@@ -99,7 +99,7 @@ bool run_test(int config, uint16* in0, uint16* in1, uint16* out, uint16* golden_
 }
 
 std::string get_data_path() {
-    std::string rel_path = "../../data/";
+    std::string rel_path = "/data1/jcz/activation_accelerator_tutorial/prj/data/";
     std::string test_file = rel_path + "in0_bf16.bin";
     std::ifstream f(test_file.c_str());
     if (f.good()) {

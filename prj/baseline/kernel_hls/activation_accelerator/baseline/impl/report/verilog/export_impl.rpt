@@ -1,0 +1,319 @@
+================================================================
+== Vivado Place & Route Results
+================================================================
++ General Information:
+    * Date:            Tue Sep 23 22:31:06 CST 2025
+    * Version:         2022.2 (Build 3670227 on Oct 13 2022)
+    * Project:         activation_accelerator
+    * Solution:        baseline (Vivado IP Flow Target)
+    * Product family:  zynquplus
+    * Target device:   xck26-sfvc784-2LV-c
+
+
+================================================================
+== Run Constraints & Options
+================================================================
++ Design Constraints & Options:
+    * Place & Route target clock:  10 ns
+    * C-Synthesis target clock:    10 ns
+    * C-Synthesis uncertainty:     27%
+
++ RTL Synthesis Options:
+    * config_export -vivado_synth_strategy:     default
+    * config_export -vivado_synth_design_args:  -directive sdx_optimization_effort_high
+
++ Place & Route Options:
+    * config_export -vivado_impl_strategy:  default
+    * config_export -vivado_phys_opt:       none
+
++ Reporting Options:
+    * config_export -vivado_report_level:      2
+    * config_export -vivado_max_timing_paths:  10
+
+
+================================================================
+== Place & Route Resource Summary
+================================================================
+LUT:              7738
+FF:               6733
+DSP:              21
+BRAM:             181
+URAM:             0
+SRL:              374
+
+
+================================================================
+== Place & Route Timing Summary
+================================================================
+* Timing was met
++----------------+-------------+
+| Timing         | Period (ns) |
++----------------+-------------+
+| Target         | 10.000      |
+| Post-Synthesis | 5.249       |
+| Post-Route     | 7.984       |
++----------------+-------------+
+
+
+================================================================
+== Place & Route Resources
+================================================================
++--------------------------------------------------------------------+------+------+-----+------+------+-----+--------+---------+---------+------------+-------------------------------------------------------------------------------------------------------------------+
+| Name                                                               | LUT  | FF   | DSP | BRAM | URAM | SRL | Pragma | Impl    | Latency | Variable   | Source                                                                                                            |
++--------------------------------------------------------------------+------+------+-----+------+------+-----+--------+---------+---------+------------+-------------------------------------------------------------------------------------------------------------------+
+| inst                                                               | 7738 | 6733 | 21  | 181  |      |     |        |         |         |            |                                                                                                                   |
+|   (inst)                                                           | 24   | 471  |     |      |      |     |        |         |         |            |                                                                                                                   |
+|   buf0_U                                                           | 4    |      |     | 30   |      |     |        |         |         |            |                                                                                                                   |
+|     bind_storage ram_1p                                            |      |      |     |      |      |     |        | auto    | 1       | buf0       |                                                                                                                   |
+|   buf1_U                                                           |      |      |     | 30   |      |     |        |         |         |            |                                                                                                                   |
+|     bind_storage ram_1p                                            |      |      |     |      |      |     |        | auto    | 1       | buf1       |                                                                                                                   |
+|   buf2_U                                                           | 22   |      |     | 30   |      |     |        |         |         |            |                                                                                                                   |
+|     bind_storage ram_1p                                            |      |      |     |      |      |     |        | auto    | 1       | buf2       |                                                                                                                   |
+|   control_s_axi_U                                                  | 303  | 312  |     |      |      |     |        |         |         |            |                                                                                                                   |
+|   faddfsub_32ns_32ns_32_4_full_dsp_1_U68                           | 177  | 200  | 2   |      |      |     |        |         |         |            |                                                                                                                   |
+|     bind_op fadd                                                   |      |      |     |      |      |     |        | fulldsp | 3       | x_assign_3 | activation_accelerator.cpp:195                                                                                    |
+|     bind_op fadd                                                   |      |      |     |      |      |     |        | fulldsp | 3       | x_assign_2 | activation_accelerator.cpp:174                                                                                    |
+|   fdiv_32ns_32ns_32_9_no_dsp_1_U71                                 | 771  | 366  |     |      |      |     |        |         |         |            |                                                                                                                   |
+|     (fdiv_32ns_32ns_32_9_no_dsp_1_U71)                             |      | 64   |     |      |      |     |        |         |         |            |                                                                                                                   |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U69                                | 78   | 96   | 3   |      |      |     |        |         |         |            |                                                                                                                   |
+|     bind_op fmul                                                   |      |      |     |      |      |     |        | maxdsp  | 2       | mean       | activation_accelerator.cpp:188                                                                                    |
+|     bind_op fmul                                                   |      |      |     |      |      |     |        | maxdsp  | 2       | var        | activation_accelerator.cpp:194                                                                                    |
+|     bind_op fmul                                                   |      |      |     |      |      |     |        | maxdsp  | 2       | mean_sq    | activation_accelerator.cpp:173                                                                                    |
+|   fsqrt_32ns_32ns_32_8_no_dsp_1_U70                                | 416  | 237  |     |      |      |     |        |         |         |            |                                                                                                                   |
+|     bind_op fsqrt                                                  |      |      |     |      |      |     |        | fabric  | 7       | stddev     | /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13        |
+|     bind_op fsqrt                                                  |      |      |     |      |      |     |        | fabric  | 7       | rms        | /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13        |
+|   gmem0_m_axi_U                                                    | 530  | 781  |     | 1    |      |     |        |         |         |            |                                                                                                                   |
+|   gmem1_m_axi_U                                                    | 465  | 781  |     | 1    |      |     |        |         |         |            |                                                                                                                   |
+|   gmem2_m_axi_U                                                    | 702  | 1126 |     | 1    |      |     |        |         |         |            |                                                                                                                   |
+|   grp_activation_accelerator_Pipeline_VITIS_LOOP_144_11_fu_266     | 70   | 34   |     |      |      |     |        |         |         |            |                                                                                                                   |
+|     (grp_activation_accelerator_Pipeline_VITIS_LOOP_144_11_fu_266) | 5    | 32   |     |      |      |     |        |         |         |            |                                                                                                                   |
+|   grp_activation_accelerator_Pipeline_VITIS_LOOP_144_12_fu_238     | 41   | 34   |     |      |      |     |        |         |         |            |                                                                                                                   |
+|     (grp_activation_accelerator_Pipeline_VITIS_LOOP_144_12_fu_238) | 15   | 32   |     |      |      |     |        |         |         |            |                                                                                                                   |
+|   grp_activation_accelerator_Pipeline_VITIS_LOOP_144_13_fu_230     | 43   | 34   |     |      |      |     |        |         |         |            |                                                                                                                   |
+|     (grp_activation_accelerator_Pipeline_VITIS_LOOP_144_13_fu_230) | 2    | 32   |     |      |      |     |        |         |         |            |                                                                                                                   |
+|   grp_activation_accelerator_Pipeline_VITIS_LOOP_144_14_fu_222     | 68   | 34   |     |      |      |     |        |         |         |            |                                                                                                                   |
+|     (grp_activation_accelerator_Pipeline_VITIS_LOOP_144_14_fu_222) | 9    | 32   |     |      |      |     |        |         |         |            |                                                                                                                   |
+|   grp_activation_accelerator_Pipeline_VITIS_LOOP_144_15_fu_214     | 32   | 34   |     |      |      |     |        |         |         |            |                                                                                                                   |
+|     (grp_activation_accelerator_Pipeline_VITIS_LOOP_144_15_fu_214) | 6    | 32   |     |      |      |     |        |         |         |            |                                                                                                                   |
+|   grp_activation_accelerator_Pipeline_VITIS_LOOP_144_1_fu_258      | 41   | 34   |     |      |      |     |        |         |         |            |                                                                                                                   |
+|     (grp_activation_accelerator_Pipeline_VITIS_LOOP_144_1_fu_258)  | 2    | 32   |     |      |      |     |        |         |         |            |                                                                                                                   |
+|   grp_activation_accelerator_Pipeline_VITIS_LOOP_151_1_fu_326      | 794  | 337  | 7   |      |      |     |        |         |         |            |                                                                                                                   |
+|     (grp_activation_accelerator_Pipeline_VITIS_LOOP_151_1_fu_326)  | 66   | 66   |     |      |      |     |        |         |         |            |                                                                                                                   |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U44                             | 695  | 269  | 7   |      |      |     |        |         |         |            |                                                                                                                   |
+|       bind_op fexp                                                 |      |      |     |      |      |     |        | fulldsp | 7       | tmp        | /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/common/hls_exp_float.cpp:17 |
+|     flow_control_loop_pipe_sequential_init_U                       | 33   | 2    |     |      |      |     |        |         |         |            |                                                                                                                   |
+|   grp_activation_accelerator_Pipeline_VITIS_LOOP_159_1_fu_319      | 1746 | 898  | 9   |      |      |     |        |         |         |            |                                                                                                                   |
+|     (grp_activation_accelerator_Pipeline_VITIS_LOOP_159_1_fu_319)  | 91   | 121  |     |      |      |     |        |         |         |            |                                                                                                                   |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U32                             | 149  | 160  | 2   |      |      |     |        |         |         |            |                                                                                                                   |
+|       bind_op fadd                                                 |      |      |     |      |      |     |        | fulldsp | 3       | add_i2     | activation_accelerator.cpp:160                                                                                    |
+|     fdiv_32ns_32ns_32_9_no_dsp_1_U34                               | 776  | 378  |     |      |      |     |        |         |         |            |                                                                                                                   |
+|       bind_op fdiv                                                 |      |      |     |      |      |     |        | fabric  | 8       | sig        | activation_accelerator.cpp:160                                                                                    |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U35                             | 695  | 237  | 7   |      |      |     |        |         |         |            |                                                                                                                   |
+|       bind_op fexp                                                 |      |      |     |      |      |     |        | fulldsp | 7       | tmp_1      | /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/common/hls_exp_float.cpp:17 |
+|     flow_control_loop_pipe_sequential_init_U                       | 35   | 2    |     |      |      |     |        |         |         |            |                                                                                                                   |
+|   grp_activation_accelerator_Pipeline_VITIS_LOOP_170_1_fu_305      | 129  | 122  |     |      |      |     |        |         |         |            |                                                                                                                   |
+|     (grp_activation_accelerator_Pipeline_VITIS_LOOP_170_1_fu_305)  | 93   | 120  |     |      |      |     |        |         |         |            |                                                                                                                   |
+|     flow_control_loop_pipe_sequential_init_U                       | 37   | 2    |     |      |      |     |        |         |         |            |                                                                                                                   |
+|   grp_activation_accelerator_Pipeline_VITIS_LOOP_175_2_fu_311      | 65   | 52   |     |      |      |     |        |         |         |            |                                                                                                                   |
+|     (grp_activation_accelerator_Pipeline_VITIS_LOOP_175_2_fu_311)  | 12   | 50   |     |      |      |     |        |         |         |            |                                                                                                                   |
+|     flow_control_loop_pipe_sequential_init_U                       | 53   | 2    |     |      |      |     |        |         |         |            |                                                                                                                   |
+|   grp_activation_accelerator_Pipeline_VITIS_LOOP_185_1_fu_283      | 170  | 88   |     |      |      |     |        |         |         |            |                                                                                                                   |
+|     (grp_activation_accelerator_Pipeline_VITIS_LOOP_185_1_fu_283)  | 133  | 86   |     |      |      |     |        |         |         |            |                                                                                                                   |
+|     flow_control_loop_pipe_sequential_init_U                       | 37   | 2    |     |      |      |     |        |         |         |            |                                                                                                                   |
+|   grp_activation_accelerator_Pipeline_VITIS_LOOP_190_2_fu_289      | 200  | 160  |     |      |      |     |        |         |         |            |                                                                                                                   |
+|     (grp_activation_accelerator_Pipeline_VITIS_LOOP_190_2_fu_289)  | 178  | 158  |     |      |      |     |        |         |         |            |                                                                                                                   |
+|     flow_control_loop_pipe_sequential_init_U                       | 23   | 2    |     |      |      |     |        |         |         |            |                                                                                                                   |
+|   grp_activation_accelerator_Pipeline_VITIS_LOOP_196_3_fu_296      | 106  | 99   |     |      |      |     |        |         |         |            |                                                                                                                   |
+|     (grp_activation_accelerator_Pipeline_VITIS_LOOP_196_3_fu_296)  | 59   | 97   |     |      |      |     |        |         |         |            |                                                                                                                   |
+|     flow_control_loop_pipe_sequential_init_U                       | 47   | 2    |     |      |      |     |        |         |         |            |                                                                                                                   |
+|   grp_activation_accelerator_Pipeline_VITIS_LOOP_205_1_fu_333      | 148  | 69   |     |      |      |     |        |         |         |            |                                                                                                                   |
+|     (grp_activation_accelerator_Pipeline_VITIS_LOOP_205_1_fu_333)  | 29   | 67   |     |      |      |     |        |         |         |            |                                                                                                                   |
+|     flow_control_loop_pipe_sequential_init_U                       | 119  | 2    |     |      |      |     |        |         |         |            |                                                                                                                   |
+|   grp_activation_accelerator_Pipeline_VITIS_LOOP_262_1_fu_351      | 37   | 67   |     |      |      |     |        |         |         |            |                                                                                                                   |
+|     (grp_activation_accelerator_Pipeline_VITIS_LOOP_262_1_fu_351)  | 3    | 65   |     |      |      |     |        |         |         |            |                                                                                                                   |
+|     flow_control_loop_pipe_sequential_init_U                       | 34   | 2    |     |      |      |     |        |         |         |            |                                                                                                                   |
+|   grp_activation_accelerator_Pipeline_VITIS_LOOP_265_2_fu_360      | 38   | 67   |     |      |      |     |        |         |         |            |                                                                                                                   |
+|     (grp_activation_accelerator_Pipeline_VITIS_LOOP_265_2_fu_360)  | 5    | 65   |     |      |      |     |        |         |         |            |                                                                                                                   |
+|     flow_control_loop_pipe_sequential_init_U                       | 33   | 2    |     |      |      |     |        |         |         |            |                                                                                                                   |
+|   grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341      | 397  | 142  |     |      |      |     |        |         |         |            |                                                                                                                   |
+|     (grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341)  | 11   | 69   |     |      |      |     |        |         |         |            |                                                                                                                   |
+|     grp_bf16add_fu_75                                              | 386  | 73   |     |      |      |     |        |         |         |            |                                                                                                                   |
+|   grp_activation_accelerator_Pipeline_VITIS_LOOP_283_4_fu_252      | 43   | 18   |     |      |      |     |        |         |         |            |                                                                                                                   |
+|     (grp_activation_accelerator_Pipeline_VITIS_LOOP_283_4_fu_252)  | 7    | 16   |     |      |      |     |        |         |         |            |                                                                                                                   |
+|     flow_control_loop_pipe_sequential_init_U                       | 36   | 2    |     |      |      |     |        |         |         |            |                                                                                                                   |
+|   grp_activation_accelerator_Pipeline_VITIS_LOOP_292_5_fu_246      | 29   | 18   |     |      |      |     |        |         |         |            |                                                                                                                   |
+|     (grp_activation_accelerator_Pipeline_VITIS_LOOP_292_5_fu_246)  | 7    | 16   |     |      |      |     |        |         |         |            |                                                                                                                   |
+|     flow_control_loop_pipe_sequential_init_U                       | 22   | 2    |     |      |      |     |        |         |         |            |                                                                                                                   |
+|   grp_activation_accelerator_Pipeline_VITIS_LOOP_316_6_fu_274      | 36   | 21   |     |      |      |     |        |         |         |            |                                                                                                                   |
+|     (grp_activation_accelerator_Pipeline_VITIS_LOOP_316_6_fu_274)  | 1    | 19   |     |      |      |     |        |         |         |            |                                                                                                                   |
+|     flow_control_loop_pipe_sequential_init_U                       | 35   | 2    |     |      |      |     |        |         |         |            |                                                                                                                   |
+|   x_U                                                              | 15   | 1    |     | 58   |      |     |        |         |         |            |                                                                                                                   |
+|     bind_storage ram_1p                                            |      |      |     |      |      |     |        | auto    | 1       | x          | activation_accelerator.cpp:259                                                                                    |
+|   y_U                                                              | 15   |      |     | 30   |      |     |        |         |         |            |                                                                                                                   |
+|     bind_storage ram_1p                                            |      |      |     |      |      |     |        | auto    | 1       | y          | activation_accelerator.cpp:259                                                                                    |
++--------------------------------------------------------------------+------+------+-----+------+------+-----+--------+---------+---------+------------+-------------------------------------------------------------------------------------------------------------------+
+
+
+================================================================
+== Place & Route Fail Fast
+================================================================
++-----------------------------------------------------------+-----------+--------+--------+
+| Criteria                                                  | Guideline | Actual | Status |
++-----------------------------------------------------------+-----------+--------+--------+
+| LUT                                                       | 70%       | 6.61%  | OK     |
+| FD                                                        | 50%       | 2.87%  | OK     |
+| LUTRAM+SRL                                                | 25%       | 0.65%  | OK     |
+| CARRY8                                                    | 25%       | 3.31%  | OK     |
+| MUXF7                                                     | 15%       | 0.68%  | OK     |
+| DSP                                                       | 80%       | 1.68%  | OK     |
+| RAMB/FIFO                                                 | 80%       | 62.85% | OK     |
+| URAM                                                      | 80%       | 0.00%  | OK     |
+| DSP+RAMB+URAM (Avg)                                       | 70%       | 32.27% | OK     |
+| BUFGCE* + BUFGCTRL                                        | 24        | 0      | OK     |
+| DONT_TOUCH (cells/nets)                                   | 0         | 0      | OK     |
+| MARK_DEBUG (nets)                                         | 0         | 0      | OK     |
+| Control Sets                                              | 2196      | 192    | OK     |
+| Average Fanout for modules > 100k cells                   | 4         | 0      | OK     |
+| Non-FD high fanout nets > 10k loads                       | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| TIMING-6 (No common primary clock between related clocks) | 0         | 0      | OK     |
+| TIMING-7 (No common node between related clocks)          | 0         | 0      | OK     |
+| TIMING-8 (No common period between related clocks)        | 0         | 0      | OK     |
+| TIMING-14 (LUT on the clock tree)                         | 0         | 0      | OK     |
+| TIMING-35 (No common node in paths with the same clock)   | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| Number of paths above max LUT budgeting (0.391ns)         | 0         | 0      | OK     |
+| Number of paths above max Net budgeting (0.263ns)         | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+
+
+================================================================
+== Place & Route Timing Paths
+================================================================
+* Timing was met
++-------+-------+-----------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path  | SLACK | STARTPOINT PIN                                                                          | ENDPOINT PIN                                                                                                     | LOGIC LEVELS | MAX FANOUT | DATAPATH DELAY | DATAPATH LOGIC | DATAPATH NET |
+|       |       |                                                                                         |                                                                                                                  |              |            |                |          DELAY |        DELAY |
++-------+-------+-----------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path1 | 2.016 | config_r_read_reg_476_reg[29]/C                                                         | x_U/ram_reg_bram_8/WEA[1]                                                                                        |            9 |         61 |          7.342 |          1.333 |        6.009 |
+| Path2 | 2.021 | config_r_read_reg_476_reg[29]/C                                                         | x_U/ram_reg_bram_8/WEA[0]                                                                                        |            9 |         61 |          7.336 |          1.333 |        6.003 |
+| Path3 | 2.073 | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/buf0_load_reg_138_reg[13]/C | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_2_fu_88_reg[10]/CE |           15 |         47 |          7.800 |          2.073 |        5.727 |
+| Path4 | 2.073 | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/buf0_load_reg_138_reg[13]/C | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_2_fu_88_reg[9]/CE  |           15 |         47 |          7.800 |          2.073 |        5.727 |
+| Path5 | 2.074 | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/buf0_load_reg_138_reg[13]/C | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_2_fu_88_reg[11]/CE |           15 |         47 |          7.800 |          2.073 |        5.727 |
++-------+-------+-----------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+
+    +----------------------------------------------------------------------------------------------------------------------------+------------------------+
+    | Path1 Cells                                                                                                                | Primitive Type         |
+    +----------------------------------------------------------------------------------------------------------------------------+------------------------+
+    | config_r_read_reg_476_reg[29]                                                                                              | REGISTER.SDR.FDRE      |
+    | buf2_U/ap_CS_fsm[53]_i_12                                                                                                  | CLB.LUT.LUT5           |
+    | buf2_U/ap_CS_fsm[53]_i_9                                                                                                   | CLB.LUT.LUT6           |
+    | buf2_U/ap_CS_fsm[53]_i_6                                                                                                   | CLB.LUT.LUT3           |
+    | buf2_U/ap_CS_fsm[53]_i_3                                                                                                   | CLB.LUT.LUT4           |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_144_12_fu_238/ram_reg_bram_16_i_12                                          | CLB.LUT.LUT6           |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_185_1_fu_283/flow_control_loop_pipe_sequential_init_U/ram_reg_bram_16_i_7   | CLB.LUT.LUT6           |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_170_1_fu_305/flow_control_loop_pipe_sequential_init_U/ram_reg_bram_16_i_4   | CLB.LUT.LUT6           |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_205_1_fu_333/flow_control_loop_pipe_sequential_init_U/ram_reg_bram_16_i_2   | CLB.LUT.LUT6           |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_205_1_fu_333/flow_control_loop_pipe_sequential_init_U/ram_reg_bram_8_i_2__2 | CLB.LUT.LUT5           |
+    | x_U/ram_reg_bram_8                                                                                                         | BLOCKRAM.BRAM.RAMB36E2 |
+    +----------------------------------------------------------------------------------------------------------------------------+------------------------+
+
+    +----------------------------------------------------------------------------------------------------------------------------+------------------------+
+    | Path2 Cells                                                                                                                | Primitive Type         |
+    +----------------------------------------------------------------------------------------------------------------------------+------------------------+
+    | config_r_read_reg_476_reg[29]                                                                                              | REGISTER.SDR.FDRE      |
+    | buf2_U/ap_CS_fsm[53]_i_12                                                                                                  | CLB.LUT.LUT5           |
+    | buf2_U/ap_CS_fsm[53]_i_9                                                                                                   | CLB.LUT.LUT6           |
+    | buf2_U/ap_CS_fsm[53]_i_6                                                                                                   | CLB.LUT.LUT3           |
+    | buf2_U/ap_CS_fsm[53]_i_3                                                                                                   | CLB.LUT.LUT4           |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_144_12_fu_238/ram_reg_bram_16_i_12                                          | CLB.LUT.LUT6           |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_185_1_fu_283/flow_control_loop_pipe_sequential_init_U/ram_reg_bram_16_i_7   | CLB.LUT.LUT6           |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_170_1_fu_305/flow_control_loop_pipe_sequential_init_U/ram_reg_bram_16_i_4   | CLB.LUT.LUT6           |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_205_1_fu_333/flow_control_loop_pipe_sequential_init_U/ram_reg_bram_16_i_2   | CLB.LUT.LUT6           |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_205_1_fu_333/flow_control_loop_pipe_sequential_init_U/ram_reg_bram_8_i_2__2 | CLB.LUT.LUT5           |
+    | x_U/ram_reg_bram_8                                                                                                         | BLOCKRAM.BRAM.RAMB36E2 |
+    +----------------------------------------------------------------------------------------------------------------------------+------------------------+
+
+    +----------------------------------------------------------------------------------------------------------------------+-------------------+
+    | Path3 Cells                                                                                                          | Primitive Type    |
+    +----------------------------------------------------------------------------------------------------------------------+-------------------+
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/buf0_load_reg_138_reg[13]                                | REGISTER.SDR.FDRE |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln79_reg_884[0]_i_9               | CLB.LUT.LUT4      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln52_fu_339_p2_carry_i_9          | CLB.LUT.LUT5      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_3_fu_485_p2_carry_i_49 | CLB.LUT.LUT2      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_1_fu_479_p2_carry_i_41 | CLB.LUT.LUT6      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_1_fu_479_p2_carry_i_39 | CLB.LUT.LUT6      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_1_fu_479_p2_carry_i_29 | CLB.LUT.LUT5      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_1_fu_479_p2_carry_i_7  | CLB.LUT.LUT6      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln69_fu_467_p2_carry_i_16         | CLB.LUT.LUT5      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln69_fu_467_p2_carry              | CLB.CARRY.CARRY8  |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_2_fu_88[11]_i_2        | CLB.LUT.LUT6      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/max_exp_2_fu_92[15]_i_30               | CLB.LUT.LUT6      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/max_exp_2_fu_92[15]_i_14               | CLB.LUT.LUT6      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/max_exp_2_fu_92[15]_i_5                | CLB.LUT.LUT6      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/max_exp_2_fu_92[15]_i_1                | CLB.LUT.LUT6      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/max_exp_2_fu_92[15]_i_2                | CLB.LUT.LUT6      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_2_fu_88_reg[10]        | REGISTER.SDR.FDRE |
+    +----------------------------------------------------------------------------------------------------------------------+-------------------+
+
+    +----------------------------------------------------------------------------------------------------------------------+-------------------+
+    | Path4 Cells                                                                                                          | Primitive Type    |
+    +----------------------------------------------------------------------------------------------------------------------+-------------------+
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/buf0_load_reg_138_reg[13]                                | REGISTER.SDR.FDRE |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln79_reg_884[0]_i_9               | CLB.LUT.LUT4      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln52_fu_339_p2_carry_i_9          | CLB.LUT.LUT5      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_3_fu_485_p2_carry_i_49 | CLB.LUT.LUT2      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_1_fu_479_p2_carry_i_41 | CLB.LUT.LUT6      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_1_fu_479_p2_carry_i_39 | CLB.LUT.LUT6      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_1_fu_479_p2_carry_i_29 | CLB.LUT.LUT5      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_1_fu_479_p2_carry_i_7  | CLB.LUT.LUT6      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln69_fu_467_p2_carry_i_16         | CLB.LUT.LUT5      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln69_fu_467_p2_carry              | CLB.CARRY.CARRY8  |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_2_fu_88[11]_i_2        | CLB.LUT.LUT6      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/max_exp_2_fu_92[15]_i_30               | CLB.LUT.LUT6      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/max_exp_2_fu_92[15]_i_14               | CLB.LUT.LUT6      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/max_exp_2_fu_92[15]_i_5                | CLB.LUT.LUT6      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/max_exp_2_fu_92[15]_i_1                | CLB.LUT.LUT6      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/max_exp_2_fu_92[15]_i_2                | CLB.LUT.LUT6      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_2_fu_88_reg[9]         | REGISTER.SDR.FDRE |
+    +----------------------------------------------------------------------------------------------------------------------+-------------------+
+
+    +----------------------------------------------------------------------------------------------------------------------+-------------------+
+    | Path5 Cells                                                                                                          | Primitive Type    |
+    +----------------------------------------------------------------------------------------------------------------------+-------------------+
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/buf0_load_reg_138_reg[13]                                | REGISTER.SDR.FDRE |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln79_reg_884[0]_i_9               | CLB.LUT.LUT4      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln52_fu_339_p2_carry_i_9          | CLB.LUT.LUT5      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_3_fu_485_p2_carry_i_49 | CLB.LUT.LUT2      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_1_fu_479_p2_carry_i_41 | CLB.LUT.LUT6      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_1_fu_479_p2_carry_i_39 | CLB.LUT.LUT6      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_1_fu_479_p2_carry_i_29 | CLB.LUT.LUT5      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_1_fu_479_p2_carry_i_7  | CLB.LUT.LUT6      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln69_fu_467_p2_carry_i_16         | CLB.LUT.LUT5      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln69_fu_467_p2_carry              | CLB.CARRY.CARRY8  |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_2_fu_88[11]_i_2        | CLB.LUT.LUT6      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/max_exp_2_fu_92[15]_i_30               | CLB.LUT.LUT6      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/max_exp_2_fu_92[15]_i_14               | CLB.LUT.LUT6      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/max_exp_2_fu_92[15]_i_5                | CLB.LUT.LUT6      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/max_exp_2_fu_92[15]_i_1                | CLB.LUT.LUT6      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/max_exp_2_fu_92[15]_i_2                | CLB.LUT.LUT6      |
+    | grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_2_fu_88_reg[11]        | REGISTER.SDR.FDRE |
+    +----------------------------------------------------------------------------------------------------------------------+-------------------+
+
+
+================================================================
+== Place & Route Vivado Reports
+================================================================
++--------------------------+--------------------------------------------------------------------------------+
+| Report Type              | Report Location                                                                |
++--------------------------+--------------------------------------------------------------------------------+
+| design_analysis          | impl/verilog/report/activation_accelerator_design_analysis_routed.rpt          |
+| failfast                 | impl/verilog/report/activation_accelerator_failfast_routed.rpt                 |
+| status                   | impl/verilog/report/activation_accelerator_status_routed.rpt                   |
+| timing                   | impl/verilog/report/activation_accelerator_timing_routed.rpt                   |
+| timing_paths             | impl/verilog/report/activation_accelerator_timing_paths_routed.rpt             |
+| utilization              | impl/verilog/report/activation_accelerator_utilization_routed.rpt              |
+| utilization_hierarchical | impl/verilog/report/activation_accelerator_utilization_hierarchical_routed.rpt |
++--------------------------+--------------------------------------------------------------------------------+
+
+

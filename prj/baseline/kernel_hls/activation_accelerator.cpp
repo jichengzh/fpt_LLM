@@ -278,21 +278,21 @@ void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, 
             }
         }
         else if(config == 1) { // safe softmax
-            // bf16_to_float(buf0, x, 32*1024);
-            // float_safe_softmax(x, buf2, 32*1024);
-            for(int i = 0; i < 32*1024; i++) {
-#pragma HLS PIPELINE II=1
-                buf2[i] = 0;
-            }
+            bf16_to_float(buf0, x, 32*1024);
+            float_safe_softmax(x, buf2, 32*1024);
+//             for(int i = 0; i < 32*1024; i++) {
+// #pragma HLS PIPELINE II=1
+//                 buf2[i] = 0;
+//             }
         }
         else if(config == 2) { // mask safe softmax
-            // bf16_to_float(buf0, x, 32*1024);
-            // bf16_to_float(buf1, y, 32*1024);
-            // float_mask_safe_softmax(x, y, buf2, 32*1024);
-            for(int i = 0; i < 32*1024; i++) {
-#pragma HLS PIPELINE II=1
-                buf2[i] = 0;
-            }
+            bf16_to_float(buf0, x, 32*1024);
+            bf16_to_float(buf1, y, 32*1024);
+            float_mask_safe_softmax(x, y, buf2, 32*1024);
+//             for(int i = 0; i < 32*1024; i++) {
+// #pragma HLS PIPELINE II=1
+//                 buf2[i] = 0;
+//             }
         }
         else if(config == 3) { // Sigmoid
             bf16_to_float(buf0, x, 32*1024);
