@@ -86,7 +86,6 @@ proc check_tvin_file {} {
          "c.activation_accelerator.autotvin_in0.dat"
          "c.activation_accelerator.autotvin_in1.dat"
          "c.activation_accelerator.autotvin_out_r.dat"
-         "c.activation_accelerator.autotvin_stage.dat"
          "c.activation_accelerator.autotvin_config_r.dat"
     }
     foreach rtlfile $rtlfilelist {

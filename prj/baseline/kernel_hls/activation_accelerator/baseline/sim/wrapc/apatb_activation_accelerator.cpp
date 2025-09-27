@@ -1032,8 +1032,8 @@ void apatb_activation_accelerator_hw(void* __xlx_apatb_param_in0, void* __xlx_ap
 #else
   static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port5 {
 #endif
-    .width = 16,
-    .asize = 2,
+    .width = 512,
+    .asize = 64,
     .hbm = false,
     .name = { "gmem0" },
 #ifdef POST_CHECK
@@ -1047,7 +1047,7 @@ void apatb_activation_accelerator_hw(void* __xlx_apatb_param_in0, void* __xlx_ap
 #endif
   };
   port5.param = { __xlx_apatb_param_in0 };
-  port5.depth = { 32768 };
+  port5.depth = { 1024 };
   port5.offset = {  };
   port5.hasWrite = { false };
 
@@ -1056,8 +1056,8 @@ void apatb_activation_accelerator_hw(void* __xlx_apatb_param_in0, void* __xlx_ap
 #else
   static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port6 {
 #endif
-    .width = 16,
-    .asize = 2,
+    .width = 512,
+    .asize = 64,
     .hbm = false,
     .name = { "gmem1" },
 #ifdef POST_CHECK
@@ -1071,7 +1071,7 @@ void apatb_activation_accelerator_hw(void* __xlx_apatb_param_in0, void* __xlx_ap
 #endif
   };
   port6.param = { __xlx_apatb_param_in1 };
-  port6.depth = { 32768 };
+  port6.depth = { 1024 };
   port6.offset = {  };
   port6.hasWrite = { false };
 
@@ -1080,8 +1080,8 @@ void apatb_activation_accelerator_hw(void* __xlx_apatb_param_in0, void* __xlx_ap
 #else
   static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port7 {
 #endif
-    .width = 16,
-    .asize = 2,
+    .width = 512,
+    .asize = 64,
     .hbm = false,
     .name = { "gmem2" },
 #ifdef POST_CHECK
@@ -1104,7 +1104,7 @@ void apatb_activation_accelerator_hw(void* __xlx_apatb_param_in0, void* __xlx_ap
 #endif
   };
   port7.param = { __xlx_apatb_param_out_r };
-  port7.depth = { 32768 };
+  port7.depth = { 1024 };
   port7.offset = {  };
   port7.hasWrite = { true };
 

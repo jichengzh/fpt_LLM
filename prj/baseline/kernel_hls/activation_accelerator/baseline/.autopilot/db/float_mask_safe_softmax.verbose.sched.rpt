@@ -1,0 +1,224 @@
+
+
+================================================================
+== Vitis HLS Report for 'float_mask_safe_softmax'
+================================================================
+* Date:           Sat Sep 27 10:30:51 2025
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        activation_accelerator
+* Solution:       baseline (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.057 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     6186|     6186|  61.860 us|  61.860 us|  6186|  6186|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 10
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%sum_loc = alloca i64 1"   --->   Operation 11 'alloca' 'sum_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%max_val_4_loc = alloca i64 1"   --->   Operation 12 'alloca' 'max_val_4_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%x_mask = alloca i64 1" [activation_accelerator.cpp:264]   --->   Operation 13 'alloca' 'x_mask' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_S2P_BRAM">   --->   Core 97 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%exp_x = alloca i64 1" [activation_accelerator.cpp:278]   --->   Operation 14 'alloca' 'exp_x' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_S2P_BRAM">   --->   Core 97 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_1 : Operation 15 [2/2] (0.00ns)   --->   "%call_ln0 = call void @float_mask_safe_softmax_Pipeline_mask_softmax_loop_0, i32 %x_mask, i32 %yt, i32 %xt"   --->   Operation 15 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 16 [1/2] (0.00ns)   --->   "%call_ln0 = call void @float_mask_safe_softmax_Pipeline_mask_softmax_loop_0, i32 %x_mask, i32 %yt, i32 %xt"   --->   Operation 16 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 1.23>
+ST_3 : Operation 17 [1/1] (0.00ns)   --->   "%x_mask_addr = getelementptr i32 %x_mask, i64 0, i64 0" [activation_accelerator.cpp:271]   --->   Operation 17 'getelementptr' 'x_mask_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 18 [2/2] (1.23ns)   --->   "%max_val = load i10 %x_mask_addr" [activation_accelerator.cpp:271]   --->   Operation 18 'load' 'max_val' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_S2P_BRAM">   --->   Core 97 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+
+State 4 <SV = 3> <Delay = 1.23>
+ST_4 : Operation 19 [1/2] (1.23ns)   --->   "%max_val = load i10 %x_mask_addr" [activation_accelerator.cpp:271]   --->   Operation 19 'load' 'max_val' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM_S2P_BRAM">   --->   Core 97 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+
+State 5 <SV = 4> <Delay = 0.42>
+ST_5 : Operation 20 [2/2] (0.42ns)   --->   "%call_ln271 = call void @float_mask_safe_softmax_Pipeline_mask_softmax_loop_1, i32 %max_val, i32 %x_mask, i32 %max_val_4_loc" [activation_accelerator.cpp:271]   --->   Operation 20 'call' 'call_ln271' <Predicate = true> <Delay = 0.42> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 21 [1/2] (0.00ns)   --->   "%call_ln271 = call void @float_mask_safe_softmax_Pipeline_mask_softmax_loop_1, i32 %max_val, i32 %x_mask, i32 %max_val_4_loc" [activation_accelerator.cpp:271]   --->   Operation 21 'call' 'call_ln271' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 22 [1/1] (0.00ns)   --->   "%max_val_4_loc_load = load i32 %max_val_4_loc"   --->   Operation 22 'load' 'max_val_4_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 23 [2/2] (0.00ns)   --->   "%call_ln0 = call void @float_mask_safe_softmax_Pipeline_mask_softmax_loop_2, i32 %x_mask, i32 %max_val_4_loc_load, i32 %exp_x, i32 %sum_loc"   --->   Operation 23 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 0.00>
+ST_8 : Operation 24 [1/2] (0.00ns)   --->   "%call_ln0 = call void @float_mask_safe_softmax_Pipeline_mask_softmax_loop_2, i32 %x_mask, i32 %max_val_4_loc_load, i32 %exp_x, i32 %sum_loc"   --->   Operation 24 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 25 [1/1] (0.00ns)   --->   "%sum_loc_load = load i32 %sum_loc"   --->   Operation 25 'load' 'sum_loc_load' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 26 [2/2] (0.00ns)   --->   "%call_ln0 = call void @float_mask_safe_softmax_Pipeline_mask_softmax_loop_3, i32 %exp_x, i32 %sum_loc_load, i16 %activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_9, i16 %activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_8, i16 %activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_7, i16 %activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_6, i16 %activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_5, i16 %activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_4, i16 %activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_3, i16 %activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_2, i16 %activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_1, i16 %activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_10, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_11, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_12, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_13, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_14, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_15, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_16, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_17, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_18, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_19, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_20, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_21, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_22, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_23, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_24, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_25, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_26, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_27, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_28, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_29, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_30, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_31"   --->   Operation 26 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 27 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %yt, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 27 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 28 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %xt, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 28 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 29 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_9, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 29 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 30 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_8, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 30 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 31 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_7, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 31 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 32 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_6, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 32 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 33 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_5, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 33 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 34 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_4, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 34 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 35 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_3, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 35 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 36 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_2, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 36 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 37 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_1, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 37 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 38 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 38 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 39 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_10, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 39 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 40 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_11, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 40 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 41 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_12, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 41 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 42 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_13, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 42 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 43 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_14, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 43 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 44 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_15, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 44 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 45 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_16, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 45 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 46 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_17, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 46 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 47 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_18, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 47 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 48 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_19, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 48 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 49 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_20, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 49 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 50 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_21, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 50 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 51 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_22, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 51 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 52 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_23, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 52 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 53 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_24, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 53 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 54 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_25, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 54 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 55 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_26, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 55 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 56 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_27, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 56 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 57 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_28, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 57 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 58 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_29, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 58 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 59 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_30, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 59 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 60 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_31, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 60 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 61 [1/1] (0.00ns)   --->   "%specmemcore_ln265 = specmemcore void @_ssdm_op_SpecMemCore, i32 %x_mask, i64 666, i64 25, i64 18446744073709551615" [activation_accelerator.cpp:265]   --->   Operation 61 'specmemcore' 'specmemcore_ln265' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 62 [1/1] (0.00ns)   --->   "%specmemcore_ln279 = specmemcore void @_ssdm_op_SpecMemCore, i32 %exp_x, i64 666, i64 25, i64 18446744073709551615" [activation_accelerator.cpp:279]   --->   Operation 62 'specmemcore' 'specmemcore_ln279' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 63 [1/2] (0.00ns)   --->   "%call_ln0 = call void @float_mask_safe_softmax_Pipeline_mask_softmax_loop_3, i32 %exp_x, i32 %sum_loc_load, i16 %activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_9, i16 %activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_8, i16 %activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_7, i16 %activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_6, i16 %activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_5, i16 %activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_4, i16 %activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_3, i16 %activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_2, i16 %activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_1, i16 %activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_10, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_11, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_12, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_13, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_14, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_15, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_16, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_17, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_18, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_19, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_20, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_21, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_22, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_23, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_24, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_25, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_26, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_27, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_28, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_29, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_30, i16 %p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_31"   --->   Operation 63 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 64 [1/1] (0.00ns)   --->   "%ret_ln293 = ret" [activation_accelerator.cpp:293]   --->   Operation 64 'ret' 'ret_ln293' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 1.24ns
+The critical path consists of the following:
+	'getelementptr' operation ('x_mask_addr', activation_accelerator.cpp:271) [75]  (0 ns)
+	'load' operation ('max_val', activation_accelerator.cpp:271) on array 'x_mask', activation_accelerator.cpp:264 [76]  (1.24 ns)
+
+ <State 4>: 1.24ns
+The critical path consists of the following:
+	'load' operation ('max_val', activation_accelerator.cpp:271) on array 'x_mask', activation_accelerator.cpp:264 [76]  (1.24 ns)
+
+ <State 5>: 0.427ns
+The critical path consists of the following:
+	'call' operation ('call_ln271', activation_accelerator.cpp:271) to 'float_mask_safe_softmax_Pipeline_mask_softmax_loop_1' [77]  (0.427 ns)
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+ <State 8>: 0ns
+The critical path consists of the following:
+
+ <State 9>: 0ns
+The critical path consists of the following:
+
+ <State 10>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

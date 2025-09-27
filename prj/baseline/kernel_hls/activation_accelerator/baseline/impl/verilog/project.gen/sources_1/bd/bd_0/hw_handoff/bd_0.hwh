@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Sep 23 22:19:37 2025" VIVADOVERSION="2022.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Sep 27 11:30:11 2025" VIVADOVERSION="2022.2">
 
   <SYSTEMINFO ARCH="zynquplus" DEVICE="xck26" NAME="bd_0" PACKAGE="sfvc784" SPEEDGRADE="-2LV"/>
 
@@ -84,12 +84,12 @@
         <CONNECTION INSTANCE="hls_inst" PORT="m_axi_gmem0_WID"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="31" NAME="m_axi_gmem0_wdata" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem0_WDATA">
+    <PORT DIR="O" LEFT="511" NAME="m_axi_gmem0_wdata" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem0_WDATA">
       <CONNECTIONS>
         <CONNECTION INSTANCE="hls_inst" PORT="m_axi_gmem0_WDATA"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="3" NAME="m_axi_gmem0_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem0_WSTRB">
+    <PORT DIR="O" LEFT="63" NAME="m_axi_gmem0_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem0_WSTRB">
       <CONNECTIONS>
         <CONNECTION INSTANCE="hls_inst" PORT="m_axi_gmem0_WSTRB"/>
       </CONNECTIONS>
@@ -194,7 +194,7 @@
         <CONNECTION INSTANCE="hls_inst" PORT="m_axi_gmem0_RID"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="31" NAME="m_axi_gmem0_rdata" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem0_RDATA">
+    <PORT DIR="I" LEFT="511" NAME="m_axi_gmem0_rdata" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem0_RDATA">
       <CONNECTIONS>
         <CONNECTION INSTANCE="hls_inst" PORT="m_axi_gmem0_RDATA"/>
       </CONNECTIONS>
@@ -284,12 +284,12 @@
         <CONNECTION INSTANCE="hls_inst" PORT="m_axi_gmem1_WID"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="31" NAME="m_axi_gmem1_wdata" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem1_WDATA">
+    <PORT DIR="O" LEFT="511" NAME="m_axi_gmem1_wdata" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem1_WDATA">
       <CONNECTIONS>
         <CONNECTION INSTANCE="hls_inst" PORT="m_axi_gmem1_WDATA"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="3" NAME="m_axi_gmem1_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem1_WSTRB">
+    <PORT DIR="O" LEFT="63" NAME="m_axi_gmem1_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem1_WSTRB">
       <CONNECTIONS>
         <CONNECTION INSTANCE="hls_inst" PORT="m_axi_gmem1_WSTRB"/>
       </CONNECTIONS>
@@ -394,7 +394,7 @@
         <CONNECTION INSTANCE="hls_inst" PORT="m_axi_gmem1_RID"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="31" NAME="m_axi_gmem1_rdata" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem1_RDATA">
+    <PORT DIR="I" LEFT="511" NAME="m_axi_gmem1_rdata" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem1_RDATA">
       <CONNECTIONS>
         <CONNECTION INSTANCE="hls_inst" PORT="m_axi_gmem1_RDATA"/>
       </CONNECTIONS>
@@ -484,12 +484,12 @@
         <CONNECTION INSTANCE="hls_inst" PORT="m_axi_gmem2_WID"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="31" NAME="m_axi_gmem2_wdata" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem2_WDATA">
+    <PORT DIR="O" LEFT="511" NAME="m_axi_gmem2_wdata" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem2_WDATA">
       <CONNECTIONS>
         <CONNECTION INSTANCE="hls_inst" PORT="m_axi_gmem2_WDATA"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="3" NAME="m_axi_gmem2_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem2_WSTRB">
+    <PORT DIR="O" LEFT="63" NAME="m_axi_gmem2_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem2_WSTRB">
       <CONNECTIONS>
         <CONNECTION INSTANCE="hls_inst" PORT="m_axi_gmem2_WSTRB"/>
       </CONNECTIONS>
@@ -594,7 +594,7 @@
         <CONNECTION INSTANCE="hls_inst" PORT="m_axi_gmem2_RID"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="31" NAME="m_axi_gmem2_rdata" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem2_RDATA">
+    <PORT DIR="I" LEFT="511" NAME="m_axi_gmem2_rdata" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem2_RDATA">
       <CONNECTIONS>
         <CONNECTION INSTANCE="hls_inst" PORT="m_axi_gmem2_RDATA"/>
       </CONNECTIONS>
@@ -707,8 +707,8 @@
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES>
-    <BUSINTERFACE BUSNAME="hls_inst_m_axi_gmem0" DATAWIDTH="32" NAME="m_axi_gmem0" TYPE="MASTER">
-      <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
+    <BUSINTERFACE BUSNAME="hls_inst_m_axi_gmem0" DATAWIDTH="512" NAME="m_axi_gmem0" TYPE="MASTER">
+      <PARAMETER NAME="DATA_WIDTH" VALUE="512"/>
       <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
       <PARAMETER NAME="FREQ_HZ" VALUE="100000000.0"/>
       <PARAMETER NAME="ID_WIDTH" VALUE="1"/>
@@ -782,8 +782,8 @@
         <PORTMAP LOGICAL="RREADY" PHYSICAL="m_axi_gmem0_rready"/>
       </PORTMAPS>
     </BUSINTERFACE>
-    <BUSINTERFACE BUSNAME="hls_inst_m_axi_gmem1" DATAWIDTH="32" NAME="m_axi_gmem1" TYPE="MASTER">
-      <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
+    <BUSINTERFACE BUSNAME="hls_inst_m_axi_gmem1" DATAWIDTH="512" NAME="m_axi_gmem1" TYPE="MASTER">
+      <PARAMETER NAME="DATA_WIDTH" VALUE="512"/>
       <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
       <PARAMETER NAME="FREQ_HZ" VALUE="100000000.0"/>
       <PARAMETER NAME="ID_WIDTH" VALUE="1"/>
@@ -857,8 +857,8 @@
         <PORTMAP LOGICAL="RREADY" PHYSICAL="m_axi_gmem1_rready"/>
       </PORTMAPS>
     </BUSINTERFACE>
-    <BUSINTERFACE BUSNAME="hls_inst_m_axi_gmem2" DATAWIDTH="32" NAME="m_axi_gmem2" TYPE="MASTER">
-      <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
+    <BUSINTERFACE BUSNAME="hls_inst_m_axi_gmem2" DATAWIDTH="512" NAME="m_axi_gmem2" TYPE="MASTER">
+      <PARAMETER NAME="DATA_WIDTH" VALUE="512"/>
       <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
       <PARAMETER NAME="FREQ_HZ" VALUE="100000000.0"/>
       <PARAMETER NAME="ID_WIDTH" VALUE="1"/>
@@ -993,14 +993,14 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
-    <MODULE COREREVISION="2114273538" FULLNAME="/hls_inst" HWVERSION="1.0" INSTANCE="hls_inst" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="activation_accelerator" VLNV="xilinx.com:hls:activation_accelerator:1.0">
+    <MODULE COREREVISION="2114278649" FULLNAME="/hls_inst" HWVERSION="1.0" INSTANCE="hls_inst" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="activation_accelerator" VLNV="xilinx.com:hls:activation_accelerator:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="C_S_AXI_CONTROL_ADDR_WIDTH" VALUE="7"/>
         <PARAMETER NAME="C_S_AXI_CONTROL_DATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_M_AXI_GMEM0_ID_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_M_AXI_GMEM0_ADDR_WIDTH" VALUE="64"/>
-        <PARAMETER NAME="C_M_AXI_GMEM0_DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_M_AXI_GMEM0_DATA_WIDTH" VALUE="512"/>
         <PARAMETER NAME="C_M_AXI_GMEM0_AWUSER_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_M_AXI_GMEM0_ARUSER_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_M_AXI_GMEM0_WUSER_WIDTH" VALUE="1"/>
@@ -1011,7 +1011,7 @@
         <PARAMETER NAME="C_M_AXI_GMEM0_CACHE_VALUE" VALUE="&quot;0011&quot;"/>
         <PARAMETER NAME="C_M_AXI_GMEM1_ID_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_M_AXI_GMEM1_ADDR_WIDTH" VALUE="64"/>
-        <PARAMETER NAME="C_M_AXI_GMEM1_DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_M_AXI_GMEM1_DATA_WIDTH" VALUE="512"/>
         <PARAMETER NAME="C_M_AXI_GMEM1_AWUSER_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_M_AXI_GMEM1_ARUSER_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_M_AXI_GMEM1_WUSER_WIDTH" VALUE="1"/>
@@ -1022,7 +1022,7 @@
         <PARAMETER NAME="C_M_AXI_GMEM1_CACHE_VALUE" VALUE="&quot;0011&quot;"/>
         <PARAMETER NAME="C_M_AXI_GMEM2_ID_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_M_AXI_GMEM2_ADDR_WIDTH" VALUE="64"/>
-        <PARAMETER NAME="C_M_AXI_GMEM2_DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_M_AXI_GMEM2_DATA_WIDTH" VALUE="512"/>
         <PARAMETER NAME="C_M_AXI_GMEM2_AWUSER_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_M_AXI_GMEM2_ARUSER_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_M_AXI_GMEM2_WUSER_WIDTH" VALUE="1"/>
@@ -1041,7 +1041,7 @@
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
-        <PARAMETER NAME="latency" VALUE="undef"/>
+        <PARAMETER NAME="latency" VALUE="2413"/>
         <PARAMETER NAME="II" VALUE="x"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
         <PARAMETER NAME="C_S_AXI_CONTROL_BASEADDR" VALUE="0x00000000"/>
@@ -1213,12 +1213,12 @@
             <CONNECTION INSTANCE="bd_0_imp" PORT="m_axi_gmem0_wid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="m_axi_gmem0_WDATA" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem0_WDATA">
+        <PORT DIR="O" LEFT="511" NAME="m_axi_gmem0_WDATA" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem0_WDATA">
           <CONNECTIONS>
             <CONNECTION INSTANCE="bd_0_imp" PORT="m_axi_gmem0_wdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="m_axi_gmem0_WSTRB" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem0_WSTRB">
+        <PORT DIR="O" LEFT="63" NAME="m_axi_gmem0_WSTRB" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem0_WSTRB">
           <CONNECTIONS>
             <CONNECTION INSTANCE="bd_0_imp" PORT="m_axi_gmem0_wstrb"/>
           </CONNECTIONS>
@@ -1323,7 +1323,7 @@
             <CONNECTION INSTANCE="bd_0_imp" PORT="m_axi_gmem0_rid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="m_axi_gmem0_RDATA" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem0_RDATA">
+        <PORT DIR="I" LEFT="511" NAME="m_axi_gmem0_RDATA" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem0_RDATA">
           <CONNECTIONS>
             <CONNECTION INSTANCE="bd_0_imp" PORT="m_axi_gmem0_rdata"/>
           </CONNECTIONS>
@@ -1413,12 +1413,12 @@
             <CONNECTION INSTANCE="bd_0_imp" PORT="m_axi_gmem1_wid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="m_axi_gmem1_WDATA" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem1_WDATA">
+        <PORT DIR="O" LEFT="511" NAME="m_axi_gmem1_WDATA" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem1_WDATA">
           <CONNECTIONS>
             <CONNECTION INSTANCE="bd_0_imp" PORT="m_axi_gmem1_wdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="m_axi_gmem1_WSTRB" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem1_WSTRB">
+        <PORT DIR="O" LEFT="63" NAME="m_axi_gmem1_WSTRB" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem1_WSTRB">
           <CONNECTIONS>
             <CONNECTION INSTANCE="bd_0_imp" PORT="m_axi_gmem1_wstrb"/>
           </CONNECTIONS>
@@ -1523,7 +1523,7 @@
             <CONNECTION INSTANCE="bd_0_imp" PORT="m_axi_gmem1_rid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="m_axi_gmem1_RDATA" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem1_RDATA">
+        <PORT DIR="I" LEFT="511" NAME="m_axi_gmem1_RDATA" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem1_RDATA">
           <CONNECTIONS>
             <CONNECTION INSTANCE="bd_0_imp" PORT="m_axi_gmem1_rdata"/>
           </CONNECTIONS>
@@ -1613,12 +1613,12 @@
             <CONNECTION INSTANCE="bd_0_imp" PORT="m_axi_gmem2_wid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="m_axi_gmem2_WDATA" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem2_WDATA">
+        <PORT DIR="O" LEFT="511" NAME="m_axi_gmem2_WDATA" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem2_WDATA">
           <CONNECTIONS>
             <CONNECTION INSTANCE="bd_0_imp" PORT="m_axi_gmem2_wdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="m_axi_gmem2_WSTRB" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem2_WSTRB">
+        <PORT DIR="O" LEFT="63" NAME="m_axi_gmem2_WSTRB" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem2_WSTRB">
           <CONNECTIONS>
             <CONNECTION INSTANCE="bd_0_imp" PORT="m_axi_gmem2_wstrb"/>
           </CONNECTIONS>
@@ -1723,7 +1723,7 @@
             <CONNECTION INSTANCE="bd_0_imp" PORT="m_axi_gmem2_rid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="m_axi_gmem2_RDATA" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem2_RDATA">
+        <PORT DIR="I" LEFT="511" NAME="m_axi_gmem2_RDATA" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_m_axi_gmem2_RDATA">
           <CONNECTIONS>
             <CONNECTION INSTANCE="bd_0_imp" PORT="m_axi_gmem2_rdata"/>
           </CONNECTIONS>
@@ -1802,17 +1802,17 @@
             <PORTMAP LOGICAL="RREADY" PHYSICAL="s_axi_control_RREADY"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="hls_inst_m_axi_gmem0" DATAWIDTH="32" NAME="m_axi_gmem0" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
+        <BUSINTERFACE BUSNAME="hls_inst_m_axi_gmem0" DATAWIDTH="512" NAME="m_axi_gmem0" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="16"/>
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="16"/>
-          <PARAMETER NAME="MAX_READ_BURST_LENGTH" VALUE="16"/>
+          <PARAMETER NAME="MAX_READ_BURST_LENGTH" VALUE="32"/>
           <PARAMETER NAME="MAX_WRITE_BURST_LENGTH" VALUE="16"/>
           <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
           <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_ONLY"/>
           <PARAMETER NAME="HAS_BURST" VALUE="0"/>
           <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
-          <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="DATA_WIDTH" VALUE="512"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="100000000.0"/>
           <PARAMETER NAME="ID_WIDTH" VALUE="1"/>
           <PARAMETER NAME="ADDR_WIDTH" VALUE="64"/>
@@ -1879,17 +1879,17 @@
             <PORTMAP LOGICAL="RREADY" PHYSICAL="m_axi_gmem0_RREADY"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="hls_inst_m_axi_gmem1" DATAWIDTH="32" NAME="m_axi_gmem1" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
+        <BUSINTERFACE BUSNAME="hls_inst_m_axi_gmem1" DATAWIDTH="512" NAME="m_axi_gmem1" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="16"/>
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="16"/>
-          <PARAMETER NAME="MAX_READ_BURST_LENGTH" VALUE="16"/>
+          <PARAMETER NAME="MAX_READ_BURST_LENGTH" VALUE="32"/>
           <PARAMETER NAME="MAX_WRITE_BURST_LENGTH" VALUE="16"/>
           <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
           <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_ONLY"/>
           <PARAMETER NAME="HAS_BURST" VALUE="0"/>
           <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
-          <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="DATA_WIDTH" VALUE="512"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="100000000.0"/>
           <PARAMETER NAME="ID_WIDTH" VALUE="1"/>
           <PARAMETER NAME="ADDR_WIDTH" VALUE="64"/>
@@ -1956,17 +1956,17 @@
             <PORTMAP LOGICAL="RREADY" PHYSICAL="m_axi_gmem1_RREADY"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="hls_inst_m_axi_gmem2" DATAWIDTH="32" NAME="m_axi_gmem2" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
+        <BUSINTERFACE BUSNAME="hls_inst_m_axi_gmem2" DATAWIDTH="512" NAME="m_axi_gmem2" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="16"/>
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="16"/>
           <PARAMETER NAME="MAX_READ_BURST_LENGTH" VALUE="16"/>
-          <PARAMETER NAME="MAX_WRITE_BURST_LENGTH" VALUE="16"/>
+          <PARAMETER NAME="MAX_WRITE_BURST_LENGTH" VALUE="32"/>
           <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
           <PARAMETER NAME="READ_WRITE_MODE" VALUE="WRITE_ONLY"/>
           <PARAMETER NAME="HAS_BURST" VALUE="0"/>
           <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
-          <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="DATA_WIDTH" VALUE="512"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="100000000.0"/>
           <PARAMETER NAME="ID_WIDTH" VALUE="1"/>
           <PARAMETER NAME="ADDR_WIDTH" VALUE="64"/>

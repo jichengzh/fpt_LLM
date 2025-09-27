@@ -28,26 +28,24 @@
 `define AUTOTB_TVIN_in0  "../tv/cdatafile/c.activation_accelerator.autotvin_in0.dat"
 `define AUTOTB_TVIN_in1  "../tv/cdatafile/c.activation_accelerator.autotvin_in1.dat"
 `define AUTOTB_TVIN_out_r  "../tv/cdatafile/c.activation_accelerator.autotvin_out_r.dat"
-`define AUTOTB_TVIN_stage  "../tv/cdatafile/c.activation_accelerator.autotvin_stage.dat"
 `define AUTOTB_TVIN_config_r  "../tv/cdatafile/c.activation_accelerator.autotvin_config_r.dat"
 `define AUTOTB_TVIN_gmem0_out_wrapc  "../tv/rtldatafile/rtl.activation_accelerator.autotvin_gmem0.dat"
 `define AUTOTB_TVIN_gmem1_out_wrapc  "../tv/rtldatafile/rtl.activation_accelerator.autotvin_gmem1.dat"
 `define AUTOTB_TVIN_in0_out_wrapc  "../tv/rtldatafile/rtl.activation_accelerator.autotvin_in0.dat"
 `define AUTOTB_TVIN_in1_out_wrapc  "../tv/rtldatafile/rtl.activation_accelerator.autotvin_in1.dat"
 `define AUTOTB_TVIN_out_r_out_wrapc  "../tv/rtldatafile/rtl.activation_accelerator.autotvin_out_r.dat"
-`define AUTOTB_TVIN_stage_out_wrapc  "../tv/rtldatafile/rtl.activation_accelerator.autotvin_stage.dat"
 `define AUTOTB_TVIN_config_r_out_wrapc  "../tv/rtldatafile/rtl.activation_accelerator.autotvin_config_r.dat"
 `define AUTOTB_TVOUT_gmem2  "../tv/cdatafile/c.activation_accelerator.autotvout_gmem2.dat"
 `define AUTOTB_TVOUT_gmem2_out_wrapc  "../tv/rtldatafile/rtl.activation_accelerator.autotvout_gmem2.dat"
 module `AUTOTB_TOP;
 
-parameter AUTOTB_TRANSACTION_NUM = 15;
+parameter AUTOTB_TRANSACTION_NUM = 7;
 parameter PROGRESS_TIMEOUT = 10000000;
-parameter LATENCY_ESTIMATION = -1;
+parameter LATENCY_ESTIMATION = 266349;
 parameter LENGTH_config_r = 1;
-parameter LENGTH_gmem0 = 32768;
-parameter LENGTH_gmem1 = 32768;
-parameter LENGTH_gmem2 = 32768;
+parameter LENGTH_gmem0 = 1024;
+parameter LENGTH_gmem1 = 1024;
+parameter LENGTH_gmem2 = 1024;
 parameter LENGTH_in0 = 1;
 parameter LENGTH_in1 = 1;
 parameter LENGTH_out_r = 1;
@@ -55,7 +53,7 @@ parameter LENGTH_stage = 1;
 
 task read_token;
     input integer fp;
-    output reg [191 : 0] token;
+    output reg [1047 : 0] token;
     integer ret;
     begin
         token = "";
@@ -115,8 +113,8 @@ wire [3 : 0] gmem0_AWREGION;
 wire [0 : 0] gmem0_AWUSER;
 wire  gmem0_WVALID;
 wire  gmem0_WREADY;
-wire [31 : 0] gmem0_WDATA;
-wire [3 : 0] gmem0_WSTRB;
+wire [511 : 0] gmem0_WDATA;
+wire [63 : 0] gmem0_WSTRB;
 wire  gmem0_WLAST;
 wire [0 : 0] gmem0_WID;
 wire [0 : 0] gmem0_WUSER;
@@ -135,7 +133,7 @@ wire [3 : 0] gmem0_ARREGION;
 wire [0 : 0] gmem0_ARUSER;
 wire  gmem0_RVALID;
 wire  gmem0_RREADY;
-wire [31 : 0] gmem0_RDATA;
+wire [511 : 0] gmem0_RDATA;
 wire  gmem0_RLAST;
 wire [0 : 0] gmem0_RID;
 wire [0 : 0] gmem0_RUSER;
@@ -160,8 +158,8 @@ wire [3 : 0] gmem1_AWREGION;
 wire [0 : 0] gmem1_AWUSER;
 wire  gmem1_WVALID;
 wire  gmem1_WREADY;
-wire [31 : 0] gmem1_WDATA;
-wire [3 : 0] gmem1_WSTRB;
+wire [511 : 0] gmem1_WDATA;
+wire [63 : 0] gmem1_WSTRB;
 wire  gmem1_WLAST;
 wire [0 : 0] gmem1_WID;
 wire [0 : 0] gmem1_WUSER;
@@ -180,7 +178,7 @@ wire [3 : 0] gmem1_ARREGION;
 wire [0 : 0] gmem1_ARUSER;
 wire  gmem1_RVALID;
 wire  gmem1_RREADY;
-wire [31 : 0] gmem1_RDATA;
+wire [511 : 0] gmem1_RDATA;
 wire  gmem1_RLAST;
 wire [0 : 0] gmem1_RID;
 wire [0 : 0] gmem1_RUSER;
@@ -205,8 +203,8 @@ wire [3 : 0] gmem2_AWREGION;
 wire [0 : 0] gmem2_AWUSER;
 wire  gmem2_WVALID;
 wire  gmem2_WREADY;
-wire [31 : 0] gmem2_WDATA;
-wire [3 : 0] gmem2_WSTRB;
+wire [511 : 0] gmem2_WDATA;
+wire [63 : 0] gmem2_WSTRB;
 wire  gmem2_WLAST;
 wire [0 : 0] gmem2_WID;
 wire [0 : 0] gmem2_WUSER;
@@ -225,7 +223,7 @@ wire [3 : 0] gmem2_ARREGION;
 wire [0 : 0] gmem2_ARUSER;
 wire  gmem2_RVALID;
 wire  gmem2_RREADY;
-wire [31 : 0] gmem2_RDATA;
+wire [511 : 0] gmem2_RDATA;
 wire  gmem2_RLAST;
 wire [0 : 0] gmem2_RID;
 wire [0 : 0] gmem2_RUSER;
@@ -762,9 +760,6 @@ reg [31:0] size_in1_backup;
 reg end_out_r;
 reg [31:0] size_out_r;
 reg [31:0] size_out_r_backup;
-reg end_stage;
-reg [31:0] size_stage;
-reg [31:0] size_stage_backup;
 reg end_config_r;
 reg [31:0] size_config_r;
 reg [31:0] size_config_r_backup;

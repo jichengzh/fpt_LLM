@@ -5,10 +5,16 @@ Multi-threading is on. Using 46 slave threads.
 WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/ip/xil_defaultlib/activation_accelerator_fmul_32ns_32ns_32_3_max_dsp_1_ip.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module activation_accelerator_fmul_32ns_32ns_32_3_max_dsp_1_ip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/ip/xil_defaultlib/activation_accelerator_fadd_32ns_32ns_32_4_no_dsp_1_ip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module activation_accelerator_fadd_32ns_32ns_32_4_no_dsp_1_ip
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/ip/xil_defaultlib/activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1_ip.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1_ip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/ip/xil_defaultlib/activation_accelerator_fcmp_32ns_32ns_1_2_no_dsp_1_ip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module activation_accelerator_fcmp_32ns_32ns_1_2_no_dsp_1_ip
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/ip/xil_defaultlib/activation_accelerator_fexp_32ns_32ns_32_8_full_dsp_1_ip.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module activation_accelerator_fexp_32ns_32ns_32_8_full_dsp_1_ip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/ip/xil_defaultlib/activation_accelerator_fsub_32ns_32ns_32_4_full_dsp_1_ip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module activation_accelerator_fsub_32ns_32ns_32_4_full_dsp_1_ip
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/ip/xil_defaultlib/activation_accelerator_fdiv_32ns_32ns_32_9_no_dsp_1_ip.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module activation_accelerator_fdiv_32ns_32ns_32_9_no_dsp_1_ip
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/ip/xil_defaultlib/activation_accelerator_faddfsub_32ns_32ns_32_4_full_dsp_1_ip.v" into library xil_defaultlib
@@ -17,16 +23,16 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_acceler
 INFO: [VRFC 10-311] analyzing module activation_accelerator_fsqrt_32ns_32ns_32_8_no_dsp_1_ip
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/glbl.v" into library work
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_185_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_185_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_316_6.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_316_6
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_292_5.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_292_5
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module activation_accelerator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_float_mask_safe_softmax_Pipeline_mask_softmax_loop_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module activation_accelerator_float_mask_safe_softmax_Pipeline_mask_softmax_loop_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_float_safe_softmax_Pipeline_softmax_loop_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module activation_accelerator_float_safe_softmax_Pipeline_softmax_loop_2
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_fmul_32ns_32ns_32_3_max_dsp_1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module activation_accelerator_fmul_32ns_32ns_32_3_max_dsp_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_activation_accelerator_Pipeline_silu_loop.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module activation_accelerator_activation_accelerator_Pipeline_silu_loop
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_gmem0_m_axi.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module activation_accelerator_gmem0_m_axi
 INFO: [VRFC 10-311] analyzing module activation_accelerator_gmem0_m_axi_load
@@ -38,34 +44,40 @@ INFO: [VRFC 10-311] analyzing module activation_accelerator_gmem0_m_axi_reg_slic
 INFO: [VRFC 10-311] analyzing module activation_accelerator_gmem0_m_axi_fifo
 INFO: [VRFC 10-311] analyzing module activation_accelerator_gmem0_m_axi_srl
 INFO: [VRFC 10-311] analyzing module activation_accelerator_gmem0_m_axi_mem
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_170_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_170_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_float_mask_safe_softmax_Pipeline_mask_softmax_loop_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module activation_accelerator_float_mask_safe_softmax_Pipeline_mask_softmax_loop_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_float_mask_safe_softmax.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module activation_accelerator_float_mask_safe_softmax
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_bf16_to_float.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module activation_accelerator_bf16_to_float
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_336_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_336_1
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/AESL_axi_master_gmem1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_axi_master_gmem1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_144_14.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_144_14
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_144_12.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_144_12
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_265_2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_265_2
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_262_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_262_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_175_2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_175_2
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_196_3.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_196_3
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_151_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_151_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_activation_accelerator_Pipeline_layer_loop_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module activation_accelerator_activation_accelerator_Pipeline_layer_loop_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_float_mask_safe_softmax_x_mask_RAM_S2P_BRAM_1R1W.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module activation_accelerator_float_mask_safe_softmax_x_mask_RAM_S2P_BRAM_1R1W
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_float_safe_softmax.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module activation_accelerator_float_safe_softmax
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_mux_325_16_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module activation_accelerator_mux_325_16_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_activation_accelerator_Pipeline_add_loop.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module activation_accelerator_activation_accelerator_Pipeline_add_loop
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_float_mask_safe_softmax_Pipeline_mask_softmax_loop_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module activation_accelerator_float_mask_safe_softmax_Pipeline_mask_softmax_loop_2
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_control_s_axi.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module activation_accelerator_control_s_axi
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_190_2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_190_2
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_283_4.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_283_4
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_144_13.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_144_13
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_387_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_387_3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_float_safe_softmax_Pipeline_softmax_loop_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module activation_accelerator_float_safe_softmax_Pipeline_softmax_loop_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_activation_accelerator_Pipeline_layer_loop_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module activation_accelerator_activation_accelerator_Pipeline_layer_loop_1
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/AESL_axi_slave_control.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_axi_slave_control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_activation_accelerator_Pipeline_layer_loop_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module activation_accelerator_activation_accelerator_Pipeline_layer_loop_2
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_gmem1_m_axi.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module activation_accelerator_gmem1_m_axi
 INFO: [VRFC 10-311] analyzing module activation_accelerator_gmem1_m_axi_load
@@ -79,18 +91,20 @@ INFO: [VRFC 10-311] analyzing module activation_accelerator_gmem1_m_axi_srl
 INFO: [VRFC 10-311] analyzing module activation_accelerator_gmem1_m_axi_mem
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_fsqrt_32ns_32ns_32_8_no_dsp_1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module activation_accelerator_fsqrt_32ns_32ns_32_8_no_dsp_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_144_11.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_144_11
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_faddfsub_32ns_32ns_32_4_full_dsp_1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module activation_accelerator_faddfsub_32ns_32ns_32_4_full_dsp_1
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_fexp_32ns_32ns_32_8_full_dsp_1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module activation_accelerator_fexp_32ns_32ns_32_8_full_dsp_1
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module activation_accelerator_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_float_mask_safe_softmax_Pipeline_mask_softmax_loop_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module activation_accelerator_float_mask_safe_softmax_Pipeline_mask_softmax_loop_3
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/AESL_axi_master_gmem2.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_axi_master_gmem2
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_144_15.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_144_15
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_fadd_32ns_32ns_32_4_no_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module activation_accelerator_fadd_32ns_32ns_32_4_no_dsp_1
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator.autotb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module apatb_activation_accelerator_top
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_fdiv_32ns_32ns_32_9_no_dsp_1.v" into library xil_defaultlib
@@ -106,24 +120,24 @@ INFO: [VRFC 10-311] analyzing module activation_accelerator_gmem2_m_axi_reg_slic
 INFO: [VRFC 10-311] analyzing module activation_accelerator_gmem2_m_axi_fifo
 INFO: [VRFC 10-311] analyzing module activation_accelerator_gmem2_m_axi_srl
 INFO: [VRFC 10-311] analyzing module activation_accelerator_gmem2_m_axi_mem
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_144_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_144_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_205_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_205_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_fcmp_32ns_32ns_1_2_no_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module activation_accelerator_fcmp_32ns_32ns_1_2_no_dsp_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_xt_RAM_S2P_BRAM_1R1W.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module activation_accelerator_xt_RAM_S2P_BRAM_1R1W
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_float_safe_softmax_Pipeline_softmax_loop_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module activation_accelerator_float_safe_softmax_Pipeline_softmax_loop_0
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/AESL_axi_master_gmem0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_axi_master_gmem0
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_buf0_RAM_AUTO_1R1W.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module activation_accelerator_buf0_RAM_AUTO_1R1W
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_bf16add.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module activation_accelerator_bf16add
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_159_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_159_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_activation_accelerator_Pipeline_rms_loop_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module activation_accelerator_activation_accelerator_Pipeline_rms_loop_0
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_275_3.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_275_3
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_x_RAM_AUTO_1R1W.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module activation_accelerator_x_RAM_AUTO_1R1W
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_activation_accelerator_Pipeline_rms_loop_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module activation_accelerator_activation_accelerator_Pipeline_rms_loop_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_fsub_32ns_32ns_32_4_full_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module activation_accelerator_fsub_32ns_32ns_32_4_full_dsp_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator_activation_accelerator_Pipeline_sigmoid_loop.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module activation_accelerator_activation_accelerator_Pipeline_sigmoid_loop
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module dataflow_monitor
 Starting static elaboration
@@ -153,18 +167,12 @@ Compiling package ieee.vital_timing
 Compiling package ieee.vital_primitives
 Compiling package unisim.vpkg
 Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
-Compiling module xil_defaultlib.activation_accelerator_buf0_RAM_...
-Compiling module xil_defaultlib.activation_accelerator_x_RAM_AUT...
+Compiling module xil_defaultlib.activation_accelerator_activatio...
+Compiling module xil_defaultlib.activation_accelerator_xt_RAM_S2...
 Compiling module xil_defaultlib.activation_accelerator_flow_cont...
 Compiling module xil_defaultlib.activation_accelerator_activatio...
-Compiling module xil_defaultlib.activation_accelerator_activatio...
-Compiling module xil_defaultlib.activation_accelerator_activatio...
-Compiling module xil_defaultlib.activation_accelerator_activatio...
-Compiling module xil_defaultlib.activation_accelerator_activatio...
-Compiling module xil_defaultlib.activation_accelerator_activatio...
-Compiling module xil_defaultlib.activation_accelerator_activatio...
-Compiling module xil_defaultlib.activation_accelerator_activatio...
-Compiling module xil_defaultlib.activation_accelerator_activatio...
+Compiling module xil_defaultlib.activation_accelerator_mux_325_1...
+Compiling module xil_defaultlib.activation_accelerator_bf16_to_f...
 Compiling module xil_defaultlib.activation_accelerator_activatio...
 Compiling module xil_defaultlib.activation_accelerator_activatio...
 Compiling module xil_defaultlib.activation_accelerator_activatio...
@@ -402,9 +410,74 @@ Compiling module xil_defaultlib.activation_accelerator_fexp_32ns...
 Compiling module xil_defaultlib.activation_accelerator_fexp_32ns...
 Compiling module xil_defaultlib.activation_accelerator_activatio...
 Compiling module xil_defaultlib.activation_accelerator_activatio...
-Compiling module xil_defaultlib.activation_accelerator_activatio...
-Compiling module xil_defaultlib.activation_accelerator_bf16add
-Compiling module xil_defaultlib.activation_accelerator_activatio...
+Compiling module xil_defaultlib.activation_accelerator_float_mas...
+Compiling module xil_defaultlib.activation_accelerator_float_mas...
+Compiling module xil_defaultlib.activation_accelerator_float_mas...
+Compiling architecture rtl of entity floating_point_v7_1_15.flt_add [\flt_add(c_xdevicefamily="zynqup...]
+Compiling architecture xilinx of entity floating_point_v7_1_15.floating_point_v7_1_15_viv [\floating_point_v7_1_15_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_15.floating_point_v7_1_15 [\floating_point_v7_1_15(c_xdevic...]
+Compiling module xil_defaultlib.activation_accelerator_fsub_32ns...
+Compiling module xil_defaultlib.activation_accelerator_fsub_32ns...
+Compiling module xil_defaultlib.activation_accelerator_float_mas...
+Compiling module xil_defaultlib.activation_accelerator_float_mas...
+Compiling architecture synth of entity floating_point_v7_1_15.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_15.compare_ne_im [\compare_ne_im(c_xdevicefamily="...]
+Compiling architecture synth of entity floating_point_v7_1_15.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=11,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_15.compare_eq [\compare_eq(c_xdevicefamily="zyn...]
+Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_15.compare_gt [\compare_gt(c_xdevicefamily="zyn...]
+Compiling architecture rtl of entity floating_point_v7_1_15.fp_cmp [\fp_cmp(c_xdevicefamily="zynqupl...]
+Compiling architecture xilinx of entity floating_point_v7_1_15.floating_point_v7_1_15_viv [\floating_point_v7_1_15_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_15.floating_point_v7_1_15 [\floating_point_v7_1_15(c_xdevic...]
+Compiling module xil_defaultlib.activation_accelerator_fcmp_32ns...
+Compiling module xil_defaultlib.activation_accelerator_fcmp_32ns...
+Compiling module xil_defaultlib.activation_accelerator_float_mas...
+Compiling module xil_defaultlib.activation_accelerator_float_saf...
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=8,length=0,fast_inp...]
+Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_15.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_15.zero_det_sel [\zero_det_sel(c_xdevicefamily="z...]
+Compiling architecture rtl of entity floating_point_v7_1_15.shift_msb_first [\shift_msb_first(a_width=25,resu...]
+Compiling architecture rtl of entity floating_point_v7_1_15.alignment [\alignment(c_xdevicefamily="zynq...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=13)\]
+Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=14,fast_input=true)...]
+Compiling architecture rtl of entity floating_point_v7_1_15.addsub_logic [\addsub_logic(c_xdevicefamily="z...]
+Compiling architecture rtl of entity floating_point_v7_1_15.addsub [\addsub(c_xdevicefamily="zynqupl...]
+Compiling architecture rtl of entity floating_point_v7_1_15.align_add [\align_add(c_xdevicefamily="zynq...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=6,length=0,fast_inp...]
+Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture rtl of entity floating_point_v7_1_15.mux4 [\mux4(c_xdevicefamily="zynquplus...]
+Compiling architecture rtl of entity floating_point_v7_1_15.mux4 [\mux4(c_xdevicefamily="zynquplus...]
+Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture rtl of entity floating_point_v7_1_15.lead_zero_encode [\lead_zero_encode(c_xdevicefamil...]
+Compiling architecture rtl of entity floating_point_v7_1_15.shift_msb_first [\shift_msb_first(a_width=27,resu...]
+Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture rtl of entity floating_point_v7_1_15.renorm_and_round_logic [\renorm_and_round_logic(c_xdevic...]
+Compiling architecture rtl of entity floating_point_v7_1_15.norm_and_round_logic [\norm_and_round_logic(c_xdevicef...]
+Compiling architecture synth of entity floating_point_v7_1_15.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_15.special_detect [\special_detect(c_xdevicefamily=...]
+Compiling architecture synth of entity floating_point_v7_1_15.compare [\compare(c_xdevicefamily="zynqup...]
+Compiling architecture rtl of entity floating_point_v7_1_15.flt_add_exp [\flt_add_exp(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_15.flt_dec_op [\flt_dec_op(c_xdevicefamily="zyn...]
+Compiling architecture rtl of entity floating_point_v7_1_15.flt_add_logic [\flt_add_logic(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_15.flt_add [\flt_add(c_xdevicefamily="zynqup...]
+Compiling architecture xilinx of entity floating_point_v7_1_15.floating_point_v7_1_15_viv [\floating_point_v7_1_15_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_15.floating_point_v7_1_15 [\floating_point_v7_1_15(c_xdevic...]
+Compiling module xil_defaultlib.activation_accelerator_fadd_32ns...
+Compiling module xil_defaultlib.activation_accelerator_fadd_32ns...
+Compiling module xil_defaultlib.activation_accelerator_float_saf...
+Compiling module xil_defaultlib.activation_accelerator_float_saf...
+Compiling module xil_defaultlib.activation_accelerator_float_saf...
 Compiling module xil_defaultlib.activation_accelerator_activatio...
 Compiling module xil_defaultlib.activation_accelerator_activatio...
 Compiling module xil_defaultlib.activation_accelerator_control_s...
@@ -434,10 +507,6 @@ Compiling module xil_defaultlib.activation_accelerator_gmem0_m_a...
 Compiling module xil_defaultlib.activation_accelerator_gmem0_m_a...
 Compiling module xil_defaultlib.activation_accelerator_gmem0_m_a...
 Compiling module xil_defaultlib.activation_accelerator_gmem0_m_a...
-Compiling module xil_defaultlib.activation_accelerator_gmem0_m_a...
-Compiling module xil_defaultlib.activation_accelerator_gmem0_m_a...
-Compiling module xil_defaultlib.activation_accelerator_gmem0_m_a...
-Compiling module xil_defaultlib.activation_accelerator_gmem0_m_a...
 Compiling module xil_defaultlib.activation_accelerator_gmem1_m_a...
 Compiling module xil_defaultlib.activation_accelerator_gmem1_m_a...
 Compiling module xil_defaultlib.activation_accelerator_gmem1_m_a...
@@ -464,14 +533,6 @@ Compiling module xil_defaultlib.activation_accelerator_gmem1_m_a...
 Compiling module xil_defaultlib.activation_accelerator_gmem1_m_a...
 Compiling module xil_defaultlib.activation_accelerator_gmem1_m_a...
 Compiling module xil_defaultlib.activation_accelerator_gmem1_m_a...
-Compiling module xil_defaultlib.activation_accelerator_gmem1_m_a...
-Compiling module xil_defaultlib.activation_accelerator_gmem1_m_a...
-Compiling module xil_defaultlib.activation_accelerator_gmem1_m_a...
-Compiling module xil_defaultlib.activation_accelerator_gmem1_m_a...
-Compiling module xil_defaultlib.activation_accelerator_gmem2_m_a...
-Compiling module xil_defaultlib.activation_accelerator_gmem2_m_a...
-Compiling module xil_defaultlib.activation_accelerator_gmem2_m_a...
-Compiling module xil_defaultlib.activation_accelerator_gmem2_m_a...
 Compiling module xil_defaultlib.activation_accelerator_gmem2_m_a...
 Compiling module xil_defaultlib.activation_accelerator_gmem2_m_a...
 Compiling module xil_defaultlib.activation_accelerator_gmem2_m_a...
@@ -509,12 +570,7 @@ Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,a
 Compiling architecture rtl of entity floating_point_v7_1_15.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=24,b_wi...]
 Compiling architecture struct of entity floating_point_v7_1_15.fix_mult_dsp48e1_sgl [\fix_mult_dsp48e1_sgl(registers=...]
 Compiling architecture rtl of entity floating_point_v7_1_15.fix_mult [\fix_mult(c_xdevicefamily="zynqu...]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=8,length=0,fast_inp...]
 Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="zy...]
-Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="zy...]
-Compiling architecture synth of entity floating_point_v7_1_15.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
-Compiling architecture rtl of entity floating_point_v7_1_15.special_detect [\special_detect(c_xdevicefamily=...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
 Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=3,length=0,fast_inp...]
 Compiling architecture rtl of entity floating_point_v7_1_15.flt_mult_exp [\flt_mult_exp(c_xdevicefamily="z...]
@@ -531,8 +587,6 @@ Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\x
 Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=5,length=0,fast_inp...]
 Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="zy...]
 Compiling architecture synth of entity floating_point_v7_1_15.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=6,length=0,fast_inp...]
 Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="zy...]
 Compiling architecture synth of entity floating_point_v7_1_15.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
@@ -565,8 +619,6 @@ Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\x
 Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=13,length=0,fast_in...]
 Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="zy...]
 Compiling architecture synth of entity floating_point_v7_1_15.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=14,fast_input=true)...]
 Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="zy...]
 Compiling architecture synth of entity floating_point_v7_1_15.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
@@ -659,8 +711,7 @@ Compiling module xil_defaultlib.AESL_axi_master_gmem1
 Compiling module xil_defaultlib.AESL_axi_master_gmem2
 Compiling module xil_defaultlib.AESL_axi_slave_control
 Compiling module xil_defaultlib.nodf_module_intf
-Compiling module xil_defaultlib.seq_loop_intf(FSM_WIDTH=5)
-Compiling module xil_defaultlib.seq_loop_intf
+Compiling module xil_defaultlib.seq_loop_intf(FSM_WIDTH=66)
 Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
 Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=3)
 Compiling module xil_defaultlib.dataflow_monitor_1

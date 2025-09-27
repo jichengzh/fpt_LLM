@@ -42,7 +42,6 @@ module AESL_axi_slave_control (
 `define TV_IN_in0 "../tv/cdatafile/c.activation_accelerator.autotvin_in0.dat"
 `define TV_IN_in1 "../tv/cdatafile/c.activation_accelerator.autotvin_in1.dat"
 `define TV_IN_out_r "../tv/cdatafile/c.activation_accelerator.autotvin_out_r.dat"
-`define TV_IN_stage "../tv/cdatafile/c.activation_accelerator.autotvin_stage.dat"
 `define TV_IN_config_r "../tv/cdatafile/c.activation_accelerator.autotvin_config_r.dat"
 parameter ADDR_WIDTH = 7;
 parameter DATA_WIDTH = 32;
@@ -55,9 +54,6 @@ parameter in1_c_bitwidth = 64;
 parameter out_r_DEPTH = 1;
 reg [31 : 0] out_r_OPERATE_DEPTH = 0;
 parameter out_r_c_bitwidth = 64;
-parameter stage_DEPTH = 1;
-reg [31 : 0] stage_OPERATE_DEPTH = 0;
-parameter stage_c_bitwidth = 32;
 parameter config_r_DEPTH = 1;
 reg [31 : 0] config_r_OPERATE_DEPTH = 0;
 parameter config_r_c_bitwidth = 32;
@@ -120,9 +116,6 @@ reg in1_write_data_finish;
 reg [out_r_c_bitwidth - 1 : 0] mem_out_r [out_r_DEPTH - 1 : 0] = '{default : 'h0};
 reg [DATA_WIDTH-1 : 0] image_mem_out_r [ (out_r_c_bitwidth+DATA_WIDTH-1)/DATA_WIDTH * out_r_DEPTH -1 : 0] = '{default : 'hz};
 reg out_r_write_data_finish;
-reg [DATA_WIDTH - 1 : 0] mem_stage [stage_DEPTH - 1 : 0] = '{default : 'h0};
-reg [DATA_WIDTH-1 : 0] image_mem_stage [ (stage_c_bitwidth+DATA_WIDTH-1)/DATA_WIDTH * stage_DEPTH -1 : 0] = '{default : 'hz};
-reg stage_write_data_finish;
 reg [DATA_WIDTH - 1 : 0] mem_config_r [config_r_DEPTH - 1 : 0] = '{default : 'h0};
 reg [DATA_WIDTH-1 : 0] image_mem_config_r [ (config_r_c_bitwidth+DATA_WIDTH-1)/DATA_WIDTH * config_r_DEPTH -1 : 0] = '{default : 'hz};
 reg config_r_write_data_finish;
@@ -139,7 +132,6 @@ reg process_2_finish = 0;
 reg process_3_finish = 0;
 reg process_4_finish = 0;
 reg process_5_finish = 0;
-reg process_6_finish = 0;
 //write in0 reg
 reg [31 : 0] write_in0_count = 0;
 reg write_in0_run_flag = 0;
@@ -152,10 +144,6 @@ reg write_one_in1_data_done = 0;
 reg [31 : 0] write_out_r_count = 0;
 reg write_out_r_run_flag = 0;
 reg write_one_out_r_data_done = 0;
-//write stage reg
-reg [31 : 0] write_stage_count = 0;
-reg write_stage_run_flag = 0;
-reg write_one_stage_data_done = 0;
 //write config_r reg
 reg [31 : 0] write_config_r_count = 0;
 reg write_config_r_run_flag = 0;
@@ -182,13 +170,13 @@ assign TRAN_control_write_start_finish = AESL_write_start_finish;
 assign TRAN_control_done_out = AESL_done_index_reg;
 assign TRAN_control_ready_out = AESL_ready_out_index_reg;
 assign TRAN_control_idle_out = AESL_idle_index_reg;
-assign TRAN_control_write_data_finish = 1 & in0_write_data_finish & in1_write_data_finish & out_r_write_data_finish & stage_write_data_finish & config_r_write_data_finish;
+assign TRAN_control_write_data_finish = 1 & in0_write_data_finish & in1_write_data_finish & out_r_write_data_finish & config_r_write_data_finish;
 always @(TRAN_control_ready_in or ready_initial) 
 begin
     AESL_ready_reg <= TRAN_control_ready_in | ready_initial;
 end
 
-always @(reset or process_0_finish or process_1_finish or process_2_finish or process_3_finish or process_4_finish or process_5_finish or process_6_finish ) begin
+always @(reset or process_0_finish or process_1_finish or process_2_finish or process_3_finish or process_4_finish or process_5_finish ) begin
     if (reset == 0) begin
         ongoing_process_number <= 0;
     end
@@ -208,9 +196,6 @@ always @(reset or process_0_finish or process_1_finish or process_2_finish or pr
             ongoing_process_number <= ongoing_process_number + 1;
     end
     else if (ongoing_process_number == 5 && process_5_finish == 1) begin
-            ongoing_process_number <= ongoing_process_number + 1;
-    end
-    else if (ongoing_process_number == 6 && process_6_finish == 1) begin
             ongoing_process_number <= 0;
     end
 end
@@ -609,82 +594,6 @@ initial begin : write_out_r
 end
 always @(reset or posedge clk) begin
     if (reset == 0) begin
-        stage_write_data_finish <= 0;
-        write_stage_run_flag <= 0; 
-        write_stage_count = 0;
-        count_operate_depth_by_bitwidth_and_depth (stage_c_bitwidth, stage_DEPTH, stage_OPERATE_DEPTH);
-    end
-    else begin
-        if (TRAN_control_start_in === 1) begin
-            stage_write_data_finish <= 0;
-        end
-        if (AESL_ready_reg === 1) begin
-            write_stage_run_flag <= 1; 
-            write_stage_count = 0;
-        end
-        if (write_one_stage_data_done === 1) begin
-            write_stage_count = write_stage_count + 1;
-            if (write_stage_count == stage_OPERATE_DEPTH) begin
-                write_stage_run_flag <= 0; 
-                stage_write_data_finish <= 1;
-            end
-        end
-    end
-end
-
-initial begin : write_stage
-    integer write_stage_resp;
-    integer process_num ;
-    integer get_ack;
-    integer four_byte_num;
-    integer c_bitwidth;
-    integer i;
-    integer j;
-    reg [31 : 0] stage_data_tmp_reg;
-    wait(reset === 1);
-    @(posedge clk);
-    c_bitwidth = stage_c_bitwidth;
-    process_num = 4;
-    count_c_data_four_byte_num_by_bitwidth (c_bitwidth , four_byte_num) ;
-    while (1) begin
-        process_4_finish <= 0;
-
-        if (ongoing_process_number === process_num && process_busy === 0 ) begin
-            get_ack = 1;
-            if (write_stage_run_flag === 1 && get_ack === 1) begin
-                process_busy = 1;
-                //write stage data 
-                for (i = 0 ; i < four_byte_num ; i = i+1) begin
-                    if (stage_c_bitwidth < 32) begin
-                        stage_data_tmp_reg = mem_stage[write_stage_count];
-                    end
-                    else begin
-                        for (j=0 ; j<32 ; j = j + 1) begin
-                            if (i*32 + j < stage_c_bitwidth) begin
-                                stage_data_tmp_reg[j] = mem_stage[write_stage_count][i*32 + j];
-                            end
-                            else begin
-                                stage_data_tmp_reg[j] = 0;
-                            end
-                        end
-                    end
-                    if(image_mem_stage[write_stage_count * four_byte_num  + i]!==stage_data_tmp_reg) begin
-                    write (stage_data_in_addr + write_stage_count * four_byte_num * 4 + i * 4, stage_data_tmp_reg, write_stage_resp);
-                    image_mem_stage[write_stage_count * four_byte_num + i]=stage_data_tmp_reg;
-                    end
-                end
-                process_busy = 0;
-                write_one_stage_data_done <= 1;
-                @(posedge clk);
-                write_one_stage_data_done <= 0;
-            end   
-            process_4_finish <= 1;
-        end
-        @(posedge clk);
-    end    
-end
-always @(reset or posedge clk) begin
-    if (reset == 0) begin
         config_r_write_data_finish <= 0;
         write_config_r_run_flag <= 0; 
         write_config_r_count = 0;
@@ -720,10 +629,10 @@ initial begin : write_config_r
     wait(reset === 1);
     @(posedge clk);
     c_bitwidth = config_r_c_bitwidth;
-    process_num = 5;
+    process_num = 4;
     count_c_data_four_byte_num_by_bitwidth (c_bitwidth , four_byte_num) ;
     while (1) begin
-        process_5_finish <= 0;
+        process_4_finish <= 0;
 
         if (ongoing_process_number === process_num && process_busy === 0 ) begin
             get_ack = 1;
@@ -754,7 +663,7 @@ initial begin : write_config_r
                 @(posedge clk);
                 write_one_config_r_data_done <= 0;
             end   
-            process_5_finish <= 1;
+            process_4_finish <= 1;
         end
         @(posedge clk);
     end    
@@ -766,7 +675,7 @@ always @(reset or posedge clk) begin
         write_start_count <= 0;
     end
     else begin
-        if (write_start_count >= 15) begin
+        if (write_start_count >= 7) begin
             write_start_run_flag <= 0; 
         end
         else if (TRAN_control_write_start_in === 1) begin
@@ -785,9 +694,9 @@ initial begin : write_start
     integer write_start_resp;
     wait(reset === 1);
     @(posedge clk);
-    process_num = 6;
+    process_num = 5;
     while (1) begin
-        process_6_finish = 0;
+        process_5_finish = 0;
         if (ongoing_process_number === process_num && process_busy === 0 ) begin
             if (write_start_run_flag === 1) begin
                 process_busy = 1;
@@ -799,7 +708,7 @@ initial begin : write_start
                 @(posedge clk);
                 AESL_write_start_finish <= 0;
             end
-            process_6_finish <= 1;
+            process_5_finish <= 1;
         end 
         @(posedge clk);
     end
@@ -1179,139 +1088,6 @@ initial begin : read_out_r_file_process
 end 
  
 task write_binary_out_r;
-    input integer fp;
-    input reg[64-1:0] in;
-    input integer in_bw;
-    reg [63:0] tmp_long;
-    reg[64-1:0] local_in;
-    integer char_num;
-    integer long_num;
-    integer i;
-    integer j;
-    begin
-        long_num = (in_bw + 63) / 64;
-        char_num = ((in_bw - 1) % 64 + 7) / 8;
-        for(i=long_num;i>0;i=i-1) begin
-             local_in = in;
-             tmp_long = local_in >> ((i-1)*64);
-             for(j=0;j<64;j=j+1)
-                 if (tmp_long[j] === 1'bx)
-                     tmp_long[j] = 1'b0;
-             if (i == long_num) begin
-                 case(char_num)
-                     1: $fwrite(fp,"%c",tmp_long[7:0]);
-                     2: $fwrite(fp,"%c%c",tmp_long[15:8],tmp_long[7:0]);
-                     3: $fwrite(fp,"%c%c%c",tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
-                     4: $fwrite(fp,"%c%c%c%c",tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
-                     5: $fwrite(fp,"%c%c%c%c%c",tmp_long[39:32],tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
-                     6: $fwrite(fp,"%c%c%c%c%c%c",tmp_long[47:40],tmp_long[39:32],tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
-                     7: $fwrite(fp,"%c%c%c%c%c%c%c",tmp_long[55:48],tmp_long[47:40],tmp_long[39:32],tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
-                     8: $fwrite(fp,"%c%c%c%c%c%c%c%c",tmp_long[63:56],tmp_long[55:48],tmp_long[47:40],tmp_long[39:32],tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
-                     default: ;
-                 endcase
-             end
-             else begin
-                 $fwrite(fp,"%c%c%c%c%c%c%c%c",tmp_long[63:56],tmp_long[55:48],tmp_long[47:40],tmp_long[39:32],tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
-             end
-        end
-    end
-endtask;
-//------------------------Read file------------------------ 
- 
-// Read data from file 
-initial begin : read_stage_file_process 
-  integer fp; 
-  integer ret; 
-  integer factor; 
-  reg [127 : 0] token; 
-  reg [127 : 0] token_tmp; 
-  //reg [stage_c_bitwidth - 1 : 0] token_tmp; 
-  reg [DATA_WIDTH - 1 : 0] tmp_cache_mem; 
-  reg [ 8*5 : 1] str;
-    reg [63:0] trans_depth;
-  integer transaction_idx; 
-  integer i; 
-  transaction_idx = 0; 
-  tmp_cache_mem [DATA_WIDTH - 1 : 0] = 0;
-  count_seperate_factor_by_bitwidth (stage_c_bitwidth , factor);
-  fp = $fopen(`TV_IN_stage ,"r"); 
-  if(fp == 0) begin                               // Failed to open file 
-      $display("Failed to open file \"%s\"!", `TV_IN_stage); 
-      $finish; 
-  end 
-  read_token(fp, token); 
-  if (token != "[[[runtime]]]") begin             // Illegal format 
-      $display("ERROR: Simulation using HLS TB failed.");
-      $finish; 
-  end 
-  read_token(fp, token); 
-  while (token != "[[[/runtime]]]") begin 
-      if (token != "[[transaction]]") begin 
-          $display("ERROR: Simulation using HLS TB failed.");
-          $finish; 
-      end 
-      read_token(fp, token);                        // skip transaction number 
-      @(posedge clk);
-      # 0.2;
-      while(AESL_ready_reg !== 1) begin
-          @(posedge clk); 
-          # 0.2;
-      end
-      for(i = 0; i < stage_DEPTH; i = i + 1) begin 
-          read_token(fp, token); 
-          ret = $sscanf(token, "0x%x", token_tmp); 
-          if (factor == 4) begin
-              if (i%factor == 0) begin
-                  tmp_cache_mem [7 : 0] = token_tmp;
-              end
-              if (i%factor == 1) begin
-                  tmp_cache_mem [15 : 8] = token_tmp;
-              end
-              if (i%factor == 2) begin
-                  tmp_cache_mem [23 : 16] = token_tmp;
-              end
-              if (i%factor == 3) begin
-                  tmp_cache_mem [31 : 24] = token_tmp;
-                  mem_stage [i/factor] = tmp_cache_mem;
-                  tmp_cache_mem [DATA_WIDTH - 1 : 0] = 0;
-              end
-          end
-          if (factor == 2) begin
-              if (i%factor == 0) begin
-                  tmp_cache_mem [15 : 0] = token_tmp;
-              end
-              if (i%factor == 1) begin
-                  tmp_cache_mem [31 : 16] = token_tmp;
-                  mem_stage [i/factor] = tmp_cache_mem;
-                  tmp_cache_mem [DATA_WIDTH - 1: 0] = 0;
-              end
-          end
-          if (factor == 1) begin
-              mem_stage [i] = token_tmp;
-          end
-      end 
-      if (factor == 4) begin
-          if (i%factor != 0) begin
-              mem_stage [i/factor] = tmp_cache_mem;
-          end
-      end
-      if (factor == 2) begin
-          if (i%factor != 0) begin
-              mem_stage [i/factor] = tmp_cache_mem;
-          end
-      end 
-      read_token(fp, token); 
-      if(token != "[[/transaction]]") begin 
-          $display("ERROR: Simulation using HLS TB failed.");
-          $finish; 
-      end 
-      read_token(fp, token); 
-      transaction_idx = transaction_idx + 1; 
-  end 
-  $fclose(fp); 
-end 
- 
-task write_binary_stage;
     input integer fp;
     input reg[64-1:0] in;
     input integer in_bw;

@@ -10,6 +10,39 @@
 #include <unistd.h>
 #include <string>
 
+#include <ap_int.h>
+
+// === 与核保持一致的基本常量（建议与 .h 中一致）===
+// static constexpr int DATA_SIZE = 32 * 1024;  // 你已有定义的话可去掉这行
+static constexpr int VEC       = 32;         // 512b / 16b
+static constexpr int NW        = DATA_SIZE / VEC; // 1024
+
+// === 声明 512b 顶层核的原型（与实现保持一致：int 或 int32 统一）===
+extern void activation_accelerator(ap_uint<512>* in0,
+                                   ap_uint<512>* in1,
+                                   ap_uint<512>* out,
+                                   int stage,
+                                   int config);
+
+// === 16b<->512b 打/解包工具 ===
+static inline void pack16_to_512(const uint16* src16, ap_uint<512>* dst512, int words) {
+    for (int w = 0; w < words; ++w) {
+        ap_uint<512> acc = 0;
+        for (int v = 0; v < VEC; ++v) {
+            acc.range(16*(v+1)-1, 16*v) = (ap_uint<16>)src16[w*VEC + v];
+        }
+        dst512[w] = acc;
+    }
+}
+static inline void unpack512_to_16(const ap_uint<512>* src512, uint16* dst16, int words) {
+    for (int w = 0; w < words; ++w) {
+        ap_uint<512> acc = src512[w];
+        for (int v = 0; v < VEC; ++v) {
+            dst16[w*VEC + v] = (uint16)acc.range(16*(v+1)-1, 16*v);
+        }
+    }
+}
+
 // Data loading function
 bool load_binary_data(const std::string& filename, uint16* data) {
     std::ifstream file(filename, std::ios::binary);
@@ -79,14 +112,26 @@ bool run_test(int config, uint16* in0, uint16* in1, uint16* out, uint16* golden_
     // Select input1 based on config (only config 2 uses mask)
     uint16* current_in1 = (config == 2) ? mask_data : in1;
 
+    // 创建 512b 临时缓冲
+    static ap_uint<512> in0_512[NW];
+    static ap_uint<512> in1_512[NW];
+    static ap_uint<512> out_512[NW];
+
+    // 打包 16b -> 512b 将32*1024变为1024个512bit字
+    pack16_to_512(in0,        in0_512, NW);
+    pack16_to_512(current_in1,in1_512, NW);
+
     // Stage 1: Compute
     int32 current_stage = STAGE_COMPUTE;
-    activation_accelerator(in0, current_in1, out, current_stage, config);
+    // activation_accelerator(in0, current_in1, out, current_stage, config);
+    activation_accelerator(in0_512, in1_512, out_512, current_stage, config);
 
-    // Stage 2: Store
-    current_stage = STAGE_STORE;
-    activation_accelerator(in0, current_in1, out, current_stage, config);
+    // 已经修改核函数逻辑不再使用stage
+    // current_stage = STAGE_STORE;
+    // activation_accelerator(in0_512, in1_512, out_512, current_stage, config);
 
+    // 解包
+    unpack512_to_16(out_512, out, NW);
     // Compare results
     int errors = compare_results(out, golden_data_ptr, in0, current_in1, config);
 
@@ -118,6 +163,10 @@ int main() {
     uint16* out = new uint16[DATA_SIZE];
     uint16* mask = new uint16[DATA_SIZE];
     uint16* golden_data[7];
+    static ap_uint<512> in0_512[NW];
+    static ap_uint<512> in1_512[NW];
+    static ap_uint<512> out_512[NW];
+
     for (int i = 0; i < 7; ++i) golden_data[i] = new uint16[DATA_SIZE];
 
     // Load test data
@@ -155,37 +204,63 @@ int main() {
     }
 
     // Stage 0: Data transfer
+    // int32 stage = STAGE_LOAD;
+    // std::cout << "Set activation_accelerator.stage = 0" << std::endl;
+    // activation_accelerator(in0, in1, out, stage, 0);
+    // std::cout << "Data transfer complete" << std::endl;
+    // 将加载数据改为打包数据
+    
+    // if(stage == 0) { // Stage 0: Load data from PS to PL
+    //     for(int i = 0; i < 32*1024; i++) {
+    //         buf0[i] = in0[i];
+    //     }
+    //     for(int i = 0; i < 32*1024; i++) {
+    //         buf1[i] = in1[i];
+    //     }
+    // }
     int32 stage = STAGE_LOAD;
-    std::cout << "Set activation_accelerator.stage = 0" << std::endl;
-    activation_accelerator(in0, in1, out, stage, 0);
-    std::cout << "Data transfer complete" << std::endl;
+    // 打包一次后，后续循环复用 in0_512/in1_512；config==2 时再临时把 in1_512 换成 mask
+    pack16_to_512(in0, in0_512, NW);
+    pack16_to_512(in1, in1_512, NW);
+    std::cout << "Packed inputs to 512b buffers (stage 0 prepared)" << std::endl;
 
     // Main loop for all configs
     double total_time = 0.0;
     for (int config = 0; config < 7; ++config) {
-        // Stage 1: Compute
+        // 若是 mask softmax，临时用 mask 打包覆盖 in1_512
+        if (config == 2) {
+            pack16_to_512(mask, in1_512, NW);
+        } else {
+            // 确保 in1_512 是正常 in1（如果上一轮是 mask，记得恢复）
+            pack16_to_512(in1, in1_512, NW);
+        }
+
         stage = STAGE_COMPUTE;
         std::cout << "\n--- Testing Config " << config << " ---" << std::endl;
         auto t1 = std::chrono::high_resolution_clock::now();
-        activation_accelerator(in0, in1, out, stage, config);
+
+        // 调 512b 核
+        activation_accelerator(in0_512, in1_512, out_512, stage, config);
+
         auto t2 = std::chrono::high_resolution_clock::now();
         double elapsed = std::chrono::duration<double, std::milli>(t2 - t1).count();
         total_time += elapsed;
         std::cout << "Config " << config << " compute time: " << elapsed << " ms" << std::endl;
 
-        // Stage 2: Store
-        stage = STAGE_STORE;
-        activation_accelerator(in0, in1, out, stage, config);
+        // 若你的核需要 STAGE_STORE 再写出，取消注释下面两行：
+        // stage = STAGE_STORE;
+        // activation_accelerator(in0_512, in1_512, out_512, stage, config);
+
+        // 解包输出保存/比对
+        unpack512_to_16(out_512, out, NW);
         std::cout << "Output results saved to: " << data_path << "hls_output_config_" << config << ".bin" << std::endl;
         save_binary_data(data_path + "hls_output_config_" + std::to_string(config) + ".bin", out);
 
-        // Compare results
-        int errors = compare_results(out, golden_data[config], in0, in1, config);
-        if (errors == 0) {
-            std::cout << "Config " << config << " test passed!" << std::endl;
-        } else {
-            std::cout << "Config " << config << " test failed with " << errors << " errors" << std::endl;
-        }
+        int errors = compare_results(out, golden_data[config], in0,
+                                    (config==2 ? mask : in1),
+                                    config);
+        if (errors == 0) std::cout << "Config " << config << " test passed!\n";
+        else             std::cout << "Config " << config << " test failed with " << errors << " errors\n";
     }
     std::cout << "\nTotal compute time for all configs: " << total_time << " ms" << std::endl;
 

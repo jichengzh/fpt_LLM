@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x47A53B275039CDE4",
+      "boundary_crc": "0x3A5D9A81673795E",
       "device": "xck26-sfvc784-2LV-c",
       "gen_directory": "../../../../project.gen/sources_1/bd/bd_0",
       "name": "bd_0",
@@ -39,7 +39,7 @@
             "value_src": "default"
           },
           "DATA_WIDTH": {
-            "value": "32"
+            "value": "512"
           },
           "FREQ_HZ": {
             "value": "100000000.0"
@@ -215,13 +215,13 @@
           "WDATA": {
             "physical_name": "m_axi_gmem0_wdata",
             "direction": "O",
-            "left": "31",
+            "left": "511",
             "right": "0"
           },
           "WSTRB": {
             "physical_name": "m_axi_gmem0_wstrb",
             "direction": "O",
-            "left": "3",
+            "left": "63",
             "right": "0"
           },
           "WLAST": {
@@ -333,7 +333,7 @@
           "RDATA": {
             "physical_name": "m_axi_gmem0_rdata",
             "direction": "I",
-            "left": "31",
+            "left": "511",
             "right": "0"
           },
           "RRESP": {
@@ -381,7 +381,7 @@
             "value_src": "default"
           },
           "DATA_WIDTH": {
-            "value": "32"
+            "value": "512"
           },
           "FREQ_HZ": {
             "value": "100000000.0"
@@ -557,13 +557,13 @@
           "WDATA": {
             "physical_name": "m_axi_gmem1_wdata",
             "direction": "O",
-            "left": "31",
+            "left": "511",
             "right": "0"
           },
           "WSTRB": {
             "physical_name": "m_axi_gmem1_wstrb",
             "direction": "O",
-            "left": "3",
+            "left": "63",
             "right": "0"
           },
           "WLAST": {
@@ -675,7 +675,7 @@
           "RDATA": {
             "physical_name": "m_axi_gmem1_rdata",
             "direction": "I",
-            "left": "31",
+            "left": "511",
             "right": "0"
           },
           "RRESP": {
@@ -723,7 +723,7 @@
             "value_src": "default"
           },
           "DATA_WIDTH": {
-            "value": "32"
+            "value": "512"
           },
           "FREQ_HZ": {
             "value": "100000000.0"
@@ -899,13 +899,13 @@
           "WDATA": {
             "physical_name": "m_axi_gmem2_wdata",
             "direction": "O",
-            "left": "31",
+            "left": "511",
             "right": "0"
           },
           "WSTRB": {
             "physical_name": "m_axi_gmem2_wstrb",
             "direction": "O",
-            "left": "3",
+            "left": "63",
             "right": "0"
           },
           "WLAST": {
@@ -1017,7 +1017,7 @@
           "RDATA": {
             "physical_name": "m_axi_gmem2_rdata",
             "direction": "I",
-            "left": "31",
+            "left": "511",
             "right": "0"
           },
           "RRESP": {

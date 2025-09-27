@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-//Date        : Tue Sep 23 22:19:37 2025
+//Date        : Sat Sep 27 11:30:11 2025
 //Host        : super-test running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target bd_0.bd
 //Design      : bd_0
@@ -154,7 +154,7 @@ module bd_0
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.AP_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.AP_CLK, ASSOCIATED_BUSIF m_axi_gmem0:m_axi_gmem1:m_axi_gmem2:s_axi_control, ASSOCIATED_RESET ap_rst_n, CLK_DOMAIN bd_0_ap_clk_0, FREQ_HZ 100000000.0, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input ap_clk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.AP_RST_N RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.AP_RST_N, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input ap_rst_n;
   (* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 INTR.INTERRUPT INTERRUPT" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME INTR.INTERRUPT, PortWidth 1, SENSITIVITY LEVEL_HIGH" *) output interrupt;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem0 " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axi_gmem0, ADDR_WIDTH 64, ARUSER_WIDTH 0, AWUSER_WIDTH 0, BUSER_WIDTH 0, CLK_DOMAIN bd_0_ap_clk_0, DATA_WIDTH 32, FREQ_HZ 100000000.0, HAS_BRESP 1, HAS_BURST 0, HAS_CACHE 1, HAS_LOCK 1, HAS_PROT 1, HAS_QOS 1, HAS_REGION 1, HAS_RRESP 1, HAS_WSTRB 1, ID_WIDTH 1, INSERT_VIP 0, MAX_BURST_LENGTH 256, NUM_READ_OUTSTANDING 16, NUM_READ_THREADS 1, NUM_WRITE_OUTSTANDING 16, NUM_WRITE_THREADS 1, PHASE 0.0, PROTOCOL AXI4, READ_WRITE_MODE READ_ONLY, RUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, SUPPORTS_NARROW_BURST 0, WUSER_BITS_PER_BYTE 0, WUSER_WIDTH 0" *) output [63:0]m_axi_gmem0_araddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem0 " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axi_gmem0, ADDR_WIDTH 64, ARUSER_WIDTH 0, AWUSER_WIDTH 0, BUSER_WIDTH 0, CLK_DOMAIN bd_0_ap_clk_0, DATA_WIDTH 512, FREQ_HZ 100000000.0, HAS_BRESP 1, HAS_BURST 0, HAS_CACHE 1, HAS_LOCK 1, HAS_PROT 1, HAS_QOS 1, HAS_REGION 1, HAS_RRESP 1, HAS_WSTRB 1, ID_WIDTH 1, INSERT_VIP 0, MAX_BURST_LENGTH 256, NUM_READ_OUTSTANDING 16, NUM_READ_THREADS 1, NUM_WRITE_OUTSTANDING 16, NUM_WRITE_THREADS 1, PHASE 0.0, PROTOCOL AXI4, READ_WRITE_MODE READ_ONLY, RUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, SUPPORTS_NARROW_BURST 0, WUSER_BITS_PER_BYTE 0, WUSER_WIDTH 0" *) output [63:0]m_axi_gmem0_araddr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem0 " *) output [1:0]m_axi_gmem0_arburst;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem0 " *) output [3:0]m_axi_gmem0_arcache;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem0 " *) output [0:0]m_axi_gmem0_arid;
@@ -182,19 +182,19 @@ module bd_0
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem0 " *) output m_axi_gmem0_bready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem0 " *) input [1:0]m_axi_gmem0_bresp;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem0 " *) input m_axi_gmem0_bvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem0 " *) input [31:0]m_axi_gmem0_rdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem0 " *) input [511:0]m_axi_gmem0_rdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem0 " *) input [0:0]m_axi_gmem0_rid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem0 " *) input m_axi_gmem0_rlast;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem0 " *) output m_axi_gmem0_rready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem0 " *) input [1:0]m_axi_gmem0_rresp;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem0 " *) input m_axi_gmem0_rvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem0 " *) output [31:0]m_axi_gmem0_wdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem0 " *) output [511:0]m_axi_gmem0_wdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem0 " *) output [0:0]m_axi_gmem0_wid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem0 " *) output m_axi_gmem0_wlast;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem0 " *) input m_axi_gmem0_wready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem0 " *) output [3:0]m_axi_gmem0_wstrb;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem0 " *) output [63:0]m_axi_gmem0_wstrb;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem0 " *) output m_axi_gmem0_wvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem1 " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axi_gmem1, ADDR_WIDTH 64, ARUSER_WIDTH 0, AWUSER_WIDTH 0, BUSER_WIDTH 0, CLK_DOMAIN bd_0_ap_clk_0, DATA_WIDTH 32, FREQ_HZ 100000000.0, HAS_BRESP 1, HAS_BURST 0, HAS_CACHE 1, HAS_LOCK 1, HAS_PROT 1, HAS_QOS 1, HAS_REGION 1, HAS_RRESP 1, HAS_WSTRB 1, ID_WIDTH 1, INSERT_VIP 0, MAX_BURST_LENGTH 256, NUM_READ_OUTSTANDING 16, NUM_READ_THREADS 1, NUM_WRITE_OUTSTANDING 16, NUM_WRITE_THREADS 1, PHASE 0.0, PROTOCOL AXI4, READ_WRITE_MODE READ_ONLY, RUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, SUPPORTS_NARROW_BURST 0, WUSER_BITS_PER_BYTE 0, WUSER_WIDTH 0" *) output [63:0]m_axi_gmem1_araddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem1 " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axi_gmem1, ADDR_WIDTH 64, ARUSER_WIDTH 0, AWUSER_WIDTH 0, BUSER_WIDTH 0, CLK_DOMAIN bd_0_ap_clk_0, DATA_WIDTH 512, FREQ_HZ 100000000.0, HAS_BRESP 1, HAS_BURST 0, HAS_CACHE 1, HAS_LOCK 1, HAS_PROT 1, HAS_QOS 1, HAS_REGION 1, HAS_RRESP 1, HAS_WSTRB 1, ID_WIDTH 1, INSERT_VIP 0, MAX_BURST_LENGTH 256, NUM_READ_OUTSTANDING 16, NUM_READ_THREADS 1, NUM_WRITE_OUTSTANDING 16, NUM_WRITE_THREADS 1, PHASE 0.0, PROTOCOL AXI4, READ_WRITE_MODE READ_ONLY, RUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, SUPPORTS_NARROW_BURST 0, WUSER_BITS_PER_BYTE 0, WUSER_WIDTH 0" *) output [63:0]m_axi_gmem1_araddr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem1 " *) output [1:0]m_axi_gmem1_arburst;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem1 " *) output [3:0]m_axi_gmem1_arcache;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem1 " *) output [0:0]m_axi_gmem1_arid;
@@ -222,19 +222,19 @@ module bd_0
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem1 " *) output m_axi_gmem1_bready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem1 " *) input [1:0]m_axi_gmem1_bresp;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem1 " *) input m_axi_gmem1_bvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem1 " *) input [31:0]m_axi_gmem1_rdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem1 " *) input [511:0]m_axi_gmem1_rdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem1 " *) input [0:0]m_axi_gmem1_rid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem1 " *) input m_axi_gmem1_rlast;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem1 " *) output m_axi_gmem1_rready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem1 " *) input [1:0]m_axi_gmem1_rresp;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem1 " *) input m_axi_gmem1_rvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem1 " *) output [31:0]m_axi_gmem1_wdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem1 " *) output [511:0]m_axi_gmem1_wdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem1 " *) output [0:0]m_axi_gmem1_wid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem1 " *) output m_axi_gmem1_wlast;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem1 " *) input m_axi_gmem1_wready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem1 " *) output [3:0]m_axi_gmem1_wstrb;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem1 " *) output [63:0]m_axi_gmem1_wstrb;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem1 " *) output m_axi_gmem1_wvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem2 " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axi_gmem2, ADDR_WIDTH 64, ARUSER_WIDTH 0, AWUSER_WIDTH 0, BUSER_WIDTH 0, CLK_DOMAIN bd_0_ap_clk_0, DATA_WIDTH 32, FREQ_HZ 100000000.0, HAS_BRESP 1, HAS_BURST 0, HAS_CACHE 1, HAS_LOCK 1, HAS_PROT 1, HAS_QOS 1, HAS_REGION 1, HAS_RRESP 1, HAS_WSTRB 1, ID_WIDTH 1, INSERT_VIP 0, MAX_BURST_LENGTH 256, NUM_READ_OUTSTANDING 16, NUM_READ_THREADS 1, NUM_WRITE_OUTSTANDING 16, NUM_WRITE_THREADS 1, PHASE 0.0, PROTOCOL AXI4, READ_WRITE_MODE WRITE_ONLY, RUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, SUPPORTS_NARROW_BURST 0, WUSER_BITS_PER_BYTE 0, WUSER_WIDTH 0" *) output [63:0]m_axi_gmem2_araddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem2 " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axi_gmem2, ADDR_WIDTH 64, ARUSER_WIDTH 0, AWUSER_WIDTH 0, BUSER_WIDTH 0, CLK_DOMAIN bd_0_ap_clk_0, DATA_WIDTH 512, FREQ_HZ 100000000.0, HAS_BRESP 1, HAS_BURST 0, HAS_CACHE 1, HAS_LOCK 1, HAS_PROT 1, HAS_QOS 1, HAS_REGION 1, HAS_RRESP 1, HAS_WSTRB 1, ID_WIDTH 1, INSERT_VIP 0, MAX_BURST_LENGTH 256, NUM_READ_OUTSTANDING 16, NUM_READ_THREADS 1, NUM_WRITE_OUTSTANDING 16, NUM_WRITE_THREADS 1, PHASE 0.0, PROTOCOL AXI4, READ_WRITE_MODE WRITE_ONLY, RUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, SUPPORTS_NARROW_BURST 0, WUSER_BITS_PER_BYTE 0, WUSER_WIDTH 0" *) output [63:0]m_axi_gmem2_araddr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem2 " *) output [1:0]m_axi_gmem2_arburst;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem2 " *) output [3:0]m_axi_gmem2_arcache;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem2 " *) output [0:0]m_axi_gmem2_arid;
@@ -262,17 +262,17 @@ module bd_0
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem2 " *) output m_axi_gmem2_bready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem2 " *) input [1:0]m_axi_gmem2_bresp;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem2 " *) input m_axi_gmem2_bvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem2 " *) input [31:0]m_axi_gmem2_rdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem2 " *) input [511:0]m_axi_gmem2_rdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem2 " *) input [0:0]m_axi_gmem2_rid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem2 " *) input m_axi_gmem2_rlast;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem2 " *) output m_axi_gmem2_rready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem2 " *) input [1:0]m_axi_gmem2_rresp;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem2 " *) input m_axi_gmem2_rvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem2 " *) output [31:0]m_axi_gmem2_wdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem2 " *) output [511:0]m_axi_gmem2_wdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem2 " *) output [0:0]m_axi_gmem2_wid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem2 " *) output m_axi_gmem2_wlast;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem2 " *) input m_axi_gmem2_wready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem2 " *) output [3:0]m_axi_gmem2_wstrb;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem2 " *) output [63:0]m_axi_gmem2_wstrb;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem2 " *) output m_axi_gmem2_wvalid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axi_control, ADDR_WIDTH 32, ARUSER_WIDTH 0, AWUSER_WIDTH 0, BUSER_WIDTH 0, CLK_DOMAIN bd_0_ap_clk_0, DATA_WIDTH 32, FREQ_HZ 100000000.0, HAS_BRESP 1, HAS_BURST 0, HAS_CACHE 0, HAS_LOCK 0, HAS_PROT 0, HAS_QOS 0, HAS_REGION 0, HAS_RRESP 1, HAS_WSTRB 1, ID_WIDTH 0, INSERT_VIP 0, MAX_BURST_LENGTH 1, NUM_READ_OUTSTANDING 1, NUM_READ_THREADS 1, NUM_WRITE_OUTSTANDING 1, NUM_WRITE_THREADS 1, PHASE 0.0, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, RUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, SUPPORTS_NARROW_BURST 0, WUSER_BITS_PER_BYTE 0, WUSER_WIDTH 0" *) input [6:0]s_axi_control_araddr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control " *) output s_axi_control_arready;
@@ -323,17 +323,17 @@ module bd_0
   wire hls_inst_m_axi_gmem0_BREADY;
   wire [1:0]hls_inst_m_axi_gmem0_BRESP;
   wire hls_inst_m_axi_gmem0_BVALID;
-  wire [31:0]hls_inst_m_axi_gmem0_RDATA;
+  wire [511:0]hls_inst_m_axi_gmem0_RDATA;
   wire [0:0]hls_inst_m_axi_gmem0_RID;
   wire hls_inst_m_axi_gmem0_RLAST;
   wire hls_inst_m_axi_gmem0_RREADY;
   wire [1:0]hls_inst_m_axi_gmem0_RRESP;
   wire hls_inst_m_axi_gmem0_RVALID;
-  wire [31:0]hls_inst_m_axi_gmem0_WDATA;
+  wire [511:0]hls_inst_m_axi_gmem0_WDATA;
   wire [0:0]hls_inst_m_axi_gmem0_WID;
   wire hls_inst_m_axi_gmem0_WLAST;
   wire hls_inst_m_axi_gmem0_WREADY;
-  wire [3:0]hls_inst_m_axi_gmem0_WSTRB;
+  wire [63:0]hls_inst_m_axi_gmem0_WSTRB;
   wire hls_inst_m_axi_gmem0_WVALID;
   wire [63:0]hls_inst_m_axi_gmem1_ARADDR;
   wire [1:0]hls_inst_m_axi_gmem1_ARBURST;
@@ -363,17 +363,17 @@ module bd_0
   wire hls_inst_m_axi_gmem1_BREADY;
   wire [1:0]hls_inst_m_axi_gmem1_BRESP;
   wire hls_inst_m_axi_gmem1_BVALID;
-  wire [31:0]hls_inst_m_axi_gmem1_RDATA;
+  wire [511:0]hls_inst_m_axi_gmem1_RDATA;
   wire [0:0]hls_inst_m_axi_gmem1_RID;
   wire hls_inst_m_axi_gmem1_RLAST;
   wire hls_inst_m_axi_gmem1_RREADY;
   wire [1:0]hls_inst_m_axi_gmem1_RRESP;
   wire hls_inst_m_axi_gmem1_RVALID;
-  wire [31:0]hls_inst_m_axi_gmem1_WDATA;
+  wire [511:0]hls_inst_m_axi_gmem1_WDATA;
   wire [0:0]hls_inst_m_axi_gmem1_WID;
   wire hls_inst_m_axi_gmem1_WLAST;
   wire hls_inst_m_axi_gmem1_WREADY;
-  wire [3:0]hls_inst_m_axi_gmem1_WSTRB;
+  wire [63:0]hls_inst_m_axi_gmem1_WSTRB;
   wire hls_inst_m_axi_gmem1_WVALID;
   wire [63:0]hls_inst_m_axi_gmem2_ARADDR;
   wire [1:0]hls_inst_m_axi_gmem2_ARBURST;
@@ -403,17 +403,17 @@ module bd_0
   wire hls_inst_m_axi_gmem2_BREADY;
   wire [1:0]hls_inst_m_axi_gmem2_BRESP;
   wire hls_inst_m_axi_gmem2_BVALID;
-  wire [31:0]hls_inst_m_axi_gmem2_RDATA;
+  wire [511:0]hls_inst_m_axi_gmem2_RDATA;
   wire [0:0]hls_inst_m_axi_gmem2_RID;
   wire hls_inst_m_axi_gmem2_RLAST;
   wire hls_inst_m_axi_gmem2_RREADY;
   wire [1:0]hls_inst_m_axi_gmem2_RRESP;
   wire hls_inst_m_axi_gmem2_RVALID;
-  wire [31:0]hls_inst_m_axi_gmem2_WDATA;
+  wire [511:0]hls_inst_m_axi_gmem2_WDATA;
   wire [0:0]hls_inst_m_axi_gmem2_WID;
   wire hls_inst_m_axi_gmem2_WLAST;
   wire hls_inst_m_axi_gmem2_WREADY;
-  wire [3:0]hls_inst_m_axi_gmem2_WSTRB;
+  wire [63:0]hls_inst_m_axi_gmem2_WSTRB;
   wire hls_inst_m_axi_gmem2_WVALID;
   wire [6:0]s_axi_control_0_1_ARADDR;
   wire s_axi_control_0_1_ARREADY;
@@ -440,7 +440,7 @@ module bd_0
   assign hls_inst_m_axi_gmem0_BID = m_axi_gmem0_bid[0];
   assign hls_inst_m_axi_gmem0_BRESP = m_axi_gmem0_bresp[1:0];
   assign hls_inst_m_axi_gmem0_BVALID = m_axi_gmem0_bvalid;
-  assign hls_inst_m_axi_gmem0_RDATA = m_axi_gmem0_rdata[31:0];
+  assign hls_inst_m_axi_gmem0_RDATA = m_axi_gmem0_rdata[511:0];
   assign hls_inst_m_axi_gmem0_RID = m_axi_gmem0_rid[0];
   assign hls_inst_m_axi_gmem0_RLAST = m_axi_gmem0_rlast;
   assign hls_inst_m_axi_gmem0_RRESP = m_axi_gmem0_rresp[1:0];
@@ -451,7 +451,7 @@ module bd_0
   assign hls_inst_m_axi_gmem1_BID = m_axi_gmem1_bid[0];
   assign hls_inst_m_axi_gmem1_BRESP = m_axi_gmem1_bresp[1:0];
   assign hls_inst_m_axi_gmem1_BVALID = m_axi_gmem1_bvalid;
-  assign hls_inst_m_axi_gmem1_RDATA = m_axi_gmem1_rdata[31:0];
+  assign hls_inst_m_axi_gmem1_RDATA = m_axi_gmem1_rdata[511:0];
   assign hls_inst_m_axi_gmem1_RID = m_axi_gmem1_rid[0];
   assign hls_inst_m_axi_gmem1_RLAST = m_axi_gmem1_rlast;
   assign hls_inst_m_axi_gmem1_RRESP = m_axi_gmem1_rresp[1:0];
@@ -462,7 +462,7 @@ module bd_0
   assign hls_inst_m_axi_gmem2_BID = m_axi_gmem2_bid[0];
   assign hls_inst_m_axi_gmem2_BRESP = m_axi_gmem2_bresp[1:0];
   assign hls_inst_m_axi_gmem2_BVALID = m_axi_gmem2_bvalid;
-  assign hls_inst_m_axi_gmem2_RDATA = m_axi_gmem2_rdata[31:0];
+  assign hls_inst_m_axi_gmem2_RDATA = m_axi_gmem2_rdata[511:0];
   assign hls_inst_m_axi_gmem2_RID = m_axi_gmem2_rid[0];
   assign hls_inst_m_axi_gmem2_RLAST = m_axi_gmem2_rlast;
   assign hls_inst_m_axi_gmem2_RRESP = m_axi_gmem2_rresp[1:0];
@@ -493,10 +493,10 @@ module bd_0
   assign m_axi_gmem0_awvalid = hls_inst_m_axi_gmem0_AWVALID;
   assign m_axi_gmem0_bready = hls_inst_m_axi_gmem0_BREADY;
   assign m_axi_gmem0_rready = hls_inst_m_axi_gmem0_RREADY;
-  assign m_axi_gmem0_wdata[31:0] = hls_inst_m_axi_gmem0_WDATA;
+  assign m_axi_gmem0_wdata[511:0] = hls_inst_m_axi_gmem0_WDATA;
   assign m_axi_gmem0_wid[0] = hls_inst_m_axi_gmem0_WID;
   assign m_axi_gmem0_wlast = hls_inst_m_axi_gmem0_WLAST;
-  assign m_axi_gmem0_wstrb[3:0] = hls_inst_m_axi_gmem0_WSTRB;
+  assign m_axi_gmem0_wstrb[63:0] = hls_inst_m_axi_gmem0_WSTRB;
   assign m_axi_gmem0_wvalid = hls_inst_m_axi_gmem0_WVALID;
   assign m_axi_gmem1_araddr[63:0] = hls_inst_m_axi_gmem1_ARADDR;
   assign m_axi_gmem1_arburst[1:0] = hls_inst_m_axi_gmem1_ARBURST;
@@ -522,10 +522,10 @@ module bd_0
   assign m_axi_gmem1_awvalid = hls_inst_m_axi_gmem1_AWVALID;
   assign m_axi_gmem1_bready = hls_inst_m_axi_gmem1_BREADY;
   assign m_axi_gmem1_rready = hls_inst_m_axi_gmem1_RREADY;
-  assign m_axi_gmem1_wdata[31:0] = hls_inst_m_axi_gmem1_WDATA;
+  assign m_axi_gmem1_wdata[511:0] = hls_inst_m_axi_gmem1_WDATA;
   assign m_axi_gmem1_wid[0] = hls_inst_m_axi_gmem1_WID;
   assign m_axi_gmem1_wlast = hls_inst_m_axi_gmem1_WLAST;
-  assign m_axi_gmem1_wstrb[3:0] = hls_inst_m_axi_gmem1_WSTRB;
+  assign m_axi_gmem1_wstrb[63:0] = hls_inst_m_axi_gmem1_WSTRB;
   assign m_axi_gmem1_wvalid = hls_inst_m_axi_gmem1_WVALID;
   assign m_axi_gmem2_araddr[63:0] = hls_inst_m_axi_gmem2_ARADDR;
   assign m_axi_gmem2_arburst[1:0] = hls_inst_m_axi_gmem2_ARBURST;
@@ -551,10 +551,10 @@ module bd_0
   assign m_axi_gmem2_awvalid = hls_inst_m_axi_gmem2_AWVALID;
   assign m_axi_gmem2_bready = hls_inst_m_axi_gmem2_BREADY;
   assign m_axi_gmem2_rready = hls_inst_m_axi_gmem2_RREADY;
-  assign m_axi_gmem2_wdata[31:0] = hls_inst_m_axi_gmem2_WDATA;
+  assign m_axi_gmem2_wdata[511:0] = hls_inst_m_axi_gmem2_WDATA;
   assign m_axi_gmem2_wid[0] = hls_inst_m_axi_gmem2_WID;
   assign m_axi_gmem2_wlast = hls_inst_m_axi_gmem2_WLAST;
-  assign m_axi_gmem2_wstrb[3:0] = hls_inst_m_axi_gmem2_WSTRB;
+  assign m_axi_gmem2_wstrb[63:0] = hls_inst_m_axi_gmem2_WSTRB;
   assign m_axi_gmem2_wvalid = hls_inst_m_axi_gmem2_WVALID;
   assign s_axi_control_0_1_ARADDR = s_axi_control_araddr[6:0];
   assign s_axi_control_0_1_ARVALID = s_axi_control_arvalid;

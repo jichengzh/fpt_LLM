@@ -1,6 +1,9 @@
 obj/activation_accelerator.o: ../../../../activation_accelerator.cpp \
  ../../../../activation_accelerator.h \
- /data/xilinx/Vitis_HLS/2022.2/include/hls_math.h \
+ /data/xilinx/Vitis_HLS/2022.2/include/ap_int.h \
+ /data/xilinx/Vitis_HLS/2022.2/include/ap_common.h \
+ /data/xilinx/Vitis_HLS/2022.2/include/ap_decl.h \
+ /data/xilinx/Vitis_HLS/2022.2/include/etc/ap_private.h \
  /data/xilinx/Vitis_HLS/2022.2/include/hls_half.h \
  /data/xilinx/Vitis_HLS/2022.2/include/hls_half_fpo.h \
  /data/xilinx/Vitis_HLS/2022.2/include/hls_fpo.h \
@@ -11,24 +14,21 @@ obj/activation_accelerator.o: ../../../../activation_accelerator.cpp \
  /data/xilinx/Vitis_HLS/2022.2/include/mpfr.h \
  /data/xilinx/Vitis_HLS/2022.2/include/ap_decl.h \
  /data/xilinx/Vitis_HLS/2022.2/include/hls_half_x_utils.h \
- /data/xilinx/Vitis_HLS/2022.2/include/hls_hotbm_apfixed.h \
- /data/xilinx/Vitis_HLS/2022.2/include/ap_fixed.h \
- /data/xilinx/Vitis_HLS/2022.2/include/ap_common.h \
- /data/xilinx/Vitis_HLS/2022.2/include/ap_decl.h \
- /data/xilinx/Vitis_HLS/2022.2/include/etc/ap_private.h \
- /data/xilinx/Vitis_HLS/2022.2/include/hls_half.h \
- /data/xilinx/Vitis_HLS/2022.2/include/ap_fixed_base.h \
- /data/xilinx/Vitis_HLS/2022.2/include/ap_int.h \
  /data/xilinx/Vitis_HLS/2022.2/include/ap_int_base.h \
  /data/xilinx/Vitis_HLS/2022.2/include/ap_int_ref.h \
  /data/xilinx/Vitis_HLS/2022.2/include/ap_int_special.h \
+ /data/xilinx/Vitis_HLS/2022.2/include/ap_fixed.h \
+ /data/xilinx/Vitis_HLS/2022.2/include/ap_fixed_base.h \
  /data/xilinx/Vitis_HLS/2022.2/include/ap_fixed_ref.h \
  /data/xilinx/Vitis_HLS/2022.2/include/ap_fixed_special.h \
+ /data/xilinx/Vitis_HLS/2022.2/include/hls_math.h \
+ /data/xilinx/Vitis_HLS/2022.2/include/hls_half.h \
+ /data/xilinx/Vitis_HLS/2022.2/include/hls_hotbm_apfixed.h \
+ /data/xilinx/Vitis_HLS/2022.2/include/ap_fixed.h \
  /data/xilinx/Vitis_HLS/2022.2/include/ap_int.h \
  /data/xilinx/Vitis_HLS/2022.2/include/utils/x_hls_defines.h \
  /data/xilinx/Vitis_HLS/2022.2/include/utils/hls_version.h \
  /data/xilinx/Vitis_HLS/2022.2/include/utils/x_hls_utils.h \
- /data/xilinx/Vitis_HLS/2022.2/include/ap_fixed.h \
  /data/xilinx/Vitis_HLS/2022.2/include/hls_cordic_apfixed.h \
  /data/xilinx/Vitis_HLS/2022.2/include/hls_exp_apfixed.h \
  /data/xilinx/Vitis_HLS/2022.2/include/hls_log_apfixed.h \

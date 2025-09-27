@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-//Date        : Tue Sep 23 22:19:37 2025
+//Date        : Sat Sep 27 11:30:11 2025
 //Host        : super-test running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target bd_0_wrapper.bd
 //Design      : bd_0_wrapper
@@ -181,17 +181,17 @@ module bd_0_wrapper
   output m_axi_gmem0_bready;
   input [1:0]m_axi_gmem0_bresp;
   input m_axi_gmem0_bvalid;
-  input [31:0]m_axi_gmem0_rdata;
+  input [511:0]m_axi_gmem0_rdata;
   input [0:0]m_axi_gmem0_rid;
   input m_axi_gmem0_rlast;
   output m_axi_gmem0_rready;
   input [1:0]m_axi_gmem0_rresp;
   input m_axi_gmem0_rvalid;
-  output [31:0]m_axi_gmem0_wdata;
+  output [511:0]m_axi_gmem0_wdata;
   output [0:0]m_axi_gmem0_wid;
   output m_axi_gmem0_wlast;
   input m_axi_gmem0_wready;
-  output [3:0]m_axi_gmem0_wstrb;
+  output [63:0]m_axi_gmem0_wstrb;
   output m_axi_gmem0_wvalid;
   output [63:0]m_axi_gmem1_araddr;
   output [1:0]m_axi_gmem1_arburst;
@@ -221,17 +221,17 @@ module bd_0_wrapper
   output m_axi_gmem1_bready;
   input [1:0]m_axi_gmem1_bresp;
   input m_axi_gmem1_bvalid;
-  input [31:0]m_axi_gmem1_rdata;
+  input [511:0]m_axi_gmem1_rdata;
   input [0:0]m_axi_gmem1_rid;
   input m_axi_gmem1_rlast;
   output m_axi_gmem1_rready;
   input [1:0]m_axi_gmem1_rresp;
   input m_axi_gmem1_rvalid;
-  output [31:0]m_axi_gmem1_wdata;
+  output [511:0]m_axi_gmem1_wdata;
   output [0:0]m_axi_gmem1_wid;
   output m_axi_gmem1_wlast;
   input m_axi_gmem1_wready;
-  output [3:0]m_axi_gmem1_wstrb;
+  output [63:0]m_axi_gmem1_wstrb;
   output m_axi_gmem1_wvalid;
   output [63:0]m_axi_gmem2_araddr;
   output [1:0]m_axi_gmem2_arburst;
@@ -261,17 +261,17 @@ module bd_0_wrapper
   output m_axi_gmem2_bready;
   input [1:0]m_axi_gmem2_bresp;
   input m_axi_gmem2_bvalid;
-  input [31:0]m_axi_gmem2_rdata;
+  input [511:0]m_axi_gmem2_rdata;
   input [0:0]m_axi_gmem2_rid;
   input m_axi_gmem2_rlast;
   output m_axi_gmem2_rready;
   input [1:0]m_axi_gmem2_rresp;
   input m_axi_gmem2_rvalid;
-  output [31:0]m_axi_gmem2_wdata;
+  output [511:0]m_axi_gmem2_wdata;
   output [0:0]m_axi_gmem2_wid;
   output m_axi_gmem2_wlast;
   input m_axi_gmem2_wready;
-  output [3:0]m_axi_gmem2_wstrb;
+  output [63:0]m_axi_gmem2_wstrb;
   output m_axi_gmem2_wvalid;
   input [6:0]s_axi_control_araddr;
   output s_axi_control_arready;
@@ -322,17 +322,17 @@ module bd_0_wrapper
   wire m_axi_gmem0_bready;
   wire [1:0]m_axi_gmem0_bresp;
   wire m_axi_gmem0_bvalid;
-  wire [31:0]m_axi_gmem0_rdata;
+  wire [511:0]m_axi_gmem0_rdata;
   wire [0:0]m_axi_gmem0_rid;
   wire m_axi_gmem0_rlast;
   wire m_axi_gmem0_rready;
   wire [1:0]m_axi_gmem0_rresp;
   wire m_axi_gmem0_rvalid;
-  wire [31:0]m_axi_gmem0_wdata;
+  wire [511:0]m_axi_gmem0_wdata;
   wire [0:0]m_axi_gmem0_wid;
   wire m_axi_gmem0_wlast;
   wire m_axi_gmem0_wready;
-  wire [3:0]m_axi_gmem0_wstrb;
+  wire [63:0]m_axi_gmem0_wstrb;
   wire m_axi_gmem0_wvalid;
   wire [63:0]m_axi_gmem1_araddr;
   wire [1:0]m_axi_gmem1_arburst;
@@ -362,17 +362,17 @@ module bd_0_wrapper
   wire m_axi_gmem1_bready;
   wire [1:0]m_axi_gmem1_bresp;
   wire m_axi_gmem1_bvalid;
-  wire [31:0]m_axi_gmem1_rdata;
+  wire [511:0]m_axi_gmem1_rdata;
   wire [0:0]m_axi_gmem1_rid;
   wire m_axi_gmem1_rlast;
   wire m_axi_gmem1_rready;
   wire [1:0]m_axi_gmem1_rresp;
   wire m_axi_gmem1_rvalid;
-  wire [31:0]m_axi_gmem1_wdata;
+  wire [511:0]m_axi_gmem1_wdata;
   wire [0:0]m_axi_gmem1_wid;
   wire m_axi_gmem1_wlast;
   wire m_axi_gmem1_wready;
-  wire [3:0]m_axi_gmem1_wstrb;
+  wire [63:0]m_axi_gmem1_wstrb;
   wire m_axi_gmem1_wvalid;
   wire [63:0]m_axi_gmem2_araddr;
   wire [1:0]m_axi_gmem2_arburst;
@@ -402,17 +402,17 @@ module bd_0_wrapper
   wire m_axi_gmem2_bready;
   wire [1:0]m_axi_gmem2_bresp;
   wire m_axi_gmem2_bvalid;
-  wire [31:0]m_axi_gmem2_rdata;
+  wire [511:0]m_axi_gmem2_rdata;
   wire [0:0]m_axi_gmem2_rid;
   wire m_axi_gmem2_rlast;
   wire m_axi_gmem2_rready;
   wire [1:0]m_axi_gmem2_rresp;
   wire m_axi_gmem2_rvalid;
-  wire [31:0]m_axi_gmem2_wdata;
+  wire [511:0]m_axi_gmem2_wdata;
   wire [0:0]m_axi_gmem2_wid;
   wire m_axi_gmem2_wlast;
   wire m_axi_gmem2_wready;
-  wire [3:0]m_axi_gmem2_wstrb;
+  wire [63:0]m_axi_gmem2_wstrb;
   wire m_axi_gmem2_wvalid;
   wire [6:0]s_axi_control_araddr;
   wire s_axi_control_arready;

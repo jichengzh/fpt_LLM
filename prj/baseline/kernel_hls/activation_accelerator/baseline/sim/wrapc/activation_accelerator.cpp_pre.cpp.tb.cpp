@@ -321,18 +321,2434 @@ namespace std
 
 
 
+# 1 "/data/xilinx/Vitis_HLS/2022.2/include/ap_int.h" 1
+# 10 "/data/xilinx/Vitis_HLS/2022.2/include/ap_int.h"
+# 1 "/data/xilinx/Vitis_HLS/2022.2/include/ap_common.h" 1
+# 41 "/data/xilinx/Vitis_HLS/2022.2/include/ap_common.h"
+# 1 "/data/xilinx/Vitis_HLS/2022.2/include/ap_decl.h" 1
+# 54 "/data/xilinx/Vitis_HLS/2022.2/include/ap_decl.h"
 
-# 12 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator.h"
-typedef uint16_t uint16;
-typedef int32_t int32;
-typedef int64_t int64;
+# 54 "/data/xilinx/Vitis_HLS/2022.2/include/ap_decl.h"
+enum ap_q_mode {
+  AP_RND,
+  AP_RND_ZERO,
+  AP_RND_MIN_INF,
+  AP_RND_INF,
+  AP_RND_CONV,
+  AP_TRN,
+  AP_TRN_ZERO,
+};
+# 76 "/data/xilinx/Vitis_HLS/2022.2/include/ap_decl.h"
+enum ap_o_mode {
+  AP_SAT,
+  AP_SAT_ZERO,
+  AP_SAT_SYM,
+  AP_WRAP,
+  AP_WRAP_SM,
+};
+# 133 "/data/xilinx/Vitis_HLS/2022.2/include/ap_decl.h"
+template <int _AP_W, bool _AP_S>
+struct ap_int_base;
+
+template <int _AP_W>
+struct ap_int;
+
+template <int _AP_W>
+struct ap_uint;
+
+template <int _AP_W, bool _AP_S>
+struct ap_range_ref;
+
+template <int _AP_W, bool _AP_S>
+struct ap_bit_ref;
+
+template <int _AP_W1, typename _AP_T1, int _AP_W2, typename _AP_T2>
+struct ap_concat_ref;
+
+template <int _AP_W, int _AP_I, bool _AP_S = true, ap_q_mode _AP_Q = AP_TRN,
+          ap_o_mode _AP_O = AP_WRAP, int _AP_N = 0>
+struct ap_fixed_base;
+
+template <int _AP_W, int _AP_I, ap_q_mode _AP_Q = AP_TRN,
+          ap_o_mode _AP_O = AP_WRAP, int _AP_N = 0>
+struct ap_fixed;
+
+template <int _AP_W, int _AP_I, ap_q_mode _AP_Q = AP_TRN,
+          ap_o_mode _AP_O = AP_WRAP, int _AP_N = 0>
+struct ap_ufixed;
+
+template <int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O,
+          int _AP_N>
+struct af_range_ref;
+
+template <int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O,
+          int _AP_N>
+struct af_bit_ref;
 
 
-uint16 bf16add(uint16 a_bits, uint16 b_bits);
+enum BaseMode { AP_BIN = 2, AP_OCT = 8, AP_DEC = 10, AP_HEX = 16 };
+# 187 "/data/xilinx/Vitis_HLS/2022.2/include/ap_decl.h"
+typedef signed long long ap_slong;
+typedef unsigned long long ap_ulong;
 
 
-void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, int32 config);
-# 2 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator.cpp" 2
+enum {
+  _AP_SIZE_char = 8,
+  _AP_SIZE_short = sizeof(short) * 8,
+  _AP_SIZE_int = sizeof(int) * 8,
+  _AP_SIZE_long = sizeof(long) * 8,
+  _AP_SIZE_ap_slong = sizeof(ap_slong) * 8
+};
+# 42 "/data/xilinx/Vitis_HLS/2022.2/include/ap_common.h" 2
+# 50 "/data/xilinx/Vitis_HLS/2022.2/include/ap_common.h"
+# 1 "/usr/include/assert.h" 1 3 4
+# 66 "/usr/include/assert.h" 3 4
+
+# 66 "/usr/include/assert.h" 3 4
+extern "C" {
+
+
+extern void __assert_fail (const char *__assertion, const char *__file,
+      unsigned int __line, const char *__function)
+     throw () __attribute__ ((__noreturn__));
+
+
+extern void __assert_perror_fail (int __errnum, const char *__file,
+      unsigned int __line, const char *__function)
+     throw () __attribute__ ((__noreturn__));
+
+
+
+
+extern void __assert (const char *__assertion, const char *__file, int __line)
+     throw () __attribute__ ((__noreturn__));
+
+
+}
+# 51 "/data/xilinx/Vitis_HLS/2022.2/include/ap_common.h" 2
+# 64 "/data/xilinx/Vitis_HLS/2022.2/include/ap_common.h"
+# 1 "/usr/include/stdio.h" 1 3 4
+# 27 "/usr/include/stdio.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/libc-header-start.h" 1 3 4
+# 28 "/usr/include/stdio.h" 2 3 4
+
+extern "C" {
+
+
+
+# 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stddef.h" 1 3 4
+# 216 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stddef.h" 3 4
+typedef long unsigned int size_t;
+# 34 "/usr/include/stdio.h" 2 3 4
+
+
+# 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stdarg.h" 1 3 4
+# 40 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stdarg.h" 3 4
+typedef __builtin_va_list __gnuc_va_list;
+# 37 "/usr/include/stdio.h" 2 3 4
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h" 1 3 4
+
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h" 1 3 4
+# 13 "/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h" 3 4
+typedef struct
+{
+  int __count;
+  union
+  {
+    unsigned int __wch;
+    char __wchb[4];
+  } __value;
+} __mbstate_t;
+# 6 "/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h" 2 3 4
+
+
+
+
+typedef struct _G_fpos_t
+{
+  __off_t __pos;
+  __mbstate_t __state;
+} __fpos_t;
+# 40 "/usr/include/stdio.h" 2 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h" 1 3 4
+# 10 "/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h" 3 4
+typedef struct _G_fpos64_t
+{
+  __off64_t __pos;
+  __mbstate_t __state;
+} __fpos64_t;
+# 41 "/usr/include/stdio.h" 2 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/__FILE.h" 1 3 4
+
+
+
+struct _IO_FILE;
+typedef struct _IO_FILE __FILE;
+# 42 "/usr/include/stdio.h" 2 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/FILE.h" 1 3 4
+
+
+
+struct _IO_FILE;
+
+
+typedef struct _IO_FILE FILE;
+# 43 "/usr/include/stdio.h" 2 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 1 3 4
+# 35 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3 4
+struct _IO_FILE;
+struct _IO_marker;
+struct _IO_codecvt;
+struct _IO_wide_data;
+
+
+
+
+typedef void _IO_lock_t;
+
+
+
+
+
+struct _IO_FILE
+{
+  int _flags;
+
+
+  char *_IO_read_ptr;
+  char *_IO_read_end;
+  char *_IO_read_base;
+  char *_IO_write_base;
+  char *_IO_write_ptr;
+  char *_IO_write_end;
+  char *_IO_buf_base;
+  char *_IO_buf_end;
+
+
+  char *_IO_save_base;
+  char *_IO_backup_base;
+  char *_IO_save_end;
+
+  struct _IO_marker *_markers;
+
+  struct _IO_FILE *_chain;
+
+  int _fileno;
+  int _flags2;
+  __off_t _old_offset;
+
+
+  unsigned short _cur_column;
+  signed char _vtable_offset;
+  char _shortbuf[1];
+
+  _IO_lock_t *_lock;
+
+
+
+
+
+
+
+  __off64_t _offset;
+
+  struct _IO_codecvt *_codecvt;
+  struct _IO_wide_data *_wide_data;
+  struct _IO_FILE *_freeres_list;
+  void *_freeres_buf;
+  size_t __pad5;
+  int _mode;
+
+  char _unused2[15 * sizeof (int) - 4 * sizeof (void *) - sizeof (size_t)];
+};
+# 44 "/usr/include/stdio.h" 2 3 4
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h" 1 3 4
+# 27 "/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h" 3 4
+typedef __ssize_t cookie_read_function_t (void *__cookie, char *__buf,
+                                          size_t __nbytes);
+
+
+
+
+
+
+
+typedef __ssize_t cookie_write_function_t (void *__cookie, const char *__buf,
+                                           size_t __nbytes);
+
+
+
+
+
+
+
+typedef int cookie_seek_function_t (void *__cookie, __off64_t *__pos, int __w);
+
+
+typedef int cookie_close_function_t (void *__cookie);
+
+
+
+
+
+
+typedef struct _IO_cookie_io_functions_t
+{
+  cookie_read_function_t *read;
+  cookie_write_function_t *write;
+  cookie_seek_function_t *seek;
+  cookie_close_function_t *close;
+} cookie_io_functions_t;
+# 47 "/usr/include/stdio.h" 2 3 4
+
+
+
+
+
+typedef __gnuc_va_list va_list;
+# 63 "/usr/include/stdio.h" 3 4
+typedef __off_t off_t;
+
+
+
+
+
+
+typedef __off64_t off64_t;
+
+
+
+
+
+
+typedef __ssize_t ssize_t;
+
+
+
+
+
+
+typedef __fpos_t fpos_t;
+
+
+
+
+typedef __fpos64_t fpos64_t;
+# 133 "/usr/include/stdio.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/stdio_lim.h" 1 3 4
+# 134 "/usr/include/stdio.h" 2 3 4
+
+
+
+extern FILE *stdin;
+extern FILE *stdout;
+extern FILE *stderr;
+
+
+
+
+
+
+extern int remove (const char *__filename) throw ();
+
+extern int rename (const char *__old, const char *__new) throw ();
+
+
+
+extern int renameat (int __oldfd, const char *__old, int __newfd,
+       const char *__new) throw ();
+# 164 "/usr/include/stdio.h" 3 4
+extern int renameat2 (int __oldfd, const char *__old, int __newfd,
+        const char *__new, unsigned int __flags) throw ();
+
+
+
+
+
+
+
+extern FILE *tmpfile (void) ;
+# 183 "/usr/include/stdio.h" 3 4
+extern FILE *tmpfile64 (void) ;
+
+
+
+extern char *tmpnam (char *__s) throw () ;
+
+
+
+
+extern char *tmpnam_r (char *__s) throw () ;
+# 204 "/usr/include/stdio.h" 3 4
+extern char *tempnam (const char *__dir, const char *__pfx)
+     throw () __attribute__ ((__malloc__)) ;
+
+
+
+
+
+
+
+extern int fclose (FILE *__stream);
+
+
+
+
+extern int fflush (FILE *__stream);
+# 227 "/usr/include/stdio.h" 3 4
+extern int fflush_unlocked (FILE *__stream);
+# 237 "/usr/include/stdio.h" 3 4
+extern int fcloseall (void);
+# 246 "/usr/include/stdio.h" 3 4
+extern FILE *fopen (const char *__restrict __filename,
+      const char *__restrict __modes) ;
+
+
+
+
+extern FILE *freopen (const char *__restrict __filename,
+        const char *__restrict __modes,
+        FILE *__restrict __stream) ;
+# 270 "/usr/include/stdio.h" 3 4
+extern FILE *fopen64 (const char *__restrict __filename,
+        const char *__restrict __modes) ;
+extern FILE *freopen64 (const char *__restrict __filename,
+   const char *__restrict __modes,
+   FILE *__restrict __stream) ;
+
+
+
+
+extern FILE *fdopen (int __fd, const char *__modes) throw () ;
+
+
+
+
+
+extern FILE *fopencookie (void *__restrict __magic_cookie,
+     const char *__restrict __modes,
+     cookie_io_functions_t __io_funcs) throw () ;
+
+
+
+
+extern FILE *fmemopen (void *__s, size_t __len, const char *__modes)
+  throw () ;
+
+
+
+
+extern FILE *open_memstream (char **__bufloc, size_t *__sizeloc) throw () ;
+
+
+
+
+
+extern void setbuf (FILE *__restrict __stream, char *__restrict __buf) throw ();
+
+
+
+extern int setvbuf (FILE *__restrict __stream, char *__restrict __buf,
+      int __modes, size_t __n) throw ();
+
+
+
+
+extern void setbuffer (FILE *__restrict __stream, char *__restrict __buf,
+         size_t __size) throw ();
+
+
+extern void setlinebuf (FILE *__stream) throw ();
+
+
+
+
+
+
+
+extern int fprintf (FILE *__restrict __stream,
+      const char *__restrict __format, ...);
+
+
+
+
+extern int printf (const char *__restrict __format, ...);
+
+extern int sprintf (char *__restrict __s,
+      const char *__restrict __format, ...) throw ();
+
+
+
+
+
+extern int vfprintf (FILE *__restrict __s, const char *__restrict __format,
+       __gnuc_va_list __arg);
+
+
+
+
+extern int vprintf (const char *__restrict __format, __gnuc_va_list __arg);
+
+extern int vsprintf (char *__restrict __s, const char *__restrict __format,
+       __gnuc_va_list __arg) throw ();
+
+
+
+extern int snprintf (char *__restrict __s, size_t __maxlen,
+       const char *__restrict __format, ...)
+     throw () __attribute__ ((__format__ (__printf__, 3, 4)));
+
+extern int vsnprintf (char *__restrict __s, size_t __maxlen,
+        const char *__restrict __format, __gnuc_va_list __arg)
+     throw () __attribute__ ((__format__ (__printf__, 3, 0)));
+
+
+
+
+
+extern int vasprintf (char **__restrict __ptr, const char *__restrict __f,
+        __gnuc_va_list __arg)
+     throw () __attribute__ ((__format__ (__printf__, 2, 0))) ;
+extern int __asprintf (char **__restrict __ptr,
+         const char *__restrict __fmt, ...)
+     throw () __attribute__ ((__format__ (__printf__, 2, 3))) ;
+extern int asprintf (char **__restrict __ptr,
+       const char *__restrict __fmt, ...)
+     throw () __attribute__ ((__format__ (__printf__, 2, 3))) ;
+
+
+
+
+extern int vdprintf (int __fd, const char *__restrict __fmt,
+       __gnuc_va_list __arg)
+     __attribute__ ((__format__ (__printf__, 2, 0)));
+extern int dprintf (int __fd, const char *__restrict __fmt, ...)
+     __attribute__ ((__format__ (__printf__, 2, 3)));
+
+
+
+
+
+
+
+extern int fscanf (FILE *__restrict __stream,
+     const char *__restrict __format, ...) ;
+
+
+
+
+extern int scanf (const char *__restrict __format, ...) ;
+
+extern int sscanf (const char *__restrict __s,
+     const char *__restrict __format, ...) throw ();
+
+
+
+
+
+
+extern int fscanf (FILE *__restrict __stream, const char *__restrict __format, ...) __asm__ ("" "__isoc99_fscanf")
+
+                               ;
+extern int scanf (const char *__restrict __format, ...) __asm__ ("" "__isoc99_scanf")
+                              ;
+extern int sscanf (const char *__restrict __s, const char *__restrict __format, ...) throw () __asm__ ("" "__isoc99_sscanf")
+
+                      ;
+# 432 "/usr/include/stdio.h" 3 4
+extern int vfscanf (FILE *__restrict __s, const char *__restrict __format,
+      __gnuc_va_list __arg)
+     __attribute__ ((__format__ (__scanf__, 2, 0))) ;
+
+
+
+
+
+extern int vscanf (const char *__restrict __format, __gnuc_va_list __arg)
+     __attribute__ ((__format__ (__scanf__, 1, 0))) ;
+
+
+extern int vsscanf (const char *__restrict __s,
+      const char *__restrict __format, __gnuc_va_list __arg)
+     throw () __attribute__ ((__format__ (__scanf__, 2, 0)));
+
+
+
+
+extern int vfscanf (FILE *__restrict __s, const char *__restrict __format, __gnuc_va_list __arg) __asm__ ("" "__isoc99_vfscanf")
+
+
+
+     __attribute__ ((__format__ (__scanf__, 2, 0))) ;
+extern int vscanf (const char *__restrict __format, __gnuc_va_list __arg) __asm__ ("" "__isoc99_vscanf")
+
+     __attribute__ ((__format__ (__scanf__, 1, 0))) ;
+extern int vsscanf (const char *__restrict __s, const char *__restrict __format, __gnuc_va_list __arg) throw () __asm__ ("" "__isoc99_vsscanf")
+
+
+
+     __attribute__ ((__format__ (__scanf__, 2, 0)));
+# 485 "/usr/include/stdio.h" 3 4
+extern int fgetc (FILE *__stream);
+extern int getc (FILE *__stream);
+
+
+
+
+
+extern int getchar (void);
+
+
+
+
+
+
+extern int getc_unlocked (FILE *__stream);
+extern int getchar_unlocked (void);
+# 510 "/usr/include/stdio.h" 3 4
+extern int fgetc_unlocked (FILE *__stream);
+# 521 "/usr/include/stdio.h" 3 4
+extern int fputc (int __c, FILE *__stream);
+extern int putc (int __c, FILE *__stream);
+
+
+
+
+
+extern int putchar (int __c);
+# 537 "/usr/include/stdio.h" 3 4
+extern int fputc_unlocked (int __c, FILE *__stream);
+
+
+
+
+
+
+
+extern int putc_unlocked (int __c, FILE *__stream);
+extern int putchar_unlocked (int __c);
+
+
+
+
+
+
+extern int getw (FILE *__stream);
+
+
+extern int putw (int __w, FILE *__stream);
+
+
+
+
+
+
+
+extern char *fgets (char *__restrict __s, int __n, FILE *__restrict __stream)
+     ;
+# 587 "/usr/include/stdio.h" 3 4
+extern char *fgets_unlocked (char *__restrict __s, int __n,
+        FILE *__restrict __stream) ;
+# 603 "/usr/include/stdio.h" 3 4
+extern __ssize_t __getdelim (char **__restrict __lineptr,
+                             size_t *__restrict __n, int __delimiter,
+                             FILE *__restrict __stream) ;
+extern __ssize_t getdelim (char **__restrict __lineptr,
+                           size_t *__restrict __n, int __delimiter,
+                           FILE *__restrict __stream) ;
+
+
+
+
+
+
+
+extern __ssize_t getline (char **__restrict __lineptr,
+                          size_t *__restrict __n,
+                          FILE *__restrict __stream) ;
+
+
+
+
+
+
+
+extern int fputs (const char *__restrict __s, FILE *__restrict __stream);
+
+
+
+
+
+extern int puts (const char *__s);
+
+
+
+
+
+
+extern int ungetc (int __c, FILE *__stream);
+
+
+
+
+
+
+extern size_t fread (void *__restrict __ptr, size_t __size,
+       size_t __n, FILE *__restrict __stream) ;
+
+
+
+
+extern size_t fwrite (const void *__restrict __ptr, size_t __size,
+        size_t __n, FILE *__restrict __s);
+# 662 "/usr/include/stdio.h" 3 4
+extern int fputs_unlocked (const char *__restrict __s,
+      FILE *__restrict __stream);
+# 673 "/usr/include/stdio.h" 3 4
+extern size_t fread_unlocked (void *__restrict __ptr, size_t __size,
+         size_t __n, FILE *__restrict __stream) ;
+extern size_t fwrite_unlocked (const void *__restrict __ptr, size_t __size,
+          size_t __n, FILE *__restrict __stream);
+
+
+
+
+
+
+
+extern int fseek (FILE *__stream, long int __off, int __whence);
+
+
+
+
+extern long int ftell (FILE *__stream) ;
+
+
+
+
+extern void rewind (FILE *__stream);
+# 707 "/usr/include/stdio.h" 3 4
+extern int fseeko (FILE *__stream, __off_t __off, int __whence);
+
+
+
+
+extern __off_t ftello (FILE *__stream) ;
+# 731 "/usr/include/stdio.h" 3 4
+extern int fgetpos (FILE *__restrict __stream, fpos_t *__restrict __pos);
+
+
+
+
+extern int fsetpos (FILE *__stream, const fpos_t *__pos);
+# 750 "/usr/include/stdio.h" 3 4
+extern int fseeko64 (FILE *__stream, __off64_t __off, int __whence);
+extern __off64_t ftello64 (FILE *__stream) ;
+extern int fgetpos64 (FILE *__restrict __stream, fpos64_t *__restrict __pos);
+extern int fsetpos64 (FILE *__stream, const fpos64_t *__pos);
+
+
+
+extern void clearerr (FILE *__stream) throw ();
+
+extern int feof (FILE *__stream) throw () ;
+
+extern int ferror (FILE *__stream) throw () ;
+
+
+
+extern void clearerr_unlocked (FILE *__stream) throw ();
+extern int feof_unlocked (FILE *__stream) throw () ;
+extern int ferror_unlocked (FILE *__stream) throw () ;
+
+
+
+
+
+
+
+extern void perror (const char *__s);
+
+
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/sys_errlist.h" 1 3 4
+# 26 "/usr/include/x86_64-linux-gnu/bits/sys_errlist.h" 3 4
+extern int sys_nerr;
+extern const char *const sys_errlist[];
+
+
+extern int _sys_nerr;
+extern const char *const _sys_errlist[];
+# 782 "/usr/include/stdio.h" 2 3 4
+
+
+
+
+extern int fileno (FILE *__stream) throw () ;
+
+
+
+
+extern int fileno_unlocked (FILE *__stream) throw () ;
+# 800 "/usr/include/stdio.h" 3 4
+extern FILE *popen (const char *__command, const char *__modes) ;
+
+
+
+
+
+extern int pclose (FILE *__stream);
+
+
+
+
+
+extern char *ctermid (char *__s) throw ();
+
+
+
+
+
+extern char *cuserid (char *__s);
+
+
+
+
+struct obstack;
+
+
+extern int obstack_printf (struct obstack *__restrict __obstack,
+      const char *__restrict __format, ...)
+     throw () __attribute__ ((__format__ (__printf__, 2, 3)));
+extern int obstack_vprintf (struct obstack *__restrict __obstack,
+       const char *__restrict __format,
+       __gnuc_va_list __args)
+     throw () __attribute__ ((__format__ (__printf__, 2, 0)));
+
+
+
+
+
+
+
+extern void flockfile (FILE *__stream) throw ();
+
+
+
+extern int ftrylockfile (FILE *__stream) throw () ;
+
+
+extern void funlockfile (FILE *__stream) throw ();
+# 858 "/usr/include/stdio.h" 3 4
+extern int __uflow (FILE *);
+extern int __overflow (FILE *, int);
+# 873 "/usr/include/stdio.h" 3 4
+}
+# 65 "/data/xilinx/Vitis_HLS/2022.2/include/ap_common.h" 2
+
+# 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/stdlib.h" 1 3
+# 36 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/stdlib.h" 3
+# 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdlib" 1 3
+# 39 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdlib" 3
+       
+# 40 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdlib" 3
+# 75 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdlib" 3
+# 1 "/usr/include/stdlib.h" 1 3 4
+# 25 "/usr/include/stdlib.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/libc-header-start.h" 1 3 4
+# 26 "/usr/include/stdlib.h" 2 3 4
+
+
+
+
+
+# 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stddef.h" 1 3 4
+# 32 "/usr/include/stdlib.h" 2 3 4
+
+extern "C" {
+
+
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/waitflags.h" 1 3 4
+# 52 "/usr/include/x86_64-linux-gnu/bits/waitflags.h" 3 4
+typedef enum
+{
+  P_ALL,
+  P_PID,
+  P_PGID
+} idtype_t;
+# 40 "/usr/include/stdlib.h" 2 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/waitstatus.h" 1 3 4
+# 41 "/usr/include/stdlib.h" 2 3 4
+# 55 "/usr/include/stdlib.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/floatn.h" 1 3 4
+# 75 "/usr/include/x86_64-linux-gnu/bits/floatn.h" 3 4
+typedef _Complex float __cfloat128 __attribute__ ((__mode__ (__TC__)));
+# 87 "/usr/include/x86_64-linux-gnu/bits/floatn.h" 3 4
+typedef __float128 _Float128;
+# 120 "/usr/include/x86_64-linux-gnu/bits/floatn.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 1 3 4
+# 24 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/long-double.h" 1 3 4
+# 25 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 2 3 4
+# 214 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 3 4
+typedef float _Float32;
+# 251 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 3 4
+typedef double _Float64;
+# 268 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 3 4
+typedef double _Float32x;
+# 285 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 3 4
+typedef long double _Float64x;
+# 121 "/usr/include/x86_64-linux-gnu/bits/floatn.h" 2 3 4
+# 56 "/usr/include/stdlib.h" 2 3 4
+
+
+typedef struct
+  {
+    int quot;
+    int rem;
+  } div_t;
+
+
+
+typedef struct
+  {
+    long int quot;
+    long int rem;
+  } ldiv_t;
+
+
+
+
+
+__extension__ typedef struct
+  {
+    long long int quot;
+    long long int rem;
+  } lldiv_t;
+# 97 "/usr/include/stdlib.h" 3 4
+extern size_t __ctype_get_mb_cur_max (void) throw () ;
+
+
+
+extern double atof (const char *__nptr)
+     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1))) ;
+
+extern int atoi (const char *__nptr)
+     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1))) ;
+
+extern long int atol (const char *__nptr)
+     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1))) ;
+
+
+
+__extension__ extern long long int atoll (const char *__nptr)
+     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1))) ;
+
+
+
+extern double strtod (const char *__restrict __nptr,
+        char **__restrict __endptr)
+     throw () __attribute__ ((__nonnull__ (1)));
+
+
+
+extern float strtof (const char *__restrict __nptr,
+       char **__restrict __endptr) throw () __attribute__ ((__nonnull__ (1)));
+
+extern long double strtold (const char *__restrict __nptr,
+       char **__restrict __endptr)
+     throw () __attribute__ ((__nonnull__ (1)));
+# 140 "/usr/include/stdlib.h" 3 4
+extern _Float32 strtof32 (const char *__restrict __nptr,
+     char **__restrict __endptr)
+     throw () __attribute__ ((__nonnull__ (1)));
+
+
+
+extern _Float64 strtof64 (const char *__restrict __nptr,
+     char **__restrict __endptr)
+     throw () __attribute__ ((__nonnull__ (1)));
+
+
+
+extern _Float128 strtof128 (const char *__restrict __nptr,
+       char **__restrict __endptr)
+     throw () __attribute__ ((__nonnull__ (1)));
+
+
+
+extern _Float32x strtof32x (const char *__restrict __nptr,
+       char **__restrict __endptr)
+     throw () __attribute__ ((__nonnull__ (1)));
+
+
+
+extern _Float64x strtof64x (const char *__restrict __nptr,
+       char **__restrict __endptr)
+     throw () __attribute__ ((__nonnull__ (1)));
+# 176 "/usr/include/stdlib.h" 3 4
+extern long int strtol (const char *__restrict __nptr,
+   char **__restrict __endptr, int __base)
+     throw () __attribute__ ((__nonnull__ (1)));
+
+extern unsigned long int strtoul (const char *__restrict __nptr,
+      char **__restrict __endptr, int __base)
+     throw () __attribute__ ((__nonnull__ (1)));
+
+
+
+__extension__
+extern long long int strtoq (const char *__restrict __nptr,
+        char **__restrict __endptr, int __base)
+     throw () __attribute__ ((__nonnull__ (1)));
+
+__extension__
+extern unsigned long long int strtouq (const char *__restrict __nptr,
+           char **__restrict __endptr, int __base)
+     throw () __attribute__ ((__nonnull__ (1)));
+
+
+
+
+__extension__
+extern long long int strtoll (const char *__restrict __nptr,
+         char **__restrict __endptr, int __base)
+     throw () __attribute__ ((__nonnull__ (1)));
+
+__extension__
+extern unsigned long long int strtoull (const char *__restrict __nptr,
+     char **__restrict __endptr, int __base)
+     throw () __attribute__ ((__nonnull__ (1)));
+
+
+
+
+extern int strfromd (char *__dest, size_t __size, const char *__format,
+       double __f)
+     throw () __attribute__ ((__nonnull__ (3)));
+
+extern int strfromf (char *__dest, size_t __size, const char *__format,
+       float __f)
+     throw () __attribute__ ((__nonnull__ (3)));
+
+extern int strfroml (char *__dest, size_t __size, const char *__format,
+       long double __f)
+     throw () __attribute__ ((__nonnull__ (3)));
+# 232 "/usr/include/stdlib.h" 3 4
+extern int strfromf32 (char *__dest, size_t __size, const char * __format,
+         _Float32 __f)
+     throw () __attribute__ ((__nonnull__ (3)));
+
+
+
+extern int strfromf64 (char *__dest, size_t __size, const char * __format,
+         _Float64 __f)
+     throw () __attribute__ ((__nonnull__ (3)));
+
+
+
+extern int strfromf128 (char *__dest, size_t __size, const char * __format,
+   _Float128 __f)
+     throw () __attribute__ ((__nonnull__ (3)));
+
+
+
+extern int strfromf32x (char *__dest, size_t __size, const char * __format,
+   _Float32x __f)
+     throw () __attribute__ ((__nonnull__ (3)));
+
+
+
+extern int strfromf64x (char *__dest, size_t __size, const char * __format,
+   _Float64x __f)
+     throw () __attribute__ ((__nonnull__ (3)));
+# 272 "/usr/include/stdlib.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/locale_t.h" 1 3 4
+# 22 "/usr/include/x86_64-linux-gnu/bits/types/locale_t.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h" 1 3 4
+# 28 "/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h" 3 4
+struct __locale_struct
+{
+
+  struct __locale_data *__locales[13];
+
+
+  const unsigned short int *__ctype_b;
+  const int *__ctype_tolower;
+  const int *__ctype_toupper;
+
+
+  const char *__names[13];
+};
+
+typedef struct __locale_struct *__locale_t;
+# 23 "/usr/include/x86_64-linux-gnu/bits/types/locale_t.h" 2 3 4
+
+typedef __locale_t locale_t;
+# 273 "/usr/include/stdlib.h" 2 3 4
+
+extern long int strtol_l (const char *__restrict __nptr,
+     char **__restrict __endptr, int __base,
+     locale_t __loc) throw () __attribute__ ((__nonnull__ (1, 4)));
+
+extern unsigned long int strtoul_l (const char *__restrict __nptr,
+        char **__restrict __endptr,
+        int __base, locale_t __loc)
+     throw () __attribute__ ((__nonnull__ (1, 4)));
+
+__extension__
+extern long long int strtoll_l (const char *__restrict __nptr,
+    char **__restrict __endptr, int __base,
+    locale_t __loc)
+     throw () __attribute__ ((__nonnull__ (1, 4)));
+
+__extension__
+extern unsigned long long int strtoull_l (const char *__restrict __nptr,
+       char **__restrict __endptr,
+       int __base, locale_t __loc)
+     throw () __attribute__ ((__nonnull__ (1, 4)));
+
+extern double strtod_l (const char *__restrict __nptr,
+   char **__restrict __endptr, locale_t __loc)
+     throw () __attribute__ ((__nonnull__ (1, 3)));
+
+extern float strtof_l (const char *__restrict __nptr,
+         char **__restrict __endptr, locale_t __loc)
+     throw () __attribute__ ((__nonnull__ (1, 3)));
+
+extern long double strtold_l (const char *__restrict __nptr,
+         char **__restrict __endptr,
+         locale_t __loc)
+     throw () __attribute__ ((__nonnull__ (1, 3)));
+# 316 "/usr/include/stdlib.h" 3 4
+extern _Float32 strtof32_l (const char *__restrict __nptr,
+       char **__restrict __endptr,
+       locale_t __loc)
+     throw () __attribute__ ((__nonnull__ (1, 3)));
+
+
+
+extern _Float64 strtof64_l (const char *__restrict __nptr,
+       char **__restrict __endptr,
+       locale_t __loc)
+     throw () __attribute__ ((__nonnull__ (1, 3)));
+
+
+
+extern _Float128 strtof128_l (const char *__restrict __nptr,
+         char **__restrict __endptr,
+         locale_t __loc)
+     throw () __attribute__ ((__nonnull__ (1, 3)));
+
+
+
+extern _Float32x strtof32x_l (const char *__restrict __nptr,
+         char **__restrict __endptr,
+         locale_t __loc)
+     throw () __attribute__ ((__nonnull__ (1, 3)));
+
+
+
+extern _Float64x strtof64x_l (const char *__restrict __nptr,
+         char **__restrict __endptr,
+         locale_t __loc)
+     throw () __attribute__ ((__nonnull__ (1, 3)));
+# 385 "/usr/include/stdlib.h" 3 4
+extern char *l64a (long int __n) throw () ;
+
+
+extern long int a64l (const char *__s)
+     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1))) ;
+
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/sys/types.h" 1 3 4
+# 27 "/usr/include/x86_64-linux-gnu/sys/types.h" 3 4
+extern "C" {
+
+
+
+
+
+typedef __u_char u_char;
+typedef __u_short u_short;
+typedef __u_int u_int;
+typedef __u_long u_long;
+typedef __quad_t quad_t;
+typedef __u_quad_t u_quad_t;
+typedef __fsid_t fsid_t;
+
+
+typedef __loff_t loff_t;
+
+
+
+
+typedef __ino_t ino_t;
+
+
+
+
+
+
+typedef __ino64_t ino64_t;
+
+
+
+
+typedef __dev_t dev_t;
+
+
+
+
+typedef __gid_t gid_t;
+
+
+
+
+typedef __mode_t mode_t;
+
+
+
+
+typedef __nlink_t nlink_t;
+
+
+
+
+typedef __uid_t uid_t;
+# 97 "/usr/include/x86_64-linux-gnu/sys/types.h" 3 4
+typedef __pid_t pid_t;
+
+
+
+
+
+typedef __id_t id_t;
+# 114 "/usr/include/x86_64-linux-gnu/sys/types.h" 3 4
+typedef __daddr_t daddr_t;
+typedef __caddr_t caddr_t;
+
+
+
+
+
+typedef __key_t key_t;
+
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/clock_t.h" 1 3 4
+
+
+
+
+
+
+typedef __clock_t clock_t;
+# 127 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h" 1 3 4
+
+
+
+
+
+
+typedef __clockid_t clockid_t;
+# 129 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/time_t.h" 1 3 4
+
+
+
+
+
+
+typedef __time_t time_t;
+# 130 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/timer_t.h" 1 3 4
+
+
+
+
+
+
+typedef __timer_t timer_t;
+# 131 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4
+
+
+
+typedef __useconds_t useconds_t;
+
+
+
+typedef __suseconds_t suseconds_t;
+
+
+
+
+
+# 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stddef.h" 1 3 4
+# 145 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4
+
+
+
+typedef unsigned long int ulong;
+typedef unsigned short int ushort;
+typedef unsigned int uint;
+
+
+
+
+
+
+
+typedef __uint8_t u_int8_t;
+typedef __uint16_t u_int16_t;
+typedef __uint32_t u_int32_t;
+typedef __uint64_t u_int64_t;
+
+
+typedef int register_t __attribute__ ((__mode__ (__word__)));
+# 176 "/usr/include/x86_64-linux-gnu/sys/types.h" 3 4
+# 1 "/usr/include/endian.h" 1 3 4
+# 24 "/usr/include/endian.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/endian.h" 1 3 4
+# 35 "/usr/include/x86_64-linux-gnu/bits/endian.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/endianness.h" 1 3 4
+# 36 "/usr/include/x86_64-linux-gnu/bits/endian.h" 2 3 4
+# 25 "/usr/include/endian.h" 2 3 4
+# 35 "/usr/include/endian.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/byteswap.h" 1 3 4
+# 33 "/usr/include/x86_64-linux-gnu/bits/byteswap.h" 3 4
+static __inline __uint16_t
+__bswap_16 (__uint16_t __bsx)
+{
+
+  return __builtin_bswap16 (__bsx);
+
+
+
+}
+
+
+
+
+
+
+static __inline __uint32_t
+__bswap_32 (__uint32_t __bsx)
+{
+
+  return __builtin_bswap32 (__bsx);
+
+
+
+}
+# 69 "/usr/include/x86_64-linux-gnu/bits/byteswap.h" 3 4
+__extension__ static __inline __uint64_t
+__bswap_64 (__uint64_t __bsx)
+{
+
+  return __builtin_bswap64 (__bsx);
+
+
+
+}
+# 36 "/usr/include/endian.h" 2 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/uintn-identity.h" 1 3 4
+# 32 "/usr/include/x86_64-linux-gnu/bits/uintn-identity.h" 3 4
+static __inline __uint16_t
+__uint16_identity (__uint16_t __x)
+{
+  return __x;
+}
+
+static __inline __uint32_t
+__uint32_identity (__uint32_t __x)
+{
+  return __x;
+}
+
+static __inline __uint64_t
+__uint64_identity (__uint64_t __x)
+{
+  return __x;
+}
+# 37 "/usr/include/endian.h" 2 3 4
+# 177 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4
+
+
+# 1 "/usr/include/x86_64-linux-gnu/sys/select.h" 1 3 4
+# 30 "/usr/include/x86_64-linux-gnu/sys/select.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/select.h" 1 3 4
+# 22 "/usr/include/x86_64-linux-gnu/bits/select.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4
+# 23 "/usr/include/x86_64-linux-gnu/bits/select.h" 2 3 4
+# 31 "/usr/include/x86_64-linux-gnu/sys/select.h" 2 3 4
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h" 1 3 4
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h" 1 3 4
+
+
+
+
+typedef struct
+{
+  unsigned long int __val[(1024 / (8 * sizeof (unsigned long int)))];
+} __sigset_t;
+# 5 "/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h" 2 3 4
+
+
+typedef __sigset_t sigset_t;
+# 34 "/usr/include/x86_64-linux-gnu/sys/select.h" 2 3 4
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h" 1 3 4
+
+
+
+
+
+
+
+struct timeval
+{
+  __time_t tv_sec;
+  __suseconds_t tv_usec;
+};
+# 38 "/usr/include/x86_64-linux-gnu/sys/select.h" 2 3 4
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h" 1 3 4
+# 10 "/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h" 3 4
+struct timespec
+{
+  __time_t tv_sec;
+
+
+
+  __syscall_slong_t tv_nsec;
+# 26 "/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h" 3 4
+};
+# 40 "/usr/include/x86_64-linux-gnu/sys/select.h" 2 3 4
+# 49 "/usr/include/x86_64-linux-gnu/sys/select.h" 3 4
+typedef long int __fd_mask;
+# 59 "/usr/include/x86_64-linux-gnu/sys/select.h" 3 4
+typedef struct
+  {
+
+
+
+    __fd_mask fds_bits[1024 / (8 * (int) sizeof (__fd_mask))];
+
+
+
+
+
+  } fd_set;
+
+
+
+
+
+
+typedef __fd_mask fd_mask;
+# 91 "/usr/include/x86_64-linux-gnu/sys/select.h" 3 4
+extern "C" {
+# 101 "/usr/include/x86_64-linux-gnu/sys/select.h" 3 4
+extern int select (int __nfds, fd_set *__restrict __readfds,
+     fd_set *__restrict __writefds,
+     fd_set *__restrict __exceptfds,
+     struct timeval *__restrict __timeout);
+# 113 "/usr/include/x86_64-linux-gnu/sys/select.h" 3 4
+extern int pselect (int __nfds, fd_set *__restrict __readfds,
+      fd_set *__restrict __writefds,
+      fd_set *__restrict __exceptfds,
+      const struct timespec *__restrict __timeout,
+      const __sigset_t *__restrict __sigmask);
+# 126 "/usr/include/x86_64-linux-gnu/sys/select.h" 3 4
+}
+# 180 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4
+
+
+
+
+
+typedef __blksize_t blksize_t;
+
+
+
+
+
+
+typedef __blkcnt_t blkcnt_t;
+
+
+
+typedef __fsblkcnt_t fsblkcnt_t;
+
+
+
+typedef __fsfilcnt_t fsfilcnt_t;
+# 219 "/usr/include/x86_64-linux-gnu/sys/types.h" 3 4
+typedef __blkcnt64_t blkcnt64_t;
+typedef __fsblkcnt64_t fsblkcnt64_t;
+typedef __fsfilcnt64_t fsfilcnt64_t;
+
+
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h" 1 3 4
+# 23 "/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h" 1 3 4
+# 44 "/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h" 1 3 4
+# 21 "/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4
+# 22 "/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h" 2 3 4
+# 45 "/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h" 2 3 4
+
+
+
+
+typedef struct __pthread_internal_list
+{
+  struct __pthread_internal_list *__prev;
+  struct __pthread_internal_list *__next;
+} __pthread_list_t;
+
+typedef struct __pthread_internal_slist
+{
+  struct __pthread_internal_slist *__next;
+} __pthread_slist_t;
+# 74 "/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/struct_mutex.h" 1 3 4
+# 22 "/usr/include/x86_64-linux-gnu/bits/struct_mutex.h" 3 4
+struct __pthread_mutex_s
+{
+  int __lock;
+  unsigned int __count;
+  int __owner;
+
+  unsigned int __nusers;
+
+
+
+  int __kind;
+
+  short __spins;
+  short __elision;
+  __pthread_list_t __list;
+# 53 "/usr/include/x86_64-linux-gnu/bits/struct_mutex.h" 3 4
+};
+# 75 "/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h" 2 3 4
+# 87 "/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h" 1 3 4
+# 23 "/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h" 3 4
+struct __pthread_rwlock_arch_t
+{
+  unsigned int __readers;
+  unsigned int __writers;
+  unsigned int __wrphase_futex;
+  unsigned int __writers_futex;
+  unsigned int __pad3;
+  unsigned int __pad4;
+
+  int __cur_writer;
+  int __shared;
+  signed char __rwelision;
+
+
+
+
+  unsigned char __pad1[7];
+
+
+  unsigned long int __pad2;
+
+
+  unsigned int __flags;
+# 55 "/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h" 3 4
+};
+# 88 "/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h" 2 3 4
+
+
+
+
+struct __pthread_cond_s
+{
+  __extension__ union
+  {
+    __extension__ unsigned long long int __wseq;
+    struct
+    {
+      unsigned int __low;
+      unsigned int __high;
+    } __wseq32;
+  };
+  __extension__ union
+  {
+    __extension__ unsigned long long int __g1_start;
+    struct
+    {
+      unsigned int __low;
+      unsigned int __high;
+    } __g1_start32;
+  };
+  unsigned int __g_refs[2] ;
+  unsigned int __g_size[2];
+  unsigned int __g1_orig_size;
+  unsigned int __wrefs;
+  unsigned int __g_signals[2];
+};
+# 24 "/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h" 2 3 4
+
+
+
+typedef unsigned long int pthread_t;
+
+
+
+
+typedef union
+{
+  char __size[4];
+  int __align;
+} pthread_mutexattr_t;
+
+
+
+
+typedef union
+{
+  char __size[4];
+  int __align;
+} pthread_condattr_t;
+
+
+
+typedef unsigned int pthread_key_t;
+
+
+
+typedef int pthread_once_t;
+
+
+union pthread_attr_t
+{
+  char __size[56];
+  long int __align;
+};
+
+typedef union pthread_attr_t pthread_attr_t;
+
+
+
+
+typedef union
+{
+  struct __pthread_mutex_s __data;
+  char __size[40];
+  long int __align;
+} pthread_mutex_t;
+
+
+typedef union
+{
+  struct __pthread_cond_s __data;
+  char __size[48];
+  __extension__ long long int __align;
+} pthread_cond_t;
+
+
+
+
+
+typedef union
+{
+  struct __pthread_rwlock_arch_t __data;
+  char __size[56];
+  long int __align;
+} pthread_rwlock_t;
+
+typedef union
+{
+  char __size[8];
+  long int __align;
+} pthread_rwlockattr_t;
+
+
+
+
+
+typedef volatile int pthread_spinlock_t;
+
+
+
+
+typedef union
+{
+  char __size[32];
+  long int __align;
+} pthread_barrier_t;
+
+typedef union
+{
+  char __size[4];
+  int __align;
+} pthread_barrierattr_t;
+# 228 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4
+
+
+}
+# 395 "/usr/include/stdlib.h" 2 3 4
+
+
+
+
+
+
+extern long int random (void) throw ();
+
+
+extern void srandom (unsigned int __seed) throw ();
+
+
+
+
+
+extern char *initstate (unsigned int __seed, char *__statebuf,
+   size_t __statelen) throw () __attribute__ ((__nonnull__ (2)));
+
+
+
+extern char *setstate (char *__statebuf) throw () __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+
+
+struct random_data
+  {
+    int32_t *fptr;
+    int32_t *rptr;
+    int32_t *state;
+    int rand_type;
+    int rand_deg;
+    int rand_sep;
+    int32_t *end_ptr;
+  };
+
+extern int random_r (struct random_data *__restrict __buf,
+       int32_t *__restrict __result) throw () __attribute__ ((__nonnull__ (1, 2)));
+
+extern int srandom_r (unsigned int __seed, struct random_data *__buf)
+     throw () __attribute__ ((__nonnull__ (2)));
+
+extern int initstate_r (unsigned int __seed, char *__restrict __statebuf,
+   size_t __statelen,
+   struct random_data *__restrict __buf)
+     throw () __attribute__ ((__nonnull__ (2, 4)));
+
+extern int setstate_r (char *__restrict __statebuf,
+         struct random_data *__restrict __buf)
+     throw () __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+
+extern int rand (void) throw ();
+
+extern void srand (unsigned int __seed) throw ();
+
+
+
+extern int rand_r (unsigned int *__seed) throw ();
+
+
+
+
+
+
+
+extern double drand48 (void) throw ();
+extern double erand48 (unsigned short int __xsubi[3]) throw () __attribute__ ((__nonnull__ (1)));
+
+
+extern long int lrand48 (void) throw ();
+extern long int nrand48 (unsigned short int __xsubi[3])
+     throw () __attribute__ ((__nonnull__ (1)));
+
+
+extern long int mrand48 (void) throw ();
+extern long int jrand48 (unsigned short int __xsubi[3])
+     throw () __attribute__ ((__nonnull__ (1)));
+
+
+extern void srand48 (long int __seedval) throw ();
+extern unsigned short int *seed48 (unsigned short int __seed16v[3])
+     throw () __attribute__ ((__nonnull__ (1)));
+extern void lcong48 (unsigned short int __param[7]) throw () __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+struct drand48_data
+  {
+    unsigned short int __x[3];
+    unsigned short int __old_x[3];
+    unsigned short int __c;
+    unsigned short int __init;
+    __extension__ unsigned long long int __a;
+
+  };
+
+
+extern int drand48_r (struct drand48_data *__restrict __buffer,
+        double *__restrict __result) throw () __attribute__ ((__nonnull__ (1, 2)));
+extern int erand48_r (unsigned short int __xsubi[3],
+        struct drand48_data *__restrict __buffer,
+        double *__restrict __result) throw () __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern int lrand48_r (struct drand48_data *__restrict __buffer,
+        long int *__restrict __result)
+     throw () __attribute__ ((__nonnull__ (1, 2)));
+extern int nrand48_r (unsigned short int __xsubi[3],
+        struct drand48_data *__restrict __buffer,
+        long int *__restrict __result)
+     throw () __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern int mrand48_r (struct drand48_data *__restrict __buffer,
+        long int *__restrict __result)
+     throw () __attribute__ ((__nonnull__ (1, 2)));
+extern int jrand48_r (unsigned short int __xsubi[3],
+        struct drand48_data *__restrict __buffer,
+        long int *__restrict __result)
+     throw () __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern int srand48_r (long int __seedval, struct drand48_data *__buffer)
+     throw () __attribute__ ((__nonnull__ (2)));
+
+extern int seed48_r (unsigned short int __seed16v[3],
+       struct drand48_data *__buffer) throw () __attribute__ ((__nonnull__ (1, 2)));
+
+extern int lcong48_r (unsigned short int __param[7],
+        struct drand48_data *__buffer)
+     throw () __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+extern void *malloc (size_t __size) throw () __attribute__ ((__malloc__))
+     __attribute__ ((__alloc_size__ (1))) ;
+
+extern void *calloc (size_t __nmemb, size_t __size)
+     throw () __attribute__ ((__malloc__)) __attribute__ ((__alloc_size__ (1, 2))) ;
+
+
+
+
+
+
+extern void *realloc (void *__ptr, size_t __size)
+     throw () __attribute__ ((__warn_unused_result__)) __attribute__ ((__alloc_size__ (2)));
+
+
+
+
+
+
+
+extern void *reallocarray (void *__ptr, size_t __nmemb, size_t __size)
+     throw () __attribute__ ((__warn_unused_result__))
+     __attribute__ ((__alloc_size__ (2, 3)));
+
+
+
+extern void free (void *__ptr) throw ();
+
+
+# 1 "/usr/include/alloca.h" 1 3 4
+# 24 "/usr/include/alloca.h" 3 4
+# 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stddef.h" 1 3 4
+# 25 "/usr/include/alloca.h" 2 3 4
+
+extern "C" {
+
+
+
+
+
+extern void *alloca (size_t __size) throw ();
+
+
+
+
+
+}
+# 569 "/usr/include/stdlib.h" 2 3 4
+
+
+
+
+
+extern void *valloc (size_t __size) throw () __attribute__ ((__malloc__))
+     __attribute__ ((__alloc_size__ (1))) ;
+
+
+
+
+extern int posix_memalign (void **__memptr, size_t __alignment, size_t __size)
+     throw () __attribute__ ((__nonnull__ (1))) ;
+
+
+
+
+extern void *aligned_alloc (size_t __alignment, size_t __size)
+     throw () __attribute__ ((__malloc__)) __attribute__ ((__alloc_size__ (2))) ;
+
+
+
+extern void abort (void) throw () __attribute__ ((__noreturn__));
+
+
+
+extern int atexit (void (*__func) (void)) throw () __attribute__ ((__nonnull__ (1)));
+
+
+
+
+extern "C++" int at_quick_exit (void (*__func) (void))
+     throw () __asm ("at_quick_exit") __attribute__ ((__nonnull__ (1)));
+# 610 "/usr/include/stdlib.h" 3 4
+extern int on_exit (void (*__func) (int __status, void *__arg), void *__arg)
+     throw () __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+extern void exit (int __status) throw () __attribute__ ((__noreturn__));
+
+
+
+
+
+extern void quick_exit (int __status) throw () __attribute__ ((__noreturn__));
+
+
+
+
+
+extern void _Exit (int __status) throw () __attribute__ ((__noreturn__));
+
+
+
+
+extern char *getenv (const char *__name) throw () __attribute__ ((__nonnull__ (1))) ;
+
+
+
+
+extern char *secure_getenv (const char *__name)
+     throw () __attribute__ ((__nonnull__ (1))) ;
+
+
+
+
+
+
+extern int putenv (char *__string) throw () __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+extern int setenv (const char *__name, const char *__value, int __replace)
+     throw () __attribute__ ((__nonnull__ (2)));
+
+
+extern int unsetenv (const char *__name) throw () __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+
+extern int clearenv (void) throw ();
+# 675 "/usr/include/stdlib.h" 3 4
+extern char *mktemp (char *__template) throw () __attribute__ ((__nonnull__ (1)));
+# 688 "/usr/include/stdlib.h" 3 4
+extern int mkstemp (char *__template) __attribute__ ((__nonnull__ (1))) ;
+# 698 "/usr/include/stdlib.h" 3 4
+extern int mkstemp64 (char *__template) __attribute__ ((__nonnull__ (1))) ;
+# 710 "/usr/include/stdlib.h" 3 4
+extern int mkstemps (char *__template, int __suffixlen) __attribute__ ((__nonnull__ (1))) ;
+# 720 "/usr/include/stdlib.h" 3 4
+extern int mkstemps64 (char *__template, int __suffixlen)
+     __attribute__ ((__nonnull__ (1))) ;
+# 731 "/usr/include/stdlib.h" 3 4
+extern char *mkdtemp (char *__template) throw () __attribute__ ((__nonnull__ (1))) ;
+# 742 "/usr/include/stdlib.h" 3 4
+extern int mkostemp (char *__template, int __flags) __attribute__ ((__nonnull__ (1))) ;
+# 752 "/usr/include/stdlib.h" 3 4
+extern int mkostemp64 (char *__template, int __flags) __attribute__ ((__nonnull__ (1))) ;
+# 762 "/usr/include/stdlib.h" 3 4
+extern int mkostemps (char *__template, int __suffixlen, int __flags)
+     __attribute__ ((__nonnull__ (1))) ;
+# 774 "/usr/include/stdlib.h" 3 4
+extern int mkostemps64 (char *__template, int __suffixlen, int __flags)
+     __attribute__ ((__nonnull__ (1))) ;
+# 784 "/usr/include/stdlib.h" 3 4
+extern int system (const char *__command) ;
+
+
+
+
+
+extern char *canonicalize_file_name (const char *__name)
+     throw () __attribute__ ((__nonnull__ (1))) ;
+# 800 "/usr/include/stdlib.h" 3 4
+extern char *realpath (const char *__restrict __name,
+         char *__restrict __resolved) throw () ;
+
+
+
+
+
+
+typedef int (*__compar_fn_t) (const void *, const void *);
+
+
+typedef __compar_fn_t comparison_fn_t;
+
+
+
+typedef int (*__compar_d_fn_t) (const void *, const void *, void *);
+
+
+
+
+extern void *bsearch (const void *__key, const void *__base,
+        size_t __nmemb, size_t __size, __compar_fn_t __compar)
+     __attribute__ ((__nonnull__ (1, 2, 5))) ;
+
+
+
+
+
+
+
+extern void qsort (void *__base, size_t __nmemb, size_t __size,
+     __compar_fn_t __compar) __attribute__ ((__nonnull__ (1, 4)));
+
+extern void qsort_r (void *__base, size_t __nmemb, size_t __size,
+       __compar_d_fn_t __compar, void *__arg)
+  __attribute__ ((__nonnull__ (1, 4)));
+
+
+
+
+extern int abs (int __x) throw () __attribute__ ((__const__)) ;
+extern long int labs (long int __x) throw () __attribute__ ((__const__)) ;
+
+
+__extension__ extern long long int llabs (long long int __x)
+     throw () __attribute__ ((__const__)) ;
+
+
+
+
+
+
+extern div_t div (int __numer, int __denom)
+     throw () __attribute__ ((__const__)) ;
+extern ldiv_t ldiv (long int __numer, long int __denom)
+     throw () __attribute__ ((__const__)) ;
+
+
+__extension__ extern lldiv_t lldiv (long long int __numer,
+        long long int __denom)
+     throw () __attribute__ ((__const__)) ;
+# 872 "/usr/include/stdlib.h" 3 4
+extern char *ecvt (double __value, int __ndigit, int *__restrict __decpt,
+     int *__restrict __sign) throw () __attribute__ ((__nonnull__ (3, 4))) ;
+
+
+
+
+extern char *fcvt (double __value, int __ndigit, int *__restrict __decpt,
+     int *__restrict __sign) throw () __attribute__ ((__nonnull__ (3, 4))) ;
+
+
+
+
+extern char *gcvt (double __value, int __ndigit, char *__buf)
+     throw () __attribute__ ((__nonnull__ (3))) ;
+
+
+
+
+extern char *qecvt (long double __value, int __ndigit,
+      int *__restrict __decpt, int *__restrict __sign)
+     throw () __attribute__ ((__nonnull__ (3, 4))) ;
+extern char *qfcvt (long double __value, int __ndigit,
+      int *__restrict __decpt, int *__restrict __sign)
+     throw () __attribute__ ((__nonnull__ (3, 4))) ;
+extern char *qgcvt (long double __value, int __ndigit, char *__buf)
+     throw () __attribute__ ((__nonnull__ (3))) ;
+
+
+
+
+extern int ecvt_r (double __value, int __ndigit, int *__restrict __decpt,
+     int *__restrict __sign, char *__restrict __buf,
+     size_t __len) throw () __attribute__ ((__nonnull__ (3, 4, 5)));
+extern int fcvt_r (double __value, int __ndigit, int *__restrict __decpt,
+     int *__restrict __sign, char *__restrict __buf,
+     size_t __len) throw () __attribute__ ((__nonnull__ (3, 4, 5)));
+
+extern int qecvt_r (long double __value, int __ndigit,
+      int *__restrict __decpt, int *__restrict __sign,
+      char *__restrict __buf, size_t __len)
+     throw () __attribute__ ((__nonnull__ (3, 4, 5)));
+extern int qfcvt_r (long double __value, int __ndigit,
+      int *__restrict __decpt, int *__restrict __sign,
+      char *__restrict __buf, size_t __len)
+     throw () __attribute__ ((__nonnull__ (3, 4, 5)));
+
+
+
+
+
+extern int mblen (const char *__s, size_t __n) throw ();
+
+
+extern int mbtowc (wchar_t *__restrict __pwc,
+     const char *__restrict __s, size_t __n) throw ();
+
+
+extern int wctomb (char *__s, wchar_t __wchar) throw ();
+
+
+
+extern size_t mbstowcs (wchar_t *__restrict __pwcs,
+   const char *__restrict __s, size_t __n) throw ();
+
+extern size_t wcstombs (char *__restrict __s,
+   const wchar_t *__restrict __pwcs, size_t __n)
+     throw ();
+
+
+
+
+
+
+
+extern int rpmatch (const char *__response) throw () __attribute__ ((__nonnull__ (1))) ;
+# 957 "/usr/include/stdlib.h" 3 4
+extern int getsubopt (char **__restrict __optionp,
+        char *const *__restrict __tokens,
+        char **__restrict __valuep)
+     throw () __attribute__ ((__nonnull__ (1, 2, 3))) ;
+
+
+
+
+
+
+
+extern int posix_openpt (int __oflag) ;
+
+
+
+
+
+
+
+extern int grantpt (int __fd) throw ();
+
+
+
+extern int unlockpt (int __fd) throw ();
+
+
+
+
+extern char *ptsname (int __fd) throw () ;
+
+
+
+
+
+
+extern int ptsname_r (int __fd, char *__buf, size_t __buflen)
+     throw () __attribute__ ((__nonnull__ (2)));
+
+
+extern int getpt (void);
+
+
+
+
+
+
+extern int getloadavg (double __loadavg[], int __nelem)
+     throw () __attribute__ ((__nonnull__ (1)));
+# 1013 "/usr/include/stdlib.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/stdlib-float.h" 1 3 4
+# 1014 "/usr/include/stdlib.h" 2 3 4
+# 1023 "/usr/include/stdlib.h" 3 4
+}
+# 76 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdlib" 2 3
+
+# 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/std_abs.h" 1 3
+# 33 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/std_abs.h" 3
+       
+# 34 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/std_abs.h" 3
+# 46 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/std_abs.h" 3
+extern "C++"
+{
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+
+  using ::abs;
+
+
+  inline long
+  abs(long __i) { return __builtin_labs(__i); }
+
+
+
+  inline long long
+  abs(long long __x) { return __builtin_llabs (__x); }
+
+
+
+
+
+
+
+  inline constexpr double
+  abs(double __x)
+  { return __builtin_fabs(__x); }
+
+  inline constexpr float
+  abs(float __x)
+  { return __builtin_fabsf(__x); }
+
+  inline constexpr long double
+  abs(long double __x)
+  { return __builtin_fabsl(__x); }
+
+
+
+  inline constexpr __int128
+  abs(__int128 __x) { return __x >= 0 ? __x : -__x; }
+# 100 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/std_abs.h" 3
+  inline constexpr
+  __float128
+  abs(__float128 __x)
+  { return __x < 0 ? -__x : __x; }
+
+
+
+}
+}
+# 78 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdlib" 2 3
+# 121 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdlib" 3
+extern "C++"
+{
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+
+  using ::div_t;
+  using ::ldiv_t;
+
+  using ::abort;
+
+
+
+  using ::atexit;
+
+
+  using ::at_quick_exit;
+
+
+  using ::atof;
+  using ::atoi;
+  using ::atol;
+  using ::bsearch;
+  using ::calloc;
+  using ::div;
+  using ::exit;
+  using ::free;
+  using ::getenv;
+  using ::labs;
+  using ::ldiv;
+  using ::malloc;
+
+  using ::mblen;
+  using ::mbstowcs;
+  using ::mbtowc;
+
+  using ::qsort;
+
+
+  using ::quick_exit;
+
+
+  using ::rand;
+  using ::realloc;
+  using ::srand;
+  using ::strtod;
+  using ::strtol;
+  using ::strtoul;
+  using ::system;
+
+  using ::wcstombs;
+  using ::wctomb;
+
+
+
+  inline ldiv_t
+  div(long __i, long __j) { return ldiv(__i, __j); }
+
+
+
+
+}
+# 195 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdlib" 3
+namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
+{
+
+
+
+  using ::lldiv_t;
+
+
+
+
+
+  using ::_Exit;
+
+
+
+  using ::llabs;
+
+  inline lldiv_t
+  div(long long __n, long long __d)
+  { lldiv_t __q; __q.quot = __n / __d; __q.rem = __n % __d; return __q; }
+
+  using ::lldiv;
+# 227 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdlib" 3
+  using ::atoll;
+  using ::strtoll;
+  using ::strtoull;
+
+  using ::strtof;
+  using ::strtold;
+
+
+}
+
+namespace std
+{
+
+  using ::__gnu_cxx::lldiv_t;
+
+  using ::__gnu_cxx::_Exit;
+
+  using ::__gnu_cxx::llabs;
+  using ::__gnu_cxx::div;
+  using ::__gnu_cxx::lldiv;
+
+  using ::__gnu_cxx::atoll;
+  using ::__gnu_cxx::strtof;
+  using ::__gnu_cxx::strtoll;
+  using ::__gnu_cxx::strtoull;
+  using ::__gnu_cxx::strtold;
+}
+
+
+
+}
+# 37 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/stdlib.h" 2 3
+
+using std::abort;
+using std::atexit;
+using std::exit;
+
+
+  using std::at_quick_exit;
+
+
+  using std::quick_exit;
+
+
+
+
+using std::div_t;
+using std::ldiv_t;
+
+using std::abs;
+using std::atof;
+using std::atoi;
+using std::atol;
+using std::bsearch;
+using std::calloc;
+using std::div;
+using std::free;
+using std::getenv;
+using std::labs;
+using std::ldiv;
+using std::malloc;
+
+using std::mblen;
+using std::mbstowcs;
+using std::mbtowc;
+
+using std::qsort;
+using std::rand;
+using std::realloc;
+using std::srand;
+using std::strtod;
+using std::strtol;
+using std::strtoul;
+using std::system;
+
+using std::wcstombs;
+using std::wctomb;
+# 67 "/data/xilinx/Vitis_HLS/2022.2/include/ap_common.h" 2
+# 152 "/data/xilinx/Vitis_HLS/2022.2/include/ap_common.h"
 # 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/iostream" 1 3
 # 36 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/iostream" 3
        
@@ -368,8 +2784,6 @@ void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, 
 
 
 
-
-# 50 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/memoryfwd.h" 3
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
@@ -464,39 +2878,16 @@ namespace __cxx11 {
 # 28 "/usr/include/wchar.h" 2 3 4
 
 
-# 1 "/usr/include/x86_64-linux-gnu/bits/floatn.h" 1 3 4
-# 75 "/usr/include/x86_64-linux-gnu/bits/floatn.h" 3 4
-typedef _Complex float __cfloat128 __attribute__ ((__mode__ (__TC__)));
-# 87 "/usr/include/x86_64-linux-gnu/bits/floatn.h" 3 4
-typedef __float128 _Float128;
-# 120 "/usr/include/x86_64-linux-gnu/bits/floatn.h" 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 1 3 4
-# 24 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/long-double.h" 1 3 4
-# 25 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 2 3 4
-# 214 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 3 4
-typedef float _Float32;
-# 251 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 3 4
-typedef double _Float64;
-# 268 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 3 4
-typedef double _Float32x;
-# 285 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 3 4
-typedef long double _Float64x;
-# 121 "/usr/include/x86_64-linux-gnu/bits/floatn.h" 2 3 4
-# 31 "/usr/include/wchar.h" 2 3 4
+
 
 
 
 
 # 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stddef.h" 1 3 4
-# 216 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stddef.h" 3 4
-typedef long unsigned int size_t;
 # 36 "/usr/include/wchar.h" 2 3 4
 
 
 # 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stdarg.h" 1 3 4
-# 40 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stdarg.h" 3 4
-typedef __builtin_va_list __gnuc_va_list;
 # 39 "/usr/include/wchar.h" 2 3 4
 
 
@@ -508,64 +2899,10 @@ typedef unsigned int wint_t;
 
 
 
-# 1 "/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h" 1 3 4
-# 13 "/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h" 3 4
-typedef struct
-{
-  int __count;
-  union
-  {
-    unsigned int __wch;
-    char __wchb[4];
-  } __value;
-} __mbstate_t;
-# 5 "/usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h" 2 3 4
+
 
 typedef __mbstate_t mbstate_t;
 # 43 "/usr/include/wchar.h" 2 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/types/__FILE.h" 1 3 4
-
-
-
-struct _IO_FILE;
-typedef struct _IO_FILE __FILE;
-# 44 "/usr/include/wchar.h" 2 3 4
-
-
-# 1 "/usr/include/x86_64-linux-gnu/bits/types/FILE.h" 1 3 4
-
-
-
-struct _IO_FILE;
-
-
-typedef struct _IO_FILE FILE;
-# 47 "/usr/include/wchar.h" 2 3 4
-
-
-# 1 "/usr/include/x86_64-linux-gnu/bits/types/locale_t.h" 1 3 4
-# 22 "/usr/include/x86_64-linux-gnu/bits/types/locale_t.h" 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h" 1 3 4
-# 28 "/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h" 3 4
-struct __locale_struct
-{
-
-  struct __locale_data *__locales[13];
-
-
-  const unsigned short int *__ctype_b;
-  const int *__ctype_tolower;
-  const int *__ctype_toupper;
-
-
-  const char *__names[13];
-};
-
-typedef struct __locale_struct *__locale_t;
-# 23 "/usr/include/x86_64-linux-gnu/bits/types/locale_t.h" 2 3 4
-
-typedef __locale_t locale_t;
-# 50 "/usr/include/wchar.h" 2 3 4
 # 79 "/usr/include/wchar.h" 3 4
 extern "C" {
 
@@ -9511,18 +11848,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 # 1 "/usr/include/ctype.h" 1 3 4
 # 28 "/usr/include/ctype.h" 3 4
 extern "C" {
-# 39 "/usr/include/ctype.h" 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/endian.h" 1 3 4
-# 35 "/usr/include/x86_64-linux-gnu/bits/endian.h" 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/endianness.h" 1 3 4
-# 36 "/usr/include/x86_64-linux-gnu/bits/endian.h" 2 3 4
-# 40 "/usr/include/ctype.h" 2 3 4
-
-
-
-
-
-
+# 46 "/usr/include/ctype.h" 3 4
 enum
 {
   _ISupper = ((0) < 8 ? ((1 << (0)) << 8) : ((1 << (0)) >> 8)),
@@ -9824,38 +12150,7 @@ namespace __cxx11 {
 # 29 "/usr/include/sched.h" 3 4
 # 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stddef.h" 1 3 4
 # 30 "/usr/include/sched.h" 2 3 4
-
-# 1 "/usr/include/x86_64-linux-gnu/bits/types/time_t.h" 1 3 4
-
-
-
-
-
-
-typedef __time_t time_t;
-# 32 "/usr/include/sched.h" 2 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h" 1 3 4
-# 10 "/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h" 3 4
-struct timespec
-{
-  __time_t tv_sec;
-
-
-
-  __syscall_slong_t tv_nsec;
-# 26 "/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h" 3 4
-};
-# 33 "/usr/include/sched.h" 2 3 4
-
-
-
-
-
-typedef __pid_t pid_t;
-
-
-
-
+# 43 "/usr/include/sched.h" 3 4
 # 1 "/usr/include/x86_64-linux-gnu/bits/sched.h" 1 3 4
 # 76 "/usr/include/x86_64-linux-gnu/bits/sched.h" 3 4
 # 1 "/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h" 1 3 4
@@ -9965,24 +12260,7 @@ extern int sched_getaffinity (__pid_t __pid, size_t __cpusetsize,
 # 1 "/usr/include/x86_64-linux-gnu/bits/time.h" 1 3 4
 # 73 "/usr/include/x86_64-linux-gnu/bits/time.h" 3 4
 # 1 "/usr/include/x86_64-linux-gnu/bits/timex.h" 1 3 4
-# 22 "/usr/include/x86_64-linux-gnu/bits/timex.h" 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h" 1 3 4
-
-
-
-
-
-
-
-struct timeval
-{
-  __time_t tv_sec;
-  __suseconds_t tv_usec;
-};
-# 23 "/usr/include/x86_64-linux-gnu/bits/timex.h" 2 3 4
-
-
-
+# 26 "/usr/include/x86_64-linux-gnu/bits/timex.h" 3 4
 struct timex
 {
   unsigned int modes;
@@ -10024,15 +12302,7 @@ extern int clock_adjtime (__clockid_t __clock_id, struct timex *__utx) throw ();
 
 
 
-# 1 "/usr/include/x86_64-linux-gnu/bits/types/clock_t.h" 1 3 4
 
-
-
-
-
-
-typedef __clock_t clock_t;
-# 38 "/usr/include/time.h" 2 3 4
 
 # 1 "/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h" 1 3 4
 
@@ -10062,30 +12332,7 @@ struct tm
 
 };
 # 40 "/usr/include/time.h" 2 3 4
-
-
-
-
-
-
-# 1 "/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h" 1 3 4
-
-
-
-
-
-
-typedef __clockid_t clockid_t;
-# 47 "/usr/include/time.h" 2 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/types/timer_t.h" 1 3 4
-
-
-
-
-
-
-typedef __timer_t timer_t;
-# 48 "/usr/include/time.h" 2 3 4
+# 48 "/usr/include/time.h" 3 4
 # 1 "/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h" 1 3 4
 
 
@@ -10286,206 +12533,7 @@ extern int getdate_r (const char *__restrict __string,
 # 24 "/usr/include/pthread.h" 2 3 4
 
 
-# 1 "/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h" 1 3 4
-# 23 "/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h" 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h" 1 3 4
-# 44 "/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h" 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h" 1 3 4
-# 21 "/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h" 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4
-# 22 "/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h" 2 3 4
-# 45 "/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h" 2 3 4
 
-
-
-
-typedef struct __pthread_internal_list
-{
-  struct __pthread_internal_list *__prev;
-  struct __pthread_internal_list *__next;
-} __pthread_list_t;
-
-typedef struct __pthread_internal_slist
-{
-  struct __pthread_internal_slist *__next;
-} __pthread_slist_t;
-# 74 "/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h" 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/struct_mutex.h" 1 3 4
-# 22 "/usr/include/x86_64-linux-gnu/bits/struct_mutex.h" 3 4
-struct __pthread_mutex_s
-{
-  int __lock;
-  unsigned int __count;
-  int __owner;
-
-  unsigned int __nusers;
-
-
-
-  int __kind;
-
-  short __spins;
-  short __elision;
-  __pthread_list_t __list;
-# 53 "/usr/include/x86_64-linux-gnu/bits/struct_mutex.h" 3 4
-};
-# 75 "/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h" 2 3 4
-# 87 "/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h" 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h" 1 3 4
-# 23 "/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h" 3 4
-struct __pthread_rwlock_arch_t
-{
-  unsigned int __readers;
-  unsigned int __writers;
-  unsigned int __wrphase_futex;
-  unsigned int __writers_futex;
-  unsigned int __pad3;
-  unsigned int __pad4;
-
-  int __cur_writer;
-  int __shared;
-  signed char __rwelision;
-
-
-
-
-  unsigned char __pad1[7];
-
-
-  unsigned long int __pad2;
-
-
-  unsigned int __flags;
-# 55 "/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h" 3 4
-};
-# 88 "/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h" 2 3 4
-
-
-
-
-struct __pthread_cond_s
-{
-  __extension__ union
-  {
-    __extension__ unsigned long long int __wseq;
-    struct
-    {
-      unsigned int __low;
-      unsigned int __high;
-    } __wseq32;
-  };
-  __extension__ union
-  {
-    __extension__ unsigned long long int __g1_start;
-    struct
-    {
-      unsigned int __low;
-      unsigned int __high;
-    } __g1_start32;
-  };
-  unsigned int __g_refs[2] ;
-  unsigned int __g_size[2];
-  unsigned int __g1_orig_size;
-  unsigned int __wrefs;
-  unsigned int __g_signals[2];
-};
-# 24 "/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h" 2 3 4
-
-
-
-typedef unsigned long int pthread_t;
-
-
-
-
-typedef union
-{
-  char __size[4];
-  int __align;
-} pthread_mutexattr_t;
-
-
-
-
-typedef union
-{
-  char __size[4];
-  int __align;
-} pthread_condattr_t;
-
-
-
-typedef unsigned int pthread_key_t;
-
-
-
-typedef int pthread_once_t;
-
-
-union pthread_attr_t
-{
-  char __size[56];
-  long int __align;
-};
-
-typedef union pthread_attr_t pthread_attr_t;
-
-
-
-
-typedef union
-{
-  struct __pthread_mutex_s __data;
-  char __size[40];
-  long int __align;
-} pthread_mutex_t;
-
-
-typedef union
-{
-  struct __pthread_cond_s __data;
-  char __size[48];
-  __extension__ long long int __align;
-} pthread_cond_t;
-
-
-
-
-
-typedef union
-{
-  struct __pthread_rwlock_arch_t __data;
-  char __size[56];
-  long int __align;
-} pthread_rwlock_t;
-
-typedef union
-{
-  char __size[8];
-  long int __align;
-} pthread_rwlockattr_t;
-
-
-
-
-
-typedef volatile int pthread_spinlock_t;
-
-
-
-
-typedef union
-{
-  char __size[32];
-  long int __align;
-} pthread_barrier_t;
-
-typedef union
-{
-  char __size[4];
-  int __align;
-} pthread_barrierattr_t;
-# 27 "/usr/include/pthread.h" 2 3 4
 # 1 "/usr/include/x86_64-linux-gnu/bits/setjmp.h" 1 3 4
 # 26 "/usr/include/x86_64-linux-gnu/bits/setjmp.h" 3 4
 # 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4
@@ -16037,1231 +18085,6 @@ namespace __cxx11 {
 # 39 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdlib" 3
        
 # 40 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdlib" 3
-# 75 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdlib" 3
-# 1 "/usr/include/stdlib.h" 1 3 4
-# 25 "/usr/include/stdlib.h" 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/libc-header-start.h" 1 3 4
-# 26 "/usr/include/stdlib.h" 2 3 4
-
-
-
-
-
-# 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stddef.h" 1 3 4
-# 32 "/usr/include/stdlib.h" 2 3 4
-
-extern "C" {
-
-
-
-
-
-# 1 "/usr/include/x86_64-linux-gnu/bits/waitflags.h" 1 3 4
-# 52 "/usr/include/x86_64-linux-gnu/bits/waitflags.h" 3 4
-typedef enum
-{
-  P_ALL,
-  P_PID,
-  P_PGID
-} idtype_t;
-# 40 "/usr/include/stdlib.h" 2 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/waitstatus.h" 1 3 4
-# 41 "/usr/include/stdlib.h" 2 3 4
-# 58 "/usr/include/stdlib.h" 3 4
-typedef struct
-  {
-    int quot;
-    int rem;
-  } div_t;
-
-
-
-typedef struct
-  {
-    long int quot;
-    long int rem;
-  } ldiv_t;
-
-
-
-
-
-__extension__ typedef struct
-  {
-    long long int quot;
-    long long int rem;
-  } lldiv_t;
-# 97 "/usr/include/stdlib.h" 3 4
-extern size_t __ctype_get_mb_cur_max (void) throw () ;
-
-
-
-extern double atof (const char *__nptr)
-     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1))) ;
-
-extern int atoi (const char *__nptr)
-     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1))) ;
-
-extern long int atol (const char *__nptr)
-     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1))) ;
-
-
-
-__extension__ extern long long int atoll (const char *__nptr)
-     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1))) ;
-
-
-
-extern double strtod (const char *__restrict __nptr,
-        char **__restrict __endptr)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-extern float strtof (const char *__restrict __nptr,
-       char **__restrict __endptr) throw () __attribute__ ((__nonnull__ (1)));
-
-extern long double strtold (const char *__restrict __nptr,
-       char **__restrict __endptr)
-     throw () __attribute__ ((__nonnull__ (1)));
-# 140 "/usr/include/stdlib.h" 3 4
-extern _Float32 strtof32 (const char *__restrict __nptr,
-     char **__restrict __endptr)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-extern _Float64 strtof64 (const char *__restrict __nptr,
-     char **__restrict __endptr)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-extern _Float128 strtof128 (const char *__restrict __nptr,
-       char **__restrict __endptr)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-extern _Float32x strtof32x (const char *__restrict __nptr,
-       char **__restrict __endptr)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-extern _Float64x strtof64x (const char *__restrict __nptr,
-       char **__restrict __endptr)
-     throw () __attribute__ ((__nonnull__ (1)));
-# 176 "/usr/include/stdlib.h" 3 4
-extern long int strtol (const char *__restrict __nptr,
-   char **__restrict __endptr, int __base)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-extern unsigned long int strtoul (const char *__restrict __nptr,
-      char **__restrict __endptr, int __base)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-__extension__
-extern long long int strtoq (const char *__restrict __nptr,
-        char **__restrict __endptr, int __base)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-__extension__
-extern unsigned long long int strtouq (const char *__restrict __nptr,
-           char **__restrict __endptr, int __base)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-
-__extension__
-extern long long int strtoll (const char *__restrict __nptr,
-         char **__restrict __endptr, int __base)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-__extension__
-extern unsigned long long int strtoull (const char *__restrict __nptr,
-     char **__restrict __endptr, int __base)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-
-extern int strfromd (char *__dest, size_t __size, const char *__format,
-       double __f)
-     throw () __attribute__ ((__nonnull__ (3)));
-
-extern int strfromf (char *__dest, size_t __size, const char *__format,
-       float __f)
-     throw () __attribute__ ((__nonnull__ (3)));
-
-extern int strfroml (char *__dest, size_t __size, const char *__format,
-       long double __f)
-     throw () __attribute__ ((__nonnull__ (3)));
-# 232 "/usr/include/stdlib.h" 3 4
-extern int strfromf32 (char *__dest, size_t __size, const char * __format,
-         _Float32 __f)
-     throw () __attribute__ ((__nonnull__ (3)));
-
-
-
-extern int strfromf64 (char *__dest, size_t __size, const char * __format,
-         _Float64 __f)
-     throw () __attribute__ ((__nonnull__ (3)));
-
-
-
-extern int strfromf128 (char *__dest, size_t __size, const char * __format,
-   _Float128 __f)
-     throw () __attribute__ ((__nonnull__ (3)));
-
-
-
-extern int strfromf32x (char *__dest, size_t __size, const char * __format,
-   _Float32x __f)
-     throw () __attribute__ ((__nonnull__ (3)));
-
-
-
-extern int strfromf64x (char *__dest, size_t __size, const char * __format,
-   _Float64x __f)
-     throw () __attribute__ ((__nonnull__ (3)));
-# 274 "/usr/include/stdlib.h" 3 4
-extern long int strtol_l (const char *__restrict __nptr,
-     char **__restrict __endptr, int __base,
-     locale_t __loc) throw () __attribute__ ((__nonnull__ (1, 4)));
-
-extern unsigned long int strtoul_l (const char *__restrict __nptr,
-        char **__restrict __endptr,
-        int __base, locale_t __loc)
-     throw () __attribute__ ((__nonnull__ (1, 4)));
-
-__extension__
-extern long long int strtoll_l (const char *__restrict __nptr,
-    char **__restrict __endptr, int __base,
-    locale_t __loc)
-     throw () __attribute__ ((__nonnull__ (1, 4)));
-
-__extension__
-extern unsigned long long int strtoull_l (const char *__restrict __nptr,
-       char **__restrict __endptr,
-       int __base, locale_t __loc)
-     throw () __attribute__ ((__nonnull__ (1, 4)));
-
-extern double strtod_l (const char *__restrict __nptr,
-   char **__restrict __endptr, locale_t __loc)
-     throw () __attribute__ ((__nonnull__ (1, 3)));
-
-extern float strtof_l (const char *__restrict __nptr,
-         char **__restrict __endptr, locale_t __loc)
-     throw () __attribute__ ((__nonnull__ (1, 3)));
-
-extern long double strtold_l (const char *__restrict __nptr,
-         char **__restrict __endptr,
-         locale_t __loc)
-     throw () __attribute__ ((__nonnull__ (1, 3)));
-# 316 "/usr/include/stdlib.h" 3 4
-extern _Float32 strtof32_l (const char *__restrict __nptr,
-       char **__restrict __endptr,
-       locale_t __loc)
-     throw () __attribute__ ((__nonnull__ (1, 3)));
-
-
-
-extern _Float64 strtof64_l (const char *__restrict __nptr,
-       char **__restrict __endptr,
-       locale_t __loc)
-     throw () __attribute__ ((__nonnull__ (1, 3)));
-
-
-
-extern _Float128 strtof128_l (const char *__restrict __nptr,
-         char **__restrict __endptr,
-         locale_t __loc)
-     throw () __attribute__ ((__nonnull__ (1, 3)));
-
-
-
-extern _Float32x strtof32x_l (const char *__restrict __nptr,
-         char **__restrict __endptr,
-         locale_t __loc)
-     throw () __attribute__ ((__nonnull__ (1, 3)));
-
-
-
-extern _Float64x strtof64x_l (const char *__restrict __nptr,
-         char **__restrict __endptr,
-         locale_t __loc)
-     throw () __attribute__ ((__nonnull__ (1, 3)));
-# 385 "/usr/include/stdlib.h" 3 4
-extern char *l64a (long int __n) throw () ;
-
-
-extern long int a64l (const char *__s)
-     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1))) ;
-
-
-
-
-# 1 "/usr/include/x86_64-linux-gnu/sys/types.h" 1 3 4
-# 27 "/usr/include/x86_64-linux-gnu/sys/types.h" 3 4
-extern "C" {
-
-
-
-
-
-typedef __u_char u_char;
-typedef __u_short u_short;
-typedef __u_int u_int;
-typedef __u_long u_long;
-typedef __quad_t quad_t;
-typedef __u_quad_t u_quad_t;
-typedef __fsid_t fsid_t;
-
-
-typedef __loff_t loff_t;
-
-
-
-
-typedef __ino_t ino_t;
-
-
-
-
-
-
-typedef __ino64_t ino64_t;
-
-
-
-
-typedef __dev_t dev_t;
-
-
-
-
-typedef __gid_t gid_t;
-
-
-
-
-typedef __mode_t mode_t;
-
-
-
-
-typedef __nlink_t nlink_t;
-
-
-
-
-typedef __uid_t uid_t;
-
-
-
-
-
-typedef __off_t off_t;
-
-
-
-
-
-
-typedef __off64_t off64_t;
-# 103 "/usr/include/x86_64-linux-gnu/sys/types.h" 3 4
-typedef __id_t id_t;
-
-
-
-
-typedef __ssize_t ssize_t;
-
-
-
-
-
-typedef __daddr_t daddr_t;
-typedef __caddr_t caddr_t;
-
-
-
-
-
-typedef __key_t key_t;
-# 134 "/usr/include/x86_64-linux-gnu/sys/types.h" 3 4
-typedef __useconds_t useconds_t;
-
-
-
-typedef __suseconds_t suseconds_t;
-
-
-
-
-
-# 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stddef.h" 1 3 4
-# 145 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4
-
-
-
-typedef unsigned long int ulong;
-typedef unsigned short int ushort;
-typedef unsigned int uint;
-
-
-
-
-
-
-
-typedef __uint8_t u_int8_t;
-typedef __uint16_t u_int16_t;
-typedef __uint32_t u_int32_t;
-typedef __uint64_t u_int64_t;
-
-
-typedef int register_t __attribute__ ((__mode__ (__word__)));
-# 176 "/usr/include/x86_64-linux-gnu/sys/types.h" 3 4
-# 1 "/usr/include/endian.h" 1 3 4
-# 35 "/usr/include/endian.h" 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/byteswap.h" 1 3 4
-# 33 "/usr/include/x86_64-linux-gnu/bits/byteswap.h" 3 4
-static __inline __uint16_t
-__bswap_16 (__uint16_t __bsx)
-{
-
-  return __builtin_bswap16 (__bsx);
-
-
-
-}
-
-
-
-
-
-
-static __inline __uint32_t
-__bswap_32 (__uint32_t __bsx)
-{
-
-  return __builtin_bswap32 (__bsx);
-
-
-
-}
-# 69 "/usr/include/x86_64-linux-gnu/bits/byteswap.h" 3 4
-__extension__ static __inline __uint64_t
-__bswap_64 (__uint64_t __bsx)
-{
-
-  return __builtin_bswap64 (__bsx);
-
-
-
-}
-# 36 "/usr/include/endian.h" 2 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/uintn-identity.h" 1 3 4
-# 32 "/usr/include/x86_64-linux-gnu/bits/uintn-identity.h" 3 4
-static __inline __uint16_t
-__uint16_identity (__uint16_t __x)
-{
-  return __x;
-}
-
-static __inline __uint32_t
-__uint32_identity (__uint32_t __x)
-{
-  return __x;
-}
-
-static __inline __uint64_t
-__uint64_identity (__uint64_t __x)
-{
-  return __x;
-}
-# 37 "/usr/include/endian.h" 2 3 4
-# 177 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4
-
-
-# 1 "/usr/include/x86_64-linux-gnu/sys/select.h" 1 3 4
-# 30 "/usr/include/x86_64-linux-gnu/sys/select.h" 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/select.h" 1 3 4
-# 22 "/usr/include/x86_64-linux-gnu/bits/select.h" 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4
-# 23 "/usr/include/x86_64-linux-gnu/bits/select.h" 2 3 4
-# 31 "/usr/include/x86_64-linux-gnu/sys/select.h" 2 3 4
-
-
-# 1 "/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h" 1 3 4
-
-
-
-# 1 "/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h" 1 3 4
-
-
-
-
-typedef struct
-{
-  unsigned long int __val[(1024 / (8 * sizeof (unsigned long int)))];
-} __sigset_t;
-# 5 "/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h" 2 3 4
-
-
-typedef __sigset_t sigset_t;
-# 34 "/usr/include/x86_64-linux-gnu/sys/select.h" 2 3 4
-# 49 "/usr/include/x86_64-linux-gnu/sys/select.h" 3 4
-typedef long int __fd_mask;
-# 59 "/usr/include/x86_64-linux-gnu/sys/select.h" 3 4
-typedef struct
-  {
-
-
-
-    __fd_mask fds_bits[1024 / (8 * (int) sizeof (__fd_mask))];
-
-
-
-
-
-  } fd_set;
-
-
-
-
-
-
-typedef __fd_mask fd_mask;
-# 91 "/usr/include/x86_64-linux-gnu/sys/select.h" 3 4
-extern "C" {
-# 101 "/usr/include/x86_64-linux-gnu/sys/select.h" 3 4
-extern int select (int __nfds, fd_set *__restrict __readfds,
-     fd_set *__restrict __writefds,
-     fd_set *__restrict __exceptfds,
-     struct timeval *__restrict __timeout);
-# 113 "/usr/include/x86_64-linux-gnu/sys/select.h" 3 4
-extern int pselect (int __nfds, fd_set *__restrict __readfds,
-      fd_set *__restrict __writefds,
-      fd_set *__restrict __exceptfds,
-      const struct timespec *__restrict __timeout,
-      const __sigset_t *__restrict __sigmask);
-# 126 "/usr/include/x86_64-linux-gnu/sys/select.h" 3 4
-}
-# 180 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4
-
-
-
-
-
-typedef __blksize_t blksize_t;
-
-
-
-
-
-
-typedef __blkcnt_t blkcnt_t;
-
-
-
-typedef __fsblkcnt_t fsblkcnt_t;
-
-
-
-typedef __fsfilcnt_t fsfilcnt_t;
-# 219 "/usr/include/x86_64-linux-gnu/sys/types.h" 3 4
-typedef __blkcnt64_t blkcnt64_t;
-typedef __fsblkcnt64_t fsblkcnt64_t;
-typedef __fsfilcnt64_t fsfilcnt64_t;
-# 230 "/usr/include/x86_64-linux-gnu/sys/types.h" 3 4
-}
-# 395 "/usr/include/stdlib.h" 2 3 4
-
-
-
-
-
-
-extern long int random (void) throw ();
-
-
-extern void srandom (unsigned int __seed) throw ();
-
-
-
-
-
-extern char *initstate (unsigned int __seed, char *__statebuf,
-   size_t __statelen) throw () __attribute__ ((__nonnull__ (2)));
-
-
-
-extern char *setstate (char *__statebuf) throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-
-
-
-
-struct random_data
-  {
-    int32_t *fptr;
-    int32_t *rptr;
-    int32_t *state;
-    int rand_type;
-    int rand_deg;
-    int rand_sep;
-    int32_t *end_ptr;
-  };
-
-extern int random_r (struct random_data *__restrict __buf,
-       int32_t *__restrict __result) throw () __attribute__ ((__nonnull__ (1, 2)));
-
-extern int srandom_r (unsigned int __seed, struct random_data *__buf)
-     throw () __attribute__ ((__nonnull__ (2)));
-
-extern int initstate_r (unsigned int __seed, char *__restrict __statebuf,
-   size_t __statelen,
-   struct random_data *__restrict __buf)
-     throw () __attribute__ ((__nonnull__ (2, 4)));
-
-extern int setstate_r (char *__restrict __statebuf,
-         struct random_data *__restrict __buf)
-     throw () __attribute__ ((__nonnull__ (1, 2)));
-
-
-
-
-
-extern int rand (void) throw ();
-
-extern void srand (unsigned int __seed) throw ();
-
-
-
-extern int rand_r (unsigned int *__seed) throw ();
-
-
-
-
-
-
-
-extern double drand48 (void) throw ();
-extern double erand48 (unsigned short int __xsubi[3]) throw () __attribute__ ((__nonnull__ (1)));
-
-
-extern long int lrand48 (void) throw ();
-extern long int nrand48 (unsigned short int __xsubi[3])
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-extern long int mrand48 (void) throw ();
-extern long int jrand48 (unsigned short int __xsubi[3])
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-extern void srand48 (long int __seedval) throw ();
-extern unsigned short int *seed48 (unsigned short int __seed16v[3])
-     throw () __attribute__ ((__nonnull__ (1)));
-extern void lcong48 (unsigned short int __param[7]) throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-
-
-struct drand48_data
-  {
-    unsigned short int __x[3];
-    unsigned short int __old_x[3];
-    unsigned short int __c;
-    unsigned short int __init;
-    __extension__ unsigned long long int __a;
-
-  };
-
-
-extern int drand48_r (struct drand48_data *__restrict __buffer,
-        double *__restrict __result) throw () __attribute__ ((__nonnull__ (1, 2)));
-extern int erand48_r (unsigned short int __xsubi[3],
-        struct drand48_data *__restrict __buffer,
-        double *__restrict __result) throw () __attribute__ ((__nonnull__ (1, 2)));
-
-
-extern int lrand48_r (struct drand48_data *__restrict __buffer,
-        long int *__restrict __result)
-     throw () __attribute__ ((__nonnull__ (1, 2)));
-extern int nrand48_r (unsigned short int __xsubi[3],
-        struct drand48_data *__restrict __buffer,
-        long int *__restrict __result)
-     throw () __attribute__ ((__nonnull__ (1, 2)));
-
-
-extern int mrand48_r (struct drand48_data *__restrict __buffer,
-        long int *__restrict __result)
-     throw () __attribute__ ((__nonnull__ (1, 2)));
-extern int jrand48_r (unsigned short int __xsubi[3],
-        struct drand48_data *__restrict __buffer,
-        long int *__restrict __result)
-     throw () __attribute__ ((__nonnull__ (1, 2)));
-
-
-extern int srand48_r (long int __seedval, struct drand48_data *__buffer)
-     throw () __attribute__ ((__nonnull__ (2)));
-
-extern int seed48_r (unsigned short int __seed16v[3],
-       struct drand48_data *__buffer) throw () __attribute__ ((__nonnull__ (1, 2)));
-
-extern int lcong48_r (unsigned short int __param[7],
-        struct drand48_data *__buffer)
-     throw () __attribute__ ((__nonnull__ (1, 2)));
-
-
-
-
-extern void *malloc (size_t __size) throw () __attribute__ ((__malloc__))
-     __attribute__ ((__alloc_size__ (1))) ;
-
-extern void *calloc (size_t __nmemb, size_t __size)
-     throw () __attribute__ ((__malloc__)) __attribute__ ((__alloc_size__ (1, 2))) ;
-
-
-
-
-
-
-extern void *realloc (void *__ptr, size_t __size)
-     throw () __attribute__ ((__warn_unused_result__)) __attribute__ ((__alloc_size__ (2)));
-
-
-
-
-
-
-
-extern void *reallocarray (void *__ptr, size_t __nmemb, size_t __size)
-     throw () __attribute__ ((__warn_unused_result__))
-     __attribute__ ((__alloc_size__ (2, 3)));
-
-
-
-extern void free (void *__ptr) throw ();
-
-
-# 1 "/usr/include/alloca.h" 1 3 4
-# 24 "/usr/include/alloca.h" 3 4
-# 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stddef.h" 1 3 4
-# 25 "/usr/include/alloca.h" 2 3 4
-
-extern "C" {
-
-
-
-
-
-extern void *alloca (size_t __size) throw ();
-
-
-
-
-
-}
-# 569 "/usr/include/stdlib.h" 2 3 4
-
-
-
-
-
-extern void *valloc (size_t __size) throw () __attribute__ ((__malloc__))
-     __attribute__ ((__alloc_size__ (1))) ;
-
-
-
-
-extern int posix_memalign (void **__memptr, size_t __alignment, size_t __size)
-     throw () __attribute__ ((__nonnull__ (1))) ;
-
-
-
-
-extern void *aligned_alloc (size_t __alignment, size_t __size)
-     throw () __attribute__ ((__malloc__)) __attribute__ ((__alloc_size__ (2))) ;
-
-
-
-extern void abort (void) throw () __attribute__ ((__noreturn__));
-
-
-
-extern int atexit (void (*__func) (void)) throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-
-extern "C++" int at_quick_exit (void (*__func) (void))
-     throw () __asm ("at_quick_exit") __attribute__ ((__nonnull__ (1)));
-# 610 "/usr/include/stdlib.h" 3 4
-extern int on_exit (void (*__func) (int __status, void *__arg), void *__arg)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-
-
-extern void exit (int __status) throw () __attribute__ ((__noreturn__));
-
-
-
-
-
-extern void quick_exit (int __status) throw () __attribute__ ((__noreturn__));
-
-
-
-
-
-extern void _Exit (int __status) throw () __attribute__ ((__noreturn__));
-
-
-
-
-extern char *getenv (const char *__name) throw () __attribute__ ((__nonnull__ (1))) ;
-
-
-
-
-extern char *secure_getenv (const char *__name)
-     throw () __attribute__ ((__nonnull__ (1))) ;
-
-
-
-
-
-
-extern int putenv (char *__string) throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-
-
-extern int setenv (const char *__name, const char *__value, int __replace)
-     throw () __attribute__ ((__nonnull__ (2)));
-
-
-extern int unsetenv (const char *__name) throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-
-
-
-extern int clearenv (void) throw ();
-# 675 "/usr/include/stdlib.h" 3 4
-extern char *mktemp (char *__template) throw () __attribute__ ((__nonnull__ (1)));
-# 688 "/usr/include/stdlib.h" 3 4
-extern int mkstemp (char *__template) __attribute__ ((__nonnull__ (1))) ;
-# 698 "/usr/include/stdlib.h" 3 4
-extern int mkstemp64 (char *__template) __attribute__ ((__nonnull__ (1))) ;
-# 710 "/usr/include/stdlib.h" 3 4
-extern int mkstemps (char *__template, int __suffixlen) __attribute__ ((__nonnull__ (1))) ;
-# 720 "/usr/include/stdlib.h" 3 4
-extern int mkstemps64 (char *__template, int __suffixlen)
-     __attribute__ ((__nonnull__ (1))) ;
-# 731 "/usr/include/stdlib.h" 3 4
-extern char *mkdtemp (char *__template) throw () __attribute__ ((__nonnull__ (1))) ;
-# 742 "/usr/include/stdlib.h" 3 4
-extern int mkostemp (char *__template, int __flags) __attribute__ ((__nonnull__ (1))) ;
-# 752 "/usr/include/stdlib.h" 3 4
-extern int mkostemp64 (char *__template, int __flags) __attribute__ ((__nonnull__ (1))) ;
-# 762 "/usr/include/stdlib.h" 3 4
-extern int mkostemps (char *__template, int __suffixlen, int __flags)
-     __attribute__ ((__nonnull__ (1))) ;
-# 774 "/usr/include/stdlib.h" 3 4
-extern int mkostemps64 (char *__template, int __suffixlen, int __flags)
-     __attribute__ ((__nonnull__ (1))) ;
-# 784 "/usr/include/stdlib.h" 3 4
-extern int system (const char *__command) ;
-
-
-
-
-
-extern char *canonicalize_file_name (const char *__name)
-     throw () __attribute__ ((__nonnull__ (1))) ;
-# 800 "/usr/include/stdlib.h" 3 4
-extern char *realpath (const char *__restrict __name,
-         char *__restrict __resolved) throw () ;
-
-
-
-
-
-
-typedef int (*__compar_fn_t) (const void *, const void *);
-
-
-typedef __compar_fn_t comparison_fn_t;
-
-
-
-typedef int (*__compar_d_fn_t) (const void *, const void *, void *);
-
-
-
-
-extern void *bsearch (const void *__key, const void *__base,
-        size_t __nmemb, size_t __size, __compar_fn_t __compar)
-     __attribute__ ((__nonnull__ (1, 2, 5))) ;
-
-
-
-
-
-
-
-extern void qsort (void *__base, size_t __nmemb, size_t __size,
-     __compar_fn_t __compar) __attribute__ ((__nonnull__ (1, 4)));
-
-extern void qsort_r (void *__base, size_t __nmemb, size_t __size,
-       __compar_d_fn_t __compar, void *__arg)
-  __attribute__ ((__nonnull__ (1, 4)));
-
-
-
-
-extern int abs (int __x) throw () __attribute__ ((__const__)) ;
-extern long int labs (long int __x) throw () __attribute__ ((__const__)) ;
-
-
-__extension__ extern long long int llabs (long long int __x)
-     throw () __attribute__ ((__const__)) ;
-
-
-
-
-
-
-extern div_t div (int __numer, int __denom)
-     throw () __attribute__ ((__const__)) ;
-extern ldiv_t ldiv (long int __numer, long int __denom)
-     throw () __attribute__ ((__const__)) ;
-
-
-__extension__ extern lldiv_t lldiv (long long int __numer,
-        long long int __denom)
-     throw () __attribute__ ((__const__)) ;
-# 872 "/usr/include/stdlib.h" 3 4
-extern char *ecvt (double __value, int __ndigit, int *__restrict __decpt,
-     int *__restrict __sign) throw () __attribute__ ((__nonnull__ (3, 4))) ;
-
-
-
-
-extern char *fcvt (double __value, int __ndigit, int *__restrict __decpt,
-     int *__restrict __sign) throw () __attribute__ ((__nonnull__ (3, 4))) ;
-
-
-
-
-extern char *gcvt (double __value, int __ndigit, char *__buf)
-     throw () __attribute__ ((__nonnull__ (3))) ;
-
-
-
-
-extern char *qecvt (long double __value, int __ndigit,
-      int *__restrict __decpt, int *__restrict __sign)
-     throw () __attribute__ ((__nonnull__ (3, 4))) ;
-extern char *qfcvt (long double __value, int __ndigit,
-      int *__restrict __decpt, int *__restrict __sign)
-     throw () __attribute__ ((__nonnull__ (3, 4))) ;
-extern char *qgcvt (long double __value, int __ndigit, char *__buf)
-     throw () __attribute__ ((__nonnull__ (3))) ;
-
-
-
-
-extern int ecvt_r (double __value, int __ndigit, int *__restrict __decpt,
-     int *__restrict __sign, char *__restrict __buf,
-     size_t __len) throw () __attribute__ ((__nonnull__ (3, 4, 5)));
-extern int fcvt_r (double __value, int __ndigit, int *__restrict __decpt,
-     int *__restrict __sign, char *__restrict __buf,
-     size_t __len) throw () __attribute__ ((__nonnull__ (3, 4, 5)));
-
-extern int qecvt_r (long double __value, int __ndigit,
-      int *__restrict __decpt, int *__restrict __sign,
-      char *__restrict __buf, size_t __len)
-     throw () __attribute__ ((__nonnull__ (3, 4, 5)));
-extern int qfcvt_r (long double __value, int __ndigit,
-      int *__restrict __decpt, int *__restrict __sign,
-      char *__restrict __buf, size_t __len)
-     throw () __attribute__ ((__nonnull__ (3, 4, 5)));
-
-
-
-
-
-extern int mblen (const char *__s, size_t __n) throw ();
-
-
-extern int mbtowc (wchar_t *__restrict __pwc,
-     const char *__restrict __s, size_t __n) throw ();
-
-
-extern int wctomb (char *__s, wchar_t __wchar) throw ();
-
-
-
-extern size_t mbstowcs (wchar_t *__restrict __pwcs,
-   const char *__restrict __s, size_t __n) throw ();
-
-extern size_t wcstombs (char *__restrict __s,
-   const wchar_t *__restrict __pwcs, size_t __n)
-     throw ();
-
-
-
-
-
-
-
-extern int rpmatch (const char *__response) throw () __attribute__ ((__nonnull__ (1))) ;
-# 957 "/usr/include/stdlib.h" 3 4
-extern int getsubopt (char **__restrict __optionp,
-        char *const *__restrict __tokens,
-        char **__restrict __valuep)
-     throw () __attribute__ ((__nonnull__ (1, 2, 3))) ;
-
-
-
-
-
-
-
-extern int posix_openpt (int __oflag) ;
-
-
-
-
-
-
-
-extern int grantpt (int __fd) throw ();
-
-
-
-extern int unlockpt (int __fd) throw ();
-
-
-
-
-extern char *ptsname (int __fd) throw () ;
-
-
-
-
-
-
-extern int ptsname_r (int __fd, char *__buf, size_t __buflen)
-     throw () __attribute__ ((__nonnull__ (2)));
-
-
-extern int getpt (void);
-
-
-
-
-
-
-extern int getloadavg (double __loadavg[], int __nelem)
-     throw () __attribute__ ((__nonnull__ (1)));
-# 1013 "/usr/include/stdlib.h" 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/stdlib-float.h" 1 3 4
-# 1014 "/usr/include/stdlib.h" 2 3 4
-# 1023 "/usr/include/stdlib.h" 3 4
-}
-# 76 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdlib" 2 3
-
-# 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/std_abs.h" 1 3
-# 33 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/std_abs.h" 3
-       
-# 34 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/std_abs.h" 3
-# 46 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/std_abs.h" 3
-extern "C++"
-{
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-  using ::abs;
-
-
-  inline long
-  abs(long __i) { return __builtin_labs(__i); }
-
-
-
-  inline long long
-  abs(long long __x) { return __builtin_llabs (__x); }
-
-
-
-
-
-
-
-  inline constexpr double
-  abs(double __x)
-  { return __builtin_fabs(__x); }
-
-  inline constexpr float
-  abs(float __x)
-  { return __builtin_fabsf(__x); }
-
-  inline constexpr long double
-  abs(long double __x)
-  { return __builtin_fabsl(__x); }
-
-
-
-  inline constexpr __int128
-  abs(__int128 __x) { return __x >= 0 ? __x : -__x; }
-# 100 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/std_abs.h" 3
-  inline constexpr
-  __float128
-  abs(__float128 __x)
-  { return __x < 0 ? -__x : __x; }
-
-
-
-}
-}
-# 78 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdlib" 2 3
-# 121 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdlib" 3
-extern "C++"
-{
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-  using ::div_t;
-  using ::ldiv_t;
-
-  using ::abort;
-
-
-
-  using ::atexit;
-
-
-  using ::at_quick_exit;
-
-
-  using ::atof;
-  using ::atoi;
-  using ::atol;
-  using ::bsearch;
-  using ::calloc;
-  using ::div;
-  using ::exit;
-  using ::free;
-  using ::getenv;
-  using ::labs;
-  using ::ldiv;
-  using ::malloc;
-
-  using ::mblen;
-  using ::mbstowcs;
-  using ::mbtowc;
-
-  using ::qsort;
-
-
-  using ::quick_exit;
-
-
-  using ::rand;
-  using ::realloc;
-  using ::srand;
-  using ::strtod;
-  using ::strtol;
-  using ::strtoul;
-  using ::system;
-
-  using ::wcstombs;
-  using ::wctomb;
-
-
-
-  inline ldiv_t
-  div(long __i, long __j) { return ldiv(__i, __j); }
-
-
-
-
-}
-# 195 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdlib" 3
-namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
-{
-
-
-
-  using ::lldiv_t;
-
-
-
-
-
-  using ::_Exit;
-
-
-
-  using ::llabs;
-
-  inline lldiv_t
-  div(long long __n, long long __d)
-  { lldiv_t __q; __q.quot = __n / __d; __q.rem = __n % __d; return __q; }
-
-  using ::lldiv;
-# 227 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdlib" 3
-  using ::atoll;
-  using ::strtoll;
-  using ::strtoull;
-
-  using ::strtof;
-  using ::strtold;
-
-
-}
-
-namespace std
-{
-
-  using ::__gnu_cxx::lldiv_t;
-
-  using ::__gnu_cxx::_Exit;
-
-  using ::__gnu_cxx::llabs;
-  using ::__gnu_cxx::div;
-  using ::__gnu_cxx::lldiv;
-
-  using ::__gnu_cxx::atoll;
-  using ::__gnu_cxx::strtof;
-  using ::__gnu_cxx::strtoll;
-  using ::__gnu_cxx::strtoull;
-  using ::__gnu_cxx::strtold;
-}
-
-
-
-}
 # 42 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/ext/string_conversions.h" 2 3
 # 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cwchar" 1 3
 # 39 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cwchar" 3
@@ -17272,677 +18095,6 @@ namespace std
 # 39 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdio" 3
        
 # 40 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdio" 3
-
-
-# 1 "/usr/include/stdio.h" 1 3 4
-# 27 "/usr/include/stdio.h" 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/libc-header-start.h" 1 3 4
-# 28 "/usr/include/stdio.h" 2 3 4
-
-extern "C" {
-
-
-
-# 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stddef.h" 1 3 4
-# 34 "/usr/include/stdio.h" 2 3 4
-
-
-# 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/stdarg.h" 1 3 4
-# 37 "/usr/include/stdio.h" 2 3 4
-
-
-# 1 "/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h" 1 3 4
-# 10 "/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h" 3 4
-typedef struct _G_fpos_t
-{
-  __off_t __pos;
-  __mbstate_t __state;
-} __fpos_t;
-# 40 "/usr/include/stdio.h" 2 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h" 1 3 4
-# 10 "/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h" 3 4
-typedef struct _G_fpos64_t
-{
-  __off64_t __pos;
-  __mbstate_t __state;
-} __fpos64_t;
-# 41 "/usr/include/stdio.h" 2 3 4
-
-
-# 1 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 1 3 4
-# 35 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3 4
-struct _IO_FILE;
-struct _IO_marker;
-struct _IO_codecvt;
-struct _IO_wide_data;
-
-
-
-
-typedef void _IO_lock_t;
-
-
-
-
-
-struct _IO_FILE
-{
-  int _flags;
-
-
-  char *_IO_read_ptr;
-  char *_IO_read_end;
-  char *_IO_read_base;
-  char *_IO_write_base;
-  char *_IO_write_ptr;
-  char *_IO_write_end;
-  char *_IO_buf_base;
-  char *_IO_buf_end;
-
-
-  char *_IO_save_base;
-  char *_IO_backup_base;
-  char *_IO_save_end;
-
-  struct _IO_marker *_markers;
-
-  struct _IO_FILE *_chain;
-
-  int _fileno;
-  int _flags2;
-  __off_t _old_offset;
-
-
-  unsigned short _cur_column;
-  signed char _vtable_offset;
-  char _shortbuf[1];
-
-  _IO_lock_t *_lock;
-
-
-
-
-
-
-
-  __off64_t _offset;
-
-  struct _IO_codecvt *_codecvt;
-  struct _IO_wide_data *_wide_data;
-  struct _IO_FILE *_freeres_list;
-  void *_freeres_buf;
-  size_t __pad5;
-  int _mode;
-
-  char _unused2[15 * sizeof (int) - 4 * sizeof (void *) - sizeof (size_t)];
-};
-# 44 "/usr/include/stdio.h" 2 3 4
-
-
-# 1 "/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h" 1 3 4
-# 27 "/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h" 3 4
-typedef __ssize_t cookie_read_function_t (void *__cookie, char *__buf,
-                                          size_t __nbytes);
-
-
-
-
-
-
-
-typedef __ssize_t cookie_write_function_t (void *__cookie, const char *__buf,
-                                           size_t __nbytes);
-
-
-
-
-
-
-
-typedef int cookie_seek_function_t (void *__cookie, __off64_t *__pos, int __w);
-
-
-typedef int cookie_close_function_t (void *__cookie);
-
-
-
-
-
-
-typedef struct _IO_cookie_io_functions_t
-{
-  cookie_read_function_t *read;
-  cookie_write_function_t *write;
-  cookie_seek_function_t *seek;
-  cookie_close_function_t *close;
-} cookie_io_functions_t;
-# 47 "/usr/include/stdio.h" 2 3 4
-
-
-
-
-
-typedef __gnuc_va_list va_list;
-# 84 "/usr/include/stdio.h" 3 4
-typedef __fpos_t fpos_t;
-
-
-
-
-typedef __fpos64_t fpos64_t;
-# 133 "/usr/include/stdio.h" 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/stdio_lim.h" 1 3 4
-# 134 "/usr/include/stdio.h" 2 3 4
-
-
-
-extern FILE *stdin;
-extern FILE *stdout;
-extern FILE *stderr;
-
-
-
-
-
-
-extern int remove (const char *__filename) throw ();
-
-extern int rename (const char *__old, const char *__new) throw ();
-
-
-
-extern int renameat (int __oldfd, const char *__old, int __newfd,
-       const char *__new) throw ();
-# 164 "/usr/include/stdio.h" 3 4
-extern int renameat2 (int __oldfd, const char *__old, int __newfd,
-        const char *__new, unsigned int __flags) throw ();
-
-
-
-
-
-
-
-extern FILE *tmpfile (void) ;
-# 183 "/usr/include/stdio.h" 3 4
-extern FILE *tmpfile64 (void) ;
-
-
-
-extern char *tmpnam (char *__s) throw () ;
-
-
-
-
-extern char *tmpnam_r (char *__s) throw () ;
-# 204 "/usr/include/stdio.h" 3 4
-extern char *tempnam (const char *__dir, const char *__pfx)
-     throw () __attribute__ ((__malloc__)) ;
-
-
-
-
-
-
-
-extern int fclose (FILE *__stream);
-
-
-
-
-extern int fflush (FILE *__stream);
-# 227 "/usr/include/stdio.h" 3 4
-extern int fflush_unlocked (FILE *__stream);
-# 237 "/usr/include/stdio.h" 3 4
-extern int fcloseall (void);
-# 246 "/usr/include/stdio.h" 3 4
-extern FILE *fopen (const char *__restrict __filename,
-      const char *__restrict __modes) ;
-
-
-
-
-extern FILE *freopen (const char *__restrict __filename,
-        const char *__restrict __modes,
-        FILE *__restrict __stream) ;
-# 270 "/usr/include/stdio.h" 3 4
-extern FILE *fopen64 (const char *__restrict __filename,
-        const char *__restrict __modes) ;
-extern FILE *freopen64 (const char *__restrict __filename,
-   const char *__restrict __modes,
-   FILE *__restrict __stream) ;
-
-
-
-
-extern FILE *fdopen (int __fd, const char *__modes) throw () ;
-
-
-
-
-
-extern FILE *fopencookie (void *__restrict __magic_cookie,
-     const char *__restrict __modes,
-     cookie_io_functions_t __io_funcs) throw () ;
-
-
-
-
-extern FILE *fmemopen (void *__s, size_t __len, const char *__modes)
-  throw () ;
-
-
-
-
-extern FILE *open_memstream (char **__bufloc, size_t *__sizeloc) throw () ;
-
-
-
-
-
-extern void setbuf (FILE *__restrict __stream, char *__restrict __buf) throw ();
-
-
-
-extern int setvbuf (FILE *__restrict __stream, char *__restrict __buf,
-      int __modes, size_t __n) throw ();
-
-
-
-
-extern void setbuffer (FILE *__restrict __stream, char *__restrict __buf,
-         size_t __size) throw ();
-
-
-extern void setlinebuf (FILE *__stream) throw ();
-
-
-
-
-
-
-
-extern int fprintf (FILE *__restrict __stream,
-      const char *__restrict __format, ...);
-
-
-
-
-extern int printf (const char *__restrict __format, ...);
-
-extern int sprintf (char *__restrict __s,
-      const char *__restrict __format, ...) throw ();
-
-
-
-
-
-extern int vfprintf (FILE *__restrict __s, const char *__restrict __format,
-       __gnuc_va_list __arg);
-
-
-
-
-extern int vprintf (const char *__restrict __format, __gnuc_va_list __arg);
-
-extern int vsprintf (char *__restrict __s, const char *__restrict __format,
-       __gnuc_va_list __arg) throw ();
-
-
-
-extern int snprintf (char *__restrict __s, size_t __maxlen,
-       const char *__restrict __format, ...)
-     throw () __attribute__ ((__format__ (__printf__, 3, 4)));
-
-extern int vsnprintf (char *__restrict __s, size_t __maxlen,
-        const char *__restrict __format, __gnuc_va_list __arg)
-     throw () __attribute__ ((__format__ (__printf__, 3, 0)));
-
-
-
-
-
-extern int vasprintf (char **__restrict __ptr, const char *__restrict __f,
-        __gnuc_va_list __arg)
-     throw () __attribute__ ((__format__ (__printf__, 2, 0))) ;
-extern int __asprintf (char **__restrict __ptr,
-         const char *__restrict __fmt, ...)
-     throw () __attribute__ ((__format__ (__printf__, 2, 3))) ;
-extern int asprintf (char **__restrict __ptr,
-       const char *__restrict __fmt, ...)
-     throw () __attribute__ ((__format__ (__printf__, 2, 3))) ;
-
-
-
-
-extern int vdprintf (int __fd, const char *__restrict __fmt,
-       __gnuc_va_list __arg)
-     __attribute__ ((__format__ (__printf__, 2, 0)));
-extern int dprintf (int __fd, const char *__restrict __fmt, ...)
-     __attribute__ ((__format__ (__printf__, 2, 3)));
-
-
-
-
-
-
-
-extern int fscanf (FILE *__restrict __stream,
-     const char *__restrict __format, ...) ;
-
-
-
-
-extern int scanf (const char *__restrict __format, ...) ;
-
-extern int sscanf (const char *__restrict __s,
-     const char *__restrict __format, ...) throw ();
-
-
-
-
-
-
-extern int fscanf (FILE *__restrict __stream, const char *__restrict __format, ...) __asm__ ("" "__isoc99_fscanf")
-
-                               ;
-extern int scanf (const char *__restrict __format, ...) __asm__ ("" "__isoc99_scanf")
-                              ;
-extern int sscanf (const char *__restrict __s, const char *__restrict __format, ...) throw () __asm__ ("" "__isoc99_sscanf")
-
-                      ;
-# 432 "/usr/include/stdio.h" 3 4
-extern int vfscanf (FILE *__restrict __s, const char *__restrict __format,
-      __gnuc_va_list __arg)
-     __attribute__ ((__format__ (__scanf__, 2, 0))) ;
-
-
-
-
-
-extern int vscanf (const char *__restrict __format, __gnuc_va_list __arg)
-     __attribute__ ((__format__ (__scanf__, 1, 0))) ;
-
-
-extern int vsscanf (const char *__restrict __s,
-      const char *__restrict __format, __gnuc_va_list __arg)
-     throw () __attribute__ ((__format__ (__scanf__, 2, 0)));
-
-
-
-
-extern int vfscanf (FILE *__restrict __s, const char *__restrict __format, __gnuc_va_list __arg) __asm__ ("" "__isoc99_vfscanf")
-
-
-
-     __attribute__ ((__format__ (__scanf__, 2, 0))) ;
-extern int vscanf (const char *__restrict __format, __gnuc_va_list __arg) __asm__ ("" "__isoc99_vscanf")
-
-     __attribute__ ((__format__ (__scanf__, 1, 0))) ;
-extern int vsscanf (const char *__restrict __s, const char *__restrict __format, __gnuc_va_list __arg) throw () __asm__ ("" "__isoc99_vsscanf")
-
-
-
-     __attribute__ ((__format__ (__scanf__, 2, 0)));
-# 485 "/usr/include/stdio.h" 3 4
-extern int fgetc (FILE *__stream);
-extern int getc (FILE *__stream);
-
-
-
-
-
-extern int getchar (void);
-
-
-
-
-
-
-extern int getc_unlocked (FILE *__stream);
-extern int getchar_unlocked (void);
-# 510 "/usr/include/stdio.h" 3 4
-extern int fgetc_unlocked (FILE *__stream);
-# 521 "/usr/include/stdio.h" 3 4
-extern int fputc (int __c, FILE *__stream);
-extern int putc (int __c, FILE *__stream);
-
-
-
-
-
-extern int putchar (int __c);
-# 537 "/usr/include/stdio.h" 3 4
-extern int fputc_unlocked (int __c, FILE *__stream);
-
-
-
-
-
-
-
-extern int putc_unlocked (int __c, FILE *__stream);
-extern int putchar_unlocked (int __c);
-
-
-
-
-
-
-extern int getw (FILE *__stream);
-
-
-extern int putw (int __w, FILE *__stream);
-
-
-
-
-
-
-
-extern char *fgets (char *__restrict __s, int __n, FILE *__restrict __stream)
-     ;
-# 587 "/usr/include/stdio.h" 3 4
-extern char *fgets_unlocked (char *__restrict __s, int __n,
-        FILE *__restrict __stream) ;
-# 603 "/usr/include/stdio.h" 3 4
-extern __ssize_t __getdelim (char **__restrict __lineptr,
-                             size_t *__restrict __n, int __delimiter,
-                             FILE *__restrict __stream) ;
-extern __ssize_t getdelim (char **__restrict __lineptr,
-                           size_t *__restrict __n, int __delimiter,
-                           FILE *__restrict __stream) ;
-
-
-
-
-
-
-
-extern __ssize_t getline (char **__restrict __lineptr,
-                          size_t *__restrict __n,
-                          FILE *__restrict __stream) ;
-
-
-
-
-
-
-
-extern int fputs (const char *__restrict __s, FILE *__restrict __stream);
-
-
-
-
-
-extern int puts (const char *__s);
-
-
-
-
-
-
-extern int ungetc (int __c, FILE *__stream);
-
-
-
-
-
-
-extern size_t fread (void *__restrict __ptr, size_t __size,
-       size_t __n, FILE *__restrict __stream) ;
-
-
-
-
-extern size_t fwrite (const void *__restrict __ptr, size_t __size,
-        size_t __n, FILE *__restrict __s);
-# 662 "/usr/include/stdio.h" 3 4
-extern int fputs_unlocked (const char *__restrict __s,
-      FILE *__restrict __stream);
-# 673 "/usr/include/stdio.h" 3 4
-extern size_t fread_unlocked (void *__restrict __ptr, size_t __size,
-         size_t __n, FILE *__restrict __stream) ;
-extern size_t fwrite_unlocked (const void *__restrict __ptr, size_t __size,
-          size_t __n, FILE *__restrict __stream);
-
-
-
-
-
-
-
-extern int fseek (FILE *__stream, long int __off, int __whence);
-
-
-
-
-extern long int ftell (FILE *__stream) ;
-
-
-
-
-extern void rewind (FILE *__stream);
-# 707 "/usr/include/stdio.h" 3 4
-extern int fseeko (FILE *__stream, __off_t __off, int __whence);
-
-
-
-
-extern __off_t ftello (FILE *__stream) ;
-# 731 "/usr/include/stdio.h" 3 4
-extern int fgetpos (FILE *__restrict __stream, fpos_t *__restrict __pos);
-
-
-
-
-extern int fsetpos (FILE *__stream, const fpos_t *__pos);
-# 750 "/usr/include/stdio.h" 3 4
-extern int fseeko64 (FILE *__stream, __off64_t __off, int __whence);
-extern __off64_t ftello64 (FILE *__stream) ;
-extern int fgetpos64 (FILE *__restrict __stream, fpos64_t *__restrict __pos);
-extern int fsetpos64 (FILE *__stream, const fpos64_t *__pos);
-
-
-
-extern void clearerr (FILE *__stream) throw ();
-
-extern int feof (FILE *__stream) throw () ;
-
-extern int ferror (FILE *__stream) throw () ;
-
-
-
-extern void clearerr_unlocked (FILE *__stream) throw ();
-extern int feof_unlocked (FILE *__stream) throw () ;
-extern int ferror_unlocked (FILE *__stream) throw () ;
-
-
-
-
-
-
-
-extern void perror (const char *__s);
-
-
-
-
-
-# 1 "/usr/include/x86_64-linux-gnu/bits/sys_errlist.h" 1 3 4
-# 26 "/usr/include/x86_64-linux-gnu/bits/sys_errlist.h" 3 4
-extern int sys_nerr;
-extern const char *const sys_errlist[];
-
-
-extern int _sys_nerr;
-extern const char *const _sys_errlist[];
-# 782 "/usr/include/stdio.h" 2 3 4
-
-
-
-
-extern int fileno (FILE *__stream) throw () ;
-
-
-
-
-extern int fileno_unlocked (FILE *__stream) throw () ;
-# 800 "/usr/include/stdio.h" 3 4
-extern FILE *popen (const char *__command, const char *__modes) ;
-
-
-
-
-
-extern int pclose (FILE *__stream);
-
-
-
-
-
-extern char *ctermid (char *__s) throw ();
-
-
-
-
-
-extern char *cuserid (char *__s);
-
-
-
-
-struct obstack;
-
-
-extern int obstack_printf (struct obstack *__restrict __obstack,
-      const char *__restrict __format, ...)
-     throw () __attribute__ ((__format__ (__printf__, 2, 3)));
-extern int obstack_vprintf (struct obstack *__restrict __obstack,
-       const char *__restrict __format,
-       __gnuc_va_list __args)
-     throw () __attribute__ ((__format__ (__printf__, 2, 0)));
-
-
-
-
-
-
-
-extern void flockfile (FILE *__stream) throw ();
-
-
-
-extern int ftrylockfile (FILE *__stream) throw () ;
-
-
-extern void funlockfile (FILE *__stream) throw ();
-# 858 "/usr/include/stdio.h" 3 4
-extern int __uflow (FILE *);
-extern int __overflow (FILE *, int);
-# 873 "/usr/include/stdio.h" 3 4
-}
-# 43 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdio" 2 3
 # 96 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdio" 3
 namespace std
 {
@@ -28423,7 +28575,943 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 3 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator.cpp" 2
+# 153 "/data/xilinx/Vitis_HLS/2022.2/include/ap_common.h" 2
+
+
+
+
+
+# 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 1 3
+# 36 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
+       
+# 37 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
+
+
+
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+namespace __cxx11 {
+# 64 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
+  template<typename _CharT, typename _Traits, typename _Alloc>
+    class basic_stringbuf : public basic_streambuf<_CharT, _Traits>
+    {
+      struct __xfer_bufptrs;
+    public:
+
+      typedef _CharT char_type;
+      typedef _Traits traits_type;
+
+
+      typedef _Alloc allocator_type;
+      typedef typename traits_type::int_type int_type;
+      typedef typename traits_type::pos_type pos_type;
+      typedef typename traits_type::off_type off_type;
+
+      typedef basic_streambuf<char_type, traits_type> __streambuf_type;
+      typedef basic_string<char_type, _Traits, _Alloc> __string_type;
+      typedef typename __string_type::size_type __size_type;
+
+    protected:
+
+      ios_base::openmode _M_mode;
+
+
+      __string_type _M_string;
+
+    public:
+# 99 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
+      explicit
+      basic_stringbuf(ios_base::openmode __mode = ios_base::in | ios_base::out)
+      : __streambuf_type(), _M_mode(__mode), _M_string()
+      { }
+# 112 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
+      explicit
+      basic_stringbuf(const __string_type& __str,
+        ios_base::openmode __mode = ios_base::in | ios_base::out)
+      : __streambuf_type(), _M_mode(),
+ _M_string(__str.data(), __str.size(), __str.get_allocator())
+      { _M_stringbuf_init(__mode); }
+
+
+      basic_stringbuf(const basic_stringbuf&) = delete;
+
+      basic_stringbuf(basic_stringbuf&& __rhs)
+      : basic_stringbuf(std::move(__rhs), __xfer_bufptrs(__rhs, this))
+      { __rhs._M_sync(const_cast<char_type*>(__rhs._M_string.data()), 0, 0); }
+
+
+
+      basic_stringbuf&
+      operator=(const basic_stringbuf&) = delete;
+
+      basic_stringbuf&
+      operator=(basic_stringbuf&& __rhs)
+      {
+ __xfer_bufptrs __st{__rhs, this};
+ const __streambuf_type& __base = __rhs;
+ __streambuf_type::operator=(__base);
+ this->pubimbue(__rhs.getloc());
+ _M_mode = __rhs._M_mode;
+ _M_string = std::move(__rhs._M_string);
+ __rhs._M_sync(const_cast<char_type*>(__rhs._M_string.data()), 0, 0);
+ return *this;
+      }
+
+      void
+      swap(basic_stringbuf& __rhs)
+      {
+ __xfer_bufptrs __l_st{*this, std::__addressof(__rhs)};
+ __xfer_bufptrs __r_st{__rhs, this};
+ __streambuf_type& __base = __rhs;
+ __streambuf_type::swap(__base);
+ __rhs.pubimbue(this->pubimbue(__rhs.getloc()));
+ std::swap(_M_mode, __rhs._M_mode);
+ std::swap(_M_string, __rhs._M_string);
+      }
+# 166 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
+      __string_type
+      str() const
+      {
+ __string_type __ret(_M_string.get_allocator());
+ if (this->pptr())
+   {
+
+     if (this->pptr() > this->egptr())
+       __ret.assign(this->pbase(), this->pptr());
+     else
+       __ret.assign(this->pbase(), this->egptr());
+   }
+ else
+   __ret = _M_string;
+ return __ret;
+      }
+# 190 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
+      void
+      str(const __string_type& __s)
+      {
+
+
+ _M_string.assign(__s.data(), __s.size());
+ _M_stringbuf_init(_M_mode);
+      }
+
+    protected:
+
+      void
+      _M_stringbuf_init(ios_base::openmode __mode)
+      {
+ _M_mode = __mode;
+ __size_type __len = 0;
+ if (_M_mode & (ios_base::ate | ios_base::app))
+   __len = _M_string.size();
+ _M_sync(const_cast<char_type*>(_M_string.data()), 0, __len);
+      }
+
+      virtual streamsize
+      showmanyc()
+      {
+ streamsize __ret = -1;
+ if (_M_mode & ios_base::in)
+   {
+     _M_update_egptr();
+     __ret = this->egptr() - this->gptr();
+   }
+ return __ret;
+      }
+
+      virtual int_type
+      underflow();
+
+      virtual int_type
+      pbackfail(int_type __c = traits_type::eof());
+
+      virtual int_type
+      overflow(int_type __c = traits_type::eof());
+# 243 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
+      virtual __streambuf_type*
+      setbuf(char_type* __s, streamsize __n)
+      {
+ if (__s && __n >= 0)
+   {
+
+
+
+
+
+
+     _M_string.clear();
+
+
+     _M_sync(__s, __n, 0);
+   }
+ return this;
+      }
+
+      virtual pos_type
+      seekoff(off_type __off, ios_base::seekdir __way,
+       ios_base::openmode __mode = ios_base::in | ios_base::out);
+
+      virtual pos_type
+      seekpos(pos_type __sp,
+       ios_base::openmode __mode = ios_base::in | ios_base::out);
+
+
+
+
+      void
+      _M_sync(char_type* __base, __size_type __i, __size_type __o);
+
+
+
+      void
+      _M_update_egptr()
+      {
+ const bool __testin = _M_mode & ios_base::in;
+ if (this->pptr() && this->pptr() > this->egptr())
+   {
+     if (__testin)
+       this->setg(this->eback(), this->gptr(), this->pptr());
+     else
+       this->setg(this->pptr(), this->pptr(), this->pptr());
+   }
+      }
+
+
+
+      void
+      _M_pbump(char_type* __pbeg, char_type* __pend, off_type __off);
+
+    private:
+
+
+
+
+      struct __xfer_bufptrs
+      {
+ __xfer_bufptrs(const basic_stringbuf& __from, basic_stringbuf* __to)
+ : _M_to{__to}, _M_goff{-1, -1, -1}, _M_poff{-1, -1, -1}
+ {
+   const _CharT* const __str = __from._M_string.data();
+   const _CharT* __end = nullptr;
+   if (__from.eback())
+     {
+       _M_goff[0] = __from.eback() - __str;
+       _M_goff[1] = __from.gptr() - __str;
+       _M_goff[2] = __from.egptr() - __str;
+       __end = __from.egptr();
+     }
+   if (__from.pbase())
+     {
+       _M_poff[0] = __from.pbase() - __str;
+       _M_poff[1] = __from.pptr() - __from.pbase();
+       _M_poff[2] = __from.epptr() - __str;
+       if (__from.pptr() > __end)
+  __end = __from.pptr();
+     }
+
+
+   if (__end)
+     {
+
+
+       auto& __mut_from = const_cast<basic_stringbuf&>(__from);
+       __mut_from._M_string._M_length(__end - __str);
+     }
+ }
+
+ ~__xfer_bufptrs()
+ {
+   char_type* __str = const_cast<char_type*>(_M_to->_M_string.data());
+   if (_M_goff[0] != -1)
+     _M_to->setg(__str+_M_goff[0], __str+_M_goff[1], __str+_M_goff[2]);
+   if (_M_poff[0] != -1)
+     _M_to->_M_pbump(__str+_M_poff[0], __str+_M_poff[2], _M_poff[1]);
+ }
+
+ basic_stringbuf* _M_to;
+ off_type _M_goff[3];
+ off_type _M_poff[3];
+      };
+# 357 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
+      basic_stringbuf(basic_stringbuf&& __rhs, __xfer_bufptrs&&)
+      : __streambuf_type(static_cast<const __streambuf_type&>(__rhs)),
+      _M_mode(__rhs._M_mode), _M_string(std::move(__rhs._M_string))
+      { }
+
+    };
+# 380 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
+  template<typename _CharT, typename _Traits, typename _Alloc>
+    class basic_istringstream : public basic_istream<_CharT, _Traits>
+    {
+    public:
+
+      typedef _CharT char_type;
+      typedef _Traits traits_type;
+
+
+      typedef _Alloc allocator_type;
+      typedef typename traits_type::int_type int_type;
+      typedef typename traits_type::pos_type pos_type;
+      typedef typename traits_type::off_type off_type;
+
+
+      typedef basic_string<_CharT, _Traits, _Alloc> __string_type;
+      typedef basic_stringbuf<_CharT, _Traits, _Alloc> __stringbuf_type;
+      typedef basic_istream<char_type, traits_type> __istream_type;
+
+    private:
+      __stringbuf_type _M_stringbuf;
+
+    public:
+# 416 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
+      explicit
+      basic_istringstream(ios_base::openmode __mode = ios_base::in)
+      : __istream_type(), _M_stringbuf(__mode | ios_base::in)
+      { this->init(&_M_stringbuf); }
+# 434 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
+      explicit
+      basic_istringstream(const __string_type& __str,
+     ios_base::openmode __mode = ios_base::in)
+      : __istream_type(), _M_stringbuf(__str, __mode | ios_base::in)
+      { this->init(&_M_stringbuf); }
+
+
+
+
+
+
+
+      ~basic_istringstream()
+      { }
+
+
+      basic_istringstream(const basic_istringstream&) = delete;
+
+      basic_istringstream(basic_istringstream&& __rhs)
+      : __istream_type(std::move(__rhs)),
+      _M_stringbuf(std::move(__rhs._M_stringbuf))
+      { __istream_type::set_rdbuf(&_M_stringbuf); }
+
+
+
+      basic_istringstream&
+      operator=(const basic_istringstream&) = delete;
+
+      basic_istringstream&
+      operator=(basic_istringstream&& __rhs)
+      {
+ __istream_type::operator=(std::move(__rhs));
+ _M_stringbuf = std::move(__rhs._M_stringbuf);
+ return *this;
+      }
+
+      void
+      swap(basic_istringstream& __rhs)
+      {
+ __istream_type::swap(__rhs);
+ _M_stringbuf.swap(__rhs._M_stringbuf);
+      }
+# 485 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
+      __stringbuf_type*
+      rdbuf() const
+      { return const_cast<__stringbuf_type*>(&_M_stringbuf); }
+
+
+
+
+
+      __string_type
+      str() const
+      { return _M_stringbuf.str(); }
+
+
+
+
+
+
+
+      void
+      str(const __string_type& __s)
+      { _M_stringbuf.str(__s); }
+    };
+# 524 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
+  template <typename _CharT, typename _Traits, typename _Alloc>
+    class basic_ostringstream : public basic_ostream<_CharT, _Traits>
+    {
+    public:
+
+      typedef _CharT char_type;
+      typedef _Traits traits_type;
+
+
+      typedef _Alloc allocator_type;
+      typedef typename traits_type::int_type int_type;
+      typedef typename traits_type::pos_type pos_type;
+      typedef typename traits_type::off_type off_type;
+
+
+      typedef basic_string<_CharT, _Traits, _Alloc> __string_type;
+      typedef basic_stringbuf<_CharT, _Traits, _Alloc> __stringbuf_type;
+      typedef basic_ostream<char_type, traits_type> __ostream_type;
+
+    private:
+      __stringbuf_type _M_stringbuf;
+
+    public:
+# 560 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
+      explicit
+      basic_ostringstream(ios_base::openmode __mode = ios_base::out)
+      : __ostream_type(), _M_stringbuf(__mode | ios_base::out)
+      { this->init(&_M_stringbuf); }
+# 578 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
+      explicit
+      basic_ostringstream(const __string_type& __str,
+     ios_base::openmode __mode = ios_base::out)
+      : __ostream_type(), _M_stringbuf(__str, __mode | ios_base::out)
+      { this->init(&_M_stringbuf); }
+
+
+
+
+
+
+
+      ~basic_ostringstream()
+      { }
+
+
+      basic_ostringstream(const basic_ostringstream&) = delete;
+
+      basic_ostringstream(basic_ostringstream&& __rhs)
+      : __ostream_type(std::move(__rhs)),
+      _M_stringbuf(std::move(__rhs._M_stringbuf))
+      { __ostream_type::set_rdbuf(&_M_stringbuf); }
+
+
+
+      basic_ostringstream&
+      operator=(const basic_ostringstream&) = delete;
+
+      basic_ostringstream&
+      operator=(basic_ostringstream&& __rhs)
+      {
+ __ostream_type::operator=(std::move(__rhs));
+ _M_stringbuf = std::move(__rhs._M_stringbuf);
+ return *this;
+      }
+
+      void
+      swap(basic_ostringstream& __rhs)
+      {
+ __ostream_type::swap(__rhs);
+ _M_stringbuf.swap(__rhs._M_stringbuf);
+      }
+# 629 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
+      __stringbuf_type*
+      rdbuf() const
+      { return const_cast<__stringbuf_type*>(&_M_stringbuf); }
+
+
+
+
+
+      __string_type
+      str() const
+      { return _M_stringbuf.str(); }
+
+
+
+
+
+
+
+      void
+      str(const __string_type& __s)
+      { _M_stringbuf.str(__s); }
+    };
+# 668 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
+  template <typename _CharT, typename _Traits, typename _Alloc>
+    class basic_stringstream : public basic_iostream<_CharT, _Traits>
+    {
+    public:
+
+      typedef _CharT char_type;
+      typedef _Traits traits_type;
+
+
+      typedef _Alloc allocator_type;
+      typedef typename traits_type::int_type int_type;
+      typedef typename traits_type::pos_type pos_type;
+      typedef typename traits_type::off_type off_type;
+
+
+      typedef basic_string<_CharT, _Traits, _Alloc> __string_type;
+      typedef basic_stringbuf<_CharT, _Traits, _Alloc> __stringbuf_type;
+      typedef basic_iostream<char_type, traits_type> __iostream_type;
+
+    private:
+      __stringbuf_type _M_stringbuf;
+
+    public:
+# 703 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
+      explicit
+      basic_stringstream(ios_base::openmode __m = ios_base::out | ios_base::in)
+      : __iostream_type(), _M_stringbuf(__m)
+      { this->init(&_M_stringbuf); }
+# 719 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
+      explicit
+      basic_stringstream(const __string_type& __str,
+    ios_base::openmode __m = ios_base::out | ios_base::in)
+      : __iostream_type(), _M_stringbuf(__str, __m)
+      { this->init(&_M_stringbuf); }
+
+
+
+
+
+
+
+      ~basic_stringstream()
+      { }
+
+
+      basic_stringstream(const basic_stringstream&) = delete;
+
+      basic_stringstream(basic_stringstream&& __rhs)
+      : __iostream_type(std::move(__rhs)),
+      _M_stringbuf(std::move(__rhs._M_stringbuf))
+      { __iostream_type::set_rdbuf(&_M_stringbuf); }
+
+
+
+      basic_stringstream&
+      operator=(const basic_stringstream&) = delete;
+
+      basic_stringstream&
+      operator=(basic_stringstream&& __rhs)
+      {
+ __iostream_type::operator=(std::move(__rhs));
+ _M_stringbuf = std::move(__rhs._M_stringbuf);
+ return *this;
+      }
+
+      void
+      swap(basic_stringstream& __rhs)
+      {
+ __iostream_type::swap(__rhs);
+ _M_stringbuf.swap(__rhs._M_stringbuf);
+      }
+# 770 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
+      __stringbuf_type*
+      rdbuf() const
+      { return const_cast<__stringbuf_type*>(&_M_stringbuf); }
+
+
+
+
+
+      __string_type
+      str() const
+      { return _M_stringbuf.str(); }
+
+
+
+
+
+
+
+      void
+      str(const __string_type& __s)
+      { _M_stringbuf.str(__s); }
+    };
+
+
+
+  template <class _CharT, class _Traits, class _Allocator>
+    inline void
+    swap(basic_stringbuf<_CharT, _Traits, _Allocator>& __x,
+  basic_stringbuf<_CharT, _Traits, _Allocator>& __y)
+    { __x.swap(__y); }
+
+
+  template <class _CharT, class _Traits, class _Allocator>
+    inline void
+    swap(basic_istringstream<_CharT, _Traits, _Allocator>& __x,
+  basic_istringstream<_CharT, _Traits, _Allocator>& __y)
+    { __x.swap(__y); }
+
+
+  template <class _CharT, class _Traits, class _Allocator>
+    inline void
+    swap(basic_ostringstream<_CharT, _Traits, _Allocator>& __x,
+  basic_ostringstream<_CharT, _Traits, _Allocator>& __y)
+    { __x.swap(__y); }
+
+
+  template <class _CharT, class _Traits, class _Allocator>
+    inline void
+    swap(basic_stringstream<_CharT, _Traits, _Allocator>& __x,
+  basic_stringstream<_CharT, _Traits, _Allocator>& __y)
+    { __x.swap(__y); }
+
+
+}
+
+}
+
+# 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/sstream.tcc" 1 3
+# 37 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/sstream.tcc" 3
+       
+# 38 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/sstream.tcc" 3
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+
+  template <class _CharT, class _Traits, class _Alloc>
+    typename basic_stringbuf<_CharT, _Traits, _Alloc>::int_type
+    basic_stringbuf<_CharT, _Traits, _Alloc>::
+    pbackfail(int_type __c)
+    {
+      int_type __ret = traits_type::eof();
+      if (this->eback() < this->gptr())
+ {
+
+
+   const bool __testeof = traits_type::eq_int_type(__c, __ret);
+   if (!__testeof)
+     {
+       const bool __testeq = traits_type::eq(traits_type::
+          to_char_type(__c),
+          this->gptr()[-1]);
+       const bool __testout = this->_M_mode & ios_base::out;
+       if (__testeq || __testout)
+  {
+    this->gbump(-1);
+    if (!__testeq)
+      *this->gptr() = traits_type::to_char_type(__c);
+    __ret = __c;
+  }
+     }
+   else
+     {
+       this->gbump(-1);
+       __ret = traits_type::not_eof(__c);
+     }
+ }
+      return __ret;
+    }
+
+  template <class _CharT, class _Traits, class _Alloc>
+    typename basic_stringbuf<_CharT, _Traits, _Alloc>::int_type
+    basic_stringbuf<_CharT, _Traits, _Alloc>::
+    overflow(int_type __c)
+    {
+      const bool __testout = this->_M_mode & ios_base::out;
+      if (__builtin_expect(!__testout, false))
+ return traits_type::eof();
+
+      const bool __testeof = traits_type::eq_int_type(__c, traits_type::eof());
+      if (__builtin_expect(__testeof, false))
+ return traits_type::not_eof(__c);
+
+      const __size_type __capacity = _M_string.capacity();
+
+
+      if ((this->epptr() - this->pbase()) < __capacity)
+ {
+
+   char_type* __base = const_cast<char_type*>(_M_string.data());
+   _M_pbump(__base, __base + __capacity, this->pptr() - this->pbase());
+   if (_M_mode & ios_base::in)
+     {
+       const __size_type __nget = this->gptr() - this->eback();
+       const __size_type __eget = this->egptr() - this->eback();
+       this->setg(__base, __base + __nget, __base + __eget + 1);
+     }
+   *this->pptr() = traits_type::to_char_type(__c);
+   this->pbump(1);
+   return __c;
+ }
+
+
+      const __size_type __max_size = _M_string.max_size();
+      const bool __testput = this->pptr() < this->epptr();
+      if (__builtin_expect(!__testput && __capacity == __max_size, false))
+ return traits_type::eof();
+
+
+
+      const char_type __conv = traits_type::to_char_type(__c);
+      if (!__testput)
+ {
+# 129 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/sstream.tcc" 3
+   const __size_type __opt_len = std::max(__size_type(2 * __capacity),
+       __size_type(512));
+   const __size_type __len = std::min(__opt_len, __max_size);
+   __string_type __tmp(_M_string.get_allocator());
+   __tmp.reserve(__len);
+   if (this->pbase())
+     __tmp.assign(this->pbase(), this->epptr() - this->pbase());
+   __tmp.push_back(__conv);
+   _M_string.swap(__tmp);
+   _M_sync(const_cast<char_type*>(_M_string.data()),
+    this->gptr() - this->eback(), this->pptr() - this->pbase());
+ }
+      else
+ *this->pptr() = __conv;
+      this->pbump(1);
+      return __c;
+    }
+
+  template <class _CharT, class _Traits, class _Alloc>
+    typename basic_stringbuf<_CharT, _Traits, _Alloc>::int_type
+    basic_stringbuf<_CharT, _Traits, _Alloc>::
+    underflow()
+    {
+      int_type __ret = traits_type::eof();
+      const bool __testin = this->_M_mode & ios_base::in;
+      if (__testin)
+ {
+
+   _M_update_egptr();
+
+   if (this->gptr() < this->egptr())
+     __ret = traits_type::to_int_type(*this->gptr());
+ }
+      return __ret;
+    }
+
+  template <class _CharT, class _Traits, class _Alloc>
+    typename basic_stringbuf<_CharT, _Traits, _Alloc>::pos_type
+    basic_stringbuf<_CharT, _Traits, _Alloc>::
+    seekoff(off_type __off, ios_base::seekdir __way, ios_base::openmode __mode)
+    {
+      pos_type __ret = pos_type(off_type(-1));
+      bool __testin = (ios_base::in & this->_M_mode & __mode) != 0;
+      bool __testout = (ios_base::out & this->_M_mode & __mode) != 0;
+      const bool __testboth = __testin && __testout && __way != ios_base::cur;
+      __testin &= !(__mode & ios_base::out);
+      __testout &= !(__mode & ios_base::in);
+
+
+
+      const char_type* __beg = __testin ? this->eback() : this->pbase();
+      if ((__beg || !__off) && (__testin || __testout || __testboth))
+ {
+   _M_update_egptr();
+
+   off_type __newoffi = __off;
+   off_type __newoffo = __newoffi;
+   if (__way == ios_base::cur)
+     {
+       __newoffi += this->gptr() - __beg;
+       __newoffo += this->pptr() - __beg;
+     }
+   else if (__way == ios_base::end)
+     __newoffo = __newoffi += this->egptr() - __beg;
+
+   if ((__testin || __testboth)
+       && __newoffi >= 0
+       && this->egptr() - __beg >= __newoffi)
+     {
+       this->setg(this->eback(), this->eback() + __newoffi,
+    this->egptr());
+       __ret = pos_type(__newoffi);
+     }
+   if ((__testout || __testboth)
+       && __newoffo >= 0
+       && this->egptr() - __beg >= __newoffo)
+     {
+       _M_pbump(this->pbase(), this->epptr(), __newoffo);
+       __ret = pos_type(__newoffo);
+     }
+ }
+      return __ret;
+    }
+
+  template <class _CharT, class _Traits, class _Alloc>
+    typename basic_stringbuf<_CharT, _Traits, _Alloc>::pos_type
+    basic_stringbuf<_CharT, _Traits, _Alloc>::
+    seekpos(pos_type __sp, ios_base::openmode __mode)
+    {
+      pos_type __ret = pos_type(off_type(-1));
+      const bool __testin = (ios_base::in & this->_M_mode & __mode) != 0;
+      const bool __testout = (ios_base::out & this->_M_mode & __mode) != 0;
+
+      const char_type* __beg = __testin ? this->eback() : this->pbase();
+      if ((__beg || !off_type(__sp)) && (__testin || __testout))
+ {
+   _M_update_egptr();
+
+   const off_type __pos(__sp);
+   const bool __testpos = (0 <= __pos
+      && __pos <= this->egptr() - __beg);
+   if (__testpos)
+     {
+       if (__testin)
+  this->setg(this->eback(), this->eback() + __pos,
+      this->egptr());
+       if (__testout)
+  _M_pbump(this->pbase(), this->epptr(), __pos);
+       __ret = __sp;
+     }
+ }
+      return __ret;
+    }
+
+  template <class _CharT, class _Traits, class _Alloc>
+    void
+    basic_stringbuf<_CharT, _Traits, _Alloc>::
+    _M_sync(char_type* __base, __size_type __i, __size_type __o)
+    {
+      const bool __testin = _M_mode & ios_base::in;
+      const bool __testout = _M_mode & ios_base::out;
+      char_type* __endg = __base + _M_string.size();
+      char_type* __endp = __base + _M_string.capacity();
+
+      if (__base != _M_string.data())
+ {
+
+   __endg += __i;
+   __i = 0;
+   __endp = __endg;
+ }
+
+      if (__testin)
+ this->setg(__base, __base + __i, __endg);
+      if (__testout)
+ {
+   _M_pbump(__base, __endp, __o);
+
+
+
+   if (!__testin)
+     this->setg(__endg, __endg, __endg);
+ }
+    }
+
+  template <class _CharT, class _Traits, class _Alloc>
+    void
+    basic_stringbuf<_CharT, _Traits, _Alloc>::
+    _M_pbump(char_type* __pbeg, char_type* __pend, off_type __off)
+    {
+      this->setp(__pbeg, __pend);
+      while (__off > __gnu_cxx::__numeric_traits<int>::__max)
+ {
+   this->pbump(__gnu_cxx::__numeric_traits<int>::__max);
+   __off -= __gnu_cxx::__numeric_traits<int>::__max;
+ }
+      this->pbump(__off);
+    }
+
+
+
+
+  extern template class basic_stringbuf<char>;
+  extern template class basic_istringstream<char>;
+  extern template class basic_ostringstream<char>;
+  extern template class basic_stringstream<char>;
+
+
+  extern template class basic_stringbuf<wchar_t>;
+  extern template class basic_istringstream<wchar_t>;
+  extern template class basic_ostringstream<wchar_t>;
+  extern template class basic_stringstream<wchar_t>;
+
+
+
+
+}
+# 828 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 2 3
+# 159 "/data/xilinx/Vitis_HLS/2022.2/include/ap_common.h" 2
+
+
+
+
+
+
+# 164 "/data/xilinx/Vitis_HLS/2022.2/include/ap_common.h"
+enum { CHAR_IS_SIGNED = (char)-1 < 0 };
+
+
+namespace _ap_type {
+template <typename _Tp>
+struct is_signed {
+  static const bool value = _Tp(-1) < _Tp(1);
+};
+
+template <typename _Tp>
+struct is_integral {
+  static const bool value = false;
+};
+
+
+
+
+
+template <> struct is_integral<bool> { static const bool value = true; };
+template <> struct is_integral<char> { static const bool value = true; };
+template <> struct is_integral<signed char> { static const bool value = true; };
+template <> struct is_integral<unsigned char> { static const bool value = true; };
+template <> struct is_integral<short> { static const bool value = true; };
+template <> struct is_integral<unsigned short> { static const bool value = true; };
+template <> struct is_integral<int> { static const bool value = true; };
+template <> struct is_integral<unsigned int> { static const bool value = true; };
+template <> struct is_integral<long> { static const bool value = true; };
+template <> struct is_integral<unsigned long> { static const bool value = true; };
+template <> struct is_integral<ap_slong> { static const bool value = true; };
+template <> struct is_integral<ap_ulong> { static const bool value = true; };
+
+
+template <bool, typename _Tp = void>
+struct enable_if {};
+
+template <typename _Tp>
+struct enable_if<true, _Tp> {
+  typedef _Tp type;
+};
+
+template <typename _Tp>
+struct remove_const {
+  typedef _Tp type;
+};
+
+template <typename _Tp>
+struct remove_const<_Tp const> {
+  typedef _Tp type;
+};
+}
+# 587 "/data/xilinx/Vitis_HLS/2022.2/include/ap_common.h"
+static inline unsigned char guess_radix(const char* s) {
+  unsigned char rd = 10;
+  const char* p = s;
+
+  if (p[0] == '-' || p[0] == '+') ++p;
+
+  if (p[0] == '0') {
+    if (p[1] == 'b' || p[1] == 'B') {
+      rd = 2;
+    } else if (p[1] == 'o' || p[1] == 'O') {
+      rd = 8;
+    } else if (p[1] == 'x' || p[1] == 'X') {
+      rd = 16;
+    } else if (p[1] == 'd' || p[1] == 'D') {
+      rd = 10;
+    }
+  }
+  return rd;
+}
+# 615 "/data/xilinx/Vitis_HLS/2022.2/include/ap_common.h"
+class half;
+
+
+
+
+
+
 # 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cmath" 1 3
 # 39 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cmath" 3
        
@@ -28443,6 +29531,8 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 
+
+# 34 "/usr/include/math.h" 3 4
 extern "C" {
 
 
@@ -32872,14 +33962,36 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 4 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator.cpp" 2
-# 1 "/data/xilinx/Vitis_HLS/2022.2/include/hls_math.h" 1
-# 40 "/data/xilinx/Vitis_HLS/2022.2/include/hls_math.h"
-# 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cmath" 1 3
-# 39 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cmath" 3
-       
-# 40 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cmath" 3
-# 41 "/data/xilinx/Vitis_HLS/2022.2/include/hls_math.h" 2
+# 623 "/data/xilinx/Vitis_HLS/2022.2/include/ap_common.h" 2
+# 653 "/data/xilinx/Vitis_HLS/2022.2/include/ap_common.h"
+
+# 653 "/data/xilinx/Vitis_HLS/2022.2/include/ap_common.h"
+template <int _AP_W, bool _AP_S, bool _AP_C = _AP_W <= 64>
+class ap_private;
+
+template <int _AP_W, bool _AP_S>
+struct ssdm_int_sim {
+
+  typedef ap_private<_AP_W, _AP_S> DataType;
+  ap_private<_AP_W, _AP_S> V;
+  ssdm_int_sim() {}
+  ssdm_int_sim(ap_private<_AP_W, _AP_S> o):V(o){}
+};
+
+
+# 1 "/data/xilinx/Vitis_HLS/2022.2/include/etc/ap_private.h" 1
+# 9 "/data/xilinx/Vitis_HLS/2022.2/include/etc/ap_private.h"
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wpragmas"
+#pragma GCC diagnostic ignored "-Wint-in-bool-context"
+#pragma GCC diagnostic ignored "-Wmaybe-uninitialized"
+#pragma GCC diagnostic ignored "-Wunused-parameter"
+# 25 "/data/xilinx/Vitis_HLS/2022.2/include/etc/ap_private.h"
+template <int _AP_W, bool _AP_S>
+struct _private_range_ref;
+template <int _AP_W, bool _AP_S>
+struct _private_bit_ref;
+# 52 "/data/xilinx/Vitis_HLS/2022.2/include/etc/ap_private.h"
 # 1 "/data/xilinx/Vitis_HLS/2022.2/include/hls_half.h" 1
 # 25 "/data/xilinx/Vitis_HLS/2022.2/include/hls_half.h"
 # 1 "/data/xilinx/Vitis_HLS/2022.2/include/hls_half_fpo.h" 1
@@ -32888,6 +34000,8 @@ namespace std __attribute__ ((__visibility__ ("default")))
 # 40 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/limits" 3
        
 # 41 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/limits" 3
+# 158 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/limits" 3
+
 # 158 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/limits" 3
 namespace std __attribute__ ((__visibility__ ("default")))
 {
@@ -34453,27 +35567,6 @@ using std::trunc;
 
 
 # 1 "/usr/include/assert.h" 1 3 4
-# 66 "/usr/include/assert.h" 3 4
-extern "C" {
-
-
-extern void __assert_fail (const char *__assertion, const char *__file,
-      unsigned int __line, const char *__function)
-     throw () __attribute__ ((__noreturn__));
-
-
-extern void __assert_perror_fail (int __errnum, const char *__file,
-      unsigned int __line, const char *__function)
-     throw () __attribute__ ((__noreturn__));
-
-
-
-
-extern void __assert (const char *__assertion, const char *__file, int __line)
-     throw () __attribute__ ((__noreturn__));
-
-
-}
 # 18 "/data/xilinx/Vitis_HLS/2022.2/include/hls_fpo.h" 2
 # 143 "/data/xilinx/Vitis_HLS/2022.2/include/hls_fpo.h"
 # 1 "/data/xilinx/Vitis_HLS/2022.2/include/floating_point_v7_1_bitacc_cmodel.h" 1
@@ -37338,77 +38431,6 @@ inline double xil_fpo_flttoflt_d_d(double a)
 
 
 # 1 "/data/xilinx/Vitis_HLS/2022.2/include/ap_decl.h" 1
-# 54 "/data/xilinx/Vitis_HLS/2022.2/include/ap_decl.h"
-enum ap_q_mode {
-  AP_RND,
-  AP_RND_ZERO,
-  AP_RND_MIN_INF,
-  AP_RND_INF,
-  AP_RND_CONV,
-  AP_TRN,
-  AP_TRN_ZERO,
-};
-# 76 "/data/xilinx/Vitis_HLS/2022.2/include/ap_decl.h"
-enum ap_o_mode {
-  AP_SAT,
-  AP_SAT_ZERO,
-  AP_SAT_SYM,
-  AP_WRAP,
-  AP_WRAP_SM,
-};
-# 133 "/data/xilinx/Vitis_HLS/2022.2/include/ap_decl.h"
-template <int _AP_W, bool _AP_S>
-struct ap_int_base;
-
-template <int _AP_W>
-struct ap_int;
-
-template <int _AP_W>
-struct ap_uint;
-
-template <int _AP_W, bool _AP_S>
-struct ap_range_ref;
-
-template <int _AP_W, bool _AP_S>
-struct ap_bit_ref;
-
-template <int _AP_W1, typename _AP_T1, int _AP_W2, typename _AP_T2>
-struct ap_concat_ref;
-
-template <int _AP_W, int _AP_I, bool _AP_S = true, ap_q_mode _AP_Q = AP_TRN,
-          ap_o_mode _AP_O = AP_WRAP, int _AP_N = 0>
-struct ap_fixed_base;
-
-template <int _AP_W, int _AP_I, ap_q_mode _AP_Q = AP_TRN,
-          ap_o_mode _AP_O = AP_WRAP, int _AP_N = 0>
-struct ap_fixed;
-
-template <int _AP_W, int _AP_I, ap_q_mode _AP_Q = AP_TRN,
-          ap_o_mode _AP_O = AP_WRAP, int _AP_N = 0>
-struct ap_ufixed;
-
-template <int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O,
-          int _AP_N>
-struct af_range_ref;
-
-template <int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O,
-          int _AP_N>
-struct af_bit_ref;
-
-
-enum BaseMode { AP_BIN = 2, AP_OCT = 8, AP_DEC = 10, AP_HEX = 16 };
-# 187 "/data/xilinx/Vitis_HLS/2022.2/include/ap_decl.h"
-typedef signed long long ap_slong;
-typedef unsigned long long ap_ulong;
-
-
-enum {
-  _AP_SIZE_char = 8,
-  _AP_SIZE_short = sizeof(short) * 8,
-  _AP_SIZE_int = sizeof(int) * 8,
-  _AP_SIZE_long = sizeof(long) * 8,
-  _AP_SIZE_ap_slong = sizeof(ap_slong) * 8
-};
 # 22 "/data/xilinx/Vitis_HLS/2022.2/include/hls_half_fpo.h" 2
 # 32 "/data/xilinx/Vitis_HLS/2022.2/include/hls_half_fpo.h"
 class half {
@@ -38619,2044 +39641,6 @@ using detail::isnormal;
 using detail::isunordered;
 using detail::signbit;
 # 151 "/data/xilinx/Vitis_HLS/2022.2/include/hls_half.h" 2
-# 42 "/data/xilinx/Vitis_HLS/2022.2/include/hls_math.h" 2
-
-
-
-namespace hls {
-
-
-  int signbit(double);
-  int signbit(float);
-  int signbit(half);
-  int signbitf(float);
-  int half_signbit(half);
-
-
-  double nan(const char*);
-  float nanf(const char*);
-  half half_nan(const char *);
-
-
-  int isfinite(double);
-  int isfinite(float);
-  int isfinite(half);
-  int isfinitef(float);
-  int half_isfinite(half);
-
-
-  int __isfinite(double);
-  int __isfinite(float);
-  int __isfinite(half);
-  int __isfinitef(float);
-
-
-  int isinf(double);
-  int isinf(float);
-  int isinf(half);
-  int isinff(float);
-  int half_isinf(half);
-
-
-  int __isinf(double);
-  int __isinf(float);
-  int __isinf(half);
-  int __isinff(float);
-
-
-  int isnan(double);
-  int isnan(float);
-  int isnan(half);
-  int isnanf(float);
-  int half_isnan(half);
-
-
-  int __isnan(double);
-  int __isnan(float);
-  int __isnan(half);
-  int __isnanf(float);
-
-
-  int isnormal(double);
-  int isnormal(float);
-  int isnormal(half);
-  int isnormalf(float);
-  int half_isnormal(half);
-
-
-  int __isnormal(double);
-  int __isnormal(float);
-  int __isnormal(half);
-  int __isnormalf(float);
-
-
-  int fpclassify(double);
-  int fpclassify(float);
-  int fpclassify(half);
-  int fpclassifyf(float);
-  int half_fpclassify(half);
-
-
-  int __fpclassify(double);
-  int __fpclassify(float);
-  int __fpclassify(half);
-  int __fpclassifyf(float);
-
-
-  double copysign(double, double);
-  float copysign(float, float);
-  half copysign(half, half);
-  float copysignf(float, float);
-  half half_copysign(half, half);
-  int8_t copysign(int8_t, int8_t);
-  uint8_t copysign(uint8_t, uint8_t);
-  int16_t copysign(int16_t, int16_t);
-  uint16_t copysign(uint16_t, uint16_t);
-  int32_t copysign(int32_t, int32_t);
-  uint32_t copysign(uint32_t, uint32_t);
-
-
-  double fabs(double);
-  float fabs(float);
-  half fabs(half);
-  float fabsf(float);
-  half half_fabs(half);
-  int8_t fabs(int8_t);
-  uint8_t fabs(uint8_t);
-  int16_t fabs(int16_t);
-  uint16_t fabs(uint16_t);
-  int32_t fabs(int32_t);
-  uint32_t fabs(uint32_t);
-
-
-  double abs(double);
-  float abs(float);
-  half abs(half);
-  float absf(float);
-  half half_abs(half);
-  int8_t abs(int8_t);
-  uint8_t abs(uint8_t);
-  int16_t abs(int16_t);
-  uint16_t abs(uint16_t);
-  int32_t abs(int32_t);
-  uint32_t abs(uint32_t);
-
-
-  double fma(double, double, double);
-  float fma(float, float, float);
-  half fma(half, half, half);
-  float fmaf(float, float, float);
-  half half_fma(half, half, half);
-
-
-  double mad(double, double, double);
-  float mad(float, float, float);
-  half mad(half, half, half);
-  float madf(float, float, float);
-  half half_mad(half, half, half);
-
-
-  int isequal(double, double);
-  int isequal(float, float);
-  int isequal(half, half);
-  int isequalf(float, float);
-  int half_isequal(half, half);
-
-
-  int isgreater(double, double);
-  int isgreater(float, float);
-  int isgreater(half, half);
-  int isgreaterf(float, float);
-  int half_isgreater(half, half);
-
-
-  int isgreaterequal(double, double);
-  int isgreaterequal(float, float);
-  int isgreaterequal(half, half);
-  int isgreaterequalf(float, float);
-  int half_isgreaterequal(half, half);
-
-
-  int isless(double, double);
-  int isless(float, float);
-  int isless(half, half);
-  int islessf(float, float);
-  int half_isless(half, half);
-
-
-  int islessequal(double, double);
-  int islessequal(float, float);
-  int islessequal(half, half);
-  int islessequalf(float, float);
-  int half_islessequal(half, half);
-
-
-  int islessgreater(double, double);
-  int islessgreater(float, float);
-  int islessgreater(half, half);
-  int islessgreaterf(float, float);
-  int half_islessgreater(half, half);
-
-
-  int isnotequal(double, double);
-  int isnotequal(float, float);
-  int isnotequal(half, half);
-  int isnotequalf(float, float);
-  int half_isnotequal(half, half);
-
-
-  double fmax(double, double);
-  float fmax(float, float);
-  half fmax(half, half);
-  float fmaxf(float, float);
-  half half_fmax(half, half);
-  int8_t fmax(int8_t,int8_t);
-  uint8_t fmax(uint8_t, uint8_t);
-  int16_t fmax(int16_t, int16_t);
-  uint16_t fmax(uint16_t, uint16_t);
-  int32_t fmax(int32_t, int32_t);
-  uint32_t fmax(uint32_t, uint32_t);
-
-
-  double fmin(double, double);
-  float fmin(float, float);
-  half fmin(half, half);
-  float fminf(float, float);
-  half half_fmin(half, half);
-  int8_t fmin(int8_t,int8_t);
-  uint8_t fmin(uint8_t, uint8_t);
-  int16_t fmin(int16_t, int16_t);
-  uint16_t fmin(uint16_t, uint16_t);
-  int32_t fmin(int32_t, int32_t);
-  uint32_t fmin(uint32_t, uint32_t);
-
-
-  template <class T>
-  T max(T x, T y){
- return (x > y) ? x : y;
-  }
-
-
-  template <class T>
-  T min(T x, T y){
- return (x < y) ? x : y;
-  }
-
-
-  double fdim(double, double);
-  float fdim(float, float);
-  half fdim(half, half);
-  float fdimf(float, float);
-  half half_fdim(half, half);
-  int8_t fdim(int8_t,int8_t);
-  uint8_t fdim(uint8_t, uint8_t);
-  int16_t fdim(int16_t, int16_t);
-  uint16_t fdim(uint16_t, uint16_t);
-  int32_t fdim(int32_t, int32_t);
-  uint32_t fdim(uint32_t, uint32_t);
-
-
-  double maxmag(double, double);
-  float maxmag(float, float);
-  half maxmag(half, half);
-  float maxmagf(float, float);
-  half half_maxmag(half, half);
-  int8_t maxmag(int8_t,int8_t);
-  uint8_t maxmag(uint8_t, uint8_t);
-  int16_t maxmag(int16_t, int16_t);
-  uint16_t maxmag(uint16_t, uint16_t);
-  int32_t maxmag(int32_t, int32_t);
-  uint32_t maxmag(uint32_t, uint32_t);
-
-
-  double minmag(double, double);
-  float minmag(float, float);
-  half minmag(half, half);
-  float minmagf(float, float);
-  half half_minmag(half, half);
-  int8_t minmag(int8_t,int8_t);
-  uint8_t minmag(uint8_t, uint8_t);
-  int16_t minmag(int16_t, int16_t);
-  uint16_t minmag(uint16_t, uint16_t);
-  int32_t minmag(int32_t, int32_t);
-  uint32_t minmag(uint32_t, uint32_t);
-
-
-
-  double frexp(double, int*);
-  float frexp(float, int*);
-  half frexp(half, int*);
-  float frexpf(float, int*);
-  half half_frexp(half, int*);
-
-
-  double ldexp(double, int);
-  float ldexp(float, int);
-  half ldexp(half, int);
-  float ldexpf(float, int);
-  half half_ldexp(half, int);
-
-
-  int ilogb(double);
-  int ilogb(float);
-  int ilogb(half);
-  int ilogbf(float);
-  int half_ilogb(half);
-
-
-  double scalbn(double, int);
-  float scalbn(float, int);
-  half scalbn(half, int);
-  float scalbnf(float, int);
-  half half_scalbn(half, int);
-
-
-  double scalbln(double, long int);
-  float scalbln(float, long int);
-  half scalbln(half, long int);
-  float scalblnf(float, long int);
-  half half_scalbln(half, long int);
-
-
-  double ceil(double);
-  float ceil(float);
-  half ceil(half);
-  float ceilf(float);
-  half half_ceil(half);
-
-
-  double floor(double);
-  float floor(float);
-  half floor(half);
-  float floorf(float);
-  half half_floor(half);
-
-
-  double trunc(double);
-  float trunc(float);
-  half trunc(half);
-  float truncf(float);
-  half half_trunc(half);
-
-
-  double round(double);
-  float round(float);
-  half round(half);
-  float roundf(float);
-  half half_round(half);
-
-
-  double rint(double);
-  float rint(float);
-  half rint(half);
-  float rintf(float);
-  half half_rint(half);
-
-
-  long int lround(double);
-  long int lround(float);
-  long int lround(half);
-  long int lroundf(float);
-  long int half_lround(half);
-
-
-  long long int llround(double);
-  long long int llround(float);
-  long long int llround(half);
-  long long int llroundf(float);
-  long long int half_llround(half);
-
-
-  long int lrint(double);
-  long int lrint(float);
-  long int lrint(half);
-  long int lrintf(float);
-  long int half_lrint(half);
-
-
-  long long int llrint(double);
-  long long int llrint(float);
-  long long int llrint(half);
-  long long int llrintf(float);
-  long long int half_llrint(half);
-
-
-  template<class T>
-  T cast_IEEE754(double, bool);
-  template<class T>
-  T cast_IEEE754(float, bool);
-  template<class T>
-  T cast_IEEE754(half, bool);
-
-  template<class T>
-  T cast_IEEE754(double);
-  template<class T>
-  T cast_IEEE754(float);
-  template<class T>
-  T cast_IEEE754(half);
-
-
-
-  template<>
-  char cast_IEEE754<char>(double, bool);
-  template<>
-  char cast_IEEE754<char>(float, bool);
-  template<>
-  char cast_IEEE754<char>(half, bool);
-  template<>
-  char cast_IEEE754<char>(double);
-  template<>
-  char cast_IEEE754<char>(float);
-  template<>
-  char cast_IEEE754<char>(half);
-
-
-  template<>
-  int8_t cast_IEEE754<int8_t>(double, bool);
-  template<>
-  int8_t cast_IEEE754<int8_t>(float, bool);
-  template<>
-  int8_t cast_IEEE754<int8_t>(half, bool);
-  template<>
-  int8_t cast_IEEE754<int8_t>(double);
-  template<>
-  int8_t cast_IEEE754<int8_t>(float);
-  template<>
-  int8_t cast_IEEE754<int8_t>(half);
-
-
-  template<>
-  uint8_t cast_IEEE754<uint8_t>(double, bool);
-  template<>
-  uint8_t cast_IEEE754<uint8_t>(float, bool);
-  template<>
-  uint8_t cast_IEEE754<uint8_t>(half, bool);
-  template<>
-  uint8_t cast_IEEE754<uint8_t>(double);
-  template<>
-  uint8_t cast_IEEE754<uint8_t>(float);
-  template<>
-  uint8_t cast_IEEE754<uint8_t>(half);
-
-
-  template<>
-  int16_t cast_IEEE754<int16_t>(double, bool);
-  template<>
-  int16_t cast_IEEE754<int16_t>(float, bool);
-  template<>
-  int16_t cast_IEEE754<int16_t>(half, bool);
-  template<>
-  int16_t cast_IEEE754<int16_t>(double);
-  template<>
-  int16_t cast_IEEE754<int16_t>(float);
-  template<>
-  int16_t cast_IEEE754<int16_t>(half);
-
-
-  template<>
-  uint16_t cast_IEEE754<uint16_t>(double, bool);
-  template<>
-  uint16_t cast_IEEE754<uint16_t>(float, bool);
-  template<>
-  uint16_t cast_IEEE754<uint16_t>(half, bool);
-  template<>
-  uint16_t cast_IEEE754<uint16_t>(double);
-  template<>
-  uint16_t cast_IEEE754<uint16_t>(float);
-  template<>
-  uint16_t cast_IEEE754<uint16_t>(half);
-
-
-  template<>
-  int32_t cast_IEEE754<int32_t>(double, bool);
-  template<>
-  int32_t cast_IEEE754<int32_t>(float, bool);
-  template<>
-  int32_t cast_IEEE754<int32_t>(half, bool);
-  template<>
-  int32_t cast_IEEE754<int32_t>(double);
-  template<>
-  int32_t cast_IEEE754<int32_t>(float);
-  template<>
-  int32_t cast_IEEE754<int32_t>(half);
-
-
-  template<>
-  uint32_t cast_IEEE754<uint32_t>(double, bool);
-  template<>
-  uint32_t cast_IEEE754<uint32_t>(float, bool);
-  template<>
-  uint32_t cast_IEEE754<uint32_t>(half, bool);
-  template<>
-  uint32_t cast_IEEE754<uint32_t>(double);
-  template<>
-  uint32_t cast_IEEE754<uint32_t>(float);
-  template<>
-  uint32_t cast_IEEE754<uint32_t>(half);
-
-
-  template<>
-  int64_t cast_IEEE754<int64_t>(double, bool);
-  template<>
-  int64_t cast_IEEE754<int64_t>(float, bool);
-  template<>
-  int64_t cast_IEEE754<int64_t>(half, bool);
-  template<>
-  int64_t cast_IEEE754<int64_t>(double);
-  template<>
-  int64_t cast_IEEE754<int64_t>(float);
-  template<>
-  int64_t cast_IEEE754<int64_t>(half);
-
-
-  template<>
-  uint64_t cast_IEEE754<uint64_t>(double, bool);
-  template<>
-  uint64_t cast_IEEE754<uint64_t>(float, bool);
-  template<>
-  uint64_t cast_IEEE754<uint64_t>(half, bool);
-  template<>
-  uint64_t cast_IEEE754<uint64_t>(double);
-  template<>
-  uint64_t cast_IEEE754<uint64_t>(float);
-  template<>
-  uint64_t cast_IEEE754<uint64_t>(half);
-
-
-
-  double nearbyint(double);
-  float nearbyint(float);
-  half nearbyint(half);
-  float nearbyintf(float);
-  half half_nearbyint(half);
-
-
-  double modf(double, double*);
-  float modf(float, float*);
-  half modf(half, half*);
-  float modff(float, float*);
-  half half_modf(half, half*);
-
-
-  double fract(double, double*);
-  float fract(float, float*);
-  half fract(half, half*);
-  float fractf(float, float*);
-  half half_fract(half, half*);
-
-
-  int isordered(double, double);
-  int isordered(float, float);
-  int isordered(half, half);
-  int isorderedf(float, float);
-  int half_isordered(half, half);
-
-
-  int isunordered(double, double);
-  int isunordered(float, float);
-  int isunordered(half, half);
-  int isunorderedf(float, float);
-  int half_isunordered(half, half);
-
-
-  double bitselect(double, double, double);
-  float bitselect(float, float, float);
-  int bitselect(int, int, int);
-  uint32_t bitselect(uint32_t, uint32_t, uint32_t);
-  half bitselect(half, half, half);
-  float bitselectf(float, float, float);
-  half half_bitselect(half, half, half);
-
-
-  namespace hotbm {
- double sin(double);
- float sin(float);
- half sin(half);
- float sinf(float);
- half half_sin(half);
-
- double cos(double);
- float cos(float);
- half cos(half);
- float cosf(float);
- half half_cos(half);
-
- void sincos(double, double*, double*);
- void sincos(float, float*, float*);
- void sincos(half, half*, half*);
- void sincosf(float, float*, float*);
- void half_sincos(half, half*, half*);
-  }
-
-
-  namespace cordic {
- double sin(double);
- float sin(float);
- half sin(half);
- float sinf(float);
- half half_sin(half);
-
- double cos(double);
- float cos(float);
- half cos(half);
- float cosf(float);
- half half_cos(half);
-
- void sincos(double, double*, double*);
- void sincos(float, float*, float*);
- void sincos(half, half*, half*);
- void sincosf(float, float*, float*);
- void half_sincos(half, half*, half*);
-  }
-
-
-  double sin(double);
-  float sin(float);
-  half sin(half);
-  float sinf(float);
-  half half_sin(half);
-
-  double cos(double);
-  float cos(float);
-  half cos(half);
-  float cosf(float);
-  half half_cos(half);
-
-
-  void sincos(double, double*, double*);
-  void sincos(float, float*, float*);
-  void sincos(half, half*, half*);
-  void sincosf(float, float*, float*);
-  void half_sincos(half, half*, half*);
-
-
-  double sinpi(double);
-  float sinpi(float);
-  half sinpi(half);
-  float sinpif(float);
-  half half_sinpi(half);
-
-
-  double cospi(double);
-  float cospi(float);
-  half cospi(half);
-  float cospif(float);
-  half half_cospi(half);
-
-
-  double tanpi(double);
-  float tanpi(float);
-  half tanpi(half);
-  float tanpif(float);
-  half half_tanpi(half);
-
-
-  double atan(double);
-  float atan(float);
-  half atan(half);
-  float atanf(float);
-  half half_atan(half);
-
-
-  double atan2(double, double);
-  float atan2(float, float);
-  half atan2(half, half);
-  float atan2f(float, float);
-  half half_atan2(half, half);
-
-
-  double tan(double);
-  float tan(float);
-  half tan(half);
-  float tanf(float);
-  half half_tan(half);
-
-
-  double sinh(double);
-  float sinh(float);
-  half sinh(half);
-  float sinhf(float);
-  half half_sinh(half);
-
-
-  double cosh(double);
-  float cosh(float);
-  half cosh(half);
-  float coshf(float);
-  half half_cosh(half);
-
-
-  double exp(double);
-  float exp(float);
-  half exp(half);
-  float expf(float);
-  half half_exp(half);
-  int8_t exp(int8_t);
-  uint8_t exp(uint8_t);
-  int16_t exp(int16_t);
-  uint16_t exp(uint16_t);
-  int32_t exp(int32_t);
-  uint32_t exp(uint32_t);
-
-
-  double exp2(double);
-  float exp2(float);
-  half exp2(half);
-  float exp2f(float);
-  half half_exp2(half);
-
-
-  double exp10(double);
-  float exp10(float);
-  half exp10(half);
-  float exp10f(float);
-  half half_exp10(half);
-
-
-  double expm1(double);
-  float expm1(float);
-  half expm1(half);
-  float expm1f(float);
-  half half_expm1(half);
-
-
-  double log(double);
-  float log(float);
-  half log(half);
-  float logf(float);
-  half half_log(half);
-  int8_t log(int8_t);
-  uint8_t log(uint8_t);
-  int16_t log(int16_t);
-  uint16_t log(uint16_t);
-  int32_t log(int32_t);
-  uint32_t log(uint32_t);
-
-
-  double log2(double);
-  float log2(float);
-  half log2(half);
-  float log2f(float);
-  half half_log2(half);
-
-
-  double log10(double);
-  float log10(float);
-  half log10(half);
-  float log10f(float);
-  half half_log10(half);
-  int8_t log10(int8_t);
-  uint8_t log10(uint8_t);
-  int16_t log10(int16_t);
-  uint16_t log10(uint16_t);
-  int32_t log10(int32_t);
-  uint32_t log10(uint32_t);
-
-
-  double logb(double);
-  float logb(float);
-  half logb(half);
-  float logbf(float);
-  half half_logb(half);
-
-  double log1p(double);
-  float log1p(float);
-  half log1p(half);
-  float log1pf(float);
-  half half_log1p(half);
-
-
-  half pow(half, half);
-  float pow(float, float);
-  double pow(double, double);
-  float powf(float, float);
-  half half_pow(half, half);
-  int8_t pow(int8_t, int8_t);
-  uint8_t pow(uint8_t, uint8_t);
-  int16_t pow(int16_t, int16_t);
-  uint16_t pow(uint16_t, uint16_t);
-  int32_t pow(int32_t, int32_t);
-  uint32_t pow(uint32_t, uint32_t);
-  int8_t powr(int8_t, int8_t);
-  uint8_t powr(uint8_t, uint8_t);
-  int16_t powr(int16_t, int16_t);
-  uint16_t powr(uint16_t, uint16_t);
-  int32_t powr(int32_t, int32_t);
-  uint32_t powr(uint32_t, uint32_t);
-
-
-  half powr(half, half);
-  float powr(float, float);
-  double powr(double, double);
-  float powrf(float, float);
-  half half_powr(half, half);
-
-
-  half pown(half, int);
-  float pown(float, int);
-  double pown(double, int);
-  float pownf(float, int);
-  half half_pown(half, int);
-
-
-  half rootn(half, int);
-  float rootn(float, int);
-  double rootn(double, int);
-  float rootnf(float, int);
-  half half_rootn(half, int);
-
-
-  double sqrt(double);
-  float sqrt(float);
-  half sqrt(half);
-  float sqrtf(float);
-  half half_sqrt(half);
-  int8_t sqrt(int8_t);
-  uint8_t sqrt(uint8_t);
-  int16_t sqrt(int16_t);
-  uint16_t sqrt(uint16_t);
-  int32_t sqrt(int32_t);
-  uint32_t sqrt(uint32_t);
-# 858 "/data/xilinx/Vitis_HLS/2022.2/include/hls_math.h"
-  double recip(double);
-  float recip(float);
-  half recip(half);
-  float recipf(float);
-  half half_recip(half);
-  int8_t recip(int8_t);
-  uint8_t recip(uint8_t);
-  int16_t recip(int16_t);
-  uint16_t recip(uint16_t);
-  int32_t recip(int32_t);
-  uint32_t recip(uint32_t);
-
-
-  double rsqrt(double);
-  float rsqrt(float);
-  half rsqrt(half);
-  float rsqrtf(float);
-  half half_rsqrt(half);
-  int8_t rsqrt(int8_t);
-  uint8_t rsqrt(uint8_t);
-  int16_t rsqrt(int16_t);
-  uint16_t rsqrt(uint16_t);
-  int32_t rsqrt(int32_t);
-  uint32_t rsqrt(uint32_t);
-
-
-  double cbrt(double);
-  float cbrt(float);
-  half cbrt(half);
-  float cbrtf(float);
-  half half_cbrt(half);
-
-
-  double hypot(double, double);
-  float hypot(float, float);
-  half hypot(half, half);
-  float hypotf(float, float);
-  half half_hypot(half, half);
-
-
-  double erf(double);
-  float erf(float);
-  half erf(half);
-  float erff(float);
-  half half_erf(half);
-  int8_t erf(int8_t);
-  uint8_t erf(uint8_t);
-  int16_t erf(int16_t);
-  uint16_t erf(uint16_t);
-  int32_t erf(int32_t);
-  uint32_t erf(uint32_t);
-
-
-  double erfc(double);
-  float erfc(float);
-  half erfc(half);
-  float erfcf(float);
-  half half_erfc(half);
-  int8_t erfc(int8_t);
-  uint8_t erfc(uint8_t);
-  int16_t erfc(int16_t);
-  uint16_t erfc(uint16_t);
-  int32_t erfc(int32_t);
-  uint32_t erfc(uint32_t);
-
-
-  double lgamma(double);
-  float lgamma(float);
-  half lgamma(half);
-  float lgammaf(float);
-  half half_lgamma(half);
-  int8_t lgamma(int8_t);
-  uint8_t lgamma(uint8_t);
-  int16_t lgamma(int16_t);
-  uint16_t lgamma(uint16_t);
-  int32_t lgamma(int32_t);
-  uint32_t lgamma(uint32_t);
-
-
-  double lgamma_r(double, int*);
-  float lgamma_r(float, int*);
-  half lgamma_r(half, int*);
-  float lgamma_rf(float, int*);
-  half half_lgamma_r(half, int*);
-  int8_t lgamma_r(int8_t);
-  uint8_t lgamma_r(uint8_t);
-  int16_t lgamma_r(int16_t);
-  uint16_t lgamma_r(uint16_t);
-  int32_t lgamma_r(int32_t);
-  uint32_t lgamma_r(uint32_t);
-
-
-  double tgamma(double);
-  float tgamma(float);
-  half tgamma(half);
-  float tgammaf(float);
-  half half_tgamma(half);
-  int8_t tgamma(int8_t);
-  uint8_t tgamma(uint8_t);
-  int16_t tgamma(int16_t);
-  uint16_t tgamma(uint16_t);
-  int32_t tgamma(int32_t);
-  uint32_t tgamma(uint32_t);
-
-  double tgamma_p_reduce(double);
-  float tgamma_p_reduce(float);
-  float tgammaf_p_reduce(float);
-
-
-  double fmod(double, double);
-  float fmod(float, float);
-  half fmod(half, half);
-  float fmodf(float, float);
-  half half_fmod(half, half);
-
-
-  double remainder(double, double);
-  float remainder(float, float);
-  half remainder(half, half);
-  float remainderf(float, float);
-  half half_remainder(half, half);
-
-
-  double remquo(double, double, int*);
-  float remquo(float, float, int*);
-  half remquo(half, half, int*);
-  float remquof(float, float, int*);
-  half half_remquo(half, half, int*);
-
-
-  double divide(double, double);
-  float divide(float, float);
-  half divide(half, half);
-  float dividef(float, float);
-  half half_divide(half, half);
-
-
-  double nextafter(double, double);
-  float nextafter(float, float);
-  half nextafter(half, half);
-  float nextafterf(float, float);
-  half half_nextafter(half, half);
-
-
-  double tanh(double);
-  float tanh(float);
-  half tanh(half);
-  float tanhf(float);
-  half half_tanh(half);
-
-
-  double atanh(double);
-  float atanh(float);
-  half atanh(half);
-  float atanhf(float);
-  half half_atanh(half);
-
-
-  double asinh(double);
-  float asinh(float);
-  half asinh(half);
-  float asinhf(float);
-  half half_asinh(half);
-
-
-  double acosh(double);
-  float acosh(float);
-  half acosh(half);
-  float acoshf(float);
-  half half_acosh(half);
-
-
-  double asin(double);
-  float asin(float);
-  half asin(half);
-  float asinf(float);
-  half half_asin(half);
-
-
-  double acos(double);
-  float acos(float);
-  half acos(half);
-  float acosf(float);
-  half half_acos(half);
-
-
-  double asinpi(double);
-  float asinpi(float);
-  half asinpi(half);
-  float asinpif(float);
-  half half_asinpi(half);
-
-
-  double acospi(double);
-  float acospi(float);
-  half acospi(half);
-  float acospif(float);
-  half half_acospi(half);
-
-
-  double atanpi(double);
-  float atanpi(float);
-  half atanpi(half);
-  float atanpif(float);
-  half half_atanpi(half);
-}
-
-# 1 "/data/xilinx/Vitis_HLS/2022.2/include/hls_hotbm_apfixed.h" 1
-# 42 "/data/xilinx/Vitis_HLS/2022.2/include/hls_hotbm_apfixed.h"
-# 1 "/data/xilinx/Vitis_HLS/2022.2/include/ap_fixed.h" 1
-# 9 "/data/xilinx/Vitis_HLS/2022.2/include/ap_fixed.h"
-# 1 "/data/xilinx/Vitis_HLS/2022.2/include/ap_common.h" 1
-# 41 "/data/xilinx/Vitis_HLS/2022.2/include/ap_common.h"
-# 1 "/data/xilinx/Vitis_HLS/2022.2/include/ap_decl.h" 1
-# 42 "/data/xilinx/Vitis_HLS/2022.2/include/ap_common.h" 2
-# 50 "/data/xilinx/Vitis_HLS/2022.2/include/ap_common.h"
-# 1 "/usr/include/assert.h" 1 3 4
-# 51 "/data/xilinx/Vitis_HLS/2022.2/include/ap_common.h" 2
-# 66 "/data/xilinx/Vitis_HLS/2022.2/include/ap_common.h"
-# 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/stdlib.h" 1 3
-# 36 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/stdlib.h" 3
-# 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdlib" 1 3
-# 39 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdlib" 3
-       
-# 40 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdlib" 3
-# 37 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/stdlib.h" 2 3
-
-
-# 38 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/stdlib.h" 3
-using std::abort;
-using std::atexit;
-using std::exit;
-
-
-  using std::at_quick_exit;
-
-
-  using std::quick_exit;
-
-
-
-
-using std::div_t;
-using std::ldiv_t;
-
-using std::abs;
-using std::atof;
-using std::atoi;
-using std::atol;
-using std::bsearch;
-using std::calloc;
-using std::div;
-using std::free;
-using std::getenv;
-using std::labs;
-using std::ldiv;
-using std::malloc;
-
-using std::mblen;
-using std::mbstowcs;
-using std::mbtowc;
-
-using std::qsort;
-using std::rand;
-using std::realloc;
-using std::srand;
-using std::strtod;
-using std::strtol;
-using std::strtoul;
-using std::system;
-
-using std::wcstombs;
-using std::wctomb;
-# 67 "/data/xilinx/Vitis_HLS/2022.2/include/ap_common.h" 2
-# 158 "/data/xilinx/Vitis_HLS/2022.2/include/ap_common.h"
-# 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 1 3
-# 36 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
-       
-# 37 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
-
-
-
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-namespace __cxx11 {
-# 64 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
-  template<typename _CharT, typename _Traits, typename _Alloc>
-    class basic_stringbuf : public basic_streambuf<_CharT, _Traits>
-    {
-      struct __xfer_bufptrs;
-    public:
-
-      typedef _CharT char_type;
-      typedef _Traits traits_type;
-
-
-      typedef _Alloc allocator_type;
-      typedef typename traits_type::int_type int_type;
-      typedef typename traits_type::pos_type pos_type;
-      typedef typename traits_type::off_type off_type;
-
-      typedef basic_streambuf<char_type, traits_type> __streambuf_type;
-      typedef basic_string<char_type, _Traits, _Alloc> __string_type;
-      typedef typename __string_type::size_type __size_type;
-
-    protected:
-
-      ios_base::openmode _M_mode;
-
-
-      __string_type _M_string;
-
-    public:
-# 99 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
-      explicit
-      basic_stringbuf(ios_base::openmode __mode = ios_base::in | ios_base::out)
-      : __streambuf_type(), _M_mode(__mode), _M_string()
-      { }
-# 112 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
-      explicit
-      basic_stringbuf(const __string_type& __str,
-        ios_base::openmode __mode = ios_base::in | ios_base::out)
-      : __streambuf_type(), _M_mode(),
- _M_string(__str.data(), __str.size(), __str.get_allocator())
-      { _M_stringbuf_init(__mode); }
-
-
-      basic_stringbuf(const basic_stringbuf&) = delete;
-
-      basic_stringbuf(basic_stringbuf&& __rhs)
-      : basic_stringbuf(std::move(__rhs), __xfer_bufptrs(__rhs, this))
-      { __rhs._M_sync(const_cast<char_type*>(__rhs._M_string.data()), 0, 0); }
-
-
-
-      basic_stringbuf&
-      operator=(const basic_stringbuf&) = delete;
-
-      basic_stringbuf&
-      operator=(basic_stringbuf&& __rhs)
-      {
- __xfer_bufptrs __st{__rhs, this};
- const __streambuf_type& __base = __rhs;
- __streambuf_type::operator=(__base);
- this->pubimbue(__rhs.getloc());
- _M_mode = __rhs._M_mode;
- _M_string = std::move(__rhs._M_string);
- __rhs._M_sync(const_cast<char_type*>(__rhs._M_string.data()), 0, 0);
- return *this;
-      }
-
-      void
-      swap(basic_stringbuf& __rhs)
-      {
- __xfer_bufptrs __l_st{*this, std::__addressof(__rhs)};
- __xfer_bufptrs __r_st{__rhs, this};
- __streambuf_type& __base = __rhs;
- __streambuf_type::swap(__base);
- __rhs.pubimbue(this->pubimbue(__rhs.getloc()));
- std::swap(_M_mode, __rhs._M_mode);
- std::swap(_M_string, __rhs._M_string);
-      }
-# 166 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
-      __string_type
-      str() const
-      {
- __string_type __ret(_M_string.get_allocator());
- if (this->pptr())
-   {
-
-     if (this->pptr() > this->egptr())
-       __ret.assign(this->pbase(), this->pptr());
-     else
-       __ret.assign(this->pbase(), this->egptr());
-   }
- else
-   __ret = _M_string;
- return __ret;
-      }
-# 190 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
-      void
-      str(const __string_type& __s)
-      {
-
-
- _M_string.assign(__s.data(), __s.size());
- _M_stringbuf_init(_M_mode);
-      }
-
-    protected:
-
-      void
-      _M_stringbuf_init(ios_base::openmode __mode)
-      {
- _M_mode = __mode;
- __size_type __len = 0;
- if (_M_mode & (ios_base::ate | ios_base::app))
-   __len = _M_string.size();
- _M_sync(const_cast<char_type*>(_M_string.data()), 0, __len);
-      }
-
-      virtual streamsize
-      showmanyc()
-      {
- streamsize __ret = -1;
- if (_M_mode & ios_base::in)
-   {
-     _M_update_egptr();
-     __ret = this->egptr() - this->gptr();
-   }
- return __ret;
-      }
-
-      virtual int_type
-      underflow();
-
-      virtual int_type
-      pbackfail(int_type __c = traits_type::eof());
-
-      virtual int_type
-      overflow(int_type __c = traits_type::eof());
-# 243 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
-      virtual __streambuf_type*
-      setbuf(char_type* __s, streamsize __n)
-      {
- if (__s && __n >= 0)
-   {
-
-
-
-
-
-
-     _M_string.clear();
-
-
-     _M_sync(__s, __n, 0);
-   }
- return this;
-      }
-
-      virtual pos_type
-      seekoff(off_type __off, ios_base::seekdir __way,
-       ios_base::openmode __mode = ios_base::in | ios_base::out);
-
-      virtual pos_type
-      seekpos(pos_type __sp,
-       ios_base::openmode __mode = ios_base::in | ios_base::out);
-
-
-
-
-      void
-      _M_sync(char_type* __base, __size_type __i, __size_type __o);
-
-
-
-      void
-      _M_update_egptr()
-      {
- const bool __testin = _M_mode & ios_base::in;
- if (this->pptr() && this->pptr() > this->egptr())
-   {
-     if (__testin)
-       this->setg(this->eback(), this->gptr(), this->pptr());
-     else
-       this->setg(this->pptr(), this->pptr(), this->pptr());
-   }
-      }
-
-
-
-      void
-      _M_pbump(char_type* __pbeg, char_type* __pend, off_type __off);
-
-    private:
-
-
-
-
-      struct __xfer_bufptrs
-      {
- __xfer_bufptrs(const basic_stringbuf& __from, basic_stringbuf* __to)
- : _M_to{__to}, _M_goff{-1, -1, -1}, _M_poff{-1, -1, -1}
- {
-   const _CharT* const __str = __from._M_string.data();
-   const _CharT* __end = nullptr;
-   if (__from.eback())
-     {
-       _M_goff[0] = __from.eback() - __str;
-       _M_goff[1] = __from.gptr() - __str;
-       _M_goff[2] = __from.egptr() - __str;
-       __end = __from.egptr();
-     }
-   if (__from.pbase())
-     {
-       _M_poff[0] = __from.pbase() - __str;
-       _M_poff[1] = __from.pptr() - __from.pbase();
-       _M_poff[2] = __from.epptr() - __str;
-       if (__from.pptr() > __end)
-  __end = __from.pptr();
-     }
-
-
-   if (__end)
-     {
-
-
-       auto& __mut_from = const_cast<basic_stringbuf&>(__from);
-       __mut_from._M_string._M_length(__end - __str);
-     }
- }
-
- ~__xfer_bufptrs()
- {
-   char_type* __str = const_cast<char_type*>(_M_to->_M_string.data());
-   if (_M_goff[0] != -1)
-     _M_to->setg(__str+_M_goff[0], __str+_M_goff[1], __str+_M_goff[2]);
-   if (_M_poff[0] != -1)
-     _M_to->_M_pbump(__str+_M_poff[0], __str+_M_poff[2], _M_poff[1]);
- }
-
- basic_stringbuf* _M_to;
- off_type _M_goff[3];
- off_type _M_poff[3];
-      };
-# 357 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
-      basic_stringbuf(basic_stringbuf&& __rhs, __xfer_bufptrs&&)
-      : __streambuf_type(static_cast<const __streambuf_type&>(__rhs)),
-      _M_mode(__rhs._M_mode), _M_string(std::move(__rhs._M_string))
-      { }
-
-    };
-# 380 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
-  template<typename _CharT, typename _Traits, typename _Alloc>
-    class basic_istringstream : public basic_istream<_CharT, _Traits>
-    {
-    public:
-
-      typedef _CharT char_type;
-      typedef _Traits traits_type;
-
-
-      typedef _Alloc allocator_type;
-      typedef typename traits_type::int_type int_type;
-      typedef typename traits_type::pos_type pos_type;
-      typedef typename traits_type::off_type off_type;
-
-
-      typedef basic_string<_CharT, _Traits, _Alloc> __string_type;
-      typedef basic_stringbuf<_CharT, _Traits, _Alloc> __stringbuf_type;
-      typedef basic_istream<char_type, traits_type> __istream_type;
-
-    private:
-      __stringbuf_type _M_stringbuf;
-
-    public:
-# 416 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
-      explicit
-      basic_istringstream(ios_base::openmode __mode = ios_base::in)
-      : __istream_type(), _M_stringbuf(__mode | ios_base::in)
-      { this->init(&_M_stringbuf); }
-# 434 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
-      explicit
-      basic_istringstream(const __string_type& __str,
-     ios_base::openmode __mode = ios_base::in)
-      : __istream_type(), _M_stringbuf(__str, __mode | ios_base::in)
-      { this->init(&_M_stringbuf); }
-
-
-
-
-
-
-
-      ~basic_istringstream()
-      { }
-
-
-      basic_istringstream(const basic_istringstream&) = delete;
-
-      basic_istringstream(basic_istringstream&& __rhs)
-      : __istream_type(std::move(__rhs)),
-      _M_stringbuf(std::move(__rhs._M_stringbuf))
-      { __istream_type::set_rdbuf(&_M_stringbuf); }
-
-
-
-      basic_istringstream&
-      operator=(const basic_istringstream&) = delete;
-
-      basic_istringstream&
-      operator=(basic_istringstream&& __rhs)
-      {
- __istream_type::operator=(std::move(__rhs));
- _M_stringbuf = std::move(__rhs._M_stringbuf);
- return *this;
-      }
-
-      void
-      swap(basic_istringstream& __rhs)
-      {
- __istream_type::swap(__rhs);
- _M_stringbuf.swap(__rhs._M_stringbuf);
-      }
-# 485 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
-      __stringbuf_type*
-      rdbuf() const
-      { return const_cast<__stringbuf_type*>(&_M_stringbuf); }
-
-
-
-
-
-      __string_type
-      str() const
-      { return _M_stringbuf.str(); }
-
-
-
-
-
-
-
-      void
-      str(const __string_type& __s)
-      { _M_stringbuf.str(__s); }
-    };
-# 524 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
-  template <typename _CharT, typename _Traits, typename _Alloc>
-    class basic_ostringstream : public basic_ostream<_CharT, _Traits>
-    {
-    public:
-
-      typedef _CharT char_type;
-      typedef _Traits traits_type;
-
-
-      typedef _Alloc allocator_type;
-      typedef typename traits_type::int_type int_type;
-      typedef typename traits_type::pos_type pos_type;
-      typedef typename traits_type::off_type off_type;
-
-
-      typedef basic_string<_CharT, _Traits, _Alloc> __string_type;
-      typedef basic_stringbuf<_CharT, _Traits, _Alloc> __stringbuf_type;
-      typedef basic_ostream<char_type, traits_type> __ostream_type;
-
-    private:
-      __stringbuf_type _M_stringbuf;
-
-    public:
-# 560 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
-      explicit
-      basic_ostringstream(ios_base::openmode __mode = ios_base::out)
-      : __ostream_type(), _M_stringbuf(__mode | ios_base::out)
-      { this->init(&_M_stringbuf); }
-# 578 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
-      explicit
-      basic_ostringstream(const __string_type& __str,
-     ios_base::openmode __mode = ios_base::out)
-      : __ostream_type(), _M_stringbuf(__str, __mode | ios_base::out)
-      { this->init(&_M_stringbuf); }
-
-
-
-
-
-
-
-      ~basic_ostringstream()
-      { }
-
-
-      basic_ostringstream(const basic_ostringstream&) = delete;
-
-      basic_ostringstream(basic_ostringstream&& __rhs)
-      : __ostream_type(std::move(__rhs)),
-      _M_stringbuf(std::move(__rhs._M_stringbuf))
-      { __ostream_type::set_rdbuf(&_M_stringbuf); }
-
-
-
-      basic_ostringstream&
-      operator=(const basic_ostringstream&) = delete;
-
-      basic_ostringstream&
-      operator=(basic_ostringstream&& __rhs)
-      {
- __ostream_type::operator=(std::move(__rhs));
- _M_stringbuf = std::move(__rhs._M_stringbuf);
- return *this;
-      }
-
-      void
-      swap(basic_ostringstream& __rhs)
-      {
- __ostream_type::swap(__rhs);
- _M_stringbuf.swap(__rhs._M_stringbuf);
-      }
-# 629 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
-      __stringbuf_type*
-      rdbuf() const
-      { return const_cast<__stringbuf_type*>(&_M_stringbuf); }
-
-
-
-
-
-      __string_type
-      str() const
-      { return _M_stringbuf.str(); }
-
-
-
-
-
-
-
-      void
-      str(const __string_type& __s)
-      { _M_stringbuf.str(__s); }
-    };
-# 668 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
-  template <typename _CharT, typename _Traits, typename _Alloc>
-    class basic_stringstream : public basic_iostream<_CharT, _Traits>
-    {
-    public:
-
-      typedef _CharT char_type;
-      typedef _Traits traits_type;
-
-
-      typedef _Alloc allocator_type;
-      typedef typename traits_type::int_type int_type;
-      typedef typename traits_type::pos_type pos_type;
-      typedef typename traits_type::off_type off_type;
-
-
-      typedef basic_string<_CharT, _Traits, _Alloc> __string_type;
-      typedef basic_stringbuf<_CharT, _Traits, _Alloc> __stringbuf_type;
-      typedef basic_iostream<char_type, traits_type> __iostream_type;
-
-    private:
-      __stringbuf_type _M_stringbuf;
-
-    public:
-# 703 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
-      explicit
-      basic_stringstream(ios_base::openmode __m = ios_base::out | ios_base::in)
-      : __iostream_type(), _M_stringbuf(__m)
-      { this->init(&_M_stringbuf); }
-# 719 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
-      explicit
-      basic_stringstream(const __string_type& __str,
-    ios_base::openmode __m = ios_base::out | ios_base::in)
-      : __iostream_type(), _M_stringbuf(__str, __m)
-      { this->init(&_M_stringbuf); }
-
-
-
-
-
-
-
-      ~basic_stringstream()
-      { }
-
-
-      basic_stringstream(const basic_stringstream&) = delete;
-
-      basic_stringstream(basic_stringstream&& __rhs)
-      : __iostream_type(std::move(__rhs)),
-      _M_stringbuf(std::move(__rhs._M_stringbuf))
-      { __iostream_type::set_rdbuf(&_M_stringbuf); }
-
-
-
-      basic_stringstream&
-      operator=(const basic_stringstream&) = delete;
-
-      basic_stringstream&
-      operator=(basic_stringstream&& __rhs)
-      {
- __iostream_type::operator=(std::move(__rhs));
- _M_stringbuf = std::move(__rhs._M_stringbuf);
- return *this;
-      }
-
-      void
-      swap(basic_stringstream& __rhs)
-      {
- __iostream_type::swap(__rhs);
- _M_stringbuf.swap(__rhs._M_stringbuf);
-      }
-# 770 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 3
-      __stringbuf_type*
-      rdbuf() const
-      { return const_cast<__stringbuf_type*>(&_M_stringbuf); }
-
-
-
-
-
-      __string_type
-      str() const
-      { return _M_stringbuf.str(); }
-
-
-
-
-
-
-
-      void
-      str(const __string_type& __s)
-      { _M_stringbuf.str(__s); }
-    };
-
-
-
-  template <class _CharT, class _Traits, class _Allocator>
-    inline void
-    swap(basic_stringbuf<_CharT, _Traits, _Allocator>& __x,
-  basic_stringbuf<_CharT, _Traits, _Allocator>& __y)
-    { __x.swap(__y); }
-
-
-  template <class _CharT, class _Traits, class _Allocator>
-    inline void
-    swap(basic_istringstream<_CharT, _Traits, _Allocator>& __x,
-  basic_istringstream<_CharT, _Traits, _Allocator>& __y)
-    { __x.swap(__y); }
-
-
-  template <class _CharT, class _Traits, class _Allocator>
-    inline void
-    swap(basic_ostringstream<_CharT, _Traits, _Allocator>& __x,
-  basic_ostringstream<_CharT, _Traits, _Allocator>& __y)
-    { __x.swap(__y); }
-
-
-  template <class _CharT, class _Traits, class _Allocator>
-    inline void
-    swap(basic_stringstream<_CharT, _Traits, _Allocator>& __x,
-  basic_stringstream<_CharT, _Traits, _Allocator>& __y)
-    { __x.swap(__y); }
-
-
-}
-
-}
-
-# 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/sstream.tcc" 1 3
-# 37 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/sstream.tcc" 3
-       
-# 38 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/sstream.tcc" 3
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-  template <class _CharT, class _Traits, class _Alloc>
-    typename basic_stringbuf<_CharT, _Traits, _Alloc>::int_type
-    basic_stringbuf<_CharT, _Traits, _Alloc>::
-    pbackfail(int_type __c)
-    {
-      int_type __ret = traits_type::eof();
-      if (this->eback() < this->gptr())
- {
-
-
-   const bool __testeof = traits_type::eq_int_type(__c, __ret);
-   if (!__testeof)
-     {
-       const bool __testeq = traits_type::eq(traits_type::
-          to_char_type(__c),
-          this->gptr()[-1]);
-       const bool __testout = this->_M_mode & ios_base::out;
-       if (__testeq || __testout)
-  {
-    this->gbump(-1);
-    if (!__testeq)
-      *this->gptr() = traits_type::to_char_type(__c);
-    __ret = __c;
-  }
-     }
-   else
-     {
-       this->gbump(-1);
-       __ret = traits_type::not_eof(__c);
-     }
- }
-      return __ret;
-    }
-
-  template <class _CharT, class _Traits, class _Alloc>
-    typename basic_stringbuf<_CharT, _Traits, _Alloc>::int_type
-    basic_stringbuf<_CharT, _Traits, _Alloc>::
-    overflow(int_type __c)
-    {
-      const bool __testout = this->_M_mode & ios_base::out;
-      if (__builtin_expect(!__testout, false))
- return traits_type::eof();
-
-      const bool __testeof = traits_type::eq_int_type(__c, traits_type::eof());
-      if (__builtin_expect(__testeof, false))
- return traits_type::not_eof(__c);
-
-      const __size_type __capacity = _M_string.capacity();
-
-
-      if ((this->epptr() - this->pbase()) < __capacity)
- {
-
-   char_type* __base = const_cast<char_type*>(_M_string.data());
-   _M_pbump(__base, __base + __capacity, this->pptr() - this->pbase());
-   if (_M_mode & ios_base::in)
-     {
-       const __size_type __nget = this->gptr() - this->eback();
-       const __size_type __eget = this->egptr() - this->eback();
-       this->setg(__base, __base + __nget, __base + __eget + 1);
-     }
-   *this->pptr() = traits_type::to_char_type(__c);
-   this->pbump(1);
-   return __c;
- }
-
-
-      const __size_type __max_size = _M_string.max_size();
-      const bool __testput = this->pptr() < this->epptr();
-      if (__builtin_expect(!__testput && __capacity == __max_size, false))
- return traits_type::eof();
-
-
-
-      const char_type __conv = traits_type::to_char_type(__c);
-      if (!__testput)
- {
-# 129 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/bits/sstream.tcc" 3
-   const __size_type __opt_len = std::max(__size_type(2 * __capacity),
-       __size_type(512));
-   const __size_type __len = std::min(__opt_len, __max_size);
-   __string_type __tmp(_M_string.get_allocator());
-   __tmp.reserve(__len);
-   if (this->pbase())
-     __tmp.assign(this->pbase(), this->epptr() - this->pbase());
-   __tmp.push_back(__conv);
-   _M_string.swap(__tmp);
-   _M_sync(const_cast<char_type*>(_M_string.data()),
-    this->gptr() - this->eback(), this->pptr() - this->pbase());
- }
-      else
- *this->pptr() = __conv;
-      this->pbump(1);
-      return __c;
-    }
-
-  template <class _CharT, class _Traits, class _Alloc>
-    typename basic_stringbuf<_CharT, _Traits, _Alloc>::int_type
-    basic_stringbuf<_CharT, _Traits, _Alloc>::
-    underflow()
-    {
-      int_type __ret = traits_type::eof();
-      const bool __testin = this->_M_mode & ios_base::in;
-      if (__testin)
- {
-
-   _M_update_egptr();
-
-   if (this->gptr() < this->egptr())
-     __ret = traits_type::to_int_type(*this->gptr());
- }
-      return __ret;
-    }
-
-  template <class _CharT, class _Traits, class _Alloc>
-    typename basic_stringbuf<_CharT, _Traits, _Alloc>::pos_type
-    basic_stringbuf<_CharT, _Traits, _Alloc>::
-    seekoff(off_type __off, ios_base::seekdir __way, ios_base::openmode __mode)
-    {
-      pos_type __ret = pos_type(off_type(-1));
-      bool __testin = (ios_base::in & this->_M_mode & __mode) != 0;
-      bool __testout = (ios_base::out & this->_M_mode & __mode) != 0;
-      const bool __testboth = __testin && __testout && __way != ios_base::cur;
-      __testin &= !(__mode & ios_base::out);
-      __testout &= !(__mode & ios_base::in);
-
-
-
-      const char_type* __beg = __testin ? this->eback() : this->pbase();
-      if ((__beg || !__off) && (__testin || __testout || __testboth))
- {
-   _M_update_egptr();
-
-   off_type __newoffi = __off;
-   off_type __newoffo = __newoffi;
-   if (__way == ios_base::cur)
-     {
-       __newoffi += this->gptr() - __beg;
-       __newoffo += this->pptr() - __beg;
-     }
-   else if (__way == ios_base::end)
-     __newoffo = __newoffi += this->egptr() - __beg;
-
-   if ((__testin || __testboth)
-       && __newoffi >= 0
-       && this->egptr() - __beg >= __newoffi)
-     {
-       this->setg(this->eback(), this->eback() + __newoffi,
-    this->egptr());
-       __ret = pos_type(__newoffi);
-     }
-   if ((__testout || __testboth)
-       && __newoffo >= 0
-       && this->egptr() - __beg >= __newoffo)
-     {
-       _M_pbump(this->pbase(), this->epptr(), __newoffo);
-       __ret = pos_type(__newoffo);
-     }
- }
-      return __ret;
-    }
-
-  template <class _CharT, class _Traits, class _Alloc>
-    typename basic_stringbuf<_CharT, _Traits, _Alloc>::pos_type
-    basic_stringbuf<_CharT, _Traits, _Alloc>::
-    seekpos(pos_type __sp, ios_base::openmode __mode)
-    {
-      pos_type __ret = pos_type(off_type(-1));
-      const bool __testin = (ios_base::in & this->_M_mode & __mode) != 0;
-      const bool __testout = (ios_base::out & this->_M_mode & __mode) != 0;
-
-      const char_type* __beg = __testin ? this->eback() : this->pbase();
-      if ((__beg || !off_type(__sp)) && (__testin || __testout))
- {
-   _M_update_egptr();
-
-   const off_type __pos(__sp);
-   const bool __testpos = (0 <= __pos
-      && __pos <= this->egptr() - __beg);
-   if (__testpos)
-     {
-       if (__testin)
-  this->setg(this->eback(), this->eback() + __pos,
-      this->egptr());
-       if (__testout)
-  _M_pbump(this->pbase(), this->epptr(), __pos);
-       __ret = __sp;
-     }
- }
-      return __ret;
-    }
-
-  template <class _CharT, class _Traits, class _Alloc>
-    void
-    basic_stringbuf<_CharT, _Traits, _Alloc>::
-    _M_sync(char_type* __base, __size_type __i, __size_type __o)
-    {
-      const bool __testin = _M_mode & ios_base::in;
-      const bool __testout = _M_mode & ios_base::out;
-      char_type* __endg = __base + _M_string.size();
-      char_type* __endp = __base + _M_string.capacity();
-
-      if (__base != _M_string.data())
- {
-
-   __endg += __i;
-   __i = 0;
-   __endp = __endg;
- }
-
-      if (__testin)
- this->setg(__base, __base + __i, __endg);
-      if (__testout)
- {
-   _M_pbump(__base, __endp, __o);
-
-
-
-   if (!__testin)
-     this->setg(__endg, __endg, __endg);
- }
-    }
-
-  template <class _CharT, class _Traits, class _Alloc>
-    void
-    basic_stringbuf<_CharT, _Traits, _Alloc>::
-    _M_pbump(char_type* __pbeg, char_type* __pend, off_type __off)
-    {
-      this->setp(__pbeg, __pend);
-      while (__off > __gnu_cxx::__numeric_traits<int>::__max)
- {
-   this->pbump(__gnu_cxx::__numeric_traits<int>::__max);
-   __off -= __gnu_cxx::__numeric_traits<int>::__max;
- }
-      this->pbump(__off);
-    }
-
-
-
-
-  extern template class basic_stringbuf<char>;
-  extern template class basic_istringstream<char>;
-  extern template class basic_ostringstream<char>;
-  extern template class basic_stringstream<char>;
-
-
-  extern template class basic_stringbuf<wchar_t>;
-  extern template class basic_istringstream<wchar_t>;
-  extern template class basic_ostringstream<wchar_t>;
-  extern template class basic_stringstream<wchar_t>;
-
-
-
-
-}
-# 828 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/sstream" 2 3
-# 159 "/data/xilinx/Vitis_HLS/2022.2/include/ap_common.h" 2
-
-
-
-
-
-
-# 164 "/data/xilinx/Vitis_HLS/2022.2/include/ap_common.h"
-enum { CHAR_IS_SIGNED = (char)-1 < 0 };
-
-
-namespace _ap_type {
-template <typename _Tp>
-struct is_signed {
-  static const bool value = _Tp(-1) < _Tp(1);
-};
-
-template <typename _Tp>
-struct is_integral {
-  static const bool value = false;
-};
-
-
-
-
-
-template <> struct is_integral<bool> { static const bool value = true; };
-template <> struct is_integral<char> { static const bool value = true; };
-template <> struct is_integral<signed char> { static const bool value = true; };
-template <> struct is_integral<unsigned char> { static const bool value = true; };
-template <> struct is_integral<short> { static const bool value = true; };
-template <> struct is_integral<unsigned short> { static const bool value = true; };
-template <> struct is_integral<int> { static const bool value = true; };
-template <> struct is_integral<unsigned int> { static const bool value = true; };
-template <> struct is_integral<long> { static const bool value = true; };
-template <> struct is_integral<unsigned long> { static const bool value = true; };
-template <> struct is_integral<ap_slong> { static const bool value = true; };
-template <> struct is_integral<ap_ulong> { static const bool value = true; };
-
-
-template <bool, typename _Tp = void>
-struct enable_if {};
-
-template <typename _Tp>
-struct enable_if<true, _Tp> {
-  typedef _Tp type;
-};
-
-template <typename _Tp>
-struct remove_const {
-  typedef _Tp type;
-};
-
-template <typename _Tp>
-struct remove_const<_Tp const> {
-  typedef _Tp type;
-};
-}
-# 587 "/data/xilinx/Vitis_HLS/2022.2/include/ap_common.h"
-static inline unsigned char guess_radix(const char* s) {
-  unsigned char rd = 10;
-  const char* p = s;
-
-  if (p[0] == '-' || p[0] == '+') ++p;
-
-  if (p[0] == '0') {
-    if (p[1] == 'b' || p[1] == 'B') {
-      rd = 2;
-    } else if (p[1] == 'o' || p[1] == 'O') {
-      rd = 8;
-    } else if (p[1] == 'x' || p[1] == 'X') {
-      rd = 16;
-    } else if (p[1] == 'd' || p[1] == 'D') {
-      rd = 10;
-    }
-  }
-  return rd;
-}
-# 615 "/data/xilinx/Vitis_HLS/2022.2/include/ap_common.h"
-class half;
-
-
-
-
-
-
-# 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cmath" 1 3
-# 39 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cmath" 3
-       
-# 40 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cmath" 3
-# 623 "/data/xilinx/Vitis_HLS/2022.2/include/ap_common.h" 2
-# 653 "/data/xilinx/Vitis_HLS/2022.2/include/ap_common.h"
-template <int _AP_W, bool _AP_S, bool _AP_C = _AP_W <= 64>
-class ap_private;
-
-template <int _AP_W, bool _AP_S>
-struct ssdm_int_sim {
-
-  typedef ap_private<_AP_W, _AP_S> DataType;
-  ap_private<_AP_W, _AP_S> V;
-  ssdm_int_sim() {}
-  ssdm_int_sim(ap_private<_AP_W, _AP_S> o):V(o){}
-};
-
-
-# 1 "/data/xilinx/Vitis_HLS/2022.2/include/etc/ap_private.h" 1
-# 9 "/data/xilinx/Vitis_HLS/2022.2/include/etc/ap_private.h"
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wpragmas"
-#pragma GCC diagnostic ignored "-Wint-in-bool-context"
-#pragma GCC diagnostic ignored "-Wmaybe-uninitialized"
-#pragma GCC diagnostic ignored "-Wunused-parameter"
-# 25 "/data/xilinx/Vitis_HLS/2022.2/include/etc/ap_private.h"
-template <int _AP_W, bool _AP_S>
-struct _private_range_ref;
-template <int _AP_W, bool _AP_S>
-struct _private_bit_ref;
-# 52 "/data/xilinx/Vitis_HLS/2022.2/include/etc/ap_private.h"
-# 1 "/data/xilinx/Vitis_HLS/2022.2/include/hls_half.h" 1
 # 53 "/data/xilinx/Vitis_HLS/2022.2/include/etc/ap_private.h" 2
 # 63 "/data/xilinx/Vitis_HLS/2022.2/include/etc/ap_private.h"
 namespace AESL_std {
@@ -55789,11 +54773,7 @@ inline half rawBitsToHalf(unsigned short pi) {
   return __D;
 
 }
-# 10 "/data/xilinx/Vitis_HLS/2022.2/include/ap_fixed.h" 2
-# 1 "/data/xilinx/Vitis_HLS/2022.2/include/ap_fixed_base.h" 1
-# 16 "/data/xilinx/Vitis_HLS/2022.2/include/ap_fixed_base.h"
-# 1 "/data/xilinx/Vitis_HLS/2022.2/include/ap_int.h" 1
-# 11 "/data/xilinx/Vitis_HLS/2022.2/include/ap_int.h"
+# 11 "/data/xilinx/Vitis_HLS/2022.2/include/ap_int.h" 2
 # 1 "/data/xilinx/Vitis_HLS/2022.2/include/ap_int_base.h" 1
 # 21 "/data/xilinx/Vitis_HLS/2022.2/include/ap_int_base.h"
 #pragma GCC diagnostic push
@@ -58865,6 +57845,18 @@ inline bool operator!=(const ap_int<_AP_W> &__x, const complex<ap_int<_AP_W> > &
 
 }
 # 353 "/data/xilinx/Vitis_HLS/2022.2/include/ap_int.h" 2
+
+
+
+
+
+
+
+# 1 "/data/xilinx/Vitis_HLS/2022.2/include/ap_fixed.h" 1
+# 10 "/data/xilinx/Vitis_HLS/2022.2/include/ap_fixed.h"
+# 1 "/data/xilinx/Vitis_HLS/2022.2/include/ap_fixed_base.h" 1
+# 16 "/data/xilinx/Vitis_HLS/2022.2/include/ap_fixed_base.h"
+# 1 "/data/xilinx/Vitis_HLS/2022.2/include/ap_int.h" 1
 # 17 "/data/xilinx/Vitis_HLS/2022.2/include/ap_fixed_base.h" 2
 # 32 "/data/xilinx/Vitis_HLS/2022.2/include/ap_fixed_base.h"
 # 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cfenv" 1 3
@@ -62434,6 +61426,1042 @@ inline bool operator!=(
 
 }
 # 366 "/data/xilinx/Vitis_HLS/2022.2/include/ap_fixed.h" 2
+# 361 "/data/xilinx/Vitis_HLS/2022.2/include/ap_int.h" 2
+# 13 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator.h" 2
+typedef ap_uint<16> uint16;
+typedef ap_uint<32> uint32;
+typedef int32_t int32;
+typedef int64_t int64;
+
+
+uint16 bf16add(uint16 a_bits, uint16 b_bits);
+
+
+void activation_accelerator(ap_uint<512>* in0, ap_uint<512>* in1, ap_uint<512>* out, int32 stage, int32 config);
+# 2 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator.cpp" 2
+
+# 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cmath" 1 3
+# 39 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cmath" 3
+       
+# 40 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cmath" 3
+# 4 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator.cpp" 2
+# 1 "/data/xilinx/Vitis_HLS/2022.2/include/hls_math.h" 1
+# 40 "/data/xilinx/Vitis_HLS/2022.2/include/hls_math.h"
+# 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cmath" 1 3
+# 39 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cmath" 3
+       
+# 40 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cmath" 3
+# 41 "/data/xilinx/Vitis_HLS/2022.2/include/hls_math.h" 2
+# 1 "/data/xilinx/Vitis_HLS/2022.2/include/hls_half.h" 1
+# 42 "/data/xilinx/Vitis_HLS/2022.2/include/hls_math.h" 2
+
+
+
+namespace hls {
+
+
+  int signbit(double);
+  int signbit(float);
+  int signbit(half);
+  int signbitf(float);
+  int half_signbit(half);
+
+
+  double nan(const char*);
+  float nanf(const char*);
+  half half_nan(const char *);
+
+
+  int isfinite(double);
+  int isfinite(float);
+  int isfinite(half);
+  int isfinitef(float);
+  int half_isfinite(half);
+
+
+  int __isfinite(double);
+  int __isfinite(float);
+  int __isfinite(half);
+  int __isfinitef(float);
+
+
+  int isinf(double);
+  int isinf(float);
+  int isinf(half);
+  int isinff(float);
+  int half_isinf(half);
+
+
+  int __isinf(double);
+  int __isinf(float);
+  int __isinf(half);
+  int __isinff(float);
+
+
+  int isnan(double);
+  int isnan(float);
+  int isnan(half);
+  int isnanf(float);
+  int half_isnan(half);
+
+
+  int __isnan(double);
+  int __isnan(float);
+  int __isnan(half);
+  int __isnanf(float);
+
+
+  int isnormal(double);
+  int isnormal(float);
+  int isnormal(half);
+  int isnormalf(float);
+  int half_isnormal(half);
+
+
+  int __isnormal(double);
+  int __isnormal(float);
+  int __isnormal(half);
+  int __isnormalf(float);
+
+
+  int fpclassify(double);
+  int fpclassify(float);
+  int fpclassify(half);
+  int fpclassifyf(float);
+  int half_fpclassify(half);
+
+
+  int __fpclassify(double);
+  int __fpclassify(float);
+  int __fpclassify(half);
+  int __fpclassifyf(float);
+
+
+  double copysign(double, double);
+  float copysign(float, float);
+  half copysign(half, half);
+  float copysignf(float, float);
+  half half_copysign(half, half);
+  int8_t copysign(int8_t, int8_t);
+  uint8_t copysign(uint8_t, uint8_t);
+  int16_t copysign(int16_t, int16_t);
+  uint16_t copysign(uint16_t, uint16_t);
+  int32_t copysign(int32_t, int32_t);
+  uint32_t copysign(uint32_t, uint32_t);
+
+
+  double fabs(double);
+  float fabs(float);
+  half fabs(half);
+  float fabsf(float);
+  half half_fabs(half);
+  int8_t fabs(int8_t);
+  uint8_t fabs(uint8_t);
+  int16_t fabs(int16_t);
+  uint16_t fabs(uint16_t);
+  int32_t fabs(int32_t);
+  uint32_t fabs(uint32_t);
+
+
+  double abs(double);
+  float abs(float);
+  half abs(half);
+  float absf(float);
+  half half_abs(half);
+  int8_t abs(int8_t);
+  uint8_t abs(uint8_t);
+  int16_t abs(int16_t);
+  uint16_t abs(uint16_t);
+  int32_t abs(int32_t);
+  uint32_t abs(uint32_t);
+
+
+  double fma(double, double, double);
+  float fma(float, float, float);
+  half fma(half, half, half);
+  float fmaf(float, float, float);
+  half half_fma(half, half, half);
+
+
+  double mad(double, double, double);
+  float mad(float, float, float);
+  half mad(half, half, half);
+  float madf(float, float, float);
+  half half_mad(half, half, half);
+
+
+  int isequal(double, double);
+  int isequal(float, float);
+  int isequal(half, half);
+  int isequalf(float, float);
+  int half_isequal(half, half);
+
+
+  int isgreater(double, double);
+  int isgreater(float, float);
+  int isgreater(half, half);
+  int isgreaterf(float, float);
+  int half_isgreater(half, half);
+
+
+  int isgreaterequal(double, double);
+  int isgreaterequal(float, float);
+  int isgreaterequal(half, half);
+  int isgreaterequalf(float, float);
+  int half_isgreaterequal(half, half);
+
+
+  int isless(double, double);
+  int isless(float, float);
+  int isless(half, half);
+  int islessf(float, float);
+  int half_isless(half, half);
+
+
+  int islessequal(double, double);
+  int islessequal(float, float);
+  int islessequal(half, half);
+  int islessequalf(float, float);
+  int half_islessequal(half, half);
+
+
+  int islessgreater(double, double);
+  int islessgreater(float, float);
+  int islessgreater(half, half);
+  int islessgreaterf(float, float);
+  int half_islessgreater(half, half);
+
+
+  int isnotequal(double, double);
+  int isnotequal(float, float);
+  int isnotequal(half, half);
+  int isnotequalf(float, float);
+  int half_isnotequal(half, half);
+
+
+  double fmax(double, double);
+  float fmax(float, float);
+  half fmax(half, half);
+  float fmaxf(float, float);
+  half half_fmax(half, half);
+  int8_t fmax(int8_t,int8_t);
+  uint8_t fmax(uint8_t, uint8_t);
+  int16_t fmax(int16_t, int16_t);
+  uint16_t fmax(uint16_t, uint16_t);
+  int32_t fmax(int32_t, int32_t);
+  uint32_t fmax(uint32_t, uint32_t);
+
+
+  double fmin(double, double);
+  float fmin(float, float);
+  half fmin(half, half);
+  float fminf(float, float);
+  half half_fmin(half, half);
+  int8_t fmin(int8_t,int8_t);
+  uint8_t fmin(uint8_t, uint8_t);
+  int16_t fmin(int16_t, int16_t);
+  uint16_t fmin(uint16_t, uint16_t);
+  int32_t fmin(int32_t, int32_t);
+  uint32_t fmin(uint32_t, uint32_t);
+
+
+  template <class T>
+  T max(T x, T y){
+ return (x > y) ? x : y;
+  }
+
+
+  template <class T>
+  T min(T x, T y){
+ return (x < y) ? x : y;
+  }
+
+
+  double fdim(double, double);
+  float fdim(float, float);
+  half fdim(half, half);
+  float fdimf(float, float);
+  half half_fdim(half, half);
+  int8_t fdim(int8_t,int8_t);
+  uint8_t fdim(uint8_t, uint8_t);
+  int16_t fdim(int16_t, int16_t);
+  uint16_t fdim(uint16_t, uint16_t);
+  int32_t fdim(int32_t, int32_t);
+  uint32_t fdim(uint32_t, uint32_t);
+
+
+  double maxmag(double, double);
+  float maxmag(float, float);
+  half maxmag(half, half);
+  float maxmagf(float, float);
+  half half_maxmag(half, half);
+  int8_t maxmag(int8_t,int8_t);
+  uint8_t maxmag(uint8_t, uint8_t);
+  int16_t maxmag(int16_t, int16_t);
+  uint16_t maxmag(uint16_t, uint16_t);
+  int32_t maxmag(int32_t, int32_t);
+  uint32_t maxmag(uint32_t, uint32_t);
+
+
+  double minmag(double, double);
+  float minmag(float, float);
+  half minmag(half, half);
+  float minmagf(float, float);
+  half half_minmag(half, half);
+  int8_t minmag(int8_t,int8_t);
+  uint8_t minmag(uint8_t, uint8_t);
+  int16_t minmag(int16_t, int16_t);
+  uint16_t minmag(uint16_t, uint16_t);
+  int32_t minmag(int32_t, int32_t);
+  uint32_t minmag(uint32_t, uint32_t);
+
+
+
+  double frexp(double, int*);
+  float frexp(float, int*);
+  half frexp(half, int*);
+  float frexpf(float, int*);
+  half half_frexp(half, int*);
+
+
+  double ldexp(double, int);
+  float ldexp(float, int);
+  half ldexp(half, int);
+  float ldexpf(float, int);
+  half half_ldexp(half, int);
+
+
+  int ilogb(double);
+  int ilogb(float);
+  int ilogb(half);
+  int ilogbf(float);
+  int half_ilogb(half);
+
+
+  double scalbn(double, int);
+  float scalbn(float, int);
+  half scalbn(half, int);
+  float scalbnf(float, int);
+  half half_scalbn(half, int);
+
+
+  double scalbln(double, long int);
+  float scalbln(float, long int);
+  half scalbln(half, long int);
+  float scalblnf(float, long int);
+  half half_scalbln(half, long int);
+
+
+  double ceil(double);
+  float ceil(float);
+  half ceil(half);
+  float ceilf(float);
+  half half_ceil(half);
+
+
+  double floor(double);
+  float floor(float);
+  half floor(half);
+  float floorf(float);
+  half half_floor(half);
+
+
+  double trunc(double);
+  float trunc(float);
+  half trunc(half);
+  float truncf(float);
+  half half_trunc(half);
+
+
+  double round(double);
+  float round(float);
+  half round(half);
+  float roundf(float);
+  half half_round(half);
+
+
+  double rint(double);
+  float rint(float);
+  half rint(half);
+  float rintf(float);
+  half half_rint(half);
+
+
+  long int lround(double);
+  long int lround(float);
+  long int lround(half);
+  long int lroundf(float);
+  long int half_lround(half);
+
+
+  long long int llround(double);
+  long long int llround(float);
+  long long int llround(half);
+  long long int llroundf(float);
+  long long int half_llround(half);
+
+
+  long int lrint(double);
+  long int lrint(float);
+  long int lrint(half);
+  long int lrintf(float);
+  long int half_lrint(half);
+
+
+  long long int llrint(double);
+  long long int llrint(float);
+  long long int llrint(half);
+  long long int llrintf(float);
+  long long int half_llrint(half);
+
+
+  template<class T>
+  T cast_IEEE754(double, bool);
+  template<class T>
+  T cast_IEEE754(float, bool);
+  template<class T>
+  T cast_IEEE754(half, bool);
+
+  template<class T>
+  T cast_IEEE754(double);
+  template<class T>
+  T cast_IEEE754(float);
+  template<class T>
+  T cast_IEEE754(half);
+
+
+
+  template<>
+  char cast_IEEE754<char>(double, bool);
+  template<>
+  char cast_IEEE754<char>(float, bool);
+  template<>
+  char cast_IEEE754<char>(half, bool);
+  template<>
+  char cast_IEEE754<char>(double);
+  template<>
+  char cast_IEEE754<char>(float);
+  template<>
+  char cast_IEEE754<char>(half);
+
+
+  template<>
+  int8_t cast_IEEE754<int8_t>(double, bool);
+  template<>
+  int8_t cast_IEEE754<int8_t>(float, bool);
+  template<>
+  int8_t cast_IEEE754<int8_t>(half, bool);
+  template<>
+  int8_t cast_IEEE754<int8_t>(double);
+  template<>
+  int8_t cast_IEEE754<int8_t>(float);
+  template<>
+  int8_t cast_IEEE754<int8_t>(half);
+
+
+  template<>
+  uint8_t cast_IEEE754<uint8_t>(double, bool);
+  template<>
+  uint8_t cast_IEEE754<uint8_t>(float, bool);
+  template<>
+  uint8_t cast_IEEE754<uint8_t>(half, bool);
+  template<>
+  uint8_t cast_IEEE754<uint8_t>(double);
+  template<>
+  uint8_t cast_IEEE754<uint8_t>(float);
+  template<>
+  uint8_t cast_IEEE754<uint8_t>(half);
+
+
+  template<>
+  int16_t cast_IEEE754<int16_t>(double, bool);
+  template<>
+  int16_t cast_IEEE754<int16_t>(float, bool);
+  template<>
+  int16_t cast_IEEE754<int16_t>(half, bool);
+  template<>
+  int16_t cast_IEEE754<int16_t>(double);
+  template<>
+  int16_t cast_IEEE754<int16_t>(float);
+  template<>
+  int16_t cast_IEEE754<int16_t>(half);
+
+
+  template<>
+  uint16_t cast_IEEE754<uint16_t>(double, bool);
+  template<>
+  uint16_t cast_IEEE754<uint16_t>(float, bool);
+  template<>
+  uint16_t cast_IEEE754<uint16_t>(half, bool);
+  template<>
+  uint16_t cast_IEEE754<uint16_t>(double);
+  template<>
+  uint16_t cast_IEEE754<uint16_t>(float);
+  template<>
+  uint16_t cast_IEEE754<uint16_t>(half);
+
+
+  template<>
+  int32_t cast_IEEE754<int32_t>(double, bool);
+  template<>
+  int32_t cast_IEEE754<int32_t>(float, bool);
+  template<>
+  int32_t cast_IEEE754<int32_t>(half, bool);
+  template<>
+  int32_t cast_IEEE754<int32_t>(double);
+  template<>
+  int32_t cast_IEEE754<int32_t>(float);
+  template<>
+  int32_t cast_IEEE754<int32_t>(half);
+
+
+  template<>
+  uint32_t cast_IEEE754<uint32_t>(double, bool);
+  template<>
+  uint32_t cast_IEEE754<uint32_t>(float, bool);
+  template<>
+  uint32_t cast_IEEE754<uint32_t>(half, bool);
+  template<>
+  uint32_t cast_IEEE754<uint32_t>(double);
+  template<>
+  uint32_t cast_IEEE754<uint32_t>(float);
+  template<>
+  uint32_t cast_IEEE754<uint32_t>(half);
+
+
+  template<>
+  int64_t cast_IEEE754<int64_t>(double, bool);
+  template<>
+  int64_t cast_IEEE754<int64_t>(float, bool);
+  template<>
+  int64_t cast_IEEE754<int64_t>(half, bool);
+  template<>
+  int64_t cast_IEEE754<int64_t>(double);
+  template<>
+  int64_t cast_IEEE754<int64_t>(float);
+  template<>
+  int64_t cast_IEEE754<int64_t>(half);
+
+
+  template<>
+  uint64_t cast_IEEE754<uint64_t>(double, bool);
+  template<>
+  uint64_t cast_IEEE754<uint64_t>(float, bool);
+  template<>
+  uint64_t cast_IEEE754<uint64_t>(half, bool);
+  template<>
+  uint64_t cast_IEEE754<uint64_t>(double);
+  template<>
+  uint64_t cast_IEEE754<uint64_t>(float);
+  template<>
+  uint64_t cast_IEEE754<uint64_t>(half);
+
+
+
+  double nearbyint(double);
+  float nearbyint(float);
+  half nearbyint(half);
+  float nearbyintf(float);
+  half half_nearbyint(half);
+
+
+  double modf(double, double*);
+  float modf(float, float*);
+  half modf(half, half*);
+  float modff(float, float*);
+  half half_modf(half, half*);
+
+
+  double fract(double, double*);
+  float fract(float, float*);
+  half fract(half, half*);
+  float fractf(float, float*);
+  half half_fract(half, half*);
+
+
+  int isordered(double, double);
+  int isordered(float, float);
+  int isordered(half, half);
+  int isorderedf(float, float);
+  int half_isordered(half, half);
+
+
+  int isunordered(double, double);
+  int isunordered(float, float);
+  int isunordered(half, half);
+  int isunorderedf(float, float);
+  int half_isunordered(half, half);
+
+
+  double bitselect(double, double, double);
+  float bitselect(float, float, float);
+  int bitselect(int, int, int);
+  uint32_t bitselect(uint32_t, uint32_t, uint32_t);
+  half bitselect(half, half, half);
+  float bitselectf(float, float, float);
+  half half_bitselect(half, half, half);
+
+
+  namespace hotbm {
+ double sin(double);
+ float sin(float);
+ half sin(half);
+ float sinf(float);
+ half half_sin(half);
+
+ double cos(double);
+ float cos(float);
+ half cos(half);
+ float cosf(float);
+ half half_cos(half);
+
+ void sincos(double, double*, double*);
+ void sincos(float, float*, float*);
+ void sincos(half, half*, half*);
+ void sincosf(float, float*, float*);
+ void half_sincos(half, half*, half*);
+  }
+
+
+  namespace cordic {
+ double sin(double);
+ float sin(float);
+ half sin(half);
+ float sinf(float);
+ half half_sin(half);
+
+ double cos(double);
+ float cos(float);
+ half cos(half);
+ float cosf(float);
+ half half_cos(half);
+
+ void sincos(double, double*, double*);
+ void sincos(float, float*, float*);
+ void sincos(half, half*, half*);
+ void sincosf(float, float*, float*);
+ void half_sincos(half, half*, half*);
+  }
+
+
+  double sin(double);
+  float sin(float);
+  half sin(half);
+  float sinf(float);
+  half half_sin(half);
+
+  double cos(double);
+  float cos(float);
+  half cos(half);
+  float cosf(float);
+  half half_cos(half);
+
+
+  void sincos(double, double*, double*);
+  void sincos(float, float*, float*);
+  void sincos(half, half*, half*);
+  void sincosf(float, float*, float*);
+  void half_sincos(half, half*, half*);
+
+
+  double sinpi(double);
+  float sinpi(float);
+  half sinpi(half);
+  float sinpif(float);
+  half half_sinpi(half);
+
+
+  double cospi(double);
+  float cospi(float);
+  half cospi(half);
+  float cospif(float);
+  half half_cospi(half);
+
+
+  double tanpi(double);
+  float tanpi(float);
+  half tanpi(half);
+  float tanpif(float);
+  half half_tanpi(half);
+
+
+  double atan(double);
+  float atan(float);
+  half atan(half);
+  float atanf(float);
+  half half_atan(half);
+
+
+  double atan2(double, double);
+  float atan2(float, float);
+  half atan2(half, half);
+  float atan2f(float, float);
+  half half_atan2(half, half);
+
+
+  double tan(double);
+  float tan(float);
+  half tan(half);
+  float tanf(float);
+  half half_tan(half);
+
+
+  double sinh(double);
+  float sinh(float);
+  half sinh(half);
+  float sinhf(float);
+  half half_sinh(half);
+
+
+  double cosh(double);
+  float cosh(float);
+  half cosh(half);
+  float coshf(float);
+  half half_cosh(half);
+
+
+  double exp(double);
+  float exp(float);
+  half exp(half);
+  float expf(float);
+  half half_exp(half);
+  int8_t exp(int8_t);
+  uint8_t exp(uint8_t);
+  int16_t exp(int16_t);
+  uint16_t exp(uint16_t);
+  int32_t exp(int32_t);
+  uint32_t exp(uint32_t);
+
+
+  double exp2(double);
+  float exp2(float);
+  half exp2(half);
+  float exp2f(float);
+  half half_exp2(half);
+
+
+  double exp10(double);
+  float exp10(float);
+  half exp10(half);
+  float exp10f(float);
+  half half_exp10(half);
+
+
+  double expm1(double);
+  float expm1(float);
+  half expm1(half);
+  float expm1f(float);
+  half half_expm1(half);
+
+
+  double log(double);
+  float log(float);
+  half log(half);
+  float logf(float);
+  half half_log(half);
+  int8_t log(int8_t);
+  uint8_t log(uint8_t);
+  int16_t log(int16_t);
+  uint16_t log(uint16_t);
+  int32_t log(int32_t);
+  uint32_t log(uint32_t);
+
+
+  double log2(double);
+  float log2(float);
+  half log2(half);
+  float log2f(float);
+  half half_log2(half);
+
+
+  double log10(double);
+  float log10(float);
+  half log10(half);
+  float log10f(float);
+  half half_log10(half);
+  int8_t log10(int8_t);
+  uint8_t log10(uint8_t);
+  int16_t log10(int16_t);
+  uint16_t log10(uint16_t);
+  int32_t log10(int32_t);
+  uint32_t log10(uint32_t);
+
+
+  double logb(double);
+  float logb(float);
+  half logb(half);
+  float logbf(float);
+  half half_logb(half);
+
+  double log1p(double);
+  float log1p(float);
+  half log1p(half);
+  float log1pf(float);
+  half half_log1p(half);
+
+
+  half pow(half, half);
+  float pow(float, float);
+  double pow(double, double);
+  float powf(float, float);
+  half half_pow(half, half);
+  int8_t pow(int8_t, int8_t);
+  uint8_t pow(uint8_t, uint8_t);
+  int16_t pow(int16_t, int16_t);
+  uint16_t pow(uint16_t, uint16_t);
+  int32_t pow(int32_t, int32_t);
+  uint32_t pow(uint32_t, uint32_t);
+  int8_t powr(int8_t, int8_t);
+  uint8_t powr(uint8_t, uint8_t);
+  int16_t powr(int16_t, int16_t);
+  uint16_t powr(uint16_t, uint16_t);
+  int32_t powr(int32_t, int32_t);
+  uint32_t powr(uint32_t, uint32_t);
+
+
+  half powr(half, half);
+  float powr(float, float);
+  double powr(double, double);
+  float powrf(float, float);
+  half half_powr(half, half);
+
+
+  half pown(half, int);
+  float pown(float, int);
+  double pown(double, int);
+  float pownf(float, int);
+  half half_pown(half, int);
+
+
+  half rootn(half, int);
+  float rootn(float, int);
+  double rootn(double, int);
+  float rootnf(float, int);
+  half half_rootn(half, int);
+
+
+  double sqrt(double);
+  float sqrt(float);
+  half sqrt(half);
+  float sqrtf(float);
+  half half_sqrt(half);
+  int8_t sqrt(int8_t);
+  uint8_t sqrt(uint8_t);
+  int16_t sqrt(int16_t);
+  uint16_t sqrt(uint16_t);
+  int32_t sqrt(int32_t);
+  uint32_t sqrt(uint32_t);
+# 858 "/data/xilinx/Vitis_HLS/2022.2/include/hls_math.h"
+  double recip(double);
+  float recip(float);
+  half recip(half);
+  float recipf(float);
+  half half_recip(half);
+  int8_t recip(int8_t);
+  uint8_t recip(uint8_t);
+  int16_t recip(int16_t);
+  uint16_t recip(uint16_t);
+  int32_t recip(int32_t);
+  uint32_t recip(uint32_t);
+
+
+  double rsqrt(double);
+  float rsqrt(float);
+  half rsqrt(half);
+  float rsqrtf(float);
+  half half_rsqrt(half);
+  int8_t rsqrt(int8_t);
+  uint8_t rsqrt(uint8_t);
+  int16_t rsqrt(int16_t);
+  uint16_t rsqrt(uint16_t);
+  int32_t rsqrt(int32_t);
+  uint32_t rsqrt(uint32_t);
+
+
+  double cbrt(double);
+  float cbrt(float);
+  half cbrt(half);
+  float cbrtf(float);
+  half half_cbrt(half);
+
+
+  double hypot(double, double);
+  float hypot(float, float);
+  half hypot(half, half);
+  float hypotf(float, float);
+  half half_hypot(half, half);
+
+
+  double erf(double);
+  float erf(float);
+  half erf(half);
+  float erff(float);
+  half half_erf(half);
+  int8_t erf(int8_t);
+  uint8_t erf(uint8_t);
+  int16_t erf(int16_t);
+  uint16_t erf(uint16_t);
+  int32_t erf(int32_t);
+  uint32_t erf(uint32_t);
+
+
+  double erfc(double);
+  float erfc(float);
+  half erfc(half);
+  float erfcf(float);
+  half half_erfc(half);
+  int8_t erfc(int8_t);
+  uint8_t erfc(uint8_t);
+  int16_t erfc(int16_t);
+  uint16_t erfc(uint16_t);
+  int32_t erfc(int32_t);
+  uint32_t erfc(uint32_t);
+
+
+  double lgamma(double);
+  float lgamma(float);
+  half lgamma(half);
+  float lgammaf(float);
+  half half_lgamma(half);
+  int8_t lgamma(int8_t);
+  uint8_t lgamma(uint8_t);
+  int16_t lgamma(int16_t);
+  uint16_t lgamma(uint16_t);
+  int32_t lgamma(int32_t);
+  uint32_t lgamma(uint32_t);
+
+
+  double lgamma_r(double, int*);
+  float lgamma_r(float, int*);
+  half lgamma_r(half, int*);
+  float lgamma_rf(float, int*);
+  half half_lgamma_r(half, int*);
+  int8_t lgamma_r(int8_t);
+  uint8_t lgamma_r(uint8_t);
+  int16_t lgamma_r(int16_t);
+  uint16_t lgamma_r(uint16_t);
+  int32_t lgamma_r(int32_t);
+  uint32_t lgamma_r(uint32_t);
+
+
+  double tgamma(double);
+  float tgamma(float);
+  half tgamma(half);
+  float tgammaf(float);
+  half half_tgamma(half);
+  int8_t tgamma(int8_t);
+  uint8_t tgamma(uint8_t);
+  int16_t tgamma(int16_t);
+  uint16_t tgamma(uint16_t);
+  int32_t tgamma(int32_t);
+  uint32_t tgamma(uint32_t);
+
+  double tgamma_p_reduce(double);
+  float tgamma_p_reduce(float);
+  float tgammaf_p_reduce(float);
+
+
+  double fmod(double, double);
+  float fmod(float, float);
+  half fmod(half, half);
+  float fmodf(float, float);
+  half half_fmod(half, half);
+
+
+  double remainder(double, double);
+  float remainder(float, float);
+  half remainder(half, half);
+  float remainderf(float, float);
+  half half_remainder(half, half);
+
+
+  double remquo(double, double, int*);
+  float remquo(float, float, int*);
+  half remquo(half, half, int*);
+  float remquof(float, float, int*);
+  half half_remquo(half, half, int*);
+
+
+  double divide(double, double);
+  float divide(float, float);
+  half divide(half, half);
+  float dividef(float, float);
+  half half_divide(half, half);
+
+
+  double nextafter(double, double);
+  float nextafter(float, float);
+  half nextafter(half, half);
+  float nextafterf(float, float);
+  half half_nextafter(half, half);
+
+
+  double tanh(double);
+  float tanh(float);
+  half tanh(half);
+  float tanhf(float);
+  half half_tanh(half);
+
+
+  double atanh(double);
+  float atanh(float);
+  half atanh(half);
+  float atanhf(float);
+  half half_atanh(half);
+
+
+  double asinh(double);
+  float asinh(float);
+  half asinh(half);
+  float asinhf(float);
+  half half_asinh(half);
+
+
+  double acosh(double);
+  float acosh(float);
+  half acosh(half);
+  float acoshf(float);
+  half half_acosh(half);
+
+
+  double asin(double);
+  float asin(float);
+  half asin(half);
+  float asinf(float);
+  half half_asin(half);
+
+
+  double acos(double);
+  float acos(float);
+  half acos(half);
+  float acosf(float);
+  half half_acos(half);
+
+
+  double asinpi(double);
+  float asinpi(float);
+  half asinpi(half);
+  float asinpif(float);
+  half half_asinpi(half);
+
+
+  double acospi(double);
+  float acospi(float);
+  half acospi(half);
+  float acospif(float);
+  half half_acospi(half);
+
+
+  double atanpi(double);
+  float atanpi(float);
+  half atanpi(half);
+  float atanpif(float);
+  half half_atanpi(half);
+}
+
+# 1 "/data/xilinx/Vitis_HLS/2022.2/include/hls_hotbm_apfixed.h" 1
+# 42 "/data/xilinx/Vitis_HLS/2022.2/include/hls_hotbm_apfixed.h"
+# 1 "/data/xilinx/Vitis_HLS/2022.2/include/ap_fixed.h" 1
 # 43 "/data/xilinx/Vitis_HLS/2022.2/include/hls_hotbm_apfixed.h" 2
 # 1 "/data/xilinx/Vitis_HLS/2022.2/include/ap_int.h" 1
 # 44 "/data/xilinx/Vitis_HLS/2022.2/include/hls_hotbm_apfixed.h" 2
@@ -62461,13 +62489,7 @@ struct float_struct2 {
 };
 # 45 "/data/xilinx/Vitis_HLS/2022.2/include/hls_hotbm_apfixed.h" 2
 # 1 "/data/xilinx/Vitis_HLS/2022.2/include/utils/x_hls_utils.h" 1
-# 36 "/data/xilinx/Vitis_HLS/2022.2/include/utils/x_hls_utils.h"
-# 1 "/data/xilinx/Vitis_HLS/2022.2/include/ap_fixed.h" 1
-# 37 "/data/xilinx/Vitis_HLS/2022.2/include/utils/x_hls_utils.h" 2
-
-
-
-
+# 41 "/data/xilinx/Vitis_HLS/2022.2/include/utils/x_hls_utils.h"
 # 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cmath" 1 3
 # 39 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cmath" 3
        
@@ -77557,7 +77579,16 @@ namespace hls {
 
 };
 # 5 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator.cpp" 2
-# 23 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator.cpp"
+# 18 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator.cpp"
+const int N = 32*1024;
+const int VEC = 32;
+const int NW = N / VEC;
+const int TILE = 1024;
+const int TILEW = TILE / VEC;
+
+
+
+
 uint16 bf16add(uint16 a_bits, uint16 b_bits) {
 
     uint16_t a_sign = (a_bits >> 15) & 0x1;
@@ -77679,14 +77710,19 @@ uint16 bf16add(uint16 a_bits, uint16 b_bits) {
 
 
 void bf16_to_float(const uint16* in, float* out, int len) {
+#pragma HLS INLINE off
+    bf16_to_float_loop:
     for (int i = 0; i < len; ++i) {
+#pragma HLS PIPELINE II=1
         uint32_t x_f32 = ((uint32_t)in[i]) << 16;
         out[i] = *(float*)&x_f32;
     }
 }
 
 void float_sigmoid(const float* x, uint16* y, int len) {
+    sigmoid_loop:
     for (int i = 0; i < len; ++i) {
+#pragma HLS PIPELINE II=1
         float val = 1.0f / (1.0f + hls::expf(-x[i]));
         uint32_t* y_f32_ptr = (uint32_t*)&val;
         y[i] = (*y_f32_ptr) >> 16;
@@ -77694,7 +77730,9 @@ void float_sigmoid(const float* x, uint16* y, int len) {
 }
 
 void float_silu(const float* x, uint16* y, int len) {
+    silu_loop:
     for (int i = 0; i < len; ++i) {
+#pragma HLS PIPELINE II=1
         float sig = 1.0f / (1.0f + hls::expf(-x[i]));
         float val = x[i] * sig;
         uint32_t* y_f32_ptr = (uint32_t*)&val;
@@ -77705,12 +77743,16 @@ void float_silu(const float* x, uint16* y, int len) {
 void float_rms_norm(const float* x, uint16* y_bf16, int len) {
     const float eps = 1e-6f;
     float sum_sq = 0.0f;
+    rms_loop_0:
     for (int i = 0; i < len; ++i) {
+#pragma HLS PIPELINE II=1
         sum_sq += x[i] * x[i];
     }
     float mean_sq = sum_sq / len;
     float rms = hls::sqrtf(mean_sq + eps);
+    rms_loop_1:
     for (int i = 0; i < len; ++i) {
+#pragma HLS PIPELINE II=1
         float y = x[i] / rms;
         uint32_t* y_f32_ptr = (uint32_t*)&y;
         y_bf16[i] = (*y_f32_ptr) >> 16;
@@ -77720,18 +77762,24 @@ void float_rms_norm(const float* x, uint16* y_bf16, int len) {
 void float_layer_norm(const float* x, uint16* y_bf16, int len) {
     const float eps = 1e-6f;
     float sum = 0.0f;
+    layer_loop_0:
     for (int i = 0; i < len; ++i) {
+#pragma HLS PIPELINE II=1
         sum += x[i];
     }
     float mean = sum / len;
     float var = 0.0f;
+    layer_loop_1:
     for (int i = 0; i < len; ++i) {
+#pragma HLS PIPELINE II=1
         float diff = x[i] - mean;
         var += diff * diff;
     }
     var /= len;
     float stddev = hls::sqrtf(var + eps);
+    layer_loop_2:
     for (int i = 0; i < len; ++i) {
+#pragma HLS PIPELINE II=1
         float y = (x[i] - mean) / stddev;
         uint32_t* y_f32_ptr = (uint32_t*)&y;
         y_bf16[i] = (*y_f32_ptr) >> 16;
@@ -77740,7 +77788,9 @@ void float_layer_norm(const float* x, uint16* y_bf16, int len) {
 
 
 void float_add(const float* x, const float* y, uint16* out, int len) {
+    add_loop:
     for (int i = 0; i < len; ++i) {
+#pragma HLS PIPELINE II=1
         float sum = x[i] + y[i];
         uint32_t* sum_f32_ptr = (uint32_t*)&sum;
         out[i] = (*sum_f32_ptr) >> 16;
@@ -77749,15 +77799,25 @@ void float_add(const float* x, const float* y, uint16* out, int len) {
 
 
 void float_safe_softmax(const float* x, uint16* y_bf16, int len) {
+#pragma HLS INLINE off
     float max_val = x[0];
-    for (int i = 1; i < len; ++i) if (x[i] > max_val) max_val = x[i];
+    softmax_loop_0:
+    for (int i = 1; i < len; ++i) {
+#pragma HLS PIPELINE II=1
+        if (x[i] > max_val) max_val = x[i];
+    }
     float sum = 0.0f;
-    float exp_x[32768];
+    float exp_x[TILE];
+#pragma HLS BIND_STORAGE variable=exp_x type=ram_s2p impl=bram
+    softmax_loop_1:
     for (int i = 0; i < len; ++i) {
+#pragma HLS PIPELINE II=1
         exp_x[i] = hls::expf(x[i] - max_val);
         sum += exp_x[i];
     }
+    softmax_loop_2:
     for (int i = 0; i < len; ++i) {
+#pragma HLS PIPELINE II=1
         float y = exp_x[i] / sum;
         uint32_t* y_f32_ptr = (uint32_t*)&y;
         y_bf16[i] = (*y_f32_ptr) >> 16;
@@ -77765,17 +77825,32 @@ void float_safe_softmax(const float* x, uint16* y_bf16, int len) {
 }
 
 void float_mask_safe_softmax(const float* x, const float* mask, uint16* y_bf16, int len) {
-    float x_mask[32768];
-    for (int i = 0; i < len; ++i) x_mask[i] = x[i] * mask[i];
-    float max_val = x_mask[0];
-    for (int i = 1; i < len; ++i) if (x_mask[i] > max_val) max_val = x_mask[i];
-    float sum = 0.0f;
-    float exp_x[32768];
+#pragma HLS INLINE off
+    float x_mask[TILE];
+#pragma HLS BIND_STORAGE variable=x_mask type=ram_s2p impl=bram
+    mask_softmax_loop_0:
     for (int i = 0; i < len; ++i) {
-        exp_x[i] = hls::expf(x[i] - max_val);
+#pragma HLS PIPELINE II=1
+        x_mask[i] = (mask[i] > 0.5f) ? x[i] : (-1e30f);
+    }
+    float max_val = x_mask[0];
+    mask_softmax_loop_1:
+    for (int i = 1; i < len; ++i) {
+#pragma HLS PIPELINE II=1
+        if (x_mask[i] > max_val) max_val = x_mask[i];
+        }
+    float sum = 0.0f;
+    float exp_x[TILE];
+#pragma HLS BIND_STORAGE variable=exp_x type=ram_s2p impl=bram
+    mask_softmax_loop_2:
+    for (int i = 0; i < len; ++i) {
+#pragma HLS PIPELINE II=1
+        exp_x[i] = hls::expf(x_mask[i] - max_val);
         sum += exp_x[i];
     }
+    mask_softmax_loop_3:
     for (int i = 0; i < len; ++i) {
+#pragma HLS PIPELINE II=1
         float y = exp_x[i] / sum;
         uint32_t* y_f32_ptr = (uint32_t*)&y;
         y_bf16[i] = (*y_f32_ptr) >> 16;
@@ -77783,76 +77858,98 @@ void float_mask_safe_softmax(const float* x, const float* mask, uint16* y_bf16, 
 }
 
 
-void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, int32 config) {
-#pragma HLS INTERFACE m_axi port=in0 offset=slave bundle=gmem0 depth=32768
-#pragma HLS INTERFACE m_axi port=in1 offset=slave bundle=gmem1 depth=32768
-#pragma HLS INTERFACE m_axi port=out offset=slave bundle=gmem2 depth=32768
+
+void activation_accelerator(ap_uint<512>* in0, ap_uint<512>* in1, ap_uint<512>* out, int32 stage, int32 config) {
+
+
+
+
+#pragma HLS INTERFACE m_axi port=in0 bundle=gmem0 offset=slave depth=1024 max_read_burst_length=32 num_read_outstanding=16
+#pragma HLS INTERFACE m_axi port=in1 bundle=gmem1 offset=slave depth=1024 max_read_burst_length=32 num_read_outstanding=16
+#pragma HLS INTERFACE m_axi port=out bundle=gmem2 offset=slave depth=1024 max_write_burst_length=32 num_write_outstanding=16
+
 #pragma HLS INTERFACE s_axilite port=stage
 #pragma HLS INTERFACE s_axilite port=config
 #pragma HLS INTERFACE s_axilite port=return
+# 317 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator.cpp"
+    static ap_uint<16> tile0[TILE], tile1[TILE], tile2[TILE];
+#pragma HLS BIND_STORAGE variable=tile0 type=ram_2p impl=bram
+#pragma HLS BIND_STORAGE variable=tile1 type=ram_2p impl=bram
+#pragma HLS BIND_STORAGE variable=tile2 type=ram_2p impl=bram
+#pragma HLS ARRAY_PARTITION variable=tile0 cyclic factor=32
+#pragma HLS ARRAY_PARTITION variable=tile1 cyclic factor=32
+#pragma HLS ARRAY_PARTITION variable=tile2 cyclic factor=32
 
-    static uint16 buf0[32*1024];
-    static uint16 buf1[32*1024];
-    static uint16 buf2[32*1024];
-    float x[32*1024], y[32*1024];
 
-    if(stage == 0) {
-        for(int i = 0; i < 32*1024; i++) {
-            buf0[i] = in0[i];
-        }
-        for(int i = 0; i < 32*1024; i++) {
-            buf1[i] = in1[i];
-        }
-    }
+    static float xt[TILE], yt[TILE];
+#pragma HLS BIND_STORAGE variable=xt type=ram_s2p impl=bram
+#pragma HLS BIND_STORAGE variable=yt type=ram_s2p impl=bram
 
-    if(stage == 1) {
-        if(config == 0) {
-            bf16_to_float(buf0, x, 32*1024);
-            bf16_to_float(buf1, y, 32*1024);
-            float_add(x, y, buf2, 32*1024);
-            for(int i = 0; i < 32*1024; i++) {
+
+TILES:
+    for (int t=0; t<N; t+=TILE){
+#pragma HLS LOOP_TRIPCOUNT min=N/TILE max=N/TILE
+
+
+        for (int w=0; w<TILEW; ++w){
 #pragma HLS PIPELINE II=1
-                buf2[i] = bf16add(buf0[i], buf1[i]);
+            ap_uint<512> w0 = in0[(t/VEC)+w];
+            ap_uint<512> w1 = in1[(t/VEC)+w];
+
+            for (int v=0; v<VEC; ++v){
+#pragma HLS UNROLL
+                tile0[w*VEC+v] = w0.range(16*(v+1)-1, 16*v);
+                tile1[w*VEC+v] = w1.range(16*(v+1)-1, 16*v);
             }
+        }
+
+
+
+        if(config == 0) {
+
+            bf16_to_float(tile0, xt, TILE);
+            bf16_to_float(tile1, yt, TILE);
+
+            float_add(xt, yt, tile2, TILE);
+
+
         }
         else if(config == 1) {
-
-
-            for(int i = 0; i < 32*1024; i++) {
-#pragma HLS PIPELINE II=1
-                buf2[i] = 0;
-            }
+            bf16_to_float(tile0, xt, TILE);
+            float_safe_softmax(xt, tile2, TILE);
         }
         else if(config == 2) {
-
-
-
-            for(int i = 0; i < 32*1024; i++) {
-#pragma HLS PIPELINE II=1
-                buf2[i] = 0;
-            }
+            bf16_to_float(tile0, xt, TILE);
+            bf16_to_float(tile1, yt, TILE);
+            float_mask_safe_softmax(xt, yt, tile2, TILE);
         }
         else if(config == 3) {
-            bf16_to_float(buf0, x, 32*1024);
-            float_sigmoid(x, buf2, 32*1024);
+            bf16_to_float(tile0, xt, TILE);
+            float_sigmoid(xt, tile2, TILE);
         }
         else if(config == 4) {
-            bf16_to_float(buf0, x, 32*1024);
-            float_silu(x, buf2, 32*1024);
+            bf16_to_float(tile0, xt, TILE);
+            float_silu(xt, tile2, TILE);
         }
         else if(config == 5) {
-            bf16_to_float(buf0, x, 32*1024);
-            float_rms_norm(x, buf2, 32*1024);
+            bf16_to_float(tile0, xt, TILE);
+            float_rms_norm(xt, tile2, TILE);
         }
         else if(config == 6) {
-            bf16_to_float(buf0, x, 32*1024);
-            float_layer_norm(x, buf2, 32*1024);
+            bf16_to_float(tile0, xt, TILE);
+            float_layer_norm(xt, tile2, TILE);
         }
-    }
 
-    if(stage == 2) {
-        for(int i = 0; i < 32*1024; i++) {
-            out[i] = buf2[i];
+
+
+        for (int w=0; w<TILEW; ++w){
+#pragma HLS PIPELINE II=1
+            ap_uint<512> wo = 0;
+            for (int v=0; v<VEC; ++v){
+#pragma HLS UNROLL
+                wo.range(16*(v+1)-1, 16*v) = tile2[w*VEC+v];
+            }
+            out[(t/VEC)+w] = wo;
         }
     }
 }
@@ -77860,21 +77957,21 @@ void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, 
 #ifdef __cplusplus
 extern "C"
 #endif
-void apatb_activation_accelerator_ir(unsigned short *, unsigned short *, unsigned short *, int, int);
+void apatb_activation_accelerator_ir(ap_uint<512> *, ap_uint<512> *, ap_uint<512> *, int, int);
 #ifdef __cplusplus
 extern "C"
 #endif
-void activation_accelerator_hw_stub(unsigned short *in0, unsigned short *in1, unsigned short *out, int stage, int config){
+void activation_accelerator_hw_stub(ap_uint<512> *in0, ap_uint<512> *in1, ap_uint<512> *out, int stage, int config){
 activation_accelerator(in0, in1, out, stage, config);
 return ;
 }
 #ifdef __cplusplus
 extern "C"
 #endif
-void apatb_activation_accelerator_sw(unsigned short *in0, unsigned short *in1, unsigned short *out, int stage, int config){
+void apatb_activation_accelerator_sw(ap_uint<512> *in0, ap_uint<512> *in1, ap_uint<512> *out, int stage, int config){
 apatb_activation_accelerator_ir(in0, in1, out, stage, config);
 return ;
 }
 #endif
-# 320 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator.cpp"
+# 397 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator.cpp"
 

@@ -9,7 +9,9 @@
 // Vitis HLS 2022.2 不支持 hls_bfloat16.h，使用自定义实现
 
 // Data type definitions for C simulation
-typedef uint16_t uint16;
+#include <ap_int.h>
+typedef ap_uint<16> uint16;
+typedef ap_uint<32> uint32; // 如需
 typedef int32_t int32;
 typedef int64_t int64;
 
@@ -17,7 +19,7 @@ typedef int64_t int64;
 uint16 bf16add(uint16 a_bits, uint16 b_bits);
 
 // Function declaration - 使用uint16数据类型
-void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, int32 config);
+void activation_accelerator(ap_uint<512>* in0, ap_uint<512>* in1, ap_uint<512>* out, int32 stage, int32 config);
 
 // Configuration definitions
 #define CONFIG_ELTWISE_ADD 0     // Element-wise addition
