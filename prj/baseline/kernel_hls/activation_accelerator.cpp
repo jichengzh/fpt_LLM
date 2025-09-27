@@ -137,8 +137,6 @@ uint16 bf16add(uint16 a_bits, uint16 b_bits) {
 }
 
 
-
-
 // bf16编码(uint16)批量转float32
 void bf16_to_float(const uint16* in, float* out, int len) {
     for (int i = 0; i < len; ++i) {
@@ -146,6 +144,38 @@ void bf16_to_float(const uint16* in, float* out, int len) {
         out[i] = *(float*)&x_f32;
     }
 }
+//雷神之锤求平方根倒数
+float Q_rsqrt(float number)
+{
+	long i;
+	float x2, y;
+	const float threehalfs = 1.5F;
+	x2 = number * 0.5F;
+	y  = number;
+    
+    /*核心代码*/
+    // 1. reinterpret_cast from float to int
+	i  = * ( long * ) &y;                       // evil floating point bit level hacking（对浮点数的邪恶位元hack）
+    // 2. 估算平方根倒数
+	i  = 0x5f3759df - ( i >> 1 );               // what the fuck? (....why not 0x69696969?)
+    // reinterpret_cast from int to float
+	y  = * ( float * ) &i;
+  	// 3. 牛顿法
+	y  = y * ( threehalfs - ( x2 * y * y ) );   // 1st iteration 
+    // y  = y * ( threehalfs - ( x2 * y * y ) );   // 2nd iteration, this can be removed
+
+	return y;
+}
+
+//exp近似计算
+float fast_exp1(float x) {
+x = 1.0 + x / 256;
+for (int i = 0; i < 8; i++) {
+x *= x;
+}
+return x;
+}
+
 // sigmoid
 void float_sigmoid(const float* x, uint16* y, int len) {
     for (int i = 0; i < len; ++i) {
@@ -163,7 +193,8 @@ void float_silu(const float* x, uint16* y, int len) {
         y[i] = (*y_f32_ptr) >> 16;
     }
 }
-// rms_norm
+
+// rms_norm(使用雷神之锤)
 void float_rms_norm(const float* x, uint16* y_bf16, int len) {
     const float eps = 1e-6f;
     float sum_sq = 0.0f;
@@ -171,13 +202,17 @@ void float_rms_norm(const float* x, uint16* y_bf16, int len) {
         sum_sq += x[i] * x[i];
     }
     float mean_sq = sum_sq / len;
-    float rms = hls::sqrtf(mean_sq + eps);
+    float rms = mean_sq + eps;
+    float re_rms = Q_rsqrt(rms);
+
     for (int i = 0; i < len; ++i) {
-        float y = x[i] / rms;
+        float y = x[i] * re_rms;
         uint32_t* y_f32_ptr = (uint32_t*)&y;
         y_bf16[i] = (*y_f32_ptr) >> 16;
     }
 }
+
+
 // layer_norm
 void float_layer_norm(const float* x, uint16* y_bf16, int len) {
     const float eps = 1e-6f;
@@ -225,6 +260,7 @@ void float_safe_softmax(const float* x, uint16* y_bf16, int len) {
         y_bf16[i] = (*y_f32_ptr) >> 16;
     }
 }
+
 // mask safe softmax
 void float_mask_safe_softmax(const float* x, const float* mask, uint16* y_bf16, int len) {
     float x_mask[32768];
