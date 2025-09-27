@@ -258,6 +258,7 @@ void float_safe_softmax(const float* x, uint16* y_bf16, int len) {
         y_bf16[i] = (*y_f32_ptr) >> 16;
     }
 }
+
 // mask safe softmax
 // void float_mask_safe_softmax(const float* x, const float* mask, uint16* y_bf16, int len) {
 // #pragma HLS INLINE off
