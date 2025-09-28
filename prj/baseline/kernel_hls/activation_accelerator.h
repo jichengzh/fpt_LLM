@@ -36,6 +36,6 @@ void activation_accelerator(ap_uint<512>* in0, ap_uint<512>* in1, ap_uint<512>* 
 #define STAGE_STORE 2     // Data storage stage
 
 // Data size
-#define DATA_SIZE (32*1024)
+#define DATA_SIZE (64*768)
 
 #endif // ACTIVATION_ACCELERATOR_H

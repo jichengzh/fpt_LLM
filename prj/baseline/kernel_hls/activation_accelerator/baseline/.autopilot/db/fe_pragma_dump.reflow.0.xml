@@ -1,66 +1,62 @@
 <pragmas>
-<pragma file="activation_accelerator.cpp" line="237" pragmaType="inline" parentfunction="float_safe_softmax" off="1" region="0" recursive="0"/>
-<pragma file="activation_accelerator.cpp" line="255" pragmaType="pipeline" parentfunction="float_safe_softmax" off="0" ii="1" rewind="0" style=""/>
-<pragma file="activation_accelerator.cpp" line="249" pragmaType="pipeline" parentfunction="float_safe_softmax" off="0" ii="1" rewind="0" style=""/>
-<pragma file="activation_accelerator.cpp" line="241" pragmaType="pipeline" parentfunction="float_safe_softmax" off="0" ii="1" rewind="0" style=""/>
-<pragma file="activation_accelerator.cpp" line="246" pragmaType="bind_storage" parentfunction="float_safe_softmax" op="666" impl="25" latency="-1" variable="exp_x"/>
-<pragma file="activation_accelerator.cpp" line="263" pragmaType="inline" parentfunction="float_mask_safe_softmax" off="1" region="0" recursive="0"/>
-<pragma file="activation_accelerator.cpp" line="288" pragmaType="pipeline" parentfunction="float_mask_safe_softmax" off="0" ii="1" rewind="0" style=""/>
-<pragma file="activation_accelerator.cpp" line="282" pragmaType="pipeline" parentfunction="float_mask_safe_softmax" off="0" ii="1" rewind="0" style=""/>
-<pragma file="activation_accelerator.cpp" line="274" pragmaType="pipeline" parentfunction="float_mask_safe_softmax" off="0" ii="1" rewind="0" style=""/>
-<pragma file="activation_accelerator.cpp" line="268" pragmaType="pipeline" parentfunction="float_mask_safe_softmax" off="0" ii="1" rewind="0" style=""/>
-<pragma file="activation_accelerator.cpp" line="265" pragmaType="bind_storage" parentfunction="float_mask_safe_softmax" op="666" impl="25" latency="-1" variable="x_mask"/>
-<pragma file="activation_accelerator.cpp" line="279" pragmaType="bind_storage" parentfunction="float_mask_safe_softmax" op="666" impl="25" latency="-1" variable="exp_x"/>
+<pragma file="/data/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
 <pragma file="/data/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" line="541" pragmaType="inline" parentfunction="ap_int_base<16, false>::operator unsigned long long() const" off="0" region="0" recursive="0"/>
-<pragma file="activation_accelerator.cpp" line="160" pragmaType="pipeline" parentfunction="float_sigmoid" off="0" ii="1" rewind="0" style=""/>
+<pragma file="activation_accelerator.cpp" line="230" pragmaType="pipeline" parentfunction="float_silu" off="0" ii="1" rewind="0" style=""/>
 <pragma file="/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/expfloat.cpp" line="21" pragmaType="inline" parentfunction="expf" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<16>::ap_uint(unsigned int)" off="0" region="0" recursive="0"/>
 <pragma file="/data/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" line="215" pragmaType="inline" parentfunction="ap_int_base<16, false>::ap_int_base(unsigned int)" off="0" region="0" recursive="0"/>
-<pragma file="activation_accelerator.cpp" line="333" pragmaType="loop_tripcount" parentfunction="activation_accelerator" min="32" max="32" avg="32"/>
-<pragma file="activation_accelerator.cpp" line="337" pragmaType="pipeline" parentfunction="activation_accelerator" off="0" ii="1" rewind="0" style=""/>
-<pragma file="activation_accelerator.cpp" line="388" pragmaType="pipeline" parentfunction="activation_accelerator" off="0" ii="1" rewind="0" style=""/>
-<pragma file="activation_accelerator.cpp" line="342" pragmaType="unroll" parentfunction="activation_accelerator" factor="-1" skip_exit_check="0"/>
-<pragma file="activation_accelerator.cpp" line="391" pragmaType="unroll" parentfunction="activation_accelerator" factor="-1" skip_exit_check="0"/>
-<pragma file="activation_accelerator.cpp" line="302" pragmaType="interface" parentfunction="activation_accelerator" mode="m_axi" port="in0" bundle="gmem0" offset="slave" name="" depth="1024" num_read_outstanding="16" num_write_outstanding="-1" max_burst_read_length="32" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
-<pragma file="activation_accelerator.cpp" line="303" pragmaType="interface" parentfunction="activation_accelerator" mode="m_axi" port="in1" bundle="gmem1" offset="slave" name="" depth="1024" num_read_outstanding="16" num_write_outstanding="-1" max_burst_read_length="32" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
-<pragma file="activation_accelerator.cpp" line="304" pragmaType="interface" parentfunction="activation_accelerator" mode="m_axi" port="out" bundle="gmem2" offset="slave" name="" depth="1024" num_read_outstanding="-1" num_write_outstanding="16" max_burst_read_length="-1" max_burst_write_length="32" latency="-1" max_widen_bitwidth="-1" channel=""/>
-<pragma file="activation_accelerator.cpp" line="306" pragmaType="interface" parentfunction="activation_accelerator" mode="s_axilite" port="stage" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
-<pragma file="activation_accelerator.cpp" line="307" pragmaType="interface" parentfunction="activation_accelerator" mode="s_axilite" port="config" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
-<pragma file="activation_accelerator.cpp" line="308" pragmaType="interface" parentfunction="activation_accelerator" mode="s_axilite" port="" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
-<pragma file="activation_accelerator.cpp" line="318" pragmaType="bind_storage" parentfunction="activation_accelerator" op="666" impl="22" latency="-1" variable="_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0"/>
-<pragma file="activation_accelerator.cpp" line="319" pragmaType="bind_storage" parentfunction="activation_accelerator" op="666" impl="22" latency="-1" variable="_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1"/>
-<pragma file="activation_accelerator.cpp" line="320" pragmaType="bind_storage" parentfunction="activation_accelerator" op="666" impl="22" latency="-1" variable="_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2"/>
-<pragma file="activation_accelerator.cpp" line="321" pragmaType="array_partition" parentfunction="activation_accelerator" dim="1" factor="32" mode="cyclic" dynamic="0" variable="_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0"/>
-<pragma file="activation_accelerator.cpp" line="322" pragmaType="array_partition" parentfunction="activation_accelerator" dim="1" factor="32" mode="cyclic" dynamic="0" variable="_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1"/>
-<pragma file="activation_accelerator.cpp" line="323" pragmaType="array_partition" parentfunction="activation_accelerator" dim="1" factor="32" mode="cyclic" dynamic="0" variable="_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2"/>
-<pragma file="activation_accelerator.cpp" line="327" pragmaType="bind_storage" parentfunction="activation_accelerator" op="666" impl="25" latency="-1" variable="_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE2xt"/>
-<pragma file="activation_accelerator.cpp" line="328" pragmaType="bind_storage" parentfunction="activation_accelerator" op="666" impl="25" latency="-1" variable="_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE2yt"/>
-<pragma file="/data/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" line="1045" pragmaType="inline" parentfunction="range" off="0" region="0" recursive="0"/>
-<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<16>::ap_uint<512, false>(ap_range_ref<512, false> const&)" off="0" region="0" recursive="0"/>
-<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<512>::ap_uint(int)" off="0" region="0" recursive="0"/>
-<pragma file="/data/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" line="185" pragmaType="inline" parentfunction="ap_int_base<512, false>::ap_int_base<16, false>(ap_int_base<16, false> const&)" off="0" region="0" recursive="0"/>
 <pragma file="/data/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" line="0" pragmaType="inline" parentfunction="ap_range_ref<512, false>& ap_range_ref<512, false>::operator=<16, false>(ap_int_base<16, false> const&)" off="0" region="0" recursive="0"/>
 <pragma file="/data/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_common.h" line="523" pragmaType="inline" parentfunction="ssdm_int<16, false>::ssdm_int(unsigned short)" off="0" region="0" recursive="0"/>
+<pragma file="/data/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" line="1045" pragmaType="inline" parentfunction="range" off="0" region="0" recursive="0"/>
 <pragma file="/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/common/hls_exp_float.cpp" line="16" pragmaType="inline" parentfunction="exp" off="0" region="0" recursive="0"/>
+<pragma file="activation_accelerator.cpp" line="244" pragmaType="pipeline" parentfunction="float_rms_norm" off="0" ii="1" rewind="0" style=""/>
+<pragma file="activation_accelerator.cpp" line="280" pragmaType="pipeline" parentfunction="float_layer_norm" off="0" ii="1" rewind="0" style=""/>
+<pragma file="activation_accelerator.cpp" line="272" pragmaType="pipeline" parentfunction="float_layer_norm" off="0" ii="1" rewind="0" style=""/>
+<pragma file="activation_accelerator.cpp" line="265" pragmaType="pipeline" parentfunction="float_layer_norm" off="0" ii="1" rewind="0" style=""/>
+<pragma file="activation_accelerator.cpp" line="291" pragmaType="pipeline" parentfunction="float_add" off="0" ii="1" rewind="0" style=""/>
+<pragma file="activation_accelerator.cpp" line="300" pragmaType="inline" parentfunction="float_safe_softmax" off="1" region="0" recursive="0"/>
+<pragma file="activation_accelerator.cpp" line="318" pragmaType="pipeline" parentfunction="float_safe_softmax" off="0" ii="1" rewind="0" style=""/>
+<pragma file="activation_accelerator.cpp" line="312" pragmaType="pipeline" parentfunction="float_safe_softmax" off="0" ii="1" rewind="0" style=""/>
+<pragma file="activation_accelerator.cpp" line="304" pragmaType="pipeline" parentfunction="float_safe_softmax" off="0" ii="1" rewind="0" style=""/>
+<pragma file="activation_accelerator.cpp" line="309" pragmaType="bind_storage" parentfunction="float_safe_softmax" op="666" impl="25" latency="-1" variable="exp_x"/>
+<pragma file="activation_accelerator.cpp" line="397" pragmaType="loop_tripcount" parentfunction="activation_accelerator" min="64" max="64" avg="64"/>
+<pragma file="activation_accelerator.cpp" line="403" pragmaType="pipeline" parentfunction="activation_accelerator" off="0" ii="1" rewind="0" style=""/>
+<pragma file="activation_accelerator.cpp" line="452" pragmaType="pipeline" parentfunction="activation_accelerator" off="0" ii="1" rewind="0" style=""/>
+<pragma file="activation_accelerator.cpp" line="428" pragmaType="pipeline" parentfunction="activation_accelerator" off="0" ii="1" rewind="0" style=""/>
+<pragma file="activation_accelerator.cpp" line="466" pragmaType="pipeline" parentfunction="activation_accelerator" off="0" ii="1" rewind="0" style=""/>
+<pragma file="activation_accelerator.cpp" line="408" pragmaType="unroll" parentfunction="activation_accelerator" factor="-1" skip_exit_check="0"/>
+<pragma file="activation_accelerator.cpp" line="469" pragmaType="unroll" parentfunction="activation_accelerator" factor="-1" skip_exit_check="0"/>
+<pragma file="activation_accelerator.cpp" line="366" pragmaType="interface" parentfunction="activation_accelerator" mode="m_axi" port="in0" bundle="gmem0" offset="slave" name="" depth="1536" num_read_outstanding="16" num_write_outstanding="-1" max_burst_read_length="24" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="activation_accelerator.cpp" line="367" pragmaType="interface" parentfunction="activation_accelerator" mode="m_axi" port="in1" bundle="gmem1" offset="slave" name="" depth="1536" num_read_outstanding="16" num_write_outstanding="-1" max_burst_read_length="24" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="activation_accelerator.cpp" line="368" pragmaType="interface" parentfunction="activation_accelerator" mode="m_axi" port="out" bundle="gmem2" offset="slave" name="" depth="1536" num_read_outstanding="-1" num_write_outstanding="16" max_burst_read_length="-1" max_burst_write_length="24" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="activation_accelerator.cpp" line="370" pragmaType="interface" parentfunction="activation_accelerator" mode="s_axilite" port="stage" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="activation_accelerator.cpp" line="371" pragmaType="interface" parentfunction="activation_accelerator" mode="s_axilite" port="config" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="activation_accelerator.cpp" line="372" pragmaType="interface" parentfunction="activation_accelerator" mode="s_axilite" port="" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="activation_accelerator.cpp" line="382" pragmaType="bind_storage" parentfunction="activation_accelerator" op="666" impl="22" latency="-1" variable="_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0"/>
+<pragma file="activation_accelerator.cpp" line="383" pragmaType="bind_storage" parentfunction="activation_accelerator" op="666" impl="22" latency="-1" variable="_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1"/>
+<pragma file="activation_accelerator.cpp" line="384" pragmaType="bind_storage" parentfunction="activation_accelerator" op="666" impl="22" latency="-1" variable="_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2"/>
+<pragma file="activation_accelerator.cpp" line="385" pragmaType="array_partition" parentfunction="activation_accelerator" dim="1" factor="32" mode="cyclic" dynamic="0" variable="_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0"/>
+<pragma file="activation_accelerator.cpp" line="386" pragmaType="array_partition" parentfunction="activation_accelerator" dim="1" factor="32" mode="cyclic" dynamic="0" variable="_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1"/>
+<pragma file="activation_accelerator.cpp" line="387" pragmaType="array_partition" parentfunction="activation_accelerator" dim="1" factor="32" mode="cyclic" dynamic="0" variable="_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2"/>
+<pragma file="activation_accelerator.cpp" line="391" pragmaType="bind_storage" parentfunction="activation_accelerator" op="666" impl="25" latency="-1" variable="_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE2xt"/>
+<pragma file="activation_accelerator.cpp" line="392" pragmaType="bind_storage" parentfunction="activation_accelerator" op="666" impl="25" latency="-1" variable="_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE2yt"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<16>::ap_uint()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<16>::ap_uint<512, false>(ap_range_ref<512, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<16>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<512>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="/data/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" line="185" pragmaType="inline" parentfunction="ap_int_base<512, false>::ap_int_base<16, false>(ap_int_base<16, false> const&)" off="0" region="0" recursive="0"/>
 <pragma file="/data/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_common.h" line="523" pragmaType="inline" parentfunction="_ZN8ssdm_intILi512ELb0EEC2EDq512_j" off="0" region="0" recursive="0"/>
 <pragma file="/data/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" line="214" pragmaType="inline" parentfunction="ap_int_base<512, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="/data/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" line="214" pragmaType="inline" parentfunction="ap_int_base<16, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
 <pragma file="/data/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" line="357" pragmaType="inline" parentfunction="ap_int_base<16, false>::ap_int_base<512, false>(ap_range_ref<512, false> const&)" off="0" region="0" recursive="0"/>
 <pragma file="/data/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_common.h" line="0" pragmaType="inline" parentfunction="ssdm_int<512, false>::ssdm_int()" off="0" region="0" recursive="0"/>
 <pragma file="/data/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" line="626" pragmaType="inline" parentfunction="get" off="0" region="0" recursive="0"/>
 <pragma file="/data/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" line="175" pragmaType="inline" parentfunction="ap_int_base<512, false>::ap_int_base()" off="0" region="0" recursive="0"/>
 <pragma file="/data/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" line="303" pragmaType="inline" parentfunction="ap_range_ref<512, false>::ap_range_ref(ap_int_base<512, false>*, int, int)" off="0" region="0" recursive="0"/>
 <pragma file="/data/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" line="175" pragmaType="inline" parentfunction="ap_int_base<16, false>::ap_int_base()" off="0" region="0" recursive="0"/>
-<pragma file="activation_accelerator.cpp" line="170" pragmaType="pipeline" parentfunction="float_silu" off="0" ii="1" rewind="0" style=""/>
-<pragma file="activation_accelerator.cpp" line="190" pragmaType="pipeline" parentfunction="float_rms_norm" off="0" ii="1" rewind="0" style=""/>
-<pragma file="activation_accelerator.cpp" line="183" pragmaType="pipeline" parentfunction="float_rms_norm" off="0" ii="1" rewind="0" style=""/>
-<pragma file="activation_accelerator.cpp" line="217" pragmaType="pipeline" parentfunction="float_layer_norm" off="0" ii="1" rewind="0" style=""/>
-<pragma file="activation_accelerator.cpp" line="209" pragmaType="pipeline" parentfunction="float_layer_norm" off="0" ii="1" rewind="0" style=""/>
-<pragma file="activation_accelerator.cpp" line="202" pragmaType="pipeline" parentfunction="float_layer_norm" off="0" ii="1" rewind="0" style=""/>
-<pragma file="activation_accelerator.cpp" line="228" pragmaType="pipeline" parentfunction="float_add" off="0" ii="1" rewind="0" style=""/>
-<pragma file="activation_accelerator.cpp" line="148" pragmaType="inline" parentfunction="bf16_to_float" off="1" region="0" recursive="0"/>
-<pragma file="activation_accelerator.cpp" line="151" pragmaType="pipeline" parentfunction="bf16_to_float" off="0" ii="1" rewind="0" style=""/>
-<pragma file="/data/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_common.h" line="0" pragmaType="inline" parentfunction="ssdm_int<16, false>::ssdm_int()" off="0" region="0" recursive="0"/>
+<pragma file="activation_accelerator.cpp" line="176" pragmaType="inline" parentfunction="bf16_to_float" off="1" region="0" recursive="0"/>
+<pragma file="activation_accelerator.cpp" line="179" pragmaType="pipeline" parentfunction="bf16_to_float" off="0" ii="1" rewind="0" style=""/>
 <pragma file="/data/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="/data/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_common.h" line="0" pragmaType="inline" parentfunction="ssdm_int<16, false>::ssdm_int()" off="0" region="0" recursive="0"/>
 <pragma file="/data/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
 </pragmas>

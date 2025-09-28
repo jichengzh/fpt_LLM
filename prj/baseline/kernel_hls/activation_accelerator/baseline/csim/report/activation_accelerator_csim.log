@@ -4,71 +4,71 @@ INFO: [SIM 4] CSIM will launch GCC as the compiler.
    Compiling ../../../../activation_accelerator.cpp in debug mode
    Generating csim.exe
 Loading test data...
-Using relative data path: /data1/jcz/activation_accelerator_tutorial/prj/data/
+Using relative data path: /data1/jcz/activation_accelerator_tutorial/prj/testvector_example/bf16_vectors2/
 BF16 data loaded successfully
-in0 statistics: min=14460, max=49152, mean=32621.8
-in1 statistics: min=14654, max=49152, mean=32583.6
-mask statistics: min=0, max=16256, mean=8129.49
+in0 statistics: min=0, max=65535, mean=26455.6
+in1 statistics: min=0, max=65535, mean=26455.6
+mask statistics: min=0, max=0, mean=0
 === HLS Activation Accelerator Testbench ===
-Trying to load: /data1/jcz/activation_accelerator_tutorial/prj/data/golden_out_config_0_bf16.bin
+Trying to load: /data1/jcz/activation_accelerator_tutorial/prj/testvector_example/bf16_vectors2/golden_out_config_0_bf16.bin
 Loaded Config 0 golden data from bf16
-Trying to load: /data1/jcz/activation_accelerator_tutorial/prj/data/golden_out_config_1_bf16.bin
+Trying to load: /data1/jcz/activation_accelerator_tutorial/prj/testvector_example/bf16_vectors2/golden_out_config_1_bf16.bin
 Loaded Config 1 golden data from bf16
-Trying to load: /data1/jcz/activation_accelerator_tutorial/prj/data/golden_out_config_2_bf16.bin
+Trying to load: /data1/jcz/activation_accelerator_tutorial/prj/testvector_example/bf16_vectors2/golden_out_config_2_bf16.bin
 Loaded Config 2 golden data from bf16
-Trying to load: /data1/jcz/activation_accelerator_tutorial/prj/data/golden_out_config_3_bf16.bin
+Trying to load: /data1/jcz/activation_accelerator_tutorial/prj/testvector_example/bf16_vectors2/golden_out_config_3_bf16.bin
 Loaded Config 3 golden data from bf16
-Trying to load: /data1/jcz/activation_accelerator_tutorial/prj/data/golden_out_config_4_bf16.bin
+Trying to load: /data1/jcz/activation_accelerator_tutorial/prj/testvector_example/bf16_vectors2/golden_out_config_4_bf16.bin
 Loaded Config 4 golden data from bf16
-Trying to load: /data1/jcz/activation_accelerator_tutorial/prj/data/golden_out_config_5_bf16.bin
+Trying to load: /data1/jcz/activation_accelerator_tutorial/prj/testvector_example/bf16_vectors2/golden_out_config_5_bf16.bin
 Loaded Config 5 golden data from bf16
-Trying to load: /data1/jcz/activation_accelerator_tutorial/prj/data/golden_out_config_6_bf16.bin
+Trying to load: /data1/jcz/activation_accelerator_tutorial/prj/testvector_example/bf16_vectors2/golden_out_config_6_bf16.bin
 Loaded Config 6 golden data from bf16
 Packed inputs to 512b buffers (stage 0 prepared)
 
 --- Testing Config 0 ---
-Config 0 compute time: 90.4923 ms
-Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/data/hls_output_config_0.bin
-Max Difference: 1
-Config 0 test failed with 8004 errors
+Config 0 compute time: 3443.39 ms
+Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/testvector_example/bf16_vectors2/hls_output_config_0.bin
+Max Difference: 65535
+Config 0 test failed with 38280 errors
 
 --- Testing Config 1 ---
-Config 1 compute time: 5884.39 ms
-Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/data/hls_output_config_1.bin
-Max Difference: 667
-Config 1 test failed with 32768 errors
+Config 1 compute time: 4062.33 ms
+Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/testvector_example/bf16_vectors2/hls_output_config_1.bin
+Max Difference: 65535
+Config 1 test failed with 31928 errors
 
 --- Testing Config 2 ---
-Config 2 compute time: 5251.8 ms
-Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/data/hls_output_config_2.bin
-Max Difference: 14595
-Config 2 test failed with 32768 errors
+Config 2 compute time: 1007.28 ms
+Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/testvector_example/bf16_vectors2/hls_output_config_2.bin
+Max Difference: 65535
+Config 2 test failed with 41233 errors
 
 --- Testing Config 3 ---
-Config 3 compute time: 5234.57 ms
-Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/data/hls_output_config_3.bin
-Max Difference: 1
-Config 3 test failed with 16816 errors
+Config 3 compute time: 1006.34 ms
+Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/testvector_example/bf16_vectors2/hls_output_config_3.bin
+Max Difference: 65535
+Config 3 test failed with 33730 errors
 
 --- Testing Config 4 ---
-Config 4 compute time: 5214.26 ms
-Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/data/hls_output_config_4.bin
-Max Difference: 1
-Config 4 test failed with 16222 errors
+Config 4 compute time: 1005.05 ms
+Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/testvector_example/bf16_vectors2/hls_output_config_4.bin
+Max Difference: 65535
+Config 4 test failed with 47035 errors
 
 --- Testing Config 5 ---
-Config 5 compute time: 82.151 ms
-Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/data/hls_output_config_5.bin
-Max Difference: 9
-Config 5 test failed with 27700 errors
+Config 5 compute time: 1005.01 ms
+Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/testvector_example/bf16_vectors2/hls_output_config_5.bin
+Max Difference: 65535
+Config 5 test failed with 44004 errors
 
 --- Testing Config 6 ---
-Config 6 compute time: 67.1648 ms
-Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/data/hls_output_config_6.bin
-Max Difference: 33599
-Config 6 test failed with 31214 errors
+Config 6 compute time: 1009.08 ms
+Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/testvector_example/bf16_vectors2/hls_output_config_6.bin
+Max Difference: 65535
+Config 6 test failed with 22262 errors
 
-Total compute time for all configs: 21824.8 ms
+Total compute time for all configs: 12538.5 ms
 
 === Test Complete ===
 INFO: [SIM 1] CSim done with 0 errors.
