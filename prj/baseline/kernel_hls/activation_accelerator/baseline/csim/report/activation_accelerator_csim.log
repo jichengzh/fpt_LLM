@@ -27,48 +27,48 @@ Loaded Config 6 golden data from bf16
 Packed inputs to 512b buffers (stage 0 prepared)
 
 --- Testing Config 0 ---
-Config 0 compute time: 3443.39 ms
+Config 0 compute time: 3378.31 ms
 Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/testvector_example/bf16_vectors2/hls_output_config_0.bin
 Max Difference: 65535
 Config 0 test failed with 38280 errors
 
 --- Testing Config 1 ---
-Config 1 compute time: 4062.33 ms
+Config 1 compute time: 4054.71 ms
 Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/testvector_example/bf16_vectors2/hls_output_config_1.bin
 Max Difference: 65535
 Config 1 test failed with 31928 errors
 
 --- Testing Config 2 ---
-Config 2 compute time: 1007.28 ms
+Config 2 compute time: 1001.87 ms
 Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/testvector_example/bf16_vectors2/hls_output_config_2.bin
 Max Difference: 65535
 Config 2 test failed with 41233 errors
 
 --- Testing Config 3 ---
-Config 3 compute time: 1006.34 ms
+Config 3 compute time: 1001.63 ms
 Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/testvector_example/bf16_vectors2/hls_output_config_3.bin
 Max Difference: 65535
 Config 3 test failed with 33730 errors
 
 --- Testing Config 4 ---
-Config 4 compute time: 1005.05 ms
+Config 4 compute time: 999.81 ms
 Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/testvector_example/bf16_vectors2/hls_output_config_4.bin
 Max Difference: 65535
 Config 4 test failed with 47035 errors
 
 --- Testing Config 5 ---
-Config 5 compute time: 1005.01 ms
+Config 5 compute time: 1001.41 ms
 Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/testvector_example/bf16_vectors2/hls_output_config_5.bin
 Max Difference: 65535
 Config 5 test failed with 44004 errors
 
 --- Testing Config 6 ---
-Config 6 compute time: 1009.08 ms
+Config 6 compute time: 1000.91 ms
 Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/testvector_example/bf16_vectors2/hls_output_config_6.bin
 Max Difference: 65535
 Config 6 test failed with 22262 errors
 
-Total compute time for all configs: 12538.5 ms
+Total compute time for all configs: 12438.7 ms
 
 === Test Complete ===
 INFO: [SIM 1] CSim done with 0 errors.

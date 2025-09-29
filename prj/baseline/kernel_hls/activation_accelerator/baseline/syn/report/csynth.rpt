@@ -1,0 +1,379 @@
+
+
+================================================================
+== Synthesis Summary Report of 'activation_accelerator'
+================================================================
++ General Information: 
+    * Date:           Sun Sep 28 11:44:01 2025
+    * Version:        2022.2 (Build 3670227 on Oct 13 2022)
+    * Project:        activation_accelerator
+    * Solution:       baseline (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xck26-sfvc784-2LV-c
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+-----------+---------+------------+-------------+-----+
+    |                        Modules                       | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |           |         |            |             |     |
+    |                        & Loops                       | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM    |   DSP   |     FF     |     LUT     | URAM|
+    +------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+-----------+---------+------------+-------------+-----+
+    |+ activation_accelerator                              |     -|  0.00|   401293|  4.013e+06|         -|   401294|     -|        no|  102 (35%)|  14 (1%)|  10899 (4%)|  22566 (19%)|    -|
+    | o ROW_LOOP                                           |     -|  7.30|   401280|  4.013e+06|      6270|        -|    64|        no|          -|        -|           -|            -|    -|
+    |  + activation_accelerator_Pipeline_VITIS_LOOP_402_1  |     -|  0.00|       27|    270.000|         -|       27|     -|        no|          -|        -|  1045 (~0%)|     81 (~0%)|    -|
+    |   o VITIS_LOOP_402_1                                 |     -|  7.30|       25|    250.000|         3|        1|    24|       yes|          -|        -|           -|            -|    -|
+    |  + activation_accelerator_Pipeline_VITIS_LOOP_451_4  |     -|  5.15|      770|  7.700e+03|         -|      770|     -|        no|          -|        -|    12 (~0%)|     55 (~0%)|    -|
+    |   o VITIS_LOOP_451_4                                 |     -|  7.30|      768|  7.680e+03|         1|        1|   768|       yes|          -|        -|           -|            -|    -|
+    |  + activation_accelerator_Pipeline_VITIS_LOOP_427_3  |     -|  5.15|      770|  7.700e+03|         -|      770|     -|        no|          -|        -|    12 (~0%)|     55 (~0%)|    -|
+    |   o VITIS_LOOP_427_3                                 |     -|  7.30|      768|  7.680e+03|         1|        1|   768|       yes|          -|        -|           -|            -|    -|
+    |  + bf16_to_float                                     |     -|  4.04|      770|  7.700e+03|         -|      770|     -|        no|          -|        -|    23 (~0%)|    214 (~0%)|    -|
+    |   o bf16_to_float_loop                               |     -|  7.30|      768|  7.680e+03|         2|        1|   768|       yes|          -|        -|           -|            -|    -|
+    |  + bf16_to_float                                     |     -|  4.04|      770|  7.700e+03|         -|      770|     -|        no|          -|        -|    23 (~0%)|    214 (~0%)|    -|
+    |   o bf16_to_float_loop                               |     -|  7.30|      768|  7.680e+03|         2|        1|   768|       yes|          -|        -|           -|            -|    -|
+    |  + activation_accelerator_Pipeline_silu_loop         |     -|  0.24|      794|  7.940e+03|         -|      794|     -|        no|          -|        -|   407 (~0%)|    195 (~0%)|    -|
+    |   o silu_loop                                        |     -|  7.30|      792|  7.920e+03|        26|        1|   768|       yes|          -|        -|           -|            -|    -|
+    |  + activation_accelerator_Pipeline_rms_loop_0        |     -|  0.28|     2311|  2.311e+04|         -|     2311|     -|        no|          -|        -|   116 (~0%)|    113 (~0%)|    -|
+    |   o rms_loop_0                                       |    II|  7.30|     2309|  2.309e+04|         9|        3|   768|       yes|          -|        -|           -|            -|    -|
+    |  + activation_accelerator_Pipeline_VITIS_LOOP_251_1  |     -|  0.28|      774|  7.740e+03|         -|      774|     -|        no|          -|        -|   207 (~0%)|    130 (~0%)|    -|
+    |   o VITIS_LOOP_251_1                                 |     -|  7.30|      772|  7.720e+03|         6|        1|   768|       yes|          -|        -|           -|            -|    -|
+    |  + activation_accelerator_Pipeline_layer_loop_0      |     -|  1.17|     2307|  2.307e+04|         -|     2307|     -|        no|          -|        -|    49 (~0%)|    122 (~0%)|    -|
+    |   o layer_loop_0                                     |    II|  7.30|     2305|  2.305e+04|         5|        3|   768|       yes|          -|        -|           -|            -|    -|
+    |  + activation_accelerator_Pipeline_layer_loop_1      |     -|  0.28|     2315|  2.315e+04|         -|     2315|     -|        no|          -|        -|   215 (~0%)|    181 (~0%)|    -|
+    |   o layer_loop_1                                     |    II|  7.30|     2313|  2.313e+04|        13|        3|   768|       yes|          -|        -|           -|            -|    -|
+    |  + activation_accelerator_Pipeline_layer_loop_2      |     -|  0.24|      784|  7.840e+03|         -|      784|     -|        no|          -|        -|   259 (~0%)|    130 (~0%)|    -|
+    |   o layer_loop_2                                     |     -|  7.30|      782|  7.820e+03|        16|        1|   768|       yes|          -|        -|           -|            -|    -|
+    |  + float_safe_softmax                                |     -|  0.24|     3877|  3.877e+04|         -|     3877|     -|        no|    2 (~0%)|        -|   665 (~0%)|    637 (~0%)|    -|
+    |   + float_safe_softmax_Pipeline_softmax_loop_0       |     -|  3.28|      770|  7.700e+03|         -|      770|     -|        no|          -|        -|   112 (~0%)|    178 (~0%)|    -|
+    |    o softmax_loop_0                                  |     -|  7.30|      768|  7.680e+03|         3|        1|   767|       yes|          -|        -|           -|            -|    -|
+    |   + float_safe_softmax_Pipeline_softmax_loop_1       |     -|  0.86|     2320|  2.320e+04|         -|     2320|     -|        no|          -|        -|   291 (~0%)|    177 (~0%)|    -|
+    |    o softmax_loop_1                                  |    II|  7.30|     2318|  2.318e+04|        18|        3|   768|       yes|          -|        -|           -|            -|    -|
+    |   + float_safe_softmax_Pipeline_softmax_loop_2       |     -|  0.24|      780|  7.800e+03|         -|      780|     -|        no|          -|        -|   219 (~0%)|    130 (~0%)|    -|
+    |    o softmax_loop_2                                  |     -|  7.30|      778|  7.780e+03|        12|        1|   768|       yes|          -|        -|           -|            -|    -|
+    |  + activation_accelerator_Pipeline_add_loop          |     -|  0.86|      775|  7.750e+03|         -|      775|     -|        no|          -|  2 (~0%)|   468 (~0%)|    344 (~0%)|    -|
+    |   o add_loop                                         |     -|  7.30|      773|  7.730e+03|         7|        1|   768|       yes|          -|        -|           -|            -|    -|
+    |  + activation_accelerator_Pipeline_add_loop1         |     -|  0.86|      775|  7.750e+03|         -|      775|     -|        no|          -|        -|   241 (~0%)|    130 (~0%)|    -|
+    |   o add_loop                                         |     -|  7.30|      773|  7.730e+03|         7|        1|   768|       yes|          -|        -|           -|            -|    -|
+    |  + activation_accelerator_Pipeline_VITIS_LOOP_465_5  |     -|  0.00|       27|    270.000|         -|       27|     -|        no|          -|        -|   523 (~0%)|     70 (~0%)|    -|
+    |   o VITIS_LOOP_465_5                                 |     -|  7.30|       25|    250.000|         3|        1|    24|       yes|          -|        -|           -|            -|    -|
+    +------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+-----------+---------+------------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| Interface   | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   |
+|             | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| m_axi_gmem0 | 512 -> 512 | 64            | 0       | slave  | 0        | 0         | 32           | 16           | 16          | 16          |
+| m_axi_gmem1 | 512 -> 512 | 64            | 0       | slave  | 0        | 0         | 32           | 16           | 16          | 16          |
+| m_axi_gmem2 | 512 -> 512 | 64            | 0       | slave  | 0        | 0         | 16           | 32           | 16          | 16          |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 7             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | in0_1    | 0x10   | 32    | W      | Data signal of in0               |                                                                      |
+| s_axi_control | in0_2    | 0x14   | 32    | W      | Data signal of in0               |                                                                      |
+| s_axi_control | in1_1    | 0x1c   | 32    | W      | Data signal of in1               |                                                                      |
+| s_axi_control | in1_2    | 0x20   | 32    | W      | Data signal of in1               |                                                                      |
+| s_axi_control | out_r_1  | 0x28   | 32    | W      | Data signal of out_r             |                                                                      |
+| s_axi_control | out_r_2  | 0x2c   | 32    | W      | Data signal of out_r             |                                                                      |
+| s_axi_control | stage    | 0x34   | 32    | W      | Data signal of stage             |                                                                      |
+| s_axi_control | config_r | 0x3c   | 32    | W      | Data signal of config_r          |                                                                      |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+---------------+
+| Argument | Direction | Datatype      |
++----------+-----------+---------------+
+| in0      | in        | ap_uint<512>* |
+| in1      | in        | ap_uint<512>* |
+| out      | out       | ap_uint<512>* |
+| stage    | in        | int           |
+| config   | in        | int           |
++----------+-----------+---------------+
+
+* SW-to-HW Mapping
++----------+---------------+-----------+----------+---------------------------------+
+| Argument | HW Interface  | HW Type   | HW Usage | HW Info                         |
++----------+---------------+-----------+----------+---------------------------------+
+| in0      | m_axi_gmem0   | interface |          |                                 |
+| in0      | s_axi_control | register  | offset   | name=in0_1 offset=0x10 range=32 |
+| in0      | s_axi_control | register  | offset   | name=in0_2 offset=0x14 range=32 |
+| in1      | m_axi_gmem1   | interface |          |                                 |
+| in1      | s_axi_control | register  | offset   | name=in1_1 offset=0x1c range=32 |
+| in1      | s_axi_control | register  | offset   | name=in1_2 offset=0x20 range=32 |
+| out      | m_axi_gmem2   | interface |          |                                 |
+| out      | s_axi_control | interface | offset   |                                 |
+| stage    | s_axi_control | register  |          | name=stage offset=0x34 range=32 |
+| config   | s_axi_control | interface |          |                                 |
++----------+---------------+-----------+----------+---------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+----------+-----------+--------+-------+----------------------------------+
+| HW Interface | Loop     | Direction | Length | Width | Location                         |
++--------------+----------+-----------+--------+-------+----------------------------------+
+| m_axi_gmem0  | ROW_LOOP | read      | 1536   | 512   | activation_accelerator.cpp:396:5 |
+| m_axi_gmem1  | ROW_LOOP | read      | 1536   | 512   | activation_accelerator.cpp:396:5 |
+| m_axi_gmem2  | ROW_LOOP | write     | 1536   | 512   | activation_accelerator.cpp:396:5 |
++--------------+----------+-----------+--------+-------+----------------------------------+
+
+* Inferred Bursts and Widening Missed
++--------------+----------+------------------+--------------------------------------------------------------------------------------------------------+------------+-----------------------------------+
+| HW Interface | Variable | Loop             | Problem                                                                                                | Resolution | Location                          |
++--------------+----------+------------------+--------------------------------------------------------------------------------------------------------+------------+-----------------------------------+
+| m_axi_gmem2  | out      | VITIS_LOOP_465_5 | Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | activation_accelerator.cpp:465:27 |
+| m_axi_gmem0  | in0      | VITIS_LOOP_402_1 | Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | activation_accelerator.cpp:402:27 |
+| m_axi_gmem1  | in1      | VITIS_LOOP_402_1 | Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | activation_accelerator.cpp:402:27 |
++--------------+----------+------------------+--------------------------------------------------------------------------------------------------------+------------+-----------------------------------+
+
+    * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------------------------+-----+--------+------------+-------+---------+---------+
+| Name                                                | DSP | Pragma | Variable   | Op    | Impl    | Latency |
++-----------------------------------------------------+-----+--------+------------+-------+---------+---------+
+| + activation_accelerator                            | 14  |        |            |       |         |         |
+|   add_ln396_fu_1499_p2                              | -   |        | add_ln396  | add   | fabric  | 0       |
+|   fdiv_32ns_32ns_32_9_no_dsp_1_U482                 | -   |        | mean_sq    | fdiv  | fabric  | 8       |
+|   faddfsub_32ns_32ns_32_4_full_dsp_1_U480           | 2   |        | rms        | fadd  | fulldsp | 3       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U481                | 3   |        | x2         | fmul  | maxdsp  | 2       |
+|   sub_ln199_fu_1703_p2                              | -   |        | sub_ln199  | sub   | fabric  | 0       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U481                | 3   |        | mul1_i_i   | fmul  | maxdsp  | 2       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U481                | 3   |        | mul2_i_i   | fmul  | maxdsp  | 2       |
+|   faddfsub_32ns_32ns_32_4_full_dsp_1_U480           | 2   |        | sub3_i_i   | fadd  | fulldsp | 3       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U481                | 3   |        | re_rms     | fmul  | maxdsp  | 2       |
+|   fdiv_32ns_32ns_32_9_no_dsp_1_U482                 | -   |        | mean       | fdiv  | fabric  | 8       |
+|   fdiv_32ns_32ns_32_9_no_dsp_1_U482                 | -   |        | var        | fdiv  | fabric  | 8       |
+|   faddfsub_32ns_32ns_32_4_full_dsp_1_U480           | 2   |        | x_assign_1 | fadd  | fulldsp | 3       |
+|   fsqrt_32ns_32ns_32_8_no_dsp_1_U483                | -   |        | stddev     | fsqrt | fabric  | 7       |
+|  + activation_accelerator_Pipeline_VITIS_LOOP_402_1 | 0   |        |            |       |         |         |
+|    add_ln402_fu_1450_p2                             | -   |        | add_ln402  | add   | fabric  | 0       |
+|  + activation_accelerator_Pipeline_VITIS_LOOP_451_4 | 0   |        |            |       |         |         |
+|    add_ln451_fu_760_p2                              | -   |        | add_ln451  | add   | fabric  | 0       |
+|  + activation_accelerator_Pipeline_VITIS_LOOP_427_3 | 0   |        |            |       |         |         |
+|    add_ln427_fu_760_p2                              | -   |        | add_ln427  | add   | fabric  | 0       |
+|  + bf16_to_float (grp_bf16_to_float_fu_710)         | 0   |        |            |       |         |         |
+|    add_ln178_fu_563_p2                              | -   |        | add_ln178  | add   | fabric  | 0       |
+|  + activation_accelerator_Pipeline_silu_loop        | 0   |        |            |       |         |         |
+|    add_ln229_fu_774_p2                              | -   |        | add_ln229  | add   | fabric  | 0       |
+|  + activation_accelerator_Pipeline_rms_loop_0       | 0   |        |            |       |         |         |
+|    add_ln243_fu_95_p2                               | -   |        | add_ln243  | add   | fabric  | 0       |
+|  + activation_accelerator_Pipeline_VITIS_LOOP_251_1 | 0   |        |            |       |         |         |
+|    add_ln251_fu_765_p2                              | -   |        | add_ln251  | add   | fabric  | 0       |
+|  + activation_accelerator_Pipeline_layer_loop_0     | 0   |        |            |       |         |         |
+|    add_ln264_fu_92_p2                               | -   |        | add_ln264  | add   | fabric  | 0       |
+|  + activation_accelerator_Pipeline_layer_loop_1     | 0   |        |            |       |         |         |
+|    add_ln271_fu_109_p2                              | -   |        | add_ln271  | add   | fabric  | 0       |
+|  + activation_accelerator_Pipeline_layer_loop_2     | 0   |        |            |       |         |         |
+|    add_ln279_fu_775_p2                              | -   |        | add_ln279  | add   | fabric  | 0       |
+|  + float_safe_softmax                               | 0   |        |            |       |         |         |
+|   + float_safe_softmax_Pipeline_softmax_loop_0      | 0   |        |            |       |         |         |
+|     add_ln303_fu_113_p2                             | -   |        | add_ln303  | add   | fabric  | 0       |
+|   + float_safe_softmax_Pipeline_softmax_loop_1      | 0   |        |            |       |         |         |
+|     add_ln311_fu_132_p2                             | -   |        | add_ln311  | add   | fabric  | 0       |
+|   + float_safe_softmax_Pipeline_softmax_loop_2      | 0   |        |            |       |         |         |
+|     add_ln317_fu_763_p2                             | -   |        | add_ln317  | add   | fabric  | 0       |
+|  + bf16_to_float (grp_bf16_to_float_fu_780)         | 0   |        |            |       |         |         |
+|    add_ln178_fu_563_p2                              | -   |        | add_ln178  | add   | fabric  | 0       |
+|  + activation_accelerator_Pipeline_add_loop         | 2   |        |            |       |         |         |
+|    add_ln290_fu_768_p2                              | -   |        | add_ln290  | add   | fabric  | 0       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U375              | 2   |        | sum_2      | fadd  | fulldsp | 3       |
+|  + activation_accelerator_Pipeline_add_loop1        | 0   |        |            |       |         |         |
+|    add_ln290_fu_768_p2                              | -   |        | add_ln290  | add   | fabric  | 0       |
+|  + activation_accelerator_Pipeline_VITIS_LOOP_465_5 | 0   |        |            |       |         |         |
+|    add_ln465_fu_576_p2                              | -   |        | add_ln465  | add   | fabric  | 0       |
++-----------------------------------------------------+-----+--------+------------+-------+---------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++----------------------------------------------------------------------------+------+------+--------+------------------------------------------------------------------------+---------+------+---------+
+| Name                                                                       | BRAM | URAM | Pragma | Variable                                                               | Storage | Impl | Latency |
++----------------------------------------------------------------------------+------+------+--------+------------------------------------------------------------------------+---------+------+---------+
+| + activation_accelerator                                                   | 102  | 0    |        |                                                                        |         |      |         |
+|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9 | ram_2p  | bram | 1       |
+|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_9_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_9 | ram_2p  | bram | 1       |
+|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_8_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_8 | ram_2p  | bram | 1       |
+|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_8_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_8 | ram_2p  | bram | 1       |
+|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_7_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_7 | ram_2p  | bram | 1       |
+|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_7_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_7 | ram_2p  | bram | 1       |
+|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_6_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_6 | ram_2p  | bram | 1       |
+|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_6_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_6 | ram_2p  | bram | 1       |
+|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_5_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_5 | ram_2p  | bram | 1       |
+|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_5_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_5 | ram_2p  | bram | 1       |
+|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_4_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_4 | ram_2p  | bram | 1       |
+|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_4_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_4 | ram_2p  | bram | 1       |
+|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_3_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_3 | ram_2p  | bram | 1       |
+|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_3_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_3 | ram_2p  | bram | 1       |
+|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_2_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_2 | ram_2p  | bram | 1       |
+|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_2_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_2 | ram_2p  | bram | 1       |
+|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_1_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_1 | ram_2p  | bram | 1       |
+|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_1_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_1 | ram_2p  | bram | 1       |
+|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_U   | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0   | ram_2p  | bram | 1       |
+|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_U   | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1   | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_10_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_10        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_10_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_10        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_11_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_11        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_11_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_11        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_12_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_12        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_12_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_12        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_13_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_13        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_13_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_13        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_14_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_14        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_14_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_14        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_15_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_15        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_15_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_15        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_16_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_16        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_16_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_16        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_17_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_17        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_17_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_17        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_18_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_18        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_18_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_18        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_19_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_19        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_19_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_19        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_20_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_20        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_20_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_20        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_21_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_21        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_21_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_21        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_22_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_22        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_22_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_22        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_23_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_23        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_23_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_23        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_24_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_24        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_24_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_24        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_25_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_25        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_25_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_25        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_26_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_26        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_26_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_26        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_27_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_27        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_27_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_27        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_28_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_28        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_28_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_28        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_29_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_29        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_29_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_29        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_30_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_30        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_30_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_30        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_31_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_31        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_31_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_31        | ram_2p  | bram | 1       |
+|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_9_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_9 | ram_2p  | bram | 1       |
+|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_8_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_8 | ram_2p  | bram | 1       |
+|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_7_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_7 | ram_2p  | bram | 1       |
+|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_6_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_6 | ram_2p  | bram | 1       |
+|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_5_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_5 | ram_2p  | bram | 1       |
+|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_4_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_4 | ram_2p  | bram | 1       |
+|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_3_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_3 | ram_2p  | bram | 1       |
+|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_2_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_2 | ram_2p  | bram | 1       |
+|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_1_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_1 | ram_2p  | bram | 1       |
+|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_U   | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2   | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_10_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_10        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_11_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_11        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_12_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_12        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_13_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_13        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_14_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_14        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_15_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_15        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_16_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_16        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_17_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_17        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_18_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_18        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_19_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_19        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_20_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_20        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_21_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_21        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_22_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_22        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_23_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_23        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_24_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_24        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_25_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_25        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_26_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_26        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_27_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_27        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_28_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_28        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_29_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_29        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_30_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_30        | ram_2p  | bram | 1       |
+|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_31_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_31        | ram_2p  | bram | 1       |
+|   xt_U                                                                     | 2    | -    | pragma | xt                                                                     | ram_s2p | bram | 1       |
+|   yt_U                                                                     | 2    | -    | pragma | yt                                                                     | ram_s2p | bram | 1       |
+|  + float_safe_softmax                                                      | 2    | 0    |        |                                                                        |         |      |         |
+|    exp_x_U                                                                 | 2    | -    | yes    | exp_x                                                                  | ram_s2p | bram | 1       |
++----------------------------------------------------------------------------+------+------+--------+------------------------------------------------------------------------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+
+| Type            | Options                                                                                              | Location                                                         |
++-----------------+------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+
+| inline          | off                                                                                                  | activation_accelerator.cpp:176 in bf16_to_float                  |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:179 in bf16_to_float                  |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:230 in float_silu                     |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:244 in float_rms_norm                 |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:265 in float_layer_norm               |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:272 in float_layer_norm               |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:280 in float_layer_norm               |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:291 in float_add                      |
+| inline          | off                                                                                                  | activation_accelerator.cpp:300 in float_safe_softmax             |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:304 in float_safe_softmax             |
+| bind_storage    | variable=exp_x type=ram_s2p impl=bram                                                                | activation_accelerator.cpp:309 in float_safe_softmax, exp_x      |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:312 in float_safe_softmax             |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:318 in float_safe_softmax             |
+| interface       | m_axi port=in0 bundle=gmem0 offset=slave depth=NW max_read_burst_length=32 num_read_outstanding=16   | activation_accelerator.cpp:366 in activation_accelerator, in0    |
+| interface       | m_axi port=in1 bundle=gmem1 offset=slave depth=NW max_read_burst_length=32 num_read_outstanding=16   | activation_accelerator.cpp:367 in activation_accelerator, in1    |
+| interface       | m_axi port=out bundle=gmem2 offset=slave depth=NW max_write_burst_length=32 num_write_outstanding=16 | activation_accelerator.cpp:368 in activation_accelerator, out    |
+| interface       | s_axilite port=stage                                                                                 | activation_accelerator.cpp:370 in activation_accelerator, stage  |
+| interface       | s_axilite port=config                                                                                | activation_accelerator.cpp:371 in activation_accelerator, config |
+| interface       | s_axilite port=return                                                                                | activation_accelerator.cpp:372 in activation_accelerator, return |
+| bind_storage    | variable=tile0 type=ram_2p impl=bram                                                                 | activation_accelerator.cpp:382 in activation_accelerator, tile0  |
+| bind_storage    | variable=tile1 type=ram_2p impl=bram                                                                 | activation_accelerator.cpp:383 in activation_accelerator, tile1  |
+| bind_storage    | variable=tile2 type=ram_2p impl=bram                                                                 | activation_accelerator.cpp:384 in activation_accelerator, tile2  |
+| array_partition | variable=tile0 cyclic factor=32                                                                      | activation_accelerator.cpp:385 in activation_accelerator, tile0  |
+| array_partition | variable=tile1 cyclic factor=32                                                                      | activation_accelerator.cpp:386 in activation_accelerator, tile1  |
+| array_partition | variable=tile2 cyclic factor=32                                                                      | activation_accelerator.cpp:387 in activation_accelerator, tile2  |
+| bind_storage    | variable=xt type=ram_s2p impl=bram                                                                   | activation_accelerator.cpp:391 in activation_accelerator, xt     |
+| bind_storage    | variable=yt type=ram_s2p impl=bram                                                                   | activation_accelerator.cpp:392 in activation_accelerator, yt     |
+| loop_tripcount  | min=NROWS max=NROWS                                                                                  | activation_accelerator.cpp:397 in activation_accelerator         |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:403 in activation_accelerator         |
+| unroll          |                                                                                                      | activation_accelerator.cpp:408 in activation_accelerator         |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:428 in activation_accelerator         |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:452 in activation_accelerator         |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:466 in activation_accelerator         |
+| unroll          |                                                                                                      | activation_accelerator.cpp:469 in activation_accelerator         |
++-----------------+------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+
+
+

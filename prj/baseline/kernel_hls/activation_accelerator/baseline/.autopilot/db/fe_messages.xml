@@ -654,13 +654,13 @@
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="activation_accelerator" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=activation_accelerator" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="activation_accelerator.cpp:366:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="activation_accelerator" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=in0 bundle=gmem0 offset=slave depth=NW max_read_burst_length=TILEW num_read_outstanding=16" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="activation_accelerator" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=in0 bundle=gmem0 offset=slave depth=NW max_read_burst_length=32 num_read_outstanding=16" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="activation_accelerator.cpp:367:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="activation_accelerator" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=in1 bundle=gmem1 offset=slave depth=NW max_read_burst_length=TILEW num_read_outstanding=16" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="activation_accelerator" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=in1 bundle=gmem1 offset=slave depth=NW max_read_burst_length=32 num_read_outstanding=16" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="activation_accelerator.cpp:368:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="activation_accelerator" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=out bundle=gmem2 offset=slave depth=NW max_write_burst_length=TILEW num_write_outstanding=16" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="activation_accelerator" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=out bundle=gmem2 offset=slave depth=NW max_write_burst_length=32 num_write_outstanding=16" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="activation_accelerator.cpp:370:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="activation_accelerator" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=stage" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
@@ -737,14 +737,35 @@
     <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="activation_accelerator.cpp:361:0" msg_body="Unrolling loop 'VITIS_LOOP_468_6' (activation_accelerator.cpp:468:31) in function 'activation_accelerator' completely with a factor of 32">
         <args Factor="32" LoopLoc="activation_accelerator.cpp:468:31" LoopName="VITIS_LOOP_468_6"/>
     </msg>
-    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-326" msg_severity="ERROR" msg_loc="activation_accelerator.cpp:366:9" msg_body="in function 'activation_accelerator(ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, int, int)': Invalid value for m_axi max_read/write_burst_length. It should be in [1, 256] and pow of 2, activation_accelerator(ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, int, int)'">
-        <args Function="islist {activation_accelerator(ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, int, int)} {activation_accelerator(ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, int, int)}"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="activation_accelerator.cpp:260:0" msg_body="Inlining function 'hls::sqrtf(float)' into 'float_layer_norm(float const*, ap_uint&lt;16&gt;*, int)'">
+        <args Callee="hls::sqrtf(float)" Caller="float_layer_norm(float const*, ap_uint&lt;16&gt;*, int)"/>
     </msg>
-    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-326" msg_severity="ERROR" msg_loc="activation_accelerator.cpp:367:9" msg_body="in function 'activation_accelerator(ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, int, int)': Invalid value for m_axi max_read/write_burst_length. It should be in [1, 256] and pow of 2, activation_accelerator(ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, int, int)'">
-        <args Function="islist {activation_accelerator(ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, int, int)} {activation_accelerator(ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, int, int)}"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="activation_accelerator.cpp:239:0" msg_body="Inlining function 'Q_rsqrt(float)' into 'float_rms_norm(float const*, ap_uint&lt;16&gt;*, int)'">
+        <args Callee="Q_rsqrt(float)" Caller="float_rms_norm(float const*, ap_uint&lt;16&gt;*, int)"/>
     </msg>
-    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-326" msg_severity="ERROR" msg_loc="activation_accelerator.cpp:368:9" msg_body="in function 'activation_accelerator(ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, int, int)': Invalid value for m_axi max_read/write_burst_length. It should be in [1, 256] and pow of 2, activation_accelerator(ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, int, int)'">
-        <args Function="islist {activation_accelerator(ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, int, int)} {activation_accelerator(ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, int, int)}"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="activation_accelerator.cpp:361:0" msg_body="Inlining function 'row_op_select(int, int)' into 'activation_accelerator(ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, int, int)'">
+        <args Callee="row_op_select(int, int)" Caller="activation_accelerator(ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, int, int)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="activation_accelerator.cpp:361:0" msg_body="Inlining function 'float_add(float const*, float const*, ap_uint&lt;16&gt;*, int)' into 'activation_accelerator(ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, int, int)'">
+        <args Callee="float_add(float const*, float const*, ap_uint&lt;16&gt;*, int)" Caller="activation_accelerator(ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, int, int)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="activation_accelerator.cpp:361:0" msg_body="Inlining function 'float_layer_norm(float const*, ap_uint&lt;16&gt;*, int)' into 'activation_accelerator(ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, int, int)'">
+        <args Callee="float_layer_norm(float const*, ap_uint&lt;16&gt;*, int)" Caller="activation_accelerator(ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, int, int)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="activation_accelerator.cpp:361:0" msg_body="Inlining function 'float_rms_norm(float const*, ap_uint&lt;16&gt;*, int)' into 'activation_accelerator(ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, int, int)'">
+        <args Callee="float_rms_norm(float const*, ap_uint&lt;16&gt;*, int)" Caller="activation_accelerator(ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, int, int)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="activation_accelerator.cpp:361:0" msg_body="Inlining function 'float_silu(float const*, ap_uint&lt;16&gt;*, int)' into 'activation_accelerator(ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, int, int)'">
+        <args Callee="float_silu(float const*, ap_uint&lt;16&gt;*, int)" Caller="activation_accelerator(ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, ap_uint&lt;512&gt;*, int, int)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="activation_accelerator.cpp:381:0" msg_body="Applying array_partition to '_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0': Cyclic partitioning with factor 32 on dimension 1.">
+        <args Dim="1" Factor="32" Mode="Cyclic" UOName="_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="activation_accelerator.cpp:381:0" msg_body="Applying array_partition to '_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1': Cyclic partitioning with factor 32 on dimension 1.">
+        <args Dim="1" Factor="32" Mode="Cyclic" UOName="_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="activation_accelerator.cpp:381:0" msg_body="Applying array_partition to '_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2': Cyclic partitioning with factor 32 on dimension 1.">
+        <args Dim="1" Factor="32" Mode="Cyclic" UOName="_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2"/>
     </msg>
 </xilinx:hls_fe_msgs>
 

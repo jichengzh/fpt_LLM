@@ -1,0 +1,7 @@
+Running: xsim.dir/activation_accelerator/xsimk -simmode gui -wdb activation_accelerator.wdb -simrunnum 0 -socket 60209
+Design successfully loaded
+Design Loading Memory Usage: 40700 KB (Peak: 40700 KB)
+Design Loading CPU Usage: 70 ms
+Simulation completed
+Simulation Memory Usage: 164768 KB (Peak: 179968 KB)
+Simulation CPU Usage: 567880 ms

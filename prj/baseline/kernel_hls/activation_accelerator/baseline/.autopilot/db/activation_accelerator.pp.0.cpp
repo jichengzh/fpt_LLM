@@ -55335,9 +55335,9 @@ __attribute__((sdx_kernel("activation_accelerator", 0))) void activation_acceler
 
 
 
-#pragma HLS INTERFACE m_axi port=in0 bundle=gmem0 offset=slave depth=NW max_read_burst_length=TILEW num_read_outstanding=16
-#pragma HLS INTERFACE m_axi port=in1 bundle=gmem1 offset=slave depth=NW max_read_burst_length=TILEW num_read_outstanding=16
-#pragma HLS INTERFACE m_axi port=out bundle=gmem2 offset=slave depth=NW max_write_burst_length=TILEW num_write_outstanding=16
+#pragma HLS INTERFACE m_axi port=in0 bundle=gmem0 offset=slave depth=NW max_read_burst_length=32 num_read_outstanding=16
+#pragma HLS INTERFACE m_axi port=in1 bundle=gmem1 offset=slave depth=NW max_read_burst_length=32 num_read_outstanding=16
+#pragma HLS INTERFACE m_axi port=out bundle=gmem2 offset=slave depth=NW max_write_burst_length=32 num_write_outstanding=16
 
 #pragma HLS INTERFACE s_axilite port=stage
 #pragma HLS INTERFACE s_axilite port=config

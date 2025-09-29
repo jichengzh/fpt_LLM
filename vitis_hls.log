@@ -6,9 +6,9 @@
 
 source /data/xilinx/Vitis_HLS/2022.2/scripts/vitis_hls/hls.tcl -notrace
 INFO: [HLS 200-10] Running '/data/xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/vitis_hls'
-INFO: [HLS 200-10] For user 'jichengzhi' on host 'super-test' (Linux_x86_64 version 5.4.0-169-generic) on Sat Sep 27 10:25:51 CST 2025
+INFO: [HLS 200-10] For user 'jichengzhi' on host 'super-test' (Linux_x86_64 version 5.4.0-169-generic) on Sun Sep 28 11:32:54 CST 2025
 INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
 INFO: [HLS 200-10] In directory '/data1/jcz/activation_accelerator_tutorial'
 ERROR [AP-1] Could not read script 'run_hls.tcl'.
-INFO: [HLS 200-112] Total CPU user time: 1.13 seconds. Total CPU system time: 0.13 seconds. Total elapsed time: 4.79 seconds; peak allocated memory: 98.906 MB.
-INFO: [Common 17-206] Exiting vitis_hls at Sat Sep 27 10:25:51 2025...
+INFO: [HLS 200-112] Total CPU user time: 0.95 seconds. Total CPU system time: 0.12 seconds. Total elapsed time: 0.76 seconds; peak allocated memory: 98.910 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Sun Sep 28 11:32:54 2025...

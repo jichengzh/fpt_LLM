@@ -1,0 +1,806 @@
+<profile>
+  <RunData>
+    <RUN_TYPE>impl</RUN_TYPE>
+    <VIVADO_VERSION>v.2022.2</VIVADO_VERSION>
+    <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+  </RunData>
+  <TimingReport>
+    <TargetClockPeriod>10.000</TargetClockPeriod>
+    <AchievedClockPeriod>6.411</AchievedClockPeriod>
+    <CLOCK_NAME>ap_clk</CLOCK_NAME>
+    <CP_FINAL>6.411</CP_FINAL>
+    <CP_ROUTE>6.411</CP_ROUTE>
+    <CP_SYNTH>4.981</CP_SYNTH>
+    <CP_TARGET>10.000</CP_TARGET>
+    <SLACK_FINAL>3.589</SLACK_FINAL>
+    <SLACK_ROUTE>3.589</SLACK_ROUTE>
+    <SLACK_SYNTH>5.019</SLACK_SYNTH>
+    <TIMING_MET>TRUE</TIMING_MET>
+    <TNS_FINAL>0.000</TNS_FINAL>
+    <TNS_ROUTE>0.000</TNS_ROUTE>
+    <TNS_SYNTH>0.000</TNS_SYNTH>
+    <WNS_FINAL>3.589</WNS_FINAL>
+    <WNS_ROUTE>3.589</WNS_ROUTE>
+    <WNS_SYNTH>5.019</WNS_SYNTH>
+  </TimingReport>
+  <AreaReport>
+    <Resources>
+      <BRAM>146</BRAM>
+      <CLB>1661</CLB>
+      <DSP>14</DSP>
+      <FF>8298</FF>
+      <LATCH>0</LATCH>
+      <LUT>7888</LUT>
+      <SRL>871</SRL>
+      <URAM>0</URAM>
+    </Resources>
+    <AvailableResources>
+      <BRAM>288</BRAM>
+      <CLB>14640</CLB>
+      <DSP>1248</DSP>
+      <FF>234240</FF>
+      <LUT>117120</LUT>
+      <URAM>64</URAM>
+    </AvailableResources>
+  </AreaReport>
+  <RtlModules>
+    <RtlModule CELL="inst" DEPTH="0" IS_TOP="1" TYPE="function" MODULENAME="activation_accelerator" DISPNAME="inst" RTLNAME="activation_accelerator">
+      <SubModules count="123">activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_1_U activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_2_U activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_3_U activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_4_U activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_5_U activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_6_U activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_7_U activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_8_U activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_U activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_U activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_1_U activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_2_U activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_3_U activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_4_U activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_5_U activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_6_U activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_7_U activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_8_U activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_9_U activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_U activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_1_U activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_2_U activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_3_U activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_4_U activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_5_U activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_6_U activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_7_U activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_8_U activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_9_U activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_U control_s_axi_U fadd_32ns_32ns_32_4_no_dsp_1_U485 faddfsub_32ns_32ns_32_4_full_dsp_1_U480 fdiv_32ns_32ns_32_9_no_dsp_1_U482 fexp_32ns_32ns_32_8_full_dsp_1_U484 fmul_32ns_32ns_32_3_max_dsp_1_U481 fsqrt_32ns_32ns_32_8_no_dsp_1_U483 gmem0_m_axi_U gmem1_m_axi_U gmem2_m_axi_U grp_activation_accelerator_Pipeline_VITIS_LOOP_251_1_fu_927 grp_activation_accelerator_Pipeline_VITIS_LOOP_402_1_fu_436 grp_activation_accelerator_Pipeline_VITIS_LOOP_427_3_fu_642 grp_activation_accelerator_Pipeline_VITIS_LOOP_451_4_fu_574 grp_activation_accelerator_Pipeline_VITIS_LOOP_465_5_fu_1299 grp_activation_accelerator_Pipeline_add_loop1_fu_1227 grp_activation_accelerator_Pipeline_add_loop_fu_1155 grp_activation_accelerator_Pipeline_layer_loop_0_fu_998 grp_activation_accelerator_Pipeline_layer_loop_1_fu_1005 grp_activation_accelerator_Pipeline_layer_loop_2_fu_1013 grp_activation_accelerator_Pipeline_rms_loop_0_fu_920 grp_activation_accelerator_Pipeline_silu_loop_fu_850 grp_bf16_to_float_fu_710 grp_bf16_to_float_fu_780 grp_float_safe_softmax_fu_1085 p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_10_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_11_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_12_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_13_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_14_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_15_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_16_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_17_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_18_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_19_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_20_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_21_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_22_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_23_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_24_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_25_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_26_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_27_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_28_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_29_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_30_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_31_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_10_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_11_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_12_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_13_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_14_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_15_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_16_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_17_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_18_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_19_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_20_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_21_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_22_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_23_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_24_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_25_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_26_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_27_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_28_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_29_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_30_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_31_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_10_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_11_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_12_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_13_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_14_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_15_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_16_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_17_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_18_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_19_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_20_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_21_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_22_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_23_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_24_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_25_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_26_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_27_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_28_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_29_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_30_U p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_31_U xt_U yt_U</SubModules>
+      <Resources BRAM="146" DSP="14" FF="8298" LUT="7888"/>
+      <LocalResources FF="633" LUT="92"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_1_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_1_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_2_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_2_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_3_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_3_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_4_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_4_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_5_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_5_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_6_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_6_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_7_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_7_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_8_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_8_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_1_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_1_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_2_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_2_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_3_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_3_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_4_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_4_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_5_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_5_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_6_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_6_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_7_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_7_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_8_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_8_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_9_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_9_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_1_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_1_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_2_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_2_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_3_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_3_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_4_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_4_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_5_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_5_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_6_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_6_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_7_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_7_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_8_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_8_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_9_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_9_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="3"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/control_s_axi_U" BINDMODULE="activation_accelerator_control_s_axi" DEPTH="1" TYPE="rtl" MODULENAME="control_s_axi" DISPNAME="control_s_axi_U" RTLNAME="activation_accelerator_control_s_axi">
+      <Resources FF="312" LUT="287"/>
+    </RtlModule>
+    <RtlModule CELL="inst/fadd_32ns_32ns_32_4_no_dsp_1_U485" BINDMODULE="activation_accelerator_fadd_32ns_32ns_32_4_no_dsp_1" DEPTH="1" TYPE="rtl" MODULENAME="fadd_32ns_32ns_32_4_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_4_no_dsp_1_U485" RTLNAME="activation_accelerator_fadd_32ns_32ns_32_4_no_dsp_1">
+      <Resources FF="136" LUT="335"/>
+      <LocalResources FF="64"/>
+    </RtlModule>
+    <RtlModule CELL="inst/faddfsub_32ns_32ns_32_4_full_dsp_1_U480" BINDMODULE="activation_accelerator_faddfsub_32ns_32ns_32_4_full_dsp_1" DEPTH="1" TYPE="resource" MODULENAME="faddfsub_32ns_32ns_32_4_full_dsp_1" DISPNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U480" RTLNAME="activation_accelerator_faddfsub_32ns_32ns_32_4_full_dsp_1">
+      <Resources DSP="2" FF="200" LUT="205"/>
+      <LocalResources FF="65" LUT="31"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="ROW_LOOP" OPTYPE="fadd" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U480" SOURCE="activation_accelerator.cpp:248" URAM="0" VARIABLE="rms"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="ROW_LOOP" OPTYPE="fadd" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U480" SOURCE="activation_accelerator.cpp:201" URAM="0" VARIABLE="sub3_i_i"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="ROW_LOOP" OPTYPE="fadd" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U480" SOURCE="activation_accelerator.cpp:277" URAM="0" VARIABLE="x_assign_1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/fdiv_32ns_32ns_32_9_no_dsp_1_U482" BINDMODULE="activation_accelerator_fdiv_32ns_32ns_32_9_no_dsp_1" DEPTH="1" TYPE="resource" MODULENAME="fdiv_32ns_32ns_32_9_no_dsp_1" DISPNAME="fdiv_32ns_32ns_32_9_no_dsp_1_U482" RTLNAME="activation_accelerator_fdiv_32ns_32ns_32_9_no_dsp_1">
+      <Resources FF="382" LUT="779"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fdiv" DSP="0" ID="" IMPL="fabric" LATENCY="8" LOOP="ROW_LOOP" OPTYPE="fdiv" PRAGMA="" RTLNAME="fdiv_32ns_32ns_32_9_no_dsp_1_U482" SOURCE="activation_accelerator.cpp:247" URAM="0" VARIABLE="mean_sq"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fdiv" DSP="0" ID="" IMPL="fabric" LATENCY="8" LOOP="ROW_LOOP" OPTYPE="fdiv" PRAGMA="" RTLNAME="fdiv_32ns_32ns_32_9_no_dsp_1_U482" SOURCE="activation_accelerator.cpp:268" URAM="0" VARIABLE="mean"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fdiv" DSP="0" ID="" IMPL="fabric" LATENCY="8" LOOP="ROW_LOOP" OPTYPE="fdiv" PRAGMA="" RTLNAME="fdiv_32ns_32ns_32_9_no_dsp_1_U482" SOURCE="activation_accelerator.cpp:276" URAM="0" VARIABLE="var"/>
+    </RtlModule>
+    <RtlModule CELL="inst/fexp_32ns_32ns_32_8_full_dsp_1_U484" BINDMODULE="activation_accelerator_fexp_32ns_32ns_32_8_full_dsp_1" DEPTH="1" TYPE="rtl" MODULENAME="fexp_32ns_32ns_32_8_full_dsp_1" DISPNAME="fexp_32ns_32ns_32_8_full_dsp_1_U484" RTLNAME="activation_accelerator_fexp_32ns_32ns_32_8_full_dsp_1">
+      <Resources DSP="7" FF="238" LUT="690"/>
+      <LocalResources FF="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/fmul_32ns_32ns_32_3_max_dsp_1_U481" BINDMODULE="activation_accelerator_fmul_32ns_32ns_32_3_max_dsp_1" DEPTH="1" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_3_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_3_max_dsp_1_U481" RTLNAME="activation_accelerator_fmul_32ns_32ns_32_3_max_dsp_1">
+      <Resources DSP="3" FF="96" LUT="146"/>
+      <LocalResources FF="64" LUT="69"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="2" LOOP="ROW_LOOP" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_3_max_dsp_1_U481" SOURCE="activation_accelerator.cpp:190" URAM="0" VARIABLE="x2"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="2" LOOP="ROW_LOOP" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_3_max_dsp_1_U481" SOURCE="activation_accelerator.cpp:201" URAM="0" VARIABLE="mul1_i_i"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="2" LOOP="ROW_LOOP" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_3_max_dsp_1_U481" SOURCE="activation_accelerator.cpp:201" URAM="0" VARIABLE="mul2_i_i"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="2" LOOP="ROW_LOOP" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_3_max_dsp_1_U481" SOURCE="activation_accelerator.cpp:201" URAM="0" VARIABLE="re_rms"/>
+    </RtlModule>
+    <RtlModule CELL="inst/fsqrt_32ns_32ns_32_8_no_dsp_1_U483" BINDMODULE="activation_accelerator_fsqrt_32ns_32ns_32_8_no_dsp_1" DEPTH="1" TYPE="resource" MODULENAME="fsqrt_32ns_32ns_32_8_no_dsp_1" DISPNAME="fsqrt_32ns_32ns_32_8_no_dsp_1_U483" RTLNAME="activation_accelerator_fsqrt_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="237" LUT="416"/>
+      <LocalResources FF="32"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsqrt" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="ROW_LOOP" OPTYPE="fsqrt" PRAGMA="" RTLNAME="fsqrt_32ns_32ns_32_8_no_dsp_1_U483" SOURCE="/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13" URAM="0" VARIABLE="stddev"/>
+    </RtlModule>
+    <RtlModule CELL="inst/gmem0_m_axi_U" BINDMODULE="activation_accelerator_gmem0_m_axi" DEPTH="1" TYPE="rtl" MODULENAME="gmem0_m_axi" DISPNAME="gmem0_m_axi_U" RTLNAME="activation_accelerator_gmem0_m_axi">
+      <Resources BRAM="15" FF="1669" LUT="949"/>
+    </RtlModule>
+    <RtlModule CELL="inst/gmem1_m_axi_U" BINDMODULE="activation_accelerator_gmem1_m_axi" DEPTH="1" TYPE="rtl" MODULENAME="gmem1_m_axi" DISPNAME="gmem1_m_axi_U" RTLNAME="activation_accelerator_gmem1_m_axi">
+      <Resources BRAM="15" FF="1668" LUT="897"/>
+    </RtlModule>
+    <RtlModule CELL="inst/gmem2_m_axi_U" BINDMODULE="activation_accelerator_gmem2_m_axi" DEPTH="1" TYPE="rtl" MODULENAME="gmem2_m_axi" DISPNAME="gmem2_m_axi_U" RTLNAME="activation_accelerator_gmem2_m_axi">
+      <Resources BRAM="16" FF="1476" LUT="1165"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_251_1_fu_927" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_VITIS_LOOP_251_1" DISPNAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_251_1_fu_927" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_251_1">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="58" LUT="117"/>
+      <LocalResources FF="56" LUT="93"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_251_1_fu_927/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="24"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_402_1_fu_436" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_VITIS_LOOP_402_1" DISPNAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_402_1_fu_436" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_402_1">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="42" LUT="27"/>
+      <LocalResources FF="40" LUT="10"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_402_1_fu_436/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="18"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_427_3_fu_642" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_VITIS_LOOP_427_3" DISPNAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_427_3_fu_642" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_427_3">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="12" LUT="81"/>
+      <LocalResources FF="10" LUT="9"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_427_3_fu_642/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="72"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_451_4_fu_574" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_VITIS_LOOP_451_4" DISPNAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_451_4_fu_574" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_451_4">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="12" LUT="34"/>
+      <LocalResources FF="10" LUT="8"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_451_4_fu_574/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="26"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_465_5_fu_1299" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_VITIS_LOOP_465_5" DISPNAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_465_5_fu_1299" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_465_5">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="11" LUT="22"/>
+      <LocalResources FF="9" LUT="9"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_465_5_fu_1299/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="13"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_add_loop1_fu_1227" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_add_loop1" DISPNAME="grp_activation_accelerator_Pipeline_add_loop1_fu_1227" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_add_loop1">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="52" LUT="118"/>
+      <LocalResources FF="50" LUT="85"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_add_loop1_fu_1227/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="33"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_add_loop_fu_1155" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_add_loop" DISPNAME="grp_activation_accelerator_Pipeline_add_loop_fu_1155" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_add_loop">
+      <SubModules count="2">fadd_32ns_32ns_32_4_full_dsp_1_U375 flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources DSP="2" FF="171" LUT="194"/>
+      <LocalResources FF="50" LUT="37"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_add_loop_fu_1155/fadd_32ns_32ns_32_4_full_dsp_1_U375" BINDMODULE="activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1" DEPTH="2" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_4_full_dsp_1" DISPNAME="fadd_32ns_32ns_32_4_full_dsp_1_U375" RTLNAME="activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1">
+      <Resources DSP="2" FF="119" LUT="128"/>
+      <LocalResources FF="16"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="add_loop" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_4_full_dsp_1_U375" SOURCE="activation_accelerator.cpp:292" URAM="0" VARIABLE="sum_2"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_add_loop_fu_1155/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="29"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_layer_loop_0_fu_998" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_layer_loop_0" DISPNAME="grp_activation_accelerator_Pipeline_layer_loop_0_fu_998" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_layer_loop_0">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="50" LUT="56"/>
+      <LocalResources FF="48" LUT="43"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_layer_loop_0_fu_998/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="13"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_layer_loop_1_fu_1005" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_layer_loop_1" DISPNAME="grp_activation_accelerator_Pipeline_layer_loop_1_fu_1005" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_layer_loop_1">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="138" LUT="189"/>
+      <LocalResources FF="136" LUT="165"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_layer_loop_1_fu_1005/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="25"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_layer_loop_2_fu_1013" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_layer_loop_2" DISPNAME="grp_activation_accelerator_Pipeline_layer_loop_2_fu_1013" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_layer_loop_2">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="46" LUT="100"/>
+      <LocalResources FF="44" LUT="78"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_layer_loop_2_fu_1013/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="22"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_rms_loop_0_fu_920" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_rms_loop_0" DISPNAME="grp_activation_accelerator_Pipeline_rms_loop_0_fu_920" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_rms_loop_0">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="100" LUT="42"/>
+      <LocalResources FF="98" LUT="24"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_rms_loop_0_fu_920/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="19"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_silu_loop_fu_850" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_silu_loop" DISPNAME="grp_activation_accelerator_Pipeline_silu_loop_fu_850" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_silu_loop">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="164" LUT="201"/>
+      <LocalResources FF="162" LUT="183"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_silu_loop_fu_850/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="18"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_bf16_to_float_fu_710" DEPTH="1" TYPE="function" MODULENAME="bf16_to_float" DISPNAME="grp_bf16_to_float_fu_710" RTLNAME="activation_accelerator_bf16_to_float">
+      <SubModules count="2">flow_control_loop_pipe_sequential_init_U mux_325_16_1_1_U101</SubModules>
+      <Resources FF="23" LUT="168"/>
+      <LocalResources FF="21" LUT="3"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_bf16_to_float_fu_710/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="21"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_bf16_to_float_fu_710/mux_325_16_1_1_U101" BINDMODULE="activation_accelerator_mux_325_16_1_1" DEPTH="2" TYPE="rtl" MODULENAME="mux_325_16_1_1" DISPNAME="mux_325_16_1_1_U101" RTLNAME="activation_accelerator_mux_325_16_1_1">
+      <Resources LUT="144"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_bf16_to_float_fu_780" DEPTH="1" TYPE="function" MODULENAME="bf16_to_float" DISPNAME="grp_bf16_to_float_fu_780" RTLNAME="activation_accelerator_bf16_to_float">
+      <SubModules count="2">flow_control_loop_pipe_sequential_init_U mux_325_16_1_1_U101</SubModules>
+      <Resources FF="23" LUT="162"/>
+      <LocalResources FF="21" LUT="3"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_bf16_to_float_fu_780/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="15"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_bf16_to_float_fu_780/mux_325_16_1_1_U101" BINDMODULE="activation_accelerator_mux_325_16_1_1" DEPTH="2" TYPE="rtl" MODULENAME="mux_325_16_1_1" DISPNAME="mux_325_16_1_1_U101" RTLNAME="activation_accelerator_mux_325_16_1_1">
+      <Resources LUT="144"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_safe_softmax_fu_1085" DEPTH="1" TYPE="function" MODULENAME="float_safe_softmax" DISPNAME="grp_float_safe_softmax_fu_1085" RTLNAME="activation_accelerator_float_safe_softmax">
+      <SubModules count="4">exp_x_U grp_float_safe_softmax_Pipeline_softmax_loop_0_fu_104 grp_float_safe_softmax_Pipeline_softmax_loop_1_fu_112 grp_float_safe_softmax_Pipeline_softmax_loop_2_fu_121</SubModules>
+      <Resources BRAM="2" FF="349" LUT="374"/>
+      <LocalResources FF="27" LUT="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_safe_softmax_fu_1085/exp_x_U" BINDMODULE="activation_accelerator_float_safe_softmax_exp_x_RAM_S2P_BRAM_1R1W" DEPTH="2" TYPE="resource" MODULENAME="float_safe_softmax_exp_x_RAM_S2P_BRAM_1R1W" DISPNAME="exp_x_U" RTLNAME="activation_accelerator_float_safe_softmax_exp_x_RAM_S2P_BRAM_1R1W">
+      <Resources BRAM="2" LUT="1"/>
+      <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="exp_x_U" SOURCE="activation_accelerator.cpp:308" URAM="0" VARIABLE="exp_x"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_safe_softmax_fu_1085/grp_float_safe_softmax_Pipeline_softmax_loop_0_fu_104" DEPTH="2" TYPE="function" MODULENAME="float_safe_softmax_Pipeline_softmax_loop_0" DISPNAME="grp_float_safe_softmax_Pipeline_softmax_loop_0_fu_104" RTLNAME="activation_accelerator_float_safe_softmax_Pipeline_softmax_loop_0">
+      <SubModules count="2">fcmp_32ns_32ns_1_2_no_dsp_1_U258 flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="127" LUT="151"/>
+      <LocalResources FF="77" LUT="34"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_safe_softmax_fu_1085/grp_float_safe_softmax_Pipeline_softmax_loop_0_fu_104/fcmp_32ns_32ns_1_2_no_dsp_1_U258" BINDMODULE="activation_accelerator_fcmp_32ns_32ns_1_2_no_dsp_1" DEPTH="3" TYPE="rtl" MODULENAME="fcmp_32ns_32ns_1_2_no_dsp_1" DISPNAME="fcmp_32ns_32ns_1_2_no_dsp_1_U258" RTLNAME="activation_accelerator_fcmp_32ns_32ns_1_2_no_dsp_1">
+      <Resources FF="48" LUT="75"/>
+      <LocalResources FF="48" LUT="8"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_safe_softmax_fu_1085/grp_float_safe_softmax_Pipeline_softmax_loop_0_fu_104/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="42"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_safe_softmax_fu_1085/grp_float_safe_softmax_Pipeline_softmax_loop_1_fu_112" DEPTH="2" TYPE="function" MODULENAME="float_safe_softmax_Pipeline_softmax_loop_1" DISPNAME="grp_float_safe_softmax_Pipeline_softmax_loop_1_fu_112" RTLNAME="activation_accelerator_float_safe_softmax_Pipeline_softmax_loop_1">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="154" LUT="113"/>
+      <LocalResources FF="152" LUT="91"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_safe_softmax_fu_1085/grp_float_safe_softmax_Pipeline_softmax_loop_1_fu_112/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="22"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_safe_softmax_fu_1085/grp_float_safe_softmax_Pipeline_softmax_loop_2_fu_121" DEPTH="2" TYPE="function" MODULENAME="float_safe_softmax_Pipeline_softmax_loop_2" DISPNAME="grp_float_safe_softmax_Pipeline_softmax_loop_2_fu_121" RTLNAME="activation_accelerator_float_safe_softmax_Pipeline_softmax_loop_2">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="41" LUT="109"/>
+      <LocalResources FF="39" LUT="83"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_safe_softmax_fu_1085/grp_float_safe_softmax_Pipeline_softmax_loop_2_fu_121/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="26"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_10_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_10_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_10_U" SOURCE="activation_accelerator.cpp:382" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_10"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_11_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_11_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_11_U" SOURCE="activation_accelerator.cpp:382" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_11"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_12_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_12_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_12_U" SOURCE="activation_accelerator.cpp:382" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_12"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_13_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_13_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_13_U" SOURCE="activation_accelerator.cpp:382" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_13"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_14_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_14_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_14_U" SOURCE="activation_accelerator.cpp:382" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_14"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_15_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_15_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_15_U" SOURCE="activation_accelerator.cpp:382" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_15"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_16_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_16_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_16_U" SOURCE="activation_accelerator.cpp:382" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_16"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_17_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_17_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_17_U" SOURCE="activation_accelerator.cpp:382" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_17"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_18_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_18_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_18_U" SOURCE="activation_accelerator.cpp:382" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_18"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_19_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_19_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_19_U" SOURCE="activation_accelerator.cpp:382" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_19"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_20_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_20_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_20_U" SOURCE="activation_accelerator.cpp:382" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_20"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_21_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_21_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_21_U" SOURCE="activation_accelerator.cpp:382" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_21"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_22_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_22_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_22_U" SOURCE="activation_accelerator.cpp:382" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_22"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_23_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_23_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_23_U" SOURCE="activation_accelerator.cpp:382" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_23"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_24_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_24_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_24_U" SOURCE="activation_accelerator.cpp:382" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_24"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_25_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_25_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_25_U" SOURCE="activation_accelerator.cpp:382" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_25"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_26_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_26_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_26_U" SOURCE="activation_accelerator.cpp:382" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_26"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_27_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_27_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_27_U" SOURCE="activation_accelerator.cpp:382" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_27"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_28_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_28_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_28_U" SOURCE="activation_accelerator.cpp:382" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_28"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_29_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_29_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_29_U" SOURCE="activation_accelerator.cpp:382" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_29"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_30_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_30_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_30_U" SOURCE="activation_accelerator.cpp:382" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_30"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_31_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_31_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_31_U" SOURCE="activation_accelerator.cpp:382" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_31"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_10_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_10_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_10_U" SOURCE="activation_accelerator.cpp:383" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_10"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_11_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_11_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_11_U" SOURCE="activation_accelerator.cpp:383" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_11"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_12_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_12_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_12_U" SOURCE="activation_accelerator.cpp:383" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_12"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_13_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_13_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_13_U" SOURCE="activation_accelerator.cpp:383" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_13"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_14_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_14_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_14_U" SOURCE="activation_accelerator.cpp:383" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_14"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_15_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_15_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_15_U" SOURCE="activation_accelerator.cpp:383" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_15"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_16_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_16_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_16_U" SOURCE="activation_accelerator.cpp:383" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_16"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_17_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_17_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_17_U" SOURCE="activation_accelerator.cpp:383" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_17"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_18_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_18_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_18_U" SOURCE="activation_accelerator.cpp:383" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_18"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_19_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_19_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_19_U" SOURCE="activation_accelerator.cpp:383" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_19"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_20_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_20_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_20_U" SOURCE="activation_accelerator.cpp:383" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_20"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_21_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_21_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_21_U" SOURCE="activation_accelerator.cpp:383" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_21"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_22_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_22_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_22_U" SOURCE="activation_accelerator.cpp:383" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_22"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_23_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_23_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_23_U" SOURCE="activation_accelerator.cpp:383" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_23"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_24_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_24_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_24_U" SOURCE="activation_accelerator.cpp:383" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_24"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_25_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_25_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_25_U" SOURCE="activation_accelerator.cpp:383" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_25"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_26_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_26_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_26_U" SOURCE="activation_accelerator.cpp:383" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_26"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_27_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_27_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_27_U" SOURCE="activation_accelerator.cpp:383" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_27"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_28_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_28_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_28_U" SOURCE="activation_accelerator.cpp:383" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_28"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_29_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_29_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_29_U" SOURCE="activation_accelerator.cpp:383" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_29"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_30_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_30_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_30_U" SOURCE="activation_accelerator.cpp:383" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_30"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_31_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_31_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_31_U" SOURCE="activation_accelerator.cpp:383" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_31"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_10_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_10_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_10_U" SOURCE="activation_accelerator.cpp:384" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_10"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_11_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_11_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_11_U" SOURCE="activation_accelerator.cpp:384" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_11"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_12_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_12_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_12_U" SOURCE="activation_accelerator.cpp:384" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_12"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_13_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_13_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_13_U" SOURCE="activation_accelerator.cpp:384" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_13"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_14_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_14_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_14_U" SOURCE="activation_accelerator.cpp:384" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_14"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_15_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_15_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_15_U" SOURCE="activation_accelerator.cpp:384" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_15"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_16_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_16_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_16_U" SOURCE="activation_accelerator.cpp:384" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_16"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_17_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_17_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_17_U" SOURCE="activation_accelerator.cpp:384" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_17"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_18_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_18_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_18_U" SOURCE="activation_accelerator.cpp:384" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_18"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_19_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_19_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_19_U" SOURCE="activation_accelerator.cpp:384" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_19"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_20_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_20_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_20_U" SOURCE="activation_accelerator.cpp:384" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_20"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_21_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_21_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_21_U" SOURCE="activation_accelerator.cpp:384" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_21"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_22_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_22_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_22_U" SOURCE="activation_accelerator.cpp:384" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_22"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_23_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_23_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_23_U" SOURCE="activation_accelerator.cpp:384" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_23"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_24_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_24_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_24_U" SOURCE="activation_accelerator.cpp:384" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_24"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_25_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_25_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_25_U" SOURCE="activation_accelerator.cpp:384" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_25"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_26_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_26_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_26_U" SOURCE="activation_accelerator.cpp:384" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_26"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_27_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_27_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_27_U" SOURCE="activation_accelerator.cpp:384" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_27"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_28_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_28_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_28_U" SOURCE="activation_accelerator.cpp:384" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_28"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_29_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_29_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_29_U" SOURCE="activation_accelerator.cpp:384" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_29"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_30_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_30_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_30_U" SOURCE="activation_accelerator.cpp:384" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_30"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_31_U" BINDMODULE="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DEPTH="1" TYPE="resource" MODULENAME="activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb" DISPNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_31_U" RTLNAME="activation_accelerator_activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_RAM_2Pbkb">
+      <Resources BRAM="1" LUT="8"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_31_U" SOURCE="activation_accelerator.cpp:384" URAM="0" VARIABLE="p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_31"/>
+    </RtlModule>
+    <RtlModule CELL="inst/xt_U" BINDMODULE="activation_accelerator_xt_RAM_S2P_BRAM_1R1W" DEPTH="1" TYPE="resource" MODULENAME="xt_RAM_S2P_BRAM_1R1W" DISPNAME="xt_U" RTLNAME="activation_accelerator_xt_RAM_S2P_BRAM_1R1W">
+      <Resources BRAM="1" LUT="9"/>
+      <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="pragma" RTLNAME="xt_U" SOURCE="activation_accelerator.cpp:391" URAM="0" VARIABLE="xt"/>
+    </RtlModule>
+    <RtlModule CELL="inst/yt_U" BINDMODULE="activation_accelerator_xt_RAM_S2P_BRAM_1R1W" DEPTH="1" TYPE="resource" MODULENAME="xt_RAM_S2P_BRAM_1R1W" DISPNAME="yt_U" RTLNAME="activation_accelerator_xt_RAM_S2P_BRAM_1R1W">
+      <Resources BRAM="1" LUT="13"/>
+      <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="pragma" RTLNAME="yt_U" SOURCE="activation_accelerator.cpp:392" URAM="0" VARIABLE="yt"/>
+    </RtlModule>
+  </RtlModules>
+  <TimingPaths>
+    <TPATH DATAPATH_DELAY="6.407" DATAPATH_LOGIC_DELAY="3.442" DATAPATH_NET_DELAY="2.965" ENDPOINT_PIN="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[14].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[23]/D" LOGIC_LEVELS="24" MAX_FANOUT="27" SLACK="3.589" STARTPOINT_PIN="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[9].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[24]/C">
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[9].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[24]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/CHAIN_GEN[1].C_MUX.CARRY_MUX_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[8].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[24].Q_XOR.SUM_XOR_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[11].ADDSUB/CHAIN_GEN[1].C_MUX.CARRY_MUX_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[11].ADDSUB/ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[11].ADDSUB/ADDSUB/CHAIN_GEN[8].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[11].ADDSUB/ADDSUB/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[11].ADDSUB/ADDSUB/CHAIN_GEN[24].Q_XOR.SUM_XOR_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[12].ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[12].ADDSUB/ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[12].ADDSUB/ADDSUB/CHAIN_GEN[8].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[12].ADDSUB/ADDSUB/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[12].ADDSUB/ADDSUB/CHAIN_GEN[24].Q_XOR.SUM_XOR_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[13].ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[13].ADDSUB/ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[13].ADDSUB/ADDSUB/CHAIN_GEN[8].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[13].ADDSUB/ADDSUB/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[13].ADDSUB/ADDSUB/CHAIN_GEN[24].Q_XOR.SUM_XOR_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[14].ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[14].ADDSUB/ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[14].ADDSUB/ADDSUB/CHAIN_GEN[8].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[14].ADDSUB/ADDSUB/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[14].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[23]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="6.407" DATAPATH_LOGIC_DELAY="3.414" DATAPATH_NET_DELAY="2.993" ENDPOINT_PIN="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[14].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[24]/D" LOGIC_LEVELS="25" MAX_FANOUT="27" SLACK="3.589" STARTPOINT_PIN="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[9].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[24]/C">
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[9].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[24]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/CHAIN_GEN[1].C_MUX.CARRY_MUX_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[8].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[24].Q_XOR.SUM_XOR_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[11].ADDSUB/CHAIN_GEN[1].C_MUX.CARRY_MUX_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[11].ADDSUB/ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[11].ADDSUB/ADDSUB/CHAIN_GEN[8].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[11].ADDSUB/ADDSUB/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[11].ADDSUB/ADDSUB/CHAIN_GEN[24].Q_XOR.SUM_XOR_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[12].ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[12].ADDSUB/ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[12].ADDSUB/ADDSUB/CHAIN_GEN[8].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[12].ADDSUB/ADDSUB/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[12].ADDSUB/ADDSUB/CHAIN_GEN[24].Q_XOR.SUM_XOR_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[13].ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[13].ADDSUB/ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[13].ADDSUB/ADDSUB/CHAIN_GEN[8].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[13].ADDSUB/ADDSUB/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[13].ADDSUB/ADDSUB/CHAIN_GEN[24].Q_XOR.SUM_XOR_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[14].ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[14].ADDSUB/ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[14].ADDSUB/ADDSUB/CHAIN_GEN[8].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[14].ADDSUB/ADDSUB/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[14].ADDSUB/ADDSUB/CHAIN_GEN[24].Q_XOR.SUM_XOR_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[14].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[24]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="6.403" DATAPATH_LOGIC_DELAY="3.312" DATAPATH_NET_DELAY="3.091" ENDPOINT_PIN="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[23]/D" LOGIC_LEVELS="24" MAX_FANOUT="27" SLACK="3.594" STARTPOINT_PIN="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[14].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[24]/C">
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[14].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[24]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[15].ADDSUB/CHAIN_GEN[7].C_MUX.CARRY_MUX_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[15].ADDSUB/ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[15].ADDSUB/ADDSUB/CHAIN_GEN[8].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[15].ADDSUB/ADDSUB/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[15].ADDSUB/ADDSUB/CHAIN_GEN[24].Q_XOR.SUM_XOR_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[16].ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[16].ADDSUB/ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[16].ADDSUB/ADDSUB/CHAIN_GEN[8].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[16].ADDSUB/ADDSUB/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[16].ADDSUB/ADDSUB/CHAIN_GEN[24].Q_XOR.SUM_XOR_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[17].ADDSUB/CHAIN_GEN[1].C_MUX.CARRY_MUX_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[17].ADDSUB/ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[17].ADDSUB/ADDSUB/CHAIN_GEN[8].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[17].ADDSUB/ADDSUB/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[17].ADDSUB/ADDSUB/CHAIN_GEN[24].Q_XOR.SUM_XOR_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/CHAIN_GEN[2].C_MUX.CARRY_MUX_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/ADDSUB/CHAIN_GEN[8].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/ADDSUB/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/ADDSUB/CHAIN_GEN[24].Q_XOR.SUM_XOR_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/CHAIN_GEN[8].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[23]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="6.403" DATAPATH_LOGIC_DELAY="3.284" DATAPATH_NET_DELAY="3.119" ENDPOINT_PIN="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[24]/D" LOGIC_LEVELS="25" MAX_FANOUT="27" SLACK="3.594" STARTPOINT_PIN="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[14].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[24]/C">
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[14].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[24]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[15].ADDSUB/CHAIN_GEN[7].C_MUX.CARRY_MUX_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[15].ADDSUB/ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[15].ADDSUB/ADDSUB/CHAIN_GEN[8].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[15].ADDSUB/ADDSUB/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[15].ADDSUB/ADDSUB/CHAIN_GEN[24].Q_XOR.SUM_XOR_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[16].ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[16].ADDSUB/ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[16].ADDSUB/ADDSUB/CHAIN_GEN[8].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[16].ADDSUB/ADDSUB/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[16].ADDSUB/ADDSUB/CHAIN_GEN[24].Q_XOR.SUM_XOR_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[17].ADDSUB/CHAIN_GEN[1].C_MUX.CARRY_MUX_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[17].ADDSUB/ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[17].ADDSUB/ADDSUB/CHAIN_GEN[8].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[17].ADDSUB/ADDSUB/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[17].ADDSUB/ADDSUB/CHAIN_GEN[24].Q_XOR.SUM_XOR_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/CHAIN_GEN[2].C_MUX.CARRY_MUX_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/ADDSUB/CHAIN_GEN[8].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/ADDSUB/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[18].ADDSUB/ADDSUB/CHAIN_GEN[24].Q_XOR.SUM_XOR_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/CHAIN_GEN[8].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/CHAIN_GEN[24].Q_XOR.SUM_XOR_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[19].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[24]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="6.396" DATAPATH_LOGIC_DELAY="3.432" DATAPATH_NET_DELAY="2.964" ENDPOINT_PIN="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[14].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[21]/D" LOGIC_LEVELS="24" MAX_FANOUT="27" SLACK="3.600" STARTPOINT_PIN="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[9].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[24]/C">
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[9].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[24]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/CHAIN_GEN[1].C_MUX.CARRY_MUX_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[8].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[10].ADDSUB/ADDSUB/CHAIN_GEN[24].Q_XOR.SUM_XOR_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[11].ADDSUB/CHAIN_GEN[1].C_MUX.CARRY_MUX_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[11].ADDSUB/ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[11].ADDSUB/ADDSUB/CHAIN_GEN[8].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[11].ADDSUB/ADDSUB/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[11].ADDSUB/ADDSUB/CHAIN_GEN[24].Q_XOR.SUM_XOR_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[12].ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[12].ADDSUB/ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[12].ADDSUB/ADDSUB/CHAIN_GEN[8].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[12].ADDSUB/ADDSUB/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[12].ADDSUB/ADDSUB/CHAIN_GEN[24].Q_XOR.SUM_XOR_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[13].ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[13].ADDSUB/ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[13].ADDSUB/ADDSUB/CHAIN_GEN[8].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[13].ADDSUB/ADDSUB/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[13].ADDSUB/ADDSUB/CHAIN_GEN[24].Q_XOR.SUM_XOR_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[14].ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[14].ADDSUB/ADDSUB/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[14].ADDSUB/ADDSUB/CHAIN_GEN[8].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[14].ADDSUB/ADDSUB/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[14].ADDSUB/ADDSUB/Q_DEL/i_pipe/opt_has_pipe.first_q_reg[21]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
+    </TPATH>
+  </TimingPaths>
+  <VivadoReportFiles>
+    <ReportFile TYPE="design_analysis" PATH="verilog/report/activation_accelerator_design_analysis_routed.rpt"/>
+    <ReportFile TYPE="failfast" PATH="verilog/report/activation_accelerator_failfast_routed.rpt"/>
+    <ReportFile TYPE="status" PATH="verilog/report/activation_accelerator_status_routed.rpt"/>
+    <ReportFile TYPE="timing" PATH="verilog/report/activation_accelerator_timing_routed.rpt"/>
+    <ReportFile TYPE="timing_paths" PATH="verilog/report/activation_accelerator_timing_paths_routed.rpt"/>
+    <ReportFile TYPE="utilization" PATH="verilog/report/activation_accelerator_utilization_routed.rpt"/>
+    <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/activation_accelerator_utilization_hierarchical_routed.rpt"/>
+  </VivadoReportFiles>
+  <GeneralInfo NAME="General Information">
+    <item NAME="Date" VALUE="Sun Sep 28 12:09:48 CST 2025"/>
+    <item NAME="Version" VALUE="2022.2 (Build 3670227 on Oct 13 2022)"/>
+    <item NAME="Project" VALUE="activation_accelerator"/>
+    <item NAME="Solution" VALUE="baseline (Vivado IP Flow Target)"/>
+    <item NAME="Product family" VALUE="zynquplus"/>
+    <item NAME="Target device" VALUE="xck26-sfvc784-2LV-c"/>
+  </GeneralInfo>
+  <RunOptions NAME="Run Constraints &amp; Options">
+    <General NAME="Design Constraints &amp; Options">
+      <item NAME="Place &amp; Route target clock" VALUE="10 ns"/>
+      <item NAME="C-Synthesis target clock" VALUE="10 ns"/>
+      <item NAME="C-Synthesis uncertainty" VALUE="27%"/>
+      <item NAME="config_export -ip_xdc_file" VALUE=""/>
+      <item NAME="config_export -ip_xdc_ooc_file" VALUE=""/>
+    </General>
+    <Syn NAME="RTL Synthesis Options">
+      <item NAME="config_export -vivado_synth_strategy" VALUE="default"/>
+      <item NAME="config_export -vivado_synth_design_args" VALUE="-directive sdx_optimization_effort_high"/>
+    </Syn>
+    <Impl NAME="Place &amp; Route Options">
+      <item NAME="config_export -vivado_impl_strategy" VALUE="default"/>
+      <item NAME="config_export -vivado_phys_opt" VALUE="none"/>
+      <item NAME="config_export -vivado_pblock" VALUE=""/>
+    </Impl>
+    <Reporting NAME="Reporting Options">
+      <item NAME="config_export -vivado_report_level" VALUE="2"/>
+      <item NAME="config_export -vivado_max_timing_paths" VALUE="10"/>
+    </Reporting>
+  </RunOptions>
+</profile>
+

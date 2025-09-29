@@ -1364,7 +1364,7 @@ Diagnostics:
     FilePath:        activation_accelerator.cpp
     Replacements:    
       - FilePath:        /data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp
-        Offset:          2359520
+        Offset:          2359511
         Length:          0
         ReplacementText: 'VITIS_LOOP_402_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1373,7 +1373,7 @@ Diagnostics:
     FilePath:        activation_accelerator.cpp
     Replacements:    
       - FilePath:        /data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp
-        Offset:          2359682
+        Offset:          2359673
         Length:          0
         ReplacementText: 'VITIS_LOOP_407_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1382,7 +1382,7 @@ Diagnostics:
     FilePath:        activation_accelerator.cpp
     Replacements:    
       - FilePath:        /data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp
-        Offset:          2360146
+        Offset:          2360137
         Length:          0
         ReplacementText: 'VITIS_LOOP_427_3: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1391,7 +1391,7 @@ Diagnostics:
     FilePath:        activation_accelerator.cpp
     Replacements:    
       - FilePath:        /data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp
-        Offset:          2360826
+        Offset:          2360817
         Length:          0
         ReplacementText: 'VITIS_LOOP_451_4: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1400,7 +1400,7 @@ Diagnostics:
     FilePath:        activation_accelerator.cpp
     Replacements:    
       - FilePath:        /data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp
-        Offset:          2361121
+        Offset:          2361112
         Length:          0
         ReplacementText: 'VITIS_LOOP_465_5: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1409,7 +1409,7 @@ Diagnostics:
     FilePath:        activation_accelerator.cpp
     Replacements:    
       - FilePath:        /data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp
-        Offset:          2361215
+        Offset:          2361206
         Length:          0
         ReplacementText: 'VITIS_LOOP_468_6: '
 ...
