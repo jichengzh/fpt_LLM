@@ -2,17 +2,24 @@ import numpy as np, torch
 import pandas as pd
 
 N, D = 64, 768
-path = "/home/xushaohui/FPT/fpt_LLM/prj/testvector_example/bf16_vectors2/hls_output_config_0.bin"
+
+#启动命令：python test_data_output.py
+
+# Name = "ref_softmax_bf16"
+# Name = "X_test_tensor_bf16"
+Name = "hls_output_config_0"
+# Name = "golden_out_config_0_bf16"
+path = "/home/xushaohui/FPT/fpt_LLM/prj/testvector_example/bf16_vectors2/"+ Name + ".bin" 
 
 
 # 读作 uint16 并 reshape
 bits = np.fromfile(path, dtype=np.uint16).reshape(N, D)
 
 # ✅ 先转换为 torch 支持的 dtype（int32），保持 bit pattern 不变
-t_int = torch.from_numpy(bits.astype(np.int32))
+t_int16 = torch.from_numpy(bits.view(np.int16))
 
 # ✅ 重新解释为 bfloat16
-t_bf16 = t_int.view(torch.bfloat16)
+t_bf16 = t_int16.view(torch.bfloat16)
 
 # ✅ 转换为 float32 便于查看数值
 t_f32 = t_bf16.to(torch.float32).numpy()
@@ -34,6 +41,8 @@ t_f32 = t_bf16.to(torch.float32).numpy()
 
 df = pd.DataFrame(t_f32)
 
+df = df.fillna(0.0)
+
 # 3. 将 DataFrame 输出为 Excel 文件
-df.to_excel("/home/xushaohui/FPT/fpt_LLM/seedata/hls_output_config_0.xlsx", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
+df.to_csv("/home/xushaohui/FPT/fpt_LLM/seedata/" + Name + ".csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
 
