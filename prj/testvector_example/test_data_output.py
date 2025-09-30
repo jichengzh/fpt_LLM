@@ -6,8 +6,8 @@ N, D = 64, 768
 #启动命令：python test_data_output.py
 
 # Name = "ref_softmax_bf16"
-# Name = "X_test_tensor_bf16"
-Name = "hls_output_config_0"
+Name = "X_test_tensor_bf16"
+# Name = "hls_output_config_0"
 # Name = "golden_out_config_0_bf16"
 path = "/home/xushaohui/FPT/fpt_LLM/prj/testvector_example/bf16_vectors2/"+ Name + ".bin" 
 
@@ -41,7 +41,7 @@ t_f32 = t_bf16.to(torch.float32).numpy()
 
 df = pd.DataFrame(t_f32)
 
-df = df.fillna(0.0)
+# df = df.fillna(0.0)
 
 # 3. 将 DataFrame 输出为 Excel 文件
 df.to_csv("/home/xushaohui/FPT/fpt_LLM/seedata/" + Name + ".csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
