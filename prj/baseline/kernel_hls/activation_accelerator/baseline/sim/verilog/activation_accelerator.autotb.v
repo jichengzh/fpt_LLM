@@ -41,7 +41,7 @@ module `AUTOTB_TOP;
 
 parameter AUTOTB_TRANSACTION_NUM = 7;
 parameter PROGRESS_TIMEOUT = 10000000;
-parameter LATENCY_ESTIMATION = 401293;
+parameter LATENCY_ESTIMATION = 400905;
 parameter LENGTH_config_r = 1;
 parameter LENGTH_gmem0 = 1536;
 parameter LENGTH_gmem1 = 1536;
@@ -1166,6 +1166,12 @@ endtask
 `ifndef POST_SYN
 
 `endif
+
+AESL_deadlock_detector deadlock_detector(
+    .dl_reset(AESL_reset),
+    .all_finish(all_finish),
+    .dl_clock(AESL_clock));
+
 ///////////////////////////////////////////////////////
 // dataflow status monitor
 ///////////////////////////////////////////////////////

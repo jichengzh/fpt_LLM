@@ -55030,7 +55030,146 @@ namespace hls {
 
 };
 # 5 "activation_accelerator.cpp" 2
-# 19 "activation_accelerator.cpp"
+# 1 "/data/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int.h" 1
+# 6 "activation_accelerator.cpp" 2
+# 1 "/data/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_stream.h" 1
+# 15 "/data/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_stream.h"
+# 1 "/data/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_stream_39.h" 1
+# 26 "/data/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_stream_39.h"
+namespace hls {
+# 52 "/data/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_stream_39.h"
+template<typename __STREAM_T__, int DEPTH=0>
+class stream;
+
+template<typename __STREAM_T__>
+class stream<__STREAM_T__, 0>
+{
+  public:
+    using value_type = __STREAM_T__;
+
+    inline __attribute__((always_inline)) __attribute__((nodebug)) stream() {
+      __fpga_set_stream_depth(&this->V, 0);
+    }
+
+    inline __attribute__((always_inline)) __attribute__((nodebug)) stream(const char* name) {
+      (void)(name);
+      __fpga_set_stream_depth(&this->V, 0);
+    }
+
+
+  private:
+    inline __attribute__((always_inline)) __attribute__((nodebug)) stream(const stream< __STREAM_T__ >& chn):V(chn.V) {
+    }
+
+    inline __attribute__((always_inline)) __attribute__((nodebug)) stream& operator= (const stream< __STREAM_T__ >& chn) {
+        V = chn.V;
+        return *this;
+    }
+
+  public:
+
+    inline __attribute__((always_inline)) __attribute__((nodebug)) void operator >> (__STREAM_T__& rdata) {
+        read(rdata);
+    }
+
+    inline __attribute__((always_inline)) __attribute__((nodebug)) void operator << (const __STREAM_T__& wdata) {
+        write(wdata);
+    }
+
+
+  public:
+
+    inline __attribute__((always_inline)) __attribute__((nodebug)) bool empty() const {
+        return !__fpga_fifo_not_empty(&V);
+    }
+
+    inline __attribute__((always_inline)) __attribute__((nodebug)) bool full() const {
+        return !__fpga_fifo_not_full(&V);
+    }
+
+
+    inline __attribute__((always_inline)) __attribute__((nodebug)) void read(__STREAM_T__& dout) {
+        __fpga_fifo_pop(&V, &dout);
+    }
+
+
+    inline __attribute__((noinline)) __attribute__((nodebug)) bool read_dep(__STREAM_T__& dout, volatile bool flag) {
+        __fpga_fifo_pop(&V, &dout);
+        return flag;
+    }
+
+    inline __attribute__((always_inline)) __attribute__((nodebug)) __STREAM_T__ read() {
+        __STREAM_T__ tmp;
+        read(tmp);
+        return tmp;
+    }
+
+
+    inline __attribute__((always_inline)) __attribute__((nodebug)) bool read_nb(__STREAM_T__& dout) {
+        __STREAM_T__ tmp;
+
+        if (__fpga_fifo_nb_pop(&V, &tmp)) {
+            dout = tmp;
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+    inline __attribute__((always_inline)) __attribute__((nodebug)) void write(const __STREAM_T__& din) {
+        __fpga_fifo_push(&V, &din);
+    }
+
+
+    inline __attribute__((noinline)) __attribute__((nodebug)) bool write_dep(const __STREAM_T__& din, volatile bool flag) {
+        __fpga_fifo_push(&V, &din);
+        return flag;
+    }
+
+
+    inline __attribute__((always_inline)) __attribute__((nodebug)) bool write_nb(const __STREAM_T__& din) {
+        return __fpga_fifo_nb_push(&V, &din);
+    }
+
+
+    inline __attribute__((always_inline)) __attribute__((nodebug)) unsigned size() const {
+        return __fpga_fifo_size(&V);
+    }
+
+
+    inline __attribute__((always_inline)) __attribute__((nodebug)) unsigned capacity() const {
+        return __fpga_fifo_capacity(&V);
+    }
+
+
+    void set_name(const char* name) { (void)(name); }
+
+  public:
+    __STREAM_T__ V __attribute__((no_ctor));
+};
+
+template<typename __STREAM_T__, int DEPTH>
+class stream : public stream<__STREAM_T__, 0> {
+  public:
+    inline __attribute__((always_inline)) __attribute__((nodebug)) stream() {
+      __fpga_set_stream_depth(&this->V, DEPTH);
+    }
+
+    inline __attribute__((always_inline)) __attribute__((nodebug)) stream(const char* name) {
+      (void)(name);
+      __fpga_set_stream_depth(&this->V, DEPTH);
+    }
+};
+}
+# 16 "/data/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_stream.h" 2
+# 7 "activation_accelerator.cpp" 2
+
+
+typedef ap_uint<16> uint16;
+using bf16 = uint16;
+typedef ap_uint<512> u512;
+# 25 "activation_accelerator.cpp"
 const int NROWS = 64;
 const int COLS = 768;
 const int N = NROWS * COLS;
@@ -55039,7 +55178,6 @@ const int VEC = 32;
 const int NW = N / VEC;
 const int TILE = COLS;
 const int TILEW = TILE / VEC;
-
 
 enum : int {
     ACT_SOFTMAX = 0,
@@ -55066,6 +55204,24 @@ static inline int row_op_select(int row, int config) {
     }
 
     return config;
+}
+
+
+static inline void unpack_word(u512 w, bf16 lane[VEC]) {
+#pragma HLS INLINE
+ VITIS_LOOP_64_1: for (int v = 0; v < VEC; ++v) {
+#pragma HLS UNROLL
+ lane[v] = w.range(16*(v+1)-1, 16*v);
+    }
+}
+static inline u512 pack_word(const bf16 lane[VEC]) {
+#pragma HLS INLINE
+ u512 w = 0;
+    VITIS_LOOP_72_1: for (int v = 0; v < VEC; ++v) {
+#pragma HLS UNROLL
+ w.range(16*(v+1)-1, 16*v) = lane[v];
+    }
+    return w;
 }
 
 
@@ -55132,7 +55288,7 @@ uint16 bf16add(uint16 a_bits, uint16 b_bits) {
 
 
 
-    VITIS_LOOP_120_1: while (result_mantissa < (0x80 << precision_shift) && max_exp > 0) {
+    VITIS_LOOP_143_1: while (result_mantissa < (0x80 << precision_shift) && max_exp > 0) {
         result_mantissa <<= 1;
         max_exp--;
 
@@ -55186,20 +55342,38 @@ uint16 bf16add(uint16 a_bits, uint16 b_bits) {
 }
 
 
-
-void bf16_to_float(const uint16* in, float* out, int len) {
-#pragma HLS INLINE off
- bf16_to_float_loop:
-    for (int i = 0; i < len; ++i) {
-#pragma HLS PIPELINE II=1
- uint32_t x_f32 = ((uint32_t)in[i]) << 16;
-        out[i] = *(float*)&x_f32;
-    }
+static inline float bf16_to_f32_scalar(uint16 b) {
+    ap_uint<32> w = ((ap_uint<32>)b) << 16;
+    return *reinterpret_cast<float*>(&w);
+}
+static inline uint16 f32_to_bf16_scalar(float x) {
+    ap_uint<32> w = *reinterpret_cast<ap_uint<32>*>(&x);
+    return (uint16_t)(w >> 16);
 }
 
+
+static void bf16_to_float(const uint16* in, float* out, int len) {
+#pragma HLS INLINE
+ convert_loop:
+    for (int i = 0; i < len; ++i) {
+#pragma HLS PIPELINE II=1
+ ap_uint<32> xw = ((ap_uint<32>)in[i]) << 16;
+        out[i] = *reinterpret_cast<float*>(&xw);
+    }
+}
+static void float_to_bf16(const float* in, uint16* out, int len) {
+#pragma HLS INLINE
+ convert_loop2:
+    for (int i = 0; i < len; ++i) {
+#pragma HLS PIPELINE II=1
+ ap_uint<32> w = *reinterpret_cast<const ap_uint<32>*>(&in[i]);
+        out[i] = (uint16_t)(w >> 16);
+    }
+}
+# 237 "activation_accelerator.cpp"
 float Q_rsqrt(float number)
 {
- long i;
+
  float x2, y;
  const float threehalfs = 1.5F;
  x2 = number * 0.5F;
@@ -55207,6 +55381,7 @@ float Q_rsqrt(float number)
 
 
 
+    int32_t i = *reinterpret_cast<int32_t*>(&y);
  i = * ( long * ) &y;
 
  i = 0x5f3759df - ( i >> 1 );
@@ -55222,25 +55397,26 @@ float Q_rsqrt(float number)
 
 float fast_exp1(float x) {
 x = 1.0 + x / 256;
-VITIS_LOOP_210_1: for (int i = 0; i < 8; i++) {
+VITIS_LOOP_263_1: for (int i = 0; i < 8; i++) {
 x *= x;
 }
 return x;
 }
-# 227 "activation_accelerator.cpp"
+
+
 void float_silu(const float* x, uint16* y, int len) {
-    silu_loop:
+#pragma HLS INLINE
+ silu_loop:
     for (int i = 0; i < len; ++i) {
 #pragma HLS PIPELINE II=1
  float sig = 1.0f / (1.0f + hls::expf(-x[i]));
         float val = x[i] * sig;
-        uint32_t* y_f32_ptr = (uint32_t*)&val;
-        y[i] = (*y_f32_ptr) >> 16;
+        y[i] = f32_to_bf16_scalar(x[i] * sig);
     }
 }
 
 
-void float_rms_norm(const float* x, uint16* y_bf16, int len) {
+void float_rmsnorm(const float* x, uint16* y_bf16, int len) {
     const float eps = 1e-6f;
     float sum_sq = 0.0f;
     rms_loop_0:
@@ -55251,17 +55427,15 @@ void float_rms_norm(const float* x, uint16* y_bf16, int len) {
     float mean_sq = sum_sq / len;
     float rms = mean_sq + eps;
     float re_rms = Q_rsqrt(rms);
-
-    VITIS_LOOP_251_1: for (int i = 0; i < len; ++i) {
-        float y = x[i] * re_rms;
-        uint32_t* y_f32_ptr = (uint32_t*)&y;
-        y_bf16[i] = (*y_f32_ptr) >> 16;
+    rms_loop_1:
+    for (int i = 0; i < len; ++i) {
+        y_bf16[i] = f32_to_bf16_scalar(x[i] * re_rms);
     }
 }
 
 
 
-void float_layer_norm(const float* x, uint16* y_bf16, int len) {
+void float_layernorm(const float* x, uint16* y_bf16, int len) {
     const float eps = 1e-6f;
     float sum = 0.0f;
     layer_loop_0:
@@ -55277,171 +55451,220 @@ void float_layer_norm(const float* x, uint16* y_bf16, int len) {
  float diff = x[i] - mean;
         var += diff * diff;
     }
-    var /= len;
-    float stddev = hls::sqrtf(var + eps);
-    layer_loop_2:
+    float inv_std = hls::rsqrtf(var / len + eps);
+    ln_2:
     for (int i = 0; i < len; ++i) {
 #pragma HLS PIPELINE II=1
- float y = (x[i] - mean) / stddev;
-        uint32_t* y_f32_ptr = (uint32_t*)&y;
-        y_bf16[i] = (*y_f32_ptr) >> 16;
+ y_bf16[i] = f32_to_bf16_scalar((x[i] - mean) * inv_std);
     }
 }
 
 
 void float_add(const float* x, const float* y, uint16* out, int len) {
-    add_loop:
+#pragma HLS INLINE
+ add_loop:
     for (int i = 0; i < len; ++i) {
 #pragma HLS PIPELINE II=1
  float sum = x[i] + y[i];
-        uint32_t* sum_f32_ptr = (uint32_t*)&sum;
-        out[i] = (*sum_f32_ptr) >> 16;
+        out[i] = f32_to_bf16_scalar(sum);
     }
 }
 
 
-void float_safe_softmax(const float* x, uint16* y_bf16, int len) {
-#pragma HLS INLINE off
- float max_val = x[0];
-    softmax_loop_0:
+void float_softmax(const float* x, uint16* y_bf16, int len) {
+#pragma HLS INLINE
+ float xmax = x[0];
+    smx_0:
     for (int i = 1; i < len; ++i) {
 #pragma HLS PIPELINE II=1
- if (x[i] > max_val) max_val = x[i];
+ xmax = hls::fmaxf(xmax, x[i]);
     }
-    float sum = 0.0f;
-    float exp_x[TILE];
-#pragma HLS BIND_STORAGE variable=exp_x type=ram_s2p impl=bram
- softmax_loop_1:
+    float sum = 0.f;
+
+    smx_1:
     for (int i = 0; i < len; ++i) {
 #pragma HLS PIPELINE II=1
- exp_x[i] = hls::expf(x[i] - max_val);
-        sum += exp_x[i];
+ float e = hls::expf(x[i] - xmax);
+        sum += e;
+
     }
-    softmax_loop_2:
+    smx_2:
     for (int i = 0; i < len; ++i) {
 #pragma HLS PIPELINE II=1
- float y = exp_x[i] / sum;
-        uint32_t* y_f32_ptr = (uint32_t*)&y;
-        y_bf16[i] = (*y_f32_ptr) >> 16;
+ float e = hls::expf(x[i] - xmax);
+        y_bf16[i] = f32_to_bf16_scalar(e / sum);
     }
 }
-# 361 "activation_accelerator.cpp"
-__attribute__((sdx_kernel("activation_accelerator", 0))) void activation_accelerator(ap_uint<512>* in0, ap_uint<512>* in1, ap_uint<512>* out, int32 stage, int32 config) {
-#line 39 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/run_hls.tcl"
-#pragma HLSDIRECTIVE TOP name=activation_accelerator
-# 361 "activation_accelerator.cpp"
 
 
 
+static void load_rows(const u512* __restrict in0,
+                      const u512* __restrict in1,
+                      hls::stream<u512> &s0,
+                      hls::stream<u512> &s1)
+{
+#pragma HLS INLINE off
 
 
-#pragma HLS INTERFACE m_axi port=in0 bundle=gmem0 offset=slave depth=NW max_read_burst_length=32 num_read_outstanding=16
-#pragma HLS INTERFACE m_axi port=in1 bundle=gmem1 offset=slave depth=NW max_read_burst_length=32 num_read_outstanding=16
-#pragma HLS INTERFACE m_axi port=out bundle=gmem2 offset=slave depth=NW max_write_burst_length=32 num_write_outstanding=16
+#pragma HLS DATAFLOW disable_start_propagation
 
-#pragma HLS INTERFACE s_axilite port=stage
-#pragma HLS INTERFACE s_axilite port=config
-#pragma HLS INTERFACE s_axilite port=return
+
+#pragma HLS INTERFACE ap_memory port=in0
+#pragma HLS INTERFACE ap_memory port=in1
 
 
 
+#pragma HLS STREAM variable=s0 depth=64
+#pragma HLS STREAM variable=s1 depth=64
+
+LOAD_ROW:
+    for (int r = 0; r < NROWS; ++r) {
+
+#pragma HLS LOOP_TRIPCOUNT min=NROWS max=NROWS
+ const int base = (r * COLS) / VEC;
+    LOAD_W:
 
 
+        for (int w = 0; w < TILEW; ++w) {
+#pragma HLS PIPELINE II=1
+ s0.write(in0[base + w]);
+            s1.write(in1[base + w]);
+        }
+    }
+}
 
 
+static void compute_rows(hls::stream<u512> &s0,
+                         hls::stream<u512> &s1,
+                         hls::stream<u512> &so,
+                         int32 config)
+{
+#pragma HLS INLINE off
 
- static ap_uint<16> tile0[TILE], tile1[TILE], tile2[TILE];
+#pragma HLS STREAM variable=s0 depth=64
+#pragma HLS STREAM variable=s1 depth=64
+#pragma HLS STREAM variable=so depth=64
+
+
+ bf16 tile0[COLS], tile1[COLS], tile2[COLS];
+
 #pragma HLS BIND_STORAGE variable=tile0 type=ram_2p impl=bram
 #pragma HLS BIND_STORAGE variable=tile1 type=ram_2p impl=bram
 #pragma HLS BIND_STORAGE variable=tile2 type=ram_2p impl=bram
+
+
 #pragma HLS ARRAY_PARTITION variable=tile0 cyclic factor=32
 #pragma HLS ARRAY_PARTITION variable=tile1 cyclic factor=32
 #pragma HLS ARRAY_PARTITION variable=tile2 cyclic factor=32
 
 
- static float xt[TILE], yt[TILE];
+ float xt[COLS], yt[COLS];
+
+
 #pragma HLS BIND_STORAGE variable=xt type=ram_s2p impl=bram
 #pragma HLS BIND_STORAGE variable=yt type=ram_s2p impl=bram
+#pragma HLS ARRAY_PARTITION variable=xt cyclic factor=32
+#pragma HLS ARRAY_PARTITION variable=yt cyclic factor=32
 
-
- ROW_LOOP:
+COMPUTE_ROW:
     for (int r = 0; r < NROWS; ++r) {
 #pragma HLS LOOP_TRIPCOUNT min=NROWS max=NROWS
 
- const int t = r * COLS;
 
-
-        VITIS_LOOP_402_1: for (int w = 0; w < TILEW; ++w) {
+ UNPK_W:
+        for (int w = 0; w < TILEW; ++w) {
 #pragma HLS PIPELINE II=1
-
- ap_uint<512> w0 = in0[(t / VEC) + w];
-            ap_uint<512> w1 = in1[(t / VEC) + w];
-            VITIS_LOOP_407_2: for (int v = 0; v < VEC; ++v) {
+ u512 w0 = s0.read();
+            u512 w1 = s1.read();
+            bf16 lane0[VEC], lane1[VEC];
+#pragma HLS ARRAY_PARTITION variable=lane0 complete
+#pragma HLS ARRAY_PARTITION variable=lane1 complete
+ unpack_word(w0, lane0);
+            unpack_word(w1, lane1);
+        UNPK_V:
+            for (int v = 0; v < VEC; ++v) {
 #pragma HLS UNROLL
- tile0[w*VEC + v] = w0.range(16*(v+1)-1, 16*v);
-                tile1[w*VEC + v] = w1.range(16*(v+1)-1, 16*v);
+ const int idx = w*VEC + v;
+                tile0[idx] = lane0[v];
+                tile1[idx] = lane1[v];
             }
         }
 
 
-        int op = row_op_select(r, config);
+        const int op = row_op_select(r, config);
+        bf16_to_float(tile0, xt, COLS);
+        if (op == ACT_ADD || op == ACT_MUL ) {
+            bf16_to_float(tile1, yt, COLS);
+        }
 
         switch (op) {
-        case ACT_ADD:
-            bf16_to_float(tile0, xt, TILE);
-            bf16_to_float(tile1, yt, TILE);
-            float_add(xt, yt, tile2, TILE);
-            break;
-        case ACT_MUL:
-
-
-
-            VITIS_LOOP_427_3: for(int i = 0; i < TILE; i++) {
-#pragma HLS PIPELINE II=1
- tile2[i] = 0;
-            }
-            break;
-        case ACT_SOFTMAX:
-            bf16_to_float(tile0, xt, TILE);
-            float_safe_softmax(xt, tile2, TILE);
-            break;
-        case ACT_LAYERNORM:
-            bf16_to_float(tile0, xt, TILE);
-            float_layer_norm(xt, tile2, TILE);
-            break;
-        case ACT_RMSNORM:
-            bf16_to_float(tile0, xt, TILE);
-            float_rms_norm(xt, tile2, TILE);
-            break;
-        case ACT_SILU:
-            bf16_to_float(tile0, xt, TILE);
-            float_silu(xt, tile2, TILE);
-            break;
-        case ACT_GELU:
-
-
-            VITIS_LOOP_451_4: for(int i = 0; i < TILE; i++) {
-#pragma HLS PIPELINE II=1
- tile2[i] = 0;
-            }
-            break;
-        default:
-
-            bf16_to_float(tile0, xt, TILE);
-            bf16_to_float(tile1, yt, TILE);
-            float_add(xt, yt, tile2, TILE);
-            break;
+        case ACT_ADD: float_add(xt, yt, tile2, COLS); break;
+        case ACT_SILU: float_silu(xt, tile2, COLS); break;
+        case ACT_LAYERNORM: float_layernorm(xt, tile2, COLS); break;
+        case ACT_RMSNORM: float_rmsnorm(xt, tile2, COLS); break;
+        case ACT_SOFTMAX: float_softmax(xt, tile2, COLS); break;
+        case ACT_GELU: float_silu(xt, tile2, COLS); break;
+        case ACT_MUL: float_add(xt, yt, tile2, COLS); break;
+        default: float_add(xt, yt, tile2, COLS); break;
         }
 
 
-        VITIS_LOOP_465_5: for (int w = 0; w < TILEW; ++w) {
+
+
+
+    PK_W:
+        for (int w = 0; w < TILEW; ++w) {
 #pragma HLS PIPELINE II=1
- ap_uint<512> wo = 0;
-            VITIS_LOOP_468_6: for (int v = 0; v < VEC; ++v) {
+ bf16 lane[VEC];
+#pragma HLS ARRAY_PARTITION variable=lane complete
+ PK_V:
+            for (int v = 0; v < VEC; ++v) {
 #pragma HLS UNROLL
- wo.range(16*(v+1)-1, 16*v) = tile2[w*VEC + v];
+ lane[v] = tile2[w*VEC + v];
             }
-            out[(t / VEC) + w] = wo;
+            so.write(pack_word(lane));
         }
     }
+}
+
+
+static void store_rows(hls::stream<u512> &so, u512* __restrict out)
+{
+#pragma HLS INLINE off
+#pragma HLS STREAM variable=so depth=64
+STORE_ROW:
+    for (int r = 0; r < NROWS; ++r) {
+#pragma HLS LOOP_TRIPCOUNT min=NROWS max=NROWS
+ const int base = (r * COLS) / VEC;
+    STORE_W:
+        for (int w = 0; w < TILEW; ++w) {
+#pragma HLS PIPELINE II=1
+ out[base + w] = so.read();
+        }
+    }
+}
+
+
+__attribute__((sdx_kernel("activation_accelerator", 0))) void activation_accelerator(u512* in0, u512* in1, u512* out, int32 stage, int32 config)
+{
+#line 39 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/run_hls.tcl"
+#pragma HLSDIRECTIVE TOP name=activation_accelerator
+# 512 "activation_accelerator.cpp"
+
+#pragma HLS INTERFACE m_axi port=in0 bundle=gmem0 offset=slave depth=NW max_read_burst_length=32 num_read_outstanding=16
+#pragma HLS INTERFACE m_axi port=in1 bundle=gmem1 offset=slave depth=NW max_read_burst_length=32 num_read_outstanding=16
+#pragma HLS INTERFACE m_axi port=out bundle=gmem2 offset=slave depth=NW max_write_burst_length=32 num_write_outstanding=16
+#pragma HLS INTERFACE s_axilite port=stage
+#pragma HLS INTERFACE s_axilite port=config
+#pragma HLS INTERFACE s_axilite port=return
+#pragma HLS DATAFLOW
+
+ hls::stream<u512> s_in0("s_in0"), s_in1("s_in1"), s_out("s_out");
+#pragma HLS STREAM variable=s_in0 depth=64
+#pragma HLS STREAM variable=s_in1 depth=64
+#pragma HLS STREAM variable=s_out depth=64
+
+ load_rows(in0, in1, s_in0, s_in1);
+    compute_rows(s_in0, s_in1, s_out, config);
+    store_rows(s_out, out);
 }

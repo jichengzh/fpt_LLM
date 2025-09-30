@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'activation_accelerator'" level="0">
-<item name = "Date">Sun Sep 28 11:43:53 2025
+<item name = "Date">Mon Sep 29 22:11:53 2025
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">activation_accelerator</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">53133, 401293, 0.531 ms, 4.013 ms, 53134, 401294, no</column>
+<column name="">102793, 400905, 1.028 ms, 4.009 ms, 102786, 400898, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,6 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- ROW_LOOP">53120, 401280, 830 ~ 6270, -, -, 64, no</column>
 </table>
 </item>
 </section>

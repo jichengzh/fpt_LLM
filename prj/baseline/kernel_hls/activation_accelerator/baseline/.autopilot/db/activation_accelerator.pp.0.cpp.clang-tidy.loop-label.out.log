@@ -726,66 +726,38 @@
        ^~~
        VITIS_LOOP_195_3: 
 /data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:52812:8: note: FIX-IT applied suggested code changes
-/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55135:5: warning: Added loop label VITIS_LOOP_120_1:   [xilinx-label-all-loops]
+/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55212:2: warning: Added loop label VITIS_LOOP_64_1:   [xilinx-label-all-loops]
+ for (int v = 0; v < VEC; ++v) {
+ ^~~
+ VITIS_LOOP_64_1: 
+/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55212:2: note: FIX-IT applied suggested code changes
+/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55220:5: warning: Added loop label VITIS_LOOP_72_1:   [xilinx-label-all-loops]
+    for (int v = 0; v < VEC; ++v) {
+    ^~~
+    VITIS_LOOP_72_1: 
+/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55220:5: note: FIX-IT applied suggested code changes
+/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55291:5: warning: Added loop label VITIS_LOOP_143_1:   [xilinx-label-all-loops]
     while (result_mantissa < (0x80 << precision_shift) && max_exp > 0) {
     ^~~~~
-    VITIS_LOOP_120_1: 
-/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55135:5: note: FIX-IT applied suggested code changes
-/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55225:1: warning: Added loop label VITIS_LOOP_210_1:   [xilinx-label-all-loops]
+    VITIS_LOOP_143_1: 
+/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55291:5: note: FIX-IT applied suggested code changes
+/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55400:1: warning: Added loop label VITIS_LOOP_263_1:   [xilinx-label-all-loops]
 for (int i = 0; i < 8; i++) {
 ^~~
-VITIS_LOOP_210_1: 
-/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55225:1: note: FIX-IT applied suggested code changes
-/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55255:5: warning: Added loop label VITIS_LOOP_251_1:   [xilinx-label-all-loops]
-    for (int i = 0; i < len; ++i) {
-    ^~~
-    VITIS_LOOP_251_1: 
-/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55255:5: note: FIX-IT applied suggested code changes
-/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55313:46: error: Invalid Directive: for current device, ram_s2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
-#pragma HLS BIND_STORAGE variable=exp_x type=ram_s2p impl=bram
-                                             ^
-/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55354:46: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+VITIS_LOOP_263_1: 
+/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55400:1: note: FIX-IT applied suggested code changes
+/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55551:46: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=tile0 type=ram_2p impl=bram
                                              ^
-/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55355:46: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55552:46: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=tile1 type=ram_2p impl=bram
                                              ^
-/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55356:46: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55553:46: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=tile2 type=ram_2p impl=bram
                                              ^
-/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55363:43: error: Invalid Directive: for current device, ram_s2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55564:43: error: Invalid Directive: for current device, ram_s2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=xt type=ram_s2p impl=bram
                                           ^
-/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55364:43: error: Invalid Directive: for current device, ram_s2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55565:43: error: Invalid Directive: for current device, ram_s2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=yt type=ram_s2p impl=bram
                                           ^
-/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55374:9: warning: Added loop label VITIS_LOOP_402_1:   [xilinx-label-all-loops]
-        for (int w = 0; w < TILEW; ++w) {
-        ^~~
-        VITIS_LOOP_402_1: 
-/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55374:9: note: FIX-IT applied suggested code changes
-/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55379:13: warning: Added loop label VITIS_LOOP_407_2:   [xilinx-label-all-loops]
-            for (int v = 0; v < VEC; ++v) {
-            ^~~
-            VITIS_LOOP_407_2: 
-/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55379:13: note: FIX-IT applied suggested code changes
-/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55399:13: warning: Added loop label VITIS_LOOP_427_3:   [xilinx-label-all-loops]
-            for(int i = 0; i < TILE; i++) {
-            ^~~
-            VITIS_LOOP_427_3: 
-/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55399:13: note: FIX-IT applied suggested code changes
-/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55423:13: warning: Added loop label VITIS_LOOP_451_4:   [xilinx-label-all-loops]
-            for(int i = 0; i < TILE; i++) {
-            ^~~
-            VITIS_LOOP_451_4: 
-/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55423:13: note: FIX-IT applied suggested code changes
-/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55437:9: warning: Added loop label VITIS_LOOP_465_5:   [xilinx-label-all-loops]
-        for (int w = 0; w < TILEW; ++w) {
-        ^~~
-        VITIS_LOOP_465_5: 
-/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55437:9: note: FIX-IT applied suggested code changes
-/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55440:13: warning: Added loop label VITIS_LOOP_468_6:   [xilinx-label-all-loops]
-            for (int v = 0; v < VEC; ++v) {
-            ^~~
-            VITIS_LOOP_468_6: 
-/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55440:13: note: FIX-IT applied suggested code changes

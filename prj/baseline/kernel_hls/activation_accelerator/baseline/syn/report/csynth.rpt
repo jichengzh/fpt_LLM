@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'activation_accelerator'
 ================================================================
 + General Information: 
-    * Date:           Sun Sep 28 11:44:01 2025
+    * Date:           Mon Sep 29 22:12:03 2025
     * Version:        2022.2 (Build 3670227 on Oct 13 2022)
     * Project:        activation_accelerator
     * Solution:       baseline (Vivado IP Flow Target)
@@ -15,48 +15,56 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+-----------+---------+------------+-------------+-----+
-    |                        Modules                       | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |           |         |            |             |     |
-    |                        & Loops                       | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM    |   DSP   |     FF     |     LUT     | URAM|
-    +------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+-----------+---------+------------+-------------+-----+
-    |+ activation_accelerator                              |     -|  0.00|   401293|  4.013e+06|         -|   401294|     -|        no|  102 (35%)|  14 (1%)|  10899 (4%)|  22566 (19%)|    -|
-    | o ROW_LOOP                                           |     -|  7.30|   401280|  4.013e+06|      6270|        -|    64|        no|          -|        -|           -|            -|    -|
-    |  + activation_accelerator_Pipeline_VITIS_LOOP_402_1  |     -|  0.00|       27|    270.000|         -|       27|     -|        no|          -|        -|  1045 (~0%)|     81 (~0%)|    -|
-    |   o VITIS_LOOP_402_1                                 |     -|  7.30|       25|    250.000|         3|        1|    24|       yes|          -|        -|           -|            -|    -|
-    |  + activation_accelerator_Pipeline_VITIS_LOOP_451_4  |     -|  5.15|      770|  7.700e+03|         -|      770|     -|        no|          -|        -|    12 (~0%)|     55 (~0%)|    -|
-    |   o VITIS_LOOP_451_4                                 |     -|  7.30|      768|  7.680e+03|         1|        1|   768|       yes|          -|        -|           -|            -|    -|
-    |  + activation_accelerator_Pipeline_VITIS_LOOP_427_3  |     -|  5.15|      770|  7.700e+03|         -|      770|     -|        no|          -|        -|    12 (~0%)|     55 (~0%)|    -|
-    |   o VITIS_LOOP_427_3                                 |     -|  7.30|      768|  7.680e+03|         1|        1|   768|       yes|          -|        -|           -|            -|    -|
-    |  + bf16_to_float                                     |     -|  4.04|      770|  7.700e+03|         -|      770|     -|        no|          -|        -|    23 (~0%)|    214 (~0%)|    -|
-    |   o bf16_to_float_loop                               |     -|  7.30|      768|  7.680e+03|         2|        1|   768|       yes|          -|        -|           -|            -|    -|
-    |  + bf16_to_float                                     |     -|  4.04|      770|  7.700e+03|         -|      770|     -|        no|          -|        -|    23 (~0%)|    214 (~0%)|    -|
-    |   o bf16_to_float_loop                               |     -|  7.30|      768|  7.680e+03|         2|        1|   768|       yes|          -|        -|           -|            -|    -|
-    |  + activation_accelerator_Pipeline_silu_loop         |     -|  0.24|      794|  7.940e+03|         -|      794|     -|        no|          -|        -|   407 (~0%)|    195 (~0%)|    -|
-    |   o silu_loop                                        |     -|  7.30|      792|  7.920e+03|        26|        1|   768|       yes|          -|        -|           -|            -|    -|
-    |  + activation_accelerator_Pipeline_rms_loop_0        |     -|  0.28|     2311|  2.311e+04|         -|     2311|     -|        no|          -|        -|   116 (~0%)|    113 (~0%)|    -|
-    |   o rms_loop_0                                       |    II|  7.30|     2309|  2.309e+04|         9|        3|   768|       yes|          -|        -|           -|            -|    -|
-    |  + activation_accelerator_Pipeline_VITIS_LOOP_251_1  |     -|  0.28|      774|  7.740e+03|         -|      774|     -|        no|          -|        -|   207 (~0%)|    130 (~0%)|    -|
-    |   o VITIS_LOOP_251_1                                 |     -|  7.30|      772|  7.720e+03|         6|        1|   768|       yes|          -|        -|           -|            -|    -|
-    |  + activation_accelerator_Pipeline_layer_loop_0      |     -|  1.17|     2307|  2.307e+04|         -|     2307|     -|        no|          -|        -|    49 (~0%)|    122 (~0%)|    -|
-    |   o layer_loop_0                                     |    II|  7.30|     2305|  2.305e+04|         5|        3|   768|       yes|          -|        -|           -|            -|    -|
-    |  + activation_accelerator_Pipeline_layer_loop_1      |     -|  0.28|     2315|  2.315e+04|         -|     2315|     -|        no|          -|        -|   215 (~0%)|    181 (~0%)|    -|
-    |   o layer_loop_1                                     |    II|  7.30|     2313|  2.313e+04|        13|        3|   768|       yes|          -|        -|           -|            -|    -|
-    |  + activation_accelerator_Pipeline_layer_loop_2      |     -|  0.24|      784|  7.840e+03|         -|      784|     -|        no|          -|        -|   259 (~0%)|    130 (~0%)|    -|
-    |   o layer_loop_2                                     |     -|  7.30|      782|  7.820e+03|        16|        1|   768|       yes|          -|        -|           -|            -|    -|
-    |  + float_safe_softmax                                |     -|  0.24|     3877|  3.877e+04|         -|     3877|     -|        no|    2 (~0%)|        -|   665 (~0%)|    637 (~0%)|    -|
-    |   + float_safe_softmax_Pipeline_softmax_loop_0       |     -|  3.28|      770|  7.700e+03|         -|      770|     -|        no|          -|        -|   112 (~0%)|    178 (~0%)|    -|
-    |    o softmax_loop_0                                  |     -|  7.30|      768|  7.680e+03|         3|        1|   767|       yes|          -|        -|           -|            -|    -|
-    |   + float_safe_softmax_Pipeline_softmax_loop_1       |     -|  0.86|     2320|  2.320e+04|         -|     2320|     -|        no|          -|        -|   291 (~0%)|    177 (~0%)|    -|
-    |    o softmax_loop_1                                  |    II|  7.30|     2318|  2.318e+04|        18|        3|   768|       yes|          -|        -|           -|            -|    -|
-    |   + float_safe_softmax_Pipeline_softmax_loop_2       |     -|  0.24|      780|  7.800e+03|         -|      780|     -|        no|          -|        -|   219 (~0%)|    130 (~0%)|    -|
-    |    o softmax_loop_2                                  |     -|  7.30|      778|  7.780e+03|        12|        1|   768|       yes|          -|        -|           -|            -|    -|
-    |  + activation_accelerator_Pipeline_add_loop          |     -|  0.86|      775|  7.750e+03|         -|      775|     -|        no|          -|  2 (~0%)|   468 (~0%)|    344 (~0%)|    -|
-    |   o add_loop                                         |     -|  7.30|      773|  7.730e+03|         7|        1|   768|       yes|          -|        -|           -|            -|    -|
-    |  + activation_accelerator_Pipeline_add_loop1         |     -|  0.86|      775|  7.750e+03|         -|      775|     -|        no|          -|        -|   241 (~0%)|    130 (~0%)|    -|
-    |   o add_loop                                         |     -|  7.30|      773|  7.730e+03|         7|        1|   768|       yes|          -|        -|           -|            -|    -|
-    |  + activation_accelerator_Pipeline_VITIS_LOOP_465_5  |     -|  0.00|       27|    270.000|         -|       27|     -|        no|          -|        -|   523 (~0%)|     70 (~0%)|    -|
-    |   o VITIS_LOOP_465_5                                 |     -|  7.30|       25|    250.000|         3|        1|    24|       yes|          -|        -|           -|            -|    -|
-    +------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+-----------+---------+------------+-------------+-----+
+    +-------------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+-----------+---------+------------+-------------+-----+
+    |                           Modules                           | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |           |         |            |             |     |
+    |                           & Loops                           | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM    |   DSP   |     FF     |     LUT     | URAM|
+    +-------------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+-----------+---------+------------+-------------+-----+
+    |+ activation_accelerator*                                    |     -|  0.00|   400905|  4.009e+06|         -|   400898|     -|  dataflow|  247 (85%)|  21 (1%)|  12216 (5%)|  32830 (28%)|    -|
+    | + entry_proc                                                |     -|  5.46|        0|      0.000|         -|        0|     -|        no|          -|        -|     3 (~0%)|     38 (~0%)|    -|
+    | + load_rows*                                                |     -|  0.00|     1547|  1.547e+04|         -|     1548|     -|  dataflow|          -|        -|  1168 (~0%)|    476 (~0%)|    -|
+    |  + load_rows_Loop_LOAD_ROW_proc1                            |     -|  0.00|     1547|  1.547e+04|         -|     1547|     -|        no|          -|        -|  1168 (~0%)|    476 (~0%)|    -|
+    |   + load_rows_Loop_LOAD_ROW_proc1_Pipeline_LOAD_ROW_LOAD_W  |     -|  0.00|     1539|  1.539e+04|         -|     1539|     -|        no|          -|        -|  1041 (~0%)|    109 (~0%)|    -|
+    |    o LOAD_ROW_LOAD_W                                        |     -|  7.30|     1537|  1.537e+04|         3|        1|  1536|       yes|          -|        -|           -|            -|    -|
+    | + compute_rows                                              |     -|  0.01|   400897|  4.009e+06|         -|   400897|     -|        no|  160 (55%)|  21 (1%)|   4621 (1%)|  23478 (20%)|    -|
+    |  o COMPUTE_ROW                                              |     -|  7.30|   400896|  4.009e+06|      6264|        -|    64|        no|          -|        -|           -|            -|    -|
+    |   + compute_rows_Pipeline_UNPK_W                            |     -|  4.51|       26|    260.000|         -|       26|     -|        no|          -|        -|    13 (~0%)|     81 (~0%)|    -|
+    |    o UNPK_W                                                 |     -|  7.30|       24|    240.000|         2|        1|    24|       yes|          -|        -|           -|            -|    -|
+    |   + compute_rows_Pipeline_convert_loop                      |     -|  4.04|      770|  7.700e+03|         -|      770|     -|        no|          -|        -|    23 (~0%)|    214 (~0%)|    -|
+    |    o convert_loop                                           |     -|  7.30|      768|  7.680e+03|         2|        1|   768|       yes|          -|        -|           -|            -|    -|
+    |   + compute_rows_Pipeline_convert_loop1                     |     -|  4.04|      770|  7.700e+03|         -|      770|     -|        no|          -|        -|    23 (~0%)|    214 (~0%)|    -|
+    |    o convert_loop                                           |     -|  7.30|      768|  7.680e+03|         2|        1|   768|       yes|          -|        -|           -|            -|    -|
+    |   + compute_rows_Pipeline_silu_loop2                        |     -|  0.01|      794|  7.940e+03|         -|      794|     -|        no|          -|        -|   407 (~0%)|    343 (~0%)|    -|
+    |    o silu_loop                                              |     -|  7.30|      792|  7.920e+03|        26|        1|   768|       yes|          -|        -|           -|            -|    -|
+    |   + compute_rows_Pipeline_smx_0                             |     -|  1.87|      769|  7.690e+03|         -|      769|     -|        no|          -|        -|    50 (~0%)|    517 (~0%)|    -|
+    |    o smx_0                                                  |     -|  7.30|      767|  7.670e+03|         2|        1|   767|       yes|          -|        -|           -|            -|    -|
+    |   + compute_rows_Pipeline_smx_1                             |     -|  0.86|     2320|  2.320e+04|         -|     2320|     -|        no|          -|        -|   222 (~0%)|    293 (~0%)|    -|
+    |    o smx_1                                                  |    II|  7.30|     2318|  2.318e+04|        18|        3|   768|       yes|          -|        -|           -|            -|    -|
+    |   + compute_rows_Pipeline_smx_2                             |     -|  0.24|      792|  7.920e+03|         -|      792|     -|        no|          -|        -|   307 (~0%)|    278 (~0%)|    -|
+    |    o smx_2                                                  |     -|  7.30|      790|  7.900e+03|        24|        1|   768|       yes|          -|        -|           -|            -|    -|
+    |   + compute_rows_Pipeline_rms_loop_0                        |     -|  0.28|     2311|  2.311e+04|         -|     2311|     -|        no|          -|        -|   121 (~0%)|    261 (~0%)|    -|
+    |    o rms_loop_0                                             |    II|  7.30|     2309|  2.309e+04|         9|        3|   768|       yes|          -|        -|           -|            -|    -|
+    |   + compute_rows_Pipeline_rms_loop_1                        |     -|  0.28|      774|  7.740e+03|         -|      774|     -|        no|          -|        -|   207 (~0%)|    278 (~0%)|    -|
+    |    o rms_loop_1                                             |     -|  7.30|      772|  7.720e+03|         6|        1|   768|       yes|          -|        -|           -|            -|    -|
+    |   + compute_rows_Pipeline_layer_loop_0                      |     -|  0.38|     2307|  2.307e+04|         -|     2307|     -|        no|          -|        -|    54 (~0%)|    270 (~0%)|    -|
+    |    o layer_loop_0                                           |    II|  7.30|     2305|  2.305e+04|         5|        3|   768|       yes|          -|        -|           -|            -|    -|
+    |   + compute_rows_Pipeline_layer_loop_1                      |     -|  0.28|     2315|  2.315e+04|         -|     2315|     -|        no|          -|        -|   220 (~0%)|    329 (~0%)|    -|
+    |    o layer_loop_1                                           |    II|  7.30|     2313|  2.313e+04|        13|        3|   768|       yes|          -|        -|           -|            -|    -|
+    |   + compute_rows_Pipeline_ln_2                              |     -|  0.28|      778|  7.780e+03|         -|      778|     -|        no|          -|        -|   247 (~0%)|    278 (~0%)|    -|
+    |    o ln_2                                                   |     -|  7.30|      776|  7.760e+03|        10|        1|   768|       yes|          -|        -|           -|            -|    -|
+    |   + compute_rows_Pipeline_silu_loop                         |     -|  0.01|      794|  7.940e+03|         -|      794|     -|        no|          -|        -|   407 (~0%)|    343 (~0%)|    -|
+    |    o silu_loop                                              |     -|  7.30|      792|  7.920e+03|        26|        1|   768|       yes|          -|        -|           -|            -|    -|
+    |   + compute_rows_Pipeline_add_loop                          |     -|  0.86|      775|  7.750e+03|         -|      775|     -|        no|          -|        -|   241 (~0%)|    426 (~0%)|    -|
+    |    o add_loop                                               |     -|  7.30|      773|  7.730e+03|         7|        1|   768|       yes|          -|        -|           -|            -|    -|
+    |   + compute_rows_Pipeline_add_loop3                         |     -|  0.86|      775|  7.750e+03|         -|      775|     -|        no|          -|        -|   241 (~0%)|    426 (~0%)|    -|
+    |    o add_loop                                               |     -|  7.30|      773|  7.730e+03|         7|        1|   768|       yes|          -|        -|           -|            -|    -|
+    |   + compute_rows_Pipeline_add_loop4                         |     -|  0.86|      775|  7.750e+03|         -|      775|     -|        no|          -|        -|   241 (~0%)|    426 (~0%)|    -|
+    |    o add_loop                                               |     -|  7.30|      773|  7.730e+03|         7|        1|   768|       yes|          -|        -|           -|            -|    -|
+    |   + compute_rows_Pipeline_PK_W                              |     -|  4.51|       26|    260.000|         -|       26|     -|        no|          -|        -|     8 (~0%)|     70 (~0%)|    -|
+    |    o PK_W                                                   |     -|  7.30|       24|    240.000|         2|        1|    24|       yes|          -|        -|           -|            -|    -|
+    | + store_rows                                                |     -|  0.00|     1547|  1.547e+04|         -|     1547|     -|        no|          -|        -|   598 (~0%)|    338 (~0%)|    -|
+    |  + store_rows_Pipeline_STORE_ROW_STORE_W                    |     -|  0.00|     1539|  1.539e+04|         -|     1539|     -|        no|          -|        -|   529 (~0%)|     91 (~0%)|    -|
+    |   o STORE_ROW_STORE_W                                       |     -|  7.30|     1537|  1.537e+04|         3|        1|  1536|       yes|          -|        -|           -|            -|    -|
+    +-------------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+-----------+---------+------------+-------------+-----+
 
 
 ================================================================
@@ -145,235 +153,343 @@
  Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
 
 * Inferred Burst Summary
-+--------------+----------+-----------+--------+-------+----------------------------------+
-| HW Interface | Loop     | Direction | Length | Width | Location                         |
-+--------------+----------+-----------+--------+-------+----------------------------------+
-| m_axi_gmem0  | ROW_LOOP | read      | 1536   | 512   | activation_accelerator.cpp:396:5 |
-| m_axi_gmem1  | ROW_LOOP | read      | 1536   | 512   | activation_accelerator.cpp:396:5 |
-| m_axi_gmem2  | ROW_LOOP | write     | 1536   | 512   | activation_accelerator.cpp:396:5 |
-+--------------+----------+-----------+--------+-------+----------------------------------+
++--------------+-----------+-----------+--------+-------+----------------------------------+
+| HW Interface | Loop      | Direction | Length | Width | Location                         |
++--------------+-----------+-----------+--------+-------+----------------------------------+
+| m_axi_gmem0  | LOAD_ROW  | read      | 1536   | 512   | activation_accelerator.cpp:384:5 |
+| m_axi_gmem1  | LOAD_ROW  | read      | 1536   | 512   | activation_accelerator.cpp:384:5 |
+| m_axi_gmem2  | STORE_ROW | write     | 1536   | 512   | activation_accelerator.cpp:499:5 |
++--------------+-----------+-----------+--------+-------+----------------------------------+
 
 * Inferred Bursts and Widening Missed
-+--------------+----------+------------------+--------------------------------------------------------------------------------------------------------+------------+-----------------------------------+
-| HW Interface | Variable | Loop             | Problem                                                                                                | Resolution | Location                          |
-+--------------+----------+------------------+--------------------------------------------------------------------------------------------------------+------------+-----------------------------------+
-| m_axi_gmem2  | out      | VITIS_LOOP_465_5 | Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | activation_accelerator.cpp:465:27 |
-| m_axi_gmem0  | in0      | VITIS_LOOP_402_1 | Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | activation_accelerator.cpp:402:27 |
-| m_axi_gmem1  | in1      | VITIS_LOOP_402_1 | Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | activation_accelerator.cpp:402:27 |
-+--------------+----------+------------------+--------------------------------------------------------------------------------------------------------+------------+-----------------------------------+
++--------------+----------+---------+--------------------------------------------------------------------------------------------------------+------------+----------------------------------+
+| HW Interface | Variable | Loop    | Problem                                                                                                | Resolution | Location                         |
++--------------+----------+---------+--------------------------------------------------------------------------------------------------------+------------+----------------------------------+
+| m_axi_gmem0  | in0      | LOAD_W  | Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | activation_accelerator.cpp:391:9 |
+| m_axi_gmem1  | in1      | LOAD_W  | Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | activation_accelerator.cpp:391:9 |
+| m_axi_gmem2  | out      | STORE_W | Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | activation_accelerator.cpp:503:9 |
++--------------+----------+---------+--------------------------------------------------------------------------------------------------------+------------+----------------------------------+
 
     * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
 
 ================================================================
 == Bind Op Report
 ================================================================
-+-----------------------------------------------------+-----+--------+------------+-------+---------+---------+
-| Name                                                | DSP | Pragma | Variable   | Op    | Impl    | Latency |
-+-----------------------------------------------------+-----+--------+------------+-------+---------+---------+
-| + activation_accelerator                            | 14  |        |            |       |         |         |
-|   add_ln396_fu_1499_p2                              | -   |        | add_ln396  | add   | fabric  | 0       |
-|   fdiv_32ns_32ns_32_9_no_dsp_1_U482                 | -   |        | mean_sq    | fdiv  | fabric  | 8       |
-|   faddfsub_32ns_32ns_32_4_full_dsp_1_U480           | 2   |        | rms        | fadd  | fulldsp | 3       |
-|   fmul_32ns_32ns_32_3_max_dsp_1_U481                | 3   |        | x2         | fmul  | maxdsp  | 2       |
-|   sub_ln199_fu_1703_p2                              | -   |        | sub_ln199  | sub   | fabric  | 0       |
-|   fmul_32ns_32ns_32_3_max_dsp_1_U481                | 3   |        | mul1_i_i   | fmul  | maxdsp  | 2       |
-|   fmul_32ns_32ns_32_3_max_dsp_1_U481                | 3   |        | mul2_i_i   | fmul  | maxdsp  | 2       |
-|   faddfsub_32ns_32ns_32_4_full_dsp_1_U480           | 2   |        | sub3_i_i   | fadd  | fulldsp | 3       |
-|   fmul_32ns_32ns_32_3_max_dsp_1_U481                | 3   |        | re_rms     | fmul  | maxdsp  | 2       |
-|   fdiv_32ns_32ns_32_9_no_dsp_1_U482                 | -   |        | mean       | fdiv  | fabric  | 8       |
-|   fdiv_32ns_32ns_32_9_no_dsp_1_U482                 | -   |        | var        | fdiv  | fabric  | 8       |
-|   faddfsub_32ns_32ns_32_4_full_dsp_1_U480           | 2   |        | x_assign_1 | fadd  | fulldsp | 3       |
-|   fsqrt_32ns_32ns_32_8_no_dsp_1_U483                | -   |        | stddev     | fsqrt | fabric  | 7       |
-|  + activation_accelerator_Pipeline_VITIS_LOOP_402_1 | 0   |        |            |       |         |         |
-|    add_ln402_fu_1450_p2                             | -   |        | add_ln402  | add   | fabric  | 0       |
-|  + activation_accelerator_Pipeline_VITIS_LOOP_451_4 | 0   |        |            |       |         |         |
-|    add_ln451_fu_760_p2                              | -   |        | add_ln451  | add   | fabric  | 0       |
-|  + activation_accelerator_Pipeline_VITIS_LOOP_427_3 | 0   |        |            |       |         |         |
-|    add_ln427_fu_760_p2                              | -   |        | add_ln427  | add   | fabric  | 0       |
-|  + bf16_to_float (grp_bf16_to_float_fu_710)         | 0   |        |            |       |         |         |
-|    add_ln178_fu_563_p2                              | -   |        | add_ln178  | add   | fabric  | 0       |
-|  + activation_accelerator_Pipeline_silu_loop        | 0   |        |            |       |         |         |
-|    add_ln229_fu_774_p2                              | -   |        | add_ln229  | add   | fabric  | 0       |
-|  + activation_accelerator_Pipeline_rms_loop_0       | 0   |        |            |       |         |         |
-|    add_ln243_fu_95_p2                               | -   |        | add_ln243  | add   | fabric  | 0       |
-|  + activation_accelerator_Pipeline_VITIS_LOOP_251_1 | 0   |        |            |       |         |         |
-|    add_ln251_fu_765_p2                              | -   |        | add_ln251  | add   | fabric  | 0       |
-|  + activation_accelerator_Pipeline_layer_loop_0     | 0   |        |            |       |         |         |
-|    add_ln264_fu_92_p2                               | -   |        | add_ln264  | add   | fabric  | 0       |
-|  + activation_accelerator_Pipeline_layer_loop_1     | 0   |        |            |       |         |         |
-|    add_ln271_fu_109_p2                              | -   |        | add_ln271  | add   | fabric  | 0       |
-|  + activation_accelerator_Pipeline_layer_loop_2     | 0   |        |            |       |         |         |
-|    add_ln279_fu_775_p2                              | -   |        | add_ln279  | add   | fabric  | 0       |
-|  + float_safe_softmax                               | 0   |        |            |       |         |         |
-|   + float_safe_softmax_Pipeline_softmax_loop_0      | 0   |        |            |       |         |         |
-|     add_ln303_fu_113_p2                             | -   |        | add_ln303  | add   | fabric  | 0       |
-|   + float_safe_softmax_Pipeline_softmax_loop_1      | 0   |        |            |       |         |         |
-|     add_ln311_fu_132_p2                             | -   |        | add_ln311  | add   | fabric  | 0       |
-|   + float_safe_softmax_Pipeline_softmax_loop_2      | 0   |        |            |       |         |         |
-|     add_ln317_fu_763_p2                             | -   |        | add_ln317  | add   | fabric  | 0       |
-|  + bf16_to_float (grp_bf16_to_float_fu_780)         | 0   |        |            |       |         |         |
-|    add_ln178_fu_563_p2                              | -   |        | add_ln178  | add   | fabric  | 0       |
-|  + activation_accelerator_Pipeline_add_loop         | 2   |        |            |       |         |         |
-|    add_ln290_fu_768_p2                              | -   |        | add_ln290  | add   | fabric  | 0       |
-|    fadd_32ns_32ns_32_4_full_dsp_1_U375              | 2   |        | sum_2      | fadd  | fulldsp | 3       |
-|  + activation_accelerator_Pipeline_add_loop1        | 0   |        |            |       |         |         |
-|    add_ln290_fu_768_p2                              | -   |        | add_ln290  | add   | fabric  | 0       |
-|  + activation_accelerator_Pipeline_VITIS_LOOP_465_5 | 0   |        |            |       |         |         |
-|    add_ln465_fu_576_p2                              | -   |        | add_ln465  | add   | fabric  | 0       |
-+-----------------------------------------------------+-----+--------+------------+-------+---------+---------+
++-------------------------------------------------------------+-----+--------+------------+--------+---------+---------+
+| Name                                                        | DSP | Pragma | Variable   | Op     | Impl    | Latency |
++-------------------------------------------------------------+-----+--------+------------+--------+---------+---------+
+| + activation_accelerator                                    | 21  |        |            |        |         |         |
+|  + load_rows                                                | 0   |        |            |        |         |         |
+|   + load_rows_Loop_LOAD_ROW_proc1                           | 0   |        |            |        |         |         |
+|    + load_rows_Loop_LOAD_ROW_proc1_Pipeline_LOAD_ROW_LOAD_W | 0   |        |            |        |         |         |
+|      add_ln384_fu_124_p2                                    | -   |        | add_ln384  | add    | fabric  | 0       |
+|  + compute_rows                                             | 21  |        |            |        |         |         |
+|    r_2_fu_1970_p2                                           | -   |        | r_2        | add    | fabric  | 0       |
+|    fdiv_32ns_32ns_32_9_no_dsp_1_U1079                       | -   |        | mean_sq    | fdiv   | fabric  | 8       |
+|    faddfsub_32ns_32ns_32_4_full_dsp_1_U1077                 | 2   |        | rms        | fadd   | fulldsp | 3       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1078                      | 3   |        | x2         | fmul   | maxdsp  | 2       |
+|    i_11_fu_2187_p2                                          | -   |        | i_11       | sub    | fabric  | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1078                      | 3   |        | mul1_i_i   | fmul   | maxdsp  | 2       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1078                      | 3   |        | mul2_i_i   | fmul   | maxdsp  | 2       |
+|    faddfsub_32ns_32ns_32_4_full_dsp_1_U1077                 | 2   |        | sub3_i_i   | fadd   | fulldsp | 3       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1078                      | 3   |        | re_rms     | fmul   | maxdsp  | 2       |
+|    fdiv_32ns_32ns_32_9_no_dsp_1_U1079                       | -   |        | mean       | fdiv   | fabric  | 8       |
+|    fdiv_32ns_32ns_32_9_no_dsp_1_U1079                       | -   |        | div13_i    | fdiv   | fabric  | 8       |
+|    faddfsub_32ns_32ns_32_4_full_dsp_1_U1077                 | 2   |        | x_assign_3 | fadd   | fulldsp | 3       |
+|    frsqrt_32ns_32ns_32_10_full_dsp_1_U1080                  | 9   |        | inv_std    | frsqrt | fulldsp | 9       |
+|   + compute_rows_Pipeline_UNPK_W                            | 0   |        |            |        |         |         |
+|     add_ln438_fu_1416_p2                                    | -   |        | add_ln438  | add    | fabric  | 0       |
+|   + compute_rows_Pipeline_convert_loop                      | 0   |        |            |        |         |         |
+|     add_ln210_fu_1214_p2                                    | -   |        | add_ln210  | add    | fabric  | 0       |
+|   + compute_rows_Pipeline_convert_loop1                     | 0   |        |            |        |         |         |
+|     add_ln210_fu_1214_p2                                    | -   |        | add_ln210  | add    | fabric  | 0       |
+|   + compute_rows_Pipeline_silu_loop2                        | 0   |        |            |        |         |         |
+|     add_ln273_fu_1241_p2                                    | -   |        | add_ln273  | add    | fabric  | 0       |
+|   + compute_rows_Pipeline_smx_0                             | 0   |        |            |        |         |         |
+|     add_ln341_fu_640_p2                                     | -   |        | add_ln341  | add    | fabric  | 0       |
+|   + compute_rows_Pipeline_smx_1                             | 0   |        |            |        |         |         |
+|     add_ln348_fu_585_p2                                     | -   |        | add_ln348  | add    | fabric  | 0       |
+|   + compute_rows_Pipeline_smx_2                             | 0   |        |            |        |         |         |
+|     add_ln355_fu_1249_p2                                    | -   |        | add_ln355  | add    | fabric  | 0       |
+|   + compute_rows_Pipeline_rms_loop_0                        | 0   |        |            |        |         |         |
+|     add_ln286_fu_568_p2                                     | -   |        | add_ln286  | add    | fabric  | 0       |
+|   + compute_rows_Pipeline_rms_loop_1                        | 0   |        |            |        |         |         |
+|     add_ln294_fu_1232_p2                                    | -   |        | add_ln294  | add    | fabric  | 0       |
+|   + compute_rows_Pipeline_layer_loop_0                      | 0   |        |            |        |         |         |
+|     add_ln305_fu_564_p2                                     | -   |        | add_ln305  | add    | fabric  | 0       |
+|   + compute_rows_Pipeline_layer_loop_1                      | 0   |        |            |        |         |         |
+|     add_ln312_fu_582_p2                                     | -   |        | add_ln312  | add    | fabric  | 0       |
+|   + compute_rows_Pipeline_ln_2                              | 0   |        |            |        |         |         |
+|     add_ln319_fu_1242_p2                                    | -   |        | add_ln319  | add    | fabric  | 0       |
+|   + compute_rows_Pipeline_silu_loop                         | 0   |        |            |        |         |         |
+|     add_ln273_fu_1241_p2                                    | -   |        | add_ln273  | add    | fabric  | 0       |
+|   + compute_rows_Pipeline_add_loop                          | 0   |        |            |        |         |         |
+|     add_ln329_fu_1700_p2                                    | -   |        | add_ln329  | add    | fabric  | 0       |
+|   + compute_rows_Pipeline_add_loop3                         | 0   |        |            |        |         |         |
+|     add_ln329_fu_1700_p2                                    | -   |        | add_ln329  | add    | fabric  | 0       |
+|   + compute_rows_Pipeline_add_loop4                         | 0   |        |            |        |         |         |
+|     add_ln329_fu_1700_p2                                    | -   |        | add_ln329  | add    | fabric  | 0       |
+|   + compute_rows_Pipeline_PK_W                              | 0   |        |            |        |         |         |
+|     add_ln479_fu_549_p2                                     | -   |        | add_ln479  | add    | fabric  | 0       |
+|  + store_rows                                               | 0   |        |            |        |         |         |
+|   + store_rows_Pipeline_STORE_ROW_STORE_W                   | 0   |        |            |        |         |         |
+|     add_ln499_fu_98_p2                                      | -   |        | add_ln499  | add    | fabric  | 0       |
++-------------------------------------------------------------+-----+--------+------------+--------+---------+---------+
 
 
 ================================================================
 == Bind Storage Report
 ================================================================
-+----------------------------------------------------------------------------+------+------+--------+------------------------------------------------------------------------+---------+------+---------+
-| Name                                                                       | BRAM | URAM | Pragma | Variable                                                               | Storage | Impl | Latency |
-+----------------------------------------------------------------------------+------+------+--------+------------------------------------------------------------------------+---------+------+---------+
-| + activation_accelerator                                                   | 102  | 0    |        |                                                                        |         |      |         |
-|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_9 | ram_2p  | bram | 1       |
-|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_9_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_9 | ram_2p  | bram | 1       |
-|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_8_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_8 | ram_2p  | bram | 1       |
-|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_8_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_8 | ram_2p  | bram | 1       |
-|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_7_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_7 | ram_2p  | bram | 1       |
-|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_7_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_7 | ram_2p  | bram | 1       |
-|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_6_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_6 | ram_2p  | bram | 1       |
-|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_6_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_6 | ram_2p  | bram | 1       |
-|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_5_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_5 | ram_2p  | bram | 1       |
-|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_5_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_5 | ram_2p  | bram | 1       |
-|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_4_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_4 | ram_2p  | bram | 1       |
-|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_4_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_4 | ram_2p  | bram | 1       |
-|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_3_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_3 | ram_2p  | bram | 1       |
-|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_3_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_3 | ram_2p  | bram | 1       |
-|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_2_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_2 | ram_2p  | bram | 1       |
-|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_2_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_2 | ram_2p  | bram | 1       |
-|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_1_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_1 | ram_2p  | bram | 1       |
-|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_1_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_1 | ram_2p  | bram | 1       |
-|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0_U   | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile0   | ram_2p  | bram | 1       |
-|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1_U   | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile1   | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_10_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_10        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_10_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_10        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_11_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_11        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_11_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_11        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_12_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_12        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_12_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_12        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_13_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_13        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_13_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_13        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_14_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_14        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_14_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_14        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_15_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_15        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_15_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_15        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_16_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_16        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_16_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_16        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_17_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_17        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_17_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_17        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_18_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_18        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_18_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_18        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_19_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_19        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_19_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_19        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_20_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_20        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_20_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_20        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_21_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_21        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_21_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_21        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_22_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_22        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_22_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_22        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_23_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_23        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_23_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_23        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_24_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_24        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_24_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_24        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_25_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_25        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_25_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_25        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_26_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_26        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_26_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_26        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_27_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_27        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_27_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_27        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_28_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_28        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_28_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_28        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_29_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_29        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_29_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_29        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_30_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_30        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_30_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_30        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_31_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile0_31        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_31_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile1_31        | ram_2p  | bram | 1       |
-|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_9_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_9 | ram_2p  | bram | 1       |
-|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_8_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_8 | ram_2p  | bram | 1       |
-|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_7_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_7 | ram_2p  | bram | 1       |
-|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_6_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_6 | ram_2p  | bram | 1       |
-|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_5_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_5 | ram_2p  | bram | 1       |
-|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_4_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_4 | ram_2p  | bram | 1       |
-|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_3_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_3 | ram_2p  | bram | 1       |
-|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_2_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_2 | ram_2p  | bram | 1       |
-|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_1_U | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_1 | ram_2p  | bram | 1       |
-|   activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2_U   | 1    | -    | pragma | activation_accelerator_ap_uint_ap_uint_512_ap_uint_512_int_int_tile2   | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_10_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_10        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_11_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_11        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_12_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_12        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_13_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_13        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_14_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_14        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_15_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_15        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_16_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_16        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_17_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_17        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_18_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_18        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_19_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_19        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_20_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_20        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_21_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_21        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_22_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_22        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_23_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_23        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_24_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_24        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_25_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_25        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_26_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_26        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_27_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_27        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_28_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_28        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_29_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_29        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_30_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_30        | ram_2p  | bram | 1       |
-|   p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_31_U        | 1    | -    | pragma | p_ZZ22activation_acceleratorP7ap_uintILi512EES1_S1_iiE5tile2_31        | ram_2p  | bram | 1       |
-|   xt_U                                                                     | 2    | -    | pragma | xt                                                                     | ram_s2p | bram | 1       |
-|   yt_U                                                                     | 2    | -    | pragma | yt                                                                     | ram_s2p | bram | 1       |
-|  + float_safe_softmax                                                      | 2    | 0    |        |                                                                        |         |      |         |
-|    exp_x_U                                                                 | 2    | -    | yes    | exp_x                                                                  | ram_s2p | bram | 1       |
-+----------------------------------------------------------------------------+------+------+--------+------------------------------------------------------------------------+---------+------+---------+
++---------------------------------------------+------+------+--------+------------+---------+--------+---------+
+| Name                                        | BRAM | URAM | Pragma | Variable   | Storage | Impl   | Latency |
++---------------------------------------------+------+------+--------+------------+---------+--------+---------+
+| + activation_accelerator                    | 247  | 0    |        |            |         |        |         |
+|   config_r_c_U                              | -    | -    |        | config_r_c | fifo    | srl    | 0       |
+|   out_r_c_U                                 | -    | -    |        | out_r_c    | fifo    | srl    | 0       |
+|   s_in0_U                                   | 29   | -    |        | s_in0      | fifo    | memory | 0       |
+|   s_in1_U                                   | 29   | -    |        | s_in1      | fifo    | memory | 0       |
+|   s_out_U                                   | 29   | -    |        | s_out      | fifo    | memory | 0       |
+|  + compute_rows                             | 160  | 0    |        |            |         |        |         |
+|    tile0_V_U                                | 1    | -    | yes    | tile0_V    | ram_2p  | bram   | 1       |
+|    tile0_V_32_U                             | 1    | -    | yes    | tile0_V_32 | ram_2p  | bram   | 1       |
+|    tile0_V_33_U                             | 1    | -    | yes    | tile0_V_33 | ram_2p  | bram   | 1       |
+|    tile0_V_34_U                             | 1    | -    | yes    | tile0_V_34 | ram_2p  | bram   | 1       |
+|    tile0_V_35_U                             | 1    | -    | yes    | tile0_V_35 | ram_2p  | bram   | 1       |
+|    tile0_V_36_U                             | 1    | -    | yes    | tile0_V_36 | ram_2p  | bram   | 1       |
+|    tile0_V_37_U                             | 1    | -    | yes    | tile0_V_37 | ram_2p  | bram   | 1       |
+|    tile0_V_38_U                             | 1    | -    | yes    | tile0_V_38 | ram_2p  | bram   | 1       |
+|    tile0_V_39_U                             | 1    | -    | yes    | tile0_V_39 | ram_2p  | bram   | 1       |
+|    tile0_V_40_U                             | 1    | -    | yes    | tile0_V_40 | ram_2p  | bram   | 1       |
+|    tile0_V_41_U                             | 1    | -    | yes    | tile0_V_41 | ram_2p  | bram   | 1       |
+|    tile0_V_42_U                             | 1    | -    | yes    | tile0_V_42 | ram_2p  | bram   | 1       |
+|    tile0_V_43_U                             | 1    | -    | yes    | tile0_V_43 | ram_2p  | bram   | 1       |
+|    tile0_V_44_U                             | 1    | -    | yes    | tile0_V_44 | ram_2p  | bram   | 1       |
+|    tile0_V_45_U                             | 1    | -    | yes    | tile0_V_45 | ram_2p  | bram   | 1       |
+|    tile0_V_46_U                             | 1    | -    | yes    | tile0_V_46 | ram_2p  | bram   | 1       |
+|    tile0_V_47_U                             | 1    | -    | yes    | tile0_V_47 | ram_2p  | bram   | 1       |
+|    tile0_V_48_U                             | 1    | -    | yes    | tile0_V_48 | ram_2p  | bram   | 1       |
+|    tile0_V_49_U                             | 1    | -    | yes    | tile0_V_49 | ram_2p  | bram   | 1       |
+|    tile0_V_50_U                             | 1    | -    | yes    | tile0_V_50 | ram_2p  | bram   | 1       |
+|    tile0_V_51_U                             | 1    | -    | yes    | tile0_V_51 | ram_2p  | bram   | 1       |
+|    tile0_V_52_U                             | 1    | -    | yes    | tile0_V_52 | ram_2p  | bram   | 1       |
+|    tile0_V_53_U                             | 1    | -    | yes    | tile0_V_53 | ram_2p  | bram   | 1       |
+|    tile0_V_54_U                             | 1    | -    | yes    | tile0_V_54 | ram_2p  | bram   | 1       |
+|    tile0_V_55_U                             | 1    | -    | yes    | tile0_V_55 | ram_2p  | bram   | 1       |
+|    tile0_V_56_U                             | 1    | -    | yes    | tile0_V_56 | ram_2p  | bram   | 1       |
+|    tile0_V_57_U                             | 1    | -    | yes    | tile0_V_57 | ram_2p  | bram   | 1       |
+|    tile0_V_58_U                             | 1    | -    | yes    | tile0_V_58 | ram_2p  | bram   | 1       |
+|    tile0_V_59_U                             | 1    | -    | yes    | tile0_V_59 | ram_2p  | bram   | 1       |
+|    tile0_V_60_U                             | 1    | -    | yes    | tile0_V_60 | ram_2p  | bram   | 1       |
+|    tile0_V_61_U                             | 1    | -    | yes    | tile0_V_61 | ram_2p  | bram   | 1       |
+|    tile0_V_62_U                             | 1    | -    | yes    | tile0_V_62 | ram_2p  | bram   | 1       |
+|    tile1_V_U                                | 1    | -    | yes    | tile1_V    | ram_2p  | bram   | 1       |
+|    tile1_V_32_U                             | 1    | -    | yes    | tile1_V_32 | ram_2p  | bram   | 1       |
+|    tile1_V_33_U                             | 1    | -    | yes    | tile1_V_33 | ram_2p  | bram   | 1       |
+|    tile1_V_34_U                             | 1    | -    | yes    | tile1_V_34 | ram_2p  | bram   | 1       |
+|    tile1_V_35_U                             | 1    | -    | yes    | tile1_V_35 | ram_2p  | bram   | 1       |
+|    tile1_V_36_U                             | 1    | -    | yes    | tile1_V_36 | ram_2p  | bram   | 1       |
+|    tile1_V_37_U                             | 1    | -    | yes    | tile1_V_37 | ram_2p  | bram   | 1       |
+|    tile1_V_38_U                             | 1    | -    | yes    | tile1_V_38 | ram_2p  | bram   | 1       |
+|    tile1_V_39_U                             | 1    | -    | yes    | tile1_V_39 | ram_2p  | bram   | 1       |
+|    tile1_V_40_U                             | 1    | -    | yes    | tile1_V_40 | ram_2p  | bram   | 1       |
+|    tile1_V_41_U                             | 1    | -    | yes    | tile1_V_41 | ram_2p  | bram   | 1       |
+|    tile1_V_42_U                             | 1    | -    | yes    | tile1_V_42 | ram_2p  | bram   | 1       |
+|    tile1_V_43_U                             | 1    | -    | yes    | tile1_V_43 | ram_2p  | bram   | 1       |
+|    tile1_V_44_U                             | 1    | -    | yes    | tile1_V_44 | ram_2p  | bram   | 1       |
+|    tile1_V_45_U                             | 1    | -    | yes    | tile1_V_45 | ram_2p  | bram   | 1       |
+|    tile1_V_46_U                             | 1    | -    | yes    | tile1_V_46 | ram_2p  | bram   | 1       |
+|    tile1_V_47_U                             | 1    | -    | yes    | tile1_V_47 | ram_2p  | bram   | 1       |
+|    tile1_V_48_U                             | 1    | -    | yes    | tile1_V_48 | ram_2p  | bram   | 1       |
+|    tile1_V_49_U                             | 1    | -    | yes    | tile1_V_49 | ram_2p  | bram   | 1       |
+|    tile1_V_50_U                             | 1    | -    | yes    | tile1_V_50 | ram_2p  | bram   | 1       |
+|    tile1_V_51_U                             | 1    | -    | yes    | tile1_V_51 | ram_2p  | bram   | 1       |
+|    tile1_V_52_U                             | 1    | -    | yes    | tile1_V_52 | ram_2p  | bram   | 1       |
+|    tile1_V_53_U                             | 1    | -    | yes    | tile1_V_53 | ram_2p  | bram   | 1       |
+|    tile1_V_54_U                             | 1    | -    | yes    | tile1_V_54 | ram_2p  | bram   | 1       |
+|    tile1_V_55_U                             | 1    | -    | yes    | tile1_V_55 | ram_2p  | bram   | 1       |
+|    tile1_V_56_U                             | 1    | -    | yes    | tile1_V_56 | ram_2p  | bram   | 1       |
+|    tile1_V_57_U                             | 1    | -    | yes    | tile1_V_57 | ram_2p  | bram   | 1       |
+|    tile1_V_58_U                             | 1    | -    | yes    | tile1_V_58 | ram_2p  | bram   | 1       |
+|    tile1_V_59_U                             | 1    | -    | yes    | tile1_V_59 | ram_2p  | bram   | 1       |
+|    tile1_V_60_U                             | 1    | -    | yes    | tile1_V_60 | ram_2p  | bram   | 1       |
+|    tile1_V_61_U                             | 1    | -    | yes    | tile1_V_61 | ram_2p  | bram   | 1       |
+|    tile1_V_62_U                             | 1    | -    | yes    | tile1_V_62 | ram_2p  | bram   | 1       |
+|    tile2_V_U                                | 1    | -    | yes    | tile2_V    | ram_2p  | bram   | 1       |
+|    tile2_V_32_U                             | 1    | -    | yes    | tile2_V_32 | ram_2p  | bram   | 1       |
+|    tile2_V_33_U                             | 1    | -    | yes    | tile2_V_33 | ram_2p  | bram   | 1       |
+|    tile2_V_34_U                             | 1    | -    | yes    | tile2_V_34 | ram_2p  | bram   | 1       |
+|    tile2_V_35_U                             | 1    | -    | yes    | tile2_V_35 | ram_2p  | bram   | 1       |
+|    tile2_V_36_U                             | 1    | -    | yes    | tile2_V_36 | ram_2p  | bram   | 1       |
+|    tile2_V_37_U                             | 1    | -    | yes    | tile2_V_37 | ram_2p  | bram   | 1       |
+|    tile2_V_38_U                             | 1    | -    | yes    | tile2_V_38 | ram_2p  | bram   | 1       |
+|    tile2_V_39_U                             | 1    | -    | yes    | tile2_V_39 | ram_2p  | bram   | 1       |
+|    tile2_V_40_U                             | 1    | -    | yes    | tile2_V_40 | ram_2p  | bram   | 1       |
+|    tile2_V_41_U                             | 1    | -    | yes    | tile2_V_41 | ram_2p  | bram   | 1       |
+|    tile2_V_42_U                             | 1    | -    | yes    | tile2_V_42 | ram_2p  | bram   | 1       |
+|    tile2_V_43_U                             | 1    | -    | yes    | tile2_V_43 | ram_2p  | bram   | 1       |
+|    tile2_V_44_U                             | 1    | -    | yes    | tile2_V_44 | ram_2p  | bram   | 1       |
+|    tile2_V_45_U                             | 1    | -    | yes    | tile2_V_45 | ram_2p  | bram   | 1       |
+|    tile2_V_46_U                             | 1    | -    | yes    | tile2_V_46 | ram_2p  | bram   | 1       |
+|    tile2_V_47_U                             | 1    | -    | yes    | tile2_V_47 | ram_2p  | bram   | 1       |
+|    tile2_V_48_U                             | 1    | -    | yes    | tile2_V_48 | ram_2p  | bram   | 1       |
+|    tile2_V_49_U                             | 1    | -    | yes    | tile2_V_49 | ram_2p  | bram   | 1       |
+|    tile2_V_50_U                             | 1    | -    | yes    | tile2_V_50 | ram_2p  | bram   | 1       |
+|    tile2_V_51_U                             | 1    | -    | yes    | tile2_V_51 | ram_2p  | bram   | 1       |
+|    tile2_V_52_U                             | 1    | -    | yes    | tile2_V_52 | ram_2p  | bram   | 1       |
+|    tile2_V_53_U                             | 1    | -    | yes    | tile2_V_53 | ram_2p  | bram   | 1       |
+|    tile2_V_54_U                             | 1    | -    | yes    | tile2_V_54 | ram_2p  | bram   | 1       |
+|    tile2_V_55_U                             | 1    | -    | yes    | tile2_V_55 | ram_2p  | bram   | 1       |
+|    tile2_V_56_U                             | 1    | -    | yes    | tile2_V_56 | ram_2p  | bram   | 1       |
+|    tile2_V_57_U                             | 1    | -    | yes    | tile2_V_57 | ram_2p  | bram   | 1       |
+|    tile2_V_58_U                             | 1    | -    | yes    | tile2_V_58 | ram_2p  | bram   | 1       |
+|    tile2_V_59_U                             | 1    | -    | yes    | tile2_V_59 | ram_2p  | bram   | 1       |
+|    tile2_V_60_U                             | 1    | -    | yes    | tile2_V_60 | ram_2p  | bram   | 1       |
+|    tile2_V_61_U                             | 1    | -    | yes    | tile2_V_61 | ram_2p  | bram   | 1       |
+|    tile2_V_62_U                             | 1    | -    | yes    | tile2_V_62 | ram_2p  | bram   | 1       |
+|    xt_U                                     | 1    | -    | yes    | xt         | ram_s2p | bram   | 1       |
+|    xt_32_U                                  | 1    | -    | yes    | xt_32      | ram_s2p | bram   | 1       |
+|    xt_33_U                                  | 1    | -    | yes    | xt_33      | ram_s2p | bram   | 1       |
+|    xt_34_U                                  | 1    | -    | yes    | xt_34      | ram_s2p | bram   | 1       |
+|    xt_35_U                                  | 1    | -    | yes    | xt_35      | ram_s2p | bram   | 1       |
+|    xt_36_U                                  | 1    | -    | yes    | xt_36      | ram_s2p | bram   | 1       |
+|    xt_37_U                                  | 1    | -    | yes    | xt_37      | ram_s2p | bram   | 1       |
+|    xt_38_U                                  | 1    | -    | yes    | xt_38      | ram_s2p | bram   | 1       |
+|    xt_39_U                                  | 1    | -    | yes    | xt_39      | ram_s2p | bram   | 1       |
+|    xt_40_U                                  | 1    | -    | yes    | xt_40      | ram_s2p | bram   | 1       |
+|    xt_41_U                                  | 1    | -    | yes    | xt_41      | ram_s2p | bram   | 1       |
+|    xt_42_U                                  | 1    | -    | yes    | xt_42      | ram_s2p | bram   | 1       |
+|    xt_43_U                                  | 1    | -    | yes    | xt_43      | ram_s2p | bram   | 1       |
+|    xt_44_U                                  | 1    | -    | yes    | xt_44      | ram_s2p | bram   | 1       |
+|    xt_45_U                                  | 1    | -    | yes    | xt_45      | ram_s2p | bram   | 1       |
+|    xt_46_U                                  | 1    | -    | yes    | xt_46      | ram_s2p | bram   | 1       |
+|    xt_47_U                                  | 1    | -    | yes    | xt_47      | ram_s2p | bram   | 1       |
+|    xt_48_U                                  | 1    | -    | yes    | xt_48      | ram_s2p | bram   | 1       |
+|    xt_49_U                                  | 1    | -    | yes    | xt_49      | ram_s2p | bram   | 1       |
+|    xt_50_U                                  | 1    | -    | yes    | xt_50      | ram_s2p | bram   | 1       |
+|    xt_51_U                                  | 1    | -    | yes    | xt_51      | ram_s2p | bram   | 1       |
+|    xt_52_U                                  | 1    | -    | yes    | xt_52      | ram_s2p | bram   | 1       |
+|    xt_53_U                                  | 1    | -    | yes    | xt_53      | ram_s2p | bram   | 1       |
+|    xt_54_U                                  | 1    | -    | yes    | xt_54      | ram_s2p | bram   | 1       |
+|    xt_55_U                                  | 1    | -    | yes    | xt_55      | ram_s2p | bram   | 1       |
+|    xt_56_U                                  | 1    | -    | yes    | xt_56      | ram_s2p | bram   | 1       |
+|    xt_57_U                                  | 1    | -    | yes    | xt_57      | ram_s2p | bram   | 1       |
+|    xt_58_U                                  | 1    | -    | yes    | xt_58      | ram_s2p | bram   | 1       |
+|    xt_59_U                                  | 1    | -    | yes    | xt_59      | ram_s2p | bram   | 1       |
+|    xt_60_U                                  | 1    | -    | yes    | xt_60      | ram_s2p | bram   | 1       |
+|    xt_61_U                                  | 1    | -    | yes    | xt_61      | ram_s2p | bram   | 1       |
+|    xt_62_U                                  | 1    | -    | yes    | xt_62      | ram_s2p | bram   | 1       |
+|    yt_U                                     | 1    | -    | yes    | yt         | ram_s2p | bram   | 1       |
+|    yt_32_U                                  | 1    | -    | yes    | yt_32      | ram_s2p | bram   | 1       |
+|    yt_33_U                                  | 1    | -    | yes    | yt_33      | ram_s2p | bram   | 1       |
+|    yt_34_U                                  | 1    | -    | yes    | yt_34      | ram_s2p | bram   | 1       |
+|    yt_35_U                                  | 1    | -    | yes    | yt_35      | ram_s2p | bram   | 1       |
+|    fadd_32ns_32ns_32_4_no_dsp_1_U1082       | 1    | -    | yes    | yt_36      | ram_s2p | bram   | 1       |
+|    fadd_32ns_32ns_32_4_no_dsp_1_U1082       | 1    | -    | yes    | yt_37      | ram_s2p | bram   | 1       |
+|    faddfsub_32ns_32ns_32_4_full_dsp_1_U1077 | 1    | -    | yes    | yt_38      | ram_s2p | bram   | 1       |
+|    fexp_32ns_32ns_32_8_full_dsp_1_U1081     | 1    | -    | yes    | yt_39      | ram_s2p | bram   | 1       |
+|    fadd_32ns_32ns_32_4_no_dsp_1_U1082       | 1    | -    | yes    | yt_40      | ram_s2p | bram   | 1       |
+|    yt_41_U                                  | 1    | -    | yes    | yt_41      | ram_s2p | bram   | 1       |
+|    yt_42_U                                  | 1    | -    | yes    | yt_42      | ram_s2p | bram   | 1       |
+|    yt_43_U                                  | 1    | -    | yes    | yt_43      | ram_s2p | bram   | 1       |
+|    yt_44_U                                  | 1    | -    | yes    | yt_44      | ram_s2p | bram   | 1       |
+|    yt_45_U                                  | 1    | -    | yes    | yt_45      | ram_s2p | bram   | 1       |
+|    yt_46_U                                  | 1    | -    | yes    | yt_46      | ram_s2p | bram   | 1       |
+|    yt_47_U                                  | 1    | -    | yes    | yt_47      | ram_s2p | bram   | 1       |
+|    yt_48_U                                  | 1    | -    | yes    | yt_48      | ram_s2p | bram   | 1       |
+|    yt_49_U                                  | 1    | -    | yes    | yt_49      | ram_s2p | bram   | 1       |
+|    yt_50_U                                  | 1    | -    | yes    | yt_50      | ram_s2p | bram   | 1       |
+|    yt_51_U                                  | 1    | -    | yes    | yt_51      | ram_s2p | bram   | 1       |
+|    yt_52_U                                  | 1    | -    | yes    | yt_52      | ram_s2p | bram   | 1       |
+|    yt_53_U                                  | 1    | -    | yes    | yt_53      | ram_s2p | bram   | 1       |
+|    yt_54_U                                  | 1    | -    | yes    | yt_54      | ram_s2p | bram   | 1       |
+|    yt_55_U                                  | 1    | -    | yes    | yt_55      | ram_s2p | bram   | 1       |
+|    yt_56_U                                  | 1    | -    | yes    | yt_56      | ram_s2p | bram   | 1       |
+|    yt_57_U                                  | 1    | -    | yes    | yt_57      | ram_s2p | bram   | 1       |
+|    yt_58_U                                  | 1    | -    | yes    | yt_58      | ram_s2p | bram   | 1       |
+|    yt_59_U                                  | 1    | -    | yes    | yt_59      | ram_s2p | bram   | 1       |
+|    yt_60_U                                  | 1    | -    | yes    | yt_60      | ram_s2p | bram   | 1       |
+|    yt_61_U                                  | 1    | -    | yes    | yt_61      | ram_s2p | bram   | 1       |
+|    yt_62_U                                  | 1    | -    | yes    | yt_62      | ram_s2p | bram   | 1       |
++---------------------------------------------+------+------+--------+------------+---------+--------+---------+
 
 
 ================================================================
 == Pragma Report
 ================================================================
+* Pragmas with Warnings
++----------+---------------------------+---------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Type     | Options                   | Location                                    | Messages                                                                                                                                                                           |
++----------+---------------------------+---------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| dataflow | disable_start_propagation | activation_accelerator.cpp:372 in load_rows | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
++----------+---------------------------+---------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
 * Valid Pragma Syntax
 +-----------------+------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+
 | Type            | Options                                                                                              | Location                                                         |
 +-----------------+------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+
-| inline          | off                                                                                                  | activation_accelerator.cpp:176 in bf16_to_float                  |
-| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:179 in bf16_to_float                  |
-| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:230 in float_silu                     |
-| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:244 in float_rms_norm                 |
-| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:265 in float_layer_norm               |
-| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:272 in float_layer_norm               |
-| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:280 in float_layer_norm               |
-| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:291 in float_add                      |
-| inline          | off                                                                                                  | activation_accelerator.cpp:300 in float_safe_softmax             |
-| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:304 in float_safe_softmax             |
-| bind_storage    | variable=exp_x type=ram_s2p impl=bram                                                                | activation_accelerator.cpp:309 in float_safe_softmax, exp_x      |
-| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:312 in float_safe_softmax             |
-| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:318 in float_safe_softmax             |
-| interface       | m_axi port=in0 bundle=gmem0 offset=slave depth=NW max_read_burst_length=32 num_read_outstanding=16   | activation_accelerator.cpp:366 in activation_accelerator, in0    |
-| interface       | m_axi port=in1 bundle=gmem1 offset=slave depth=NW max_read_burst_length=32 num_read_outstanding=16   | activation_accelerator.cpp:367 in activation_accelerator, in1    |
-| interface       | m_axi port=out bundle=gmem2 offset=slave depth=NW max_write_burst_length=32 num_write_outstanding=16 | activation_accelerator.cpp:368 in activation_accelerator, out    |
-| interface       | s_axilite port=stage                                                                                 | activation_accelerator.cpp:370 in activation_accelerator, stage  |
-| interface       | s_axilite port=config                                                                                | activation_accelerator.cpp:371 in activation_accelerator, config |
-| interface       | s_axilite port=return                                                                                | activation_accelerator.cpp:372 in activation_accelerator, return |
-| bind_storage    | variable=tile0 type=ram_2p impl=bram                                                                 | activation_accelerator.cpp:382 in activation_accelerator, tile0  |
-| bind_storage    | variable=tile1 type=ram_2p impl=bram                                                                 | activation_accelerator.cpp:383 in activation_accelerator, tile1  |
-| bind_storage    | variable=tile2 type=ram_2p impl=bram                                                                 | activation_accelerator.cpp:384 in activation_accelerator, tile2  |
-| array_partition | variable=tile0 cyclic factor=32                                                                      | activation_accelerator.cpp:385 in activation_accelerator, tile0  |
-| array_partition | variable=tile1 cyclic factor=32                                                                      | activation_accelerator.cpp:386 in activation_accelerator, tile1  |
-| array_partition | variable=tile2 cyclic factor=32                                                                      | activation_accelerator.cpp:387 in activation_accelerator, tile2  |
-| bind_storage    | variable=xt type=ram_s2p impl=bram                                                                   | activation_accelerator.cpp:391 in activation_accelerator, xt     |
-| bind_storage    | variable=yt type=ram_s2p impl=bram                                                                   | activation_accelerator.cpp:392 in activation_accelerator, yt     |
-| loop_tripcount  | min=NROWS max=NROWS                                                                                  | activation_accelerator.cpp:397 in activation_accelerator         |
-| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:403 in activation_accelerator         |
-| unroll          |                                                                                                      | activation_accelerator.cpp:408 in activation_accelerator         |
-| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:428 in activation_accelerator         |
-| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:452 in activation_accelerator         |
-| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:466 in activation_accelerator         |
-| unroll          |                                                                                                      | activation_accelerator.cpp:469 in activation_accelerator         |
+| inline          |                                                                                                      | activation_accelerator.cpp:63 in unpack_word                     |
+| unroll          |                                                                                                      | activation_accelerator.cpp:65 in unpack_word                     |
+| inline          |                                                                                                      | activation_accelerator.cpp:70 in pack_word                       |
+| unroll          |                                                                                                      | activation_accelerator.cpp:73 in pack_word                       |
+| inline          |                                                                                                      | activation_accelerator.cpp:208 in bf16_to_float                  |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:211 in bf16_to_float                  |
+| inline          |                                                                                                      | activation_accelerator.cpp:217 in float_to_bf16                  |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:220 in float_to_bf16                  |
+| inline          |                                                                                                      | activation_accelerator.cpp:271 in float_silu                     |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:274 in float_silu                     |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:287 in float_rmsnorm                  |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:306 in float_layernorm                |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:313 in float_layernorm                |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:320 in float_layernorm                |
+| inline          |                                                                                                      | activation_accelerator.cpp:327 in float_add                      |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:330 in float_add                      |
+| inline          |                                                                                                      | activation_accelerator.cpp:338 in float_softmax                  |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:342 in float_softmax                  |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:349 in float_softmax                  |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:356 in float_softmax                  |
+| inline          | off                                                                                                  | activation_accelerator.cpp:369 in load_rows                      |
+| interface       | ap_memory port=in0                                                                                   | activation_accelerator.cpp:375 in load_rows, in0                 |
+| interface       | ap_memory port=in1                                                                                   | activation_accelerator.cpp:376 in load_rows, in1                 |
+| stream          | variable=s0 depth=64                                                                                 | activation_accelerator.cpp:380 in load_rows, s0                  |
+| stream          | variable=s1 depth=64                                                                                 | activation_accelerator.cpp:381 in load_rows, s1                  |
+| loop_tripcount  | min=NROWS max=NROWS                                                                                  | activation_accelerator.cpp:386 in load_rows                      |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:392 in load_rows                      |
+| inline          | off                                                                                                  | activation_accelerator.cpp:405 in compute_rows                   |
+| stream          | variable=s0 depth=64                                                                                 | activation_accelerator.cpp:407 in compute_rows, s0               |
+| stream          | variable=s1 depth=64                                                                                 | activation_accelerator.cpp:408 in compute_rows, s1               |
+| stream          | variable=so depth=64                                                                                 | activation_accelerator.cpp:409 in compute_rows, so               |
+| bind_storage    | variable=tile0 type=ram_2p impl=bram                                                                 | activation_accelerator.cpp:414 in compute_rows, tile0            |
+| bind_storage    | variable=tile1 type=ram_2p impl=bram                                                                 | activation_accelerator.cpp:415 in compute_rows, tile1            |
+| bind_storage    | variable=tile2 type=ram_2p impl=bram                                                                 | activation_accelerator.cpp:416 in compute_rows, tile2            |
+| array_partition | variable=tile0 cyclic factor=32                                                                      | activation_accelerator.cpp:419 in compute_rows, tile0            |
+| array_partition | variable=tile1 cyclic factor=32                                                                      | activation_accelerator.cpp:420 in compute_rows, tile1            |
+| array_partition | variable=tile2 cyclic factor=32                                                                      | activation_accelerator.cpp:421 in compute_rows, tile2            |
+| bind_storage    | variable=xt type=ram_s2p impl=bram                                                                   | activation_accelerator.cpp:427 in compute_rows, xt               |
+| bind_storage    | variable=yt type=ram_s2p impl=bram                                                                   | activation_accelerator.cpp:428 in compute_rows, yt               |
+| array_partition | variable=xt cyclic factor=32                                                                         | activation_accelerator.cpp:429 in compute_rows, xt               |
+| array_partition | variable=yt cyclic factor=32                                                                         | activation_accelerator.cpp:430 in compute_rows, yt               |
+| loop_tripcount  | min=NROWS max=NROWS                                                                                  | activation_accelerator.cpp:434 in compute_rows                   |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:439 in compute_rows                   |
+| array_partition | variable=lane0 complete                                                                              | activation_accelerator.cpp:443 in compute_rows, lane0            |
+| array_partition | variable=lane1 complete                                                                              | activation_accelerator.cpp:444 in compute_rows, lane1            |
+| unroll          |                                                                                                      | activation_accelerator.cpp:449 in compute_rows                   |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:480 in compute_rows                   |
+| array_partition | variable=lane complete                                                                               | activation_accelerator.cpp:482 in compute_rows, lane             |
+| unroll          |                                                                                                      | activation_accelerator.cpp:485 in compute_rows                   |
+| inline          | off                                                                                                  | activation_accelerator.cpp:496 in store_rows                     |
+| stream          | variable=so depth=64                                                                                 | activation_accelerator.cpp:497 in store_rows, so                 |
+| loop_tripcount  | min=NROWS max=NROWS                                                                                  | activation_accelerator.cpp:500 in store_rows                     |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:504 in store_rows                     |
+| interface       | m_axi port=in0 bundle=gmem0 offset=slave depth=NW max_read_burst_length=32 num_read_outstanding=16   | activation_accelerator.cpp:513 in activation_accelerator, in0    |
+| interface       | m_axi port=in1 bundle=gmem1 offset=slave depth=NW max_read_burst_length=32 num_read_outstanding=16   | activation_accelerator.cpp:514 in activation_accelerator, in1    |
+| interface       | m_axi port=out bundle=gmem2 offset=slave depth=NW max_write_burst_length=32 num_write_outstanding=16 | activation_accelerator.cpp:515 in activation_accelerator, out    |
+| interface       | s_axilite port=stage                                                                                 | activation_accelerator.cpp:516 in activation_accelerator, stage  |
+| interface       | s_axilite port=config                                                                                | activation_accelerator.cpp:517 in activation_accelerator, config |
+| interface       | s_axilite port=return                                                                                | activation_accelerator.cpp:518 in activation_accelerator, return |
+| dataflow        |                                                                                                      | activation_accelerator.cpp:519 in activation_accelerator         |
+| stream          | variable=s_in0 depth=64                                                                              | activation_accelerator.cpp:522 in activation_accelerator, s_in0  |
+| stream          | variable=s_in1 depth=64                                                                              | activation_accelerator.cpp:523 in activation_accelerator, s_in1  |
+| stream          | variable=s_out depth=64                                                                              | activation_accelerator.cpp:524 in activation_accelerator, s_out  |
 +-----------------+------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+
 
 
