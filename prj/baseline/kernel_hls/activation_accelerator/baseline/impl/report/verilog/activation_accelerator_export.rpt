@@ -4,21 +4,21 @@ Implementation tool: Xilinx Vivado v.2022.2
 Project:             activation_accelerator
 Solution:            baseline
 Device target:       xck26-sfvc784-2LV-c
-Report date:         Sat Sep 27 11:44:48 CST 2025
+Report date:         Mon Sep 29 22:42:22 CST 2025
 
 #=== Post-Implementation Resource usage ===
 SLICE:            0
-LUT:          13220
-FF:           11073
-DSP:             41
-BRAM:           150
+LUT:          10694
+FF:            8337
+DSP:             21
+BRAM:           251
 URAM:             0
 LATCH:            0
-SRL:           1017
-CLB:           2654
+SRL:            967
+CLB:           2131
 
 #=== Final timing ===
 CP required:                     10.000
-CP achieved post-synthesis:      4.980
-CP achieved post-implementation: 6.814
+CP achieved post-synthesis:      4.981
+CP achieved post-implementation: 6.893
 Timing met

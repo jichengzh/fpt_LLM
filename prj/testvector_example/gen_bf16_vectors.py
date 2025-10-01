@@ -585,6 +585,59 @@ def main():
         torch.save(bf16_to_f32(add_ref_bf16), os.path.join(args.outdir, "ref_add_f32.pt"))
         torch.save(bf16_to_f32(mul_ref_bf16), os.path.join(args.outdir, "ref_mul_f32.pt"))
 
+        def save_ref_pack(name, t_bf16: torch.Tensor):
+            # 1) PyTorch
+            torch.save(t_bf16, os.path.join(args.outdir, f"{name}_bf16.pt"))
+            torch.save(bf16_to_f32(t_bf16), os.path.join(args.outdir, f"{name}_f32.pt"))
+            # 2) 位流/NPY（bf16 的 16bit bitstream）
+            bits = to_bf16_bits(t_bf16)
+            bits.tofile(os.path.join(args.outdir, f"{name}_bf16.bin"))
+            np.save(os.path.join(args.outdir, f"{name}_bf16_bits.npy"), bits)
+        # ========== 新增：另存为 golden_out_config_i_* 的名字 ==========
+        def save_as_golden(config_idx: int, t_bf16: torch.Tensor, outdir: str, also_pt_f32: bool = False):
+            """把同一个 bf16 Tensor 另存为 golden_out_config_<i>_bf16.bin
+            如果 also_pt_f32=True，则同时额外保存 .pt/.f32 版本（可选）。"""
+            # 保存 .bin（uint16 原始位流）
+            bits = to_bf16_bits(t_bf16)
+            bits.tofile(os.path.join(outdir, f"golden_out_config_{config_idx}_bf16.bin"))
+            if also_pt_f32:
+                torch.save(t_bf16, os.path.join(outdir, f"golden_out_config_{config_idx}_bf16.pt"))
+                torch.save(bf16_to_f32(t_bf16), os.path.join(outdir, f"golden_out_config_{config_idx}_f32.pt"))
+        OP2CFG = {
+            "softmax":    0,
+            "silu":       1,
+            "rmsnorm":    2,
+            "layernorm":  3,
+            "gelu":       4, 
+            "add":        5,
+            "mul":        6,      # 同上
+        }
+
+        save_ref_pack("ref_softmax", softmax_ref_bf16)
+        save_ref_pack("ref_layernorm", ln_ref_bf16)
+        save_ref_pack("ref_rmsnorm", rms_ref_bf16)
+        save_ref_pack("ref_silu", silu_ref_bf16)
+        save_ref_pack("ref_gelu", gelu_ref_bf16)
+        save_ref_pack("ref_add", add_ref_bf16)
+        save_ref_pack("ref_mul", mul_ref_bf16)
+
+        # 再按“golden_out_config_i”的旧风格额外保存一份（关键改动在这里）
+        if "add" in OP2CFG:
+            save_as_golden(OP2CFG["add"], add_ref_bf16, args.outdir, also_pt_f32=False)
+        if "softmax" in OP2CFG:
+            save_as_golden(OP2CFG["softmax"], softmax_ref_bf16, args.outdir, also_pt_f32=False)
+        if "layernorm" in OP2CFG:
+            save_as_golden(OP2CFG["layernorm"], ln_ref_bf16, args.outdir, also_pt_f32=False)
+        if "rmsnorm" in OP2CFG:
+            save_as_golden(OP2CFG["rmsnorm"], rms_ref_bf16, args.outdir, also_pt_f32=False)
+        if "silu" in OP2CFG:
+            save_as_golden(OP2CFG["silu"], silu_ref_bf16, args.outdir, also_pt_f32=False)
+        if "gelu" in OP2CFG:
+            save_as_golden(OP2CFG["gelu"], gelu_ref_bf16, args.outdir, also_pt_f32=False)
+        if "mul" in OP2CFG:
+            save_as_golden(OP2CFG["mul"], mul_ref_bf16, args.outdir, also_pt_f32=False)
+
+
         print("[OK] Saved PyTorch reference outputs (bf16 & f32).")
 
     # 6) 简要报告

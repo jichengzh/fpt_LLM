@@ -66222,16 +66222,8 @@ extern __pid_t gettid (void) throw ();
 
 # 17 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp"
 static constexpr int VEC = 32;
-static constexpr int NW = (32*1024) / VEC;
-
-
-extern void activation_accelerator(ap_uint<512>* in0,
-                                   ap_uint<512>* in1,
-                                   ap_uint<512>* out,
-                                   int stage,
-                                   int config);
-
-
+static constexpr int NW = (64*768) / VEC;
+# 28 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp"
 static inline void pack16_to_512(const uint16* src16, ap_uint<512>* dst512, int words) {
     for (int w = 0; w < words; ++w) {
         ap_uint<512> acc = 0;
@@ -66257,7 +66249,7 @@ bool load_binary_data(const std::string& filename, uint16* data) {
         return false;
     }
 
-    file.read(reinterpret_cast<char*>(data), (32*1024) * sizeof(uint16_t));
+    file.read(reinterpret_cast<char*>(data), (64*768) * sizeof(uint16_t));
 
     file.close();
     return true;
@@ -66270,7 +66262,7 @@ bool save_binary_data(const std::string& filename, uint16* data) {
         return false;
     }
 
-    file.write(reinterpret_cast<char*>(data), (32*1024) * sizeof(uint16_t));
+    file.write(reinterpret_cast<char*>(data), (64*768) * sizeof(uint16_t));
     file.close();
     return true;
 }
@@ -66281,7 +66273,7 @@ void print_data_stats(uint16* data, const std::string& name) {
     uint16 max_val = data[0];
     double sum = 0;
 
-    for (int i = 0; i < (32*1024); i++) {
+    for (int i = 0; i < (64*768); i++) {
         if (data[i] < min_val) min_val = data[i];
         if (data[i] > max_val) max_val = data[i];
         sum += data[i];
@@ -66289,14 +66281,14 @@ void print_data_stats(uint16* data, const std::string& name) {
 
     std::cout << name << " statistics: min=" << min_val
               << ", max=" << max_val
-              << ", mean=" << sum/(32*1024) << std::endl;
+              << ", mean=" << sum/(64*768) << std::endl;
 }
 
 
 int compare_results(uint16* result, uint16* golden, uint16* in0, uint16* in1, int32 config) {
     int errors = 0;
     uint16_t max_diff = 0;
-    for (int i = 0; i < (32*1024); ++i) {
+    for (int i = 0; i < (64*768); ++i) {
         if (result[i] != golden[i]) {
             uint16_t diff = std::abs(result[i] - golden[i]);
             if (diff > max_diff) {
@@ -66311,48 +66303,10 @@ int compare_results(uint16* result, uint16* golden, uint16* in0, uint16* in1, in
     std::cout << "Max Difference: " << max_diff << std::endl;
     return errors;
 }
-
-
-bool run_test(int config, uint16* in0, uint16* in1, uint16* out, uint16* golden_data_ptr, const std::string& data_path, uint16* mask_data) {
-    std::cout << "\n--- Testing Config " << config << " ---" << std::endl;
-
-
-    uint16* current_in1 = (config == 2) ? mask_data : in1;
-
-
-    static ap_uint<512> in0_512[NW];
-    static ap_uint<512> in1_512[NW];
-    static ap_uint<512> out_512[NW];
-
-
-    pack16_to_512(in0, in0_512, NW);
-    pack16_to_512(current_in1,in1_512, NW);
-
-
-    int32 current_stage = 1;
-
-    activation_accelerator(in0_512, in1_512, out_512, current_stage, config);
-
-
-
-
-
-
-    unpack512_to_16(out_512, out, NW);
-
-    int errors = compare_results(out, golden_data_ptr, in0, current_in1, config);
-
-
-    std::string output_filename = data_path + "hls_output_config_" + std::to_string(config) + ".bin";
-    save_binary_data(output_filename, out);
-    std::cout << "Output results saved to: " << output_filename << std::endl;
-
-    return errors == 0;
-}
-
+# 146 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp"
 std::string get_data_path() {
-    std::string rel_path = "/data1/jcz/activation_accelerator_tutorial/prj/data/";
-    std::string test_file = rel_path + "in0_bf16.bin";
+    std::string rel_path = "/data1/jcz/activation_accelerator_tutorial/prj/testvector_example/bf16_vectors2/";
+    std::string test_file = rel_path + "X_test_tensor_bf16.bin";
     std::ifstream f(test_file.c_str());
     if (f.good()) {
         std::cout << "Using relative data path: " << rel_path << std::endl;
@@ -66365,30 +66319,29 @@ std::string get_data_path() {
 
 int main() {
 
-    uint16* in0 = new uint16[(32*1024)];
-    uint16* in1 = new uint16[(32*1024)];
-    uint16* out = new uint16[(32*1024)];
-    uint16* mask = new uint16[(32*1024)];
+    uint16* in0 = new uint16[(64*768)];
+    uint16* in1 = new uint16[(64*768)];
+    uint16* out = new uint16[(64*768)];
+    uint16* mask = new uint16[(64*768)];
     uint16* golden_data[7];
     static ap_uint<512> in0_512[NW];
     static ap_uint<512> in1_512[NW];
     static ap_uint<512> out_512[NW];
 
-    for (int i = 0; i < 7; ++i) golden_data[i] = new uint16[(32*1024)];
+    for (int i = 0; i < 7; ++i) golden_data[i] = new uint16[(64*768)];
 
 
     std::cout << "Loading test data..." << std::endl;
     std::string data_path = get_data_path();
-    if (!load_binary_data(data_path + "in0_bf16.bin", in0) ||
-        !load_binary_data(data_path + "in1_bf16.bin", in1) ||
-        !load_binary_data(data_path + "mask_bf16.bin", mask)) {
+    if (!load_binary_data(data_path + "X_test_tensor_bf16.bin", in0) ||
+        !load_binary_data(data_path + "X_test_tensor_bf16.bin", in1) ) {
         std::cerr << "Unable to load bf16 input data, using random data" << std::endl;
         srand(time(
-# 179 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp" 3 4
+# 178 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp" 3 4
                   __null
-# 179 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp"
+# 178 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp"
                       ));
-        for(int i = 0; i < (32*1024); i++) {
+        for(int i = 0; i < (64*768); i++) {
             in0[i] = rand() % 1000 - 500;
             in1[i] = rand() % 1000 - 500;
             mask[i] = rand() % 2;
@@ -66407,13 +66360,13 @@ int main() {
         std::cout << "Trying to load: " << golden_file << std::endl;
         if (!load_binary_data(golden_file, golden_data[i])) {
             std::cerr << "Unable to load Config " << i << " golden data" << std::endl;
-            for(int j = 0; j < (32*1024); j++) golden_data[i][j] = rand() % 1000 - 500;
+            for(int j = 0; j < (64*768); j++) golden_data[i][j] = rand() % 1000 - 500;
             std::cout << "Using random data as golden reference for Config " << i << std::endl;
         } else {
             std::cout << "Loaded Config " << i << " golden data from bf16" << std::endl;
         }
     }
-# 221 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp"
+# 220 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp"
     int32 stage = 0;
 
     pack16_to_512(in0, in0_512, NW);
@@ -66423,14 +66376,7 @@ int main() {
 
     double total_time = 0.0;
     for (int config = 0; config < 7; ++config) {
-
-        if (config == 2) {
-            pack16_to_512(mask, in1_512, NW);
-        } else {
-
-            pack16_to_512(in1, in1_512, NW);
-        }
-
+# 237 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp"
         stage = 1;
         std::cout << "\n--- Testing Config " << config << " ---" << std::endl;
         auto t1 = std::chrono::high_resolution_clock::now();
@@ -66452,9 +66398,10 @@ int main() {
         std::cout << "Output results saved to: " << data_path << "hls_output_config_" << config << ".bin" << std::endl;
         save_binary_data(data_path + "hls_output_config_" + std::to_string(config) + ".bin", out);
 
-        int errors = compare_results(out, golden_data[config], in0,
-                                    (config==2 ? mask : in1),
-                                    config);
+
+
+
+        int errors = compare_results(out, golden_data[config], in0, in1, config);
         if (errors == 0) std::cout << "Config " << config << " test passed!\n";
         else std::cout << "Config " << config << " test failed with " << errors << " errors\n";
     }

@@ -1,5 +1,5 @@
-34 errors generated.
+31 errors generated.
 Error while processing /data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp.
-clang-tidy applied 135 of 135 suggested fixes.
+clang-tidy applied 134 of 134 suggested fixes.
 Suppressed 87 warnings (87 in non-user code).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

@@ -1302,88 +1302,64 @@ Diagnostics:
         Length:          0
         ReplacementText: 'VITIS_LOOP_195_3: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_90_1:  '
-    FileOffset:      90
+    Message:         'Added loop label VITIS_LOOP_64_1:  '
+    FileOffset:      64
     FilePath:        activation_accelerator.cpp
     Replacements:    
       - FilePath:        /data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp
-        Offset:          2353046
+        Offset:          2356235
         Length:          0
-        ReplacementText: 'VITIS_LOOP_90_1: '
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ram_s2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      246
+        ReplacementText: 'VITIS_LOOP_64_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_72_1:  '
+    FileOffset:      72
     FilePath:        activation_accelerator.cpp
     Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ram_s2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      265
+      - FilePath:        /data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp
+        Offset:          2356421
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_72_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_143_1:  '
+    FileOffset:      143
     FilePath:        activation_accelerator.cpp
     Replacements:    
+      - FilePath:        /data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp
+        Offset:          2358196
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_143_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_263_1:  '
+    FileOffset:      263
+    FilePath:        activation_accelerator.cpp
+    Replacements:    
+      - FilePath:        /data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp
+        Offset:          2360546
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_263_1: '
   - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ram_s2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      279
+    Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      414
     FilePath:        activation_accelerator.cpp
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      318
+    FileOffset:      415
     FilePath:        activation_accelerator.cpp
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      319
-    FilePath:        activation_accelerator.cpp
-    Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      320
+    FileOffset:      416
     FilePath:        activation_accelerator.cpp
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Invalid Directive: for current device, ram_s2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      327
+    FileOffset:      427
     FilePath:        activation_accelerator.cpp
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Invalid Directive: for current device, ram_s2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      328
+    FileOffset:      428
     FilePath:        activation_accelerator.cpp
     Replacements:    
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_336_1:  '
-    FileOffset:      336
-    FilePath:        activation_accelerator.cpp
-    Replacements:    
-      - FilePath:        /data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp
-        Offset:          2359694
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_336_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_341_2:  '
-    FileOffset:      341
-    FilePath:        activation_accelerator.cpp
-    Replacements:    
-      - FilePath:        /data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp
-        Offset:          2359843
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_341_2: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_387_3:  '
-    FileOffset:      387
-    FilePath:        activation_accelerator.cpp
-    Replacements:    
-      - FilePath:        /data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp
-        Offset:          2361044
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_387_3: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_390_4:  '
-    FileOffset:      390
-    FilePath:        activation_accelerator.cpp
-    Replacements:    
-      - FilePath:        /data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp
-        Offset:          2361133
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_390_4: '
 ...

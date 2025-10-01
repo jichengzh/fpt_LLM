@@ -15,14 +15,14 @@
 // === 与核保持一致的基本常量（建议与 .h 中一致）===
 // static constexpr int DATA_SIZE = 32 * 1024;  // 你已有定义的话可去掉这行
 static constexpr int VEC       = 32;         // 512b / 16b
-static constexpr int NW        = DATA_SIZE / VEC; // 1024
+static constexpr int NW        = DATA_SIZE / VEC; 
 
 // === 声明 512b 顶层核的原型（与实现保持一致：int 或 int32 统一）===
-extern void activation_accelerator(ap_uint<512>* in0,
-                                   ap_uint<512>* in1,
-                                   ap_uint<512>* out,
-                                   int stage,
-                                   int config);
+// extern void activation_accelerator(ap_uint<512>* in0,
+//                                    ap_uint<512>* in1,
+//                                    ap_uint<512>* out,
+//                                    int stage,
+//                                    int config);
 
 // === 16b<->512b 打/解包工具 ===
 static inline void pack16_to_512(const uint16* src16, ap_uint<512>* dst512, int words) {
@@ -106,46 +106,46 @@ int compare_results(uint16* result, uint16* golden, uint16* in0, uint16* in1, in
 }
 
 // A wrapper function to run a single test configuration
-bool run_test(int config, uint16* in0, uint16* in1, uint16* out, uint16* golden_data_ptr, const std::string& data_path, uint16* mask_data) {
-    std::cout << "\n--- Testing Config " << config << " ---" << std::endl;
+// bool run_test(int config, uint16* in0, uint16* in1, uint16* out, uint16* golden_data_ptr, const std::string& data_path, uint16* mask_data) {
+//     std::cout << "\n--- Testing Config " << config << " ---" << std::endl;
 
-    // Select input1 based on config (only config 2 uses mask)
-    uint16* current_in1 = (config == 2) ? mask_data : in1;
+//     // Select input1 based on config (only config 2 uses mask)
+//     pack16_to_512(in1, in1_512, NW);
 
-    // 创建 512b 临时缓冲
-    static ap_uint<512> in0_512[NW];
-    static ap_uint<512> in1_512[NW];
-    static ap_uint<512> out_512[NW];
+//     // 创建 512b 临时缓冲
+//     static ap_uint<512> in0_512[NW];
+//     static ap_uint<512> in1_512[NW];
+//     static ap_uint<512> out_512[NW];
 
-    // 打包 16b -> 512b 将32*1024变为1024个512bit字
-    pack16_to_512(in0,        in0_512, NW);
-    pack16_to_512(current_in1,in1_512, NW);
+//     // 打包 16b -> 512b 将32*1024变为1024个512bit字
+//     pack16_to_512(in0,        in0_512, NW);
+//     pack16_to_512(current_in1,in1_512, NW);
 
-    // Stage 1: Compute
-    int32 current_stage = STAGE_COMPUTE;
-    // activation_accelerator(in0, current_in1, out, current_stage, config);
-    activation_accelerator(in0_512, in1_512, out_512, current_stage, config);
+//     // Stage 1: Compute
+//     int32 current_stage = STAGE_COMPUTE;
+//     // activation_accelerator(in0, current_in1, out, current_stage, config);
+//     activation_accelerator(in0_512, in1_512, out_512, current_stage, config);
 
-    // 已经修改核函数逻辑不再使用stage
-    // current_stage = STAGE_STORE;
-    // activation_accelerator(in0_512, in1_512, out_512, current_stage, config);
+//     // 已经修改核函数逻辑不再使用stage
+//     // current_stage = STAGE_STORE;
+//     // activation_accelerator(in0_512, in1_512, out_512, current_stage, config);
 
-    // 解包
-    unpack512_to_16(out_512, out, NW);
-    // Compare results
-    int errors = compare_results(out, golden_data_ptr, in0, current_in1, config);
+//     // 解包
+//     unpack512_to_16(out_512, out, NW);
+//     // Compare results
+//     int errors = compare_results(out, golden_data_ptr, in0, current_in1, config);
 
-    // Save HLS output
-    std::string output_filename = data_path + "hls_output_config_" + std::to_string(config) + ".bin";
-    save_binary_data(output_filename, out);
-    std::cout << "Output results saved to: " << output_filename << std::endl;
+//     // Save HLS output
+//     std::string output_filename = data_path + "hls_output_config_" + std::to_string(config) + ".bin";
+//     save_binary_data(output_filename, out);
+//     std::cout << "Output results saved to: " << output_filename << std::endl;
 
-    return errors == 0;
-}
+//     return errors == 0;
+// }
 
 std::string get_data_path() {
-    std::string rel_path = "/data1/jcz/activation_accelerator_tutorial/prj/data/";
-    std::string test_file = rel_path + "in0_bf16.bin";
+    std::string rel_path = "/data1/jcz/activation_accelerator_tutorial/prj/testvector_example/bf16_vectors2/";
+    std::string test_file = rel_path + "X_test_tensor_bf16.bin";
     std::ifstream f(test_file.c_str());
     if (f.good()) {
         std::cout << "Using relative data path: " << rel_path << std::endl;
@@ -172,9 +172,8 @@ int main() {
     // Load test data
     std::cout << "Loading test data..." << std::endl;
     std::string data_path = get_data_path();
-    if (!load_binary_data(data_path + "in0_bf16.bin", in0) ||
-        !load_binary_data(data_path + "in1_bf16.bin", in1) ||
-        !load_binary_data(data_path + "mask_bf16.bin", mask)) {
+    if (!load_binary_data(data_path + "X_test_tensor_bf16.bin", in0) ||
+        !load_binary_data(data_path + "X_test_tensor_bf16.bin", in1) ) {
         std::cerr << "Unable to load bf16 input data, using random data" << std::endl;
         srand(time(NULL));
         for(int i = 0; i < DATA_SIZE; i++) {
@@ -228,12 +227,12 @@ int main() {
     double total_time = 0.0;
     for (int config = 0; config < 7; ++config) {
         // 若是 mask softmax，临时用 mask 打包覆盖 in1_512
-        if (config == 2) {
-            pack16_to_512(mask, in1_512, NW);
-        } else {
-            // 确保 in1_512 是正常 in1（如果上一轮是 mask，记得恢复）
-            pack16_to_512(in1, in1_512, NW);
-        }
+        // if (config == 2) {
+        //     pack16_to_512(mask, in1_512, NW);
+        // } else {
+        //     // 确保 in1_512 是正常 in1（如果上一轮是 mask，记得恢复）
+        //     pack16_to_512(in1, in1_512, NW);
+        // }
 
         stage = STAGE_COMPUTE;
         std::cout << "\n--- Testing Config " << config << " ---" << std::endl;
@@ -256,9 +255,10 @@ int main() {
         std::cout << "Output results saved to: " << data_path << "hls_output_config_" << config << ".bin" << std::endl;
         save_binary_data(data_path + "hls_output_config_" + std::to_string(config) + ".bin", out);
 
-        int errors = compare_results(out, golden_data[config], in0,
-                                    (config==2 ? mask : in1),
-                                    config);
+        // int errors = compare_results(out, golden_data[config], in0,
+        //                             (config==2 ? mask : in1),
+        //                             config);
+        int errors = compare_results(out, golden_data[config], in0, in1, config);
         if (errors == 0) std::cout << "Config " << config << " test passed!\n";
         else             std::cout << "Config " << config << " test failed with " << errors << " errors\n";
     }
