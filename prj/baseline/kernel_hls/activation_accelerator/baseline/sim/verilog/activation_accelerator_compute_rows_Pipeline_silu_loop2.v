@@ -741,7 +741,7 @@ reg   [31:0] tmp_s_reg_1612_pp0_iter19_reg;
 reg   [31:0] tmp_s_reg_1612_pp0_iter20_reg;
 reg   [31:0] tmp_s_reg_1612_pp0_iter21_reg;
 wire   [31:0] bitcast_ln275_1_fu_1381_p1;
-reg   [31:0] tmp_1_reg_1622;
+reg   [31:0] tmp_16_reg_1622;
 reg   [31:0] add_i_reg_1627;
 reg   [31:0] sig_reg_1632;
 reg   [15:0] trunc_ln203_3_reg_1637;
@@ -749,7 +749,7 @@ wire    ap_block_pp0_stage0;
 reg   [9:0] i_fu_244;
 wire   [9:0] add_ln273_fu_1241_p2;
 wire    ap_loop_init;
-reg   [9:0] ap_sig_allocacmp_i_4;
+reg   [9:0] ap_sig_allocacmp_i_3;
 wire   [4:0] lshr_ln275_1_fu_1247_p4;
 wire   [31:0] bitcast_ln275_fu_1371_p1;
 wire   [31:0] xor_ln275_fu_1375_p2;
@@ -1215,7 +1215,7 @@ always @ (posedge ap_clk) begin
         ap_loop_exit_ready_pp0_iter8_reg <= ap_loop_exit_ready_pp0_iter7_reg;
         ap_loop_exit_ready_pp0_iter9_reg <= ap_loop_exit_ready_pp0_iter8_reg;
         sig_reg_1632 <= grp_fu_1911_p_dout0;
-        tmp_1_reg_1622 <= grp_fu_2326_p_dout0;
+        tmp_16_reg_1622 <= grp_fu_2326_p_dout0;
         tmp_s_reg_1612_pp0_iter10_reg <= tmp_s_reg_1612_pp0_iter9_reg;
         tmp_s_reg_1612_pp0_iter11_reg <= tmp_s_reg_1612_pp0_iter10_reg;
         tmp_s_reg_1612_pp0_iter12_reg <= tmp_s_reg_1612_pp0_iter11_reg;
@@ -1345,9 +1345,9 @@ end
 
 always @ (*) begin
     if (((ap_loop_init == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0))) begin
-        ap_sig_allocacmp_i_4 = 10'd0;
+        ap_sig_allocacmp_i_3 = 10'd0;
     end else begin
-        ap_sig_allocacmp_i_4 = i_fu_244;
+        ap_sig_allocacmp_i_3 = i_fu_244;
     end
 end
 
@@ -2130,7 +2130,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln273_fu_1241_p2 = (ap_sig_allocacmp_i_4 + 10'd1);
+assign add_ln273_fu_1241_p2 = (ap_sig_allocacmp_i_3 + 10'd1);
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 
@@ -2206,7 +2206,7 @@ assign bitcast_ln275_fu_1371_p1 = tmp_s_fu_1302_p34;
 
 assign grp_fu_1900_p_ce = 1'b1;
 
-assign grp_fu_1900_p_din0 = tmp_1_reg_1622;
+assign grp_fu_1900_p_din0 = tmp_16_reg_1622;
 
 assign grp_fu_1900_p_din1 = 32'd1065353216;
 
@@ -2230,9 +2230,9 @@ assign grp_fu_2326_p_din0 = 32'd0;
 
 assign grp_fu_2326_p_din1 = bitcast_ln275_1_fu_1381_p1;
 
-assign icmp_ln273_fu_1235_p2 = ((ap_sig_allocacmp_i_4 == 10'd768) ? 1'b1 : 1'b0);
+assign icmp_ln273_fu_1235_p2 = ((ap_sig_allocacmp_i_3 == 10'd768) ? 1'b1 : 1'b0);
 
-assign lshr_ln275_1_fu_1247_p4 = {{ap_sig_allocacmp_i_4[9:5]}};
+assign lshr_ln275_1_fu_1247_p4 = {{ap_sig_allocacmp_i_3[9:5]}};
 
 assign tile2_V_32_address1 = zext_ln275_reg_1411_pp0_iter24_reg;
 
@@ -2362,7 +2362,7 @@ assign tile2_V_address1 = zext_ln275_reg_1411_pp0_iter24_reg;
 
 assign tile2_V_d1 = trunc_ln203_3_reg_1637;
 
-assign trunc_ln275_fu_1293_p1 = ap_sig_allocacmp_i_4[4:0];
+assign trunc_ln275_fu_1293_p1 = ap_sig_allocacmp_i_3[4:0];
 
 assign w_V_fu_1386_p1 = grp_fu_1906_p_dout0;
 

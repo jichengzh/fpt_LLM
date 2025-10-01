@@ -216,7 +216,7 @@ wire    grp_store_rows_Pipeline_STORE_ROW_STORE_W_fu_66_m_axi_gmem2_BREADY;
 reg    grp_store_rows_Pipeline_STORE_ROW_STORE_W_fu_66_ap_start_reg;
 wire    ap_CS_fsm_state3;
 wire    ap_CS_fsm_state4;
-wire  signed [63:0] sext_ln499_fu_85_p1;
+wire  signed [63:0] sext_ln517_fu_85_p1;
 reg    ap_block_state1;
 reg   [8:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
@@ -295,7 +295,7 @@ activation_accelerator_store_rows_Pipeline_STORE_ROW_STORE_W grp_store_rows_Pipe
     .m_axi_gmem2_BRESP(m_axi_gmem2_BRESP),
     .m_axi_gmem2_BID(m_axi_gmem2_BID),
     .m_axi_gmem2_BUSER(m_axi_gmem2_BUSER),
-    .sext_ln499(trunc_ln_reg_95)
+    .sext_ln517(trunc_ln_reg_95)
 );
 
 always @ (posedge ap_clk) begin
@@ -420,7 +420,7 @@ end
 
 always @ (*) begin
     if (((m_axi_gmem2_AWREADY == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
-        m_axi_gmem2_AWADDR = sext_ln499_fu_85_p1;
+        m_axi_gmem2_AWADDR = sext_ln517_fu_85_p1;
     end else if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
         m_axi_gmem2_AWADDR = grp_store_rows_Pipeline_STORE_ROW_STORE_W_fu_66_m_axi_gmem2_AWADDR;
     end else begin
@@ -665,6 +665,6 @@ assign m_axi_gmem2_WSTRB = grp_store_rows_Pipeline_STORE_ROW_STORE_W_fu_66_m_axi
 
 assign m_axi_gmem2_WUSER = grp_store_rows_Pipeline_STORE_ROW_STORE_W_fu_66_m_axi_gmem2_WUSER;
 
-assign sext_ln499_fu_85_p1 = $signed(trunc_ln_reg_95);
+assign sext_ln517_fu_85_p1 = $signed(trunc_ln_reg_95);
 
 endmodule //activation_accelerator_store_rows

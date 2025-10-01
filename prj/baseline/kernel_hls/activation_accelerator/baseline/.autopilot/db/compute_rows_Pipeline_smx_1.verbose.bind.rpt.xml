@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'compute_rows_Pipeline_smx_1'" level="0">
-<item name = "Date">Mon Sep 29 22:11:45 2025
+<item name = "Date">Wed Oct  1 10:14:40 2025
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">activation_accelerator</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">2320, 2320, 23.200 us, 23.200 us, 2320, 2320, no</column>
+<column name="">322, 322, 3.220 us, 3.220 us, 322, 322, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- smx_1">2318, 2318, 18, 3, 1, 768, yes</column>
+<column name="- smx_1">320, 320, 36, 3, 1, 96, yes</column>
 </table>
 </item>
 </section>

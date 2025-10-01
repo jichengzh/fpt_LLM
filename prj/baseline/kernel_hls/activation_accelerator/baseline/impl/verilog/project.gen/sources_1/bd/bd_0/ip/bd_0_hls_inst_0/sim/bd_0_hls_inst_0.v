@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:hls:activation_accelerator:1.0
-// IP Revision: 2114282188
+// IP Revision: 2114284354
 
 `timescale 1ns/1ps
 

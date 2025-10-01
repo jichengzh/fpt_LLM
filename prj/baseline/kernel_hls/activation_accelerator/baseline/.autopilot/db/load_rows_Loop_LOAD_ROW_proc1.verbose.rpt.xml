@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'load_rows_Loop_LOAD_ROW_proc1'" level="0">
-<item name = "Date">Mon Sep 29 22:11:54 2025
+<item name = "Date">Wed Oct  1 10:14:48 2025
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">activation_accelerator</item>
@@ -124,7 +124,7 @@
 <column name="ap_CS_fsm">9, 0, 9, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
 <column name="grp_load_rows_Loop_LOAD_ROW_proc1_Pipeline_LOAD_ROW_LOAD_W_fu_76_ap_start_reg">1, 0, 1, 0</column>
-<column name="trunc_ln384_1_reg_142">58, 0, 58, 0</column>
+<column name="trunc_ln402_1_reg_142">58, 0, 58, 0</column>
 <column name="trunc_ln_reg_132">58, 0, 58, 0</column>
 </table>
 </item>

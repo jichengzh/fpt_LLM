@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'load_rows_Loop_LOAD_ROW_proc1'
 ================================================================
-* Date:           Mon Sep 29 22:11:42 2025
+* Date:           Wed Oct  1 10:14:38 2025
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        activation_accelerator
@@ -83,51 +83,51 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 7.30>
-ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%in1_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %in1" [activation_accelerator.cpp:384]   --->   Operation 10 'read' 'in1_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%in0_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %in0" [activation_accelerator.cpp:384]   --->   Operation 11 'read' 'in0_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i58 @_ssdm_op_PartSelect.i58.i64.i32.i32, i64 %in0_read, i32 6, i32 63" [activation_accelerator.cpp:384]   --->   Operation 12 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%sext_ln384 = sext i58 %trunc_ln" [activation_accelerator.cpp:384]   --->   Operation 13 'sext' 'sext_ln384' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%gmem0_addr = getelementptr i512 %gmem0, i64 %sext_ln384" [activation_accelerator.cpp:384]   --->   Operation 14 'getelementptr' 'gmem0_addr' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%trunc_ln384_1 = partselect i58 @_ssdm_op_PartSelect.i58.i64.i32.i32, i64 %in1_read, i32 6, i32 63" [activation_accelerator.cpp:384]   --->   Operation 15 'partselect' 'trunc_ln384_1' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%sext_ln384_1 = sext i58 %trunc_ln384_1" [activation_accelerator.cpp:384]   --->   Operation 16 'sext' 'sext_ln384_1' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%gmem1_addr = getelementptr i512 %gmem1, i64 %sext_ln384_1" [activation_accelerator.cpp:384]   --->   Operation 17 'getelementptr' 'gmem1_addr' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 18 [7/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem0_addr, i32 1536" [activation_accelerator.cpp:384]   --->   Operation 18 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_1 : Operation 19 [7/7] (7.30ns)   --->   "%empty_50 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem1_addr, i32 1536" [activation_accelerator.cpp:384]   --->   Operation 19 'readreq' 'empty_50' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%in1_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %in1" [activation_accelerator.cpp:402]   --->   Operation 10 'read' 'in1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%in0_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %in0" [activation_accelerator.cpp:402]   --->   Operation 11 'read' 'in0_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i58 @_ssdm_op_PartSelect.i58.i64.i32.i32, i64 %in0_read, i32 6, i32 63" [activation_accelerator.cpp:402]   --->   Operation 12 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%sext_ln402 = sext i58 %trunc_ln" [activation_accelerator.cpp:402]   --->   Operation 13 'sext' 'sext_ln402' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%gmem0_addr = getelementptr i512 %gmem0, i64 %sext_ln402" [activation_accelerator.cpp:402]   --->   Operation 14 'getelementptr' 'gmem0_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%trunc_ln402_1 = partselect i58 @_ssdm_op_PartSelect.i58.i64.i32.i32, i64 %in1_read, i32 6, i32 63" [activation_accelerator.cpp:402]   --->   Operation 15 'partselect' 'trunc_ln402_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%sext_ln402_1 = sext i58 %trunc_ln402_1" [activation_accelerator.cpp:402]   --->   Operation 16 'sext' 'sext_ln402_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%gmem1_addr = getelementptr i512 %gmem1, i64 %sext_ln402_1" [activation_accelerator.cpp:402]   --->   Operation 17 'getelementptr' 'gmem1_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [7/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem0_addr, i32 1536" [activation_accelerator.cpp:402]   --->   Operation 18 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_1 : Operation 19 [7/7] (7.30ns)   --->   "%empty_50 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem1_addr, i32 1536" [activation_accelerator.cpp:402]   --->   Operation 19 'readreq' 'empty_50' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 2 <SV = 1> <Delay = 7.30>
-ST_2 : Operation 20 [6/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem0_addr, i32 1536" [activation_accelerator.cpp:384]   --->   Operation 20 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_2 : Operation 21 [6/7] (7.30ns)   --->   "%empty_50 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem1_addr, i32 1536" [activation_accelerator.cpp:384]   --->   Operation 21 'readreq' 'empty_50' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_2 : Operation 20 [6/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem0_addr, i32 1536" [activation_accelerator.cpp:402]   --->   Operation 20 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_2 : Operation 21 [6/7] (7.30ns)   --->   "%empty_50 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem1_addr, i32 1536" [activation_accelerator.cpp:402]   --->   Operation 21 'readreq' 'empty_50' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 3 <SV = 2> <Delay = 7.30>
-ST_3 : Operation 22 [5/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem0_addr, i32 1536" [activation_accelerator.cpp:384]   --->   Operation 22 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_3 : Operation 23 [5/7] (7.30ns)   --->   "%empty_50 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem1_addr, i32 1536" [activation_accelerator.cpp:384]   --->   Operation 23 'readreq' 'empty_50' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_3 : Operation 22 [5/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem0_addr, i32 1536" [activation_accelerator.cpp:402]   --->   Operation 22 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_3 : Operation 23 [5/7] (7.30ns)   --->   "%empty_50 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem1_addr, i32 1536" [activation_accelerator.cpp:402]   --->   Operation 23 'readreq' 'empty_50' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 4 <SV = 3> <Delay = 7.30>
-ST_4 : Operation 24 [4/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem0_addr, i32 1536" [activation_accelerator.cpp:384]   --->   Operation 24 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_4 : Operation 25 [4/7] (7.30ns)   --->   "%empty_50 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem1_addr, i32 1536" [activation_accelerator.cpp:384]   --->   Operation 25 'readreq' 'empty_50' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_4 : Operation 24 [4/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem0_addr, i32 1536" [activation_accelerator.cpp:402]   --->   Operation 24 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_4 : Operation 25 [4/7] (7.30ns)   --->   "%empty_50 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem1_addr, i32 1536" [activation_accelerator.cpp:402]   --->   Operation 25 'readreq' 'empty_50' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 5 <SV = 4> <Delay = 7.30>
-ST_5 : Operation 26 [3/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem0_addr, i32 1536" [activation_accelerator.cpp:384]   --->   Operation 26 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_5 : Operation 27 [3/7] (7.30ns)   --->   "%empty_50 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem1_addr, i32 1536" [activation_accelerator.cpp:384]   --->   Operation 27 'readreq' 'empty_50' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_5 : Operation 26 [3/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem0_addr, i32 1536" [activation_accelerator.cpp:402]   --->   Operation 26 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_5 : Operation 27 [3/7] (7.30ns)   --->   "%empty_50 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem1_addr, i32 1536" [activation_accelerator.cpp:402]   --->   Operation 27 'readreq' 'empty_50' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 6 <SV = 5> <Delay = 7.30>
-ST_6 : Operation 28 [2/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem0_addr, i32 1536" [activation_accelerator.cpp:384]   --->   Operation 28 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_6 : Operation 29 [2/7] (7.30ns)   --->   "%empty_50 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem1_addr, i32 1536" [activation_accelerator.cpp:384]   --->   Operation 29 'readreq' 'empty_50' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_6 : Operation 28 [2/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem0_addr, i32 1536" [activation_accelerator.cpp:402]   --->   Operation 28 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_6 : Operation 29 [2/7] (7.30ns)   --->   "%empty_50 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem1_addr, i32 1536" [activation_accelerator.cpp:402]   --->   Operation 29 'readreq' 'empty_50' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 7 <SV = 6> <Delay = 7.30>
-ST_7 : Operation 30 [1/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem0_addr, i32 1536" [activation_accelerator.cpp:384]   --->   Operation 30 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_7 : Operation 31 [1/7] (7.30ns)   --->   "%empty_50 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem1_addr, i32 1536" [activation_accelerator.cpp:384]   --->   Operation 31 'readreq' 'empty_50' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_7 : Operation 30 [1/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem0_addr, i32 1536" [activation_accelerator.cpp:402]   --->   Operation 30 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_7 : Operation 31 [1/7] (7.30ns)   --->   "%empty_50 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem1_addr, i32 1536" [activation_accelerator.cpp:402]   --->   Operation 31 'readreq' 'empty_50' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 8 <SV = 7> <Delay = 0.00>
 ST_8 : Operation 32 [1/1] (0.00ns)   --->   "%empty_51 = wait i32 @_ssdm_op_Wait"   --->   Operation 32 'wait' 'empty_51' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 33 [2/2] (0.00ns)   --->   "%call_ln384 = call void @load_rows_Loop_LOAD_ROW_proc1_Pipeline_LOAD_ROW_LOAD_W, i512 %gmem1, i58 %trunc_ln384_1, i512 %gmem0, i58 %trunc_ln, i512 %s_in01, i512 %s_in12" [activation_accelerator.cpp:384]   --->   Operation 33 'call' 'call_ln384' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 33 [2/2] (0.00ns)   --->   "%call_ln402 = call void @load_rows_Loop_LOAD_ROW_proc1_Pipeline_LOAD_ROW_LOAD_W, i512 %gmem1, i58 %trunc_ln402_1, i512 %gmem0, i58 %trunc_ln, i512 %s_in01, i512 %s_in12" [activation_accelerator.cpp:402]   --->   Operation 33 'call' 'call_ln402' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 9 <SV = 8> <Delay = 0.00>
 ST_9 : Operation 34 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %gmem0, void @empty_9, i32 0, i32 0, void @empty_13, i32 0, i32 1536, void @empty_31, void @empty_30, void @empty_13, i32 16, i32 16, i32 32, i32 16, void @empty_13, void @empty_13, i32 4294967295, i32 0"   --->   Operation 34 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 35 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %gmem1, void @empty_9, i32 0, i32 0, void @empty_13, i32 0, i32 1536, void @empty_22, void @empty_30, void @empty_13, i32 16, i32 16, i32 32, i32 16, void @empty_13, void @empty_13, i32 4294967295, i32 0"   --->   Operation 35 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 36 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %s_in01, void @empty_7, i32 0, i32 0, void @empty_13, i32 0, i32 0, void @empty_13, void @empty_13, void @empty_13, i32 0, i32 0, i32 0, i32 0, void @empty_13, void @empty_13, i32 4294967295, i32 0"   --->   Operation 36 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 37 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %s_in12, void @empty_7, i32 0, i32 0, void @empty_13, i32 0, i32 0, void @empty_13, void @empty_13, void @empty_13, i32 0, i32 0, i32 0, i32 0, void @empty_13, void @empty_13, i32 4294967295, i32 0"   --->   Operation 37 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_9 : Operation 38 [1/2] (0.00ns)   --->   "%call_ln384 = call void @load_rows_Loop_LOAD_ROW_proc1_Pipeline_LOAD_ROW_LOAD_W, i512 %gmem1, i58 %trunc_ln384_1, i512 %gmem0, i58 %trunc_ln, i512 %s_in01, i512 %s_in12" [activation_accelerator.cpp:384]   --->   Operation 38 'call' 'call_ln384' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 38 [1/2] (0.00ns)   --->   "%call_ln402 = call void @load_rows_Loop_LOAD_ROW_proc1_Pipeline_LOAD_ROW_LOAD_W, i512 %gmem1, i58 %trunc_ln402_1, i512 %gmem0, i58 %trunc_ln, i512 %s_in01, i512 %s_in12" [activation_accelerator.cpp:402]   --->   Operation 38 'call' 'call_ln402' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_9 : Operation 39 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 39 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
 
 
@@ -138,33 +138,33 @@ Target clock period: 10ns, clock uncertainty: 2.7ns.
 
  <State 1>: 7.3ns
 The critical path consists of the following:
-	wire read operation ('in0_read', activation_accelerator.cpp:384) on port 'in0' (activation_accelerator.cpp:384) [12]  (0 ns)
-	'getelementptr' operation ('gmem0_addr', activation_accelerator.cpp:384) [15]  (0 ns)
-	bus request operation ('empty', activation_accelerator.cpp:384) on port 'gmem0' (activation_accelerator.cpp:384) [19]  (7.3 ns)
+	wire read operation ('in0_read', activation_accelerator.cpp:402) on port 'in0' (activation_accelerator.cpp:402) [12]  (0 ns)
+	'getelementptr' operation ('gmem0_addr', activation_accelerator.cpp:402) [15]  (0 ns)
+	bus request operation ('empty', activation_accelerator.cpp:402) on port 'gmem0' (activation_accelerator.cpp:402) [19]  (7.3 ns)
 
  <State 2>: 7.3ns
 The critical path consists of the following:
-	bus request operation ('empty', activation_accelerator.cpp:384) on port 'gmem0' (activation_accelerator.cpp:384) [19]  (7.3 ns)
+	bus request operation ('empty', activation_accelerator.cpp:402) on port 'gmem0' (activation_accelerator.cpp:402) [19]  (7.3 ns)
 
  <State 3>: 7.3ns
 The critical path consists of the following:
-	bus request operation ('empty', activation_accelerator.cpp:384) on port 'gmem0' (activation_accelerator.cpp:384) [19]  (7.3 ns)
+	bus request operation ('empty', activation_accelerator.cpp:402) on port 'gmem0' (activation_accelerator.cpp:402) [19]  (7.3 ns)
 
  <State 4>: 7.3ns
 The critical path consists of the following:
-	bus request operation ('empty', activation_accelerator.cpp:384) on port 'gmem0' (activation_accelerator.cpp:384) [19]  (7.3 ns)
+	bus request operation ('empty', activation_accelerator.cpp:402) on port 'gmem0' (activation_accelerator.cpp:402) [19]  (7.3 ns)
 
  <State 5>: 7.3ns
 The critical path consists of the following:
-	bus request operation ('empty', activation_accelerator.cpp:384) on port 'gmem0' (activation_accelerator.cpp:384) [19]  (7.3 ns)
+	bus request operation ('empty', activation_accelerator.cpp:402) on port 'gmem0' (activation_accelerator.cpp:402) [19]  (7.3 ns)
 
  <State 6>: 7.3ns
 The critical path consists of the following:
-	bus request operation ('empty', activation_accelerator.cpp:384) on port 'gmem0' (activation_accelerator.cpp:384) [19]  (7.3 ns)
+	bus request operation ('empty', activation_accelerator.cpp:402) on port 'gmem0' (activation_accelerator.cpp:402) [19]  (7.3 ns)
 
  <State 7>: 7.3ns
 The critical path consists of the following:
-	bus request operation ('empty', activation_accelerator.cpp:384) on port 'gmem0' (activation_accelerator.cpp:384) [19]  (7.3 ns)
+	bus request operation ('empty', activation_accelerator.cpp:402) on port 'gmem0' (activation_accelerator.cpp:402) [19]  (7.3 ns)
 
  <State 8>: 0ns
 The critical path consists of the following:

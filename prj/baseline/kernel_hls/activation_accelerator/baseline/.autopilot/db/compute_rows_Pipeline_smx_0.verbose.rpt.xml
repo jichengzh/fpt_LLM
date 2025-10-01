@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'compute_rows_Pipeline_smx_0'" level="0">
-<item name = "Date">Mon Sep 29 22:11:55 2025
+<item name = "Date">Wed Oct  1 10:14:49 2025
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">activation_accelerator</item>
@@ -118,7 +118,7 @@
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_done_int">9, 2, 1, 2</column>
 <column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
-<column name="ap_sig_allocacmp_i_3">9, 2, 10, 20</column>
+<column name="ap_sig_allocacmp_i_2">9, 2, 10, 20</column>
 <column name="i_fu_138">9, 2, 10, 20</column>
 <column name="xmax_3_fu_134">9, 2, 32, 64</column>
 </table>

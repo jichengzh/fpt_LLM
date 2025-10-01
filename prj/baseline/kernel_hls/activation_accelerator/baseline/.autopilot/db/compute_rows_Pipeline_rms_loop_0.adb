@@ -286,7 +286,7 @@
               <coreName>RAM_S2P_BRAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3470016944</coreId>
+              <coreId>382381856</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -322,7 +322,7 @@
               <coreName>RAM_S2P_BRAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3470013552</coreId>
+              <coreId>383320640</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -358,7 +358,7 @@
               <coreName>RAM_S2P_BRAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3470007888</coreId>
+              <coreId>383324112</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -394,7 +394,7 @@
               <coreName>RAM_S2P_BRAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3469329984</coreId>
+              <coreId>383309456</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -430,7 +430,7 @@
               <coreName>RAM_S2P_BRAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>30</coreId>
+              <coreId>381973152</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -466,7 +466,7 @@
               <coreName>RAM_S2P_BRAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3468716112</coreId>
+              <coreId>775041336</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -502,7 +502,7 @@
               <coreName>RAM_S2P_BRAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3468577216</coreId>
+              <coreId>382635056</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -538,7 +538,7 @@
               <coreName>RAM_S2P_BRAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>192</coreId>
+              <coreId>382406272</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -574,7 +574,7 @@
               <coreName>RAM_S2P_BRAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3469329984</coreId>
+              <coreId>757935405</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -610,7 +610,7 @@
               <coreName>RAM_S2P_BRAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3468650976</coreId>
+              <coreId>382630640</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -646,7 +646,7 @@
               <coreName>RAM_S2P_BRAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3468833520</coreId>
+              <coreId>383313328</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -682,7 +682,7 @@
               <coreName>RAM_S2P_BRAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3469539648</coreId>
+              <coreId>383312368</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -718,7 +718,7 @@
               <coreName>RAM_S2P_BRAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>608</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -754,7 +754,7 @@
               <coreName>RAM_S2P_BRAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3470011376</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -790,7 +790,7 @@
               <coreName>RAM_S2P_BRAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1702258035</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -862,7 +862,7 @@
               <coreName>RAM_S2P_BRAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1397508187</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -898,7 +898,7 @@
               <coreName>RAM_S2P_BRAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3470021488</coreId>
+              <coreId>383315936</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -934,7 +934,7 @@
               <coreName>RAM_S2P_BRAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>383318784</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -970,7 +970,7 @@
               <coreName>RAM_S2P_BRAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3470009632</coreId>
+              <coreId>383317664</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -1006,7 +1006,7 @@
               <coreName>RAM_S2P_BRAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3470020512</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -1042,7 +1042,7 @@
               <coreName>RAM_S2P_BRAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>382634448</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -1078,7 +1078,7 @@
               <coreName>RAM_S2P_BRAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>539122993</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -1150,7 +1150,7 @@
               <coreName>RAM_S2P_BRAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>383328144</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -1186,7 +1186,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>382791536</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -1310,7 +1310,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3469485856</coreId>
+              <coreId>380993952</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -1353,7 +1353,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3469490440</coreId>
+              <coreId>382365904</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -1396,7 +1396,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3469482144</coreId>
+              <coreId>382788960</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -1430,7 +1430,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item class_id="11" tracking_level="0" version="0">
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second class_id="12" tracking_level="0" version="0">
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1487,7 +1487,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1544,7 +1544,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1601,7 +1601,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1623,7 +1623,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3469484720</coreId>
+              <coreId>382786384</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -1659,7 +1659,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1716,7 +1716,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1738,7 +1738,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3469485856</coreId>
+              <coreId>382787520</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -1775,7 +1775,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1831,7 +1831,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1853,7 +1853,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>383327088</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -1889,7 +1889,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1911,7 +1911,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3469454776</coreId>
+              <coreId>942815856</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -1947,7 +1947,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1969,7 +1969,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>382623032</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -2005,7 +2005,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2027,7 +2027,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3469519552</coreId>
+              <coreId>382830400</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -2063,7 +2063,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2085,7 +2085,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3469511344</coreId>
+              <coreId>1397508187</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -2121,7 +2121,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2143,7 +2143,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>382845552</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -2179,7 +2179,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2201,7 +2201,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>382845696</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -2237,7 +2237,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2259,7 +2259,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>382847216</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -2295,7 +2295,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2317,7 +2317,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>176</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -2353,7 +2353,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2375,7 +2375,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3469517320</coreId>
+              <coreId>382848872</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -2411,7 +2411,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2433,7 +2433,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3469517808</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -2469,7 +2469,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2491,7 +2491,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3469990480</coreId>
+              <coreId>382760224</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -2527,7 +2527,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2549,7 +2549,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3469996800</coreId>
+              <coreId>2296604913</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -2585,7 +2585,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2607,7 +2607,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3469997264</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -2643,7 +2643,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2665,7 +2665,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3470000464</coreId>
+              <coreId>382754096</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -2701,7 +2701,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2723,7 +2723,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3469999552</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -2759,7 +2759,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2781,7 +2781,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3470001136</coreId>
+              <coreId>382755864</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -2817,7 +2817,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2839,7 +2839,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>382756672</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -2875,7 +2875,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2897,7 +2897,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3470003200</coreId>
+              <coreId>382757728</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -2933,7 +2933,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2955,7 +2955,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>382758688</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -2991,7 +2991,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3013,7 +3013,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3470005472</coreId>
+              <coreId>382759424</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -3049,7 +3049,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3107,7 +3107,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3129,7 +3129,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3469715920</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -3165,7 +3165,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3187,7 +3187,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>20</coreId>
+              <coreId>1903386477</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -3223,7 +3223,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3245,7 +3245,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>1415533385</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -3281,7 +3281,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3303,7 +3303,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3469744584</coreId>
+              <coreId>1936683105</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -3339,7 +3339,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3361,7 +3361,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>1007225406</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -3397,7 +3397,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3419,7 +3419,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>176</coreId>
+              <coreId>1226845485</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -3455,7 +3455,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3477,7 +3477,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>1769218157</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -3513,7 +3513,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3535,7 +3535,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3469748992</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -3571,7 +3571,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3593,7 +3593,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3469750128</coreId>
+              <coreId>382624552</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -3629,7 +3629,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3651,7 +3651,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>480</coreId>
+              <coreId>382625360</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -3687,7 +3687,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3709,7 +3709,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3469723312</coreId>
+              <coreId>784</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -3743,7 +3743,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3799,7 +3799,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3855,7 +3855,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3911,7 +3911,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3967,7 +3967,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4023,7 +4023,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4079,7 +4079,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4135,7 +4135,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4191,7 +4191,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4247,7 +4247,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4303,7 +4303,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4359,7 +4359,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4415,7 +4415,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4471,7 +4471,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4527,7 +4527,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4583,7 +4583,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4639,7 +4639,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4695,7 +4695,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4751,7 +4751,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4807,7 +4807,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4863,7 +4863,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4919,7 +4919,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4975,7 +4975,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5031,7 +5031,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5087,7 +5087,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5143,7 +5143,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5199,7 +5199,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5255,7 +5255,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5311,7 +5311,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5367,7 +5367,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5423,7 +5423,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5479,7 +5479,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5535,7 +5535,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5550,7 +5550,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>mux_325_32_1_1_U370</rtlName>
+              <rtlName>mux_325_32_1_1_U384</rtlName>
               <control>auto</control>
               <opType>mux</opType>
               <implIndex>auto</implIndex>
@@ -5624,7 +5624,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5681,7 +5681,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5738,7 +5738,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5760,7 +5760,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>383279216</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -5797,7 +5797,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5857,7 +5857,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5879,7 +5879,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3469490304</coreId>
+              <coreId>304</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -5921,7 +5921,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>383293104</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -5964,7 +5964,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>480</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -6008,7 +6008,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3469503032</coreId>
+              <coreId>383294480</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -6084,7 +6084,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3469503840</coreId>
+              <coreId>383295312</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -6115,7 +6115,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3469490304</coreId>
+              <coreId>1145981250</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -6146,7 +6146,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3469513952</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -6177,7 +6177,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3469505888</coreId>
+              <coreId>383297376</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -6208,7 +6208,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3469506240</coreId>
+              <coreId>383298264</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -6239,7 +6239,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3469507072</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -6270,7 +6270,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>176</coreId>
+              <coreId>383298896</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -6321,7 +6321,7 @@
           <Obj>
             <type>3</type>
             <id>77</id>
-            <name>for.inc.i465</name>
+            <name>for.inc.i467</name>
             <fileName/>
             <fileDirectory/>
             <lineNumber>0</lineNumber>
@@ -6355,7 +6355,7 @@
           <Obj>
             <type>3</type>
             <id>154</id>
-            <name>for.inc.i465.split</name>
+            <name>for.inc.i467.split</name>
             <fileName/>
             <fileDirectory/>
             <lineNumber>0</lineNumber>
@@ -6459,7 +6459,7 @@
           <Obj>
             <type>3</type>
             <id>158</id>
-            <name>for.end.i470.exitStub</name>
+            <name>for.end.i472.exitStub</name>
             <fileName/>
             <fileDirectory/>
             <lineNumber>0</lineNumber>
@@ -6477,7 +6477,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>22</coreId>
+            <coreId>1869182049</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -9030,7 +9030,7 @@
           </second>
         </item>
         <item>
-          <first>mux_325_32_1_1_U370 (mux_325_32_1_1)</first>
+          <first>mux_325_32_1_1_U384 (mux_325_32_1_1)</first>
           <second>
             <count>2</count>
             <item_version>0</item_version>
@@ -9576,7 +9576,7 @@
           </second>
         </item>
         <item>
-          <first>mux_325_32_1_1_U370</first>
+          <first>mux_325_32_1_1_U384</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
@@ -9587,7 +9587,7 @@
         <count>1</count>
         <item_version>0</item_version>
         <item class_id="40" tracking_level="0" version="0">
-          <first>mux_325_32_1_1_U370 (mux_325_32_1_1)</first>
+          <first>mux_325_32_1_1_U384 (mux_325_32_1_1)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>

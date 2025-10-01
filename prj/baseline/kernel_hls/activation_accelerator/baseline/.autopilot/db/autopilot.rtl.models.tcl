@@ -19,7 +19,11 @@ set SynModuleInfo {
     }
   }
   {SRCNAME compute_rows_Pipeline_smx_0 MODELNAME compute_rows_Pipeline_smx_0 RTLNAME activation_accelerator_compute_rows_Pipeline_smx_0}
-  {SRCNAME compute_rows_Pipeline_smx_1 MODELNAME compute_rows_Pipeline_smx_1 RTLNAME activation_accelerator_compute_rows_Pipeline_smx_1}
+  {SRCNAME compute_rows_Pipeline_smx_1 MODELNAME compute_rows_Pipeline_smx_1 RTLNAME activation_accelerator_compute_rows_Pipeline_smx_1
+    SUBMODULES {
+      {MODELNAME activation_accelerator_mux_255_32_1_1 RTLNAME activation_accelerator_mux_255_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+    }
+  }
   {SRCNAME compute_rows_Pipeline_smx_2 MODELNAME compute_rows_Pipeline_smx_2 RTLNAME activation_accelerator_compute_rows_Pipeline_smx_2}
   {SRCNAME compute_rows_Pipeline_rms_loop_0 MODELNAME compute_rows_Pipeline_rms_loop_0 RTLNAME activation_accelerator_compute_rows_Pipeline_rms_loop_0}
   {SRCNAME compute_rows_Pipeline_rms_loop_1 MODELNAME compute_rows_Pipeline_rms_loop_1 RTLNAME activation_accelerator_compute_rows_Pipeline_rms_loop_1}

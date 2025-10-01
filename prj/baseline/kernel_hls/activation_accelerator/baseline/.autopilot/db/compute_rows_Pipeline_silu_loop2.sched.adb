@@ -178,7 +178,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3935921312</coreId>
+						<coreId>847477408</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -214,7 +214,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3461695568</coreId>
+						<coreId>374687008</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -286,7 +286,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462509696</coreId>
+						<coreId>375505520</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -322,7 +322,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3460891456</coreId>
+						<coreId>448</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -358,7 +358,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3461394304</coreId>
+						<coreId>448</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -394,7 +394,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3461729776</coreId>
+						<coreId>374494864</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -430,7 +430,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3461560576</coreId>
+						<coreId>375249792</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -466,7 +466,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462250656</coreId>
+						<coreId>448</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -502,7 +502,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462521296</coreId>
+						<coreId>375241360</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -538,7 +538,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462240928</coreId>
+						<coreId>448</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -574,7 +574,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462507872</coreId>
+						<coreId>1869182049</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -610,7 +610,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3461716240</coreId>
+						<coreId>128</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -646,7 +646,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462248208</coreId>
+						<coreId>375492848</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -682,7 +682,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462498496</coreId>
+						<coreId>448</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -718,7 +718,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1397508187</coreId>
+						<coreId>374709184</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -754,7 +754,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462251632</coreId>
+						<coreId>375258992</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -790,7 +790,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3461267232</coreId>
+						<coreId>375225760</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -826,7 +826,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462520272</coreId>
+						<coreId>375566656</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -862,7 +862,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3461520816</coreId>
+						<coreId>1397508187</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -898,7 +898,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3935885312</coreId>
+						<coreId>375504000</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -934,7 +934,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3461520816</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -970,7 +970,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>542329928</coreId>
+						<coreId>673195817</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -1006,7 +1006,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3461520816</coreId>
+						<coreId>1702130553</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -1042,7 +1042,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3461560064</coreId>
+						<coreId>374709184</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -1078,7 +1078,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462494848</coreId>
+						<coreId>847244848</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -1114,7 +1114,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462495280</coreId>
+						<coreId>375566656</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -1150,7 +1150,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1397508187</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -1186,7 +1186,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1397508187</coreId>
+						<coreId>374651808</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1222,7 +1222,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3935951680</coreId>
+						<coreId>375492240</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1258,7 +1258,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>375491344</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1330,7 +1330,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>375242288</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1366,7 +1366,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>374702368</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1402,7 +1402,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3461660384</coreId>
+						<coreId>847520432</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1438,7 +1438,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3461660784</coreId>
+						<coreId>374995712</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1474,7 +1474,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>769</coreId>
+						<coreId>1330007625</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1510,7 +1510,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3461661872</coreId>
+						<coreId>375710480</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1582,7 +1582,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>374995712</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1618,7 +1618,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1330007625</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1654,7 +1654,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>375707808</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1690,7 +1690,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3461520816</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1726,7 +1726,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330007625</coreId>
+						<coreId>374995712</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1762,7 +1762,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462722272</coreId>
+						<coreId>1330007625</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1798,7 +1798,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>375705136</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1834,7 +1834,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3461520816</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1870,7 +1870,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330007625</coreId>
+						<coreId>375242544</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1906,7 +1906,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462578512</coreId>
+						<coreId>539122993</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1978,7 +1978,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3461520816</coreId>
+						<coreId>373995600</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2014,7 +2014,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330007625</coreId>
+						<coreId>1</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2050,7 +2050,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462575840</coreId>
+						<coreId>375253408</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2086,7 +2086,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>374053360</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2122,7 +2122,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3461520816</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2158,7 +2158,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330007625</coreId>
+						<coreId>374054448</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2194,7 +2194,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462573168</coreId>
+						<coreId>1</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2230,7 +2230,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>375492368</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2266,7 +2266,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3461701920</coreId>
+						<coreId>1702258035</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2302,7 +2302,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3461702496</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2384,7 +2384,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3461703408</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2427,7 +2427,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3460893280</coreId>
+						<coreId>375566656</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2451,9 +2451,9 @@
 					<Obj>
 						<type>0</type>
 						<id>133</id>
-						<name>i_4</name>
+						<name>i_3</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -2461,7 +2461,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item class_id="11" tracking_level="0" version="0">
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second class_id="12" tracking_level="0" version="0">
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2483,7 +2483,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3460893920</coreId>
+						<coreId>374753024</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -2510,7 +2510,7 @@
 						<id>134</id>
 						<name>icmp_ln273</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>273</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -2518,7 +2518,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2540,7 +2540,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3460894304</coreId>
+						<coreId>375243520</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -2567,7 +2567,7 @@
 						<id>136</id>
 						<name>add_ln273</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>273</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -2575,7 +2575,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2597,7 +2597,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3460894888</coreId>
+						<coreId>6775156</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -2624,7 +2624,7 @@
 						<id>137</id>
 						<name>br_ln273</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>273</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -2632,7 +2632,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2654,7 +2654,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3461520816</coreId>
+						<coreId>375235624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2682,7 +2682,7 @@
 						<id>141</id>
 						<name>lshr_ln275_1</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -2690,7 +2690,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2712,7 +2712,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462731792</coreId>
+						<coreId>375227184</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -2741,7 +2741,7 @@
 						<id>142</id>
 						<name>zext_ln275</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -2749,7 +2749,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2771,7 +2771,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462732208</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -2797,7 +2797,7 @@
 						<id>143</id>
 						<name>xt_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -2805,7 +2805,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2827,7 +2827,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>374957888</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -2855,7 +2855,7 @@
 						<id>144</id>
 						<name>xt_32_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -2863,7 +2863,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2885,7 +2885,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462772768</coreId>
+						<coreId>608</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -2913,7 +2913,7 @@
 						<id>145</id>
 						<name>xt_33_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -2921,7 +2921,529 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>275</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>375229536</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>5</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>390</item>
+					<item>391</item>
+					<item>392</item>
+				</oprand_edges>
+				<opcode>getelementptr</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>12</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_77">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>146</id>
+						<name>xt_34_addr</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>275</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>275</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>375228336</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>5</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>393</item>
+					<item>394</item>
+					<item>395</item>
+				</oprand_edges>
+				<opcode>getelementptr</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>13</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_78">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>147</id>
+						<name>xt_35_addr</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>275</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>275</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>304</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>5</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>396</item>
+					<item>397</item>
+					<item>398</item>
+				</oprand_edges>
+				<opcode>getelementptr</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>14</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_79">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>148</id>
+						<name>xt_36_addr</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>275</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>275</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>374959520</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>5</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>399</item>
+					<item>400</item>
+					<item>401</item>
+				</oprand_edges>
+				<opcode>getelementptr</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>15</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_80">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>149</id>
+						<name>xt_37_addr</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>275</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>275</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>374960104</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>5</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>402</item>
+					<item>403</item>
+					<item>404</item>
+				</oprand_edges>
+				<opcode>getelementptr</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>16</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_81">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>150</id>
+						<name>xt_38_addr</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>275</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>275</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>1936484411</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>5</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>405</item>
+					<item>406</item>
+					<item>407</item>
+				</oprand_edges>
+				<opcode>getelementptr</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>17</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_82">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>151</id>
+						<name>xt_39_addr</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>275</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>275</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>1030185332</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>5</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>408</item>
+					<item>409</item>
+					<item>410</item>
+				</oprand_edges>
+				<opcode>getelementptr</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>18</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_83">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>152</id>
+						<name>xt_40_addr</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>275</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>275</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>1835083323</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>5</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>411</item>
+					<item>412</item>
+					<item>413</item>
+				</oprand_edges>
+				<opcode>getelementptr</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>19</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_84">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>153</id>
+						<name>xt_41_addr</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>275</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>275</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>375498928</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>5</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>414</item>
+					<item>415</item>
+					<item>416</item>
+				</oprand_edges>
+				<opcode>getelementptr</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>20</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_85">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>154</id>
+						<name>xt_42_addr</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>275</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2951,9 +3473,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>390</item>
-					<item>391</item>
-					<item>392</item>
+					<item>417</item>
+					<item>418</item>
+					<item>419</item>
 				</oprand_edges>
 				<opcode>getelementptr</opcode>
 				<m_Display>0</m_Display>
@@ -2961,17 +3483,17 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>12</m_topoIndex>
+				<m_topoIndex>21</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_77">
+			<item class_id_reference="9" object_id="_86">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>146</id>
-						<name>xt_34_addr</name>
+						<id>155</id>
+						<name>xt_43_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -2979,7 +3501,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3001,7 +3523,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462772768</coreId>
+						<coreId>375498760</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -3009,9 +3531,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>393</item>
-					<item>394</item>
-					<item>395</item>
+					<item>420</item>
+					<item>421</item>
+					<item>422</item>
 				</oprand_edges>
 				<opcode>getelementptr</opcode>
 				<m_Display>0</m_Display>
@@ -3019,17 +3541,17 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>13</m_topoIndex>
+				<m_topoIndex>22</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_78">
+			<item class_id_reference="9" object_id="_87">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>147</id>
-						<name>xt_35_addr</name>
+						<id>156</id>
+						<name>xt_44_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -3037,7 +3559,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3059,7 +3581,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462263696</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -3067,9 +3589,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>396</item>
-					<item>397</item>
-					<item>398</item>
+					<item>423</item>
+					<item>424</item>
+					<item>425</item>
 				</oprand_edges>
 				<opcode>getelementptr</opcode>
 				<m_Display>0</m_Display>
@@ -3077,17 +3599,17 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>14</m_topoIndex>
+				<m_topoIndex>23</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_79">
+			<item class_id_reference="9" object_id="_88">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>148</id>
-						<name>xt_36_addr</name>
+						<id>157</id>
+						<name>xt_45_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -3095,7 +3617,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3117,7 +3639,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -3125,9 +3647,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>399</item>
-					<item>400</item>
-					<item>401</item>
+					<item>426</item>
+					<item>427</item>
+					<item>428</item>
 				</oprand_edges>
 				<opcode>getelementptr</opcode>
 				<m_Display>0</m_Display>
@@ -3135,17 +3657,17 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>15</m_topoIndex>
+				<m_topoIndex>24</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_80">
+			<item class_id_reference="9" object_id="_89">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>149</id>
-						<name>xt_37_addr</name>
+						<id>158</id>
+						<name>xt_46_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -3153,7 +3675,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3175,7 +3697,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1953394531</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -3183,9 +3705,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>402</item>
-					<item>403</item>
-					<item>404</item>
+					<item>429</item>
+					<item>430</item>
+					<item>431</item>
 				</oprand_edges>
 				<opcode>getelementptr</opcode>
 				<m_Display>0</m_Display>
@@ -3193,17 +3715,17 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>16</m_topoIndex>
+				<m_topoIndex>25</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_81">
+			<item class_id_reference="9" object_id="_90">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>150</id>
-						<name>xt_38_addr</name>
+						<id>159</id>
+						<name>xt_47_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -3211,7 +3733,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3233,7 +3755,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462496544</coreId>
+						<coreId>1948283493</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -3241,9 +3763,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>405</item>
-					<item>406</item>
-					<item>407</item>
+					<item>432</item>
+					<item>433</item>
+					<item>434</item>
 				</oprand_edges>
 				<opcode>getelementptr</opcode>
 				<m_Display>0</m_Display>
@@ -3251,17 +3773,17 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>17</m_topoIndex>
+				<m_topoIndex>26</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_82">
+			<item class_id_reference="9" object_id="_91">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>151</id>
-						<name>xt_39_addr</name>
+						<id>160</id>
+						<name>xt_48_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -3269,7 +3791,65 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>275</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>1030647657</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>5</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>435</item>
+					<item>436</item>
+					<item>437</item>
+				</oprand_edges>
+				<opcode>getelementptr</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>27</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_92">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>161</id>
+						<name>xt_49_addr</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>275</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3299,586 +3879,6 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>408</item>
-					<item>409</item>
-					<item>410</item>
-				</oprand_edges>
-				<opcode>getelementptr</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>18</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_83">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>152</id>
-						<name>xt_40_addr</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>275</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>275</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3461164288</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>5</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>411</item>
-					<item>412</item>
-					<item>413</item>
-				</oprand_edges>
-				<opcode>getelementptr</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>19</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_84">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>153</id>
-						<name>xt_41_addr</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>275</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>275</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3461969632</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>5</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>414</item>
-					<item>415</item>
-					<item>416</item>
-				</oprand_edges>
-				<opcode>getelementptr</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>20</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_85">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>154</id>
-						<name>xt_42_addr</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>275</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>275</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3462210656</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>5</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>417</item>
-					<item>418</item>
-					<item>419</item>
-				</oprand_edges>
-				<opcode>getelementptr</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>21</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_86">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>155</id>
-						<name>xt_43_addr</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>275</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>275</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3461520816</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>5</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>420</item>
-					<item>421</item>
-					<item>422</item>
-				</oprand_edges>
-				<opcode>getelementptr</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>22</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_87">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>156</id>
-						<name>xt_44_addr</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>275</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>275</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>1914708526</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>5</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>423</item>
-					<item>424</item>
-					<item>425</item>
-				</oprand_edges>
-				<opcode>getelementptr</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>23</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_88">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>157</id>
-						<name>xt_45_addr</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>275</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>275</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3462525056</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>5</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>426</item>
-					<item>427</item>
-					<item>428</item>
-				</oprand_edges>
-				<opcode>getelementptr</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>24</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_89">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>158</id>
-						<name>xt_46_addr</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>275</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>275</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>2560</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>5</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>429</item>
-					<item>430</item>
-					<item>431</item>
-				</oprand_edges>
-				<opcode>getelementptr</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>25</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_90">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>159</id>
-						<name>xt_47_addr</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>275</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>275</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3462528016</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>5</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>432</item>
-					<item>433</item>
-					<item>434</item>
-				</oprand_edges>
-				<opcode>getelementptr</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>26</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_91">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>160</id>
-						<name>xt_48_addr</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>275</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>275</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3462528640</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>5</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>435</item>
-					<item>436</item>
-					<item>437</item>
-				</oprand_edges>
-				<opcode>getelementptr</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>27</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_92">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>161</id>
-						<name>xt_49_addr</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>275</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>275</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>832</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>5</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
 					<item>438</item>
 					<item>439</item>
 					<item>440</item>
@@ -3899,7 +3899,7 @@
 						<id>162</id>
 						<name>xt_50_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -3907,7 +3907,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3929,7 +3929,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>64</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -3957,7 +3957,7 @@
 						<id>163</id>
 						<name>xt_51_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -3965,7 +3965,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3987,7 +3987,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462503744</coreId>
+						<coreId>375257744</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4015,7 +4015,7 @@
 						<id>164</id>
 						<name>xt_52_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -4023,7 +4023,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4045,7 +4045,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>374995712</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4073,7 +4073,7 @@
 						<id>165</id>
 						<name>xt_53_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -4081,7 +4081,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4103,7 +4103,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462504832</coreId>
+						<coreId>375713128</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4131,7 +4131,7 @@
 						<id>166</id>
 						<name>xt_54_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -4139,7 +4139,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4189,7 +4189,7 @@
 						<id>167</id>
 						<name>xt_55_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -4197,7 +4197,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4219,7 +4219,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462771032</coreId>
+						<coreId>374995712</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4247,7 +4247,7 @@
 						<id>168</id>
 						<name>xt_56_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -4255,7 +4255,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4277,7 +4277,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462770448</coreId>
+						<coreId>375716776</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4305,7 +4305,7 @@
 						<id>169</id>
 						<name>xt_57_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -4313,7 +4313,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4335,7 +4335,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462771696</coreId>
+						<coreId>375718120</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4363,7 +4363,7 @@
 						<id>170</id>
 						<name>xt_58_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -4371,7 +4371,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4393,7 +4393,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>48</coreId>
+						<coreId>375718984</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4421,7 +4421,7 @@
 						<id>171</id>
 						<name>xt_59_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -4429,7 +4429,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4451,7 +4451,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3461520816</coreId>
+						<coreId>375719920</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4479,7 +4479,7 @@
 						<id>172</id>
 						<name>xt_60_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -4487,7 +4487,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4509,7 +4509,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462735552</coreId>
+						<coreId>176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4537,7 +4537,7 @@
 						<id>173</id>
 						<name>xt_61_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -4545,7 +4545,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4567,7 +4567,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3461520816</coreId>
+						<coreId>375262624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4595,7 +4595,7 @@
 						<id>174</id>
 						<name>xt_62_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -4603,7 +4603,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4625,7 +4625,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462737344</coreId>
+						<coreId>375450016</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4653,7 +4653,7 @@
 						<id>175</id>
 						<name>trunc_ln275</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -4661,7 +4661,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4683,7 +4683,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3461520816</coreId>
+						<coreId>375263600</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4709,7 +4709,7 @@
 						<id>176</id>
 						<name>xt_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -4717,7 +4717,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4739,7 +4739,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462235680</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4765,7 +4765,7 @@
 						<id>177</id>
 						<name>xt_32_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -4773,7 +4773,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4795,7 +4795,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462236816</coreId>
+						<coreId>375259888</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4821,7 +4821,7 @@
 						<id>178</id>
 						<name>xt_33_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -4829,7 +4829,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4851,7 +4851,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462236144</coreId>
+						<coreId>373300560</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4877,7 +4877,7 @@
 						<id>179</id>
 						<name>xt_34_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -4885,511 +4885,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>275</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3461520816</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>484</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
-				<m_topoIndex>46</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_111">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>180</id>
-						<name>xt_35_load</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>275</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>275</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3461966704</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>485</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
-				<m_topoIndex>47</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_112">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>181</id>
-						<name>xt_36_load</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>275</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>275</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3461968256</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>486</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
-				<m_topoIndex>48</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_113">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>182</id>
-						<name>xt_37_load</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>275</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>275</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3461969392</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>487</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
-				<m_topoIndex>49</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_114">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>183</id>
-						<name>xt_38_load</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>275</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>275</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3462212880</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>488</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
-				<m_topoIndex>50</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_115">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>184</id>
-						<name>xt_39_load</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>275</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>275</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3461520816</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>489</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
-				<m_topoIndex>51</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_116">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>185</id>
-						<name>xt_40_load</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>275</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>275</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3462725224</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>490</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
-				<m_topoIndex>52</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_117">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>186</id>
-						<name>xt_41_load</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>275</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>275</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>491</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
-				<m_topoIndex>53</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_118">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>187</id>
-						<name>xt_42_load</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>275</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>275</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>492</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
-				<m_topoIndex>54</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_119">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>188</id>
-						<name>xt_43_load</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>275</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5419,7 +4915,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>493</item>
+					<item>484</item>
 				</oprand_edges>
 				<opcode>load</opcode>
 				<m_Display>0</m_Display>
@@ -5427,17 +4923,17 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>1.23</m_delay>
-				<m_topoIndex>55</m_topoIndex>
+				<m_topoIndex>46</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_120">
+			<item class_id_reference="9" object_id="_111">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>189</id>
-						<name>xt_44_load</name>
+						<id>180</id>
+						<name>xt_35_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -5445,7 +4941,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5467,7 +4963,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3461520816</coreId>
+						<coreId>375269352</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5475,7 +4971,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>494</item>
+					<item>485</item>
 				</oprand_edges>
 				<opcode>load</opcode>
 				<m_Display>0</m_Display>
@@ -5483,17 +4979,17 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>1.23</m_delay>
-				<m_topoIndex>56</m_topoIndex>
+				<m_topoIndex>47</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_121">
+			<item class_id_reference="9" object_id="_112">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>190</id>
-						<name>xt_45_load</name>
+						<id>181</id>
+						<name>xt_36_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -5501,847 +4997,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>275</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3461520816</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>495</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
-				<m_topoIndex>57</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_122">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>191</id>
-						<name>xt_46_load</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>275</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>275</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3462563360</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>496</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
-				<m_topoIndex>58</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_123">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>192</id>
-						<name>xt_47_load</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>275</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>275</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3462564496</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>497</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
-				<m_topoIndex>59</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_124">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>193</id>
-						<name>xt_48_load</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>275</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>275</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3462564432</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>498</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
-				<m_topoIndex>60</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_125">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>194</id>
-						<name>xt_49_load</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>275</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>275</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3462566848</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>499</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
-				<m_topoIndex>61</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_126">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>195</id>
-						<name>xt_50_load</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>275</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>275</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>575620686</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>500</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
-				<m_topoIndex>62</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_127">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>196</id>
-						<name>xt_51_load</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>275</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>275</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>1852383291</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>501</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
-				<m_topoIndex>63</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_128">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>197</id>
-						<name>xt_52_load</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>275</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>275</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3462569904</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>502</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
-				<m_topoIndex>64</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_129">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>198</id>
-						<name>xt_53_load</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>275</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>275</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3462767488</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>503</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
-				<m_topoIndex>65</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_130">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>199</id>
-						<name>xt_54_load</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>275</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>275</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3462270464</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>504</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
-				<m_topoIndex>66</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_131">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>200</id>
-						<name>xt_55_load</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>275</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>275</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3462272016</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>505</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
-				<m_topoIndex>67</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_132">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>201</id>
-						<name>xt_56_load</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>275</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>275</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3462273152</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>506</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
-				<m_topoIndex>68</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_133">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>202</id>
-						<name>xt_57_load</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>275</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>275</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3462272176</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>507</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
-				<m_topoIndex>69</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_134">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>203</id>
-						<name>xt_58_load</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>275</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>275</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3462275504</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>508</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
-				<m_topoIndex>70</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_135">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>204</id>
-						<name>xt_59_load</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>275</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>275</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>1936018748</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>509</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
-				<m_topoIndex>71</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_136">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>205</id>
-						<name>xt_60_load</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>275</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6371,7 +5027,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>510</item>
+					<item>486</item>
 				</oprand_edges>
 				<opcode>load</opcode>
 				<m_Display>0</m_Display>
@@ -6379,17 +5035,17 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>1.23</m_delay>
-				<m_topoIndex>72</m_topoIndex>
+				<m_topoIndex>48</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_137">
+			<item class_id_reference="9" object_id="_113">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>206</id>
-						<name>xt_61_load</name>
+						<id>182</id>
+						<name>xt_37_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -6397,7 +5053,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6419,7 +5075,1351 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462770112</coreId>
+						<coreId>1869635878</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>487</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.23</m_delay>
+				<m_topoIndex>49</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_114">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>183</id>
+						<name>xt_38_load</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>275</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>275</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>375271936</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>488</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.23</m_delay>
+				<m_topoIndex>50</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_115">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>184</id>
+						<name>xt_39_load</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>275</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>275</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>0</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>489</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.23</m_delay>
+				<m_topoIndex>51</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_116">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>185</id>
+						<name>xt_40_load</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>275</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>275</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>0</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>490</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.23</m_delay>
+				<m_topoIndex>52</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_117">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>186</id>
+						<name>xt_41_load</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>275</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>275</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>375274688</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>491</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.23</m_delay>
+				<m_topoIndex>53</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_118">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>187</id>
+						<name>xt_42_load</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>275</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>275</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>1600350578</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>492</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.23</m_delay>
+				<m_topoIndex>54</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_119">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>188</id>
+						<name>xt_43_load</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>275</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>275</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>375219360</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>493</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.23</m_delay>
+				<m_topoIndex>55</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_120">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>189</id>
+						<name>xt_44_load</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>275</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>275</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>374961056</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>494</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.23</m_delay>
+				<m_topoIndex>56</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_121">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>190</id>
+						<name>xt_45_load</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>275</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>275</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>375201936</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>495</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.23</m_delay>
+				<m_topoIndex>57</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_122">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>191</id>
+						<name>xt_46_load</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>275</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>275</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>375201632</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>496</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.23</m_delay>
+				<m_topoIndex>58</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_123">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>192</id>
+						<name>xt_47_load</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>275</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>275</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>1852405087</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>497</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.23</m_delay>
+				<m_topoIndex>59</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_124">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>193</id>
+						<name>xt_48_load</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>275</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>275</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>1702258035</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>498</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.23</m_delay>
+				<m_topoIndex>60</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_125">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>194</id>
+						<name>xt_49_load</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>275</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>275</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>0</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>499</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.23</m_delay>
+				<m_topoIndex>61</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_126">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>195</id>
+						<name>xt_50_load</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>275</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>275</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>0</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>500</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.23</m_delay>
+				<m_topoIndex>62</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_127">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>196</id>
+						<name>xt_51_load</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>275</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>275</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>375208064</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>501</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.23</m_delay>
+				<m_topoIndex>63</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_128">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>197</id>
+						<name>xt_52_load</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>275</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>275</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>1885548146</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>502</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.23</m_delay>
+				<m_topoIndex>64</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_129">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>198</id>
+						<name>xt_53_load</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>275</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>275</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>375210016</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>503</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.23</m_delay>
+				<m_topoIndex>65</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_130">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>199</id>
+						<name>xt_54_load</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>275</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>275</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>691286842</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>504</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.23</m_delay>
+				<m_topoIndex>66</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_131">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>200</id>
+						<name>xt_55_load</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>275</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>275</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>1701978146</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>505</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.23</m_delay>
+				<m_topoIndex>67</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_132">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>201</id>
+						<name>xt_56_load</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>275</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>275</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>542329928</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>506</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.23</m_delay>
+				<m_topoIndex>68</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_133">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>202</id>
+						<name>xt_57_load</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>275</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>275</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>1768713728</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>507</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.23</m_delay>
+				<m_topoIndex>69</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_134">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>203</id>
+						<name>xt_58_load</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>275</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>275</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>375211984</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>508</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.23</m_delay>
+				<m_topoIndex>70</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_135">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>204</id>
+						<name>xt_59_load</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>275</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>275</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>375208992</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>509</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.23</m_delay>
+				<m_topoIndex>71</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_136">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>205</id>
+						<name>xt_60_load</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>275</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>275</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>375217584</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>510</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.23</m_delay>
+				<m_topoIndex>72</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_137">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>206</id>
+						<name>xt_61_load</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>275</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>275</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>375566656</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6445,7 +6445,7 @@
 						<id>207</id>
 						<name>xt_62_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -6453,7 +6453,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6475,7 +6475,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462280112</coreId>
+						<coreId>375566656</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6501,7 +6501,7 @@
 						<id>208</id>
 						<name>tmp_s</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -6509,7 +6509,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6531,7 +6531,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>114</coreId>
+						<coreId>1702258035</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6590,7 +6590,7 @@
 						<id>209</id>
 						<name>bitcast_ln275</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -6598,7 +6598,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6620,7 +6620,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3461520816</coreId>
+						<coreId>1030647657</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6646,7 +6646,7 @@
 						<id>210</id>
 						<name>xor_ln275</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -6654,7 +6654,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6676,7 +6676,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462214664</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6703,7 +6703,7 @@
 						<id>211</id>
 						<name>bitcast_ln275_1</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -6711,7 +6711,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6733,7 +6733,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462215888</coreId>
+						<coreId>1747935849</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6757,7 +6757,7 @@
 					<Obj>
 						<type>0</type>
 						<id>212</id>
-						<name>tmp_1</name>
+						<name>tmp_16</name>
 						<fileName>/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/common/hls_exp_float.cpp</fileName>
 						<fileDirectory>/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath</fileDirectory>
 						<lineNumber>17</lineNumber>
@@ -6789,7 +6789,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462217024</coreId>
+						<coreId>1885420404</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6816,7 +6816,7 @@
 						<id>213</id>
 						<name>add_i</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -6824,7 +6824,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6846,7 +6846,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462216720</coreId>
+						<coreId>375360880</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6873,7 +6873,7 @@
 						<id>214</id>
 						<name>sig</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>275</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -6881,7 +6881,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6903,7 +6903,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462219632</coreId>
+						<coreId>375360880</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6930,7 +6930,7 @@
 						<id>215</id>
 						<name>mul5_i</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -6938,7 +6938,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6960,7 +6960,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>375373304</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6987,7 +6987,7 @@
 						<id>216</id>
 						<name>w_V</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>202</lineNumber>
 						<contextFuncName>f32_to_bf16_scalar</contextFuncName>
 						<contextNormFuncName>f32_to_bf16_scalar</contextNormFuncName>
@@ -6995,7 +6995,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7017,7 +7017,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1397508187</coreId>
+						<coreId>375375864</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -7043,7 +7043,7 @@
 						<id>217</id>
 						<name>trunc_ln203_3</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>203</lineNumber>
 						<contextFuncName>f32_to_bf16_scalar</contextFuncName>
 						<contextNormFuncName>f32_to_bf16_scalar</contextNormFuncName>
@@ -7051,7 +7051,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7073,7 +7073,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462223264</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -7102,7 +7102,7 @@
 						<id>218</id>
 						<name>tile2_V_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -7110,7 +7110,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7132,7 +7132,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>375376752</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -7160,7 +7160,7 @@
 						<id>219</id>
 						<name>tile2_V_32_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -7168,123 +7168,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>277</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>774971502</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>5</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>574</item>
-					<item>575</item>
-					<item>576</item>
-				</oprand_edges>
-				<opcode>getelementptr</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>90</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_151">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>220</id>
-						<name>tile2_V_33_addr</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>277</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>277</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3462226896</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>5</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>577</item>
-					<item>578</item>
-					<item>579</item>
-				</oprand_edges>
-				<opcode>getelementptr</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>91</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_152">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>221</id>
-						<name>tile2_V_34_addr</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>277</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7314,9 +7198,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>580</item>
-					<item>581</item>
-					<item>582</item>
+					<item>574</item>
+					<item>575</item>
+					<item>576</item>
 				</oprand_edges>
 				<opcode>getelementptr</opcode>
 				<m_Display>0</m_Display>
@@ -7324,17 +7208,17 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>92</m_topoIndex>
+				<m_topoIndex>90</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_153">
+			<item class_id_reference="9" object_id="_151">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>222</id>
-						<name>tile2_V_35_addr</name>
+						<id>220</id>
+						<name>tile2_V_33_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -7342,7 +7226,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7364,7 +7248,123 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462229216</coreId>
+						<coreId>0</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>5</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>577</item>
+					<item>578</item>
+					<item>579</item>
+				</oprand_edges>
+				<opcode>getelementptr</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>91</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_152">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>221</id>
+						<name>tile2_V_34_addr</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>277</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>277</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>375379872</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>5</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>580</item>
+					<item>581</item>
+					<item>582</item>
+				</oprand_edges>
+				<opcode>getelementptr</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>92</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_153">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>222</id>
+						<name>tile2_V_35_addr</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>277</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>277</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -7392,7 +7392,7 @@
 						<id>223</id>
 						<name>tile2_V_36_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -7400,7 +7400,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7422,7 +7422,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462222992</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -7450,7 +7450,7 @@
 						<id>224</id>
 						<name>tile2_V_37_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -7458,7 +7458,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7508,7 +7508,7 @@
 						<id>225</id>
 						<name>tile2_V_38_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -7516,7 +7516,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7538,7 +7538,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462236272</coreId>
+						<coreId>375385776</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -7566,7 +7566,7 @@
 						<id>226</id>
 						<name>tile2_V_39_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -7574,7 +7574,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7596,7 +7596,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462772768</coreId>
+						<coreId>375384704</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -7624,7 +7624,7 @@
 						<id>227</id>
 						<name>tile2_V_40_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -7632,7 +7632,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7654,7 +7654,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462285728</coreId>
+						<coreId>375386112</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -7682,7 +7682,7 @@
 						<id>228</id>
 						<name>tile2_V_41_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -7690,7 +7690,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7712,7 +7712,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462287280</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -7740,7 +7740,7 @@
 						<id>229</id>
 						<name>tile2_V_42_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -7748,7 +7748,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7770,7 +7770,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462288416</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -7798,7 +7798,7 @@
 						<id>230</id>
 						<name>tile2_V_43_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -7806,7 +7806,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7828,7 +7828,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1634692198</coreId>
+						<coreId>375391360</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -7856,7 +7856,7 @@
 						<id>231</id>
 						<name>tile2_V_44_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -7864,7 +7864,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7886,7 +7886,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>375391904</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -7914,7 +7914,7 @@
 						<id>232</id>
 						<name>tile2_V_45_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -7922,7 +7922,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7944,7 +7944,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>375392704</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -7972,7 +7972,7 @@
 						<id>233</id>
 						<name>tile2_V_46_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -7980,7 +7980,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -8002,7 +8002,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462296648</coreId>
+						<coreId>375400560</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -8030,7 +8030,7 @@
 						<id>234</id>
 						<name>tile2_V_47_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -8038,7 +8038,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -8060,7 +8060,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>83</coreId>
+						<coreId>375368272</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -8088,7 +8088,7 @@
 						<id>235</id>
 						<name>tile2_V_48_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -8096,7 +8096,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -8118,7 +8118,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1702258035</coreId>
+						<coreId>375397704</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -8146,7 +8146,7 @@
 						<id>236</id>
 						<name>tile2_V_49_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -8154,7 +8154,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -8204,7 +8204,7 @@
 						<id>237</id>
 						<name>tile2_V_50_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -8212,7 +8212,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -8234,7 +8234,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462301208</coreId>
+						<coreId>176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -8262,7 +8262,7 @@
 						<id>238</id>
 						<name>tile2_V_51_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -8270,7 +8270,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -8292,7 +8292,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3461965056</coreId>
+						<coreId>3777</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -8320,7 +8320,7 @@
 						<id>239</id>
 						<name>tile2_V_52_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -8328,7 +8328,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -8350,7 +8350,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>375441808</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -8378,7 +8378,7 @@
 						<id>240</id>
 						<name>tile2_V_53_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -8386,7 +8386,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -8408,7 +8408,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>375451496</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -8436,7 +8436,7 @@
 						<id>241</id>
 						<name>tile2_V_54_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -8444,7 +8444,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -8466,7 +8466,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462772768</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -8494,7 +8494,7 @@
 						<id>242</id>
 						<name>tile2_V_55_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -8502,413 +8502,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>277</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3462305488</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>5</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>643</item>
-					<item>644</item>
-					<item>645</item>
-				</oprand_edges>
-				<opcode>getelementptr</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>113</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_174">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>243</id>
-						<name>tile2_V_56_addr</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>277</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>277</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3462532400</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>5</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>646</item>
-					<item>647</item>
-					<item>648</item>
-				</oprand_edges>
-				<opcode>getelementptr</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>114</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_175">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>244</id>
-						<name>tile2_V_57_addr</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>277</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>277</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>5</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>649</item>
-					<item>650</item>
-					<item>651</item>
-				</oprand_edges>
-				<opcode>getelementptr</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>115</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_176">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>245</id>
-						<name>tile2_V_58_addr</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>277</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>277</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3462536592</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>5</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>652</item>
-					<item>653</item>
-					<item>654</item>
-				</oprand_edges>
-				<opcode>getelementptr</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>116</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_177">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>246</id>
-						<name>tile2_V_59_addr</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>277</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>277</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3462537832</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>5</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>655</item>
-					<item>656</item>
-					<item>657</item>
-				</oprand_edges>
-				<opcode>getelementptr</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>117</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_178">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>247</id>
-						<name>tile2_V_60_addr</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>277</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>277</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>858860852</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>5</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>658</item>
-					<item>659</item>
-					<item>660</item>
-				</oprand_edges>
-				<opcode>getelementptr</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>118</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_179">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>248</id>
-						<name>tile2_V_61_addr</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>277</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>277</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>5</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>661</item>
-					<item>662</item>
-					<item>663</item>
-				</oprand_edges>
-				<opcode>getelementptr</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>119</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_180">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>249</id>
-						<name>tile2_V_62_addr</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>277</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -8938,9 +8532,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>664</item>
-					<item>665</item>
-					<item>666</item>
+					<item>643</item>
+					<item>644</item>
+					<item>645</item>
 				</oprand_edges>
 				<opcode>getelementptr</opcode>
 				<m_Display>0</m_Display>
@@ -8948,17 +8542,17 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>120</m_topoIndex>
+				<m_topoIndex>113</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_181">
+			<item class_id_reference="9" object_id="_174">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>250</id>
-						<name>_ln277</name>
+						<id>243</id>
+						<name>tile2_V_56_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -8966,7 +8560,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -8988,7 +8582,413 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3461520816</coreId>
+						<coreId>375441824</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>5</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>646</item>
+					<item>647</item>
+					<item>648</item>
+				</oprand_edges>
+				<opcode>getelementptr</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>114</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_175">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>244</id>
+						<name>tile2_V_57_addr</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>277</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>277</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>375455168</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>5</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>649</item>
+					<item>650</item>
+					<item>651</item>
+				</oprand_edges>
+				<opcode>getelementptr</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>115</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_176">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>245</id>
+						<name>tile2_V_58_addr</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>277</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>277</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>375455232</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>5</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>652</item>
+					<item>653</item>
+					<item>654</item>
+				</oprand_edges>
+				<opcode>getelementptr</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>116</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_177">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>246</id>
+						<name>tile2_V_59_addr</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>277</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>277</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>0</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>5</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>655</item>
+					<item>656</item>
+					<item>657</item>
+				</oprand_edges>
+				<opcode>getelementptr</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>117</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_178">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>247</id>
+						<name>tile2_V_60_addr</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>277</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>277</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>375458992</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>5</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>658</item>
+					<item>659</item>
+					<item>660</item>
+				</oprand_edges>
+				<opcode>getelementptr</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>118</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_179">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>248</id>
+						<name>tile2_V_61_addr</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>277</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>277</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>480</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>5</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>661</item>
+					<item>662</item>
+					<item>663</item>
+				</oprand_edges>
+				<opcode>getelementptr</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>119</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_180">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>249</id>
+						<name>tile2_V_62_addr</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>277</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>277</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>0</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>5</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>664</item>
+					<item>665</item>
+					<item>666</item>
+				</oprand_edges>
+				<opcode>getelementptr</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>120</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_181">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>250</id>
+						<name>_ln277</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>277</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>277</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>375460144</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9077,7 +9077,7 @@
 						<id>252</id>
 						<name>tile2_V_61_addr_write_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -9085,7 +9085,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -9107,7 +9107,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3461520816</coreId>
+						<coreId>375464536</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9134,7 +9134,7 @@
 						<id>253</id>
 						<name>br_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -9142,176 +9142,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>277</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>0</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>851</item>
-				</oprand_edges>
-				<opcode>br</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>122</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_184">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>255</id>
-						<name>tile2_V_60_addr_write_ln277</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>277</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>277</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3462545648</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>0</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>846</item>
-					<item>847</item>
-				</oprand_edges>
-				<opcode>store</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
-				<m_topoIndex>123</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_185">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>256</id>
-						<name>br_ln277</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>277</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>277</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>1885548146</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>0</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>848</item>
-				</oprand_edges>
-				<opcode>br</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>124</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_186">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>258</id>
-						<name>tile2_V_59_addr_write_ln277</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>277</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -9339,28 +9170,27 @@
 					<bitwidth>0</bitwidth>
 				</Value>
 				<oprand_edges>
-					<count>2</count>
+					<count>1</count>
 					<item_version>0</item_version>
-					<item>843</item>
-					<item>844</item>
+					<item>851</item>
 				</oprand_edges>
-				<opcode>store</opcode>
+				<opcode>br</opcode>
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
-				<m_topoIndex>125</m_topoIndex>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>122</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_187">
+			<item class_id_reference="9" object_id="_184">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>259</id>
-						<name>br_ln277</name>
+						<id>255</id>
+						<name>tile2_V_60_addr_write_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -9368,7 +9198,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -9390,7 +9220,177 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462547168</coreId>
+						<coreId>0</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>0</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>846</item>
+					<item>847</item>
+				</oprand_edges>
+				<opcode>store</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.23</m_delay>
+				<m_topoIndex>123</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_185">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>256</id>
+						<name>br_ln277</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>277</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>277</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>304</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>0</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>848</item>
+				</oprand_edges>
+				<opcode>br</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>124</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_186">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>258</id>
+						<name>tile2_V_59_addr_write_ln277</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>277</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>277</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>0</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>0</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>843</item>
+					<item>844</item>
+				</oprand_edges>
+				<opcode>store</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.23</m_delay>
+				<m_topoIndex>125</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_187">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>259</id>
+						<name>br_ln277</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>277</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>277</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>375472296</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9416,7 +9416,7 @@
 						<id>261</id>
 						<name>tile2_V_58_addr_write_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -9424,7 +9424,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -9446,7 +9446,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1730555936</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9473,7 +9473,7 @@
 						<id>262</id>
 						<name>br_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -9481,7 +9481,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -9503,7 +9503,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3461520816</coreId>
+						<coreId>375473120</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9529,7 +9529,7 @@
 						<id>264</id>
 						<name>tile2_V_57_addr_write_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -9537,7 +9537,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -9559,7 +9559,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462555216</coreId>
+						<coreId>375475312</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9586,7 +9586,7 @@
 						<id>265</id>
 						<name>br_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -9594,7 +9594,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -9616,7 +9616,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>375476448</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9642,7 +9642,7 @@
 						<id>267</id>
 						<name>tile2_V_56_addr_write_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -9650,7 +9650,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -9672,7 +9672,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>375478144</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9699,7 +9699,7 @@
 						<id>268</id>
 						<name>br_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -9707,7 +9707,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -9729,7 +9729,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462557008</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9755,7 +9755,7 @@
 						<id>270</id>
 						<name>tile2_V_55_addr_write_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -9763,120 +9763,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>277</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3462560608</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>0</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>831</item>
-					<item>832</item>
-				</oprand_edges>
-				<opcode>store</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
-				<m_topoIndex>133</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_195">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>271</id>
-						<name>br_ln277</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>277</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>277</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3462741168</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>0</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>833</item>
-				</oprand_edges>
-				<opcode>br</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>134</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_196">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>273</id>
-						<name>tile2_V_54_addr_write_ln277</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>277</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -9906,6 +9793,119 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
+					<item>831</item>
+					<item>832</item>
+				</oprand_edges>
+				<opcode>store</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.23</m_delay>
+				<m_topoIndex>133</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_195">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>271</id>
+						<name>br_ln277</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>277</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>277</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>0</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>0</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>833</item>
+				</oprand_edges>
+				<opcode>br</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>134</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_196">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>273</id>
+						<name>tile2_V_54_addr_write_ln277</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>277</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>277</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>375487192</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>0</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
 					<item>828</item>
 					<item>829</item>
 				</oprand_edges>
@@ -9925,7 +9925,7 @@
 						<id>274</id>
 						<name>br_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -9933,7 +9933,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -9981,7 +9981,7 @@
 						<id>276</id>
 						<name>tile2_V_53_addr_write_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -9989,7 +9989,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -10011,7 +10011,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462745280</coreId>
+						<coreId>375488016</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10038,7 +10038,7 @@
 						<id>277</id>
 						<name>br_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -10046,7 +10046,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -10068,7 +10068,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>374995712</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10094,7 +10094,7 @@
 						<id>279</id>
 						<name>tile2_V_52_addr_write_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -10102,7 +10102,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -10124,7 +10124,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3461520816</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10151,7 +10151,7 @@
 						<id>280</id>
 						<name>br_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -10159,7 +10159,176 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>277</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>176</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>0</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>824</item>
+				</oprand_edges>
+				<opcode>br</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>140</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_202">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>282</id>
+						<name>tile2_V_51_addr_write_ln277</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>277</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>277</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>3</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>0</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>819</item>
+					<item>820</item>
+				</oprand_edges>
+				<opcode>store</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.23</m_delay>
+				<m_topoIndex>141</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_203">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>283</id>
+						<name>br_ln277</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>277</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>277</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>375727024</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>0</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>821</item>
+				</oprand_edges>
+				<opcode>br</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>142</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_204">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>285</id>
+						<name>tile2_V_50_addr_write_ln277</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>277</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -10187,175 +10356,6 @@
 					<bitwidth>0</bitwidth>
 				</Value>
 				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>824</item>
-				</oprand_edges>
-				<opcode>br</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>140</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_202">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>282</id>
-						<name>tile2_V_51_addr_write_ln277</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>277</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>277</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3462753272</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>0</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>819</item>
-					<item>820</item>
-				</oprand_edges>
-				<opcode>store</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
-				<m_topoIndex>141</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_203">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>283</id>
-						<name>br_ln277</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>277</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>277</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3462752688</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>0</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>821</item>
-				</oprand_edges>
-				<opcode>br</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>142</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_204">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>285</id>
-						<name>tile2_V_50_addr_write_ln277</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>277</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>277</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3462754768</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>0</bitwidth>
-				</Value>
-				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
 					<item>816</item>
@@ -10377,7 +10377,7 @@
 						<id>286</id>
 						<name>br_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -10385,7 +10385,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -10407,7 +10407,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462763136</coreId>
+						<coreId>374995712</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10433,7 +10433,7 @@
 						<id>288</id>
 						<name>tile2_V_49_addr_write_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -10441,7 +10441,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -10490,7 +10490,7 @@
 						<id>289</id>
 						<name>br_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -10498,7 +10498,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -10520,7 +10520,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462760312</coreId>
+						<coreId>375736664</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10546,7 +10546,7 @@
 						<id>291</id>
 						<name>tile2_V_48_addr_write_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -10554,7 +10554,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -10603,7 +10603,7 @@
 						<id>292</id>
 						<name>br_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -10611,7 +10611,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -10633,7 +10633,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>375736064</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10659,7 +10659,7 @@
 						<id>294</id>
 						<name>tile2_V_47_addr_write_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -10667,7 +10667,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -10689,7 +10689,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>375740640</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10716,7 +10716,7 @@
 						<id>295</id>
 						<name>br_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -10724,7 +10724,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -10746,7 +10746,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462764512</coreId>
+						<coreId>375739888</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10772,7 +10772,7 @@
 						<id>297</id>
 						<name>tile2_V_46_addr_write_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -10780,7 +10780,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -10802,7 +10802,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>608</coreId>
+						<coreId>176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10829,7 +10829,7 @@
 						<id>298</id>
 						<name>br_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -10837,7 +10837,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -10859,7 +10859,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462767800</coreId>
+						<coreId>375744256</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10885,7 +10885,7 @@
 						<id>300</id>
 						<name>tile2_V_45_addr_write_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -10893,7 +10893,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -10915,7 +10915,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462580576</coreId>
+						<coreId>375746232</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10942,7 +10942,7 @@
 						<id>301</id>
 						<name>br_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -10950,7 +10950,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -10998,7 +10998,7 @@
 						<id>303</id>
 						<name>tile2_V_44_addr_write_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -11006,7 +11006,120 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>277</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>343</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>0</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>798</item>
+					<item>799</item>
+				</oprand_edges>
+				<opcode>store</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.23</m_delay>
+				<m_topoIndex>155</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_217">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>304</id>
+						<name>br_ln277</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>277</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>activation_accelerator.cpp</first>
+											<second>float_silu</second>
+										</first>
+										<second>277</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>608</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>0</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>800</item>
+				</oprand_edges>
+				<opcode>br</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>156</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_218">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>306</id>
+						<name>tile2_V_43_addr_write_ln277</name>
+						<fileName>activation_accelerator.cpp</fileName>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>277</lineNumber>
+						<contextFuncName>float_silu</contextFuncName>
+						<contextNormFuncName>float_silu</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -11036,119 +11149,6 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>798</item>
-					<item>799</item>
-				</oprand_edges>
-				<opcode>store</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
-				<m_topoIndex>155</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_217">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>304</id>
-						<name>br_ln277</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>277</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>277</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>3462584912</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>0</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>800</item>
-				</oprand_edges>
-				<opcode>br</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>156</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_218">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>306</id>
-						<name>tile2_V_43_addr_write_ln277</name>
-						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>277</lineNumber>
-						<contextFuncName>float_silu</contextFuncName>
-						<contextNormFuncName>float_silu</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>activation_accelerator.cpp</first>
-											<second>float_silu</second>
-										</first>
-										<second>277</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>1920295712</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>0</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
 					<item>795</item>
 					<item>796</item>
 				</oprand_edges>
@@ -11168,7 +11168,7 @@
 						<id>307</id>
 						<name>br_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -11176,7 +11176,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -11198,7 +11198,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>7891302</coreId>
+						<coreId>375753352</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11224,7 +11224,7 @@
 						<id>309</id>
 						<name>tile2_V_42_addr_write_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -11232,7 +11232,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -11254,7 +11254,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1885414953</coreId>
+						<coreId>375754752</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11281,7 +11281,7 @@
 						<id>310</id>
 						<name>br_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -11289,7 +11289,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -11311,7 +11311,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>779251572</coreId>
+						<coreId>375755392</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11337,7 +11337,7 @@
 						<id>312</id>
 						<name>tile2_V_41_addr_write_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -11345,7 +11345,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -11367,7 +11367,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1663508591</coreId>
+						<coreId>608</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11394,7 +11394,7 @@
 						<id>313</id>
 						<name>br_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -11402,7 +11402,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -11424,7 +11424,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1879058744</coreId>
+						<coreId>336</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11450,7 +11450,7 @@
 						<id>315</id>
 						<name>tile2_V_40_addr_write_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -11458,7 +11458,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -11480,7 +11480,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1769234806</coreId>
+						<coreId>375760696</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11507,7 +11507,7 @@
 						<id>316</id>
 						<name>br_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -11515,7 +11515,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -11537,7 +11537,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1886413614</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11563,7 +11563,7 @@
 						<id>318</id>
 						<name>tile2_V_39_addr_write_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -11571,7 +11571,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -11593,7 +11593,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1769239855</coreId>
+						<coreId>373889696</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11620,7 +11620,7 @@
 						<id>319</id>
 						<name>br_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -11628,7 +11628,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -11650,7 +11650,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>675181665</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11676,7 +11676,7 @@
 						<id>321</id>
 						<name>tile2_V_38_addr_write_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -11684,7 +11684,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -11706,7 +11706,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>976909164</coreId>
+						<coreId>375766224</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11733,7 +11733,7 @@
 						<id>322</id>
 						<name>br_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -11741,7 +11741,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -11763,7 +11763,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1953393013</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11789,7 +11789,7 @@
 						<id>324</id>
 						<name>tile2_V_37_addr_write_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -11797,7 +11797,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -11819,7 +11819,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1932485490</coreId>
+						<coreId>127</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11846,7 +11846,7 @@
 						<id>325</id>
 						<name>br_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -11854,7 +11854,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -11876,7 +11876,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1746938165</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11902,7 +11902,7 @@
 						<id>327</id>
 						<name>tile2_V_36_addr_write_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -11910,7 +11910,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -11932,7 +11932,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>691288370</coreId>
+						<coreId>375401456</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11959,7 +11959,7 @@
 						<id>328</id>
 						<name>br_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -11967,7 +11967,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -11989,7 +11989,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>875772528</coreId>
+						<coreId>375402672</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12015,7 +12015,7 @@
 						<id>330</id>
 						<name>tile2_V_35_addr_write_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -12023,7 +12023,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -12045,7 +12045,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2228327</coreId>
+						<coreId>375390528</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12072,7 +12072,7 @@
 						<id>331</id>
 						<name>br_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -12080,7 +12080,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -12102,7 +12102,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1667457375</coreId>
+						<coreId>1869833586</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12128,7 +12128,7 @@
 						<id>333</id>
 						<name>tile2_V_34_addr_write_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -12136,7 +12136,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -12158,7 +12158,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1919950848</coreId>
+						<coreId>375406688</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12185,7 +12185,7 @@
 						<id>334</id>
 						<name>br_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -12193,7 +12193,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -12215,7 +12215,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>757935405</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12241,7 +12241,7 @@
 						<id>336</id>
 						<name>tile2_V_33_addr_write_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -12249,7 +12249,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -12271,7 +12271,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1667592992</coreId>
+						<coreId>375410016</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12298,7 +12298,7 @@
 						<id>337</id>
 						<name>br_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -12306,7 +12306,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -12328,7 +12328,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1970040691</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12354,7 +12354,7 @@
 						<id>339</id>
 						<name>tile2_V_32_addr_write_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -12362,7 +12362,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -12384,7 +12384,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>536882754</coreId>
+						<coreId>375412912</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12411,7 +12411,7 @@
 						<id>340</id>
 						<name>br_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -12419,7 +12419,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -12441,7 +12441,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1465862992</coreId>
+						<coreId>375415360</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12467,7 +12467,7 @@
 						<id>342</id>
 						<name>tile2_V_addr_write_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -12475,7 +12475,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -12497,7 +12497,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1702258035</coreId>
+						<coreId>375430256</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12524,7 +12524,7 @@
 						<id>343</id>
 						<name>br_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -12532,7 +12532,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -12554,7 +12554,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1819243365</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12580,7 +12580,7 @@
 						<id>345</id>
 						<name>tile2_V_62_addr_write_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -12588,7 +12588,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -12610,7 +12610,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>757935405</coreId>
+						<coreId>375418384</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12637,7 +12637,7 @@
 						<id>346</id>
 						<name>br_ln277</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>277</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -12645,7 +12645,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -12667,7 +12667,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462626784</coreId>
+						<coreId>375419680</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12693,7 +12693,7 @@
 						<id>348</id>
 						<name>i_write_ln273</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>273</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -12701,7 +12701,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -12752,7 +12752,7 @@
 						<id>349</id>
 						<name>br_ln273</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
 						<lineNumber>273</lineNumber>
 						<contextFuncName>float_silu</contextFuncName>
 						<contextNormFuncName>float_silu</contextNormFuncName>
@@ -12760,7 +12760,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -12782,7 +12782,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462621536</coreId>
+						<coreId>375397936</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12824,7 +12824,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>375423776</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12869,7 +12869,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462632160</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -12900,7 +12900,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462621536</coreId>
+						<coreId>375425472</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -12931,7 +12931,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>375426240</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -12962,7 +12962,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462634128</coreId>
+						<coreId>375426824</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -13024,7 +13024,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>375428336</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -13055,7 +13055,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462634144</coreId>
+						<coreId>375428688</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -13086,7 +13086,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462637872</coreId>
+						<coreId>375430576</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -13117,7 +13117,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462642464</coreId>
+						<coreId>375435488</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -13210,7 +13210,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462637872</coreId>
+						<coreId>375430576</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13241,7 +13241,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3461574448</coreId>
+						<coreId>375249200</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13272,7 +13272,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462644768</coreId>
+						<coreId>375437296</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13303,7 +13303,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>375443216</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13334,7 +13334,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>375443984</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13365,7 +13365,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462653584</coreId>
+						<coreId>375444624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13396,7 +13396,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462622783</coreId>
+						<coreId>375445256</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13427,7 +13427,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462622989</coreId>
+						<coreId>608</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13458,7 +13458,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462653728</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13489,7 +13489,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>20</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13520,7 +13520,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>79</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13551,7 +13551,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4</coreId>
+						<coreId>375448208</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13582,7 +13582,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462624274</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13613,7 +13613,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462624495</coreId>
+						<coreId>375449248</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13644,7 +13644,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462657672</coreId>
+						<coreId>375264448</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13675,7 +13675,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1629892709</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13737,7 +13737,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>375279312</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13768,7 +13768,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>375280512</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13799,7 +13799,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>375280960</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13830,7 +13830,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>375264448</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13861,7 +13861,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>75497986</coreId>
+						<coreId>176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13892,7 +13892,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1635150196</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13954,7 +13954,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>375284320</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -14016,7 +14016,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1701012321</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -14047,7 +14047,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>375286736</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -14078,7 +14078,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>375285232</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -14109,7 +14109,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3462667296</coreId>
+						<coreId>375288032</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -14140,7 +14140,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>375288720</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -14207,7 +14207,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>3461538736</coreId>
+					<coreId>374001264</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14241,7 +14241,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1330007625</coreId>
+					<coreId>375566656</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14381,7 +14381,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>3460892016</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14413,7 +14413,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2432</coreId>
+					<coreId>1397508187</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14445,7 +14445,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>375468560</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14477,7 +14477,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>375471888</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14509,7 +14509,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>3462552144</coreId>
+					<coreId>375474784</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14541,7 +14541,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1330007625</coreId>
+					<coreId>375477616</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14573,7 +14573,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>3461967008</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14605,7 +14605,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>3462742200</coreId>
+					<coreId>375486440</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14637,7 +14637,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>176</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14669,7 +14669,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>176</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14701,7 +14701,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>375728672</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14733,7 +14733,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>3462754240</coreId>
+					<coreId>375731568</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14765,7 +14765,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>3462757168</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14797,7 +14797,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>176</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14829,7 +14829,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>24416</coreId>
+					<coreId>375737424</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14893,7 +14893,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>3461520816</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14925,7 +14925,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1330007625</coreId>
+					<coreId>375749096</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14957,7 +14957,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>3462584848</coreId>
+					<coreId>375750832</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14989,7 +14989,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>788537856</coreId>
+					<coreId>375754160</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -15021,7 +15021,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>980447331</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -15053,7 +15053,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1563506994</coreId>
+					<coreId>1397508187</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -15085,7 +15085,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1885742880</coreId>
+					<coreId>784</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -15117,7 +15117,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>724263727</coreId>
+					<coreId>375765784</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -15149,7 +15149,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>661944615</coreId>
+					<coreId>375756608</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -15181,7 +15181,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1701978112</coreId>
+					<coreId>375390528</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -15213,7 +15213,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1919950848</coreId>
+					<coreId>480</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -15245,7 +15245,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>774774887</coreId>
+					<coreId>5557</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -15277,7 +15277,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1952802409</coreId>
+					<coreId>375408208</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -15309,7 +15309,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>757935405</coreId>
+					<coreId>375411968</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -15341,7 +15341,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1970561893</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -15373,7 +15373,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1769218162</coreId>
+					<coreId>375393008</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -15405,7 +15405,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>375420880</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -15437,7 +15437,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>3462630944</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>

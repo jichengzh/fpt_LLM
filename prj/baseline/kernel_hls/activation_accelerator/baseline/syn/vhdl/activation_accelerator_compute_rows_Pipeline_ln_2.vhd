@@ -516,7 +516,7 @@ attribute shreg_extract : string;
 
 
 begin
-    mux_325_32_1_1_U546 : component activation_accelerator_mux_325_32_1_1
+    mux_325_32_1_1_U560 : component activation_accelerator_mux_325_32_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,

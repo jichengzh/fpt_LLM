@@ -844,8 +844,8 @@ reg   [4:0] trunc_ln331_reg_2152_pp0_iter4_reg;
 reg   [4:0] trunc_ln331_reg_2152_pp0_iter5_reg;
 wire   [31:0] tmp_s_fu_1793_p34;
 reg   [31:0] tmp_s_reg_2318;
-wire   [31:0] tmp_3_fu_1862_p34;
-reg   [31:0] tmp_3_reg_2323;
+wire   [31:0] tmp_18_fu_1862_p34;
+reg   [31:0] tmp_18_reg_2323;
 reg   [15:0] trunc_ln2_reg_2328;
 wire    ap_block_pp0_stage0;
 reg   [9:0] i_2_fu_302;
@@ -917,7 +917,7 @@ activation_accelerator_mux_325_32_1_1 #(
     .din31_WIDTH( 32 ),
     .din32_WIDTH( 5 ),
     .dout_WIDTH( 32 ))
-mux_325_32_1_1_U946(
+mux_325_32_1_1_U960(
     .din0(xt_q0),
     .din1(xt_32_q0),
     .din2(xt_33_q0),
@@ -991,7 +991,7 @@ activation_accelerator_mux_325_32_1_1 #(
     .din31_WIDTH( 32 ),
     .din32_WIDTH( 5 ),
     .dout_WIDTH( 32 ))
-mux_325_32_1_1_U947(
+mux_325_32_1_1_U961(
     .din0(yt_q0),
     .din1(yt_32_q0),
     .din2(yt_33_q0),
@@ -1025,7 +1025,7 @@ mux_325_32_1_1_U947(
     .din30(yt_61_q0),
     .din31(yt_62_q0),
     .din32(trunc_ln331_reg_2152),
-    .dout(tmp_3_fu_1862_p34)
+    .dout(tmp_18_fu_1862_p34)
 );
 
 activation_accelerator_flow_control_loop_pipe_sequential_init flow_control_loop_pipe_sequential_init_U(
@@ -1139,7 +1139,7 @@ always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         ap_loop_exit_ready_pp0_iter1_reg <= ap_loop_exit_ready;
         ap_loop_exit_ready_pp0_iter2_reg <= ap_loop_exit_ready_pp0_iter1_reg;
-        tmp_3_reg_2323 <= tmp_3_fu_1862_p34;
+        tmp_18_reg_2323 <= tmp_18_fu_1862_p34;
         tmp_s_reg_2318 <= tmp_s_fu_1793_p34;
         trunc_ln331_reg_2152_pp0_iter1_reg <= trunc_ln331_reg_2152;
         zext_ln331_reg_1956_pp0_iter1_reg[4 : 0] <= zext_ln331_reg_1956[4 : 0];
@@ -2289,7 +2289,7 @@ assign grp_fu_1900_p_ce = 1'b1;
 
 assign grp_fu_1900_p_din0 = tmp_s_reg_2318;
 
-assign grp_fu_1900_p_din1 = tmp_3_reg_2323;
+assign grp_fu_1900_p_din1 = tmp_18_reg_2323;
 
 assign grp_fu_1900_p_opcode = 2'd0;
 

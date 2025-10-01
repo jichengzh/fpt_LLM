@@ -469,7 +469,7 @@ attribute shreg_extract : string;
 
 
 begin
-    mux_325_32_1_1_U405 : component activation_accelerator_mux_325_32_1_1
+    mux_325_32_1_1_U419 : component activation_accelerator_mux_325_32_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,

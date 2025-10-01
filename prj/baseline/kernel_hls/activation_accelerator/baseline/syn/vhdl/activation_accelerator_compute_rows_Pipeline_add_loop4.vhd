@@ -438,8 +438,8 @@ attribute shreg_extract : string;
     signal trunc_ln331_reg_2152_pp0_iter5_reg : STD_LOGIC_VECTOR (4 downto 0);
     signal tmp_s_fu_1793_p34 : STD_LOGIC_VECTOR (31 downto 0);
     signal tmp_s_reg_2318 : STD_LOGIC_VECTOR (31 downto 0);
-    signal tmp_3_fu_1862_p34 : STD_LOGIC_VECTOR (31 downto 0);
-    signal tmp_3_reg_2323 : STD_LOGIC_VECTOR (31 downto 0);
+    signal tmp_18_fu_1862_p34 : STD_LOGIC_VECTOR (31 downto 0);
+    signal tmp_18_reg_2323 : STD_LOGIC_VECTOR (31 downto 0);
     signal trunc_ln2_reg_2328 : STD_LOGIC_VECTOR (15 downto 0);
     signal ap_block_pp0_stage0 : BOOLEAN;
     signal i_2_fu_302 : STD_LOGIC_VECTOR (9 downto 0);
@@ -575,7 +575,7 @@ attribute shreg_extract : string;
 
 
 begin
-    mux_325_32_1_1_U946 : component activation_accelerator_mux_325_32_1_1
+    mux_325_32_1_1_U960 : component activation_accelerator_mux_325_32_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -649,7 +649,7 @@ begin
         din32 => trunc_ln331_reg_2152,
         dout => tmp_s_fu_1793_p34);
 
-    mux_325_32_1_1_U947 : component activation_accelerator_mux_325_32_1_1
+    mux_325_32_1_1_U961 : component activation_accelerator_mux_325_32_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -721,7 +721,7 @@ begin
         din30 => yt_61_q0,
         din31 => yt_62_q0,
         din32 => trunc_ln331_reg_2152,
-        dout => tmp_3_fu_1862_p34);
+        dout => tmp_18_fu_1862_p34);
 
     flow_control_loop_pipe_sequential_init_U : component activation_accelerator_flow_control_loop_pipe_sequential_init
     port map (
@@ -874,7 +874,7 @@ begin
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then
                 ap_loop_exit_ready_pp0_iter1_reg <= ap_loop_exit_ready;
                 ap_loop_exit_ready_pp0_iter2_reg <= ap_loop_exit_ready_pp0_iter1_reg;
-                tmp_3_reg_2323 <= tmp_3_fu_1862_p34;
+                tmp_18_reg_2323 <= tmp_18_fu_1862_p34;
                 tmp_s_reg_2318 <= tmp_s_fu_1793_p34;
                 trunc_ln331_reg_2152_pp0_iter1_reg <= trunc_ln331_reg_2152;
                     zext_ln331_reg_1956_pp0_iter1_reg(4 downto 0) <= zext_ln331_reg_1956(4 downto 0);
@@ -1003,7 +1003,7 @@ begin
 
     grp_fu_1900_p_ce <= ap_const_logic_1;
     grp_fu_1900_p_din0 <= tmp_s_reg_2318;
-    grp_fu_1900_p_din1 <= tmp_3_reg_2323;
+    grp_fu_1900_p_din1 <= tmp_18_reg_2323;
     grp_fu_1900_p_opcode <= ap_const_lv2_0(1 - 1 downto 0);
     icmp_ln329_fu_1694_p2 <= "1" when (ap_sig_allocacmp_i = ap_const_lv10_300) else "0";
     lshr_ln1_fu_1706_p4 <= ap_sig_allocacmp_i(9 downto 5);

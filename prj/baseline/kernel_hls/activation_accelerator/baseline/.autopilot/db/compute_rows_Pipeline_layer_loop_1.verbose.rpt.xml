@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'compute_rows_Pipeline_layer_loop_1'" level="0">
-<item name = "Date">Mon Sep 29 22:11:57 2025
+<item name = "Date">Wed Oct  1 10:14:51 2025
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">activation_accelerator</item>
@@ -62,7 +62,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="mux_325_32_1_1_U509">mux_325_32_1_1, 0, 0, 0, 148, 0</column>
+<column name="mux_325_32_1_1_U523">mux_325_32_1_1, 0, 0, 0, 148, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">

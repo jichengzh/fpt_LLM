@@ -344,12 +344,30 @@ void float_softmax(const float* x, uint16* y_bf16, int len) {
     }
     float sum = 0.f;
     // 用栈数组放指数；如 len 很大可放到 BRAM
+    const int UF = 8;  // 展开系数，8/16/32 视资源取
+    // float sum = 0.f;
+
     smx_1:
-    for (int i = 0; i < len; ++i) {
+    for (int i = 0; i < len; i += UF) {
     #pragma HLS PIPELINE II=1
-        float e = hls::expf(x[i] - xmax);
-        sum += e;
-        // 为节省存储，可直接在 smx_2 里再算一遍 exp；此处示例直接二次计算
+        float e[UF];
+    #pragma HLS ARRAY_PARTITION variable=e complete
+    load_e:
+        for (int u = 0; u < UF; ++u) {
+    #pragma HLS UNROLL
+            int idx = i + u;
+            e[u] = (idx < len) ? hls::expf(x[idx] - xmax) : 0.f;
+        }
+        // 块内树形归约（示例：UF=8）
+        float s0 = e[0] + e[1];
+        float s1 = e[2] + e[3];
+        float s2 = e[4] + e[5];
+        float s3 = e[6] + e[7];
+        float t0 = s0 + s1;
+        float t1 = s2 + s3;
+        float block = t0 + t1;
+
+        sum += block;   // 这里的回授频率= len/UF 次
     }
     smx_2:
     for (int i = 0; i < len; ++i) {

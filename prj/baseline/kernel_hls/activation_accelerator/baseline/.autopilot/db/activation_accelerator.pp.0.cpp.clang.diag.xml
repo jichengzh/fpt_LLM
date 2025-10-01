@@ -1,6 +1,6 @@
 <dict>
   <key>main-file</key>
-  <string>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp</string>
+  <string>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp</string>
   <key>diagnostics</key>
   <array>
     <dict>
@@ -3561,7 +3561,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>349</integer>
+      <integer>352</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -3577,7 +3577,39 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>356</integer>
+      <integer>354</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=float_softmax_XLX_SEP_ PragmaOptions=variable=e complete_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>activation_accelerator.cpp</string>
+      <key>line</key>
+      <integer>357</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=float_softmax_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>activation_accelerator.cpp</string>
+      <key>line</key>
+      <integer>374</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -3593,7 +3625,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>369</integer>
+      <integer>387</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -3609,7 +3641,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>372</integer>
+      <integer>390</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -3625,7 +3657,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>375</integer>
+      <integer>393</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -3641,7 +3673,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>376</integer>
+      <integer>394</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -3657,7 +3689,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>380</integer>
+      <integer>398</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -3673,7 +3705,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>381</integer>
+      <integer>399</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -3689,7 +3721,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>386</integer>
+      <integer>404</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -3705,7 +3737,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>392</integer>
+      <integer>410</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -3721,7 +3753,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>405</integer>
+      <integer>423</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -3737,7 +3769,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>407</integer>
+      <integer>425</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -3753,7 +3785,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>408</integer>
+      <integer>426</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -3769,7 +3801,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>409</integer>
+      <integer>427</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -3785,7 +3817,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>414</integer>
+      <integer>432</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -3801,7 +3833,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>415</integer>
+      <integer>433</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -3817,7 +3849,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>416</integer>
+      <integer>434</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -3833,7 +3865,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>419</integer>
+      <integer>437</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -3849,7 +3881,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>420</integer>
+      <integer>438</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -3865,7 +3897,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>421</integer>
+      <integer>439</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -3881,7 +3913,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>427</integer>
+      <integer>445</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -3897,7 +3929,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>428</integer>
+      <integer>446</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -3913,7 +3945,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>429</integer>
+      <integer>447</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -3929,7 +3961,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>430</integer>
+      <integer>448</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -3945,7 +3977,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>434</integer>
+      <integer>452</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -3961,7 +3993,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>439</integer>
+      <integer>457</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -3977,7 +4009,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>443</integer>
+      <integer>461</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -3993,7 +4025,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>444</integer>
+      <integer>462</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -4009,7 +4041,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>449</integer>
+      <integer>467</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -4025,7 +4057,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>480</integer>
+      <integer>498</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -4041,7 +4073,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>482</integer>
+      <integer>500</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -4057,7 +4089,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>485</integer>
+      <integer>503</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -4073,7 +4105,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>496</integer>
+      <integer>514</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -4089,7 +4121,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>497</integer>
+      <integer>515</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -4105,7 +4137,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>500</integer>
+      <integer>518</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -4121,7 +4153,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>504</integer>
+      <integer>522</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -4135,7 +4167,7 @@
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
-      <string>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/run_hls.tcl</string>
+      <string>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/run_hls.tcl</string>
       <key>line</key>
       <integer>39</integer>
       <key>column</key>
@@ -4153,7 +4185,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>513</integer>
+      <integer>531</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -4169,7 +4201,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>514</integer>
+      <integer>532</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -4185,7 +4217,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>515</integer>
+      <integer>533</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -4201,7 +4233,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>516</integer>
+      <integer>534</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -4217,7 +4249,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>517</integer>
+      <integer>535</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -4233,7 +4265,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>518</integer>
+      <integer>536</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -4249,7 +4281,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>519</integer>
+      <integer>537</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -4265,7 +4297,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>522</integer>
+      <integer>540</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -4281,7 +4313,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>523</integer>
+      <integer>541</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -4297,7 +4329,7 @@
       <key>filename</key>
       <string>activation_accelerator.cpp</string>
       <key>line</key>
-      <integer>524</integer>
+      <integer>542</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>

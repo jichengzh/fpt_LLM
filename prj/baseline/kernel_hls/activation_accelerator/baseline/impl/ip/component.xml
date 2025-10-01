@@ -2002,7 +2002,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>71e1e9cb</spirit:value>
+            <spirit:value>d1c60c08</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2021,7 +2021,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>2c59a239</spirit:value>
+            <spirit:value>81337275</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2040,7 +2040,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>59c4275a</spirit:value>
+            <spirit:value>43dd5cc1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2059,7 +2059,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>f0ccbfee</spirit:value>
+            <spirit:value>48ef1ac9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -5295,6 +5295,10 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>hdl/verilog/activation_accelerator_mux_255_32_1_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/verilog/activation_accelerator_mux_325_16_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
@@ -5537,6 +5541,11 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/activation_accelerator_load_rows_Loop_LOAD_ROW_proc1_Pipeline_LOAD_ROW_LOAD_W.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/activation_accelerator_mux_255_32_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -5800,6 +5809,10 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>hdl/vhdl/activation_accelerator_mux_255_32_1_1.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/vhdl/activation_accelerator_mux_325_16_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
@@ -5826,7 +5839,7 @@
       <spirit:file>
         <spirit:name>hdl/vhdl/activation_accelerator.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_ff339b36</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_7382a4b4</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -6028,6 +6041,11 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vhdl/activation_accelerator_load_rows_Loop_LOAD_ROW_proc1_Pipeline_LOAD_ROW_LOAD_W.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/activation_accelerator_mux_255_32_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -6538,8 +6556,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Activation_accelerator</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2114282188</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-09-29T14:28:31Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2114284354</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-10-01T02:35:17Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -6550,7 +6568,7 @@
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="c90bed3d"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="d37294b6"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="db0fea9a"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="febb8534"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="544274b0"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="d227dd20"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="1253a35a"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="97bda426"/>

@@ -44,7 +44,7 @@ set SCTraceOption all
 set TargetInfo xck26:-sfvc784:-2LV-c
 set SourceFiles {sc {} c {../../activation_accelerator.h ../../activation_accelerator.cpp}}
 set SourceFlags {sc {} c {{ } {} { } {}}}
-set DirectiveFile /data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/baseline.directive
+set DirectiveFile /data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/baseline.directive
 set TBFiles {verilog ../../testbench.cpp bc ../../testbench.cpp sc ../../testbench.cpp vhdl ../../testbench.cpp c {} cas ../../testbench.cpp}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

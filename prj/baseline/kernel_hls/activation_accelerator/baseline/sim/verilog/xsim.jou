@@ -2,13 +2,13 @@
 # xsim v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Mon Sep 29 22:14:11 2025
-# Process ID: 835882
-# Current directory: /data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog
+# Start of session at: Wed Oct  1 10:17:39 2025
+# Process ID: 314261
+# Current directory: /data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog
 # Command line: xsim -mode tcl -source {xsim.dir/activation_accelerator/xsim_script.tcl}
-# Log file: /data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/xsim.log
-# Journal file: /data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/xsim.jou
-# Running On: super-test, OS: Linux, CPU Frequency: 2699.998 MHz, CPU Physical cores: 20, Host memory: 134761 MB
+# Log file: /data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/xsim.log
+# Journal file: /data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/xsim.jou
+# Running On: super-test, OS: Linux, CPU Frequency: 2700.000 MHz, CPU Physical cores: 21, Host memory: 134761 MB
 #-----------------------------------------------------------
 source xsim.dir/activation_accelerator/xsim_script.tcl
 source activation_accelerator.tcl

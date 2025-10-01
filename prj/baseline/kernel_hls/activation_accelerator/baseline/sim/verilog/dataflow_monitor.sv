@@ -484,8 +484,8 @@ end
     assign upc_loop_intf_7.iter_end_block = AESL_inst_activation_accelerator.compute_rows_U0.grp_compute_rows_Pipeline_smx_1_fu_1135.ap_block_pp0_stage2_subdone;
     assign upc_loop_intf_7.quit_block = AESL_inst_activation_accelerator.compute_rows_U0.grp_compute_rows_Pipeline_smx_1_fu_1135.ap_block_pp0_stage2_subdone;
     assign upc_loop_intf_7.iter_start_enable = AESL_inst_activation_accelerator.compute_rows_U0.grp_compute_rows_Pipeline_smx_1_fu_1135.ap_enable_reg_pp0_iter0;
-    assign upc_loop_intf_7.iter_end_enable = AESL_inst_activation_accelerator.compute_rows_U0.grp_compute_rows_Pipeline_smx_1_fu_1135.ap_enable_reg_pp0_iter5;
-    assign upc_loop_intf_7.quit_enable = AESL_inst_activation_accelerator.compute_rows_U0.grp_compute_rows_Pipeline_smx_1_fu_1135.ap_enable_reg_pp0_iter5;
+    assign upc_loop_intf_7.iter_end_enable = AESL_inst_activation_accelerator.compute_rows_U0.grp_compute_rows_Pipeline_smx_1_fu_1135.ap_enable_reg_pp0_iter11;
+    assign upc_loop_intf_7.quit_enable = AESL_inst_activation_accelerator.compute_rows_U0.grp_compute_rows_Pipeline_smx_1_fu_1135.ap_enable_reg_pp0_iter11;
     assign upc_loop_intf_7.loop_start = AESL_inst_activation_accelerator.compute_rows_U0.grp_compute_rows_Pipeline_smx_1_fu_1135.ap_start;
     assign upc_loop_intf_7.loop_ready = AESL_inst_activation_accelerator.compute_rows_U0.grp_compute_rows_Pipeline_smx_1_fu_1135.ap_ready;
     assign upc_loop_intf_7.loop_done = AESL_inst_activation_accelerator.compute_rows_U0.grp_compute_rows_Pipeline_smx_1_fu_1135.ap_done_int;

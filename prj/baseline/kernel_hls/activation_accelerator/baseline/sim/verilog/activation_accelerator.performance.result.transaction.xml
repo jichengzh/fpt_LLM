@@ -1,8 +1,8 @@
                              latency        interval
-transaction       0:          262542          262542
-transaction       1:          169853          169853
-transaction       2:          239453          239453
-transaction       3:          308903          308903
-transaction       4:          169853          169853
-transaction       5:          192353          192353
-transaction       6:          192353               x
+transaction       0:          190612          190612
+transaction       1:          157863          157863
+transaction       2:          227463          227463
+transaction       3:          296913          296913
+transaction       4:          157863          157863
+transaction       5:          180363          180363
+transaction       6:          180363               x

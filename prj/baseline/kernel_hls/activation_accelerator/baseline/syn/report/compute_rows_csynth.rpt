@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'compute_rows'
 ================================================================
-* Date:           Mon Sep 29 22:11:59 2025
+* Date:           Wed Oct  1 10:14:54 2025
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        activation_accelerator
@@ -43,7 +43,7 @@
         |grp_compute_rows_Pipeline_convert_loop1_fu_961  |compute_rows_Pipeline_convert_loop1  |      770|      770|   7.700 us|   7.700 us|   770|   770|       no|
         |grp_compute_rows_Pipeline_silu_loop2_fu_1029    |compute_rows_Pipeline_silu_loop2     |      794|      794|   7.940 us|   7.940 us|   794|   794|       no|
         |grp_compute_rows_Pipeline_smx_0_fu_1097         |compute_rows_Pipeline_smx_0          |      769|      769|   7.690 us|   7.690 us|   769|   769|       no|
-        |grp_compute_rows_Pipeline_smx_1_fu_1135         |compute_rows_Pipeline_smx_1          |     2320|     2320|  23.200 us|  23.200 us|  2320|  2320|       no|
+        |grp_compute_rows_Pipeline_smx_1_fu_1135         |compute_rows_Pipeline_smx_1          |      322|      322|   3.220 us|   3.220 us|   322|   322|       no|
         |grp_compute_rows_Pipeline_smx_2_fu_1173         |compute_rows_Pipeline_smx_2          |      792|      792|   7.920 us|   7.920 us|   792|   792|       no|
         |grp_compute_rows_Pipeline_rms_loop_0_fu_1243    |compute_rows_Pipeline_rms_loop_0     |     2311|     2311|  23.110 us|  23.110 us|  2311|  2311|       no|
         |grp_compute_rows_Pipeline_rms_loop_1_fu_1280    |compute_rows_Pipeline_rms_loop_1     |      774|      774|   7.740 us|   7.740 us|   774|   774|       no|
@@ -77,49 +77,49 @@
 |DSP              |        -|     -|       -|       -|    -|
 |Expression       |        -|     -|       0|     368|    -|
 |FIFO             |        -|     -|       -|       -|    -|
-|Instance         |        -|    21|    4140|    7057|    -|
+|Instance         |        -|    43|    6668|   10913|    -|
 |Memory           |      160|     -|       0|       0|    -|
 |Multiplexer      |        -|     -|       -|   16053|    -|
 |Register         |        -|     -|     481|       -|    -|
 +-----------------+---------+------+--------+--------+-----+
-|Total            |      160|    21|    4621|   23478|    0|
+|Total            |      160|    43|    7149|   27334|    0|
 +-----------------+---------+------+--------+--------+-----+
 |Available        |      288|  1248|  234240|  117120|   64|
 +-----------------+---------+------+--------+--------+-----+
-|Utilization (%)  |       55|     1|       1|      20|    0|
+|Utilization (%)  |       55|     3|       3|      23|    0|
 +-----------------+---------+------+--------+--------+-----+
 
 + Detail: 
     * Instance: 
-    +------------------------------------------------+-------------------------------------+---------+----+-----+-----+-----+
-    |                    Instance                    |                Module               | BRAM_18K| DSP|  FF | LUT | URAM|
-    +------------------------------------------------+-------------------------------------+---------+----+-----+-----+-----+
-    |grp_compute_rows_Pipeline_PK_W_fu_1862          |compute_rows_Pipeline_PK_W           |        0|   0|    8|   70|    0|
-    |grp_compute_rows_Pipeline_UNPK_W_fu_821         |compute_rows_Pipeline_UNPK_W         |        0|   0|   13|   81|    0|
-    |grp_compute_rows_Pipeline_add_loop_fu_1562      |compute_rows_Pipeline_add_loop       |        0|   0|  241|  426|    0|
-    |grp_compute_rows_Pipeline_add_loop3_fu_1662     |compute_rows_Pipeline_add_loop3      |        0|   0|  241|  426|    0|
-    |grp_compute_rows_Pipeline_add_loop4_fu_1762     |compute_rows_Pipeline_add_loop4      |        0|   0|  241|  426|    0|
-    |grp_compute_rows_Pipeline_convert_loop_fu_893   |compute_rows_Pipeline_convert_loop   |        0|   0|   23|  214|    0|
-    |grp_compute_rows_Pipeline_convert_loop1_fu_961  |compute_rows_Pipeline_convert_loop1  |        0|   0|   23|  214|    0|
-    |grp_compute_rows_Pipeline_layer_loop_0_fu_1349  |compute_rows_Pipeline_layer_loop_0   |        0|   0|   54|  270|    0|
-    |grp_compute_rows_Pipeline_layer_loop_1_fu_1386  |compute_rows_Pipeline_layer_loop_1   |        0|   0|  220|  329|    0|
-    |grp_compute_rows_Pipeline_ln_2_fu_1424          |compute_rows_Pipeline_ln_2           |        0|   0|  247|  278|    0|
-    |grp_compute_rows_Pipeline_rms_loop_0_fu_1243    |compute_rows_Pipeline_rms_loop_0     |        0|   0|  121|  261|    0|
-    |grp_compute_rows_Pipeline_rms_loop_1_fu_1280    |compute_rows_Pipeline_rms_loop_1     |        0|   0|  207|  278|    0|
-    |grp_compute_rows_Pipeline_silu_loop_fu_1494     |compute_rows_Pipeline_silu_loop      |        0|   0|  407|  343|    0|
-    |grp_compute_rows_Pipeline_silu_loop2_fu_1029    |compute_rows_Pipeline_silu_loop2     |        0|   0|  407|  343|    0|
-    |grp_compute_rows_Pipeline_smx_0_fu_1097         |compute_rows_Pipeline_smx_0          |        0|   0|   50|  517|    0|
-    |grp_compute_rows_Pipeline_smx_1_fu_1135         |compute_rows_Pipeline_smx_1          |        0|   0|  222|  293|    0|
-    |grp_compute_rows_Pipeline_smx_2_fu_1173         |compute_rows_Pipeline_smx_2          |        0|   0|  307|  278|    0|
-    |fadd_32ns_32ns_32_4_no_dsp_1_U1082              |fadd_32ns_32ns_32_4_no_dsp_1         |        0|   0|  168|  434|    0|
-    |faddfsub_32ns_32ns_32_4_full_dsp_1_U1077        |faddfsub_32ns_32ns_32_4_full_dsp_1   |        0|   2|  227|  214|    0|
-    |fdiv_32ns_32ns_32_9_no_dsp_1_U1079              |fdiv_32ns_32ns_32_9_no_dsp_1         |        0|   0|    0|    0|    0|
-    |fexp_32ns_32ns_32_8_full_dsp_1_U1081            |fexp_32ns_32ns_32_8_full_dsp_1       |        0|   7|  324|  905|    0|
-    |fmul_32ns_32ns_32_3_max_dsp_1_U1078             |fmul_32ns_32ns_32_3_max_dsp_1        |        0|   3|  128|  135|    0|
-    |frsqrt_32ns_32ns_32_10_full_dsp_1_U1080         |frsqrt_32ns_32ns_32_10_full_dsp_1    |        0|   9|  261|  322|    0|
-    +------------------------------------------------+-------------------------------------+---------+----+-----+-----+-----+
-    |Total                                           |                                     |        0|  21| 4140| 7057|    0|
-    +------------------------------------------------+-------------------------------------+---------+----+-----+-----+-----+
+    +------------------------------------------------+-------------------------------------+---------+----+------+------+-----+
+    |                    Instance                    |                Module               | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +------------------------------------------------+-------------------------------------+---------+----+------+------+-----+
+    |grp_compute_rows_Pipeline_PK_W_fu_1862          |compute_rows_Pipeline_PK_W           |        0|   0|     8|    70|    0|
+    |grp_compute_rows_Pipeline_UNPK_W_fu_821         |compute_rows_Pipeline_UNPK_W         |        0|   0|    13|    81|    0|
+    |grp_compute_rows_Pipeline_add_loop_fu_1562      |compute_rows_Pipeline_add_loop       |        0|   0|   241|   426|    0|
+    |grp_compute_rows_Pipeline_add_loop3_fu_1662     |compute_rows_Pipeline_add_loop3      |        0|   0|   241|   426|    0|
+    |grp_compute_rows_Pipeline_add_loop4_fu_1762     |compute_rows_Pipeline_add_loop4      |        0|   0|   241|   426|    0|
+    |grp_compute_rows_Pipeline_convert_loop_fu_893   |compute_rows_Pipeline_convert_loop   |        0|   0|    23|   214|    0|
+    |grp_compute_rows_Pipeline_convert_loop1_fu_961  |compute_rows_Pipeline_convert_loop1  |        0|   0|    23|   214|    0|
+    |grp_compute_rows_Pipeline_layer_loop_0_fu_1349  |compute_rows_Pipeline_layer_loop_0   |        0|   0|    54|   270|    0|
+    |grp_compute_rows_Pipeline_layer_loop_1_fu_1386  |compute_rows_Pipeline_layer_loop_1   |        0|   0|   220|   329|    0|
+    |grp_compute_rows_Pipeline_ln_2_fu_1424          |compute_rows_Pipeline_ln_2           |        0|   0|   247|   278|    0|
+    |grp_compute_rows_Pipeline_rms_loop_0_fu_1243    |compute_rows_Pipeline_rms_loop_0     |        0|   0|   121|   261|    0|
+    |grp_compute_rows_Pipeline_rms_loop_1_fu_1280    |compute_rows_Pipeline_rms_loop_1     |        0|   0|   207|   278|    0|
+    |grp_compute_rows_Pipeline_silu_loop_fu_1494     |compute_rows_Pipeline_silu_loop      |        0|   0|   407|   343|    0|
+    |grp_compute_rows_Pipeline_silu_loop2_fu_1029    |compute_rows_Pipeline_silu_loop2     |        0|   0|   407|   343|    0|
+    |grp_compute_rows_Pipeline_smx_0_fu_1097         |compute_rows_Pipeline_smx_0          |        0|   0|    50|   517|    0|
+    |grp_compute_rows_Pipeline_smx_1_fu_1135         |compute_rows_Pipeline_smx_1          |        0|  22|  2750|  4149|    0|
+    |grp_compute_rows_Pipeline_smx_2_fu_1173         |compute_rows_Pipeline_smx_2          |        0|   0|   307|   278|    0|
+    |fadd_32ns_32ns_32_4_no_dsp_1_U1096              |fadd_32ns_32ns_32_4_no_dsp_1         |        0|   0|   168|   434|    0|
+    |faddfsub_32ns_32ns_32_4_full_dsp_1_U1091        |faddfsub_32ns_32ns_32_4_full_dsp_1   |        0|   2|   227|   214|    0|
+    |fdiv_32ns_32ns_32_9_no_dsp_1_U1093              |fdiv_32ns_32ns_32_9_no_dsp_1         |        0|   0|     0|     0|    0|
+    |fexp_32ns_32ns_32_8_full_dsp_1_U1095            |fexp_32ns_32ns_32_8_full_dsp_1       |        0|   7|   324|   905|    0|
+    |fmul_32ns_32ns_32_3_max_dsp_1_U1092             |fmul_32ns_32ns_32_3_max_dsp_1        |        0|   3|   128|   135|    0|
+    |frsqrt_32ns_32ns_32_10_full_dsp_1_U1094         |frsqrt_32ns_32ns_32_10_full_dsp_1    |        0|   9|   261|   322|    0|
+    +------------------------------------------------+-------------------------------------+---------+----+------+------+-----+
+    |Total                                           |                                     |        0|  43|  6668| 10913|    0|
+    +------------------------------------------------+-------------------------------------+---------+----+------+------+-----+
 
     * DSP: 
     N/A
@@ -308,9 +308,9 @@
     |and_ln52_fu_2125_p2               |       and|   0|  0|   2|           1|           1|
     |ap_block_state84_on_subcall_done  |       and|   0|  0|   2|           1|           1|
     |cmp21_i_fu_1942_p2                |      icmp|   0|  0|  20|          32|           3|
-    |icmp_ln433_fu_1964_p2             |      icmp|   0|  0|  11|           7|           8|
-    |icmp_ln463_fu_2153_p2             |      icmp|   0|  0|  20|          32|           3|
+    |icmp_ln451_fu_1964_p2             |      icmp|   0|  0|  11|           7|           8|
     |icmp_ln47_fu_1976_p2              |      icmp|   0|  0|  10|           7|           5|
+    |icmp_ln481_fu_2153_p2             |      icmp|   0|  0|  20|          32|           3|
     |icmp_ln48_fu_1982_p2              |      icmp|   0|  0|  10|           7|           5|
     |icmp_ln49_fu_1998_p2              |      icmp|   0|  0|   8|           2|           1|
     |icmp_ln50_fu_2004_p2              |      icmp|   0|  0|  10|           7|           6|
@@ -321,7 +321,7 @@
     |or_ln50_fu_2093_p2                |        or|   0|  0|   2|           1|           1|
     |or_ln52_fu_2139_p2                |        or|   0|  0|   2|           1|           1|
     |op_fu_2145_p3                     |    select|   0|  0|  32|           1|          32|
-    |select_ln433_fu_1948_p3           |    select|   0|  0|   3|           1|           3|
+    |select_ln451_fu_1948_p3           |    select|   0|  0|   3|           1|           3|
     |select_ln47_fu_2034_p3            |    select|   0|  0|  32|           1|          32|
     |select_ln48_fu_2053_p3            |    select|   0|  0|  32|           1|           1|
     |select_ln50_1_fu_2099_p3          |    select|   0|  0|  32|           1|          32|
@@ -1002,7 +1002,7 @@
     |grp_compute_rows_Pipeline_smx_1_fu_1135_ap_start_reg         |   1|   0|    1|          0|
     |grp_compute_rows_Pipeline_smx_2_fu_1173_ap_start_reg         |   1|   0|    1|          0|
     |i_11_reg_2298                                                |  32|   0|   32|          0|
-    |icmp_ln463_reg_2275                                          |   1|   0|    1|          0|
+    |icmp_ln481_reg_2275                                          |   1|   0|    1|          0|
     |inv_std_reg_2321                                             |  32|   0|   32|          0|
     |mean_reg_2312                                                |  32|   0|   32|          0|
     |op_reg_2270                                                  |  32|   0|   32|          0|
@@ -1011,7 +1011,7 @@
     |reg_1923                                                     |  32|   0|   32|          0|
     |reg_1928                                                     |  32|   0|   32|          0|
     |reg_1935                                                     |  32|   0|   32|          0|
-    |select_ln433_reg_2257                                        |   2|   0|   32|         30|
+    |select_ln451_reg_2257                                        |   2|   0|   32|         30|
     |trunc_ln5_reg_2293                                           |  31|   0|   31|          0|
     |xmax_reg_2279                                                |  32|   0|   32|          0|
     +-------------------------------------------------------------+----+----+-----+-----------+

@@ -280,7 +280,7 @@ wire   [31:0] res_5_fu_983_p3;
 wire    ap_loop_init;
 reg   [9:0] i_fu_138;
 wire   [9:0] add_ln341_fu_640_p2;
-reg   [9:0] ap_sig_allocacmp_i_3;
+reg   [9:0] ap_sig_allocacmp_i_2;
 wire    ap_block_pp0_stage0_01001;
 wire   [4:0] lshr_ln5_fu_590_p4;
 wire   [31:0] data_V_fu_723_p1;
@@ -528,9 +528,9 @@ end
 
 always @ (*) begin
     if (((1'b0 == ap_block_pp0_stage0) & (ap_loop_init == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        ap_sig_allocacmp_i_3 = 10'd1;
+        ap_sig_allocacmp_i_2 = 10'd1;
     end else begin
-        ap_sig_allocacmp_i_3 = i_fu_138;
+        ap_sig_allocacmp_i_2 = i_fu_138;
     end
 end
 
@@ -809,7 +809,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln341_fu_640_p2 = (ap_sig_allocacmp_i_3 + 10'd1);
+assign add_ln341_fu_640_p2 = (ap_sig_allocacmp_i_2 + 10'd1);
 
 assign and_ln18_1_fu_835_p2 = (icmp_ln1023_1_fu_829_p2 & icmp_ln1019_1_fu_811_p2);
 
@@ -865,9 +865,9 @@ assign icmp_ln25_1_fu_793_p2 = ((or_ln25_1_fu_787_p2 == 23'd0) ? 1'b1 : 1'b0);
 
 assign icmp_ln25_fu_781_p2 = ((or_ln25_fu_775_p2 == 8'd0) ? 1'b1 : 1'b0);
 
-assign icmp_ln341_fu_584_p2 = ((ap_sig_allocacmp_i_3 == 10'd768) ? 1'b1 : 1'b0);
+assign icmp_ln341_fu_584_p2 = ((ap_sig_allocacmp_i_2 == 10'd768) ? 1'b1 : 1'b0);
 
-assign lshr_ln5_fu_590_p4 = {{ap_sig_allocacmp_i_3[9:5]}};
+assign lshr_ln5_fu_590_p4 = {{ap_sig_allocacmp_i_2[9:5]}};
 
 assign or_ln18_1_fu_965_p2 = (and_ln25_fu_799_p2 | and_ln18_fu_823_p2);
 
@@ -897,7 +897,7 @@ assign res_fu_861_p1 = p_Result_3_fu_851_p4;
 
 assign select_ln39_fu_877_p3 = ((p_Result_s_fu_727_p3[0:0] == 1'b1) ? xor_ln39_fu_871_p2 : ymaggreater_fu_865_p2);
 
-assign trunc_ln343_fu_636_p1 = ap_sig_allocacmp_i_3[4:0];
+assign trunc_ln343_fu_636_p1 = ap_sig_allocacmp_i_2[4:0];
 
 assign x_fp_exp_V_fu_735_p4 = {{data_V_fu_723_p1[30:23]}};
 

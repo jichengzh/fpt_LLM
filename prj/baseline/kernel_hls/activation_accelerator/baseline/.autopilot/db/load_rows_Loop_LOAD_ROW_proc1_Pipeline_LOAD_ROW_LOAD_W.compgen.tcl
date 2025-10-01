@@ -26,14 +26,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 6 \
-    name sext_ln384_1 \
+    name sext_ln402_1 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_sext_ln384_1 \
+    corename dc_sext_ln402_1 \
     op interface \
-    ports { sext_ln384_1 { I 58 vector } } \
+    ports { sext_ln402_1 { I 58 vector } } \
 } "
 }
 
@@ -56,14 +56,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 8 \
-    name sext_ln384 \
+    name sext_ln402 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_sext_ln384 \
+    corename dc_sext_ln402 \
     op interface \
-    ports { sext_ln384 { I 58 vector } } \
+    ports { sext_ln402 { I 58 vector } } \
 } "
 }
 

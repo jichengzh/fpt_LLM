@@ -595,10 +595,10 @@ newFuncRoot:37 %br_ln0 = br void %for.body.i85
 
 <Node id="74" bw="10" op_0_bw="10" op_1_bw="0">
 <![CDATA[
-for.body.i85:0 %i_3 = load i10 %i
+for.body.i85:0 %i_2 = load i10 %i
 
 ]]></Node>
-<StgValue><ssdm name="i_3"/></StgValue>
+<StgValue><ssdm name="i_2"/></StgValue>
 </operation>
 
 <operation id="44" st_id="1" stage="1" lat="1">
@@ -610,7 +610,7 @@ for.body.i85:0 %i_3 = load i10 %i
 
 <Node id="75" bw="1" op_0_bw="10" op_1_bw="10">
 <![CDATA[
-for.body.i85:1 %icmp_ln341 = icmp_eq  i10 %i_3, i10 768
+for.body.i85:1 %icmp_ln341 = icmp_eq  i10 %i_2, i10 768
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln341"/></StgValue>
@@ -640,7 +640,7 @@ for.body.i85:2 %speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoo
 
 <Node id="77" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-for.body.i85:3 %br_ln341 = br i1 %icmp_ln341, void %for.body.i85.split_ifconv, void %for.body6.i.preheader.exitStub
+for.body.i85:3 %br_ln341 = br i1 %icmp_ln341, void %for.body.i85.split_ifconv, void %cond.end.i.7.preheader.exitStub
 
 ]]></Node>
 <StgValue><ssdm name="br_ln341"/></StgValue>
@@ -656,7 +656,7 @@ for.body.i85:3 %br_ln341 = br i1 %icmp_ln341, void %for.body.i85.split_ifconv, v
 
 <Node id="82" bw="5" op_0_bw="5" op_1_bw="10" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-for.body.i85.split_ifconv:3 %lshr_ln5 = partselect i5 @_ssdm_op_PartSelect.i5.i10.i32.i32, i10 %i_3, i32 5, i32 9
+for.body.i85.split_ifconv:3 %lshr_ln5 = partselect i5 @_ssdm_op_PartSelect.i5.i10.i32.i32, i10 %i_2, i32 5, i32 9
 
 ]]></Node>
 <StgValue><ssdm name="lshr_ln5"/></StgValue>
@@ -1200,7 +1200,7 @@ for.body.i85.split_ifconv:36 %xt_62_addr = getelementptr i32 %xt_62, i64 0, i64 
 
 <Node id="116" bw="5" op_0_bw="10">
 <![CDATA[
-for.body.i85.split_ifconv:37 %trunc_ln343 = trunc i10 %i_3
+for.body.i85.split_ifconv:37 %trunc_ln343 = trunc i10 %i_2
 
 ]]></Node>
 <StgValue><ssdm name="trunc_ln343"/></StgValue>
@@ -1728,7 +1728,7 @@ for.body.i85.split_ifconv:69 %xt_62_load = load i5 %xt_62_addr
 
 <Node id="191" bw="10" op_0_bw="10" op_1_bw="10">
 <![CDATA[
-for.body.i85.split_ifconv:112 %add_ln341 = add i10 %i_3, i10 1
+for.body.i85.split_ifconv:112 %add_ln341 = add i10 %i_2, i10 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln341"/></StgValue>
@@ -1760,7 +1760,7 @@ for.body.i85.split_ifconv:113 %store_ln341 = store i10 %add_ln341, i10 %i
 
 <Node id="196" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-for.body6.i.preheader.exitStub:0 %xmax_3_load = load i32 %xmax_3
+cond.end.i.7.preheader.exitStub:0 %xmax_3_load = load i32 %xmax_3
 
 ]]></Node>
 <StgValue><ssdm name="xmax_3_load"/></StgValue>
@@ -1776,7 +1776,7 @@ for.body6.i.preheader.exitStub:0 %xmax_3_load = load i32 %xmax_3
 
 <Node id="197" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-for.body6.i.preheader.exitStub:1 %write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %xmax_3_out, i32 %xmax_3_load
+cond.end.i.7.preheader.exitStub:1 %write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %xmax_3_out, i32 %xmax_3_load
 
 ]]></Node>
 <StgValue><ssdm name="write_ln0"/></StgValue>
@@ -1792,7 +1792,7 @@ for.body6.i.preheader.exitStub:1 %write_ln0 = write void @_ssdm_op_Write.ap_auto
 
 <Node id="198" bw="0">
 <![CDATA[
-for.body6.i.preheader.exitStub:2 %ret_ln0 = ret
+cond.end.i.7.preheader.exitStub:2 %ret_ln0 = ret
 
 ]]></Node>
 <StgValue><ssdm name="ret_ln0"/></StgValue>

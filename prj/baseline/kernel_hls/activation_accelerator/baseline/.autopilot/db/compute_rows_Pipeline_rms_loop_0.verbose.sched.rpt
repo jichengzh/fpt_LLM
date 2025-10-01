@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'compute_rows_Pipeline_rms_loop_0'
 ================================================================
-* Date:           Mon Sep 29 22:11:46 2025
+* Date:           Wed Oct  1 10:14:41 2025
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        activation_accelerator
@@ -128,12 +128,12 @@ ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void
 ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %xt_62, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 45 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 46 [1/1] (0.42ns)   --->   "%store_ln0 = store i10 0, i10 %i"   --->   Operation 46 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
 ST_1 : Operation 47 [1/1] (0.42ns)   --->   "%store_ln0 = store i32 0, i32 %sum_sq"   --->   Operation 47 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
-ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc.i465"   --->   Operation 48 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc.i467"   --->   Operation 48 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%i_6 = load i10 %i" [activation_accelerator.cpp:288]   --->   Operation 49 'load' 'i_6' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 50 [1/1] (0.91ns)   --->   "%icmp_ln286 = icmp_eq  i10 %i_6, i10 768" [activation_accelerator.cpp:286]   --->   Operation 50 'icmp' 'icmp_ln286' <Predicate = true> <Delay = 0.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 768, i64 768, i64 768"   --->   Operation 51 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 52 [1/1] (0.78ns)   --->   "%add_ln286 = add i10 %i_6, i10 1" [activation_accelerator.cpp:286]   --->   Operation 52 'add' 'add_ln286' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%br_ln286 = br i1 %icmp_ln286, void %for.inc.i465.split, void %for.end.i470.exitStub" [activation_accelerator.cpp:286]   --->   Operation 53 'br' 'br_ln286' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%br_ln286 = br i1 %icmp_ln286, void %for.inc.i467.split, void %for.end.i472.exitStub" [activation_accelerator.cpp:286]   --->   Operation 53 'br' 'br_ln286' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%lshr_ln4 = partselect i5 @_ssdm_op_PartSelect.i5.i10.i32.i32, i10 %i_6, i32 5, i32 9" [activation_accelerator.cpp:288]   --->   Operation 54 'partselect' 'lshr_ln4' <Predicate = (!icmp_ln286)> <Delay = 0.00>
 ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%zext_ln288 = zext i5 %lshr_ln4" [activation_accelerator.cpp:288]   --->   Operation 55 'zext' 'zext_ln288' <Predicate = (!icmp_ln286)> <Delay = 0.00>
 ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%xt_addr = getelementptr i32 %xt, i64 0, i64 %zext_ln288" [activation_accelerator.cpp:288]   --->   Operation 56 'getelementptr' 'xt_addr' <Predicate = (!icmp_ln286)> <Delay = 0.00>
@@ -265,7 +265,7 @@ ST_9 : Operation 162 [1/1] (0.00ns)   --->   "%specpipeline_ln287 = specpipeline
 ST_9 : Operation 163 [1/1] (0.00ns)   --->   "%specloopname_ln284 = specloopname void @_ssdm_op_SpecLoopName, void @empty_19" [activation_accelerator.cpp:284]   --->   Operation 163 'specloopname' 'specloopname_ln284' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 164 [1/4] (4.89ns)   --->   "%sum_sq_1 = fadd i32 %sum_sq_load, i32 %mul_i1" [activation_accelerator.cpp:288]   --->   Operation 164 'fadd' 'sum_sq_1' <Predicate = true> <Delay = 4.89> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 3> <II = 1> <Delay = 4.89> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 ST_9 : Operation 165 [1/1] (0.42ns)   --->   "%store_ln286 = store i32 %sum_sq_1, i32 %sum_sq" [activation_accelerator.cpp:286]   --->   Operation 165 'store' 'store_ln286' <Predicate = true> <Delay = 0.42>
-ST_9 : Operation 166 [1/1] (0.00ns)   --->   "%br_ln286 = br void %for.inc.i465" [activation_accelerator.cpp:286]   --->   Operation 166 'br' 'br_ln286' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 166 [1/1] (0.00ns)   --->   "%br_ln286 = br void %for.inc.i467" [activation_accelerator.cpp:286]   --->   Operation 166 'br' 'br_ln286' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================

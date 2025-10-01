@@ -73,10 +73,10 @@ entry:7 %call_ln0 = call void @load_rows_Loop_LOAD_ROW_proc1, i64 %in0_read, i51
 
 <Node id="7" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="0">
 <![CDATA[
-entry:0 %specdataflowpipeline_ln372 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 1, void @empty_13
+entry:0 %specdataflowpipeline_ln390 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 1, void @empty_13
 
 ]]></Node>
-<StgValue><ssdm name="specdataflowpipeline_ln372"/></StgValue>
+<StgValue><ssdm name="specdataflowpipeline_ln390"/></StgValue>
 </operation>
 
 <operation id="7" st_id="2" stage="1" lat="1">
@@ -163,10 +163,10 @@ entry:7 %call_ln0 = call void @load_rows_Loop_LOAD_ROW_proc1, i64 %in0_read, i51
 
 <Node id="15" bw="0">
 <![CDATA[
-entry:8 %ret_ln397 = ret
+entry:8 %ret_ln415 = ret
 
 ]]></Node>
-<StgValue><ssdm name="ret_ln397"/></StgValue>
+<StgValue><ssdm name="ret_ln415"/></StgValue>
 </operation>
 </state>
 </state_list>

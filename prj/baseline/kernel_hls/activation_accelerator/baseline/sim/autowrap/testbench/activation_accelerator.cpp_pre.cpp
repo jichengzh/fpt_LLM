@@ -1,10 +1,10 @@
-# 1 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator.cpp"
+# 1 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator.cpp"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 1 "<command-line>" 2
-# 1 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator.cpp"
-# 1 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator.h" 1
+# 1 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator.cpp"
+# 1 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator.h" 1
 
 
 
@@ -308,7 +308,7 @@ namespace std
   using ::uintmax_t;
   using ::uintptr_t;
 }
-# 5 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator.h" 2
+# 5 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator.h" 2
 
 
 
@@ -61422,7 +61422,7 @@ inline bool operator!=(
 }
 # 366 "/data/xilinx/Vitis_HLS/2022.2/include/ap_fixed.h" 2
 # 361 "/data/xilinx/Vitis_HLS/2022.2/include/ap_int.h" 2
-# 13 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator.h" 2
+# 13 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator.h" 2
 typedef ap_uint<16> uint16;
 typedef ap_uint<32> uint32;
 typedef int32_t int32;
@@ -61433,13 +61433,13 @@ uint16 bf16add(uint16 a_bits, uint16 b_bits);
 
 
 void activation_accelerator(ap_uint<512>* in0, ap_uint<512>* in1, ap_uint<512>* out, int32 stage, int32 config);
-# 2 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator.cpp" 2
+# 2 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator.cpp" 2
 
 # 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cmath" 1 3
 # 39 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cmath" 3
        
 # 40 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cmath" 3
-# 4 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator.cpp" 2
+# 4 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator.cpp" 2
 # 1 "/data/xilinx/Vitis_HLS/2022.2/include/hls_math.h" 1
 # 40 "/data/xilinx/Vitis_HLS/2022.2/include/hls_math.h"
 # 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cmath" 1 3
@@ -77573,9 +77573,9 @@ namespace hls {
     uint32_t logb(uint32_t);
 
 };
-# 5 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator.cpp" 2
+# 5 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator.cpp" 2
 # 1 "/data/xilinx/Vitis_HLS/2022.2/include/ap_int.h" 1
-# 6 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator.cpp" 2
+# 6 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator.cpp" 2
 # 1 "/data/xilinx/Vitis_HLS/2022.2/include/hls_stream.h" 1
 # 23 "/data/xilinx/Vitis_HLS/2022.2/include/hls_stream.h"
 # 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/queue" 1 3
@@ -101046,13 +101046,13 @@ public:
 };
 
 }
-# 7 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator.cpp" 2
+# 7 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator.cpp" 2
 
 
 typedef ap_uint<16> uint16;
 using bf16 = uint16;
 typedef ap_uint<512> u512;
-# 25 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator.cpp"
+# 25 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator.cpp"
 const int NROWS = 64;
 const int COLS = 768;
 const int N = NROWS * COLS;
@@ -101253,7 +101253,7 @@ static void float_to_bf16(const float* in, uint16* out, int len) {
         out[i] = (uint16_t)(w >> 16);
     }
 }
-# 237 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator.cpp"
+# 237 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator.cpp"
 float Q_rsqrt(float number)
 {
 
@@ -101364,12 +101364,30 @@ void float_softmax(const float* x, uint16* y_bf16, int len) {
     }
     float sum = 0.f;
 
-    smx_1:
-    for (int i = 0; i < len; ++i) {
-#pragma HLS PIPELINE II=1
-        float e = hls::expf(x[i] - xmax);
-        sum += e;
+    const int UF = 8;
 
+
+    smx_1:
+    for (int i = 0; i < len; i += UF) {
+#pragma HLS PIPELINE II=1
+        float e[UF];
+#pragma HLS ARRAY_PARTITION variable=e complete
+    load_e:
+        for (int u = 0; u < UF; ++u) {
+#pragma HLS UNROLL
+            int idx = i + u;
+            e[u] = (idx < len) ? hls::expf(x[idx] - xmax) : 0.f;
+        }
+
+        float s0 = e[0] + e[1];
+        float s1 = e[2] + e[3];
+        float s2 = e[4] + e[5];
+        float s3 = e[6] + e[7];
+        float t0 = s0 + s1;
+        float t1 = s2 + s3;
+        float block = t0 + t1;
+
+        sum += block;
     }
     smx_2:
     for (int i = 0; i < len; ++i) {

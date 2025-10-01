@@ -20,10 +20,10 @@
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
             <Best-caseLatency>102793</Best-caseLatency>
-            <Average-caseLatency>196297</Average-caseLatency>
+            <Average-caseLatency>180361</Average-caseLatency>
             <Worst-caseLatency>400905</Worst-caseLatency>
             <Best-caseRealTimeLatency>1.028 ms</Best-caseRealTimeLatency>
-            <Average-caseRealTimeLatency>1.963 ms</Average-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>1.804 ms</Average-caseRealTimeLatency>
             <Worst-caseRealTimeLatency>4.009 ms</Worst-caseRealTimeLatency>
             <DataflowPipelineThroughput>
                 <range>
@@ -38,9 +38,9 @@
     <AreaEstimates>
         <Resources>
             <BRAM_18K>247</BRAM_18K>
-            <DSP>21</DSP>
-            <FF>12216</FF>
-            <LUT>32830</LUT>
+            <DSP>43</DSP>
+            <FF>14744</FF>
+            <LUT>36686</LUT>
             <URAM>0</URAM>
         </Resources>
         <AvailableResources>
@@ -1920,7 +1920,7 @@
                                     <ModuleName>load_rows_Loop_LOAD_ROW_proc1_Pipeline_LOAD_ROW_LOAD_W</ModuleName>
                                     <IsCompInst>true</IsCompInst>
                                     <ID>76</ID>
-                                    <BindInstances>add_ln384_fu_124_p2</BindInstances>
+                                    <BindInstances>add_ln402_fu_124_p2</BindInstances>
                                 </Instance>
                             </InstancesList>
                         </Instance>
@@ -1937,7 +1937,7 @@
                             <ModuleName>compute_rows_Pipeline_UNPK_W</ModuleName>
                             <IsCompInst>true</IsCompInst>
                             <ID>821</ID>
-                            <BindInstances>add_ln438_fu_1416_p2</BindInstances>
+                            <BindInstances>add_ln456_fu_1416_p2</BindInstances>
                         </Instance>
                         <Instance>
                             <InstName>grp_compute_rows_Pipeline_convert_loop_fu_893</InstName>
@@ -1972,14 +1972,14 @@
                             <ModuleName>compute_rows_Pipeline_smx_1</ModuleName>
                             <IsCompInst>true</IsCompInst>
                             <ID>1135</ID>
-                            <BindInstances>add_ln348_fu_585_p2</BindInstances>
+                            <BindInstances>faddfsub_32ns_32ns_32_4_full_dsp_1_U261 fexp_32ns_32ns_32_8_full_dsp_1_U267 faddfsub_32ns_32ns_32_4_full_dsp_1_U262 fexp_32ns_32ns_32_8_full_dsp_1_U268 faddfsub_32ns_32ns_32_4_full_dsp_1_U263 faddfsub_32ns_32ns_32_4_full_dsp_1_U264 fexp_32ns_32ns_32_8_full_dsp_1_U267 fexp_32ns_32ns_32_8_full_dsp_1_U268 faddfsub_32ns_32ns_32_4_full_dsp_1_U261 faddfsub_32ns_32ns_32_4_full_dsp_1_U262 fexp_32ns_32ns_32_8_full_dsp_1_U267 faddfsub_32ns_32ns_32_4_full_dsp_1_U263 faddfsub_32ns_32ns_32_4_full_dsp_1_U264 faddfsub_32ns_32ns_32_4_full_dsp_1_U261 faddfsub_32ns_32ns_32_4_full_dsp_1_U262 faddfsub_32ns_32ns_32_4_full_dsp_1_U263 faddfsub_32ns_32ns_32_4_full_dsp_1_U264 add_ln351_fu_663_p2</BindInstances>
                         </Instance>
                         <Instance>
                             <InstName>grp_compute_rows_Pipeline_smx_2_fu_1173</InstName>
                             <ModuleName>compute_rows_Pipeline_smx_2</ModuleName>
                             <IsCompInst>true</IsCompInst>
                             <ID>1173</ID>
-                            <BindInstances>add_ln355_fu_1249_p2</BindInstances>
+                            <BindInstances>add_ln373_fu_1249_p2</BindInstances>
                         </Instance>
                         <Instance>
                             <InstName>grp_compute_rows_Pipeline_rms_loop_0_fu_1243</InstName>
@@ -2049,10 +2049,10 @@
                             <ModuleName>compute_rows_Pipeline_PK_W</ModuleName>
                             <IsCompInst>true</IsCompInst>
                             <ID>1862</ID>
-                            <BindInstances>add_ln479_fu_549_p2</BindInstances>
+                            <BindInstances>add_ln497_fu_549_p2</BindInstances>
                         </Instance>
                     </InstancesList>
-                    <BindInstances>tile0_V_U tile0_V_32_U tile0_V_33_U tile0_V_34_U tile0_V_35_U tile0_V_36_U tile0_V_37_U tile0_V_38_U tile0_V_39_U tile0_V_40_U tile0_V_41_U tile0_V_42_U tile0_V_43_U tile0_V_44_U tile0_V_45_U tile0_V_46_U tile0_V_47_U tile0_V_48_U tile0_V_49_U tile0_V_50_U tile0_V_51_U tile0_V_52_U tile0_V_53_U tile0_V_54_U tile0_V_55_U tile0_V_56_U tile0_V_57_U tile0_V_58_U tile0_V_59_U tile0_V_60_U tile0_V_61_U tile0_V_62_U tile1_V_U tile1_V_32_U tile1_V_33_U tile1_V_34_U tile1_V_35_U tile1_V_36_U tile1_V_37_U tile1_V_38_U tile1_V_39_U tile1_V_40_U tile1_V_41_U tile1_V_42_U tile1_V_43_U tile1_V_44_U tile1_V_45_U tile1_V_46_U tile1_V_47_U tile1_V_48_U tile1_V_49_U tile1_V_50_U tile1_V_51_U tile1_V_52_U tile1_V_53_U tile1_V_54_U tile1_V_55_U tile1_V_56_U tile1_V_57_U tile1_V_58_U tile1_V_59_U tile1_V_60_U tile1_V_61_U tile1_V_62_U tile2_V_U tile2_V_32_U tile2_V_33_U tile2_V_34_U tile2_V_35_U tile2_V_36_U tile2_V_37_U tile2_V_38_U tile2_V_39_U tile2_V_40_U tile2_V_41_U tile2_V_42_U tile2_V_43_U tile2_V_44_U tile2_V_45_U tile2_V_46_U tile2_V_47_U tile2_V_48_U tile2_V_49_U tile2_V_50_U tile2_V_51_U tile2_V_52_U tile2_V_53_U tile2_V_54_U tile2_V_55_U tile2_V_56_U tile2_V_57_U tile2_V_58_U tile2_V_59_U tile2_V_60_U tile2_V_61_U tile2_V_62_U xt_U xt_32_U xt_33_U xt_34_U xt_35_U xt_36_U xt_37_U xt_38_U xt_39_U xt_40_U xt_41_U xt_42_U xt_43_U xt_44_U xt_45_U xt_46_U xt_47_U xt_48_U xt_49_U xt_50_U xt_51_U xt_52_U xt_53_U xt_54_U xt_55_U xt_56_U xt_57_U xt_58_U xt_59_U xt_60_U xt_61_U xt_62_U yt_U yt_32_U yt_33_U yt_34_U yt_35_U fadd_32ns_32ns_32_4_no_dsp_1_U1082 fadd_32ns_32ns_32_4_no_dsp_1_U1082 faddfsub_32ns_32ns_32_4_full_dsp_1_U1077 fexp_32ns_32ns_32_8_full_dsp_1_U1081 fadd_32ns_32ns_32_4_no_dsp_1_U1082 yt_41_U yt_42_U yt_43_U yt_44_U yt_45_U yt_46_U yt_47_U yt_48_U yt_49_U yt_50_U yt_51_U yt_52_U yt_53_U yt_54_U yt_55_U yt_56_U yt_57_U yt_58_U yt_59_U yt_60_U yt_61_U yt_62_U r_2_fu_1970_p2 fdiv_32ns_32ns_32_9_no_dsp_1_U1079 faddfsub_32ns_32ns_32_4_full_dsp_1_U1077 fmul_32ns_32ns_32_3_max_dsp_1_U1078 i_11_fu_2187_p2 fmul_32ns_32ns_32_3_max_dsp_1_U1078 fmul_32ns_32ns_32_3_max_dsp_1_U1078 faddfsub_32ns_32ns_32_4_full_dsp_1_U1077 fmul_32ns_32ns_32_3_max_dsp_1_U1078 fdiv_32ns_32ns_32_9_no_dsp_1_U1079 fdiv_32ns_32ns_32_9_no_dsp_1_U1079 faddfsub_32ns_32ns_32_4_full_dsp_1_U1077 frsqrt_32ns_32ns_32_10_full_dsp_1_U1080</BindInstances>
+                    <BindInstances>tile0_V_U tile0_V_32_U tile0_V_33_U tile0_V_34_U tile0_V_35_U tile0_V_36_U tile0_V_37_U tile0_V_38_U tile0_V_39_U tile0_V_40_U tile0_V_41_U tile0_V_42_U tile0_V_43_U tile0_V_44_U tile0_V_45_U tile0_V_46_U tile0_V_47_U tile0_V_48_U tile0_V_49_U tile0_V_50_U tile0_V_51_U tile0_V_52_U tile0_V_53_U tile0_V_54_U tile0_V_55_U tile0_V_56_U tile0_V_57_U tile0_V_58_U tile0_V_59_U tile0_V_60_U tile0_V_61_U tile0_V_62_U tile1_V_U tile1_V_32_U tile1_V_33_U tile1_V_34_U tile1_V_35_U tile1_V_36_U tile1_V_37_U tile1_V_38_U tile1_V_39_U tile1_V_40_U tile1_V_41_U tile1_V_42_U tile1_V_43_U tile1_V_44_U tile1_V_45_U tile1_V_46_U tile1_V_47_U tile1_V_48_U tile1_V_49_U tile1_V_50_U tile1_V_51_U tile1_V_52_U tile1_V_53_U tile1_V_54_U tile1_V_55_U tile1_V_56_U tile1_V_57_U tile1_V_58_U tile1_V_59_U tile1_V_60_U tile1_V_61_U tile1_V_62_U tile2_V_U tile2_V_32_U tile2_V_33_U tile2_V_34_U tile2_V_35_U tile2_V_36_U tile2_V_37_U tile2_V_38_U tile2_V_39_U tile2_V_40_U tile2_V_41_U tile2_V_42_U tile2_V_43_U tile2_V_44_U faddfsub_32ns_32ns_32_4_full_dsp_1_U1091 fexp_32ns_32ns_32_8_full_dsp_1_U1095 tile2_V_47_U tile2_V_48_U tile2_V_49_U tile2_V_50_U tile2_V_51_U tile2_V_52_U tile2_V_53_U tile2_V_54_U tile2_V_55_U tile2_V_56_U tile2_V_57_U tile2_V_58_U tile2_V_59_U tile2_V_60_U tile2_V_61_U tile2_V_62_U xt_U xt_32_U xt_33_U xt_34_U xt_35_U xt_36_U xt_37_U xt_38_U xt_39_U xt_40_U xt_41_U xt_42_U xt_43_U xt_44_U xt_45_U xt_46_U fexp_32ns_32ns_32_8_full_dsp_1_U1095 xt_48_U xt_49_U xt_50_U xt_51_U xt_52_U xt_53_U xt_54_U xt_55_U xt_56_U xt_57_U xt_58_U xt_59_U xt_60_U xt_61_U xt_62_U yt_U yt_32_U yt_33_U yt_34_U yt_35_U fadd_32ns_32ns_32_4_no_dsp_1_U1096 fadd_32ns_32ns_32_4_no_dsp_1_U1096 faddfsub_32ns_32ns_32_4_full_dsp_1_U1091 fmul_32ns_32ns_32_3_max_dsp_1_U1092 fadd_32ns_32ns_32_4_no_dsp_1_U1096 yt_41_U yt_42_U yt_43_U yt_44_U yt_45_U yt_46_U yt_47_U fexp_32ns_32ns_32_8_full_dsp_1_U1095 yt_49_U yt_50_U yt_51_U yt_52_U yt_53_U yt_54_U yt_55_U yt_56_U yt_57_U yt_58_U yt_59_U yt_60_U yt_61_U faddfsub_32ns_32ns_32_4_full_dsp_1_U1091 r_2_fu_1970_p2 fdiv_32ns_32ns_32_9_no_dsp_1_U1093 faddfsub_32ns_32ns_32_4_full_dsp_1_U1091 fmul_32ns_32ns_32_3_max_dsp_1_U1092 i_11_fu_2187_p2 fmul_32ns_32ns_32_3_max_dsp_1_U1092 fmul_32ns_32ns_32_3_max_dsp_1_U1092 faddfsub_32ns_32ns_32_4_full_dsp_1_U1091 fmul_32ns_32ns_32_3_max_dsp_1_U1092 fdiv_32ns_32ns_32_9_no_dsp_1_U1093 fdiv_32ns_32ns_32_9_no_dsp_1_U1093 faddfsub_32ns_32ns_32_4_full_dsp_1_U1091 frsqrt_32ns_32ns_32_10_full_dsp_1_U1094</BindInstances>
                 </Instance>
                 <Instance>
                     <InstName>store_rows_U0</InstName>
@@ -2065,7 +2065,7 @@
                             <ModuleName>store_rows_Pipeline_STORE_ROW_STORE_W</ModuleName>
                             <IsCompInst>true</IsCompInst>
                             <ID>66</ID>
-                            <BindInstances>add_ln499_fu_98_p2</BindInstances>
+                            <BindInstances>add_ln517_fu_98_p2</BindInstances>
                         </Instance>
                     </InstancesList>
                 </Instance>
@@ -2168,7 +2168,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="LOAD_ROW_LOAD_W" OPTYPE="add" PRAGMA="" RTLNAME="add_ln384_fu_124_p2" SOURCE="activation_accelerator.cpp:384" URAM="0" VARIABLE="add_ln384"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="LOAD_ROW_LOAD_W" OPTYPE="add" PRAGMA="" RTLNAME="add_ln402_fu_124_p2" SOURCE="activation_accelerator.cpp:402" URAM="0" VARIABLE="add_ln402"/>
             </BindNodes>
         </Module>
         <Module>
@@ -2305,7 +2305,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="UNPK_W" OPTYPE="add" PRAGMA="" RTLNAME="add_ln438_fu_1416_p2" SOURCE="activation_accelerator.cpp:438" URAM="0" VARIABLE="add_ln438"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="UNPK_W" OPTYPE="add" PRAGMA="" RTLNAME="add_ln456_fu_1416_p2" SOURCE="activation_accelerator.cpp:456" URAM="0" VARIABLE="add_ln456"/>
             </BindNodes>
         </Module>
         <Module>
@@ -2494,24 +2494,24 @@
                     <EstimatedClockPeriod>6.437</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>2320</Best-caseLatency>
-                    <Average-caseLatency>2320</Average-caseLatency>
-                    <Worst-caseLatency>2320</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>23.200 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>23.200 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>23.200 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>2320</PipelineInitiationInterval>
+                    <Best-caseLatency>322</Best-caseLatency>
+                    <Average-caseLatency>322</Average-caseLatency>
+                    <Worst-caseLatency>322</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>3.220 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>3.220 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>3.220 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>322</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
                     <smx_1>
                         <Name>smx_1</Name>
                         <Slack>7.30</Slack>
-                        <TripCount>768</TripCount>
-                        <Latency>2318</Latency>
-                        <AbsoluteTimeLatency>23.180 us</AbsoluteTimeLatency>
+                        <TripCount>96</TripCount>
+                        <Latency>320</Latency>
+                        <AbsoluteTimeLatency>3.200 us</AbsoluteTimeLatency>
                         <PipelineII>3</PipelineII>
-                        <PipelineDepth>18</PipelineDepth>
+                        <PipelineDepth>36</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
                     </smx_1>
@@ -2519,25 +2519,42 @@
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>222</FF>
+                    <DSP>22</DSP>
+                    <AVAIL_DSP>1248</AVAIL_DSP>
+                    <UTIL_DSP>1</UTIL_DSP>
+                    <FF>2750</FF>
                     <AVAIL_FF>234240</AVAIL_FF>
-                    <UTIL_FF>~0</UTIL_FF>
-                    <LUT>293</LUT>
+                    <UTIL_FF>1</UTIL_FF>
+                    <LUT>4149</LUT>
                     <AVAIL_LUT>117120</AVAIL_LUT>
-                    <UTIL_LUT>~0</UTIL_LUT>
+                    <UTIL_LUT>3</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
                     <AVAIL_BRAM>288</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
-                    <DSP>0</DSP>
-                    <AVAIL_DSP>1248</AVAIL_DSP>
-                    <UTIL_DSP>0</UTIL_DSP>
                     <URAM>0</URAM>
                     <AVAIL_URAM>64</AVAIL_URAM>
                     <UTIL_URAM>0</UTIL_URAM>
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="smx_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln348_fu_585_p2" SOURCE="activation_accelerator.cpp:348" URAM="0" VARIABLE="add_ln348"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="smx_1" OPTYPE="fsub" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U261" SOURCE="activation_accelerator.cpp:359" URAM="0" VARIABLE="x_assign_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fexp" DSP="7" ID="" IMPL="fulldsp" LATENCY="7" LOOP="smx_1" OPTYPE="fexp" PRAGMA="" RTLNAME="fexp_32ns_32ns_32_8_full_dsp_1_U267" SOURCE="/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/common/hls_exp_float.cpp:17" URAM="0" VARIABLE="tmp_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="smx_1" OPTYPE="fsub" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U262" SOURCE="activation_accelerator.cpp:359" URAM="0" VARIABLE="x_assign_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fexp" DSP="7" ID="" IMPL="fulldsp" LATENCY="7" LOOP="smx_1" OPTYPE="fexp" PRAGMA="" RTLNAME="fexp_32ns_32ns_32_8_full_dsp_1_U268" SOURCE="/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/common/hls_exp_float.cpp:17" URAM="0" VARIABLE="tmp_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="smx_1" OPTYPE="fsub" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U263" SOURCE="activation_accelerator.cpp:359" URAM="0" VARIABLE="x_assign_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="smx_1" OPTYPE="fsub" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U264" SOURCE="activation_accelerator.cpp:359" URAM="0" VARIABLE="x_assign_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fexp" DSP="7" ID="" IMPL="fulldsp" LATENCY="7" LOOP="smx_1" OPTYPE="fexp" PRAGMA="" RTLNAME="fexp_32ns_32ns_32_8_full_dsp_1_U267" SOURCE="/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/common/hls_exp_float.cpp:17" URAM="0" VARIABLE="tmp_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fexp" DSP="7" ID="" IMPL="fulldsp" LATENCY="7" LOOP="smx_1" OPTYPE="fexp" PRAGMA="" RTLNAME="fexp_32ns_32ns_32_8_full_dsp_1_U268" SOURCE="/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/common/hls_exp_float.cpp:17" URAM="0" VARIABLE="tmp_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="smx_1" OPTYPE="fsub" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U261" SOURCE="activation_accelerator.cpp:359" URAM="0" VARIABLE="x_assign_s"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="smx_1" OPTYPE="fsub" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U262" SOURCE="activation_accelerator.cpp:359" URAM="0" VARIABLE="x_assign_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fexp" DSP="7" ID="" IMPL="fulldsp" LATENCY="7" LOOP="smx_1" OPTYPE="fexp" PRAGMA="" RTLNAME="fexp_32ns_32ns_32_8_full_dsp_1_U267" SOURCE="/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/common/hls_exp_float.cpp:17" URAM="0" VARIABLE="tmp_15"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="smx_1" OPTYPE="fsub" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U263" SOURCE="activation_accelerator.cpp:362" URAM="0" VARIABLE="s0"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="smx_1" OPTYPE="fsub" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U264" SOURCE="activation_accelerator.cpp:363" URAM="0" VARIABLE="s1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="smx_1" OPTYPE="fsub" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U261" SOURCE="activation_accelerator.cpp:365" URAM="0" VARIABLE="s3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="smx_1" OPTYPE="fsub" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U262" SOURCE="activation_accelerator.cpp:366" URAM="0" VARIABLE="t0"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="smx_1" OPTYPE="fsub" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U263" SOURCE="activation_accelerator.cpp:367" URAM="0" VARIABLE="t1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="smx_1" OPTYPE="fsub" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U264" SOURCE="activation_accelerator.cpp:368" URAM="0" VARIABLE="block"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="smx_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln351_fu_663_p2" SOURCE="activation_accelerator.cpp:351" URAM="0" VARIABLE="add_ln351"/>
             </BindNodes>
         </Module>
         <Module>
@@ -2595,7 +2612,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="smx_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln355_fu_1249_p2" SOURCE="activation_accelerator.cpp:355" URAM="0" VARIABLE="add_ln355"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="smx_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln373_fu_1249_p2" SOURCE="activation_accelerator.cpp:373" URAM="0" VARIABLE="add_ln373"/>
             </BindNodes>
         </Module>
         <Module>
@@ -3233,7 +3250,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PK_W" OPTYPE="add" PRAGMA="" RTLNAME="add_ln479_fu_549_p2" SOURCE="activation_accelerator.cpp:479" URAM="0" VARIABLE="add_ln479"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PK_W" OPTYPE="add" PRAGMA="" RTLNAME="add_ln497_fu_549_p2" SOURCE="activation_accelerator.cpp:497" URAM="0" VARIABLE="add_ln497"/>
             </BindNodes>
         </Module>
         <Module>
@@ -3249,10 +3266,10 @@
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>102785</Best-caseLatency>
-                    <Average-caseLatency>196289</Average-caseLatency>
+                    <Average-caseLatency>180353</Average-caseLatency>
                     <Worst-caseLatency>400897</Worst-caseLatency>
                     <Best-caseRealTimeLatency>1.028 ms</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>1.963 ms</Average-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>1.804 ms</Average-caseRealTimeLatency>
                     <Worst-caseRealTimeLatency>4.009 ms</Worst-caseRealTimeLatency>
                     <PipelineInitiationInterval>102785 ~ 400897</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
@@ -3299,194 +3316,194 @@
                     <BRAM_18K>160</BRAM_18K>
                     <AVAIL_BRAM>288</AVAIL_BRAM>
                     <UTIL_BRAM>55</UTIL_BRAM>
-                    <DSP>21</DSP>
+                    <DSP>43</DSP>
                     <AVAIL_DSP>1248</AVAIL_DSP>
-                    <UTIL_DSP>1</UTIL_DSP>
-                    <FF>4621</FF>
+                    <UTIL_DSP>3</UTIL_DSP>
+                    <FF>7149</FF>
                     <AVAIL_FF>234240</AVAIL_FF>
-                    <UTIL_FF>1</UTIL_FF>
-                    <LUT>23478</LUT>
+                    <UTIL_FF>3</UTIL_FF>
+                    <LUT>27334</LUT>
                     <AVAIL_LUT>117120</AVAIL_LUT>
-                    <UTIL_LUT>20</UTIL_LUT>
+                    <UTIL_LUT>23</UTIL_LUT>
                     <URAM>0</URAM>
                     <AVAIL_URAM>64</AVAIL_URAM>
                     <UTIL_URAM>0</UTIL_URAM>
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile0_V"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_32_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile0_V_32"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_33_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile0_V_33"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_34_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile0_V_34"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_35_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile0_V_35"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_36_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile0_V_36"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_37_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile0_V_37"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_38_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile0_V_38"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_39_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile0_V_39"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_40_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile0_V_40"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_41_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile0_V_41"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_42_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile0_V_42"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_43_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile0_V_43"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_44_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile0_V_44"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_45_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile0_V_45"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_46_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile0_V_46"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_47_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile0_V_47"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_48_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile0_V_48"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_49_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile0_V_49"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_50_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile0_V_50"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_51_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile0_V_51"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_52_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile0_V_52"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_53_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile0_V_53"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_54_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile0_V_54"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_55_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile0_V_55"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_56_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile0_V_56"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_57_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile0_V_57"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_58_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile0_V_58"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_59_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile0_V_59"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_60_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile0_V_60"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_61_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile0_V_61"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_62_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile0_V_62"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile1_V"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_32_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile1_V_32"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_33_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile1_V_33"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_34_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile1_V_34"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_35_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile1_V_35"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_36_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile1_V_36"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_37_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile1_V_37"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_38_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile1_V_38"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_39_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile1_V_39"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_40_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile1_V_40"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_41_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile1_V_41"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_42_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile1_V_42"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_43_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile1_V_43"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_44_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile1_V_44"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_45_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile1_V_45"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_46_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile1_V_46"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_47_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile1_V_47"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_48_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile1_V_48"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_49_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile1_V_49"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_50_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile1_V_50"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_51_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile1_V_51"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_52_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile1_V_52"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_53_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile1_V_53"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_54_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile1_V_54"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_55_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile1_V_55"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_56_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile1_V_56"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_57_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile1_V_57"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_58_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile1_V_58"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_59_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile1_V_59"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_60_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile1_V_60"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_61_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile1_V_61"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_62_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile1_V_62"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile2_V"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_32_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile2_V_32"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_33_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile2_V_33"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_34_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile2_V_34"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_35_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile2_V_35"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_36_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile2_V_36"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_37_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile2_V_37"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_38_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile2_V_38"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_39_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile2_V_39"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_40_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile2_V_40"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_41_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile2_V_41"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_42_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile2_V_42"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_43_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile2_V_43"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_44_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile2_V_44"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_45_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile2_V_45"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_46_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile2_V_46"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_47_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile2_V_47"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_48_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile2_V_48"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_49_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile2_V_49"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_50_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile2_V_50"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_51_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile2_V_51"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_52_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile2_V_52"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_53_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile2_V_53"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_54_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile2_V_54"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_55_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile2_V_55"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_56_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile2_V_56"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_57_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile2_V_57"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_58_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile2_V_58"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_59_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile2_V_59"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_60_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile2_V_60"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_61_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile2_V_61"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_62_U" SOURCE="activation_accelerator.cpp:412" URAM="0" VARIABLE="tile2_V_62"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="xt"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_32_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="xt_32"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_33_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="xt_33"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_34_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="xt_34"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_35_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="xt_35"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_36_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="xt_36"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_37_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="xt_37"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_38_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="xt_38"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_39_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="xt_39"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_40_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="xt_40"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_41_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="xt_41"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_42_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="xt_42"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_43_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="xt_43"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_44_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="xt_44"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_45_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="xt_45"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_46_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="xt_46"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_47_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="xt_47"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_48_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="xt_48"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_49_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="xt_49"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_50_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="xt_50"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_51_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="xt_51"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_52_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="xt_52"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_53_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="xt_53"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_54_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="xt_54"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_55_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="xt_55"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_56_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="xt_56"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_57_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="xt_57"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_58_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="xt_58"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_59_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="xt_59"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_60_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="xt_60"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_61_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="xt_61"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_62_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="xt_62"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="yt"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_32_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="yt_32"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_33_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="yt_33"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_34_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="yt_34"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_35_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="yt_35"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="fadd_32ns_32ns_32_4_no_dsp_1_U1082" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="yt_36"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="fadd_32ns_32ns_32_4_no_dsp_1_U1082" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="yt_37"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U1077" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="yt_38"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="fexp_32ns_32ns_32_8_full_dsp_1_U1081" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="yt_39"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="fadd_32ns_32ns_32_4_no_dsp_1_U1082" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="yt_40"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_41_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="yt_41"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_42_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="yt_42"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_43_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="yt_43"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_44_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="yt_44"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_45_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="yt_45"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_46_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="yt_46"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_47_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="yt_47"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_48_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="yt_48"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_49_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="yt_49"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_50_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="yt_50"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_51_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="yt_51"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_52_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="yt_52"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_53_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="yt_53"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_54_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="yt_54"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_55_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="yt_55"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_56_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="yt_56"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_57_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="yt_57"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_58_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="yt_58"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_59_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="yt_59"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_60_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="yt_60"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_61_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="yt_61"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_62_U" SOURCE="activation_accelerator.cpp:424" URAM="0" VARIABLE="yt_62"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="COMPUTE_ROW" OPTYPE="add" PRAGMA="" RTLNAME="r_2_fu_1970_p2" SOURCE="activation_accelerator.cpp:433" URAM="0" VARIABLE="r_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fdiv" DSP="0" ID="" IMPL="fabric" LATENCY="8" LOOP="COMPUTE_ROW" OPTYPE="fdiv" PRAGMA="" RTLNAME="fdiv_32ns_32ns_32_9_no_dsp_1_U1079" SOURCE="activation_accelerator.cpp:290" URAM="0" VARIABLE="mean_sq"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="COMPUTE_ROW" OPTYPE="fadd" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U1077" SOURCE="activation_accelerator.cpp:291" URAM="0" VARIABLE="rms"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="2" LOOP="COMPUTE_ROW" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_3_max_dsp_1_U1078" SOURCE="activation_accelerator.cpp:242" URAM="0" VARIABLE="x2"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile0_V"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_32_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile0_V_32"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_33_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile0_V_33"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_34_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile0_V_34"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_35_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile0_V_35"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_36_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile0_V_36"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_37_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile0_V_37"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_38_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile0_V_38"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_39_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile0_V_39"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_40_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile0_V_40"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_41_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile0_V_41"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_42_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile0_V_42"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_43_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile0_V_43"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_44_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile0_V_44"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_45_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile0_V_45"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_46_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile0_V_46"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_47_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile0_V_47"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_48_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile0_V_48"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_49_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile0_V_49"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_50_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile0_V_50"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_51_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile0_V_51"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_52_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile0_V_52"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_53_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile0_V_53"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_54_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile0_V_54"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_55_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile0_V_55"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_56_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile0_V_56"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_57_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile0_V_57"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_58_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile0_V_58"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_59_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile0_V_59"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_60_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile0_V_60"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_61_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile0_V_61"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile0_V_62_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile0_V_62"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile1_V"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_32_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile1_V_32"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_33_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile1_V_33"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_34_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile1_V_34"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_35_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile1_V_35"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_36_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile1_V_36"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_37_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile1_V_37"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_38_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile1_V_38"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_39_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile1_V_39"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_40_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile1_V_40"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_41_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile1_V_41"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_42_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile1_V_42"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_43_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile1_V_43"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_44_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile1_V_44"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_45_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile1_V_45"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_46_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile1_V_46"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_47_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile1_V_47"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_48_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile1_V_48"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_49_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile1_V_49"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_50_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile1_V_50"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_51_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile1_V_51"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_52_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile1_V_52"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_53_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile1_V_53"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_54_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile1_V_54"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_55_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile1_V_55"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_56_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile1_V_56"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_57_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile1_V_57"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_58_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile1_V_58"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_59_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile1_V_59"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_60_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile1_V_60"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_61_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile1_V_61"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile1_V_62_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile1_V_62"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile2_V"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_32_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile2_V_32"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_33_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile2_V_33"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_34_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile2_V_34"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_35_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile2_V_35"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_36_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile2_V_36"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_37_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile2_V_37"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_38_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile2_V_38"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_39_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile2_V_39"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_40_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile2_V_40"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_41_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile2_V_41"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_42_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile2_V_42"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_43_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile2_V_43"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_44_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile2_V_44"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U1091" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile2_V_45"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="fexp_32ns_32ns_32_8_full_dsp_1_U1095" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile2_V_46"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_47_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile2_V_47"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_48_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile2_V_48"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_49_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile2_V_49"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_50_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile2_V_50"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_51_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile2_V_51"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_52_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile2_V_52"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_53_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile2_V_53"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_54_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile2_V_54"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_55_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile2_V_55"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_56_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile2_V_56"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_57_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile2_V_57"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_58_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile2_V_58"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_59_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile2_V_59"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_60_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile2_V_60"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_61_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile2_V_61"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="tile2_V_62_U" SOURCE="activation_accelerator.cpp:430" URAM="0" VARIABLE="tile2_V_62"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="xt"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_32_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="xt_32"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_33_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="xt_33"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_34_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="xt_34"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_35_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="xt_35"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_36_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="xt_36"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_37_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="xt_37"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_38_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="xt_38"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_39_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="xt_39"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_40_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="xt_40"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_41_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="xt_41"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_42_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="xt_42"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_43_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="xt_43"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_44_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="xt_44"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_45_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="xt_45"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_46_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="xt_46"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="fexp_32ns_32ns_32_8_full_dsp_1_U1095" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="xt_47"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_48_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="xt_48"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_49_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="xt_49"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_50_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="xt_50"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_51_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="xt_51"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_52_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="xt_52"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_53_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="xt_53"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_54_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="xt_54"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_55_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="xt_55"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_56_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="xt_56"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_57_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="xt_57"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_58_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="xt_58"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_59_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="xt_59"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_60_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="xt_60"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_61_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="xt_61"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="xt_62_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="xt_62"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="yt"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_32_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="yt_32"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_33_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="yt_33"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_34_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="yt_34"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_35_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="yt_35"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="fadd_32ns_32ns_32_4_no_dsp_1_U1096" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="yt_36"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="fadd_32ns_32ns_32_4_no_dsp_1_U1096" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="yt_37"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U1091" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="yt_38"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="fmul_32ns_32ns_32_3_max_dsp_1_U1092" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="yt_39"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="fadd_32ns_32ns_32_4_no_dsp_1_U1096" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="yt_40"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_41_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="yt_41"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_42_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="yt_42"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_43_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="yt_43"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_44_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="yt_44"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_45_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="yt_45"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_46_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="yt_46"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_47_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="yt_47"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="fexp_32ns_32ns_32_8_full_dsp_1_U1095" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="yt_48"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_49_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="yt_49"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_50_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="yt_50"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_51_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="yt_51"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_52_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="yt_52"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_53_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="yt_53"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_54_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="yt_54"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_55_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="yt_55"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_56_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="yt_56"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_57_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="yt_57"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_58_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="yt_58"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_59_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="yt_59"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_60_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="yt_60"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="yt_61_U" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="yt_61"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="yes" RTLNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U1091" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="yt_62"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="COMPUTE_ROW" OPTYPE="add" PRAGMA="" RTLNAME="r_2_fu_1970_p2" SOURCE="activation_accelerator.cpp:451" URAM="0" VARIABLE="r_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fdiv" DSP="0" ID="" IMPL="fabric" LATENCY="8" LOOP="COMPUTE_ROW" OPTYPE="fdiv" PRAGMA="" RTLNAME="fdiv_32ns_32ns_32_9_no_dsp_1_U1093" SOURCE="activation_accelerator.cpp:290" URAM="0" VARIABLE="mean_sq"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="COMPUTE_ROW" OPTYPE="fadd" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U1091" SOURCE="activation_accelerator.cpp:291" URAM="0" VARIABLE="rms"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="2" LOOP="COMPUTE_ROW" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_3_max_dsp_1_U1092" SOURCE="activation_accelerator.cpp:242" URAM="0" VARIABLE="x2"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="COMPUTE_ROW" OPTYPE="sub" PRAGMA="" RTLNAME="i_11_fu_2187_p2" SOURCE="activation_accelerator.cpp:250" URAM="0" VARIABLE="i_11"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="2" LOOP="COMPUTE_ROW" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_3_max_dsp_1_U1078" SOURCE="activation_accelerator.cpp:254" URAM="0" VARIABLE="mul1_i_i"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="2" LOOP="COMPUTE_ROW" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_3_max_dsp_1_U1078" SOURCE="activation_accelerator.cpp:254" URAM="0" VARIABLE="mul2_i_i"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="COMPUTE_ROW" OPTYPE="fadd" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U1077" SOURCE="activation_accelerator.cpp:254" URAM="0" VARIABLE="sub3_i_i"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="2" LOOP="COMPUTE_ROW" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_3_max_dsp_1_U1078" SOURCE="activation_accelerator.cpp:254" URAM="0" VARIABLE="re_rms"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fdiv" DSP="0" ID="" IMPL="fabric" LATENCY="8" LOOP="COMPUTE_ROW" OPTYPE="fdiv" PRAGMA="" RTLNAME="fdiv_32ns_32ns_32_9_no_dsp_1_U1079" SOURCE="activation_accelerator.cpp:309" URAM="0" VARIABLE="mean"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fdiv" DSP="0" ID="" IMPL="fabric" LATENCY="8" LOOP="COMPUTE_ROW" OPTYPE="fdiv" PRAGMA="" RTLNAME="fdiv_32ns_32ns_32_9_no_dsp_1_U1079" SOURCE="activation_accelerator.cpp:317" URAM="0" VARIABLE="div13_i"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="COMPUTE_ROW" OPTYPE="fadd" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U1077" SOURCE="activation_accelerator.cpp:317" URAM="0" VARIABLE="x_assign_3"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op frsqrt" DSP="9" ID="" IMPL="fulldsp" LATENCY="9" LOOP="COMPUTE_ROW" OPTYPE="frsqrt" PRAGMA="" RTLNAME="frsqrt_32ns_32ns_32_10_full_dsp_1_U1080" SOURCE="/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/rsqrtfloat.cpp:22" URAM="0" VARIABLE="inv_std"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="2" LOOP="COMPUTE_ROW" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_3_max_dsp_1_U1092" SOURCE="activation_accelerator.cpp:254" URAM="0" VARIABLE="mul1_i_i"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="2" LOOP="COMPUTE_ROW" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_3_max_dsp_1_U1092" SOURCE="activation_accelerator.cpp:254" URAM="0" VARIABLE="mul2_i_i"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="COMPUTE_ROW" OPTYPE="fadd" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U1091" SOURCE="activation_accelerator.cpp:254" URAM="0" VARIABLE="sub3_i_i"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="2" LOOP="COMPUTE_ROW" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_3_max_dsp_1_U1092" SOURCE="activation_accelerator.cpp:254" URAM="0" VARIABLE="re_rms"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fdiv" DSP="0" ID="" IMPL="fabric" LATENCY="8" LOOP="COMPUTE_ROW" OPTYPE="fdiv" PRAGMA="" RTLNAME="fdiv_32ns_32ns_32_9_no_dsp_1_U1093" SOURCE="activation_accelerator.cpp:309" URAM="0" VARIABLE="mean"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fdiv" DSP="0" ID="" IMPL="fabric" LATENCY="8" LOOP="COMPUTE_ROW" OPTYPE="fdiv" PRAGMA="" RTLNAME="fdiv_32ns_32ns_32_9_no_dsp_1_U1093" SOURCE="activation_accelerator.cpp:317" URAM="0" VARIABLE="div13_i"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="COMPUTE_ROW" OPTYPE="fadd" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U1091" SOURCE="activation_accelerator.cpp:317" URAM="0" VARIABLE="x_assign_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op frsqrt" DSP="9" ID="" IMPL="fulldsp" LATENCY="9" LOOP="COMPUTE_ROW" OPTYPE="frsqrt" PRAGMA="" RTLNAME="frsqrt_32ns_32ns_32_10_full_dsp_1_U1094" SOURCE="/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/rsqrtfloat.cpp:22" URAM="0" VARIABLE="inv_std"/>
             </BindNodes>
         </Module>
         <Module>
@@ -3544,7 +3561,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="STORE_ROW_STORE_W" OPTYPE="add" PRAGMA="" RTLNAME="add_ln499_fu_98_p2" SOURCE="activation_accelerator.cpp:499" URAM="0" VARIABLE="add_ln499"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="STORE_ROW_STORE_W" OPTYPE="add" PRAGMA="" RTLNAME="add_ln517_fu_98_p2" SOURCE="activation_accelerator.cpp:517" URAM="0" VARIABLE="add_ln517"/>
             </BindNodes>
         </Module>
         <Module>
@@ -3596,10 +3613,10 @@
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>102793</Best-caseLatency>
-                    <Average-caseLatency>196297</Average-caseLatency>
+                    <Average-caseLatency>180361</Average-caseLatency>
                     <Worst-caseLatency>400905</Worst-caseLatency>
                     <Best-caseRealTimeLatency>1.028 ms</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>1.963 ms</Average-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>1.804 ms</Average-caseRealTimeLatency>
                     <Worst-caseRealTimeLatency>4.009 ms</Worst-caseRealTimeLatency>
                     <DataflowPipelineThroughput>
                         <range>
@@ -3616,26 +3633,26 @@
                     <BRAM_18K>247</BRAM_18K>
                     <AVAIL_BRAM>288</AVAIL_BRAM>
                     <UTIL_BRAM>85</UTIL_BRAM>
-                    <DSP>21</DSP>
+                    <DSP>43</DSP>
                     <AVAIL_DSP>1248</AVAIL_DSP>
-                    <UTIL_DSP>1</UTIL_DSP>
-                    <FF>12216</FF>
+                    <UTIL_DSP>3</UTIL_DSP>
+                    <FF>14744</FF>
                     <AVAIL_FF>234240</AVAIL_FF>
-                    <UTIL_FF>5</UTIL_FF>
-                    <LUT>32830</LUT>
+                    <UTIL_FF>6</UTIL_FF>
+                    <LUT>36686</LUT>
                     <AVAIL_LUT>117120</AVAIL_LUT>
-                    <UTIL_LUT>28</UTIL_LUT>
+                    <UTIL_LUT>31</UTIL_LUT>
                     <URAM>0</URAM>
                     <AVAIL_URAM>64</AVAIL_URAM>
                     <UTIL_URAM>0</UTIL_URAM>
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="config_r_c_U" SOURCE="activation_accelerator.cpp:519" URAM="0" VARIABLE="config_r_c"/>
-                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="out_r_c_U" SOURCE="activation_accelerator.cpp:519" URAM="0" VARIABLE="out_r_c"/>
-                <BindNode BINDTYPE="storage" BRAM="29" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="memory" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="s_in0_U" SOURCE="activation_accelerator.cpp:521" URAM="0" VARIABLE="s_in0"/>
-                <BindNode BINDTYPE="storage" BRAM="29" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="memory" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="s_in1_U" SOURCE="activation_accelerator.cpp:521" URAM="0" VARIABLE="s_in1"/>
-                <BindNode BINDTYPE="storage" BRAM="29" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="memory" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="s_out_U" SOURCE="activation_accelerator.cpp:521" URAM="0" VARIABLE="s_out"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="config_r_c_U" SOURCE="activation_accelerator.cpp:537" URAM="0" VARIABLE="config_r_c"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="out_r_c_U" SOURCE="activation_accelerator.cpp:537" URAM="0" VARIABLE="out_r_c"/>
+                <BindNode BINDTYPE="storage" BRAM="29" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="memory" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="s_in0_U" SOURCE="activation_accelerator.cpp:539" URAM="0" VARIABLE="s_in0"/>
+                <BindNode BINDTYPE="storage" BRAM="29" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="memory" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="s_in1_U" SOURCE="activation_accelerator.cpp:539" URAM="0" VARIABLE="s_in1"/>
+                <BindNode BINDTYPE="storage" BRAM="29" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="memory" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="s_out_U" SOURCE="activation_accelerator.cpp:539" URAM="0" VARIABLE="s_out"/>
             </BindNodes>
         </Module>
     </ModuleInformation>
@@ -4128,17 +4145,17 @@
             <item name="Inferred Burst Summary">
                 <table>
                     <keys size="6">HW Interface, Loop, Direction, Length, Width, Location</keys>
-                    <column name="m_axi_gmem0">LOAD_ROW, read, 1536, 512, activation_accelerator.cpp:384:5</column>
-                    <column name="m_axi_gmem1">LOAD_ROW, read, 1536, 512, activation_accelerator.cpp:384:5</column>
-                    <column name="m_axi_gmem2">STORE_ROW, write, 1536, 512, activation_accelerator.cpp:499:5</column>
+                    <column name="m_axi_gmem0">LOAD_ROW, read, 1536, 512, activation_accelerator.cpp:402:5</column>
+                    <column name="m_axi_gmem1">LOAD_ROW, read, 1536, 512, activation_accelerator.cpp:402:5</column>
+                    <column name="m_axi_gmem2">STORE_ROW, write, 1536, 512, activation_accelerator.cpp:517:5</column>
                 </table>
             </item>
             <item name="Inferred Bursts and Widening Missed">
                 <table>
                     <keys size="6">HW Interface, Variable, Loop, Problem, Resolution, Location</keys>
-                    <column name="m_axi_gmem0">in0, LOAD_W, Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 0, 214-353, activation_accelerator.cpp:391:9</column>
-                    <column name="m_axi_gmem1">in1, LOAD_W, Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 0, 214-353, activation_accelerator.cpp:391:9</column>
-                    <column name="m_axi_gmem2">out, STORE_W, Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 0, 214-353, activation_accelerator.cpp:503:9</column>
+                    <column name="m_axi_gmem0">in0, LOAD_W, Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 0, 214-353, activation_accelerator.cpp:409:9</column>
+                    <column name="m_axi_gmem1">in1, LOAD_W, Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 0, 214-353, activation_accelerator.cpp:409:9</column>
+                    <column name="m_axi_gmem2">out, STORE_W, Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 0, 214-353, activation_accelerator.cpp:521:9</column>
                 </table>
             </item>
         </section>
@@ -4162,54 +4179,56 @@
         <Pragma type="pipeline" location="activation_accelerator.cpp:330" status="valid" parentFunction="float_add" variable="" isDirective="0" options="II=1"/>
         <Pragma type="inline" location="activation_accelerator.cpp:338" status="valid" parentFunction="float_softmax" variable="" isDirective="0" options=""/>
         <Pragma type="pipeline" location="activation_accelerator.cpp:342" status="valid" parentFunction="float_softmax" variable="" isDirective="0" options="II=1"/>
-        <Pragma type="pipeline" location="activation_accelerator.cpp:349" status="valid" parentFunction="float_softmax" variable="" isDirective="0" options="II=1"/>
-        <Pragma type="pipeline" location="activation_accelerator.cpp:356" status="valid" parentFunction="float_softmax" variable="" isDirective="0" options="II=1"/>
-        <Pragma type="inline" location="activation_accelerator.cpp:369" status="valid" parentFunction="load_rows" variable="" isDirective="0" options="off"/>
-        <Pragma type="dataflow" location="activation_accelerator.cpp:372" status="warning" parentFunction="load_rows" variable="" isDirective="0" options="disable_start_propagation">
+        <Pragma type="pipeline" location="activation_accelerator.cpp:352" status="valid" parentFunction="float_softmax" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="array_partition" location="activation_accelerator.cpp:354" status="valid" parentFunction="float_softmax" variable="e" isDirective="0" options="variable=e complete"/>
+        <Pragma type="unroll" location="activation_accelerator.cpp:357" status="valid" parentFunction="float_softmax" variable="" isDirective="0" options=""/>
+        <Pragma type="pipeline" location="activation_accelerator.cpp:374" status="valid" parentFunction="float_softmax" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="activation_accelerator.cpp:387" status="valid" parentFunction="load_rows" variable="" isDirective="0" options="off"/>
+        <Pragma type="dataflow" location="activation_accelerator.cpp:390" status="warning" parentFunction="load_rows" variable="" isDirective="0" options="disable_start_propagation">
             <Msg msg_id="214-114" msg_severity="WARNING" msg_body="Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region"/>
         </Pragma>
-        <Pragma type="interface" location="activation_accelerator.cpp:375" status="valid" parentFunction="load_rows" variable="in0" isDirective="0" options="ap_memory port=in0"/>
-        <Pragma type="interface" location="activation_accelerator.cpp:376" status="valid" parentFunction="load_rows" variable="in1" isDirective="0" options="ap_memory port=in1"/>
-        <Pragma type="stream" location="activation_accelerator.cpp:380" status="valid" parentFunction="load_rows" variable="s0" isDirective="0" options="variable=s0 depth=64"/>
-        <Pragma type="stream" location="activation_accelerator.cpp:381" status="valid" parentFunction="load_rows" variable="s1" isDirective="0" options="variable=s1 depth=64"/>
-        <Pragma type="loop_tripcount" location="activation_accelerator.cpp:386" status="valid" parentFunction="load_rows" variable="" isDirective="0" options="min=NROWS max=NROWS"/>
-        <Pragma type="pipeline" location="activation_accelerator.cpp:392" status="valid" parentFunction="load_rows" variable="" isDirective="0" options="II=1"/>
-        <Pragma type="inline" location="activation_accelerator.cpp:405" status="valid" parentFunction="compute_rows" variable="" isDirective="0" options="off"/>
-        <Pragma type="stream" location="activation_accelerator.cpp:407" status="valid" parentFunction="compute_rows" variable="s0" isDirective="0" options="variable=s0 depth=64"/>
-        <Pragma type="stream" location="activation_accelerator.cpp:408" status="valid" parentFunction="compute_rows" variable="s1" isDirective="0" options="variable=s1 depth=64"/>
-        <Pragma type="stream" location="activation_accelerator.cpp:409" status="valid" parentFunction="compute_rows" variable="so" isDirective="0" options="variable=so depth=64"/>
-        <Pragma type="bind_storage" location="activation_accelerator.cpp:414" status="valid" parentFunction="compute_rows" variable="tile0" isDirective="0" options="variable=tile0 type=ram_2p impl=bram"/>
-        <Pragma type="bind_storage" location="activation_accelerator.cpp:415" status="valid" parentFunction="compute_rows" variable="tile1" isDirective="0" options="variable=tile1 type=ram_2p impl=bram"/>
-        <Pragma type="bind_storage" location="activation_accelerator.cpp:416" status="valid" parentFunction="compute_rows" variable="tile2" isDirective="0" options="variable=tile2 type=ram_2p impl=bram"/>
-        <Pragma type="array_partition" location="activation_accelerator.cpp:419" status="valid" parentFunction="compute_rows" variable="tile0" isDirective="0" options="variable=tile0 cyclic factor=32"/>
-        <Pragma type="array_partition" location="activation_accelerator.cpp:420" status="valid" parentFunction="compute_rows" variable="tile1" isDirective="0" options="variable=tile1 cyclic factor=32"/>
-        <Pragma type="array_partition" location="activation_accelerator.cpp:421" status="valid" parentFunction="compute_rows" variable="tile2" isDirective="0" options="variable=tile2 cyclic factor=32"/>
-        <Pragma type="bind_storage" location="activation_accelerator.cpp:427" status="valid" parentFunction="compute_rows" variable="xt" isDirective="0" options="variable=xt type=ram_s2p impl=bram"/>
-        <Pragma type="bind_storage" location="activation_accelerator.cpp:428" status="valid" parentFunction="compute_rows" variable="yt" isDirective="0" options="variable=yt type=ram_s2p impl=bram"/>
-        <Pragma type="array_partition" location="activation_accelerator.cpp:429" status="valid" parentFunction="compute_rows" variable="xt" isDirective="0" options="variable=xt cyclic factor=32"/>
-        <Pragma type="array_partition" location="activation_accelerator.cpp:430" status="valid" parentFunction="compute_rows" variable="yt" isDirective="0" options="variable=yt cyclic factor=32"/>
-        <Pragma type="loop_tripcount" location="activation_accelerator.cpp:434" status="valid" parentFunction="compute_rows" variable="" isDirective="0" options="min=NROWS max=NROWS"/>
-        <Pragma type="pipeline" location="activation_accelerator.cpp:439" status="valid" parentFunction="compute_rows" variable="" isDirective="0" options="II=1"/>
-        <Pragma type="array_partition" location="activation_accelerator.cpp:443" status="valid" parentFunction="compute_rows" variable="lane0" isDirective="0" options="variable=lane0 complete"/>
-        <Pragma type="array_partition" location="activation_accelerator.cpp:444" status="valid" parentFunction="compute_rows" variable="lane1" isDirective="0" options="variable=lane1 complete"/>
-        <Pragma type="unroll" location="activation_accelerator.cpp:449" status="valid" parentFunction="compute_rows" variable="" isDirective="0" options=""/>
-        <Pragma type="pipeline" location="activation_accelerator.cpp:480" status="valid" parentFunction="compute_rows" variable="" isDirective="0" options="II=1"/>
-        <Pragma type="array_partition" location="activation_accelerator.cpp:482" status="valid" parentFunction="compute_rows" variable="lane" isDirective="0" options="variable=lane complete"/>
-        <Pragma type="unroll" location="activation_accelerator.cpp:485" status="valid" parentFunction="compute_rows" variable="" isDirective="0" options=""/>
-        <Pragma type="inline" location="activation_accelerator.cpp:496" status="valid" parentFunction="store_rows" variable="" isDirective="0" options="off"/>
-        <Pragma type="stream" location="activation_accelerator.cpp:497" status="valid" parentFunction="store_rows" variable="so" isDirective="0" options="variable=so depth=64"/>
-        <Pragma type="loop_tripcount" location="activation_accelerator.cpp:500" status="valid" parentFunction="store_rows" variable="" isDirective="0" options="min=NROWS max=NROWS"/>
-        <Pragma type="pipeline" location="activation_accelerator.cpp:504" status="valid" parentFunction="store_rows" variable="" isDirective="0" options="II=1"/>
-        <Pragma type="interface" location="activation_accelerator.cpp:513" status="valid" parentFunction="activation_accelerator" variable="in0" isDirective="0" options="m_axi port=in0 bundle=gmem0 offset=slave depth=NW max_read_burst_length=32 num_read_outstanding=16"/>
-        <Pragma type="interface" location="activation_accelerator.cpp:514" status="valid" parentFunction="activation_accelerator" variable="in1" isDirective="0" options="m_axi port=in1 bundle=gmem1 offset=slave depth=NW max_read_burst_length=32 num_read_outstanding=16"/>
-        <Pragma type="interface" location="activation_accelerator.cpp:515" status="valid" parentFunction="activation_accelerator" variable="out" isDirective="0" options="m_axi port=out bundle=gmem2 offset=slave depth=NW max_write_burst_length=32 num_write_outstanding=16"/>
-        <Pragma type="interface" location="activation_accelerator.cpp:516" status="valid" parentFunction="activation_accelerator" variable="stage" isDirective="0" options="s_axilite port=stage"/>
-        <Pragma type="interface" location="activation_accelerator.cpp:517" status="valid" parentFunction="activation_accelerator" variable="config" isDirective="0" options="s_axilite port=config"/>
-        <Pragma type="interface" location="activation_accelerator.cpp:518" status="valid" parentFunction="activation_accelerator" variable="return" isDirective="0" options="s_axilite port=return"/>
-        <Pragma type="dataflow" location="activation_accelerator.cpp:519" status="valid" parentFunction="activation_accelerator" variable="" isDirective="0" options=""/>
-        <Pragma type="stream" location="activation_accelerator.cpp:522" status="valid" parentFunction="activation_accelerator" variable="s_in0" isDirective="0" options="variable=s_in0 depth=64"/>
-        <Pragma type="stream" location="activation_accelerator.cpp:523" status="valid" parentFunction="activation_accelerator" variable="s_in1" isDirective="0" options="variable=s_in1 depth=64"/>
-        <Pragma type="stream" location="activation_accelerator.cpp:524" status="valid" parentFunction="activation_accelerator" variable="s_out" isDirective="0" options="variable=s_out depth=64"/>
+        <Pragma type="interface" location="activation_accelerator.cpp:393" status="valid" parentFunction="load_rows" variable="in0" isDirective="0" options="ap_memory port=in0"/>
+        <Pragma type="interface" location="activation_accelerator.cpp:394" status="valid" parentFunction="load_rows" variable="in1" isDirective="0" options="ap_memory port=in1"/>
+        <Pragma type="stream" location="activation_accelerator.cpp:398" status="valid" parentFunction="load_rows" variable="s0" isDirective="0" options="variable=s0 depth=64"/>
+        <Pragma type="stream" location="activation_accelerator.cpp:399" status="valid" parentFunction="load_rows" variable="s1" isDirective="0" options="variable=s1 depth=64"/>
+        <Pragma type="loop_tripcount" location="activation_accelerator.cpp:404" status="valid" parentFunction="load_rows" variable="" isDirective="0" options="min=NROWS max=NROWS"/>
+        <Pragma type="pipeline" location="activation_accelerator.cpp:410" status="valid" parentFunction="load_rows" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="activation_accelerator.cpp:423" status="valid" parentFunction="compute_rows" variable="" isDirective="0" options="off"/>
+        <Pragma type="stream" location="activation_accelerator.cpp:425" status="valid" parentFunction="compute_rows" variable="s0" isDirective="0" options="variable=s0 depth=64"/>
+        <Pragma type="stream" location="activation_accelerator.cpp:426" status="valid" parentFunction="compute_rows" variable="s1" isDirective="0" options="variable=s1 depth=64"/>
+        <Pragma type="stream" location="activation_accelerator.cpp:427" status="valid" parentFunction="compute_rows" variable="so" isDirective="0" options="variable=so depth=64"/>
+        <Pragma type="bind_storage" location="activation_accelerator.cpp:432" status="valid" parentFunction="compute_rows" variable="tile0" isDirective="0" options="variable=tile0 type=ram_2p impl=bram"/>
+        <Pragma type="bind_storage" location="activation_accelerator.cpp:433" status="valid" parentFunction="compute_rows" variable="tile1" isDirective="0" options="variable=tile1 type=ram_2p impl=bram"/>
+        <Pragma type="bind_storage" location="activation_accelerator.cpp:434" status="valid" parentFunction="compute_rows" variable="tile2" isDirective="0" options="variable=tile2 type=ram_2p impl=bram"/>
+        <Pragma type="array_partition" location="activation_accelerator.cpp:437" status="valid" parentFunction="compute_rows" variable="tile0" isDirective="0" options="variable=tile0 cyclic factor=32"/>
+        <Pragma type="array_partition" location="activation_accelerator.cpp:438" status="valid" parentFunction="compute_rows" variable="tile1" isDirective="0" options="variable=tile1 cyclic factor=32"/>
+        <Pragma type="array_partition" location="activation_accelerator.cpp:439" status="valid" parentFunction="compute_rows" variable="tile2" isDirective="0" options="variable=tile2 cyclic factor=32"/>
+        <Pragma type="bind_storage" location="activation_accelerator.cpp:445" status="valid" parentFunction="compute_rows" variable="xt" isDirective="0" options="variable=xt type=ram_s2p impl=bram"/>
+        <Pragma type="bind_storage" location="activation_accelerator.cpp:446" status="valid" parentFunction="compute_rows" variable="yt" isDirective="0" options="variable=yt type=ram_s2p impl=bram"/>
+        <Pragma type="array_partition" location="activation_accelerator.cpp:447" status="valid" parentFunction="compute_rows" variable="xt" isDirective="0" options="variable=xt cyclic factor=32"/>
+        <Pragma type="array_partition" location="activation_accelerator.cpp:448" status="valid" parentFunction="compute_rows" variable="yt" isDirective="0" options="variable=yt cyclic factor=32"/>
+        <Pragma type="loop_tripcount" location="activation_accelerator.cpp:452" status="valid" parentFunction="compute_rows" variable="" isDirective="0" options="min=NROWS max=NROWS"/>
+        <Pragma type="pipeline" location="activation_accelerator.cpp:457" status="valid" parentFunction="compute_rows" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="array_partition" location="activation_accelerator.cpp:461" status="valid" parentFunction="compute_rows" variable="lane0" isDirective="0" options="variable=lane0 complete"/>
+        <Pragma type="array_partition" location="activation_accelerator.cpp:462" status="valid" parentFunction="compute_rows" variable="lane1" isDirective="0" options="variable=lane1 complete"/>
+        <Pragma type="unroll" location="activation_accelerator.cpp:467" status="valid" parentFunction="compute_rows" variable="" isDirective="0" options=""/>
+        <Pragma type="pipeline" location="activation_accelerator.cpp:498" status="valid" parentFunction="compute_rows" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="array_partition" location="activation_accelerator.cpp:500" status="valid" parentFunction="compute_rows" variable="lane" isDirective="0" options="variable=lane complete"/>
+        <Pragma type="unroll" location="activation_accelerator.cpp:503" status="valid" parentFunction="compute_rows" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="activation_accelerator.cpp:514" status="valid" parentFunction="store_rows" variable="" isDirective="0" options="off"/>
+        <Pragma type="stream" location="activation_accelerator.cpp:515" status="valid" parentFunction="store_rows" variable="so" isDirective="0" options="variable=so depth=64"/>
+        <Pragma type="loop_tripcount" location="activation_accelerator.cpp:518" status="valid" parentFunction="store_rows" variable="" isDirective="0" options="min=NROWS max=NROWS"/>
+        <Pragma type="pipeline" location="activation_accelerator.cpp:522" status="valid" parentFunction="store_rows" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="interface" location="activation_accelerator.cpp:531" status="valid" parentFunction="activation_accelerator" variable="in0" isDirective="0" options="m_axi port=in0 bundle=gmem0 offset=slave depth=NW max_read_burst_length=32 num_read_outstanding=16"/>
+        <Pragma type="interface" location="activation_accelerator.cpp:532" status="valid" parentFunction="activation_accelerator" variable="in1" isDirective="0" options="m_axi port=in1 bundle=gmem1 offset=slave depth=NW max_read_burst_length=32 num_read_outstanding=16"/>
+        <Pragma type="interface" location="activation_accelerator.cpp:533" status="valid" parentFunction="activation_accelerator" variable="out" isDirective="0" options="m_axi port=out bundle=gmem2 offset=slave depth=NW max_write_burst_length=32 num_write_outstanding=16"/>
+        <Pragma type="interface" location="activation_accelerator.cpp:534" status="valid" parentFunction="activation_accelerator" variable="stage" isDirective="0" options="s_axilite port=stage"/>
+        <Pragma type="interface" location="activation_accelerator.cpp:535" status="valid" parentFunction="activation_accelerator" variable="config" isDirective="0" options="s_axilite port=config"/>
+        <Pragma type="interface" location="activation_accelerator.cpp:536" status="valid" parentFunction="activation_accelerator" variable="return" isDirective="0" options="s_axilite port=return"/>
+        <Pragma type="dataflow" location="activation_accelerator.cpp:537" status="valid" parentFunction="activation_accelerator" variable="" isDirective="0" options=""/>
+        <Pragma type="stream" location="activation_accelerator.cpp:540" status="valid" parentFunction="activation_accelerator" variable="s_in0" isDirective="0" options="variable=s_in0 depth=64"/>
+        <Pragma type="stream" location="activation_accelerator.cpp:541" status="valid" parentFunction="activation_accelerator" variable="s_in1" isDirective="0" options="variable=s_in1 depth=64"/>
+        <Pragma type="stream" location="activation_accelerator.cpp:542" status="valid" parentFunction="activation_accelerator" variable="s_out" isDirective="0" options="variable=s_out depth=64"/>
     </PragmaReport>
 </profile>
 

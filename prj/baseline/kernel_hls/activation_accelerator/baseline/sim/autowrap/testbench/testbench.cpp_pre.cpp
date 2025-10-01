@@ -1,10 +1,10 @@
-# 1 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp"
+# 1 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 1 "<command-line>" 2
-# 1 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp"
-# 1 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator.h" 1
+# 1 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp"
+# 1 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator.h" 1
 
 
 
@@ -308,7 +308,7 @@ namespace std
   using ::uintmax_t;
   using ::uintptr_t;
 }
-# 5 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator.h" 2
+# 5 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator.h" 2
 
 
 
@@ -61422,7 +61422,7 @@ inline bool operator!=(
 }
 # 366 "/data/xilinx/Vitis_HLS/2022.2/include/ap_fixed.h" 2
 # 361 "/data/xilinx/Vitis_HLS/2022.2/include/ap_int.h" 2
-# 13 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator.h" 2
+# 13 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator.h" 2
 typedef ap_uint<16> uint16;
 typedef ap_uint<32> uint32;
 typedef int32_t int32;
@@ -61433,7 +61433,7 @@ uint16 bf16add(uint16 a_bits, uint16 b_bits);
 
 
 void activation_accelerator(ap_uint<512>* in0, ap_uint<512>* in1, ap_uint<512>* out, int32 stage, int32 config);
-# 2 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp" 2
+# 2 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp" 2
 
 # 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/fstream" 1 3
 # 36 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/fstream" 3
@@ -63277,28 +63277,28 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 }
 # 1170 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/fstream" 2 3
-# 4 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp" 2
+# 4 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp" 2
 # 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdlib" 1 3
 # 39 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdlib" 3
        
 # 40 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdlib" 3
-# 5 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp" 2
+# 5 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp" 2
 # 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/ctime" 1 3
 # 39 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/ctime" 3
        
 # 40 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/ctime" 3
-# 6 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp" 2
+# 6 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp" 2
 
 # 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstring" 1 3
 # 39 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstring" 3
        
 # 40 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstring" 3
-# 8 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp" 2
+# 8 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp" 2
 # 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cmath" 1 3
 # 39 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cmath" 3
        
 # 40 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cmath" 3
-# 9 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp" 2
+# 9 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp" 2
 # 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/chrono" 1 3
 # 32 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/chrono" 3
        
@@ -64858,7 +64858,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 10 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp" 2
+# 10 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp" 2
 # 1 "/usr/include/unistd.h" 1 3 4
 # 27 "/usr/include/unistd.h" 3 4
 extern "C" {
@@ -66211,19 +66211,19 @@ extern __pid_t gettid (void) throw ();
 # 1171 "/usr/include/unistd.h" 2 3 4
 
 }
-# 11 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp" 2
+# 11 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp" 2
 
 
 # 1 "/data/xilinx/Vitis_HLS/2022.2/include/ap_int.h" 1
-# 14 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp" 2
+# 14 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp" 2
 
 
 
 
-# 17 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp"
+# 17 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp"
 static constexpr int VEC = 32;
 static constexpr int NW = (64*768) / VEC;
-# 28 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp"
+# 28 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp"
 static inline void pack16_to_512(const uint16* src16, ap_uint<512>* dst512, int words) {
     for (int w = 0; w < words; ++w) {
         ap_uint<512> acc = 0;
@@ -66303,10 +66303,10 @@ int compare_results(uint16* result, uint16* golden, uint16* in0, uint16* in1, in
     std::cout << "Max Difference: " << max_diff << std::endl;
     return errors;
 }
-# 146 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp"
+# 146 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp"
 std::string get_data_path() {
-    std::string rel_path = "/data1/jcz/activation_accelerator_tutorial/prj/testvector_example/bf16_vectors2/";
-    std::string test_file = rel_path + "X_test_tensor_bf16.bin";
+    std::string rel_path = "/data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors2";
+    std::string test_file = rel_path + "/X_test_tensor_bf16.bin";
     std::ifstream f(test_file.c_str());
     if (f.good()) {
         std::cout << "Using relative data path: " << rel_path << std::endl;
@@ -66337,9 +66337,9 @@ int main() {
         !load_binary_data(data_path + "X_test_tensor_bf16.bin", in1) ) {
         std::cerr << "Unable to load bf16 input data, using random data" << std::endl;
         srand(time(
-# 178 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp" 3 4
+# 178 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp" 3 4
                   __null
-# 178 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp"
+# 178 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp"
                       ));
         for(int i = 0; i < (64*768); i++) {
             in0[i] = rand() % 1000 - 500;
@@ -66366,7 +66366,7 @@ int main() {
             std::cout << "Loaded Config " << i << " golden data from bf16" << std::endl;
         }
     }
-# 220 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp"
+# 220 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp"
     int32 stage = 0;
 
     pack16_to_512(in0, in0_512, NW);
@@ -66376,7 +66376,7 @@ int main() {
 
     double total_time = 0.0;
     for (int config = 0; config < 7; ++config) {
-# 237 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp"
+# 237 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp"
         stage = 1;
         std::cout << "\n--- Testing Config " << config << " ---" << std::endl;
         auto t1 = std::chrono::high_resolution_clock::now();

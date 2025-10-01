@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'compute_rows'" level="0">
-<item name = "Date">Mon Sep 29 22:11:52 2025
+<item name = "Date">Wed Oct  1 10:14:46 2025
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">activation_accelerator</item>
@@ -36,7 +36,7 @@
 <column name="grp_compute_rows_Pipeline_convert_loop1_fu_961">compute_rows_Pipeline_convert_loop1, 770, 770, 7.700 us, 7.700 us, 770, 770, no</column>
 <column name="grp_compute_rows_Pipeline_silu_loop2_fu_1029">compute_rows_Pipeline_silu_loop2, 794, 794, 7.940 us, 7.940 us, 794, 794, no</column>
 <column name="grp_compute_rows_Pipeline_smx_0_fu_1097">compute_rows_Pipeline_smx_0, 769, 769, 7.690 us, 7.690 us, 769, 769, no</column>
-<column name="grp_compute_rows_Pipeline_smx_1_fu_1135">compute_rows_Pipeline_smx_1, 2320, 2320, 23.200 us, 23.200 us, 2320, 2320, no</column>
+<column name="grp_compute_rows_Pipeline_smx_1_fu_1135">compute_rows_Pipeline_smx_1, 322, 322, 3.220 us, 3.220 us, 322, 322, no</column>
 <column name="grp_compute_rows_Pipeline_smx_2_fu_1173">compute_rows_Pipeline_smx_2, 792, 792, 7.920 us, 7.920 us, 792, 792, no</column>
 <column name="grp_compute_rows_Pipeline_rms_loop_0_fu_1243">compute_rows_Pipeline_rms_loop_0, 2311, 2311, 23.110 us, 23.110 us, 2311, 2311, no</column>
 <column name="grp_compute_rows_Pipeline_rms_loop_1_fu_1280">compute_rows_Pipeline_rms_loop_1, 774, 774, 7.740 us, 7.740 us, 774, 774, no</column>

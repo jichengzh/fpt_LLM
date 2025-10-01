@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date              : Mon Sep 29 22:42:10 2025
+| Date              : Wed Oct  1 10:51:49 2025
 | Host              : super-test running 64-bit Ubuntu 20.04.6 LTS
 | Command           : report_timing -max_paths 10 -file ./report/activation_accelerator_timing_paths_routed.rpt
 | Design            : bd_0_wrapper
@@ -12,71 +12,15 @@ Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 Timing Report
 
-Slack (MET) :             3.107ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/trunc_ln212_reg_1594_reg[0]/C
+Slack (MET) :             2.796ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg[0]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/compute_rows_U0/yt_54_U/ram_reg_bram_0/DINBDIN[15]
+  Destination:            bd_0_i/hls_inst/inst/compute_rows_U0/xt_60_U/ram_reg_bram_0/DINBDIN[9]
                             (rising edge-triggered cell RAMB18E2 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        6.376ns  (logic 0.658ns (10.319%)  route 5.718ns (89.681%))
-  Logic Levels:           3  (LUT6=2 MUXF7=1)
-  Clock Path Skew:        0.008ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.049ns = ( 10.049 - 10.000 ) 
-    Source Clock Delay      (SCD):    0.041ns
-    Clock Pessimism Removal (CPR):    0.000ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=9998, unset)         0.041     0.041    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ap_clk
-    SLICE_X51Y129        FDRE                                         r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/trunc_ln212_reg_1594_reg[0]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X51Y129        FDRE (Prop_DFF2_SLICEL_C_Q)
-                                                      0.115     0.156 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/trunc_ln212_reg_1594_reg[0]/Q
-                         net (fo=161, routed)         2.477     2.633    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/trunc_ln212_reg_1594_reg_n_12_[0]
-    SLICE_X27Y19         LUT6 (Prop_D6LUT_SLICEL_I4_O)
-                                                      0.221     2.854 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ram_reg_bram_0_i_101/O
-                         net (fo=1, routed)           0.013     2.867    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/mux_2_0[15]
-    SLICE_X27Y19         MUXF7 (Prop_F7MUX_CD_SLICEL_I0_O)
-                                                      0.095     2.962 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ram_reg_bram_0_i_34/O
-                         net (fo=1, routed)           0.894     3.856    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/mux_3_0[15]
-    SLICE_X47Y38         LUT6 (Prop_H6LUT_SLICEL_I5_O)
-                                                      0.227     4.083 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ram_reg_bram_0_i_8/O
-                         net (fo=32, routed)          2.334     6.417    bd_0_i/hls_inst/inst/compute_rows_U0/yt_54_U/DINBDIN[15]
-    RAMB18_X0Y62         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/yt_54_U/ram_reg_bram_0/DINBDIN[15]
-  -------------------------------------------------------------------    -------------------
-
-                         (clock ap_clk rise edge)    10.000    10.000 r  
-                                                      0.000    10.000 r  ap_clk (IN)
-                         net (fo=9998, unset)         0.049    10.049    bd_0_i/hls_inst/inst/compute_rows_U0/yt_54_U/ap_clk
-    RAMB18_X0Y62         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/yt_54_U/ram_reg_bram_0/CLKBWRCLK
-                         clock pessimism              0.000    10.049    
-                         clock uncertainty           -0.035    10.014    
-    RAMB18_X0Y62         RAMB18E2 (Setup_RAMB18E2_L_RAMB180_CLKBWRCLK_DINBDIN[15])
-                                                     -0.489     9.525    bd_0_i/hls_inst/inst/compute_rows_U0/yt_54_U/ram_reg_bram_0
-  -------------------------------------------------------------------
-                         required time                          9.525    
-                         arrival time                          -6.417    
-  -------------------------------------------------------------------
-                         slack                                  3.107    
-
-Slack (MET) :             3.135ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/trunc_ln212_reg_1594_reg[1]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/compute_rows_U0/yt_44_U/ram_reg_bram_0/DINBDIN[14]
-                            (rising edge-triggered cell RAMB18E2 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             ap_clk
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        6.446ns  (logic 0.427ns (6.625%)  route 6.019ns (93.375%))
+  Data Path Delay:        6.809ns  (logic 0.621ns (9.120%)  route 6.188ns (90.880%))
   Logic Levels:           3  (LUT6=2 MUXF7=1)
   Clock Path Skew:        0.006ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.048ns = ( 10.048 - 10.000 ) 
@@ -92,485 +36,541 @@ Slack (MET) :             3.135ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=9998, unset)         0.042     0.042    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ap_clk
-    SLICE_X52Y121        FDRE                                         r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/trunc_ln212_reg_1594_reg[1]/C
+                         net (fo=12215, unset)        0.042     0.042    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ap_clk
+    SLICE_X49Y138        FDRE                                         r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X52Y121        FDRE (Prop_EFF_SLICEL_C_Q)
-                                                      0.114     0.156 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/trunc_ln212_reg_1594_reg[1]/Q
-                         net (fo=160, routed)         2.861     3.017    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/p_1_in
-    SLICE_X48Y19         LUT6 (Prop_A6LUT_SLICEL_I2_O)
-                                                      0.137     3.154 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ram_reg_bram_0_i_108/O
-                         net (fo=1, routed)           0.014     3.168    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/mux_2_3[14]
-    SLICE_X48Y19         MUXF7 (Prop_F7MUX_AB_SLICEL_I1_O)
-                                                      0.096     3.264 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ram_reg_bram_0_i_37/O
-                         net (fo=1, routed)           0.783     4.047    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/mux_3_1[14]
-    SLICE_X28Y36         LUT6 (Prop_F6LUT_SLICEM_I3_O)
-                                                      0.080     4.127 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ram_reg_bram_0_i_9/O
-                         net (fo=32, routed)          2.361     6.488    bd_0_i/hls_inst/inst/compute_rows_U0/yt_44_U/DINBDIN[14]
-    RAMB18_X2Y51         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/yt_44_U/ram_reg_bram_0/DINBDIN[14]
+    SLICE_X49Y138        FDRE (Prop_EFF_SLICEL_C_Q)
+                                                      0.114     0.156 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg[0]/Q
+                         net (fo=161, routed)         2.775     2.931    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg_n_12_[0]
+    SLICE_X27Y17         LUT6 (Prop_G6LUT_SLICEL_I4_O)
+                                                      0.226     3.157 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ram_reg_bram_0_i_201/O
+                         net (fo=1, routed)           0.012     3.169    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/mux_2_1[9]
+    SLICE_X27Y17         MUXF7 (Prop_F7MUX_GH_SLICEL_I1_O)
+                                                      0.095     3.264 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ram_reg_bram_0_i_78/O
+                         net (fo=1, routed)           1.224     4.488    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/mux_3_0[9]
+    SLICE_X50Y40         LUT6 (Prop_G6LUT_SLICEL_I5_O)
+                                                      0.186     4.674 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ram_reg_bram_0_i_14/O
+                         net (fo=32, routed)          2.177     6.851    bd_0_i/hls_inst/inst/compute_rows_U0/xt_60_U/DINBDIN[9]
+    RAMB18_X1Y69         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/xt_60_U/ram_reg_bram_0/DINBDIN[9]
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=9998, unset)         0.048    10.048    bd_0_i/hls_inst/inst/compute_rows_U0/yt_44_U/ap_clk
-    RAMB18_X2Y51         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/yt_44_U/ram_reg_bram_0/CLKBWRCLK
+                         net (fo=12215, unset)        0.048    10.048    bd_0_i/hls_inst/inst/compute_rows_U0/xt_60_U/ap_clk
+    RAMB18_X1Y69         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/xt_60_U/ram_reg_bram_0/CLKBWRCLK
                          clock pessimism              0.000    10.048    
                          clock uncertainty           -0.035    10.013    
-    RAMB18_X2Y51         RAMB18E2 (Setup_RAMB18E2_U_RAMB181_CLKBWRCLK_DINBDIN[14])
-                                                     -0.390     9.623    bd_0_i/hls_inst/inst/compute_rows_U0/yt_44_U/ram_reg_bram_0
-  -------------------------------------------------------------------
-                         required time                          9.623    
-                         arrival time                          -6.488    
-  -------------------------------------------------------------------
-                         slack                                  3.135    
-
-Slack (MET) :             3.137ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/trunc_ln212_reg_1594_reg[1]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/compute_rows_U0/yt_32_U/ram_reg_bram_0/DINBDIN[14]
-                            (rising edge-triggered cell RAMB18E2 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             ap_clk
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        6.444ns  (logic 0.427ns (6.626%)  route 6.017ns (93.374%))
-  Logic Levels:           3  (LUT6=2 MUXF7=1)
-  Clock Path Skew:        0.006ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.048ns = ( 10.048 - 10.000 ) 
-    Source Clock Delay      (SCD):    0.042ns
-    Clock Pessimism Removal (CPR):    0.000ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=9998, unset)         0.042     0.042    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ap_clk
-    SLICE_X52Y121        FDRE                                         r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/trunc_ln212_reg_1594_reg[1]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X52Y121        FDRE (Prop_EFF_SLICEL_C_Q)
-                                                      0.114     0.156 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/trunc_ln212_reg_1594_reg[1]/Q
-                         net (fo=160, routed)         2.861     3.017    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/p_1_in
-    SLICE_X48Y19         LUT6 (Prop_A6LUT_SLICEL_I2_O)
-                                                      0.137     3.154 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ram_reg_bram_0_i_108/O
-                         net (fo=1, routed)           0.014     3.168    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/mux_2_3[14]
-    SLICE_X48Y19         MUXF7 (Prop_F7MUX_AB_SLICEL_I1_O)
-                                                      0.096     3.264 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ram_reg_bram_0_i_37/O
-                         net (fo=1, routed)           0.783     4.047    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/mux_3_1[14]
-    SLICE_X28Y36         LUT6 (Prop_F6LUT_SLICEM_I3_O)
-                                                      0.080     4.127 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ram_reg_bram_0_i_9/O
-                         net (fo=32, routed)          2.359     6.486    bd_0_i/hls_inst/inst/compute_rows_U0/yt_32_U/DINBDIN[14]
-    RAMB18_X2Y53         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/yt_32_U/ram_reg_bram_0/DINBDIN[14]
-  -------------------------------------------------------------------    -------------------
-
-                         (clock ap_clk rise edge)    10.000    10.000 r  
-                                                      0.000    10.000 r  ap_clk (IN)
-                         net (fo=9998, unset)         0.048    10.048    bd_0_i/hls_inst/inst/compute_rows_U0/yt_32_U/ap_clk
-    RAMB18_X2Y53         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/yt_32_U/ram_reg_bram_0/CLKBWRCLK
-                         clock pessimism              0.000    10.048    
-                         clock uncertainty           -0.035    10.013    
-    RAMB18_X2Y53         RAMB18E2 (Setup_RAMB18E2_U_RAMB181_CLKBWRCLK_DINBDIN[14])
-                                                     -0.390     9.623    bd_0_i/hls_inst/inst/compute_rows_U0/yt_32_U/ram_reg_bram_0
-  -------------------------------------------------------------------
-                         required time                          9.623    
-                         arrival time                          -6.486    
-  -------------------------------------------------------------------
-                         slack                                  3.137    
-
-Slack (MET) :             3.163ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/trunc_ln212_reg_1594_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/compute_rows_U0/yt_49_U/ram_reg_bram_0/DINBDIN[15]
-                            (rising edge-triggered cell RAMB18E2 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             ap_clk
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        6.380ns  (logic 0.658ns (10.313%)  route 5.722ns (89.687%))
-  Logic Levels:           3  (LUT6=2 MUXF7=1)
-  Clock Path Skew:        0.007ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.048ns = ( 10.048 - 10.000 ) 
-    Source Clock Delay      (SCD):    0.041ns
-    Clock Pessimism Removal (CPR):    0.000ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=9998, unset)         0.041     0.041    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ap_clk
-    SLICE_X51Y129        FDRE                                         r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/trunc_ln212_reg_1594_reg[0]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X51Y129        FDRE (Prop_DFF2_SLICEL_C_Q)
-                                                      0.115     0.156 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/trunc_ln212_reg_1594_reg[0]/Q
-                         net (fo=161, routed)         2.477     2.633    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/trunc_ln212_reg_1594_reg_n_12_[0]
-    SLICE_X27Y19         LUT6 (Prop_D6LUT_SLICEL_I4_O)
-                                                      0.221     2.854 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ram_reg_bram_0_i_101/O
-                         net (fo=1, routed)           0.013     2.867    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/mux_2_0[15]
-    SLICE_X27Y19         MUXF7 (Prop_F7MUX_CD_SLICEL_I0_O)
-                                                      0.095     2.962 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ram_reg_bram_0_i_34/O
-                         net (fo=1, routed)           0.894     3.856    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/mux_3_0[15]
-    SLICE_X47Y38         LUT6 (Prop_H6LUT_SLICEL_I5_O)
-                                                      0.227     4.083 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ram_reg_bram_0_i_8/O
-                         net (fo=32, routed)          2.338     6.421    bd_0_i/hls_inst/inst/compute_rows_U0/yt_49_U/DINBDIN[15]
-    RAMB18_X0Y63         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/yt_49_U/ram_reg_bram_0/DINBDIN[15]
-  -------------------------------------------------------------------    -------------------
-
-                         (clock ap_clk rise edge)    10.000    10.000 r  
-                                                      0.000    10.000 r  ap_clk (IN)
-                         net (fo=9998, unset)         0.048    10.048    bd_0_i/hls_inst/inst/compute_rows_U0/yt_49_U/ap_clk
-    RAMB18_X0Y63         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/yt_49_U/ram_reg_bram_0/CLKBWRCLK
-                         clock pessimism              0.000    10.048    
-                         clock uncertainty           -0.035    10.013    
-    RAMB18_X0Y63         RAMB18E2 (Setup_RAMB18E2_U_RAMB181_CLKBWRCLK_DINBDIN[15])
-                                                     -0.428     9.585    bd_0_i/hls_inst/inst/compute_rows_U0/yt_49_U/ram_reg_bram_0
-  -------------------------------------------------------------------
-                         required time                          9.585    
-                         arrival time                          -6.421    
-  -------------------------------------------------------------------
-                         slack                                  3.163    
-
-Slack (MET) :             3.245ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/trunc_ln212_reg_1594_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/compute_rows_U0/yt_51_U/ram_reg_bram_0/DINBDIN[15]
-                            (rising edge-triggered cell RAMB18E2 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             ap_clk
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        6.238ns  (logic 0.658ns (10.548%)  route 5.580ns (89.452%))
-  Logic Levels:           3  (LUT6=2 MUXF7=1)
-  Clock Path Skew:        0.008ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.049ns = ( 10.049 - 10.000 ) 
-    Source Clock Delay      (SCD):    0.041ns
-    Clock Pessimism Removal (CPR):    0.000ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=9998, unset)         0.041     0.041    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ap_clk
-    SLICE_X51Y129        FDRE                                         r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/trunc_ln212_reg_1594_reg[0]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X51Y129        FDRE (Prop_DFF2_SLICEL_C_Q)
-                                                      0.115     0.156 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/trunc_ln212_reg_1594_reg[0]/Q
-                         net (fo=161, routed)         2.477     2.633    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/trunc_ln212_reg_1594_reg_n_12_[0]
-    SLICE_X27Y19         LUT6 (Prop_D6LUT_SLICEL_I4_O)
-                                                      0.221     2.854 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ram_reg_bram_0_i_101/O
-                         net (fo=1, routed)           0.013     2.867    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/mux_2_0[15]
-    SLICE_X27Y19         MUXF7 (Prop_F7MUX_CD_SLICEL_I0_O)
-                                                      0.095     2.962 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ram_reg_bram_0_i_34/O
-                         net (fo=1, routed)           0.894     3.856    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/mux_3_0[15]
-    SLICE_X47Y38         LUT6 (Prop_H6LUT_SLICEL_I5_O)
-                                                      0.227     4.083 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ram_reg_bram_0_i_8/O
-                         net (fo=32, routed)          2.196     6.279    bd_0_i/hls_inst/inst/compute_rows_U0/yt_51_U/DINBDIN[15]
-    RAMB18_X0Y60         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/yt_51_U/ram_reg_bram_0/DINBDIN[15]
-  -------------------------------------------------------------------    -------------------
-
-                         (clock ap_clk rise edge)    10.000    10.000 r  
-                                                      0.000    10.000 r  ap_clk (IN)
-                         net (fo=9998, unset)         0.049    10.049    bd_0_i/hls_inst/inst/compute_rows_U0/yt_51_U/ap_clk
-    RAMB18_X0Y60         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/yt_51_U/ram_reg_bram_0/CLKBWRCLK
-                         clock pessimism              0.000    10.049    
-                         clock uncertainty           -0.035    10.014    
-    RAMB18_X0Y60         RAMB18E2 (Setup_RAMB18E2_L_RAMB180_CLKBWRCLK_DINBDIN[15])
-                                                     -0.489     9.525    bd_0_i/hls_inst/inst/compute_rows_U0/yt_51_U/ram_reg_bram_0
-  -------------------------------------------------------------------
-                         required time                          9.525    
-                         arrival time                          -6.279    
-  -------------------------------------------------------------------
-                         slack                                  3.245    
-
-Slack (MET) :             3.265ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/trunc_ln212_reg_1594_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/compute_rows_U0/yt_53_U/ram_reg_bram_0/DINBDIN[15]
-                            (rising edge-triggered cell RAMB18E2 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             ap_clk
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        6.278ns  (logic 0.658ns (10.481%)  route 5.620ns (89.519%))
-  Logic Levels:           3  (LUT6=2 MUXF7=1)
-  Clock Path Skew:        0.007ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.048ns = ( 10.048 - 10.000 ) 
-    Source Clock Delay      (SCD):    0.041ns
-    Clock Pessimism Removal (CPR):    0.000ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=9998, unset)         0.041     0.041    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ap_clk
-    SLICE_X51Y129        FDRE                                         r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/trunc_ln212_reg_1594_reg[0]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X51Y129        FDRE (Prop_DFF2_SLICEL_C_Q)
-                                                      0.115     0.156 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/trunc_ln212_reg_1594_reg[0]/Q
-                         net (fo=161, routed)         2.477     2.633    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/trunc_ln212_reg_1594_reg_n_12_[0]
-    SLICE_X27Y19         LUT6 (Prop_D6LUT_SLICEL_I4_O)
-                                                      0.221     2.854 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ram_reg_bram_0_i_101/O
-                         net (fo=1, routed)           0.013     2.867    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/mux_2_0[15]
-    SLICE_X27Y19         MUXF7 (Prop_F7MUX_CD_SLICEL_I0_O)
-                                                      0.095     2.962 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ram_reg_bram_0_i_34/O
-                         net (fo=1, routed)           0.894     3.856    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/mux_3_0[15]
-    SLICE_X47Y38         LUT6 (Prop_H6LUT_SLICEL_I5_O)
-                                                      0.227     4.083 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ram_reg_bram_0_i_8/O
-                         net (fo=32, routed)          2.236     6.319    bd_0_i/hls_inst/inst/compute_rows_U0/yt_53_U/DINBDIN[15]
-    RAMB18_X0Y61         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/yt_53_U/ram_reg_bram_0/DINBDIN[15]
-  -------------------------------------------------------------------    -------------------
-
-                         (clock ap_clk rise edge)    10.000    10.000 r  
-                                                      0.000    10.000 r  ap_clk (IN)
-                         net (fo=9998, unset)         0.048    10.048    bd_0_i/hls_inst/inst/compute_rows_U0/yt_53_U/ap_clk
-    RAMB18_X0Y61         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/yt_53_U/ram_reg_bram_0/CLKBWRCLK
-                         clock pessimism              0.000    10.048    
-                         clock uncertainty           -0.035    10.013    
-    RAMB18_X0Y61         RAMB18E2 (Setup_RAMB18E2_U_RAMB181_CLKBWRCLK_DINBDIN[15])
-                                                     -0.428     9.585    bd_0_i/hls_inst/inst/compute_rows_U0/yt_53_U/ram_reg_bram_0
-  -------------------------------------------------------------------
-                         required time                          9.585    
-                         arrival time                          -6.319    
-  -------------------------------------------------------------------
-                         slack                                  3.265    
-
-Slack (MET) :             3.355ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/trunc_ln212_reg_1594_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/compute_rows_U0/yt_U/ram_reg_bram_0/DINBDIN[15]
-                            (rising edge-triggered cell RAMB18E2 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             ap_clk
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        6.129ns  (logic 0.658ns (10.737%)  route 5.471ns (89.263%))
-  Logic Levels:           3  (LUT6=2 MUXF7=1)
-  Clock Path Skew:        0.008ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.049ns = ( 10.049 - 10.000 ) 
-    Source Clock Delay      (SCD):    0.041ns
-    Clock Pessimism Removal (CPR):    0.000ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=9998, unset)         0.041     0.041    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ap_clk
-    SLICE_X51Y129        FDRE                                         r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/trunc_ln212_reg_1594_reg[0]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X51Y129        FDRE (Prop_DFF2_SLICEL_C_Q)
-                                                      0.115     0.156 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/trunc_ln212_reg_1594_reg[0]/Q
-                         net (fo=161, routed)         2.477     2.633    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/trunc_ln212_reg_1594_reg_n_12_[0]
-    SLICE_X27Y19         LUT6 (Prop_D6LUT_SLICEL_I4_O)
-                                                      0.221     2.854 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ram_reg_bram_0_i_101/O
-                         net (fo=1, routed)           0.013     2.867    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/mux_2_0[15]
-    SLICE_X27Y19         MUXF7 (Prop_F7MUX_CD_SLICEL_I0_O)
-                                                      0.095     2.962 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ram_reg_bram_0_i_34/O
-                         net (fo=1, routed)           0.894     3.856    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/mux_3_0[15]
-    SLICE_X47Y38         LUT6 (Prop_H6LUT_SLICEL_I5_O)
-                                                      0.227     4.083 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ram_reg_bram_0_i_8/O
-                         net (fo=32, routed)          2.087     6.170    bd_0_i/hls_inst/inst/compute_rows_U0/yt_U/DINBDIN[15]
-    RAMB18_X2Y54         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/yt_U/ram_reg_bram_0/DINBDIN[15]
-  -------------------------------------------------------------------    -------------------
-
-                         (clock ap_clk rise edge)    10.000    10.000 r  
-                                                      0.000    10.000 r  ap_clk (IN)
-                         net (fo=9998, unset)         0.049    10.049    bd_0_i/hls_inst/inst/compute_rows_U0/yt_U/ap_clk
-    RAMB18_X2Y54         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/yt_U/ram_reg_bram_0/CLKBWRCLK
-                         clock pessimism              0.000    10.049    
-                         clock uncertainty           -0.035    10.014    
-    RAMB18_X2Y54         RAMB18E2 (Setup_RAMB18E2_L_RAMB180_CLKBWRCLK_DINBDIN[15])
-                                                     -0.489     9.525    bd_0_i/hls_inst/inst/compute_rows_U0/yt_U/ram_reg_bram_0
-  -------------------------------------------------------------------
-                         required time                          9.525    
-                         arrival time                          -6.170    
-  -------------------------------------------------------------------
-                         slack                                  3.355    
-
-Slack (MET) :             3.364ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/trunc_ln212_reg_1594_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/compute_rows_U0/yt_U/ram_reg_bram_0/DINBDIN[9]
-                            (rising edge-triggered cell RAMB18E2 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             ap_clk
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        6.231ns  (logic 0.621ns (9.967%)  route 5.610ns (90.033%))
-  Logic Levels:           3  (LUT6=2 MUXF7=1)
-  Clock Path Skew:        0.008ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.049ns = ( 10.049 - 10.000 ) 
-    Source Clock Delay      (SCD):    0.041ns
-    Clock Pessimism Removal (CPR):    0.000ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=9998, unset)         0.041     0.041    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ap_clk
-    SLICE_X51Y129        FDRE                                         r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/trunc_ln212_reg_1594_reg[0]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X51Y129        FDRE (Prop_DFF2_SLICEL_C_Q)
-                                                      0.115     0.156 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/trunc_ln212_reg_1594_reg[0]/Q
-                         net (fo=161, routed)         2.713     2.869    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/trunc_ln212_reg_1594_reg_n_12_[0]
-    SLICE_X27Y54         LUT6 (Prop_B6LUT_SLICEL_I4_O)
-                                                      0.224     3.093 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ram_reg_bram_0_i_143/O
-                         net (fo=1, routed)           0.013     3.106    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/mux_2_6[9]
-    SLICE_X27Y54         MUXF7 (Prop_F7MUX_AB_SLICEL_I0_O)
-                                                      0.096     3.202 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ram_reg_bram_0_i_55/O
-                         net (fo=1, routed)           0.455     3.657    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/mux_3_3[9]
-    SLICE_X28Y35         LUT6 (Prop_G6LUT_SLICEM_I0_O)
-                                                      0.186     3.843 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ram_reg_bram_0_i_14/O
-                         net (fo=32, routed)          2.429     6.272    bd_0_i/hls_inst/inst/compute_rows_U0/yt_U/DINBDIN[9]
-    RAMB18_X2Y54         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/yt_U/ram_reg_bram_0/DINBDIN[9]
-  -------------------------------------------------------------------    -------------------
-
-                         (clock ap_clk rise edge)    10.000    10.000 r  
-                                                      0.000    10.000 r  ap_clk (IN)
-                         net (fo=9998, unset)         0.049    10.049    bd_0_i/hls_inst/inst/compute_rows_U0/yt_U/ap_clk
-    RAMB18_X2Y54         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/yt_U/ram_reg_bram_0/CLKBWRCLK
-                         clock pessimism              0.000    10.049    
-                         clock uncertainty           -0.035    10.014    
-    RAMB18_X2Y54         RAMB18E2 (Setup_RAMB18E2_L_RAMB180_CLKBWRCLK_DINBDIN[9])
-                                                     -0.378     9.636    bd_0_i/hls_inst/inst/compute_rows_U0/yt_U/ram_reg_bram_0
-  -------------------------------------------------------------------
-                         required time                          9.636    
-                         arrival time                          -6.272    
-  -------------------------------------------------------------------
-                         slack                                  3.364    
-
-Slack (MET) :             3.368ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/inst/compute_rows_U0/tile1_V_54_U/ram_reg_bram_0/CLKARDCLK
-                            (rising edge-triggered cell RAMB18E2 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/compute_rows_U0/yt_44_U/ram_reg_bram_0/DINBDIN[11]
-                            (rising edge-triggered cell RAMB18E2 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             ap_clk
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        6.103ns  (logic 1.717ns (28.132%)  route 4.386ns (71.868%))
-  Logic Levels:           3  (LUT6=2 MUXF7=1)
-  Clock Path Skew:        -0.056ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.048ns = ( 10.048 - 10.000 ) 
-    Source Clock Delay      (SCD):    0.104ns
-    Clock Pessimism Removal (CPR):    0.000ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=9998, unset)         0.104     0.104    bd_0_i/hls_inst/inst/compute_rows_U0/tile1_V_54_U/ap_clk
-    RAMB18_X1Y15         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/tile1_V_54_U/ram_reg_bram_0/CLKARDCLK
-  -------------------------------------------------------------------    -------------------
-    RAMB18_X1Y15         RAMB18E2 (Prop_RAMB18E2_U_RAMB181_CLKARDCLK_DOUTADOUT[11])
-                                                      1.282     1.386 r  bd_0_i/hls_inst/inst/compute_rows_U0/tile1_V_54_U/ram_reg_bram_0/DOUTADOUT[11]
-                         net (fo=1, routed)           0.667     2.053    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ram_reg_bram_0_i_32_0[11]
-    SLICE_X51Y35         LUT6 (Prop_G6LUT_SLICEL_I0_O)
-                                                      0.151     2.204 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ram_reg_bram_0_i_130/O
-                         net (fo=1, routed)           0.012     2.216    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/mux_2_5[11]
-    SLICE_X51Y35         MUXF7 (Prop_F7MUX_GH_SLICEL_I1_O)
-                                                      0.095     2.311 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ram_reg_bram_0_i_48/O
-                         net (fo=1, routed)           1.242     3.553    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/mux_3_2[11]
-    SLICE_X28Y35         LUT6 (Prop_H6LUT_SLICEM_I1_O)
-                                                      0.189     3.742 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ram_reg_bram_0_i_12/O
-                         net (fo=32, routed)          2.465     6.207    bd_0_i/hls_inst/inst/compute_rows_U0/yt_44_U/DINBDIN[11]
-    RAMB18_X2Y51         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/yt_44_U/ram_reg_bram_0/DINBDIN[11]
-  -------------------------------------------------------------------    -------------------
-
-                         (clock ap_clk rise edge)    10.000    10.000 r  
-                                                      0.000    10.000 r  ap_clk (IN)
-                         net (fo=9998, unset)         0.048    10.048    bd_0_i/hls_inst/inst/compute_rows_U0/yt_44_U/ap_clk
-    RAMB18_X2Y51         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/yt_44_U/ram_reg_bram_0/CLKBWRCLK
-                         clock pessimism              0.000    10.048    
-                         clock uncertainty           -0.035    10.013    
-    RAMB18_X2Y51         RAMB18E2 (Setup_RAMB18E2_U_RAMB181_CLKBWRCLK_DINBDIN[11])
-                                                     -0.437     9.576    bd_0_i/hls_inst/inst/compute_rows_U0/yt_44_U/ram_reg_bram_0
-  -------------------------------------------------------------------
-                         required time                          9.576    
-                         arrival time                          -6.207    
-  -------------------------------------------------------------------
-                         slack                                  3.368    
-
-Slack (MET) :             3.372ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/trunc_ln212_reg_1594_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/compute_rows_U0/yt_32_U/ram_reg_bram_0/DINBDIN[9]
-                            (rising edge-triggered cell RAMB18E2 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             ap_clk
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        6.234ns  (logic 0.621ns (9.961%)  route 5.613ns (90.039%))
-  Logic Levels:           3  (LUT6=2 MUXF7=1)
-  Clock Path Skew:        0.007ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.048ns = ( 10.048 - 10.000 ) 
-    Source Clock Delay      (SCD):    0.041ns
-    Clock Pessimism Removal (CPR):    0.000ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock ap_clk rise edge)     0.000     0.000 r  
-                                                      0.000     0.000 r  ap_clk (IN)
-                         net (fo=9998, unset)         0.041     0.041    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ap_clk
-    SLICE_X51Y129        FDRE                                         r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/trunc_ln212_reg_1594_reg[0]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X51Y129        FDRE (Prop_DFF2_SLICEL_C_Q)
-                                                      0.115     0.156 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/trunc_ln212_reg_1594_reg[0]/Q
-                         net (fo=161, routed)         2.713     2.869    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/trunc_ln212_reg_1594_reg_n_12_[0]
-    SLICE_X27Y54         LUT6 (Prop_B6LUT_SLICEL_I4_O)
-                                                      0.224     3.093 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ram_reg_bram_0_i_143/O
-                         net (fo=1, routed)           0.013     3.106    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/mux_2_6[9]
-    SLICE_X27Y54         MUXF7 (Prop_F7MUX_AB_SLICEL_I0_O)
-                                                      0.096     3.202 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ram_reg_bram_0_i_55/O
-                         net (fo=1, routed)           0.455     3.657    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/mux_3_3[9]
-    SLICE_X28Y35         LUT6 (Prop_G6LUT_SLICEM_I0_O)
-                                                      0.186     3.843 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop1_fu_961/ram_reg_bram_0_i_14/O
-                         net (fo=32, routed)          2.432     6.275    bd_0_i/hls_inst/inst/compute_rows_U0/yt_32_U/DINBDIN[9]
-    RAMB18_X2Y53         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/yt_32_U/ram_reg_bram_0/DINBDIN[9]
-  -------------------------------------------------------------------    -------------------
-
-                         (clock ap_clk rise edge)    10.000    10.000 r  
-                                                      0.000    10.000 r  ap_clk (IN)
-                         net (fo=9998, unset)         0.048    10.048    bd_0_i/hls_inst/inst/compute_rows_U0/yt_32_U/ap_clk
-    RAMB18_X2Y53         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/yt_32_U/ram_reg_bram_0/CLKBWRCLK
-                         clock pessimism              0.000    10.048    
-                         clock uncertainty           -0.035    10.013    
-    RAMB18_X2Y53         RAMB18E2 (Setup_RAMB18E2_U_RAMB181_CLKBWRCLK_DINBDIN[9])
-                                                     -0.365     9.648    bd_0_i/hls_inst/inst/compute_rows_U0/yt_32_U/ram_reg_bram_0
+    RAMB18_X1Y69         RAMB18E2 (Setup_RAMB18E2_U_RAMB181_CLKBWRCLK_DINBDIN[9])
+                                                     -0.365     9.648    bd_0_i/hls_inst/inst/compute_rows_U0/xt_60_U/ram_reg_bram_0
   -------------------------------------------------------------------
                          required time                          9.648    
-                         arrival time                          -6.275    
+                         arrival time                          -6.851    
   -------------------------------------------------------------------
-                         slack                                  3.372    
+                         slack                                  2.796    
+
+Slack (MET) :             2.843ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/compute_rows_U0/xt_62_U/ram_reg_bram_0/DINBDIN[2]
+                            (rising edge-triggered cell RAMB18E2 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        6.731ns  (logic 0.531ns (7.889%)  route 6.200ns (92.111%))
+  Logic Levels:           3  (LUT6=2 MUXF7=1)
+  Clock Path Skew:        0.006ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.048ns = ( 10.048 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.042ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=12215, unset)        0.042     0.042    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ap_clk
+    SLICE_X49Y138        FDRE                                         r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X49Y138        FDRE (Prop_EFF_SLICEL_C_Q)
+                                                      0.114     0.156 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg[0]/Q
+                         net (fo=161, routed)         2.837     2.993    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg_n_12_[0]
+    SLICE_X27Y18         LUT6 (Prop_D6LUT_SLICEL_I4_O)
+                                                      0.185     3.178 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ram_reg_bram_0_i_256/O
+                         net (fo=1, routed)           0.013     3.191    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/mux_2_0[2]
+    SLICE_X27Y18         MUXF7 (Prop_F7MUX_CD_SLICEL_I0_O)
+                                                      0.095     3.286 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ram_reg_bram_0_i_106/O
+                         net (fo=1, routed)           1.181     4.467    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/mux_3_0[2]
+    SLICE_X50Y38         LUT6 (Prop_H6LUT_SLICEL_I5_O)
+                                                      0.137     4.604 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ram_reg_bram_0_i_21/O
+                         net (fo=32, routed)          2.169     6.773    bd_0_i/hls_inst/inst/compute_rows_U0/xt_62_U/DINBDIN[2]
+    RAMB18_X1Y71         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/xt_62_U/ram_reg_bram_0/DINBDIN[2]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=12215, unset)        0.048    10.048    bd_0_i/hls_inst/inst/compute_rows_U0/xt_62_U/ap_clk
+    RAMB18_X1Y71         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/xt_62_U/ram_reg_bram_0/CLKBWRCLK
+                         clock pessimism              0.000    10.048    
+                         clock uncertainty           -0.035    10.013    
+    RAMB18_X1Y71         RAMB18E2 (Setup_RAMB18E2_U_RAMB181_CLKBWRCLK_DINBDIN[2])
+                                                     -0.396     9.617    bd_0_i/hls_inst/inst/compute_rows_U0/xt_62_U/ram_reg_bram_0
+  -------------------------------------------------------------------
+                         required time                          9.617    
+                         arrival time                          -6.773    
+  -------------------------------------------------------------------
+                         slack                                  2.843    
+
+Slack (MET) :             2.900ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/compute_rows_U0/xt_44_U/ram_reg_bram_0/DINBDIN[9]
+                            (rising edge-triggered cell RAMB18E2 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        6.693ns  (logic 0.621ns (9.278%)  route 6.072ns (90.722%))
+  Logic Levels:           3  (LUT6=2 MUXF7=1)
+  Clock Path Skew:        0.007ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.049ns = ( 10.049 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.042ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=12215, unset)        0.042     0.042    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ap_clk
+    SLICE_X49Y138        FDRE                                         r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X49Y138        FDRE (Prop_EFF_SLICEL_C_Q)
+                                                      0.114     0.156 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg[0]/Q
+                         net (fo=161, routed)         2.775     2.931    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg_n_12_[0]
+    SLICE_X27Y17         LUT6 (Prop_G6LUT_SLICEL_I4_O)
+                                                      0.226     3.157 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ram_reg_bram_0_i_201/O
+                         net (fo=1, routed)           0.012     3.169    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/mux_2_1[9]
+    SLICE_X27Y17         MUXF7 (Prop_F7MUX_GH_SLICEL_I1_O)
+                                                      0.095     3.264 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ram_reg_bram_0_i_78/O
+                         net (fo=1, routed)           1.224     4.488    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/mux_3_0[9]
+    SLICE_X50Y40         LUT6 (Prop_G6LUT_SLICEL_I5_O)
+                                                      0.186     4.674 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ram_reg_bram_0_i_14/O
+                         net (fo=32, routed)          2.062     6.735    bd_0_i/hls_inst/inst/compute_rows_U0/xt_44_U/DINBDIN[9]
+    RAMB18_X1Y68         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/xt_44_U/ram_reg_bram_0/DINBDIN[9]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=12215, unset)        0.049    10.049    bd_0_i/hls_inst/inst/compute_rows_U0/xt_44_U/ap_clk
+    RAMB18_X1Y68         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/xt_44_U/ram_reg_bram_0/CLKBWRCLK
+                         clock pessimism              0.000    10.049    
+                         clock uncertainty           -0.035    10.014    
+    RAMB18_X1Y68         RAMB18E2 (Setup_RAMB18E2_L_RAMB180_CLKBWRCLK_DINBDIN[9])
+                                                     -0.378     9.636    bd_0_i/hls_inst/inst/compute_rows_U0/xt_44_U/ram_reg_bram_0
+  -------------------------------------------------------------------
+                         required time                          9.636    
+                         arrival time                          -6.735    
+  -------------------------------------------------------------------
+                         slack                                  2.900    
+
+Slack (MET) :             2.903ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/compute_rows_U0/xt_61_U/ram_reg_bram_0/DINBDIN[8]
+                            (rising edge-triggered cell RAMB18E2 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        6.623ns  (logic 0.490ns (7.398%)  route 6.133ns (92.602%))
+  Logic Levels:           3  (LUT6=2 MUXF7=1)
+  Clock Path Skew:        0.007ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.049ns = ( 10.049 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.042ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=12215, unset)        0.042     0.042    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ap_clk
+    SLICE_X49Y138        FDRE                                         r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X49Y138        FDRE (Prop_EFF_SLICEL_C_Q)
+                                                      0.114     0.156 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg[0]/Q
+                         net (fo=161, routed)         2.829     2.985    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg_n_12_[0]
+    SLICE_X27Y17         LUT6 (Prop_E6LUT_SLICEL_I4_O)
+                                                      0.223     3.208 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ram_reg_bram_0_i_209/O
+                         net (fo=1, routed)           0.011     3.219    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/mux_2_1[8]
+    SLICE_X27Y17         MUXF7 (Prop_F7MUX_EF_SLICEL_I1_O)
+                                                      0.095     3.314 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ram_reg_bram_0_i_82/O
+                         net (fo=1, routed)           0.939     4.253    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/mux_3_0[8]
+    SLICE_X47Y37         LUT6 (Prop_H6LUT_SLICEL_I5_O)
+                                                      0.058     4.311 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ram_reg_bram_0_i_15/O
+                         net (fo=32, routed)          2.354     6.665    bd_0_i/hls_inst/inst/compute_rows_U0/xt_61_U/DINBDIN[8]
+    RAMB18_X2Y68         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/xt_61_U/ram_reg_bram_0/DINBDIN[8]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=12215, unset)        0.049    10.049    bd_0_i/hls_inst/inst/compute_rows_U0/xt_61_U/ap_clk
+    RAMB18_X2Y68         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/xt_61_U/ram_reg_bram_0/CLKBWRCLK
+                         clock pessimism              0.000    10.049    
+                         clock uncertainty           -0.035    10.014    
+    RAMB18_X2Y68         RAMB18E2 (Setup_RAMB18E2_L_RAMB180_CLKBWRCLK_DINBDIN[8])
+                                                     -0.446     9.568    bd_0_i/hls_inst/inst/compute_rows_U0/xt_61_U/ram_reg_bram_0
+  -------------------------------------------------------------------
+                         required time                          9.568    
+                         arrival time                          -6.665    
+  -------------------------------------------------------------------
+                         slack                                  2.903    
+
+Slack (MET) :             2.919ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/compute_rows_U0/xt_52_U/ram_reg_bram_0/DINBDIN[2]
+                            (rising edge-triggered cell RAMB18E2 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        6.645ns  (logic 0.531ns (7.991%)  route 6.114ns (92.009%))
+  Logic Levels:           3  (LUT6=2 MUXF7=1)
+  Clock Path Skew:        0.007ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.049ns = ( 10.049 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.042ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=12215, unset)        0.042     0.042    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ap_clk
+    SLICE_X49Y138        FDRE                                         r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X49Y138        FDRE (Prop_EFF_SLICEL_C_Q)
+                                                      0.114     0.156 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg[0]/Q
+                         net (fo=161, routed)         2.837     2.993    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg_n_12_[0]
+    SLICE_X27Y18         LUT6 (Prop_D6LUT_SLICEL_I4_O)
+                                                      0.185     3.178 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ram_reg_bram_0_i_256/O
+                         net (fo=1, routed)           0.013     3.191    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/mux_2_0[2]
+    SLICE_X27Y18         MUXF7 (Prop_F7MUX_CD_SLICEL_I0_O)
+                                                      0.095     3.286 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ram_reg_bram_0_i_106/O
+                         net (fo=1, routed)           1.181     4.467    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/mux_3_0[2]
+    SLICE_X50Y38         LUT6 (Prop_H6LUT_SLICEL_I5_O)
+                                                      0.137     4.604 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ram_reg_bram_0_i_21/O
+                         net (fo=32, routed)          2.083     6.687    bd_0_i/hls_inst/inst/compute_rows_U0/xt_52_U/DINBDIN[2]
+    RAMB18_X1Y66         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/xt_52_U/ram_reg_bram_0/DINBDIN[2]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=12215, unset)        0.049    10.049    bd_0_i/hls_inst/inst/compute_rows_U0/xt_52_U/ap_clk
+    RAMB18_X1Y66         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/xt_52_U/ram_reg_bram_0/CLKBWRCLK
+                         clock pessimism              0.000    10.049    
+                         clock uncertainty           -0.035    10.014    
+    RAMB18_X1Y66         RAMB18E2 (Setup_RAMB18E2_L_RAMB180_CLKBWRCLK_DINBDIN[2])
+                                                     -0.408     9.606    bd_0_i/hls_inst/inst/compute_rows_U0/xt_52_U/ram_reg_bram_0
+  -------------------------------------------------------------------
+                         required time                          9.606    
+                         arrival time                          -6.687    
+  -------------------------------------------------------------------
+                         slack                                  2.919    
+
+Slack (MET) :             2.933ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/compute_rows_U0/xt_58_U/ram_reg_bram_0/DINBDIN[2]
+                            (rising edge-triggered cell RAMB18E2 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        6.630ns  (logic 0.531ns (8.009%)  route 6.099ns (91.991%))
+  Logic Levels:           3  (LUT6=2 MUXF7=1)
+  Clock Path Skew:        0.007ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.049ns = ( 10.049 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.042ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=12215, unset)        0.042     0.042    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ap_clk
+    SLICE_X49Y138        FDRE                                         r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X49Y138        FDRE (Prop_EFF_SLICEL_C_Q)
+                                                      0.114     0.156 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg[0]/Q
+                         net (fo=161, routed)         2.837     2.993    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg_n_12_[0]
+    SLICE_X27Y18         LUT6 (Prop_D6LUT_SLICEL_I4_O)
+                                                      0.185     3.178 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ram_reg_bram_0_i_256/O
+                         net (fo=1, routed)           0.013     3.191    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/mux_2_0[2]
+    SLICE_X27Y18         MUXF7 (Prop_F7MUX_CD_SLICEL_I0_O)
+                                                      0.095     3.286 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ram_reg_bram_0_i_106/O
+                         net (fo=1, routed)           1.181     4.467    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/mux_3_0[2]
+    SLICE_X50Y38         LUT6 (Prop_H6LUT_SLICEL_I5_O)
+                                                      0.137     4.604 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ram_reg_bram_0_i_21/O
+                         net (fo=32, routed)          2.068     6.672    bd_0_i/hls_inst/inst/compute_rows_U0/xt_58_U/DINBDIN[2]
+    RAMB18_X1Y70         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/xt_58_U/ram_reg_bram_0/DINBDIN[2]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=12215, unset)        0.049    10.049    bd_0_i/hls_inst/inst/compute_rows_U0/xt_58_U/ap_clk
+    RAMB18_X1Y70         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/xt_58_U/ram_reg_bram_0/CLKBWRCLK
+                         clock pessimism              0.000    10.049    
+                         clock uncertainty           -0.035    10.014    
+    RAMB18_X1Y70         RAMB18E2 (Setup_RAMB18E2_L_RAMB180_CLKBWRCLK_DINBDIN[2])
+                                                     -0.408     9.606    bd_0_i/hls_inst/inst/compute_rows_U0/xt_58_U/ram_reg_bram_0
+  -------------------------------------------------------------------
+                         required time                          9.606    
+                         arrival time                          -6.672    
+  -------------------------------------------------------------------
+                         slack                                  2.933    
+
+Slack (MET) :             2.939ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/compute_rows_U0/xt_60_U/ram_reg_bram_0/DINBDIN[2]
+                            (rising edge-triggered cell RAMB18E2 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        6.636ns  (logic 0.531ns (8.002%)  route 6.105ns (91.998%))
+  Logic Levels:           3  (LUT6=2 MUXF7=1)
+  Clock Path Skew:        0.006ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.048ns = ( 10.048 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.042ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=12215, unset)        0.042     0.042    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ap_clk
+    SLICE_X49Y138        FDRE                                         r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X49Y138        FDRE (Prop_EFF_SLICEL_C_Q)
+                                                      0.114     0.156 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg[0]/Q
+                         net (fo=161, routed)         2.837     2.993    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg_n_12_[0]
+    SLICE_X27Y18         LUT6 (Prop_D6LUT_SLICEL_I4_O)
+                                                      0.185     3.178 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ram_reg_bram_0_i_256/O
+                         net (fo=1, routed)           0.013     3.191    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/mux_2_0[2]
+    SLICE_X27Y18         MUXF7 (Prop_F7MUX_CD_SLICEL_I0_O)
+                                                      0.095     3.286 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ram_reg_bram_0_i_106/O
+                         net (fo=1, routed)           1.181     4.467    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/mux_3_0[2]
+    SLICE_X50Y38         LUT6 (Prop_H6LUT_SLICEL_I5_O)
+                                                      0.137     4.604 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ram_reg_bram_0_i_21/O
+                         net (fo=32, routed)          2.074     6.678    bd_0_i/hls_inst/inst/compute_rows_U0/xt_60_U/DINBDIN[2]
+    RAMB18_X1Y69         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/xt_60_U/ram_reg_bram_0/DINBDIN[2]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=12215, unset)        0.048    10.048    bd_0_i/hls_inst/inst/compute_rows_U0/xt_60_U/ap_clk
+    RAMB18_X1Y69         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/xt_60_U/ram_reg_bram_0/CLKBWRCLK
+                         clock pessimism              0.000    10.048    
+                         clock uncertainty           -0.035    10.013    
+    RAMB18_X1Y69         RAMB18E2 (Setup_RAMB18E2_U_RAMB181_CLKBWRCLK_DINBDIN[2])
+                                                     -0.396     9.617    bd_0_i/hls_inst/inst/compute_rows_U0/xt_60_U/ram_reg_bram_0
+  -------------------------------------------------------------------
+                         required time                          9.617    
+                         arrival time                          -6.678    
+  -------------------------------------------------------------------
+                         slack                                  2.939    
+
+Slack (MET) :             2.958ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/compute_rows_U0/xt_57_U/ram_reg_bram_0/DINBDIN[0]
+                            (rising edge-triggered cell RAMB18E2 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        6.598ns  (logic 0.487ns (7.381%)  route 6.111ns (92.619%))
+  Logic Levels:           3  (LUT6=2 MUXF7=1)
+  Clock Path Skew:        0.006ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.048ns = ( 10.048 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.042ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=12215, unset)        0.042     0.042    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ap_clk
+    SLICE_X49Y138        FDRE                                         r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X49Y138        FDRE (Prop_EFF_SLICEL_C_Q)
+                                                      0.114     0.156 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg[0]/Q
+                         net (fo=161, routed)         2.838     2.994    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg_n_12_[0]
+    SLICE_X27Y17         LUT6 (Prop_C6LUT_SLICEL_I4_O)
+                                                      0.221     3.215 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ram_reg_bram_0_i_273/O
+                         net (fo=1, routed)           0.015     3.230    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/mux_2_1[0]
+    SLICE_X27Y17         MUXF7 (Prop_F7MUX_CD_SLICEL_I1_O)
+                                                      0.096     3.326 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ram_reg_bram_0_i_114/O
+                         net (fo=1, routed)           0.873     4.199    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/mux_3_0[0]
+    SLICE_X47Y37         LUT6 (Prop_F6LUT_SLICEL_I5_O)
+                                                      0.056     4.255 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ram_reg_bram_0_i_23/O
+                         net (fo=32, routed)          2.386     6.640    bd_0_i/hls_inst/inst/compute_rows_U0/xt_57_U/DINBDIN[0]
+    RAMB18_X2Y69         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/xt_57_U/ram_reg_bram_0/DINBDIN[0]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=12215, unset)        0.048    10.048    bd_0_i/hls_inst/inst/compute_rows_U0/xt_57_U/ap_clk
+    RAMB18_X2Y69         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/xt_57_U/ram_reg_bram_0/CLKBWRCLK
+                         clock pessimism              0.000    10.048    
+                         clock uncertainty           -0.035    10.013    
+    RAMB18_X2Y69         RAMB18E2 (Setup_RAMB18E2_U_RAMB181_CLKBWRCLK_DINBDIN[0])
+                                                     -0.414     9.599    bd_0_i/hls_inst/inst/compute_rows_U0/xt_57_U/ram_reg_bram_0
+  -------------------------------------------------------------------
+                         required time                          9.599    
+                         arrival time                          -6.640    
+  -------------------------------------------------------------------
+                         slack                                  2.958    
+
+Slack (MET) :             2.960ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/compute_rows_U0/xt_40_U/ram_reg_bram_0/DINBDIN[9]
+                            (rising edge-triggered cell RAMB18E2 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        6.645ns  (logic 0.621ns (9.345%)  route 6.024ns (90.655%))
+  Logic Levels:           3  (LUT6=2 MUXF7=1)
+  Clock Path Skew:        0.006ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.048ns = ( 10.048 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.042ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=12215, unset)        0.042     0.042    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ap_clk
+    SLICE_X49Y138        FDRE                                         r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X49Y138        FDRE (Prop_EFF_SLICEL_C_Q)
+                                                      0.114     0.156 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg[0]/Q
+                         net (fo=161, routed)         2.775     2.931    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg_n_12_[0]
+    SLICE_X27Y17         LUT6 (Prop_G6LUT_SLICEL_I4_O)
+                                                      0.226     3.157 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ram_reg_bram_0_i_201/O
+                         net (fo=1, routed)           0.012     3.169    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/mux_2_1[9]
+    SLICE_X27Y17         MUXF7 (Prop_F7MUX_GH_SLICEL_I1_O)
+                                                      0.095     3.264 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ram_reg_bram_0_i_78/O
+                         net (fo=1, routed)           1.224     4.488    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/mux_3_0[9]
+    SLICE_X50Y40         LUT6 (Prop_G6LUT_SLICEL_I5_O)
+                                                      0.186     4.674 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ram_reg_bram_0_i_14/O
+                         net (fo=32, routed)          2.013     6.687    bd_0_i/hls_inst/inst/compute_rows_U0/xt_40_U/DINBDIN[9]
+    RAMB18_X1Y67         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/xt_40_U/ram_reg_bram_0/DINBDIN[9]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=12215, unset)        0.048    10.048    bd_0_i/hls_inst/inst/compute_rows_U0/xt_40_U/ap_clk
+    RAMB18_X1Y67         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/xt_40_U/ram_reg_bram_0/CLKBWRCLK
+                         clock pessimism              0.000    10.048    
+                         clock uncertainty           -0.035    10.013    
+    RAMB18_X1Y67         RAMB18E2 (Setup_RAMB18E2_U_RAMB181_CLKBWRCLK_DINBDIN[9])
+                                                     -0.365     9.648    bd_0_i/hls_inst/inst/compute_rows_U0/xt_40_U/ram_reg_bram_0
+  -------------------------------------------------------------------
+                         required time                          9.648    
+                         arrival time                          -6.687    
+  -------------------------------------------------------------------
+                         slack                                  2.960    
+
+Slack (MET) :             2.962ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/compute_rows_U0/xt_U/ram_reg_bram_0/DINBDIN[4]
+                            (rising edge-triggered cell RAMB18E2 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        6.621ns  (logic 0.549ns (8.292%)  route 6.072ns (91.708%))
+  Logic Levels:           3  (LUT6=2 MUXF7=1)
+  Clock Path Skew:        0.006ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.048ns = ( 10.048 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.042ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=12215, unset)        0.042     0.042    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ap_clk
+    SLICE_X49Y138        FDRE                                         r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X49Y138        FDRE (Prop_EFF_SLICEL_C_Q)
+                                                      0.114     0.156 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg[0]/Q
+                         net (fo=161, routed)         2.735     2.891    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/trunc_ln212_reg_1594_reg_n_12_[0]
+    SLICE_X27Y19         LUT6 (Prop_C6LUT_SLICEL_I4_O)
+                                                      0.187     3.078 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ram_reg_bram_0_i_241/O
+                         net (fo=1, routed)           0.015     3.093    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/mux_2_1[4]
+    SLICE_X27Y19         MUXF7 (Prop_F7MUX_CD_SLICEL_I1_O)
+                                                      0.096     3.189 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ram_reg_bram_0_i_98/O
+                         net (fo=1, routed)           0.870     4.059    bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/mux_3_0[4]
+    SLICE_X47Y38         LUT6 (Prop_B6LUT_SLICEL_I5_O)
+                                                      0.152     4.211 r  bd_0_i/hls_inst/inst/compute_rows_U0/grp_compute_rows_Pipeline_convert_loop_fu_893/ram_reg_bram_0_i_19/O
+                         net (fo=32, routed)          2.452     6.663    bd_0_i/hls_inst/inst/compute_rows_U0/xt_U/DINBDIN[4]
+    RAMB18_X2Y71         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/xt_U/ram_reg_bram_0/DINBDIN[4]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=12215, unset)        0.048    10.048    bd_0_i/hls_inst/inst/compute_rows_U0/xt_U/ap_clk
+    RAMB18_X2Y71         RAMB18E2                                     r  bd_0_i/hls_inst/inst/compute_rows_U0/xt_U/ram_reg_bram_0/CLKBWRCLK
+                         clock pessimism              0.000    10.048    
+                         clock uncertainty           -0.035    10.013    
+    RAMB18_X2Y71         RAMB18E2 (Setup_RAMB18E2_U_RAMB181_CLKBWRCLK_DINBDIN[4])
+                                                     -0.388     9.625    bd_0_i/hls_inst/inst/compute_rows_U0/xt_U/ram_reg_bram_0
+  -------------------------------------------------------------------
+                         required time                          9.625    
+                         arrival time                          -6.663    
+  -------------------------------------------------------------------
+                         slack                                  2.962    
 
 
 
