@@ -1030,10 +1030,10 @@ newFuncRoot:66 %br_ln0 = br void %for.body.i106
 
 <Node id="133" bw="10" op_0_bw="10" op_1_bw="0">
 <![CDATA[
-for.body.i106:0 %i_9 = load i10 %i
+for.body.i106:0 %i_8 = load i10 %i
 
 ]]></Node>
-<StgValue><ssdm name="i_9"/></StgValue>
+<StgValue><ssdm name="i_8"/></StgValue>
 </operation>
 
 <operation id="73" st_id="1" stage="1" lat="1">
@@ -1045,7 +1045,7 @@ for.body.i106:0 %i_9 = load i10 %i
 
 <Node id="134" bw="1" op_0_bw="10" op_1_bw="10">
 <![CDATA[
-for.body.i106:1 %icmp_ln210 = icmp_eq  i10 %i_9, i10 768
+for.body.i106:1 %icmp_ln210 = icmp_eq  i10 %i_8, i10 768
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln210"/></StgValue>
@@ -1075,7 +1075,7 @@ for.body.i106:2 %speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLo
 
 <Node id="136" bw="10" op_0_bw="10" op_1_bw="10">
 <![CDATA[
-for.body.i106:3 %add_ln210 = add i10 %i_9, i10 1
+for.body.i106:3 %add_ln210 = add i10 %i_8, i10 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln210"/></StgValue>
@@ -1106,7 +1106,7 @@ for.body.i106:4 %br_ln210 = br i1 %icmp_ln210, void %for.body.i106.split, void %
 
 <Node id="141" bw="5" op_0_bw="5" op_1_bw="10" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-for.body.i106.split:2 %lshr_ln = partselect i5 @_ssdm_op_PartSelect.i5.i10.i32.i32, i10 %i_9, i32 5, i32 9
+for.body.i106.split:2 %lshr_ln = partselect i5 @_ssdm_op_PartSelect.i5.i10.i32.i32, i10 %i_8, i32 5, i32 9
 
 ]]></Node>
 <StgValue><ssdm name="lshr_ln"/></StgValue>
@@ -1650,7 +1650,7 @@ for.body.i106.split:35 %tile0_V_62_addr = getelementptr i16 %tile0_V_62, i64 0, 
 
 <Node id="175" bw="5" op_0_bw="10">
 <![CDATA[
-for.body.i106.split:36 %trunc_ln212 = trunc i10 %i_9
+for.body.i106.split:36 %trunc_ln212 = trunc i10 %i_8
 
 ]]></Node>
 <StgValue><ssdm name="trunc_ln212"/></StgValue>
@@ -2259,7 +2259,7 @@ for.body.i106.split:0 %specpipeline_ln211 = specpipeline void @_ssdm_op_SpecPipe
 
 <Node id="140" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.body.i106.split:1 %specloopname_ln210 = specloopname void @_ssdm_op_SpecLoopName, void @empty_16
+for.body.i106.split:1 %specloopname_ln210 = specloopname void @_ssdm_op_SpecLoopName, void @empty_0
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln210"/></StgValue>
@@ -5204,9 +5204,9 @@ arrayidx2.i105197.case.31:1 %br_ln213 = br void %arrayidx2.i105197.exit
 </dataflow>
 <dataflow id="683" from="i" to="store_ln0" fromId="5" toId="70">
 </dataflow>
-<dataflow id="684" from="i" to="i_9" fromId="5" toId="72">
+<dataflow id="684" from="i" to="i_8" fromId="5" toId="72">
 </dataflow>
-<dataflow id="685" from="i_9" to="icmp_ln210" fromId="72" toId="73">
+<dataflow id="685" from="i_8" to="icmp_ln210" fromId="72" toId="73">
 </dataflow>
 <dataflow id="687" from="StgValue_686" to="icmp_ln210" fromId="686" toId="73">
 </dataflow>
@@ -5218,7 +5218,7 @@ arrayidx2.i105197.case.31:1 %br_ln213 = br void %arrayidx2.i105197.exit
 </dataflow>
 <dataflow id="693" from="StgValue_690" to="speclooptripcount_ln0" fromId="690" toId="74">
 </dataflow>
-<dataflow id="694" from="i_9" to="add_ln210" fromId="72" toId="75">
+<dataflow id="694" from="i_8" to="add_ln210" fromId="72" toId="75">
 </dataflow>
 <dataflow id="696" from="StgValue_695" to="add_ln210" fromId="695" toId="75">
 </dataflow>
@@ -5226,7 +5226,7 @@ arrayidx2.i105197.case.31:1 %br_ln213 = br void %arrayidx2.i105197.exit
 </dataflow>
 <dataflow id="699" from="_ssdm_op_PartSelect.i5.i10.i32.i32" to="lshr_ln" fromId="698" toId="77">
 </dataflow>
-<dataflow id="700" from="i_9" to="lshr_ln" fromId="72" toId="77">
+<dataflow id="700" from="i_8" to="lshr_ln" fromId="72" toId="77">
 </dataflow>
 <dataflow id="702" from="StgValue_701" to="lshr_ln" fromId="701" toId="77">
 </dataflow>
@@ -5426,7 +5426,7 @@ arrayidx2.i105197.case.31:1 %br_ln213 = br void %arrayidx2.i105197.exit
 </dataflow>
 <dataflow id="802" from="zext_ln212" to="tile0_V_62_addr" fromId="78" toId="110">
 </dataflow>
-<dataflow id="803" from="i_9" to="trunc_ln212" fromId="72" toId="111">
+<dataflow id="803" from="i_8" to="trunc_ln212" fromId="72" toId="111">
 </dataflow>
 <dataflow id="804" from="tile0_V_addr" to="tile0_V_load" fromId="79" toId="112">
 </dataflow>
@@ -5574,7 +5574,7 @@ arrayidx2.i105197.case.31:1 %br_ln213 = br void %arrayidx2.i105197.exit
 </dataflow>
 <dataflow id="911" from="_ssdm_op_SpecLoopName" to="specloopname_ln210" fromId="910" toId="148">
 </dataflow>
-<dataflow id="913" from="empty_16" to="specloopname_ln210" fromId="912" toId="148">
+<dataflow id="913" from="empty_0" to="specloopname_ln210" fromId="912" toId="148">
 </dataflow>
 <dataflow id="914" from="tile0_V_addr" to="tile0_V_load" fromId="79" toId="149">
 </dataflow>

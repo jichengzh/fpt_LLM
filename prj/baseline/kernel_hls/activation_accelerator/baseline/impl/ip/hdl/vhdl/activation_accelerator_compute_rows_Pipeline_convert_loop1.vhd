@@ -314,7 +314,7 @@ attribute shreg_extract : string;
     signal trunc_ln212_fu_1266_p1 : STD_LOGIC_VECTOR (4 downto 0);
     signal trunc_ln212_reg_1594 : STD_LOGIC_VECTOR (4 downto 0);
     signal ap_block_pp0_stage0 : BOOLEAN;
-    signal i_1_fu_236 : STD_LOGIC_VECTOR (9 downto 0);
+    signal i_5_fu_236 : STD_LOGIC_VECTOR (9 downto 0);
     signal add_ln210_fu_1214_p2 : STD_LOGIC_VECTOR (9 downto 0);
     signal ap_loop_init : STD_LOGIC;
     signal ap_sig_allocacmp_i : STD_LOGIC_VECTOR (9 downto 0);
@@ -425,7 +425,7 @@ attribute shreg_extract : string;
 
 
 begin
-    mux_325_16_1_1_U696 : component activation_accelerator_mux_325_16_1_1
+    mux_325_16_1_1_U873 : component activation_accelerator_mux_325_16_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -562,14 +562,14 @@ begin
     end process;
 
 
-    i_1_fu_236_assign_proc : process (ap_clk)
+    i_5_fu_236_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then
                 if (((icmp_ln210_fu_1208_p2 = ap_const_lv1_0) and (ap_enable_reg_pp0_iter0 = ap_const_logic_1))) then 
-                    i_1_fu_236 <= add_ln210_fu_1214_p2;
+                    i_5_fu_236 <= add_ln210_fu_1214_p2;
                 elsif ((ap_loop_init = ap_const_logic_1)) then 
-                    i_1_fu_236 <= ap_const_lv10_0;
+                    i_5_fu_236 <= ap_const_lv10_0;
                 end if;
             end if; 
         end if;
@@ -655,12 +655,12 @@ begin
     end process;
 
 
-    ap_sig_allocacmp_i_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_block_pp0_stage0, i_1_fu_236, ap_loop_init)
+    ap_sig_allocacmp_i_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_block_pp0_stage0, i_5_fu_236, ap_loop_init)
     begin
         if (((ap_loop_init = ap_const_logic_1) and (ap_const_boolean_0 = ap_block_pp0_stage0) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
             ap_sig_allocacmp_i <= ap_const_lv10_0;
         else 
-            ap_sig_allocacmp_i <= i_1_fu_236;
+            ap_sig_allocacmp_i <= i_5_fu_236;
         end if; 
     end process;
 

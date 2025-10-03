@@ -25,10 +25,10 @@
 
 <Node id="65" bw="10" op_0_bw="32">
 <![CDATA[
-newFuncRoot:0 %i_1 = alloca i32 1
+newFuncRoot:0 %i_5 = alloca i32 1
 
 ]]></Node>
-<StgValue><ssdm name="i_1"/></StgValue>
+<StgValue><ssdm name="i_5"/></StgValue>
 </operation>
 
 <operation id="6" st_id="1" stage="1" lat="1">
@@ -1000,7 +1000,7 @@ newFuncRoot:64 %specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %t
 
 <Node id="130" bw="0" op_0_bw="10" op_1_bw="10">
 <![CDATA[
-newFuncRoot:65 %store_ln0 = store i10 0, i10 %i_1
+newFuncRoot:65 %store_ln0 = store i10 0, i10 %i_5
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
@@ -1030,7 +1030,7 @@ newFuncRoot:66 %br_ln0 = br void %for.body.i131
 
 <Node id="133" bw="10" op_0_bw="10" op_1_bw="0">
 <![CDATA[
-for.body.i131:0 %i = load i10 %i_1
+for.body.i131:0 %i = load i10 %i_5
 
 ]]></Node>
 <StgValue><ssdm name="i"/></StgValue>
@@ -2194,7 +2194,7 @@ for.body.i131.split:104 %switch_ln213 = switch i5 %trunc_ln212, void %arrayidx2.
 
 <Node id="341" bw="0" op_0_bw="10" op_1_bw="10" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-arrayidx2.i130194.exit:0 %store_ln210 = store i10 %add_ln210, i10 %i_1
+arrayidx2.i130194.exit:0 %store_ln210 = store i10 %add_ln210, i10 %i_5
 
 ]]></Node>
 <StgValue><ssdm name="store_ln210"/></StgValue>
@@ -2259,7 +2259,7 @@ for.body.i131.split:0 %specpipeline_ln211 = specpipeline void @_ssdm_op_SpecPipe
 
 <Node id="140" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.body.i131.split:1 %specloopname_ln210 = specloopname void @_ssdm_op_SpecLoopName, void @empty_16
+for.body.i131.split:1 %specloopname_ln210 = specloopname void @_ssdm_op_SpecLoopName, void @empty_0
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln210"/></StgValue>

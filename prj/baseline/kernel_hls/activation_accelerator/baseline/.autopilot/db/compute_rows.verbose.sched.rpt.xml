@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'compute_rows'" level="0">
-<item name = "Date">Wed Oct  1 10:14:45 2025
+<item name = "Date">Fri Oct  3 15:43:22 2025
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">activation_accelerator</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">102785, 400897, 1.028 ms, 4.009 ms, 102785, 400897, no</column>
+<column name="">102785, 174017, 1.028 ms, 1.740 ms, 102785, 174017, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- COMPUTE_ROW">102784, 400896, 1606 ~ 6264, -, -, 64, no</column>
+<column name="- COMPUTE_ROW">102784, 174016, 1606 ~ 2719, -, -, 64, no</column>
 </table>
 </item>
 </section>

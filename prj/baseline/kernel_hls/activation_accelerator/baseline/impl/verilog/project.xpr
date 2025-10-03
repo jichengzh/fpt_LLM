@@ -6,7 +6,7 @@
 <Project Version="7" Minor="61" Path="/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/impl/verilog/project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="ef7872e67d954c0f84ff5766d0c6962b"/>
+    <Option Name="Id" Val="27adc92c05444fd7851cd6c5db4d19ce"/>
     <Option Name="Part" Val="xck26-sfvc784-2LV-c"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>

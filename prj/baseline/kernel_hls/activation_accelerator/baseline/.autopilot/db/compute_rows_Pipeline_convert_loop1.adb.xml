@@ -25,10 +25,10 @@
 
 <Node id="65" bw="10" op_0_bw="32">
 <![CDATA[
-newFuncRoot:0 %i_1 = alloca i32 1
+newFuncRoot:0 %i_5 = alloca i32 1
 
 ]]></Node>
-<StgValue><ssdm name="i_1"/></StgValue>
+<StgValue><ssdm name="i_5"/></StgValue>
 </operation>
 
 <operation id="6" st_id="1" stage="1" lat="1">
@@ -1000,7 +1000,7 @@ newFuncRoot:64 %specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %t
 
 <Node id="130" bw="0" op_0_bw="10" op_1_bw="10">
 <![CDATA[
-newFuncRoot:65 %store_ln0 = store i10 0, i10 %i_1
+newFuncRoot:65 %store_ln0 = store i10 0, i10 %i_5
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
@@ -1030,7 +1030,7 @@ newFuncRoot:66 %br_ln0 = br void %for.body.i131
 
 <Node id="133" bw="10" op_0_bw="10" op_1_bw="0">
 <![CDATA[
-for.body.i131:0 %i = load i10 %i_1
+for.body.i131:0 %i = load i10 %i_5
 
 ]]></Node>
 <StgValue><ssdm name="i"/></StgValue>
@@ -2194,7 +2194,7 @@ for.body.i131.split:104 %switch_ln213 = switch i5 %trunc_ln212, void %arrayidx2.
 
 <Node id="341" bw="0" op_0_bw="10" op_1_bw="10" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-arrayidx2.i130194.exit:0 %store_ln210 = store i10 %add_ln210, i10 %i_1
+arrayidx2.i130194.exit:0 %store_ln210 = store i10 %add_ln210, i10 %i_5
 
 ]]></Node>
 <StgValue><ssdm name="store_ln210"/></StgValue>
@@ -2259,7 +2259,7 @@ for.body.i131.split:0 %specpipeline_ln211 = specpipeline void @_ssdm_op_SpecPipe
 
 <Node id="140" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.body.i131.split:1 %specloopname_ln210 = specloopname void @_ssdm_op_SpecLoopName, void @empty_16
+for.body.i131.split:1 %specloopname_ln210 = specloopname void @_ssdm_op_SpecLoopName, void @empty_0
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln210"/></StgValue>
@@ -4558,7 +4558,7 @@ arrayidx2.i130194.case.31:1 %br_ln213 = br void %arrayidx2.i130194.exit
 
 
 <dataflows>
-<dataflow id="355" from="StgValue_354" to="i_1" fromId="354" toId="5">
+<dataflow id="355" from="StgValue_354" to="i_5" fromId="354" toId="5">
 </dataflow>
 <dataflow id="357" from="_ssdm_op_SpecMemCore" to="specmemcore_ln0" fromId="356" toId="6">
 </dataflow>
@@ -5202,9 +5202,9 @@ arrayidx2.i130194.case.31:1 %br_ln213 = br void %arrayidx2.i130194.exit
 </dataflow>
 <dataflow id="682" from="StgValue_681" to="store_ln0" fromId="681" toId="70">
 </dataflow>
-<dataflow id="683" from="i_1" to="store_ln0" fromId="5" toId="70">
+<dataflow id="683" from="i_5" to="store_ln0" fromId="5" toId="70">
 </dataflow>
-<dataflow id="684" from="i_1" to="i" fromId="5" toId="72">
+<dataflow id="684" from="i_5" to="i" fromId="5" toId="72">
 </dataflow>
 <dataflow id="685" from="i" to="icmp_ln210" fromId="72" toId="73">
 </dataflow>
@@ -5558,7 +5558,7 @@ arrayidx2.i130194.case.31:1 %br_ln213 = br void %arrayidx2.i130194.exit
 </dataflow>
 <dataflow id="899" from="add_ln210" to="store_ln210" fromId="75" toId="145">
 </dataflow>
-<dataflow id="900" from="i_1" to="store_ln210" fromId="5" toId="145">
+<dataflow id="900" from="i_5" to="store_ln210" fromId="5" toId="145">
 </dataflow>
 <dataflow id="902" from="_ssdm_op_SpecPipeline" to="specpipeline_ln211" fromId="901" toId="147">
 </dataflow>
@@ -5574,7 +5574,7 @@ arrayidx2.i130194.case.31:1 %br_ln213 = br void %arrayidx2.i130194.exit
 </dataflow>
 <dataflow id="911" from="_ssdm_op_SpecLoopName" to="specloopname_ln210" fromId="910" toId="148">
 </dataflow>
-<dataflow id="913" from="empty_16" to="specloopname_ln210" fromId="912" toId="148">
+<dataflow id="913" from="empty_0" to="specloopname_ln210" fromId="912" toId="148">
 </dataflow>
 <dataflow id="914" from="tile1_V_addr" to="tile1_V_load" fromId="79" toId="149">
 </dataflow>

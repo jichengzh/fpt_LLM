@@ -1,0 +1,462 @@
+
+
+================================================================
+== Vitis HLS Report for 'float_rmsnorm'
+================================================================
+* Date:           Fri Oct  3 15:43:17 2025
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        activation_accelerator
+* Solution:       baseline (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.057 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     1115|     1115|  11.150 us|  11.150 us|  1115|  1115|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 33
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%sum_sq_loc = alloca i64 1"   --->   Operation 34 'alloca' 'sum_sq_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [2/2] (0.00ns)   --->   "%call_ln0 = call void @float_rmsnorm_Pipeline_rms_loop_0, i32 %x_0, i32 %x_8, i32 %x_16, i32 %x_24, i32 %x_1, i32 %x_9, i32 %x_17, i32 %x_25, i32 %x_2, i32 %x_10, i32 %x_18, i32 %x_26, i32 %x_3, i32 %x_11, i32 %x_19, i32 %x_27, i32 %x_4, i32 %x_12, i32 %x_20, i32 %x_28, i32 %x_5, i32 %x_13, i32 %x_21, i32 %x_29, i32 %x_6, i32 %x_14, i32 %x_22, i32 %x_30, i32 %x_7, i32 %x_15, i32 %x_23, i32 %x_31, i32 %sum_sq_loc"   --->   Operation 35 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 36 [1/2] (0.00ns)   --->   "%call_ln0 = call void @float_rmsnorm_Pipeline_rms_loop_0, i32 %x_0, i32 %x_8, i32 %x_16, i32 %x_24, i32 %x_1, i32 %x_9, i32 %x_17, i32 %x_25, i32 %x_2, i32 %x_10, i32 %x_18, i32 %x_26, i32 %x_3, i32 %x_11, i32 %x_19, i32 %x_27, i32 %x_4, i32 %x_12, i32 %x_20, i32 %x_28, i32 %x_5, i32 %x_13, i32 %x_21, i32 %x_29, i32 %x_6, i32 %x_14, i32 %x_22, i32 %x_30, i32 %x_7, i32 %x_15, i32 %x_23, i32 %x_31, i32 %sum_sq_loc"   --->   Operation 36 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 7.05>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%sum_sq_loc_load = load i32 %sum_sq_loc"   --->   Operation 37 'load' 'sum_sq_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 38 [9/9] (7.05ns)   --->   "%mean_sq = fdiv i32 %sum_sq_loc_load, i32 768" [activation_accelerator.cpp:314]   --->   Operation 38 'fdiv' 'mean_sq' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 7.05>
+ST_4 : Operation 39 [8/9] (7.05ns)   --->   "%mean_sq = fdiv i32 %sum_sq_loc_load, i32 768" [activation_accelerator.cpp:314]   --->   Operation 39 'fdiv' 'mean_sq' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 7.05>
+ST_5 : Operation 40 [7/9] (7.05ns)   --->   "%mean_sq = fdiv i32 %sum_sq_loc_load, i32 768" [activation_accelerator.cpp:314]   --->   Operation 40 'fdiv' 'mean_sq' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 7.05>
+ST_6 : Operation 41 [6/9] (7.05ns)   --->   "%mean_sq = fdiv i32 %sum_sq_loc_load, i32 768" [activation_accelerator.cpp:314]   --->   Operation 41 'fdiv' 'mean_sq' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 7.05>
+ST_7 : Operation 42 [5/9] (7.05ns)   --->   "%mean_sq = fdiv i32 %sum_sq_loc_load, i32 768" [activation_accelerator.cpp:314]   --->   Operation 42 'fdiv' 'mean_sq' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 7.05>
+ST_8 : Operation 43 [4/9] (7.05ns)   --->   "%mean_sq = fdiv i32 %sum_sq_loc_load, i32 768" [activation_accelerator.cpp:314]   --->   Operation 43 'fdiv' 'mean_sq' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 7.05>
+ST_9 : Operation 44 [3/9] (7.05ns)   --->   "%mean_sq = fdiv i32 %sum_sq_loc_load, i32 768" [activation_accelerator.cpp:314]   --->   Operation 44 'fdiv' 'mean_sq' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 7.05>
+ST_10 : Operation 45 [2/9] (7.05ns)   --->   "%mean_sq = fdiv i32 %sum_sq_loc_load, i32 768" [activation_accelerator.cpp:314]   --->   Operation 45 'fdiv' 'mean_sq' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 7.05>
+ST_11 : Operation 46 [1/9] (7.05ns)   --->   "%mean_sq = fdiv i32 %sum_sq_loc_load, i32 768" [activation_accelerator.cpp:314]   --->   Operation 46 'fdiv' 'mean_sq' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 6.43>
+ST_12 : Operation 47 [4/4] (6.43ns)   --->   "%rms = fadd i32 %mean_sq, i32 1e-06" [activation_accelerator.cpp:315]   --->   Operation 47 'fadd' 'rms' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 6.43>
+ST_13 : Operation 48 [3/4] (6.43ns)   --->   "%rms = fadd i32 %mean_sq, i32 1e-06" [activation_accelerator.cpp:315]   --->   Operation 48 'fadd' 'rms' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 6.43>
+ST_14 : Operation 49 [2/4] (6.43ns)   --->   "%rms = fadd i32 %mean_sq, i32 1e-06" [activation_accelerator.cpp:315]   --->   Operation 49 'fadd' 'rms' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 6.43>
+ST_15 : Operation 50 [1/4] (6.43ns)   --->   "%rms = fadd i32 %mean_sq, i32 1e-06" [activation_accelerator.cpp:315]   --->   Operation 50 'fadd' 'rms' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 7.01>
+ST_16 : Operation 51 [3/3] (7.01ns)   --->   "%x2 = fmul i32 %rms, i32 0.5" [activation_accelerator.cpp:242]   --->   Operation 51 'fmul' 'x2' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 52 [1/1] (0.00ns)   --->   "%y = bitcast i32 %rms" [activation_accelerator.cpp:243]   --->   Operation 52 'bitcast' 'y' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 53 [1/1] (0.00ns)   --->   "%trunc_ln1 = partselect i31 @_ssdm_op_PartSelect.i31.i32.i32.i32, i32 %y, i32 1, i32 31" [activation_accelerator.cpp:250]   --->   Operation 53 'partselect' 'trunc_ln1' <Predicate = true> <Delay = 0.00>
+
+State 17 <SV = 16> <Delay = 7.01>
+ST_17 : Operation 54 [2/3] (7.01ns)   --->   "%x2 = fmul i32 %rms, i32 0.5" [activation_accelerator.cpp:242]   --->   Operation 54 'fmul' 'x2' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 7.01>
+ST_18 : Operation 55 [1/3] (7.01ns)   --->   "%x2 = fmul i32 %rms, i32 0.5" [activation_accelerator.cpp:242]   --->   Operation 55 'fmul' 'x2' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 56 [1/1] (0.00ns)   --->   "%sext_ln250 = sext i31 %trunc_ln1" [activation_accelerator.cpp:250]   --->   Operation 56 'sext' 'sext_ln250' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 57 [1/1] (1.01ns)   --->   "%i_2 = sub i32 1597463007, i32 %sext_ln250" [activation_accelerator.cpp:250]   --->   Operation 57 'sub' 'i_2' <Predicate = true> <Delay = 1.01> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 7.01>
+ST_19 : Operation 58 [1/1] (0.00ns)   --->   "%bitcast_ln252 = bitcast i32 %i_2" [activation_accelerator.cpp:252]   --->   Operation 58 'bitcast' 'bitcast_ln252' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 59 [3/3] (7.01ns)   --->   "%mul1_i = fmul i32 %x2, i32 %bitcast_ln252" [activation_accelerator.cpp:254]   --->   Operation 59 'fmul' 'mul1_i' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 7.01>
+ST_20 : Operation 60 [2/3] (7.01ns)   --->   "%mul1_i = fmul i32 %x2, i32 %bitcast_ln252" [activation_accelerator.cpp:254]   --->   Operation 60 'fmul' 'mul1_i' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 7.01>
+ST_21 : Operation 61 [1/3] (7.01ns)   --->   "%mul1_i = fmul i32 %x2, i32 %bitcast_ln252" [activation_accelerator.cpp:254]   --->   Operation 61 'fmul' 'mul1_i' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 21> <Delay = 7.01>
+ST_22 : Operation 62 [3/3] (7.01ns)   --->   "%mul2_i = fmul i32 %mul1_i, i32 %bitcast_ln252" [activation_accelerator.cpp:254]   --->   Operation 62 'fmul' 'mul2_i' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 7.01>
+ST_23 : Operation 63 [2/3] (7.01ns)   --->   "%mul2_i = fmul i32 %mul1_i, i32 %bitcast_ln252" [activation_accelerator.cpp:254]   --->   Operation 63 'fmul' 'mul2_i' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 24 <SV = 23> <Delay = 7.01>
+ST_24 : Operation 64 [1/3] (7.01ns)   --->   "%mul2_i = fmul i32 %mul1_i, i32 %bitcast_ln252" [activation_accelerator.cpp:254]   --->   Operation 64 'fmul' 'mul2_i' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 25 <SV = 24> <Delay = 6.43>
+ST_25 : Operation 65 [4/4] (6.43ns)   --->   "%sub3_i = fsub i32 1.5, i32 %mul2_i" [activation_accelerator.cpp:254]   --->   Operation 65 'fsub' 'sub3_i' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 26 <SV = 25> <Delay = 6.43>
+ST_26 : Operation 66 [3/4] (6.43ns)   --->   "%sub3_i = fsub i32 1.5, i32 %mul2_i" [activation_accelerator.cpp:254]   --->   Operation 66 'fsub' 'sub3_i' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 27 <SV = 26> <Delay = 6.43>
+ST_27 : Operation 67 [2/4] (6.43ns)   --->   "%sub3_i = fsub i32 1.5, i32 %mul2_i" [activation_accelerator.cpp:254]   --->   Operation 67 'fsub' 'sub3_i' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 28 <SV = 27> <Delay = 6.43>
+ST_28 : Operation 68 [1/4] (6.43ns)   --->   "%sub3_i = fsub i32 1.5, i32 %mul2_i" [activation_accelerator.cpp:254]   --->   Operation 68 'fsub' 'sub3_i' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 29 <SV = 28> <Delay = 7.01>
+ST_29 : Operation 69 [3/3] (7.01ns)   --->   "%re_rms = fmul i32 %bitcast_ln252, i32 %sub3_i" [activation_accelerator.cpp:254]   --->   Operation 69 'fmul' 're_rms' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 30 <SV = 29> <Delay = 7.01>
+ST_30 : Operation 70 [2/3] (7.01ns)   --->   "%re_rms = fmul i32 %bitcast_ln252, i32 %sub3_i" [activation_accelerator.cpp:254]   --->   Operation 70 'fmul' 're_rms' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 31 <SV = 30> <Delay = 7.01>
+ST_31 : Operation 71 [1/3] (7.01ns)   --->   "%re_rms = fmul i32 %bitcast_ln252, i32 %sub3_i" [activation_accelerator.cpp:254]   --->   Operation 71 'fmul' 're_rms' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 32 <SV = 31> <Delay = 0.00>
+ST_32 : Operation 72 [2/2] (0.00ns)   --->   "%call_ln254 = call void @float_rmsnorm_Pipeline_rms_loop_1, i32 %x_0, i32 %x_1, i32 %x_2, i32 %x_3, i32 %x_4, i32 %x_5, i32 %x_6, i32 %x_7, i32 %x_8, i32 %x_9, i32 %x_10, i32 %x_11, i32 %x_12, i32 %x_13, i32 %x_14, i32 %x_15, i32 %x_16, i32 %x_17, i32 %x_18, i32 %x_19, i32 %x_20, i32 %x_21, i32 %x_22, i32 %x_23, i32 %x_24, i32 %x_25, i32 %x_26, i32 %x_27, i32 %x_28, i32 %x_29, i32 %x_30, i32 %x_31, i32 %re_rms, i16 %y_bf16_0, i16 %y_bf16_1, i16 %y_bf16_2, i16 %y_bf16_3, i16 %y_bf16_4, i16 %y_bf16_5, i16 %y_bf16_6, i16 %y_bf16_7, i16 %y_bf16_8, i16 %y_bf16_9, i16 %y_bf16_10, i16 %y_bf16_11, i16 %y_bf16_12, i16 %y_bf16_13, i16 %y_bf16_14, i16 %y_bf16_15, i16 %y_bf16_16, i16 %y_bf16_17, i16 %y_bf16_18, i16 %y_bf16_19, i16 %y_bf16_20, i16 %y_bf16_21, i16 %y_bf16_22, i16 %y_bf16_23, i16 %y_bf16_24, i16 %y_bf16_25, i16 %y_bf16_26, i16 %y_bf16_27, i16 %y_bf16_28, i16 %y_bf16_29, i16 %y_bf16_30, i16 %y_bf16_31" [activation_accelerator.cpp:254]   --->   Operation 72 'call' 'call_ln254' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 33 <SV = 32> <Delay = 0.00>
+ST_33 : Operation 73 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %x_0, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 73 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 74 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %x_1, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 74 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 75 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %x_2, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 75 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 76 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %x_3, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 76 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 77 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %x_4, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 77 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 78 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %x_5, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 78 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 79 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %x_6, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 79 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 80 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %x_7, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 80 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 81 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %x_8, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 81 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 82 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %x_9, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 82 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 83 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %x_10, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 83 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 84 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %x_11, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 84 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 85 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %x_12, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 85 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 86 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %x_13, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 86 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 87 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %x_14, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 87 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 88 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %x_15, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 88 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 89 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %x_16, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 89 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 90 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %x_17, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 90 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 91 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %x_18, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 91 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 92 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %x_19, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 92 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 93 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %x_20, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 93 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 94 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %x_21, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 94 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 95 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %x_22, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 95 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 96 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %x_23, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 96 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 97 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %x_24, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 97 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 98 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %x_25, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 98 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 99 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %x_26, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 99 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 100 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %x_27, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 100 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 101 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %x_28, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 101 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 102 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %x_29, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 102 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 103 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %x_30, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 103 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 104 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %x_31, i64 666, i64 25, i64 18446744073709551615"   --->   Operation 104 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 105 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %y_bf16_0, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 105 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 106 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %y_bf16_1, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 106 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 107 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %y_bf16_2, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 107 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 108 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %y_bf16_3, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 108 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 109 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %y_bf16_4, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 109 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 110 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %y_bf16_5, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 110 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 111 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %y_bf16_6, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 111 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 112 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %y_bf16_7, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 112 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 113 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %y_bf16_8, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 113 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 114 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %y_bf16_9, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 114 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 115 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %y_bf16_10, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 115 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 116 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %y_bf16_11, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 116 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 117 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %y_bf16_12, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 117 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 118 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %y_bf16_13, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 118 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 119 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %y_bf16_14, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 119 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 120 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %y_bf16_15, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 120 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 121 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %y_bf16_16, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 121 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 122 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %y_bf16_17, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 122 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 123 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %y_bf16_18, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 123 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 124 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %y_bf16_19, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 124 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 125 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %y_bf16_20, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 125 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 126 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %y_bf16_21, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 126 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 127 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %y_bf16_22, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 127 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 128 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %y_bf16_23, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 128 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 129 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %y_bf16_24, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 129 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 130 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %y_bf16_25, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 130 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 131 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %y_bf16_26, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 131 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 132 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %y_bf16_27, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 132 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 133 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %y_bf16_28, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 133 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 134 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %y_bf16_29, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 134 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 135 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %y_bf16_30, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 135 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 136 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %y_bf16_31, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 136 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 137 [1/2] (0.00ns)   --->   "%call_ln254 = call void @float_rmsnorm_Pipeline_rms_loop_1, i32 %x_0, i32 %x_1, i32 %x_2, i32 %x_3, i32 %x_4, i32 %x_5, i32 %x_6, i32 %x_7, i32 %x_8, i32 %x_9, i32 %x_10, i32 %x_11, i32 %x_12, i32 %x_13, i32 %x_14, i32 %x_15, i32 %x_16, i32 %x_17, i32 %x_18, i32 %x_19, i32 %x_20, i32 %x_21, i32 %x_22, i32 %x_23, i32 %x_24, i32 %x_25, i32 %x_26, i32 %x_27, i32 %x_28, i32 %x_29, i32 %x_30, i32 %x_31, i32 %re_rms, i16 %y_bf16_0, i16 %y_bf16_1, i16 %y_bf16_2, i16 %y_bf16_3, i16 %y_bf16_4, i16 %y_bf16_5, i16 %y_bf16_6, i16 %y_bf16_7, i16 %y_bf16_8, i16 %y_bf16_9, i16 %y_bf16_10, i16 %y_bf16_11, i16 %y_bf16_12, i16 %y_bf16_13, i16 %y_bf16_14, i16 %y_bf16_15, i16 %y_bf16_16, i16 %y_bf16_17, i16 %y_bf16_18, i16 %y_bf16_19, i16 %y_bf16_20, i16 %y_bf16_21, i16 %y_bf16_22, i16 %y_bf16_23, i16 %y_bf16_24, i16 %y_bf16_25, i16 %y_bf16_26, i16 %y_bf16_27, i16 %y_bf16_28, i16 %y_bf16_29, i16 %y_bf16_30, i16 %y_bf16_31" [activation_accelerator.cpp:254]   --->   Operation 137 'call' 'call_ln254' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_33 : Operation 138 [1/1] (0.00ns)   --->   "%ret_ln321 = ret" [activation_accelerator.cpp:321]   --->   Operation 138 'ret' 'ret_ln321' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 7.06ns
+The critical path consists of the following:
+	'load' operation ('sum_sq_loc_load') on local variable 'sum_sq_loc' [131]  (0 ns)
+	'fdiv' operation ('mean_sq', activation_accelerator.cpp:314) [132]  (7.06 ns)
+
+ <State 4>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('mean_sq', activation_accelerator.cpp:314) [132]  (7.06 ns)
+
+ <State 5>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('mean_sq', activation_accelerator.cpp:314) [132]  (7.06 ns)
+
+ <State 6>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('mean_sq', activation_accelerator.cpp:314) [132]  (7.06 ns)
+
+ <State 7>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('mean_sq', activation_accelerator.cpp:314) [132]  (7.06 ns)
+
+ <State 8>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('mean_sq', activation_accelerator.cpp:314) [132]  (7.06 ns)
+
+ <State 9>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('mean_sq', activation_accelerator.cpp:314) [132]  (7.06 ns)
+
+ <State 10>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('mean_sq', activation_accelerator.cpp:314) [132]  (7.06 ns)
+
+ <State 11>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('mean_sq', activation_accelerator.cpp:314) [132]  (7.06 ns)
+
+ <State 12>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('rms', activation_accelerator.cpp:315) [133]  (6.44 ns)
+
+ <State 13>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('rms', activation_accelerator.cpp:315) [133]  (6.44 ns)
+
+ <State 14>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('rms', activation_accelerator.cpp:315) [133]  (6.44 ns)
+
+ <State 15>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('rms', activation_accelerator.cpp:315) [133]  (6.44 ns)
+
+ <State 16>: 7.02ns
+The critical path consists of the following:
+	'fmul' operation ('x2', activation_accelerator.cpp:242) [134]  (7.02 ns)
+
+ <State 17>: 7.02ns
+The critical path consists of the following:
+	'fmul' operation ('x2', activation_accelerator.cpp:242) [134]  (7.02 ns)
+
+ <State 18>: 7.02ns
+The critical path consists of the following:
+	'fmul' operation ('x2', activation_accelerator.cpp:242) [134]  (7.02 ns)
+
+ <State 19>: 7.02ns
+The critical path consists of the following:
+	'fmul' operation ('mul1_i', activation_accelerator.cpp:254) [140]  (7.02 ns)
+
+ <State 20>: 7.02ns
+The critical path consists of the following:
+	'fmul' operation ('mul1_i', activation_accelerator.cpp:254) [140]  (7.02 ns)
+
+ <State 21>: 7.02ns
+The critical path consists of the following:
+	'fmul' operation ('mul1_i', activation_accelerator.cpp:254) [140]  (7.02 ns)
+
+ <State 22>: 7.02ns
+The critical path consists of the following:
+	'fmul' operation ('mul2_i', activation_accelerator.cpp:254) [141]  (7.02 ns)
+
+ <State 23>: 7.02ns
+The critical path consists of the following:
+	'fmul' operation ('mul2_i', activation_accelerator.cpp:254) [141]  (7.02 ns)
+
+ <State 24>: 7.02ns
+The critical path consists of the following:
+	'fmul' operation ('mul2_i', activation_accelerator.cpp:254) [141]  (7.02 ns)
+
+ <State 25>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('sub3_i', activation_accelerator.cpp:254) [142]  (6.44 ns)
+
+ <State 26>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('sub3_i', activation_accelerator.cpp:254) [142]  (6.44 ns)
+
+ <State 27>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('sub3_i', activation_accelerator.cpp:254) [142]  (6.44 ns)
+
+ <State 28>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('sub3_i', activation_accelerator.cpp:254) [142]  (6.44 ns)
+
+ <State 29>: 7.02ns
+The critical path consists of the following:
+	'fmul' operation ('re_rms', activation_accelerator.cpp:254) [143]  (7.02 ns)
+
+ <State 30>: 7.02ns
+The critical path consists of the following:
+	'fmul' operation ('re_rms', activation_accelerator.cpp:254) [143]  (7.02 ns)
+
+ <State 31>: 7.02ns
+The critical path consists of the following:
+	'fmul' operation ('re_rms', activation_accelerator.cpp:254) [143]  (7.02 ns)
+
+ <State 32>: 0ns
+The critical path consists of the following:
+
+ <State 33>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

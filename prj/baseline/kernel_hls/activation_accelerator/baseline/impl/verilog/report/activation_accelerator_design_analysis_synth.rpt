@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Wed Oct  1 10:43:50 2025
+| Date         : Fri Oct  3 16:38:18 2025
 | Host         : super-test running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_design_analysis -file ./report/activation_accelerator_design_analysis_synth.rpt
 | Design       : bd_0_wrapper
@@ -25,17 +25,17 @@ Table of Contents
 |      Characteristics      |                                                                         Path #1                                                                         |
 +---------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Requirement               | 10.000                                                                                                                                                  |
-| Path Delay                | 4.978                                                                                                                                                   |
-| Logic Delay               | 4.227(85%)                                                                                                                                              |
-| Net Delay                 | 0.751(15%)                                                                                                                                              |
+| Path Delay                | 5.043                                                                                                                                                   |
+| Logic Delay               | 4.315(86%)                                                                                                                                              |
+| Net Delay                 | 0.728(14%)                                                                                                                                              |
 | Clock Skew                | -0.012                                                                                                                                                  |
-| Slack                     | 5.019                                                                                                                                                   |
+| Slack                     | 4.954                                                                                                                                                   |
 | Clock Uncertainty         | 0.035                                                                                                                                                   |
 | Clock Relationship        | Safely Timed                                                                                                                                            |
 | Clock Delay Group         | Same Clock                                                                                                                                              |
 | Logic Levels              | 12                                                                                                                                                      |
 | Routes                    | NA                                                                                                                                                      |
-| Logical Path              | FDRE/C-(2)-DSP_A_B_DATA-(1)-DSP_PREADD_DATA-DSP_MULTIPLIER-DSP_M_DATA-DSP_ALU-DSP_OUTPUT-DSP_ALU-DSP_OUTPUT-DSP_ALU-DSP_OUTPUT-LUT6-(1)-LUT3-(1)-FDRE/D |
+| Logical Path              | FDRE/C-(4)-DSP_A_B_DATA-(1)-DSP_PREADD_DATA-DSP_MULTIPLIER-DSP_M_DATA-DSP_ALU-DSP_OUTPUT-DSP_ALU-DSP_OUTPUT-DSP_ALU-DSP_OUTPUT-LUT6-(1)-LUT6-(1)-FDRE/D |
 | Start Point Clock         | ap_clk                                                                                                                                                  |
 | End Point Clock           | ap_clk                                                                                                                                                  |
 | DSP Block                 | Comb                                                                                                                                                    |
@@ -43,7 +43,7 @@ Table of Contents
 | IO Crossings              | 0                                                                                                                                                       |
 | SLR Crossings             | 0                                                                                                                                                       |
 | PBlocks                   | 0                                                                                                                                                       |
-| High Fanout               | 2                                                                                                                                                       |
+| High Fanout               | 4                                                                                                                                                       |
 | Dont Touch                | 0                                                                                                                                                       |
 | Mark Debug                | 0                                                                                                                                                       |
 | Start Point Pin Primitive | FDRE/C                                                                                                                                                  |
@@ -57,11 +57,11 @@ Table of Contents
 2. Logic Level Distribution
 ---------------------------
 
-+-----------------+-------------+----+----+-----+-----+-----+-----+----+----+----+----+----+----+----+----+----+----+----+
-| End Point Clock | Requirement |  3 |  6 |  7  |  8  |  9  |  10 | 11 | 12 | 13 | 14 | 15 | 16 | 20 | 22 | 23 | 24 | 25 |
-+-----------------+-------------+----+----+-----+-----+-----+-----+----+----+----+----+----+----+----+----+----+----+----+
-| ap_clk          | 10.000ns    | 64 | 30 | 119 | 202 | 206 | 116 | 95 |  9 |  4 | 12 |  8 |  5 |  5 | 40 | 40 | 40 |  5 |
-+-----------------+-------------+----+----+-----+-----+-----+-----+----+----+----+----+----+----+----+----+----+----+----+
++-----------------+-------------+-----+-----+----+-----+----+----+----+----+----+----+
+| End Point Clock | Requirement |  8  |  9  | 10 |  11 | 12 | 20 | 22 | 23 | 24 | 25 |
++-----------------+-------------+-----+-----+----+-----+----+----+----+----+----+----+
+| ap_clk          | 10.000ns    | 128 | 181 | 72 | 312 | 54 |  8 | 75 | 80 | 80 | 10 |
++-----------------+-------------+-----+-----+----+-----+----+----+----+----+----+----+
 * Columns represent the logic levels per end point clock
 ** Distribution is for top worst 1000 paths
 

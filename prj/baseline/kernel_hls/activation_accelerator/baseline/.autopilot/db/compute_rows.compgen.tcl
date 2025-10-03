@@ -18,12 +18,6 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set name activation_accelerator_frsqrt_32ns_32ns_32_10_full_dsp_1
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {frsqrt} IMPL {fulldsp} LATENCY 9 ALLOW_PRAGMA 1
-}
-
-
 set name activation_accelerator_fexp_32ns_32ns_32_8_full_dsp_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fexp} IMPL {fulldsp} LATENCY 7 ALLOW_PRAGMA 1
@@ -56,7 +50,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1105 \
+    id 1284 \
     name s_in01 \
     type fifo \
     dir I \
@@ -71,7 +65,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1106 \
+    id 1285 \
     name s_in12 \
     type fifo \
     dir I \
@@ -86,7 +80,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1107 \
+    id 1286 \
     name s_out3 \
     type fifo \
     dir O \
@@ -101,7 +95,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1108 \
+    id 1287 \
     name config_r \
     type fifo \
     dir I \

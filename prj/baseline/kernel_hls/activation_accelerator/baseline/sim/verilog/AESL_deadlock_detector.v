@@ -316,21 +316,21 @@ end
         .token_out_vec(token_out_vec_3),
         .dl_detect_out(dl_in_vec[3]));
 
-    assign proc_3_data_FIFO_blk[0] = 1'b0 | (~AESL_inst_activation_accelerator.compute_rows_U0.grp_compute_rows_Pipeline_UNPK_W_fu_821.s_in01_blk_n) | (~AESL_inst_activation_accelerator.compute_rows_U0.grp_compute_rows_Pipeline_UNPK_W_fu_821.s_in12_blk_n);
+    assign proc_3_data_FIFO_blk[0] = 1'b0 | (~AESL_inst_activation_accelerator.compute_rows_U0.grp_compute_rows_Pipeline_UNPK_W_fu_787.s_in01_blk_n) | (~AESL_inst_activation_accelerator.compute_rows_U0.grp_compute_rows_Pipeline_UNPK_W_fu_787.s_in12_blk_n);
     assign proc_3_data_PIPO_blk[0] = 1'b0;
     assign proc_3_start_FIFO_blk[0] = 1'b0;
     assign proc_3_TLF_FIFO_blk[0] = 1'b0;
     assign proc_3_input_sync_blk[0] = 1'b0;
     assign proc_3_output_sync_blk[0] = 1'b0;
     assign proc_dep_vld_vec_3[0] = dl_detect_out ? proc_dep_vld_vec_3_reg[0] : (proc_3_data_FIFO_blk[0] | proc_3_data_PIPO_blk[0] | proc_3_start_FIFO_blk[0] | proc_3_TLF_FIFO_blk[0] | proc_3_input_sync_blk[0] | proc_3_output_sync_blk[0]);
-    assign proc_3_data_FIFO_blk[1] = 1'b0 | (~AESL_inst_activation_accelerator.compute_rows_U0.grp_compute_rows_Pipeline_UNPK_W_fu_821.s_in01_blk_n) | (~AESL_inst_activation_accelerator.compute_rows_U0.grp_compute_rows_Pipeline_UNPK_W_fu_821.s_in12_blk_n);
+    assign proc_3_data_FIFO_blk[1] = 1'b0 | (~AESL_inst_activation_accelerator.compute_rows_U0.grp_compute_rows_Pipeline_UNPK_W_fu_787.s_in01_blk_n) | (~AESL_inst_activation_accelerator.compute_rows_U0.grp_compute_rows_Pipeline_UNPK_W_fu_787.s_in12_blk_n);
     assign proc_3_data_PIPO_blk[1] = 1'b0;
     assign proc_3_start_FIFO_blk[1] = 1'b0;
     assign proc_3_TLF_FIFO_blk[1] = 1'b0;
     assign proc_3_input_sync_blk[1] = 1'b0;
     assign proc_3_output_sync_blk[1] = 1'b0;
     assign proc_dep_vld_vec_3[1] = dl_detect_out ? proc_dep_vld_vec_3_reg[1] : (proc_3_data_FIFO_blk[1] | proc_3_data_PIPO_blk[1] | proc_3_start_FIFO_blk[1] | proc_3_TLF_FIFO_blk[1] | proc_3_input_sync_blk[1] | proc_3_output_sync_blk[1]);
-    assign proc_3_data_FIFO_blk[2] = 1'b0 | (~AESL_inst_activation_accelerator.compute_rows_U0.grp_compute_rows_Pipeline_PK_W_fu_1862.s_out3_blk_n);
+    assign proc_3_data_FIFO_blk[2] = 1'b0 | (~AESL_inst_activation_accelerator.compute_rows_U0.grp_compute_rows_Pipeline_PK_W_fu_1713.s_out3_blk_n);
     assign proc_3_data_PIPO_blk[2] = 1'b0;
     assign proc_3_start_FIFO_blk[2] = 1'b0;
     assign proc_3_TLF_FIFO_blk[2] = 1'b0;

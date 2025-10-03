@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Oct  1 10:36:00 2025" VIVADOVERSION="2022.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Oct  3 16:30:35 2025" VIVADOVERSION="2022.2">
 
   <SYSTEMINFO ARCH="zynquplus" DEVICE="xck26" NAME="bd_0" PACKAGE="sfvc784" SPEEDGRADE="-2LV"/>
 
@@ -993,7 +993,7 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
-    <MODULE COREREVISION="2114284354" FULLNAME="/hls_inst" HWVERSION="1.0" INSTANCE="hls_inst" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="activation_accelerator" VLNV="xilinx.com:hls:activation_accelerator:1.0">
+    <MODULE COREREVISION="2114287589" FULLNAME="/hls_inst" HWVERSION="1.0" INSTANCE="hls_inst" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="activation_accelerator" VLNV="xilinx.com:hls:activation_accelerator:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="C_S_AXI_CONTROL_ADDR_WIDTH" VALUE="7"/>

@@ -589,7 +589,7 @@ wire    ap_block_pp0_stage0_11001;
 wire   [4:0] trunc_ln212_fu_1266_p1;
 reg   [4:0] trunc_ln212_reg_1594;
 wire    ap_block_pp0_stage0;
-reg   [9:0] i_1_fu_236;
+reg   [9:0] i_5_fu_236;
 wire   [9:0] add_ln210_fu_1214_p2;
 wire    ap_loop_init;
 reg   [9:0] ap_sig_allocacmp_i;
@@ -649,7 +649,7 @@ activation_accelerator_mux_325_16_1_1 #(
     .din31_WIDTH( 16 ),
     .din32_WIDTH( 5 ),
     .dout_WIDTH( 16 ))
-mux_325_16_1_1_U696(
+mux_325_16_1_1_U873(
     .din0(tile1_V_q0),
     .din1(tile1_V_32_q0),
     .din2(tile1_V_33_q0),
@@ -736,9 +736,9 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         if (((icmp_ln210_fu_1208_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
-            i_1_fu_236 <= add_ln210_fu_1214_p2;
+            i_5_fu_236 <= add_ln210_fu_1214_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            i_1_fu_236 <= 10'd0;
+            i_5_fu_236 <= 10'd0;
         end
     end
 end
@@ -794,7 +794,7 @@ always @ (*) begin
     if (((ap_loop_init == 1'b1) & (1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         ap_sig_allocacmp_i = 10'd0;
     end else begin
-        ap_sig_allocacmp_i = i_1_fu_236;
+        ap_sig_allocacmp_i = i_5_fu_236;
     end
 end
 

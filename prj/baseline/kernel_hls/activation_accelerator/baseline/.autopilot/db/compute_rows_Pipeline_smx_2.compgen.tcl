@@ -1242,14 +1242,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 381 \
-    name sum_5_reload \
+    name sum_4_reload \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_sum_5_reload \
+    corename dc_sum_4_reload \
     op interface \
-    ports { sum_5_reload { I 32 vector } } \
+    ports { sum_4_reload { I 32 vector } } \
 } "
 }
 

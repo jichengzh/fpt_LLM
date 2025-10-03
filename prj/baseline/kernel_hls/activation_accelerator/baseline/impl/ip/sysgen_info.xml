@@ -9,6 +9,6 @@
   <modelParameters>
     <combinational>0</combinational>
     <latency>102793</latency>
-    <II>102786 ~ 400898</II>
+    <II>102786 ~ 174018</II>
   </modelParameters>
 </AdditionalInfo>

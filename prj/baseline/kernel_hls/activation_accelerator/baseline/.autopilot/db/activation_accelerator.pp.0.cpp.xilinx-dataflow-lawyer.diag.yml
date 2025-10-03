@@ -3,6 +3,6 @@ MainSourceFile:  /data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerat
 Diagnostics:     
   - DiagnosticName:  clang-diagnostic-warning
     Message:         '[xlx-df-check-11] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region'
-    FileOffset:      '390:9'
+    FileOffset:      '567:9'
     FilePath:        activation_accelerator.cpp
 ...

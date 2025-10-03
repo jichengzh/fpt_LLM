@@ -55419,10 +55419,34 @@ void float_silu(const float* x, uint16* y, int len) {
 void float_rmsnorm(const float* x, uint16* y_bf16, int len) {
     const float eps = 1e-6f;
     float sum_sq = 0.0f;
+    const int UF = 8;
+
     rms_loop_0:
-    for (int i = 0; i < len; ++i) {
+    for (int i = 0; i < len; i += UF) {
 #pragma HLS PIPELINE II=1
- sum_sq += x[i] * x[i];
+ float a[UF];
+#pragma HLS ARRAY_PARTITION variable=a complete
+
+ load_and_sq:
+        for (int u = 0; u < UF; ++u) {
+#pragma HLS UNROLL
+ int idx = i + u;
+            float v = (idx < len) ? x[idx] : 0.f;
+
+            a[u] = v * v;
+
+        }
+
+
+        float s0 = a[0] + a[1];
+        float s1 = a[2] + a[3];
+        float s2 = a[4] + a[5];
+        float s3 = a[6] + a[7];
+        float t0 = s0 + s1;
+        float t1 = s2 + s3;
+        float block = t0 + t1;
+
+        sum_sq += block;
     }
     float mean_sq = sum_sq / len;
     float rms = mean_sq + eps;
@@ -55434,23 +55458,70 @@ void float_rmsnorm(const float* x, uint16* y_bf16, int len) {
 }
 
 
-
 void float_layernorm(const float* x, uint16* y_bf16, int len) {
     const float eps = 1e-6f;
     float sum = 0.0f;
+
+
+    const int UF = 8;
+
     layer_loop_0:
-    for (int i = 0; i < len; ++i) {
+    for (int i = 0; i < len; i += UF) {
 #pragma HLS PIPELINE II=1
- sum += x[i];
+ float a[UF];
+#pragma HLS ARRAY_PARTITION variable=a complete
+
+
+ load_a:
+        for (int u = 0; u < UF; ++u) {
+#pragma HLS UNROLL
+ int idx = i + u;
+            a[u] = (idx < len) ? x[idx] : 0.f;
+        }
+
+
+        float s0 = a[0] + a[1];
+        float s1 = a[2] + a[3];
+        float s2 = a[4] + a[5];
+        float s3 = a[6] + a[7];
+        float t0 = s0 + s1;
+        float t1 = s2 + s3;
+        float block = t0 + t1;
+
+        sum += block;
     }
+
+
     float mean = sum / len;
     float var = 0.0f;
+
     layer_loop_1:
-    for (int i = 0; i < len; ++i) {
+    for (int i = 0; i < len; i += UF) {
 #pragma HLS PIPELINE II=1
- float diff = x[i] - mean;
-        var += diff * diff;
+ float s[UF];
+#pragma HLS ARRAY_PARTITION variable=s complete
+
+ load_s:
+        for (int u = 0; u < UF; ++u) {
+#pragma HLS UNROLL
+ int idx = i + u;
+            float xi = (idx < len) ? x[idx] : 0.f;
+            float d = xi - mean;
+            s[u] = d * d;
+        }
+
+
+        float p0 = s[0] + s[1];
+        float p1 = s[2] + s[3];
+        float p2 = s[4] + s[5];
+        float p3 = s[6] + s[7];
+        float q0 = p0 + p1;
+        float q1 = p2 + p3;
+        float block = q0 + q1;
+
+        var += block;
     }
+
     float inv_std = hls::rsqrtf(var / len + eps);
     ln_2:
     for (int i = 0; i < len; ++i) {
@@ -55458,8 +55529,7 @@ void float_layernorm(const float* x, uint16* y_bf16, int len) {
  y_bf16[i] = f32_to_bf16_scalar((x[i] - mean) * inv_std);
     }
 }
-
-
+# 455 "activation_accelerator.cpp"
 void float_add(const float* x, const float* y, uint16* out, int len) {
 #pragma HLS INLINE
  add_loop:
@@ -55469,8 +55539,7 @@ void float_add(const float* x, const float* y, uint16* out, int len) {
         out[i] = f32_to_bf16_scalar(sum);
     }
 }
-
-
+# 514 "activation_accelerator.cpp"
 void float_softmax(const float* x, uint16* y_bf16, int len) {
 #pragma HLS INLINE
  float xmax = x[0];
@@ -55488,6 +55557,7 @@ void float_softmax(const float* x, uint16* y_bf16, int len) {
     for (int i = 0; i < len; i += UF) {
 #pragma HLS PIPELINE II=1
  float e[UF];
+
 #pragma HLS ARRAY_PARTITION variable=e complete
  load_e:
         for (int u = 0; u < UF; ++u) {
@@ -55513,7 +55583,6 @@ void float_softmax(const float* x, uint16* y_bf16, int len) {
         y_bf16[i] = f32_to_bf16_scalar(e / sum);
     }
 }
-
 
 
 static void load_rows(const u512* __restrict in0,
@@ -55667,7 +55736,7 @@ __attribute__((sdx_kernel("activation_accelerator", 0))) void activation_acceler
 {
 #line 39 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/run_hls.tcl"
 #pragma HLSDIRECTIVE TOP name=activation_accelerator
-# 530 "activation_accelerator.cpp"
+# 707 "activation_accelerator.cpp"
 
 #pragma HLS INTERFACE m_axi port=in0 bundle=gmem0 offset=slave depth=NW max_read_burst_length=32 num_read_outstanding=16
 #pragma HLS INTERFACE m_axi port=in1 bundle=gmem1 offset=slave depth=NW max_read_burst_length=32 num_read_outstanding=16

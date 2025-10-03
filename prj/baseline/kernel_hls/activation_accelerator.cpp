@@ -282,10 +282,34 @@ void float_silu(const float* x, uint16* y, int len) {
 void float_rmsnorm(const float* x, uint16* y_bf16, int len) {
     const float eps = 1e-6f;
     float sum_sq = 0.0f;
+    const int UF = 8;  // 8/16/32 视带宽与资源选择
+
     rms_loop_0:
-    for (int i = 0; i < len; ++i) { 
+    for (int i = 0; i < len; i += UF) {
     #pragma HLS PIPELINE II=1
-        sum_sq += x[i] * x[i];
+        float a[UF];
+    #pragma HLS ARRAY_PARTITION variable=a complete
+
+    load_and_sq:
+        for (int u = 0; u < UF; ++u) {
+        #pragma HLS UNROLL
+            int idx = i + u;
+            float v = (idx < len) ? x[idx] : 0.f;
+            // 用乘法或 fmaf(v, v, 0.f)（映射到 DSP，数值更好）
+            a[u] = v * v;
+            // a[u] = fmaf(v, v, 0.f);
+        }
+
+        // 块内树形规约（UF=8 示例；若 UF=16/32 按层继续展开）
+        float s0 = a[0] + a[1];
+        float s1 = a[2] + a[3];
+        float s2 = a[4] + a[5];
+        float s3 = a[6] + a[7];
+        float t0 = s0 + s1;
+        float t1 = s2 + s3;
+        float block = t0 + t1;
+
+        sum_sq += block;   // 与你的 softmax 风格一致：标量回授在这里
     }
     float mean_sq = sum_sq / len;
     float rms = mean_sq + eps;
@@ -296,24 +320,74 @@ void float_rmsnorm(const float* x, uint16* y_bf16, int len) {
     }
 }
 
-
 // layer_norm
 void float_layernorm(const float* x, uint16* y_bf16, int len) {
     const float eps = 1e-6f;
     float sum = 0.0f;
+
+    // —— 求和（II=1）：块内树形 + 环形桶 —— //
+    const int UF  = 8;    // 8/16/32 视你的存储带宽选择，尽量与数组分区一致
+
     layer_loop_0:
-    for (int i = 0; i < len; ++i) { 
+    // len =  768 每次循环处理 UF = 8 个元素
+    for (int i = 0; i < len; i += UF) {
     #pragma HLS PIPELINE II=1
-        sum += x[i];
+        // 初始化了一个栈数组 a[UF]，得到一个长度为 UF 的浮点数组
+        float a[UF];
+        #pragma HLS ARRAY_PARTITION variable=a complete
+
+        // 并行读取 UF 个元素（需要上游数组有足够 bank/端口）
+        load_a:
+        for (int u = 0; u < UF; ++u) {
+        #pragma HLS UNROLL
+            int idx = i + u;
+            //  0.f表示float类型的0 用于填充
+            a[u] = (idx < len) ? x[idx] : 0.f;
+        }
+
+            // 块内树形规约（以 UF=8 为例；若 UF=16/32，按层继续展开）
+        float s0 = a[0] + a[1];
+        float s1 = a[2] + a[3];
+        float s2 = a[4] + a[5];
+        float s3 = a[6] + a[7];
+        float t0 = s0 + s1;
+        float t1 = s2 + s3;
+        float block = t0 + t1;
+
+        sum += block;
     }
+
+    // 小规模归约
     float mean = sum / len;
     float var = 0.0f;
+
     layer_loop_1:
-    for (int i = 0; i < len; ++i) { 
-        #pragma HLS PIPELINE II=1
-        float diff = x[i] - mean;
-        var += diff * diff;
+    for (int i = 0; i < len; i += UF) {
+    #pragma HLS PIPELINE II=1
+        float s[UF];
+    #pragma HLS ARRAY_PARTITION variable=s complete
+
+    load_s:
+        for (int u = 0; u < UF; ++u) {
+        #pragma HLS UNROLL
+            int idx = i + u;
+            float xi = (idx < len) ? x[idx] : 0.f;
+            float d  = xi - mean;
+            s[u] = d * d;                 // 可换成 fmaf(d, d, 0.f)
+        }
+
+        // 块内树形规约（UF=8 示例；UF=16/32 按层继续展开）
+        float p0 = s[0] + s[1];
+        float p1 = s[2] + s[3];
+        float p2 = s[4] + s[5];
+        float p3 = s[6] + s[7];
+        float q0 = p0 + p1;
+        float q1 = p2 + p3;
+        float block = q0 + q1;
+
+        var += block;                     // 与 softmax 相同：回授在这里
     }
+
     float inv_std = hls::rsqrtf(var / len + eps);
     ln_2:
     for (int i = 0; i < len; ++i) {
@@ -321,6 +395,64 @@ void float_layernorm(const float* x, uint16* y_bf16, int len) {
         y_bf16[i] = f32_to_bf16_scalar((x[i] - mean) * inv_std);
     }
 }
+// void float_layernorm(const float* x, uint16* y_bf16, int len) {
+// #pragma HLS INLINE off
+//     const float eps = 1e-6f;
+
+//     // ---- 1) 分桶累加：同时求 sum 和 sumsq（II=1）----
+//     //分桶累加的思想是把逐次累加的跨迭代数据相关性（RAW）降低，提升流水线效率
+//     const int ACC = 32;                 // >= FAdd latency（常见8~14），取32更稳
+//     float ps[ACC], ps2[ACC];
+
+//     // 拆分32个独立寄存器。 同一拍内可以并行访问不同元素避免端口冲突
+// #pragma HLS ARRAY_PARTITION variable=ps  complete
+// #pragma HLS ARRAY_PARTITION variable=ps2 complete
+
+// init_bucket:
+//     for (int k = 0; k < ACC; ++k) {
+// #pragma HLS UNROLL
+//         ps[k]  = 0.f;
+//         ps2[k] = 0.f;
+//     }
+
+// acc_loop:
+//     for (int i = 0; i < len; ++i) {
+// #pragma HLS PIPELINE II=1
+// #pragma HLS DEPENDENCE variable=ps  inter RAW false
+// #pragma HLS DEPENDENCE variable=ps2 inter RAW false
+// //  len 表示总元素数量，整除 ACC取余数，得到每个元素在对应桶内的坐标1，和33对应的k都是1
+//         int k = i & (ACC - 1);          // i % ACC（ACC 取 2^n 省资源）
+//         float v = x[i];
+//         //  完成累加操作
+//         ps[k]  = ps[k]  + v;
+//         // 完成加乘操作
+//         ps2[k] = fmaf(v, v, ps2[k]);    // ps2[k] += v*v（映射到DSP，精度更好）
+//     }
+
+//     // ---- 2) 归约并计算 mean/var ----
+//     float sum = 0.f, sumsq = 0.f;
+// reduce_bucket:
+//     for (int k = 0; k < ACC; ++k) {
+//         // 小规模规约
+// #pragma HLS UNROLL
+//         sum   += ps[k];
+//         sumsq += ps2[k];
+//     }
+//     float mean = sum / (float)len;
+//     float var  = (sumsq / (float)len) - mean * mean;
+//     // 数值护栏（极端情况下可能出现 -0.0x）：
+//     var = hls::fmaxf(var, 0.0f);
+
+//     float inv_std = hls::rsqrtf(var + eps);
+
+//     // ---- 3) 归一化写回（II=1）----
+// norm_loop:
+//     for (int i = 0; i < len; ++i) {
+// #pragma HLS PIPELINE II=1
+//         float y = (x[i] - mean) * inv_std;
+//         y_bf16[i] = f32_to_bf16_scalar(y);
+//     }
+// }
 
 // float加法
 void float_add(const float* x, const float* y, uint16* out, int len) {
@@ -332,6 +464,54 @@ void float_add(const float* x, const float* y, uint16* out, int len) {
         out[i] = f32_to_bf16_scalar(sum);
     }
 }
+
+// safe softmax
+// void float_softmax(const float* x, uint16* y_bf16, int len) {
+// #pragma HLS INLINE
+//     float xmax = x[0];
+//     smx_0:
+//     for (int i = 1; i < len; ++i) {
+//     #pragma HLS PIPELINE II=1
+//         xmax = hls::fmaxf(xmax, x[i]);
+//     }
+//     // 经验：FAdd 延迟通常 8~14；取 ACC 为 8/16/32（≥ 延迟，且便于模运算）
+//     const int ACC = 32;   // 建议 32（覆盖多数 FAdd 延迟），16 有时仍不足
+//     float partial[ACC];
+//     #pragma HLS ARRAY_PARTITION variable=partial complete
+//     #pragma HLS DEPENDENCE variable=partial inter false   // 告诉编译器跨迭代独立
+
+//     // 初始化
+//     init_partial:
+//     for (int k = 0; k < ACC; ++k) {
+//     #pragma HLS UNROLL
+//         partial[k] = 0.f;
+//     }
+
+//     smx_1:
+//     for (int i = 0; i < len; ++i) {
+//     #pragma HLS PIPELINE II=1
+//         float e = hls::expf(x[i] - xmax);
+//         int k = i & (ACC - 1);       // 等价于 i % ACC（ACC 取 2 的幂更省资源）
+//         partial[k] += e;             // 每个 partial[k] 的“复用间隔”= ACC  周期
+//     }
+
+//     // 小规模归约（树形/全展开）
+//     float sum0 = 0.f;
+//     reduce_partial:
+//     for (int k = 0; k < ACC; ++k) {
+//     #pragma HLS UNROLL
+//         sum0 += partial[k];
+//     }
+//     float sum = sum0;
+//     float inv = 1.0f / sum;
+
+//     smx_2:
+//     for (int i = 0; i < len; ++i) {
+//     #pragma HLS PIPELINE II=1
+//     float e = hls::expf(x[i] - xmax);
+//     y_bf16[i] = f32_to_bf16_scalar(e * inv);  // 用乘法替代逐元素除法
+//     }
+// }
 
 // safe softmax
 void float_softmax(const float* x, uint16* y_bf16, int len) {
@@ -351,6 +531,7 @@ void float_softmax(const float* x, uint16* y_bf16, int len) {
     for (int i = 0; i < len; i += UF) {
     #pragma HLS PIPELINE II=1
         float e[UF];
+    // 拆分数组e
     #pragma HLS ARRAY_PARTITION variable=e complete
     load_e:
         for (int u = 0; u < UF; ++u) {
@@ -376,7 +557,6 @@ void float_softmax(const float* x, uint16* y_bf16, int len) {
         y_bf16[i] = f32_to_bf16_scalar(e / sum);
     }
 }
-
 // ==================== Stage A: LOAD ====================
 // load_rows：从两路源数据 in0、in1 逐“行”读取 512-bit 宽度的数据，写入到两条 HLS 流 s0、s1。
 static void load_rows(const u512* __restrict in0,

@@ -592,7 +592,7 @@ wire    ap_block_pp0_stage0;
 reg   [9:0] i_fu_236;
 wire   [9:0] add_ln210_fu_1214_p2;
 wire    ap_loop_init;
-reg   [9:0] ap_sig_allocacmp_i_9;
+reg   [9:0] ap_sig_allocacmp_i_8;
 wire   [31:0] bitcast_ln213_fu_1352_p1;
 wire   [4:0] lshr_ln_fu_1220_p4;
 wire   [15:0] tmp_s_fu_1275_p34;
@@ -792,9 +792,9 @@ end
 
 always @ (*) begin
     if (((ap_loop_init == 1'b1) & (1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        ap_sig_allocacmp_i_9 = 10'd0;
+        ap_sig_allocacmp_i_8 = 10'd0;
     end else begin
-        ap_sig_allocacmp_i_9 = i_fu_236;
+        ap_sig_allocacmp_i_8 = i_fu_236;
     end
 end
 
@@ -1577,7 +1577,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln210_fu_1214_p2 = (ap_sig_allocacmp_i_9 + 10'd1);
+assign add_ln210_fu_1214_p2 = (ap_sig_allocacmp_i_8 + 10'd1);
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 
@@ -1599,9 +1599,9 @@ assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
 assign bitcast_ln213_fu_1352_p1 = r_V_fu_1344_p3;
 
-assign icmp_ln210_fu_1208_p2 = ((ap_sig_allocacmp_i_9 == 10'd768) ? 1'b1 : 1'b0);
+assign icmp_ln210_fu_1208_p2 = ((ap_sig_allocacmp_i_8 == 10'd768) ? 1'b1 : 1'b0);
 
-assign lshr_ln_fu_1220_p4 = {{ap_sig_allocacmp_i_9[9:5]}};
+assign lshr_ln_fu_1220_p4 = {{ap_sig_allocacmp_i_8[9:5]}};
 
 assign r_V_fu_1344_p3 = {{tmp_s_fu_1275_p34}, {16'd0}};
 
@@ -1669,7 +1669,7 @@ assign tile0_V_62_address0 = zext_ln212_fu_1230_p1;
 
 assign tile0_V_address0 = zext_ln212_fu_1230_p1;
 
-assign trunc_ln212_fu_1266_p1 = ap_sig_allocacmp_i_9[4:0];
+assign trunc_ln212_fu_1266_p1 = ap_sig_allocacmp_i_8[4:0];
 
 assign xt_32_address1 = zext_ln212_reg_1398;
 

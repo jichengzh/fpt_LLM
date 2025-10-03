@@ -307,11 +307,11 @@ set RtlHierarchyInfo {[
 			{"Name" : "gmem1", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "gmem1_blk_n_R", "Type" : "RtlSignal"}]},
-			{"Name" : "sext_ln402_1", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sext_ln579_1", "Type" : "None", "Direction" : "I"},
 			{"Name" : "gmem0", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "gmem0_blk_n_R", "Type" : "RtlSignal"}]},
-			{"Name" : "sext_ln402", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sext_ln579", "Type" : "None", "Direction" : "I"},
 			{"Name" : "s_in01", "Type" : "Fifo", "Direction" : "O",
 				"BlockSignal" : [
 					{"Name" : "s_in01_blk_n", "Type" : "RtlSignal"}]},
@@ -334,9 +334,9 @@ set ArgLastReadFirstWriteLatency {
 		s_in12 {Type O LastRead -1 FirstWrite 2}}
 	load_rows_Loop_LOAD_ROW_proc1_Pipeline_LOAD_ROW_LOAD_W {
 		gmem1 {Type I LastRead 1 FirstWrite -1}
-		sext_ln402_1 {Type I LastRead 0 FirstWrite -1}
+		sext_ln579_1 {Type I LastRead 0 FirstWrite -1}
 		gmem0 {Type I LastRead 1 FirstWrite -1}
-		sext_ln402 {Type I LastRead 0 FirstWrite -1}
+		sext_ln579 {Type I LastRead 0 FirstWrite -1}
 		s_in01 {Type O LastRead -1 FirstWrite 2}
 		s_in12 {Type O LastRead -1 FirstWrite 2}}}
 

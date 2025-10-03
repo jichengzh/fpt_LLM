@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'activation_accelerator'
 ================================================================
 + General Information: 
-    * Date:           Wed Oct  1 10:14:58 2025
+    * Date:           Fri Oct  3 15:43:35 2025
     * Version:        2022.2 (Build 3670227 on Oct 13 2022)
     * Project:        activation_accelerator
     * Solution:       baseline (Vivado IP Flow Target)
@@ -15,56 +15,58 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +-------------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+-----------+---------+------------+-------------+-----+
-    |                           Modules                           | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |           |         |            |             |     |
-    |                           & Loops                           | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM    |   DSP   |     FF     |     LUT     | URAM|
-    +-------------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+-----------+---------+------------+-------------+-----+
-    |+ activation_accelerator*                                    |     -|  0.00|   400905|  4.009e+06|         -|   400898|     -|  dataflow|  247 (85%)|  43 (3%)|  14744 (6%)|  36686 (31%)|    -|
-    | + entry_proc                                                |     -|  5.46|        0|      0.000|         -|        0|     -|        no|          -|        -|     3 (~0%)|     38 (~0%)|    -|
-    | + load_rows*                                                |     -|  0.00|     1547|  1.547e+04|         -|     1548|     -|  dataflow|          -|        -|  1168 (~0%)|    476 (~0%)|    -|
-    |  + load_rows_Loop_LOAD_ROW_proc1                            |     -|  0.00|     1547|  1.547e+04|         -|     1547|     -|        no|          -|        -|  1168 (~0%)|    476 (~0%)|    -|
-    |   + load_rows_Loop_LOAD_ROW_proc1_Pipeline_LOAD_ROW_LOAD_W  |     -|  0.00|     1539|  1.539e+04|         -|     1539|     -|        no|          -|        -|  1041 (~0%)|    109 (~0%)|    -|
-    |    o LOAD_ROW_LOAD_W                                        |     -|  7.30|     1537|  1.537e+04|         3|        1|  1536|       yes|          -|        -|           -|            -|    -|
-    | + compute_rows                                              |     -|  0.01|   400897|  4.009e+06|         -|   400897|     -|        no|  160 (55%)|  43 (3%)|   7149 (3%)|  27334 (23%)|    -|
-    |  o COMPUTE_ROW                                              |     -|  7.30|   400896|  4.009e+06|      6264|        -|    64|        no|          -|        -|           -|            -|    -|
-    |   + compute_rows_Pipeline_UNPK_W                            |     -|  4.51|       26|    260.000|         -|       26|     -|        no|          -|        -|    13 (~0%)|     81 (~0%)|    -|
-    |    o UNPK_W                                                 |     -|  7.30|       24|    240.000|         2|        1|    24|       yes|          -|        -|           -|            -|    -|
-    |   + compute_rows_Pipeline_convert_loop                      |     -|  4.04|      770|  7.700e+03|         -|      770|     -|        no|          -|        -|    23 (~0%)|    214 (~0%)|    -|
-    |    o convert_loop                                           |     -|  7.30|      768|  7.680e+03|         2|        1|   768|       yes|          -|        -|           -|            -|    -|
-    |   + compute_rows_Pipeline_convert_loop1                     |     -|  4.04|      770|  7.700e+03|         -|      770|     -|        no|          -|        -|    23 (~0%)|    214 (~0%)|    -|
-    |    o convert_loop                                           |     -|  7.30|      768|  7.680e+03|         2|        1|   768|       yes|          -|        -|           -|            -|    -|
-    |   + compute_rows_Pipeline_silu_loop2                        |     -|  0.01|      794|  7.940e+03|         -|      794|     -|        no|          -|        -|   407 (~0%)|    343 (~0%)|    -|
-    |    o silu_loop                                              |     -|  7.30|      792|  7.920e+03|        26|        1|   768|       yes|          -|        -|           -|            -|    -|
-    |   + compute_rows_Pipeline_smx_0                             |     -|  1.87|      769|  7.690e+03|         -|      769|     -|        no|          -|        -|    50 (~0%)|    517 (~0%)|    -|
-    |    o smx_0                                                  |     -|  7.30|      767|  7.670e+03|         2|        1|   767|       yes|          -|        -|           -|            -|    -|
-    |   + compute_rows_Pipeline_smx_1                             |     -|  0.86|      322|  3.220e+03|         -|      322|     -|        no|          -|  22 (1%)|   2750 (1%)|    4149 (3%)|    -|
-    |    o smx_1                                                  |    II|  7.30|      320|  3.200e+03|        36|        3|    96|       yes|          -|        -|           -|            -|    -|
-    |   + compute_rows_Pipeline_smx_2                             |     -|  0.24|      792|  7.920e+03|         -|      792|     -|        no|          -|        -|   307 (~0%)|    278 (~0%)|    -|
-    |    o smx_2                                                  |     -|  7.30|      790|  7.900e+03|        24|        1|   768|       yes|          -|        -|           -|            -|    -|
-    |   + compute_rows_Pipeline_rms_loop_0                        |     -|  0.28|     2311|  2.311e+04|         -|     2311|     -|        no|          -|        -|   121 (~0%)|    261 (~0%)|    -|
-    |    o rms_loop_0                                             |    II|  7.30|     2309|  2.309e+04|         9|        3|   768|       yes|          -|        -|           -|            -|    -|
-    |   + compute_rows_Pipeline_rms_loop_1                        |     -|  0.28|      774|  7.740e+03|         -|      774|     -|        no|          -|        -|   207 (~0%)|    278 (~0%)|    -|
-    |    o rms_loop_1                                             |     -|  7.30|      772|  7.720e+03|         6|        1|   768|       yes|          -|        -|           -|            -|    -|
-    |   + compute_rows_Pipeline_layer_loop_0                      |     -|  0.38|     2307|  2.307e+04|         -|     2307|     -|        no|          -|        -|    54 (~0%)|    270 (~0%)|    -|
-    |    o layer_loop_0                                           |    II|  7.30|     2305|  2.305e+04|         5|        3|   768|       yes|          -|        -|           -|            -|    -|
-    |   + compute_rows_Pipeline_layer_loop_1                      |     -|  0.28|     2315|  2.315e+04|         -|     2315|     -|        no|          -|        -|   220 (~0%)|    329 (~0%)|    -|
-    |    o layer_loop_1                                           |    II|  7.30|     2313|  2.313e+04|        13|        3|   768|       yes|          -|        -|           -|            -|    -|
-    |   + compute_rows_Pipeline_ln_2                              |     -|  0.28|      778|  7.780e+03|         -|      778|     -|        no|          -|        -|   247 (~0%)|    278 (~0%)|    -|
-    |    o ln_2                                                   |     -|  7.30|      776|  7.760e+03|        10|        1|   768|       yes|          -|        -|           -|            -|    -|
-    |   + compute_rows_Pipeline_silu_loop                         |     -|  0.01|      794|  7.940e+03|         -|      794|     -|        no|          -|        -|   407 (~0%)|    343 (~0%)|    -|
-    |    o silu_loop                                              |     -|  7.30|      792|  7.920e+03|        26|        1|   768|       yes|          -|        -|           -|            -|    -|
-    |   + compute_rows_Pipeline_add_loop                          |     -|  0.86|      775|  7.750e+03|         -|      775|     -|        no|          -|        -|   241 (~0%)|    426 (~0%)|    -|
-    |    o add_loop                                               |     -|  7.30|      773|  7.730e+03|         7|        1|   768|       yes|          -|        -|           -|            -|    -|
-    |   + compute_rows_Pipeline_add_loop3                         |     -|  0.86|      775|  7.750e+03|         -|      775|     -|        no|          -|        -|   241 (~0%)|    426 (~0%)|    -|
-    |    o add_loop                                               |     -|  7.30|      773|  7.730e+03|         7|        1|   768|       yes|          -|        -|           -|            -|    -|
-    |   + compute_rows_Pipeline_add_loop4                         |     -|  0.86|      775|  7.750e+03|         -|      775|     -|        no|          -|        -|   241 (~0%)|    426 (~0%)|    -|
-    |    o add_loop                                               |     -|  7.30|      773|  7.730e+03|         7|        1|   768|       yes|          -|        -|           -|            -|    -|
-    |   + compute_rows_Pipeline_PK_W                              |     -|  4.51|       26|    260.000|         -|       26|     -|        no|          -|        -|     8 (~0%)|     70 (~0%)|    -|
-    |    o PK_W                                                   |     -|  7.30|       24|    240.000|         2|        1|    24|       yes|          -|        -|           -|            -|    -|
-    | + store_rows                                                |     -|  0.00|     1547|  1.547e+04|         -|     1547|     -|        no|          -|        -|   598 (~0%)|    338 (~0%)|    -|
-    |  + store_rows_Pipeline_STORE_ROW_STORE_W                    |     -|  0.00|     1539|  1.539e+04|         -|     1539|     -|        no|          -|        -|   529 (~0%)|     91 (~0%)|    -|
-    |   o STORE_ROW_STORE_W                                       |     -|  7.30|     1537|  1.537e+04|         3|        1|  1536|       yes|          -|        -|           -|            -|    -|
-    +-------------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+-----------+---------+------------+-------------+-----+
+    +-------------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+-----------+----------+------------+-------------+-----+
+    |                           Modules                           | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |           |          |            |             |     |
+    |                           & Loops                           | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM    |    DSP   |     FF     |     LUT     | URAM|
+    +-------------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+-----------+----------+------------+-------------+-----+
+    |+ activation_accelerator*                                    |     -|  0.00|   174025|  1.740e+06|         -|   174018|     -|  dataflow|  247 (85%)|   64 (5%)|  18570 (7%)|  44113 (37%)|    -|
+    | + entry_proc                                                |     -|  5.46|        0|      0.000|         -|        0|     -|        no|          -|         -|     3 (~0%)|     38 (~0%)|    -|
+    | + load_rows*                                                |     -|  0.00|     1547|  1.547e+04|         -|     1548|     -|  dataflow|          -|         -|  1168 (~0%)|    476 (~0%)|    -|
+    |  + load_rows_Loop_LOAD_ROW_proc1                            |     -|  0.00|     1547|  1.547e+04|         -|     1547|     -|        no|          -|         -|  1168 (~0%)|    476 (~0%)|    -|
+    |   + load_rows_Loop_LOAD_ROW_proc1_Pipeline_LOAD_ROW_LOAD_W  |     -|  0.00|     1539|  1.539e+04|         -|     1539|     -|        no|          -|         -|  1041 (~0%)|    109 (~0%)|    -|
+    |    o LOAD_ROW_LOAD_W                                        |     -|  7.30|     1537|  1.537e+04|         3|        1|  1536|       yes|          -|         -|           -|            -|    -|
+    | + compute_rows                                              |     -|  0.01|   174017|  1.740e+06|         -|   174017|     -|        no|  160 (55%)|   64 (5%)|  10975 (4%)|  34761 (29%)|    -|
+    |  o COMPUTE_ROW                                              |     -|  7.30|   174016|  1.740e+06|      2719|        -|    64|        no|          -|         -|           -|            -|    -|
+    |   + compute_rows_Pipeline_UNPK_W                            |     -|  4.51|       26|    260.000|         -|       26|     -|        no|          -|         -|    13 (~0%)|     81 (~0%)|    -|
+    |    o UNPK_W                                                 |     -|  7.30|       24|    240.000|         2|        1|    24|       yes|          -|         -|           -|            -|    -|
+    |   + compute_rows_Pipeline_convert_loop                      |     -|  4.04|      770|  7.700e+03|         -|      770|     -|        no|          -|         -|    23 (~0%)|    214 (~0%)|    -|
+    |    o convert_loop                                           |     -|  7.30|      768|  7.680e+03|         2|        1|   768|       yes|          -|         -|           -|            -|    -|
+    |   + compute_rows_Pipeline_convert_loop1                     |     -|  4.04|      770|  7.700e+03|         -|      770|     -|        no|          -|         -|    23 (~0%)|    214 (~0%)|    -|
+    |    o convert_loop                                           |     -|  7.30|      768|  7.680e+03|         2|        1|   768|       yes|          -|         -|           -|            -|    -|
+    |   + compute_rows_Pipeline_silu_loop2                        |     -|  0.01|      794|  7.940e+03|         -|      794|     -|        no|          -|         -|   407 (~0%)|    343 (~0%)|    -|
+    |    o silu_loop                                              |     -|  7.30|      792|  7.920e+03|        26|        1|   768|       yes|          -|         -|           -|            -|    -|
+    |   + compute_rows_Pipeline_smx_0                             |     -|  1.87|      769|  7.690e+03|         -|      769|     -|        no|          -|         -|    50 (~0%)|    517 (~0%)|    -|
+    |    o smx_0                                                  |     -|  7.30|      767|  7.670e+03|         2|        1|   767|       yes|          -|         -|           -|            -|    -|
+    |   + compute_rows_Pipeline_smx_1                             |     -|  0.86|      322|  3.220e+03|         -|      322|     -|        no|          -|   14 (1%)|  1842 (~0%)|    3293 (2%)|    -|
+    |    o smx_1                                                  |    II|  7.30|      320|  3.200e+03|        36|        3|    96|       yes|          -|         -|           -|            -|    -|
+    |   + compute_rows_Pipeline_smx_2                             |     -|  0.24|      792|  7.920e+03|         -|      792|     -|        no|          -|         -|   307 (~0%)|    278 (~0%)|    -|
+    |    o smx_2                                                  |     -|  7.30|      790|  7.900e+03|        24|        1|   768|       yes|          -|         -|           -|            -|    -|
+    |   + float_rmsnorm                                           |     -|  0.24|     1115|  1.115e+04|         -|     1115|     -|        no|          -|   15 (1%)|   2532 (1%)|    4396 (3%)|    -|
+    |    + float_rmsnorm_Pipeline_rms_loop_0                      |     -|  0.28|      309|  3.090e+03|         -|      309|     -|        no|          -|  10 (~0%)|  1744 (~0%)|    2528 (2%)|    -|
+    |     o rms_loop_0                                            |    II|  7.30|      307|  3.070e+03|        23|        3|    96|       yes|          -|         -|           -|            -|    -|
+    |    + float_rmsnorm_Pipeline_rms_loop_1                      |     -|  0.28|      774|  7.740e+03|         -|      774|     -|        no|          -|         -|   207 (~0%)|    278 (~0%)|    -|
+    |     o rms_loop_1                                            |     -|  7.30|      772|  7.720e+03|         6|        1|   768|       yes|          -|         -|           -|            -|    -|
+    |   + float_layernorm                                         |     -|  0.24|     1435|  1.435e+04|         -|     1435|     -|        no|          -|   15 (1%)|   2729 (1%)|    5474 (4%)|    -|
+    |    + float_layernorm_Pipeline_layer_loop_0                  |     -|  0.86|      306|  3.060e+03|         -|      306|     -|        no|          -|         -|   608 (~0%)|    1295 (1%)|    -|
+    |     o layer_loop_0                                          |    II|  7.30|      304|  3.040e+03|        20|        3|    96|       yes|          -|         -|           -|            -|    -|
+    |    + float_layernorm_Pipeline_layer_loop_1                  |     -|  0.28|      316|  3.160e+03|         -|      316|     -|        no|          -|   6 (~0%)|  1446 (~0%)|    1807 (1%)|    -|
+    |     o layer_loop_1                                          |    II|  7.30|      314|  3.140e+03|        30|        3|    96|       yes|          -|         -|           -|            -|    -|
+    |    + float_layernorm_Pipeline_ln_2                          |     -|  0.28|      778|  7.780e+03|         -|      778|     -|        no|          -|         -|   247 (~0%)|    278 (~0%)|    -|
+    |     o ln_2                                                  |     -|  7.30|      776|  7.760e+03|        10|        1|   768|       yes|          -|         -|           -|            -|    -|
+    |   + compute_rows_Pipeline_silu_loop                         |     -|  0.01|      794|  7.940e+03|         -|      794|     -|        no|          -|         -|   407 (~0%)|    343 (~0%)|    -|
+    |    o silu_loop                                              |     -|  7.30|      792|  7.920e+03|        26|        1|   768|       yes|          -|         -|           -|            -|    -|
+    |   + compute_rows_Pipeline_add_loop                          |     -|  0.86|      775|  7.750e+03|         -|      775|     -|        no|          -|         -|   241 (~0%)|    426 (~0%)|    -|
+    |    o add_loop                                               |     -|  7.30|      773|  7.730e+03|         7|        1|   768|       yes|          -|         -|           -|            -|    -|
+    |   + compute_rows_Pipeline_add_loop3                         |     -|  0.86|      775|  7.750e+03|         -|      775|     -|        no|          -|         -|   241 (~0%)|    426 (~0%)|    -|
+    |    o add_loop                                               |     -|  7.30|      773|  7.730e+03|         7|        1|   768|       yes|          -|         -|           -|            -|    -|
+    |   + compute_rows_Pipeline_add_loop4                         |     -|  0.86|      775|  7.750e+03|         -|      775|     -|        no|          -|         -|   241 (~0%)|    426 (~0%)|    -|
+    |    o add_loop                                               |     -|  7.30|      773|  7.730e+03|         7|        1|   768|       yes|          -|         -|           -|            -|    -|
+    |   + compute_rows_Pipeline_PK_W                              |     -|  4.51|       26|    260.000|         -|       26|     -|        no|          -|         -|     8 (~0%)|     70 (~0%)|    -|
+    |    o PK_W                                                   |     -|  7.30|       24|    240.000|         2|        1|    24|       yes|          -|         -|           -|            -|    -|
+    | + store_rows                                                |     -|  0.00|     1547|  1.547e+04|         -|     1547|     -|        no|          -|         -|   598 (~0%)|    338 (~0%)|    -|
+    |  + store_rows_Pipeline_STORE_ROW_STORE_W                    |     -|  0.00|     1539|  1.539e+04|         -|     1539|     -|        no|          -|         -|   529 (~0%)|     91 (~0%)|    -|
+    |   o STORE_ROW_STORE_W                                       |     -|  7.30|     1537|  1.537e+04|         3|        1|  1536|       yes|          -|         -|           -|            -|    -|
+    +-------------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+-----------+----------+------------+-------------+-----+
 
 
 ================================================================
@@ -156,18 +158,18 @@
 +--------------+-----------+-----------+--------+-------+----------------------------------+
 | HW Interface | Loop      | Direction | Length | Width | Location                         |
 +--------------+-----------+-----------+--------+-------+----------------------------------+
-| m_axi_gmem0  | LOAD_ROW  | read      | 1536   | 512   | activation_accelerator.cpp:402:5 |
-| m_axi_gmem1  | LOAD_ROW  | read      | 1536   | 512   | activation_accelerator.cpp:402:5 |
-| m_axi_gmem2  | STORE_ROW | write     | 1536   | 512   | activation_accelerator.cpp:517:5 |
+| m_axi_gmem0  | LOAD_ROW  | read      | 1536   | 512   | activation_accelerator.cpp:579:5 |
+| m_axi_gmem1  | LOAD_ROW  | read      | 1536   | 512   | activation_accelerator.cpp:579:5 |
+| m_axi_gmem2  | STORE_ROW | write     | 1536   | 512   | activation_accelerator.cpp:694:5 |
 +--------------+-----------+-----------+--------+-------+----------------------------------+
 
 * Inferred Bursts and Widening Missed
 +--------------+----------+---------+--------------------------------------------------------------------------------------------------------+------------+----------------------------------+
 | HW Interface | Variable | Loop    | Problem                                                                                                | Resolution | Location                         |
 +--------------+----------+---------+--------------------------------------------------------------------------------------------------------+------------+----------------------------------+
-| m_axi_gmem0  | in0      | LOAD_W  | Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | activation_accelerator.cpp:409:9 |
-| m_axi_gmem1  | in1      | LOAD_W  | Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | activation_accelerator.cpp:409:9 |
-| m_axi_gmem2  | out      | STORE_W | Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | activation_accelerator.cpp:521:9 |
+| m_axi_gmem0  | in0      | LOAD_W  | Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | activation_accelerator.cpp:586:9 |
+| m_axi_gmem1  | in1      | LOAD_W  | Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | activation_accelerator.cpp:586:9 |
+| m_axi_gmem2  | out      | STORE_W | Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | activation_accelerator.cpp:698:9 |
 +--------------+----------+---------+--------------------------------------------------------------------------------------------------------+------------+----------------------------------+
 
     * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
@@ -175,83 +177,85 @@
 ================================================================
 == Bind Op Report
 ================================================================
-+-------------------------------------------------------------+-----+--------+------------+--------+---------+---------+
-| Name                                                        | DSP | Pragma | Variable   | Op     | Impl    | Latency |
-+-------------------------------------------------------------+-----+--------+------------+--------+---------+---------+
-| + activation_accelerator                                    | 43  |        |            |        |         |         |
-|  + load_rows                                                | 0   |        |            |        |         |         |
-|   + load_rows_Loop_LOAD_ROW_proc1                           | 0   |        |            |        |         |         |
-|    + load_rows_Loop_LOAD_ROW_proc1_Pipeline_LOAD_ROW_LOAD_W | 0   |        |            |        |         |         |
-|      add_ln402_fu_124_p2                                    | -   |        | add_ln402  | add    | fabric  | 0       |
-|  + compute_rows                                             | 43  |        |            |        |         |         |
-|    r_2_fu_1970_p2                                           | -   |        | r_2        | add    | fabric  | 0       |
-|    fdiv_32ns_32ns_32_9_no_dsp_1_U1093                       | -   |        | mean_sq    | fdiv   | fabric  | 8       |
-|    faddfsub_32ns_32ns_32_4_full_dsp_1_U1091                 | 2   |        | rms        | fadd   | fulldsp | 3       |
-|    fmul_32ns_32ns_32_3_max_dsp_1_U1092                      | 3   |        | x2         | fmul   | maxdsp  | 2       |
-|    i_11_fu_2187_p2                                          | -   |        | i_11       | sub    | fabric  | 0       |
-|    fmul_32ns_32ns_32_3_max_dsp_1_U1092                      | 3   |        | mul1_i_i   | fmul   | maxdsp  | 2       |
-|    fmul_32ns_32ns_32_3_max_dsp_1_U1092                      | 3   |        | mul2_i_i   | fmul   | maxdsp  | 2       |
-|    faddfsub_32ns_32ns_32_4_full_dsp_1_U1091                 | 2   |        | sub3_i_i   | fadd   | fulldsp | 3       |
-|    fmul_32ns_32ns_32_3_max_dsp_1_U1092                      | 3   |        | re_rms     | fmul   | maxdsp  | 2       |
-|    fdiv_32ns_32ns_32_9_no_dsp_1_U1093                       | -   |        | mean       | fdiv   | fabric  | 8       |
-|    fdiv_32ns_32ns_32_9_no_dsp_1_U1093                       | -   |        | div13_i    | fdiv   | fabric  | 8       |
-|    faddfsub_32ns_32ns_32_4_full_dsp_1_U1091                 | 2   |        | x_assign_3 | fadd   | fulldsp | 3       |
-|    frsqrt_32ns_32ns_32_10_full_dsp_1_U1094                  | 9   |        | inv_std    | frsqrt | fulldsp | 9       |
-|   + compute_rows_Pipeline_UNPK_W                            | 0   |        |            |        |         |         |
-|     add_ln456_fu_1416_p2                                    | -   |        | add_ln456  | add    | fabric  | 0       |
-|   + compute_rows_Pipeline_convert_loop                      | 0   |        |            |        |         |         |
-|     add_ln210_fu_1214_p2                                    | -   |        | add_ln210  | add    | fabric  | 0       |
-|   + compute_rows_Pipeline_convert_loop1                     | 0   |        |            |        |         |         |
-|     add_ln210_fu_1214_p2                                    | -   |        | add_ln210  | add    | fabric  | 0       |
-|   + compute_rows_Pipeline_silu_loop2                        | 0   |        |            |        |         |         |
-|     add_ln273_fu_1241_p2                                    | -   |        | add_ln273  | add    | fabric  | 0       |
-|   + compute_rows_Pipeline_smx_0                             | 0   |        |            |        |         |         |
-|     add_ln341_fu_640_p2                                     | -   |        | add_ln341  | add    | fabric  | 0       |
-|   + compute_rows_Pipeline_smx_1                             | 22  |        |            |        |         |         |
-|     faddfsub_32ns_32ns_32_4_full_dsp_1_U261                 | 2   |        | x_assign_5 | fsub   | fulldsp | 3       |
-|     fexp_32ns_32ns_32_8_full_dsp_1_U267                     | 7   |        | tmp_3      | fexp   | fulldsp | 7       |
-|     faddfsub_32ns_32ns_32_4_full_dsp_1_U262                 | 2   |        | x_assign_6 | fsub   | fulldsp | 3       |
-|     fexp_32ns_32ns_32_8_full_dsp_1_U268                     | 7   |        | tmp_5      | fexp   | fulldsp | 7       |
-|     faddfsub_32ns_32ns_32_4_full_dsp_1_U263                 | 2   |        | x_assign_7 | fsub   | fulldsp | 3       |
-|     faddfsub_32ns_32ns_32_4_full_dsp_1_U264                 | 2   |        | x_assign_8 | fsub   | fulldsp | 3       |
-|     fexp_32ns_32ns_32_8_full_dsp_1_U267                     | 7   |        | tmp_9      | fexp   | fulldsp | 7       |
-|     fexp_32ns_32ns_32_8_full_dsp_1_U268                     | 7   |        | tmp_11     | fexp   | fulldsp | 7       |
-|     faddfsub_32ns_32ns_32_4_full_dsp_1_U261                 | 2   |        | x_assign_s | fsub   | fulldsp | 3       |
-|     faddfsub_32ns_32ns_32_4_full_dsp_1_U262                 | 2   |        | x_assign_1 | fsub   | fulldsp | 3       |
-|     fexp_32ns_32ns_32_8_full_dsp_1_U267                     | 7   |        | tmp_15     | fexp   | fulldsp | 7       |
-|     faddfsub_32ns_32ns_32_4_full_dsp_1_U263                 | 2   |        | s0         | fsub   | fulldsp | 3       |
-|     faddfsub_32ns_32ns_32_4_full_dsp_1_U264                 | 2   |        | s1         | fsub   | fulldsp | 3       |
-|     faddfsub_32ns_32ns_32_4_full_dsp_1_U261                 | 2   |        | s3         | fsub   | fulldsp | 3       |
-|     faddfsub_32ns_32ns_32_4_full_dsp_1_U262                 | 2   |        | t0         | fsub   | fulldsp | 3       |
-|     faddfsub_32ns_32ns_32_4_full_dsp_1_U263                 | 2   |        | t1         | fsub   | fulldsp | 3       |
-|     faddfsub_32ns_32ns_32_4_full_dsp_1_U264                 | 2   |        | block      | fsub   | fulldsp | 3       |
-|     add_ln351_fu_663_p2                                     | -   |        | add_ln351  | add    | fabric  | 0       |
-|   + compute_rows_Pipeline_smx_2                             | 0   |        |            |        |         |         |
-|     add_ln373_fu_1249_p2                                    | -   |        | add_ln373  | add    | fabric  | 0       |
-|   + compute_rows_Pipeline_rms_loop_0                        | 0   |        |            |        |         |         |
-|     add_ln286_fu_568_p2                                     | -   |        | add_ln286  | add    | fabric  | 0       |
-|   + compute_rows_Pipeline_rms_loop_1                        | 0   |        |            |        |         |         |
-|     add_ln294_fu_1232_p2                                    | -   |        | add_ln294  | add    | fabric  | 0       |
-|   + compute_rows_Pipeline_layer_loop_0                      | 0   |        |            |        |         |         |
-|     add_ln305_fu_564_p2                                     | -   |        | add_ln305  | add    | fabric  | 0       |
-|   + compute_rows_Pipeline_layer_loop_1                      | 0   |        |            |        |         |         |
-|     add_ln312_fu_582_p2                                     | -   |        | add_ln312  | add    | fabric  | 0       |
-|   + compute_rows_Pipeline_ln_2                              | 0   |        |            |        |         |         |
-|     add_ln319_fu_1242_p2                                    | -   |        | add_ln319  | add    | fabric  | 0       |
-|   + compute_rows_Pipeline_silu_loop                         | 0   |        |            |        |         |         |
-|     add_ln273_fu_1241_p2                                    | -   |        | add_ln273  | add    | fabric  | 0       |
-|   + compute_rows_Pipeline_add_loop                          | 0   |        |            |        |         |         |
-|     add_ln329_fu_1700_p2                                    | -   |        | add_ln329  | add    | fabric  | 0       |
-|   + compute_rows_Pipeline_add_loop3                         | 0   |        |            |        |         |         |
-|     add_ln329_fu_1700_p2                                    | -   |        | add_ln329  | add    | fabric  | 0       |
-|   + compute_rows_Pipeline_add_loop4                         | 0   |        |            |        |         |         |
-|     add_ln329_fu_1700_p2                                    | -   |        | add_ln329  | add    | fabric  | 0       |
-|   + compute_rows_Pipeline_PK_W                              | 0   |        |            |        |         |         |
-|     add_ln497_fu_549_p2                                     | -   |        | add_ln497  | add    | fabric  | 0       |
-|  + store_rows                                               | 0   |        |            |        |         |         |
-|   + store_rows_Pipeline_STORE_ROW_STORE_W                   | 0   |        |            |        |         |         |
-|     add_ln517_fu_98_p2                                      | -   |        | add_ln517  | add    | fabric  | 0       |
-+-------------------------------------------------------------+-----+--------+------------+--------+---------+---------+
++-------------------------------------------------------------+-----+--------+-----------+--------+---------+---------+
+| Name                                                        | DSP | Pragma | Variable  | Op     | Impl    | Latency |
++-------------------------------------------------------------+-----+--------+-----------+--------+---------+---------+
+| + activation_accelerator                                    | 64  |        |           |        |         |         |
+|  + load_rows                                                | 0   |        |           |        |         |         |
+|   + load_rows_Loop_LOAD_ROW_proc1                           | 0   |        |           |        |         |         |
+|    + load_rows_Loop_LOAD_ROW_proc1_Pipeline_LOAD_ROW_LOAD_W | 0   |        |           |        |         |         |
+|      add_ln579_fu_124_p2                                    | -   |        | add_ln579 | add    | fabric  | 0       |
+|  + compute_rows                                             | 64  |        |           |        |         |         |
+|    r_2_fu_1779_p2                                           | -   |        | r_2       | add    | fabric  | 0       |
+|   + compute_rows_Pipeline_UNPK_W                            | 0   |        |           |        |         |         |
+|     add_ln633_fu_1416_p2                                    | -   |        | add_ln633 | add    | fabric  | 0       |
+|   + compute_rows_Pipeline_convert_loop                      | 0   |        |           |        |         |         |
+|     add_ln210_fu_1214_p2                                    | -   |        | add_ln210 | add    | fabric  | 0       |
+|   + compute_rows_Pipeline_convert_loop1                     | 0   |        |           |        |         |         |
+|     add_ln210_fu_1214_p2                                    | -   |        | add_ln210 | add    | fabric  | 0       |
+|   + compute_rows_Pipeline_silu_loop2                        | 0   |        |           |        |         |         |
+|     add_ln273_fu_1241_p2                                    | -   |        | add_ln273 | add    | fabric  | 0       |
+|   + compute_rows_Pipeline_smx_0                             | 0   |        |           |        |         |         |
+|     add_ln518_fu_640_p2                                     | -   |        | add_ln518 | add    | fabric  | 0       |
+|   + compute_rows_Pipeline_smx_1                             | 14  |        |           |        |         |         |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U267                     | 7   |        | tmp_3     | fexp   | fulldsp | 7       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U268                     | 7   |        | tmp_5     | fexp   | fulldsp | 7       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U267                     | 7   |        | tmp_9     | fexp   | fulldsp | 7       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U268                     | 7   |        | tmp_11    | fexp   | fulldsp | 7       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U267                     | 7   |        | tmp_15    | fexp   | fulldsp | 7       |
+|     add_ln528_fu_663_p2                                     | -   |        | add_ln528 | add    | fabric  | 0       |
+|   + compute_rows_Pipeline_smx_2                             | 0   |        |           |        |         |         |
+|     add_ln551_fu_1249_p2                                    | -   |        | add_ln551 | add    | fabric  | 0       |
+|   + float_rmsnorm                                           | 15  |        |           |        |         |         |
+|     fdiv_32ns_32ns_32_9_no_dsp_1_U500                       | -   |        | mean_sq   | fdiv   | fabric  | 8       |
+|     faddfsub_32ns_32ns_32_4_full_dsp_1_U498                 | 2   |        | rms       | fadd   | fulldsp | 3       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U499                      | 3   |        | x2        | fmul   | maxdsp  | 2       |
+|     i_2_fu_416_p2                                           | -   |        | i_2       | sub    | fabric  | 0       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U499                      | 3   |        | mul1_i    | fmul   | maxdsp  | 2       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U499                      | 3   |        | mul2_i    | fmul   | maxdsp  | 2       |
+|     faddfsub_32ns_32ns_32_4_full_dsp_1_U498                 | 2   |        | sub3_i    | fadd   | fulldsp | 3       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U499                      | 3   |        | re_rms    | fmul   | maxdsp  | 2       |
+|    + float_rmsnorm_Pipeline_rms_loop_0                      | 10  |        |           |        |         |         |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U387                     | 3   |        | mul_1     | fmul   | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U388                     | 3   |        | mul_2     | fmul   | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U387                     | 3   |        | mul_4     | fmul   | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U388                     | 3   |        | mul_5     | fmul   | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U387                     | 3   |        | mul_7     | fmul   | maxdsp  | 2       |
+|      fadd_32ns_32ns_32_4_full_dsp_1_U383                    | 2   |        | s2        | fadd   | fulldsp | 3       |
+|      fadd_32ns_32ns_32_4_full_dsp_1_U383                    | 2   |        | t0        | fadd   | fulldsp | 3       |
+|      fadd_32ns_32ns_32_4_full_dsp_1_U383                    | 2   |        | t1        | fadd   | fulldsp | 3       |
+|      fadd_32ns_32ns_32_4_full_dsp_1_U384                    | 2   |        | block     | fadd   | fulldsp | 3       |
+|      fadd_32ns_32ns_32_4_no_dsp_1_U385                      | -   |        | sum_sq_1  | fadd   | fabric  | 3       |
+|      add_ln288_fu_640_p2                                    | -   |        | add_ln288 | add    | fabric  | 0       |
+|    + float_rmsnorm_Pipeline_rms_loop_1                      | 0   |        |           |        |         |         |
+|      add_ln318_fu_1232_p2                                   | -   |        | add_ln318 | add    | fabric  | 0       |
+|   + float_layernorm                                         | 15  |        |           |        |         |         |
+|     frsqrt_32ns_32ns_32_10_full_dsp_1_U732                  | 9   |        | inv_std   | frsqrt | fulldsp | 9       |
+|    + float_layernorm_Pipeline_layer_loop_0                  | 0   |        |           |        |         |         |
+|      add_ln332_fu_628_p2                                    | -   |        | add_ln332 | add    | fabric  | 0       |
+|    + float_layernorm_Pipeline_layer_loop_1                  | 6   |        |           |        |         |         |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U617                     | 3   |        | mul_1     | fmul   | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U618                     | 3   |        | mul_2     | fmul   | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U617                     | 3   |        | mul_4     | fmul   | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U618                     | 3   |        | mul_5     | fmul   | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U617                     | 3   |        | mul_7     | fmul   | maxdsp  | 2       |
+|      add_ln362_fu_658_p2                                    | -   |        | add_ln362 | add    | fabric  | 0       |
+|    + float_layernorm_Pipeline_ln_2                          | 0   |        |           |        |         |         |
+|      add_ln390_fu_1242_p2                                   | -   |        | add_ln390 | add    | fabric  | 0       |
+|   + compute_rows_Pipeline_silu_loop                         | 0   |        |           |        |         |         |
+|     add_ln273_fu_1241_p2                                    | -   |        | add_ln273 | add    | fabric  | 0       |
+|   + compute_rows_Pipeline_add_loop                          | 0   |        |           |        |         |         |
+|     add_ln458_fu_1700_p2                                    | -   |        | add_ln458 | add    | fabric  | 0       |
+|   + compute_rows_Pipeline_add_loop3                         | 0   |        |           |        |         |         |
+|     add_ln458_fu_1700_p2                                    | -   |        | add_ln458 | add    | fabric  | 0       |
+|   + compute_rows_Pipeline_add_loop4                         | 0   |        |           |        |         |         |
+|     add_ln458_fu_1700_p2                                    | -   |        | add_ln458 | add    | fabric  | 0       |
+|   + compute_rows_Pipeline_PK_W                              | 0   |        |           |        |         |         |
+|     add_ln674_fu_549_p2                                     | -   |        | add_ln674 | add    | fabric  | 0       |
+|  + store_rows                                               | 0   |        |           |        |         |         |
+|   + store_rows_Pipeline_STORE_ROW_STORE_W                   | 0   |        |           |        |         |         |
+|     add_ln694_fu_98_p2                                      | -   |        | add_ln694 | add    | fabric  | 0       |
++-------------------------------------------------------------+-----+--------+-----------+--------+---------+---------+
 
 
 ================================================================
@@ -345,11 +349,11 @@
 |    tile2_V_42_U                             | 1    | -    | yes    | tile2_V_42 | ram_2p  | bram   | 1       |
 |    tile2_V_43_U                             | 1    | -    | yes    | tile2_V_43 | ram_2p  | bram   | 1       |
 |    tile2_V_44_U                             | 1    | -    | yes    | tile2_V_44 | ram_2p  | bram   | 1       |
-|    faddfsub_32ns_32ns_32_4_full_dsp_1_U1091 | 1    | -    | yes    | tile2_V_45 | ram_2p  | bram   | 1       |
-|    fexp_32ns_32ns_32_8_full_dsp_1_U1095     | 1    | -    | yes    | tile2_V_46 | ram_2p  | bram   | 1       |
+|    tile2_V_45_U                             | 1    | -    | yes    | tile2_V_45 | ram_2p  | bram   | 1       |
+|    tile2_V_46_U                             | 1    | -    | yes    | tile2_V_46 | ram_2p  | bram   | 1       |
 |    tile2_V_47_U                             | 1    | -    | yes    | tile2_V_47 | ram_2p  | bram   | 1       |
-|    tile2_V_48_U                             | 1    | -    | yes    | tile2_V_48 | ram_2p  | bram   | 1       |
-|    tile2_V_49_U                             | 1    | -    | yes    | tile2_V_49 | ram_2p  | bram   | 1       |
+|    faddfsub_32ns_32ns_32_4_full_dsp_1_U1268 | 1    | -    | yes    | tile2_V_48 | ram_2p  | bram   | 1       |
+|    fexp_32ns_32ns_32_8_full_dsp_1_U1271     | 1    | -    | yes    | tile2_V_49 | ram_2p  | bram   | 1       |
 |    tile2_V_50_U                             | 1    | -    | yes    | tile2_V_50 | ram_2p  | bram   | 1       |
 |    tile2_V_51_U                             | 1    | -    | yes    | tile2_V_51 | ram_2p  | bram   | 1       |
 |    tile2_V_52_U                             | 1    | -    | yes    | tile2_V_52 | ram_2p  | bram   | 1       |
@@ -359,7 +363,7 @@
 |    tile2_V_56_U                             | 1    | -    | yes    | tile2_V_56 | ram_2p  | bram   | 1       |
 |    tile2_V_57_U                             | 1    | -    | yes    | tile2_V_57 | ram_2p  | bram   | 1       |
 |    tile2_V_58_U                             | 1    | -    | yes    | tile2_V_58 | ram_2p  | bram   | 1       |
-|    tile2_V_59_U                             | 1    | -    | yes    | tile2_V_59 | ram_2p  | bram   | 1       |
+|    faddfsub_32ns_32ns_32_4_full_dsp_1_U1272 | 1    | -    | yes    | tile2_V_59 | ram_2p  | bram   | 1       |
 |    tile2_V_60_U                             | 1    | -    | yes    | tile2_V_60 | ram_2p  | bram   | 1       |
 |    tile2_V_61_U                             | 1    | -    | yes    | tile2_V_61 | ram_2p  | bram   | 1       |
 |    tile2_V_62_U                             | 1    | -    | yes    | tile2_V_62 | ram_2p  | bram   | 1       |
@@ -370,7 +374,7 @@
 |    xt_35_U                                  | 1    | -    | yes    | xt_35      | ram_s2p | bram   | 1       |
 |    xt_36_U                                  | 1    | -    | yes    | xt_36      | ram_s2p | bram   | 1       |
 |    xt_37_U                                  | 1    | -    | yes    | xt_37      | ram_s2p | bram   | 1       |
-|    xt_38_U                                  | 1    | -    | yes    | xt_38      | ram_s2p | bram   | 1       |
+|    faddfsub_32ns_32ns_32_4_full_dsp_1_U1273 | 1    | -    | yes    | xt_38      | ram_s2p | bram   | 1       |
 |    xt_39_U                                  | 1    | -    | yes    | xt_39      | ram_s2p | bram   | 1       |
 |    xt_40_U                                  | 1    | -    | yes    | xt_40      | ram_s2p | bram   | 1       |
 |    xt_41_U                                  | 1    | -    | yes    | xt_41      | ram_s2p | bram   | 1       |
@@ -379,20 +383,20 @@
 |    xt_44_U                                  | 1    | -    | yes    | xt_44      | ram_s2p | bram   | 1       |
 |    xt_45_U                                  | 1    | -    | yes    | xt_45      | ram_s2p | bram   | 1       |
 |    xt_46_U                                  | 1    | -    | yes    | xt_46      | ram_s2p | bram   | 1       |
-|    fexp_32ns_32ns_32_8_full_dsp_1_U1095     | 1    | -    | yes    | xt_47      | ram_s2p | bram   | 1       |
+|    xt_47_U                                  | 1    | -    | yes    | xt_47      | ram_s2p | bram   | 1       |
 |    xt_48_U                                  | 1    | -    | yes    | xt_48      | ram_s2p | bram   | 1       |
-|    xt_49_U                                  | 1    | -    | yes    | xt_49      | ram_s2p | bram   | 1       |
-|    xt_50_U                                  | 1    | -    | yes    | xt_50      | ram_s2p | bram   | 1       |
+|    faddfsub_32ns_32ns_32_4_full_dsp_1_U1274 | 1    | -    | yes    | xt_49      | ram_s2p | bram   | 1       |
+|    fexp_32ns_32ns_32_8_full_dsp_1_U1271     | 1    | -    | yes    | xt_50      | ram_s2p | bram   | 1       |
 |    xt_51_U                                  | 1    | -    | yes    | xt_51      | ram_s2p | bram   | 1       |
 |    xt_52_U                                  | 1    | -    | yes    | xt_52      | ram_s2p | bram   | 1       |
 |    xt_53_U                                  | 1    | -    | yes    | xt_53      | ram_s2p | bram   | 1       |
 |    xt_54_U                                  | 1    | -    | yes    | xt_54      | ram_s2p | bram   | 1       |
-|    xt_55_U                                  | 1    | -    | yes    | xt_55      | ram_s2p | bram   | 1       |
+|    fdiv_32ns_32ns_32_9_no_dsp_1_U1270       | 1    | -    | yes    | xt_55      | ram_s2p | bram   | 1       |
 |    xt_56_U                                  | 1    | -    | yes    | xt_56      | ram_s2p | bram   | 1       |
 |    xt_57_U                                  | 1    | -    | yes    | xt_57      | ram_s2p | bram   | 1       |
-|    xt_58_U                                  | 1    | -    | yes    | xt_58      | ram_s2p | bram   | 1       |
-|    xt_59_U                                  | 1    | -    | yes    | xt_59      | ram_s2p | bram   | 1       |
-|    xt_60_U                                  | 1    | -    | yes    | xt_60      | ram_s2p | bram   | 1       |
+|    fdiv_32ns_32ns_32_9_no_dsp_1_U1270       | 1    | -    | yes    | xt_58      | ram_s2p | bram   | 1       |
+|    faddfsub_32ns_32ns_32_4_full_dsp_1_U1268 | 1    | -    | yes    | xt_59      | ram_s2p | bram   | 1       |
+|    faddfsub_32ns_32ns_32_4_full_dsp_1_U1275 | 1    | -    | yes    | xt_60      | ram_s2p | bram   | 1       |
 |    xt_61_U                                  | 1    | -    | yes    | xt_61      | ram_s2p | bram   | 1       |
 |    xt_62_U                                  | 1    | -    | yes    | xt_62      | ram_s2p | bram   | 1       |
 |    yt_U                                     | 1    | -    | yes    | yt         | ram_s2p | bram   | 1       |
@@ -400,23 +404,23 @@
 |    yt_33_U                                  | 1    | -    | yes    | yt_33      | ram_s2p | bram   | 1       |
 |    yt_34_U                                  | 1    | -    | yes    | yt_34      | ram_s2p | bram   | 1       |
 |    yt_35_U                                  | 1    | -    | yes    | yt_35      | ram_s2p | bram   | 1       |
-|    fadd_32ns_32ns_32_4_no_dsp_1_U1096       | 1    | -    | yes    | yt_36      | ram_s2p | bram   | 1       |
-|    fadd_32ns_32ns_32_4_no_dsp_1_U1096       | 1    | -    | yes    | yt_37      | ram_s2p | bram   | 1       |
-|    faddfsub_32ns_32ns_32_4_full_dsp_1_U1091 | 1    | -    | yes    | yt_38      | ram_s2p | bram   | 1       |
-|    fmul_32ns_32ns_32_3_max_dsp_1_U1092      | 1    | -    | yes    | yt_39      | ram_s2p | bram   | 1       |
-|    fadd_32ns_32ns_32_4_no_dsp_1_U1096       | 1    | -    | yes    | yt_40      | ram_s2p | bram   | 1       |
+|    yt_36_U                                  | 1    | -    | yes    | yt_36      | ram_s2p | bram   | 1       |
+|    yt_37_U                                  | 1    | -    | yes    | yt_37      | ram_s2p | bram   | 1       |
+|    yt_38_U                                  | 1    | -    | yes    | yt_38      | ram_s2p | bram   | 1       |
+|    faddfsub_32ns_32ns_32_4_full_dsp_1_U1268 | 1    | -    | yes    | yt_39      | ram_s2p | bram   | 1       |
+|    yt_40_U                                  | 1    | -    | yes    | yt_40      | ram_s2p | bram   | 1       |
 |    yt_41_U                                  | 1    | -    | yes    | yt_41      | ram_s2p | bram   | 1       |
 |    yt_42_U                                  | 1    | -    | yes    | yt_42      | ram_s2p | bram   | 1       |
 |    yt_43_U                                  | 1    | -    | yes    | yt_43      | ram_s2p | bram   | 1       |
 |    yt_44_U                                  | 1    | -    | yes    | yt_44      | ram_s2p | bram   | 1       |
-|    yt_45_U                                  | 1    | -    | yes    | yt_45      | ram_s2p | bram   | 1       |
-|    yt_46_U                                  | 1    | -    | yes    | yt_46      | ram_s2p | bram   | 1       |
-|    yt_47_U                                  | 1    | -    | yes    | yt_47      | ram_s2p | bram   | 1       |
-|    fexp_32ns_32ns_32_8_full_dsp_1_U1095     | 1    | -    | yes    | yt_48      | ram_s2p | bram   | 1       |
-|    yt_49_U                                  | 1    | -    | yes    | yt_49      | ram_s2p | bram   | 1       |
-|    yt_50_U                                  | 1    | -    | yes    | yt_50      | ram_s2p | bram   | 1       |
-|    yt_51_U                                  | 1    | -    | yes    | yt_51      | ram_s2p | bram   | 1       |
-|    yt_52_U                                  | 1    | -    | yes    | yt_52      | ram_s2p | bram   | 1       |
+|    faddfsub_32ns_32ns_32_4_full_dsp_1_U1268 | 1    | -    | yes    | yt_45      | ram_s2p | bram   | 1       |
+|    faddfsub_32ns_32ns_32_4_full_dsp_1_U1272 | 1    | -    | yes    | yt_46      | ram_s2p | bram   | 1       |
+|    faddfsub_32ns_32ns_32_4_full_dsp_1_U1273 | 1    | -    | yes    | yt_47      | ram_s2p | bram   | 1       |
+|    faddfsub_32ns_32ns_32_4_full_dsp_1_U1268 | 1    | -    | yes    | yt_48      | ram_s2p | bram   | 1       |
+|    faddfsub_32ns_32ns_32_4_full_dsp_1_U1272 | 1    | -    | yes    | yt_49      | ram_s2p | bram   | 1       |
+|    faddfsub_32ns_32ns_32_4_full_dsp_1_U1272 | 1    | -    | yes    | yt_50      | ram_s2p | bram   | 1       |
+|    faddfsub_32ns_32ns_32_4_full_dsp_1_U1273 | 1    | -    | yes    | yt_51      | ram_s2p | bram   | 1       |
+|    fadd_32ns_32ns_32_4_no_dsp_1_U1276       | 1    | -    | yes    | yt_52      | ram_s2p | bram   | 1       |
 |    yt_53_U                                  | 1    | -    | yes    | yt_53      | ram_s2p | bram   | 1       |
 |    yt_54_U                                  | 1    | -    | yes    | yt_54      | ram_s2p | bram   | 1       |
 |    yt_55_U                                  | 1    | -    | yes    | yt_55      | ram_s2p | bram   | 1       |
@@ -425,8 +429,8 @@
 |    yt_58_U                                  | 1    | -    | yes    | yt_58      | ram_s2p | bram   | 1       |
 |    yt_59_U                                  | 1    | -    | yes    | yt_59      | ram_s2p | bram   | 1       |
 |    yt_60_U                                  | 1    | -    | yes    | yt_60      | ram_s2p | bram   | 1       |
-|    yt_61_U                                  | 1    | -    | yes    | yt_61      | ram_s2p | bram   | 1       |
-|    faddfsub_32ns_32ns_32_4_full_dsp_1_U1091 | 1    | -    | yes    | yt_62      | ram_s2p | bram   | 1       |
+|    faddfsub_32ns_32ns_32_4_full_dsp_1_U1273 | 1    | -    | yes    | yt_61      | ram_s2p | bram   | 1       |
+|    yt_62_U                                  | 1    | -    | yes    | yt_62      | ram_s2p | bram   | 1       |
 +---------------------------------------------+------+------+--------+------------+---------+--------+---------+
 
 
@@ -437,7 +441,7 @@
 +----------+---------------------------+---------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Type     | Options                   | Location                                    | Messages                                                                                                                                                                           |
 +----------+---------------------------+---------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| dataflow | disable_start_propagation | activation_accelerator.cpp:390 in load_rows | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
+| dataflow | disable_start_propagation | activation_accelerator.cpp:567 in load_rows | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
 +----------+---------------------------+---------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 * Valid Pragma Syntax
@@ -454,61 +458,67 @@
 | pipeline        | II=1                                                                                                 | activation_accelerator.cpp:220 in float_to_bf16                  |
 | inline          |                                                                                                      | activation_accelerator.cpp:271 in float_silu                     |
 | pipeline        | II=1                                                                                                 | activation_accelerator.cpp:274 in float_silu                     |
-| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:287 in float_rmsnorm                  |
-| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:306 in float_layernorm                |
-| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:313 in float_layernorm                |
-| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:320 in float_layernorm                |
-| inline          |                                                                                                      | activation_accelerator.cpp:327 in float_add                      |
-| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:330 in float_add                      |
-| inline          |                                                                                                      | activation_accelerator.cpp:338 in float_softmax                  |
-| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:342 in float_softmax                  |
-| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:352 in float_softmax                  |
-| array_partition | variable=e complete                                                                                  | activation_accelerator.cpp:354 in float_softmax, e               |
-| unroll          |                                                                                                      | activation_accelerator.cpp:357 in float_softmax                  |
-| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:374 in float_softmax                  |
-| inline          | off                                                                                                  | activation_accelerator.cpp:387 in load_rows                      |
-| interface       | ap_memory port=in0                                                                                   | activation_accelerator.cpp:393 in load_rows, in0                 |
-| interface       | ap_memory port=in1                                                                                   | activation_accelerator.cpp:394 in load_rows, in1                 |
-| stream          | variable=s0 depth=64                                                                                 | activation_accelerator.cpp:398 in load_rows, s0                  |
-| stream          | variable=s1 depth=64                                                                                 | activation_accelerator.cpp:399 in load_rows, s1                  |
-| loop_tripcount  | min=NROWS max=NROWS                                                                                  | activation_accelerator.cpp:404 in load_rows                      |
-| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:410 in load_rows                      |
-| inline          | off                                                                                                  | activation_accelerator.cpp:423 in compute_rows                   |
-| stream          | variable=s0 depth=64                                                                                 | activation_accelerator.cpp:425 in compute_rows, s0               |
-| stream          | variable=s1 depth=64                                                                                 | activation_accelerator.cpp:426 in compute_rows, s1               |
-| stream          | variable=so depth=64                                                                                 | activation_accelerator.cpp:427 in compute_rows, so               |
-| bind_storage    | variable=tile0 type=ram_2p impl=bram                                                                 | activation_accelerator.cpp:432 in compute_rows, tile0            |
-| bind_storage    | variable=tile1 type=ram_2p impl=bram                                                                 | activation_accelerator.cpp:433 in compute_rows, tile1            |
-| bind_storage    | variable=tile2 type=ram_2p impl=bram                                                                 | activation_accelerator.cpp:434 in compute_rows, tile2            |
-| array_partition | variable=tile0 cyclic factor=32                                                                      | activation_accelerator.cpp:437 in compute_rows, tile0            |
-| array_partition | variable=tile1 cyclic factor=32                                                                      | activation_accelerator.cpp:438 in compute_rows, tile1            |
-| array_partition | variable=tile2 cyclic factor=32                                                                      | activation_accelerator.cpp:439 in compute_rows, tile2            |
-| bind_storage    | variable=xt type=ram_s2p impl=bram                                                                   | activation_accelerator.cpp:445 in compute_rows, xt               |
-| bind_storage    | variable=yt type=ram_s2p impl=bram                                                                   | activation_accelerator.cpp:446 in compute_rows, yt               |
-| array_partition | variable=xt cyclic factor=32                                                                         | activation_accelerator.cpp:447 in compute_rows, xt               |
-| array_partition | variable=yt cyclic factor=32                                                                         | activation_accelerator.cpp:448 in compute_rows, yt               |
-| loop_tripcount  | min=NROWS max=NROWS                                                                                  | activation_accelerator.cpp:452 in compute_rows                   |
-| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:457 in compute_rows                   |
-| array_partition | variable=lane0 complete                                                                              | activation_accelerator.cpp:461 in compute_rows, lane0            |
-| array_partition | variable=lane1 complete                                                                              | activation_accelerator.cpp:462 in compute_rows, lane1            |
-| unroll          |                                                                                                      | activation_accelerator.cpp:467 in compute_rows                   |
-| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:498 in compute_rows                   |
-| array_partition | variable=lane complete                                                                               | activation_accelerator.cpp:500 in compute_rows, lane             |
-| unroll          |                                                                                                      | activation_accelerator.cpp:503 in compute_rows                   |
-| inline          | off                                                                                                  | activation_accelerator.cpp:514 in store_rows                     |
-| stream          | variable=so depth=64                                                                                 | activation_accelerator.cpp:515 in store_rows, so                 |
-| loop_tripcount  | min=NROWS max=NROWS                                                                                  | activation_accelerator.cpp:518 in store_rows                     |
-| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:522 in store_rows                     |
-| interface       | m_axi port=in0 bundle=gmem0 offset=slave depth=NW max_read_burst_length=32 num_read_outstanding=16   | activation_accelerator.cpp:531 in activation_accelerator, in0    |
-| interface       | m_axi port=in1 bundle=gmem1 offset=slave depth=NW max_read_burst_length=32 num_read_outstanding=16   | activation_accelerator.cpp:532 in activation_accelerator, in1    |
-| interface       | m_axi port=out bundle=gmem2 offset=slave depth=NW max_write_burst_length=32 num_write_outstanding=16 | activation_accelerator.cpp:533 in activation_accelerator, out    |
-| interface       | s_axilite port=stage                                                                                 | activation_accelerator.cpp:534 in activation_accelerator, stage  |
-| interface       | s_axilite port=config                                                                                | activation_accelerator.cpp:535 in activation_accelerator, config |
-| interface       | s_axilite port=return                                                                                | activation_accelerator.cpp:536 in activation_accelerator, return |
-| dataflow        |                                                                                                      | activation_accelerator.cpp:537 in activation_accelerator         |
-| stream          | variable=s_in0 depth=64                                                                              | activation_accelerator.cpp:540 in activation_accelerator, s_in0  |
-| stream          | variable=s_in1 depth=64                                                                              | activation_accelerator.cpp:541 in activation_accelerator, s_in1  |
-| stream          | variable=s_out depth=64                                                                              | activation_accelerator.cpp:542 in activation_accelerator, s_out  |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:289 in float_rmsnorm                  |
+| array_partition | variable=a complete                                                                                  | activation_accelerator.cpp:291 in float_rmsnorm, a               |
+| unroll          |                                                                                                      | activation_accelerator.cpp:295 in float_rmsnorm                  |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:333 in float_layernorm                |
+| array_partition | variable=a complete                                                                                  | activation_accelerator.cpp:335 in float_layernorm, a             |
+| unroll          |                                                                                                      | activation_accelerator.cpp:340 in float_layernorm                |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:363 in float_layernorm                |
+| array_partition | variable=s complete                                                                                  | activation_accelerator.cpp:365 in float_layernorm, s             |
+| unroll          |                                                                                                      | activation_accelerator.cpp:369 in float_layernorm                |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:391 in float_layernorm                |
+| inline          |                                                                                                      | activation_accelerator.cpp:456 in float_add                      |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:459 in float_add                      |
+| inline          |                                                                                                      | activation_accelerator.cpp:515 in float_softmax                  |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:519 in float_softmax                  |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:529 in float_softmax                  |
+| array_partition | variable=e complete                                                                                  | activation_accelerator.cpp:532 in float_softmax, e               |
+| unroll          |                                                                                                      | activation_accelerator.cpp:535 in float_softmax                  |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:552 in float_softmax                  |
+| inline          | off                                                                                                  | activation_accelerator.cpp:564 in load_rows                      |
+| interface       | ap_memory port=in0                                                                                   | activation_accelerator.cpp:570 in load_rows, in0                 |
+| interface       | ap_memory port=in1                                                                                   | activation_accelerator.cpp:571 in load_rows, in1                 |
+| stream          | variable=s0 depth=64                                                                                 | activation_accelerator.cpp:575 in load_rows, s0                  |
+| stream          | variable=s1 depth=64                                                                                 | activation_accelerator.cpp:576 in load_rows, s1                  |
+| loop_tripcount  | min=NROWS max=NROWS                                                                                  | activation_accelerator.cpp:581 in load_rows                      |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:587 in load_rows                      |
+| inline          | off                                                                                                  | activation_accelerator.cpp:600 in compute_rows                   |
+| stream          | variable=s0 depth=64                                                                                 | activation_accelerator.cpp:602 in compute_rows, s0               |
+| stream          | variable=s1 depth=64                                                                                 | activation_accelerator.cpp:603 in compute_rows, s1               |
+| stream          | variable=so depth=64                                                                                 | activation_accelerator.cpp:604 in compute_rows, so               |
+| bind_storage    | variable=tile0 type=ram_2p impl=bram                                                                 | activation_accelerator.cpp:609 in compute_rows, tile0            |
+| bind_storage    | variable=tile1 type=ram_2p impl=bram                                                                 | activation_accelerator.cpp:610 in compute_rows, tile1            |
+| bind_storage    | variable=tile2 type=ram_2p impl=bram                                                                 | activation_accelerator.cpp:611 in compute_rows, tile2            |
+| array_partition | variable=tile0 cyclic factor=32                                                                      | activation_accelerator.cpp:614 in compute_rows, tile0            |
+| array_partition | variable=tile1 cyclic factor=32                                                                      | activation_accelerator.cpp:615 in compute_rows, tile1            |
+| array_partition | variable=tile2 cyclic factor=32                                                                      | activation_accelerator.cpp:616 in compute_rows, tile2            |
+| bind_storage    | variable=xt type=ram_s2p impl=bram                                                                   | activation_accelerator.cpp:622 in compute_rows, xt               |
+| bind_storage    | variable=yt type=ram_s2p impl=bram                                                                   | activation_accelerator.cpp:623 in compute_rows, yt               |
+| array_partition | variable=xt cyclic factor=32                                                                         | activation_accelerator.cpp:624 in compute_rows, xt               |
+| array_partition | variable=yt cyclic factor=32                                                                         | activation_accelerator.cpp:625 in compute_rows, yt               |
+| loop_tripcount  | min=NROWS max=NROWS                                                                                  | activation_accelerator.cpp:629 in compute_rows                   |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:634 in compute_rows                   |
+| array_partition | variable=lane0 complete                                                                              | activation_accelerator.cpp:638 in compute_rows, lane0            |
+| array_partition | variable=lane1 complete                                                                              | activation_accelerator.cpp:639 in compute_rows, lane1            |
+| unroll          |                                                                                                      | activation_accelerator.cpp:644 in compute_rows                   |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:675 in compute_rows                   |
+| array_partition | variable=lane complete                                                                               | activation_accelerator.cpp:677 in compute_rows, lane             |
+| unroll          |                                                                                                      | activation_accelerator.cpp:680 in compute_rows                   |
+| inline          | off                                                                                                  | activation_accelerator.cpp:691 in store_rows                     |
+| stream          | variable=so depth=64                                                                                 | activation_accelerator.cpp:692 in store_rows, so                 |
+| loop_tripcount  | min=NROWS max=NROWS                                                                                  | activation_accelerator.cpp:695 in store_rows                     |
+| pipeline        | II=1                                                                                                 | activation_accelerator.cpp:699 in store_rows                     |
+| interface       | m_axi port=in0 bundle=gmem0 offset=slave depth=NW max_read_burst_length=32 num_read_outstanding=16   | activation_accelerator.cpp:708 in activation_accelerator, in0    |
+| interface       | m_axi port=in1 bundle=gmem1 offset=slave depth=NW max_read_burst_length=32 num_read_outstanding=16   | activation_accelerator.cpp:709 in activation_accelerator, in1    |
+| interface       | m_axi port=out bundle=gmem2 offset=slave depth=NW max_write_burst_length=32 num_write_outstanding=16 | activation_accelerator.cpp:710 in activation_accelerator, out    |
+| interface       | s_axilite port=stage                                                                                 | activation_accelerator.cpp:711 in activation_accelerator, stage  |
+| interface       | s_axilite port=config                                                                                | activation_accelerator.cpp:712 in activation_accelerator, config |
+| interface       | s_axilite port=return                                                                                | activation_accelerator.cpp:713 in activation_accelerator, return |
+| dataflow        |                                                                                                      | activation_accelerator.cpp:714 in activation_accelerator         |
+| stream          | variable=s_in0 depth=64                                                                              | activation_accelerator.cpp:717 in activation_accelerator, s_in0  |
+| stream          | variable=s_in1 depth=64                                                                              | activation_accelerator.cpp:718 in activation_accelerator, s_in1  |
+| stream          | variable=s_out depth=64                                                                              | activation_accelerator.cpp:719 in activation_accelerator, s_out  |
 +-----------------+------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+
 
 

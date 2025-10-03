@@ -1339,27 +1339,27 @@ Diagnostics:
         ReplacementText: 'VITIS_LOOP_263_1: '
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      432
+    FileOffset:      609
     FilePath:        activation_accelerator.cpp
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      433
+    FileOffset:      610
     FilePath:        activation_accelerator.cpp
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      434
+    FileOffset:      611
     FilePath:        activation_accelerator.cpp
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Invalid Directive: for current device, ram_s2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      445
+    FileOffset:      622
     FilePath:        activation_accelerator.cpp
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Invalid Directive: for current device, ram_s2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      446
+    FileOffset:      623
     FilePath:        activation_accelerator.cpp
     Replacements:    
 ...

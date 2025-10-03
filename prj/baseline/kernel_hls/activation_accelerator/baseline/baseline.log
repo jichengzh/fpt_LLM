@@ -14,47 +14,53 @@ INFO: [SIM 211-2] *************** CSIM start ***************
 INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 26.66 seconds. CPU system time: 0.8 seconds. Elapsed time: 27.45 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 24.93 seconds. CPU system time: 0.95 seconds. Elapsed time: 25.85 seconds; current allocated memory: 0.000 MB.
 INFO: [HLS 200-1510] Running: csynth_design 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 754.160 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 754.180 MB.
 INFO: [HLS 200-10] Analyzing design file 'activation_accelerator.cpp' ... 
-WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (activation_accelerator.cpp:390:9)
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (activation_accelerator.cpp:567:9)
 WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file activation_accelerator.cpp
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 30.11 seconds. CPU system time: 1.92 seconds. Elapsed time: 34.59 seconds; current allocated memory: 761.039 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 27.5 seconds. CPU system time: 1.64 seconds. Elapsed time: 29.15 seconds; current allocated memory: 761.188 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
 INFO: [HLS 214-131] Inlining function 'exp_reduce_::exp(float)' into 'hls::expf(float)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/expfloat.cpp:22:9)
 INFO: [HLS 214-131] Inlining function 'hls::expf(float)' into 'float_silu(float const*, ap_uint<16>*, int)' (activation_accelerator.cpp:275:29)
-INFO: [HLS 214-131] Inlining function 'hls::rsqrtf(float)' into 'float_layernorm(float const*, ap_uint<16>*, int)' (activation_accelerator.cpp:317:21)
-INFO: [HLS 214-131] Inlining function 'hls::expf(float)' into 'float_softmax(float const*, ap_uint<16>*, int)' (activation_accelerator.cpp:359:34)
-INFO: [HLS 214-131] Inlining function 'hls::expf(float)' into 'float_softmax(float const*, ap_uint<16>*, int)' (activation_accelerator.cpp:375:12)
-INFO: [HLS 214-131] Inlining function 'pack_word(ap_uint<16> const*)' into 'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)' (activation_accelerator.cpp:506:22)
-INFO: [HLS 214-131] Inlining function 'float_add(float const*, float const*, ap_uint<16>*, int)' into 'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)' (activation_accelerator.cpp:489:18)
-INFO: [HLS 214-131] Inlining function 'float_add(float const*, float const*, ap_uint<16>*, int)' into 'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)' (activation_accelerator.cpp:488:23)
-INFO: [HLS 214-131] Inlining function 'unpack_word(ap_uint<512>, ap_uint<16>*)' into 'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)' (activation_accelerator.cpp:463:2)
-INFO: [HLS 214-131] Inlining function 'float_silu(float const*, ap_uint<16>*, int)' into 'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)' (activation_accelerator.cpp:487:24)
-INFO: [HLS 214-131] Inlining function 'unpack_word(ap_uint<512>, ap_uint<16>*)' into 'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)' (activation_accelerator.cpp:464:13)
-INFO: [HLS 214-131] Inlining function 'float_softmax(float const*, ap_uint<16>*, int)' into 'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)' (activation_accelerator.cpp:486:27)
-INFO: [HLS 214-131] Inlining function 'bf16_to_float(ap_uint<16> const*, float*, int)' into 'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)' (activation_accelerator.cpp:476:9)
-INFO: [HLS 214-131] Inlining function 'bf16_to_float(ap_uint<16> const*, float*, int)' into 'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)' (activation_accelerator.cpp:478:13)
-INFO: [HLS 214-131] Inlining function 'float_add(float const*, float const*, ap_uint<16>*, int)' into 'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)' (activation_accelerator.cpp:482:23)
-INFO: [HLS 214-131] Inlining function 'float_silu(float const*, ap_uint<16>*, int)' into 'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)' (activation_accelerator.cpp:483:24)
-INFO: [HLS 214-291] Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma (activation_accelerator.cpp:460:18)
-INFO: [HLS 214-291] Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma (activation_accelerator.cpp:460:30)
+INFO: [HLS 214-131] Inlining function 'hls::rsqrtf(float)' into 'float_layernorm(float const*, ap_uint<16>*, int)' (activation_accelerator.cpp:388:21)
+INFO: [HLS 214-131] Inlining function 'hls::expf(float)' into 'float_softmax(float const*, ap_uint<16>*, int)' (activation_accelerator.cpp:537:34)
+INFO: [HLS 214-131] Inlining function 'hls::expf(float)' into 'float_softmax(float const*, ap_uint<16>*, int)' (activation_accelerator.cpp:553:12)
+INFO: [HLS 214-131] Inlining function 'pack_word(ap_uint<16> const*)' into 'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)' (activation_accelerator.cpp:683:22)
+INFO: [HLS 214-131] Inlining function 'float_add(float const*, float const*, ap_uint<16>*, int)' into 'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)' (activation_accelerator.cpp:666:18)
+INFO: [HLS 214-131] Inlining function 'float_add(float const*, float const*, ap_uint<16>*, int)' into 'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)' (activation_accelerator.cpp:665:23)
+INFO: [HLS 214-131] Inlining function 'unpack_word(ap_uint<512>, ap_uint<16>*)' into 'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)' (activation_accelerator.cpp:640:2)
+INFO: [HLS 214-131] Inlining function 'float_silu(float const*, ap_uint<16>*, int)' into 'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)' (activation_accelerator.cpp:664:24)
+INFO: [HLS 214-131] Inlining function 'unpack_word(ap_uint<512>, ap_uint<16>*)' into 'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)' (activation_accelerator.cpp:641:13)
+INFO: [HLS 214-131] Inlining function 'float_softmax(float const*, ap_uint<16>*, int)' into 'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)' (activation_accelerator.cpp:663:27)
+INFO: [HLS 214-131] Inlining function 'bf16_to_float(ap_uint<16> const*, float*, int)' into 'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)' (activation_accelerator.cpp:653:9)
+INFO: [HLS 214-131] Inlining function 'bf16_to_float(ap_uint<16> const*, float*, int)' into 'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)' (activation_accelerator.cpp:655:13)
+INFO: [HLS 214-131] Inlining function 'float_add(float const*, float const*, ap_uint<16>*, int)' into 'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)' (activation_accelerator.cpp:659:23)
+INFO: [HLS 214-131] Inlining function 'float_silu(float const*, ap_uint<16>*, int)' into 'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)' (activation_accelerator.cpp:660:24)
+INFO: [HLS 214-291] Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma (activation_accelerator.cpp:637:18)
+INFO: [HLS 214-291] Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma (activation_accelerator.cpp:637:30)
 INFO: [HLS 214-291] Loop 'VITIS_LOOP_64_1' is marked as complete unroll implied by the pipeline pragma (activation_accelerator.cpp:64:19)
-INFO: [HLS 214-291] Loop 'UNPK_V' is marked as complete unroll implied by the pipeline pragma (activation_accelerator.cpp:466:13)
-INFO: [HLS 214-291] Loop 'load_e' is marked as complete unroll implied by the pipeline pragma (activation_accelerator.cpp:356:9)
-INFO: [HLS 214-291] Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma (activation_accelerator.cpp:499:7)
-INFO: [HLS 214-291] Loop 'PK_V' is marked as complete unroll implied by the pipeline pragma (activation_accelerator.cpp:502:13)
+INFO: [HLS 214-291] Loop 'UNPK_V' is marked as complete unroll implied by the pipeline pragma (activation_accelerator.cpp:643:13)
+INFO: [HLS 214-291] Loop 'load_e' is marked as complete unroll implied by the pipeline pragma (activation_accelerator.cpp:534:9)
+INFO: [HLS 214-291] Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma (activation_accelerator.cpp:676:7)
+INFO: [HLS 214-291] Loop 'PK_V' is marked as complete unroll implied by the pipeline pragma (activation_accelerator.cpp:679:13)
 INFO: [HLS 214-291] Loop 'VITIS_LOOP_72_1' is marked as complete unroll implied by the pipeline pragma (activation_accelerator.cpp:72:22)
-INFO: [HLS 214-186] Unrolling loop 'anonymous' (activation_accelerator.cpp:460:18) in function 'compute_rows' completely with a factor of 32 (activation_accelerator.cpp:422:0)
-INFO: [HLS 214-186] Unrolling loop 'anonymous' (activation_accelerator.cpp:460:30) in function 'compute_rows' completely with a factor of 32 (activation_accelerator.cpp:422:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_64_1' (activation_accelerator.cpp:64:19) in function 'compute_rows' completely with a factor of 32 (activation_accelerator.cpp:422:0)
-INFO: [HLS 214-186] Unrolling loop 'UNPK_V' (activation_accelerator.cpp:466:13) in function 'compute_rows' completely with a factor of 32 (activation_accelerator.cpp:422:0)
-INFO: [HLS 214-186] Unrolling loop 'load_e' (activation_accelerator.cpp:356:9) in function 'compute_rows' completely with a factor of 8 (activation_accelerator.cpp:422:0)
-INFO: [HLS 214-186] Unrolling loop 'anonymous' (activation_accelerator.cpp:499:7) in function 'compute_rows' completely with a factor of 32 (activation_accelerator.cpp:422:0)
-INFO: [HLS 214-186] Unrolling loop 'PK_V' (activation_accelerator.cpp:502:13) in function 'compute_rows' completely with a factor of 32 (activation_accelerator.cpp:422:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_72_1' (activation_accelerator.cpp:72:22) in function 'compute_rows' completely with a factor of 32 (activation_accelerator.cpp:422:0)
-INFO: [HLS 214-178] Inlining function 'f32_to_bf16_scalar(float)' into 'float_layernorm(float const*, ap_uint<16>*, int)' (activation_accelerator.cpp:301:0)
+INFO: [HLS 214-291] Loop 'load_and_sq' is marked as complete unroll implied by the pipeline pragma (activation_accelerator.cpp:294:9)
+INFO: [HLS 214-291] Loop 'load_s' is marked as complete unroll implied by the pipeline pragma (activation_accelerator.cpp:368:9)
+INFO: [HLS 214-291] Loop 'load_a' is marked as complete unroll implied by the pipeline pragma (activation_accelerator.cpp:339:9)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (activation_accelerator.cpp:637:18) in function 'compute_rows' completely with a factor of 32 (activation_accelerator.cpp:599:0)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (activation_accelerator.cpp:637:30) in function 'compute_rows' completely with a factor of 32 (activation_accelerator.cpp:599:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_64_1' (activation_accelerator.cpp:64:19) in function 'compute_rows' completely with a factor of 32 (activation_accelerator.cpp:599:0)
+INFO: [HLS 214-186] Unrolling loop 'UNPK_V' (activation_accelerator.cpp:643:13) in function 'compute_rows' completely with a factor of 32 (activation_accelerator.cpp:599:0)
+INFO: [HLS 214-186] Unrolling loop 'load_e' (activation_accelerator.cpp:534:9) in function 'compute_rows' completely with a factor of 8 (activation_accelerator.cpp:599:0)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (activation_accelerator.cpp:676:7) in function 'compute_rows' completely with a factor of 32 (activation_accelerator.cpp:599:0)
+INFO: [HLS 214-186] Unrolling loop 'PK_V' (activation_accelerator.cpp:679:13) in function 'compute_rows' completely with a factor of 32 (activation_accelerator.cpp:599:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_72_1' (activation_accelerator.cpp:72:22) in function 'compute_rows' completely with a factor of 32 (activation_accelerator.cpp:599:0)
+INFO: [HLS 214-186] Unrolling loop 'load_and_sq' (activation_accelerator.cpp:294:9) in function 'float_rmsnorm' completely with a factor of 8 (activation_accelerator.cpp:282:0)
+INFO: [HLS 214-186] Unrolling loop 'load_s' (activation_accelerator.cpp:368:9) in function 'float_layernorm' completely with a factor of 8 (activation_accelerator.cpp:324:0)
+INFO: [HLS 214-186] Unrolling loop 'load_a' (activation_accelerator.cpp:339:9) in function 'float_layernorm' completely with a factor of 8 (activation_accelerator.cpp:324:0)
+INFO: [HLS 214-178] Inlining function 'f32_to_bf16_scalar(float)' into 'float_layernorm(float const*, ap_uint<16>*, int)' (activation_accelerator.cpp:324:0)
 INFO: [HLS 214-178] Inlining function 'Q_rsqrt(float)' into 'float_rmsnorm(float const*, ap_uint<16>*, int)' (activation_accelerator.cpp:282:0)
 INFO: [HLS 214-178] Inlining function 'f32_to_bf16_scalar(float)' into 'float_rmsnorm(float const*, ap_uint<16>*, int)' (activation_accelerator.cpp:282:0)
 INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'int generic_isnan<float>(float)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h:16:0)
@@ -66,50 +72,48 @@ INFO: [HLS 214-178] Inlining function 'int generic_isnan<float>(float)' into 'fl
 INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_ieee() const' into 'float generic_fmax<float>(float, float)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmax.h:20:0)
 INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_int() const' into 'float generic_fmax<float>(float, float)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmax.h:20:0)
 INFO: [HLS 214-178] Inlining function 'hls::fmax(float, float)' into 'hls::fmaxf(float, float)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp:10:0)
-INFO: [HLS 214-178] Inlining function 'row_op_select(int, int)' into 'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)' (activation_accelerator.cpp:422:0)
-INFO: [HLS 214-178] Inlining function 'f32_to_bf16_scalar(float)' into 'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)' (activation_accelerator.cpp:422:0)
-INFO: [HLS 214-178] Inlining function 'float_layernorm(float const*, ap_uint<16>*, int)' into 'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)' (activation_accelerator.cpp:422:0)
-INFO: [HLS 214-178] Inlining function 'float_rmsnorm(float const*, ap_uint<16>*, int)' into 'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)' (activation_accelerator.cpp:422:0)
-INFO: [HLS 214-178] Inlining function 'hls::fmaxf(float, float)' into 'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)' (activation_accelerator.cpp:422:0)
-INFO: [HLS 214-248] Applying array_partition to 'tile0': Cyclic partitioning with factor 32 on dimension 1. (activation_accelerator.cpp:430:7)
-INFO: [HLS 214-248] Applying array_partition to 'tile1': Cyclic partitioning with factor 32 on dimension 1. (activation_accelerator.cpp:430:20)
-INFO: [HLS 214-248] Applying array_partition to 'tile2': Cyclic partitioning with factor 32 on dimension 1. (activation_accelerator.cpp:430:33)
-INFO: [HLS 214-248] Applying array_partition to 'xt': Cyclic partitioning with factor 32 on dimension 1. (activation_accelerator.cpp:442:8)
-INFO: [HLS 214-248] Applying array_partition to 'yt': Cyclic partitioning with factor 32 on dimension 1. (activation_accelerator.cpp:442:18)
+INFO: [HLS 214-178] Inlining function 'row_op_select(int, int)' into 'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)' (activation_accelerator.cpp:599:0)
+INFO: [HLS 214-178] Inlining function 'f32_to_bf16_scalar(float)' into 'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)' (activation_accelerator.cpp:599:0)
+INFO: [HLS 214-178] Inlining function 'hls::fmaxf(float, float)' into 'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)' (activation_accelerator.cpp:599:0)
+INFO: [HLS 214-248] Applying array_partition to 'tile0': Cyclic partitioning with factor 32 on dimension 1. (activation_accelerator.cpp:607:7)
+INFO: [HLS 214-248] Applying array_partition to 'tile1': Cyclic partitioning with factor 32 on dimension 1. (activation_accelerator.cpp:607:20)
+INFO: [HLS 214-248] Applying array_partition to 'tile2': Cyclic partitioning with factor 32 on dimension 1. (activation_accelerator.cpp:607:33)
+INFO: [HLS 214-248] Applying array_partition to 'xt': Cyclic partitioning with factor 32 on dimension 1. (activation_accelerator.cpp:619:8)
+INFO: [HLS 214-248] Applying array_partition to 'yt': Cyclic partitioning with factor 32 on dimension 1. (activation_accelerator.cpp:619:18)
 INFO: [HLS 214-364] Automatically inlining function 'float generic_fmax<float>(float, float)' to improve effectiveness of pipeline pragma in function 'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp:7:12)
-INFO: [HLS 214-115] Multiple burst reads of length 1536 and bit width 512 in loop 'LOAD_ROW'(activation_accelerator.cpp:402:5) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (activation_accelerator.cpp:402:10)
-INFO: [HLS 214-115] Multiple burst reads of length 1536 and bit width 512 in loop 'LOAD_ROW'(activation_accelerator.cpp:402:5) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (activation_accelerator.cpp:402:10)
-INFO: [HLS 214-115] Multiple burst writes of length 1536 and bit width 512 in loop 'STORE_ROW'(activation_accelerator.cpp:517:5) has been inferred on bundle 'gmem2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (activation_accelerator.cpp:517:5)
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 9.65 seconds. CPU system time: 1.11 seconds. Elapsed time: 12.31 seconds; current allocated memory: 761.574 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 761.574 MB.
+INFO: [HLS 214-115] Multiple burst reads of length 1536 and bit width 512 in loop 'LOAD_ROW'(activation_accelerator.cpp:579:5) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (activation_accelerator.cpp:579:10)
+INFO: [HLS 214-115] Multiple burst reads of length 1536 and bit width 512 in loop 'LOAD_ROW'(activation_accelerator.cpp:579:5) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (activation_accelerator.cpp:579:10)
+INFO: [HLS 214-115] Multiple burst writes of length 1536 and bit width 512 in loop 'STORE_ROW'(activation_accelerator.cpp:694:5) has been inferred on bundle 'gmem2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (activation_accelerator.cpp:694:5)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 8.82 seconds. CPU system time: 1.01 seconds. Elapsed time: 9.83 seconds; current allocated memory: 761.820 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 761.820 MB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.94 seconds. CPU system time: 0.06 seconds. Elapsed time: 1.34 seconds; current allocated memory: 812.473 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.7 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.72 seconds; current allocated memory: 812.598 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 1.27 seconds. CPU system time: 0.04 seconds. Elapsed time: 1.34 seconds; current allocated memory: 883.930 MB.
-INFO: [XFORM 203-510] Pipelining loop 'rms_loop_1' (activation_accelerator.cpp:294) in function 'compute_rows' automatically.
-INFO: [XFORM 203-721] Changing loop 'Loop_LOAD_ROW_proc' (activation_accelerator.cpp:409) to a process function for dataflow in function 'load_rows'.
-INFO: [XFORM 203-712] Applying dataflow to function 'load_rows' (activation_accelerator.cpp:387:1), detected/extracted 1 process function(s): 
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 1.11 seconds. CPU system time: 0.07 seconds. Elapsed time: 1.18 seconds; current allocated memory: 884.207 MB.
+INFO: [XFORM 203-510] Pipelining loop 'rms_loop_1' (activation_accelerator.cpp:318) in function 'float_rmsnorm' automatically.
+INFO: [XFORM 203-721] Changing loop 'Loop_LOAD_ROW_proc' (activation_accelerator.cpp:586) to a process function for dataflow in function 'load_rows'.
+INFO: [XFORM 203-712] Applying dataflow to function 'load_rows' (activation_accelerator.cpp:564:1), detected/extracted 1 process function(s): 
 	 'load_rows_Loop_LOAD_ROW_proc1'.
-INFO: [XFORM 203-712] Applying dataflow to function 'activation_accelerator' (activation_accelerator.cpp:529:1), detected/extracted 4 process function(s): 
+INFO: [XFORM 203-712] Applying dataflow to function 'activation_accelerator' (activation_accelerator.cpp:706:1), detected/extracted 4 process function(s): 
 	 'entry_proc'
 	 'load_rows'
 	 'compute_rows'
 	 'store_rows'.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (activation_accelerator.cpp:342:9) to (activation_accelerator.cpp:341:5) in function 'compute_rows'... converting 7 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (activation_accelerator.cpp:519:9) to (activation_accelerator.cpp:518:5) in function 'compute_rows'... converting 7 basic blocks.
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (activation_accelerator.cpp:45:37) to (activation_accelerator.cpp:210:5) in function 'compute_rows'... converting 8 basic blocks.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 2.03 seconds. CPU system time: 0.08 seconds. Elapsed time: 2.14 seconds; current allocated memory: 971.316 MB.
-INFO: [XFORM 203-541] Flattening a loop nest 'STORE_ROW' (activation_accelerator.cpp:517:14) in function 'store_rows'.
-INFO: [XFORM 203-541] Flattening a loop nest 'LOAD_ROW' (activation_accelerator.cpp:409:18) in function 'load_rows_Loop_LOAD_ROW_proc1'.
-WARNING: [HLS 200-960] Cannot flatten loop 'COMPUTE_ROW' (activation_accelerator.cpp:451:14) in function 'compute_rows' more than one sub loop.
-INFO: [HLS 200-472] Inferring partial write operation for 'tile0.V' (activation_accelerator.cpp:469:28)
-INFO: [HLS 200-472] Inferring partial write operation for 'tile1.V' (activation_accelerator.cpp:470:28)
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 2.01 seconds. CPU system time: 0.07 seconds. Elapsed time: 2.08 seconds; current allocated memory: 971.898 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'STORE_ROW' (activation_accelerator.cpp:694:14) in function 'store_rows'.
+INFO: [XFORM 203-541] Flattening a loop nest 'LOAD_ROW' (activation_accelerator.cpp:586:18) in function 'load_rows_Loop_LOAD_ROW_proc1'.
+WARNING: [HLS 200-960] Cannot flatten loop 'COMPUTE_ROW' (activation_accelerator.cpp:628:14) in function 'compute_rows' more than one sub loop.
+INFO: [HLS 200-472] Inferring partial write operation for 'y_bf16_0' (activation_accelerator.cpp:319:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'y_bf16_0' (activation_accelerator.cpp:392:12)
+INFO: [HLS 200-472] Inferring partial write operation for 'tile0.V' (activation_accelerator.cpp:646:28)
+INFO: [HLS 200-472] Inferring partial write operation for 'tile1.V' (activation_accelerator.cpp:647:28)
 INFO: [HLS 200-472] Inferring partial write operation for 'xt' (activation_accelerator.cpp:213:16)
-INFO: [HLS 200-472] Inferring partial write operation for 'tile2.V' (activation_accelerator.cpp:332:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'tile2.V' (activation_accelerator.cpp:461:16)
 INFO: [HLS 200-472] Inferring partial write operation for 'tile2.V' (activation_accelerator.cpp:277:14)
-INFO: [HLS 200-472] Inferring partial write operation for 'tile2.V' (activation_accelerator.cpp:321:12)
-INFO: [HLS 200-472] Inferring partial write operation for 'tile2.V' (activation_accelerator.cpp:295:19)
-INFO: [HLS 200-472] Inferring partial write operation for 'tile2.V' (activation_accelerator.cpp:376:19)
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1.59 seconds. CPU system time: 0.11 seconds. Elapsed time: 1.72 seconds; current allocated memory: 1.208 GB.
+INFO: [HLS 200-472] Inferring partial write operation for 'tile2.V' (activation_accelerator.cpp:554:19)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1.54 seconds. CPU system time: 0.12 seconds. Elapsed time: 1.66 seconds; current allocated memory: 1.228 GB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'activation_accelerator' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -117,13 +121,13 @@ INFO: [HLS 200-42] -- Implementing module 'entry_proc'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.26 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.44 seconds; current allocated memory: 1.211 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.25 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.32 seconds; current allocated memory: 1.231 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.211 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.231 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'load_rows_Loop_LOAD_ROW_proc1_Pipeline_LOAD_ROW_LOAD_W' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -131,37 +135,37 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'LOAD_ROW_LOAD_W'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'LOAD_ROW_LOAD_W'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.212 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.232 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.212 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.232 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'load_rows_Loop_LOAD_ROW_proc1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.212 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.233 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.212 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.233 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'load_rows' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.212 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.233 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.212 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.233 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'compute_rows_Pipeline_UNPK_W' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -169,13 +173,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'UNPK_W'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'UNPK_W'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.21 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 1.214 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.234 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.214 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.234 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'compute_rows_Pipeline_convert_loop' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -183,13 +187,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'convert_loop'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'convert_loop'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.24 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.24 seconds; current allocated memory: 1.217 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.237 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.217 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.237 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'compute_rows_Pipeline_silu_loop2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -197,13 +201,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'silu_loop'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 26, loop 'silu_loop'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.3 seconds. CPU system time: 0 seconds. Elapsed time: 0.3 seconds; current allocated memory: 1.219 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.25 seconds. CPU system time: 0 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.239 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.18 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.18 seconds; current allocated memory: 1.219 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 1.239 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'compute_rows_Pipeline_smx_0' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -211,29 +215,29 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'smx_0'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'smx_0'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.21 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.220 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.23 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.240 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.220 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.240 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'compute_rows_Pipeline_smx_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'smx_1'.
-WARNING: [HLS 200-880] The II Violation in module 'compute_rows_Pipeline_smx_1' (loop 'smx_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('sum_write_ln351', activation_accelerator.cpp:351) of variable 'sum', activation_accelerator.cpp:370 on local variable 'sum' and 'load' operation ('sum_load', activation_accelerator.cpp:370) on local variable 'sum'.
-WARNING: [HLS 200-880] The II Violation in module 'compute_rows_Pipeline_smx_1' (loop 'smx_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('sum_write_ln351', activation_accelerator.cpp:351) of variable 'sum', activation_accelerator.cpp:370 on local variable 'sum' and 'load' operation ('sum_load', activation_accelerator.cpp:370) on local variable 'sum'.
+WARNING: [HLS 200-880] The II Violation in module 'compute_rows_Pipeline_smx_1' (loop 'smx_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('sum_write_ln528', activation_accelerator.cpp:528) of variable 'sum', activation_accelerator.cpp:548 on local variable 'sum' and 'load' operation ('sum_load', activation_accelerator.cpp:548) on local variable 'sum'.
+WARNING: [HLS 200-880] The II Violation in module 'compute_rows_Pipeline_smx_1' (loop 'smx_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('sum_write_ln528', activation_accelerator.cpp:528) of variable 'sum', activation_accelerator.cpp:548 on local variable 'sum' and 'load' operation ('sum_load', activation_accelerator.cpp:548) on local variable 'sum'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 3, Depth = 36, loop 'smx_1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.35 seconds. CPU system time: 0 seconds. Elapsed time: 0.36 seconds; current allocated memory: 1.221 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.45 seconds. CPU system time: 0 seconds. Elapsed time: 0.46 seconds; current allocated memory: 1.242 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.32 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.32 seconds; current allocated memory: 1.221 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.41 seconds. CPU system time: 0 seconds. Elapsed time: 0.41 seconds; current allocated memory: 1.242 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'compute_rows_Pipeline_smx_2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -241,89 +245,113 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'smx_2'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 24, loop 'smx_2'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.42 seconds. CPU system time: 0 seconds. Elapsed time: 0.42 seconds; current allocated memory: 1.225 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.53 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.54 seconds; current allocated memory: 1.245 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.225 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 1.245 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'compute_rows_Pipeline_rms_loop_0' 
+INFO: [HLS 200-42] -- Implementing module 'float_rmsnorm_Pipeline_rms_loop_0' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'rms_loop_0'.
-WARNING: [HLS 200-880] The II Violation in module 'compute_rows_Pipeline_rms_loop_0' (loop 'rms_loop_0'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('sum_sq_write_ln286', activation_accelerator.cpp:286) of variable 'sum_sq', activation_accelerator.cpp:288 on local variable 'sum_sq' and 'load' operation ('sum_sq_load', activation_accelerator.cpp:288) on local variable 'sum_sq'.
-WARNING: [HLS 200-880] The II Violation in module 'compute_rows_Pipeline_rms_loop_0' (loop 'rms_loop_0'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('sum_sq_write_ln286', activation_accelerator.cpp:286) of variable 'sum_sq', activation_accelerator.cpp:288 on local variable 'sum_sq' and 'load' operation ('sum_sq_load', activation_accelerator.cpp:288) on local variable 'sum_sq'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 3, Depth = 9, loop 'rms_loop_0'
+WARNING: [HLS 200-880] The II Violation in module 'float_rmsnorm_Pipeline_rms_loop_0' (loop 'rms_loop_0'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('sum_sq_write_ln288', activation_accelerator.cpp:288) of variable 'sum_sq', activation_accelerator.cpp:312 on local variable 'sum_sq' and 'load' operation ('sum_sq_load', activation_accelerator.cpp:312) on local variable 'sum_sq'.
+WARNING: [HLS 200-880] The II Violation in module 'float_rmsnorm_Pipeline_rms_loop_0' (loop 'rms_loop_0'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('sum_sq_write_ln288', activation_accelerator.cpp:288) of variable 'sum_sq', activation_accelerator.cpp:312 on local variable 'sum_sq' and 'load' operation ('sum_sq_load', activation_accelerator.cpp:312) on local variable 'sum_sq'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 3, Depth = 23, loop 'rms_loop_0'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.21 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.225 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.29 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.31 seconds; current allocated memory: 1.246 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.225 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.2 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.246 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'compute_rows_Pipeline_rms_loop_1' 
+INFO: [HLS 200-42] -- Implementing module 'float_rmsnorm_Pipeline_rms_loop_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'rms_loop_1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, loop 'rms_loop_1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.22 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.228 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.31 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.31 seconds; current allocated memory: 1.249 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.228 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.249 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'compute_rows_Pipeline_layer_loop_0' 
+INFO: [HLS 200-42] -- Implementing module 'float_rmsnorm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.249 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.21 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 1.249 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'float_layernorm_Pipeline_layer_loop_0' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'layer_loop_0'.
-WARNING: [HLS 200-880] The II Violation in module 'compute_rows_Pipeline_layer_loop_0' (loop 'layer_loop_0'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('sum_write_ln305', activation_accelerator.cpp:305) of variable 'sum', activation_accelerator.cpp:307 on local variable 'sum' and 'load' operation ('sum_load_2', activation_accelerator.cpp:307) on local variable 'sum'.
-WARNING: [HLS 200-880] The II Violation in module 'compute_rows_Pipeline_layer_loop_0' (loop 'layer_loop_0'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('sum_write_ln305', activation_accelerator.cpp:305) of variable 'sum', activation_accelerator.cpp:307 on local variable 'sum' and 'load' operation ('sum_load_2', activation_accelerator.cpp:307) on local variable 'sum'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 3, Depth = 5, loop 'layer_loop_0'
+WARNING: [HLS 200-880] The II Violation in module 'float_layernorm_Pipeline_layer_loop_0' (loop 'layer_loop_0'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('sum_write_ln332', activation_accelerator.cpp:332) of variable 'sum', activation_accelerator.cpp:354 on local variable 'sum' and 'load' operation ('sum_load', activation_accelerator.cpp:354) on local variable 'sum'.
+WARNING: [HLS 200-880] The II Violation in module 'float_layernorm_Pipeline_layer_loop_0' (loop 'layer_loop_0'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('sum_write_ln332', activation_accelerator.cpp:332) of variable 'sum', activation_accelerator.cpp:354 on local variable 'sum' and 'load' operation ('sum_load', activation_accelerator.cpp:354) on local variable 'sum'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 3, Depth = 20, loop 'layer_loop_0'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.229 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.29 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.29 seconds; current allocated memory: 1.250 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.229 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.250 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'compute_rows_Pipeline_layer_loop_1' 
+INFO: [HLS 200-42] -- Implementing module 'float_layernorm_Pipeline_layer_loop_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'layer_loop_1'.
-WARNING: [HLS 200-880] The II Violation in module 'compute_rows_Pipeline_layer_loop_1' (loop 'layer_loop_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('var_write_ln312', activation_accelerator.cpp:312) of variable 'var', activation_accelerator.cpp:315 on local variable 'var' and 'load' operation ('var_load', activation_accelerator.cpp:315) on local variable 'var'.
-WARNING: [HLS 200-880] The II Violation in module 'compute_rows_Pipeline_layer_loop_1' (loop 'layer_loop_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('var_write_ln312', activation_accelerator.cpp:312) of variable 'var', activation_accelerator.cpp:315 on local variable 'var' and 'load' operation ('var_load', activation_accelerator.cpp:315) on local variable 'var'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 3, Depth = 13, loop 'layer_loop_1'
+WARNING: [HLS 200-880] The II Violation in module 'float_layernorm_Pipeline_layer_loop_1' (loop 'layer_loop_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('var_write_ln362', activation_accelerator.cpp:362) of variable 'var', activation_accelerator.cpp:385 on local variable 'var' and 'load' operation ('var_load', activation_accelerator.cpp:385) on local variable 'var'.
+WARNING: [HLS 200-880] The II Violation in module 'float_layernorm_Pipeline_layer_loop_1' (loop 'layer_loop_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('var_write_ln362', activation_accelerator.cpp:362) of variable 'var', activation_accelerator.cpp:385 on local variable 'var' and 'load' operation ('var_load', activation_accelerator.cpp:385) on local variable 'var'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 3, Depth = 30, loop 'layer_loop_1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.18 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.230 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.34 seconds. CPU system time: 0 seconds. Elapsed time: 0.34 seconds; current allocated memory: 1.251 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.230 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.26 seconds. CPU system time: 0 seconds. Elapsed time: 0.26 seconds; current allocated memory: 1.252 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'compute_rows_Pipeline_ln_2' 
+INFO: [HLS 200-42] -- Implementing module 'float_layernorm_Pipeline_ln_2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'ln_2'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 10, loop 'ln_2'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.25 seconds. CPU system time: 0 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.233 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.35 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.37 seconds; current allocated memory: 1.254 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.233 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.254 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'float_layernorm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.255 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.25 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.26 seconds; current allocated memory: 1.255 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'compute_rows_Pipeline_silu_loop' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -331,13 +359,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'silu_loop'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 26, loop 'silu_loop'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.27 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.29 seconds; current allocated memory: 1.235 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.4 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.42 seconds; current allocated memory: 1.257 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.21 seconds. CPU system time: 0 seconds. Elapsed time: 0.23 seconds; current allocated memory: 1.235 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.257 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'compute_rows_Pipeline_convert_loop1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -345,13 +373,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'convert_loop'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'convert_loop'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.27 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.237 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.26 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.28 seconds; current allocated memory: 1.260 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.237 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.260 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'compute_rows_Pipeline_add_loop' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -359,13 +387,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'add_loop'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 7, loop 'add_loop'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.29 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.3 seconds; current allocated memory: 1.240 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.28 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.31 seconds; current allocated memory: 1.262 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.240 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.262 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'compute_rows_Pipeline_add_loop3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -373,13 +401,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'add_loop'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 7, loop 'add_loop'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.31 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.33 seconds; current allocated memory: 1.243 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.32 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.34 seconds; current allocated memory: 1.265 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.243 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.265 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'compute_rows_Pipeline_add_loop4' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -387,13 +415,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'add_loop'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 7, loop 'add_loop'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.32 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.33 seconds; current allocated memory: 1.246 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.33 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.34 seconds; current allocated memory: 1.268 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.246 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.268 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'compute_rows_Pipeline_PK_W' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -401,26 +429,26 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'PK_W'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'PK_W'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.247 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 1.269 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.247 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.269 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'compute_rows' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.37 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.38 seconds; current allocated memory: 1.250 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.23 seconds. CPU system time: 0 seconds. Elapsed time: 0.23 seconds; current allocated memory: 1.272 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 WARNING: [BIND 205-102] The specified resource core for memory 'xt' will be ignored if a simpler one can be used.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.83 seconds. CPU system time: 0 seconds. Elapsed time: 0.84 seconds; current allocated memory: 1.250 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.53 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.54 seconds; current allocated memory: 1.272 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'store_rows_Pipeline_STORE_ROW_STORE_W' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -428,42 +456,42 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'STORE_ROW_STORE_W'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'STORE_ROW_STORE_W'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.78 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.8 seconds; current allocated memory: 1.250 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.79 seconds. CPU system time: 0 seconds. Elapsed time: 0.78 seconds; current allocated memory: 1.272 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.250 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.272 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'store_rows' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.251 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.273 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.251 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.273 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'activation_accelerator' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.251 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.273 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.27 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.251 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.3 seconds. CPU system time: 0 seconds. Elapsed time: 0.31 seconds; current allocated memory: 1.273 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'entry_proc' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'entry_proc'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.68 seconds. CPU system time: 0 seconds. Elapsed time: 0.68 seconds; current allocated memory: 1.251 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.75 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.76 seconds; current allocated memory: 1.273 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'load_rows_Loop_LOAD_ROW_proc1_Pipeline_LOAD_ROW_LOAD_W' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -493,12 +521,12 @@ WARNING: [RTGEN 206-101] Setting dangling out port 'load_rows_Loop_LOAD_ROW_proc
 WARNING: [RTGEN 206-101] Setting dangling out port 'load_rows_Loop_LOAD_ROW_proc1_Pipeline_LOAD_ROW_LOAD_W/m_axi_gmem1_ARREGION' to 0.
 WARNING: [RTGEN 206-101] Setting dangling out port 'load_rows_Loop_LOAD_ROW_proc1_Pipeline_LOAD_ROW_LOAD_W/m_axi_gmem1_ARUSER' to 0.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'load_rows_Loop_LOAD_ROW_proc1_Pipeline_LOAD_ROW_LOAD_W'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.252 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.273 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'load_rows_Loop_LOAD_ROW_proc1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'load_rows_Loop_LOAD_ROW_proc1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.253 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.275 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'load_rows' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -541,20 +569,20 @@ WARNING: [RTGEN 206-101] Setting dangling out port 'load_rows/m_axi_gmem1_WID' t
 WARNING: [RTGEN 206-101] Setting dangling out port 'load_rows/m_axi_gmem1_WUSER' to 0.
 WARNING: [RTGEN 206-101] Setting dangling out port 'load_rows/m_axi_gmem1_BREADY' to 0.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'load_rows'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.2 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.21 seconds; current allocated memory: 1.254 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.19 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.4 seconds; current allocated memory: 1.276 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'compute_rows_Pipeline_UNPK_W' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'compute_rows_Pipeline_UNPK_W' pipeline 'UNPK_W' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_rows_Pipeline_UNPK_W'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.278 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'compute_rows_Pipeline_convert_loop' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'compute_rows_Pipeline_convert_loop' pipeline 'convert_loop' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Generating core module 'mux_325_16_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_rows_Pipeline_convert_loop'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.261 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.283 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'compute_rows_Pipeline_silu_loop2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -565,14 +593,14 @@ INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_8_full_dsp_1': 1
 INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mux_325_32_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_rows_Pipeline_silu_loop2'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.18 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.21 seconds; current allocated memory: 1.266 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.2 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.288 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'compute_rows_Pipeline_smx_0' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'compute_rows_Pipeline_smx_0' pipeline 'smx_0' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Generating core module 'mux_325_32_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_rows_Pipeline_smx_0'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.25 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.26 seconds; current allocated memory: 1.270 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.25 seconds. CPU system time: 0 seconds. Elapsed time: 0.26 seconds; current allocated memory: 1.292 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'compute_rows_Pipeline_smx_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -582,7 +610,7 @@ INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1
 INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_8_full_dsp_1': 3 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mux_255_32_1_1': 8 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_rows_Pipeline_smx_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.41 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.42 seconds; current allocated memory: 1.275 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.4 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.41 seconds; current allocated memory: 1.297 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'compute_rows_Pipeline_smx_2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -592,51 +620,73 @@ INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_9_no_dsp_1': 1 i
 INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_8_full_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mux_325_32_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_rows_Pipeline_smx_2'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.47 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.48 seconds; current allocated memory: 1.279 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.44 seconds. CPU system time: 0 seconds. Elapsed time: 0.44 seconds; current allocated memory: 1.301 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'compute_rows_Pipeline_rms_loop_0' 
+INFO: [HLS 200-10] -- Generating RTL for module 'float_rmsnorm_Pipeline_rms_loop_0' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'compute_rows_Pipeline_rms_loop_0' pipeline 'rms_loop_0' pipeline type 'loop pipeline'
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'float_rmsnorm_Pipeline_rms_loop_0' pipeline 'rms_loop_0' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 2 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_255_32_1_1': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'float_rmsnorm_Pipeline_rms_loop_0'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.307 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'float_rmsnorm_Pipeline_rms_loop_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'float_rmsnorm_Pipeline_rms_loop_1' pipeline 'rms_loop_1' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mux_325_32_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_rows_Pipeline_rms_loop_0'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.24 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.284 GB.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'float_rmsnorm_Pipeline_rms_loop_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.35 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.35 seconds; current allocated memory: 1.310 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'compute_rows_Pipeline_rms_loop_1' 
+INFO: [HLS 200-10] -- Generating RTL for module 'float_rmsnorm' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'compute_rows_Pipeline_rms_loop_1' pipeline 'rms_loop_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_9_no_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mux_325_32_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_rows_Pipeline_rms_loop_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.287 GB.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'float_rmsnorm'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.21 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 1.316 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'compute_rows_Pipeline_layer_loop_0' 
+INFO: [HLS 200-10] -- Generating RTL for module 'float_layernorm_Pipeline_layer_loop_0' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'compute_rows_Pipeline_layer_loop_0' pipeline 'layer_loop_0' pipeline type 'loop pipeline'
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'float_layernorm_Pipeline_layer_loop_0' pipeline 'layer_loop_0' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_no_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mux_325_32_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_rows_Pipeline_layer_loop_0'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.291 GB.
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_255_32_1_1': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'float_layernorm_Pipeline_layer_loop_0'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.29 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.3 seconds; current allocated memory: 1.319 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'compute_rows_Pipeline_layer_loop_1' 
+INFO: [HLS 200-10] -- Generating RTL for module 'float_layernorm_Pipeline_layer_loop_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'compute_rows_Pipeline_layer_loop_1' pipeline 'layer_loop_1' pipeline type 'loop pipeline'
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'float_layernorm_Pipeline_layer_loop_1' pipeline 'layer_loop_1' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1': 5 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_255_32_1_1': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'float_layernorm_Pipeline_layer_loop_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.25 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.323 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'float_layernorm_Pipeline_ln_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'float_layernorm_Pipeline_ln_2' pipeline 'ln_2' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mux_325_32_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_rows_Pipeline_layer_loop_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.294 GB.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'float_layernorm_Pipeline_ln_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.37 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.38 seconds; current allocated memory: 1.327 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'compute_rows_Pipeline_ln_2' 
+INFO: [HLS 200-10] -- Generating RTL for module 'float_layernorm' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'compute_rows_Pipeline_ln_2' pipeline 'ln_2' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+WARNING: [RTGEN 206-101] Setting dangling out port 'float_layernorm/grp_fu_2074_p_opcode' to 0.
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1': 5 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_9_no_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mux_325_32_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_rows_Pipeline_ln_2'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.2 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.297 GB.
+INFO: [RTGEN 206-100] Generating core module 'frsqrt_32ns_32ns_32_10_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'float_layernorm'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.24 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.26 seconds; current allocated memory: 1.334 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'compute_rows_Pipeline_silu_loop' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -647,14 +697,14 @@ INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_8_full_dsp_1': 1
 INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mux_325_32_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_rows_Pipeline_silu_loop'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.23 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.24 seconds; current allocated memory: 1.302 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.39 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.41 seconds; current allocated memory: 1.337 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'compute_rows_Pipeline_convert_loop1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'compute_rows_Pipeline_convert_loop1' pipeline 'convert_loop' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Generating core module 'mux_325_16_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_rows_Pipeline_convert_loop1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.307 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.29 seconds; current allocated memory: 1.342 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'compute_rows_Pipeline_add_loop' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -662,7 +712,7 @@ INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'compute_rows_Pipe
 INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mux_325_32_1_1': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_rows_Pipeline_add_loop'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.2 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.312 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.2 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 1.347 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'compute_rows_Pipeline_add_loop3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -670,7 +720,7 @@ INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'compute_rows_Pipe
 INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mux_325_32_1_1': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_rows_Pipeline_add_loop3'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.29 seconds; current allocated memory: 1.319 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.28 seconds; current allocated memory: 1.353 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'compute_rows_Pipeline_add_loop4' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -678,26 +728,25 @@ INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'compute_rows_Pipe
 INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mux_325_32_1_1': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_rows_Pipeline_add_loop4'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.34 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.34 seconds; current allocated memory: 1.325 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.28 seconds; current allocated memory: 1.360 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'compute_rows_Pipeline_PK_W' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'compute_rows_Pipeline_PK_W' pipeline 'PK_W' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_rows_Pipeline_PK_W'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.29 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.31 seconds; current allocated memory: 1.331 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.24 seconds. CPU system time: 0 seconds. Elapsed time: 0.24 seconds; current allocated memory: 1.365 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'compute_rows' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_no_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1': 5 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_9_no_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_8_full_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'frsqrt_32ns_32ns_32_10_full_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_rows'.
 INFO: [RTMG 210-278] Implementing memory 'activation_accelerator_compute_rows_tile0_V_RAM_2P_BRAM_1R1W' using block RAMs.
 INFO: [RTMG 210-278] Implementing memory 'activation_accelerator_compute_rows_xt_RAM_S2P_BRAM_1R1W' using block RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.48 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.74 seconds; current allocated memory: 1.351 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.39 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.4 seconds; current allocated memory: 1.384 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'store_rows_Pipeline_STORE_ROW_STORE_W' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -716,12 +765,47 @@ WARNING: [RTGEN 206-101] Setting dangling out port 'store_rows_Pipeline_STORE_RO
 WARNING: [RTGEN 206-101] Setting dangling out port 'store_rows_Pipeline_STORE_ROW_STORE_W/m_axi_gmem2_AWUSER' to 0.
 WARNING: [RTGEN 206-101] Setting dangling out port 'store_rows_Pipeline_STORE_ROW_STORE_W/m_axi_gmem2_BREADY' to 0.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'store_rows_Pipeline_STORE_ROW_STORE_W'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.95 seconds. CPU system time: 0.04 seconds. Elapsed time: 1.99 seconds; current allocated memory: 1.359 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.57 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.65 seconds; current allocated memory: 1.391 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'store_rows' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'store_rows'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.360 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.392 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'activation_accelerator' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'activation_accelerator/gmem0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'activation_accelerator/gmem1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'activation_accelerator/gmem2' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'activation_accelerator/in0' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'activation_accelerator/in1' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'activation_accelerator/out_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'activation_accelerator/stage' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'activation_accelerator/config_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'activation_accelerator' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'in0', 'in1', 'out_r', 'stage', 'config_r' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator'.
+INFO: [RTMG 210-285] Implementing FIFO 'out_r_c_U(activation_accelerator_fifo_w64_d4_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'config_r_c_U(activation_accelerator_fifo_w32_d3_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 's_in0_U(activation_accelerator_fifo_w512_d64_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 's_in1_U(activation_accelerator_fifo_w512_d64_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 's_out_U(activation_accelerator_fifo_w512_d64_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_compute_rows_U0_U(activation_accelerator_start_for_compute_rows_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_store_rows_U0_U(activation_accelerator_start_for_store_rows_U0)' using Shift Registers.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.18 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.394 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1.83 seconds. CPU system time: 0.06 seconds. Elapsed time: 1.89 seconds; current allocated memory: 1.402 GB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 3.43 seconds. CPU system time: 0.02 seconds. Elapsed time: 3.45 seconds; current allocated memory: 1.416 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for activation_accelerator.
+INFO: [VLOG 209-307] Generating Verilog RTL for activation_accelerator.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 66.67 seconds. CPU system time: 3.55 seconds. Elapsed time: 70.83 seconds; current allocated memory: 696.535 MB.
+INFO: [HLS 200-1510] Running: cosim_design 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+WARNING: [HLS 200-616] This design uses AXI slave interface in dataflow mode, which can result in simulation dead-lock and/or mismatching results (due to AXI slave FIFO sizing).

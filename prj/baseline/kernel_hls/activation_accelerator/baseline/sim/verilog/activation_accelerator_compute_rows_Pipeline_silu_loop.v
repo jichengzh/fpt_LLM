@@ -238,23 +238,23 @@ module activation_accelerator_compute_rows_Pipeline_silu_loop (
         xt_62_address0,
         xt_62_ce0,
         xt_62_q0,
-        grp_fu_1900_p_din0,
-        grp_fu_1900_p_din1,
-        grp_fu_1900_p_opcode,
-        grp_fu_1900_p_dout0,
-        grp_fu_1900_p_ce,
-        grp_fu_1906_p_din0,
-        grp_fu_1906_p_din1,
-        grp_fu_1906_p_dout0,
-        grp_fu_1906_p_ce,
-        grp_fu_1911_p_din0,
-        grp_fu_1911_p_din1,
-        grp_fu_1911_p_dout0,
-        grp_fu_1911_p_ce,
-        grp_fu_2326_p_din0,
-        grp_fu_2326_p_din1,
-        grp_fu_2326_p_dout0,
-        grp_fu_2326_p_ce
+        grp_fu_2042_p_din0,
+        grp_fu_2042_p_din1,
+        grp_fu_2042_p_opcode,
+        grp_fu_2042_p_dout0,
+        grp_fu_2042_p_ce,
+        grp_fu_2046_p_din0,
+        grp_fu_2046_p_din1,
+        grp_fu_2046_p_dout0,
+        grp_fu_2046_p_ce,
+        grp_fu_2050_p_din0,
+        grp_fu_2050_p_din1,
+        grp_fu_2050_p_dout0,
+        grp_fu_2050_p_ce,
+        grp_fu_2054_p_din0,
+        grp_fu_2054_p_din1,
+        grp_fu_2054_p_dout0,
+        grp_fu_2054_p_ce
 );
 
 parameter    ap_ST_fsm_pp0_stage0 = 1'd1;
@@ -489,23 +489,23 @@ input  [31:0] xt_61_q0;
 output  [4:0] xt_62_address0;
 output   xt_62_ce0;
 input  [31:0] xt_62_q0;
-output  [31:0] grp_fu_1900_p_din0;
-output  [31:0] grp_fu_1900_p_din1;
-output  [0:0] grp_fu_1900_p_opcode;
-input  [31:0] grp_fu_1900_p_dout0;
-output   grp_fu_1900_p_ce;
-output  [31:0] grp_fu_1906_p_din0;
-output  [31:0] grp_fu_1906_p_din1;
-input  [31:0] grp_fu_1906_p_dout0;
-output   grp_fu_1906_p_ce;
-output  [31:0] grp_fu_1911_p_din0;
-output  [31:0] grp_fu_1911_p_din1;
-input  [31:0] grp_fu_1911_p_dout0;
-output   grp_fu_1911_p_ce;
-output  [31:0] grp_fu_2326_p_din0;
-output  [31:0] grp_fu_2326_p_din1;
-input  [31:0] grp_fu_2326_p_dout0;
-output   grp_fu_2326_p_ce;
+output  [31:0] grp_fu_2042_p_din0;
+output  [31:0] grp_fu_2042_p_din1;
+output  [0:0] grp_fu_2042_p_opcode;
+input  [31:0] grp_fu_2042_p_dout0;
+output   grp_fu_2042_p_ce;
+output  [31:0] grp_fu_2046_p_din0;
+output  [31:0] grp_fu_2046_p_din1;
+input  [31:0] grp_fu_2046_p_dout0;
+output   grp_fu_2046_p_ce;
+output  [31:0] grp_fu_2050_p_din0;
+output  [31:0] grp_fu_2050_p_din1;
+input  [31:0] grp_fu_2050_p_dout0;
+output   grp_fu_2050_p_ce;
+output  [31:0] grp_fu_2054_p_din0;
+output  [31:0] grp_fu_2054_p_din1;
+input  [31:0] grp_fu_2054_p_dout0;
+output   grp_fu_2054_p_ce;
 
 reg ap_idle;
 reg tile2_V_62_ce1;
@@ -742,15 +742,15 @@ reg   [31:0] tmp_s_reg_1612_pp0_iter20_reg;
 reg   [31:0] tmp_s_reg_1612_pp0_iter21_reg;
 wire   [31:0] bitcast_ln275_1_fu_1381_p1;
 reg   [31:0] tmp_17_reg_1622;
-reg   [31:0] add_i2_reg_1627;
+reg   [31:0] add_i_reg_1627;
 reg   [31:0] sig_reg_1632;
 reg   [15:0] trunc_ln203_2_reg_1637;
 wire    ap_block_pp0_stage0;
 reg   [9:0] i_fu_244;
 wire   [9:0] add_ln273_fu_1241_p2;
 wire    ap_loop_init;
-reg   [9:0] ap_sig_allocacmp_i_4;
-wire   [4:0] lshr_ln2_fu_1247_p4;
+reg   [9:0] ap_sig_allocacmp_i_7;
+wire   [4:0] lshr_ln5_fu_1247_p4;
 wire   [31:0] bitcast_ln275_fu_1371_p1;
 wire   [31:0] xor_ln275_fu_1375_p2;
 wire   [31:0] w_V_fu_1386_p1;
@@ -855,7 +855,7 @@ activation_accelerator_mux_325_32_1_1 #(
     .din31_WIDTH( 32 ),
     .din32_WIDTH( 5 ),
     .dout_WIDTH( 32 ))
-mux_325_32_1_1_U631(
+mux_325_32_1_1_U808(
     .din0(xt_q0),
     .din1(xt_32_q0),
     .din2(xt_33_q0),
@@ -1191,7 +1191,7 @@ end
 
 always @ (posedge ap_clk) begin
     if ((1'b0 == ap_block_pp0_stage0_11001)) begin
-        add_i2_reg_1627 <= grp_fu_1900_p_dout0;
+        add_i_reg_1627 <= grp_fu_2042_p_dout0;
         ap_loop_exit_ready_pp0_iter10_reg <= ap_loop_exit_ready_pp0_iter9_reg;
         ap_loop_exit_ready_pp0_iter11_reg <= ap_loop_exit_ready_pp0_iter10_reg;
         ap_loop_exit_ready_pp0_iter12_reg <= ap_loop_exit_ready_pp0_iter11_reg;
@@ -1214,8 +1214,8 @@ always @ (posedge ap_clk) begin
         ap_loop_exit_ready_pp0_iter7_reg <= ap_loop_exit_ready_pp0_iter6_reg;
         ap_loop_exit_ready_pp0_iter8_reg <= ap_loop_exit_ready_pp0_iter7_reg;
         ap_loop_exit_ready_pp0_iter9_reg <= ap_loop_exit_ready_pp0_iter8_reg;
-        sig_reg_1632 <= grp_fu_1911_p_dout0;
-        tmp_17_reg_1622 <= grp_fu_2326_p_dout0;
+        sig_reg_1632 <= grp_fu_2050_p_dout0;
+        tmp_17_reg_1622 <= grp_fu_2054_p_dout0;
         tmp_s_reg_1612_pp0_iter10_reg <= tmp_s_reg_1612_pp0_iter9_reg;
         tmp_s_reg_1612_pp0_iter11_reg <= tmp_s_reg_1612_pp0_iter10_reg;
         tmp_s_reg_1612_pp0_iter12_reg <= tmp_s_reg_1612_pp0_iter11_reg;
@@ -1345,9 +1345,9 @@ end
 
 always @ (*) begin
     if (((ap_loop_init == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0))) begin
-        ap_sig_allocacmp_i_4 = 10'd0;
+        ap_sig_allocacmp_i_7 = 10'd0;
     end else begin
-        ap_sig_allocacmp_i_4 = i_fu_244;
+        ap_sig_allocacmp_i_7 = i_fu_244;
     end
 end
 
@@ -2130,7 +2130,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln273_fu_1241_p2 = (ap_sig_allocacmp_i_4 + 10'd1);
+assign add_ln273_fu_1241_p2 = (ap_sig_allocacmp_i_7 + 10'd1);
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 
@@ -2204,35 +2204,35 @@ assign bitcast_ln275_1_fu_1381_p1 = xor_ln275_fu_1375_p2;
 
 assign bitcast_ln275_fu_1371_p1 = tmp_s_fu_1302_p34;
 
-assign grp_fu_1900_p_ce = 1'b1;
+assign grp_fu_2042_p_ce = 1'b1;
 
-assign grp_fu_1900_p_din0 = tmp_17_reg_1622;
+assign grp_fu_2042_p_din0 = tmp_17_reg_1622;
 
-assign grp_fu_1900_p_din1 = 32'd1065353216;
+assign grp_fu_2042_p_din1 = 32'd1065353216;
 
-assign grp_fu_1900_p_opcode = 2'd0;
+assign grp_fu_2042_p_opcode = 2'd0;
 
-assign grp_fu_1906_p_ce = 1'b1;
+assign grp_fu_2046_p_ce = 1'b1;
 
-assign grp_fu_1906_p_din0 = tmp_s_reg_1612_pp0_iter21_reg;
+assign grp_fu_2046_p_din0 = tmp_s_reg_1612_pp0_iter21_reg;
 
-assign grp_fu_1906_p_din1 = sig_reg_1632;
+assign grp_fu_2046_p_din1 = sig_reg_1632;
 
-assign grp_fu_1911_p_ce = 1'b1;
+assign grp_fu_2050_p_ce = 1'b1;
 
-assign grp_fu_1911_p_din0 = 32'd1065353216;
+assign grp_fu_2050_p_din0 = 32'd1065353216;
 
-assign grp_fu_1911_p_din1 = add_i2_reg_1627;
+assign grp_fu_2050_p_din1 = add_i_reg_1627;
 
-assign grp_fu_2326_p_ce = 1'b1;
+assign grp_fu_2054_p_ce = 1'b1;
 
-assign grp_fu_2326_p_din0 = 32'd0;
+assign grp_fu_2054_p_din0 = 32'd0;
 
-assign grp_fu_2326_p_din1 = bitcast_ln275_1_fu_1381_p1;
+assign grp_fu_2054_p_din1 = bitcast_ln275_1_fu_1381_p1;
 
-assign icmp_ln273_fu_1235_p2 = ((ap_sig_allocacmp_i_4 == 10'd768) ? 1'b1 : 1'b0);
+assign icmp_ln273_fu_1235_p2 = ((ap_sig_allocacmp_i_7 == 10'd768) ? 1'b1 : 1'b0);
 
-assign lshr_ln2_fu_1247_p4 = {{ap_sig_allocacmp_i_4[9:5]}};
+assign lshr_ln5_fu_1247_p4 = {{ap_sig_allocacmp_i_7[9:5]}};
 
 assign tile2_V_32_address1 = zext_ln275_reg_1411_pp0_iter24_reg;
 
@@ -2362,9 +2362,9 @@ assign tile2_V_address1 = zext_ln275_reg_1411_pp0_iter24_reg;
 
 assign tile2_V_d1 = trunc_ln203_2_reg_1637;
 
-assign trunc_ln275_fu_1293_p1 = ap_sig_allocacmp_i_4[4:0];
+assign trunc_ln275_fu_1293_p1 = ap_sig_allocacmp_i_7[4:0];
 
-assign w_V_fu_1386_p1 = grp_fu_1906_p_dout0;
+assign w_V_fu_1386_p1 = grp_fu_2046_p_dout0;
 
 assign xor_ln275_fu_1375_p2 = (bitcast_ln275_fu_1371_p1 ^ 32'd2147483648);
 
@@ -2432,7 +2432,7 @@ assign xt_62_address0 = zext_ln275_fu_1257_p1;
 
 assign xt_address0 = zext_ln275_fu_1257_p1;
 
-assign zext_ln275_fu_1257_p1 = lshr_ln2_fu_1247_p4;
+assign zext_ln275_fu_1257_p1 = lshr_ln5_fu_1247_p4;
 
 always @ (posedge ap_clk) begin
     zext_ln275_reg_1411[63:5] <= 59'b00000000000000000000000000000000000000000000000000000000000;

@@ -25,11 +25,21 @@ set SynModuleInfo {
     }
   }
   {SRCNAME compute_rows_Pipeline_smx_2 MODELNAME compute_rows_Pipeline_smx_2 RTLNAME activation_accelerator_compute_rows_Pipeline_smx_2}
-  {SRCNAME compute_rows_Pipeline_rms_loop_0 MODELNAME compute_rows_Pipeline_rms_loop_0 RTLNAME activation_accelerator_compute_rows_Pipeline_rms_loop_0}
-  {SRCNAME compute_rows_Pipeline_rms_loop_1 MODELNAME compute_rows_Pipeline_rms_loop_1 RTLNAME activation_accelerator_compute_rows_Pipeline_rms_loop_1}
-  {SRCNAME compute_rows_Pipeline_layer_loop_0 MODELNAME compute_rows_Pipeline_layer_loop_0 RTLNAME activation_accelerator_compute_rows_Pipeline_layer_loop_0}
-  {SRCNAME compute_rows_Pipeline_layer_loop_1 MODELNAME compute_rows_Pipeline_layer_loop_1 RTLNAME activation_accelerator_compute_rows_Pipeline_layer_loop_1}
-  {SRCNAME compute_rows_Pipeline_ln_2 MODELNAME compute_rows_Pipeline_ln_2 RTLNAME activation_accelerator_compute_rows_Pipeline_ln_2}
+  {SRCNAME float_rmsnorm_Pipeline_rms_loop_0 MODELNAME float_rmsnorm_Pipeline_rms_loop_0 RTLNAME activation_accelerator_float_rmsnorm_Pipeline_rms_loop_0
+    SUBMODULES {
+      {MODELNAME activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1 RTLNAME activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1 BINDTYPE op TYPE fadd IMPL fulldsp LATENCY 3 ALLOW_PRAGMA 1}
+    }
+  }
+  {SRCNAME float_rmsnorm_Pipeline_rms_loop_1 MODELNAME float_rmsnorm_Pipeline_rms_loop_1 RTLNAME activation_accelerator_float_rmsnorm_Pipeline_rms_loop_1}
+  {SRCNAME float_rmsnorm MODELNAME float_rmsnorm RTLNAME activation_accelerator_float_rmsnorm}
+  {SRCNAME float_layernorm_Pipeline_layer_loop_0 MODELNAME float_layernorm_Pipeline_layer_loop_0 RTLNAME activation_accelerator_float_layernorm_Pipeline_layer_loop_0}
+  {SRCNAME float_layernorm_Pipeline_layer_loop_1 MODELNAME float_layernorm_Pipeline_layer_loop_1 RTLNAME activation_accelerator_float_layernorm_Pipeline_layer_loop_1}
+  {SRCNAME float_layernorm_Pipeline_ln_2 MODELNAME float_layernorm_Pipeline_ln_2 RTLNAME activation_accelerator_float_layernorm_Pipeline_ln_2}
+  {SRCNAME float_layernorm MODELNAME float_layernorm RTLNAME activation_accelerator_float_layernorm
+    SUBMODULES {
+      {MODELNAME activation_accelerator_frsqrt_32ns_32ns_32_10_full_dsp_1 RTLNAME activation_accelerator_frsqrt_32ns_32ns_32_10_full_dsp_1 BINDTYPE op TYPE frsqrt IMPL fulldsp LATENCY 9 ALLOW_PRAGMA 1}
+    }
+  }
   {SRCNAME compute_rows_Pipeline_silu_loop MODELNAME compute_rows_Pipeline_silu_loop RTLNAME activation_accelerator_compute_rows_Pipeline_silu_loop}
   {SRCNAME compute_rows_Pipeline_convert_loop1 MODELNAME compute_rows_Pipeline_convert_loop1 RTLNAME activation_accelerator_compute_rows_Pipeline_convert_loop1}
   {SRCNAME compute_rows_Pipeline_add_loop MODELNAME compute_rows_Pipeline_add_loop RTLNAME activation_accelerator_compute_rows_Pipeline_add_loop}
@@ -41,7 +51,6 @@ set SynModuleInfo {
       {MODELNAME activation_accelerator_faddfsub_32ns_32ns_32_4_full_dsp_1 RTLNAME activation_accelerator_faddfsub_32ns_32ns_32_4_full_dsp_1 BINDTYPE op TYPE fadd IMPL fulldsp LATENCY 3 ALLOW_PRAGMA 1}
       {MODELNAME activation_accelerator_fmul_32ns_32ns_32_3_max_dsp_1 RTLNAME activation_accelerator_fmul_32ns_32ns_32_3_max_dsp_1 BINDTYPE op TYPE fmul IMPL maxdsp LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME activation_accelerator_fdiv_32ns_32ns_32_9_no_dsp_1 RTLNAME activation_accelerator_fdiv_32ns_32ns_32_9_no_dsp_1 BINDTYPE op TYPE fdiv IMPL fabric LATENCY 8 ALLOW_PRAGMA 1}
-      {MODELNAME activation_accelerator_frsqrt_32ns_32ns_32_10_full_dsp_1 RTLNAME activation_accelerator_frsqrt_32ns_32ns_32_10_full_dsp_1 BINDTYPE op TYPE frsqrt IMPL fulldsp LATENCY 9 ALLOW_PRAGMA 1}
       {MODELNAME activation_accelerator_fexp_32ns_32ns_32_8_full_dsp_1 RTLNAME activation_accelerator_fexp_32ns_32ns_32_8_full_dsp_1 BINDTYPE op TYPE fexp IMPL fulldsp LATENCY 7 ALLOW_PRAGMA 1}
       {MODELNAME activation_accelerator_fadd_32ns_32ns_32_4_no_dsp_1 RTLNAME activation_accelerator_fadd_32ns_32ns_32_4_no_dsp_1 BINDTYPE op TYPE fadd IMPL fabric LATENCY 3 ALLOW_PRAGMA 1}
       {MODELNAME activation_accelerator_compute_rows_tile0_V_RAM_2P_BRAM_1R1W RTLNAME activation_accelerator_compute_rows_tile0_V_RAM_2P_BRAM_1R1W BINDTYPE storage TYPE ram_2p IMPL bram LATENCY 2 ALLOW_PRAGMA 1}

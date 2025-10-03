@@ -2,26 +2,28 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Wed Oct  1 10:15:50 2025
-# Process ID: 313373
+# Start of session at: Fri Oct  3 15:44:24 2025
+# Process ID: 1820423
 # Current directory: /data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/ip_tmp
 # Command line: vivado  -notrace -log vivado.log -mode batch -source run_vivado_gen_ip.tcl
 # Log file: /data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/ip_tmp/vivado.log
 # Journal file: /data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/ip_tmp/vivado.jou
-# Running On: super-test, OS: Linux, CPU Frequency: 2700.001 MHz, CPU Physical cores: 20, Host memory: 134761 MB
+# Running On: super-test, OS: Linux, CPU Frequency: 2699.998 MHz, CPU Physical cores: 20, Host memory: 134761 MB
 #-----------------------------------------------------------
 source run_vivado_gen_ip.tcl -notrace
-create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1723.164 ; gain = 86.992 ; free physical = 36067 ; free virtual = 113258
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1698.773 ; gain = 12.023 ; free physical = 14136 ; free virtual = 92232
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/data/xilinx/Vivado/2022.2/data/ip'.
 WARNING: [IP_Flow 19-4832] The IP name 'activation_accelerator_fmul_32ns_32ns_32_3_max_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
-create_ip: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1828.031 ; gain = 104.867 ; free physical = 35960 ; free virtual = 113230
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'activation_accelerator_fmul_32ns_32ns_32_3_max_dsp_1_ip'...
 INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'activation_accelerator_fmul_32ns_32ns_32_3_max_dsp_1_ip'...
 WARNING: [IP_Flow 19-4832] The IP name 'activation_accelerator_fadd_32ns_32ns_32_4_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'activation_accelerator_fadd_32ns_32ns_32_4_no_dsp_1_ip'...
 INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'activation_accelerator_fadd_32ns_32ns_32_4_no_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1_ip'...
 WARNING: [IP_Flow 19-4832] The IP name 'activation_accelerator_frsqrt_32ns_32ns_32_10_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'activation_accelerator_frsqrt_32ns_32ns_32_10_full_dsp_1_ip'...
 INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'activation_accelerator_frsqrt_32ns_32ns_32_10_full_dsp_1_ip'...
@@ -34,4 +36,4 @@ INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'activation_accele
 WARNING: [IP_Flow 19-4832] The IP name 'activation_accelerator_faddfsub_32ns_32ns_32_4_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'activation_accelerator_faddfsub_32ns_32ns_32_4_full_dsp_1_ip'...
 INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'activation_accelerator_faddfsub_32ns_32ns_32_4_full_dsp_1_ip'...
-INFO: [Common 17-206] Exiting Vivado at Wed Oct  1 10:16:39 2025...
+INFO: [Common 17-206] Exiting Vivado at Fri Oct  3 15:44:41 2025...

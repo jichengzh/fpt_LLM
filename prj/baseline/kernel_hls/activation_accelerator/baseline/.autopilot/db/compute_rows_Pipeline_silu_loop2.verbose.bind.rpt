@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'compute_rows_Pipeline_silu_loop2'
 ================================================================
-* Date:           Wed Oct  1 10:14:39 2025
+* Date:           Fri Oct  3 15:43:14 2025
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        activation_accelerator
@@ -176,12 +176,12 @@ ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void
 ST_1 : Operation 93 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %tile2_V_62, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 93 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 94 [1/1] (0.42ns)   --->   "%store_ln0 = store i10 0, i10 %i"   --->   Operation 94 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
 ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body.i50"   --->   Operation 95 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 96 [1/1] (0.00ns)   --->   "%i_3 = load i10 %i" [activation_accelerator.cpp:275]   --->   Operation 96 'load' 'i_3' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 97 [1/1] (0.91ns)   --->   "%icmp_ln273 = icmp_eq  i10 %i_3, i10 768" [activation_accelerator.cpp:273]   --->   Operation 97 'icmp' 'icmp_ln273' <Predicate = true> <Delay = 0.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 96 [1/1] (0.00ns)   --->   "%i_6 = load i10 %i" [activation_accelerator.cpp:275]   --->   Operation 96 'load' 'i_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 97 [1/1] (0.91ns)   --->   "%icmp_ln273 = icmp_eq  i10 %i_6, i10 768" [activation_accelerator.cpp:273]   --->   Operation 97 'icmp' 'icmp_ln273' <Predicate = true> <Delay = 0.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 98 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 768, i64 768, i64 768"   --->   Operation 98 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 99 [1/1] (0.78ns)   --->   "%add_ln273 = add i10 %i_3, i10 1" [activation_accelerator.cpp:273]   --->   Operation 99 'add' 'add_ln273' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 100 [1/1] (0.00ns)   --->   "%br_ln273 = br i1 %icmp_ln273, void %for.body.i50.split, void %PK_W.loopexit5963.exitStub" [activation_accelerator.cpp:273]   --->   Operation 100 'br' 'br_ln273' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 101 [1/1] (0.00ns)   --->   "%lshr_ln275_1 = partselect i5 @_ssdm_op_PartSelect.i5.i10.i32.i32, i10 %i_3, i32 5, i32 9" [activation_accelerator.cpp:275]   --->   Operation 101 'partselect' 'lshr_ln275_1' <Predicate = (!icmp_ln273)> <Delay = 0.00>
+ST_1 : Operation 99 [1/1] (0.78ns)   --->   "%add_ln273 = add i10 %i_6, i10 1" [activation_accelerator.cpp:273]   --->   Operation 99 'add' 'add_ln273' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 100 [1/1] (0.00ns)   --->   "%br_ln273 = br i1 %icmp_ln273, void %for.body.i50.split, void %PK_W.loopexit4617.exitStub" [activation_accelerator.cpp:273]   --->   Operation 100 'br' 'br_ln273' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 101 [1/1] (0.00ns)   --->   "%lshr_ln275_1 = partselect i5 @_ssdm_op_PartSelect.i5.i10.i32.i32, i10 %i_6, i32 5, i32 9" [activation_accelerator.cpp:275]   --->   Operation 101 'partselect' 'lshr_ln275_1' <Predicate = (!icmp_ln273)> <Delay = 0.00>
 ST_1 : Operation 102 [1/1] (0.00ns)   --->   "%zext_ln275 = zext i5 %lshr_ln275_1" [activation_accelerator.cpp:275]   --->   Operation 102 'zext' 'zext_ln275' <Predicate = (!icmp_ln273)> <Delay = 0.00>
 ST_1 : Operation 103 [1/1] (0.00ns)   --->   "%xt_addr = getelementptr i32 %xt, i64 0, i64 %zext_ln275" [activation_accelerator.cpp:275]   --->   Operation 103 'getelementptr' 'xt_addr' <Predicate = (!icmp_ln273)> <Delay = 0.00>
 ST_1 : Operation 104 [1/1] (0.00ns)   --->   "%xt_32_addr = getelementptr i32 %xt_32, i64 0, i64 %zext_ln275" [activation_accelerator.cpp:275]   --->   Operation 104 'getelementptr' 'xt_32_addr' <Predicate = (!icmp_ln273)> <Delay = 0.00>
@@ -215,7 +215,7 @@ ST_1 : Operation 131 [1/1] (0.00ns)   --->   "%xt_59_addr = getelementptr i32 %x
 ST_1 : Operation 132 [1/1] (0.00ns)   --->   "%xt_60_addr = getelementptr i32 %xt_60, i64 0, i64 %zext_ln275" [activation_accelerator.cpp:275]   --->   Operation 132 'getelementptr' 'xt_60_addr' <Predicate = (!icmp_ln273)> <Delay = 0.00>
 ST_1 : Operation 133 [1/1] (0.00ns)   --->   "%xt_61_addr = getelementptr i32 %xt_61, i64 0, i64 %zext_ln275" [activation_accelerator.cpp:275]   --->   Operation 133 'getelementptr' 'xt_61_addr' <Predicate = (!icmp_ln273)> <Delay = 0.00>
 ST_1 : Operation 134 [1/1] (0.00ns)   --->   "%xt_62_addr = getelementptr i32 %xt_62, i64 0, i64 %zext_ln275" [activation_accelerator.cpp:275]   --->   Operation 134 'getelementptr' 'xt_62_addr' <Predicate = (!icmp_ln273)> <Delay = 0.00>
-ST_1 : Operation 135 [1/1] (0.00ns)   --->   "%trunc_ln275 = trunc i10 %i_3" [activation_accelerator.cpp:275]   --->   Operation 135 'trunc' 'trunc_ln275' <Predicate = (!icmp_ln273)> <Delay = 0.00>
+ST_1 : Operation 135 [1/1] (0.00ns)   --->   "%trunc_ln275 = trunc i10 %i_6" [activation_accelerator.cpp:275]   --->   Operation 135 'trunc' 'trunc_ln275' <Predicate = (!icmp_ln273)> <Delay = 0.00>
 ST_1 : Operation 136 [2/2] (1.23ns)   --->   "%xt_load = load i5 %xt_addr" [activation_accelerator.cpp:275]   --->   Operation 136 'load' 'xt_load' <Predicate = (!icmp_ln273)> <Delay = 1.23> <CoreInst = "RAM_S2P_BRAM">   --->   Core 97 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 24> <RAM>
 ST_1 : Operation 137 [2/2] (1.23ns)   --->   "%xt_32_load = load i5 %xt_32_addr" [activation_accelerator.cpp:275]   --->   Operation 137 'load' 'xt_32_load' <Predicate = (!icmp_ln273)> <Delay = 1.23> <CoreInst = "RAM_S2P_BRAM">   --->   Core 97 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 24> <RAM>
 ST_1 : Operation 138 [2/2] (1.23ns)   --->   "%xt_33_load = load i5 %xt_33_addr" [activation_accelerator.cpp:275]   --->   Operation 138 'load' 'xt_33_load' <Predicate = (!icmp_ln273)> <Delay = 1.23> <CoreInst = "RAM_S2P_BRAM">   --->   Core 97 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 24> <RAM>
@@ -313,43 +313,43 @@ State 9 <SV = 8> <Delay = 4.91>
 ST_9 : Operation 214 [1/8] (4.91ns)   --->   "%tmp_16 = fexp i32 @llvm.exp.f32, i32 %bitcast_ln275_1" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/common/hls_exp_float.cpp:17]   --->   Operation 214 'fexp' 'tmp_16' <Predicate = true> <Delay = 4.91> <CoreInst = "FExp_fulldsp">   --->   Core 23 'FExp_fulldsp' <Latency = 7> <II = 1> <Delay = 4.91> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
 
 State 10 <SV = 9> <Delay = 6.43>
-ST_10 : Operation 215 [4/4] (6.43ns)   --->   "%add_i = fadd i32 %tmp_16, i32 1" [activation_accelerator.cpp:275]   --->   Operation 215 'fadd' 'add_i' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 215 [4/4] (6.43ns)   --->   "%add_i1 = fadd i32 %tmp_16, i32 1" [activation_accelerator.cpp:275]   --->   Operation 215 'fadd' 'add_i1' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
 State 11 <SV = 10> <Delay = 6.43>
-ST_11 : Operation 216 [3/4] (6.43ns)   --->   "%add_i = fadd i32 %tmp_16, i32 1" [activation_accelerator.cpp:275]   --->   Operation 216 'fadd' 'add_i' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 216 [3/4] (6.43ns)   --->   "%add_i1 = fadd i32 %tmp_16, i32 1" [activation_accelerator.cpp:275]   --->   Operation 216 'fadd' 'add_i1' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
 State 12 <SV = 11> <Delay = 6.43>
-ST_12 : Operation 217 [2/4] (6.43ns)   --->   "%add_i = fadd i32 %tmp_16, i32 1" [activation_accelerator.cpp:275]   --->   Operation 217 'fadd' 'add_i' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 217 [2/4] (6.43ns)   --->   "%add_i1 = fadd i32 %tmp_16, i32 1" [activation_accelerator.cpp:275]   --->   Operation 217 'fadd' 'add_i1' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
 State 13 <SV = 12> <Delay = 6.43>
-ST_13 : Operation 218 [1/4] (6.43ns)   --->   "%add_i = fadd i32 %tmp_16, i32 1" [activation_accelerator.cpp:275]   --->   Operation 218 'fadd' 'add_i' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 218 [1/4] (6.43ns)   --->   "%add_i1 = fadd i32 %tmp_16, i32 1" [activation_accelerator.cpp:275]   --->   Operation 218 'fadd' 'add_i1' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
 State 14 <SV = 13> <Delay = 7.05>
-ST_14 : Operation 219 [9/9] (7.05ns)   --->   "%sig = fdiv i32 1, i32 %add_i" [activation_accelerator.cpp:275]   --->   Operation 219 'fdiv' 'sig' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 219 [9/9] (7.05ns)   --->   "%sig = fdiv i32 1, i32 %add_i1" [activation_accelerator.cpp:275]   --->   Operation 219 'fdiv' 'sig' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
 
 State 15 <SV = 14> <Delay = 7.05>
-ST_15 : Operation 220 [8/9] (7.05ns)   --->   "%sig = fdiv i32 1, i32 %add_i" [activation_accelerator.cpp:275]   --->   Operation 220 'fdiv' 'sig' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 220 [8/9] (7.05ns)   --->   "%sig = fdiv i32 1, i32 %add_i1" [activation_accelerator.cpp:275]   --->   Operation 220 'fdiv' 'sig' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
 
 State 16 <SV = 15> <Delay = 7.05>
-ST_16 : Operation 221 [7/9] (7.05ns)   --->   "%sig = fdiv i32 1, i32 %add_i" [activation_accelerator.cpp:275]   --->   Operation 221 'fdiv' 'sig' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 221 [7/9] (7.05ns)   --->   "%sig = fdiv i32 1, i32 %add_i1" [activation_accelerator.cpp:275]   --->   Operation 221 'fdiv' 'sig' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
 
 State 17 <SV = 16> <Delay = 7.05>
-ST_17 : Operation 222 [6/9] (7.05ns)   --->   "%sig = fdiv i32 1, i32 %add_i" [activation_accelerator.cpp:275]   --->   Operation 222 'fdiv' 'sig' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 222 [6/9] (7.05ns)   --->   "%sig = fdiv i32 1, i32 %add_i1" [activation_accelerator.cpp:275]   --->   Operation 222 'fdiv' 'sig' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
 
 State 18 <SV = 17> <Delay = 7.05>
-ST_18 : Operation 223 [5/9] (7.05ns)   --->   "%sig = fdiv i32 1, i32 %add_i" [activation_accelerator.cpp:275]   --->   Operation 223 'fdiv' 'sig' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 223 [5/9] (7.05ns)   --->   "%sig = fdiv i32 1, i32 %add_i1" [activation_accelerator.cpp:275]   --->   Operation 223 'fdiv' 'sig' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
 
 State 19 <SV = 18> <Delay = 7.05>
-ST_19 : Operation 224 [4/9] (7.05ns)   --->   "%sig = fdiv i32 1, i32 %add_i" [activation_accelerator.cpp:275]   --->   Operation 224 'fdiv' 'sig' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 224 [4/9] (7.05ns)   --->   "%sig = fdiv i32 1, i32 %add_i1" [activation_accelerator.cpp:275]   --->   Operation 224 'fdiv' 'sig' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
 
 State 20 <SV = 19> <Delay = 7.05>
-ST_20 : Operation 225 [3/9] (7.05ns)   --->   "%sig = fdiv i32 1, i32 %add_i" [activation_accelerator.cpp:275]   --->   Operation 225 'fdiv' 'sig' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 225 [3/9] (7.05ns)   --->   "%sig = fdiv i32 1, i32 %add_i1" [activation_accelerator.cpp:275]   --->   Operation 225 'fdiv' 'sig' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
 
 State 21 <SV = 20> <Delay = 7.05>
-ST_21 : Operation 226 [2/9] (7.05ns)   --->   "%sig = fdiv i32 1, i32 %add_i" [activation_accelerator.cpp:275]   --->   Operation 226 'fdiv' 'sig' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 226 [2/9] (7.05ns)   --->   "%sig = fdiv i32 1, i32 %add_i1" [activation_accelerator.cpp:275]   --->   Operation 226 'fdiv' 'sig' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
 
 State 22 <SV = 21> <Delay = 7.05>
-ST_22 : Operation 227 [1/9] (7.05ns)   --->   "%sig = fdiv i32 1, i32 %add_i" [activation_accelerator.cpp:275]   --->   Operation 227 'fdiv' 'sig' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 227 [1/9] (7.05ns)   --->   "%sig = fdiv i32 1, i32 %add_i1" [activation_accelerator.cpp:275]   --->   Operation 227 'fdiv' 'sig' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
 
 State 23 <SV = 22> <Delay = 7.01>
 ST_23 : Operation 228 [3/3] (7.01ns)   --->   "%mul5_i = fmul i32 %tmp_s, i32 %sig" [activation_accelerator.cpp:277]   --->   Operation 228 'fmul' 'mul5_i' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
@@ -365,7 +365,7 @@ ST_25 : Operation 331 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operatio
 
 State 26 <SV = 25> <Delay = 1.23>
 ST_26 : Operation 233 [1/1] (0.00ns)   --->   "%specpipeline_ln274 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_13" [activation_accelerator.cpp:274]   --->   Operation 233 'specpipeline' 'specpipeline_ln274' <Predicate = true> <Delay = 0.00>
-ST_26 : Operation 234 [1/1] (0.00ns)   --->   "%specloopname_ln273 = specloopname void @_ssdm_op_SpecLoopName, void @empty_18" [activation_accelerator.cpp:273]   --->   Operation 234 'specloopname' 'specloopname_ln273' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 234 [1/1] (0.00ns)   --->   "%specloopname_ln273 = specloopname void @_ssdm_op_SpecLoopName, void @empty_22" [activation_accelerator.cpp:273]   --->   Operation 234 'specloopname' 'specloopname_ln273' <Predicate = true> <Delay = 0.00>
 ST_26 : Operation 235 [1/1] (0.00ns)   --->   "%tile2_V_addr = getelementptr i16 %tile2_V, i64 0, i64 %zext_ln275" [activation_accelerator.cpp:277]   --->   Operation 235 'getelementptr' 'tile2_V_addr' <Predicate = true> <Delay = 0.00>
 ST_26 : Operation 236 [1/1] (0.00ns)   --->   "%tile2_V_32_addr = getelementptr i16 %tile2_V_32, i64 0, i64 %zext_ln275" [activation_accelerator.cpp:277]   --->   Operation 236 'getelementptr' 'tile2_V_32_addr' <Predicate = true> <Delay = 0.00>
 ST_26 : Operation 237 [1/1] (0.00ns)   --->   "%tile2_V_33_addr = getelementptr i16 %tile2_V_33, i64 0, i64 %zext_ln275" [activation_accelerator.cpp:277]   --->   Operation 237 'getelementptr' 'tile2_V_33_addr' <Predicate = true> <Delay = 0.00>
@@ -612,7 +612,7 @@ specmemcore_ln0       (specmemcore      ) [ 000000000000000000000000000]
 specmemcore_ln0       (specmemcore      ) [ 000000000000000000000000000]
 store_ln0             (store            ) [ 000000000000000000000000000]
 br_ln0                (br               ) [ 000000000000000000000000000]
-i_3                   (load             ) [ 000000000000000000000000000]
+i_6                   (load             ) [ 000000000000000000000000000]
 icmp_ln273            (icmp             ) [ 011111111111111111111111110]
 speclooptripcount_ln0 (speclooptripcount) [ 000000000000000000000000000]
 add_ln273             (add              ) [ 000000000000000000000000000]
@@ -692,7 +692,7 @@ bitcast_ln275         (bitcast          ) [ 000000000000000000000000000]
 xor_ln275             (xor              ) [ 000000000000000000000000000]
 bitcast_ln275_1       (bitcast          ) [ 010111111100000000000000000]
 tmp_16                (fexp             ) [ 010000000011110000000000000]
-add_i                 (fadd             ) [ 010000000000001111111110000]
+add_i1                (fadd             ) [ 010000000000001111111110000]
 sig                   (fdiv             ) [ 010000000000000000000001110]
 mul5_i                (fmul             ) [ 000000000000000000000000000]
 w_V                   (bitcast          ) [ 000000000000000000000000000]
@@ -1959,7 +1959,7 @@ ret_ln0               (ret              ) [ 000000000000000000000000000]
 <pin id="243" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_18"/></StgValue>
+<StgValue><ssdm name="empty_22"/></StgValue>
 </bind>
 </comp>
 
@@ -3774,7 +3774,7 @@ ret_ln0               (ret              ) [ 000000000000000000000000000]
 </pin_list>
 <bind>
 <opcode="fadd(9) " fcode="fadd"/>
-<opset="add_i/10 "/>
+<opset="add_i1/10 "/>
 </bind>
 </comp>
 
@@ -3826,14 +3826,14 @@ ret_ln0               (ret              ) [ 000000000000000000000000000]
 </bind>
 </comp>
 
-<comp id="1232" class="1004" name="i_3_load_fu_1232">
+<comp id="1232" class="1004" name="i_6_load_fu_1232">
 <pin_list>
 <pin id="1233" dir="0" index="0" bw="10" slack="0"/>
 <pin id="1234" dir="1" index="1" bw="10" slack="0"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
-<opset="i_3/1 "/>
+<opset="i_6/1 "/>
 </bind>
 </comp>
 
@@ -4402,13 +4402,13 @@ ret_ln0               (ret              ) [ 000000000000000000000000000]
 </bind>
 </comp>
 
-<comp id="1627" class="1005" name="add_i_reg_1627">
+<comp id="1627" class="1005" name="add_i1_reg_1627">
 <pin_list>
 <pin id="1628" dir="0" index="0" bw="32" slack="1"/>
 <pin id="1629" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
-<opset="add_i "/>
+<opset="add_i1 "/>
 </bind>
 </comp>
 
@@ -5370,7 +5370,7 @@ ret_ln0               (ret              ) [ 000000000000000000000000000]
   - Chain level:
 	State 1
 		store_ln0 : 1
-		i_3 : 1
+		i_6 : 1
 		icmp_ln273 : 2
 		add_ln273 : 2
 		br_ln273 : 3
@@ -5550,7 +5550,7 @@ N/A
 +------------------------+--------+
 |                        |   FF   |
 +------------------------+--------+
-|     add_i_reg_1627     |   32   |
+|     add_i1_reg_1627    |   32   |
 |bitcast_ln275_1_reg_1617|   32   |
 |       i_reg_1400       |   10   |
 |   icmp_ln273_reg_1407  |    1   |

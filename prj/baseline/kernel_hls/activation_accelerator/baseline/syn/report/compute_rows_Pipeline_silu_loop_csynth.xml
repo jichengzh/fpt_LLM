@@ -130,7 +130,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1900_p_din0</name>
+<name>grp_fu_2042_p_din0</name>
 <Object>compute_rows_Pipeline_silu_loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -141,7 +141,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1900_p_din1</name>
+<name>grp_fu_2042_p_din1</name>
 <Object>compute_rows_Pipeline_silu_loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -152,29 +152,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1900_p_opcode</name>
-<Object>compute_rows_Pipeline_silu_loop</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_1900_p_dout0</name>
-<Object>compute_rows_Pipeline_silu_loop</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_1900_p_ce</name>
+<name>grp_fu_2042_p_opcode</name>
 <Object>compute_rows_Pipeline_silu_loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -185,29 +163,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1906_p_din0</name>
-<Object>compute_rows_Pipeline_silu_loop</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_1906_p_din1</name>
-<Object>compute_rows_Pipeline_silu_loop</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_1906_p_dout0</name>
+<name>grp_fu_2042_p_dout0</name>
 <Object>compute_rows_Pipeline_silu_loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -218,7 +174,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1906_p_ce</name>
+<name>grp_fu_2042_p_ce</name>
 <Object>compute_rows_Pipeline_silu_loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -229,7 +185,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1911_p_din0</name>
+<name>grp_fu_2046_p_din0</name>
 <Object>compute_rows_Pipeline_silu_loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -240,7 +196,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1911_p_din1</name>
+<name>grp_fu_2046_p_din1</name>
 <Object>compute_rows_Pipeline_silu_loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -251,7 +207,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1911_p_dout0</name>
+<name>grp_fu_2046_p_dout0</name>
 <Object>compute_rows_Pipeline_silu_loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -262,7 +218,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1911_p_ce</name>
+<name>grp_fu_2046_p_ce</name>
 <Object>compute_rows_Pipeline_silu_loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -273,7 +229,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2326_p_din0</name>
+<name>grp_fu_2050_p_din0</name>
 <Object>compute_rows_Pipeline_silu_loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -284,7 +240,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2326_p_din1</name>
+<name>grp_fu_2050_p_din1</name>
 <Object>compute_rows_Pipeline_silu_loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -295,7 +251,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2326_p_dout0</name>
+<name>grp_fu_2050_p_dout0</name>
 <Object>compute_rows_Pipeline_silu_loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -306,7 +262,51 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2326_p_ce</name>
+<name>grp_fu_2050_p_ce</name>
+<Object>compute_rows_Pipeline_silu_loop</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_2054_p_din0</name>
+<Object>compute_rows_Pipeline_silu_loop</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_2054_p_din1</name>
+<Object>compute_rows_Pipeline_silu_loop</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_2054_p_dout0</name>
+<Object>compute_rows_Pipeline_silu_loop</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_2054_p_ce</name>
 <Object>compute_rows_Pipeline_silu_loop</Object>
 <Type>return value</Type>
 <Scope></Scope>

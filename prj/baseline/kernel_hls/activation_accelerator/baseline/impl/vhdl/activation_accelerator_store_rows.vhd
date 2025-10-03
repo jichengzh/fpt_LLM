@@ -164,7 +164,7 @@ attribute shreg_extract : string;
     attribute fsm_encoding of ap_CS_fsm_state3 : signal is "none";
     signal ap_CS_fsm_state4 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state4 : signal is "none";
-    signal sext_ln517_fu_85_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal sext_ln694_fu_85_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal ap_block_state1 : BOOLEAN;
     signal ap_NS_fsm : STD_LOGIC_VECTOR (8 downto 0);
     signal ap_ST_fsm_state1_blk : STD_LOGIC;
@@ -237,7 +237,7 @@ attribute shreg_extract : string;
         m_axi_gmem2_BRESP : IN STD_LOGIC_VECTOR (1 downto 0);
         m_axi_gmem2_BID : IN STD_LOGIC_VECTOR (0 downto 0);
         m_axi_gmem2_BUSER : IN STD_LOGIC_VECTOR (0 downto 0);
-        sext_ln517 : IN STD_LOGIC_VECTOR (57 downto 0) );
+        sext_ln694 : IN STD_LOGIC_VECTOR (57 downto 0) );
     end component;
 
 
@@ -302,7 +302,7 @@ begin
         m_axi_gmem2_BRESP => m_axi_gmem2_BRESP,
         m_axi_gmem2_BID => m_axi_gmem2_BID,
         m_axi_gmem2_BUSER => m_axi_gmem2_BUSER,
-        sext_ln517 => trunc_ln_reg_95);
+        sext_ln694 => trunc_ln_reg_95);
 
 
 
@@ -521,10 +521,10 @@ begin
     m_axi_gmem2_ARUSER <= ap_const_lv1_0;
     m_axi_gmem2_ARVALID <= ap_const_logic_0;
 
-    m_axi_gmem2_AWADDR_assign_proc : process(m_axi_gmem2_AWREADY, ap_CS_fsm_state2, grp_store_rows_Pipeline_STORE_ROW_STORE_W_fu_66_m_axi_gmem2_AWADDR, ap_CS_fsm_state3, ap_CS_fsm_state4, sext_ln517_fu_85_p1)
+    m_axi_gmem2_AWADDR_assign_proc : process(m_axi_gmem2_AWREADY, ap_CS_fsm_state2, grp_store_rows_Pipeline_STORE_ROW_STORE_W_fu_66_m_axi_gmem2_AWADDR, ap_CS_fsm_state3, ap_CS_fsm_state4, sext_ln694_fu_85_p1)
     begin
         if (((m_axi_gmem2_AWREADY = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-            m_axi_gmem2_AWADDR <= sext_ln517_fu_85_p1;
+            m_axi_gmem2_AWADDR <= sext_ln694_fu_85_p1;
         elsif (((ap_const_logic_1 = ap_CS_fsm_state4) or (ap_const_logic_1 = ap_CS_fsm_state3))) then 
             m_axi_gmem2_AWADDR <= grp_store_rows_Pipeline_STORE_ROW_STORE_W_fu_66_m_axi_gmem2_AWADDR;
         else 
@@ -704,6 +704,6 @@ begin
         end if; 
     end process;
 
-        sext_ln517_fu_85_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(trunc_ln_reg_95),64));
+        sext_ln694_fu_85_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(trunc_ln_reg_95),64));
 
 end behav;

@@ -1174,10 +1174,10 @@ newFuncRoot:66 %br_ln0 = br void %for.body.i164
 
 <Node id="133" bw="10" op_0_bw="10" op_1_bw="0">
 <![CDATA[
-for.body.i164:0 %i_4 = load i10 %i
+for.body.i164:0 %i_7 = load i10 %i
 
 ]]></Node>
-<StgValue><ssdm name="i_4"/></StgValue>
+<StgValue><ssdm name="i_7"/></StgValue>
 </operation>
 
 <operation id="97" st_id="1" stage="1" lat="1">
@@ -1189,7 +1189,7 @@ for.body.i164:0 %i_4 = load i10 %i
 
 <Node id="134" bw="1" op_0_bw="10" op_1_bw="10">
 <![CDATA[
-for.body.i164:1 %icmp_ln273 = icmp_eq  i10 %i_4, i10 768
+for.body.i164:1 %icmp_ln273 = icmp_eq  i10 %i_7, i10 768
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln273"/></StgValue>
@@ -1219,7 +1219,7 @@ for.body.i164:2 %speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLo
 
 <Node id="136" bw="10" op_0_bw="10" op_1_bw="10">
 <![CDATA[
-for.body.i164:3 %add_ln273 = add i10 %i_4, i10 1
+for.body.i164:3 %add_ln273 = add i10 %i_7, i10 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln273"/></StgValue>
@@ -1234,7 +1234,7 @@ for.body.i164:3 %add_ln273 = add i10 %i_4, i10 1
 
 <Node id="137" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-for.body.i164:4 %br_ln273 = br i1 %icmp_ln273, void %for.body.i164.split, void %PK_W.loopexit5967.exitStub
+for.body.i164:4 %br_ln273 = br i1 %icmp_ln273, void %for.body.i164.split, void %PK_W.loopexit4619.exitStub
 
 ]]></Node>
 <StgValue><ssdm name="br_ln273"/></StgValue>
@@ -1250,10 +1250,10 @@ for.body.i164:4 %br_ln273 = br i1 %icmp_ln273, void %for.body.i164.split, void %
 
 <Node id="141" bw="5" op_0_bw="5" op_1_bw="10" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-for.body.i164.split:2 %lshr_ln2 = partselect i5 @_ssdm_op_PartSelect.i5.i10.i32.i32, i10 %i_4, i32 5, i32 9
+for.body.i164.split:2 %lshr_ln5 = partselect i5 @_ssdm_op_PartSelect.i5.i10.i32.i32, i10 %i_7, i32 5, i32 9
 
 ]]></Node>
-<StgValue><ssdm name="lshr_ln2"/></StgValue>
+<StgValue><ssdm name="lshr_ln5"/></StgValue>
 </operation>
 
 <operation id="102" st_id="1" stage="1" lat="1">
@@ -1266,7 +1266,7 @@ for.body.i164.split:2 %lshr_ln2 = partselect i5 @_ssdm_op_PartSelect.i5.i10.i32.
 
 <Node id="142" bw="64" op_0_bw="5">
 <![CDATA[
-for.body.i164.split:3 %zext_ln275 = zext i5 %lshr_ln2
+for.body.i164.split:3 %zext_ln275 = zext i5 %lshr_ln5
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln275"/></StgValue>
@@ -1794,7 +1794,7 @@ for.body.i164.split:35 %xt_62_addr = getelementptr i32 %xt_62, i64 0, i64 %zext_
 
 <Node id="175" bw="5" op_0_bw="10">
 <![CDATA[
-for.body.i164.split:36 %trunc_ln275 = trunc i10 %i_4
+for.body.i164.split:36 %trunc_ln275 = trunc i10 %i_7
 
 ]]></Node>
 <StgValue><ssdm name="trunc_ln275"/></StgValue>
@@ -3056,10 +3056,10 @@ for.body.i164.split:73 %tmp_17 = fexp i32 @llvm.exp.f32, i32 %bitcast_ln275_1
 
 <Node id="213" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.body.i164.split:74 %add_i2 = fadd i32 %tmp_17, i32 1
+for.body.i164.split:74 %add_i = fadd i32 %tmp_17, i32 1
 
 ]]></Node>
-<StgValue><ssdm name="add_i2"/></StgValue>
+<StgValue><ssdm name="add_i"/></StgValue>
 </operation>
 </state>
 
@@ -3074,10 +3074,10 @@ for.body.i164.split:74 %add_i2 = fadd i32 %tmp_17, i32 1
 
 <Node id="213" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.body.i164.split:74 %add_i2 = fadd i32 %tmp_17, i32 1
+for.body.i164.split:74 %add_i = fadd i32 %tmp_17, i32 1
 
 ]]></Node>
-<StgValue><ssdm name="add_i2"/></StgValue>
+<StgValue><ssdm name="add_i"/></StgValue>
 </operation>
 </state>
 
@@ -3092,10 +3092,10 @@ for.body.i164.split:74 %add_i2 = fadd i32 %tmp_17, i32 1
 
 <Node id="213" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.body.i164.split:74 %add_i2 = fadd i32 %tmp_17, i32 1
+for.body.i164.split:74 %add_i = fadd i32 %tmp_17, i32 1
 
 ]]></Node>
-<StgValue><ssdm name="add_i2"/></StgValue>
+<StgValue><ssdm name="add_i"/></StgValue>
 </operation>
 </state>
 
@@ -3110,10 +3110,10 @@ for.body.i164.split:74 %add_i2 = fadd i32 %tmp_17, i32 1
 
 <Node id="213" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.body.i164.split:74 %add_i2 = fadd i32 %tmp_17, i32 1
+for.body.i164.split:74 %add_i = fadd i32 %tmp_17, i32 1
 
 ]]></Node>
-<StgValue><ssdm name="add_i2"/></StgValue>
+<StgValue><ssdm name="add_i"/></StgValue>
 </operation>
 </state>
 
@@ -3128,7 +3128,7 @@ for.body.i164.split:74 %add_i2 = fadd i32 %tmp_17, i32 1
 
 <Node id="214" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.body.i164.split:75 %sig = fdiv i32 1, i32 %add_i2
+for.body.i164.split:75 %sig = fdiv i32 1, i32 %add_i
 
 ]]></Node>
 <StgValue><ssdm name="sig"/></StgValue>
@@ -3146,7 +3146,7 @@ for.body.i164.split:75 %sig = fdiv i32 1, i32 %add_i2
 
 <Node id="214" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.body.i164.split:75 %sig = fdiv i32 1, i32 %add_i2
+for.body.i164.split:75 %sig = fdiv i32 1, i32 %add_i
 
 ]]></Node>
 <StgValue><ssdm name="sig"/></StgValue>
@@ -3164,7 +3164,7 @@ for.body.i164.split:75 %sig = fdiv i32 1, i32 %add_i2
 
 <Node id="214" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.body.i164.split:75 %sig = fdiv i32 1, i32 %add_i2
+for.body.i164.split:75 %sig = fdiv i32 1, i32 %add_i
 
 ]]></Node>
 <StgValue><ssdm name="sig"/></StgValue>
@@ -3182,7 +3182,7 @@ for.body.i164.split:75 %sig = fdiv i32 1, i32 %add_i2
 
 <Node id="214" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.body.i164.split:75 %sig = fdiv i32 1, i32 %add_i2
+for.body.i164.split:75 %sig = fdiv i32 1, i32 %add_i
 
 ]]></Node>
 <StgValue><ssdm name="sig"/></StgValue>
@@ -3200,7 +3200,7 @@ for.body.i164.split:75 %sig = fdiv i32 1, i32 %add_i2
 
 <Node id="214" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.body.i164.split:75 %sig = fdiv i32 1, i32 %add_i2
+for.body.i164.split:75 %sig = fdiv i32 1, i32 %add_i
 
 ]]></Node>
 <StgValue><ssdm name="sig"/></StgValue>
@@ -3218,7 +3218,7 @@ for.body.i164.split:75 %sig = fdiv i32 1, i32 %add_i2
 
 <Node id="214" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.body.i164.split:75 %sig = fdiv i32 1, i32 %add_i2
+for.body.i164.split:75 %sig = fdiv i32 1, i32 %add_i
 
 ]]></Node>
 <StgValue><ssdm name="sig"/></StgValue>
@@ -3236,7 +3236,7 @@ for.body.i164.split:75 %sig = fdiv i32 1, i32 %add_i2
 
 <Node id="214" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.body.i164.split:75 %sig = fdiv i32 1, i32 %add_i2
+for.body.i164.split:75 %sig = fdiv i32 1, i32 %add_i
 
 ]]></Node>
 <StgValue><ssdm name="sig"/></StgValue>
@@ -3254,7 +3254,7 @@ for.body.i164.split:75 %sig = fdiv i32 1, i32 %add_i2
 
 <Node id="214" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.body.i164.split:75 %sig = fdiv i32 1, i32 %add_i2
+for.body.i164.split:75 %sig = fdiv i32 1, i32 %add_i
 
 ]]></Node>
 <StgValue><ssdm name="sig"/></StgValue>
@@ -3272,7 +3272,7 @@ for.body.i164.split:75 %sig = fdiv i32 1, i32 %add_i2
 
 <Node id="214" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.body.i164.split:75 %sig = fdiv i32 1, i32 %add_i2
+for.body.i164.split:75 %sig = fdiv i32 1, i32 %add_i
 
 ]]></Node>
 <StgValue><ssdm name="sig"/></StgValue>
@@ -3372,7 +3372,7 @@ for.body.i164.split:78 %trunc_ln203_2 = partselect i16 @_ssdm_op_PartSelect.i16.
 
 <Node id="351" bw="0">
 <![CDATA[
-PK_W.loopexit5967.exitStub:0 %ret_ln0 = ret
+PK_W.loopexit4619.exitStub:0 %ret_ln0 = ret
 
 ]]></Node>
 <StgValue><ssdm name="ret_ln0"/></StgValue>
@@ -3405,7 +3405,7 @@ for.body.i164.split:0 %specpipeline_ln274 = specpipeline void @_ssdm_op_SpecPipe
 
 <Node id="140" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.body.i164.split:1 %specloopname_ln273 = specloopname void @_ssdm_op_SpecLoopName, void @empty_18
+for.body.i164.split:1 %specloopname_ln273 = specloopname void @_ssdm_op_SpecLoopName, void @empty_22
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln273"/></StgValue>

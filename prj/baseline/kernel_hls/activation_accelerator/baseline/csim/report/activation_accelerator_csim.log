@@ -6,9 +6,9 @@ INFO: [SIM 4] CSIM will launch GCC as the compiler.
 Loading test data...
 Using relative data path: /data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors2
 Unable to load bf16 input data, using random data
-in0 statistics: min=0, max=65535, mean=32676.1
-in1 statistics: min=0, max=65535, mean=32712.4
-mask statistics: min=0, max=1, mean=0.50474
+in0 statistics: min=0, max=65535, mean=32593.5
+in1 statistics: min=0, max=65535, mean=33033.6
+mask statistics: min=0, max=1, mean=0.500427
 === HLS Activation Accelerator Testbench ===
 Trying to load: /data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors2golden_out_config_0_bf16.bin
 Unable to load Config 0 golden data
@@ -34,48 +34,48 @@ Using random data as golden reference for Config 6
 Packed inputs to 512b buffers (stage 0 prepared)
 
 --- Testing Config 0 ---
-Config 0 compute time: 5261.65 ms
+Config 0 compute time: 4819.29 ms
 Output results saved to: /data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors2hls_output_config_0.bin
 Max Difference: 65534
-Config 0 test failed with 49140 errors
+Config 0 test failed with 49130 errors
 
 --- Testing Config 1 ---
-Config 1 compute time: 3086.49 ms
+Config 1 compute time: 3058.13 ms
 Output results saved to: /data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors2hls_output_config_1.bin
 Max Difference: 65535
-Config 1 test failed with 49126 errors
+Config 1 test failed with 49114 errors
 
 --- Testing Config 2 ---
-Config 2 compute time: 1293.27 ms
+Config 2 compute time: 1303.02 ms
 Output results saved to: /data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors2hls_output_config_2.bin
-Max Difference: 65534
-Config 2 test failed with 49108 errors
+Max Difference: 65535
+Config 2 test failed with 49096 errors
 
 --- Testing Config 3 ---
-Config 3 compute time: 1295.53 ms
+Config 3 compute time: 1297.86 ms
 Output results saved to: /data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors2hls_output_config_3.bin
 Max Difference: 65535
-Config 3 test failed with 49106 errors
+Config 3 test failed with 49116 errors
 
 --- Testing Config 4 ---
-Config 4 compute time: 3067.33 ms
+Config 4 compute time: 3058.26 ms
 Output results saved to: /data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors2hls_output_config_4.bin
-Max Difference: 65534
-Config 4 test failed with 49104 errors
+Max Difference: 65532
+Config 4 test failed with 49122 errors
 
 --- Testing Config 5 ---
-Config 5 compute time: 1297.76 ms
+Config 5 compute time: 1303.25 ms
 Output results saved to: /data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors2hls_output_config_5.bin
 Max Difference: 65534
-Config 5 test failed with 49105 errors
+Config 5 test failed with 49115 errors
 
 --- Testing Config 6 ---
-Config 6 compute time: 1297.56 ms
+Config 6 compute time: 1295.63 ms
 Output results saved to: /data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors2hls_output_config_6.bin
-Max Difference: 65534
-Config 6 test failed with 49098 errors
+Max Difference: 65533
+Config 6 test failed with 49117 errors
 
-Total compute time for all configs: 16599.6 ms
+Total compute time for all configs: 16135.4 ms
 
 === Test Complete ===
 INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 1536

@@ -208,7 +208,7 @@ end;
 architecture behav of activation_accelerator is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "activation_accelerator_activation_accelerator,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xck26-sfvc784-2LV-c,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=180361,HLS_SYN_TPT=180354,HLS_SYN_MEM=247,HLS_SYN_DSP=0,HLS_SYN_FF=14744,HLS_SYN_LUT=36686,HLS_VERSION=2022_2}";
+    "activation_accelerator_activation_accelerator,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xck26-sfvc784-2LV-c,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=132361,HLS_SYN_TPT=132354,HLS_SYN_MEM=247,HLS_SYN_DSP=0,HLS_SYN_FF=18570,HLS_SYN_LUT=44113,HLS_VERSION=2022_2}";
     constant C_S_AXI_DATA_WIDTH : INTEGER range 63 downto 0 := 20;
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant C_M_AXI_DATA_WIDTH : INTEGER range 63 downto 0 := 20;
