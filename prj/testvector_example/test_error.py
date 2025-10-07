@@ -38,9 +38,10 @@ f32_min = -f32_max
 output_f32 = np.nan_to_num(output_f32, nan=0.0, posinf=f32_max, neginf=f32_min)
 golden_f32 = np.nan_to_num(golden_f32, nan=0.0, posinf=f32_max, neginf=f32_min)
 
-
-# print(output_f32)
-
+df_error = pd.DataFrame(output_f32)
+df_error.to_csv("/home/xushaohui/FPT/fpt_LLM/seedata/output_f32.csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
+df_error = pd.DataFrame(golden_f32)
+df_error.to_csv("/home/xushaohui/FPT/fpt_LLM/seedata/golden_f32.csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
 eps =1e-12
 
 #误差计算并计算精度得分
@@ -92,6 +93,6 @@ print("评分用真实误差：", errors)
 print("总评分：", errors_point)
 
 # 将DataFrame输出为Excel文件
-df_error.to_csv("/home/xushaohui/FPT/fpt_LLM/seedata/errors_per_row_config_"+ config +".csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
-df_error_point.to_csv("/home/xushaohui/FPT/fpt_LLM/seedata/errors_point_per_row_config_"+ config +".csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
+df_error.to_csv("/home/xushaohui/FPT/fpt_LLM/seedata/config_"+ config +"/errors_per_row_config_"+ config +"2.csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
+df_error_point.to_csv("/home/xushaohui/FPT/fpt_LLM/seedata/config_"+ config +"/errors_point_per_row_config_"+ config +"2.csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
 

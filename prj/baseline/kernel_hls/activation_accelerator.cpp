@@ -204,6 +204,63 @@ float Q_rsqrt(float number)
 	return y;
 }
 
+//进位操作
+uint16_t round_float32_to_bf16(uint32_t fbits) {
+    const uint32_t LOW16_MASK = 0xFFFFu;
+
+    uint16_t high16 = static_cast<uint16_t>(fbits >> 16); // 包含 sign | exp(8) | top7(mantissa)
+    uint32_t exp_field = (fbits >> 23) & 0xFFu;
+
+    // 如果是 Inf/NaN，直接返回高 16 位（保留 NaN/Inf 表示）
+    if (exp_field == 0xFFu) {
+        return high16;
+    }
+
+    // round bit 位（第 16 位）
+    uint32_t round_bit = (fbits >> 16) & 1u;
+    // sticky bits：被丢弃区段中的低 16 位（位 0..15）
+    uint32_t sticky = fbits & LOW16_MASK;
+
+    if (round_bit == 0u) {
+        // 无需进位，直接截断
+        return high16;
+    }
+
+    // round_bit == 1: 需要判断是否进位（实现 round-to-nearest-even）
+    bool do_round_up = false;
+    if (sticky != 0u) {
+        // round bit 后还有非零位 -> 必须 round up
+        do_round_up = true;
+    } else {
+        // 恰好是 tie (1000...000)，只在当前 high16 的最低位为 1 时进位（ties-to-even）
+        if ((high16 & 1u) != 0u) {
+            do_round_up = true;
+        }
+    }
+
+    if (!do_round_up) {
+        return high16;
+    }
+
+    // 执行进位（用 32 位算以检测是否进位到 exponent）
+    uint32_t rounded = static_cast<uint32_t>(high16) + 1u;
+    const uint32_t BF16_MANT_MASK = 0x7Fu;   // 7 位
+    const uint32_t BF16_EXP_MASK  = 0xFFu;   // 8 位
+
+    uint32_t new_mant = rounded & BF16_MANT_MASK;
+    uint32_t new_exp  = (rounded >> 7) & BF16_EXP_MASK;
+    uint32_t sign     = (rounded >> 15) & 0x1u;
+
+    if (new_exp == 0xFFu) {
+        // 进位导致指数变为全 1 -> ±Inf，mantissa 清零
+        uint16_t result = static_cast<uint16_t>((sign << 15) | (0xFFu << 7));
+        return result;
+    }
+
+    return static_cast<uint16_t>(rounded & LOW16_MASK);
+}
+
+
 //exp近似计算
 float fast_exp1(float x) {
 x = 1.0 + x / 256;
@@ -223,6 +280,8 @@ return x;
 //         y[i] = (*y_f32_ptr) >> 16;
 //     }
 // }
+
+
 // silu
 void float_silu(const float* x, uint16* y, int len) {
     silu_loop:
@@ -295,6 +354,7 @@ void float_add(const float* x, const float* y, uint16* out, int len) {
     }
 }
 
+
 // safe softmax
 void float_safe_softmax(const float* x, uint16* y_bf16, int len) {
 #pragma HLS INLINE off
@@ -318,9 +378,23 @@ void float_safe_softmax(const float* x, uint16* y_bf16, int len) {
         #pragma HLS PIPELINE II=1
         float y = exp_x[i] / sum;
         uint32_t* y_f32_ptr = (uint32_t*)&y;
-        y_bf16[i] = (*y_f32_ptr) >> 16;
+        y_bf16[i] = round_float32_to_bf16(*y_f32_ptr);
     }
 }
+
+
+
+// void float_gelu(const float* x, uint16* y_bf16, int len) {
+//     const double inv_sqrt2 = 1.0 / std::sqrt(2.0);
+//     for (int i = 0; i < n; ++i) {
+//         float y = 0.5 * x[i] * (1.0 + std::erf(in[i] * inv_sqrt2));
+//         uint32_t* y_f32_ptr = (uint32_t*)&y;
+//         y_bf16[i] = (*y_f32_ptr) >> 16;
+//     }
+// }
+
+
+
 
 // mask safe softmax
 // void float_mask_safe_softmax(const float* x, const float* mask, uint16* y_bf16, int len) {
