@@ -746,18 +746,18 @@ for (int i = 0; i < 8; i++) {
 ^~~
 VITIS_LOOP_263_1: 
 /data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55400:1: note: FIX-IT applied suggested code changes
-/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55638:46: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55650:46: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=tile0 type=ram_2p impl=bram
                                              ^
-/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55639:46: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55651:46: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=tile1 type=ram_2p impl=bram
                                              ^
-/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55640:46: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55652:46: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=tile2 type=ram_2p impl=bram
                                              ^
-/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55651:43: error: Invalid Directive: for current device, ram_s2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55663:43: error: Invalid Directive: for current device, ram_s2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=xt type=ram_s2p impl=bram
                                           ^
-/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55652:43: error: Invalid Directive: for current device, ram_s2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:55664:43: error: Invalid Directive: for current device, ram_s2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=yt type=ram_s2p impl=bram
                                           ^

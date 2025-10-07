@@ -22,22 +22,22 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>1435</Best-caseLatency>
-<Average-caseLatency>1435</Average-caseLatency>
-<Worst-caseLatency>1435</Worst-caseLatency>
-<Best-caseRealTimeLatency>14.350 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>14.350 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>14.350 us</Worst-caseRealTimeLatency>
-<Interval-min>1435</Interval-min>
-<Interval-max>1435</Interval-max>
+<Best-caseLatency>1154</Best-caseLatency>
+<Average-caseLatency>1154</Average-caseLatency>
+<Worst-caseLatency>1154</Worst-caseLatency>
+<Best-caseRealTimeLatency>11.540 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>11.540 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>11.540 us</Worst-caseRealTimeLatency>
+<Interval-min>1154</Interval-min>
+<Interval-max>1154</Interval-max>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
 <DSP>15</DSP>
-<FF>2729</FF>
-<LUT>5474</LUT>
+<FF>3301</FF>
+<LUT>4246</LUT>
 <BRAM_18K>0</BRAM_18K>
 <URAM>0</URAM>
 </Resources>
@@ -327,61 +327,6 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2074_p_din0</name>
-<Object>float_layernorm</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_2074_p_din1</name>
-<Object>float_layernorm</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_2074_p_opcode</name>
-<Object>float_layernorm</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>2</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_2074_p_dout0</name>
-<Object>float_layernorm</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_2074_p_ce</name>
-<Object>float_layernorm</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
 <name>grp_fu_2066_p_din0</name>
 <Object>float_layernorm</Object>
 <Type>return value</Type>
@@ -482,6 +427,61 @@
 </RtlPorts>
 <RtlPorts>
 <name>grp_fu_2070_p_ce</name>
+<Object>float_layernorm</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_2074_p_din0</name>
+<Object>float_layernorm</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_2074_p_din1</name>
+<Object>float_layernorm</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_2074_p_opcode</name>
+<Object>float_layernorm</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>2</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_2074_p_dout0</name>
+<Object>float_layernorm</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_2074_p_ce</name>
 <Object>float_layernorm</Object>
 <Type>return value</Type>
 <Scope></Scope>

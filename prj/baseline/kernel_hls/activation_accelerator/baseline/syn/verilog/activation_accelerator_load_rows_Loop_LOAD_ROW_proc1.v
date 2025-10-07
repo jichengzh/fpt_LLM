@@ -282,8 +282,8 @@ reg    gmem0_blk_n_AR;
 reg    gmem1_blk_n_AR;
 wire  signed [57:0] trunc_ln_fu_90_p4;
 reg   [57:0] trunc_ln_reg_132;
-wire  signed [57:0] trunc_ln579_1_fu_111_p4;
-reg   [57:0] trunc_ln579_1_reg_142;
+wire  signed [57:0] trunc_ln633_1_fu_111_p4;
+reg   [57:0] trunc_ln633_1_reg_142;
 wire    grp_load_rows_Loop_LOAD_ROW_proc1_Pipeline_LOAD_ROW_LOAD_W_fu_76_ap_start;
 wire    grp_load_rows_Loop_LOAD_ROW_proc1_Pipeline_LOAD_ROW_LOAD_W_fu_76_ap_done;
 wire    grp_load_rows_Loop_LOAD_ROW_proc1_Pipeline_LOAD_ROW_LOAD_W_fu_76_ap_idle;
@@ -359,8 +359,8 @@ wire    grp_load_rows_Loop_LOAD_ROW_proc1_Pipeline_LOAD_ROW_LOAD_W_fu_76_s_in12_
 reg    grp_load_rows_Loop_LOAD_ROW_proc1_Pipeline_LOAD_ROW_LOAD_W_fu_76_ap_start_reg;
 wire    ap_CS_fsm_state8;
 wire    ap_CS_fsm_state9;
-wire  signed [63:0] sext_ln579_fu_100_p1;
-wire  signed [63:0] sext_ln579_1_fu_121_p1;
+wire  signed [63:0] sext_ln633_fu_100_p1;
+wire  signed [63:0] sext_ln633_1_fu_121_p1;
 reg    ap_block_state1;
 reg    ap_block_state1_io;
 reg   [8:0] ap_NS_fsm;
@@ -491,8 +491,8 @@ activation_accelerator_load_rows_Loop_LOAD_ROW_proc1_Pipeline_LOAD_ROW_LOAD_W gr
     .s_in12_fifo_cap(7'd0),
     .s_in12_full_n(s_in12_full_n),
     .s_in12_write(grp_load_rows_Loop_LOAD_ROW_proc1_Pipeline_LOAD_ROW_LOAD_W_fu_76_s_in12_write),
-    .sext_ln579_1(trunc_ln579_1_reg_142),
-    .sext_ln579(trunc_ln_reg_132)
+    .sext_ln633_1(trunc_ln633_1_reg_142),
+    .sext_ln633(trunc_ln_reg_132)
 );
 
 always @ (posedge ap_clk) begin
@@ -529,7 +529,7 @@ end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state1)) begin
-        trunc_ln579_1_reg_142 <= {{in1[63:6]}};
+        trunc_ln633_1_reg_142 <= {{in1[63:6]}};
         trunc_ln_reg_132 <= {{in0[63:6]}};
     end
 end
@@ -606,7 +606,7 @@ end
 
 always @ (*) begin
     if ((~((1'b1 == ap_block_state1_io) | (ap_done_reg == 1'b1) | (ap_start == 1'b0)) & (1'b1 == ap_CS_fsm_state1))) begin
-        m_axi_gmem0_ARADDR = sext_ln579_fu_100_p1;
+        m_axi_gmem0_ARADDR = sext_ln633_fu_100_p1;
     end else if (((1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8))) begin
         m_axi_gmem0_ARADDR = grp_load_rows_Loop_LOAD_ROW_proc1_Pipeline_LOAD_ROW_LOAD_W_fu_76_m_axi_gmem0_ARADDR;
     end else begin
@@ -716,7 +716,7 @@ end
 
 always @ (*) begin
     if ((~((1'b1 == ap_block_state1_io) | (ap_done_reg == 1'b1) | (ap_start == 1'b0)) & (1'b1 == ap_CS_fsm_state1))) begin
-        m_axi_gmem1_ARADDR = sext_ln579_1_fu_121_p1;
+        m_axi_gmem1_ARADDR = sext_ln633_1_fu_121_p1;
     end else if (((1'b1 == ap_CS_fsm_state9) | (1'b1 == ap_CS_fsm_state8))) begin
         m_axi_gmem1_ARADDR = grp_load_rows_Loop_LOAD_ROW_proc1_Pipeline_LOAD_ROW_LOAD_W_fu_76_m_axi_gmem1_ARADDR;
     end else begin
@@ -979,11 +979,11 @@ assign s_in01_din = grp_load_rows_Loop_LOAD_ROW_proc1_Pipeline_LOAD_ROW_LOAD_W_f
 
 assign s_in12_din = grp_load_rows_Loop_LOAD_ROW_proc1_Pipeline_LOAD_ROW_LOAD_W_fu_76_s_in12_din;
 
-assign sext_ln579_1_fu_121_p1 = trunc_ln579_1_fu_111_p4;
+assign sext_ln633_1_fu_121_p1 = trunc_ln633_1_fu_111_p4;
 
-assign sext_ln579_fu_100_p1 = trunc_ln_fu_90_p4;
+assign sext_ln633_fu_100_p1 = trunc_ln_fu_90_p4;
 
-assign trunc_ln579_1_fu_111_p4 = {{in1[63:6]}};
+assign trunc_ln633_1_fu_111_p4 = {{in1[63:6]}};
 
 assign trunc_ln_fu_90_p4 = {{in0[63:6]}};
 

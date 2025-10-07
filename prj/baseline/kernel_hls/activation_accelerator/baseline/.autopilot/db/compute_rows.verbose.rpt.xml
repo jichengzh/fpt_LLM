@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'compute_rows'" level="0">
-<item name = "Date">Fri Oct  3 15:43:32 2025
+<item name = "Date">Fri Oct  3 21:51:54 2025
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">activation_accelerator</item>
@@ -39,7 +39,7 @@
 <column name="grp_compute_rows_Pipeline_smx_1_fu_1101">compute_rows_Pipeline_smx_1, 322, 322, 3.220 us, 3.220 us, 322, 322, no</column>
 <column name="grp_compute_rows_Pipeline_smx_2_fu_1139">compute_rows_Pipeline_smx_2, 792, 792, 7.920 us, 7.920 us, 792, 792, no</column>
 <column name="grp_float_rmsnorm_fu_1209">float_rmsnorm, 1115, 1115, 11.150 us, 11.150 us, 1115, 1115, no</column>
-<column name="grp_float_layernorm_fu_1277">float_layernorm, 1435, 1435, 14.350 us, 14.350 us, 1435, 1435, no</column>
+<column name="grp_float_layernorm_fu_1277">float_layernorm, 1154, 1154, 11.540 us, 11.540 us, 1154, 1154, no</column>
 <column name="grp_compute_rows_Pipeline_silu_loop_fu_1345">compute_rows_Pipeline_silu_loop, 794, 794, 7.940 us, 7.940 us, 794, 794, no</column>
 <column name="grp_compute_rows_Pipeline_add_loop_fu_1413">compute_rows_Pipeline_add_loop, 775, 775, 7.750 us, 7.750 us, 775, 775, no</column>
 <column name="grp_compute_rows_Pipeline_add_loop3_fu_1513">compute_rows_Pipeline_add_loop3, 775, 775, 7.750 us, 7.750 us, 775, 775, no</column>
@@ -64,12 +64,12 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 331, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">-, 64, 10819, 19045, -</column>
+<column name="Instance">-, 64, 11391, 17817, -</column>
 <column name="Memory">160, -, 0, 0, -</column>
 <column name="Multiplexer">-, -, -, 15385, -</column>
 <column name="Register">-, -, 156, -, -</column>
 <specialColumn name="Available">288, 1248, 234240, 117120, 64</specialColumn>
-<specialColumn name="Utilization (%)">55, 5, 4, 29, 0</specialColumn>
+<specialColumn name="Utilization (%)">55, 5, 4, 28, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
@@ -88,17 +88,17 @@
 <column name="grp_compute_rows_Pipeline_smx_0_fu_1063">compute_rows_Pipeline_smx_0, 0, 0, 50, 517, 0</column>
 <column name="grp_compute_rows_Pipeline_smx_1_fu_1101">compute_rows_Pipeline_smx_1, 0, 14, 1842, 3293, 0</column>
 <column name="grp_compute_rows_Pipeline_smx_2_fu_1139">compute_rows_Pipeline_smx_2, 0, 0, 307, 278, 0</column>
-<column name="fadd_32ns_32ns_32_4_no_dsp_1_U1276">fadd_32ns_32ns_32_4_no_dsp_1, 0, 0, 168, 434, 0</column>
-<column name="faddfsub_32ns_32ns_32_4_full_dsp_1_U1268">faddfsub_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
-<column name="faddfsub_32ns_32ns_32_4_full_dsp_1_U1272">faddfsub_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
-<column name="faddfsub_32ns_32ns_32_4_full_dsp_1_U1273">faddfsub_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
-<column name="faddfsub_32ns_32ns_32_4_full_dsp_1_U1274">faddfsub_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
-<column name="faddfsub_32ns_32ns_32_4_full_dsp_1_U1275">faddfsub_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
-<column name="fdiv_32ns_32ns_32_9_no_dsp_1_U1270">fdiv_32ns_32ns_32_9_no_dsp_1, 0, 0, 0, 0, 0</column>
-<column name="fexp_32ns_32ns_32_8_full_dsp_1_U1271">fexp_32ns_32ns_32_8_full_dsp_1, 0, 7, 324, 905, 0</column>
-<column name="grp_float_layernorm_fu_1277">float_layernorm, 0, 15, 2729, 5474, 0</column>
+<column name="fadd_32ns_32ns_32_4_no_dsp_1_U1246">fadd_32ns_32ns_32_4_no_dsp_1, 0, 0, 168, 434, 0</column>
+<column name="faddfsub_32ns_32ns_32_4_full_dsp_1_U1238">faddfsub_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
+<column name="faddfsub_32ns_32ns_32_4_full_dsp_1_U1242">faddfsub_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
+<column name="faddfsub_32ns_32ns_32_4_full_dsp_1_U1243">faddfsub_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
+<column name="faddfsub_32ns_32ns_32_4_full_dsp_1_U1244">faddfsub_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
+<column name="faddfsub_32ns_32ns_32_4_full_dsp_1_U1245">faddfsub_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
+<column name="fdiv_32ns_32ns_32_9_no_dsp_1_U1240">fdiv_32ns_32ns_32_9_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fexp_32ns_32ns_32_8_full_dsp_1_U1241">fexp_32ns_32ns_32_8_full_dsp_1, 0, 7, 324, 905, 0</column>
+<column name="grp_float_layernorm_fu_1277">float_layernorm, 0, 15, 3301, 4246, 0</column>
 <column name="grp_float_rmsnorm_fu_1209">float_rmsnorm, 0, 15, 2532, 4396, 0</column>
-<column name="fmul_32ns_32ns_32_3_max_dsp_1_U1269">fmul_32ns_32ns_32_3_max_dsp_1, 0, 3, 128, 135, 0</column>
+<column name="fmul_32ns_32ns_32_3_max_dsp_1_U1239">fmul_32ns_32ns_32_3_max_dsp_1, 0, 3, 128, 135, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -290,8 +290,8 @@
 <column name="icmp_ln51_fu_1819_p2">icmp, 0, 0, 10, 7, 6</column>
 <column name="icmp_ln52_fu_1825_p2">icmp, 0, 0, 10, 7, 6</column>
 <column name="icmp_ln53_fu_1831_p2">icmp, 0, 0, 10, 7, 6</column>
-<column name="icmp_ln628_fu_1773_p2">icmp, 0, 0, 11, 7, 8</column>
-<column name="icmp_ln658_fu_1962_p2">icmp, 0, 0, 20, 32, 3</column>
+<column name="icmp_ln682_fu_1773_p2">icmp, 0, 0, 11, 7, 8</column>
+<column name="icmp_ln712_fu_1962_p2">icmp, 0, 0, 20, 32, 3</column>
 <column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state17_on_subcall_done">or, 0, 0, 2, 1, 1</column>
 <column name="or_ln50_fu_1902_p2">or, 0, 0, 2, 1, 1</column>
@@ -303,7 +303,7 @@
 <column name="select_ln50_fu_1894_p3">select, 0, 0, 2, 1, 2</column>
 <column name="select_ln52_fu_1940_p3">select, 0, 0, 3, 1, 3</column>
 <column name="select_ln53_fu_1837_p3">select, 0, 0, 32, 1, 32</column>
-<column name="select_ln628_fu_1757_p3">select, 0, 0, 3, 1, 3</column>
+<column name="select_ln682_fu_1757_p3">select, 0, 0, 3, 1, 3</column>
 <column name="xor_ln47_fu_1850_p2">xor, 0, 0, 2, 1, 2</column>
 <column name="xor_ln48_fu_1870_p2">xor, 0, 0, 2, 1, 2</column>
 <column name="xor_ln49_fu_1882_p2">xor, 0, 0, 2, 1, 2</column>
@@ -981,11 +981,11 @@
 <column name="grp_compute_rows_Pipeline_smx_2_fu_1139_ap_start_reg">1, 0, 1, 0</column>
 <column name="grp_float_layernorm_fu_1277_ap_start_reg">1, 0, 1, 0</column>
 <column name="grp_float_rmsnorm_fu_1209_ap_start_reg">1, 0, 1, 0</column>
-<column name="icmp_ln658_reg_2027">1, 0, 1, 0</column>
+<column name="icmp_ln712_reg_2027">1, 0, 1, 0</column>
 <column name="op_reg_2022">32, 0, 32, 0</column>
 <column name="r_1_fu_116">7, 0, 7, 0</column>
 <column name="r_2_reg_2017">7, 0, 7, 0</column>
-<column name="select_ln628_reg_2009">2, 0, 32, 30</column>
+<column name="select_ln682_reg_2009">2, 0, 32, 30</column>
 <column name="xmax_reg_2031">32, 0, 32, 0</column>
 </table>
 </item>

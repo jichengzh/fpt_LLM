@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'store_rows'
 ================================================================
-* Date:           Fri Oct  3 15:43:24 2025
+* Date:           Fri Oct  3 21:51:45 2025
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        activation_accelerator
@@ -84,38 +84,38 @@ IsGatedGlobalClock: 0
 
 State 1 <SV = 0> <Delay = 1.83>
 ST_1 : Operation 10 [1/1] (1.83ns)   --->   "%out_read = read i64 @_ssdm_op_Read.ap_fifo.i64P0A, i64 %out_r"   --->   Operation 10 'read' 'out_read' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 4> <FIFO>
-ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i58 @_ssdm_op_PartSelect.i58.i64.i32.i32, i64 %out_read, i32 6, i32 63" [activation_accelerator.cpp:694]   --->   Operation 11 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i58 @_ssdm_op_PartSelect.i58.i64.i32.i32, i64 %out_read, i32 6, i32 63" [activation_accelerator.cpp:748]   --->   Operation 11 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
 
 State 2 <SV = 1> <Delay = 7.30>
-ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%sext_ln694 = sext i58 %trunc_ln" [activation_accelerator.cpp:694]   --->   Operation 12 'sext' 'sext_ln694' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%gmem2_addr = getelementptr i512 %gmem2, i64 %sext_ln694" [activation_accelerator.cpp:694]   --->   Operation 13 'getelementptr' 'gmem2_addr' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 14 [1/1] (7.30ns)   --->   "%empty = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i512, i512 %gmem2_addr, i32 1536" [activation_accelerator.cpp:694]   --->   Operation 14 'writereq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%sext_ln748 = sext i58 %trunc_ln" [activation_accelerator.cpp:748]   --->   Operation 12 'sext' 'sext_ln748' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%gmem2_addr = getelementptr i512 %gmem2, i64 %sext_ln748" [activation_accelerator.cpp:748]   --->   Operation 13 'getelementptr' 'gmem2_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (7.30ns)   --->   "%empty = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i512, i512 %gmem2_addr, i32 1536" [activation_accelerator.cpp:748]   --->   Operation 14 'writereq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 3 <SV = 2> <Delay = 0.00>
 ST_3 : Operation 15 [1/1] (0.00ns)   --->   "%empty_48 = wait i32 @_ssdm_op_Wait"   --->   Operation 15 'wait' 'empty_48' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 16 [2/2] (0.00ns)   --->   "%call_ln694 = call void @store_rows_Pipeline_STORE_ROW_STORE_W, i512 %gmem2, i58 %trunc_ln, i512 %s_out3" [activation_accelerator.cpp:694]   --->   Operation 16 'call' 'call_ln694' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 16 [2/2] (0.00ns)   --->   "%call_ln748 = call void @store_rows_Pipeline_STORE_ROW_STORE_W, i512 %gmem2, i58 %trunc_ln, i512 %s_out3" [activation_accelerator.cpp:748]   --->   Operation 16 'call' 'call_ln748' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 4 <SV = 3> <Delay = 0.00>
-ST_4 : Operation 17 [1/2] (0.00ns)   --->   "%call_ln694 = call void @store_rows_Pipeline_STORE_ROW_STORE_W, i512 %gmem2, i58 %trunc_ln, i512 %s_out3" [activation_accelerator.cpp:694]   --->   Operation 17 'call' 'call_ln694' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 17 [1/2] (0.00ns)   --->   "%call_ln748 = call void @store_rows_Pipeline_STORE_ROW_STORE_W, i512 %gmem2, i58 %trunc_ln, i512 %s_out3" [activation_accelerator.cpp:748]   --->   Operation 17 'call' 'call_ln748' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 5 <SV = 4> <Delay = 7.30>
-ST_5 : Operation 18 [5/5] (7.30ns)   --->   "%empty_49 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [activation_accelerator.cpp:703]   --->   Operation 18 'writeresp' 'empty_49' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_5 : Operation 18 [5/5] (7.30ns)   --->   "%empty_49 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [activation_accelerator.cpp:757]   --->   Operation 18 'writeresp' 'empty_49' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 6 <SV = 5> <Delay = 7.30>
-ST_6 : Operation 19 [4/5] (7.30ns)   --->   "%empty_49 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [activation_accelerator.cpp:703]   --->   Operation 19 'writeresp' 'empty_49' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_6 : Operation 19 [4/5] (7.30ns)   --->   "%empty_49 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [activation_accelerator.cpp:757]   --->   Operation 19 'writeresp' 'empty_49' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 7 <SV = 6> <Delay = 7.30>
-ST_7 : Operation 20 [3/5] (7.30ns)   --->   "%empty_49 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [activation_accelerator.cpp:703]   --->   Operation 20 'writeresp' 'empty_49' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_7 : Operation 20 [3/5] (7.30ns)   --->   "%empty_49 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [activation_accelerator.cpp:757]   --->   Operation 20 'writeresp' 'empty_49' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 8 <SV = 7> <Delay = 7.30>
-ST_8 : Operation 21 [2/5] (7.30ns)   --->   "%empty_49 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [activation_accelerator.cpp:703]   --->   Operation 21 'writeresp' 'empty_49' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_8 : Operation 21 [2/5] (7.30ns)   --->   "%empty_49 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [activation_accelerator.cpp:757]   --->   Operation 21 'writeresp' 'empty_49' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 9 <SV = 8> <Delay = 7.30>
 ST_9 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %out_r, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %s_out3, void @empty_7, i32 0, i32 0, void @empty_13, i32 0, i32 0, void @empty_13, void @empty_13, void @empty_13, i32 0, i32 0, i32 0, i32 0, void @empty_13, void @empty_13, i32 4294967295, i32 0"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %gmem2, void @empty_9, i32 0, i32 0, void @empty_13, i32 0, i32 1536, void @empty_12, void @empty_30, void @empty_13, i32 16, i32 16, i32 16, i32 32, void @empty_13, void @empty_13, i32 4294967295, i32 0"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_9 : Operation 25 [1/5] (7.30ns)   --->   "%empty_49 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [activation_accelerator.cpp:703]   --->   Operation 25 'writeresp' 'empty_49' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_9 : Operation 26 [1/1] (0.00ns)   --->   "%ret_ln703 = ret" [activation_accelerator.cpp:703]   --->   Operation 26 'ret' 'ret_ln703' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 25 [1/5] (7.30ns)   --->   "%empty_49 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [activation_accelerator.cpp:757]   --->   Operation 25 'writeresp' 'empty_49' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_9 : Operation 26 [1/1] (0.00ns)   --->   "%ret_ln757 = ret" [activation_accelerator.cpp:757]   --->   Operation 26 'ret' 'ret_ln757' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -129,8 +129,8 @@ The critical path consists of the following:
 
  <State 2>: 7.3ns
 The critical path consists of the following:
-	'getelementptr' operation ('gmem2_addr', activation_accelerator.cpp:694) [10]  (0 ns)
-	bus request operation ('empty', activation_accelerator.cpp:694) on port 'gmem2' (activation_accelerator.cpp:694) [11]  (7.3 ns)
+	'getelementptr' operation ('gmem2_addr', activation_accelerator.cpp:748) [10]  (0 ns)
+	bus request operation ('empty', activation_accelerator.cpp:748) on port 'gmem2' (activation_accelerator.cpp:748) [11]  (7.3 ns)
 
  <State 3>: 0ns
 The critical path consists of the following:
@@ -140,23 +140,23 @@ The critical path consists of the following:
 
  <State 5>: 7.3ns
 The critical path consists of the following:
-	bus response operation ('empty_49', activation_accelerator.cpp:703) on port 'gmem2' (activation_accelerator.cpp:703) [14]  (7.3 ns)
+	bus response operation ('empty_49', activation_accelerator.cpp:757) on port 'gmem2' (activation_accelerator.cpp:757) [14]  (7.3 ns)
 
  <State 6>: 7.3ns
 The critical path consists of the following:
-	bus response operation ('empty_49', activation_accelerator.cpp:703) on port 'gmem2' (activation_accelerator.cpp:703) [14]  (7.3 ns)
+	bus response operation ('empty_49', activation_accelerator.cpp:757) on port 'gmem2' (activation_accelerator.cpp:757) [14]  (7.3 ns)
 
  <State 7>: 7.3ns
 The critical path consists of the following:
-	bus response operation ('empty_49', activation_accelerator.cpp:703) on port 'gmem2' (activation_accelerator.cpp:703) [14]  (7.3 ns)
+	bus response operation ('empty_49', activation_accelerator.cpp:757) on port 'gmem2' (activation_accelerator.cpp:757) [14]  (7.3 ns)
 
  <State 8>: 7.3ns
 The critical path consists of the following:
-	bus response operation ('empty_49', activation_accelerator.cpp:703) on port 'gmem2' (activation_accelerator.cpp:703) [14]  (7.3 ns)
+	bus response operation ('empty_49', activation_accelerator.cpp:757) on port 'gmem2' (activation_accelerator.cpp:757) [14]  (7.3 ns)
 
  <State 9>: 7.3ns
 The critical path consists of the following:
-	bus response operation ('empty_49', activation_accelerator.cpp:703) on port 'gmem2' (activation_accelerator.cpp:703) [14]  (7.3 ns)
+	bus response operation ('empty_49', activation_accelerator.cpp:757) on port 'gmem2' (activation_accelerator.cpp:757) [14]  (7.3 ns)
 
 
 ============================================================

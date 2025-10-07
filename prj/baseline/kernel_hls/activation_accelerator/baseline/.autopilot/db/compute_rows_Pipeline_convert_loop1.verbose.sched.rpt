@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'compute_rows_Pipeline_convert_loop1'
 ================================================================
-* Date:           Fri Oct  3 15:43:20 2025
+* Date:           Fri Oct  3 21:51:42 2025
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        activation_accelerator
@@ -382,7 +382,7 @@ The critical path consists of the following:
 The critical path consists of the following:
 	'load' operation ('tile1_V_load', activation_accelerator.cpp:212) on array 'tile1_V' [176]  (1.24 ns)
 	'mux' operation ('tmp_s', activation_accelerator.cpp:212) [208]  (0.789 ns)
-	'store' operation ('store_ln213', activation_accelerator.cpp:213) of variable 'bitcast_ln213', activation_accelerator.cpp:213 on array 'yt_46' [290]  (1.24 ns)
+	'store' operation ('store_ln213', activation_accelerator.cpp:213) of variable 'bitcast_ln213', activation_accelerator.cpp:213 on array 'yt_61' [245]  (1.24 ns)
 
 
 ============================================================

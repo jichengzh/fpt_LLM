@@ -50,7 +50,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1284 \
+    id 1254 \
     name s_in01 \
     type fifo \
     dir I \
@@ -65,7 +65,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1285 \
+    id 1255 \
     name s_in12 \
     type fifo \
     dir I \
@@ -80,7 +80,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1286 \
+    id 1256 \
     name s_out3 \
     type fifo \
     dir O \
@@ -95,7 +95,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1287 \
+    id 1257 \
     name config_r \
     type fifo \
     dir I \

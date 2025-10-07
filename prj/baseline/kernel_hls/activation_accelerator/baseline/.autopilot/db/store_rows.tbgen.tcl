@@ -199,7 +199,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "gmem2", "Type" : "MAXI", "Direction" : "O",
 				"BlockSignal" : [
 					{"Name" : "gmem2_blk_n_W", "Type" : "RtlSignal"}]},
-			{"Name" : "sext_ln694", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sext_ln748", "Type" : "None", "Direction" : "I"},
 			{"Name" : "s_out3", "Type" : "Fifo", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "s_out3_blk_n", "Type" : "RtlSignal"}]}],
@@ -216,7 +216,7 @@ set ArgLastReadFirstWriteLatency {
 		out_r {Type I LastRead 0 FirstWrite -1}}
 	store_rows_Pipeline_STORE_ROW_STORE_W {
 		gmem2 {Type O LastRead -1 FirstWrite 2}
-		sext_ln694 {Type I LastRead 0 FirstWrite -1}
+		sext_ln748 {Type I LastRead 0 FirstWrite -1}
 		s_out3 {Type I LastRead 1 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0

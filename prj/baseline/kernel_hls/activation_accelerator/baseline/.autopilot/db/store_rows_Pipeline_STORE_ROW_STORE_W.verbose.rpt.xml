@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'store_rows_Pipeline_STORE_ROW_STORE_W'" level="0">
-<item name = "Date">Fri Oct  3 15:43:33 2025
+<item name = "Date">Fri Oct  3 21:51:56 2025
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">activation_accelerator</item>
@@ -78,10 +78,10 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln694_fu_98_p2">+, 0, 0, 18, 11, 1</column>
+<column name="add_ln748_fu_98_p2">+, 0, 0, 18, 11, 1</column>
 <column name="ap_block_pp0_stage0_01001">and, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state2_pp0_stage0_iter1">and, 0, 0, 2, 1, 1</column>
-<column name="icmp_ln694_fu_92_p2">icmp, 0, 0, 11, 11, 11</column>
+<column name="icmp_ln748_fu_92_p2">icmp, 0, 0, 11, 11, 11</column>
 <column name="ap_block_pp0_stage0_11001">or, 0, 0, 2, 1, 1</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
@@ -103,7 +103,7 @@
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter1_reg">1, 0, 1, 0</column>
-<column name="icmp_ln694_reg_126">1, 0, 1, 0</column>
+<column name="icmp_ln748_reg_126">1, 0, 1, 0</column>
 <column name="indvar_flatten_fu_56">11, 0, 11, 0</column>
 <column name="s_out3_read_reg_135">512, 0, 512, 0</column>
 </table>
@@ -172,7 +172,7 @@
 <column name="m_axi_gmem2_BRESP">in, 2, m_axi, gmem2, pointer</column>
 <column name="m_axi_gmem2_BID">in, 1, m_axi, gmem2, pointer</column>
 <column name="m_axi_gmem2_BUSER">in, 1, m_axi, gmem2, pointer</column>
-<column name="sext_ln694">in, 58, ap_none, sext_ln694, scalar</column>
+<column name="sext_ln748">in, 58, ap_none, sext_ln748, scalar</column>
 </table>
 </item>
 </section>

@@ -33,7 +33,7 @@ Args:
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 388, Column: 21 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 442, Column: 21 }
 Function:        _Z15float_layernormPKfP7ap_uintILi16EEi
 Args:            
   - String:          'Inlining function '''
@@ -42,13 +42,13 @@ Args:
                        Line: 20, Column: 0 }
   - String:          ''' into '''
   - Caller:          'float_layernorm(float const*, ap_uint<16>*, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 324, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 364, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 537, Column: 34 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 591, Column: 34 }
 Function:        _Z13float_softmaxPKfP7ap_uintILi16EEi
 Args:            
   - String:          'Inlining function '''
@@ -57,13 +57,13 @@ Args:
                        Line: 20, Column: 0 }
   - String:          ''' into '''
   - Caller:          'float_softmax(float const*, ap_uint<16>*, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 514, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 568, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 553, Column: 12 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 607, Column: 12 }
 Function:        _Z13float_softmaxPKfP7ap_uintILi16EEi
 Args:            
   - String:          'Inlining function '''
@@ -72,13 +72,13 @@ Args:
                        Line: 20, Column: 0 }
   - String:          ''' into '''
   - Caller:          'float_softmax(float const*, ap_uint<16>*, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 514, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 568, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 683, Column: 22 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 737, Column: 22 }
 Function:        _ZL12compute_rowsRN3hls6streamI7ap_uintILi512EELi0EEES4_S4_i
 Args:            
   - String:          'Inlining function '''
@@ -86,41 +86,41 @@ Args:
     DebugLoc:        { File: activation_accelerator.cpp, Line: 69, Column: 0 }
   - String:          ''' into '''
   - Caller:          'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 599, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 653, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 666, Column: 18 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 720, Column: 18 }
 Function:        _ZL12compute_rowsRN3hls6streamI7ap_uintILi512EELi0EEES4_S4_i
 Args:            
   - String:          'Inlining function '''
   - Callee:          'float_add(float const*, float const*, ap_uint<16>*, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 455, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 509, Column: 0 }
   - String:          ''' into '''
   - Caller:          'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 599, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 653, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 665, Column: 23 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 719, Column: 23 }
 Function:        _ZL12compute_rowsRN3hls6streamI7ap_uintILi512EELi0EEES4_S4_i
 Args:            
   - String:          'Inlining function '''
   - Callee:          'float_add(float const*, float const*, ap_uint<16>*, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 455, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 509, Column: 0 }
   - String:          ''' into '''
   - Caller:          'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 599, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 653, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 640, Column: 2 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 694, Column: 2 }
 Function:        _ZL12compute_rowsRN3hls6streamI7ap_uintILi512EELi0EEES4_S4_i
 Args:            
   - String:          'Inlining function '''
@@ -128,13 +128,13 @@ Args:
     DebugLoc:        { File: activation_accelerator.cpp, Line: 62, Column: 0 }
   - String:          ''' into '''
   - Caller:          'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 599, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 653, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 664, Column: 24 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 718, Column: 24 }
 Function:        _ZL12compute_rowsRN3hls6streamI7ap_uintILi512EELi0EEES4_S4_i
 Args:            
   - String:          'Inlining function '''
@@ -142,13 +142,13 @@ Args:
     DebugLoc:        { File: activation_accelerator.cpp, Line: 270, Column: 0 }
   - String:          ''' into '''
   - Caller:          'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 599, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 653, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 641, Column: 13 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 695, Column: 13 }
 Function:        _ZL12compute_rowsRN3hls6streamI7ap_uintILi512EELi0EEES4_S4_i
 Args:            
   - String:          'Inlining function '''
@@ -156,27 +156,27 @@ Args:
     DebugLoc:        { File: activation_accelerator.cpp, Line: 62, Column: 0 }
   - String:          ''' into '''
   - Caller:          'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 599, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 653, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 663, Column: 27 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 717, Column: 27 }
 Function:        _ZL12compute_rowsRN3hls6streamI7ap_uintILi512EELi0EEES4_S4_i
 Args:            
   - String:          'Inlining function '''
   - Callee:          'float_softmax(float const*, ap_uint<16>*, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 514, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 568, Column: 0 }
   - String:          ''' into '''
   - Caller:          'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 599, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 653, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 653, Column: 9 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 707, Column: 9 }
 Function:        _ZL12compute_rowsRN3hls6streamI7ap_uintILi512EELi0EEES4_S4_i
 Args:            
   - String:          'Inlining function '''
@@ -184,13 +184,13 @@ Args:
     DebugLoc:        { File: activation_accelerator.cpp, Line: 207, Column: 0 }
   - String:          ''' into '''
   - Caller:          'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 599, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 653, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 655, Column: 13 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 709, Column: 13 }
 Function:        _ZL12compute_rowsRN3hls6streamI7ap_uintILi512EELi0EEES4_S4_i
 Args:            
   - String:          'Inlining function '''
@@ -198,27 +198,27 @@ Args:
     DebugLoc:        { File: activation_accelerator.cpp, Line: 207, Column: 0 }
   - String:          ''' into '''
   - Caller:          'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 599, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 653, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 659, Column: 23 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 713, Column: 23 }
 Function:        _ZL12compute_rowsRN3hls6streamI7ap_uintILi512EELi0EEES4_S4_i
 Args:            
   - String:          'Inlining function '''
   - Callee:          'float_add(float const*, float const*, ap_uint<16>*, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 455, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 509, Column: 0 }
   - String:          ''' into '''
   - Caller:          'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 599, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 653, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 660, Column: 24 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 714, Column: 24 }
 Function:        _ZL12compute_rowsRN3hls6streamI7ap_uintILi512EELi0EEES4_S4_i
 Args:            
   - String:          'Inlining function '''
@@ -226,13 +226,13 @@ Args:
     DebugLoc:        { File: activation_accelerator.cpp, Line: 270, Column: 0 }
   - String:          ''' into '''
   - Caller:          'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 599, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 653, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 637, Column: 18 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 691, Column: 18 }
 Function:        _ZL12compute_rowsRN3hls6streamI7ap_uintILi512EELi0EEES4_S4_i
 Args:            
   - String:          'Loop '''
@@ -242,7 +242,7 @@ Args:
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 637, Column: 30 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 691, Column: 30 }
 Function:        _ZL12compute_rowsRN3hls6streamI7ap_uintILi512EELi0EEES4_S4_i
 Args:            
   - String:          'Loop '''
@@ -272,7 +272,7 @@ Args:
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 643, Column: 13 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 697, Column: 13 }
 Function:        _ZL12compute_rowsRN3hls6streamI7ap_uintILi512EELi0EEES4_S4_i
 Args:            
   - String:          'Loop '''
@@ -282,7 +282,7 @@ Args:
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 534, Column: 9 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 588, Column: 9 }
 Function:        _ZL12compute_rowsRN3hls6streamI7ap_uintILi512EELi0EEES4_S4_i
 Args:            
   - String:          'Loop '''
@@ -292,7 +292,7 @@ Args:
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 676, Column: 7 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 730, Column: 7 }
 Function:        _ZL12compute_rowsRN3hls6streamI7ap_uintILi512EELi0EEES4_S4_i
 Args:            
   - String:          'Loop '''
@@ -302,7 +302,7 @@ Args:
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 679, Column: 13 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 733, Column: 13 }
 Function:        _ZL12compute_rowsRN3hls6streamI7ap_uintILi512EELi0EEES4_S4_i
 Args:            
   - String:          'Loop '''
@@ -322,7 +322,7 @@ Args:
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 294, Column: 9 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 307, Column: 9 }
 Function:        _Z13float_rmsnormPKfP7ap_uintILi16EEi
 Args:            
   - String:          'Loop '''
@@ -332,7 +332,7 @@ Args:
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 368, Column: 9 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 422, Column: 9 }
 Function:        _Z15float_layernormPKfP7ap_uintILi16EEi
 Args:            
   - String:          'Loop '''
@@ -342,7 +342,7 @@ Args:
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 339, Column: 9 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 379, Column: 9 }
 Function:        _Z15float_layernormPKfP7ap_uintILi16EEi
 Args:            
   - String:          'Loop '''
@@ -352,13 +352,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 599, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 653, Column: 0 }
 Function:        _ZL12compute_rowsRN3hls6streamI7ap_uintILi512EELi0EEES4_S4_i
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        anonymous
   - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:637:18'
+  - LoopLoc:         'activation_accelerator.cpp:691:18'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_rows
@@ -368,13 +368,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 599, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 653, Column: 0 }
 Function:        _ZL12compute_rowsRN3hls6streamI7ap_uintILi512EELi0EEES4_S4_i
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        anonymous
   - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:637:30'
+  - LoopLoc:         'activation_accelerator.cpp:691:30'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_rows
@@ -384,7 +384,7 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 599, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 653, Column: 0 }
 Function:        _ZL12compute_rowsRN3hls6streamI7ap_uintILi512EELi0EEES4_S4_i
 Args:            
   - String:          'Unrolling loop '''
@@ -400,7 +400,7 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 599, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 653, Column: 0 }
 Function:        _ZL12compute_rowsRN3hls6streamI7ap_uintILi512EELi0EEES4_S4_i
 Args:            
   - String:          'Unrolling loop '''
@@ -416,13 +416,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 599, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 653, Column: 0 }
 Function:        _ZL12compute_rowsRN3hls6streamI7ap_uintILi512EELi0EEES4_S4_i
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        UNPK_V
   - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:643:13'
+  - LoopLoc:         'activation_accelerator.cpp:697:13'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_rows
@@ -432,13 +432,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 599, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 653, Column: 0 }
 Function:        _ZL12compute_rowsRN3hls6streamI7ap_uintILi512EELi0EEES4_S4_i
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        load_e
   - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:534:9'
+  - LoopLoc:         'activation_accelerator.cpp:588:9'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_rows
@@ -448,13 +448,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 599, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 653, Column: 0 }
 Function:        _ZL12compute_rowsRN3hls6streamI7ap_uintILi512EELi0EEES4_S4_i
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        anonymous
   - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:676:7'
+  - LoopLoc:         'activation_accelerator.cpp:730:7'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_rows
@@ -464,13 +464,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 599, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 653, Column: 0 }
 Function:        _ZL12compute_rowsRN3hls6streamI7ap_uintILi512EELi0EEES4_S4_i
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        PK_V
   - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:679:13'
+  - LoopLoc:         'activation_accelerator.cpp:733:13'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_rows
@@ -480,7 +480,7 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 599, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 653, Column: 0 }
 Function:        _ZL12compute_rowsRN3hls6streamI7ap_uintILi512EELi0EEES4_S4_i
 Args:            
   - String:          'Unrolling loop '''
@@ -496,13 +496,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 282, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 295, Column: 0 }
 Function:        _Z13float_rmsnormPKfP7ap_uintILi16EEi
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        load_and_sq
   - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:294:9'
+  - LoopLoc:         'activation_accelerator.cpp:307:9'
   - String:          ') '
   - String:          'in function '''
   - String:          float_rmsnorm
@@ -512,39 +512,39 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 324, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 364, Column: 0 }
 Function:        _Z15float_layernormPKfP7ap_uintILi16EEi
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        load_s
   - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:368:9'
+  - LoopLoc:         'activation_accelerator.cpp:422:9'
   - String:          ') '
   - String:          'in function '''
   - String:          float_layernorm
   - String:          ''' completely with a factor of '
-  - Factor:          '8'
+  - Factor:          '16'
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 324, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 364, Column: 0 }
 Function:        _Z15float_layernormPKfP7ap_uintILi16EEi
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        load_a
   - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:339:9'
+  - LoopLoc:         'activation_accelerator.cpp:379:9'
   - String:          ') '
   - String:          'in function '''
   - String:          float_layernorm
   - String:          ''' completely with a factor of '
-  - Factor:          '8'
+  - Factor:          '16'
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 324, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 364, Column: 0 }
 Function:        _Z15float_layernormPKfP7ap_uintILi16EEi
 Args:            
   - String:          'Inlining function '''
@@ -552,13 +552,13 @@ Args:
     DebugLoc:        { File: activation_accelerator.cpp, Line: 201, Column: 0 }
   - String:          ''' into '''
   - Caller:          'float_layernorm(float const*, ap_uint<16>*, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 324, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 364, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 282, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 295, Column: 0 }
 Function:        _Z13float_rmsnormPKfP7ap_uintILi16EEi
 Args:            
   - String:          'Inlining function '''
@@ -566,13 +566,13 @@ Args:
     DebugLoc:        { File: activation_accelerator.cpp, Line: 238, Column: 0 }
   - String:          ''' into '''
   - Caller:          'float_rmsnorm(float const*, ap_uint<16>*, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 282, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 295, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 282, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 295, Column: 0 }
 Function:        _Z13float_rmsnormPKfP7ap_uintILi16EEi
 Args:            
   - String:          'Inlining function '''
@@ -580,7 +580,7 @@ Args:
     DebugLoc:        { File: activation_accelerator.cpp, Line: 201, Column: 0 }
   - String:          ''' into '''
   - Caller:          'float_rmsnorm(float const*, ap_uint<16>*, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 282, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 295, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
@@ -739,7 +739,7 @@ Args:
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 599, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 653, Column: 0 }
 Function:        _ZL12compute_rowsRN3hls6streamI7ap_uintILi512EELi0EEES4_S4_i
 Args:            
   - String:          'Inlining function '''
@@ -747,13 +747,13 @@ Args:
     DebugLoc:        { File: activation_accelerator.cpp, Line: 45, Column: 0 }
   - String:          ''' into '''
   - Caller:          'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 599, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 653, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 599, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 653, Column: 0 }
 Function:        _ZL12compute_rowsRN3hls6streamI7ap_uintILi512EELi0EEES4_S4_i
 Args:            
   - String:          'Inlining function '''
@@ -761,13 +761,13 @@ Args:
     DebugLoc:        { File: activation_accelerator.cpp, Line: 201, Column: 0 }
   - String:          ''' into '''
   - Caller:          'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 599, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 653, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 599, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 653, Column: 0 }
 Function:        _ZL12compute_rowsRN3hls6streamI7ap_uintILi512EELi0EEES4_S4_i
 Args:            
   - String:          'Inlining function '''
@@ -776,13 +776,13 @@ Args:
                        Line: 10, Column: 0 }
   - String:          ''' into '''
   - Caller:          'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 599, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 653, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: activation_accelerator.cpp, Line: 607, Column: 7 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 661, Column: 7 }
 Function:        _ZL12compute_rowsRN3hls6streamI7ap_uintILi512EELi0EEES4_S4_i
 Args:            
   - String:          'Applying '
@@ -802,7 +802,7 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: activation_accelerator.cpp, Line: 607, Column: 20 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 661, Column: 20 }
 Function:        _ZL12compute_rowsRN3hls6streamI7ap_uintILi512EELi0EEES4_S4_i
 Args:            
   - String:          'Applying '
@@ -822,7 +822,7 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: activation_accelerator.cpp, Line: 607, Column: 33 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 661, Column: 33 }
 Function:        _ZL12compute_rowsRN3hls6streamI7ap_uintILi512EELi0EEES4_S4_i
 Args:            
   - String:          'Applying '
@@ -842,7 +842,7 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: activation_accelerator.cpp, Line: 619, Column: 8 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 673, Column: 8 }
 Function:        _ZL12compute_rowsRN3hls6streamI7ap_uintILi512EELi0EEES4_S4_i
 Args:            
   - String:          'Applying '
@@ -862,7 +862,7 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: activation_accelerator.cpp, Line: 619, Column: 18 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 673, Column: 18 }
 Function:        _ZL12compute_rowsRN3hls6streamI7ap_uintILi512EELi0EEES4_S4_i
 Args:            
   - String:          'Applying '
@@ -882,7 +882,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: activation_accelerator.cpp, Line: 579, Column: 10 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 633, Column: 10 }
 Function:        _ZL9load_rowsPK7ap_uintILi512EES2_RN3hls6streamIS0_Li0EEES6_
 Args:            
   - String:          'Sequential '
@@ -902,16 +902,16 @@ Args:
   - String:          ' '
   - LoopName:        LOAD_ROW
   - String:          ' '
-  - LoopLoc:         'activation_accelerator.cpp:579:5'
+  - LoopLoc:         'activation_accelerator.cpp:633:5'
   - String:          ' '
   - Function:        'load_rows(ap_uint<512> const*, ap_uint<512> const*, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 563, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 617, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: activation_accelerator.cpp, Line: 579, Column: 10 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 633, Column: 10 }
 Function:        _ZL9load_rowsPK7ap_uintILi512EES2_RN3hls6streamIS0_Li0EEES6_
 Args:            
   - String:          'Sequential '
@@ -931,16 +931,16 @@ Args:
   - String:          ' '
   - LoopName:        LOAD_ROW
   - String:          ' '
-  - LoopLoc:         'activation_accelerator.cpp:579:5'
+  - LoopLoc:         'activation_accelerator.cpp:633:5'
   - String:          ' '
   - Function:        'load_rows(ap_uint<512> const*, ap_uint<512> const*, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 563, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 617, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: activation_accelerator.cpp, Line: 694, Column: 5 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 748, Column: 5 }
 Function:        _ZL10store_rowsRN3hls6streamI7ap_uintILi512EELi0EEEPS2_
 Args:            
   - String:          'Sequential '
@@ -960,16 +960,16 @@ Args:
   - String:          ' '
   - LoopName:        STORE_ROW
   - String:          ' '
-  - LoopLoc:         'activation_accelerator.cpp:694:5'
+  - LoopLoc:         'activation_accelerator.cpp:748:5'
   - String:          ' '
   - Function:        'store_rows(hls::stream<ap_uint<512>, 0>&, ap_uint<512>*)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 690, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 744, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: activation_accelerator.cpp, Line: 579, Column: 10 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 633, Column: 10 }
 Function:        _ZL9load_rowsPK7ap_uintILi512EES2_RN3hls6streamIS0_Li0EEES6_
 Args:            
   - String:          'Could not widen since type '
@@ -985,16 +985,16 @@ Args:
   - String:          ' '
   - LoopName:        LOAD_W
   - String:          ' '
-  - LoopLoc:         'activation_accelerator.cpp:586:9'
+  - LoopLoc:         'activation_accelerator.cpp:640:9'
   - String:          ' '
   - Function:        'load_rows(ap_uint<512> const*, ap_uint<512> const*, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 563, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 617, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: activation_accelerator.cpp, Line: 579, Column: 10 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 633, Column: 10 }
 Function:        _ZL9load_rowsPK7ap_uintILi512EES2_RN3hls6streamIS0_Li0EEES6_
 Args:            
   - String:          'Could not widen since type '
@@ -1010,16 +1010,16 @@ Args:
   - String:          ' '
   - LoopName:        LOAD_W
   - String:          ' '
-  - LoopLoc:         'activation_accelerator.cpp:586:9'
+  - LoopLoc:         'activation_accelerator.cpp:640:9'
   - String:          ' '
   - Function:        'load_rows(ap_uint<512> const*, ap_uint<512> const*, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 563, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 617, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: activation_accelerator.cpp, Line: 694, Column: 5 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 748, Column: 5 }
 Function:        _ZL10store_rowsRN3hls6streamI7ap_uintILi512EELi0EEEPS2_
 Args:            
   - String:          'Could not widen since type '
@@ -1035,10 +1035,10 @@ Args:
   - String:          ' '
   - LoopName:        STORE_W
   - String:          ' '
-  - LoopLoc:         'activation_accelerator.cpp:698:9'
+  - LoopLoc:         'activation_accelerator.cpp:752:9'
   - String:          ' '
   - Function:        'store_rows(hls::stream<ap_uint<512>, 0>&, ap_uint<512>*)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 690, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 744, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
@@ -1054,13 +1054,13 @@ Args:
                        Line: 20, Column: 0 }
   - String:          ''' to improve effectiveness of pipeline pragma in function '''
   - Caller:          'compute_rows(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 599, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 653, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: activation_accelerator.cpp, Line: 579, Column: 10 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 633, Column: 10 }
 Function:        _ZL9load_rowsPK7ap_uintILi512EES2_RN3hls6streamIS0_Li0EEES6_.1
 Args:            
   - String:          'Multiple burst '
@@ -1080,16 +1080,16 @@ Args:
   - String:          ' '
   - LoopName:        LOAD_ROW
   - String:          ' '
-  - LoopLoc:         'activation_accelerator.cpp:579:5'
+  - LoopLoc:         'activation_accelerator.cpp:633:5'
   - String:          ' '
   - Function:        'load_rows(ap_uint<512> const*, ap_uint<512> const*, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&) (.1)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 563, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 617, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: activation_accelerator.cpp, Line: 579, Column: 10 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 633, Column: 10 }
 Function:        _ZL9load_rowsPK7ap_uintILi512EES2_RN3hls6streamIS0_Li0EEES6_.1
 Args:            
   - String:          'Multiple burst '
@@ -1101,7 +1101,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        LOAD_ROW
   - String:          '''('
-  - LoopLoc:         'activation_accelerator.cpp:579:5'
+  - LoopLoc:         'activation_accelerator.cpp:633:5'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem0
@@ -1111,7 +1111,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: activation_accelerator.cpp, Line: 579, Column: 10 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 633, Column: 10 }
 Function:        _ZL9load_rowsPK7ap_uintILi512EES2_RN3hls6streamIS0_Li0EEES6_.1
 Args:            
   - String:          'Multiple burst '
@@ -1131,16 +1131,16 @@ Args:
   - String:          ' '
   - LoopName:        LOAD_ROW
   - String:          ' '
-  - LoopLoc:         'activation_accelerator.cpp:579:5'
+  - LoopLoc:         'activation_accelerator.cpp:633:5'
   - String:          ' '
   - Function:        'load_rows(ap_uint<512> const*, ap_uint<512> const*, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<512>, 0>&) (.1)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 563, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 617, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: activation_accelerator.cpp, Line: 579, Column: 10 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 633, Column: 10 }
 Function:        _ZL9load_rowsPK7ap_uintILi512EES2_RN3hls6streamIS0_Li0EEES6_.1
 Args:            
   - String:          'Multiple burst '
@@ -1152,7 +1152,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        LOAD_ROW
   - String:          '''('
-  - LoopLoc:         'activation_accelerator.cpp:579:5'
+  - LoopLoc:         'activation_accelerator.cpp:633:5'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem1
@@ -1162,7 +1162,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: activation_accelerator.cpp, Line: 694, Column: 5 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 748, Column: 5 }
 Function:        _ZL10store_rowsRN3hls6streamI7ap_uintILi512EELi0EEEPS2_.1
 Args:            
   - String:          'Multiple burst '
@@ -1182,16 +1182,16 @@ Args:
   - String:          ' '
   - LoopName:        STORE_ROW
   - String:          ' '
-  - LoopLoc:         'activation_accelerator.cpp:694:5'
+  - LoopLoc:         'activation_accelerator.cpp:748:5'
   - String:          ' '
   - Function:        'store_rows(hls::stream<ap_uint<512>, 0>&, ap_uint<512>*) (.1)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 690, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 744, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: activation_accelerator.cpp, Line: 694, Column: 5 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 748, Column: 5 }
 Function:        _ZL10store_rowsRN3hls6streamI7ap_uintILi512EELi0EEEPS2_.1
 Args:            
   - String:          'Multiple burst '
@@ -1203,7 +1203,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        STORE_ROW
   - String:          '''('
-  - LoopLoc:         'activation_accelerator.cpp:694:5'
+  - LoopLoc:         'activation_accelerator.cpp:748:5'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem2

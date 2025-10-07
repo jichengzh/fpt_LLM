@@ -142,7 +142,7 @@
 						<coreName>RAM_2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3200710720</coreId>
+						<coreId>1906372896</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -178,7 +178,7 @@
 						<coreName>RAM_2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2558735552</coreId>
+						<coreId>1474374480</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -214,7 +214,7 @@
 						<coreName>RAM_2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2558761200</coreId>
+						<coreId>540680308</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -250,7 +250,7 @@
 						<coreName>RAM_2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2560267648</coreId>
+						<coreId>1474915200</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -286,7 +286,7 @@
 						<coreName>RAM_2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2560246944</coreId>
+						<coreId>1475875648</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -322,7 +322,7 @@
 						<coreName>RAM_2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559383232</coreId>
+						<coreId>1475870752</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -358,7 +358,7 @@
 						<coreName>RAM_2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559383232</coreId>
+						<coreId>1906302032</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -394,7 +394,7 @@
 						<coreName>RAM_2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559383232</coreId>
+						<coreId>1474707800</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -430,7 +430,7 @@
 						<coreName>RAM_2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2555459312</coreId>
+						<coreId>1474926240</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -466,7 +466,7 @@
 						<coreName>RAM_2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559383232</coreId>
+						<coreId>1475866400</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -502,7 +502,7 @@
 						<coreName>RAM_2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559383232</coreId>
+						<coreId>1475870096</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -538,7 +538,7 @@
 						<coreName>RAM_2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>448</coreId>
+						<coreId>1629892703</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -574,7 +574,7 @@
 						<coreName>RAM_2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2560236016</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -610,7 +610,7 @@
 						<coreName>RAM_2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559384240</coreId>
+						<coreId>1475879856</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -646,7 +646,7 @@
 						<coreName>RAM_2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2558803376</coreId>
+						<coreId>1475869840</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -682,7 +682,7 @@
 						<coreName>RAM_2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2558764033</coreId>
+						<coreId>1474440352</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -718,7 +718,7 @@
 						<coreName>RAM_2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1380274255</coreId>
+						<coreId>1474443968</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -754,7 +754,7 @@
 						<coreName>RAM_2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559400080</coreId>
+						<coreId>1474437344</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -790,7 +790,7 @@
 						<coreName>RAM_2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1474680480</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -826,7 +826,7 @@
 						<coreName>RAM_2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559402368</coreId>
+						<coreId>1474446944</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -862,7 +862,7 @@
 						<coreName>RAM_2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559393760</coreId>
+						<coreId>1906366720</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -898,7 +898,7 @@
 						<coreName>RAM_2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559383552</coreId>
+						<coreId>1475875648</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -934,7 +934,7 @@
 						<coreName>RAM_2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559411568</coreId>
+						<coreId>176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -970,7 +970,7 @@
 						<coreName>RAM_2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2557858128</coreId>
+						<coreId>1474676728</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -1006,7 +1006,7 @@
 						<coreName>RAM_2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559410960</coreId>
+						<coreId>1474667696</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -1042,7 +1042,7 @@
 						<coreName>RAM_2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2558821280</coreId>
+						<coreId>1474438384</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -1078,7 +1078,7 @@
 						<coreName>RAM_2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2555459312</coreId>
+						<coreId>1474676256</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -1114,7 +1114,7 @@
 						<coreName>RAM_2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>304</coreId>
+						<coreId>1474442688</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -1150,7 +1150,7 @@
 						<coreName>RAM_2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2560243520</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -1186,7 +1186,7 @@
 						<coreName>RAM_S2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2560243904</coreId>
+						<coreId>1474462512</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1222,7 +1222,7 @@
 						<coreName>RAM_S2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2560233840</coreId>
+						<coreId>1474443360</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1258,7 +1258,7 @@
 						<coreName>RAM_S2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2560233904</coreId>
+						<coreId>1474680480</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1294,7 +1294,7 @@
 						<coreName>RAM_S2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>542329928</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1330,7 +1330,7 @@
 						<coreName>RAM_S2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559393312</coreId>
+						<coreId>1474680480</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1366,7 +1366,7 @@
 						<coreName>RAM_S2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559382272</coreId>
+						<coreId>1330007625</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1402,7 +1402,7 @@
 						<coreName>RAM_S2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559414752</coreId>
+						<coreId>1474679648</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1438,7 +1438,7 @@
 						<coreName>RAM_S2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2557786256</coreId>
+						<coreId>1475871360</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1474,7 +1474,7 @@
 						<coreName>RAM_S2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330007625</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1510,7 +1510,7 @@
 						<coreName>RAM_S2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559618544</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1546,7 +1546,7 @@
 						<coreName>RAM_S2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1475852704</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1582,7 +1582,7 @@
 						<coreName>RAM_S2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2557786256</coreId>
+						<coreId>1330007625</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1618,7 +1618,7 @@
 						<coreName>RAM_S2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330007625</coreId>
+						<coreId>1475877152</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1654,7 +1654,7 @@
 						<coreName>RAM_S2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559615872</coreId>
+						<coreId>1475825568</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1690,7 +1690,7 @@
 						<coreName>RAM_S2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1330007625</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1726,7 +1726,7 @@
 						<coreName>RAM_S2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2557786256</coreId>
+						<coreId>1475839616</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1762,7 +1762,7 @@
 						<coreName>RAM_S2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330007625</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1798,7 +1798,7 @@
 						<coreName>RAM_S2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559024320</coreId>
+						<coreId>1475825568</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1834,7 +1834,7 @@
 						<coreName>RAM_S2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1330007625</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1870,7 +1870,7 @@
 						<coreName>RAM_S2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1475837104</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1942,7 +1942,7 @@
 						<coreName>RAM_S2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1475785712</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1978,7 +1978,7 @@
 						<coreName>RAM_S2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1330007625</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2014,7 +2014,7 @@
 						<coreName>RAM_S2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1475802272</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2086,7 +2086,7 @@
 						<coreName>RAM_S2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1475785712</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2122,7 +2122,7 @@
 						<coreName>RAM_S2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1330007625</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2158,7 +2158,7 @@
 						<coreName>RAM_S2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1475799760</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2230,7 +2230,7 @@
 						<coreName>RAM_S2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1475785712</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2266,7 +2266,7 @@
 						<coreName>RAM_S2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1330007625</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2302,7 +2302,7 @@
 						<coreName>RAM_S2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1475797248</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2374,7 +2374,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2560206992</coreId>
+						<coreId>1475801312</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2414,7 +2414,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>1474426272</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -2456,7 +2456,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1330007625</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2499,7 +2499,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1475767472</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2542,7 +2542,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1953394531</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2585,7 +2585,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1475720960</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2612,7 +2612,7 @@
 						<name>i_3</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -2628,7 +2628,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -2641,7 +2641,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1475737048</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -2666,10 +2666,10 @@
 					<Obj>
 						<type>0</type>
 						<id>138</id>
-						<name>icmp_ln390</name>
+						<name>icmp_ln444</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>390</lineNumber>
+						<lineNumber>444</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -2685,7 +2685,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>390</second>
+										<second>444</second>
 									</item>
 								</second>
 							</item>
@@ -2723,10 +2723,10 @@
 					<Obj>
 						<type>0</type>
 						<id>140</id>
-						<name>add_ln390</name>
+						<name>add_ln444</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>390</lineNumber>
+						<lineNumber>444</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -2742,7 +2742,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>390</second>
+										<second>444</second>
 									</item>
 								</second>
 							</item>
@@ -2780,10 +2780,10 @@
 					<Obj>
 						<type>0</type>
 						<id>141</id>
-						<name>br_ln390</name>
+						<name>br_ln444</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>390</lineNumber>
+						<lineNumber>444</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -2799,7 +2799,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>390</second>
+										<second>444</second>
 									</item>
 								</second>
 							</item>
@@ -2812,7 +2812,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1475720960</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2841,7 +2841,7 @@
 						<name>lshr_ln3</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -2857,7 +2857,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -2897,10 +2897,10 @@
 					<Obj>
 						<type>0</type>
 						<id>146</id>
-						<name>zext_ln392</name>
+						<name>zext_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -2916,7 +2916,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -2929,7 +2929,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1475734832</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -2956,7 +2956,7 @@
 						<name>x_0_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -2972,7 +2972,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -3014,7 +3014,7 @@
 						<name>x_1_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -3030,7 +3030,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -3043,7 +3043,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1475720960</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -3072,7 +3072,7 @@
 						<name>x_2_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -3088,7 +3088,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -3101,7 +3101,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1475732168</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -3130,7 +3130,7 @@
 						<name>x_3_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -3146,7 +3146,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -3159,7 +3159,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1475732880</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -3188,7 +3188,7 @@
 						<name>x_4_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -3204,7 +3204,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -3217,7 +3217,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1474680480</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -3246,7 +3246,7 @@
 						<name>x_5_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -3262,7 +3262,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -3275,7 +3275,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559413856</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -3304,7 +3304,7 @@
 						<name>x_6_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -3320,7 +3320,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -3333,7 +3333,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1474781360</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -3362,7 +3362,7 @@
 						<name>x_7_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -3378,7 +3378,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -3391,7 +3391,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559389472</coreId>
+						<coreId>1474680480</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -3420,7 +3420,7 @@
 						<name>x_8_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -3436,7 +3436,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -3449,7 +3449,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2557527760</coreId>
+						<coreId>1475251408</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -3478,7 +3478,7 @@
 						<name>x_9_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -3494,7 +3494,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -3507,7 +3507,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -3536,7 +3536,7 @@
 						<name>x_10_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -3552,7 +3552,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -3565,7 +3565,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1474680480</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -3594,7 +3594,7 @@
 						<name>x_11_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -3610,7 +3610,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -3623,7 +3623,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>256</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -3652,7 +3652,7 @@
 						<name>x_12_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -3668,7 +3668,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -3681,7 +3681,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2558632480</coreId>
+						<coreId>1475248352</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -3710,7 +3710,7 @@
 						<name>x_13_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -3726,7 +3726,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -3739,7 +3739,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1474680480</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -3768,7 +3768,7 @@
 						<name>x_14_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -3784,7 +3784,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -3797,7 +3797,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2560235536</coreId>
+						<coreId>1475029248</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -3826,7 +3826,7 @@
 						<name>x_15_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -3842,7 +3842,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -3855,7 +3855,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2560238384</coreId>
+						<coreId>1475030496</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -3884,7 +3884,7 @@
 						<name>x_16_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -3900,7 +3900,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -3913,7 +3913,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>1475852704</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -3942,7 +3942,7 @@
 						<name>x_17_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -3958,7 +3958,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -3971,7 +3971,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2560222464</coreId>
+						<coreId>1475867024</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4000,7 +4000,7 @@
 						<name>x_18_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -4016,7 +4016,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -4029,7 +4029,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559394592</coreId>
+						<coreId>1475852720</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4058,7 +4058,7 @@
 						<name>x_19_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -4074,7 +4074,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -4087,7 +4087,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559395136</coreId>
+						<coreId>126</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4116,7 +4116,7 @@
 						<name>x_20_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -4132,7 +4132,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -4145,7 +4145,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559395760</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4174,7 +4174,7 @@
 						<name>x_21_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -4190,7 +4190,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -4203,7 +4203,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559397264</coreId>
+						<coreId>1474623856</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4232,7 +4232,7 @@
 						<name>x_22_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -4248,7 +4248,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -4261,7 +4261,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2558926960</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4290,7 +4290,7 @@
 						<name>x_23_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -4306,7 +4306,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -4319,7 +4319,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1936683105</coreId>
+						<coreId>176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4348,7 +4348,7 @@
 						<name>x_24_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -4364,7 +4364,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -4377,7 +4377,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2558429984</coreId>
+						<coreId>1474680480</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4406,7 +4406,7 @@
 						<name>x_25_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -4422,7 +4422,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -4435,7 +4435,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1868767266</coreId>
+						<coreId>1864378674</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4464,7 +4464,7 @@
 						<name>x_26_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -4480,7 +4480,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -4493,7 +4493,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2558362816</coreId>
+						<coreId>1474067904</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4522,7 +4522,7 @@
 						<name>x_27_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -4538,7 +4538,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -4551,7 +4551,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1474625728</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4580,7 +4580,7 @@
 						<name>x_28_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -4596,7 +4596,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -4609,7 +4609,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2558927408</coreId>
+						<coreId>1474680480</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4638,7 +4638,7 @@
 						<name>x_29_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -4654,7 +4654,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -4667,7 +4667,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559973792</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4696,7 +4696,7 @@
 						<name>x_30_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -4712,7 +4712,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -4725,7 +4725,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1599294536</coreId>
+						<coreId>1474930472</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4754,7 +4754,7 @@
 						<name>x_31_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -4770,7 +4770,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -4783,7 +4783,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1475850224</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4809,10 +4809,10 @@
 					<Obj>
 						<type>0</type>
 						<id>179</id>
-						<name>trunc_ln392</name>
+						<name>trunc_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -4828,7 +4828,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -4841,7 +4841,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559990232</coreId>
+						<coreId>1819113532</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4868,7 +4868,7 @@
 						<name>x_0_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -4884,7 +4884,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -4924,7 +4924,7 @@
 						<name>x_1_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -4940,7 +4940,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -4980,7 +4980,7 @@
 						<name>x_2_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -4996,7 +4996,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -5036,7 +5036,7 @@
 						<name>x_3_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -5052,7 +5052,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -5092,7 +5092,7 @@
 						<name>x_4_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -5108,7 +5108,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -5148,7 +5148,7 @@
 						<name>x_5_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -5164,7 +5164,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -5204,7 +5204,7 @@
 						<name>x_6_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -5220,7 +5220,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -5260,7 +5260,7 @@
 						<name>x_7_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -5276,7 +5276,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -5316,7 +5316,7 @@
 						<name>x_8_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -5332,7 +5332,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -5372,7 +5372,7 @@
 						<name>x_9_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -5388,7 +5388,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -5428,7 +5428,7 @@
 						<name>x_10_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -5444,7 +5444,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -5484,7 +5484,7 @@
 						<name>x_11_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -5500,7 +5500,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -5540,7 +5540,7 @@
 						<name>x_12_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -5556,7 +5556,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -5596,7 +5596,7 @@
 						<name>x_13_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -5612,7 +5612,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -5652,7 +5652,7 @@
 						<name>x_14_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -5668,7 +5668,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -5708,7 +5708,7 @@
 						<name>x_15_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -5724,7 +5724,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -5764,7 +5764,7 @@
 						<name>x_16_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -5780,7 +5780,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -5820,7 +5820,7 @@
 						<name>x_17_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -5836,7 +5836,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -5876,7 +5876,7 @@
 						<name>x_18_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -5892,7 +5892,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -5932,7 +5932,7 @@
 						<name>x_19_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -5948,7 +5948,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -5988,7 +5988,7 @@
 						<name>x_20_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -6004,7 +6004,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -6044,7 +6044,7 @@
 						<name>x_21_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -6060,7 +6060,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -6100,7 +6100,7 @@
 						<name>x_22_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -6116,7 +6116,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -6156,7 +6156,7 @@
 						<name>x_23_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -6172,7 +6172,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -6212,7 +6212,7 @@
 						<name>x_24_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -6228,7 +6228,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -6268,7 +6268,7 @@
 						<name>x_25_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -6284,7 +6284,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -6324,7 +6324,7 @@
 						<name>x_26_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -6340,7 +6340,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -6380,7 +6380,7 @@
 						<name>x_27_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -6396,7 +6396,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -6436,7 +6436,7 @@
 						<name>x_28_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -6452,7 +6452,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -6492,7 +6492,7 @@
 						<name>x_29_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -6508,7 +6508,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -6548,7 +6548,7 @@
 						<name>x_30_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -6564,7 +6564,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -6604,7 +6604,7 @@
 						<name>x_31_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -6620,7 +6620,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -6660,7 +6660,7 @@
 						<name>tmp_s</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -6676,7 +6676,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -6749,7 +6749,7 @@
 						<name>sub</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -6765,7 +6765,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -6806,7 +6806,7 @@
 						<name>mul2</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -6822,7 +6822,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -6892,7 +6892,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967294</coreId>
+						<coreId>892351008</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6948,7 +6948,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>711</coreId>
+						<coreId>64</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -6978,7 +6978,7 @@
 						<name>y_bf16_0_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -6994,7 +6994,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -7007,7 +7007,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559036064</coreId>
+						<coreId>1475892528</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -7036,7 +7036,7 @@
 						<name>y_bf16_1_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -7052,7 +7052,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -7065,7 +7065,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1474421344</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -7094,7 +7094,7 @@
 						<name>y_bf16_2_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -7110,7 +7110,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -7123,7 +7123,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>64</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -7152,7 +7152,7 @@
 						<name>y_bf16_3_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -7168,7 +7168,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -7181,7 +7181,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559042192</coreId>
+						<coreId>1475295024</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -7210,7 +7210,7 @@
 						<name>y_bf16_4_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -7226,7 +7226,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -7239,7 +7239,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559661568</coreId>
+						<coreId>7955819</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -7268,7 +7268,7 @@
 						<name>y_bf16_5_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -7284,7 +7284,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -7297,7 +7297,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559670792</coreId>
+						<coreId>1475305440</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -7326,7 +7326,7 @@
 						<name>y_bf16_6_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -7342,7 +7342,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -7355,7 +7355,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -7384,7 +7384,7 @@
 						<name>y_bf16_7_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -7400,7 +7400,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -7413,7 +7413,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>784</coreId>
+						<coreId>1475307696</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -7442,7 +7442,7 @@
 						<name>y_bf16_8_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -7458,7 +7458,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -7471,7 +7471,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559674544</coreId>
+						<coreId>1819113532</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -7500,7 +7500,7 @@
 						<name>y_bf16_9_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -7516,7 +7516,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -7529,7 +7529,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559675136</coreId>
+						<coreId>1475310656</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -7558,7 +7558,7 @@
 						<name>y_bf16_10_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -7574,7 +7574,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -7587,7 +7587,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559676312</coreId>
+						<coreId>1474680480</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -7616,7 +7616,7 @@
 						<name>y_bf16_11_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -7632,7 +7632,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -7645,7 +7645,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2557786256</coreId>
+						<coreId>1474659960</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -7674,7 +7674,7 @@
 						<name>y_bf16_12_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -7690,7 +7690,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -7703,7 +7703,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559026928</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -7732,7 +7732,7 @@
 						<name>y_bf16_13_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -7748,7 +7748,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -7761,7 +7761,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>1474662192</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -7790,7 +7790,7 @@
 						<name>y_bf16_14_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -7806,7 +7806,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -7819,7 +7819,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1397508187</coreId>
+						<coreId>1474662976</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -7848,7 +7848,7 @@
 						<name>y_bf16_15_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -7864,7 +7864,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -7877,7 +7877,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1474680480</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -7906,7 +7906,7 @@
 						<name>y_bf16_16_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -7922,7 +7922,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -7935,7 +7935,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559033440</coreId>
+						<coreId>1475239048</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -7964,7 +7964,7 @@
 						<name>y_bf16_17_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -7980,7 +7980,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -7993,7 +7993,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -8022,7 +8022,7 @@
 						<name>y_bf16_18_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -8038,7 +8038,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -8051,7 +8051,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2560280880</coreId>
+						<coreId>1475241280</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -8080,7 +8080,7 @@
 						<name>y_bf16_19_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -8096,7 +8096,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -8109,7 +8109,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1701978146</coreId>
+						<coreId>640</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -8138,7 +8138,7 @@
 						<name>y_bf16_20_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -8154,7 +8154,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -8167,7 +8167,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559348256</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -8196,7 +8196,7 @@
 						<name>y_bf16_21_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -8212,7 +8212,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -8225,7 +8225,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1475242736</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -8254,7 +8254,7 @@
 						<name>y_bf16_22_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -8270,7 +8270,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -8283,7 +8283,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559352600</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -8312,7 +8312,7 @@
 						<name>y_bf16_23_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -8328,7 +8328,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -8341,7 +8341,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559353104</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -8370,7 +8370,7 @@
 						<name>y_bf16_24_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -8386,7 +8386,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -8399,7 +8399,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>1475720960</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -8428,7 +8428,7 @@
 						<name>y_bf16_25_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -8444,7 +8444,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -8457,7 +8457,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1684368128</coreId>
+						<coreId>1475738832</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -8486,7 +8486,7 @@
 						<name>y_bf16_26_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -8502,7 +8502,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -8515,7 +8515,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>825701421</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -8544,7 +8544,7 @@
 						<name>y_bf16_27_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -8560,7 +8560,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -8573,7 +8573,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559393872</coreId>
+						<coreId>1475742568</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -8602,7 +8602,7 @@
 						<name>y_bf16_28_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -8618,7 +8618,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -8631,7 +8631,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1702258035</coreId>
+						<coreId>1475742880</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -8660,7 +8660,7 @@
 						<name>y_bf16_29_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -8676,7 +8676,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -8689,7 +8689,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>690633588</coreId>
+						<coreId>1475744544</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -8718,7 +8718,7 @@
 						<name>y_bf16_30_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -8734,7 +8734,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -8747,7 +8747,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559673744</coreId>
+						<coreId>1475745576</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -8776,7 +8776,7 @@
 						<name>y_bf16_31_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -8792,7 +8792,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -8805,7 +8805,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1475746560</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -8831,10 +8831,10 @@
 					<Obj>
 						<type>0</type>
 						<id>249</id>
-						<name>_ln392</name>
+						<name>_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -8850,7 +8850,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -8863,7 +8863,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559679744</coreId>
+						<coreId>568</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -8950,10 +8950,10 @@
 					<Obj>
 						<type>0</type>
 						<id>251</id>
-						<name>y_bf16_30_addr_write_ln392</name>
+						<name>y_bf16_30_addr_write_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -8969,7 +8969,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -9007,10 +9007,10 @@
 					<Obj>
 						<type>0</type>
 						<id>252</id>
-						<name>br_ln392</name>
+						<name>br_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -9026,7 +9026,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -9039,7 +9039,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559682240</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9063,10 +9063,10 @@
 					<Obj>
 						<type>0</type>
 						<id>254</id>
-						<name>y_bf16_29_addr_write_ln392</name>
+						<name>y_bf16_29_addr_write_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -9082,7 +9082,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -9120,10 +9120,10 @@
 					<Obj>
 						<type>0</type>
 						<id>255</id>
-						<name>br_ln392</name>
+						<name>br_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -9139,7 +9139,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -9152,7 +9152,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559684912</coreId>
+						<coreId>1475783120</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9176,10 +9176,10 @@
 					<Obj>
 						<type>0</type>
 						<id>257</id>
-						<name>y_bf16_28_addr_write_ln392</name>
+						<name>y_bf16_28_addr_write_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -9195,7 +9195,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -9233,10 +9233,10 @@
 					<Obj>
 						<type>0</type>
 						<id>258</id>
-						<name>br_ln392</name>
+						<name>br_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -9252,7 +9252,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -9265,7 +9265,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559688256</coreId>
+						<coreId>1475785880</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9289,10 +9289,10 @@
 					<Obj>
 						<type>0</type>
 						<id>260</id>
-						<name>y_bf16_27_addr_write_ln392</name>
+						<name>y_bf16_27_addr_write_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -9308,7 +9308,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -9346,10 +9346,10 @@
 					<Obj>
 						<type>0</type>
 						<id>261</id>
-						<name>br_ln392</name>
+						<name>br_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -9365,7 +9365,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -9378,7 +9378,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559691720</coreId>
+						<coreId>176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9402,10 +9402,10 @@
 					<Obj>
 						<type>0</type>
 						<id>263</id>
-						<name>y_bf16_26_addr_write_ln392</name>
+						<name>y_bf16_26_addr_write_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -9421,7 +9421,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -9459,10 +9459,10 @@
 					<Obj>
 						<type>0</type>
 						<id>264</id>
-						<name>br_ln392</name>
+						<name>br_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -9478,7 +9478,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -9491,7 +9491,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2558827392</coreId>
+						<coreId>1475792888</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9515,10 +9515,10 @@
 					<Obj>
 						<type>0</type>
 						<id>266</id>
-						<name>y_bf16_25_addr_write_ln392</name>
+						<name>y_bf16_25_addr_write_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -9534,7 +9534,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -9572,10 +9572,10 @@
 					<Obj>
 						<type>0</type>
 						<id>267</id>
-						<name>br_ln392</name>
+						<name>br_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -9591,7 +9591,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -9604,7 +9604,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1869504827</coreId>
+						<coreId>1819113532</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9628,10 +9628,10 @@
 					<Obj>
 						<type>0</type>
 						<id>269</id>
-						<name>y_bf16_24_addr_write_ln392</name>
+						<name>y_bf16_24_addr_write_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -9647,7 +9647,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -9685,10 +9685,10 @@
 					<Obj>
 						<type>0</type>
 						<id>270</id>
-						<name>br_ln392</name>
+						<name>br_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -9704,7 +9704,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -9717,7 +9717,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559368176</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9741,10 +9741,10 @@
 					<Obj>
 						<type>0</type>
 						<id>272</id>
-						<name>y_bf16_23_addr_write_ln392</name>
+						<name>y_bf16_23_addr_write_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -9760,7 +9760,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -9798,10 +9798,10 @@
 					<Obj>
 						<type>0</type>
 						<id>273</id>
-						<name>br_ln392</name>
+						<name>br_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -9817,7 +9817,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -9830,7 +9830,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559373040</coreId>
+						<coreId>1475757408</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9854,10 +9854,10 @@
 					<Obj>
 						<type>0</type>
 						<id>275</id>
-						<name>y_bf16_22_addr_write_ln392</name>
+						<name>y_bf16_22_addr_write_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -9873,7 +9873,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -9911,10 +9911,10 @@
 					<Obj>
 						<type>0</type>
 						<id>276</id>
-						<name>br_ln392</name>
+						<name>br_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -9930,7 +9930,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -9943,7 +9943,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1869833586</coreId>
+						<coreId>1475760168</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9967,10 +9967,10 @@
 					<Obj>
 						<type>0</type>
 						<id>278</id>
-						<name>y_bf16_21_addr_write_ln392</name>
+						<name>y_bf16_21_addr_write_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -9986,7 +9986,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -10024,10 +10024,10 @@
 					<Obj>
 						<type>0</type>
 						<id>279</id>
-						<name>br_ln392</name>
+						<name>br_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -10043,7 +10043,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -10056,7 +10056,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>39</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10080,10 +10080,10 @@
 					<Obj>
 						<type>0</type>
 						<id>281</id>
-						<name>y_bf16_20_addr_write_ln392</name>
+						<name>y_bf16_20_addr_write_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -10099,7 +10099,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -10137,10 +10137,10 @@
 					<Obj>
 						<type>0</type>
 						<id>282</id>
-						<name>br_ln392</name>
+						<name>br_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -10156,7 +10156,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -10169,7 +10169,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559381528</coreId>
+						<coreId>1475705760</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10193,10 +10193,10 @@
 					<Obj>
 						<type>0</type>
 						<id>284</id>
-						<name>y_bf16_19_addr_write_ln392</name>
+						<name>y_bf16_19_addr_write_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -10212,7 +10212,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -10250,10 +10250,10 @@
 					<Obj>
 						<type>0</type>
 						<id>285</id>
-						<name>br_ln392</name>
+						<name>br_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -10269,7 +10269,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -10282,7 +10282,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2556745632</coreId>
+						<coreId>1475904384</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10306,10 +10306,10 @@
 					<Obj>
 						<type>0</type>
 						<id>287</id>
-						<name>y_bf16_18_addr_write_ln392</name>
+						<name>y_bf16_18_addr_write_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -10325,7 +10325,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -10363,10 +10363,10 @@
 					<Obj>
 						<type>0</type>
 						<id>288</id>
-						<name>br_ln392</name>
+						<name>br_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -10382,7 +10382,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -10395,7 +10395,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2560215440</coreId>
+						<coreId>1475722208</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10419,10 +10419,10 @@
 					<Obj>
 						<type>0</type>
 						<id>290</id>
-						<name>y_bf16_17_addr_write_ln392</name>
+						<name>y_bf16_17_addr_write_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -10438,7 +10438,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -10476,10 +10476,10 @@
 					<Obj>
 						<type>0</type>
 						<id>291</id>
-						<name>br_ln392</name>
+						<name>br_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -10495,7 +10495,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -10508,7 +10508,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2560208296</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10532,10 +10532,10 @@
 					<Obj>
 						<type>0</type>
 						<id>293</id>
-						<name>y_bf16_16_addr_write_ln392</name>
+						<name>y_bf16_16_addr_write_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -10551,7 +10551,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -10589,10 +10589,10 @@
 					<Obj>
 						<type>0</type>
 						<id>294</id>
-						<name>br_ln392</name>
+						<name>br_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -10608,7 +10608,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -10621,7 +10621,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2560217504</coreId>
+						<coreId>1475727872</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10645,10 +10645,10 @@
 					<Obj>
 						<type>0</type>
 						<id>296</id>
-						<name>y_bf16_15_addr_write_ln392</name>
+						<name>y_bf16_15_addr_write_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -10664,7 +10664,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -10702,10 +10702,10 @@
 					<Obj>
 						<type>0</type>
 						<id>297</id>
-						<name>br_ln392</name>
+						<name>br_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -10721,7 +10721,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -10734,7 +10734,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2560220640</coreId>
+						<coreId>1475307200</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10758,10 +10758,10 @@
 					<Obj>
 						<type>0</type>
 						<id>299</id>
-						<name>y_bf16_14_addr_write_ln392</name>
+						<name>y_bf16_14_addr_write_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -10777,7 +10777,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -10815,10 +10815,10 @@
 					<Obj>
 						<type>0</type>
 						<id>300</id>
-						<name>br_ln392</name>
+						<name>br_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -10834,7 +10834,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -10847,7 +10847,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2560226752</coreId>
+						<coreId>1475315568</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10871,10 +10871,10 @@
 					<Obj>
 						<type>0</type>
 						<id>302</id>
-						<name>y_bf16_13_addr_write_ln392</name>
+						<name>y_bf16_13_addr_write_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -10890,7 +10890,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -10928,10 +10928,10 @@
 					<Obj>
 						<type>0</type>
 						<id>303</id>
-						<name>br_ln392</name>
+						<name>br_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -10947,7 +10947,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -10960,7 +10960,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2560229584</coreId>
+						<coreId>1475316768</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10984,10 +10984,10 @@
 					<Obj>
 						<type>0</type>
 						<id>305</id>
-						<name>y_bf16_12_addr_write_ln392</name>
+						<name>y_bf16_12_addr_write_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -11003,7 +11003,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -11041,10 +11041,10 @@
 					<Obj>
 						<type>0</type>
 						<id>306</id>
-						<name>br_ln392</name>
+						<name>br_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -11060,7 +11060,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -11073,7 +11073,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2560232752</coreId>
+						<coreId>1475319664</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11097,10 +11097,10 @@
 					<Obj>
 						<type>0</type>
 						<id>308</id>
-						<name>y_bf16_11_addr_write_ln392</name>
+						<name>y_bf16_11_addr_write_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -11116,7 +11116,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -11154,10 +11154,10 @@
 					<Obj>
 						<type>0</type>
 						<id>309</id>
-						<name>br_ln392</name>
+						<name>br_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -11173,7 +11173,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -11210,10 +11210,10 @@
 					<Obj>
 						<type>0</type>
 						<id>311</id>
-						<name>y_bf16_10_addr_write_ln392</name>
+						<name>y_bf16_10_addr_write_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -11229,7 +11229,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -11267,10 +11267,10 @@
 					<Obj>
 						<type>0</type>
 						<id>312</id>
-						<name>br_ln392</name>
+						<name>br_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -11286,7 +11286,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -11299,7 +11299,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559696464</coreId>
+						<coreId>1475810368</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11323,10 +11323,10 @@
 					<Obj>
 						<type>0</type>
 						<id>314</id>
-						<name>y_bf16_9_addr_write_ln392</name>
+						<name>y_bf16_9_addr_write_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -11342,7 +11342,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -11380,10 +11380,10 @@
 					<Obj>
 						<type>0</type>
 						<id>315</id>
-						<name>br_ln392</name>
+						<name>br_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -11399,7 +11399,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -11412,7 +11412,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559699792</coreId>
+						<coreId>1475823976</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11436,10 +11436,10 @@
 					<Obj>
 						<type>0</type>
 						<id>317</id>
-						<name>y_bf16_8_addr_write_ln392</name>
+						<name>y_bf16_8_addr_write_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -11455,7 +11455,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -11493,10 +11493,10 @@
 					<Obj>
 						<type>0</type>
 						<id>318</id>
-						<name>br_ln392</name>
+						<name>br_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -11512,7 +11512,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -11525,7 +11525,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559702688</coreId>
+						<coreId>1475826816</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11549,10 +11549,10 @@
 					<Obj>
 						<type>0</type>
 						<id>320</id>
-						<name>y_bf16_7_addr_write_ln392</name>
+						<name>y_bf16_7_addr_write_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -11568,7 +11568,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -11606,10 +11606,10 @@
 					<Obj>
 						<type>0</type>
 						<id>321</id>
-						<name>br_ln392</name>
+						<name>br_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -11625,7 +11625,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -11638,7 +11638,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>784</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11662,10 +11662,10 @@
 					<Obj>
 						<type>0</type>
 						<id>323</id>
-						<name>y_bf16_6_addr_write_ln392</name>
+						<name>y_bf16_6_addr_write_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -11681,7 +11681,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -11719,10 +11719,10 @@
 					<Obj>
 						<type>0</type>
 						<id>324</id>
-						<name>br_ln392</name>
+						<name>br_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -11738,7 +11738,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -11751,7 +11751,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559708280</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11775,10 +11775,10 @@
 					<Obj>
 						<type>0</type>
 						<id>326</id>
-						<name>y_bf16_5_addr_write_ln392</name>
+						<name>y_bf16_5_addr_write_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -11794,7 +11794,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -11832,10 +11832,10 @@
 					<Obj>
 						<type>0</type>
 						<id>327</id>
-						<name>br_ln392</name>
+						<name>br_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -11851,7 +11851,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -11864,7 +11864,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559710464</coreId>
+						<coreId>1475681264</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11888,10 +11888,10 @@
 					<Obj>
 						<type>0</type>
 						<id>329</id>
-						<name>y_bf16_4_addr_write_ln392</name>
+						<name>y_bf16_4_addr_write_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -11907,7 +11907,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -11945,10 +11945,10 @@
 					<Obj>
 						<type>0</type>
 						<id>330</id>
-						<name>br_ln392</name>
+						<name>br_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -11964,7 +11964,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -11977,7 +11977,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1475701968</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12001,10 +12001,10 @@
 					<Obj>
 						<type>0</type>
 						<id>332</id>
-						<name>y_bf16_3_addr_write_ln392</name>
+						<name>y_bf16_3_addr_write_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -12020,7 +12020,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -12058,10 +12058,10 @@
 					<Obj>
 						<type>0</type>
 						<id>333</id>
-						<name>br_ln392</name>
+						<name>br_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -12077,7 +12077,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -12090,7 +12090,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2560125616</coreId>
+						<coreId>1475704848</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12114,10 +12114,10 @@
 					<Obj>
 						<type>0</type>
 						<id>335</id>
-						<name>y_bf16_2_addr_write_ln392</name>
+						<name>y_bf16_2_addr_write_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -12133,7 +12133,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -12171,10 +12171,10 @@
 					<Obj>
 						<type>0</type>
 						<id>336</id>
-						<name>br_ln392</name>
+						<name>br_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -12190,7 +12190,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -12203,7 +12203,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1475707616</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12227,10 +12227,10 @@
 					<Obj>
 						<type>0</type>
 						<id>338</id>
-						<name>y_bf16_1_addr_write_ln392</name>
+						<name>y_bf16_1_addr_write_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -12246,7 +12246,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -12284,10 +12284,10 @@
 					<Obj>
 						<type>0</type>
 						<id>339</id>
-						<name>br_ln392</name>
+						<name>br_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -12303,7 +12303,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -12340,10 +12340,10 @@
 					<Obj>
 						<type>0</type>
 						<id>341</id>
-						<name>y_bf16_0_addr_write_ln392</name>
+						<name>y_bf16_0_addr_write_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -12359,7 +12359,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -12397,10 +12397,10 @@
 					<Obj>
 						<type>0</type>
 						<id>342</id>
-						<name>br_ln392</name>
+						<name>br_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -12416,7 +12416,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -12429,7 +12429,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2560149608</coreId>
+						<coreId>1475713344</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12453,10 +12453,10 @@
 					<Obj>
 						<type>0</type>
 						<id>344</id>
-						<name>y_bf16_31_addr_write_ln392</name>
+						<name>y_bf16_31_addr_write_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -12472,7 +12472,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -12510,10 +12510,10 @@
 					<Obj>
 						<type>0</type>
 						<id>345</id>
-						<name>br_ln392</name>
+						<name>br_ln446</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>392</lineNumber>
+						<lineNumber>446</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -12529,7 +12529,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>392</second>
+										<second>446</second>
 									</item>
 								</second>
 							</item>
@@ -12542,7 +12542,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2560152320</coreId>
+						<coreId>1475785712</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12566,10 +12566,10 @@
 					<Obj>
 						<type>0</type>
 						<id>347</id>
-						<name>i_write_ln390</name>
+						<name>i_write_ln444</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>390</lineNumber>
+						<lineNumber>444</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -12585,7 +12585,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>390</second>
+										<second>444</second>
 									</item>
 								</second>
 							</item>
@@ -12598,7 +12598,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>784</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12625,10 +12625,10 @@
 					<Obj>
 						<type>0</type>
 						<id>348</id>
-						<name>br_ln390</name>
+						<name>br_ln444</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>390</lineNumber>
+						<lineNumber>444</lineNumber>
 						<contextFuncName>float_layernorm</contextFuncName>
 						<contextNormFuncName>float_layernorm</contextNormFuncName>
 						<inlineStackInfo>
@@ -12644,7 +12644,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_layernorm</second>
 										</first>
-										<second>390</second>
+										<second>444</second>
 									</item>
 								</second>
 							</item>
@@ -12657,7 +12657,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>27</coreId>
+						<coreId>1475808240</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12699,7 +12699,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>1475808256</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12744,7 +12744,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>304</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -12775,7 +12775,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2560267776</coreId>
+						<coreId>1475793104</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -12806,7 +12806,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2560138112</coreId>
+						<coreId>1475809056</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -12837,7 +12837,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2560159168</coreId>
+						<coreId>141</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -12868,7 +12868,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>498</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -12899,7 +12899,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2560161024</coreId>
+						<coreId>1475811936</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -12930,7 +12930,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -12961,7 +12961,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2560163344</coreId>
+						<coreId>1475814624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -12992,7 +12992,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559959040</coreId>
+						<coreId>176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -13023,7 +13023,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2560163344</coreId>
+						<coreId>176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13054,7 +13054,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559343888</coreId>
+						<coreId>176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13085,7 +13085,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559959520</coreId>
+						<coreId>1475814624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13116,7 +13116,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1474619392</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13147,7 +13147,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559966264</coreId>
+						<coreId>1473942096</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13178,7 +13178,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559967032</coreId>
+						<coreId>1475819392</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13209,7 +13209,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1475820080</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13240,7 +13240,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>6775156</coreId>
+						<coreId>1475844320</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13271,7 +13271,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1346576430</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13302,7 +13302,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1475850360</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13333,7 +13333,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559970104</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13364,7 +13364,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559970256</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13395,7 +13395,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1475853456</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13426,7 +13426,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>256</coreId>
+						<coreId>1475851552</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13457,7 +13457,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559972968</coreId>
+						<coreId>1475852240</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13488,7 +13488,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559973304</coreId>
+						<coreId>417</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13519,7 +13519,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559973600</coreId>
+						<coreId>3</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13550,7 +13550,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559963552</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13581,7 +13581,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13643,7 +13643,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559975968</coreId>
+						<coreId>1475856016</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13674,7 +13674,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1475856816</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13705,7 +13705,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1473864944</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13736,7 +13736,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559978432</coreId>
+						<coreId>1475858000</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13767,7 +13767,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>784</coreId>
+						<coreId>1702258035</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13798,7 +13798,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559980232</coreId>
+						<coreId>1599294536</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13860,7 +13860,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559981520</coreId>
+						<coreId>1474680480</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13891,7 +13891,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559982320</coreId>
+						<coreId>1007225406</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13922,7 +13922,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559982816</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13953,7 +13953,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2559983504</coreId>
+						<coreId>1474635232</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -13987,7 +13987,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>64</coreId>
+					<coreId>4294967283</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14004,7 +14004,7 @@
 				<Obj>
 					<type>3</type>
 					<id>142</id>
-					<name>for.inc85</name>
+					<name>for.inc101</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -14022,7 +14022,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2559402480</coreId>
+					<coreId>4294967280</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14038,7 +14038,7 @@
 				<Obj>
 					<type>3</type>
 					<id>250</id>
-					<name>for.inc85.split</name>
+					<name>for.inc101.split</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -14056,7 +14056,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>4294967284</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14173,7 +14173,7 @@
 				<Obj>
 					<type>3</type>
 					<id>253</id>
-					<name>arrayidx8418.case.30</name>
+					<name>arrayidx10030.case.30</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -14205,7 +14205,7 @@
 				<Obj>
 					<type>3</type>
 					<id>256</id>
-					<name>arrayidx8418.case.29</name>
+					<name>arrayidx10030.case.29</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -14223,7 +14223,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2559682416</coreId>
+					<coreId>1475758336</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14237,7 +14237,7 @@
 				<Obj>
 					<type>3</type>
 					<id>259</id>
-					<name>arrayidx8418.case.28</name>
+					<name>arrayidx10030.case.28</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -14255,7 +14255,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2559673744</coreId>
+					<coreId>1475785496</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14269,7 +14269,7 @@
 				<Obj>
 					<type>3</type>
 					<id>262</id>
-					<name>arrayidx8418.case.27</name>
+					<name>arrayidx10030.case.27</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -14287,7 +14287,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2559688848</coreId>
+					<coreId>1475795744</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14301,7 +14301,7 @@
 				<Obj>
 					<type>3</type>
 					<id>265</id>
-					<name>arrayidx8418.case.26</name>
+					<name>arrayidx10030.case.26</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -14319,7 +14319,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2559393872</coreId>
+					<coreId>1145981250</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14333,7 +14333,7 @@
 				<Obj>
 					<type>3</type>
 					<id>268</id>
-					<name>arrayidx8418.case.25</name>
+					<name>arrayidx10030.case.25</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -14351,7 +14351,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2559363504</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14365,7 +14365,7 @@
 				<Obj>
 					<type>3</type>
 					<id>271</id>
-					<name>arrayidx8418.case.24</name>
+					<name>arrayidx10030.case.24</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -14383,7 +14383,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>608</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14397,7 +14397,7 @@
 				<Obj>
 					<type>3</type>
 					<id>274</id>
-					<name>arrayidx8418.case.23</name>
+					<name>arrayidx10030.case.23</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -14415,7 +14415,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2559369208</coreId>
+					<coreId>1475753712</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14429,7 +14429,7 @@
 				<Obj>
 					<type>3</type>
 					<id>277</id>
-					<name>arrayidx8418.case.22</name>
+					<name>arrayidx10030.case.22</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -14447,7 +14447,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>1475756288</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14461,7 +14461,7 @@
 				<Obj>
 					<type>3</type>
 					<id>280</id>
-					<name>arrayidx8418.case.21</name>
+					<name>arrayidx10030.case.21</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -14479,7 +14479,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2559377104</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14493,7 +14493,7 @@
 				<Obj>
 					<type>3</type>
 					<id>283</id>
-					<name>arrayidx8418.case.20</name>
+					<name>arrayidx10030.case.20</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -14511,7 +14511,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2559379184</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14525,7 +14525,7 @@
 				<Obj>
 					<type>3</type>
 					<id>286</id>
-					<name>arrayidx8418.case.19</name>
+					<name>arrayidx10030.case.19</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -14543,7 +14543,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2560192848</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14557,7 +14557,7 @@
 				<Obj>
 					<type>3</type>
 					<id>289</id>
-					<name>arrayidx8418.case.18</name>
+					<name>arrayidx10030.case.18</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -14575,7 +14575,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2560213688</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14589,295 +14589,7 @@
 				<Obj>
 					<type>3</type>
 					<id>292</id>
-					<name>arrayidx8418.case.17</name>
-					<fileName></fileName>
-					<fileDirectory></fileDirectory>
-					<lineNumber>0</lineNumber>
-					<contextFuncName></contextFuncName>
-					<contextNormFuncName></contextNormFuncName>
-					<inlineStackInfo>
-						<count>0</count>
-						<item_version>0</item_version>
-					</inlineStackInfo>
-					<originalName></originalName>
-					<rtlName></rtlName>
-					<control></control>
-					<opType></opType>
-					<implIndex></implIndex>
-					<coreName></coreName>
-					<isStorage>0</isStorage>
-					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
-					<rtlModuleName></rtlModuleName>
-				</Obj>
-				<node_objs>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>290</item>
-					<item>291</item>
-				</node_objs>
-			</item>
-			<item class_id_reference="18" object_id="_305">
-				<Obj>
-					<type>3</type>
-					<id>295</id>
-					<name>arrayidx8418.case.16</name>
-					<fileName></fileName>
-					<fileDirectory></fileDirectory>
-					<lineNumber>0</lineNumber>
-					<contextFuncName></contextFuncName>
-					<contextNormFuncName></contextNormFuncName>
-					<inlineStackInfo>
-						<count>0</count>
-						<item_version>0</item_version>
-					</inlineStackInfo>
-					<originalName></originalName>
-					<rtlName></rtlName>
-					<control></control>
-					<opType></opType>
-					<implIndex></implIndex>
-					<coreName></coreName>
-					<isStorage>0</isStorage>
-					<storageDepth>0</storageDepth>
-					<coreId>2560219360</coreId>
-					<rtlModuleName></rtlModuleName>
-				</Obj>
-				<node_objs>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>293</item>
-					<item>294</item>
-				</node_objs>
-			</item>
-			<item class_id_reference="18" object_id="_306">
-				<Obj>
-					<type>3</type>
-					<id>298</id>
-					<name>arrayidx8418.case.15</name>
-					<fileName></fileName>
-					<fileDirectory></fileDirectory>
-					<lineNumber>0</lineNumber>
-					<contextFuncName></contextFuncName>
-					<contextNormFuncName></contextNormFuncName>
-					<inlineStackInfo>
-						<count>0</count>
-						<item_version>0</item_version>
-					</inlineStackInfo>
-					<originalName></originalName>
-					<rtlName></rtlName>
-					<control></control>
-					<opType></opType>
-					<implIndex></implIndex>
-					<coreName></coreName>
-					<isStorage>0</isStorage>
-					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
-					<rtlModuleName></rtlModuleName>
-				</Obj>
-				<node_objs>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>296</item>
-					<item>297</item>
-				</node_objs>
-			</item>
-			<item class_id_reference="18" object_id="_307">
-				<Obj>
-					<type>3</type>
-					<id>301</id>
-					<name>arrayidx8418.case.14</name>
-					<fileName></fileName>
-					<fileDirectory></fileDirectory>
-					<lineNumber>0</lineNumber>
-					<contextFuncName></contextFuncName>
-					<contextNormFuncName></contextNormFuncName>
-					<inlineStackInfo>
-						<count>0</count>
-						<item_version>0</item_version>
-					</inlineStackInfo>
-					<originalName></originalName>
-					<rtlName></rtlName>
-					<control></control>
-					<opType></opType>
-					<implIndex></implIndex>
-					<coreName></coreName>
-					<isStorage>0</isStorage>
-					<storageDepth>0</storageDepth>
-					<coreId>2560225088</coreId>
-					<rtlModuleName></rtlModuleName>
-				</Obj>
-				<node_objs>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>299</item>
-					<item>300</item>
-				</node_objs>
-			</item>
-			<item class_id_reference="18" object_id="_308">
-				<Obj>
-					<type>3</type>
-					<id>304</id>
-					<name>arrayidx8418.case.13</name>
-					<fileName></fileName>
-					<fileDirectory></fileDirectory>
-					<lineNumber>0</lineNumber>
-					<contextFuncName></contextFuncName>
-					<contextNormFuncName></contextNormFuncName>
-					<inlineStackInfo>
-						<count>0</count>
-						<item_version>0</item_version>
-					</inlineStackInfo>
-					<originalName></originalName>
-					<rtlName></rtlName>
-					<control></control>
-					<opType></opType>
-					<implIndex></implIndex>
-					<coreName></coreName>
-					<isStorage>0</isStorage>
-					<storageDepth>0</storageDepth>
-					<coreId>2560228016</coreId>
-					<rtlModuleName></rtlModuleName>
-				</Obj>
-				<node_objs>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>302</item>
-					<item>303</item>
-				</node_objs>
-			</item>
-			<item class_id_reference="18" object_id="_309">
-				<Obj>
-					<type>3</type>
-					<id>307</id>
-					<name>arrayidx8418.case.12</name>
-					<fileName></fileName>
-					<fileDirectory></fileDirectory>
-					<lineNumber>0</lineNumber>
-					<contextFuncName></contextFuncName>
-					<contextNormFuncName></contextNormFuncName>
-					<inlineStackInfo>
-						<count>0</count>
-						<item_version>0</item_version>
-					</inlineStackInfo>
-					<originalName></originalName>
-					<rtlName></rtlName>
-					<control></control>
-					<opType></opType>
-					<implIndex></implIndex>
-					<coreName></coreName>
-					<isStorage>0</isStorage>
-					<storageDepth>0</storageDepth>
-					<coreId>2560228256</coreId>
-					<rtlModuleName></rtlModuleName>
-				</Obj>
-				<node_objs>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>305</item>
-					<item>306</item>
-				</node_objs>
-			</item>
-			<item class_id_reference="18" object_id="_310">
-				<Obj>
-					<type>3</type>
-					<id>310</id>
-					<name>arrayidx8418.case.11</name>
-					<fileName></fileName>
-					<fileDirectory></fileDirectory>
-					<lineNumber>0</lineNumber>
-					<contextFuncName></contextFuncName>
-					<contextNormFuncName></contextNormFuncName>
-					<inlineStackInfo>
-						<count>0</count>
-						<item_version>0</item_version>
-					</inlineStackInfo>
-					<originalName></originalName>
-					<rtlName></rtlName>
-					<control></control>
-					<opType></opType>
-					<implIndex></implIndex>
-					<coreName></coreName>
-					<isStorage>0</isStorage>
-					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
-					<rtlModuleName></rtlModuleName>
-				</Obj>
-				<node_objs>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>308</item>
-					<item>309</item>
-				</node_objs>
-			</item>
-			<item class_id_reference="18" object_id="_311">
-				<Obj>
-					<type>3</type>
-					<id>313</id>
-					<name>arrayidx8418.case.10</name>
-					<fileName></fileName>
-					<fileDirectory></fileDirectory>
-					<lineNumber>0</lineNumber>
-					<contextFuncName></contextFuncName>
-					<contextNormFuncName></contextNormFuncName>
-					<inlineStackInfo>
-						<count>0</count>
-						<item_version>0</item_version>
-					</inlineStackInfo>
-					<originalName></originalName>
-					<rtlName></rtlName>
-					<control></control>
-					<opType></opType>
-					<implIndex></implIndex>
-					<coreName></coreName>
-					<isStorage>0</isStorage>
-					<storageDepth>0</storageDepth>
-					<coreId>2559695360</coreId>
-					<rtlModuleName></rtlModuleName>
-				</Obj>
-				<node_objs>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>311</item>
-					<item>312</item>
-				</node_objs>
-			</item>
-			<item class_id_reference="18" object_id="_312">
-				<Obj>
-					<type>3</type>
-					<id>316</id>
-					<name>arrayidx8418.case.9</name>
-					<fileName></fileName>
-					<fileDirectory></fileDirectory>
-					<lineNumber>0</lineNumber>
-					<contextFuncName></contextFuncName>
-					<contextNormFuncName></contextNormFuncName>
-					<inlineStackInfo>
-						<count>0</count>
-						<item_version>0</item_version>
-					</inlineStackInfo>
-					<originalName></originalName>
-					<rtlName></rtlName>
-					<control></control>
-					<opType></opType>
-					<implIndex></implIndex>
-					<coreName></coreName>
-					<isStorage>0</isStorage>
-					<storageDepth>0</storageDepth>
-					<coreId>2559698128</coreId>
-					<rtlModuleName></rtlModuleName>
-				</Obj>
-				<node_objs>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>314</item>
-					<item>315</item>
-				</node_objs>
-			</item>
-			<item class_id_reference="18" object_id="_313">
-				<Obj>
-					<type>3</type>
-					<id>319</id>
-					<name>arrayidx8418.case.8</name>
+					<name>arrayidx10030.case.17</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -14901,15 +14613,15 @@
 				<node_objs>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>317</item>
-					<item>318</item>
+					<item>290</item>
+					<item>291</item>
 				</node_objs>
 			</item>
-			<item class_id_reference="18" object_id="_314">
+			<item class_id_reference="18" object_id="_305">
 				<Obj>
 					<type>3</type>
-					<id>322</id>
-					<name>arrayidx8418.case.7</name>
+					<id>295</id>
+					<name>arrayidx10030.case.16</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -14927,7 +14639,295 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2559703720</coreId>
+					<coreId>1475726208</coreId>
+					<rtlModuleName></rtlModuleName>
+				</Obj>
+				<node_objs>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>293</item>
+					<item>294</item>
+				</node_objs>
+			</item>
+			<item class_id_reference="18" object_id="_306">
+				<Obj>
+					<type>3</type>
+					<id>298</id>
+					<name>arrayidx10030.case.15</name>
+					<fileName></fileName>
+					<fileDirectory></fileDirectory>
+					<lineNumber>0</lineNumber>
+					<contextFuncName></contextFuncName>
+					<contextNormFuncName></contextNormFuncName>
+					<inlineStackInfo>
+						<count>0</count>
+						<item_version>0</item_version>
+					</inlineStackInfo>
+					<originalName></originalName>
+					<rtlName></rtlName>
+					<control></control>
+					<opType></opType>
+					<implIndex></implIndex>
+					<coreName></coreName>
+					<isStorage>0</isStorage>
+					<storageDepth>0</storageDepth>
+					<coreId>1475729096</coreId>
+					<rtlModuleName></rtlModuleName>
+				</Obj>
+				<node_objs>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>296</item>
+					<item>297</item>
+				</node_objs>
+			</item>
+			<item class_id_reference="18" object_id="_307">
+				<Obj>
+					<type>3</type>
+					<id>301</id>
+					<name>arrayidx10030.case.14</name>
+					<fileName></fileName>
+					<fileDirectory></fileDirectory>
+					<lineNumber>0</lineNumber>
+					<contextFuncName></contextFuncName>
+					<contextNormFuncName></contextNormFuncName>
+					<inlineStackInfo>
+						<count>0</count>
+						<item_version>0</item_version>
+					</inlineStackInfo>
+					<originalName></originalName>
+					<rtlName></rtlName>
+					<control></control>
+					<opType></opType>
+					<implIndex></implIndex>
+					<coreName></coreName>
+					<isStorage>0</isStorage>
+					<storageDepth>0</storageDepth>
+					<coreId>0</coreId>
+					<rtlModuleName></rtlModuleName>
+				</Obj>
+				<node_objs>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>299</item>
+					<item>300</item>
+				</node_objs>
+			</item>
+			<item class_id_reference="18" object_id="_308">
+				<Obj>
+					<type>3</type>
+					<id>304</id>
+					<name>arrayidx10030.case.13</name>
+					<fileName></fileName>
+					<fileDirectory></fileDirectory>
+					<lineNumber>0</lineNumber>
+					<contextFuncName></contextFuncName>
+					<contextNormFuncName></contextNormFuncName>
+					<inlineStackInfo>
+						<count>0</count>
+						<item_version>0</item_version>
+					</inlineStackInfo>
+					<originalName></originalName>
+					<rtlName></rtlName>
+					<control></control>
+					<opType></opType>
+					<implIndex></implIndex>
+					<coreName></coreName>
+					<isStorage>0</isStorage>
+					<storageDepth>0</storageDepth>
+					<coreId>1475315104</coreId>
+					<rtlModuleName></rtlModuleName>
+				</Obj>
+				<node_objs>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>302</item>
+					<item>303</item>
+				</node_objs>
+			</item>
+			<item class_id_reference="18" object_id="_309">
+				<Obj>
+					<type>3</type>
+					<id>307</id>
+					<name>arrayidx10030.case.12</name>
+					<fileName></fileName>
+					<fileDirectory></fileDirectory>
+					<lineNumber>0</lineNumber>
+					<contextFuncName></contextFuncName>
+					<contextNormFuncName></contextNormFuncName>
+					<inlineStackInfo>
+						<count>0</count>
+						<item_version>0</item_version>
+					</inlineStackInfo>
+					<originalName></originalName>
+					<rtlName></rtlName>
+					<control></control>
+					<opType></opType>
+					<implIndex></implIndex>
+					<coreName></coreName>
+					<isStorage>0</isStorage>
+					<storageDepth>0</storageDepth>
+					<coreId>176</coreId>
+					<rtlModuleName></rtlModuleName>
+				</Obj>
+				<node_objs>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>305</item>
+					<item>306</item>
+				</node_objs>
+			</item>
+			<item class_id_reference="18" object_id="_310">
+				<Obj>
+					<type>3</type>
+					<id>310</id>
+					<name>arrayidx10030.case.11</name>
+					<fileName></fileName>
+					<fileDirectory></fileDirectory>
+					<lineNumber>0</lineNumber>
+					<contextFuncName></contextFuncName>
+					<contextNormFuncName></contextNormFuncName>
+					<inlineStackInfo>
+						<count>0</count>
+						<item_version>0</item_version>
+					</inlineStackInfo>
+					<originalName></originalName>
+					<rtlName></rtlName>
+					<control></control>
+					<opType></opType>
+					<implIndex></implIndex>
+					<coreName></coreName>
+					<isStorage>0</isStorage>
+					<storageDepth>0</storageDepth>
+					<coreId>1475320696</coreId>
+					<rtlModuleName></rtlModuleName>
+				</Obj>
+				<node_objs>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>308</item>
+					<item>309</item>
+				</node_objs>
+			</item>
+			<item class_id_reference="18" object_id="_311">
+				<Obj>
+					<type>3</type>
+					<id>313</id>
+					<name>arrayidx10030.case.10</name>
+					<fileName></fileName>
+					<fileDirectory></fileDirectory>
+					<lineNumber>0</lineNumber>
+					<contextFuncName></contextFuncName>
+					<contextNormFuncName></contextNormFuncName>
+					<inlineStackInfo>
+						<count>0</count>
+						<item_version>0</item_version>
+					</inlineStackInfo>
+					<originalName></originalName>
+					<rtlName></rtlName>
+					<control></control>
+					<opType></opType>
+					<implIndex></implIndex>
+					<coreName></coreName>
+					<isStorage>0</isStorage>
+					<storageDepth>0</storageDepth>
+					<coreId>1475323696</coreId>
+					<rtlModuleName></rtlModuleName>
+				</Obj>
+				<node_objs>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>311</item>
+					<item>312</item>
+				</node_objs>
+			</item>
+			<item class_id_reference="18" object_id="_312">
+				<Obj>
+					<type>3</type>
+					<id>316</id>
+					<name>arrayidx10030.case.9</name>
+					<fileName></fileName>
+					<fileDirectory></fileDirectory>
+					<lineNumber>0</lineNumber>
+					<contextFuncName></contextFuncName>
+					<contextNormFuncName></contextNormFuncName>
+					<inlineStackInfo>
+						<count>0</count>
+						<item_version>0</item_version>
+					</inlineStackInfo>
+					<originalName></originalName>
+					<rtlName></rtlName>
+					<control></control>
+					<opType></opType>
+					<implIndex></implIndex>
+					<coreName></coreName>
+					<isStorage>0</isStorage>
+					<storageDepth>0</storageDepth>
+					<coreId>0</coreId>
+					<rtlModuleName></rtlModuleName>
+				</Obj>
+				<node_objs>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>314</item>
+					<item>315</item>
+				</node_objs>
+			</item>
+			<item class_id_reference="18" object_id="_313">
+				<Obj>
+					<type>3</type>
+					<id>319</id>
+					<name>arrayidx10030.case.8</name>
+					<fileName></fileName>
+					<fileDirectory></fileDirectory>
+					<lineNumber>0</lineNumber>
+					<contextFuncName></contextFuncName>
+					<contextNormFuncName></contextNormFuncName>
+					<inlineStackInfo>
+						<count>0</count>
+						<item_version>0</item_version>
+					</inlineStackInfo>
+					<originalName></originalName>
+					<rtlName></rtlName>
+					<control></control>
+					<opType></opType>
+					<implIndex></implIndex>
+					<coreName></coreName>
+					<isStorage>0</isStorage>
+					<storageDepth>0</storageDepth>
+					<coreId>0</coreId>
+					<rtlModuleName></rtlModuleName>
+				</Obj>
+				<node_objs>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>317</item>
+					<item>318</item>
+				</node_objs>
+			</item>
+			<item class_id_reference="18" object_id="_314">
+				<Obj>
+					<type>3</type>
+					<id>322</id>
+					<name>arrayidx10030.case.7</name>
+					<fileName></fileName>
+					<fileDirectory></fileDirectory>
+					<lineNumber>0</lineNumber>
+					<contextFuncName></contextFuncName>
+					<contextNormFuncName></contextNormFuncName>
+					<inlineStackInfo>
+						<count>0</count>
+						<item_version>0</item_version>
+					</inlineStackInfo>
+					<originalName></originalName>
+					<rtlName></rtlName>
+					<control></control>
+					<opType></opType>
+					<implIndex></implIndex>
+					<coreName></coreName>
+					<isStorage>0</isStorage>
+					<storageDepth>0</storageDepth>
+					<coreId>176</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14941,7 +14941,7 @@
 				<Obj>
 					<type>3</type>
 					<id>325</id>
-					<name>arrayidx8418.case.6</name>
+					<name>arrayidx10030.case.6</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -14959,7 +14959,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>78</coreId>
+					<coreId>1475830448</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -14973,7 +14973,7 @@
 				<Obj>
 					<type>3</type>
 					<id>328</id>
-					<name>arrayidx8418.case.5</name>
+					<name>arrayidx10030.case.5</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -14991,7 +14991,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>1475833704</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -15005,7 +15005,7 @@
 				<Obj>
 					<type>3</type>
 					<id>331</id>
-					<name>arrayidx8418.case.4</name>
+					<name>arrayidx10030.case.4</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -15023,7 +15023,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2559712288</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -15037,7 +15037,7 @@
 				<Obj>
 					<type>3</type>
 					<id>334</id>
-					<name>arrayidx8418.case.3</name>
+					<name>arrayidx10030.case.3</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -15055,7 +15055,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>608</coreId>
+					<coreId>1475703120</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -15069,7 +15069,7 @@
 				<Obj>
 					<type>3</type>
 					<id>337</id>
-					<name>arrayidx8418.case.2</name>
+					<name>arrayidx10030.case.2</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -15087,7 +15087,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>1475705952</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -15101,7 +15101,7 @@
 				<Obj>
 					<type>3</type>
 					<id>340</id>
-					<name>arrayidx8418.case.1</name>
+					<name>arrayidx10030.case.1</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -15119,7 +15119,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>1475698064</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -15133,7 +15133,7 @@
 				<Obj>
 					<type>3</type>
 					<id>343</id>
-					<name>arrayidx8418.case.0</name>
+					<name>arrayidx10030.case.0</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -15151,7 +15151,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>512</coreId>
+					<coreId>176</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -15165,7 +15165,7 @@
 				<Obj>
 					<type>3</type>
 					<id>346</id>
-					<name>arrayidx8418.case.31</name>
+					<name>arrayidx10030.case.31</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -15183,7 +15183,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>1475715720</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -15197,7 +15197,7 @@
 				<Obj>
 					<type>3</type>
 					<id>349</id>
-					<name>arrayidx8418.exit</name>
+					<name>arrayidx10030.exit</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -15229,7 +15229,7 @@
 				<Obj>
 					<type>3</type>
 					<id>351</id>
-					<name>for.end87.exitStub</name>
+					<name>for.end103.exitStub</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -15247,7 +15247,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>6775156</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -23450,7 +23450,7 @@
 		<count>73</count>
 		<item_version>0</item_version>
 		<item class_id="48" tracking_level="0" version="0">
-			<first>add_ln390_fu_1242</first>
+			<first>add_ln444_fu_1242</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -23466,7 +23466,7 @@
 			</second>
 		</item>
 		<item>
-			<first>icmp_ln390_fu_1236</first>
+			<first>icmp_ln444_fu_1236</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -23490,7 +23490,7 @@
 			</second>
 		</item>
 		<item>
-			<first>trunc_ln392_fu_1294</first>
+			<first>trunc_ln446_fu_1294</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -24026,7 +24026,7 @@
 			</second>
 		</item>
 		<item>
-			<first>zext_ln392_fu_1258</first>
+			<first>zext_ln446_fu_1258</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -24095,7 +24095,7 @@
 			</second>
 		</item>
 		<item>
-			<first>store_ln390_store_fu_1298</first>
+			<first>store_ln444_store_fu_1298</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -25191,7 +25191,7 @@
 			</second>
 		</item>
 		<item>
-			<first>icmp_ln390_reg_1403</first>
+			<first>icmp_ln444_reg_1403</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -25231,7 +25231,7 @@
 			</second>
 		</item>
 		<item>
-			<first>trunc_ln392_reg_1603</first>
+			<first>trunc_ln446_reg_1603</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -25503,7 +25503,7 @@
 			</second>
 		</item>
 		<item>
-			<first>zext_ln392_reg_1407</first>
+			<first>zext_ln446_reg_1407</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>

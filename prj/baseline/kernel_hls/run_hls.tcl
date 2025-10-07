@@ -27,7 +27,7 @@ set_part  {xck26-sfvc784-2LV-c}
 create_clock -period 10
 
 # Set variable to select which steps to execute
-set hls_exec 3
+set hls_exec 1
 
 
 csim_design

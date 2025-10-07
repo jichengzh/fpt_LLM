@@ -106,7 +106,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747433728</coreId>
+						<coreId>1462277296</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -142,7 +142,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747432928</coreId>
+						<coreId>1462276496</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -178,7 +178,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747449328</coreId>
+						<coreId>1462292944</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -214,7 +214,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2748021120</coreId>
+						<coreId>1462005024</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -250,7 +250,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>80</coreId>
+						<coreId>1463173520</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -286,7 +286,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2748307568</coreId>
+						<coreId>1462865824</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -322,7 +322,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747246640</coreId>
+						<coreId>1462852944</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -358,7 +358,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747246640</coreId>
+						<coreId>30</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -394,7 +394,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>192</coreId>
+						<coreId>1461861792</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -430,7 +430,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747246640</coreId>
+						<coreId>1463147056</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -466,7 +466,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747711920</coreId>
+						<coreId>1463184432</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -502,7 +502,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747246640</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -538,7 +538,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747714048</coreId>
+						<coreId>30</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -574,7 +574,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747690016</coreId>
+						<coreId>1463169040</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -610,7 +610,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>539570738</coreId>
+						<coreId>1462216496</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -646,7 +646,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747246640</coreId>
+						<coreId>1462005024</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -682,7 +682,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1397508187</coreId>
+						<coreId>130</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -718,7 +718,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747716176</coreId>
+						<coreId>673195817</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -754,7 +754,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747716848</coreId>
+						<coreId>539570738</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -790,7 +790,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1819113532</coreId>
+						<coreId>1463163856</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -826,7 +826,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747717344</coreId>
+						<coreId>1314013527</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -862,7 +862,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>539122993</coreId>
+						<coreId>1462005024</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -898,7 +898,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2037672306</coreId>
+						<coreId>1330007625</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -934,7 +934,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2748342352</coreId>
+						<coreId>11</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -970,7 +970,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2748320976</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1006,7 +1006,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2748324864</coreId>
+						<coreId>1463186000</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1042,7 +1042,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2748326144</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1114,7 +1114,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747246640</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1150,7 +1150,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>542329928</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1186,7 +1186,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747687776</coreId>
+						<coreId>1462005024</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1222,7 +1222,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747688432</coreId>
+						<coreId>1462531712</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1262,7 +1262,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2748318288</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1304,7 +1304,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2748318944</coreId>
+						<coreId>1463162688</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -1346,7 +1346,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>608</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1389,7 +1389,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2748320544</coreId>
+						<coreId>1463163712</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1432,7 +1432,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>784</coreId>
+						<coreId>1463164296</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1502,7 +1502,7 @@
 						<name>i</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -1518,7 +1518,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -1531,7 +1531,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1919252069</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -1556,10 +1556,10 @@
 					<Obj>
 						<type>0</type>
 						<id>75</id>
-						<name>icmp_ln528</name>
+						<name>icmp_ln582</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>528</lineNumber>
+						<lineNumber>582</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -1575,7 +1575,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>528</second>
+										<second>582</second>
 									</item>
 								</second>
 							</item>
@@ -1588,7 +1588,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>573455219</coreId>
+						<coreId>1952801312</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1613,10 +1613,10 @@
 					<Obj>
 						<type>0</type>
 						<id>77</id>
-						<name>br_ln528</name>
+						<name>br_ln582</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>528</lineNumber>
+						<lineNumber>582</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -1632,7 +1632,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>528</second>
+										<second>582</second>
 									</item>
 								</second>
 							</item>
@@ -1645,7 +1645,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1815835503</coreId>
+						<coreId>1869573160</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1674,7 +1674,7 @@
 						<name>sum_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>548</lineNumber>
+						<lineNumber>602</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -1690,7 +1690,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>548</second>
+										<second>602</second>
 									</item>
 								</second>
 							</item>
@@ -1703,7 +1703,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1667592992</coreId>
+						<coreId>543649385</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1731,7 +1731,7 @@
 						<name>lshr_ln7</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -1747,7 +1747,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -1760,7 +1760,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>828326990</coreId>
+						<coreId>1702258035</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -1787,10 +1787,10 @@
 					<Obj>
 						<type>0</type>
 						<id>83</id>
-						<name>zext_ln537</name>
+						<name>zext_ln591</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -1806,7 +1806,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -1819,7 +1819,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1936028192</coreId>
+						<coreId>539119430</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -1846,7 +1846,7 @@
 						<name>xt_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -1862,7 +1862,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -1875,7 +1875,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1869357159</coreId>
+						<coreId>1953523012</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -1904,7 +1904,7 @@
 						<name>xt_39_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -1920,7 +1920,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -1933,7 +1933,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2748027232</coreId>
+						<coreId>1462530208</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -1962,7 +1962,7 @@
 						<name>xt_47_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -1978,7 +1978,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -1991,7 +1991,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2748028000</coreId>
+						<coreId>176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -2020,7 +2020,7 @@
 						<name>xt_55_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -2036,7 +2036,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -2049,7 +2049,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>1462872912</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -2075,10 +2075,10 @@
 					<Obj>
 						<type>0</type>
 						<id>88</id>
-						<name>trunc_ln537</name>
+						<name>trunc_ln591</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -2094,7 +2094,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -2107,7 +2107,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2748029440</coreId>
+						<coreId>1462874064</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -2134,7 +2134,7 @@
 						<name>xt_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -2150,7 +2150,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -2163,7 +2163,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>1462874976</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2190,7 +2190,7 @@
 						<name>xt_39_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -2206,7 +2206,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -2219,7 +2219,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1295780106</coreId>
+						<coreId>824195705</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2246,7 +2246,7 @@
 						<name>xt_47_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -2262,7 +2262,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -2275,7 +2275,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1969430587</coreId>
+						<coreId>1159736947</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2302,7 +2302,7 @@
 						<name>xt_55_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -2318,7 +2318,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -2331,7 +2331,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1768843628</coreId>
+						<coreId>1398101057</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2358,7 +2358,7 @@
 						<name>tmp_s</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -2374,7 +2374,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -2387,7 +2387,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>171847458</coreId>
+						<coreId>1852139296</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2440,7 +2440,7 @@
 						<name>x_assign_3</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -2456,7 +2456,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -2469,7 +2469,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1702043749</coreId>
+						<coreId>540291890</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2526,7 +2526,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1031369833</coreId>
+						<coreId>1701978146</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2554,7 +2554,7 @@
 						<name>xt_32_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -2570,7 +2570,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -2583,7 +2583,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1461861753</coreId>
+						<coreId>758132786</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -2612,7 +2612,7 @@
 						<name>xt_40_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -2628,7 +2628,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -2641,7 +2641,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1868767266</coreId>
+						<coreId>1948262960</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -2670,7 +2670,7 @@
 						<name>xt_48_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -2686,7 +2686,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -2699,7 +2699,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1953394531</coreId>
+						<coreId>574044470</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -2728,7 +2728,7 @@
 						<name>xt_56_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -2744,7 +2744,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -2757,7 +2757,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1869833586</coreId>
+						<coreId>1685024032</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -2786,7 +2786,7 @@
 						<name>xt_32_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -2802,7 +2802,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -2815,7 +2815,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747993168</coreId>
+						<coreId>1462837472</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2842,7 +2842,7 @@
 						<name>xt_40_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -2858,7 +2858,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -2871,7 +2871,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2748007232</coreId>
+						<coreId>1462851472</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2898,7 +2898,7 @@
 						<name>xt_48_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -2914,7 +2914,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -2927,7 +2927,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2748008480</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2954,7 +2954,7 @@
 						<name>xt_56_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -2970,7 +2970,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -2983,7 +2983,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1462855632</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -3010,7 +3010,7 @@
 						<name>tmp_2</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -3026,7 +3026,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -3039,7 +3039,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>1462855056</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -3092,7 +3092,7 @@
 						<name>x_assign_4</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -3108,7 +3108,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -3121,7 +3121,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747993168</coreId>
+						<coreId>176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -3178,7 +3178,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2748012128</coreId>
+						<coreId>1462857000</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -3206,7 +3206,7 @@
 						<name>xt_33_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -3222,7 +3222,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -3235,7 +3235,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2748012848</coreId>
+						<coreId>1462837472</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -3264,7 +3264,7 @@
 						<name>xt_41_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -3280,7 +3280,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -3293,7 +3293,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2748014096</coreId>
+						<coreId>1462858848</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -3322,7 +3322,7 @@
 						<name>xt_49_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -3338,7 +3338,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -3351,7 +3351,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -3380,7 +3380,7 @@
 						<name>xt_57_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -3396,7 +3396,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -3409,7 +3409,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2748016040</coreId>
+						<coreId>304</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -3438,7 +3438,7 @@
 						<name>xt_33_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -3454,7 +3454,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -3467,7 +3467,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330007625</coreId>
+						<coreId>1462862600</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -3494,7 +3494,7 @@
 						<name>xt_41_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -3510,7 +3510,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -3523,7 +3523,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2748012592</coreId>
+						<coreId>1462005024</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -3550,7 +3550,7 @@
 						<name>xt_49_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -3566,7 +3566,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -3579,7 +3579,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747246640</coreId>
+						<coreId>2037542765</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -3606,7 +3606,7 @@
 						<name>xt_57_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -3622,7 +3622,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -3635,7 +3635,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>574453865</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -3662,7 +3662,7 @@
 						<name>tmp_4</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -3678,7 +3678,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -3691,7 +3691,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1634692198</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -3744,7 +3744,7 @@
 						<name>x_assign_5</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -3760,7 +3760,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -3773,7 +3773,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747721600</coreId>
+						<coreId>1462539824</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -3830,7 +3830,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>1462005024</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -3858,7 +3858,7 @@
 						<name>xt_34_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -3874,7 +3874,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -3887,7 +3887,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747697184</coreId>
+						<coreId>1462540752</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -3916,7 +3916,7 @@
 						<name>xt_42_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -3932,7 +3932,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -3945,7 +3945,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747698176</coreId>
+						<coreId>1462542944</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -3974,7 +3974,7 @@
 						<name>xt_50_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -3990,7 +3990,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -4003,7 +4003,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1936028192</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4032,7 +4032,7 @@
 						<name>xt_58_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -4048,7 +4048,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -4061,7 +4061,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747700856</coreId>
+						<coreId>220</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4090,7 +4090,7 @@
 						<name>xt_34_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -4106,7 +4106,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -4119,7 +4119,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1952542572</coreId>
+						<coreId>1629895540</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4146,7 +4146,7 @@
 						<name>xt_42_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -4162,7 +4162,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -4175,7 +4175,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747702096</coreId>
+						<coreId>1462547280</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4202,7 +4202,7 @@
 						<name>xt_50_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -4218,7 +4218,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -4231,7 +4231,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747703464</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4258,7 +4258,7 @@
 						<name>xt_58_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -4274,7 +4274,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -4287,7 +4287,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747704560</coreId>
+						<coreId>1462549960</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4314,7 +4314,7 @@
 						<name>tmp_6</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -4330,7 +4330,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -4343,7 +4343,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747705616</coreId>
+						<coreId>1462506976</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4396,7 +4396,7 @@
 						<name>x_assign_6</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -4412,7 +4412,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -4425,7 +4425,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747246640</coreId>
+						<coreId>1462551200</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4482,7 +4482,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3204427600</coreId>
+						<coreId>1462552568</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4510,7 +4510,7 @@
 						<name>xt_35_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -4526,7 +4526,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -4539,7 +4539,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>1462005024</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4568,7 +4568,7 @@
 						<name>xt_43_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -4584,7 +4584,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -4597,7 +4597,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4626,7 +4626,7 @@
 						<name>xt_51_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -4642,7 +4642,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -4655,7 +4655,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747745080</coreId>
+						<coreId>1462825544</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4684,7 +4684,7 @@
 						<name>xt_59_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -4700,7 +4700,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -4713,7 +4713,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>7955819</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4742,7 +4742,7 @@
 						<name>xt_35_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -4758,7 +4758,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -4771,7 +4771,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747078960</coreId>
+						<coreId>80</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4798,7 +4798,7 @@
 						<name>xt_43_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -4814,7 +4814,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -4827,7 +4827,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747959792</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4854,7 +4854,7 @@
 						<name>xt_51_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -4870,7 +4870,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -4883,7 +4883,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747960800</coreId>
+						<coreId>1462835128</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4910,7 +4910,7 @@
 						<name>xt_59_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -4926,7 +4926,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -4939,7 +4939,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747246640</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4966,7 +4966,7 @@
 						<name>tmp_8</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -4982,7 +4982,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -4995,7 +4995,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747961104</coreId>
+						<coreId>1462836976</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5048,7 +5048,7 @@
 						<name>x_assign_7</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -5064,7 +5064,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -5134,7 +5134,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747963856</coreId>
+						<coreId>1462839488</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5162,7 +5162,7 @@
 						<name>xt_36_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -5178,7 +5178,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -5220,7 +5220,7 @@
 						<name>xt_44_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -5236,7 +5236,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -5249,7 +5249,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1397508187</coreId>
+						<coreId>1462843104</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -5278,7 +5278,7 @@
 						<name>xt_52_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -5294,7 +5294,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -5307,7 +5307,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1462832192</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -5336,7 +5336,7 @@
 						<name>xt_60_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -5352,7 +5352,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -5365,7 +5365,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747969472</coreId>
+						<coreId>304</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -5394,7 +5394,7 @@
 						<name>xt_36_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -5410,7 +5410,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -5450,7 +5450,7 @@
 						<name>xt_44_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -5466,7 +5466,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -5479,7 +5479,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1462593984</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5506,7 +5506,7 @@
 						<name>xt_52_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -5522,7 +5522,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -5535,7 +5535,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747972616</coreId>
+						<coreId>176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5562,7 +5562,7 @@
 						<name>xt_60_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -5578,7 +5578,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -5591,7 +5591,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747971264</coreId>
+						<coreId>1462847888</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5618,7 +5618,7 @@
 						<name>tmp_10</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -5634,7 +5634,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -5647,7 +5647,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747974760</coreId>
+						<coreId>1462834816</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5700,7 +5700,7 @@
 						<name>x_assign_8</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -5716,7 +5716,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -5729,7 +5729,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747975904</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5786,7 +5786,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747904240</coreId>
+						<coreId>1462589384</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5814,7 +5814,7 @@
 						<name>xt_37_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -5830,7 +5830,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -5843,7 +5843,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>256</coreId>
+						<coreId>1462801744</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -5872,7 +5872,7 @@
 						<name>xt_45_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -5888,7 +5888,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -5901,7 +5901,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747980936</coreId>
+						<coreId>1461857104</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -5930,7 +5930,7 @@
 						<name>xt_53_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -5946,7 +5946,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -5959,7 +5959,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>119</coreId>
+						<coreId>1462803968</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -5988,7 +5988,7 @@
 						<name>xt_61_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -6004,7 +6004,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -6046,7 +6046,7 @@
 						<name>xt_37_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -6062,7 +6062,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -6075,7 +6075,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1462138880</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6102,7 +6102,7 @@
 						<name>xt_45_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -6118,7 +6118,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -6158,7 +6158,7 @@
 						<name>xt_53_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -6174,7 +6174,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -6187,7 +6187,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330010203</coreId>
+						<coreId>1462808304</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6214,7 +6214,7 @@
 						<name>xt_61_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -6230,7 +6230,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -6243,7 +6243,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>1462748368</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6270,7 +6270,7 @@
 						<name>tmp_12</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -6286,7 +6286,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -6352,7 +6352,7 @@
 						<name>x_assign_9</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -6368,7 +6368,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -6381,7 +6381,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747988112</coreId>
+						<coreId>1702258035</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6438,7 +6438,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1462812224</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6466,7 +6466,7 @@
 						<name>xt_38_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -6482,7 +6482,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -6495,7 +6495,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1431585108</coreId>
+						<coreId>1462813744</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -6524,7 +6524,7 @@
 						<name>xt_46_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -6540,7 +6540,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -6553,7 +6553,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747985280</coreId>
+						<coreId>1462005024</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -6582,7 +6582,7 @@
 						<name>xt_54_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -6598,7 +6598,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -6611,7 +6611,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747992576</coreId>
+						<coreId>608</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -6640,7 +6640,7 @@
 						<name>xt_62_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -6656,7 +6656,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -6669,7 +6669,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747993328</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -6698,7 +6698,7 @@
 						<name>xt_38_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -6714,7 +6714,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -6727,7 +6727,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747996040</coreId>
+						<coreId>1462818368</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6754,7 +6754,7 @@
 						<name>xt_46_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -6770,7 +6770,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -6783,7 +6783,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6810,7 +6810,7 @@
 						<name>xt_54_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -6826,7 +6826,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -6839,7 +6839,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747999072</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6866,7 +6866,7 @@
 						<name>xt_62_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -6882,7 +6882,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -6895,7 +6895,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2748000048</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6922,7 +6922,7 @@
 						<name>tmp_14</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -6938,7 +6938,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -6951,7 +6951,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2748001184</coreId>
+						<coreId>1462824448</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -7004,7 +7004,7 @@
 						<name>x_assign_s</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>591</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -7020,7 +7020,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>537</second>
+										<second>591</second>
 									</item>
 								</second>
 							</item>
@@ -7033,7 +7033,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2748003688</coreId>
+						<coreId>176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -7090,7 +7090,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>7955819</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -7118,7 +7118,7 @@
 						<name>s0</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>540</lineNumber>
+						<lineNumber>594</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -7134,7 +7134,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>540</second>
+										<second>594</second>
 									</item>
 								</second>
 							</item>
@@ -7175,7 +7175,7 @@
 						<name>s1</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>541</lineNumber>
+						<lineNumber>595</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -7191,7 +7191,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>541</second>
+										<second>595</second>
 									</item>
 								</second>
 							</item>
@@ -7204,7 +7204,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2748005120</coreId>
+						<coreId>1462828672</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -7232,7 +7232,7 @@
 						<name>s2</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>542</lineNumber>
+						<lineNumber>596</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -7248,7 +7248,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>542</second>
+										<second>596</second>
 									</item>
 								</second>
 							</item>
@@ -7261,7 +7261,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1462762176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -7289,7 +7289,7 @@
 						<name>s3</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>543</lineNumber>
+						<lineNumber>597</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -7305,7 +7305,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>543</second>
+										<second>597</second>
 									</item>
 								</second>
 							</item>
@@ -7318,7 +7318,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747011568</coreId>
+						<coreId>1330007625</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -7346,7 +7346,7 @@
 						<name>t0</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>544</lineNumber>
+						<lineNumber>598</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -7362,7 +7362,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>544</second>
+										<second>598</second>
 									</item>
 								</second>
 							</item>
@@ -7375,7 +7375,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>1869635878</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -7403,7 +7403,7 @@
 						<name>t1</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>545</lineNumber>
+						<lineNumber>599</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -7419,7 +7419,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>545</second>
+										<second>599</second>
 									</item>
 								</second>
 							</item>
@@ -7432,7 +7432,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>997484326</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -7460,7 +7460,7 @@
 						<name>block</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>546</lineNumber>
+						<lineNumber>600</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -7476,7 +7476,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>546</second>
+										<second>600</second>
 									</item>
 								</second>
 							</item>
@@ -7489,7 +7489,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>997484288</coreId>
+						<coreId>1462569840</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -7517,7 +7517,7 @@
 						<name>sum_2</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>548</lineNumber>
+						<lineNumber>602</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -7533,7 +7533,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>548</second>
+										<second>602</second>
 									</item>
 								</second>
 							</item>
@@ -7546,7 +7546,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1462005024</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -7571,10 +7571,10 @@
 					<Obj>
 						<type>0</type>
 						<id>181</id>
-						<name>add_ln528</name>
+						<name>add_ln582</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>528</lineNumber>
+						<lineNumber>582</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -7590,7 +7590,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>528</second>
+										<second>582</second>
 									</item>
 								</second>
 							</item>
@@ -7603,7 +7603,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>842085691</coreId>
+						<coreId>1701602659</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -7628,10 +7628,10 @@
 					<Obj>
 						<type>0</type>
 						<id>182</id>
-						<name>idx_write_ln528</name>
+						<name>idx_write_ln582</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>528</lineNumber>
+						<lineNumber>582</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -7647,7 +7647,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>528</second>
+										<second>582</second>
 									</item>
 								</second>
 							</item>
@@ -7660,7 +7660,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1919906913</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -7687,10 +7687,10 @@
 					<Obj>
 						<type>0</type>
 						<id>183</id>
-						<name>sum_write_ln528</name>
+						<name>sum_write_ln582</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>528</lineNumber>
+						<lineNumber>582</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -7706,7 +7706,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>528</second>
+										<second>582</second>
 									</item>
 								</second>
 							</item>
@@ -7719,7 +7719,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747246640</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -7747,10 +7747,10 @@
 					<Obj>
 						<type>0</type>
 						<id>184</id>
-						<name>br_ln528</name>
+						<name>br_ln582</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>528</lineNumber>
+						<lineNumber>582</lineNumber>
 						<contextFuncName>float_softmax</contextFuncName>
 						<contextNormFuncName>float_softmax</contextNormFuncName>
 						<inlineStackInfo>
@@ -7766,7 +7766,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>float_softmax</second>
 										</first>
-										<second>528</second>
+										<second>582</second>
 									</item>
 								</second>
 							</item>
@@ -7779,7 +7779,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1179535650</coreId>
+						<coreId>1462575520</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -7821,7 +7821,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747732640</coreId>
+						<coreId>1702258035</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -7864,7 +7864,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1397508187</coreId>
+						<coreId>1462570944</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -7908,7 +7908,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747733776</coreId>
+						<coreId>1952542572</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -7984,7 +7984,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>825046016</coreId>
+						<coreId>1462573504</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -8015,7 +8015,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747735168</coreId>
+						<coreId>1937076085</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -8046,7 +8046,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>573124666</coreId>
+						<coreId>1935634534</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -8077,7 +8077,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747736232</coreId>
+						<coreId>2036689696</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -8108,7 +8108,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747736272</coreId>
+						<coreId>1462581488</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -8139,7 +8139,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1936028192</coreId>
+						<coreId>1462582032</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -8170,7 +8170,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1230261845</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -8201,7 +8201,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2747739600</coreId>
+						<coreId>1462583552</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -8235,7 +8235,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>336</coreId>
+					<coreId>1462454448</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -8304,7 +8304,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2746831408</coreId>
+					<coreId>1212371746</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -8438,7 +8438,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2746816648</coreId>
+					<coreId>1462576640</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>

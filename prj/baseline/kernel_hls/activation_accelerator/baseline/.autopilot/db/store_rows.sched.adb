@@ -34,7 +34,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2578506400</coreId>
+						<coreId>1819351664</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>512</bitwidth>
@@ -70,7 +70,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2578462048</coreId>
+						<coreId>1293872176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>512</bitwidth>
@@ -106,7 +106,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2577833808</coreId>
+						<coreId>1293311024</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -146,7 +146,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2578627952</coreId>
+						<coreId>1290743040</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -174,7 +174,7 @@
 						<name>trunc_ln</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>694</lineNumber>
+						<lineNumber>748</lineNumber>
 						<contextFuncName>store_rows</contextFuncName>
 						<contextNormFuncName>store_rows</contextNormFuncName>
 						<inlineStackInfo>
@@ -190,7 +190,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>store_rows</second>
 										</first>
-										<second>694</second>
+										<second>748</second>
 									</item>
 								</second>
 							</item>
@@ -203,7 +203,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2578627952</coreId>
+						<coreId>1293782896</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>58</bitwidth>
@@ -230,10 +230,10 @@
 					<Obj>
 						<type>0</type>
 						<id>9</id>
-						<name>sext_ln694</name>
+						<name>sext_ln748</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>694</lineNumber>
+						<lineNumber>748</lineNumber>
 						<contextFuncName>store_rows</contextFuncName>
 						<contextNormFuncName>store_rows</contextNormFuncName>
 						<inlineStackInfo>
@@ -249,7 +249,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>store_rows</second>
 										</first>
-										<second>694</second>
+										<second>748</second>
 									</item>
 								</second>
 							</item>
@@ -262,7 +262,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3146646784</coreId>
+						<coreId>1931503104</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -289,7 +289,7 @@
 						<name>gmem2_addr</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>694</lineNumber>
+						<lineNumber>748</lineNumber>
 						<contextFuncName>store_rows</contextFuncName>
 						<contextNormFuncName>store_rows</contextNormFuncName>
 						<inlineStackInfo>
@@ -305,7 +305,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>store_rows</second>
 										</first>
-										<second>694</second>
+										<second>748</second>
 									</item>
 								</second>
 							</item>
@@ -318,7 +318,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1293782896</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>512</bitwidth>
@@ -346,7 +346,7 @@
 						<name>empty</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>694</lineNumber>
+						<lineNumber>748</lineNumber>
 						<contextFuncName>store_rows</contextFuncName>
 						<contextNormFuncName>store_rows</contextNormFuncName>
 						<inlineStackInfo>
@@ -362,7 +362,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>store_rows</second>
 										</first>
-										<second>694</second>
+										<second>748</second>
 									</item>
 								</second>
 							</item>
@@ -375,7 +375,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2579177968</coreId>
+						<coreId>1293375792</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -419,7 +419,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330007625</coreId>
+						<coreId>1292630832</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -445,10 +445,10 @@
 					<Obj>
 						<type>0</type>
 						<id>13</id>
-						<name>_ln694</name>
+						<name>_ln748</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>694</lineNumber>
+						<lineNumber>748</lineNumber>
 						<contextFuncName>store_rows</contextFuncName>
 						<contextNormFuncName>store_rows</contextNormFuncName>
 						<inlineStackInfo>
@@ -464,7 +464,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>store_rows</second>
 										</first>
-										<second>694</second>
+										<second>748</second>
 									</item>
 								</second>
 							</item>
@@ -477,7 +477,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>795631872</coreId>
+						<coreId>48</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -509,7 +509,7 @@
 						<name>empty_49</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>703</lineNumber>
+						<lineNumber>757</lineNumber>
 						<contextFuncName>store_rows</contextFuncName>
 						<contextNormFuncName>store_rows</contextNormFuncName>
 						<inlineStackInfo>
@@ -525,7 +525,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>store_rows</second>
 										</first>
-										<second>703</second>
+										<second>757</second>
 									</item>
 								</second>
 							</item>
@@ -538,7 +538,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2579653952</coreId>
+						<coreId>1292630832</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -565,10 +565,10 @@
 					<Obj>
 						<type>0</type>
 						<id>15</id>
-						<name>_ln703</name>
+						<name>_ln757</name>
 						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>703</lineNumber>
+						<lineNumber>757</lineNumber>
 						<contextFuncName>store_rows</contextFuncName>
 						<contextNormFuncName>store_rows</contextNormFuncName>
 						<inlineStackInfo>
@@ -584,7 +584,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>store_rows</second>
 										</first>
-										<second>703</second>
+										<second>757</second>
 									</item>
 								</second>
 							</item>
@@ -597,7 +597,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2578938928</coreId>
+						<coreId>608</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -642,7 +642,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2578939536</coreId>
+						<coreId>1289845216</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -673,7 +673,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2578627952</coreId>
+						<coreId>608</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -704,7 +704,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2579185888</coreId>
+						<coreId>1293375792</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -735,7 +735,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2578627952</coreId>
+						<coreId>1330007625</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>

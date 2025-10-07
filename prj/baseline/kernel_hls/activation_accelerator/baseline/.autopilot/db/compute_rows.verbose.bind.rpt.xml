@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'compute_rows'" level="0">
-<item name = "Date">Fri Oct  3 15:43:23 2025
+<item name = "Date">Fri Oct  3 21:51:44 2025
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">activation_accelerator</item>
@@ -39,7 +39,7 @@
 <column name="grp_compute_rows_Pipeline_smx_1_fu_1101">compute_rows_Pipeline_smx_1, 322, 322, 3.220 us, 3.220 us, 322, 322, no</column>
 <column name="grp_compute_rows_Pipeline_smx_2_fu_1139">compute_rows_Pipeline_smx_2, 792, 792, 7.920 us, 7.920 us, 792, 792, no</column>
 <column name="grp_float_rmsnorm_fu_1209">float_rmsnorm, 1115, 1115, 11.150 us, 11.150 us, 1115, 1115, no</column>
-<column name="grp_float_layernorm_fu_1277">float_layernorm, 1435, 1435, 14.350 us, 14.350 us, 1435, 1435, no</column>
+<column name="grp_float_layernorm_fu_1277">float_layernorm, 1154, 1154, 11.540 us, 11.540 us, 1154, 1154, no</column>
 <column name="grp_compute_rows_Pipeline_silu_loop_fu_1345">compute_rows_Pipeline_silu_loop, 794, 794, 7.940 us, 7.940 us, 794, 794, no</column>
 <column name="grp_compute_rows_Pipeline_add_loop_fu_1413">compute_rows_Pipeline_add_loop, 775, 775, 7.750 us, 7.750 us, 775, 775, no</column>
 <column name="grp_compute_rows_Pipeline_add_loop3_fu_1513">compute_rows_Pipeline_add_loop3, 775, 775, 7.750 us, 7.750 us, 775, 775, no</column>

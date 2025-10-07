@@ -277,7 +277,20 @@ void float_silu(const float* x, uint16* y, int len) {
         y[i] = f32_to_bf16_scalar(x[i] * sig);
     }
 }
-
+// void float_rms_norm(const float* x, uint16* y_bf16, int len) {
+//     const float eps = 1e-6f;
+//     float sum_sq = 0.0f;
+//     for (int i = 0; i < len; ++i) {
+//         sum_sq += x[i] * x[i];
+//     }
+//     float mean_sq = sum_sq / len;
+//     float rms = hls::sqrtf(mean_sq + eps);
+//     for (int i = 0; i < len; ++i) {
+//         float y = x[i] / rms;
+//         uint32_t* y_f32_ptr = (uint32_t*)&y;
+//         y_bf16[i] = (*y_f32_ptr) >> 16;
+//     }
+// }
 // rms_norm(使用雷神之锤)
 void float_rmsnorm(const float* x, uint16* y_bf16, int len) {
     const float eps = 1e-6f;
@@ -320,41 +333,79 @@ void float_rmsnorm(const float* x, uint16* y_bf16, int len) {
     }
 }
 
+// void float_layernorm(const float* x, uint16* y_bf16, int len) {
+//     const float eps = 1e-6f;
+//     float sum = 0.0f;
+//     layer_loop_0:
+//     for (int i = 0; i < len; ++i) {
+//     #pragma HLS PIPELINE II=1
+//     #pragma HLS reduction variable=sum operation=add
+//         sum += x[i];
+//     }
+//     float mean = sum / len;
+//     float var = 0.0f;
+//     layer_loop_1:
+//     for (int i = 0; i < len; ++i) {
+//     #pragma HLS PIPELINE II=1
+//     #pragma HLS reduction variable=sum operation=add
+//         float diff = x[i] - mean;
+//         var += diff * diff;
+//     }
+//     var /= len;
+//     float stddev = hls::sqrtf(var + eps);
+//     for (int i = 0; i < len; ++i) {
+//         float y = (x[i] - mean) / stddev;
+//         uint32_t* y_f32_ptr = (uint32_t*)&y;
+//         y_bf16[i] = (*y_f32_ptr) >> 16;
+//     }
+// }
+
 // layer_norm
 void float_layernorm(const float* x, uint16* y_bf16, int len) {
     const float eps = 1e-6f;
     float sum = 0.0f;
 
     // —— 求和（II=1）：块内树形 + 环形桶 —— //
-    const int UF  = 8;    // 8/16/32 视你的存储带宽选择，尽量与数组分区一致
+    const int UF = 16;
 
     layer_loop_0:
-    // len =  768 每次循环处理 UF = 8 个元素
     for (int i = 0; i < len; i += UF) {
     #pragma HLS PIPELINE II=1
-        // 初始化了一个栈数组 a[UF]，得到一个长度为 UF 的浮点数组
-        float a[UF];
-        #pragma HLS ARRAY_PARTITION variable=a complete
 
-        // 并行读取 UF 个元素（需要上游数组有足够 bank/端口）
-        load_a:
+        float a[UF];
+    #pragma HLS ARRAY_PARTITION variable=a complete
+
+    load_a:
         for (int u = 0; u < UF; ++u) {
-        #pragma HLS UNROLL
+    #pragma HLS UNROLL
             int idx = i + u;
-            //  0.f表示float类型的0 用于填充
-            a[u] = (idx < len) ? x[idx] : 0.f;
+            a[u] = (idx < len) ? x[idx] : 0.f;  // 尾部补 0
         }
 
-            // 块内树形规约（以 UF=8 为例；若 UF=16/32，按层继续展开）
+        // 16 -> 8
         float s0 = a[0] + a[1];
         float s1 = a[2] + a[3];
         float s2 = a[4] + a[5];
         float s3 = a[6] + a[7];
+        float s4 = a[8] + a[9];
+        float s5 = a[10] + a[11];
+        float s6 = a[12] + a[13];
+        float s7 = a[14] + a[15];
+
+        // 8 -> 4
         float t0 = s0 + s1;
         float t1 = s2 + s3;
-        float block = t0 + t1;
+        float t2 = s4 + s5;
+        float t3 = s6 + s7;
 
-        sum += block;
+        // 4 -> 2
+        float u0 = t0 + t1;
+        float u1 = t2 + t3;
+
+        // 2 -> 1
+        float block = u0 + u1;
+
+        sum += block;   // 与全局 sum 的一条短反馈
     }
 
     // 小规模归约
@@ -544,8 +595,10 @@ void float_softmax(const float* x, uint16* y_bf16, int len) {
         float s1 = e[2] + e[3];
         float s2 = e[4] + e[5];
         float s3 = e[6] + e[7];
+
         float t0 = s0 + s1;
         float t1 = s2 + s3;
+        
         float block = t0 + t1;
 
         sum += block;   // 这里的回授频率= len/UF 次

@@ -1867,10 +1867,10 @@ entry:79 %call_ln254 = call void @float_rmsnorm_Pipeline_rms_loop_1, i32 %x_0, i
 
 <Node id="145" bw="0">
 <![CDATA[
-entry:80 %ret_ln321 = ret
+entry:80 %ret_ln334 = ret
 
 ]]></Node>
-<StgValue><ssdm name="ret_ln321"/></StgValue>
+<StgValue><ssdm name="ret_ln334"/></StgValue>
 </operation>
 </state>
 </state_list>

@@ -55414,8 +55414,7 @@ void float_silu(const float* x, uint16* y, int len) {
         y[i] = f32_to_bf16_scalar(x[i] * sig);
     }
 }
-
-
+# 295 "activation_accelerator.cpp"
 void float_rmsnorm(const float* x, uint16* y_bf16, int len) {
     const float eps = 1e-6f;
     float sum_sq = 0.0f;
@@ -55456,21 +55455,20 @@ void float_rmsnorm(const float* x, uint16* y_bf16, int len) {
         y_bf16[i] = f32_to_bf16_scalar(x[i] * re_rms);
     }
 }
-
-
+# 364 "activation_accelerator.cpp"
 void float_layernorm(const float* x, uint16* y_bf16, int len) {
     const float eps = 1e-6f;
     float sum = 0.0f;
 
 
-    const int UF = 8;
+    const int UF = 16;
 
     layer_loop_0:
     for (int i = 0; i < len; i += UF) {
 #pragma HLS PIPELINE II=1
+
  float a[UF];
 #pragma HLS ARRAY_PARTITION variable=a complete
-
 
  load_a:
         for (int u = 0; u < UF; ++u) {
@@ -55484,9 +55482,23 @@ void float_layernorm(const float* x, uint16* y_bf16, int len) {
         float s1 = a[2] + a[3];
         float s2 = a[4] + a[5];
         float s3 = a[6] + a[7];
+        float s4 = a[8] + a[9];
+        float s5 = a[10] + a[11];
+        float s6 = a[12] + a[13];
+        float s7 = a[14] + a[15];
+
+
         float t0 = s0 + s1;
         float t1 = s2 + s3;
-        float block = t0 + t1;
+        float t2 = s4 + s5;
+        float t3 = s6 + s7;
+
+
+        float u0 = t0 + t1;
+        float u1 = t2 + t3;
+
+
+        float block = u0 + u1;
 
         sum += block;
     }
@@ -55529,7 +55541,7 @@ void float_layernorm(const float* x, uint16* y_bf16, int len) {
  y_bf16[i] = f32_to_bf16_scalar((x[i] - mean) * inv_std);
     }
 }
-# 455 "activation_accelerator.cpp"
+# 509 "activation_accelerator.cpp"
 void float_add(const float* x, const float* y, uint16* out, int len) {
 #pragma HLS INLINE
  add_loop:
@@ -55539,7 +55551,7 @@ void float_add(const float* x, const float* y, uint16* out, int len) {
         out[i] = f32_to_bf16_scalar(sum);
     }
 }
-# 514 "activation_accelerator.cpp"
+# 568 "activation_accelerator.cpp"
 void float_softmax(const float* x, uint16* y_bf16, int len) {
 #pragma HLS INLINE
  float xmax = x[0];
@@ -55736,7 +55748,7 @@ __attribute__((sdx_kernel("activation_accelerator", 0))) void activation_acceler
 {
 #line 39 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/run_hls.tcl"
 #pragma HLSDIRECTIVE TOP name=activation_accelerator
-# 707 "activation_accelerator.cpp"
+# 761 "activation_accelerator.cpp"
 
 #pragma HLS INTERFACE m_axi port=in0 bundle=gmem0 offset=slave depth=NW max_read_burst_length=32 num_read_outstanding=16
 #pragma HLS INTERFACE m_axi port=in1 bundle=gmem1 offset=slave depth=NW max_read_burst_length=32 num_read_outstanding=16

@@ -855,7 +855,7 @@ activation_accelerator_mux_325_32_1_1 #(
     .din31_WIDTH( 32 ),
     .din32_WIDTH( 5 ),
     .dout_WIDTH( 32 ))
-mux_325_32_1_1_U808(
+mux_325_32_1_1_U778(
     .din0(xt_q0),
     .din1(xt_32_q0),
     .din2(xt_33_q0),

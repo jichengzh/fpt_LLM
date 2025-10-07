@@ -257,11 +257,6 @@ module activation_accelerator_float_layernorm (
         grp_fu_2062_p_opcode,
         grp_fu_2062_p_dout0,
         grp_fu_2062_p_ce,
-        grp_fu_2074_p_din0,
-        grp_fu_2074_p_din1,
-        grp_fu_2074_p_opcode,
-        grp_fu_2074_p_dout0,
-        grp_fu_2074_p_ce,
         grp_fu_2066_p_din0,
         grp_fu_2066_p_din1,
         grp_fu_2066_p_opcode,
@@ -272,6 +267,11 @@ module activation_accelerator_float_layernorm (
         grp_fu_2070_p_opcode,
         grp_fu_2070_p_dout0,
         grp_fu_2070_p_ce,
+        grp_fu_2074_p_din0,
+        grp_fu_2074_p_din1,
+        grp_fu_2074_p_opcode,
+        grp_fu_2074_p_dout0,
+        grp_fu_2074_p_ce,
         grp_fu_2046_p_din0,
         grp_fu_2046_p_din1,
         grp_fu_2046_p_dout0,
@@ -564,11 +564,6 @@ output  [31:0] grp_fu_2062_p_din1;
 output  [1:0] grp_fu_2062_p_opcode;
 input  [31:0] grp_fu_2062_p_dout0;
 output   grp_fu_2062_p_ce;
-output  [31:0] grp_fu_2074_p_din0;
-output  [31:0] grp_fu_2074_p_din1;
-output  [1:0] grp_fu_2074_p_opcode;
-input  [31:0] grp_fu_2074_p_dout0;
-output   grp_fu_2074_p_ce;
 output  [31:0] grp_fu_2066_p_din0;
 output  [31:0] grp_fu_2066_p_din1;
 output  [1:0] grp_fu_2066_p_opcode;
@@ -579,6 +574,11 @@ output  [31:0] grp_fu_2070_p_din1;
 output  [1:0] grp_fu_2070_p_opcode;
 input  [31:0] grp_fu_2070_p_dout0;
 output   grp_fu_2070_p_ce;
+output  [31:0] grp_fu_2074_p_din0;
+output  [31:0] grp_fu_2074_p_din1;
+output  [1:0] grp_fu_2074_p_opcode;
+input  [31:0] grp_fu_2074_p_dout0;
+output   grp_fu_2074_p_ce;
 output  [31:0] grp_fu_2046_p_din0;
 output  [31:0] grp_fu_2046_p_din1;
 input  [31:0] grp_fu_2046_p_dout0;
@@ -654,14 +654,14 @@ reg x_31_ce0;
 
 (* fsm_encoding = "none" *) reg   [35:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
-reg   [31:0] mean_reg_473;
+reg   [31:0] mean_reg_441;
 wire    ap_CS_fsm_state11;
-reg   [31:0] div_reg_482;
+reg   [31:0] div_reg_450;
 wire    ap_CS_fsm_state21;
-reg   [31:0] x_assign_reg_487;
+reg   [31:0] x_assign_reg_455;
 wire    ap_CS_fsm_state25;
-wire   [31:0] grp_fu_444_p2;
-reg   [31:0] inv_std_reg_492;
+wire   [31:0] grp_fu_412_p2;
+reg   [31:0] inv_std_reg_460;
 wire    ap_CS_fsm_state35;
 wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_ap_start;
 wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_ap_done;
@@ -669,417 +669,399 @@ wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_ap_idle;
 wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_ap_ready;
 wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_0_address0;
 wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_0_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_8_address0;
-wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_8_ce0;
 wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_16_address0;
 wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_16_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_24_address0;
-wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_24_ce0;
 wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_1_address0;
 wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_1_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_9_address0;
-wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_9_ce0;
 wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_17_address0;
 wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_17_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_25_address0;
-wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_25_ce0;
 wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_2_address0;
 wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_2_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_10_address0;
-wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_10_ce0;
 wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_18_address0;
 wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_18_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_26_address0;
-wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_26_ce0;
 wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_3_address0;
 wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_3_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_11_address0;
-wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_11_ce0;
 wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_19_address0;
 wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_19_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_27_address0;
-wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_27_ce0;
 wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_4_address0;
 wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_4_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_12_address0;
-wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_12_ce0;
 wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_20_address0;
 wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_20_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_28_address0;
-wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_28_ce0;
 wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_5_address0;
 wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_5_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_13_address0;
-wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_13_ce0;
 wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_21_address0;
 wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_21_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_29_address0;
-wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_29_ce0;
 wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_6_address0;
 wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_6_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_14_address0;
-wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_14_ce0;
 wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_22_address0;
 wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_22_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_30_address0;
-wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_30_ce0;
 wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_7_address0;
 wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_7_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_15_address0;
-wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_15_ce0;
 wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_23_address0;
 wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_23_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_8_address0;
+wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_8_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_24_address0;
+wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_24_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_9_address0;
+wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_9_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_25_address0;
+wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_25_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_10_address0;
+wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_10_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_26_address0;
+wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_26_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_11_address0;
+wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_11_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_27_address0;
+wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_27_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_12_address0;
+wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_12_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_28_address0;
+wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_28_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_13_address0;
+wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_13_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_29_address0;
+wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_29_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_14_address0;
+wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_14_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_30_address0;
+wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_30_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_15_address0;
+wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_15_ce0;
 wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_31_address0;
 wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_31_ce0;
 wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_sum_out;
 wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_sum_out_ap_vld;
-wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_433_p_din0;
-wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_433_p_din1;
-wire   [0:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_433_p_opcode;
-wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_433_p_ce;
-wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_497_p_din0;
-wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_497_p_din1;
-wire   [0:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_497_p_opcode;
-wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_497_p_ce;
-wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_501_p_din0;
-wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_501_p_din1;
-wire   [0:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_501_p_opcode;
-wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_501_p_ce;
-wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_505_p_din0;
-wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_505_p_din1;
-wire   [1:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_505_p_opcode;
-wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_505_p_ce;
+wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_401_p_din0;
+wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_401_p_din1;
+wire   [0:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_401_p_opcode;
+wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_401_p_ce;
+wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_465_p_din0;
+wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_465_p_din1;
+wire   [0:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_465_p_opcode;
+wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_465_p_ce;
+wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_469_p_din0;
+wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_469_p_din1;
+wire   [0:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_469_p_opcode;
+wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_469_p_ce;
+wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_473_p_din0;
+wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_473_p_din1;
+wire   [0:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_473_p_opcode;
+wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_473_p_ce;
+wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_477_p_din0;
+wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_477_p_din1;
+wire   [0:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_477_p_opcode;
+wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_477_p_ce;
+wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_481_p_din0;
+wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_481_p_din1;
+wire   [1:0] grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_481_p_opcode;
+wire    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_481_p_ce;
 wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_ap_start;
 wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_ap_done;
 wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_ap_idle;
 wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_ap_ready;
 wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_0_address0;
 wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_0_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_8_address0;
-wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_8_ce0;
 wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_16_address0;
 wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_16_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_24_address0;
-wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_24_ce0;
 wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_1_address0;
 wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_1_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_9_address0;
-wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_9_ce0;
 wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_17_address0;
 wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_17_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_25_address0;
-wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_25_ce0;
 wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_2_address0;
 wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_2_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_10_address0;
-wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_10_ce0;
 wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_18_address0;
 wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_18_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_26_address0;
-wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_26_ce0;
 wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_3_address0;
 wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_3_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_11_address0;
-wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_11_ce0;
 wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_19_address0;
 wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_19_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_27_address0;
-wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_27_ce0;
 wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_4_address0;
 wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_4_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_12_address0;
-wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_12_ce0;
 wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_20_address0;
 wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_20_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_28_address0;
-wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_28_ce0;
 wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_5_address0;
 wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_5_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_13_address0;
-wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_13_ce0;
 wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_21_address0;
 wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_21_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_29_address0;
-wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_29_ce0;
 wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_6_address0;
 wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_6_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_14_address0;
-wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_14_ce0;
 wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_22_address0;
 wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_22_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_30_address0;
-wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_30_ce0;
 wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_7_address0;
 wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_7_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_15_address0;
-wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_15_ce0;
 wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_23_address0;
 wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_23_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_31_address0;
-wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_31_ce0;
 wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_var_out;
 wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_var_out_ap_vld;
-wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_433_p_din0;
-wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_433_p_din1;
-wire   [1:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_433_p_opcode;
-wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_433_p_ce;
-wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_497_p_din0;
-wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_497_p_din1;
-wire   [1:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_497_p_opcode;
-wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_497_p_ce;
-wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_501_p_din0;
-wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_501_p_din1;
-wire   [1:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_501_p_opcode;
-wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_501_p_ce;
-wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_509_p_din0;
-wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_509_p_din1;
-wire   [1:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_509_p_opcode;
-wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_509_p_ce;
-wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_513_p_din0;
-wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_513_p_din1;
-wire   [1:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_513_p_opcode;
-wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_513_p_ce;
-wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_505_p_din0;
-wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_505_p_din1;
-wire   [1:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_505_p_opcode;
-wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_505_p_ce;
-wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_517_p_din0;
-wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_517_p_din1;
-wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_517_p_ce;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_ap_start;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_ap_done;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_ap_idle;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_ap_ready;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_31_address1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_31_ce1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_31_we1;
-wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_31_d1;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_30_address1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_30_ce1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_30_we1;
-wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_30_d1;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_29_address1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_29_ce1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_29_we1;
-wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_29_d1;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_28_address1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_28_ce1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_28_we1;
-wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_28_d1;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_27_address1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_27_ce1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_27_we1;
-wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_27_d1;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_26_address1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_26_ce1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_26_we1;
-wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_26_d1;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_25_address1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_25_ce1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_25_we1;
-wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_25_d1;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_24_address1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_24_ce1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_24_we1;
-wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_24_d1;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_23_address1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_23_ce1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_23_we1;
-wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_23_d1;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_22_address1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_22_ce1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_22_we1;
-wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_22_d1;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_21_address1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_21_ce1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_21_we1;
-wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_21_d1;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_20_address1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_20_ce1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_20_we1;
-wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_20_d1;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_19_address1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_19_ce1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_19_we1;
-wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_19_d1;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_18_address1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_18_ce1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_18_we1;
-wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_18_d1;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_17_address1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_17_ce1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_17_we1;
-wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_17_d1;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_16_address1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_16_ce1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_16_we1;
-wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_16_d1;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_15_address1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_15_ce1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_15_we1;
-wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_15_d1;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_14_address1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_14_ce1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_14_we1;
-wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_14_d1;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_13_address1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_13_ce1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_13_we1;
-wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_13_d1;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_12_address1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_12_ce1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_12_we1;
-wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_12_d1;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_11_address1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_11_ce1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_11_we1;
-wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_11_d1;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_10_address1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_10_ce1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_10_we1;
-wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_10_d1;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_9_address1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_9_ce1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_9_we1;
-wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_9_d1;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_8_address1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_8_ce1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_8_we1;
-wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_8_d1;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_7_address1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_7_ce1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_7_we1;
-wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_7_d1;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_6_address1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_6_ce1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_6_we1;
-wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_6_d1;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_5_address1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_5_ce1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_5_we1;
-wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_5_d1;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_4_address1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_4_ce1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_4_we1;
-wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_4_d1;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_3_address1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_3_ce1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_3_we1;
-wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_3_d1;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_2_address1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_2_ce1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_2_we1;
-wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_2_d1;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_1_address1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_1_ce1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_1_we1;
-wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_1_d1;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_0_address1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_0_ce1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_0_we1;
-wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_0_d1;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_x_0_address0;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_x_0_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_x_1_address0;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_x_1_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_x_2_address0;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_x_2_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_x_3_address0;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_x_3_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_x_4_address0;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_x_4_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_x_5_address0;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_x_5_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_x_6_address0;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_x_6_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_x_7_address0;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_x_7_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_x_8_address0;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_x_8_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_x_9_address0;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_x_9_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_x_10_address0;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_x_10_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_x_11_address0;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_x_11_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_x_12_address0;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_x_12_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_x_13_address0;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_x_13_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_x_14_address0;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_x_14_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_x_15_address0;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_x_15_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_x_16_address0;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_x_16_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_x_17_address0;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_x_17_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_x_18_address0;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_x_18_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_x_19_address0;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_x_19_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_x_20_address0;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_x_20_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_x_21_address0;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_x_21_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_x_22_address0;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_x_22_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_x_23_address0;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_x_23_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_x_24_address0;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_x_24_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_x_25_address0;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_x_25_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_x_26_address0;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_x_26_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_x_27_address0;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_x_27_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_x_28_address0;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_x_28_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_x_29_address0;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_x_29_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_x_30_address0;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_x_30_ce0;
-wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_299_x_31_address0;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_x_31_ce0;
-wire   [31:0] grp_float_layernorm_Pipeline_ln_2_fu_299_grp_fu_433_p_din0;
-wire   [31:0] grp_float_layernorm_Pipeline_ln_2_fu_299_grp_fu_433_p_din1;
-wire   [0:0] grp_float_layernorm_Pipeline_ln_2_fu_299_grp_fu_433_p_opcode;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_grp_fu_433_p_ce;
-wire   [31:0] grp_float_layernorm_Pipeline_ln_2_fu_299_grp_fu_517_p_din0;
-wire   [31:0] grp_float_layernorm_Pipeline_ln_2_fu_299_grp_fu_517_p_din1;
-wire    grp_float_layernorm_Pipeline_ln_2_fu_299_grp_fu_517_p_ce;
+wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_401_p_din0;
+wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_401_p_din1;
+wire   [1:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_401_p_opcode;
+wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_401_p_ce;
+wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_465_p_din0;
+wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_465_p_din1;
+wire   [1:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_465_p_opcode;
+wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_465_p_ce;
+wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_469_p_din0;
+wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_469_p_din1;
+wire   [1:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_469_p_opcode;
+wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_469_p_ce;
+wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_473_p_din0;
+wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_473_p_din1;
+wire   [1:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_473_p_opcode;
+wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_473_p_ce;
+wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_477_p_din0;
+wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_477_p_din1;
+wire   [1:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_477_p_opcode;
+wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_477_p_ce;
+wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_481_p_din0;
+wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_481_p_din1;
+wire   [1:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_481_p_opcode;
+wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_481_p_ce;
+wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_485_p_din0;
+wire   [31:0] grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_485_p_din1;
+wire    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_485_p_ce;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_ap_start;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_ap_done;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_ap_idle;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_ap_ready;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_31_address1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_31_ce1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_31_we1;
+wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_31_d1;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_30_address1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_30_ce1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_30_we1;
+wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_30_d1;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_29_address1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_29_ce1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_29_we1;
+wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_29_d1;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_28_address1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_28_ce1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_28_we1;
+wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_28_d1;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_27_address1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_27_ce1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_27_we1;
+wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_27_d1;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_26_address1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_26_ce1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_26_we1;
+wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_26_d1;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_25_address1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_25_ce1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_25_we1;
+wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_25_d1;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_24_address1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_24_ce1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_24_we1;
+wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_24_d1;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_23_address1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_23_ce1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_23_we1;
+wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_23_d1;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_22_address1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_22_ce1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_22_we1;
+wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_22_d1;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_21_address1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_21_ce1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_21_we1;
+wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_21_d1;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_20_address1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_20_ce1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_20_we1;
+wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_20_d1;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_19_address1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_19_ce1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_19_we1;
+wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_19_d1;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_18_address1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_18_ce1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_18_we1;
+wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_18_d1;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_17_address1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_17_ce1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_17_we1;
+wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_17_d1;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_16_address1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_16_ce1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_16_we1;
+wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_16_d1;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_15_address1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_15_ce1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_15_we1;
+wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_15_d1;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_14_address1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_14_ce1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_14_we1;
+wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_14_d1;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_13_address1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_13_ce1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_13_we1;
+wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_13_d1;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_12_address1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_12_ce1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_12_we1;
+wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_12_d1;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_11_address1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_11_ce1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_11_we1;
+wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_11_d1;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_10_address1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_10_ce1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_10_we1;
+wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_10_d1;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_9_address1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_9_ce1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_9_we1;
+wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_9_d1;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_8_address1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_8_ce1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_8_we1;
+wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_8_d1;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_7_address1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_7_ce1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_7_we1;
+wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_7_d1;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_6_address1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_6_ce1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_6_we1;
+wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_6_d1;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_5_address1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_5_ce1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_5_we1;
+wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_5_d1;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_4_address1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_4_ce1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_4_we1;
+wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_4_d1;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_3_address1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_3_ce1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_3_we1;
+wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_3_d1;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_2_address1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_2_ce1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_2_we1;
+wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_2_d1;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_1_address1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_1_ce1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_1_we1;
+wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_1_d1;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_0_address1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_0_ce1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_0_we1;
+wire   [15:0] grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_0_d1;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_x_0_address0;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_x_0_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_x_1_address0;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_x_1_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_x_2_address0;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_x_2_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_x_3_address0;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_x_3_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_x_4_address0;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_x_4_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_x_5_address0;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_x_5_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_x_6_address0;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_x_6_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_x_7_address0;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_x_7_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_x_8_address0;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_x_8_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_x_9_address0;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_x_9_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_x_10_address0;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_x_10_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_x_11_address0;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_x_11_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_x_12_address0;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_x_12_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_x_13_address0;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_x_13_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_x_14_address0;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_x_14_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_x_15_address0;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_x_15_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_x_16_address0;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_x_16_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_x_17_address0;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_x_17_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_x_18_address0;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_x_18_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_x_19_address0;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_x_19_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_x_20_address0;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_x_20_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_x_21_address0;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_x_21_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_x_22_address0;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_x_22_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_x_23_address0;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_x_23_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_x_24_address0;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_x_24_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_x_25_address0;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_x_25_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_x_26_address0;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_x_26_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_x_27_address0;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_x_27_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_x_28_address0;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_x_28_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_x_29_address0;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_x_29_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_x_30_address0;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_x_30_ce0;
+wire   [4:0] grp_float_layernorm_Pipeline_ln_2_fu_267_x_31_address0;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_x_31_ce0;
+wire   [31:0] grp_float_layernorm_Pipeline_ln_2_fu_267_grp_fu_401_p_din0;
+wire   [31:0] grp_float_layernorm_Pipeline_ln_2_fu_267_grp_fu_401_p_din1;
+wire   [0:0] grp_float_layernorm_Pipeline_ln_2_fu_267_grp_fu_401_p_opcode;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_grp_fu_401_p_ce;
+wire   [31:0] grp_float_layernorm_Pipeline_ln_2_fu_267_grp_fu_485_p_din0;
+wire   [31:0] grp_float_layernorm_Pipeline_ln_2_fu_267_grp_fu_485_p_din1;
+wire    grp_float_layernorm_Pipeline_ln_2_fu_267_grp_fu_485_p_ce;
 reg    grp_float_layernorm_Pipeline_layer_loop_0_fu_160_ap_start_reg;
 wire    ap_CS_fsm_state2;
 reg    grp_float_layernorm_Pipeline_layer_loop_1_fu_229_ap_start_reg;
 wire    ap_CS_fsm_state12;
-reg    grp_float_layernorm_Pipeline_ln_2_fu_299_ap_start_reg;
+reg    grp_float_layernorm_Pipeline_ln_2_fu_267_ap_start_reg;
 wire    ap_CS_fsm_state36;
 wire    ap_CS_fsm_state13;
 wire    ap_CS_fsm_state3;
-reg   [31:0] grp_fu_433_p0;
-reg   [31:0] grp_fu_433_p1;
+reg   [31:0] grp_fu_401_p0;
+reg   [31:0] grp_fu_401_p1;
 wire    ap_CS_fsm_state22;
-reg   [31:0] grp_fu_438_p0;
+reg   [31:0] grp_fu_406_p0;
 wire    ap_CS_fsm_state26;
-reg   [1:0] grp_fu_433_opcode;
-reg    grp_fu_433_ce;
-reg   [31:0] grp_fu_497_p0;
-reg   [31:0] grp_fu_497_p1;
-reg   [1:0] grp_fu_497_opcode;
-reg    grp_fu_497_ce;
-reg   [31:0] grp_fu_501_p0;
-reg   [31:0] grp_fu_501_p1;
-reg   [1:0] grp_fu_501_opcode;
-reg    grp_fu_501_ce;
-reg   [31:0] grp_fu_505_p0;
-reg   [31:0] grp_fu_505_p1;
-reg    grp_fu_505_ce;
-reg    grp_fu_509_ce;
-reg    grp_fu_513_ce;
-reg   [31:0] grp_fu_517_p0;
-reg   [31:0] grp_fu_517_p1;
-reg    grp_fu_517_ce;
+reg   [1:0] grp_fu_401_opcode;
+reg    grp_fu_401_ce;
+reg   [31:0] grp_fu_465_p0;
+reg   [31:0] grp_fu_465_p1;
+reg   [1:0] grp_fu_465_opcode;
+reg    grp_fu_465_ce;
+reg   [31:0] grp_fu_469_p0;
+reg   [31:0] grp_fu_469_p1;
+reg   [1:0] grp_fu_469_opcode;
+reg    grp_fu_469_ce;
+reg   [31:0] grp_fu_473_p0;
+reg   [31:0] grp_fu_473_p1;
+reg   [1:0] grp_fu_473_opcode;
+reg    grp_fu_473_ce;
+reg   [31:0] grp_fu_477_p0;
+reg   [31:0] grp_fu_477_p1;
+reg   [1:0] grp_fu_477_opcode;
+reg    grp_fu_477_ce;
+reg   [31:0] grp_fu_481_p0;
+reg   [31:0] grp_fu_481_p1;
+reg    grp_fu_481_ce;
+reg   [31:0] grp_fu_485_p0;
+reg   [31:0] grp_fu_485_p1;
+reg    grp_fu_485_ce;
 reg   [35:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
 reg    ap_ST_fsm_state2_blk;
@@ -1124,7 +1106,7 @@ initial begin
 #0 ap_CS_fsm = 36'd1;
 #0 grp_float_layernorm_Pipeline_layer_loop_0_fu_160_ap_start_reg = 1'b0;
 #0 grp_float_layernorm_Pipeline_layer_loop_1_fu_229_ap_start_reg = 1'b0;
-#0 grp_float_layernorm_Pipeline_ln_2_fu_299_ap_start_reg = 1'b0;
+#0 grp_float_layernorm_Pipeline_ln_2_fu_267_ap_start_reg = 1'b0;
 end
 
 activation_accelerator_float_layernorm_Pipeline_layer_loop_0 grp_float_layernorm_Pipeline_layer_loop_0_fu_160(
@@ -1137,121 +1119,131 @@ activation_accelerator_float_layernorm_Pipeline_layer_loop_0 grp_float_layernorm
     .x_0_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_0_address0),
     .x_0_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_0_ce0),
     .x_0_q0(x_0_q0),
-    .x_8_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_8_address0),
-    .x_8_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_8_ce0),
-    .x_8_q0(x_8_q0),
     .x_16_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_16_address0),
     .x_16_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_16_ce0),
     .x_16_q0(x_16_q0),
-    .x_24_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_24_address0),
-    .x_24_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_24_ce0),
-    .x_24_q0(x_24_q0),
     .x_1_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_1_address0),
     .x_1_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_1_ce0),
     .x_1_q0(x_1_q0),
-    .x_9_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_9_address0),
-    .x_9_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_9_ce0),
-    .x_9_q0(x_9_q0),
     .x_17_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_17_address0),
     .x_17_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_17_ce0),
     .x_17_q0(x_17_q0),
-    .x_25_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_25_address0),
-    .x_25_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_25_ce0),
-    .x_25_q0(x_25_q0),
     .x_2_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_2_address0),
     .x_2_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_2_ce0),
     .x_2_q0(x_2_q0),
-    .x_10_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_10_address0),
-    .x_10_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_10_ce0),
-    .x_10_q0(x_10_q0),
     .x_18_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_18_address0),
     .x_18_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_18_ce0),
     .x_18_q0(x_18_q0),
-    .x_26_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_26_address0),
-    .x_26_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_26_ce0),
-    .x_26_q0(x_26_q0),
     .x_3_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_3_address0),
     .x_3_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_3_ce0),
     .x_3_q0(x_3_q0),
-    .x_11_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_11_address0),
-    .x_11_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_11_ce0),
-    .x_11_q0(x_11_q0),
     .x_19_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_19_address0),
     .x_19_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_19_ce0),
     .x_19_q0(x_19_q0),
-    .x_27_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_27_address0),
-    .x_27_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_27_ce0),
-    .x_27_q0(x_27_q0),
     .x_4_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_4_address0),
     .x_4_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_4_ce0),
     .x_4_q0(x_4_q0),
-    .x_12_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_12_address0),
-    .x_12_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_12_ce0),
-    .x_12_q0(x_12_q0),
     .x_20_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_20_address0),
     .x_20_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_20_ce0),
     .x_20_q0(x_20_q0),
-    .x_28_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_28_address0),
-    .x_28_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_28_ce0),
-    .x_28_q0(x_28_q0),
     .x_5_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_5_address0),
     .x_5_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_5_ce0),
     .x_5_q0(x_5_q0),
-    .x_13_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_13_address0),
-    .x_13_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_13_ce0),
-    .x_13_q0(x_13_q0),
     .x_21_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_21_address0),
     .x_21_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_21_ce0),
     .x_21_q0(x_21_q0),
-    .x_29_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_29_address0),
-    .x_29_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_29_ce0),
-    .x_29_q0(x_29_q0),
     .x_6_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_6_address0),
     .x_6_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_6_ce0),
     .x_6_q0(x_6_q0),
-    .x_14_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_14_address0),
-    .x_14_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_14_ce0),
-    .x_14_q0(x_14_q0),
     .x_22_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_22_address0),
     .x_22_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_22_ce0),
     .x_22_q0(x_22_q0),
-    .x_30_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_30_address0),
-    .x_30_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_30_ce0),
-    .x_30_q0(x_30_q0),
     .x_7_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_7_address0),
     .x_7_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_7_ce0),
     .x_7_q0(x_7_q0),
-    .x_15_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_15_address0),
-    .x_15_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_15_ce0),
-    .x_15_q0(x_15_q0),
     .x_23_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_23_address0),
     .x_23_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_23_ce0),
     .x_23_q0(x_23_q0),
+    .x_8_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_8_address0),
+    .x_8_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_8_ce0),
+    .x_8_q0(x_8_q0),
+    .x_24_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_24_address0),
+    .x_24_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_24_ce0),
+    .x_24_q0(x_24_q0),
+    .x_9_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_9_address0),
+    .x_9_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_9_ce0),
+    .x_9_q0(x_9_q0),
+    .x_25_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_25_address0),
+    .x_25_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_25_ce0),
+    .x_25_q0(x_25_q0),
+    .x_10_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_10_address0),
+    .x_10_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_10_ce0),
+    .x_10_q0(x_10_q0),
+    .x_26_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_26_address0),
+    .x_26_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_26_ce0),
+    .x_26_q0(x_26_q0),
+    .x_11_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_11_address0),
+    .x_11_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_11_ce0),
+    .x_11_q0(x_11_q0),
+    .x_27_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_27_address0),
+    .x_27_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_27_ce0),
+    .x_27_q0(x_27_q0),
+    .x_12_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_12_address0),
+    .x_12_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_12_ce0),
+    .x_12_q0(x_12_q0),
+    .x_28_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_28_address0),
+    .x_28_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_28_ce0),
+    .x_28_q0(x_28_q0),
+    .x_13_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_13_address0),
+    .x_13_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_13_ce0),
+    .x_13_q0(x_13_q0),
+    .x_29_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_29_address0),
+    .x_29_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_29_ce0),
+    .x_29_q0(x_29_q0),
+    .x_14_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_14_address0),
+    .x_14_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_14_ce0),
+    .x_14_q0(x_14_q0),
+    .x_30_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_30_address0),
+    .x_30_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_30_ce0),
+    .x_30_q0(x_30_q0),
+    .x_15_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_15_address0),
+    .x_15_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_15_ce0),
+    .x_15_q0(x_15_q0),
     .x_31_address0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_31_address0),
     .x_31_ce0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_31_ce0),
     .x_31_q0(x_31_q0),
     .sum_out(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_sum_out),
     .sum_out_ap_vld(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_sum_out_ap_vld),
-    .grp_fu_433_p_din0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_433_p_din0),
-    .grp_fu_433_p_din1(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_433_p_din1),
-    .grp_fu_433_p_opcode(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_433_p_opcode),
-    .grp_fu_433_p_dout0(grp_fu_2042_p_dout0),
-    .grp_fu_433_p_ce(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_433_p_ce),
-    .grp_fu_497_p_din0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_497_p_din0),
-    .grp_fu_497_p_din1(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_497_p_din1),
-    .grp_fu_497_p_opcode(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_497_p_opcode),
-    .grp_fu_497_p_dout0(grp_fu_2058_p_dout0),
-    .grp_fu_497_p_ce(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_497_p_ce),
-    .grp_fu_501_p_din0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_501_p_din0),
-    .grp_fu_501_p_din1(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_501_p_din1),
-    .grp_fu_501_p_opcode(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_501_p_opcode),
-    .grp_fu_501_p_dout0(grp_fu_2062_p_dout0),
-    .grp_fu_501_p_ce(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_501_p_ce),
-    .grp_fu_505_p_din0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_505_p_din0),
-    .grp_fu_505_p_din1(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_505_p_din1),
-    .grp_fu_505_p_opcode(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_505_p_opcode),
-    .grp_fu_505_p_dout0(grp_fu_2074_p_dout0),
-    .grp_fu_505_p_ce(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_505_p_ce)
+    .grp_fu_401_p_din0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_401_p_din0),
+    .grp_fu_401_p_din1(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_401_p_din1),
+    .grp_fu_401_p_opcode(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_401_p_opcode),
+    .grp_fu_401_p_dout0(grp_fu_2042_p_dout0),
+    .grp_fu_401_p_ce(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_401_p_ce),
+    .grp_fu_465_p_din0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_465_p_din0),
+    .grp_fu_465_p_din1(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_465_p_din1),
+    .grp_fu_465_p_opcode(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_465_p_opcode),
+    .grp_fu_465_p_dout0(grp_fu_2058_p_dout0),
+    .grp_fu_465_p_ce(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_465_p_ce),
+    .grp_fu_469_p_din0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_469_p_din0),
+    .grp_fu_469_p_din1(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_469_p_din1),
+    .grp_fu_469_p_opcode(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_469_p_opcode),
+    .grp_fu_469_p_dout0(grp_fu_2062_p_dout0),
+    .grp_fu_469_p_ce(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_469_p_ce),
+    .grp_fu_473_p_din0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_473_p_din0),
+    .grp_fu_473_p_din1(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_473_p_din1),
+    .grp_fu_473_p_opcode(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_473_p_opcode),
+    .grp_fu_473_p_dout0(grp_fu_2066_p_dout0),
+    .grp_fu_473_p_ce(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_473_p_ce),
+    .grp_fu_477_p_din0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_477_p_din0),
+    .grp_fu_477_p_din1(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_477_p_din1),
+    .grp_fu_477_p_opcode(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_477_p_opcode),
+    .grp_fu_477_p_dout0(grp_fu_2070_p_dout0),
+    .grp_fu_477_p_ce(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_477_p_ce),
+    .grp_fu_481_p_din0(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_481_p_din0),
+    .grp_fu_481_p_din1(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_481_p_din1),
+    .grp_fu_481_p_opcode(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_481_p_opcode),
+    .grp_fu_481_p_dout0(grp_fu_2074_p_dout0),
+    .grp_fu_481_p_ce(grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_481_p_ce)
 );
 
 activation_accelerator_float_layernorm_Pipeline_layer_loop_1 grp_float_layernorm_Pipeline_layer_loop_1_fu_229(
@@ -1264,380 +1256,332 @@ activation_accelerator_float_layernorm_Pipeline_layer_loop_1 grp_float_layernorm
     .x_0_address0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_0_address0),
     .x_0_ce0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_0_ce0),
     .x_0_q0(x_0_q0),
-    .x_8_address0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_8_address0),
-    .x_8_ce0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_8_ce0),
-    .x_8_q0(x_8_q0),
     .x_16_address0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_16_address0),
     .x_16_ce0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_16_ce0),
     .x_16_q0(x_16_q0),
-    .x_24_address0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_24_address0),
-    .x_24_ce0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_24_ce0),
-    .x_24_q0(x_24_q0),
-    .mean(mean_reg_473),
+    .mean(mean_reg_441),
     .x_1_address0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_1_address0),
     .x_1_ce0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_1_ce0),
     .x_1_q0(x_1_q0),
-    .x_9_address0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_9_address0),
-    .x_9_ce0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_9_ce0),
-    .x_9_q0(x_9_q0),
     .x_17_address0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_17_address0),
     .x_17_ce0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_17_ce0),
     .x_17_q0(x_17_q0),
-    .x_25_address0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_25_address0),
-    .x_25_ce0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_25_ce0),
-    .x_25_q0(x_25_q0),
     .x_2_address0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_2_address0),
     .x_2_ce0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_2_ce0),
     .x_2_q0(x_2_q0),
-    .x_10_address0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_10_address0),
-    .x_10_ce0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_10_ce0),
-    .x_10_q0(x_10_q0),
     .x_18_address0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_18_address0),
     .x_18_ce0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_18_ce0),
     .x_18_q0(x_18_q0),
-    .x_26_address0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_26_address0),
-    .x_26_ce0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_26_ce0),
-    .x_26_q0(x_26_q0),
     .x_3_address0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_3_address0),
     .x_3_ce0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_3_ce0),
     .x_3_q0(x_3_q0),
-    .x_11_address0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_11_address0),
-    .x_11_ce0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_11_ce0),
-    .x_11_q0(x_11_q0),
     .x_19_address0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_19_address0),
     .x_19_ce0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_19_ce0),
     .x_19_q0(x_19_q0),
-    .x_27_address0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_27_address0),
-    .x_27_ce0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_27_ce0),
-    .x_27_q0(x_27_q0),
     .x_4_address0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_4_address0),
     .x_4_ce0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_4_ce0),
     .x_4_q0(x_4_q0),
-    .x_12_address0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_12_address0),
-    .x_12_ce0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_12_ce0),
-    .x_12_q0(x_12_q0),
     .x_20_address0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_20_address0),
     .x_20_ce0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_20_ce0),
     .x_20_q0(x_20_q0),
-    .x_28_address0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_28_address0),
-    .x_28_ce0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_28_ce0),
-    .x_28_q0(x_28_q0),
     .x_5_address0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_5_address0),
     .x_5_ce0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_5_ce0),
     .x_5_q0(x_5_q0),
-    .x_13_address0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_13_address0),
-    .x_13_ce0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_13_ce0),
-    .x_13_q0(x_13_q0),
     .x_21_address0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_21_address0),
     .x_21_ce0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_21_ce0),
     .x_21_q0(x_21_q0),
-    .x_29_address0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_29_address0),
-    .x_29_ce0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_29_ce0),
-    .x_29_q0(x_29_q0),
     .x_6_address0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_6_address0),
     .x_6_ce0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_6_ce0),
     .x_6_q0(x_6_q0),
-    .x_14_address0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_14_address0),
-    .x_14_ce0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_14_ce0),
-    .x_14_q0(x_14_q0),
     .x_22_address0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_22_address0),
     .x_22_ce0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_22_ce0),
     .x_22_q0(x_22_q0),
-    .x_30_address0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_30_address0),
-    .x_30_ce0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_30_ce0),
-    .x_30_q0(x_30_q0),
     .x_7_address0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_7_address0),
     .x_7_ce0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_7_ce0),
     .x_7_q0(x_7_q0),
-    .x_15_address0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_15_address0),
-    .x_15_ce0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_15_ce0),
-    .x_15_q0(x_15_q0),
     .x_23_address0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_23_address0),
     .x_23_ce0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_23_ce0),
     .x_23_q0(x_23_q0),
-    .x_31_address0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_31_address0),
-    .x_31_ce0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_31_ce0),
-    .x_31_q0(x_31_q0),
     .var_out(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_var_out),
     .var_out_ap_vld(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_var_out_ap_vld),
-    .grp_fu_433_p_din0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_433_p_din0),
-    .grp_fu_433_p_din1(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_433_p_din1),
-    .grp_fu_433_p_opcode(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_433_p_opcode),
-    .grp_fu_433_p_dout0(grp_fu_2042_p_dout0),
-    .grp_fu_433_p_ce(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_433_p_ce),
-    .grp_fu_497_p_din0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_497_p_din0),
-    .grp_fu_497_p_din1(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_497_p_din1),
-    .grp_fu_497_p_opcode(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_497_p_opcode),
-    .grp_fu_497_p_dout0(grp_fu_2058_p_dout0),
-    .grp_fu_497_p_ce(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_497_p_ce),
-    .grp_fu_501_p_din0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_501_p_din0),
-    .grp_fu_501_p_din1(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_501_p_din1),
-    .grp_fu_501_p_opcode(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_501_p_opcode),
-    .grp_fu_501_p_dout0(grp_fu_2062_p_dout0),
-    .grp_fu_501_p_ce(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_501_p_ce),
-    .grp_fu_509_p_din0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_509_p_din0),
-    .grp_fu_509_p_din1(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_509_p_din1),
-    .grp_fu_509_p_opcode(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_509_p_opcode),
-    .grp_fu_509_p_dout0(grp_fu_2066_p_dout0),
-    .grp_fu_509_p_ce(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_509_p_ce),
-    .grp_fu_513_p_din0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_513_p_din0),
-    .grp_fu_513_p_din1(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_513_p_din1),
-    .grp_fu_513_p_opcode(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_513_p_opcode),
-    .grp_fu_513_p_dout0(grp_fu_2070_p_dout0),
-    .grp_fu_513_p_ce(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_513_p_ce),
-    .grp_fu_505_p_din0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_505_p_din0),
-    .grp_fu_505_p_din1(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_505_p_din1),
-    .grp_fu_505_p_opcode(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_505_p_opcode),
-    .grp_fu_505_p_dout0(grp_fu_2074_p_dout0),
-    .grp_fu_505_p_ce(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_505_p_ce),
-    .grp_fu_517_p_din0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_517_p_din0),
-    .grp_fu_517_p_din1(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_517_p_din1),
-    .grp_fu_517_p_dout0(grp_fu_2046_p_dout0),
-    .grp_fu_517_p_ce(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_517_p_ce)
+    .grp_fu_401_p_din0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_401_p_din0),
+    .grp_fu_401_p_din1(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_401_p_din1),
+    .grp_fu_401_p_opcode(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_401_p_opcode),
+    .grp_fu_401_p_dout0(grp_fu_2042_p_dout0),
+    .grp_fu_401_p_ce(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_401_p_ce),
+    .grp_fu_465_p_din0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_465_p_din0),
+    .grp_fu_465_p_din1(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_465_p_din1),
+    .grp_fu_465_p_opcode(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_465_p_opcode),
+    .grp_fu_465_p_dout0(grp_fu_2058_p_dout0),
+    .grp_fu_465_p_ce(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_465_p_ce),
+    .grp_fu_469_p_din0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_469_p_din0),
+    .grp_fu_469_p_din1(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_469_p_din1),
+    .grp_fu_469_p_opcode(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_469_p_opcode),
+    .grp_fu_469_p_dout0(grp_fu_2062_p_dout0),
+    .grp_fu_469_p_ce(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_469_p_ce),
+    .grp_fu_473_p_din0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_473_p_din0),
+    .grp_fu_473_p_din1(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_473_p_din1),
+    .grp_fu_473_p_opcode(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_473_p_opcode),
+    .grp_fu_473_p_dout0(grp_fu_2066_p_dout0),
+    .grp_fu_473_p_ce(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_473_p_ce),
+    .grp_fu_477_p_din0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_477_p_din0),
+    .grp_fu_477_p_din1(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_477_p_din1),
+    .grp_fu_477_p_opcode(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_477_p_opcode),
+    .grp_fu_477_p_dout0(grp_fu_2070_p_dout0),
+    .grp_fu_477_p_ce(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_477_p_ce),
+    .grp_fu_481_p_din0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_481_p_din0),
+    .grp_fu_481_p_din1(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_481_p_din1),
+    .grp_fu_481_p_opcode(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_481_p_opcode),
+    .grp_fu_481_p_dout0(grp_fu_2074_p_dout0),
+    .grp_fu_481_p_ce(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_481_p_ce),
+    .grp_fu_485_p_din0(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_485_p_din0),
+    .grp_fu_485_p_din1(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_485_p_din1),
+    .grp_fu_485_p_dout0(grp_fu_2046_p_dout0),
+    .grp_fu_485_p_ce(grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_485_p_ce)
 );
 
-activation_accelerator_float_layernorm_Pipeline_ln_2 grp_float_layernorm_Pipeline_ln_2_fu_299(
+activation_accelerator_float_layernorm_Pipeline_ln_2 grp_float_layernorm_Pipeline_ln_2_fu_267(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(grp_float_layernorm_Pipeline_ln_2_fu_299_ap_start),
-    .ap_done(grp_float_layernorm_Pipeline_ln_2_fu_299_ap_done),
-    .ap_idle(grp_float_layernorm_Pipeline_ln_2_fu_299_ap_idle),
-    .ap_ready(grp_float_layernorm_Pipeline_ln_2_fu_299_ap_ready),
-    .y_bf16_31_address1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_31_address1),
-    .y_bf16_31_ce1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_31_ce1),
-    .y_bf16_31_we1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_31_we1),
-    .y_bf16_31_d1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_31_d1),
-    .y_bf16_30_address1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_30_address1),
-    .y_bf16_30_ce1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_30_ce1),
-    .y_bf16_30_we1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_30_we1),
-    .y_bf16_30_d1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_30_d1),
-    .y_bf16_29_address1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_29_address1),
-    .y_bf16_29_ce1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_29_ce1),
-    .y_bf16_29_we1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_29_we1),
-    .y_bf16_29_d1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_29_d1),
-    .y_bf16_28_address1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_28_address1),
-    .y_bf16_28_ce1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_28_ce1),
-    .y_bf16_28_we1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_28_we1),
-    .y_bf16_28_d1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_28_d1),
-    .y_bf16_27_address1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_27_address1),
-    .y_bf16_27_ce1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_27_ce1),
-    .y_bf16_27_we1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_27_we1),
-    .y_bf16_27_d1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_27_d1),
-    .y_bf16_26_address1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_26_address1),
-    .y_bf16_26_ce1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_26_ce1),
-    .y_bf16_26_we1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_26_we1),
-    .y_bf16_26_d1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_26_d1),
-    .y_bf16_25_address1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_25_address1),
-    .y_bf16_25_ce1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_25_ce1),
-    .y_bf16_25_we1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_25_we1),
-    .y_bf16_25_d1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_25_d1),
-    .y_bf16_24_address1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_24_address1),
-    .y_bf16_24_ce1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_24_ce1),
-    .y_bf16_24_we1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_24_we1),
-    .y_bf16_24_d1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_24_d1),
-    .y_bf16_23_address1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_23_address1),
-    .y_bf16_23_ce1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_23_ce1),
-    .y_bf16_23_we1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_23_we1),
-    .y_bf16_23_d1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_23_d1),
-    .y_bf16_22_address1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_22_address1),
-    .y_bf16_22_ce1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_22_ce1),
-    .y_bf16_22_we1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_22_we1),
-    .y_bf16_22_d1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_22_d1),
-    .y_bf16_21_address1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_21_address1),
-    .y_bf16_21_ce1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_21_ce1),
-    .y_bf16_21_we1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_21_we1),
-    .y_bf16_21_d1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_21_d1),
-    .y_bf16_20_address1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_20_address1),
-    .y_bf16_20_ce1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_20_ce1),
-    .y_bf16_20_we1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_20_we1),
-    .y_bf16_20_d1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_20_d1),
-    .y_bf16_19_address1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_19_address1),
-    .y_bf16_19_ce1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_19_ce1),
-    .y_bf16_19_we1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_19_we1),
-    .y_bf16_19_d1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_19_d1),
-    .y_bf16_18_address1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_18_address1),
-    .y_bf16_18_ce1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_18_ce1),
-    .y_bf16_18_we1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_18_we1),
-    .y_bf16_18_d1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_18_d1),
-    .y_bf16_17_address1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_17_address1),
-    .y_bf16_17_ce1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_17_ce1),
-    .y_bf16_17_we1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_17_we1),
-    .y_bf16_17_d1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_17_d1),
-    .y_bf16_16_address1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_16_address1),
-    .y_bf16_16_ce1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_16_ce1),
-    .y_bf16_16_we1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_16_we1),
-    .y_bf16_16_d1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_16_d1),
-    .y_bf16_15_address1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_15_address1),
-    .y_bf16_15_ce1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_15_ce1),
-    .y_bf16_15_we1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_15_we1),
-    .y_bf16_15_d1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_15_d1),
-    .y_bf16_14_address1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_14_address1),
-    .y_bf16_14_ce1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_14_ce1),
-    .y_bf16_14_we1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_14_we1),
-    .y_bf16_14_d1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_14_d1),
-    .y_bf16_13_address1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_13_address1),
-    .y_bf16_13_ce1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_13_ce1),
-    .y_bf16_13_we1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_13_we1),
-    .y_bf16_13_d1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_13_d1),
-    .y_bf16_12_address1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_12_address1),
-    .y_bf16_12_ce1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_12_ce1),
-    .y_bf16_12_we1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_12_we1),
-    .y_bf16_12_d1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_12_d1),
-    .y_bf16_11_address1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_11_address1),
-    .y_bf16_11_ce1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_11_ce1),
-    .y_bf16_11_we1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_11_we1),
-    .y_bf16_11_d1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_11_d1),
-    .y_bf16_10_address1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_10_address1),
-    .y_bf16_10_ce1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_10_ce1),
-    .y_bf16_10_we1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_10_we1),
-    .y_bf16_10_d1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_10_d1),
-    .y_bf16_9_address1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_9_address1),
-    .y_bf16_9_ce1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_9_ce1),
-    .y_bf16_9_we1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_9_we1),
-    .y_bf16_9_d1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_9_d1),
-    .y_bf16_8_address1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_8_address1),
-    .y_bf16_8_ce1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_8_ce1),
-    .y_bf16_8_we1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_8_we1),
-    .y_bf16_8_d1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_8_d1),
-    .y_bf16_7_address1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_7_address1),
-    .y_bf16_7_ce1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_7_ce1),
-    .y_bf16_7_we1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_7_we1),
-    .y_bf16_7_d1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_7_d1),
-    .y_bf16_6_address1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_6_address1),
-    .y_bf16_6_ce1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_6_ce1),
-    .y_bf16_6_we1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_6_we1),
-    .y_bf16_6_d1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_6_d1),
-    .y_bf16_5_address1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_5_address1),
-    .y_bf16_5_ce1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_5_ce1),
-    .y_bf16_5_we1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_5_we1),
-    .y_bf16_5_d1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_5_d1),
-    .y_bf16_4_address1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_4_address1),
-    .y_bf16_4_ce1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_4_ce1),
-    .y_bf16_4_we1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_4_we1),
-    .y_bf16_4_d1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_4_d1),
-    .y_bf16_3_address1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_3_address1),
-    .y_bf16_3_ce1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_3_ce1),
-    .y_bf16_3_we1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_3_we1),
-    .y_bf16_3_d1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_3_d1),
-    .y_bf16_2_address1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_2_address1),
-    .y_bf16_2_ce1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_2_ce1),
-    .y_bf16_2_we1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_2_we1),
-    .y_bf16_2_d1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_2_d1),
-    .y_bf16_1_address1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_1_address1),
-    .y_bf16_1_ce1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_1_ce1),
-    .y_bf16_1_we1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_1_we1),
-    .y_bf16_1_d1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_1_d1),
-    .y_bf16_0_address1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_0_address1),
-    .y_bf16_0_ce1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_0_ce1),
-    .y_bf16_0_we1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_0_we1),
-    .y_bf16_0_d1(grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_0_d1),
-    .x_0_address0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_0_address0),
-    .x_0_ce0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_0_ce0),
+    .ap_start(grp_float_layernorm_Pipeline_ln_2_fu_267_ap_start),
+    .ap_done(grp_float_layernorm_Pipeline_ln_2_fu_267_ap_done),
+    .ap_idle(grp_float_layernorm_Pipeline_ln_2_fu_267_ap_idle),
+    .ap_ready(grp_float_layernorm_Pipeline_ln_2_fu_267_ap_ready),
+    .y_bf16_31_address1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_31_address1),
+    .y_bf16_31_ce1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_31_ce1),
+    .y_bf16_31_we1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_31_we1),
+    .y_bf16_31_d1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_31_d1),
+    .y_bf16_30_address1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_30_address1),
+    .y_bf16_30_ce1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_30_ce1),
+    .y_bf16_30_we1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_30_we1),
+    .y_bf16_30_d1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_30_d1),
+    .y_bf16_29_address1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_29_address1),
+    .y_bf16_29_ce1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_29_ce1),
+    .y_bf16_29_we1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_29_we1),
+    .y_bf16_29_d1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_29_d1),
+    .y_bf16_28_address1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_28_address1),
+    .y_bf16_28_ce1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_28_ce1),
+    .y_bf16_28_we1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_28_we1),
+    .y_bf16_28_d1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_28_d1),
+    .y_bf16_27_address1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_27_address1),
+    .y_bf16_27_ce1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_27_ce1),
+    .y_bf16_27_we1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_27_we1),
+    .y_bf16_27_d1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_27_d1),
+    .y_bf16_26_address1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_26_address1),
+    .y_bf16_26_ce1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_26_ce1),
+    .y_bf16_26_we1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_26_we1),
+    .y_bf16_26_d1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_26_d1),
+    .y_bf16_25_address1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_25_address1),
+    .y_bf16_25_ce1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_25_ce1),
+    .y_bf16_25_we1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_25_we1),
+    .y_bf16_25_d1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_25_d1),
+    .y_bf16_24_address1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_24_address1),
+    .y_bf16_24_ce1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_24_ce1),
+    .y_bf16_24_we1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_24_we1),
+    .y_bf16_24_d1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_24_d1),
+    .y_bf16_23_address1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_23_address1),
+    .y_bf16_23_ce1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_23_ce1),
+    .y_bf16_23_we1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_23_we1),
+    .y_bf16_23_d1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_23_d1),
+    .y_bf16_22_address1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_22_address1),
+    .y_bf16_22_ce1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_22_ce1),
+    .y_bf16_22_we1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_22_we1),
+    .y_bf16_22_d1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_22_d1),
+    .y_bf16_21_address1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_21_address1),
+    .y_bf16_21_ce1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_21_ce1),
+    .y_bf16_21_we1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_21_we1),
+    .y_bf16_21_d1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_21_d1),
+    .y_bf16_20_address1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_20_address1),
+    .y_bf16_20_ce1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_20_ce1),
+    .y_bf16_20_we1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_20_we1),
+    .y_bf16_20_d1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_20_d1),
+    .y_bf16_19_address1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_19_address1),
+    .y_bf16_19_ce1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_19_ce1),
+    .y_bf16_19_we1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_19_we1),
+    .y_bf16_19_d1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_19_d1),
+    .y_bf16_18_address1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_18_address1),
+    .y_bf16_18_ce1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_18_ce1),
+    .y_bf16_18_we1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_18_we1),
+    .y_bf16_18_d1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_18_d1),
+    .y_bf16_17_address1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_17_address1),
+    .y_bf16_17_ce1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_17_ce1),
+    .y_bf16_17_we1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_17_we1),
+    .y_bf16_17_d1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_17_d1),
+    .y_bf16_16_address1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_16_address1),
+    .y_bf16_16_ce1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_16_ce1),
+    .y_bf16_16_we1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_16_we1),
+    .y_bf16_16_d1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_16_d1),
+    .y_bf16_15_address1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_15_address1),
+    .y_bf16_15_ce1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_15_ce1),
+    .y_bf16_15_we1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_15_we1),
+    .y_bf16_15_d1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_15_d1),
+    .y_bf16_14_address1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_14_address1),
+    .y_bf16_14_ce1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_14_ce1),
+    .y_bf16_14_we1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_14_we1),
+    .y_bf16_14_d1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_14_d1),
+    .y_bf16_13_address1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_13_address1),
+    .y_bf16_13_ce1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_13_ce1),
+    .y_bf16_13_we1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_13_we1),
+    .y_bf16_13_d1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_13_d1),
+    .y_bf16_12_address1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_12_address1),
+    .y_bf16_12_ce1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_12_ce1),
+    .y_bf16_12_we1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_12_we1),
+    .y_bf16_12_d1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_12_d1),
+    .y_bf16_11_address1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_11_address1),
+    .y_bf16_11_ce1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_11_ce1),
+    .y_bf16_11_we1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_11_we1),
+    .y_bf16_11_d1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_11_d1),
+    .y_bf16_10_address1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_10_address1),
+    .y_bf16_10_ce1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_10_ce1),
+    .y_bf16_10_we1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_10_we1),
+    .y_bf16_10_d1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_10_d1),
+    .y_bf16_9_address1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_9_address1),
+    .y_bf16_9_ce1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_9_ce1),
+    .y_bf16_9_we1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_9_we1),
+    .y_bf16_9_d1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_9_d1),
+    .y_bf16_8_address1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_8_address1),
+    .y_bf16_8_ce1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_8_ce1),
+    .y_bf16_8_we1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_8_we1),
+    .y_bf16_8_d1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_8_d1),
+    .y_bf16_7_address1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_7_address1),
+    .y_bf16_7_ce1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_7_ce1),
+    .y_bf16_7_we1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_7_we1),
+    .y_bf16_7_d1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_7_d1),
+    .y_bf16_6_address1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_6_address1),
+    .y_bf16_6_ce1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_6_ce1),
+    .y_bf16_6_we1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_6_we1),
+    .y_bf16_6_d1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_6_d1),
+    .y_bf16_5_address1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_5_address1),
+    .y_bf16_5_ce1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_5_ce1),
+    .y_bf16_5_we1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_5_we1),
+    .y_bf16_5_d1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_5_d1),
+    .y_bf16_4_address1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_4_address1),
+    .y_bf16_4_ce1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_4_ce1),
+    .y_bf16_4_we1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_4_we1),
+    .y_bf16_4_d1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_4_d1),
+    .y_bf16_3_address1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_3_address1),
+    .y_bf16_3_ce1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_3_ce1),
+    .y_bf16_3_we1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_3_we1),
+    .y_bf16_3_d1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_3_d1),
+    .y_bf16_2_address1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_2_address1),
+    .y_bf16_2_ce1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_2_ce1),
+    .y_bf16_2_we1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_2_we1),
+    .y_bf16_2_d1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_2_d1),
+    .y_bf16_1_address1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_1_address1),
+    .y_bf16_1_ce1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_1_ce1),
+    .y_bf16_1_we1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_1_we1),
+    .y_bf16_1_d1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_1_d1),
+    .y_bf16_0_address1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_0_address1),
+    .y_bf16_0_ce1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_0_ce1),
+    .y_bf16_0_we1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_0_we1),
+    .y_bf16_0_d1(grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_0_d1),
+    .x_0_address0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_0_address0),
+    .x_0_ce0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_0_ce0),
     .x_0_q0(x_0_q0),
-    .x_1_address0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_1_address0),
-    .x_1_ce0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_1_ce0),
+    .x_1_address0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_1_address0),
+    .x_1_ce0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_1_ce0),
     .x_1_q0(x_1_q0),
-    .x_2_address0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_2_address0),
-    .x_2_ce0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_2_ce0),
+    .x_2_address0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_2_address0),
+    .x_2_ce0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_2_ce0),
     .x_2_q0(x_2_q0),
-    .x_3_address0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_3_address0),
-    .x_3_ce0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_3_ce0),
+    .x_3_address0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_3_address0),
+    .x_3_ce0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_3_ce0),
     .x_3_q0(x_3_q0),
-    .x_4_address0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_4_address0),
-    .x_4_ce0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_4_ce0),
+    .x_4_address0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_4_address0),
+    .x_4_ce0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_4_ce0),
     .x_4_q0(x_4_q0),
-    .x_5_address0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_5_address0),
-    .x_5_ce0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_5_ce0),
+    .x_5_address0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_5_address0),
+    .x_5_ce0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_5_ce0),
     .x_5_q0(x_5_q0),
-    .x_6_address0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_6_address0),
-    .x_6_ce0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_6_ce0),
+    .x_6_address0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_6_address0),
+    .x_6_ce0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_6_ce0),
     .x_6_q0(x_6_q0),
-    .x_7_address0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_7_address0),
-    .x_7_ce0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_7_ce0),
+    .x_7_address0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_7_address0),
+    .x_7_ce0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_7_ce0),
     .x_7_q0(x_7_q0),
-    .x_8_address0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_8_address0),
-    .x_8_ce0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_8_ce0),
+    .x_8_address0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_8_address0),
+    .x_8_ce0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_8_ce0),
     .x_8_q0(x_8_q0),
-    .x_9_address0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_9_address0),
-    .x_9_ce0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_9_ce0),
+    .x_9_address0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_9_address0),
+    .x_9_ce0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_9_ce0),
     .x_9_q0(x_9_q0),
-    .x_10_address0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_10_address0),
-    .x_10_ce0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_10_ce0),
+    .x_10_address0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_10_address0),
+    .x_10_ce0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_10_ce0),
     .x_10_q0(x_10_q0),
-    .x_11_address0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_11_address0),
-    .x_11_ce0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_11_ce0),
+    .x_11_address0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_11_address0),
+    .x_11_ce0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_11_ce0),
     .x_11_q0(x_11_q0),
-    .x_12_address0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_12_address0),
-    .x_12_ce0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_12_ce0),
+    .x_12_address0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_12_address0),
+    .x_12_ce0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_12_ce0),
     .x_12_q0(x_12_q0),
-    .x_13_address0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_13_address0),
-    .x_13_ce0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_13_ce0),
+    .x_13_address0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_13_address0),
+    .x_13_ce0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_13_ce0),
     .x_13_q0(x_13_q0),
-    .x_14_address0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_14_address0),
-    .x_14_ce0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_14_ce0),
+    .x_14_address0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_14_address0),
+    .x_14_ce0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_14_ce0),
     .x_14_q0(x_14_q0),
-    .x_15_address0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_15_address0),
-    .x_15_ce0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_15_ce0),
+    .x_15_address0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_15_address0),
+    .x_15_ce0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_15_ce0),
     .x_15_q0(x_15_q0),
-    .x_16_address0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_16_address0),
-    .x_16_ce0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_16_ce0),
+    .x_16_address0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_16_address0),
+    .x_16_ce0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_16_ce0),
     .x_16_q0(x_16_q0),
-    .x_17_address0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_17_address0),
-    .x_17_ce0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_17_ce0),
+    .x_17_address0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_17_address0),
+    .x_17_ce0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_17_ce0),
     .x_17_q0(x_17_q0),
-    .x_18_address0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_18_address0),
-    .x_18_ce0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_18_ce0),
+    .x_18_address0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_18_address0),
+    .x_18_ce0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_18_ce0),
     .x_18_q0(x_18_q0),
-    .x_19_address0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_19_address0),
-    .x_19_ce0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_19_ce0),
+    .x_19_address0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_19_address0),
+    .x_19_ce0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_19_ce0),
     .x_19_q0(x_19_q0),
-    .x_20_address0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_20_address0),
-    .x_20_ce0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_20_ce0),
+    .x_20_address0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_20_address0),
+    .x_20_ce0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_20_ce0),
     .x_20_q0(x_20_q0),
-    .x_21_address0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_21_address0),
-    .x_21_ce0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_21_ce0),
+    .x_21_address0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_21_address0),
+    .x_21_ce0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_21_ce0),
     .x_21_q0(x_21_q0),
-    .x_22_address0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_22_address0),
-    .x_22_ce0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_22_ce0),
+    .x_22_address0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_22_address0),
+    .x_22_ce0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_22_ce0),
     .x_22_q0(x_22_q0),
-    .x_23_address0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_23_address0),
-    .x_23_ce0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_23_ce0),
+    .x_23_address0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_23_address0),
+    .x_23_ce0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_23_ce0),
     .x_23_q0(x_23_q0),
-    .x_24_address0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_24_address0),
-    .x_24_ce0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_24_ce0),
+    .x_24_address0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_24_address0),
+    .x_24_ce0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_24_ce0),
     .x_24_q0(x_24_q0),
-    .x_25_address0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_25_address0),
-    .x_25_ce0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_25_ce0),
+    .x_25_address0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_25_address0),
+    .x_25_ce0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_25_ce0),
     .x_25_q0(x_25_q0),
-    .x_26_address0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_26_address0),
-    .x_26_ce0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_26_ce0),
+    .x_26_address0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_26_address0),
+    .x_26_ce0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_26_ce0),
     .x_26_q0(x_26_q0),
-    .x_27_address0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_27_address0),
-    .x_27_ce0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_27_ce0),
+    .x_27_address0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_27_address0),
+    .x_27_ce0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_27_ce0),
     .x_27_q0(x_27_q0),
-    .x_28_address0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_28_address0),
-    .x_28_ce0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_28_ce0),
+    .x_28_address0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_28_address0),
+    .x_28_ce0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_28_ce0),
     .x_28_q0(x_28_q0),
-    .x_29_address0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_29_address0),
-    .x_29_ce0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_29_ce0),
+    .x_29_address0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_29_address0),
+    .x_29_ce0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_29_ce0),
     .x_29_q0(x_29_q0),
-    .x_30_address0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_30_address0),
-    .x_30_ce0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_30_ce0),
+    .x_30_address0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_30_address0),
+    .x_30_ce0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_30_ce0),
     .x_30_q0(x_30_q0),
-    .x_31_address0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_31_address0),
-    .x_31_ce0(grp_float_layernorm_Pipeline_ln_2_fu_299_x_31_ce0),
+    .x_31_address0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_31_address0),
+    .x_31_ce0(grp_float_layernorm_Pipeline_ln_2_fu_267_x_31_ce0),
     .x_31_q0(x_31_q0),
-    .mean(mean_reg_473),
-    .inv_std(inv_std_reg_492),
-    .grp_fu_433_p_din0(grp_float_layernorm_Pipeline_ln_2_fu_299_grp_fu_433_p_din0),
-    .grp_fu_433_p_din1(grp_float_layernorm_Pipeline_ln_2_fu_299_grp_fu_433_p_din1),
-    .grp_fu_433_p_opcode(grp_float_layernorm_Pipeline_ln_2_fu_299_grp_fu_433_p_opcode),
-    .grp_fu_433_p_dout0(grp_fu_2042_p_dout0),
-    .grp_fu_433_p_ce(grp_float_layernorm_Pipeline_ln_2_fu_299_grp_fu_433_p_ce),
-    .grp_fu_517_p_din0(grp_float_layernorm_Pipeline_ln_2_fu_299_grp_fu_517_p_din0),
-    .grp_fu_517_p_din1(grp_float_layernorm_Pipeline_ln_2_fu_299_grp_fu_517_p_din1),
-    .grp_fu_517_p_dout0(grp_fu_2046_p_dout0),
-    .grp_fu_517_p_ce(grp_float_layernorm_Pipeline_ln_2_fu_299_grp_fu_517_p_ce)
+    .mean(mean_reg_441),
+    .inv_std(inv_std_reg_460),
+    .grp_fu_401_p_din0(grp_float_layernorm_Pipeline_ln_2_fu_267_grp_fu_401_p_din0),
+    .grp_fu_401_p_din1(grp_float_layernorm_Pipeline_ln_2_fu_267_grp_fu_401_p_din1),
+    .grp_fu_401_p_opcode(grp_float_layernorm_Pipeline_ln_2_fu_267_grp_fu_401_p_opcode),
+    .grp_fu_401_p_dout0(grp_fu_2042_p_dout0),
+    .grp_fu_401_p_ce(grp_float_layernorm_Pipeline_ln_2_fu_267_grp_fu_401_p_ce),
+    .grp_fu_485_p_din0(grp_float_layernorm_Pipeline_ln_2_fu_267_grp_fu_485_p_din0),
+    .grp_fu_485_p_din1(grp_float_layernorm_Pipeline_ln_2_fu_267_grp_fu_485_p_din1),
+    .grp_fu_485_p_dout0(grp_fu_2046_p_dout0),
+    .grp_fu_485_p_ce(grp_float_layernorm_Pipeline_ln_2_fu_267_grp_fu_485_p_ce)
 );
 
 activation_accelerator_frsqrt_32ns_32ns_32_10_full_dsp_1 #(
@@ -1646,13 +1590,13 @@ activation_accelerator_frsqrt_32ns_32ns_32_10_full_dsp_1 #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-frsqrt_32ns_32ns_32_10_full_dsp_1_U732(
+frsqrt_32ns_32ns_32_10_full_dsp_1_U702(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(32'd0),
-    .din1(x_assign_reg_487),
+    .din1(x_assign_reg_455),
     .ce(1'b1),
-    .dout(grp_fu_444_p2)
+    .dout(grp_fu_412_p2)
 );
 
 always @ (posedge ap_clk) begin
@@ -1689,37 +1633,37 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        grp_float_layernorm_Pipeline_ln_2_fu_299_ap_start_reg <= 1'b0;
+        grp_float_layernorm_Pipeline_ln_2_fu_267_ap_start_reg <= 1'b0;
     end else begin
         if ((1'b1 == ap_CS_fsm_state35)) begin
-            grp_float_layernorm_Pipeline_ln_2_fu_299_ap_start_reg <= 1'b1;
-        end else if ((grp_float_layernorm_Pipeline_ln_2_fu_299_ap_ready == 1'b1)) begin
-            grp_float_layernorm_Pipeline_ln_2_fu_299_ap_start_reg <= 1'b0;
+            grp_float_layernorm_Pipeline_ln_2_fu_267_ap_start_reg <= 1'b1;
+        end else if ((grp_float_layernorm_Pipeline_ln_2_fu_267_ap_ready == 1'b1)) begin
+            grp_float_layernorm_Pipeline_ln_2_fu_267_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state21)) begin
-        div_reg_482 <= grp_fu_2050_p_dout0;
+        div_reg_450 <= grp_fu_2050_p_dout0;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state35)) begin
-        inv_std_reg_492 <= grp_fu_444_p2;
+        inv_std_reg_460 <= grp_fu_412_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state11)) begin
-        mean_reg_473 <= grp_fu_2050_p_dout0;
+        mean_reg_441 <= grp_fu_2050_p_dout0;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state25)) begin
-        x_assign_reg_487 <= grp_fu_2042_p_dout0;
+        x_assign_reg_455 <= grp_fu_2042_p_dout0;
     end
 end
 
@@ -1798,7 +1742,7 @@ assign ap_ST_fsm_state34_blk = 1'b0;
 assign ap_ST_fsm_state35_blk = 1'b0;
 
 always @ (*) begin
-    if ((grp_float_layernorm_Pipeline_ln_2_fu_299_ap_done == 1'b0)) begin
+    if ((grp_float_layernorm_Pipeline_ln_2_fu_267_ap_done == 1'b0)) begin
         ap_ST_fsm_state36_blk = 1'b1;
     end else begin
         ap_ST_fsm_state36_blk = 1'b0;
@@ -1820,7 +1764,7 @@ assign ap_ST_fsm_state8_blk = 1'b0;
 assign ap_ST_fsm_state9_blk = 1'b0;
 
 always @ (*) begin
-    if ((((ap_start == 1'b0) & (1'b1 == ap_CS_fsm_state1)) | ((grp_float_layernorm_Pipeline_ln_2_fu_299_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state36)))) begin
+    if ((((ap_start == 1'b0) & (1'b1 == ap_CS_fsm_state1)) | ((grp_float_layernorm_Pipeline_ln_2_fu_267_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state36)))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -1836,7 +1780,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((grp_float_layernorm_Pipeline_ln_2_fu_299_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state36))) begin
+    if (((grp_float_layernorm_Pipeline_ln_2_fu_267_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state36))) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -1845,227 +1789,291 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        grp_fu_433_ce = grp_float_layernorm_Pipeline_ln_2_fu_299_grp_fu_433_p_ce;
+        grp_fu_401_ce = grp_float_layernorm_Pipeline_ln_2_fu_267_grp_fu_401_p_ce;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        grp_fu_433_ce = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_433_p_ce;
+        grp_fu_401_ce = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_401_p_ce;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_433_ce = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_433_p_ce;
+        grp_fu_401_ce = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_401_p_ce;
     end else begin
-        grp_fu_433_ce = 1'b1;
+        grp_fu_401_ce = 1'b1;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        grp_fu_433_opcode = grp_float_layernorm_Pipeline_ln_2_fu_299_grp_fu_433_p_opcode;
+        grp_fu_401_opcode = grp_float_layernorm_Pipeline_ln_2_fu_267_grp_fu_401_p_opcode;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        grp_fu_433_opcode = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_433_p_opcode;
+        grp_fu_401_opcode = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_401_p_opcode;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_433_opcode = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_433_p_opcode;
+        grp_fu_401_opcode = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_401_p_opcode;
     end else if ((1'b1 == ap_CS_fsm_state22)) begin
-        grp_fu_433_opcode = 2'd0;
+        grp_fu_401_opcode = 2'd0;
     end else begin
-        grp_fu_433_opcode = 'bx;
+        grp_fu_401_opcode = 'bx;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        grp_fu_433_p0 = grp_float_layernorm_Pipeline_ln_2_fu_299_grp_fu_433_p_din0;
+        grp_fu_401_p0 = grp_float_layernorm_Pipeline_ln_2_fu_267_grp_fu_401_p_din0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        grp_fu_433_p0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_433_p_din0;
+        grp_fu_401_p0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_401_p_din0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_433_p0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_433_p_din0;
+        grp_fu_401_p0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_401_p_din0;
     end else if ((1'b1 == ap_CS_fsm_state22)) begin
-        grp_fu_433_p0 = div_reg_482;
+        grp_fu_401_p0 = div_reg_450;
     end else begin
-        grp_fu_433_p0 = 'bx;
+        grp_fu_401_p0 = 'bx;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        grp_fu_433_p1 = grp_float_layernorm_Pipeline_ln_2_fu_299_grp_fu_433_p_din1;
+        grp_fu_401_p1 = grp_float_layernorm_Pipeline_ln_2_fu_267_grp_fu_401_p_din1;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        grp_fu_433_p1 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_433_p_din1;
+        grp_fu_401_p1 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_401_p_din1;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_433_p1 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_433_p_din1;
+        grp_fu_401_p1 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_401_p_din1;
     end else if ((1'b1 == ap_CS_fsm_state22)) begin
-        grp_fu_433_p1 = 32'd897988541;
+        grp_fu_401_p1 = 32'd897988541;
     end else begin
-        grp_fu_433_p1 = 'bx;
+        grp_fu_401_p1 = 'bx;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state13)) begin
-        grp_fu_438_p0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_var_out;
+        grp_fu_406_p0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_var_out;
     end else if ((1'b1 == ap_CS_fsm_state3)) begin
-        grp_fu_438_p0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_sum_out;
+        grp_fu_406_p0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_sum_out;
     end else begin
-        grp_fu_438_p0 = 'bx;
+        grp_fu_406_p0 = 'bx;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state12)) begin
-        grp_fu_497_ce = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_497_p_ce;
+        grp_fu_465_ce = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_465_p_ce;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_497_ce = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_497_p_ce;
+        grp_fu_465_ce = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_465_p_ce;
     end else begin
-        grp_fu_497_ce = 1'b1;
+        grp_fu_465_ce = 1'b1;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state12)) begin
-        grp_fu_497_opcode = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_497_p_opcode;
+        grp_fu_465_opcode = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_465_p_opcode;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_497_opcode = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_497_p_opcode;
+        grp_fu_465_opcode = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_465_p_opcode;
     end else begin
-        grp_fu_497_opcode = 'bx;
+        grp_fu_465_opcode = 'bx;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state12)) begin
-        grp_fu_497_p0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_497_p_din0;
+        grp_fu_465_p0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_465_p_din0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_497_p0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_497_p_din0;
+        grp_fu_465_p0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_465_p_din0;
     end else begin
-        grp_fu_497_p0 = 'bx;
+        grp_fu_465_p0 = 'bx;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state12)) begin
-        grp_fu_497_p1 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_497_p_din1;
+        grp_fu_465_p1 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_465_p_din1;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_497_p1 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_497_p_din1;
+        grp_fu_465_p1 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_465_p_din1;
     end else begin
-        grp_fu_497_p1 = 'bx;
+        grp_fu_465_p1 = 'bx;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state12)) begin
-        grp_fu_501_ce = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_501_p_ce;
+        grp_fu_469_ce = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_469_p_ce;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_501_ce = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_501_p_ce;
+        grp_fu_469_ce = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_469_p_ce;
     end else begin
-        grp_fu_501_ce = 1'b1;
+        grp_fu_469_ce = 1'b1;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state12)) begin
-        grp_fu_501_opcode = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_501_p_opcode;
+        grp_fu_469_opcode = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_469_p_opcode;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_501_opcode = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_501_p_opcode;
+        grp_fu_469_opcode = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_469_p_opcode;
     end else begin
-        grp_fu_501_opcode = 'bx;
+        grp_fu_469_opcode = 'bx;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state12)) begin
-        grp_fu_501_p0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_501_p_din0;
+        grp_fu_469_p0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_469_p_din0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_501_p0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_501_p_din0;
+        grp_fu_469_p0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_469_p_din0;
     end else begin
-        grp_fu_501_p0 = 'bx;
+        grp_fu_469_p0 = 'bx;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state12)) begin
-        grp_fu_501_p1 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_501_p_din1;
+        grp_fu_469_p1 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_469_p_din1;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_501_p1 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_501_p_din1;
+        grp_fu_469_p1 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_469_p_din1;
     end else begin
-        grp_fu_501_p1 = 'bx;
+        grp_fu_469_p1 = 'bx;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state12)) begin
-        grp_fu_505_ce = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_505_p_ce;
+        grp_fu_473_ce = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_473_p_ce;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_505_ce = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_505_p_ce;
+        grp_fu_473_ce = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_473_p_ce;
     end else begin
-        grp_fu_505_ce = 1'b1;
+        grp_fu_473_ce = 1'b1;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state12)) begin
-        grp_fu_505_p0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_505_p_din0;
+        grp_fu_473_opcode = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_473_p_opcode;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_505_p0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_505_p_din0;
+        grp_fu_473_opcode = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_473_p_opcode;
     end else begin
-        grp_fu_505_p0 = 'bx;
+        grp_fu_473_opcode = 'bx;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state12)) begin
-        grp_fu_505_p1 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_505_p_din1;
+        grp_fu_473_p0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_473_p_din0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_505_p1 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_505_p_din1;
+        grp_fu_473_p0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_473_p_din0;
     end else begin
-        grp_fu_505_p1 = 'bx;
+        grp_fu_473_p0 = 'bx;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state12)) begin
-        grp_fu_509_ce = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_509_p_ce;
+        grp_fu_473_p1 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_473_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_473_p1 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_473_p_din1;
     end else begin
-        grp_fu_509_ce = 1'b1;
+        grp_fu_473_p1 = 'bx;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state12)) begin
-        grp_fu_513_ce = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_513_p_ce;
+        grp_fu_477_ce = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_477_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_477_ce = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_477_p_ce;
     end else begin
-        grp_fu_513_ce = 1'b1;
+        grp_fu_477_ce = 1'b1;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state12)) begin
+        grp_fu_477_opcode = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_477_p_opcode;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_477_opcode = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_477_p_opcode;
+    end else begin
+        grp_fu_477_opcode = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state12)) begin
+        grp_fu_477_p0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_477_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_477_p0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_477_p_din0;
+    end else begin
+        grp_fu_477_p0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state12)) begin
+        grp_fu_477_p1 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_477_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_477_p1 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_477_p_din1;
+    end else begin
+        grp_fu_477_p1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state12)) begin
+        grp_fu_481_ce = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_481_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_481_ce = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_481_p_ce;
+    end else begin
+        grp_fu_481_ce = 1'b1;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state12)) begin
+        grp_fu_481_p0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_481_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_481_p0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_481_p_din0;
+    end else begin
+        grp_fu_481_p0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state12)) begin
+        grp_fu_481_p1 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_481_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_481_p1 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_grp_fu_481_p_din1;
+    end else begin
+        grp_fu_481_p1 = 'bx;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        grp_fu_517_ce = grp_float_layernorm_Pipeline_ln_2_fu_299_grp_fu_517_p_ce;
+        grp_fu_485_ce = grp_float_layernorm_Pipeline_ln_2_fu_267_grp_fu_485_p_ce;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        grp_fu_517_ce = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_517_p_ce;
+        grp_fu_485_ce = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_485_p_ce;
     end else begin
-        grp_fu_517_ce = 1'b1;
+        grp_fu_485_ce = 1'b1;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        grp_fu_517_p0 = grp_float_layernorm_Pipeline_ln_2_fu_299_grp_fu_517_p_din0;
+        grp_fu_485_p0 = grp_float_layernorm_Pipeline_ln_2_fu_267_grp_fu_485_p_din0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        grp_fu_517_p0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_517_p_din0;
+        grp_fu_485_p0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_485_p_din0;
     end else begin
-        grp_fu_517_p0 = 'bx;
+        grp_fu_485_p0 = 'bx;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        grp_fu_517_p1 = grp_float_layernorm_Pipeline_ln_2_fu_299_grp_fu_517_p_din1;
+        grp_fu_485_p1 = grp_float_layernorm_Pipeline_ln_2_fu_267_grp_fu_485_p_din1;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        grp_fu_517_p1 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_517_p_din1;
+        grp_fu_485_p1 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_485_p_din1;
     end else begin
-        grp_fu_517_p1 = 'bx;
+        grp_fu_485_p1 = 'bx;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_0_address0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_0_address0;
+        x_0_address0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_0_address0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
         x_0_address0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_0_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
@@ -2077,7 +2085,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_0_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_0_ce0;
+        x_0_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_0_ce0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
         x_0_ce0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_0_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
@@ -2089,9 +2097,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_10_address0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_10_address0;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        x_10_address0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_10_address0;
+        x_10_address0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_10_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         x_10_address0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_10_address0;
     end else begin
@@ -2101,9 +2107,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_10_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_10_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        x_10_ce0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_10_ce0;
+        x_10_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_10_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         x_10_ce0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_10_ce0;
     end else begin
@@ -2113,9 +2117,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_11_address0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_11_address0;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        x_11_address0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_11_address0;
+        x_11_address0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_11_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         x_11_address0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_11_address0;
     end else begin
@@ -2125,9 +2127,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_11_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_11_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        x_11_ce0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_11_ce0;
+        x_11_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_11_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         x_11_ce0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_11_ce0;
     end else begin
@@ -2137,9 +2137,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_12_address0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_12_address0;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        x_12_address0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_12_address0;
+        x_12_address0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_12_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         x_12_address0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_12_address0;
     end else begin
@@ -2149,9 +2147,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_12_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_12_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        x_12_ce0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_12_ce0;
+        x_12_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_12_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         x_12_ce0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_12_ce0;
     end else begin
@@ -2161,9 +2157,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_13_address0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_13_address0;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        x_13_address0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_13_address0;
+        x_13_address0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_13_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         x_13_address0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_13_address0;
     end else begin
@@ -2173,9 +2167,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_13_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_13_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        x_13_ce0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_13_ce0;
+        x_13_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_13_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         x_13_ce0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_13_ce0;
     end else begin
@@ -2185,9 +2177,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_14_address0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_14_address0;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        x_14_address0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_14_address0;
+        x_14_address0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_14_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         x_14_address0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_14_address0;
     end else begin
@@ -2197,9 +2187,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_14_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_14_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        x_14_ce0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_14_ce0;
+        x_14_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_14_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         x_14_ce0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_14_ce0;
     end else begin
@@ -2209,9 +2197,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_15_address0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_15_address0;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        x_15_address0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_15_address0;
+        x_15_address0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_15_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         x_15_address0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_15_address0;
     end else begin
@@ -2221,9 +2207,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_15_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_15_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        x_15_ce0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_15_ce0;
+        x_15_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_15_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         x_15_ce0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_15_ce0;
     end else begin
@@ -2233,7 +2217,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_16_address0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_16_address0;
+        x_16_address0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_16_address0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
         x_16_address0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_16_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
@@ -2245,7 +2229,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_16_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_16_ce0;
+        x_16_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_16_ce0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
         x_16_ce0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_16_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
@@ -2257,7 +2241,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_17_address0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_17_address0;
+        x_17_address0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_17_address0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
         x_17_address0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_17_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
@@ -2269,7 +2253,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_17_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_17_ce0;
+        x_17_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_17_ce0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
         x_17_ce0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_17_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
@@ -2281,7 +2265,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_18_address0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_18_address0;
+        x_18_address0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_18_address0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
         x_18_address0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_18_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
@@ -2293,7 +2277,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_18_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_18_ce0;
+        x_18_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_18_ce0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
         x_18_ce0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_18_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
@@ -2305,7 +2289,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_19_address0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_19_address0;
+        x_19_address0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_19_address0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
         x_19_address0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_19_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
@@ -2317,7 +2301,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_19_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_19_ce0;
+        x_19_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_19_ce0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
         x_19_ce0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_19_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
@@ -2329,7 +2313,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_1_address0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_1_address0;
+        x_1_address0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_1_address0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
         x_1_address0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_1_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
@@ -2341,7 +2325,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_1_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_1_ce0;
+        x_1_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_1_ce0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
         x_1_ce0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_1_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
@@ -2353,7 +2337,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_20_address0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_20_address0;
+        x_20_address0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_20_address0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
         x_20_address0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_20_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
@@ -2365,7 +2349,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_20_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_20_ce0;
+        x_20_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_20_ce0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
         x_20_ce0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_20_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
@@ -2377,7 +2361,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_21_address0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_21_address0;
+        x_21_address0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_21_address0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
         x_21_address0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_21_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
@@ -2389,7 +2373,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_21_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_21_ce0;
+        x_21_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_21_ce0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
         x_21_ce0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_21_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
@@ -2401,7 +2385,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_22_address0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_22_address0;
+        x_22_address0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_22_address0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
         x_22_address0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_22_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
@@ -2413,7 +2397,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_22_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_22_ce0;
+        x_22_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_22_ce0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
         x_22_ce0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_22_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
@@ -2425,7 +2409,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_23_address0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_23_address0;
+        x_23_address0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_23_address0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
         x_23_address0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_23_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
@@ -2437,7 +2421,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_23_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_23_ce0;
+        x_23_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_23_ce0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
         x_23_ce0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_23_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
@@ -2449,9 +2433,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_24_address0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_24_address0;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        x_24_address0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_24_address0;
+        x_24_address0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_24_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         x_24_address0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_24_address0;
     end else begin
@@ -2461,9 +2443,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_24_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_24_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        x_24_ce0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_24_ce0;
+        x_24_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_24_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         x_24_ce0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_24_ce0;
     end else begin
@@ -2473,9 +2453,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_25_address0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_25_address0;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        x_25_address0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_25_address0;
+        x_25_address0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_25_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         x_25_address0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_25_address0;
     end else begin
@@ -2485,9 +2463,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_25_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_25_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        x_25_ce0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_25_ce0;
+        x_25_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_25_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         x_25_ce0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_25_ce0;
     end else begin
@@ -2497,9 +2473,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_26_address0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_26_address0;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        x_26_address0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_26_address0;
+        x_26_address0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_26_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         x_26_address0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_26_address0;
     end else begin
@@ -2509,9 +2483,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_26_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_26_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        x_26_ce0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_26_ce0;
+        x_26_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_26_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         x_26_ce0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_26_ce0;
     end else begin
@@ -2521,9 +2493,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_27_address0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_27_address0;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        x_27_address0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_27_address0;
+        x_27_address0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_27_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         x_27_address0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_27_address0;
     end else begin
@@ -2533,9 +2503,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_27_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_27_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        x_27_ce0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_27_ce0;
+        x_27_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_27_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         x_27_ce0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_27_ce0;
     end else begin
@@ -2545,9 +2513,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_28_address0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_28_address0;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        x_28_address0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_28_address0;
+        x_28_address0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_28_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         x_28_address0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_28_address0;
     end else begin
@@ -2557,9 +2523,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_28_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_28_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        x_28_ce0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_28_ce0;
+        x_28_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_28_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         x_28_ce0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_28_ce0;
     end else begin
@@ -2569,9 +2533,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_29_address0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_29_address0;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        x_29_address0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_29_address0;
+        x_29_address0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_29_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         x_29_address0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_29_address0;
     end else begin
@@ -2581,9 +2543,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_29_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_29_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        x_29_ce0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_29_ce0;
+        x_29_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_29_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         x_29_ce0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_29_ce0;
     end else begin
@@ -2593,7 +2553,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_2_address0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_2_address0;
+        x_2_address0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_2_address0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
         x_2_address0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_2_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
@@ -2605,7 +2565,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_2_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_2_ce0;
+        x_2_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_2_ce0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
         x_2_ce0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_2_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
@@ -2617,9 +2577,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_30_address0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_30_address0;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        x_30_address0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_30_address0;
+        x_30_address0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_30_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         x_30_address0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_30_address0;
     end else begin
@@ -2629,9 +2587,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_30_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_30_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        x_30_ce0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_30_ce0;
+        x_30_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_30_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         x_30_ce0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_30_ce0;
     end else begin
@@ -2641,9 +2597,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_31_address0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_31_address0;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        x_31_address0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_31_address0;
+        x_31_address0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_31_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         x_31_address0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_31_address0;
     end else begin
@@ -2653,9 +2607,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_31_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_31_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        x_31_ce0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_31_ce0;
+        x_31_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_31_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         x_31_ce0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_31_ce0;
     end else begin
@@ -2665,7 +2617,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_3_address0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_3_address0;
+        x_3_address0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_3_address0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
         x_3_address0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_3_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
@@ -2677,7 +2629,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_3_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_3_ce0;
+        x_3_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_3_ce0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
         x_3_ce0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_3_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
@@ -2689,7 +2641,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_4_address0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_4_address0;
+        x_4_address0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_4_address0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
         x_4_address0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_4_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
@@ -2701,7 +2653,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_4_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_4_ce0;
+        x_4_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_4_ce0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
         x_4_ce0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_4_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
@@ -2713,7 +2665,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_5_address0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_5_address0;
+        x_5_address0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_5_address0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
         x_5_address0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_5_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
@@ -2725,7 +2677,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_5_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_5_ce0;
+        x_5_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_5_ce0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
         x_5_ce0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_5_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
@@ -2737,7 +2689,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_6_address0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_6_address0;
+        x_6_address0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_6_address0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
         x_6_address0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_6_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
@@ -2749,7 +2701,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_6_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_6_ce0;
+        x_6_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_6_ce0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
         x_6_ce0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_6_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
@@ -2761,7 +2713,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_7_address0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_7_address0;
+        x_7_address0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_7_address0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
         x_7_address0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_7_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
@@ -2773,7 +2725,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_7_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_7_ce0;
+        x_7_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_7_ce0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
         x_7_ce0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_7_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
@@ -2785,9 +2737,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_8_address0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_8_address0;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        x_8_address0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_8_address0;
+        x_8_address0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_8_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         x_8_address0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_8_address0;
     end else begin
@@ -2797,9 +2747,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_8_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_8_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        x_8_ce0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_8_ce0;
+        x_8_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_8_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         x_8_ce0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_8_ce0;
     end else begin
@@ -2809,9 +2757,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_9_address0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_9_address0;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        x_9_address0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_9_address0;
+        x_9_address0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_9_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         x_9_address0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_9_address0;
     end else begin
@@ -2821,9 +2767,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state36)) begin
-        x_9_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_299_x_9_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        x_9_ce0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_x_9_ce0;
+        x_9_ce0 = grp_float_layernorm_Pipeline_ln_2_fu_267_x_9_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         x_9_ce0 = grp_float_layernorm_Pipeline_layer_loop_0_fu_160_x_9_ce0;
     end else begin
@@ -2951,7 +2895,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state36;
         end
         ap_ST_fsm_state36 : begin
-            if (((grp_float_layernorm_Pipeline_ln_2_fu_299_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state36))) begin
+            if (((grp_float_layernorm_Pipeline_ln_2_fu_267_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state36))) begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state36;
@@ -2991,322 +2935,322 @@ assign grp_float_layernorm_Pipeline_layer_loop_0_fu_160_ap_start = grp_float_lay
 
 assign grp_float_layernorm_Pipeline_layer_loop_1_fu_229_ap_start = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_ap_start_reg;
 
-assign grp_float_layernorm_Pipeline_ln_2_fu_299_ap_start = grp_float_layernorm_Pipeline_ln_2_fu_299_ap_start_reg;
+assign grp_float_layernorm_Pipeline_ln_2_fu_267_ap_start = grp_float_layernorm_Pipeline_ln_2_fu_267_ap_start_reg;
 
-assign grp_fu_2042_p_ce = grp_fu_433_ce;
+assign grp_fu_2042_p_ce = grp_fu_401_ce;
 
-assign grp_fu_2042_p_din0 = grp_fu_433_p0;
+assign grp_fu_2042_p_din0 = grp_fu_401_p0;
 
-assign grp_fu_2042_p_din1 = grp_fu_433_p1;
+assign grp_fu_2042_p_din1 = grp_fu_401_p1;
 
-assign grp_fu_2042_p_opcode = grp_fu_433_opcode;
+assign grp_fu_2042_p_opcode = grp_fu_401_opcode;
 
-assign grp_fu_2046_p_ce = grp_fu_517_ce;
+assign grp_fu_2046_p_ce = grp_fu_485_ce;
 
-assign grp_fu_2046_p_din0 = grp_fu_517_p0;
+assign grp_fu_2046_p_din0 = grp_fu_485_p0;
 
-assign grp_fu_2046_p_din1 = grp_fu_517_p1;
+assign grp_fu_2046_p_din1 = grp_fu_485_p1;
 
 assign grp_fu_2050_p_ce = 1'b1;
 
-assign grp_fu_2050_p_din0 = grp_fu_438_p0;
+assign grp_fu_2050_p_din0 = grp_fu_406_p0;
 
 assign grp_fu_2050_p_din1 = 32'd1145044992;
 
-assign grp_fu_2058_p_ce = grp_fu_497_ce;
+assign grp_fu_2058_p_ce = grp_fu_465_ce;
 
-assign grp_fu_2058_p_din0 = grp_fu_497_p0;
+assign grp_fu_2058_p_din0 = grp_fu_465_p0;
 
-assign grp_fu_2058_p_din1 = grp_fu_497_p1;
+assign grp_fu_2058_p_din1 = grp_fu_465_p1;
 
-assign grp_fu_2058_p_opcode = grp_fu_497_opcode;
+assign grp_fu_2058_p_opcode = grp_fu_465_opcode;
 
-assign grp_fu_2062_p_ce = grp_fu_501_ce;
+assign grp_fu_2062_p_ce = grp_fu_469_ce;
 
-assign grp_fu_2062_p_din0 = grp_fu_501_p0;
+assign grp_fu_2062_p_din0 = grp_fu_469_p0;
 
-assign grp_fu_2062_p_din1 = grp_fu_501_p1;
+assign grp_fu_2062_p_din1 = grp_fu_469_p1;
 
-assign grp_fu_2062_p_opcode = grp_fu_501_opcode;
+assign grp_fu_2062_p_opcode = grp_fu_469_opcode;
 
-assign grp_fu_2066_p_ce = grp_fu_509_ce;
+assign grp_fu_2066_p_ce = grp_fu_473_ce;
 
-assign grp_fu_2066_p_din0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_509_p_din0;
+assign grp_fu_2066_p_din0 = grp_fu_473_p0;
 
-assign grp_fu_2066_p_din1 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_509_p_din1;
+assign grp_fu_2066_p_din1 = grp_fu_473_p1;
 
-assign grp_fu_2066_p_opcode = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_509_p_opcode;
+assign grp_fu_2066_p_opcode = grp_fu_473_opcode;
 
-assign grp_fu_2070_p_ce = grp_fu_513_ce;
+assign grp_fu_2070_p_ce = grp_fu_477_ce;
 
-assign grp_fu_2070_p_din0 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_513_p_din0;
+assign grp_fu_2070_p_din0 = grp_fu_477_p0;
 
-assign grp_fu_2070_p_din1 = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_513_p_din1;
+assign grp_fu_2070_p_din1 = grp_fu_477_p1;
 
-assign grp_fu_2070_p_opcode = grp_float_layernorm_Pipeline_layer_loop_1_fu_229_grp_fu_513_p_opcode;
+assign grp_fu_2070_p_opcode = grp_fu_477_opcode;
 
-assign grp_fu_2074_p_ce = grp_fu_505_ce;
+assign grp_fu_2074_p_ce = grp_fu_481_ce;
 
-assign grp_fu_2074_p_din0 = grp_fu_505_p0;
+assign grp_fu_2074_p_din0 = grp_fu_481_p0;
 
-assign grp_fu_2074_p_din1 = grp_fu_505_p1;
+assign grp_fu_2074_p_din1 = grp_fu_481_p1;
 
 assign grp_fu_2074_p_opcode = 2'd0;
 
-assign y_bf16_0_address1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_0_address1;
+assign y_bf16_0_address1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_0_address1;
 
-assign y_bf16_0_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_0_ce1;
+assign y_bf16_0_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_0_ce1;
 
-assign y_bf16_0_d1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_0_d1;
+assign y_bf16_0_d1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_0_d1;
 
-assign y_bf16_0_we1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_0_we1;
+assign y_bf16_0_we1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_0_we1;
 
-assign y_bf16_10_address1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_10_address1;
+assign y_bf16_10_address1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_10_address1;
 
-assign y_bf16_10_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_10_ce1;
+assign y_bf16_10_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_10_ce1;
 
-assign y_bf16_10_d1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_10_d1;
+assign y_bf16_10_d1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_10_d1;
 
-assign y_bf16_10_we1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_10_we1;
+assign y_bf16_10_we1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_10_we1;
 
-assign y_bf16_11_address1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_11_address1;
+assign y_bf16_11_address1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_11_address1;
 
-assign y_bf16_11_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_11_ce1;
+assign y_bf16_11_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_11_ce1;
 
-assign y_bf16_11_d1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_11_d1;
+assign y_bf16_11_d1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_11_d1;
 
-assign y_bf16_11_we1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_11_we1;
+assign y_bf16_11_we1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_11_we1;
 
-assign y_bf16_12_address1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_12_address1;
+assign y_bf16_12_address1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_12_address1;
 
-assign y_bf16_12_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_12_ce1;
+assign y_bf16_12_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_12_ce1;
 
-assign y_bf16_12_d1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_12_d1;
+assign y_bf16_12_d1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_12_d1;
 
-assign y_bf16_12_we1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_12_we1;
+assign y_bf16_12_we1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_12_we1;
 
-assign y_bf16_13_address1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_13_address1;
+assign y_bf16_13_address1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_13_address1;
 
-assign y_bf16_13_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_13_ce1;
+assign y_bf16_13_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_13_ce1;
 
-assign y_bf16_13_d1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_13_d1;
+assign y_bf16_13_d1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_13_d1;
 
-assign y_bf16_13_we1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_13_we1;
+assign y_bf16_13_we1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_13_we1;
 
-assign y_bf16_14_address1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_14_address1;
+assign y_bf16_14_address1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_14_address1;
 
-assign y_bf16_14_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_14_ce1;
+assign y_bf16_14_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_14_ce1;
 
-assign y_bf16_14_d1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_14_d1;
+assign y_bf16_14_d1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_14_d1;
 
-assign y_bf16_14_we1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_14_we1;
+assign y_bf16_14_we1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_14_we1;
 
-assign y_bf16_15_address1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_15_address1;
+assign y_bf16_15_address1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_15_address1;
 
-assign y_bf16_15_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_15_ce1;
+assign y_bf16_15_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_15_ce1;
 
-assign y_bf16_15_d1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_15_d1;
+assign y_bf16_15_d1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_15_d1;
 
-assign y_bf16_15_we1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_15_we1;
+assign y_bf16_15_we1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_15_we1;
 
-assign y_bf16_16_address1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_16_address1;
+assign y_bf16_16_address1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_16_address1;
 
-assign y_bf16_16_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_16_ce1;
+assign y_bf16_16_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_16_ce1;
 
-assign y_bf16_16_d1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_16_d1;
+assign y_bf16_16_d1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_16_d1;
 
-assign y_bf16_16_we1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_16_we1;
+assign y_bf16_16_we1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_16_we1;
 
-assign y_bf16_17_address1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_17_address1;
+assign y_bf16_17_address1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_17_address1;
 
-assign y_bf16_17_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_17_ce1;
+assign y_bf16_17_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_17_ce1;
 
-assign y_bf16_17_d1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_17_d1;
+assign y_bf16_17_d1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_17_d1;
 
-assign y_bf16_17_we1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_17_we1;
+assign y_bf16_17_we1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_17_we1;
 
-assign y_bf16_18_address1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_18_address1;
+assign y_bf16_18_address1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_18_address1;
 
-assign y_bf16_18_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_18_ce1;
+assign y_bf16_18_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_18_ce1;
 
-assign y_bf16_18_d1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_18_d1;
+assign y_bf16_18_d1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_18_d1;
 
-assign y_bf16_18_we1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_18_we1;
+assign y_bf16_18_we1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_18_we1;
 
-assign y_bf16_19_address1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_19_address1;
+assign y_bf16_19_address1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_19_address1;
 
-assign y_bf16_19_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_19_ce1;
+assign y_bf16_19_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_19_ce1;
 
-assign y_bf16_19_d1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_19_d1;
+assign y_bf16_19_d1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_19_d1;
 
-assign y_bf16_19_we1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_19_we1;
+assign y_bf16_19_we1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_19_we1;
 
-assign y_bf16_1_address1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_1_address1;
+assign y_bf16_1_address1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_1_address1;
 
-assign y_bf16_1_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_1_ce1;
+assign y_bf16_1_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_1_ce1;
 
-assign y_bf16_1_d1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_1_d1;
+assign y_bf16_1_d1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_1_d1;
 
-assign y_bf16_1_we1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_1_we1;
+assign y_bf16_1_we1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_1_we1;
 
-assign y_bf16_20_address1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_20_address1;
+assign y_bf16_20_address1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_20_address1;
 
-assign y_bf16_20_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_20_ce1;
+assign y_bf16_20_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_20_ce1;
 
-assign y_bf16_20_d1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_20_d1;
+assign y_bf16_20_d1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_20_d1;
 
-assign y_bf16_20_we1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_20_we1;
+assign y_bf16_20_we1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_20_we1;
 
-assign y_bf16_21_address1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_21_address1;
+assign y_bf16_21_address1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_21_address1;
 
-assign y_bf16_21_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_21_ce1;
+assign y_bf16_21_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_21_ce1;
 
-assign y_bf16_21_d1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_21_d1;
+assign y_bf16_21_d1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_21_d1;
 
-assign y_bf16_21_we1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_21_we1;
+assign y_bf16_21_we1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_21_we1;
 
-assign y_bf16_22_address1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_22_address1;
+assign y_bf16_22_address1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_22_address1;
 
-assign y_bf16_22_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_22_ce1;
+assign y_bf16_22_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_22_ce1;
 
-assign y_bf16_22_d1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_22_d1;
+assign y_bf16_22_d1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_22_d1;
 
-assign y_bf16_22_we1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_22_we1;
+assign y_bf16_22_we1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_22_we1;
 
-assign y_bf16_23_address1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_23_address1;
+assign y_bf16_23_address1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_23_address1;
 
-assign y_bf16_23_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_23_ce1;
+assign y_bf16_23_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_23_ce1;
 
-assign y_bf16_23_d1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_23_d1;
+assign y_bf16_23_d1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_23_d1;
 
-assign y_bf16_23_we1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_23_we1;
+assign y_bf16_23_we1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_23_we1;
 
-assign y_bf16_24_address1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_24_address1;
+assign y_bf16_24_address1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_24_address1;
 
-assign y_bf16_24_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_24_ce1;
+assign y_bf16_24_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_24_ce1;
 
-assign y_bf16_24_d1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_24_d1;
+assign y_bf16_24_d1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_24_d1;
 
-assign y_bf16_24_we1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_24_we1;
+assign y_bf16_24_we1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_24_we1;
 
-assign y_bf16_25_address1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_25_address1;
+assign y_bf16_25_address1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_25_address1;
 
-assign y_bf16_25_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_25_ce1;
+assign y_bf16_25_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_25_ce1;
 
-assign y_bf16_25_d1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_25_d1;
+assign y_bf16_25_d1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_25_d1;
 
-assign y_bf16_25_we1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_25_we1;
+assign y_bf16_25_we1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_25_we1;
 
-assign y_bf16_26_address1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_26_address1;
+assign y_bf16_26_address1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_26_address1;
 
-assign y_bf16_26_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_26_ce1;
+assign y_bf16_26_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_26_ce1;
 
-assign y_bf16_26_d1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_26_d1;
+assign y_bf16_26_d1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_26_d1;
 
-assign y_bf16_26_we1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_26_we1;
+assign y_bf16_26_we1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_26_we1;
 
-assign y_bf16_27_address1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_27_address1;
+assign y_bf16_27_address1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_27_address1;
 
-assign y_bf16_27_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_27_ce1;
+assign y_bf16_27_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_27_ce1;
 
-assign y_bf16_27_d1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_27_d1;
+assign y_bf16_27_d1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_27_d1;
 
-assign y_bf16_27_we1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_27_we1;
+assign y_bf16_27_we1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_27_we1;
 
-assign y_bf16_28_address1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_28_address1;
+assign y_bf16_28_address1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_28_address1;
 
-assign y_bf16_28_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_28_ce1;
+assign y_bf16_28_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_28_ce1;
 
-assign y_bf16_28_d1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_28_d1;
+assign y_bf16_28_d1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_28_d1;
 
-assign y_bf16_28_we1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_28_we1;
+assign y_bf16_28_we1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_28_we1;
 
-assign y_bf16_29_address1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_29_address1;
+assign y_bf16_29_address1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_29_address1;
 
-assign y_bf16_29_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_29_ce1;
+assign y_bf16_29_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_29_ce1;
 
-assign y_bf16_29_d1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_29_d1;
+assign y_bf16_29_d1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_29_d1;
 
-assign y_bf16_29_we1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_29_we1;
+assign y_bf16_29_we1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_29_we1;
 
-assign y_bf16_2_address1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_2_address1;
+assign y_bf16_2_address1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_2_address1;
 
-assign y_bf16_2_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_2_ce1;
+assign y_bf16_2_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_2_ce1;
 
-assign y_bf16_2_d1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_2_d1;
+assign y_bf16_2_d1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_2_d1;
 
-assign y_bf16_2_we1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_2_we1;
+assign y_bf16_2_we1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_2_we1;
 
-assign y_bf16_30_address1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_30_address1;
+assign y_bf16_30_address1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_30_address1;
 
-assign y_bf16_30_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_30_ce1;
+assign y_bf16_30_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_30_ce1;
 
-assign y_bf16_30_d1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_30_d1;
+assign y_bf16_30_d1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_30_d1;
 
-assign y_bf16_30_we1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_30_we1;
+assign y_bf16_30_we1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_30_we1;
 
-assign y_bf16_31_address1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_31_address1;
+assign y_bf16_31_address1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_31_address1;
 
-assign y_bf16_31_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_31_ce1;
+assign y_bf16_31_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_31_ce1;
 
-assign y_bf16_31_d1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_31_d1;
+assign y_bf16_31_d1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_31_d1;
 
-assign y_bf16_31_we1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_31_we1;
+assign y_bf16_31_we1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_31_we1;
 
-assign y_bf16_3_address1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_3_address1;
+assign y_bf16_3_address1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_3_address1;
 
-assign y_bf16_3_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_3_ce1;
+assign y_bf16_3_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_3_ce1;
 
-assign y_bf16_3_d1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_3_d1;
+assign y_bf16_3_d1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_3_d1;
 
-assign y_bf16_3_we1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_3_we1;
+assign y_bf16_3_we1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_3_we1;
 
-assign y_bf16_4_address1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_4_address1;
+assign y_bf16_4_address1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_4_address1;
 
-assign y_bf16_4_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_4_ce1;
+assign y_bf16_4_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_4_ce1;
 
-assign y_bf16_4_d1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_4_d1;
+assign y_bf16_4_d1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_4_d1;
 
-assign y_bf16_4_we1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_4_we1;
+assign y_bf16_4_we1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_4_we1;
 
-assign y_bf16_5_address1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_5_address1;
+assign y_bf16_5_address1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_5_address1;
 
-assign y_bf16_5_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_5_ce1;
+assign y_bf16_5_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_5_ce1;
 
-assign y_bf16_5_d1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_5_d1;
+assign y_bf16_5_d1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_5_d1;
 
-assign y_bf16_5_we1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_5_we1;
+assign y_bf16_5_we1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_5_we1;
 
-assign y_bf16_6_address1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_6_address1;
+assign y_bf16_6_address1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_6_address1;
 
-assign y_bf16_6_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_6_ce1;
+assign y_bf16_6_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_6_ce1;
 
-assign y_bf16_6_d1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_6_d1;
+assign y_bf16_6_d1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_6_d1;
 
-assign y_bf16_6_we1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_6_we1;
+assign y_bf16_6_we1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_6_we1;
 
-assign y_bf16_7_address1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_7_address1;
+assign y_bf16_7_address1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_7_address1;
 
-assign y_bf16_7_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_7_ce1;
+assign y_bf16_7_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_7_ce1;
 
-assign y_bf16_7_d1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_7_d1;
+assign y_bf16_7_d1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_7_d1;
 
-assign y_bf16_7_we1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_7_we1;
+assign y_bf16_7_we1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_7_we1;
 
-assign y_bf16_8_address1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_8_address1;
+assign y_bf16_8_address1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_8_address1;
 
-assign y_bf16_8_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_8_ce1;
+assign y_bf16_8_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_8_ce1;
 
-assign y_bf16_8_d1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_8_d1;
+assign y_bf16_8_d1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_8_d1;
 
-assign y_bf16_8_we1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_8_we1;
+assign y_bf16_8_we1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_8_we1;
 
-assign y_bf16_9_address1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_9_address1;
+assign y_bf16_9_address1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_9_address1;
 
-assign y_bf16_9_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_9_ce1;
+assign y_bf16_9_ce1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_9_ce1;
 
-assign y_bf16_9_d1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_9_d1;
+assign y_bf16_9_d1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_9_d1;
 
-assign y_bf16_9_we1 = grp_float_layernorm_Pipeline_ln_2_fu_299_y_bf16_9_we1;
+assign y_bf16_9_we1 = grp_float_layernorm_Pipeline_ln_2_fu_267_y_bf16_9_we1;
 
 endmodule //activation_accelerator_float_layernorm

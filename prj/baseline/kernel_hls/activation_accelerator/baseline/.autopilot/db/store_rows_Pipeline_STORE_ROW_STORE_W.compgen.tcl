@@ -10,7 +10,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1288 \
+    id 1258 \
     name gmem2 \
     type other \
     dir O \
@@ -25,22 +25,22 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1289 \
-    name sext_ln694 \
+    id 1259 \
+    name sext_ln748 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_sext_ln694 \
+    corename dc_sext_ln748 \
     op interface \
-    ports { sext_ln694 { I 58 vector } } \
+    ports { sext_ln748 { I 58 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1290 \
+    id 1260 \
     name s_out3 \
     type fifo \
     dir I \

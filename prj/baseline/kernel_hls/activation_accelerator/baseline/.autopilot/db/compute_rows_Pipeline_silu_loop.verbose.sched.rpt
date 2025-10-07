@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'compute_rows_Pipeline_silu_loop'
 ================================================================
-* Date:           Fri Oct  3 15:43:20 2025
+* Date:           Fri Oct  3 21:51:42 2025
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        activation_accelerator
@@ -578,8 +578,8 @@ The critical path consists of the following:
 
  <State 26>: 1.24ns
 The critical path consists of the following:
-	'getelementptr' operation ('tile2_V_42_addr', activation_accelerator.cpp:277) [229]  (0 ns)
-	'store' operation ('store_ln277', activation_accelerator.cpp:277) of variable 'trunc_ln203_2', activation_accelerator.cpp:203 on array 'tile2_V_42' [309]  (1.24 ns)
+	'getelementptr' operation ('tile2_V_61_addr', activation_accelerator.cpp:277) [248]  (0 ns)
+	'store' operation ('store_ln277', activation_accelerator.cpp:277) of variable 'trunc_ln203_2', activation_accelerator.cpp:203 on array 'tile2_V_61' [252]  (1.24 ns)
 
 
 ============================================================

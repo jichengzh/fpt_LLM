@@ -1252,8 +1252,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>sext_ln579_1</name>
-<Object>sext_ln579_1</Object>
+<name>sext_ln633_1</name>
+<Object>sext_ln633_1</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -1263,8 +1263,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>sext_ln579</name>
-<Object>sext_ln579</Object>
+<name>sext_ln633</name>
+<Object>sext_ln633</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>

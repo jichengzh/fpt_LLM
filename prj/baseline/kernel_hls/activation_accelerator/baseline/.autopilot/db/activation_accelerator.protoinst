@@ -164,7 +164,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"compute_rows_U0/grp_float_layernorm_fu_1277/grp_float_layernorm_Pipeline_ln_2_fu_299/grp_float_layernorm_Pipeline_ln_2_fu_299_activity": {
+				"compute_rows_U0/grp_float_layernorm_fu_1277/grp_float_layernorm_Pipeline_ln_2_fu_267/grp_float_layernorm_Pipeline_ln_2_fu_267_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},

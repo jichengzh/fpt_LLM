@@ -112,10 +112,10 @@ newFuncRoot:6 %trunc_ln = partselect i58 @_ssdm_op_PartSelect.i58.i64.i32.i32, i
 
 <Node id="14" bw="64" op_0_bw="58">
 <![CDATA[
-newFuncRoot:7 %sext_ln579 = sext i58 %trunc_ln
+newFuncRoot:7 %sext_ln633 = sext i58 %trunc_ln
 
 ]]></Node>
-<StgValue><ssdm name="sext_ln579"/></StgValue>
+<StgValue><ssdm name="sext_ln633"/></StgValue>
 </operation>
 
 <operation id="14" st_id="1" stage="1" lat="1">
@@ -127,7 +127,7 @@ newFuncRoot:7 %sext_ln579 = sext i58 %trunc_ln
 
 <Node id="15" bw="512" op_0_bw="512" op_1_bw="64">
 <![CDATA[
-newFuncRoot:8 %gmem0_addr = getelementptr i512 %gmem0, i64 %sext_ln579
+newFuncRoot:8 %gmem0_addr = getelementptr i512 %gmem0, i64 %sext_ln633
 
 ]]></Node>
 <StgValue><ssdm name="gmem0_addr"/></StgValue>
@@ -142,10 +142,10 @@ newFuncRoot:8 %gmem0_addr = getelementptr i512 %gmem0, i64 %sext_ln579
 
 <Node id="16" bw="58" op_0_bw="58" op_1_bw="64" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-newFuncRoot:9 %trunc_ln579_1 = partselect i58 @_ssdm_op_PartSelect.i58.i64.i32.i32, i64 %in1_read, i32 6, i32 63
+newFuncRoot:9 %trunc_ln633_1 = partselect i58 @_ssdm_op_PartSelect.i58.i64.i32.i32, i64 %in1_read, i32 6, i32 63
 
 ]]></Node>
-<StgValue><ssdm name="trunc_ln579_1"/></StgValue>
+<StgValue><ssdm name="trunc_ln633_1"/></StgValue>
 </operation>
 
 <operation id="16" st_id="1" stage="1" lat="1">
@@ -157,10 +157,10 @@ newFuncRoot:9 %trunc_ln579_1 = partselect i58 @_ssdm_op_PartSelect.i58.i64.i32.i
 
 <Node id="17" bw="64" op_0_bw="58">
 <![CDATA[
-newFuncRoot:10 %sext_ln579_1 = sext i58 %trunc_ln579_1
+newFuncRoot:10 %sext_ln633_1 = sext i58 %trunc_ln633_1
 
 ]]></Node>
-<StgValue><ssdm name="sext_ln579_1"/></StgValue>
+<StgValue><ssdm name="sext_ln633_1"/></StgValue>
 </operation>
 
 <operation id="17" st_id="1" stage="1" lat="1">
@@ -172,7 +172,7 @@ newFuncRoot:10 %sext_ln579_1 = sext i58 %trunc_ln579_1
 
 <Node id="18" bw="512" op_0_bw="512" op_1_bw="64">
 <![CDATA[
-newFuncRoot:11 %gmem1_addr = getelementptr i512 %gmem1, i64 %sext_ln579_1
+newFuncRoot:11 %gmem1_addr = getelementptr i512 %gmem1, i64 %sext_ln633_1
 
 ]]></Node>
 <StgValue><ssdm name="gmem1_addr"/></StgValue>
@@ -433,10 +433,10 @@ newFuncRoot:14 %empty_51 = wait i32 @_ssdm_op_Wait
 
 <Node id="22" bw="0" op_0_bw="0" op_1_bw="512" op_2_bw="58" op_3_bw="512" op_4_bw="58" op_5_bw="512" op_6_bw="512" op_7_bw="0" op_8_bw="0" op_9_bw="0">
 <![CDATA[
-newFuncRoot:15 %call_ln579 = call void @load_rows_Loop_LOAD_ROW_proc1_Pipeline_LOAD_ROW_LOAD_W, i512 %gmem1, i58 %trunc_ln579_1, i512 %gmem0, i58 %trunc_ln, i512 %s_in01, i512 %s_in12
+newFuncRoot:15 %call_ln633 = call void @load_rows_Loop_LOAD_ROW_proc1_Pipeline_LOAD_ROW_LOAD_W, i512 %gmem1, i58 %trunc_ln633_1, i512 %gmem0, i58 %trunc_ln, i512 %s_in01, i512 %s_in12
 
 ]]></Node>
-<StgValue><ssdm name="call_ln579"/></StgValue>
+<StgValue><ssdm name="call_ln633"/></StgValue>
 </operation>
 </state>
 
@@ -511,10 +511,10 @@ newFuncRoot:3 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i
 
 <Node id="22" bw="0" op_0_bw="0" op_1_bw="512" op_2_bw="58" op_3_bw="512" op_4_bw="58" op_5_bw="512" op_6_bw="512" op_7_bw="0" op_8_bw="0" op_9_bw="0">
 <![CDATA[
-newFuncRoot:15 %call_ln579 = call void @load_rows_Loop_LOAD_ROW_proc1_Pipeline_LOAD_ROW_LOAD_W, i512 %gmem1, i58 %trunc_ln579_1, i512 %gmem0, i58 %trunc_ln, i512 %s_in01, i512 %s_in12
+newFuncRoot:15 %call_ln633 = call void @load_rows_Loop_LOAD_ROW_proc1_Pipeline_LOAD_ROW_LOAD_W, i512 %gmem1, i58 %trunc_ln633_1, i512 %gmem0, i58 %trunc_ln, i512 %s_in01, i512 %s_in12
 
 ]]></Node>
-<StgValue><ssdm name="call_ln579"/></StgValue>
+<StgValue><ssdm name="call_ln633"/></StgValue>
 </operation>
 
 <operation id="39" st_id="9" stage="1" lat="1">

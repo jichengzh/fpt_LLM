@@ -259,7 +259,7 @@ entry:1 %sum_loc = alloca i64 1
 
 <Node id="131" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="32" op_21_bw="32" op_22_bw="32" op_23_bw="32" op_24_bw="32" op_25_bw="32" op_26_bw="32" op_27_bw="32" op_28_bw="32" op_29_bw="32" op_30_bw="32" op_31_bw="32" op_32_bw="32" op_33_bw="32">
 <![CDATA[
-entry:66 %call_ln0 = call void @float_layernorm_Pipeline_layer_loop_0, i32 %x_0, i32 %x_8, i32 %x_16, i32 %x_24, i32 %x_1, i32 %x_9, i32 %x_17, i32 %x_25, i32 %x_2, i32 %x_10, i32 %x_18, i32 %x_26, i32 %x_3, i32 %x_11, i32 %x_19, i32 %x_27, i32 %x_4, i32 %x_12, i32 %x_20, i32 %x_28, i32 %x_5, i32 %x_13, i32 %x_21, i32 %x_29, i32 %x_6, i32 %x_14, i32 %x_22, i32 %x_30, i32 %x_7, i32 %x_15, i32 %x_23, i32 %x_31, i32 %sum_loc
+entry:66 %call_ln0 = call void @float_layernorm_Pipeline_layer_loop_0, i32 %x_0, i32 %x_16, i32 %x_1, i32 %x_17, i32 %x_2, i32 %x_18, i32 %x_3, i32 %x_19, i32 %x_4, i32 %x_20, i32 %x_5, i32 %x_21, i32 %x_6, i32 %x_22, i32 %x_7, i32 %x_23, i32 %x_8, i32 %x_24, i32 %x_9, i32 %x_25, i32 %x_10, i32 %x_26, i32 %x_11, i32 %x_27, i32 %x_12, i32 %x_28, i32 %x_13, i32 %x_29, i32 %x_14, i32 %x_30, i32 %x_15, i32 %x_31, i32 %sum_loc
 
 ]]></Node>
 <StgValue><ssdm name="call_ln0"/></StgValue>
@@ -277,7 +277,7 @@ entry:66 %call_ln0 = call void @float_layernorm_Pipeline_layer_loop_0, i32 %x_0,
 
 <Node id="131" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="32" op_21_bw="32" op_22_bw="32" op_23_bw="32" op_24_bw="32" op_25_bw="32" op_26_bw="32" op_27_bw="32" op_28_bw="32" op_29_bw="32" op_30_bw="32" op_31_bw="32" op_32_bw="32" op_33_bw="32">
 <![CDATA[
-entry:66 %call_ln0 = call void @float_layernorm_Pipeline_layer_loop_0, i32 %x_0, i32 %x_8, i32 %x_16, i32 %x_24, i32 %x_1, i32 %x_9, i32 %x_17, i32 %x_25, i32 %x_2, i32 %x_10, i32 %x_18, i32 %x_26, i32 %x_3, i32 %x_11, i32 %x_19, i32 %x_27, i32 %x_4, i32 %x_12, i32 %x_20, i32 %x_28, i32 %x_5, i32 %x_13, i32 %x_21, i32 %x_29, i32 %x_6, i32 %x_14, i32 %x_22, i32 %x_30, i32 %x_7, i32 %x_15, i32 %x_23, i32 %x_31, i32 %sum_loc
+entry:66 %call_ln0 = call void @float_layernorm_Pipeline_layer_loop_0, i32 %x_0, i32 %x_16, i32 %x_1, i32 %x_17, i32 %x_2, i32 %x_18, i32 %x_3, i32 %x_19, i32 %x_4, i32 %x_20, i32 %x_5, i32 %x_21, i32 %x_6, i32 %x_22, i32 %x_7, i32 %x_23, i32 %x_8, i32 %x_24, i32 %x_9, i32 %x_25, i32 %x_10, i32 %x_26, i32 %x_11, i32 %x_27, i32 %x_12, i32 %x_28, i32 %x_13, i32 %x_29, i32 %x_14, i32 %x_30, i32 %x_15, i32 %x_31, i32 %sum_loc
 
 ]]></Node>
 <StgValue><ssdm name="call_ln0"/></StgValue>
@@ -467,12 +467,12 @@ entry:68 %mean = fdiv i32 %sum_loc_load, i32 768
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="134" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="32" op_21_bw="32" op_22_bw="32" op_23_bw="32" op_24_bw="32" op_25_bw="32" op_26_bw="32" op_27_bw="32" op_28_bw="32" op_29_bw="32" op_30_bw="32" op_31_bw="32" op_32_bw="32" op_33_bw="32" op_34_bw="32" op_35_bw="0" op_36_bw="0">
+<Node id="134" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="32" op_19_bw="0" op_20_bw="0">
 <![CDATA[
-entry:69 %call_ln358 = call void @float_layernorm_Pipeline_layer_loop_1, i32 %x_0, i32 %x_8, i32 %x_16, i32 %x_24, i32 %mean, i32 %x_1, i32 %x_9, i32 %x_17, i32 %x_25, i32 %x_2, i32 %x_10, i32 %x_18, i32 %x_26, i32 %x_3, i32 %x_11, i32 %x_19, i32 %x_27, i32 %x_4, i32 %x_12, i32 %x_20, i32 %x_28, i32 %x_5, i32 %x_13, i32 %x_21, i32 %x_29, i32 %x_6, i32 %x_14, i32 %x_22, i32 %x_30, i32 %x_7, i32 %x_15, i32 %x_23, i32 %x_31, i32 %var_loc
+entry:69 %call_ln412 = call void @float_layernorm_Pipeline_layer_loop_1, i32 %x_0, i32 %x_16, i32 %mean, i32 %x_1, i32 %x_17, i32 %x_2, i32 %x_18, i32 %x_3, i32 %x_19, i32 %x_4, i32 %x_20, i32 %x_5, i32 %x_21, i32 %x_6, i32 %x_22, i32 %x_7, i32 %x_23, i32 %var_loc
 
 ]]></Node>
-<StgValue><ssdm name="call_ln358"/></StgValue>
+<StgValue><ssdm name="call_ln412"/></StgValue>
 </operation>
 </state>
 
@@ -485,12 +485,12 @@ entry:69 %call_ln358 = call void @float_layernorm_Pipeline_layer_loop_1, i32 %x_
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="134" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="32" op_21_bw="32" op_22_bw="32" op_23_bw="32" op_24_bw="32" op_25_bw="32" op_26_bw="32" op_27_bw="32" op_28_bw="32" op_29_bw="32" op_30_bw="32" op_31_bw="32" op_32_bw="32" op_33_bw="32" op_34_bw="32" op_35_bw="0" op_36_bw="0">
+<Node id="134" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="32" op_19_bw="0" op_20_bw="0">
 <![CDATA[
-entry:69 %call_ln358 = call void @float_layernorm_Pipeline_layer_loop_1, i32 %x_0, i32 %x_8, i32 %x_16, i32 %x_24, i32 %mean, i32 %x_1, i32 %x_9, i32 %x_17, i32 %x_25, i32 %x_2, i32 %x_10, i32 %x_18, i32 %x_26, i32 %x_3, i32 %x_11, i32 %x_19, i32 %x_27, i32 %x_4, i32 %x_12, i32 %x_20, i32 %x_28, i32 %x_5, i32 %x_13, i32 %x_21, i32 %x_29, i32 %x_6, i32 %x_14, i32 %x_22, i32 %x_30, i32 %x_7, i32 %x_15, i32 %x_23, i32 %x_31, i32 %var_loc
+entry:69 %call_ln412 = call void @float_layernorm_Pipeline_layer_loop_1, i32 %x_0, i32 %x_16, i32 %mean, i32 %x_1, i32 %x_17, i32 %x_2, i32 %x_18, i32 %x_3, i32 %x_19, i32 %x_4, i32 %x_20, i32 %x_5, i32 %x_21, i32 %x_6, i32 %x_22, i32 %x_7, i32 %x_23, i32 %var_loc
 
 ]]></Node>
-<StgValue><ssdm name="call_ln358"/></StgValue>
+<StgValue><ssdm name="call_ln412"/></StgValue>
 </operation>
 </state>
 
@@ -931,10 +931,10 @@ entry:73 %inv_std = frsqrt i32 @_ssdm_op_FRsqrt, i32 %x_assign
 
 <Node id="139" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="16" op_3_bw="16" op_4_bw="16" op_5_bw="16" op_6_bw="16" op_7_bw="16" op_8_bw="16" op_9_bw="16" op_10_bw="16" op_11_bw="16" op_12_bw="16" op_13_bw="16" op_14_bw="16" op_15_bw="16" op_16_bw="16" op_17_bw="16" op_18_bw="16" op_19_bw="16" op_20_bw="16" op_21_bw="16" op_22_bw="16" op_23_bw="16" op_24_bw="16" op_25_bw="16" op_26_bw="16" op_27_bw="16" op_28_bw="16" op_29_bw="16" op_30_bw="16" op_31_bw="16" op_32_bw="16" op_33_bw="32" op_34_bw="32" op_35_bw="32" op_36_bw="32" op_37_bw="32" op_38_bw="32" op_39_bw="32" op_40_bw="32" op_41_bw="32" op_42_bw="32" op_43_bw="32" op_44_bw="32" op_45_bw="32" op_46_bw="32" op_47_bw="32" op_48_bw="32" op_49_bw="32" op_50_bw="32" op_51_bw="32" op_52_bw="32" op_53_bw="32" op_54_bw="32" op_55_bw="32" op_56_bw="32" op_57_bw="32" op_58_bw="32" op_59_bw="32" op_60_bw="32" op_61_bw="32" op_62_bw="32" op_63_bw="32" op_64_bw="32" op_65_bw="32" op_66_bw="32" op_67_bw="0" op_68_bw="0">
 <![CDATA[
-entry:74 %call_ln358 = call void @float_layernorm_Pipeline_ln_2, i16 %y_bf16_31, i16 %y_bf16_30, i16 %y_bf16_29, i16 %y_bf16_28, i16 %y_bf16_27, i16 %y_bf16_26, i16 %y_bf16_25, i16 %y_bf16_24, i16 %y_bf16_23, i16 %y_bf16_22, i16 %y_bf16_21, i16 %y_bf16_20, i16 %y_bf16_19, i16 %y_bf16_18, i16 %y_bf16_17, i16 %y_bf16_16, i16 %y_bf16_15, i16 %y_bf16_14, i16 %y_bf16_13, i16 %y_bf16_12, i16 %y_bf16_11, i16 %y_bf16_10, i16 %y_bf16_9, i16 %y_bf16_8, i16 %y_bf16_7, i16 %y_bf16_6, i16 %y_bf16_5, i16 %y_bf16_4, i16 %y_bf16_3, i16 %y_bf16_2, i16 %y_bf16_1, i16 %y_bf16_0, i32 %x_0, i32 %x_1, i32 %x_2, i32 %x_3, i32 %x_4, i32 %x_5, i32 %x_6, i32 %x_7, i32 %x_8, i32 %x_9, i32 %x_10, i32 %x_11, i32 %x_12, i32 %x_13, i32 %x_14, i32 %x_15, i32 %x_16, i32 %x_17, i32 %x_18, i32 %x_19, i32 %x_20, i32 %x_21, i32 %x_22, i32 %x_23, i32 %x_24, i32 %x_25, i32 %x_26, i32 %x_27, i32 %x_28, i32 %x_29, i32 %x_30, i32 %x_31, i32 %mean, i32 %inv_std
+entry:74 %call_ln412 = call void @float_layernorm_Pipeline_ln_2, i16 %y_bf16_31, i16 %y_bf16_30, i16 %y_bf16_29, i16 %y_bf16_28, i16 %y_bf16_27, i16 %y_bf16_26, i16 %y_bf16_25, i16 %y_bf16_24, i16 %y_bf16_23, i16 %y_bf16_22, i16 %y_bf16_21, i16 %y_bf16_20, i16 %y_bf16_19, i16 %y_bf16_18, i16 %y_bf16_17, i16 %y_bf16_16, i16 %y_bf16_15, i16 %y_bf16_14, i16 %y_bf16_13, i16 %y_bf16_12, i16 %y_bf16_11, i16 %y_bf16_10, i16 %y_bf16_9, i16 %y_bf16_8, i16 %y_bf16_7, i16 %y_bf16_6, i16 %y_bf16_5, i16 %y_bf16_4, i16 %y_bf16_3, i16 %y_bf16_2, i16 %y_bf16_1, i16 %y_bf16_0, i32 %x_0, i32 %x_1, i32 %x_2, i32 %x_3, i32 %x_4, i32 %x_5, i32 %x_6, i32 %x_7, i32 %x_8, i32 %x_9, i32 %x_10, i32 %x_11, i32 %x_12, i32 %x_13, i32 %x_14, i32 %x_15, i32 %x_16, i32 %x_17, i32 %x_18, i32 %x_19, i32 %x_20, i32 %x_21, i32 %x_22, i32 %x_23, i32 %x_24, i32 %x_25, i32 %x_26, i32 %x_27, i32 %x_28, i32 %x_29, i32 %x_30, i32 %x_31, i32 %mean, i32 %inv_std
 
 ]]></Node>
-<StgValue><ssdm name="call_ln358"/></StgValue>
+<StgValue><ssdm name="call_ln412"/></StgValue>
 </operation>
 </state>
 
@@ -1909,10 +1909,10 @@ entry:65 %specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %y_bf16_
 
 <Node id="139" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="16" op_3_bw="16" op_4_bw="16" op_5_bw="16" op_6_bw="16" op_7_bw="16" op_8_bw="16" op_9_bw="16" op_10_bw="16" op_11_bw="16" op_12_bw="16" op_13_bw="16" op_14_bw="16" op_15_bw="16" op_16_bw="16" op_17_bw="16" op_18_bw="16" op_19_bw="16" op_20_bw="16" op_21_bw="16" op_22_bw="16" op_23_bw="16" op_24_bw="16" op_25_bw="16" op_26_bw="16" op_27_bw="16" op_28_bw="16" op_29_bw="16" op_30_bw="16" op_31_bw="16" op_32_bw="16" op_33_bw="32" op_34_bw="32" op_35_bw="32" op_36_bw="32" op_37_bw="32" op_38_bw="32" op_39_bw="32" op_40_bw="32" op_41_bw="32" op_42_bw="32" op_43_bw="32" op_44_bw="32" op_45_bw="32" op_46_bw="32" op_47_bw="32" op_48_bw="32" op_49_bw="32" op_50_bw="32" op_51_bw="32" op_52_bw="32" op_53_bw="32" op_54_bw="32" op_55_bw="32" op_56_bw="32" op_57_bw="32" op_58_bw="32" op_59_bw="32" op_60_bw="32" op_61_bw="32" op_62_bw="32" op_63_bw="32" op_64_bw="32" op_65_bw="32" op_66_bw="32" op_67_bw="0" op_68_bw="0">
 <![CDATA[
-entry:74 %call_ln358 = call void @float_layernorm_Pipeline_ln_2, i16 %y_bf16_31, i16 %y_bf16_30, i16 %y_bf16_29, i16 %y_bf16_28, i16 %y_bf16_27, i16 %y_bf16_26, i16 %y_bf16_25, i16 %y_bf16_24, i16 %y_bf16_23, i16 %y_bf16_22, i16 %y_bf16_21, i16 %y_bf16_20, i16 %y_bf16_19, i16 %y_bf16_18, i16 %y_bf16_17, i16 %y_bf16_16, i16 %y_bf16_15, i16 %y_bf16_14, i16 %y_bf16_13, i16 %y_bf16_12, i16 %y_bf16_11, i16 %y_bf16_10, i16 %y_bf16_9, i16 %y_bf16_8, i16 %y_bf16_7, i16 %y_bf16_6, i16 %y_bf16_5, i16 %y_bf16_4, i16 %y_bf16_3, i16 %y_bf16_2, i16 %y_bf16_1, i16 %y_bf16_0, i32 %x_0, i32 %x_1, i32 %x_2, i32 %x_3, i32 %x_4, i32 %x_5, i32 %x_6, i32 %x_7, i32 %x_8, i32 %x_9, i32 %x_10, i32 %x_11, i32 %x_12, i32 %x_13, i32 %x_14, i32 %x_15, i32 %x_16, i32 %x_17, i32 %x_18, i32 %x_19, i32 %x_20, i32 %x_21, i32 %x_22, i32 %x_23, i32 %x_24, i32 %x_25, i32 %x_26, i32 %x_27, i32 %x_28, i32 %x_29, i32 %x_30, i32 %x_31, i32 %mean, i32 %inv_std
+entry:74 %call_ln412 = call void @float_layernorm_Pipeline_ln_2, i16 %y_bf16_31, i16 %y_bf16_30, i16 %y_bf16_29, i16 %y_bf16_28, i16 %y_bf16_27, i16 %y_bf16_26, i16 %y_bf16_25, i16 %y_bf16_24, i16 %y_bf16_23, i16 %y_bf16_22, i16 %y_bf16_21, i16 %y_bf16_20, i16 %y_bf16_19, i16 %y_bf16_18, i16 %y_bf16_17, i16 %y_bf16_16, i16 %y_bf16_15, i16 %y_bf16_14, i16 %y_bf16_13, i16 %y_bf16_12, i16 %y_bf16_11, i16 %y_bf16_10, i16 %y_bf16_9, i16 %y_bf16_8, i16 %y_bf16_7, i16 %y_bf16_6, i16 %y_bf16_5, i16 %y_bf16_4, i16 %y_bf16_3, i16 %y_bf16_2, i16 %y_bf16_1, i16 %y_bf16_0, i32 %x_0, i32 %x_1, i32 %x_2, i32 %x_3, i32 %x_4, i32 %x_5, i32 %x_6, i32 %x_7, i32 %x_8, i32 %x_9, i32 %x_10, i32 %x_11, i32 %x_12, i32 %x_13, i32 %x_14, i32 %x_15, i32 %x_16, i32 %x_17, i32 %x_18, i32 %x_19, i32 %x_20, i32 %x_21, i32 %x_22, i32 %x_23, i32 %x_24, i32 %x_25, i32 %x_26, i32 %x_27, i32 %x_28, i32 %x_29, i32 %x_30, i32 %x_31, i32 %mean, i32 %inv_std
 
 ]]></Node>
-<StgValue><ssdm name="call_ln358"/></StgValue>
+<StgValue><ssdm name="call_ln412"/></StgValue>
 </operation>
 
 <operation id="143" st_id="36" stage="1" lat="1">
@@ -1924,10 +1924,10 @@ entry:74 %call_ln358 = call void @float_layernorm_Pipeline_ln_2, i16 %y_bf16_31,
 
 <Node id="140" bw="0">
 <![CDATA[
-entry:75 %ret_ln394 = ret
+entry:75 %ret_ln448 = ret
 
 ]]></Node>
-<StgValue><ssdm name="ret_ln394"/></StgValue>
+<StgValue><ssdm name="ret_ln448"/></StgValue>
 </operation>
 </state>
 </state_list>
