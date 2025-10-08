@@ -2,13 +2,13 @@
 # xsim v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Wed Oct  8 15:55:16 2025
-# Process ID: 1992325
+# Start of session at: Wed Oct  8 19:23:36 2025
+# Process ID: 2114431
 # Current directory: /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog
 # Command line: xsim -mode tcl -source {xsim.dir/activation_accelerator/xsim_script.tcl}
 # Log file: /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/xsim.log
 # Journal file: /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/xsim.jou
-# Running On: super-test, OS: Linux, CPU Frequency: 2699.998 MHz, CPU Physical cores: 21, Host memory: 134761 MB
+# Running On: super-test, OS: Linux, CPU Frequency: 2700.000 MHz, CPU Physical cores: 20, Host memory: 134761 MB
 #-----------------------------------------------------------
 source xsim.dir/activation_accelerator/xsim_script.tcl
 # xsim {activation_accelerator} -autoloadwcfg -tclbatch {activation_accelerator.tcl}
@@ -477,7 +477,7 @@ Time: 411285 ns  Iteration: 11  Process: /apatb_activation_accelerator_top/AESL_
 // RTL Simulation : 15 / 15 [n/a] @ "411355000"
 ////////////////////////////////////////////////////////////////////////////////////
 $finish called at time : 411415 ns : File "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator.autotb.v" Line 741
-run: Time (s): cpu = 00:00:00.66 ; elapsed = 00:00:47 . Memory (MB): peak = 1363.910 ; gain = 56.039 ; free physical = 15171 ; free virtual = 91993
+run: Time (s): cpu = 00:00:00.56 ; elapsed = 00:00:48 . Memory (MB): peak = 1363.910 ; gain = 120.961 ; free physical = 12179 ; free virtual = 90177
 ## quit
-INFO: xsimkernel Simulation Memory Usage: 148560 KB (Peak: 196680 KB), Simulation CPU Usage: 46840 ms
-INFO: [Common 17-206] Exiting xsim at Wed Oct  8 15:56:07 2025...
+INFO: xsimkernel Simulation Memory Usage: 148560 KB (Peak: 196680 KB), Simulation CPU Usage: 47670 ms
+INFO: [Common 17-206] Exiting xsim at Wed Oct  8 19:24:28 2025...

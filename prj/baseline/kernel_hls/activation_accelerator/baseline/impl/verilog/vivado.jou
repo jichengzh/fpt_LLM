@@ -2,12 +2,12 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Wed Oct  8 15:56:53 2025
-# Process ID: 1993466
+# Start of session at: Wed Oct  8 19:25:14 2025
+# Process ID: 2115803
 # Current directory: /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/impl/verilog
 # Command line: vivado -mode batch -source run_vivado.tcl
 # Log file: /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/impl/verilog/vivado.log
 # Journal file: /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/impl/verilog/vivado.jou
-# Running On: super-test, OS: Linux, CPU Frequency: 2700.001 MHz, CPU Physical cores: 21, Host memory: 134761 MB
+# Running On: super-test, OS: Linux, CPU Frequency: 2700.000 MHz, CPU Physical cores: 20, Host memory: 134761 MB
 #-----------------------------------------------------------
 source run_vivado.tcl

@@ -28,49 +28,49 @@ Set activation_accelerator.stage = 0
 Data transfer complete
 
 --- Testing Config 0 ---
-Config 0 compute time: 0.103844 ms
+Config 0 compute time: 0.064879 ms
 Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/data/hls_output_config_0.bin
 Max Difference: 49278
 Config 0 test failed with 31704 errors
 
 --- Testing Config 1 ---
-Config 1 compute time: 207.988 ms
+Config 1 compute time: 162.284 ms
 Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/data/hls_output_config_1.bin
 Max Difference: 14595
 Config 1 test failed with 32768 errors
 
 --- Testing Config 2 ---
 WARNING [HLS SIM]: hls::stream 'hls::stream<float, 0>1' contains leftover data, which may result in RTL simulation hanging.
-Config 2 compute time: 212.749 ms
+Config 2 compute time: 165.84 ms
 Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/data/hls_output_config_2.bin
 Max Difference: 14595
 Config 2 test failed with 32768 errors
 
 --- Testing Config 3 ---
-Config 3 compute time: 209.233 ms
+Config 3 compute time: 163.067 ms
 Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/data/hls_output_config_3.bin
 Max Difference: 16225
 Config 3 test failed with 32275 errors
 
 --- Testing Config 4 ---
-Config 4 compute time: 209.073 ms
+Config 4 compute time: 163.226 ms
 Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/data/hls_output_config_4.bin
 Max Difference: 48783
 Config 4 test failed with 32227 errors
 
 --- Testing Config 5 ---
-Config 5 compute time: 0.05078 ms
+Config 5 compute time: 0.044523 ms
 Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/data/hls_output_config_5.bin
 Max Difference: 49118
 Config 5 test failed with 32724 errors
 
 --- Testing Config 6 ---
-Config 6 compute time: 0.02286 ms
+Config 6 compute time: 0.018043 ms
 Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/data/hls_output_config_6.bin
 Max Difference: 49117
 Config 6 test failed with 32742 errors
 
-Total compute time for all configs: 839.22 ms
+Total compute time for all configs: 654.545 ms
 
 === Test Complete ===
 INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 1024

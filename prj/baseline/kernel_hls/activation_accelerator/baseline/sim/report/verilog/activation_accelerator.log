@@ -38,49 +38,49 @@ Set activation_accelerator.stage = 0
 Data transfer complete
 
 --- Testing Config 0 ---
-Config 0 compute time: 15.2515 ms
+Config 0 compute time: 16.9167 ms
 Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/data/hls_output_config_0.bin
 Max Difference: 49278
 Config 0 test failed with 31704 errors
 
 --- Testing Config 1 ---
-Config 1 compute time: 247.007 ms
+Config 1 compute time: 224.068 ms
 Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/data/hls_output_config_1.bin
 Max Difference: 14595
 Config 1 test failed with 32768 errors
 
 --- Testing Config 2 ---
 WARNING [HLS SIM]: hls::stream 'hls::stream<float, 0>1' contains leftover data, which may result in RTL simulation hanging.
-Config 2 compute time: 173.958 ms
+Config 2 compute time: 237.339 ms
 Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/data/hls_output_config_2.bin
 Max Difference: 14595
 Config 2 test failed with 32768 errors
 
 --- Testing Config 3 ---
-Config 3 compute time: 171.317 ms
+Config 3 compute time: 222.427 ms
 Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/data/hls_output_config_3.bin
 Max Difference: 16225
 Config 3 test failed with 32275 errors
 
 --- Testing Config 4 ---
-Config 4 compute time: 172.716 ms
+Config 4 compute time: 222.124 ms
 Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/data/hls_output_config_4.bin
 Max Difference: 48783
 Config 4 test failed with 32227 errors
 
 --- Testing Config 5 ---
-Config 5 compute time: 9.60708 ms
+Config 5 compute time: 12.1996 ms
 Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/data/hls_output_config_5.bin
 Max Difference: 49118
 Config 5 test failed with 32724 errors
 
 --- Testing Config 6 ---
-Config 6 compute time: 9.55219 ms
+Config 6 compute time: 12.157 ms
 Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/data/hls_output_config_6.bin
 Max Difference: 49117
 Config 6 test failed with 32742 errors
 
-Total compute time for all configs: 799.408 ms
+Total compute time for all configs: 947.231 ms
 
 === Test Complete ===
 INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 1024
@@ -1386,10 +1386,10 @@ Time: 411285 ns  Iteration: 11  Process: /apatb_activation_accelerator_top/AESL_
 // RTL Simulation : 15 / 15 [n/a] @ "411355000"
 ////////////////////////////////////////////////////////////////////////////////////
 $finish called at time : 411415 ns : File "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator.autotb.v" Line 741
-run: Time (s): cpu = 00:00:00.66 ; elapsed = 00:00:47 . Memory (MB): peak = 1363.910 ; gain = 56.039 ; free physical = 15171 ; free virtual = 91993
+run: Time (s): cpu = 00:00:00.56 ; elapsed = 00:00:48 . Memory (MB): peak = 1363.910 ; gain = 120.961 ; free physical = 12179 ; free virtual = 90177
 ## quit
-INFO: xsimkernel Simulation Memory Usage: 148560 KB (Peak: 196680 KB), Simulation CPU Usage: 46840 ms
-INFO: [Common 17-206] Exiting xsim at Wed Oct  8 15:56:07 2025...
+INFO: xsimkernel Simulation Memory Usage: 148560 KB (Peak: 196680 KB), Simulation CPU Usage: 47670 ms
+INFO: [Common 17-206] Exiting xsim at Wed Oct  8 19:24:28 2025...
 Loading test data...
 Using relative data path: /data1/jcz/activation_accelerator_tutorial/prj/data/
 BF16 data loaded successfully
@@ -1415,48 +1415,48 @@ Set activation_accelerator.stage = 0
 Data transfer complete
 
 --- Testing Config 0 ---
-Config 0 compute time: 1.43109 ms
+Config 0 compute time: 1.83695 ms
 Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/data/hls_output_config_0.bin
 Max Difference: 49278
 Config 0 test failed with 31704 errors
 
 --- Testing Config 1 ---
-Config 1 compute time: 1.47819 ms
+Config 1 compute time: 1.87896 ms
 Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/data/hls_output_config_1.bin
 Max Difference: 14595
 Config 1 test failed with 32768 errors
 
 --- Testing Config 2 ---
-Config 2 compute time: 1.47922 ms
+Config 2 compute time: 1.83085 ms
 Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/data/hls_output_config_2.bin
 Max Difference: 14595
 Config 2 test failed with 32768 errors
 
 --- Testing Config 3 ---
-Config 3 compute time: 1.47326 ms
+Config 3 compute time: 1.82946 ms
 Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/data/hls_output_config_3.bin
 Max Difference: 16225
 Config 3 test failed with 32275 errors
 
 --- Testing Config 4 ---
-Config 4 compute time: 1.44755 ms
+Config 4 compute time: 1.85346 ms
 Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/data/hls_output_config_4.bin
 Max Difference: 48783
 Config 4 test failed with 32227 errors
 
 --- Testing Config 5 ---
-Config 5 compute time: 1.44614 ms
+Config 5 compute time: 1.84495 ms
 Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/data/hls_output_config_5.bin
 Max Difference: 49118
 Config 5 test failed with 32724 errors
 
 --- Testing Config 6 ---
-Config 6 compute time: 1.45063 ms
+Config 6 compute time: 1.84195 ms
 Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/data/hls_output_config_6.bin
 Max Difference: 49117
 Config 6 test failed with 32742 errors
 
-Total compute time for all configs: 10.2061 ms
+Total compute time for all configs: 12.9166 ms
 
 === Test Complete ===
 INFO: [COSIM-1000] *** C/RTL co-simulation finished: PASS ***

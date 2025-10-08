@@ -1,4 +1,4 @@
-INFO-FLOW: Workspace /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline opened at Wed Oct 08 15:52:18 CST 2025
+INFO-FLOW: Workspace /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline opened at Wed Oct 08 19:20:35 CST 2025
 Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Execute       send_msg_by_id INFO @200-435@%s%s 'open_solution -flow_target vivado' config_interface -m_axi_latency=0 
@@ -12,7 +12,7 @@ DBG:HLSDevice: Trying to load device library: /data/xilinx/Vitis_HLS/2022.2/lib/
 DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /data/xilinx/Vivado/2022.2/data/parts/arch.xml
 DBG:HLSDevice: init success
 INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
-Command       create_platform done; 2.53 sec.
+Command       create_platform done; 2.23 sec.
 Execute       source /data/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
 Execute         source /data/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
 Execute         source /data/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
@@ -25,10 +25,9 @@ Execute         source /data/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip
 Execute         source /data/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
 Execute         source /data/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
 Execute         source /data/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
-Command       ap_source done; 0.13 sec.
 Execute       ap_part_info -name xck26-sfvc784-2LV-c -data info 
 Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 2.69 sec.
+Command     set_part done; 2.36 sec.
 Execute     create_clock -period 10 
 INFO: [HLS 200-1510] Running: create_clock -period 10 
 Execute       ap_set_clock -name default -period 10 -default=false 
@@ -39,15 +38,15 @@ INFO: [SIM 211-2] *************** CSIM start ***************
 INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
 Execute       ap_part_info -name xck26-sfvc784-2LV-c -data info 
 Execute       source run_sim.tcl 
-Command       ap_source done; 0.96 sec.
+Command       ap_source done; 0.76 sec.
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-Command     csim_design done; 9.11 sec.
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 8.37 seconds. CPU system time: 0.78 seconds. Elapsed time: 9.11 seconds; current allocated memory: 0.000 MB.
+Command     csim_design done; 9.17 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 8.4 seconds. CPU system time: 0.8 seconds. Elapsed time: 9.17 seconds; current allocated memory: 0.000 MB.
 Execute     csynth_design 
 INFO: [HLS 200-1510] Running: csynth_design 
 Execute       elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0.01 seconds. Elapsed time: 0 seconds; current allocated memory: 754.195 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 748.262 MB.
 INFO: [HLS 200-10] Analyzing design file 'activation_accelerator.cpp' ... 
 INFO-FLOW: Compiling one TU...
 INFO-FLOW: Handling activation_accelerator.cpp as C++
@@ -55,32 +54,32 @@ Execute         ap_part_info -name xck26-sfvc784-2LV-c -data info
 INFO-FLOW: Running: GCC PP 39
 INFO-FLOW: Source preprocessing
 Execute         ap_eval exec -ignorestderr /data/xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang activation_accelerator.cpp -foptimization-record-file=/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0 -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /data/xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I /data/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp -hls-platform-db-name=/data/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynquplus_medium -device-resource-info=BRAM_288.000000_DSP_1248.000000_FF_234240.000000_LUT_117120.000000_SLICE_14640.000000_URAM_64.000000 -device-name-info=xck26-sfvc784-2LV-c > /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.cpp.clang.out.log 2> /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.cpp.clang.err.log 
-Command         ap_eval done; 0.25 sec.
-INFO-FLOW: Done: GCC PP 39 time: 0.2 seconds per iteration
+Command         ap_eval done; 0.27 sec.
+INFO-FLOW: Done: GCC PP 39 time: 0.3 seconds per iteration
 Execute         set_directive_top activation_accelerator -name=activation_accelerator 
 Execute         source /data/xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
 Execute         source /data/xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
 INFO-FLOW: Source syntax check for synthesis
 Execute         ap_eval exec -ignorestderr /data/xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp -hls-platform-db-name=/data/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynquplus_medium -device-resource-info=BRAM_288.000000_DSP_1248.000000_FF_234240.000000_LUT_117120.000000_SLICE_14640.000000_URAM_64.000000 -device-name-info=xck26-sfvc784-2LV-c > /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/clang.out.log 2> /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/clang.err.log 
-Command         ap_eval done; 3.48 sec.
+Command         ap_eval done; 3.5 sec.
 Execute         clang_tidy xilinx-systemc-detector -desc systemc-detector /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp std=gnu++14 -target fpga  -directive=/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec /data/xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/.systemc_flag -fix-errors /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command         clang_tidy done; 3.51 sec.
+Command         clang_tidy done; 3.27 sec.
 INFO-FLOW: Running: clang-tidy CDT preprocess 39
 Execute         clang_tidy xilinx-directive2pragma -desc directive2pragma /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp std=gnu++14 -target fpga  -directive=/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/all.directive.json 
 INFO-FLOW: exec /data/xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/all.directive.json -fix-errors /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command         clang_tidy done; 4.15 sec.
+Command         clang_tidy done; 4.17 sec.
 Execute         clang_tidy xilinx-remove-assert -desc remove-assert /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp std=gnu++14 -target fpga  
 INFO-FLOW: exec /data/xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-remove-assert -fix-errors /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command         clang_tidy done; 3.7 sec.
-INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 7.9 seconds per iteration
+Command         clang_tidy done; 3.22 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 7.4 seconds per iteration
 INFO-FLOW: Calling xilinx-label-all-loops ... 
 INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
 Execute         clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp std=gnu++14 -target fpga  
 Execute           ap_eval exec -ignorestderr /data/xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp.clang-tidy.loop-label.out.log 2> /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp.clang-tidy.loop-label.err.log 
-Command           ap_eval done; 6.86 sec.
+Command           ap_eval done; 7.84 sec.
 Execute           source /data/xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
-Command         clang_tidy done; 7.51 sec.
+Command         clang_tidy done; 8.5 sec.
 Execute         ap_eval exec -ignorestderr /data/xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp.xilinx-dataflow-lawyer.err.log 
 Command         ap_eval done; 3.02 sec.
 WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (activation_accelerator.cpp:393:9)
@@ -90,8 +89,8 @@ WARNING: [HLS 200-471] Dataflow form checks found 2 issue(s) in file activation_
 Execute         ap_part_info -name xck26-sfvc784-2LV-c -data info 
 INFO-FLOW: compiling source code to llvm bc
 Execute         ap_eval exec -ignorestderr /data/xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /data/xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I /data/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.bc -hls-platform-db-name=/data/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynquplus_medium -device-resource-info=BRAM_288.000000_DSP_1248.000000_FF_234240.000000_LUT_117120.000000_SLICE_14640.000000_URAM_64.000000 -device-name-info=xck26-sfvc784-2LV-c > /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp.clang.out.log 2> /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp.clang.err.log 
-Command         ap_eval done; 3.22 sec.
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 27.64 seconds. CPU system time: 1.66 seconds. Elapsed time: 29.32 seconds; current allocated memory: 760.656 MB.
+Command         ap_eval done; 4.21 sec.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 28.64 seconds. CPU system time: 2.05 seconds. Elapsed time: 30.68 seconds; current allocated memory: 754.723 MB.
 INFO-FLOW: Linking Debug ...
 INFO-FLOW: Linking dut bc code.
 Execute         run_link_or_opt -out /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.ld.0.bc -args  "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.g.bc"  
@@ -103,14 +102,14 @@ INFO-FLOW:
 INFO-FLOW: Linking math bc lib
 Execute         run_link_or_opt -out /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.ld.2.m1.bc -args /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.ld.1.lower.bc -only-needed /data/xilinx/Vitis_HLS/2022.2/lnx64/lib/libhlsm_39.bc /data/xilinx/Vitis_HLS/2022.2/lnx64/lib/libhlsmc++_39.bc 
 Execute           ap_eval exec -ignorestderr /data/xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.ld.1.lower.bc -only-needed /data/xilinx/Vitis_HLS/2022.2/lnx64/lib/libhlsm_39.bc /data/xilinx/Vitis_HLS/2022.2/lnx64/lib/libhlsmc++_39.bc -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.ld.2.m1.bc > /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log 
-Command           ap_eval done; 3.61 sec.
+Command           ap_eval done; 3.32 sec.
 INFO-FLOW: 
-Command         run_link_or_opt done; 3.61 sec.
+Command         run_link_or_opt done; 3.33 sec.
 Execute         run_link_or_opt -opt -out /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.ld.3.fpc.bc -args /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=activation_accelerator -reflow-float-conversion 
 Execute           ap_eval exec -ignorestderr /data/xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=activation_accelerator -reflow-float-conversion -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.ld.3.fpc.bc > /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log 
-Command           ap_eval done; 1.49 sec.
+Command           ap_eval done; 1.51 sec.
 INFO-FLOW: 
-Command         run_link_or_opt done; 1.49 sec.
+Command         run_link_or_opt done; 1.51 sec.
 Execute         run_link_or_opt -out /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.ld.4.m2.bc -args /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /data/xilinx/Vitis_HLS/2022.2/lnx64/lib/libfloatconversion_39.bc 
 Execute           ap_eval exec -ignorestderr /data/xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /data/xilinx/Vitis_HLS/2022.2/lnx64/lib/libfloatconversion_39.bc -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.ld.4.m2.bc > /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log 
 Command           ap_eval done; 0.17 sec.
@@ -118,15 +117,15 @@ INFO-FLOW:
 Command         run_link_or_opt done; 0.17 sec.
 Execute         run_link_or_opt -opt -out /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.ld.5.gdce.bc -args /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=activation_accelerator 
 Execute           ap_eval exec -ignorestderr /data/xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.ld.5.gdce.bc.opt.diag.yml /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=activation_accelerator -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.ld.5.gdce.bc > /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.ld.5.gdce.bc.opt.out.log 2> /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.ld.5.gdce.bc.opt.err.log 
-Command           ap_eval done; 0.14 sec.
+Command           ap_eval done; 0.13 sec.
 INFO-FLOW: 
-Command         run_link_or_opt done; 0.14 sec.
+Command         run_link_or_opt done; 0.13 sec.
 Execute         send_msg_by_id INFO @200-777@%s Vivado 
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
 Execute         is_m_axi_addr64 
 INFO-FLOW: Doing LTO.
 Execute         ap_eval exec -ignorestderr /data/xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.ld.0.bc.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=activation_accelerator -mllvm -hls-db-dir -mllvm /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -reflow-enable-maxi-auto-id-channel=0 -mllvm -assume-maxi-align=1 -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -reflow-assume-no-address-wrap=true -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -mllvm -default-clock-period=10 -x ir /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.ld.5.gdce.bc -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.lto.bc -hls-platform-db-name=/data/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynquplus_medium -device-resource-info=BRAM_288.000000_DSP_1248.000000_FF_234240.000000_LUT_117120.000000_SLICE_14640.000000_URAM_64.000000 -device-name-info=xck26-sfvc784-2LV-c > /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.ld.0.bc.clang.out.log 2> /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.ld.0.bc.clang.err.log 
-Command         ap_eval done; 1.02 sec.
+Command         ap_eval done; 1.28 sec.
 INFO: [HLS 214-131] Inlining function 'exp_reduce_::exp(float)' into 'hls::expf(float)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/expfloat.cpp:22:9)
 INFO: [HLS 214-131] Inlining function 'hls::expf(float)' into 'float_safe_softmax(float const*, unsigned short*, int)' (activation_accelerator.cpp:377:16)
 INFO: [HLS 214-131] Inlining function 'hls::expf(float)' into 'float_mask_safe_softmax(float const*, float const*, unsigned short*, int)' (activation_accelerator.cpp:442:25)
@@ -154,15 +153,15 @@ INFO: [HLS 214-115] Multiple burst reads of length 1024 and bit width 16 in loop
 INFO: [HLS 214-115] Multiple burst reads of length 1024 and bit width 16 in loop 'loop_24'(activation_accelerator.cpp:494:9) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (activation_accelerator.cpp:494:9)
 INFO: [HLS 214-115] Multiple burst writes of length 1024 and bit width 16 in loop 'loop_25'(activation_accelerator.cpp:569:9) has been inferred on bundle 'gmem2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (activation_accelerator.cpp:569:9)
 INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/kernel.internal.xml
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 5.98 seconds. CPU system time: 0.83 seconds. Elapsed time: 6.82 seconds; current allocated memory: 761.246 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 761.246 MB.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 5.97 seconds. CPU system time: 0.84 seconds. Elapsed time: 6.83 seconds; current allocated memory: 755.309 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 755.309 MB.
 Execute         opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute           cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
 INFO-FLOW: Running Standard Transforms...
 Execute           transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top activation_accelerator -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.0.bc -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.1.bc -f -phase std-opt 
-Command           transform done; 0.22 sec.
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.2 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.22 seconds; current allocated memory: 780.754 MB.
+Command           transform done; 0.21 sec.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.21 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.22 seconds; current allocated memory: 774.227 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
 Execute           transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -directive-preproc -mem2reg -dse -dce -globaldce /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.1.bc -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.2.prechk.bc -f 
@@ -170,7 +169,7 @@ Command           transform done; 0.22 sec.
 INFO-FLOW: Checking Synthesizability 2/2..
 Execute           transform -syn-check /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.2.prechk.bc -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.2.bc -f -phase syn-check 
 Command           transform done; 0.11 sec.
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.33 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.33 seconds; current allocated memory: 802.262 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.32 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.34 seconds; current allocated memory: 796.320 MB.
 INFO-FLOW: Compiler optimizing ...
 INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.g.1.bc to /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
@@ -194,13 +193,13 @@ INFO: [XFORM 203-712] Applying dataflow to function 'float_mask_safe_softmax' (a
 	 'float_mask_safe_softmax_Block_for.end26_proc'
 	 'float_mask_safe_softmax_Loop_loop_sum_broadcast_proc'
 	 'float_mask_safe_softmax_Loop_loop_22_proc7'.
-Command           transform done; 0.5 sec.
+Command           transform done; 0.51 sec.
 INFO-FLOW: Presyn 2...
 Execute           transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -barrier -norm-name /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.o.1.tmp.bc -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.o.2.bc -f -phase presyn 
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (activation_accelerator.cpp:42:69) to (activation_accelerator.cpp:81:9) in function 'bf16add'... converting 8 basic blocks.
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (activation_accelerator.cpp:92:21) to (activation_accelerator.cpp:133:9) in function 'bf16add'... converting 5 basic blocks.
-Command           transform done; 0.36 sec.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.81 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.88 seconds; current allocated memory: 850.500 MB.
+Command           transform done; 0.29 sec.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.77 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.81 seconds; current allocated memory: 844.562 MB.
 INFO-FLOW: Building ssdm...
 Execute           transform -hls -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.o.2.bc -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
 INFO: [HLS 200-472] Inferring partial write operation for 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.7' (activation_accelerator.cpp:464:19)
@@ -215,12 +214,13 @@ INFO: [HLS 200-472] Inferring partial write operation for 'activation_accelerato
 INFO: [HLS 200-472] Inferring partial write operation for 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.7' (activation_accelerator.cpp:171:14)
 INFO: [HLS 200-472] Inferring partial write operation for 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.7' (activation_accelerator.cpp:235:19)
 INFO: [HLS 200-472] Inferring partial write operation for 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.7' (activation_accelerator.cpp:270:19)
-Command           transform done; 0.71 sec.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.58 seconds. CPU system time: 0.14 seconds. Elapsed time: 0.71 seconds; current allocated memory: 1.141 GB.
+Command           transform done; 0.72 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.57 seconds. CPU system time: 0.13 seconds. Elapsed time: 0.72 seconds; current allocated memory: 1.135 GB.
 INFO-FLOW: Finish building internal data model.
-Command         opt_and_import_c done; 2.14 sec.
-Command       elaborate done; 38.28 sec.
+Command         opt_and_import_c done; 2.09 sec.
+Command       elaborate done; 39.6 sec.
 Execute       ap_eval exec zip -j /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
+Command       ap_eval done; 0.11 sec.
 Execute       autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO-FLOW: Synthesizing C/C++ design ...
@@ -514,7 +514,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'loop_25'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'loop_25'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.14 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.21 seconds; current allocated memory: 1.143 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.21 seconds; current allocated memory: 1.137 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_25.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_25.sched.adb -f 
@@ -526,7 +526,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.143 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.137 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_25.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_25.bind.adb -f 
@@ -540,7 +540,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'loop_1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'loop_1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.144 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.138 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_110.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_110.sched.adb -f 
@@ -552,7 +552,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.144 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.138 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_110.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_110.bind.adb -f 
@@ -568,7 +568,7 @@ WARNING: [HLS 200-880] The II Violation in module 'activation_accelerator_Pipeli
 WARNING: [HLS 200-880] The II Violation in module 'activation_accelerator_Pipeline_loop_mean' (loop 'loop_mean'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('sum_write_ln246', activation_accelerator.cpp:246) of variable 'sum', activation_accelerator.cpp:248 on local variable 'sum' and 'load' operation ('sum_load', activation_accelerator.cpp:248) on local variable 'sum'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 3, Depth = 5, loop 'loop_mean'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.144 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.138 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_mean.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_mean.sched.adb -f 
@@ -580,7 +580,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.144 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.138 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_mean.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_mean.bind.adb -f 
@@ -596,7 +596,7 @@ WARNING: [HLS 200-880] The II Violation in module 'activation_accelerator_Pipeli
 WARNING: [HLS 200-880] The II Violation in module 'activation_accelerator_Pipeline_loop_var' (loop 'loop_var'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('var_write_ln255', activation_accelerator.cpp:255) of variable 'var', activation_accelerator.cpp:258 on local variable 'var' and 'load' operation ('var_load_1', activation_accelerator.cpp:258) on local variable 'var'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 3, Depth = 13, loop 'loop_var'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.144 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.139 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_var.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_var.sched.adb -f 
@@ -608,7 +608,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.144 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.139 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_var.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_var.bind.adb -f 
@@ -622,7 +622,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'loop_norm'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 16, loop 'loop_norm'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.145 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.139 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_norm11.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_norm11.sched.adb -f 
@@ -634,7 +634,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.145 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.139 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_norm11.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_norm11.bind.adb -f 
@@ -648,7 +648,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'loop_1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'loop_1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.146 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.140 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_18.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_18.sched.adb -f 
@@ -660,7 +660,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.146 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.140 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_18.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_18.bind.adb -f 
@@ -676,7 +676,7 @@ WARNING: [HLS 200-880] The II Violation in module 'activation_accelerator_Pipeli
 WARNING: [HLS 200-880] The II Violation in module 'activation_accelerator_Pipeline_loop_sum' (loop 'loop_sum'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('sum_sq_write_ln220', activation_accelerator.cpp:220) of variable 'sum_sq', activation_accelerator.cpp:222 on local variable 'sum_sq' and 'load' operation ('sum_sq_load', activation_accelerator.cpp:222) on local variable 'sum_sq'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 3, Depth = 9, loop 'loop_sum'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.146 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.140 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_sum.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_sum.sched.adb -f 
@@ -688,7 +688,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.146 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.140 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_sum.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_sum.bind.adb -f 
@@ -702,7 +702,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'loop_norm'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 12, loop 'loop_norm'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.147 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.141 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_norm.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_norm.sched.adb -f 
@@ -714,7 +714,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.147 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.141 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_norm.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_norm.bind.adb -f 
@@ -728,7 +728,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'loop_1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'loop_1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.147 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.141 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_17.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_17.sched.adb -f 
@@ -740,7 +740,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.147 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.141 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_17.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_17.bind.adb -f 
@@ -754,11 +754,11 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'loop_3'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 26, loop 'loop_3'
 INFO: [SCHED 204-11] Finished scheduling.
-Command         schedule done; 0.12 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.148 GB.
+Command         schedule done; 0.13 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.142 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_3.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
-Command         syn_report done; 0.12 sec.
+Command         syn_report done; 0.13 sec.
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_3.sched.adb -f 
 INFO-FLOW: Finish scheduling activation_accelerator_Pipeline_loop_3.
 Execute         set_default_model activation_accelerator_Pipeline_loop_3 
@@ -768,7 +768,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.2 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.148 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.19 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.21 seconds; current allocated memory: 1.142 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_3.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_3.bind.adb -f 
@@ -782,7 +782,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'loop_1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'loop_1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.148 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.143 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_16.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_16.sched.adb -f 
@@ -794,7 +794,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.148 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.143 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_16.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_16.bind.adb -f 
@@ -808,7 +808,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'loop_2'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 23, loop 'loop_2'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.149 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.143 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_2.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_2.sched.adb -f 
@@ -820,7 +820,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.149 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.16 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.143 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_2.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_2.bind.adb -f 
@@ -834,7 +834,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'loop_1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'loop_1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.150 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.144 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_14.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_14.sched.adb -f 
@@ -846,7 +846,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.150 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.144 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_14.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_14.bind.adb -f 
@@ -860,7 +860,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'loop_1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'loop_1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.150 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.144 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_15.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_15.sched.adb -f 
@@ -872,7 +872,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.150 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.144 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_15.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_15.bind.adb -f 
@@ -886,7 +886,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'loop_18'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 7, loop 'loop_18'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.151 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.145 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/float_mask_safe_softmax_Loop_loop_18_proc5.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/float_mask_safe_softmax_Loop_loop_18_proc5.sched.adb -f 
@@ -898,7 +898,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.151 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.145 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/float_mask_safe_softmax_Loop_loop_18_proc5.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/float_mask_safe_softmax_Loop_loop_18_proc5.bind.adb -f 
@@ -910,7 +910,7 @@ Execute         set_default_model float_mask_safe_softmax_Block_float_mask_safe_
 Execute         schedule -model float_mask_safe_softmax_Block_float_mask_safe_softmax_for.cond.i.exit_proc 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.151 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.145 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/float_mask_safe_softmax_Block_float_mask_safe_softmax_for_cond_i_exit_proc.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/float_mask_safe_softmax_Block_float_mask_safe_softmax_for_cond_i_exit_proc.sched.adb -f 
@@ -922,7 +922,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.151 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.145 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/float_mask_safe_softmax_Block_float_mask_safe_softmax_for_cond_i_exit_proc.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/float_mask_safe_softmax_Block_float_mask_safe_softmax_for_cond_i_exit_proc.bind.adb -f 
@@ -936,7 +936,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'loop_max_broadcast'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'loop_max_broadcast'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.152 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.146 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/float_mask_safe_softmax_Loop_loop_max_broadcast_proc.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/float_mask_safe_softmax_Loop_loop_max_broadcast_proc.sched.adb -f 
@@ -948,7 +948,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.152 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.146 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/float_mask_safe_softmax_Loop_loop_max_broadcast_proc.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/float_mask_safe_softmax_Loop_loop_max_broadcast_proc.bind.adb -f 
@@ -964,7 +964,7 @@ WARNING: [HLS 200-880] The II Violation in module 'float_mask_safe_softmax_Loop_
 WARNING: [HLS 200-880] The II Violation in module 'float_mask_safe_softmax_Loop_loop_20_proc6' (loop 'loop_20'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('sum_write_ln438', activation_accelerator.cpp:438) of variable 'sum', activation_accelerator.cpp:444 on local variable 'sum' and 'load' operation ('sum_load', activation_accelerator.cpp:444) on local variable 'sum'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 3, Depth = 18, loop 'loop_20'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.152 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.146 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/float_mask_safe_softmax_Loop_loop_20_proc6.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/float_mask_safe_softmax_Loop_loop_20_proc6.sched.adb -f 
@@ -976,7 +976,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.152 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.146 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/float_mask_safe_softmax_Loop_loop_20_proc6.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/float_mask_safe_softmax_Loop_loop_20_proc6.bind.adb -f 
@@ -988,7 +988,7 @@ Execute         set_default_model float_mask_safe_softmax_Block_for.end26_proc
 Execute         schedule -model float_mask_safe_softmax_Block_for.end26_proc 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.152 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.146 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/float_mask_safe_softmax_Block_for_end26_proc.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/float_mask_safe_softmax_Block_for_end26_proc.sched.adb -f 
@@ -1000,7 +1000,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.152 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.146 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/float_mask_safe_softmax_Block_for_end26_proc.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/float_mask_safe_softmax_Block_for_end26_proc.bind.adb -f 
@@ -1014,7 +1014,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'loop_sum_broadcast'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'loop_sum_broadcast'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.152 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.147 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/float_mask_safe_softmax_Loop_loop_sum_broadcast_proc.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/float_mask_safe_softmax_Loop_loop_sum_broadcast_proc.sched.adb -f 
@@ -1026,7 +1026,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.152 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.147 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/float_mask_safe_softmax_Loop_loop_sum_broadcast_proc.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/float_mask_safe_softmax_Loop_loop_sum_broadcast_proc.bind.adb -f 
@@ -1040,7 +1040,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'loop_22'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 12, loop 'loop_22'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.153 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.147 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/float_mask_safe_softmax_Loop_loop_22_proc7.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/float_mask_safe_softmax_Loop_loop_22_proc7.sched.adb -f 
@@ -1052,7 +1052,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.153 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.147 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/float_mask_safe_softmax_Loop_loop_22_proc7.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/float_mask_safe_softmax_Loop_loop_22_proc7.bind.adb -f 
@@ -1064,7 +1064,7 @@ Execute         set_default_model float_mask_safe_softmax
 Execute         schedule -model float_mask_safe_softmax 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.153 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.147 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/float_mask_safe_softmax.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/float_mask_safe_softmax.sched.adb -f 
@@ -1076,10 +1076,9 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.153 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.147 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/float_mask_safe_softmax.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
-Command         syn_report done; 0.11 sec.
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/float_mask_safe_softmax.bind.adb -f 
 INFO-FLOW: Finish binding float_mask_safe_softmax.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1091,7 +1090,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'loop_1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'loop_1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.153 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.148 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_13.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_13.sched.adb -f 
@@ -1103,7 +1102,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.153 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.148 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_13.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_13.bind.adb -f 
@@ -1117,7 +1116,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'loop_max'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'loop_max'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.154 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.148 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_max.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_max.sched.adb -f 
@@ -1129,7 +1128,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.154 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.148 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_max.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_max.bind.adb -f 
@@ -1145,7 +1144,7 @@ WARNING: [HLS 200-880] The II Violation in module 'activation_accelerator_Pipeli
 WARNING: [HLS 200-880] The II Violation in module 'activation_accelerator_Pipeline_loop_exp' (loop 'loop_exp'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('sum_write_ln375', activation_accelerator.cpp:375) of variable 'sum', activation_accelerator.cpp:378 on local variable 'sum' and 'load' operation ('sum_load_3', activation_accelerator.cpp:378) on local variable 'sum'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 3, Depth = 18, loop 'loop_exp'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.154 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.149 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_exp.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_exp.sched.adb -f 
@@ -1157,7 +1156,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.154 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.149 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_exp.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_exp.bind.adb -f 
@@ -1171,7 +1170,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'loop_output'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 12, loop 'loop_output'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.155 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.149 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_output.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_output.sched.adb -f 
@@ -1183,7 +1182,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.155 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.149 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_output.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_output.bind.adb -f 
@@ -1197,7 +1196,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'loop_1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'loop_1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.156 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.150 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_1.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_1.sched.adb -f 
@@ -1209,7 +1208,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.156 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.150 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_1.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_1.bind.adb -f 
@@ -1223,7 +1222,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'loop_1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'loop_1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.156 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.150 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_11.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_11.sched.adb -f 
@@ -1235,7 +1234,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.156 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.150 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_11.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_11.bind.adb -f 
@@ -1249,7 +1248,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'loop_12'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 7, loop 'loop_12'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.157 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.151 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_12.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_12.sched.adb -f 
@@ -1261,7 +1260,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.157 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.151 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_12.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_12.bind.adb -f 
@@ -1275,7 +1274,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 WARNING: [SCHED 204-65] Unable to satisfy pipeline directive for function 'bf16add': contains subloop(s) that are not unrolled.
 INFO: [SCHED 204-11] Finished scheduling.
 Command         schedule done; 0.11 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.2 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.158 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.2 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.153 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/bf16add.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/bf16add.sched.adb -f 
@@ -1287,10 +1286,10 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.158 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.153 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/bf16add.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
-Command         syn_report done; 0.17 sec.
+Command         syn_report done; 0.18 sec.
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/bf16add.bind.adb -f 
 INFO-FLOW: Finish binding bf16add.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1301,7 +1300,7 @@ Execute         schedule -model activation_accelerator_Pipeline_loop_19
 INFO: [SCHED 204-11] Starting scheduling ...
 WARNING: [SCHED 204-67] Unable to satisfy pipeline directive for loop 'loop_19': contains subfunction 'bf16add' which is not pipelined.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.25 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.26 seconds; current allocated memory: 1.159 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.26 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.153 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_19.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_19.sched.adb -f 
@@ -1313,11 +1312,11 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command         bind done; 0.41 sec.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.43 seconds. CPU system time: 0 seconds. Elapsed time: 0.44 seconds; current allocated memory: 1.159 GB.
+Command         bind done; 0.42 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.43 seconds. CPU system time: 0 seconds. Elapsed time: 0.44 seconds; current allocated memory: 1.153 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_19.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
-Command         syn_report done; 1.13 sec.
+Command         syn_report done; 1.14 sec.
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_19.bind.adb -f 
 INFO-FLOW: Finish binding activation_accelerator_Pipeline_loop_19.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1329,7 +1328,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'loop_23'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'loop_23'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.21 seconds. CPU system time: 0 seconds. Elapsed time: 1.23 seconds; current allocated memory: 1.160 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.2 seconds. CPU system time: 0 seconds. Elapsed time: 1.21 seconds; current allocated memory: 1.154 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_23.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_23.sched.adb -f 
@@ -1341,7 +1340,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.160 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.154 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_23.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_23.bind.adb -f 
@@ -1355,7 +1354,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'loop_24'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'loop_24'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.160 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.154 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_24.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_24.sched.adb -f 
@@ -1367,7 +1366,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.160 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.154 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_24.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_24.bind.adb -f 
@@ -1380,7 +1379,7 @@ Execute         schedule -model activation_accelerator
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
 Command         schedule done; 0.19 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.21 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.160 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.22 seconds. CPU system time: 0 seconds. Elapsed time: 0.23 seconds; current allocated memory: 1.155 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Command         syn_report done; 0.22 sec.
@@ -1393,11 +1392,11 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command         bind done; 0.7 sec.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.92 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.93 seconds; current allocated memory: 1.161 GB.
+Command         bind done; 0.71 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.93 seconds. CPU system time: 0 seconds. Elapsed time: 0.94 seconds; current allocated memory: 1.155 GB.
 Execute         syn_report -verbosereport -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
-Command         syn_report done; 1.62 sec.
+Command         syn_report done; 1.61 sec.
 Execute         db_write -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.bind.adb -f 
 INFO-FLOW: Finish binding activation_accelerator.
 Execute         get_model_list activation_accelerator -filter all-wo-channel 
@@ -1457,8 +1456,7 @@ WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipel
 WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_loop_25/m_axi_gmem2_BREADY' to 0.
 INFO: [RTGEN 206-100] Generating core module 'mux_83_16_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_loop_25'.
-Command         create_rtl_model done; 0.11 sec.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.73 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.77 seconds; current allocated memory: 1.161 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.72 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.73 seconds; current allocated memory: 1.156 GB.
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_25 -style xilinx -f -lang vhdl -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/vhdl/activation_accelerator_activation_accelerator_Pipeline_loop_25 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_25 -style xilinx -f -lang vlog -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_25 
@@ -1477,7 +1475,7 @@ Execute         create_rtl_model activation_accelerator_Pipeline_loop_110 -top_p
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'activation_accelerator_Pipeline_loop_110' pipeline 'loop_1' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Generating core module 'mux_83_16_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_loop_110'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.163 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.157 GB.
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_110 -style xilinx -f -lang vhdl -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/vhdl/activation_accelerator_activation_accelerator_Pipeline_loop_110 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_110 -style xilinx -f -lang vlog -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_110 
@@ -1497,7 +1495,7 @@ INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'activation_accele
 INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_no_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mux_42_32_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_loop_mean'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.164 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.158 GB.
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_mean -style xilinx -f -lang vhdl -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/vhdl/activation_accelerator_activation_accelerator_Pipeline_loop_mean 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_mean -style xilinx -f -lang vlog -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_mean 
@@ -1519,7 +1517,7 @@ INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1
 INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mux_42_32_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_loop_var'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.165 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.159 GB.
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_var -style xilinx -f -lang vhdl -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/vhdl/activation_accelerator_activation_accelerator_Pipeline_loop_var 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_var -style xilinx -f -lang vlog -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_var 
@@ -1540,7 +1538,7 @@ INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1
 INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_9_no_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mux_42_32_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_loop_norm11'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.167 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.161 GB.
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_norm11 -style xilinx -f -lang vhdl -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/vhdl/activation_accelerator_activation_accelerator_Pipeline_loop_norm11 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_norm11 -style xilinx -f -lang vlog -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_norm11 
@@ -1559,7 +1557,7 @@ Execute         create_rtl_model activation_accelerator_Pipeline_loop_18 -top_pr
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'activation_accelerator_Pipeline_loop_18' pipeline 'loop_1' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Generating core module 'mux_83_16_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_loop_18'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.168 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.162 GB.
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_18 -style xilinx -f -lang vhdl -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/vhdl/activation_accelerator_activation_accelerator_Pipeline_loop_18 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_18 -style xilinx -f -lang vlog -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_18 
@@ -1580,7 +1578,7 @@ INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_no_dsp_1': 1 i
 INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mux_42_32_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_loop_sum'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.170 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.164 GB.
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_sum -style xilinx -f -lang vhdl -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/vhdl/activation_accelerator_activation_accelerator_Pipeline_loop_sum 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_sum -style xilinx -f -lang vlog -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_sum 
@@ -1600,7 +1598,7 @@ INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'activation_accele
 INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_9_no_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mux_42_32_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_loop_norm'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.171 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.165 GB.
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_norm -style xilinx -f -lang vhdl -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/vhdl/activation_accelerator_activation_accelerator_Pipeline_loop_norm 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_norm -style xilinx -f -lang vlog -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_norm 
@@ -1619,7 +1617,7 @@ Execute         create_rtl_model activation_accelerator_Pipeline_loop_17 -top_pr
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'activation_accelerator_Pipeline_loop_17' pipeline 'loop_1' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Generating core module 'mux_83_16_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_loop_17'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.173 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.167 GB.
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_17 -style xilinx -f -lang vhdl -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/vhdl/activation_accelerator_activation_accelerator_Pipeline_loop_17 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_17 -style xilinx -f -lang vlog -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_17 
@@ -1642,7 +1640,7 @@ INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_8_full_dsp_1': 1
 INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mux_42_32_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_loop_3'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.175 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.169 GB.
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_3 -style xilinx -f -lang vhdl -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/vhdl/activation_accelerator_activation_accelerator_Pipeline_loop_3 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_3 -style xilinx -f -lang vlog -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_3 
@@ -1661,7 +1659,7 @@ Execute         create_rtl_model activation_accelerator_Pipeline_loop_16 -top_pr
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'activation_accelerator_Pipeline_loop_16' pipeline 'loop_1' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Generating core module 'mux_83_16_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_loop_16'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.23 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.176 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.18 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.170 GB.
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_16 -style xilinx -f -lang vhdl -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/vhdl/activation_accelerator_activation_accelerator_Pipeline_loop_16 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_16 -style xilinx -f -lang vlog -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_16 
@@ -1683,7 +1681,7 @@ INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_9_no_dsp_1': 1 i
 INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_8_full_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mux_42_32_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_loop_2'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.178 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.172 GB.
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_2 -style xilinx -f -lang vhdl -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/vhdl/activation_accelerator_activation_accelerator_Pipeline_loop_2 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_2 -style xilinx -f -lang vlog -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_2 
@@ -1702,7 +1700,7 @@ Execute         create_rtl_model activation_accelerator_Pipeline_loop_14 -top_pr
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'activation_accelerator_Pipeline_loop_14' pipeline 'loop_1' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Generating core module 'mux_83_16_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_loop_14'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.21 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 1.180 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.174 GB.
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_14 -style xilinx -f -lang vhdl -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/vhdl/activation_accelerator_activation_accelerator_Pipeline_loop_14 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_14 -style xilinx -f -lang vlog -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_14 
@@ -1721,7 +1719,7 @@ Execute         create_rtl_model activation_accelerator_Pipeline_loop_15 -top_pr
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'activation_accelerator_Pipeline_loop_15' pipeline 'loop_1' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Generating core module 'mux_83_16_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_loop_15'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.181 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.175 GB.
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_15 -style xilinx -f -lang vhdl -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/vhdl/activation_accelerator_activation_accelerator_Pipeline_loop_15 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_15 -style xilinx -f -lang vlog -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_15 
@@ -1742,7 +1740,7 @@ INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 in
 INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mux_42_32_1_1': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'float_mask_safe_softmax_Loop_loop_18_proc5'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.183 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.177 GB.
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
 Execute         gen_rtl float_mask_safe_softmax_Loop_loop_18_proc5 -style xilinx -f -lang vhdl -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/vhdl/activation_accelerator_float_mask_safe_softmax_Loop_loop_18_proc5 
 Execute         gen_rtl float_mask_safe_softmax_Loop_loop_18_proc5 -style xilinx -f -lang vlog -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/verilog/activation_accelerator_float_mask_safe_softmax_Loop_loop_18_proc5 
@@ -1760,7 +1758,7 @@ INFO: [HLS 200-10] -------------------------------------------------------------
 Execute         create_rtl_model float_mask_safe_softmax_Block_float_mask_safe_softmax_for.cond.i.exit_proc -top_prefix activation_accelerator_ -sub_prefix activation_accelerator_ -mg_file /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/float_mask_safe_softmax_Block_float_mask_safe_softmax_for_cond_i_exit_proc.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'float_mask_safe_softmax_Block_float_mask_safe_softmax_for_cond_i_exit_proc'.
 INFO: [RTMG 210-285] Implementing FIFO 'max_val_stream_U(activation_accelerator_fifo_w32_d2_S)' using Shift Registers.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.28 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.3 seconds; current allocated memory: 1.184 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.23 seconds. CPU system time: 0 seconds. Elapsed time: 0.23 seconds; current allocated memory: 1.179 GB.
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
 Execute         gen_rtl float_mask_safe_softmax_Block_float_mask_safe_softmax_for.cond.i.exit_proc -style xilinx -f -lang vhdl -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/vhdl/activation_accelerator_float_mask_safe_softmax_Block_float_mask_safe_softmax_for_cond_i_exit_proc 
 Execute         gen_rtl float_mask_safe_softmax_Block_float_mask_safe_softmax_for.cond.i.exit_proc -style xilinx -f -lang vlog -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/verilog/activation_accelerator_float_mask_safe_softmax_Block_float_mask_safe_softmax_for_cond_i_exit_proc 
@@ -1778,7 +1776,7 @@ INFO: [HLS 200-10] -------------------------------------------------------------
 Execute         create_rtl_model float_mask_safe_softmax_Loop_loop_max_broadcast_proc -top_prefix activation_accelerator_ -sub_prefix activation_accelerator_ -mg_file /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/float_mask_safe_softmax_Loop_loop_max_broadcast_proc.compgen.tcl 
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'float_mask_safe_softmax_Loop_loop_max_broadcast_proc' pipeline 'loop_max_broadcast' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'float_mask_safe_softmax_Loop_loop_max_broadcast_proc'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.185 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.179 GB.
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
 Execute         gen_rtl float_mask_safe_softmax_Loop_loop_max_broadcast_proc -style xilinx -f -lang vhdl -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/vhdl/activation_accelerator_float_mask_safe_softmax_Loop_loop_max_broadcast_proc 
 Execute         gen_rtl float_mask_safe_softmax_Loop_loop_max_broadcast_proc -style xilinx -f -lang vlog -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/verilog/activation_accelerator_float_mask_safe_softmax_Loop_loop_max_broadcast_proc 
@@ -1799,7 +1797,7 @@ INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_no_dsp_1': 1 i
 INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_8_full_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'float_mask_safe_softmax_Loop_loop_20_proc6'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.186 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.180 GB.
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
 Execute         gen_rtl float_mask_safe_softmax_Loop_loop_20_proc6 -style xilinx -f -lang vhdl -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/vhdl/activation_accelerator_float_mask_safe_softmax_Loop_loop_20_proc6 
 Execute         gen_rtl float_mask_safe_softmax_Loop_loop_20_proc6 -style xilinx -f -lang vlog -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/verilog/activation_accelerator_float_mask_safe_softmax_Loop_loop_20_proc6 
@@ -1818,7 +1816,8 @@ Execute         create_rtl_model float_mask_safe_softmax_Block_for.end26_proc -t
 WARNING: [RTGEN 206-101] RTL name 'fifo_w32_d2_S' is changed to 'fifo_w32_d2_S_x' due to conflict.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'float_mask_safe_softmax_Block_for_end26_proc'.
 INFO: [RTMG 210-285] Implementing FIFO 'sum_stream_U(activation_accelerator_fifo_w32_d2_S_x)' using Shift Registers.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 1.187 GB.
+Command         create_rtl_model done; 0.13 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.29 seconds; current allocated memory: 1.181 GB.
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
 Execute         gen_rtl float_mask_safe_softmax_Block_for.end26_proc -style xilinx -f -lang vhdl -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/vhdl/activation_accelerator_float_mask_safe_softmax_Block_for_end26_proc 
 Execute         gen_rtl float_mask_safe_softmax_Block_for.end26_proc -style xilinx -f -lang vlog -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/verilog/activation_accelerator_float_mask_safe_softmax_Block_for_end26_proc 
@@ -1836,7 +1835,7 @@ INFO: [HLS 200-10] -------------------------------------------------------------
 Execute         create_rtl_model float_mask_safe_softmax_Loop_loop_sum_broadcast_proc -top_prefix activation_accelerator_ -sub_prefix activation_accelerator_ -mg_file /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/float_mask_safe_softmax_Loop_loop_sum_broadcast_proc.compgen.tcl 
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'float_mask_safe_softmax_Loop_loop_sum_broadcast_proc' pipeline 'loop_sum_broadcast' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'float_mask_safe_softmax_Loop_loop_sum_broadcast_proc'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.187 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 1.181 GB.
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
 Execute         gen_rtl float_mask_safe_softmax_Loop_loop_sum_broadcast_proc -style xilinx -f -lang vhdl -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/vhdl/activation_accelerator_float_mask_safe_softmax_Loop_loop_sum_broadcast_proc 
 Execute         gen_rtl float_mask_safe_softmax_Loop_loop_sum_broadcast_proc -style xilinx -f -lang vlog -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/verilog/activation_accelerator_float_mask_safe_softmax_Loop_loop_sum_broadcast_proc 
@@ -1855,7 +1854,7 @@ Execute         create_rtl_model float_mask_safe_softmax_Loop_loop_22_proc7 -top
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'float_mask_safe_softmax_Loop_loop_22_proc7' pipeline 'loop_22' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_9_no_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'float_mask_safe_softmax_Loop_loop_22_proc7'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.188 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.182 GB.
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
 Execute         gen_rtl float_mask_safe_softmax_Loop_loop_22_proc7 -style xilinx -f -lang vhdl -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/vhdl/activation_accelerator_float_mask_safe_softmax_Loop_loop_22_proc7 
 Execute         gen_rtl float_mask_safe_softmax_Loop_loop_22_proc7 -style xilinx -f -lang vlog -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/verilog/activation_accelerator_float_mask_safe_softmax_Loop_loop_22_proc7 
@@ -1883,7 +1882,7 @@ INFO: [RTMG 210-285] Implementing FIFO 'sum_to_broadcast_loc_channel_U(activatio
 INFO: [RTMG 210-285] Implementing FIFO 'sum_broadcast_stream_U(activation_accelerator_fifo_w32_d32768_A)' using Vivado Default RAMs.
 INFO: [RTMG 210-285] Implementing FIFO 'start_for_float_mask_safe_softmax_Loop_loop_20_proc6_U0_U(activation_accelerator_start_for_float_mask_safe_softmax_Loop_loop_20_proc6_U0)' using Shift Registers.
 INFO: [RTMG 210-285] Implementing FIFO 'start_for_float_mask_safe_softmax_Loop_loop_22_proc7_U0_U(activation_accelerator_start_for_float_mask_safe_softmax_Loop_loop_22_proc7_U0)' using Shift Registers.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.190 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.18 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.184 GB.
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
 Execute         gen_rtl float_mask_safe_softmax -style xilinx -f -lang vhdl -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/vhdl/activation_accelerator_float_mask_safe_softmax 
 Execute         gen_rtl float_mask_safe_softmax -style xilinx -f -lang vlog -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/verilog/activation_accelerator_float_mask_safe_softmax 
@@ -1902,7 +1901,7 @@ Execute         create_rtl_model activation_accelerator_Pipeline_loop_13 -top_pr
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'activation_accelerator_Pipeline_loop_13' pipeline 'loop_1' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Generating core module 'mux_83_16_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_loop_13'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.191 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.186 GB.
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_13 -style xilinx -f -lang vhdl -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/vhdl/activation_accelerator_activation_accelerator_Pipeline_loop_13 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_13 -style xilinx -f -lang vlog -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_13 
@@ -1922,7 +1921,7 @@ INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'activation_accele
 INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mux_42_32_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_loop_max'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.193 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.187 GB.
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_max -style xilinx -f -lang vhdl -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/vhdl/activation_accelerator_activation_accelerator_Pipeline_loop_max 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_max -style xilinx -f -lang vlog -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_max 
@@ -1944,7 +1943,7 @@ INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1
 INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_8_full_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mux_42_32_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_loop_exp'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.194 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.189 GB.
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_exp -style xilinx -f -lang vhdl -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/vhdl/activation_accelerator_activation_accelerator_Pipeline_loop_exp 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_exp -style xilinx -f -lang vlog -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_exp 
@@ -1964,7 +1963,7 @@ INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'activation_accele
 INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_9_no_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mux_21_32_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_loop_output'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.196 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.190 GB.
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_output -style xilinx -f -lang vhdl -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/vhdl/activation_accelerator_activation_accelerator_Pipeline_loop_output 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_output -style xilinx -f -lang vlog -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_output 
@@ -1983,7 +1982,7 @@ Execute         create_rtl_model activation_accelerator_Pipeline_loop_1 -top_pre
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'activation_accelerator_Pipeline_loop_1' pipeline 'loop_1' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Generating core module 'mux_83_16_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_loop_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.197 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.192 GB.
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_1 -style xilinx -f -lang vhdl -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/vhdl/activation_accelerator_activation_accelerator_Pipeline_loop_1 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_1 -style xilinx -f -lang vlog -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_1 
@@ -2002,7 +2001,7 @@ Execute         create_rtl_model activation_accelerator_Pipeline_loop_11 -top_pr
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'activation_accelerator_Pipeline_loop_11' pipeline 'loop_1' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Generating core module 'mux_83_16_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_loop_11'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.199 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.193 GB.
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_11 -style xilinx -f -lang vhdl -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/vhdl/activation_accelerator_activation_accelerator_Pipeline_loop_11 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_11 -style xilinx -f -lang vlog -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_11 
@@ -2022,7 +2021,7 @@ INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'activation_accele
 INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 7 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_loop_12'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.201 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.195 GB.
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_12 -style xilinx -f -lang vhdl -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/vhdl/activation_accelerator_activation_accelerator_Pipeline_loop_12 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_12 -style xilinx -f -lang vlog -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_12 
@@ -2039,7 +2038,7 @@ INFO: [HLS 200-10] -- Generating RTL for module 'bf16add'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute         create_rtl_model bf16add -top_prefix activation_accelerator_ -sub_prefix activation_accelerator_ -mg_file /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/bf16add.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'bf16add'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.25 seconds. CPU system time: 0 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.203 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.25 seconds. CPU system time: 0 seconds. Elapsed time: 0.26 seconds; current allocated memory: 1.198 GB.
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
 Execute         gen_rtl bf16add -style xilinx -f -lang vhdl -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/vhdl/activation_accelerator_bf16add 
 Execute         gen_rtl bf16add -style xilinx -f -lang vlog -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/verilog/activation_accelerator_bf16add 
@@ -2049,7 +2048,7 @@ Command         syn_report done; 0.11 sec.
 Execute         syn_report -rtlxml -model bf16add -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/report/bf16add_csynth.xml 
 Execute         syn_report -verbosereport -model bf16add -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/bf16add.verbose.rpt 
 Execute           AP::get_flow_target_display_name
-Command         syn_report done; 0.23 sec.
+Command         syn_report done; 0.22 sec.
 Execute         db_write -model bf16add -f -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/bf16add.adb 
 Execute         db_write -model bf16add -bindview -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/design.bindinfo.xml 
 Execute         gen_tb_info bf16add -p /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/bf16add 
@@ -2058,7 +2057,7 @@ INFO: [HLS 200-10] -- Generating RTL for module 'activation_accelerator_Pipeline
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute         create_rtl_model activation_accelerator_Pipeline_loop_19 -top_prefix activation_accelerator_ -sub_prefix activation_accelerator_ -mg_file /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_19.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_loop_19'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.52 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.53 seconds; current allocated memory: 1.206 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.52 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.53 seconds; current allocated memory: 1.200 GB.
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_19 -style xilinx -f -lang vhdl -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/vhdl/activation_accelerator_activation_accelerator_Pipeline_loop_19 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_19 -style xilinx -f -lang vlog -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_19 
@@ -2067,7 +2066,7 @@ Execute           AP::get_flow_target_display_name
 Execute         syn_report -rtlxml -model activation_accelerator_Pipeline_loop_19 -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/report/activation_accelerator_Pipeline_loop_19_csynth.xml 
 Execute         syn_report -verbosereport -model activation_accelerator_Pipeline_loop_19 -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_19.verbose.rpt 
 Execute           AP::get_flow_target_display_name
-Command         syn_report done; 1.15 sec.
+Command         syn_report done; 1.14 sec.
 Execute         db_write -model activation_accelerator_Pipeline_loop_19 -f -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_19.adb 
 Execute         db_write -model activation_accelerator_Pipeline_loop_19 -bindview -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/design.bindinfo.xml 
 Execute         gen_tb_info activation_accelerator_Pipeline_loop_19 -p /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_19 
@@ -2089,7 +2088,8 @@ WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipel
 WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_loop_23/m_axi_gmem0_ARREGION' to 0.
 WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_loop_23/m_axi_gmem0_ARUSER' to 0.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_loop_23'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.29 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.3 seconds; current allocated memory: 1.208 GB.
+Command         create_rtl_model done; 0.12 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.28 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.32 seconds; current allocated memory: 1.202 GB.
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_23 -style xilinx -f -lang vhdl -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/vhdl/activation_accelerator_activation_accelerator_Pipeline_loop_23 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_23 -style xilinx -f -lang vlog -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_23 
@@ -2119,7 +2119,8 @@ WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipel
 WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_loop_24/m_axi_gmem1_ARREGION' to 0.
 WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_loop_24/m_axi_gmem1_ARUSER' to 0.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_loop_24'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 1.210 GB.
+Command         create_rtl_model done; 0.12 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.17 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.204 GB.
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_24 -style xilinx -f -lang vhdl -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/vhdl/activation_accelerator_activation_accelerator_Pipeline_loop_24 
 Execute         gen_rtl activation_accelerator_Pipeline_loop_24 -style xilinx -f -lang vlog -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_24 
@@ -2181,8 +2182,8 @@ INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator'.
 INFO: [RTMG 210-278] Implementing memory 'activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb' using auto RAMs.
 INFO: [RTMG 210-278] Implementing memory 'activation_accelerator_exp_vals_RAM_AUTO_1R1W' using auto RAMs.
 INFO: [RTMG 210-278] Implementing memory 'activation_accelerator_x_RAM_AUTO_1R1W' using auto RAMs.
-Command         create_rtl_model done; 0.49 sec.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.51 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.57 seconds; current allocated memory: 1.219 GB.
+Command         create_rtl_model done; 0.57 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.58 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.65 seconds; current allocated memory: 1.214 GB.
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
 Execute         gen_rtl activation_accelerator -istop -style xilinx -f -lang vhdl -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/vhdl/activation_accelerator 
 Execute         gen_rtl activation_accelerator -istop -style xilinx -f -lang vlog -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/verilog/activation_accelerator 
@@ -2191,13 +2192,13 @@ Execute           AP::get_flow_target_display_name
 Execute         syn_report -rtlxml -model activation_accelerator -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/report/activation_accelerator_csynth.xml 
 Execute         syn_report -verbosereport -model activation_accelerator -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.verbose.rpt 
 Execute           AP::get_flow_target_display_name
-Command         syn_report done; 2.02 sec.
+Command         syn_report done; 2.16 sec.
 Execute         db_write -model activation_accelerator -f -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.adb 
 Execute         db_write -model activation_accelerator -bindview -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/design.bindinfo.xml 
 Execute         gen_tb_info activation_accelerator -p /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator 
 Execute         export_constraint_db -f -tool general -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.constraint.tcl 
 Execute         syn_report -designview -model activation_accelerator -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.design.xml 
-Command         syn_report done; 0.58 sec.
+Command         syn_report done; 0.73 sec.
 Execute         syn_report -csynthDesign -model activation_accelerator -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/report/csynth.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         syn_report -wcfg -model activation_accelerator -o /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_dataflow_ana.wcfg 
@@ -2548,7 +2549,6 @@ Execute           source /data/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/
 Execute           source /data/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
 Execute           source /data/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
 Execute           source /data/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
-Command         ap_source done; 0.11 sec.
 INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
 INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/vhdl' dstVlogDir='/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/vlog' tclDir='/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db' modelList='activation_accelerator_mux_83_16_1_1
 activation_accelerator_flow_control_loop_pipe_sequential_init
@@ -2690,7 +2690,7 @@ Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_acc
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator_Pipeline_loop_24.compgen.tcl 
 Execute         source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.compgen.tcl 
 Execute           source ./control.slave.tcl 
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 3.27 seconds. CPU system time: 0.06 seconds. Elapsed time: 3.33 seconds; current allocated memory: 1.224 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 3.56 seconds. CPU system time: 0.06 seconds. Elapsed time: 3.63 seconds; current allocated memory: 1.218 GB.
 INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='activation_accelerator_' outfile=''
 INFO-FLOW: Running: create_csynth_xml read xml data
 INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
@@ -2860,15 +2860,15 @@ INFO-FLOW: Running: gen_csynth_sec_pragma
 INFO-FLOW: Done: gen_csynth_sec_pragma time: 0 seconds per iteration
 INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
 INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 2.88 seconds. CPU system time: 0.02 seconds. Elapsed time: 2.9 seconds; current allocated memory: 1.239 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 2.88 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.89 seconds; current allocated memory: 1.233 GB.
 INFO: [VHDL 208-304] Generating VHDL RTL for activation_accelerator.
 INFO: [VLOG 209-307] Generating Verilog RTL for activation_accelerator.
 Execute         syn_report -model activation_accelerator -printsummary 
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
 INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
-Command       autosyn done; 24.07 sec.
-Command     csynth_design done; 62.46 sec.
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 58.86 seconds. CPU system time: 3.24 seconds. Elapsed time: 62.46 seconds; current allocated memory: 514.410 MB.
+Command       autosyn done; 24.39 sec.
+Command     csynth_design done; 64.11 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 59.85 seconds. CPU system time: 3.65 seconds. Elapsed time: 64.11 seconds; current allocated memory: 514.406 MB.
 Execute     cosim_design 
 INFO: [HLS 200-1510] Running: cosim_design 
 Execute       source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/global.setting.tcl 
@@ -2913,7 +2913,7 @@ Execute       ap_part_info -name xck26-sfvc784-2LV-c -data info
 INFO-FLOW: TB processing: /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator.cpp /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/./sim/autowrap/testbench/activation_accelerator.cpp_pre.cpp
 Execute       clang_tidy xilinx-tb-process -desc tb-process /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/./sim/autowrap/testbench/activation_accelerator.cpp_pre.cpp.tb.cpp std=c++14 
 INFO-FLOW: exec /data/xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-tb-process -fix-errors /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/./sim/autowrap/testbench/activation_accelerator.cpp_pre.cpp.tb.cpp -- -std=c++14 -fhls -ferror-limit=0
-Command       clang_tidy done; 6.47 sec.
+Command       clang_tidy done; 6.52 sec.
 Execute       source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/./sim/autowrap/testbench/tb.status.tcl 
 Execute       source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/global.setting.tcl 
 Execute       source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
@@ -2924,7 +2924,7 @@ Execute       source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accel
 Execute       ap_part_info -name xck26-sfvc784-2LV-c -data info 
 Execute       source .run_sim.tcl 
 INFO: [COSIM 212-302] Starting C TB testing ... 
-Command       ap_source done; 1.17 sec.
+Command       ap_source done; 1.31 sec.
 INFO: [COSIM 212-333] Generating C post check test bench ...
 INFO: [COSIM 212-12] Generating RTL test bench ...
 Execute       source ../tv/cdatafile/ref.tcl 
@@ -2955,10 +2955,10 @@ Execute         source .sim.status.tcl
 INFO: [COSIM 212-323] Starting verilog simulation. 
 INFO: [COSIM 212-15] Starting XSIM ...
 INFO: [COSIM 212-316] Starting C post checking ...
-Command       ap_source done; 89.91 sec.
+Command       ap_source done; 92.21 sec.
 INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
-Command     cosim_design done; 145.86 sec.
-INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 225.31 seconds. CPU system time: 10.07 seconds. Elapsed time: 145.86 seconds; current allocated memory: 11.070 MB.
+Command     cosim_design done; 148.07 sec.
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 224.85 seconds. CPU system time: 9.26 seconds. Elapsed time: 148.07 seconds; current allocated memory: 10.621 MB.
 Execute     export_design -format ip_catalog -evaluate verilog 
 INFO: [HLS 200-1510] Running: export_design -format ip_catalog -evaluate verilog 
 Execute       config_export -format=ip_catalog 
@@ -2992,7 +2992,7 @@ Execute         source /data/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip
 Execute         source /data/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
 Execute         source /data/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
 Execute         source /data/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
-Command       ap_source done; 0.13 sec.
+Command       ap_source done; 0.14 sec.
 INFO-FLOW: DBG:PUTS:       initCTypeInfo top_module=activation_accelerator xml_exists=0
 Execute       source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
 Execute       source /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.rtl_wrap.cfg.tcl 
@@ -3221,6 +3221,7 @@ Execute         source /data/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip
 Execute         source /data/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
 Execute         source /data/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
 Execute         source /data/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.11 sec.
 INFO-FLOW: DBG:PUTS:     IP package: exec /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/impl/ip/pack.sh
 INFO-FLOW: DBG:PUTS:     IP package: success /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/impl/ip/pack.sh
 INFO-FLOW: DBG:PUTS:   auto_impl: eval: -flow impl -rtl verilog
@@ -3293,16 +3294,17 @@ INFO-FLOW: DBG:PROC: ::HLSREPORTS::auto_impl_report topinfo_dict='RtlTopPrefix {
 INFO-FLOW: DBG:PUTS:     auto_impl_report: impl processing xml
 Execute       ap_part_info -quiet -data family -name xck26-sfvc784-2LV-c 
 INFO-FLOW: DBG:PUTS:     writing export xml file: /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/impl/report/verilog/export_impl.xml
-INFO-FLOW: DBG:PROC: ::HLSREPORTS::auto_impl_report_txt xml_root='domNode0x7ff935de31d8' export_design_flow='impl' export_rpt='/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/impl/report/verilog/export_impl.rpt' rpt_txt_var=''
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::auto_impl_report_txt xml_root='domNode0x7f2ee0abf8a8' export_design_flow='impl' export_rpt='/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/impl/report/verilog/export_impl.rpt' rpt_txt_var=''
 INFO-FLOW: DBG:PUTS:     wrote export rpt file: export_impl.rpt
 INFO-FLOW: DBG:PUTS:     auto_impl_report: syn processing xml
 Execute       ap_part_info -quiet -data family -name xck26-sfvc784-2LV-c 
 INFO-FLOW: DBG:PUTS:     writing export xml file: /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/impl/report/verilog/export_syn.xml
-INFO-FLOW: DBG:PROC: ::HLSREPORTS::auto_impl_report_txt xml_root='domNode0x7ff935e74548' export_design_flow='syn' export_rpt='/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/impl/report/verilog/export_syn.rpt' rpt_txt_var=''
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::auto_impl_report_txt xml_root='domNode0x7f2ee0b54868' export_design_flow='syn' export_rpt='/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/impl/report/verilog/export_syn.rpt' rpt_txt_var=''
 INFO-FLOW: DBG:PUTS:     wrote export rpt file: export_syn.rpt
 Execute       send_msg_by_id INFO @200-802@%s activation_accelerator/baseline/impl/export.zip 
 INFO: [HLS 200-802] Generated output file activation_accelerator/baseline/impl/export.zip
 WARNING: [HLS 200-484] The 'export_design -evaluate' command is deprecated and will be removed in a future release.
-Command     export_design done; 1026.28 sec.
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 619.81 seconds. CPU system time: 62.26 seconds. Elapsed time: 1026.28 seconds; current allocated memory: 14.508 MB.
+Command     export_design done; 987.94 sec.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 591.62 seconds. CPU system time: 58.29 seconds. Elapsed time: 987.94 seconds; current allocated memory: 19.168 MB.
 Execute     cleanup_all 
+Command     cleanup_all done; 0.11 sec.

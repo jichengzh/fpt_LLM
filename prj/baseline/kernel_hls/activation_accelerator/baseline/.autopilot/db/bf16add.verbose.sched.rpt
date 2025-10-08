@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'bf16add'
 ================================================================
-* Date:           Wed Oct  8 15:53:24 2025
+* Date:           Wed Oct  8 19:21:42 2025
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        activation_accelerator
@@ -225,7 +225,8 @@ The critical path consists of the following:
 	wire read operation ('b_bits', activation_accelerator.cpp:25) on port 'b_bits' (activation_accelerator.cpp:25) [3]  (0 ns)
 	'icmp' operation ('icmp_ln36', activation_accelerator.cpp:36) [21]  (0.849 ns)
 	'select' operation ('b_align_exp', activation_accelerator.cpp:50) [36]  (0.393 ns)
-	'icmp' operation ('icmp_ln57', activation_accelerator.cpp:57) [44]  (0.849 ns)
+	'icmp' operation ('icmp_ln54', activation_accelerator.cpp:54) [37]  (0.849 ns)
+	'xor' operation ('xor_ln54', activation_accelerator.cpp:54) [49]  (0 ns)
 	'and' operation ('and_ln57', activation_accelerator.cpp:57) [50]  (0.287 ns)
 	'select' operation ('a_full_mantissa', activation_accelerator.cpp:57) [51]  (0.904 ns)
 	'icmp' operation ('icmp_ln71', activation_accelerator.cpp:71) [59]  (1.1 ns)

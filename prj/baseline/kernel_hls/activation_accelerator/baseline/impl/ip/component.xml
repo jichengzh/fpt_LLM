@@ -6888,8 +6888,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Activation_accelerator</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2114294756</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-10-08T07:56:39Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2114294964</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-10-08T11:25:00Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>

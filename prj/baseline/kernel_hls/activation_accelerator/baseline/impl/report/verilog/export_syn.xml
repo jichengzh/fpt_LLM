@@ -776,7 +776,7 @@
     <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/activation_accelerator_utilization_hierarchical_synth.rpt"/>
   </VivadoReportFiles>
   <GeneralInfo NAME="General Information">
-    <item NAME="Date" VALUE="Wed Oct 08 16:13:12 CST 2025"/>
+    <item NAME="Date" VALUE="Wed Oct 08 19:40:54 CST 2025"/>
     <item NAME="Version" VALUE="2022.2 (Build 3670227 on Oct 13 2022)"/>
     <item NAME="Project" VALUE="activation_accelerator"/>
     <item NAME="Solution" VALUE="baseline (Vivado IP Flow Target)"/>
