@@ -1,0 +1,226 @@
+
+
+================================================================
+== Vitis HLS Report for 'activation_accelerator_Pipeline_loop_sum'
+================================================================
+* Date:           Wed Oct  8 15:53:19 2025
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        activation_accelerator
+* Solution:       baseline (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.016 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     3079|     3079|  30.790 us|  30.790 us|  3079|  3079|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------+---------+---------+----------+-----------+-----------+------+----------+
+        |            |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- loop_sum  |     3077|     3077|         9|          3|          1|  1024|       yes|
+        +------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 3, depth = 9
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 9
+* Pipeline : 1
+  Pipeline-0 : II = 3, D = 9, States = { 1 2 3 4 5 6 7 8 9 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.37>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%sum_sq = alloca i32 1"   --->   Operation 12 'alloca' 'sum_sq' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 13 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.42ns)   --->   "%store_ln0 = store i11 0, i11 %i"   --->   Operation 14 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 15 [1/1] (0.42ns)   --->   "%store_ln0 = store i32 0, i32 %sum_sq"   --->   Operation 15 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc.i124"   --->   Operation 16 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%i_10 = load i11 %i" [activation_accelerator.cpp:222]   --->   Operation 17 'load' 'i_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.94ns)   --->   "%icmp_ln220 = icmp_eq  i11 %i_10, i11 1024" [activation_accelerator.cpp:220]   --->   Operation 18 'icmp' 'icmp_ln220' <Predicate = true> <Delay = 0.94> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.94> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 1024, i64 1024, i64 1024"   --->   Operation 19 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.79ns)   --->   "%add_ln220 = add i11 %i_10, i11 1" [activation_accelerator.cpp:220]   --->   Operation 20 'add' 'add_ln220' <Predicate = true> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%br_ln220 = br i1 %icmp_ln220, void %for.inc.i124.split, void %for.end.i126.exitStub" [activation_accelerator.cpp:220]   --->   Operation 21 'br' 'br_ln220' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%lshr_ln8 = partselect i8 @_ssdm_op_PartSelect.i8.i11.i32.i32, i11 %i_10, i32 2, i32 9" [activation_accelerator.cpp:222]   --->   Operation 22 'partselect' 'lshr_ln8' <Predicate = (!icmp_ln220)> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%zext_ln222 = zext i8 %lshr_ln8" [activation_accelerator.cpp:222]   --->   Operation 23 'zext' 'zext_ln222' <Predicate = (!icmp_ln220)> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%x_addr = getelementptr i32 %x, i64 0, i64 %zext_ln222" [activation_accelerator.cpp:222]   --->   Operation 24 'getelementptr' 'x_addr' <Predicate = (!icmp_ln220)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%x_2_addr = getelementptr i32 %x_2, i64 0, i64 %zext_ln222" [activation_accelerator.cpp:222]   --->   Operation 25 'getelementptr' 'x_2_addr' <Predicate = (!icmp_ln220)> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%x_4_addr = getelementptr i32 %x_4, i64 0, i64 %zext_ln222" [activation_accelerator.cpp:222]   --->   Operation 26 'getelementptr' 'x_4_addr' <Predicate = (!icmp_ln220)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%x_6_addr = getelementptr i32 %x_6, i64 0, i64 %zext_ln222" [activation_accelerator.cpp:222]   --->   Operation 27 'getelementptr' 'x_6_addr' <Predicate = (!icmp_ln220)> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%trunc_ln222 = trunc i11 %i_10" [activation_accelerator.cpp:222]   --->   Operation 28 'trunc' 'trunc_ln222' <Predicate = (!icmp_ln220)> <Delay = 0.00>
+ST_1 : Operation 29 [2/2] (1.23ns)   --->   "%x_load = load i8 %x_addr" [activation_accelerator.cpp:222]   --->   Operation 29 'load' 'x_load' <Predicate = (!icmp_ln220)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 256> <RAM>
+ST_1 : Operation 30 [2/2] (1.23ns)   --->   "%x_2_load = load i8 %x_2_addr" [activation_accelerator.cpp:222]   --->   Operation 30 'load' 'x_2_load' <Predicate = (!icmp_ln220)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 256> <RAM>
+ST_1 : Operation 31 [2/2] (1.23ns)   --->   "%x_4_load = load i8 %x_4_addr" [activation_accelerator.cpp:222]   --->   Operation 31 'load' 'x_4_load' <Predicate = (!icmp_ln220)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 256> <RAM>
+ST_1 : Operation 32 [2/2] (1.23ns)   --->   "%x_6_load = load i8 %x_6_addr" [activation_accelerator.cpp:222]   --->   Operation 32 'load' 'x_6_load' <Predicate = (!icmp_ln220)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 256> <RAM>
+ST_1 : Operation 33 [1/1] (0.42ns)   --->   "%store_ln220 = store i11 %add_ln220, i11 %i" [activation_accelerator.cpp:220]   --->   Operation 33 'store' 'store_ln220' <Predicate = (!icmp_ln220)> <Delay = 0.42>
+
+State 2 <SV = 1> <Delay = 1.76>
+ST_2 : Operation 34 [1/2] (1.23ns)   --->   "%x_load = load i8 %x_addr" [activation_accelerator.cpp:222]   --->   Operation 34 'load' 'x_load' <Predicate = (!icmp_ln220)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 256> <RAM>
+ST_2 : Operation 35 [1/2] (1.23ns)   --->   "%x_2_load = load i8 %x_2_addr" [activation_accelerator.cpp:222]   --->   Operation 35 'load' 'x_2_load' <Predicate = (!icmp_ln220)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 256> <RAM>
+ST_2 : Operation 36 [1/2] (1.23ns)   --->   "%x_4_load = load i8 %x_4_addr" [activation_accelerator.cpp:222]   --->   Operation 36 'load' 'x_4_load' <Predicate = (!icmp_ln220)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 256> <RAM>
+ST_2 : Operation 37 [1/2] (1.23ns)   --->   "%x_6_load = load i8 %x_6_addr" [activation_accelerator.cpp:222]   --->   Operation 37 'load' 'x_6_load' <Predicate = (!icmp_ln220)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 256> <RAM>
+ST_2 : Operation 38 [1/1] (0.52ns)   --->   "%tmp_s = mux i32 @_ssdm_op_Mux.ap_auto.4f32.i2, i32 %x_load, i32 %x_2_load, i32 %x_4_load, i32 %x_6_load, i2 %trunc_ln222" [activation_accelerator.cpp:222]   --->   Operation 38 'mux' 'tmp_s' <Predicate = (!icmp_ln220)> <Delay = 0.52> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 7.01>
+ST_3 : Operation 39 [3/3] (7.01ns)   --->   "%mul_i = fmul i32 %tmp_s, i32 %tmp_s" [activation_accelerator.cpp:222]   --->   Operation 39 'fmul' 'mul_i' <Predicate = (!icmp_ln220)> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 7.01>
+ST_4 : Operation 40 [2/3] (7.01ns)   --->   "%mul_i = fmul i32 %tmp_s, i32 %tmp_s" [activation_accelerator.cpp:222]   --->   Operation 40 'fmul' 'mul_i' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 7.01>
+ST_5 : Operation 41 [1/3] (7.01ns)   --->   "%mul_i = fmul i32 %tmp_s, i32 %tmp_s" [activation_accelerator.cpp:222]   --->   Operation 41 'fmul' 'mul_i' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 4.89>
+ST_6 : Operation 42 [1/1] (0.00ns)   --->   "%sum_sq_load = load i32 %sum_sq" [activation_accelerator.cpp:222]   --->   Operation 42 'load' 'sum_sq_load' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 43 [4/4] (4.89ns)   --->   "%sum_sq_1 = fadd i32 %sum_sq_load, i32 %mul_i" [activation_accelerator.cpp:222]   --->   Operation 43 'fadd' 'sum_sq_1' <Predicate = true> <Delay = 4.89> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 3> <II = 1> <Delay = 4.89> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 51 [1/1] (0.00ns)   --->   "%sum_sq_load_1 = load i32 %sum_sq"   --->   Operation 51 'load' 'sum_sq_load_1' <Predicate = (icmp_ln220)> <Delay = 0.00>
+ST_6 : Operation 52 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %sum_sq_out, i32 %sum_sq_load_1"   --->   Operation 52 'write' 'write_ln0' <Predicate = (icmp_ln220)> <Delay = 0.00>
+ST_6 : Operation 53 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 53 'ret' 'ret_ln0' <Predicate = (icmp_ln220)> <Delay = 0.00>
+
+State 7 <SV = 6> <Delay = 4.89>
+ST_7 : Operation 44 [3/4] (4.89ns)   --->   "%sum_sq_1 = fadd i32 %sum_sq_load, i32 %mul_i" [activation_accelerator.cpp:222]   --->   Operation 44 'fadd' 'sum_sq_1' <Predicate = true> <Delay = 4.89> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 3> <II = 1> <Delay = 4.89> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 4.89>
+ST_8 : Operation 45 [2/4] (4.89ns)   --->   "%sum_sq_1 = fadd i32 %sum_sq_load, i32 %mul_i" [activation_accelerator.cpp:222]   --->   Operation 45 'fadd' 'sum_sq_1' <Predicate = true> <Delay = 4.89> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 3> <II = 1> <Delay = 4.89> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 5.32>
+ST_9 : Operation 46 [1/1] (0.00ns)   --->   "%specpipeline_ln221 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_1" [activation_accelerator.cpp:221]   --->   Operation 46 'specpipeline' 'specpipeline_ln221' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 47 [1/1] (0.00ns)   --->   "%specloopname_ln218 = specloopname void @_ssdm_op_SpecLoopName, void @empty_30" [activation_accelerator.cpp:218]   --->   Operation 47 'specloopname' 'specloopname_ln218' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 48 [1/4] (4.89ns)   --->   "%sum_sq_1 = fadd i32 %sum_sq_load, i32 %mul_i" [activation_accelerator.cpp:222]   --->   Operation 48 'fadd' 'sum_sq_1' <Predicate = true> <Delay = 4.89> <CoreInst = "FAddSub_nodsp">   --->   Core 17 'FAddSub_nodsp' <Latency = 3> <II = 1> <Delay = 4.89> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 49 [1/1] (0.42ns)   --->   "%store_ln220 = store i32 %sum_sq_1, i32 %sum_sq" [activation_accelerator.cpp:220]   --->   Operation 49 'store' 'store_ln220' <Predicate = true> <Delay = 0.42>
+ST_9 : Operation 50 [1/1] (0.00ns)   --->   "%br_ln220 = br void %for.inc.i124" [activation_accelerator.cpp:220]   --->   Operation 50 'br' 'br_ln220' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 1.37ns
+The critical path consists of the following:
+	'alloca' operation ('i') [7]  (0 ns)
+	'load' operation ('i', activation_accelerator.cpp:222) on local variable 'i' [12]  (0 ns)
+	'getelementptr' operation ('x_addr', activation_accelerator.cpp:222) [23]  (0 ns)
+	'load' operation ('x_load', activation_accelerator.cpp:222) on array 'x' [28]  (1.24 ns)
+	blocking operation 0.134 ns on control path)
+
+ <State 2>: 1.76ns
+The critical path consists of the following:
+	'load' operation ('x_load', activation_accelerator.cpp:222) on array 'x' [28]  (1.24 ns)
+	'mux' operation ('tmp_s', activation_accelerator.cpp:222) [32]  (0.525 ns)
+
+ <State 3>: 7.02ns
+The critical path consists of the following:
+	'fmul' operation ('mul_i', activation_accelerator.cpp:222) [33]  (7.02 ns)
+
+ <State 4>: 7.02ns
+The critical path consists of the following:
+	'fmul' operation ('mul_i', activation_accelerator.cpp:222) [33]  (7.02 ns)
+
+ <State 5>: 7.02ns
+The critical path consists of the following:
+	'fmul' operation ('mul_i', activation_accelerator.cpp:222) [33]  (7.02 ns)
+
+ <State 6>: 4.89ns
+The critical path consists of the following:
+	'load' operation ('sum_sq_load', activation_accelerator.cpp:222) on local variable 'sum_sq' [18]  (0 ns)
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:222) [34]  (4.89 ns)
+
+ <State 7>: 4.89ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:222) [34]  (4.89 ns)
+
+ <State 8>: 4.89ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:222) [34]  (4.89 ns)
+
+ <State 9>: 5.32ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:222) [34]  (4.89 ns)
+	'store' operation ('store_ln220', activation_accelerator.cpp:220) of variable 'sum_sq', activation_accelerator.cpp:222 on local variable 'sum_sq' [36]  (0.427 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

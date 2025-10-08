@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'activation_accelerator'" level="0">
-<item name = "Date">Tue Sep 23 21:33:53 2025
+<item name = "Date">Wed Oct  8 15:53:27 2025
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">activation_accelerator</item>
@@ -31,26 +31,31 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_144_15_fu_214">activation_accelerator_Pipeline_VITIS_LOOP_144_15, 32770, 32770, 0.328 ms, 0.328 ms, 32770, 32770, no</column>
-<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_144_14_fu_222">activation_accelerator_Pipeline_VITIS_LOOP_144_14, 32770, 32770, 0.328 ms, 0.328 ms, 32770, 32770, no</column>
-<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_144_13_fu_230">activation_accelerator_Pipeline_VITIS_LOOP_144_13, 32770, 32770, 0.328 ms, 0.328 ms, 32770, 32770, no</column>
-<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_144_12_fu_238">activation_accelerator_Pipeline_VITIS_LOOP_144_12, 32770, 32770, 0.328 ms, 0.328 ms, 32770, 32770, no</column>
-<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_292_5_fu_246">activation_accelerator_Pipeline_VITIS_LOOP_292_5, 32770, 32770, 0.328 ms, 0.328 ms, 32770, 32770, no</column>
-<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_283_4_fu_252">activation_accelerator_Pipeline_VITIS_LOOP_283_4, 32770, 32770, 0.328 ms, 0.328 ms, 32770, 32770, no</column>
-<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_144_1_fu_258">activation_accelerator_Pipeline_VITIS_LOOP_144_1, 32770, 32770, 0.328 ms, 0.328 ms, 32770, 32770, no</column>
-<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_144_11_fu_266">activation_accelerator_Pipeline_VITIS_LOOP_144_11, 32770, 32770, 0.328 ms, 0.328 ms, 32770, 32770, no</column>
-<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_316_6_fu_274">activation_accelerator_Pipeline_VITIS_LOOP_316_6, 32771, 32771, 0.328 ms, 0.328 ms, 32771, 32771, no</column>
-<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_185_1_fu_283">activation_accelerator_Pipeline_VITIS_LOOP_185_1, 98308, 98308, 0.983 ms, 0.983 ms, 98308, 98308, no</column>
-<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_190_2_fu_289">activation_accelerator_Pipeline_VITIS_LOOP_190_2, 98315, 98315, 0.983 ms, 0.983 ms, 98315, 98315, no</column>
-<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_196_3_fu_296">activation_accelerator_Pipeline_VITIS_LOOP_196_3, 32784, 32784, 0.328 ms, 0.328 ms, 32784, 32784, no</column>
-<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_170_1_fu_305">activation_accelerator_Pipeline_VITIS_LOOP_170_1, 98311, 98311, 0.983 ms, 0.983 ms, 98311, 98311, no</column>
-<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_175_2_fu_311">activation_accelerator_Pipeline_VITIS_LOOP_175_2, 32780, 32780, 0.328 ms, 0.328 ms, 32780, 32780, no</column>
-<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_159_1_fu_319">activation_accelerator_Pipeline_VITIS_LOOP_159_1, 32794, 32794, 0.328 ms, 0.328 ms, 32794, 32794, no</column>
-<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_151_1_fu_326">activation_accelerator_Pipeline_VITIS_LOOP_151_1, 32791, 32791, 0.328 ms, 0.328 ms, 32791, 32791, no</column>
-<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_205_1_fu_333">activation_accelerator_Pipeline_VITIS_LOOP_205_1, 32775, 32775, 0.328 ms, 0.328 ms, 32775, 32775, no</column>
-<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341">activation_accelerator_Pipeline_VITIS_LOOP_275_3, ?, ?, ?, ?, ?, ?, no</column>
-<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_262_1_fu_351">activation_accelerator_Pipeline_VITIS_LOOP_262_1, 32771, 32771, 0.328 ms, 0.328 ms, 32771, 32771, no</column>
-<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_265_2_fu_360">activation_accelerator_Pipeline_VITIS_LOOP_265_2, 32771, 32771, 0.328 ms, 0.328 ms, 32771, 32771, no</column>
+<column name="grp_activation_accelerator_Pipeline_loop_110_fu_323">activation_accelerator_Pipeline_loop_110, 1026, 1026, 10.260 us, 10.260 us, 1026, 1026, no</column>
+<column name="grp_activation_accelerator_Pipeline_loop_18_fu_351">activation_accelerator_Pipeline_loop_18, 1026, 1026, 10.260 us, 10.260 us, 1026, 1026, no</column>
+<column name="grp_activation_accelerator_Pipeline_loop_17_fu_379">activation_accelerator_Pipeline_loop_17, 1026, 1026, 10.260 us, 10.260 us, 1026, 1026, no</column>
+<column name="grp_activation_accelerator_Pipeline_loop_16_fu_407">activation_accelerator_Pipeline_loop_16, 1026, 1026, 10.260 us, 10.260 us, 1026, 1026, no</column>
+<column name="grp_activation_accelerator_Pipeline_loop_14_fu_435">activation_accelerator_Pipeline_loop_14, 1026, 1026, 10.260 us, 10.260 us, 1026, 1026, no</column>
+<column name="grp_activation_accelerator_Pipeline_loop_15_fu_463">activation_accelerator_Pipeline_loop_15, 1026, 1026, 10.260 us, 10.260 us, 1026, 1026, no</column>
+<column name="grp_activation_accelerator_Pipeline_loop_13_fu_491">activation_accelerator_Pipeline_loop_13, 1026, 1026, 10.260 us, 10.260 us, 1026, 1026, no</column>
+<column name="grp_activation_accelerator_Pipeline_loop_1_fu_519">activation_accelerator_Pipeline_loop_1, 1026, 1026, 10.260 us, 10.260 us, 1026, 1026, no</column>
+<column name="grp_activation_accelerator_Pipeline_loop_11_fu_547">activation_accelerator_Pipeline_loop_11, 1026, 1026, 10.260 us, 10.260 us, 1026, 1026, no</column>
+<column name="grp_activation_accelerator_Pipeline_loop_25_fu_575">activation_accelerator_Pipeline_loop_25, 1027, 1027, 10.270 us, 10.270 us, 1027, 1027, no</column>
+<column name="grp_activation_accelerator_Pipeline_loop_mean_fu_598">activation_accelerator_Pipeline_loop_mean, 3075, 3075, 30.750 us, 30.750 us, 3075, 3075, no</column>
+<column name="grp_activation_accelerator_Pipeline_loop_var_fu_607">activation_accelerator_Pipeline_loop_var, 3083, 3083, 30.830 us, 30.830 us, 3083, 3083, no</column>
+<column name="grp_activation_accelerator_Pipeline_loop_norm11_fu_617">activation_accelerator_Pipeline_loop_norm11, 1040, 1040, 10.400 us, 10.400 us, 1040, 1040, no</column>
+<column name="grp_activation_accelerator_Pipeline_loop_sum_fu_643">activation_accelerator_Pipeline_loop_sum, 3079, 3079, 30.790 us, 30.790 us, 3079, 3079, no</column>
+<column name="grp_activation_accelerator_Pipeline_loop_norm_fu_652">activation_accelerator_Pipeline_loop_norm, 1036, 1036, 10.360 us, 10.360 us, 1036, 1036, no</column>
+<column name="grp_activation_accelerator_Pipeline_loop_3_fu_677">activation_accelerator_Pipeline_loop_3, 1050, 1050, 10.500 us, 10.500 us, 1050, 1050, no</column>
+<column name="grp_activation_accelerator_Pipeline_loop_2_fu_701">activation_accelerator_Pipeline_loop_2, 1047, 1047, 10.470 us, 10.470 us, 1047, 1047, no</column>
+<column name="grp_float_mask_safe_softmax_fu_725">float_mask_safe_softmax, 3100, 3100, 31.000 us, 31.000 us, 3089, 3089, dataflow</column>
+<column name="grp_activation_accelerator_Pipeline_loop_max_fu_753">activation_accelerator_Pipeline_loop_max, 1026, 1026, 10.260 us, 10.260 us, 1026, 1026, no</column>
+<column name="grp_activation_accelerator_Pipeline_loop_exp_fu_763">activation_accelerator_Pipeline_loop_exp, 3088, 3088, 30.880 us, 30.880 us, 3088, 3088, no</column>
+<column name="grp_activation_accelerator_Pipeline_loop_output_fu_775">activation_accelerator_Pipeline_loop_output, 1036, 1036, 10.360 us, 10.360 us, 1036, 1036, no</column>
+<column name="grp_activation_accelerator_Pipeline_loop_12_fu_798">activation_accelerator_Pipeline_loop_12, 135, 135, 1.350 us, 1.350 us, 135, 135, no</column>
+<column name="grp_activation_accelerator_Pipeline_loop_19_fu_826">activation_accelerator_Pipeline_loop_19, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_activation_accelerator_Pipeline_loop_23_fu_878">activation_accelerator_Pipeline_loop_23, 1027, 1027, 10.270 us, 10.270 us, 1027, 1027, no</column>
+<column name="grp_activation_accelerator_Pipeline_loop_24_fu_901">activation_accelerator_Pipeline_loop_24, 1027, 1027, 10.270 us, 10.270 us, 1027, 1027, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

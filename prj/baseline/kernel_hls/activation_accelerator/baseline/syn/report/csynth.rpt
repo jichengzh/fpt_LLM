@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'activation_accelerator'
 ================================================================
 + General Information: 
-    * Date:           Tue Sep 23 21:33:58 2025
+    * Date:           Wed Oct  8 15:53:39 2025
     * Version:        2022.2 (Build 3670227 on Oct 13 2022)
     * Project:        activation_accelerator
     * Solution:       baseline (Vivado IP Flow Target)
@@ -15,54 +15,89 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +------------------------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+-----------+---------+-----------+------------+-----+
-    |                        Modules                       | Issue|      | Latency |  Latency  | Iteration|         |  Trip |          |           |         |           |            |     |
-    |                        & Loops                       | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count | Pipelined|   BRAM    |   DSP   |     FF    |     LUT    | URAM|
-    +------------------------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+-----------+---------+-----------+------------+-----+
-    |+ activation_accelerator                              |     -|  0.00|        -|          -|         -|        -|      -|        no|  206 (71%)|  21 (1%)|  6376 (2%)|  11410 (9%)|    -|
-    | + activation_accelerator_Pipeline_VITIS_LOOP_144_15  |     -|  4.83|    32770|  3.277e+05|         -|    32770|      -|        no|          -|        -|   35 (~0%)|    74 (~0%)|    -|
-    |  o VITIS_LOOP_144_1                                  |     -|  7.30|    32768|  3.277e+05|         2|        1|  32768|       yes|          -|        -|          -|           -|    -|
-    | + activation_accelerator_Pipeline_VITIS_LOOP_144_14  |     -|  4.83|    32770|  3.277e+05|         -|    32770|      -|        no|          -|        -|   35 (~0%)|    74 (~0%)|    -|
-    |  o VITIS_LOOP_144_1                                  |     -|  7.30|    32768|  3.277e+05|         2|        1|  32768|       yes|          -|        -|          -|           -|    -|
-    | + activation_accelerator_Pipeline_VITIS_LOOP_144_13  |     -|  4.83|    32770|  3.277e+05|         -|    32770|      -|        no|          -|        -|   35 (~0%)|    74 (~0%)|    -|
-    |  o VITIS_LOOP_144_1                                  |     -|  7.30|    32768|  3.277e+05|         2|        1|  32768|       yes|          -|        -|          -|           -|    -|
-    | + activation_accelerator_Pipeline_VITIS_LOOP_144_12  |     -|  4.83|    32770|  3.277e+05|         -|    32770|      -|        no|          -|        -|   35 (~0%)|    74 (~0%)|    -|
-    |  o VITIS_LOOP_144_1                                  |     -|  7.30|    32768|  3.277e+05|         2|        1|  32768|       yes|          -|        -|          -|           -|    -|
-    | + activation_accelerator_Pipeline_VITIS_LOOP_292_5   |     -|  4.96|    32770|  3.277e+05|         -|    32770|      -|        no|          -|        -|   18 (~0%)|    63 (~0%)|    -|
-    |  o VITIS_LOOP_292_5                                  |     -|  7.30|    32768|  3.277e+05|         1|        1|  32768|       yes|          -|        -|          -|           -|    -|
-    | + activation_accelerator_Pipeline_VITIS_LOOP_283_4   |     -|  4.96|    32770|  3.277e+05|         -|    32770|      -|        no|          -|        -|   18 (~0%)|    63 (~0%)|    -|
-    |  o VITIS_LOOP_283_4                                  |     -|  7.30|    32768|  3.277e+05|         1|        1|  32768|       yes|          -|        -|          -|           -|    -|
-    | + activation_accelerator_Pipeline_VITIS_LOOP_144_1   |     -|  4.83|    32770|  3.277e+05|         -|    32770|      -|        no|          -|        -|   35 (~0%)|    74 (~0%)|    -|
-    |  o VITIS_LOOP_144_1                                  |     -|  7.30|    32768|  3.277e+05|         2|        1|  32768|       yes|          -|        -|          -|           -|    -|
-    | + activation_accelerator_Pipeline_VITIS_LOOP_144_11  |     -|  4.83|    32770|  3.277e+05|         -|    32770|      -|        no|          -|        -|   35 (~0%)|    74 (~0%)|    -|
-    |  o VITIS_LOOP_144_1                                  |     -|  7.30|    32768|  3.277e+05|         2|        1|  32768|       yes|          -|        -|          -|           -|    -|
-    | + activation_accelerator_Pipeline_VITIS_LOOP_316_6   |     -|  0.00|    32771|  3.277e+05|         -|    32771|      -|        no|          -|        -|   37 (~0%)|    85 (~0%)|    -|
-    |  o VITIS_LOOP_316_6                                  |     -|  7.30|    32769|  3.277e+05|         3|        1|  32768|       yes|          -|        -|          -|           -|    -|
-    | + activation_accelerator_Pipeline_VITIS_LOOP_185_1   |     -|  0.44|    98308|  9.831e+05|         -|    98308|      -|        no|          -|        -|   87 (~0%)|   121 (~0%)|    -|
-    |  o VITIS_LOOP_185_1                                  |    II|  7.30|    98306|  9.831e+05|         6|        3|  32768|       yes|          -|        -|          -|           -|    -|
-    | + activation_accelerator_Pipeline_VITIS_LOOP_190_2   |     -|  0.28|    98315|  9.832e+05|         -|    98315|      -|        no|          -|        -|  221 (~0%)|   231 (~0%)|    -|
-    |  o VITIS_LOOP_190_2                                  |    II|  7.30|    98313|  9.831e+05|        13|        3|  32768|       yes|          -|        -|          -|           -|    -|
-    | + activation_accelerator_Pipeline_VITIS_LOOP_196_3   |     -|  0.24|    32784|  3.278e+05|         -|    32784|      -|        no|          -|        -|  207 (~0%)|   106 (~0%)|    -|
-    |  o VITIS_LOOP_196_3                                  |     -|  7.30|    32782|  3.278e+05|        16|        1|  32768|       yes|          -|        -|          -|           -|    -|
-    | + activation_accelerator_Pipeline_VITIS_LOOP_170_1   |     -|  0.28|    98311|  9.831e+05|         -|    98311|      -|        no|          -|        -|  122 (~0%)|   121 (~0%)|    -|
-    |  o VITIS_LOOP_170_1                                  |    II|  7.30|    98309|  9.831e+05|         9|        3|  32768|       yes|          -|        -|          -|           -|    -|
-    | + activation_accelerator_Pipeline_VITIS_LOOP_175_2   |     -|  0.24|    32780|  3.278e+05|         -|    32780|      -|        no|          -|        -|  167 (~0%)|   106 (~0%)|    -|
-    |  o VITIS_LOOP_175_2                                  |     -|  7.30|    32778|  3.278e+05|        12|        1|  32768|       yes|          -|        -|          -|           -|    -|
-    | + activation_accelerator_Pipeline_VITIS_LOOP_159_1   |     -|  0.24|    32794|  3.279e+05|         -|    32794|      -|        no|          -|  9 (~0%)|  906 (~0%)|   1290 (1%)|    -|
-    |  o VITIS_LOOP_159_1                                  |     -|  7.30|    32792|  3.279e+05|        26|        1|  32768|       yes|          -|        -|          -|           -|    -|
-    | + activation_accelerator_Pipeline_VITIS_LOOP_151_1   |     -|  0.24|    32791|  3.279e+05|         -|    32791|      -|        no|          -|  7 (~0%)|  545 (~0%)|  1044 (~0%)|    -|
-    |  o VITIS_LOOP_151_1                                  |     -|  7.30|    32789|  3.279e+05|        23|        1|  32768|       yes|          -|        -|          -|           -|    -|
-    | + activation_accelerator_Pipeline_VITIS_LOOP_205_1   |     -|  0.86|    32775|  3.278e+05|         -|    32775|      -|        no|          -|        -|  189 (~0%)|   106 (~0%)|    -|
-    |  o VITIS_LOOP_205_1                                  |     -|  7.30|    32773|  3.277e+05|         7|        1|  32768|       yes|          -|        -|          -|           -|    -|
-    | + activation_accelerator_Pipeline_VITIS_LOOP_275_3   |     -|  0.47|        -|          -|         -|        -|      -|        no|          -|        -|  158 (~0%)|   979 (~0%)|    -|
-    |  o VITIS_LOOP_275_3                                  |     -|  7.30|        -|          -|         -|        -|      -|        no|          -|        -|          -|           -|    -|
-    |   + bf16add                                          |     -|  0.47|        -|          -|         -|        -|      -|        no|          -|        -|   88 (~0%)|   903 (~0%)|    -|
-    |    o VITIS_LOOP_86_1                                 |     -|  7.30|        -|          -|         1|        -|      -|        no|          -|        -|          -|           -|    -|
-    | + activation_accelerator_Pipeline_VITIS_LOOP_262_1   |     -|  0.00|    32771|  3.277e+05|         -|    32771|      -|        no|          -|        -|   69 (~0%)|    85 (~0%)|    -|
-    |  o VITIS_LOOP_262_1                                  |     -|  7.30|    32769|  3.277e+05|         3|        1|  32768|       yes|          -|        -|          -|           -|    -|
-    | + activation_accelerator_Pipeline_VITIS_LOOP_265_2   |     -|  0.00|    32771|  3.277e+05|         -|    32771|      -|        no|          -|        -|   69 (~0%)|    85 (~0%)|    -|
-    |  o VITIS_LOOP_265_2                                  |     -|  7.30|    32769|  3.277e+05|         3|        1|  32768|       yes|          -|        -|          -|           -|    -|
-    +------------------------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+-----------+---------+-----------+------------+-----+
+    +--------------------------------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+-----------+----------+------------+-------------+-----+
+    |                                     Modules                                    | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |           |          |            |             |     |
+    |                                     & Loops                                    | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM    |    DSP   |     FF     |     LUT     | URAM|
+    +--------------------------------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+-----------+----------+------------+-------------+-----+
+    |+ activation_accelerator                                                        |     -|  0.00|        -|          -|         -|        -|     -|        no|  274 (95%)|   45 (3%)|  13357 (5%)|  28239 (24%)|    -|
+    | + activation_accelerator_Pipeline_loop_110                                     |     -|  4.10|     1026|  1.026e+04|         -|     1026|     -|        no|          -|         -|    27 (~0%)|    111 (~0%)|    -|
+    |  o loop_1                                                                      |     -|  7.30|     1024|  1.024e+04|         2|        1|  1024|       yes|          -|         -|           -|            -|    -|
+    | + activation_accelerator_Pipeline_loop_18                                      |     -|  4.10|     1026|  1.026e+04|         -|     1026|     -|        no|          -|         -|    27 (~0%)|    111 (~0%)|    -|
+    |  o loop_1                                                                      |     -|  7.30|     1024|  1.024e+04|         2|        1|  1024|       yes|          -|         -|           -|            -|    -|
+    | + activation_accelerator_Pipeline_loop_17                                      |     -|  4.10|     1026|  1.026e+04|         -|     1026|     -|        no|          -|         -|    27 (~0%)|    111 (~0%)|    -|
+    |  o loop_1                                                                      |     -|  7.30|     1024|  1.024e+04|         2|        1|  1024|       yes|          -|         -|           -|            -|    -|
+    | + activation_accelerator_Pipeline_loop_16                                      |     -|  4.10|     1026|  1.026e+04|         -|     1026|     -|        no|          -|         -|    27 (~0%)|    111 (~0%)|    -|
+    |  o loop_1                                                                      |     -|  7.30|     1024|  1.024e+04|         2|        1|  1024|       yes|          -|         -|           -|            -|    -|
+    | + activation_accelerator_Pipeline_loop_14                                      |     -|  4.10|     1026|  1.026e+04|         -|     1026|     -|        no|          -|         -|    27 (~0%)|    111 (~0%)|    -|
+    |  o loop_1                                                                      |     -|  7.30|     1024|  1.024e+04|         2|        1|  1024|       yes|          -|         -|           -|            -|    -|
+    | + activation_accelerator_Pipeline_loop_15                                      |     -|  4.10|     1026|  1.026e+04|         -|     1026|     -|        no|          -|         -|    27 (~0%)|    111 (~0%)|    -|
+    |  o loop_1                                                                      |     -|  7.30|     1024|  1.024e+04|         2|        1|  1024|       yes|          -|         -|           -|            -|    -|
+    | + activation_accelerator_Pipeline_loop_13                                      |     -|  4.10|     1026|  1.026e+04|         -|     1026|     -|        no|          -|         -|    27 (~0%)|    111 (~0%)|    -|
+    |  o loop_1                                                                      |     -|  7.30|     1024|  1.024e+04|         2|        1|  1024|       yes|          -|         -|           -|            -|    -|
+    | + activation_accelerator_Pipeline_loop_1                                       |     -|  4.10|     1026|  1.026e+04|         -|     1026|     -|        no|          -|         -|    27 (~0%)|    111 (~0%)|    -|
+    |  o loop_1                                                                      |     -|  7.30|     1024|  1.024e+04|         2|        1|  1024|       yes|          -|         -|           -|            -|    -|
+    | + activation_accelerator_Pipeline_loop_11                                      |     -|  4.10|     1026|  1.026e+04|         -|     1026|     -|        no|          -|         -|    27 (~0%)|    111 (~0%)|    -|
+    |  o loop_1                                                                      |     -|  7.30|     1024|  1.024e+04|         2|        1|  1024|       yes|          -|         -|           -|            -|    -|
+    | + activation_accelerator_Pipeline_loop_25                                      |     -|  0.00|     1027|  1.027e+04|         -|     1027|     -|        no|          -|         -|    35 (~0%)|    122 (~0%)|    -|
+    |  o loop_25                                                                     |     -|  7.30|     1025|  1.025e+04|         3|        1|  1024|       yes|          -|         -|           -|            -|    -|
+    | + activation_accelerator_Pipeline_loop_mean                                    |     -|  0.64|     3075|  3.075e+04|         -|     3075|     -|        no|          -|         -|    52 (~0%)|    144 (~0%)|    -|
+    |  o loop_mean                                                                   |    II|  7.30|     3073|  3.073e+04|         5|        3|  1024|       yes|          -|         -|           -|            -|    -|
+    | + activation_accelerator_Pipeline_loop_var                                     |     -|  0.28|     3083|  3.083e+04|         -|     3083|     -|        no|          -|         -|   218 (~0%)|    203 (~0%)|    -|
+    |  o loop_var                                                                    |    II|  7.30|     3081|  3.081e+04|        13|        3|  1024|       yes|          -|         -|           -|            -|    -|
+    | + activation_accelerator_Pipeline_loop_norm11                                  |     -|  0.24|     1040|  1.040e+04|         -|     1040|     -|        no|          -|         -|   262 (~0%)|    152 (~0%)|    -|
+    |  o loop_norm                                                                   |     -|  7.30|     1038|  1.038e+04|        16|        1|  1024|       yes|          -|         -|           -|            -|    -|
+    | + activation_accelerator_Pipeline_loop_sum                                     |     -|  0.28|     3079|  3.079e+04|         -|     3079|     -|        no|          -|         -|   119 (~0%)|    135 (~0%)|    -|
+    |  o loop_sum                                                                    |    II|  7.30|     3077|  3.077e+04|         9|        3|  1024|       yes|          -|         -|           -|            -|    -|
+    | + activation_accelerator_Pipeline_loop_norm                                    |     -|  0.24|     1036|  1.036e+04|         -|     1036|     -|        no|          -|         -|   222 (~0%)|    152 (~0%)|    -|
+    |  o loop_norm                                                                   |     -|  7.30|     1034|  1.034e+04|        12|        1|  1024|       yes|          -|         -|           -|            -|    -|
+    | + activation_accelerator_Pipeline_loop_3                                       |     -|  0.24|     1050|  1.050e+04|         -|     1050|     -|        no|          -|   7 (~0%)|   734 (~0%)|   1122 (~0%)|    -|
+    |  o loop_3                                                                      |     -|  7.30|     1048|  1.048e+04|        26|        1|  1024|       yes|          -|         -|           -|            -|    -|
+    | + activation_accelerator_Pipeline_loop_2                                       |     -|  0.24|     1047|  1.047e+04|         -|     1047|     -|        no|          -|         -|   276 (~0%)|    185 (~0%)|    -|
+    |  o loop_2                                                                      |     -|  7.30|     1045|  1.045e+04|        23|        1|  1024|       yes|          -|         -|           -|            -|    -|
+    | + float_mask_safe_softmax*                                                     |     -|  0.24|     3100|  3.100e+04|         -|     3089|     -|  dataflow|  232 (80%)|  12 (~0%)|   3182 (1%)|    3296 (2%)|    -|
+    |  + float_mask_safe_softmax_Loop_loop_18_proc5                                  |     -|  0.28|     1031|  1.031e+04|         -|     1031|     -|        no|          -|   3 (~0%)|   516 (~0%)|    486 (~0%)|    -|
+    |   o loop_18                                                                    |     -|  7.30|     1029|  1.029e+04|         7|        1|  1024|       yes|          -|         -|           -|            -|    -|
+    |  + float_mask_safe_softmax_Block_float_mask_safe_softmax_for_cond_i_exit_proc  |     -|  3.62|        1|     10.000|         -|        1|     -|        no|          -|         -|   134 (~0%)|    101 (~0%)|    -|
+    |  + float_mask_safe_softmax_Loop_loop_max_broadcast_proc                        |     -|  5.46|     1026|  1.026e+04|         -|     1026|     -|        no|          -|         -|    46 (~0%)|     81 (~0%)|    -|
+    |   o loop_max_broadcast                                                         |     -|  7.30|     1024|  1.024e+04|         2|        1|  1024|       yes|          -|         -|           -|            -|    -|
+    |  + float_mask_safe_softmax_Loop_loop_20_proc6                                  |     -|  0.64|     3088|  3.088e+04|         -|     3088|     -|        no|          -|   9 (~0%)|  1006 (~0%)|    1772 (1%)|    -|
+    |   o loop_20                                                                    |    II|  7.30|     3086|  3.086e+04|        18|        3|  1024|       yes|          -|         -|           -|            -|    -|
+    |  + float_mask_safe_softmax_Block_for_end26_proc                                |     -|  3.62|        1|     10.000|         -|        1|     -|        no|          -|         -|   134 (~0%)|    101 (~0%)|    -|
+    |  + float_mask_safe_softmax_Loop_loop_sum_broadcast_proc                        |     -|  5.46|     1026|  1.026e+04|         -|     1026|     -|        no|          -|         -|    46 (~0%)|     81 (~0%)|    -|
+    |   o loop_sum_broadcast                                                         |     -|  7.30|     1024|  1.024e+04|         2|        1|  1024|       yes|          -|         -|           -|            -|    -|
+    |  + float_mask_safe_softmax_Loop_loop_22_proc7                                  |     -|  0.24|     1036|  1.036e+04|         -|     1036|     -|        no|          -|         -|   252 (~0%)|    156 (~0%)|    -|
+    |   o loop_22                                                                    |     -|  7.30|     1034|  1.034e+04|        12|        1|  1024|       yes|          -|         -|           -|            -|    -|
+    | + activation_accelerator_Pipeline_loop_max                                     |     -|  2.76|     1026|  1.026e+04|         -|     1026|     -|        no|          -|         -|   115 (~0%)|    200 (~0%)|    -|
+    |  o loop_max                                                                    |     -|  7.30|     1024|  1.024e+04|         3|        1|  1023|       yes|          -|         -|           -|            -|    -|
+    | + activation_accelerator_Pipeline_loop_exp                                     |     -|  0.86|     3088|  3.088e+04|         -|     3088|     -|        no|          -|         -|   367 (~0%)|    231 (~0%)|    -|
+    |  o loop_exp                                                                    |    II|  7.30|     3086|  3.086e+04|        18|        3|  1024|       yes|          -|         -|           -|            -|    -|
+    | + activation_accelerator_Pipeline_loop_output                                  |     -|  0.24|     1036|  1.036e+04|         -|     1036|     -|        no|          -|         -|   221 (~0%)|    141 (~0%)|    -|
+    |  o loop_output                                                                 |     -|  7.30|     1034|  1.034e+04|        12|        1|  1024|       yes|          -|         -|           -|            -|    -|
+    | + activation_accelerator_Pipeline_loop_12                                      |     -|  0.86|      135|  1.350e+03|         -|      135|     -|        no|          -|  12 (~0%)|  2097 (~0%)|    1380 (1%)|    -|
+    |  o loop_12                                                                     |     -|  7.30|      133|  1.330e+03|         7|        1|   128|       yes|          -|         -|           -|            -|    -|
+    | + activation_accelerator_Pipeline_loop_19                                      |     -|  0.47|        -|          -|         -|        -|     -|        no|          -|         -|   991 (~0%)|    7276 (6%)|    -|
+    |  o loop_19                                                                     |     -|  7.30|        -|          -|         -|        -|     -|        no|          -|         -|           -|            -|    -|
+    |   + bf16add                                                                    |     -|  0.47|        -|          -|         -|        -|     -|        no|          -|         -|    88 (~0%)|    902 (~0%)|    -|
+    |    o VITIS_LOOP_88_1                                                           |     -|  7.30|        -|          -|         1|        -|     -|        no|          -|         -|           -|            -|    -|
+    |   + bf16add                                                                    |     -|  0.47|        -|          -|         -|        -|     -|        no|          -|         -|    88 (~0%)|    902 (~0%)|    -|
+    |    o VITIS_LOOP_88_1                                                           |     -|  7.30|        -|          -|         1|        -|     -|        no|          -|         -|           -|            -|    -|
+    |   + bf16add                                                                    |     -|  0.47|        -|          -|         -|        -|     -|        no|          -|         -|    88 (~0%)|    902 (~0%)|    -|
+    |    o VITIS_LOOP_88_1                                                           |     -|  7.30|        -|          -|         1|        -|     -|        no|          -|         -|           -|            -|    -|
+    |   + bf16add                                                                    |     -|  0.47|        -|          -|         -|        -|     -|        no|          -|         -|    88 (~0%)|    902 (~0%)|    -|
+    |    o VITIS_LOOP_88_1                                                           |     -|  7.30|        -|          -|         1|        -|     -|        no|          -|         -|           -|            -|    -|
+    |   + bf16add                                                                    |     -|  0.47|        -|          -|         -|        -|     -|        no|          -|         -|    88 (~0%)|    902 (~0%)|    -|
+    |    o VITIS_LOOP_88_1                                                           |     -|  7.30|        -|          -|         1|        -|     -|        no|          -|         -|           -|            -|    -|
+    |   + bf16add                                                                    |     -|  0.47|        -|          -|         -|        -|     -|        no|          -|         -|    88 (~0%)|    902 (~0%)|    -|
+    |    o VITIS_LOOP_88_1                                                           |     -|  7.30|        -|          -|         1|        -|     -|        no|          -|         -|           -|            -|    -|
+    |   + bf16add                                                                    |     -|  0.47|        -|          -|         -|        -|     -|        no|          -|         -|    88 (~0%)|    902 (~0%)|    -|
+    |    o VITIS_LOOP_88_1                                                           |     -|  7.30|        -|          -|         1|        -|     -|        no|          -|         -|           -|            -|    -|
+    |   + bf16add                                                                    |     -|  0.47|        -|          -|         -|        -|     -|        no|          -|         -|    88 (~0%)|    902 (~0%)|    -|
+    |    o VITIS_LOOP_88_1                                                           |     -|  7.30|        -|          -|         1|        -|     -|        no|          -|         -|           -|            -|    -|
+    | + activation_accelerator_Pipeline_loop_23                                      |     -|  0.00|     1027|  1.027e+04|         -|     1027|     -|        no|          -|         -|    52 (~0%)|     79 (~0%)|    -|
+    |  o loop_23                                                                     |     -|  7.30|     1025|  1.025e+04|         3|        1|  1024|       yes|          -|         -|           -|            -|    -|
+    | + activation_accelerator_Pipeline_loop_24                                      |     -|  0.00|     1027|  1.027e+04|         -|     1027|     -|        no|          -|         -|    52 (~0%)|     79 (~0%)|    -|
+    |  o loop_24                                                                     |     -|  7.30|     1025|  1.025e+04|         3|        1|  1024|       yes|          -|         -|           -|            -|    -|
+    +--------------------------------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+-----------+----------+------------+-------------+-----+
 
 
 ================================================================
@@ -151,127 +186,306 @@
  Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
 
 * Inferred Burst Summary
-+--------------+------------------+-----------+--------+-------+-----------------------------------+
-| HW Interface | Loop             | Direction | Length | Width | Location                          |
-+--------------+------------------+-----------+--------+-------+-----------------------------------+
-| m_axi_gmem0  | VITIS_LOOP_262_1 | read      | 32768  | 16    | activation_accelerator.cpp:262:27 |
-| m_axi_gmem1  | VITIS_LOOP_265_2 | read      | 32768  | 16    | activation_accelerator.cpp:265:27 |
-| m_axi_gmem2  | VITIS_LOOP_316_6 | write     | 32768  | 16    | activation_accelerator.cpp:316:27 |
-+--------------+------------------+-----------+--------+-------+-----------------------------------+
++--------------+---------+-----------+--------+-------+----------------------------------+
+| HW Interface | Loop    | Direction | Length | Width | Location                         |
++--------------+---------+-----------+--------+-------+----------------------------------+
+| m_axi_gmem0  | loop_23 | read      | 1024   | 16    | activation_accelerator.cpp:490:9 |
+| m_axi_gmem1  | loop_24 | read      | 1024   | 16    | activation_accelerator.cpp:494:9 |
+| m_axi_gmem2  | loop_25 | write     | 1024   | 16    | activation_accelerator.cpp:569:9 |
++--------------+---------+-----------+--------+-------+----------------------------------+
 
 * Inferred Bursts and Widening Missed
-+--------------+----------+------------------+-------------------------------------------------------------------------------------------------------+------------+-----------------------------------+
-| HW Interface | Variable | Loop             | Problem                                                                                               | Resolution | Location                          |
-+--------------+----------+------------------+-------------------------------------------------------------------------------------------------------+------------+-----------------------------------+
-| m_axi_gmem1  | in1      | VITIS_LOOP_265_2 | Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | activation_accelerator.cpp:265:27 |
-| m_axi_gmem0  | in0      | VITIS_LOOP_262_1 | Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | activation_accelerator.cpp:262:27 |
-| m_axi_gmem2  | out      | VITIS_LOOP_316_6 | Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | activation_accelerator.cpp:316:27 |
-+--------------+----------+------------------+-------------------------------------------------------------------------------------------------------+------------+-----------------------------------+
++--------------+----------+---------+-------------------------------------------------------------------------------------------------------+------------+----------------------------------+
+| HW Interface | Variable | Loop    | Problem                                                                                               | Resolution | Location                         |
++--------------+----------+---------+-------------------------------------------------------------------------------------------------------+------------+----------------------------------+
+| m_axi_gmem1  | in1      | loop_24 | Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | activation_accelerator.cpp:494:9 |
+| m_axi_gmem0  | in0      | loop_23 | Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | activation_accelerator.cpp:490:9 |
+| m_axi_gmem2  | out      | loop_25 | Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | activation_accelerator.cpp:569:9 |
++--------------+----------+---------+-------------------------------------------------------------------------------------------------------+------------+----------------------------------+
 
     * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
 
 ================================================================
 == Bind Op Report
 ================================================================
-+------------------------------------------------------+-----+--------+-------------------+-------+---------+---------+
-| Name                                                 | DSP | Pragma | Variable          | Op    | Impl    | Latency |
-+------------------------------------------------------+-----+--------+-------------------+-------+---------+---------+
-| + activation_accelerator                             | 21  |        |                   |       |         |         |
-|   fmul_32ns_32ns_32_3_max_dsp_1_U69                  | 3   |        | mean              | fmul  | maxdsp  | 2       |
-|   fmul_32ns_32ns_32_3_max_dsp_1_U69                  | 3   |        | var               | fmul  | maxdsp  | 2       |
-|   faddfsub_32ns_32ns_32_4_full_dsp_1_U68             | 2   |        | x_assign_3        | fadd  | fulldsp | 3       |
-|   fsqrt_32ns_32ns_32_8_no_dsp_1_U70                  | -   |        | stddev            | fsqrt | fabric  | 7       |
-|   fmul_32ns_32ns_32_3_max_dsp_1_U69                  | 3   |        | mean_sq           | fmul  | maxdsp  | 2       |
-|   faddfsub_32ns_32ns_32_4_full_dsp_1_U68             | 2   |        | x_assign_2        | fadd  | fulldsp | 3       |
-|   fsqrt_32ns_32ns_32_8_no_dsp_1_U70                  | -   |        | rms               | fsqrt | fabric  | 7       |
-|  + activation_accelerator_Pipeline_VITIS_LOOP_144_15 | 0   |        |                   |       |         |         |
-|    add_ln144_fu_76_p2                                | -   |        | add_ln144         | add   | fabric  | 0       |
-|  + activation_accelerator_Pipeline_VITIS_LOOP_144_14 | 0   |        |                   |       |         |         |
-|    add_ln144_fu_76_p2                                | -   |        | add_ln144         | add   | fabric  | 0       |
-|  + activation_accelerator_Pipeline_VITIS_LOOP_144_13 | 0   |        |                   |       |         |         |
-|    add_ln144_fu_76_p2                                | -   |        | add_ln144         | add   | fabric  | 0       |
-|  + activation_accelerator_Pipeline_VITIS_LOOP_144_12 | 0   |        |                   |       |         |         |
-|    add_ln144_fu_76_p2                                | -   |        | add_ln144         | add   | fabric  | 0       |
-|  + activation_accelerator_Pipeline_VITIS_LOOP_292_5  | 0   |        |                   |       |         |         |
-|    add_ln292_fu_58_p2                                | -   |        | add_ln292         | add   | fabric  | 0       |
-|  + activation_accelerator_Pipeline_VITIS_LOOP_283_4  | 0   |        |                   |       |         |         |
-|    add_ln283_fu_58_p2                                | -   |        | add_ln283         | add   | fabric  | 0       |
-|  + activation_accelerator_Pipeline_VITIS_LOOP_144_1  | 0   |        |                   |       |         |         |
-|    add_ln144_fu_76_p2                                | -   |        | add_ln144         | add   | fabric  | 0       |
-|  + activation_accelerator_Pipeline_VITIS_LOOP_144_11 | 0   |        |                   |       |         |         |
-|    add_ln144_fu_76_p2                                | -   |        | add_ln144         | add   | fabric  | 0       |
-|  + activation_accelerator_Pipeline_VITIS_LOOP_316_6  | 0   |        |                   |       |         |         |
-|    add_ln316_fu_109_p2                               | -   |        | add_ln316         | add   | fabric  | 0       |
-|  + activation_accelerator_Pipeline_VITIS_LOOP_185_1  | 0   |        |                   |       |         |         |
-|    add_ln185_fu_85_p2                                | -   |        | add_ln185         | add   | fabric  | 0       |
-|  + activation_accelerator_Pipeline_VITIS_LOOP_190_2  | 0   |        |                   |       |         |         |
-|    add_ln190_fu_99_p2                                | -   |        | add_ln190         | add   | fabric  | 0       |
-|  + activation_accelerator_Pipeline_VITIS_LOOP_196_3  | 0   |        |                   |       |         |         |
-|    add_ln196_fu_106_p2                               | -   |        | add_ln196         | add   | fabric  | 0       |
-|  + activation_accelerator_Pipeline_VITIS_LOOP_170_1  | 0   |        |                   |       |         |         |
-|    add_ln170_fu_89_p2                                | -   |        | add_ln170         | add   | fabric  | 0       |
-|  + activation_accelerator_Pipeline_VITIS_LOOP_175_2  | 0   |        |                   |       |         |         |
-|    add_ln175_fu_94_p2                                | -   |        | add_ln175         | add   | fabric  | 0       |
-|  + activation_accelerator_Pipeline_VITIS_LOOP_159_1  | 9   |        |                   |       |         |         |
-|    add_ln159_fu_105_p2                               | -   |        | add_ln159         | add   | fabric  | 0       |
-|    fexp_32ns_32ns_32_8_full_dsp_1_U35                | 7   |        | tmp_1             | fexp  | fulldsp | 7       |
-|    fadd_32ns_32ns_32_4_full_dsp_1_U32                | 2   |        | add_i2            | fadd  | fulldsp | 3       |
-|    fdiv_32ns_32ns_32_9_no_dsp_1_U34                  | -   |        | sig               | fdiv  | fabric  | 8       |
-|  + activation_accelerator_Pipeline_VITIS_LOOP_151_1  | 7   |        |                   |       |         |         |
-|    add_ln151_fu_101_p2                               | -   |        | add_ln151         | add   | fabric  | 0       |
-|    fexp_32ns_32ns_32_8_full_dsp_1_U44                | 7   |        | tmp               | fexp  | fulldsp | 7       |
-|  + activation_accelerator_Pipeline_VITIS_LOOP_205_1  | 0   |        |                   |       |         |         |
-|    add_ln205_fu_99_p2                                | -   |        | add_ln205         | add   | fabric  | 0       |
-|  + activation_accelerator_Pipeline_VITIS_LOOP_275_3  | 0   |        |                   |       |         |         |
-|    add_ln275_fu_96_p2                                | -   |        | add_ln275         | add   | fabric  | 0       |
-|   + bf16add                                          | 0   |        |                   |       |         |         |
-|     sub_ln54_fu_353_p2                               | -   |        | sub_ln54          | sub   | fabric  | 0       |
-|     sub_ln57_fu_379_p2                               | -   |        | sub_ln57          | sub   | fabric  | 0       |
-|     result_mantissa_fu_457_p2                        | -   |        | result_mantissa   | add   | fabric  | 0       |
-|     result_mantissa_1_fu_479_p2                      | -   |        | result_mantissa_1 | sub   | fabric  | 0       |
-|     result_mantissa_3_fu_485_p2                      | -   |        | result_mantissa_3 | sub   | fabric  | 0       |
-|     max_exp_11_fu_615_p2                             | -   |        | max_exp_11        | add   | fabric  | 0       |
-|     max_exp_12_fu_664_p2                             | -   |        | max_exp_12        | add   | fabric  | 0       |
-|     result_mantissa_8_fu_704_p2                      | -   |        | result_mantissa_8 | add   | fabric  | 0       |
-|     max_exp_14_fu_776_p2                             | -   |        | max_exp_14        | add   | fabric  | 0       |
-|  + activation_accelerator_Pipeline_VITIS_LOOP_262_1  | 0   |        |                   |       |         |         |
-|    add_ln262_fu_104_p2                               | -   |        | add_ln262         | add   | fabric  | 0       |
-|  + activation_accelerator_Pipeline_VITIS_LOOP_265_2  | 0   |        |                   |       |         |         |
-|    add_ln265_fu_104_p2                               | -   |        | add_ln265         | add   | fabric  | 0       |
-+------------------------------------------------------+-----+--------+-------------------+-------+---------+---------+
++----------------------------------------------------------+-----+--------+----------------------------------+-------+---------+---------+
+| Name                                                     | DSP | Pragma | Variable                         | Op    | Impl    | Latency |
++----------------------------------------------------------+-----+--------+----------------------------------+-------+---------+---------+
+| + activation_accelerator                                 | 45  |        |                                  |       |         |         |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U393                     | 3   |        | mean                             | fmul  | maxdsp  | 2       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U393                     | 3   |        | var                              | fmul  | maxdsp  | 2       |
+|   faddfsub_32ns_32ns_32_4_full_dsp_1_U392                | 2   |        | x_assign_4                       | fadd  | fulldsp | 3       |
+|   fsqrt_32ns_32ns_32_8_no_dsp_1_U394                     | -   |        | stddev                           | fsqrt | fabric  | 7       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U393                     | 3   |        | mean_sq                          | fmul  | maxdsp  | 2       |
+|   faddfsub_32ns_32ns_32_4_full_dsp_1_U392                | 2   |        | x_assign_2                       | fadd  | fulldsp | 3       |
+|   fsqrt_32ns_32ns_32_8_no_dsp_1_U394                     | -   |        | rms                              | fsqrt | fabric  | 7       |
+|  + activation_accelerator_Pipeline_loop_110              | 0   |        |                                  |       |         |         |
+|    add_ln147_fu_244_p2                                   | -   |        | add_ln147                        | add   | fabric  | 0       |
+|  + activation_accelerator_Pipeline_loop_18               | 0   |        |                                  |       |         |         |
+|    add_ln147_fu_244_p2                                   | -   |        | add_ln147                        | add   | fabric  | 0       |
+|  + activation_accelerator_Pipeline_loop_17               | 0   |        |                                  |       |         |         |
+|    add_ln147_fu_244_p2                                   | -   |        | add_ln147                        | add   | fabric  | 0       |
+|  + activation_accelerator_Pipeline_loop_16               | 0   |        |                                  |       |         |         |
+|    add_ln147_fu_244_p2                                   | -   |        | add_ln147                        | add   | fabric  | 0       |
+|  + activation_accelerator_Pipeline_loop_14               | 0   |        |                                  |       |         |         |
+|    add_ln147_fu_244_p2                                   | -   |        | add_ln147                        | add   | fabric  | 0       |
+|  + activation_accelerator_Pipeline_loop_15               | 0   |        |                                  |       |         |         |
+|    add_ln147_fu_244_p2                                   | -   |        | add_ln147                        | add   | fabric  | 0       |
+|  + activation_accelerator_Pipeline_loop_13               | 0   |        |                                  |       |         |         |
+|    add_ln147_fu_244_p2                                   | -   |        | add_ln147                        | add   | fabric  | 0       |
+|  + activation_accelerator_Pipeline_loop_1                | 0   |        |                                  |       |         |         |
+|    add_ln147_fu_244_p2                                   | -   |        | add_ln147                        | add   | fabric  | 0       |
+|  + activation_accelerator_Pipeline_loop_11               | 0   |        |                                  |       |         |         |
+|    add_ln147_fu_244_p2                                   | -   |        | add_ln147                        | add   | fabric  | 0       |
+|  + activation_accelerator_Pipeline_loop_25               | 0   |        |                                  |       |         |         |
+|    add_ln569_fu_220_p2                                   | -   |        | add_ln569                        | add   | fabric  | 0       |
+|  + activation_accelerator_Pipeline_loop_mean             | 0   |        |                                  |       |         |         |
+|    add_ln246_fu_136_p2                                   | -   |        | add_ln246                        | add   | fabric  | 0       |
+|  + activation_accelerator_Pipeline_loop_var              | 0   |        |                                  |       |         |         |
+|    add_ln255_fu_154_p2                                   | -   |        | add_ln255                        | add   | fabric  | 0       |
+|  + activation_accelerator_Pipeline_loop_norm11           | 0   |        |                                  |       |         |         |
+|    add_ln265_fu_280_p2                                   | -   |        | add_ln265                        | add   | fabric  | 0       |
+|  + activation_accelerator_Pipeline_loop_sum              | 0   |        |                                  |       |         |         |
+|    add_ln220_fu_140_p2                                   | -   |        | add_ln220                        | add   | fabric  | 0       |
+|  + activation_accelerator_Pipeline_loop_norm             | 0   |        |                                  |       |         |         |
+|    add_ln231_fu_268_p2                                   | -   |        | add_ln231                        | add   | fabric  | 0       |
+|  + activation_accelerator_Pipeline_loop_3                | 7   |        |                                  |       |         |         |
+|    add_ln166_fu_279_p2                                   | -   |        | add_ln166                        | add   | fabric  | 0       |
+|    fexp_32ns_32ns_32_8_full_dsp_1_U113                   | 7   |        | tmp_4                            | fexp  | fulldsp | 7       |
+|    fdiv_32ns_32ns_32_9_no_dsp_1_U112                     | -   |        | sig                              | fdiv  | fabric  | 8       |
+|  + activation_accelerator_Pipeline_loop_2                | 0   |        |                                  |       |         |         |
+|    add_ln156_fu_275_p2                                   | -   |        | add_ln156                        | add   | fabric  | 0       |
+|  + float_mask_safe_softmax                               | 12  |        |                                  |       |         |         |
+|    max_val_loc_channel_U                                 | 3   |        | max_val_loc_channel              | fifo  | srl     | 0       |
+|    max_val_to_broadcast_loc_channel_U                    | -   |        | max_val_to_broadcast_loc_channel | fifo  | srl     | 0       |
+|    sum_loc_channel_U                                     | 9   |        | sum_loc_channel                  | fifo  | srl     | 0       |
+|    sum_to_broadcast_loc_channel_U                        | -   |        | sum_to_broadcast_loc_channel     | fifo  | srl     | 0       |
+|   + float_mask_safe_softmax_Loop_loop_18_proc5           | 3   |        |                                  |       |         |         |
+|     add_ln413_fu_228_p2                                  | -   |        | add_ln413                        | add   | fabric  | 0       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U183                   | 3   |        | x_mask_val                       | fmul  | maxdsp  | 2       |
+|   + float_mask_safe_softmax_Loop_loop_max_broadcast_proc | 0   |        |                                  |       |         |         |
+|     i_4_fu_67_p2                                         | -   |        | i_4                              | add   | fabric  | 0       |
+|   + float_mask_safe_softmax_Loop_loop_20_proc6           | 9   |        |                                  |       |         |         |
+|     i_7_fu_101_p2                                        | -   |        | i_7                              | add   | fabric  | 0       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U201                  | 2   |        | x_assign                         | fsub  | fulldsp | 3       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U203                  | 7   |        | exp_val                          | fexp  | fulldsp | 7       |
+|     fadd_32ns_32ns_32_4_no_dsp_1_U202                    | -   |        | sum_1                            | fadd  | fabric  | 3       |
+|   + float_mask_safe_softmax_Loop_loop_sum_broadcast_proc | 0   |        |                                  |       |         |         |
+|     i_2_fu_67_p2                                         | -   |        | i_2                              | add   | fabric  | 0       |
+|   + float_mask_safe_softmax_Loop_loop_22_proc7           | 0   |        |                                  |       |         |         |
+|     add_ln458_fu_216_p2                                  | -   |        | add_ln458                        | add   | fabric  | 0       |
+|     fdiv_32ns_32ns_32_9_no_dsp_1_U212                    | -   |        | div                              | fdiv  | fabric  | 8       |
+|  + activation_accelerator_Pipeline_loop_max              | 0   |        |                                  |       |         |         |
+|    add_ln362_fu_174_p2                                   | -   |        | add_ln362                        | add   | fabric  | 0       |
+|  + activation_accelerator_Pipeline_loop_exp              | 0   |        |                                  |       |         |         |
+|    add_ln375_fu_191_p2                                   | -   |        | add_ln375                        | add   | fabric  | 0       |
+|  + activation_accelerator_Pipeline_loop_output           | 0   |        |                                  |       |         |         |
+|    add_ln383_fu_236_p2                                   | -   |        | add_ln383                        | add   | fabric  | 0       |
+|  + activation_accelerator_Pipeline_loop_12               | 12  |        |                                  |       |         |         |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U324                   | 2   |        | sum_4                            | fadd  | fulldsp | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U325                   | 2   |        | sum_5                            | fadd  | fulldsp | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U326                   | 2   |        | sum_6                            | fadd  | fulldsp | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U327                   | 2   |        | sum_7                            | fadd  | fulldsp | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U328                   | 2   |        | sum_8                            | fadd  | fulldsp | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U329                   | 2   |        | sum_9                            | fadd  | fulldsp | 3       |
+|    add_ln277_fu_482_p2                                   | -   |        | add_ln277                        | add   | fabric  | 0       |
+|  + activation_accelerator_Pipeline_loop_19               | 0   |        |                                  |       |         |         |
+|    add_ln504_fu_500_p2                                   | -   |        | add_ln504                        | add   | fabric  | 0       |
+|   + bf16add (grp_bf16add_fu_398)                         | 0   |        |                                  |       |         |         |
+|     sub_ln56_fu_355_p2                                   | -   |        | sub_ln56                         | sub   | fabric  | 0       |
+|     sub_ln59_fu_381_p2                                   | -   |        | sub_ln59                         | sub   | fabric  | 0       |
+|     result_mantissa_1_fu_471_p2                          | -   |        | result_mantissa_1                | sub   | fabric  | 0       |
+|     result_mantissa_3_fu_477_p2                          | -   |        | result_mantissa_3                | sub   | fabric  | 0       |
+|     result_mantissa_fu_503_p2                            | -   |        | result_mantissa                  | add   | fabric  | 0       |
+|     max_exp_11_fu_621_p2                                 | -   |        | max_exp_11                       | add   | fabric  | 0       |
+|     max_exp_12_fu_663_p2                                 | -   |        | max_exp_12                       | add   | fabric  | 0       |
+|     result_mantissa_13_fu_703_p2                         | -   |        | result_mantissa_13               | add   | fabric  | 0       |
+|     max_exp_14_fu_775_p2                                 | -   |        | max_exp_14                       | add   | fabric  | 0       |
+|   + bf16add (grp_bf16add_fu_405)                         | 0   |        |                                  |       |         |         |
+|     sub_ln56_fu_355_p2                                   | -   |        | sub_ln56                         | sub   | fabric  | 0       |
+|     sub_ln59_fu_381_p2                                   | -   |        | sub_ln59                         | sub   | fabric  | 0       |
+|     result_mantissa_1_fu_471_p2                          | -   |        | result_mantissa_1                | sub   | fabric  | 0       |
+|     result_mantissa_3_fu_477_p2                          | -   |        | result_mantissa_3                | sub   | fabric  | 0       |
+|     result_mantissa_fu_503_p2                            | -   |        | result_mantissa                  | add   | fabric  | 0       |
+|     max_exp_11_fu_621_p2                                 | -   |        | max_exp_11                       | add   | fabric  | 0       |
+|     max_exp_12_fu_663_p2                                 | -   |        | max_exp_12                       | add   | fabric  | 0       |
+|     result_mantissa_13_fu_703_p2                         | -   |        | result_mantissa_13               | add   | fabric  | 0       |
+|     max_exp_14_fu_775_p2                                 | -   |        | max_exp_14                       | add   | fabric  | 0       |
+|   + bf16add (grp_bf16add_fu_412)                         | 0   |        |                                  |       |         |         |
+|     sub_ln56_fu_355_p2                                   | -   |        | sub_ln56                         | sub   | fabric  | 0       |
+|     sub_ln59_fu_381_p2                                   | -   |        | sub_ln59                         | sub   | fabric  | 0       |
+|     result_mantissa_1_fu_471_p2                          | -   |        | result_mantissa_1                | sub   | fabric  | 0       |
+|     result_mantissa_3_fu_477_p2                          | -   |        | result_mantissa_3                | sub   | fabric  | 0       |
+|     result_mantissa_fu_503_p2                            | -   |        | result_mantissa                  | add   | fabric  | 0       |
+|     max_exp_11_fu_621_p2                                 | -   |        | max_exp_11                       | add   | fabric  | 0       |
+|     max_exp_12_fu_663_p2                                 | -   |        | max_exp_12                       | add   | fabric  | 0       |
+|     result_mantissa_13_fu_703_p2                         | -   |        | result_mantissa_13               | add   | fabric  | 0       |
+|     max_exp_14_fu_775_p2                                 | -   |        | max_exp_14                       | add   | fabric  | 0       |
+|   + bf16add (grp_bf16add_fu_419)                         | 0   |        |                                  |       |         |         |
+|     sub_ln56_fu_355_p2                                   | -   |        | sub_ln56                         | sub   | fabric  | 0       |
+|     sub_ln59_fu_381_p2                                   | -   |        | sub_ln59                         | sub   | fabric  | 0       |
+|     result_mantissa_1_fu_471_p2                          | -   |        | result_mantissa_1                | sub   | fabric  | 0       |
+|     result_mantissa_3_fu_477_p2                          | -   |        | result_mantissa_3                | sub   | fabric  | 0       |
+|     result_mantissa_fu_503_p2                            | -   |        | result_mantissa                  | add   | fabric  | 0       |
+|     max_exp_11_fu_621_p2                                 | -   |        | max_exp_11                       | add   | fabric  | 0       |
+|     max_exp_12_fu_663_p2                                 | -   |        | max_exp_12                       | add   | fabric  | 0       |
+|     result_mantissa_13_fu_703_p2                         | -   |        | result_mantissa_13               | add   | fabric  | 0       |
+|     max_exp_14_fu_775_p2                                 | -   |        | max_exp_14                       | add   | fabric  | 0       |
+|   + bf16add (grp_bf16add_fu_426)                         | 0   |        |                                  |       |         |         |
+|     sub_ln56_fu_355_p2                                   | -   |        | sub_ln56                         | sub   | fabric  | 0       |
+|     sub_ln59_fu_381_p2                                   | -   |        | sub_ln59                         | sub   | fabric  | 0       |
+|     result_mantissa_1_fu_471_p2                          | -   |        | result_mantissa_1                | sub   | fabric  | 0       |
+|     result_mantissa_3_fu_477_p2                          | -   |        | result_mantissa_3                | sub   | fabric  | 0       |
+|     result_mantissa_fu_503_p2                            | -   |        | result_mantissa                  | add   | fabric  | 0       |
+|     max_exp_11_fu_621_p2                                 | -   |        | max_exp_11                       | add   | fabric  | 0       |
+|     max_exp_12_fu_663_p2                                 | -   |        | max_exp_12                       | add   | fabric  | 0       |
+|     result_mantissa_13_fu_703_p2                         | -   |        | result_mantissa_13               | add   | fabric  | 0       |
+|     max_exp_14_fu_775_p2                                 | -   |        | max_exp_14                       | add   | fabric  | 0       |
+|   + bf16add (grp_bf16add_fu_433)                         | 0   |        |                                  |       |         |         |
+|     sub_ln56_fu_355_p2                                   | -   |        | sub_ln56                         | sub   | fabric  | 0       |
+|     sub_ln59_fu_381_p2                                   | -   |        | sub_ln59                         | sub   | fabric  | 0       |
+|     result_mantissa_1_fu_471_p2                          | -   |        | result_mantissa_1                | sub   | fabric  | 0       |
+|     result_mantissa_3_fu_477_p2                          | -   |        | result_mantissa_3                | sub   | fabric  | 0       |
+|     result_mantissa_fu_503_p2                            | -   |        | result_mantissa                  | add   | fabric  | 0       |
+|     max_exp_11_fu_621_p2                                 | -   |        | max_exp_11                       | add   | fabric  | 0       |
+|     max_exp_12_fu_663_p2                                 | -   |        | max_exp_12                       | add   | fabric  | 0       |
+|     result_mantissa_13_fu_703_p2                         | -   |        | result_mantissa_13               | add   | fabric  | 0       |
+|     max_exp_14_fu_775_p2                                 | -   |        | max_exp_14                       | add   | fabric  | 0       |
+|   + bf16add (grp_bf16add_fu_440)                         | 0   |        |                                  |       |         |         |
+|     sub_ln56_fu_355_p2                                   | -   |        | sub_ln56                         | sub   | fabric  | 0       |
+|     sub_ln59_fu_381_p2                                   | -   |        | sub_ln59                         | sub   | fabric  | 0       |
+|     result_mantissa_1_fu_471_p2                          | -   |        | result_mantissa_1                | sub   | fabric  | 0       |
+|     result_mantissa_3_fu_477_p2                          | -   |        | result_mantissa_3                | sub   | fabric  | 0       |
+|     result_mantissa_fu_503_p2                            | -   |        | result_mantissa                  | add   | fabric  | 0       |
+|     max_exp_11_fu_621_p2                                 | -   |        | max_exp_11                       | add   | fabric  | 0       |
+|     max_exp_12_fu_663_p2                                 | -   |        | max_exp_12                       | add   | fabric  | 0       |
+|     result_mantissa_13_fu_703_p2                         | -   |        | result_mantissa_13               | add   | fabric  | 0       |
+|     max_exp_14_fu_775_p2                                 | -   |        | max_exp_14                       | add   | fabric  | 0       |
+|   + bf16add (grp_bf16add_fu_447)                         | 0   |        |                                  |       |         |         |
+|     sub_ln56_fu_355_p2                                   | -   |        | sub_ln56                         | sub   | fabric  | 0       |
+|     sub_ln59_fu_381_p2                                   | -   |        | sub_ln59                         | sub   | fabric  | 0       |
+|     result_mantissa_1_fu_471_p2                          | -   |        | result_mantissa_1                | sub   | fabric  | 0       |
+|     result_mantissa_3_fu_477_p2                          | -   |        | result_mantissa_3                | sub   | fabric  | 0       |
+|     result_mantissa_fu_503_p2                            | -   |        | result_mantissa                  | add   | fabric  | 0       |
+|     max_exp_11_fu_621_p2                                 | -   |        | max_exp_11                       | add   | fabric  | 0       |
+|     max_exp_12_fu_663_p2                                 | -   |        | max_exp_12                       | add   | fabric  | 0       |
+|     result_mantissa_13_fu_703_p2                         | -   |        | result_mantissa_13               | add   | fabric  | 0       |
+|     max_exp_14_fu_775_p2                                 | -   |        | max_exp_14                       | add   | fabric  | 0       |
+|  + activation_accelerator_Pipeline_loop_23               | 0   |        |                                  |       |         |         |
+|    add_ln490_fu_229_p2                                   | -   |        | add_ln490                        | add   | fabric  | 0       |
+|  + activation_accelerator_Pipeline_loop_24               | 0   |        |                                  |       |         |         |
+|    add_ln494_fu_229_p2                                   | -   |        | add_ln494                        | add   | fabric  | 0       |
++----------------------------------------------------------+-----+--------+----------------------------------+-------+---------+---------+
 
 
 ================================================================
 == Bind Storage Report
 ================================================================
-+--------------------------+------+------+--------+----------+---------+------+---------+
-| Name                     | BRAM | URAM | Pragma | Variable | Storage | Impl | Latency |
-+--------------------------+------+------+--------+----------+---------+------+---------+
-| + activation_accelerator | 206  | 0    |        |          |         |      |         |
-|   x_U                    | 58   | -    |        | x        | ram_1p  | auto | 1       |
-|   y_U                    | 58   | -    |        | y        | ram_1p  | auto | 1       |
-|   buf0_U                 | 30   | -    |        | buf0     | ram_1p  | auto | 1       |
-|   buf1_U                 | 30   | -    |        | buf1     | ram_1p  | auto | 1       |
-|   buf2_U                 | 30   | -    |        | buf2     | ram_1p  | auto | 1       |
-+--------------------------+------+------+--------+----------+---------+------+---------+
++----------------------------------------------------------------------------------+------+------+--------+------------------------------------------------------------------------------+---------+--------+---------+
+| Name                                                                             | BRAM | URAM | Pragma | Variable                                                                     | Storage | Impl   | Latency |
++----------------------------------------------------------------------------------+------+------+--------+------------------------------------------------------------------------------+---------+--------+---------+
+| + activation_accelerator                                                         | 274  | 0    |        |                                                                              |         |        |         |
+|   exp_vals_U                                                                     | 2    | -    |        | exp_vals                                                                     | ram_1p  | auto   | 1       |
+|   exp_vals_1_U                                                                   | 2    | -    |        | exp_vals_1                                                                   | ram_1p  | auto   | 1       |
+|   x_U                                                                            | 2    | -    |        | x                                                                            | ram_s2p | auto   | 1       |
+|   x_2_U                                                                          | 2    | -    |        | x_2                                                                          | ram_s2p | auto   | 1       |
+|   x_4_U                                                                          | 2    | -    |        | x_4                                                                          | ram_s2p | auto   | 1       |
+|   x_6_U                                                                          | 2    | -    |        | x_6                                                                          | ram_s2p | auto   | 1       |
+|   y_U                                                                            | 2    | -    |        | y                                                                            | ram_s2p | auto   | 1       |
+|   y_1_U                                                                          | 2    | -    |        | y_1                                                                          | ram_s2p | auto   | 1       |
+|   y_2_U                                                                          | 2    | -    |        | y_2                                                                          | ram_s2p | auto   | 1       |
+|   y_3_U                                                                          | 2    | -    |        | y_3                                                                          | ram_s2p | auto   | 1       |
+|   activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_U | 1    | -    |        | activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23 | ram_1p  | auto   | 1       |
+|   activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22_U | 1    | -    |        | activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22 | ram_1p  | auto   | 1       |
+|   activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21_U | 1    | -    |        | activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21 | ram_1p  | auto   | 1       |
+|   activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20_U | 1    | -    |        | activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20 | ram_1p  | auto   | 1       |
+|   activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19_U | 1    | -    |        | activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19 | ram_1p  | auto   | 1       |
+|   activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18_U | 1    | -    |        | activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18 | ram_1p  | auto   | 1       |
+|   activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17_U | 1    | -    |        | activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17 | ram_1p  | auto   | 1       |
+|   activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16_U | 1    | -    |        | activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16 | ram_1p  | auto   | 1       |
+|   activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_15_U | 1    | -    |        | activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_15 | ram_1p  | auto   | 1       |
+|   activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_U  | 1    | -    |        | activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9  | ram_1p  | auto   | 1       |
+|   activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_U  | 1    | -    |        | activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8  | ram_1p  | auto   | 1       |
+|   activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_14_U | 1    | -    |        | activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_14 | ram_1p  | auto   | 1       |
+|   activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_13_U | 1    | -    |        | activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_13 | ram_1p  | auto   | 1       |
+|   activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_12_U | 1    | -    |        | activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_12 | ram_1p  | auto   | 1       |
+|   activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_11_U | 1    | -    |        | activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_11 | ram_1p  | auto   | 1       |
+|   activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_10_U | 1    | -    |        | activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_10 | ram_1p  | auto   | 1       |
+|   activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_U  | 1    | -    |        | activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7  | ram_1p  | auto   | 1       |
+|   activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_U  | 1    | -    |        | activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6  | ram_1p  | auto   | 1       |
+|   activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_U  | 1    | -    |        | activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5  | ram_1p  | auto   | 1       |
+|   activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_U  | 1    | -    |        | activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4  | ram_1p  | auto   | 1       |
+|   activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_U  | 1    | -    |        | activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3  | ram_1p  | auto   | 1       |
+|   activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_U  | 1    | -    |        | activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2  | ram_1p  | auto   | 1       |
+|   activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_U  | 1    | -    |        | activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1  | ram_1p  | auto   | 1       |
+|   activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_U    | 1    | -    |        | activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i    | ram_1p  | auto   | 1       |
+|  + float_mask_safe_softmax                                                       | 232  | 0    |        |                                                                              |         |        |         |
+|    x_mask_stream_U                                                               | 58   | -    |        | x_mask_stream                                                                | fifo    | memory | 0       |
+|    max_broadcast_stream_U                                                        | 58   | -    |        | max_broadcast_stream                                                         | fifo    | memory | 0       |
+|    exp_stream_U                                                                  | 58   | -    |        | exp_stream                                                                   | fifo    | memory | 0       |
+|    sum_broadcast_stream_U                                                        | 58   | -    |        | sum_broadcast_stream                                                         | fifo    | memory | 0       |
+|   + float_mask_safe_softmax_Block_float_mask_safe_softmax_for_cond_i_exit_proc   | 0    | 0    |        |                                                                              |         |        |         |
+|     max_val_stream_fifo_U                                                        | -    | -    |        | max_val_stream                                                               | fifo    | srl    | 0       |
+|   + float_mask_safe_softmax_Block_for_end26_proc                                 | 0    | 0    |        |                                                                              |         |        |         |
+|     sum_stream_fifo_U                                                            | -    | -    |        | sum_stream                                                                   | fifo    | srl    | 0       |
++----------------------------------------------------------------------------------+------+------+--------+------------------------------------------------------------------------------+---------+--------+---------+
 
 
 ================================================================
 == Pragma Report
 ================================================================
+* Pragmas with Warnings
++----------+---------+-----------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Type     | Options | Location                                                  | Messages                                                                                                                                                                           |
++----------+---------+-----------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| dataflow |         | activation_accelerator.cpp:393 in float_mask_safe_softmax | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
+|          |         |                                                           | There are a total of 5 such instances of non-canonical statements in the dataflow region                                                                                           |
++----------+---------+-----------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
 * Valid Pragma Syntax
-+-----------+------------------------------------------------------+------------------------------------------------------------------+
-| Type      | Options                                              | Location                                                         |
-+-----------+------------------------------------------------------+------------------------------------------------------------------+
-| interface | m_axi port=in0 offset=slave bundle=gmem0 depth=32768 | activation_accelerator.cpp:249 in activation_accelerator, in0    |
-| interface | m_axi port=in1 offset=slave bundle=gmem1 depth=32768 | activation_accelerator.cpp:250 in activation_accelerator, in1    |
-| interface | m_axi port=out offset=slave bundle=gmem2 depth=32768 | activation_accelerator.cpp:251 in activation_accelerator, out    |
-| interface | s_axilite port=stage                                 | activation_accelerator.cpp:252 in activation_accelerator, stage  |
-| interface | s_axilite port=config                                | activation_accelerator.cpp:253 in activation_accelerator, config |
-| interface | s_axilite port=return                                | activation_accelerator.cpp:254 in activation_accelerator, return |
-| pipeline  | II=1                                                 | activation_accelerator.cpp:276 in activation_accelerator         |
-| pipeline  | II=1                                                 | activation_accelerator.cpp:284 in activation_accelerator         |
-| pipeline  | II=1                                                 | activation_accelerator.cpp:293 in activation_accelerator         |
-+-----------+------------------------------------------------------+------------------------------------------------------------------+
++-----------------+------------------------------------------------------+---------------------------------------------------------------------------------+
+| Type            | Options                                              | Location                                                                        |
++-----------------+------------------------------------------------------+---------------------------------------------------------------------------------+
+| pipeline        | II=1                                                 | activation_accelerator.cpp:148 in bf16_to_float                                 |
+| pipeline        | II=1                                                 | activation_accelerator.cpp:157 in float_sigmoid                                 |
+| pipeline        | II=1                                                 | activation_accelerator.cpp:167 in float_silu                                    |
+| pipeline        | II=1                                                 | activation_accelerator.cpp:221 in float_rms_norm                                |
+| pipeline        | II=1                                                 | activation_accelerator.cpp:232 in float_rms_norm                                |
+| pipeline        | II=1                                                 | activation_accelerator.cpp:247 in float_layer_norm                              |
+| pipeline        | II=1                                                 | activation_accelerator.cpp:256 in float_layer_norm                              |
+| pipeline        | II=1                                                 | activation_accelerator.cpp:266 in float_layer_norm                              |
+| pipeline        | II=1                                                 | activation_accelerator.cpp:278 in float_add                                     |
+| unroll          | factor=8                                             | activation_accelerator.cpp:279 in float_add                                     |
+| pipeline        | II=1                                                 | activation_accelerator.cpp:363 in float_safe_softmax                            |
+| array_partition | variable=exp_vals cyclic factor=2 dim=1              | activation_accelerator.cpp:372 in float_safe_softmax, exp_vals                  |
+| pipeline        | II=1                                                 | activation_accelerator.cpp:376 in float_safe_softmax                            |
+| pipeline        | II=1                                                 | activation_accelerator.cpp:384 in float_safe_softmax                            |
+| stream          | variable=x_mask_stream depth=32768                   | activation_accelerator.cpp:396 in float_mask_safe_softmax, x_mask_stream        |
+| stream          | variable=x_stream depth=32768                        | activation_accelerator.cpp:398 in float_mask_safe_softmax, x_stream             |
+| stream          | variable=max_val_stream depth=2                      | activation_accelerator.cpp:400 in float_mask_safe_softmax, max_val_stream       |
+| stream          | variable=max_broadcast_stream depth=32768            | activation_accelerator.cpp:402 in float_mask_safe_softmax, max_broadcast_stream |
+| stream          | variable=exp_stream depth=32768                      | activation_accelerator.cpp:404 in float_mask_safe_softmax, exp_stream           |
+| stream          | variable=sum_stream depth=2                          | activation_accelerator.cpp:406 in float_mask_safe_softmax, sum_stream           |
+| stream          | variable=sum_broadcast_stream depth=32768            | activation_accelerator.cpp:408 in float_mask_safe_softmax, sum_broadcast_stream |
+| pipeline        | II=1                                                 | activation_accelerator.cpp:414 in float_mask_safe_softmax                       |
+| pipeline        | II=1                                                 | activation_accelerator.cpp:431 in float_mask_safe_softmax                       |
+| pipeline        | II=1                                                 | activation_accelerator.cpp:439 in float_mask_safe_softmax                       |
+| pipeline        | II=1                                                 | activation_accelerator.cpp:452 in float_mask_safe_softmax                       |
+| pipeline        | II=1                                                 | activation_accelerator.cpp:459 in float_mask_safe_softmax                       |
+| interface       | m_axi port=in0 offset=slave bundle=gmem0 depth=32768 | activation_accelerator.cpp:470 in activation_accelerator, in0                   |
+| interface       | m_axi port=in1 offset=slave bundle=gmem1 depth=32768 | activation_accelerator.cpp:471 in activation_accelerator, in1                   |
+| interface       | m_axi port=out offset=slave bundle=gmem2 depth=32768 | activation_accelerator.cpp:472 in activation_accelerator, out                   |
+| interface       | s_axilite port=stage                                 | activation_accelerator.cpp:473 in activation_accelerator, stage                 |
+| interface       | s_axilite port=config                                | activation_accelerator.cpp:474 in activation_accelerator, config                |
+| interface       | s_axilite port=return                                | activation_accelerator.cpp:475 in activation_accelerator, return                |
+| array_partition | variable=buf0 cyclic factor=8 dim=1                  | activation_accelerator.cpp:482 in activation_accelerator, buf0                  |
+| array_partition | variable=buf1 cyclic factor=8 dim=1                  | activation_accelerator.cpp:483 in activation_accelerator, buf1                  |
+| array_partition | variable=buf2 cyclic factor=8 dim=1                  | activation_accelerator.cpp:484 in activation_accelerator, buf2                  |
+| array_partition | variable=x cyclic factor=4 dim=1                     | activation_accelerator.cpp:485 in activation_accelerator, x                     |
+| array_partition | variable=y cyclic factor=4 dim=1                     | activation_accelerator.cpp:486 in activation_accelerator, y                     |
+| pipeline        | II=1                                                 | activation_accelerator.cpp:505 in activation_accelerator                        |
+| unroll          | factor=8                                             | activation_accelerator.cpp:506 in activation_accelerator                        |
+| pipeline        | II=1                                                 | activation_accelerator.cpp:570 in activation_accelerator                        |
++-----------------+------------------------------------------------------+---------------------------------------------------------------------------------+
 
 

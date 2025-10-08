@@ -1,0 +1,183 @@
+
+
+================================================================
+== Vitis HLS Report for 'activation_accelerator_Pipeline_loop_17'
+================================================================
+* Date:           Wed Oct  8 15:53:30 2025
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        activation_accelerator
+* Solution:       baseline (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  3.195 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     1026|     1026|  10.260 us|  10.260 us|  1026|  1026|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- loop_1  |     1024|     1024|         2|          1|          1|  1024|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      32|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       0|      43|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      36|    -|
+|Register         |        -|     -|      27|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|      27|     111|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      288|  1248|  234240|  117120|   64|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------+---------------+---------+----+---+----+-----+
+    |      Instance     |     Module    | BRAM_18K| DSP| FF| LUT| URAM|
+    +-------------------+---------------+---------+----+---+----+-----+
+    |mux_83_16_1_1_U97  |mux_83_16_1_1  |        0|   0|  0|  43|    0|
+    +-------------------+---------------+---------+----+---+----+-----+
+    |Total              |               |        0|   0|  0|  43|    0|
+    +-------------------+---------------+---------+----+---+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |add_ln147_fu_244_p2   |         +|   0|  0|  18|          11|           1|
+    |icmp_ln147_fu_238_p2  |      icmp|   0|  0|  12|          11|          12|
+    |ap_enable_pp0         |       xor|   0|  0|   2|           1|           2|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Total                 |          |   0|  0|  32|          23|          15|
+    +----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i       |   9|          2|   11|         22|
+    |i_9_fu_70                |   9|          2|   11|         22|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  36|          8|   24|         48|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                |   1|   0|    1|          0|
+    |ap_done_reg              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |i_9_fu_70                |  11|   0|   11|          0|
+    |i_reg_346                |  11|   0|   11|          0|
+    |trunc_ln150_reg_395      |   2|   0|    2|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    |  27|   0|   27|          0|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------------------------------------------------------------------+-----+-----+------------+------------------------------------------------------------------------------+--------------+
+|                                       RTL Ports                                       | Dir | Bits|  Protocol  |                                 Source Object                                |    C Type    |
++---------------------------------------------------------------------------------------+-----+-----+------------+------------------------------------------------------------------------------+--------------+
+|ap_clk                                                                                 |   in|    1|  ap_ctrl_hs|                                       activation_accelerator_Pipeline_loop_17|  return value|
+|ap_rst                                                                                 |   in|    1|  ap_ctrl_hs|                                       activation_accelerator_Pipeline_loop_17|  return value|
+|ap_start                                                                               |   in|    1|  ap_ctrl_hs|                                       activation_accelerator_Pipeline_loop_17|  return value|
+|ap_done                                                                                |  out|    1|  ap_ctrl_hs|                                       activation_accelerator_Pipeline_loop_17|  return value|
+|ap_idle                                                                                |  out|    1|  ap_ctrl_hs|                                       activation_accelerator_Pipeline_loop_17|  return value|
+|ap_ready                                                                               |  out|    1|  ap_ctrl_hs|                                       activation_accelerator_Pipeline_loop_17|  return value|
+|x_6_address0                                                                           |  out|    8|   ap_memory|                                                                           x_6|         array|
+|x_6_ce0                                                                                |  out|    1|   ap_memory|                                                                           x_6|         array|
+|x_6_we0                                                                                |  out|    1|   ap_memory|                                                                           x_6|         array|
+|x_6_d0                                                                                 |  out|   32|   ap_memory|                                                                           x_6|         array|
+|x_4_address0                                                                           |  out|    8|   ap_memory|                                                                           x_4|         array|
+|x_4_ce0                                                                                |  out|    1|   ap_memory|                                                                           x_4|         array|
+|x_4_we0                                                                                |  out|    1|   ap_memory|                                                                           x_4|         array|
+|x_4_d0                                                                                 |  out|   32|   ap_memory|                                                                           x_4|         array|
+|x_2_address0                                                                           |  out|    8|   ap_memory|                                                                           x_2|         array|
+|x_2_ce0                                                                                |  out|    1|   ap_memory|                                                                           x_2|         array|
+|x_2_we0                                                                                |  out|    1|   ap_memory|                                                                           x_2|         array|
+|x_2_d0                                                                                 |  out|   32|   ap_memory|                                                                           x_2|         array|
+|x_address0                                                                             |  out|    8|   ap_memory|                                                                             x|         array|
+|x_ce0                                                                                  |  out|    1|   ap_memory|                                                                             x|         array|
+|x_we0                                                                                  |  out|    1|   ap_memory|                                                                             x|         array|
+|x_d0                                                                                   |  out|   32|   ap_memory|                                                                             x|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_address0  |  out|    7|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_ce0       |  out|    1|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_q0        |   in|   16|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22_address0  |  out|    7|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22_ce0       |  out|    1|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22_q0        |   in|   16|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21_address0  |  out|    7|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21_ce0       |  out|    1|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21_q0        |   in|   16|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20_address0  |  out|    7|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20_ce0       |  out|    1|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20_q0        |   in|   16|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19_address0  |  out|    7|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19_ce0       |  out|    1|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19_q0        |   in|   16|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18_address0  |  out|    7|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18_ce0       |  out|    1|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18_q0        |   in|   16|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17_address0  |  out|    7|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17_ce0       |  out|    1|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17_q0        |   in|   16|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16_address0  |  out|    7|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16_ce0       |  out|    1|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16_q0        |   in|   16|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16|         array|
++---------------------------------------------------------------------------------------+-----+-----+------------+------------------------------------------------------------------------------+--------------+
+

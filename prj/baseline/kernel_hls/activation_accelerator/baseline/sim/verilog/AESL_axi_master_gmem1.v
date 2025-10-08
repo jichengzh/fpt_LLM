@@ -501,7 +501,7 @@ initial begin : AW_request_proc
             end
             
             if (FIFO_AW_req_ADDR_tmp/data_byte_size > gmem1_mem_depth) begin
-                $display ("/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/AESL_axi_master_gmem1.v: Write request address %d exceed AXI master gmem1 array depth: %d",FIFO_AW_req_ADDR_tmp/data_byte_size, gmem1_mem_depth); 
+                $display ("/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/AESL_axi_master_gmem1.v: Write request address %d exceed AXI master gmem1 array depth: %d",FIFO_AW_req_ADDR_tmp/data_byte_size, gmem1_mem_depth); 
                 $finish;
             end
             
@@ -688,7 +688,7 @@ initial begin : AR_request_proc
             end
 
             if (FIFO_AR_req_ADDR_tmp/data_byte_size > gmem1_mem_depth) begin
-                $display ("/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/AESL_axi_master_gmem1.v: Read request address %d exceed AXI master gmem1 array depth: %d",FIFO_AR_req_ADDR_tmp/data_byte_size, gmem1_mem_depth); 
+                $display ("/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/AESL_axi_master_gmem1.v: Read request address %d exceed AXI master gmem1 array depth: %d",FIFO_AR_req_ADDR_tmp/data_byte_size, gmem1_mem_depth); 
                 $finish;
             end
 

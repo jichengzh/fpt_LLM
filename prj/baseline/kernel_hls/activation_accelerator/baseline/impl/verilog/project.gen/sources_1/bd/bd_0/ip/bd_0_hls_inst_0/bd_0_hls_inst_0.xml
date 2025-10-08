@@ -2989,11 +2989,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Sep 23 14:19:37 UTC 2025</spirit:value>
+            <spirit:value>Wed Oct 08 07:57:16 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f589d9f6</spirit:value>
+            <spirit:value>9:4da8d319</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3004,7 +3004,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f589d9f6</spirit:value>
+            <spirit:value>9:4da8d319</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3020,11 +3020,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Sep 23 14:19:37 UTC 2025</spirit:value>
+            <spirit:value>Wed Oct 08 07:57:16 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f589d9f6</spirit:value>
+            <spirit:value>9:4da8d319</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3067,11 +3067,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Sep 23 14:19:37 UTC 2025</spirit:value>
+            <spirit:value>Wed Oct 08 07:57:16 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:45c590a2</spirit:value>
+            <spirit:value>9:fde49a4d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3087,11 +3087,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Sep 23 14:19:37 UTC 2025</spirit:value>
+            <spirit:value>Wed Oct 08 07:57:16 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:45c590a2</spirit:value>
+            <spirit:value>9:fde49a4d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3105,11 +3105,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Sep 23 14:19:37 UTC 2025</spirit:value>
+            <spirit:value>Wed Oct 08 07:57:16 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f589d9f6</spirit:value>
+            <spirit:value>9:4da8d319</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3123,11 +3123,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Sep 23 14:23:06 UTC 2025</spirit:value>
+            <spirit:value>Wed Oct 08 08:02:53 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f589d9f6</spirit:value>
+            <spirit:value>9:4da8d319</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -6246,27 +6246,39 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/ip/activation_accelerator_faddfsub_32ns_32ns_32_4_full_dsp_1_ip.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/ip/activation_accelerator_faddfsub_32ns_32ns_32_4_full_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/ip/activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1_ip.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/ip/activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/ip/activation_accelerator_fexp_32ns_32ns_32_8_full_dsp_1_ip.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/ip/activation_accelerator_fexp_32ns_32ns_32_8_full_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/ip/activation_accelerator_fmul_32ns_32ns_32_3_max_dsp_1_ip.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/ip/activation_accelerator_fmul_32ns_32ns_32_3_max_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/ip/activation_accelerator_fdiv_32ns_32ns_32_9_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/ip/activation_accelerator_fsub_32ns_32ns_32_4_full_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/ip/activation_accelerator_fsqrt_32ns_32ns_32_8_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/ip/activation_accelerator_fdiv_32ns_32ns_32_9_no_dsp_1_ip.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/ip/activation_accelerator_fsqrt_32ns_32ns_32_8_no_dsp_1_ip.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/ip/activation_accelerator_fcmp_32ns_32ns_1_2_no_dsp_1_ip.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/ip/activation_accelerator_fadd_32ns_32ns_32_4_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -6275,147 +6287,263 @@
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_144_1.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_144_11.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_144_12.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_3.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_144_13.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_11.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_144_14.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_12.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_144_15.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_13.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_151_1.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_14.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_159_1.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_15.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_170_1.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_16.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_175_2.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_17.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_185_1.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_18.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_190_2.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_19.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_196_3.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_23.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_205_1.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_24.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_262_1.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_25.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_265_2.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_110.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_275_3.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_exp.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_283_4.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_max.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_292_5.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_mean.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_316_6.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_norm.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_bf16add.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_norm11.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/activation_accelerator_buf0_RAM_AUTO_1R1W.dat</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_output.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_sum.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_var.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_buf0_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_control_s_axi.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_bf16add.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_control_s_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_faddfsub_32ns_32ns_32_4_full_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_exp_vals_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_fdiv_32ns_32ns_32_9_no_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_fexp_32ns_32ns_32_8_full_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_fadd_32ns_32ns_32_4_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_flow_control_loop_pipe_sequential_init.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_faddfsub_32ns_32ns_32_4_full_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_fmul_32ns_32ns_32_3_max_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_fcmp_32ns_32ns_1_2_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_fsqrt_32ns_32ns_32_8_no_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_fdiv_32ns_32ns_32_9_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_gmem0_m_axi.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_fexp_32ns_32ns_32_8_full_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_gmem1_m_axi.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_fifo_w32_d2_S.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_gmem2_m_axi.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_fifo_w32_d2_S_x.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_x_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_fifo_w32_d2_S_x0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_fifo_w32_d32768_A.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_float_mask_safe_softmax.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_float_mask_safe_softmax_Block_float_mask_safe_softmax_for_cond_i_exit_proc.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_float_mask_safe_softmax_Block_for_end26_proc.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_float_mask_safe_softmax_Loop_loop_18_proc5.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_float_mask_safe_softmax_Loop_loop_20_proc6.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_float_mask_safe_softmax_Loop_loop_22_proc7.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_float_mask_safe_softmax_Loop_loop_max_broadcast_proc.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_float_mask_safe_softmax_Loop_loop_sum_broadcast_proc.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_flow_control_loop_pipe.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_flow_control_loop_pipe_sequential_init.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_fmul_32ns_32ns_32_3_max_dsp_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_fsqrt_32ns_32ns_32_8_no_dsp_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_fsub_32ns_32ns_32_4_full_dsp_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_gmem0_m_axi.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_gmem1_m_axi.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_gmem2_m_axi.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_hls_deadlock_detection_unit.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_hls_deadlock_detector.vh</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_hls_deadlock_report_unit.vh</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_mux_21_32_1_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_mux_42_32_1_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_mux_83_16_1_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_start_for_float_mask_safe_softmax_Loop_loop_20_proc6_U0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_start_for_float_mask_safe_softmax_Loop_loop_22_proc7_U0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_x_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -6580,211 +6708,371 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_144_1.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_144_11.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_144_12.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_3.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_144_13.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_11.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_144_14.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_12.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_144_15.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_13.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_151_1.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_14.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_159_1.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_15.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_170_1.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_16.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_175_2.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_17.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_185_1.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_18.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_190_2.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_19.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_196_3.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_23.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_205_1.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_24.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_262_1.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_25.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_265_2.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_110.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_275_3.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_exp.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_283_4.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_max.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_292_5.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_mean.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_316_6.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_norm.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_bf16add.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_norm11.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/activation_accelerator_buf0_RAM_AUTO_1R1W.dat</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_output.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_sum.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_Pipeline_loop_var.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_buf0_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_control_s_axi.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_bf16add.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_control_s_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_faddfsub_32ns_32ns_32_4_full_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_exp_vals_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_fdiv_32ns_32ns_32_9_no_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_fexp_32ns_32ns_32_8_full_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_fadd_32ns_32ns_32_4_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_flow_control_loop_pipe_sequential_init.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_faddfsub_32ns_32ns_32_4_full_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_fmul_32ns_32ns_32_3_max_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_fcmp_32ns_32ns_1_2_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_fsqrt_32ns_32ns_32_8_no_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_fdiv_32ns_32ns_32_9_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_gmem0_m_axi.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_fexp_32ns_32ns_32_8_full_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_gmem1_m_axi.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_fifo_w32_d2_S.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_gmem2_m_axi.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_fifo_w32_d2_S_x.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator_x_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_fifo_w32_d2_S_x0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/verilog/activation_accelerator.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_fifo_w32_d32768_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/ip/activation_accelerator_faddfsub_32ns_32ns_32_4_full_dsp_1_ip.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_float_mask_safe_softmax.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/ip/activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1_ip.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_float_mask_safe_softmax_Block_float_mask_safe_softmax_for_cond_i_exit_proc.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/ip/activation_accelerator_fexp_32ns_32ns_32_8_full_dsp_1_ip.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_float_mask_safe_softmax_Block_for_end26_proc.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/ip/activation_accelerator_fmul_32ns_32ns_32_3_max_dsp_1_ip.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_float_mask_safe_softmax_Loop_loop_18_proc5.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/ip/activation_accelerator_fdiv_32ns_32ns_32_9_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_float_mask_safe_softmax_Loop_loop_20_proc6.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/410d/hdl/ip/activation_accelerator_fsqrt_32ns_32ns_32_8_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_float_mask_safe_softmax_Loop_loop_22_proc7.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_float_mask_safe_softmax_Loop_loop_max_broadcast_proc.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_float_mask_safe_softmax_Loop_loop_sum_broadcast_proc.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_flow_control_loop_pipe.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_flow_control_loop_pipe_sequential_init.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_fmul_32ns_32ns_32_3_max_dsp_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_fsqrt_32ns_32ns_32_8_no_dsp_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_fsub_32ns_32ns_32_4_full_dsp_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_gmem0_m_axi.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_gmem1_m_axi.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_gmem2_m_axi.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_hls_deadlock_detection_unit.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_hls_deadlock_detector.vh</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_hls_deadlock_report_unit.vh</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_mux_21_32_1_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_mux_42_32_1_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_mux_83_16_1_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_start_for_float_mask_safe_softmax_Loop_loop_20_proc6_U0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_start_for_float_mask_safe_softmax_Loop_loop_22_proc7_U0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator_x_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/verilog/activation_accelerator.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/ip/activation_accelerator_faddfsub_32ns_32ns_32_4_full_dsp_1_ip.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/ip/activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1_ip.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/ip/activation_accelerator_fexp_32ns_32ns_32_8_full_dsp_1_ip.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/ip/activation_accelerator_fmul_32ns_32ns_32_3_max_dsp_1_ip.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/ip/activation_accelerator_fsub_32ns_32ns_32_4_full_dsp_1_ip.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/ip/activation_accelerator_fdiv_32ns_32ns_32_9_no_dsp_1_ip.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/ip/activation_accelerator_fsqrt_32ns_32ns_32_8_no_dsp_1_ip.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/ip/activation_accelerator_fcmp_32ns_32ns_1_2_no_dsp_1_ip.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0d50/hdl/ip/activation_accelerator_fadd_32ns_32ns_32_4_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -7262,7 +7550,7 @@
     <xilinx:coreExtensions>
       <xilinx:displayName>Activation_accelerator</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2114273538</xilinx:coreRevision>
+      <xilinx:coreRevision>2114294756</xilinx:coreRevision>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -7413,7 +7701,7 @@
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="7f02abcb"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="d37294b6"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="db0fea9a"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="c8a30315"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="6848f963"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="7c6b597d"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="afb1fc98"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="6490b7ab"/>

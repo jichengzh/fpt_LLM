@@ -4,5 +4,5 @@
 	<Message severity="INFO" prefix="[IMPL 213-8]" key="IMPL_8_1773" tag="" content="Starting RTL evaluation using Vivado ..." resolution=""/>
 	<Message severity="INFO" prefix="[HLS 200-802]" key="HLS 200-802" tag="" content="Generated output file activation_accelerator/baseline/impl/export.zip" resolution=""/>
 	<Message severity="WARNING" prefix="[HLS 200-484]" key="HLS 200-484" tag="" content="The &apos;export_design -evaluate&apos; command is deprecated and will be removed in a future release." resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Command export_design CPU user time: 467.61 seconds. CPU system time: 44.21 seconds. Elapsed time: 765.74 seconds; current allocated memory: 9.980 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Command export_design CPU user time: 619.81 seconds. CPU system time: 62.26 seconds. Elapsed time: 1026.28 seconds; current allocated memory: 14.508 MB." resolution=""/>
 </Messages>

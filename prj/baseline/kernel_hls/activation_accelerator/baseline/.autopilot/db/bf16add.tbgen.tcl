@@ -63,7 +63,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "a_bits", "Type" : "None", "Direction" : "I"},
 			{"Name" : "b_bits", "Type" : "None", "Direction" : "I"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_86_1", "PipelineType" : "no",
+			{"Name" : "VITIS_LOOP_88_1", "PipelineType" : "no",
 				"LoopDec" : {"FSMBitwidth" : "2", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state2"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "1", "OneStateBlock": "ap_ST_fsm_state2_blk"}}]}]}
 
 

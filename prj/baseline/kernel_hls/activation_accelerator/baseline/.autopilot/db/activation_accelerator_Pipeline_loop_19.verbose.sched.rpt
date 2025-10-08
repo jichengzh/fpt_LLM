@@ -1,0 +1,240 @@
+
+
+================================================================
+== Vitis HLS Report for 'activation_accelerator_Pipeline_loop_19'
+================================================================
+* Date:           Wed Oct  8 15:53:24 2025
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        activation_accelerator
+* Solution:       baseline (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.832 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------+---------+---------+----------+-----------+-----------+------+----------+
+        |           |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- loop_19  |        ?|        ?|         ?|          -|          -|   128|        no|
+        +-----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.42>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 6 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.42ns)   --->   "%store_ln0 = store i11 0, i11 %i"   --->   Operation 7 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc34"   --->   Operation 8 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.23>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%i_18 = load i11 %i" [activation_accelerator.cpp:504]   --->   Operation 9 'load' 'i_18' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i11.i32, i11 %i_18, i32 10" [activation_accelerator.cpp:504]   --->   Operation 10 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 128, i64 128, i64 128"   --->   Operation 11 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln504 = br i1 %tmp, void %for.inc34.split, void %if.end74.loopexit.exitStub" [activation_accelerator.cpp:504]   --->   Operation 12 'br' 'br_ln504' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%lshr_ln = partselect i7 @_ssdm_op_PartSelect.i7.i11.i32.i32, i11 %i_18, i32 3, i32 9" [activation_accelerator.cpp:507]   --->   Operation 13 'partselect' 'lshr_ln' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%zext_ln507 = zext i7 %lshr_ln" [activation_accelerator.cpp:507]   --->   Operation 14 'zext' 'zext_ln507' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_104 = getelementptr i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23, i64 0, i64 %zext_ln507" [activation_accelerator.cpp:507]   --->   Operation 15 'getelementptr' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_104' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 16 [2/2] (1.23ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_105 = load i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_104" [activation_accelerator.cpp:507]   --->   Operation 16 'load' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_105' <Predicate = (!tmp)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_106 = getelementptr i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_15, i64 0, i64 %zext_ln507" [activation_accelerator.cpp:507]   --->   Operation 17 'getelementptr' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_106' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 18 [2/2] (1.23ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_107 = load i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_106" [activation_accelerator.cpp:507]   --->   Operation 18 'load' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_107' <Predicate = (!tmp)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_109 = getelementptr i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22, i64 0, i64 %zext_ln507" [activation_accelerator.cpp:507]   --->   Operation 19 'getelementptr' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_109' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 20 [2/2] (1.23ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_110 = load i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_109" [activation_accelerator.cpp:507]   --->   Operation 20 'load' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_110' <Predicate = (!tmp)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_111 = getelementptr i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9, i64 0, i64 %zext_ln507" [activation_accelerator.cpp:507]   --->   Operation 21 'getelementptr' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_111' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 22 [2/2] (1.23ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_112 = load i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_111" [activation_accelerator.cpp:507]   --->   Operation 22 'load' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_112' <Predicate = (!tmp)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_114 = getelementptr i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21, i64 0, i64 %zext_ln507" [activation_accelerator.cpp:507]   --->   Operation 23 'getelementptr' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_114' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 24 [2/2] (1.23ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_115 = load i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_114" [activation_accelerator.cpp:507]   --->   Operation 24 'load' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_115' <Predicate = (!tmp)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_116 = getelementptr i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8, i64 0, i64 %zext_ln507" [activation_accelerator.cpp:507]   --->   Operation 25 'getelementptr' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_116' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 26 [2/2] (1.23ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_117 = load i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_116" [activation_accelerator.cpp:507]   --->   Operation 26 'load' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_117' <Predicate = (!tmp)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_119 = getelementptr i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20, i64 0, i64 %zext_ln507" [activation_accelerator.cpp:507]   --->   Operation 27 'getelementptr' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_119' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 28 [2/2] (1.23ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_120 = load i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_119" [activation_accelerator.cpp:507]   --->   Operation 28 'load' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_120' <Predicate = (!tmp)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_121 = getelementptr i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_14, i64 0, i64 %zext_ln507" [activation_accelerator.cpp:507]   --->   Operation 29 'getelementptr' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_121' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 30 [2/2] (1.23ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_122 = load i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_121" [activation_accelerator.cpp:507]   --->   Operation 30 'load' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_122' <Predicate = (!tmp)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_124 = getelementptr i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19, i64 0, i64 %zext_ln507" [activation_accelerator.cpp:507]   --->   Operation 31 'getelementptr' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_124' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 32 [2/2] (1.23ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_125 = load i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_124" [activation_accelerator.cpp:507]   --->   Operation 32 'load' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_125' <Predicate = (!tmp)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_126 = getelementptr i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_13, i64 0, i64 %zext_ln507" [activation_accelerator.cpp:507]   --->   Operation 33 'getelementptr' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_126' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 34 [2/2] (1.23ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_127 = load i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_126" [activation_accelerator.cpp:507]   --->   Operation 34 'load' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_127' <Predicate = (!tmp)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_129 = getelementptr i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18, i64 0, i64 %zext_ln507" [activation_accelerator.cpp:507]   --->   Operation 35 'getelementptr' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_129' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 36 [2/2] (1.23ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_130 = load i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_129" [activation_accelerator.cpp:507]   --->   Operation 36 'load' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_130' <Predicate = (!tmp)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_131 = getelementptr i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_12, i64 0, i64 %zext_ln507" [activation_accelerator.cpp:507]   --->   Operation 37 'getelementptr' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_131' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 38 [2/2] (1.23ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_132 = load i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_131" [activation_accelerator.cpp:507]   --->   Operation 38 'load' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_132' <Predicate = (!tmp)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_134 = getelementptr i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17, i64 0, i64 %zext_ln507" [activation_accelerator.cpp:507]   --->   Operation 39 'getelementptr' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_134' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 40 [2/2] (1.23ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_135 = load i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_134" [activation_accelerator.cpp:507]   --->   Operation 40 'load' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_135' <Predicate = (!tmp)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_136 = getelementptr i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_11, i64 0, i64 %zext_ln507" [activation_accelerator.cpp:507]   --->   Operation 41 'getelementptr' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_136' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 42 [2/2] (1.23ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_137 = load i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_136" [activation_accelerator.cpp:507]   --->   Operation 42 'load' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_137' <Predicate = (!tmp)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_139 = getelementptr i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16, i64 0, i64 %zext_ln507" [activation_accelerator.cpp:507]   --->   Operation 43 'getelementptr' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_139' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 44 [2/2] (1.23ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_140 = load i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_139" [activation_accelerator.cpp:507]   --->   Operation 44 'load' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_140' <Predicate = (!tmp)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_141 = getelementptr i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_10, i64 0, i64 %zext_ln507" [activation_accelerator.cpp:507]   --->   Operation 45 'getelementptr' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_141' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 46 [2/2] (1.23ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_142 = load i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_141" [activation_accelerator.cpp:507]   --->   Operation 46 'load' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_142' <Predicate = (!tmp)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_2 : Operation 47 [1/1] (0.79ns)   --->   "%add_ln504 = add i11 %i_18, i11 8" [activation_accelerator.cpp:504]   --->   Operation 47 'add' 'add_ln504' <Predicate = (!tmp)> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 48 [1/1] (0.42ns)   --->   "%store_ln504 = store i11 %add_ln504, i11 %i" [activation_accelerator.cpp:504]   --->   Operation 48 'store' 'store_ln504' <Predicate = (!tmp)> <Delay = 0.42>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 49 'ret' 'ret_ln0' <Predicate = (tmp)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 1.23>
+ST_3 : Operation 50 [1/2] (1.23ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_105 = load i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_104" [activation_accelerator.cpp:507]   --->   Operation 50 'load' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_105' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_3 : Operation 51 [1/2] (1.23ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_107 = load i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_106" [activation_accelerator.cpp:507]   --->   Operation 51 'load' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_107' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_3 : Operation 52 [1/2] (1.23ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_110 = load i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_109" [activation_accelerator.cpp:507]   --->   Operation 52 'load' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_110' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_3 : Operation 53 [1/2] (1.23ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_112 = load i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_111" [activation_accelerator.cpp:507]   --->   Operation 53 'load' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_112' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_3 : Operation 54 [1/2] (1.23ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_115 = load i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_114" [activation_accelerator.cpp:507]   --->   Operation 54 'load' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_115' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_3 : Operation 55 [1/2] (1.23ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_117 = load i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_116" [activation_accelerator.cpp:507]   --->   Operation 55 'load' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_117' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_3 : Operation 56 [1/2] (1.23ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_120 = load i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_119" [activation_accelerator.cpp:507]   --->   Operation 56 'load' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_120' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_3 : Operation 57 [1/2] (1.23ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_122 = load i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_121" [activation_accelerator.cpp:507]   --->   Operation 57 'load' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_122' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_3 : Operation 58 [1/2] (1.23ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_125 = load i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_124" [activation_accelerator.cpp:507]   --->   Operation 58 'load' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_125' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_3 : Operation 59 [1/2] (1.23ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_127 = load i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_126" [activation_accelerator.cpp:507]   --->   Operation 59 'load' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_127' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_3 : Operation 60 [1/2] (1.23ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_130 = load i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_129" [activation_accelerator.cpp:507]   --->   Operation 60 'load' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_130' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_3 : Operation 61 [1/2] (1.23ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_132 = load i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_131" [activation_accelerator.cpp:507]   --->   Operation 61 'load' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_132' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_3 : Operation 62 [1/2] (1.23ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_135 = load i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_134" [activation_accelerator.cpp:507]   --->   Operation 62 'load' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_135' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_3 : Operation 63 [1/2] (1.23ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_137 = load i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_136" [activation_accelerator.cpp:507]   --->   Operation 63 'load' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_137' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_3 : Operation 64 [1/2] (1.23ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_140 = load i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_139" [activation_accelerator.cpp:507]   --->   Operation 64 'load' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_140' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_3 : Operation 65 [1/2] (1.23ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_142 = load i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_141" [activation_accelerator.cpp:507]   --->   Operation 65 'load' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_142' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+
+State 4 <SV = 3> <Delay = 6.69>
+ST_4 : Operation 66 [2/2] (6.69ns)   --->   "%tmp_s = call i16 @bf16add, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_105, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_107" [activation_accelerator.cpp:507]   --->   Operation 66 'call' 'tmp_s' <Predicate = true> <Delay = 6.69> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 67 [2/2] (6.69ns)   --->   "%tmp_5 = call i16 @bf16add, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_110, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_112" [activation_accelerator.cpp:507]   --->   Operation 67 'call' 'tmp_5' <Predicate = true> <Delay = 6.69> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 68 [2/2] (6.69ns)   --->   "%tmp_6 = call i16 @bf16add, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_115, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_117" [activation_accelerator.cpp:507]   --->   Operation 68 'call' 'tmp_6' <Predicate = true> <Delay = 6.69> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 69 [2/2] (6.69ns)   --->   "%tmp_7 = call i16 @bf16add, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_120, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_122" [activation_accelerator.cpp:507]   --->   Operation 69 'call' 'tmp_7' <Predicate = true> <Delay = 6.69> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 70 [2/2] (6.69ns)   --->   "%tmp_8 = call i16 @bf16add, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_125, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_127" [activation_accelerator.cpp:507]   --->   Operation 70 'call' 'tmp_8' <Predicate = true> <Delay = 6.69> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 71 [2/2] (6.69ns)   --->   "%tmp_9 = call i16 @bf16add, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_130, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_132" [activation_accelerator.cpp:507]   --->   Operation 71 'call' 'tmp_9' <Predicate = true> <Delay = 6.69> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 72 [2/2] (6.69ns)   --->   "%tmp_10 = call i16 @bf16add, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_135, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_137" [activation_accelerator.cpp:507]   --->   Operation 72 'call' 'tmp_10' <Predicate = true> <Delay = 6.69> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 73 [2/2] (6.69ns)   --->   "%tmp_11 = call i16 @bf16add, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_140, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_142" [activation_accelerator.cpp:507]   --->   Operation 73 'call' 'tmp_11' <Predicate = true> <Delay = 6.69> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 6.23>
+ST_5 : Operation 74 [1/1] (0.00ns)   --->   "%specpipeline_ln505 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_1" [activation_accelerator.cpp:505]   --->   Operation 74 'specpipeline' 'specpipeline_ln505' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 75 [1/1] (0.00ns)   --->   "%specloopname_ln504 = specloopname void @_ssdm_op_SpecLoopName, void @empty_4" [activation_accelerator.cpp:504]   --->   Operation 75 'specloopname' 'specloopname_ln504' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 76 [1/2] (4.99ns)   --->   "%tmp_s = call i16 @bf16add, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_105, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_107" [activation_accelerator.cpp:507]   --->   Operation 76 'call' 'tmp_s' <Predicate = true> <Delay = 4.99> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 77 [1/1] (0.00ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_108 = getelementptr i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7, i64 0, i64 %zext_ln507" [activation_accelerator.cpp:507]   --->   Operation 77 'getelementptr' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_108' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 78 [1/1] (1.23ns)   --->   "%store_ln507 = store i16 %tmp_s, i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_108" [activation_accelerator.cpp:507]   --->   Operation 78 'store' 'store_ln507' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_5 : Operation 79 [1/2] (4.99ns)   --->   "%tmp_5 = call i16 @bf16add, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_110, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_112" [activation_accelerator.cpp:507]   --->   Operation 79 'call' 'tmp_5' <Predicate = true> <Delay = 4.99> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 80 [1/1] (0.00ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_113 = getelementptr i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6, i64 0, i64 %zext_ln507" [activation_accelerator.cpp:507]   --->   Operation 80 'getelementptr' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_113' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 81 [1/1] (1.23ns)   --->   "%store_ln507 = store i16 %tmp_5, i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_113" [activation_accelerator.cpp:507]   --->   Operation 81 'store' 'store_ln507' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_5 : Operation 82 [1/2] (4.99ns)   --->   "%tmp_6 = call i16 @bf16add, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_115, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_117" [activation_accelerator.cpp:507]   --->   Operation 82 'call' 'tmp_6' <Predicate = true> <Delay = 4.99> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 83 [1/1] (0.00ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_118 = getelementptr i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5, i64 0, i64 %zext_ln507" [activation_accelerator.cpp:507]   --->   Operation 83 'getelementptr' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_118' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 84 [1/1] (1.23ns)   --->   "%store_ln507 = store i16 %tmp_6, i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_118" [activation_accelerator.cpp:507]   --->   Operation 84 'store' 'store_ln507' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_5 : Operation 85 [1/2] (4.99ns)   --->   "%tmp_7 = call i16 @bf16add, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_120, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_122" [activation_accelerator.cpp:507]   --->   Operation 85 'call' 'tmp_7' <Predicate = true> <Delay = 4.99> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 86 [1/1] (0.00ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_123 = getelementptr i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4, i64 0, i64 %zext_ln507" [activation_accelerator.cpp:507]   --->   Operation 86 'getelementptr' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_123' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 87 [1/1] (1.23ns)   --->   "%store_ln507 = store i16 %tmp_7, i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_123" [activation_accelerator.cpp:507]   --->   Operation 87 'store' 'store_ln507' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_5 : Operation 88 [1/2] (4.99ns)   --->   "%tmp_8 = call i16 @bf16add, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_125, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_127" [activation_accelerator.cpp:507]   --->   Operation 88 'call' 'tmp_8' <Predicate = true> <Delay = 4.99> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 89 [1/1] (0.00ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_128 = getelementptr i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3, i64 0, i64 %zext_ln507" [activation_accelerator.cpp:507]   --->   Operation 89 'getelementptr' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_128' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 90 [1/1] (1.23ns)   --->   "%store_ln507 = store i16 %tmp_8, i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_128" [activation_accelerator.cpp:507]   --->   Operation 90 'store' 'store_ln507' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_5 : Operation 91 [1/2] (4.99ns)   --->   "%tmp_9 = call i16 @bf16add, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_130, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_132" [activation_accelerator.cpp:507]   --->   Operation 91 'call' 'tmp_9' <Predicate = true> <Delay = 4.99> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 92 [1/1] (0.00ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_133 = getelementptr i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2, i64 0, i64 %zext_ln507" [activation_accelerator.cpp:507]   --->   Operation 92 'getelementptr' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_133' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 93 [1/1] (1.23ns)   --->   "%store_ln507 = store i16 %tmp_9, i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_133" [activation_accelerator.cpp:507]   --->   Operation 93 'store' 'store_ln507' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_5 : Operation 94 [1/2] (4.99ns)   --->   "%tmp_10 = call i16 @bf16add, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_135, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_137" [activation_accelerator.cpp:507]   --->   Operation 94 'call' 'tmp_10' <Predicate = true> <Delay = 4.99> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 95 [1/1] (0.00ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_138 = getelementptr i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1, i64 0, i64 %zext_ln507" [activation_accelerator.cpp:507]   --->   Operation 95 'getelementptr' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_138' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 96 [1/1] (1.23ns)   --->   "%store_ln507 = store i16 %tmp_10, i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_138" [activation_accelerator.cpp:507]   --->   Operation 96 'store' 'store_ln507' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_5 : Operation 97 [1/2] (4.99ns)   --->   "%tmp_11 = call i16 @bf16add, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_140, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_142" [activation_accelerator.cpp:507]   --->   Operation 97 'call' 'tmp_11' <Predicate = true> <Delay = 4.99> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 98 [1/1] (0.00ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_143 = getelementptr i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i, i64 0, i64 %zext_ln507" [activation_accelerator.cpp:507]   --->   Operation 98 'getelementptr' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_143' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 99 [1/1] (1.23ns)   --->   "%store_ln507 = store i16 %tmp_11, i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_143" [activation_accelerator.cpp:507]   --->   Operation 99 'store' 'store_ln507' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_5 : Operation 100 [1/1] (0.00ns)   --->   "%br_ln504 = br void %for.inc34" [activation_accelerator.cpp:504]   --->   Operation 100 'br' 'br_ln504' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 0.427ns
+The critical path consists of the following:
+	'alloca' operation ('i') [25]  (0 ns)
+	'store' operation ('store_ln0') of constant 0 on local variable 'i' [26]  (0.427 ns)
+
+ <State 2>: 1.24ns
+The critical path consists of the following:
+	'load' operation ('i', activation_accelerator.cpp:504) on local variable 'i' [29]  (0 ns)
+	'getelementptr' operation ('activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_104', activation_accelerator.cpp:507) [38]  (0 ns)
+	'load' operation ('activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_105', activation_accelerator.cpp:507) on array 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23' [39]  (1.24 ns)
+
+ <State 3>: 1.24ns
+The critical path consists of the following:
+	'load' operation ('activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_105', activation_accelerator.cpp:507) on array 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23' [39]  (1.24 ns)
+
+ <State 4>: 6.69ns
+The critical path consists of the following:
+	'call' operation ('tmp_s', activation_accelerator.cpp:507) to 'bf16add' [42]  (6.69 ns)
+
+ <State 5>: 6.23ns
+The critical path consists of the following:
+	'call' operation ('tmp_s', activation_accelerator.cpp:507) to 'bf16add' [42]  (5 ns)
+	'store' operation ('store_ln507', activation_accelerator.cpp:507) of variable 'tmp_s', activation_accelerator.cpp:507 on array 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7' [44]  (1.24 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

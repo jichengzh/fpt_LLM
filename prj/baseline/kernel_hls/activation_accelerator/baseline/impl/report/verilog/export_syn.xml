@@ -6,32 +6,32 @@
   </RunData>
   <TimingReport>
     <TargetClockPeriod>10.000</TargetClockPeriod>
-    <AchievedClockPeriod>5.249</AchievedClockPeriod>
+    <AchievedClockPeriod>5.498</AchievedClockPeriod>
     <CLOCK_NAME>ap_clk</CLOCK_NAME>
-    <CP_FINAL>5.249</CP_FINAL>
+    <CP_FINAL>5.498</CP_FINAL>
     <CP_ROUTE>NA</CP_ROUTE>
-    <CP_SYNTH>5.249</CP_SYNTH>
+    <CP_SYNTH>5.498</CP_SYNTH>
     <CP_TARGET>10.000</CP_TARGET>
-    <SLACK_FINAL>4.751</SLACK_FINAL>
+    <SLACK_FINAL>4.502</SLACK_FINAL>
     <SLACK_ROUTE/>
-    <SLACK_SYNTH>4.751</SLACK_SYNTH>
+    <SLACK_SYNTH>4.502</SLACK_SYNTH>
     <TIMING_MET>TRUE</TIMING_MET>
     <TNS_FINAL>0.000</TNS_FINAL>
     <TNS_ROUTE>NA</TNS_ROUTE>
     <TNS_SYNTH>0.000</TNS_SYNTH>
-    <WNS_FINAL>4.751</WNS_FINAL>
+    <WNS_FINAL>4.502</WNS_FINAL>
     <WNS_ROUTE>NA</WNS_ROUTE>
-    <WNS_SYNTH>4.751</WNS_SYNTH>
+    <WNS_SYNTH>4.502</WNS_SYNTH>
   </TimingReport>
   <AreaReport>
     <Resources>
-      <BRAM>181</BRAM>
+      <BRAM>253</BRAM>
       <CLB>0</CLB>
-      <DSP>21</DSP>
-      <FF>6805</FF>
+      <DSP>45</DSP>
+      <FF>12942</FF>
       <LATCH>0</LATCH>
-      <LUT>8186</LUT>
-      <SRL>555</SRL>
+      <LUT>17987</LUT>
+      <SRL>705</SRL>
       <URAM>0</URAM>
     </Resources>
     <AvailableResources>
@@ -45,341 +45,726 @@
   </AreaReport>
   <RtlModules>
     <RtlModule CELL="inst" DEPTH="0" IS_TOP="1" TYPE="function" MODULENAME="activation_accelerator" DISPNAME="inst" RTLNAME="activation_accelerator">
-      <SubModules count="33">buf0_U buf1_U buf2_U control_s_axi_U faddfsub_32ns_32ns_32_4_full_dsp_1_U68 fdiv_32ns_32ns_32_9_no_dsp_1_U71 fmul_32ns_32ns_32_3_max_dsp_1_U69 fsqrt_32ns_32ns_32_8_no_dsp_1_U70 gmem0_m_axi_U gmem1_m_axi_U gmem2_m_axi_U grp_activation_accelerator_Pipeline_VITIS_LOOP_144_11_fu_266 grp_activation_accelerator_Pipeline_VITIS_LOOP_144_12_fu_238 grp_activation_accelerator_Pipeline_VITIS_LOOP_144_13_fu_230 grp_activation_accelerator_Pipeline_VITIS_LOOP_144_14_fu_222 grp_activation_accelerator_Pipeline_VITIS_LOOP_144_15_fu_214 grp_activation_accelerator_Pipeline_VITIS_LOOP_144_1_fu_258 grp_activation_accelerator_Pipeline_VITIS_LOOP_151_1_fu_326 grp_activation_accelerator_Pipeline_VITIS_LOOP_159_1_fu_319 grp_activation_accelerator_Pipeline_VITIS_LOOP_170_1_fu_305 grp_activation_accelerator_Pipeline_VITIS_LOOP_175_2_fu_311 grp_activation_accelerator_Pipeline_VITIS_LOOP_185_1_fu_283 grp_activation_accelerator_Pipeline_VITIS_LOOP_190_2_fu_289 grp_activation_accelerator_Pipeline_VITIS_LOOP_196_3_fu_296 grp_activation_accelerator_Pipeline_VITIS_LOOP_205_1_fu_333 grp_activation_accelerator_Pipeline_VITIS_LOOP_262_1_fu_351 grp_activation_accelerator_Pipeline_VITIS_LOOP_265_2_fu_360 grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341 grp_activation_accelerator_Pipeline_VITIS_LOOP_283_4_fu_252 grp_activation_accelerator_Pipeline_VITIS_LOOP_292_5_fu_246 grp_activation_accelerator_Pipeline_VITIS_LOOP_316_6_fu_274 x_U y_U</SubModules>
-      <Resources BRAM="181" DSP="21" FF="6805" LUT="8186"/>
-      <LocalResources FF="471" LUT="25"/>
+      <SubModules count="70">activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_10_U activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_11_U activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_12_U activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_13_U activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_14_U activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_15_U activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16_U activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17_U activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18_U activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19_U activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_U activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20_U activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21_U activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22_U activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_U activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_U activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_U activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_U activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_U activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_U activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_U activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_U activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_U activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_U control_s_axi_U exp_vals_1_U exp_vals_U fadd_32ns_32ns_32_4_full_dsp_1_U397 fadd_32ns_32ns_32_4_no_dsp_1_U395 faddfsub_32ns_32ns_32_4_full_dsp_1_U392 fdiv_32ns_32ns_32_9_no_dsp_1_U396 fexp_32ns_32ns_32_8_full_dsp_1_U398 fmul_32ns_32ns_32_3_max_dsp_1_U393 fsqrt_32ns_32ns_32_8_no_dsp_1_U394 gmem0_m_axi_U gmem1_m_axi_U gmem2_m_axi_U grp_activation_accelerator_Pipeline_loop_110_fu_323 grp_activation_accelerator_Pipeline_loop_11_fu_547 grp_activation_accelerator_Pipeline_loop_12_fu_798 grp_activation_accelerator_Pipeline_loop_13_fu_491 grp_activation_accelerator_Pipeline_loop_14_fu_435 grp_activation_accelerator_Pipeline_loop_15_fu_463 grp_activation_accelerator_Pipeline_loop_16_fu_407 grp_activation_accelerator_Pipeline_loop_17_fu_379 grp_activation_accelerator_Pipeline_loop_18_fu_351 grp_activation_accelerator_Pipeline_loop_19_fu_826 grp_activation_accelerator_Pipeline_loop_1_fu_519 grp_activation_accelerator_Pipeline_loop_23_fu_878 grp_activation_accelerator_Pipeline_loop_24_fu_901 grp_activation_accelerator_Pipeline_loop_25_fu_575 grp_activation_accelerator_Pipeline_loop_2_fu_701 grp_activation_accelerator_Pipeline_loop_3_fu_677 grp_activation_accelerator_Pipeline_loop_exp_fu_763 grp_activation_accelerator_Pipeline_loop_max_fu_753 grp_activation_accelerator_Pipeline_loop_mean_fu_598 grp_activation_accelerator_Pipeline_loop_norm11_fu_617 grp_activation_accelerator_Pipeline_loop_norm_fu_652 grp_activation_accelerator_Pipeline_loop_output_fu_775 grp_activation_accelerator_Pipeline_loop_sum_fu_643 grp_activation_accelerator_Pipeline_loop_var_fu_607 grp_float_mask_safe_softmax_fu_725 x_2_U x_4_U x_6_U x_U y_1_U y_2_U y_3_U y_U</SubModules>
+      <Resources BRAM="253" DSP="45" FF="12942" LUT="17987"/>
+      <LocalResources FF="524" LUT="33"/>
     </RtlModule>
-    <RtlModule CELL="inst/buf0_U" BINDMODULE="activation_accelerator_buf0_RAM_AUTO_1R1W" DEPTH="1" TYPE="resource" MODULENAME="buf0_RAM_AUTO_1R1W" DISPNAME="buf0_U" RTLNAME="activation_accelerator_buf0_RAM_AUTO_1R1W">
-      <Resources BRAM="30" LUT="4"/>
-      <BindNode BINDTYPE="storage" BRAM="30" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="buf0_U" SOURCE="" URAM="0" VARIABLE="buf0"/>
+    <RtlModule CELL="inst/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_10_U" BINDMODULE="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DISPNAME="unsigned_short_unsigned_short_unsigned_short_int_i_10_U" RTLNAME="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb">
+      <Resources FF="16" LUT="32"/>
     </RtlModule>
-    <RtlModule CELL="inst/buf1_U" BINDMODULE="activation_accelerator_buf0_RAM_AUTO_1R1W" DEPTH="1" TYPE="resource" MODULENAME="buf0_RAM_AUTO_1R1W" DISPNAME="buf1_U" RTLNAME="activation_accelerator_buf0_RAM_AUTO_1R1W">
-      <Resources BRAM="30"/>
-      <BindNode BINDTYPE="storage" BRAM="30" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="buf1_U" SOURCE="" URAM="0" VARIABLE="buf1"/>
+    <RtlModule CELL="inst/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_11_U" BINDMODULE="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DISPNAME="unsigned_short_unsigned_short_unsigned_short_int_i_11_U" RTLNAME="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb">
+      <Resources FF="16" LUT="32"/>
     </RtlModule>
-    <RtlModule CELL="inst/buf2_U" BINDMODULE="activation_accelerator_buf0_RAM_AUTO_1R1W" DEPTH="1" TYPE="resource" MODULENAME="buf0_RAM_AUTO_1R1W" DISPNAME="buf2_U" RTLNAME="activation_accelerator_buf0_RAM_AUTO_1R1W">
-      <Resources BRAM="30" LUT="22"/>
-      <BindNode BINDTYPE="storage" BRAM="30" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="buf2_U" SOURCE="" URAM="0" VARIABLE="buf2"/>
+    <RtlModule CELL="inst/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_12_U" BINDMODULE="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DISPNAME="unsigned_short_unsigned_short_unsigned_short_int_i_12_U" RTLNAME="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb">
+      <Resources FF="16" LUT="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_13_U" BINDMODULE="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DISPNAME="unsigned_short_unsigned_short_unsigned_short_int_i_13_U" RTLNAME="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb">
+      <Resources FF="16" LUT="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_14_U" BINDMODULE="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DISPNAME="unsigned_short_unsigned_short_unsigned_short_int_i_14_U" RTLNAME="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb">
+      <Resources FF="16" LUT="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_15_U" BINDMODULE="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DISPNAME="unsigned_short_unsigned_short_unsigned_short_int_i_15_U" RTLNAME="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb">
+      <Resources FF="16" LUT="33"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16_U" BINDMODULE="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DISPNAME="unsigned_short_unsigned_short_unsigned_short_int_i_16_U" RTLNAME="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb">
+      <Resources FF="16" LUT="35"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17_U" BINDMODULE="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DISPNAME="unsigned_short_unsigned_short_unsigned_short_int_i_17_U" RTLNAME="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb">
+      <Resources FF="16" LUT="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18_U" BINDMODULE="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DISPNAME="unsigned_short_unsigned_short_unsigned_short_int_i_18_U" RTLNAME="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb">
+      <Resources FF="16" LUT="37"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19_U" BINDMODULE="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DISPNAME="unsigned_short_unsigned_short_unsigned_short_int_i_19_U" RTLNAME="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb">
+      <Resources FF="16" LUT="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_U" BINDMODULE="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DISPNAME="unsigned_short_unsigned_short_unsigned_short_int_i_1_U" RTLNAME="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb">
+      <Resources FF="16" LUT="34"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20_U" BINDMODULE="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DISPNAME="unsigned_short_unsigned_short_unsigned_short_int_i_20_U" RTLNAME="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb">
+      <Resources FF="16" LUT="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21_U" BINDMODULE="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DISPNAME="unsigned_short_unsigned_short_unsigned_short_int_i_21_U" RTLNAME="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb">
+      <Resources FF="16" LUT="34"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22_U" BINDMODULE="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DISPNAME="unsigned_short_unsigned_short_unsigned_short_int_i_22_U" RTLNAME="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb">
+      <Resources FF="16" LUT="33"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_U" BINDMODULE="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DISPNAME="unsigned_short_unsigned_short_unsigned_short_int_i_23_U" RTLNAME="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb">
+      <Resources FF="16" LUT="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_U" BINDMODULE="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DISPNAME="unsigned_short_unsigned_short_unsigned_short_int_i_2_U" RTLNAME="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb">
+      <Resources FF="16" LUT="34"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_U" BINDMODULE="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DISPNAME="unsigned_short_unsigned_short_unsigned_short_int_i_3_U" RTLNAME="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb">
+      <Resources FF="16" LUT="34"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_U" BINDMODULE="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DISPNAME="unsigned_short_unsigned_short_unsigned_short_int_i_4_U" RTLNAME="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb">
+      <Resources FF="16" LUT="35"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_U" BINDMODULE="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DISPNAME="unsigned_short_unsigned_short_unsigned_short_int_i_5_U" RTLNAME="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb">
+      <Resources FF="16" LUT="44"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_U" BINDMODULE="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DISPNAME="unsigned_short_unsigned_short_unsigned_short_int_i_6_U" RTLNAME="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb">
+      <Resources FF="16" LUT="34"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_U" BINDMODULE="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DISPNAME="unsigned_short_unsigned_short_unsigned_short_int_i_7_U" RTLNAME="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb">
+      <Resources FF="16" LUT="42"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_U" BINDMODULE="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DISPNAME="unsigned_short_unsigned_short_unsigned_short_int_i_8_U" RTLNAME="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb">
+      <Resources FF="16" LUT="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_U" BINDMODULE="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DISPNAME="unsigned_short_unsigned_short_unsigned_short_int_i_9_U" RTLNAME="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb">
+      <Resources FF="16" LUT="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_U" BINDMODULE="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DEPTH="1" TYPE="rtl" MODULENAME="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb" DISPNAME="unsigned_short_unsigned_short_unsigned_short_int_i_U" RTLNAME="activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_bkb">
+      <Resources FF="16" LUT="34"/>
     </RtlModule>
     <RtlModule CELL="inst/control_s_axi_U" BINDMODULE="activation_accelerator_control_s_axi" DEPTH="1" TYPE="rtl" MODULENAME="control_s_axi" DISPNAME="control_s_axi_U" RTLNAME="activation_accelerator_control_s_axi">
-      <Resources FF="312" LUT="311"/>
+      <Resources FF="312" LUT="309"/>
     </RtlModule>
-    <RtlModule CELL="inst/faddfsub_32ns_32ns_32_4_full_dsp_1_U68" BINDMODULE="activation_accelerator_faddfsub_32ns_32ns_32_4_full_dsp_1" DEPTH="1" TYPE="resource" MODULENAME="faddfsub_32ns_32ns_32_4_full_dsp_1" DISPNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U68" RTLNAME="activation_accelerator_faddfsub_32ns_32ns_32_4_full_dsp_1">
-      <Resources DSP="2" FF="202" LUT="224"/>
-      <LocalResources FF="65" LUT="3"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U68" SOURCE="activation_accelerator.cpp:195" URAM="0" VARIABLE="x_assign_3"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U68" SOURCE="activation_accelerator.cpp:174" URAM="0" VARIABLE="x_assign_2"/>
+    <RtlModule CELL="inst/exp_vals_1_U" BINDMODULE="activation_accelerator_exp_vals_RAM_AUTO_1R1W" DEPTH="1" TYPE="resource" MODULENAME="exp_vals_RAM_AUTO_1R1W" DISPNAME="exp_vals_1_U" RTLNAME="activation_accelerator_exp_vals_RAM_AUTO_1R1W">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="exp_vals_1_U" SOURCE="activation_accelerator.cpp:371" URAM="0" VARIABLE="exp_vals_1"/>
     </RtlModule>
-    <RtlModule CELL="inst/fdiv_32ns_32ns_32_9_no_dsp_1_U71" BINDMODULE="activation_accelerator_fdiv_32ns_32ns_32_9_no_dsp_1" DEPTH="1" TYPE="rtl" MODULENAME="fdiv_32ns_32ns_32_9_no_dsp_1" DISPNAME="fdiv_32ns_32ns_32_9_no_dsp_1_U71" RTLNAME="activation_accelerator_fdiv_32ns_32ns_32_9_no_dsp_1">
+    <RtlModule CELL="inst/exp_vals_U" BINDMODULE="activation_accelerator_exp_vals_RAM_AUTO_1R1W" DEPTH="1" TYPE="resource" MODULENAME="exp_vals_RAM_AUTO_1R1W" DISPNAME="exp_vals_U" RTLNAME="activation_accelerator_exp_vals_RAM_AUTO_1R1W">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="exp_vals_U" SOURCE="activation_accelerator.cpp:371" URAM="0" VARIABLE="exp_vals"/>
+    </RtlModule>
+    <RtlModule CELL="inst/fadd_32ns_32ns_32_4_full_dsp_1_U397" BINDMODULE="activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1" DEPTH="1" TYPE="rtl" MODULENAME="fadd_32ns_32ns_32_4_full_dsp_1" DISPNAME="fadd_32ns_32ns_32_4_full_dsp_1_U397" RTLNAME="activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1">
+      <Resources DSP="2" FF="201" LUT="221"/>
+      <LocalResources FF="64" LUT="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/fadd_32ns_32ns_32_4_no_dsp_1_U395" BINDMODULE="activation_accelerator_fadd_32ns_32ns_32_4_no_dsp_1" DEPTH="1" TYPE="rtl" MODULENAME="fadd_32ns_32ns_32_4_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_4_no_dsp_1_U395" RTLNAME="activation_accelerator_fadd_32ns_32ns_32_4_no_dsp_1">
+      <Resources FF="138" LUT="346"/>
+      <LocalResources FF="64"/>
+    </RtlModule>
+    <RtlModule CELL="inst/faddfsub_32ns_32ns_32_4_full_dsp_1_U392" BINDMODULE="activation_accelerator_faddfsub_32ns_32ns_32_4_full_dsp_1" DEPTH="1" TYPE="resource" MODULENAME="faddfsub_32ns_32ns_32_4_full_dsp_1" DISPNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U392" RTLNAME="activation_accelerator_faddfsub_32ns_32ns_32_4_full_dsp_1">
+      <Resources DSP="2" FF="202" LUT="250"/>
+      <LocalResources FF="65" LUT="29"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U392" SOURCE="activation_accelerator.cpp:261" URAM="0" VARIABLE="x_assign_4"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U392" SOURCE="activation_accelerator.cpp:227" URAM="0" VARIABLE="x_assign_2"/>
+    </RtlModule>
+    <RtlModule CELL="inst/fdiv_32ns_32ns_32_9_no_dsp_1_U396" BINDMODULE="activation_accelerator_fdiv_32ns_32ns_32_9_no_dsp_1" DEPTH="1" TYPE="rtl" MODULENAME="fdiv_32ns_32ns_32_9_no_dsp_1" DISPNAME="fdiv_32ns_32ns_32_9_no_dsp_1_U396" RTLNAME="activation_accelerator_fdiv_32ns_32ns_32_9_no_dsp_1">
       <Resources FF="375" LUT="784"/>
       <LocalResources FF="64"/>
     </RtlModule>
-    <RtlModule CELL="inst/fmul_32ns_32ns_32_3_max_dsp_1_U69" BINDMODULE="activation_accelerator_fmul_32ns_32ns_32_3_max_dsp_1" DEPTH="1" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_3_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_3_max_dsp_1_U69" RTLNAME="activation_accelerator_fmul_32ns_32ns_32_3_max_dsp_1">
+    <RtlModule CELL="inst/fexp_32ns_32ns_32_8_full_dsp_1_U398" BINDMODULE="activation_accelerator_fexp_32ns_32ns_32_8_full_dsp_1" DEPTH="1" TYPE="rtl" MODULENAME="fexp_32ns_32ns_32_8_full_dsp_1" DISPNAME="fexp_32ns_32ns_32_8_full_dsp_1_U398" RTLNAME="activation_accelerator_fexp_32ns_32ns_32_8_full_dsp_1">
+      <Resources DSP="7" FF="241" LUT="732"/>
+      <LocalResources FF="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/fmul_32ns_32ns_32_3_max_dsp_1_U393" BINDMODULE="activation_accelerator_fmul_32ns_32ns_32_3_max_dsp_1" DEPTH="1" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_3_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_3_max_dsp_1_U393" RTLNAME="activation_accelerator_fmul_32ns_32ns_32_3_max_dsp_1">
       <Resources DSP="3" FF="97" LUT="81"/>
       <LocalResources FF="64" LUT="1"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="2" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_3_max_dsp_1_U69" SOURCE="activation_accelerator.cpp:188" URAM="0" VARIABLE="mean"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="2" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_3_max_dsp_1_U69" SOURCE="activation_accelerator.cpp:194" URAM="0" VARIABLE="var"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="2" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_3_max_dsp_1_U69" SOURCE="activation_accelerator.cpp:173" URAM="0" VARIABLE="mean_sq"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="2" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_3_max_dsp_1_U393" SOURCE="activation_accelerator.cpp:250" URAM="0" VARIABLE="mean"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="2" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_3_max_dsp_1_U393" SOURCE="activation_accelerator.cpp:260" URAM="0" VARIABLE="var"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="2" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_3_max_dsp_1_U393" SOURCE="activation_accelerator.cpp:226" URAM="0" VARIABLE="mean_sq"/>
     </RtlModule>
-    <RtlModule CELL="inst/fsqrt_32ns_32ns_32_8_no_dsp_1_U70" BINDMODULE="activation_accelerator_fsqrt_32ns_32ns_32_8_no_dsp_1" DEPTH="1" TYPE="resource" MODULENAME="fsqrt_32ns_32ns_32_8_no_dsp_1" DISPNAME="fsqrt_32ns_32ns_32_8_no_dsp_1_U70" RTLNAME="activation_accelerator_fsqrt_32ns_32ns_32_8_no_dsp_1">
+    <RtlModule CELL="inst/fsqrt_32ns_32ns_32_8_no_dsp_1_U394" BINDMODULE="activation_accelerator_fsqrt_32ns_32ns_32_8_no_dsp_1" DEPTH="1" TYPE="resource" MODULENAME="fsqrt_32ns_32ns_32_8_no_dsp_1" DISPNAME="fsqrt_32ns_32ns_32_8_no_dsp_1_U394" RTLNAME="activation_accelerator_fsqrt_32ns_32ns_32_8_no_dsp_1">
       <Resources FF="271" LUT="417"/>
       <LocalResources FF="32"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsqrt" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="" OPTYPE="fsqrt" PRAGMA="" RTLNAME="fsqrt_32ns_32ns_32_8_no_dsp_1_U70" SOURCE="/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13" URAM="0" VARIABLE="stddev"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsqrt" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="" OPTYPE="fsqrt" PRAGMA="" RTLNAME="fsqrt_32ns_32ns_32_8_no_dsp_1_U70" SOURCE="/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13" URAM="0" VARIABLE="rms"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsqrt" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="" OPTYPE="fsqrt" PRAGMA="" RTLNAME="fsqrt_32ns_32ns_32_8_no_dsp_1_U394" SOURCE="/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13" URAM="0" VARIABLE="stddev"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsqrt" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="" OPTYPE="fsqrt" PRAGMA="" RTLNAME="fsqrt_32ns_32ns_32_8_no_dsp_1_U394" SOURCE="/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13" URAM="0" VARIABLE="rms"/>
     </RtlModule>
     <RtlModule CELL="inst/gmem0_m_axi_U" BINDMODULE="activation_accelerator_gmem0_m_axi" DEPTH="1" TYPE="rtl" MODULENAME="gmem0_m_axi" DISPNAME="gmem0_m_axi_U" RTLNAME="activation_accelerator_gmem0_m_axi">
-      <Resources BRAM="1" FF="781" LUT="567"/>
+      <Resources BRAM="1" FF="908" LUT="670"/>
     </RtlModule>
     <RtlModule CELL="inst/gmem1_m_axi_U" BINDMODULE="activation_accelerator_gmem1_m_axi" DEPTH="1" TYPE="rtl" MODULENAME="gmem1_m_axi" DISPNAME="gmem1_m_axi_U" RTLNAME="activation_accelerator_gmem1_m_axi">
-      <Resources BRAM="1" FF="781" LUT="500"/>
+      <Resources BRAM="1" FF="908" LUT="607"/>
     </RtlModule>
     <RtlModule CELL="inst/gmem2_m_axi_U" BINDMODULE="activation_accelerator_gmem2_m_axi" DEPTH="1" TYPE="rtl" MODULENAME="gmem2_m_axi" DISPNAME="gmem2_m_axi_U" RTLNAME="activation_accelerator_gmem2_m_axi">
-      <Resources BRAM="1" FF="1126" LUT="809"/>
+      <Resources BRAM="1" FF="1253" LUT="915"/>
     </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_144_11_fu_266" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_VITIS_LOOP_144_11" DISPNAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_144_11_fu_266" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_144_11">
-      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
-      <Resources FF="34" LUT="70"/>
-      <LocalResources FF="32" LUT="5"/>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_110_fu_323" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_loop_110" DISPNAME="grp_activation_accelerator_Pipeline_loop_110_fu_323" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_loop_110">
+      <SubModules count="2">flow_control_loop_pipe_sequential_init_U mux_83_16_1_1_U13</SubModules>
+      <Resources FF="26" LUT="81"/>
+      <LocalResources FF="24" LUT="7"/>
     </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_144_11_fu_266/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
-      <Resources FF="2" LUT="65"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_144_12_fu_238" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_VITIS_LOOP_144_12" DISPNAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_144_12_fu_238" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_144_12">
-      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
-      <Resources FF="34" LUT="42"/>
-      <LocalResources FF="32" LUT="15"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_144_12_fu_238/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
-      <Resources FF="2" LUT="27"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_144_13_fu_230" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_VITIS_LOOP_144_13" DISPNAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_144_13_fu_230" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_144_13">
-      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
-      <Resources FF="34" LUT="44"/>
-      <LocalResources FF="32" LUT="2"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_144_13_fu_230/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_110_fu_323/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
       <Resources FF="2" LUT="42"/>
     </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_144_14_fu_222" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_VITIS_LOOP_144_14" DISPNAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_144_14_fu_222" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_144_14">
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_110_fu_323/mux_83_16_1_1_U13" BINDMODULE="activation_accelerator_mux_83_16_1_1" DEPTH="2" TYPE="rtl" MODULENAME="mux_83_16_1_1" DISPNAME="mux_83_16_1_1_U13" RTLNAME="activation_accelerator_mux_83_16_1_1">
+      <Resources LUT="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_11_fu_547" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_loop_11" DISPNAME="grp_activation_accelerator_Pipeline_loop_11_fu_547" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_loop_11">
       <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
-      <Resources FF="34" LUT="69"/>
-      <LocalResources FF="32" LUT="9"/>
+      <Resources FF="26" LUT="41"/>
+      <LocalResources FF="24" LUT="6"/>
     </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_144_14_fu_222/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
-      <Resources FF="2" LUT="60"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_144_15_fu_214" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_VITIS_LOOP_144_15" DISPNAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_144_15_fu_214" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_144_15">
-      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
-      <Resources FF="34" LUT="33"/>
-      <LocalResources FF="32" LUT="6"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_144_15_fu_214/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
-      <Resources FF="2" LUT="27"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_144_1_fu_258" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_VITIS_LOOP_144_1" DISPNAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_144_1_fu_258" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_144_1">
-      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
-      <Resources FF="34" LUT="42"/>
-      <LocalResources FF="32" LUT="2"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_144_1_fu_258/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
-      <Resources FF="2" LUT="40"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_151_1_fu_326" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_VITIS_LOOP_151_1" DISPNAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_151_1_fu_326" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_151_1">
-      <SubModules count="2">fexp_32ns_32ns_32_8_full_dsp_1_U44 flow_control_loop_pipe_sequential_init_U</SubModules>
-      <Resources DSP="7" FF="340" LUT="832"/>
-      <LocalResources FF="66" LUT="66"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_151_1_fu_326/fexp_32ns_32ns_32_8_full_dsp_1_U44" BINDMODULE="activation_accelerator_fexp_32ns_32ns_32_8_full_dsp_1" DEPTH="2" TYPE="resource" MODULENAME="fexp_32ns_32ns_32_8_full_dsp_1" DISPNAME="fexp_32ns_32ns_32_8_full_dsp_1_U44" RTLNAME="activation_accelerator_fexp_32ns_32ns_32_8_full_dsp_1">
-      <Resources DSP="7" FF="272" LUT="732"/>
-      <LocalResources FF="63"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fexp" DSP="7" ID="" IMPL="fulldsp" LATENCY="7" LOOP="VITIS_LOOP_151_1" OPTYPE="fexp" PRAGMA="" RTLNAME="fexp_32ns_32ns_32_8_full_dsp_1_U44" SOURCE="/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/common/hls_exp_float.cpp:17" URAM="0" VARIABLE="tmp"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_151_1_fu_326/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
-      <Resources FF="2" LUT="34"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_159_1_fu_319" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_VITIS_LOOP_159_1" DISPNAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_159_1_fu_319" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_159_1">
-      <SubModules count="4">fadd_32ns_32ns_32_4_full_dsp_1_U32 fdiv_32ns_32ns_32_9_no_dsp_1_U34 fexp_32ns_32ns_32_8_full_dsp_1_U35 flow_control_loop_pipe_sequential_init_U</SubModules>
-      <Resources DSP="9" FF="921" LUT="1850"/>
-      <LocalResources FF="121" LUT="91"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_159_1_fu_319/fadd_32ns_32ns_32_4_full_dsp_1_U32" BINDMODULE="activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1" DEPTH="2" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_4_full_dsp_1" DISPNAME="fadd_32ns_32ns_32_4_full_dsp_1_U32" RTLNAME="activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1">
-      <Resources DSP="2" FF="167" LUT="204"/>
-      <LocalResources FF="63"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="VITIS_LOOP_159_1" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_4_full_dsp_1_U32" SOURCE="activation_accelerator.cpp:160" URAM="0" VARIABLE="add_i2"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_159_1_fu_319/fdiv_32ns_32ns_32_9_no_dsp_1_U34" BINDMODULE="activation_accelerator_fdiv_32ns_32ns_32_9_no_dsp_1" DEPTH="2" TYPE="resource" MODULENAME="fdiv_32ns_32ns_32_9_no_dsp_1" DISPNAME="fdiv_32ns_32ns_32_9_no_dsp_1_U34" RTLNAME="activation_accelerator_fdiv_32ns_32ns_32_9_no_dsp_1">
-      <Resources FF="391" LUT="787"/>
-      <LocalResources FF="64" LUT="30"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fdiv" DSP="0" ID="" IMPL="fabric" LATENCY="8" LOOP="VITIS_LOOP_159_1" OPTYPE="fdiv" PRAGMA="" RTLNAME="fdiv_32ns_32ns_32_9_no_dsp_1_U34" SOURCE="activation_accelerator.cpp:160" URAM="0" VARIABLE="sig"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_159_1_fu_319/fexp_32ns_32ns_32_8_full_dsp_1_U35" BINDMODULE="activation_accelerator_fexp_32ns_32ns_32_8_full_dsp_1" DEPTH="2" TYPE="resource" MODULENAME="fexp_32ns_32ns_32_8_full_dsp_1" DISPNAME="fexp_32ns_32ns_32_8_full_dsp_1_U35" RTLNAME="activation_accelerator_fexp_32ns_32ns_32_8_full_dsp_1">
-      <Resources DSP="7" FF="240" LUT="732"/>
-      <LocalResources FF="31"/>
-      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fexp" DSP="7" ID="" IMPL="fulldsp" LATENCY="7" LOOP="VITIS_LOOP_159_1" OPTYPE="fexp" PRAGMA="" RTLNAME="fexp_32ns_32ns_32_8_full_dsp_1_U35" SOURCE="/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/common/hls_exp_float.cpp:17" URAM="0" VARIABLE="tmp_1"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_159_1_fu_319/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
-      <Resources FF="2" LUT="36"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_170_1_fu_305" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_VITIS_LOOP_170_1" DISPNAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_170_1_fu_305" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_170_1">
-      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
-      <Resources FF="122" LUT="131"/>
-      <LocalResources FF="120" LUT="94"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_170_1_fu_305/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
-      <Resources FF="2" LUT="37"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_175_2_fu_311" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_VITIS_LOOP_175_2" DISPNAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_175_2_fu_311" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_175_2">
-      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
-      <Resources FF="52" LUT="72"/>
-      <LocalResources FF="50" LUT="19"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_175_2_fu_311/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
-      <Resources FF="2" LUT="53"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_185_1_fu_283" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_VITIS_LOOP_185_1" DISPNAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_185_1_fu_283" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_185_1">
-      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
-      <Resources FF="88" LUT="172"/>
-      <LocalResources FF="86" LUT="134"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_185_1_fu_283/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
-      <Resources FF="2" LUT="38"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_190_2_fu_289" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_VITIS_LOOP_190_2" DISPNAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_190_2_fu_289" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_190_2">
-      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
-      <Resources FF="160" LUT="202"/>
-      <LocalResources FF="158" LUT="179"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_190_2_fu_289/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
-      <Resources FF="2" LUT="23"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_196_3_fu_296" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_VITIS_LOOP_196_3" DISPNAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_196_3_fu_296" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_196_3">
-      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
-      <Resources FF="99" LUT="113"/>
-      <LocalResources FF="97" LUT="66"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_196_3_fu_296/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
-      <Resources FF="2" LUT="47"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_205_1_fu_333" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_VITIS_LOOP_205_1" DISPNAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_205_1_fu_333" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_205_1">
-      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
-      <Resources FF="69" LUT="156"/>
-      <LocalResources FF="67" LUT="36"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_205_1_fu_333/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
-      <Resources FF="2" LUT="120"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_262_1_fu_351" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_VITIS_LOOP_262_1" DISPNAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_262_1_fu_351" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_262_1">
-      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
-      <Resources FF="67" LUT="37"/>
-      <LocalResources FF="65" LUT="3"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_262_1_fu_351/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
-      <Resources FF="2" LUT="34"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_265_2_fu_360" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_VITIS_LOOP_265_2" DISPNAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_265_2_fu_360" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_265_2">
-      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
-      <Resources FF="67" LUT="38"/>
-      <LocalResources FF="65" LUT="5"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_265_2_fu_360/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
-      <Resources FF="2" LUT="33"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_VITIS_LOOP_275_3" DISPNAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_275_3">
-      <SubModules count="1">grp_bf16add_fu_75</SubModules>
-      <Resources FF="142" LUT="401"/>
-      <LocalResources FF="69" LUT="11"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75" DEPTH="2" TYPE="function" MODULENAME="bf16add" DISPNAME="grp_bf16add_fu_75" RTLNAME="activation_accelerator_bf16add">
-      <Resources FF="73" LUT="390"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_283_4_fu_252" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_VITIS_LOOP_283_4" DISPNAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_283_4_fu_252" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_283_4">
-      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
-      <Resources FF="18" LUT="43"/>
-      <LocalResources FF="16" LUT="7"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_283_4_fu_252/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
-      <Resources FF="2" LUT="36"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_292_5_fu_246" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_VITIS_LOOP_292_5" DISPNAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_292_5_fu_246" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_292_5">
-      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
-      <Resources FF="18" LUT="29"/>
-      <LocalResources FF="16" LUT="7"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_292_5_fu_246/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
-      <Resources FF="2" LUT="22"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_316_6_fu_274" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_VITIS_LOOP_316_6" DISPNAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_316_6_fu_274" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_316_6">
-      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
-      <Resources FF="21" LUT="36"/>
-      <LocalResources FF="19" LUT="1"/>
-    </RtlModule>
-    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_316_6_fu_274/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_11_fu_547/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
       <Resources FF="2" LUT="35"/>
     </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_12_fu_798" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_loop_12" DISPNAME="grp_activation_accelerator_Pipeline_loop_12_fu_798" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_loop_12">
+      <SubModules count="7">fadd_32ns_32ns_32_4_full_dsp_1_U324 fadd_32ns_32ns_32_4_full_dsp_1_U325 fadd_32ns_32ns_32_4_full_dsp_1_U326 fadd_32ns_32ns_32_4_full_dsp_1_U327 fadd_32ns_32ns_32_4_full_dsp_1_U328 fadd_32ns_32ns_32_4_full_dsp_1_U329 flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources DSP="12" FF="1602" LUT="1357"/>
+      <LocalResources FF="394" LUT="10"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_12_fu_798/fadd_32ns_32ns_32_4_full_dsp_1_U324" BINDMODULE="activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1" DEPTH="2" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_4_full_dsp_1" DISPNAME="fadd_32ns_32ns_32_4_full_dsp_1_U324" RTLNAME="activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1">
+      <Resources DSP="2" FF="201" LUT="220"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="loop_12" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_4_full_dsp_1_U324" SOURCE="activation_accelerator.cpp:280" URAM="0" VARIABLE="sum_4"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_12_fu_798/fadd_32ns_32ns_32_4_full_dsp_1_U325" BINDMODULE="activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1" DEPTH="2" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_4_full_dsp_1" DISPNAME="fadd_32ns_32ns_32_4_full_dsp_1_U325" RTLNAME="activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1">
+      <Resources DSP="2" FF="201" LUT="220"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="loop_12" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_4_full_dsp_1_U325" SOURCE="activation_accelerator.cpp:280" URAM="0" VARIABLE="sum_5"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_12_fu_798/fadd_32ns_32ns_32_4_full_dsp_1_U326" BINDMODULE="activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1" DEPTH="2" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_4_full_dsp_1" DISPNAME="fadd_32ns_32ns_32_4_full_dsp_1_U326" RTLNAME="activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1">
+      <Resources DSP="2" FF="201" LUT="220"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="loop_12" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_4_full_dsp_1_U326" SOURCE="activation_accelerator.cpp:280" URAM="0" VARIABLE="sum_6"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_12_fu_798/fadd_32ns_32ns_32_4_full_dsp_1_U327" BINDMODULE="activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1" DEPTH="2" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_4_full_dsp_1" DISPNAME="fadd_32ns_32ns_32_4_full_dsp_1_U327" RTLNAME="activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1">
+      <Resources DSP="2" FF="201" LUT="220"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="loop_12" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_4_full_dsp_1_U327" SOURCE="activation_accelerator.cpp:280" URAM="0" VARIABLE="sum_7"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_12_fu_798/fadd_32ns_32ns_32_4_full_dsp_1_U328" BINDMODULE="activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1" DEPTH="2" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_4_full_dsp_1" DISPNAME="fadd_32ns_32ns_32_4_full_dsp_1_U328" RTLNAME="activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1">
+      <Resources DSP="2" FF="201" LUT="220"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="loop_12" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_4_full_dsp_1_U328" SOURCE="activation_accelerator.cpp:280" URAM="0" VARIABLE="sum_8"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_12_fu_798/fadd_32ns_32ns_32_4_full_dsp_1_U329" BINDMODULE="activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1" DEPTH="2" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_4_full_dsp_1" DISPNAME="fadd_32ns_32ns_32_4_full_dsp_1_U329" RTLNAME="activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1">
+      <Resources DSP="2" FF="201" LUT="220"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="loop_12" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_4_full_dsp_1_U329" SOURCE="activation_accelerator.cpp:280" URAM="0" VARIABLE="sum_9"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_12_fu_798/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="27"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_13_fu_491" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_loop_13" DISPNAME="grp_activation_accelerator_Pipeline_loop_13_fu_491" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_loop_13">
+      <SubModules count="2">flow_control_loop_pipe_sequential_init_U mux_83_16_1_1_U249</SubModules>
+      <Resources FF="26" LUT="101"/>
+      <LocalResources FF="24" LUT="34"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_13_fu_491/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="35"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_13_fu_491/mux_83_16_1_1_U249" BINDMODULE="activation_accelerator_mux_83_16_1_1" DEPTH="2" TYPE="rtl" MODULENAME="mux_83_16_1_1" DISPNAME="mux_83_16_1_1_U249" RTLNAME="activation_accelerator_mux_83_16_1_1">
+      <Resources LUT="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_14_fu_435" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_loop_14" DISPNAME="grp_activation_accelerator_Pipeline_loop_14_fu_435" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_loop_14">
+      <SubModules count="2">flow_control_loop_pipe_sequential_init_U mux_83_16_1_1_U157</SubModules>
+      <Resources FF="26" LUT="67"/>
+      <LocalResources FF="24" LUT="7"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_14_fu_435/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="28"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_14_fu_435/mux_83_16_1_1_U157" BINDMODULE="activation_accelerator_mux_83_16_1_1" DEPTH="2" TYPE="rtl" MODULENAME="mux_83_16_1_1" DISPNAME="mux_83_16_1_1_U157" RTLNAME="activation_accelerator_mux_83_16_1_1">
+      <Resources LUT="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_15_fu_463" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_loop_15" DISPNAME="grp_activation_accelerator_Pipeline_loop_15_fu_463" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_loop_15">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="26" LUT="78"/>
+      <LocalResources FF="24" LUT="59"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_15_fu_463/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="19"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_16_fu_407" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_loop_16" DISPNAME="grp_activation_accelerator_Pipeline_loop_16_fu_407" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_loop_16">
+      <SubModules count="2">flow_control_loop_pipe_sequential_init_U mux_83_16_1_1_U128</SubModules>
+      <Resources FF="26" LUT="67"/>
+      <LocalResources FF="24" LUT="13"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_16_fu_407/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="22"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_16_fu_407/mux_83_16_1_1_U128" BINDMODULE="activation_accelerator_mux_83_16_1_1" DEPTH="2" TYPE="rtl" MODULENAME="mux_83_16_1_1" DISPNAME="mux_83_16_1_1_U128" RTLNAME="activation_accelerator_mux_83_16_1_1">
+      <Resources LUT="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_17_fu_379" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_loop_17" DISPNAME="grp_activation_accelerator_Pipeline_loop_17_fu_379" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_loop_17">
+      <SubModules count="2">flow_control_loop_pipe_sequential_init_U mux_83_16_1_1_U97</SubModules>
+      <Resources FF="26" LUT="88"/>
+      <LocalResources FF="24" LUT="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_17_fu_379/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="24"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_17_fu_379/mux_83_16_1_1_U97" BINDMODULE="activation_accelerator_mux_83_16_1_1" DEPTH="2" TYPE="rtl" MODULENAME="mux_83_16_1_1" DISPNAME="mux_83_16_1_1_U97" RTLNAME="activation_accelerator_mux_83_16_1_1">
+      <Resources LUT="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_18_fu_351" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_loop_18" DISPNAME="grp_activation_accelerator_Pipeline_loop_18_fu_351" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_loop_18">
+      <SubModules count="2">flow_control_loop_pipe_sequential_init_U mux_83_16_1_1_U61</SubModules>
+      <Resources FF="26" LUT="55"/>
+      <LocalResources FF="24" LUT="2"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_18_fu_351/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="21"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_18_fu_351/mux_83_16_1_1_U61" BINDMODULE="activation_accelerator_mux_83_16_1_1" DEPTH="2" TYPE="rtl" MODULENAME="mux_83_16_1_1" DISPNAME="mux_83_16_1_1_U61" RTLNAME="activation_accelerator_mux_83_16_1_1">
+      <Resources LUT="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_19_fu_826" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_loop_19" DISPNAME="grp_activation_accelerator_Pipeline_loop_19_fu_826" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_loop_19">
+      <SubModules count="8">grp_bf16add_fu_398 grp_bf16add_fu_405 grp_bf16add_fu_412 grp_bf16add_fu_419 grp_bf16add_fu_426 grp_bf16add_fu_433 grp_bf16add_fu_440 grp_bf16add_fu_447</SubModules>
+      <Resources FF="868" LUT="2911"/>
+      <LocalResources FF="284" LUT="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_398" DEPTH="2" TYPE="function" MODULENAME="bf16add" DISPNAME="grp_bf16add_fu_398" RTLNAME="activation_accelerator_bf16add">
+      <Resources FF="73" LUT="373"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405" DEPTH="2" TYPE="function" MODULENAME="bf16add" DISPNAME="grp_bf16add_fu_405" RTLNAME="activation_accelerator_bf16add">
+      <Resources FF="73" LUT="360"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_412" DEPTH="2" TYPE="function" MODULENAME="bf16add" DISPNAME="grp_bf16add_fu_412" RTLNAME="activation_accelerator_bf16add">
+      <Resources FF="73" LUT="357"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_419" DEPTH="2" TYPE="function" MODULENAME="bf16add" DISPNAME="grp_bf16add_fu_419" RTLNAME="activation_accelerator_bf16add">
+      <Resources FF="73" LUT="358"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426" DEPTH="2" TYPE="function" MODULENAME="bf16add" DISPNAME="grp_bf16add_fu_426" RTLNAME="activation_accelerator_bf16add">
+      <Resources FF="73" LUT="358"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_433" DEPTH="2" TYPE="function" MODULENAME="bf16add" DISPNAME="grp_bf16add_fu_433" RTLNAME="activation_accelerator_bf16add">
+      <Resources FF="73" LUT="359"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_440" DEPTH="2" TYPE="function" MODULENAME="bf16add" DISPNAME="grp_bf16add_fu_440" RTLNAME="activation_accelerator_bf16add">
+      <Resources FF="73" LUT="357"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_447" DEPTH="2" TYPE="function" MODULENAME="bf16add" DISPNAME="grp_bf16add_fu_447" RTLNAME="activation_accelerator_bf16add">
+      <Resources FF="73" LUT="357"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_1_fu_519" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_loop_1" DISPNAME="grp_activation_accelerator_Pipeline_loop_1_fu_519" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_loop_1">
+      <SubModules count="2">flow_control_loop_pipe_sequential_init_U mux_83_16_1_1_U296</SubModules>
+      <Resources FF="26" LUT="81"/>
+      <LocalResources FF="24" LUT="22"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_1_fu_519/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="27"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_1_fu_519/mux_83_16_1_1_U296" BINDMODULE="activation_accelerator_mux_83_16_1_1" DEPTH="2" TYPE="rtl" MODULENAME="mux_83_16_1_1" DISPNAME="mux_83_16_1_1_U296" RTLNAME="activation_accelerator_mux_83_16_1_1">
+      <Resources LUT="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_23_fu_878" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_loop_23" DISPNAME="grp_activation_accelerator_Pipeline_loop_23_fu_878" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_loop_23">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="52" LUT="43"/>
+      <LocalResources FF="50" LUT="24"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_23_fu_878/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="19"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_24_fu_901" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_loop_24" DISPNAME="grp_activation_accelerator_Pipeline_loop_24_fu_901" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_loop_24">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="52" LUT="34"/>
+      <LocalResources FF="50" LUT="13"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_24_fu_901/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="21"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_25_fu_575" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_loop_25" DISPNAME="grp_activation_accelerator_Pipeline_loop_25_fu_575" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_loop_25">
+      <SubModules count="2">flow_control_loop_pipe_sequential_init_U mux_83_16_1_1_U1</SubModules>
+      <Resources FF="35" LUT="76"/>
+      <LocalResources FF="33" LUT="4"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_25_fu_575/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="40"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_25_fu_575/mux_83_16_1_1_U1" BINDMODULE="activation_accelerator_mux_83_16_1_1" DEPTH="2" TYPE="rtl" MODULENAME="mux_83_16_1_1" DISPNAME="mux_83_16_1_1_U1" RTLNAME="activation_accelerator_mux_83_16_1_1">
+      <Resources LUT="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_2_fu_701" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_loop_2" DISPNAME="grp_activation_accelerator_Pipeline_loop_2_fu_701" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_loop_2">
+      <SubModules count="2">flow_control_loop_pipe_sequential_init_U mux_42_32_1_1_U144</SubModules>
+      <Resources FF="84" LUT="225"/>
+      <LocalResources FF="82" LUT="175"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_2_fu_701/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="18"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_2_fu_701/mux_42_32_1_1_U144" BINDMODULE="activation_accelerator_mux_42_32_1_1" DEPTH="2" TYPE="rtl" MODULENAME="mux_42_32_1_1" DISPNAME="mux_42_32_1_1_U144" RTLNAME="activation_accelerator_mux_42_32_1_1">
+      <Resources LUT="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_3_fu_677" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_loop_3" DISPNAME="grp_activation_accelerator_Pipeline_loop_3_fu_677" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_loop_3">
+      <SubModules count="4">fdiv_32ns_32ns_32_9_no_dsp_1_U112 fexp_32ns_32ns_32_8_full_dsp_1_U113 flow_control_loop_pipe_sequential_init_U mux_42_32_1_1_U114</SubModules>
+      <Resources DSP="7" FF="787" LUT="1662"/>
+      <LocalResources FF="122" LUT="74"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_3_fu_677/fdiv_32ns_32ns_32_9_no_dsp_1_U112" BINDMODULE="activation_accelerator_fdiv_32ns_32ns_32_9_no_dsp_1" DEPTH="2" TYPE="resource" MODULENAME="fdiv_32ns_32ns_32_9_no_dsp_1" DISPNAME="fdiv_32ns_32ns_32_9_no_dsp_1_U112" RTLNAME="activation_accelerator_fdiv_32ns_32ns_32_9_no_dsp_1">
+      <Resources FF="391" LUT="789"/>
+      <LocalResources FF="64" LUT="32"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fdiv" DSP="0" ID="" IMPL="fabric" LATENCY="8" LOOP="loop_3" OPTYPE="fdiv" PRAGMA="" RTLNAME="fdiv_32ns_32ns_32_9_no_dsp_1_U112" SOURCE="activation_accelerator.cpp:168" URAM="0" VARIABLE="sig"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_3_fu_677/fexp_32ns_32ns_32_8_full_dsp_1_U113" BINDMODULE="activation_accelerator_fexp_32ns_32ns_32_8_full_dsp_1" DEPTH="2" TYPE="resource" MODULENAME="fexp_32ns_32ns_32_8_full_dsp_1" DISPNAME="fexp_32ns_32ns_32_8_full_dsp_1_U113" RTLNAME="activation_accelerator_fexp_32ns_32ns_32_8_full_dsp_1">
+      <Resources DSP="7" FF="272" LUT="733"/>
+      <LocalResources FF="63" LUT="1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fexp" DSP="7" ID="" IMPL="fulldsp" LATENCY="7" LOOP="loop_3" OPTYPE="fexp" PRAGMA="" RTLNAME="fexp_32ns_32ns_32_8_full_dsp_1_U113" SOURCE="/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/common/hls_exp_float.cpp:17" URAM="0" VARIABLE="tmp_4"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_3_fu_677/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="34"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_3_fu_677/mux_42_32_1_1_U114" BINDMODULE="activation_accelerator_mux_42_32_1_1" DEPTH="2" TYPE="rtl" MODULENAME="mux_42_32_1_1" DISPNAME="mux_42_32_1_1_U114" RTLNAME="activation_accelerator_mux_42_32_1_1">
+      <Resources LUT="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_exp_fu_763" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_loop_exp" DISPNAME="grp_activation_accelerator_Pipeline_loop_exp_fu_763" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_loop_exp">
+      <SubModules count="2">flow_control_loop_pipe_sequential_init_U mux_42_32_1_1_U273</SubModules>
+      <Resources FF="181" LUT="186"/>
+      <LocalResources FF="179" LUT="129"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_exp_fu_763/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="25"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_exp_fu_763/mux_42_32_1_1_U273" BINDMODULE="activation_accelerator_mux_42_32_1_1" DEPTH="2" TYPE="rtl" MODULENAME="mux_42_32_1_1" DISPNAME="mux_42_32_1_1_U273" RTLNAME="activation_accelerator_mux_42_32_1_1">
+      <Resources LUT="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_max_fu_753" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_loop_max" DISPNAME="grp_activation_accelerator_Pipeline_loop_max_fu_753" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_loop_max">
+      <SubModules count="3">fcmp_32ns_32ns_1_2_no_dsp_1_U262 flow_control_loop_pipe_sequential_init_U mux_42_32_1_1_U263</SubModules>
+      <Resources FF="114" LUT="193"/>
+      <LocalResources FF="110" LUT="19"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_max_fu_753/fcmp_32ns_32ns_1_2_no_dsp_1_U262" BINDMODULE="activation_accelerator_fcmp_32ns_32ns_1_2_no_dsp_1" DEPTH="2" TYPE="rtl" MODULENAME="fcmp_32ns_32ns_1_2_no_dsp_1" DISPNAME="fcmp_32ns_32ns_1_2_no_dsp_1_U262" RTLNAME="activation_accelerator_fcmp_32ns_32ns_1_2_no_dsp_1">
+      <Resources FF="2" LUT="93"/>
+      <LocalResources FF="2" LUT="16"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_max_fu_753/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="49"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_max_fu_753/mux_42_32_1_1_U263" BINDMODULE="activation_accelerator_mux_42_32_1_1" DEPTH="2" TYPE="rtl" MODULENAME="mux_42_32_1_1" DISPNAME="mux_42_32_1_1_U263" RTLNAME="activation_accelerator_mux_42_32_1_1">
+      <Resources LUT="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_mean_fu_598" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_loop_mean" DISPNAME="grp_activation_accelerator_Pipeline_loop_mean_fu_598" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_loop_mean">
+      <SubModules count="2">flow_control_loop_pipe_sequential_init_U mux_42_32_1_1_U27</SubModules>
+      <Resources FF="53" LUT="72"/>
+      <LocalResources FF="51" LUT="18"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_mean_fu_598/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="22"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_mean_fu_598/mux_42_32_1_1_U27" BINDMODULE="activation_accelerator_mux_42_32_1_1" DEPTH="2" TYPE="rtl" MODULENAME="mux_42_32_1_1" DISPNAME="mux_42_32_1_1_U27" RTLNAME="activation_accelerator_mux_42_32_1_1">
+      <Resources LUT="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_norm11_fu_617" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_loop_norm11" DISPNAME="grp_activation_accelerator_Pipeline_loop_norm11_fu_617" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_loop_norm11">
+      <SubModules count="2">flow_control_loop_pipe_sequential_init_U mux_42_32_1_1_U46</SubModules>
+      <Resources FF="101" LUT="162"/>
+      <LocalResources FF="99" LUT="101"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_norm11_fu_617/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="29"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_norm11_fu_617/mux_42_32_1_1_U46" BINDMODULE="activation_accelerator_mux_42_32_1_1" DEPTH="2" TYPE="rtl" MODULENAME="mux_42_32_1_1" DISPNAME="mux_42_32_1_1_U46" RTLNAME="activation_accelerator_mux_42_32_1_1">
+      <Resources LUT="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_norm_fu_652" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_loop_norm" DISPNAME="grp_activation_accelerator_Pipeline_loop_norm_fu_652" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_loop_norm">
+      <SubModules count="2">flow_control_loop_pipe_sequential_init_U mux_42_32_1_1_U83</SubModules>
+      <Resources FF="69" LUT="86"/>
+      <LocalResources FF="67" LUT="34"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_norm_fu_652/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="20"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_norm_fu_652/mux_42_32_1_1_U83" BINDMODULE="activation_accelerator_mux_42_32_1_1" DEPTH="2" TYPE="rtl" MODULENAME="mux_42_32_1_1" DISPNAME="mux_42_32_1_1_U83" RTLNAME="activation_accelerator_mux_42_32_1_1">
+      <Resources LUT="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_output_fu_775" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_loop_output" DISPNAME="grp_activation_accelerator_Pipeline_loop_output_fu_775" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_loop_output">
+      <SubModules count="2">flow_control_loop_pipe_sequential_init_U mux_21_32_1_1_U283</SubModules>
+      <Resources FF="69" LUT="69"/>
+      <LocalResources FF="67" LUT="29"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_output_fu_775/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="24"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_output_fu_775/mux_21_32_1_1_U283" BINDMODULE="activation_accelerator_mux_21_32_1_1" DEPTH="2" TYPE="rtl" MODULENAME="mux_21_32_1_1" DISPNAME="mux_21_32_1_1_U283" RTLNAME="activation_accelerator_mux_21_32_1_1">
+      <Resources LUT="16"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_sum_fu_643" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_loop_sum" DISPNAME="grp_activation_accelerator_Pipeline_loop_sum_fu_643" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_loop_sum">
+      <SubModules count="2">flow_control_loop_pipe_sequential_init_U mux_42_32_1_1_U76</SubModules>
+      <Resources FF="119" LUT="187"/>
+      <LocalResources FF="117" LUT="132"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_sum_fu_643/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="23"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_sum_fu_643/mux_42_32_1_1_U76" BINDMODULE="activation_accelerator_mux_42_32_1_1" DEPTH="2" TYPE="rtl" MODULENAME="mux_42_32_1_1" DISPNAME="mux_42_32_1_1_U76" RTLNAME="activation_accelerator_mux_42_32_1_1">
+      <Resources LUT="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_var_fu_607" DEPTH="1" TYPE="function" MODULENAME="activation_accelerator_Pipeline_loop_var" DISPNAME="grp_activation_accelerator_Pipeline_loop_var_fu_607" RTLNAME="activation_accelerator_activation_accelerator_Pipeline_loop_var">
+      <SubModules count="2">flow_control_loop_pipe_sequential_init_U mux_42_32_1_1_U37</SubModules>
+      <Resources FF="157" LUT="164"/>
+      <LocalResources FF="155" LUT="113"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_var_fu_607/flow_control_loop_pipe_sequential_init_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="activation_accelerator_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="19"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_activation_accelerator_Pipeline_loop_var_fu_607/mux_42_32_1_1_U37" BINDMODULE="activation_accelerator_mux_42_32_1_1" DEPTH="2" TYPE="rtl" MODULENAME="mux_42_32_1_1" DISPNAME="mux_42_32_1_1_U37" RTLNAME="activation_accelerator_mux_42_32_1_1">
+      <Resources LUT="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_mask_safe_softmax_fu_725" DEPTH="1" TYPE="function" MODULENAME="float_mask_safe_softmax" DISPNAME="grp_float_mask_safe_softmax_fu_725" RTLNAME="activation_accelerator_float_mask_safe_softmax">
+      <SubModules count="17">exp_stream_U float_mask_safe_softmax_Block_float_mask_safe_softmax_for_cond_i_exit_proc_U0 float_mask_safe_softmax_Block_for_end26_proc_U0 float_mask_safe_softmax_Loop_loop_18_proc5_U0 float_mask_safe_softmax_Loop_loop_20_proc6_U0 float_mask_safe_softmax_Loop_loop_22_proc7_U0 float_mask_safe_softmax_Loop_loop_max_broadcast_proc_U0 float_mask_safe_softmax_Loop_loop_sum_broadcast_proc_U0 max_broadcast_stream_U max_val_loc_channel_U max_val_to_broadcast_loc_channel_U start_for_float_mask_safe_softmax_Loop_loop_20_proc6_U0_U start_for_float_mask_safe_softmax_Loop_loop_22_proc7_U0_U sum_broadcast_stream_U sum_loc_channel_U sum_to_broadcast_loc_channel_U x_mask_stream_U</SubModules>
+      <Resources BRAM="232" DSP="12" FF="2551" LUT="3657"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_mask_safe_softmax_fu_725/exp_stream_U" BINDMODULE="activation_accelerator_fifo_w32_d32768_A" DEPTH="2" TYPE="resource" MODULENAME="fifo_w32_d32768_A" DISPNAME="exp_stream_U" RTLNAME="activation_accelerator_fifo_w32_d32768_A">
+      <Resources BRAM="58" FF="66" LUT="149"/>
+      <LocalResources FF="49" LUT="50"/>
+      <BindNode BINDTYPE="storage" BRAM="58" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="memory" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="exp_stream_U" SOURCE="activation_accelerator.cpp:403" URAM="0" VARIABLE="exp_stream"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_mask_safe_softmax_fu_725/float_mask_safe_softmax_Block_float_mask_safe_softmax_for_cond_i_exit_proc_U0" DEPTH="2" TYPE="function" MODULENAME="float_mask_safe_softmax_Block_float_mask_safe_softmax_for_cond_i_exit_proc" DISPNAME="float_mask_safe_softmax_Block_float_mask_safe_softmax_for_cond_i_exit_proc_U0" RTLNAME="activation_accelerator_float_mask_safe_softmax_Block_float_mask_safe_softmax_for_cond_i_exit_proc">
+      <SubModules count="1">max_val_stream_fifo_U</SubModules>
+      <Resources FF="103" LUT="74"/>
+      <LocalResources FF="35"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_mask_safe_softmax_fu_725/float_mask_safe_softmax_Block_float_mask_safe_softmax_for_cond_i_exit_proc_U0/max_val_stream_fifo_U" BINDMODULE="activation_accelerator_fifo_w32_d2_S" DEPTH="3" TYPE="resource" MODULENAME="fifo_w32_d2_S" DISPNAME="max_val_stream_fifo_U" RTLNAME="activation_accelerator_fifo_w32_d2_S">
+      <Resources FF="68" LUT="74"/>
+      <LocalResources FF="4" LUT="9"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="max_val_stream_fifo_U" SOURCE="activation_accelerator.cpp:399" URAM="0" VARIABLE="max_val_stream"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_mask_safe_softmax_fu_725/float_mask_safe_softmax_Block_for_end26_proc_U0" DEPTH="2" TYPE="function" MODULENAME="float_mask_safe_softmax_Block_for_end26_proc" DISPNAME="float_mask_safe_softmax_Block_for_end26_proc_U0" RTLNAME="activation_accelerator_float_mask_safe_softmax_Block_for_end26_proc">
+      <SubModules count="1">sum_stream_fifo_U</SubModules>
+      <Resources FF="103" LUT="73"/>
+      <LocalResources FF="35"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_mask_safe_softmax_fu_725/float_mask_safe_softmax_Block_for_end26_proc_U0/sum_stream_fifo_U" BINDMODULE="activation_accelerator_fifo_w32_d2_S" DEPTH="3" TYPE="resource" MODULENAME="fifo_w32_d2_S_x" DISPNAME="sum_stream_fifo_U" RTLNAME="activation_accelerator_fifo_w32_d2_S_x">
+      <Resources FF="68" LUT="73"/>
+      <LocalResources FF="4" LUT="8"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="sum_stream_fifo_U" SOURCE="activation_accelerator.cpp:405" URAM="0" VARIABLE="sum_stream"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_mask_safe_softmax_fu_725/float_mask_safe_softmax_Loop_loop_18_proc5_U0" DEPTH="2" TYPE="function" MODULENAME="float_mask_safe_softmax_Loop_loop_18_proc5" DISPNAME="float_mask_safe_softmax_Loop_loop_18_proc5_U0" RTLNAME="activation_accelerator_float_mask_safe_softmax_Loop_loop_18_proc5">
+      <SubModules count="5">fcmp_32ns_32ns_1_2_no_dsp_1_U184 flow_control_loop_pipe_U fmul_32ns_32ns_32_3_max_dsp_1_U183 mux_42_32_1_1_U185 mux_42_32_1_1_U186</SubModules>
+      <Resources DSP="3" FF="352" LUT="344"/>
+      <LocalResources FF="157" LUT="25"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_mask_safe_softmax_fu_725/float_mask_safe_softmax_Loop_loop_18_proc5_U0/fcmp_32ns_32ns_1_2_no_dsp_1_U184" BINDMODULE="activation_accelerator_fcmp_32ns_32ns_1_2_no_dsp_1" DEPTH="3" TYPE="rtl" MODULENAME="fcmp_32ns_32ns_1_2_no_dsp_1" DISPNAME="fcmp_32ns_32ns_1_2_no_dsp_1_U184" RTLNAME="activation_accelerator_fcmp_32ns_32ns_1_2_no_dsp_1">
+      <Resources FF="64" LUT="118"/>
+      <LocalResources FF="64" LUT="8"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_mask_safe_softmax_fu_725/float_mask_safe_softmax_Loop_loop_18_proc5_U0/flow_control_loop_pipe_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe" DISPNAME="flow_control_loop_pipe_U" RTLNAME="activation_accelerator_flow_control_loop_pipe">
+      <Resources FF="1" LUT="41"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_mask_safe_softmax_fu_725/float_mask_safe_softmax_Loop_loop_18_proc5_U0/fmul_32ns_32ns_32_3_max_dsp_1_U183" BINDMODULE="activation_accelerator_fmul_32ns_32ns_32_3_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_3_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_3_max_dsp_1_U183" RTLNAME="activation_accelerator_fmul_32ns_32ns_32_3_max_dsp_1">
+      <Resources DSP="3" FF="130" LUT="96"/>
+      <LocalResources FF="97" LUT="1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="2" LOOP="loop_18" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_3_max_dsp_1_U183" SOURCE="activation_accelerator.cpp:417" URAM="0" VARIABLE="x_mask_val"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_mask_safe_softmax_fu_725/float_mask_safe_softmax_Loop_loop_18_proc5_U0/mux_42_32_1_1_U185" BINDMODULE="activation_accelerator_mux_42_32_1_1" DEPTH="3" TYPE="rtl" MODULENAME="mux_42_32_1_1" DISPNAME="mux_42_32_1_1_U185" RTLNAME="activation_accelerator_mux_42_32_1_1">
+      <Resources LUT="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_mask_safe_softmax_fu_725/float_mask_safe_softmax_Loop_loop_18_proc5_U0/mux_42_32_1_1_U186" BINDMODULE="activation_accelerator_mux_42_32_1_1" DEPTH="3" TYPE="rtl" MODULENAME="mux_42_32_1_1" DISPNAME="mux_42_32_1_1_U186" RTLNAME="activation_accelerator_mux_42_32_1_1">
+      <Resources LUT="32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_mask_safe_softmax_fu_725/float_mask_safe_softmax_Loop_loop_20_proc6_U0" DEPTH="2" TYPE="function" MODULENAME="float_mask_safe_softmax_Loop_loop_20_proc6" DISPNAME="float_mask_safe_softmax_Loop_loop_20_proc6_U0" RTLNAME="activation_accelerator_float_mask_safe_softmax_Loop_loop_20_proc6">
+      <SubModules count="4">fadd_32ns_32ns_32_4_no_dsp_1_U202 fexp_32ns_32ns_32_8_full_dsp_1_U203 flow_control_loop_pipe_U fsub_32ns_32ns_32_4_full_dsp_1_U201</SubModules>
+      <Resources DSP="9" FF="868" LUT="1478"/>
+      <LocalResources FF="190" LUT="19"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_mask_safe_softmax_fu_725/float_mask_safe_softmax_Loop_loop_20_proc6_U0/fadd_32ns_32ns_32_4_no_dsp_1_U202" BINDMODULE="activation_accelerator_fadd_32ns_32ns_32_4_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_4_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_4_no_dsp_1_U202" RTLNAME="activation_accelerator_fadd_32ns_32ns_32_4_no_dsp_1">
+      <Resources FF="170" LUT="427"/>
+      <LocalResources FF="96" LUT="1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="3" LOOP="loop_20" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_4_no_dsp_1_U202" SOURCE="activation_accelerator.cpp:444" URAM="0" VARIABLE="sum_1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_mask_safe_softmax_fu_725/float_mask_safe_softmax_Loop_loop_20_proc6_U0/fexp_32ns_32ns_32_8_full_dsp_1_U203" BINDMODULE="activation_accelerator_fexp_32ns_32ns_32_8_full_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fexp_32ns_32ns_32_8_full_dsp_1" DISPNAME="fexp_32ns_32ns_32_8_full_dsp_1_U203" RTLNAME="activation_accelerator_fexp_32ns_32ns_32_8_full_dsp_1">
+      <Resources DSP="7" FF="273" LUT="772"/>
+      <LocalResources FF="64" LUT="1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fexp" DSP="7" ID="" IMPL="fulldsp" LATENCY="7" LOOP="loop_20" OPTYPE="fexp" PRAGMA="" RTLNAME="fexp_32ns_32ns_32_8_full_dsp_1_U203" SOURCE="/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/common/hls_exp_float.cpp:17" URAM="0" VARIABLE="exp_val"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_mask_safe_softmax_fu_725/float_mask_safe_softmax_Loop_loop_20_proc6_U0/flow_control_loop_pipe_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe" DISPNAME="flow_control_loop_pipe_U" RTLNAME="activation_accelerator_flow_control_loop_pipe">
+      <Resources FF="1" LUT="20"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_mask_safe_softmax_fu_725/float_mask_safe_softmax_Loop_loop_20_proc6_U0/fsub_32ns_32ns_32_4_full_dsp_1_U201" BINDMODULE="activation_accelerator_fsub_32ns_32ns_32_4_full_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fsub_32ns_32ns_32_4_full_dsp_1" DISPNAME="fsub_32ns_32ns_32_4_full_dsp_1_U201" RTLNAME="activation_accelerator_fsub_32ns_32ns_32_4_full_dsp_1">
+      <Resources DSP="2" FF="234" LUT="240"/>
+      <LocalResources FF="97" LUT="2"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="loop_20" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_4_full_dsp_1_U201" SOURCE="activation_accelerator.cpp:442" URAM="0" VARIABLE="x_assign"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_mask_safe_softmax_fu_725/float_mask_safe_softmax_Loop_loop_22_proc7_U0" DEPTH="2" TYPE="function" MODULENAME="float_mask_safe_softmax_Loop_loop_22_proc7" DISPNAME="float_mask_safe_softmax_Loop_loop_22_proc7_U0" RTLNAME="activation_accelerator_float_mask_safe_softmax_Loop_loop_22_proc7">
+      <SubModules count="2">fdiv_32ns_32ns_32_9_no_dsp_1_U212 flow_control_loop_pipe_U</SubModules>
+      <Resources FF="489" LUT="871"/>
+      <LocalResources FF="96" LUT="52"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_mask_safe_softmax_fu_725/float_mask_safe_softmax_Loop_loop_22_proc7_U0/fdiv_32ns_32ns_32_9_no_dsp_1_U212" BINDMODULE="activation_accelerator_fdiv_32ns_32ns_32_9_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fdiv_32ns_32ns_32_9_no_dsp_1" DISPNAME="fdiv_32ns_32ns_32_9_no_dsp_1_U212" RTLNAME="activation_accelerator_fdiv_32ns_32ns_32_9_no_dsp_1">
+      <Resources FF="392" LUT="792"/>
+      <LocalResources FF="81" LUT="9"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fdiv" DSP="0" ID="" IMPL="fabric" LATENCY="8" LOOP="loop_22" OPTYPE="fdiv" PRAGMA="" RTLNAME="fdiv_32ns_32ns_32_9_no_dsp_1_U212" SOURCE="activation_accelerator.cpp:462" URAM="0" VARIABLE="div"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_mask_safe_softmax_fu_725/float_mask_safe_softmax_Loop_loop_22_proc7_U0/flow_control_loop_pipe_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe" DISPNAME="flow_control_loop_pipe_U" RTLNAME="activation_accelerator_flow_control_loop_pipe">
+      <Resources FF="1" LUT="27"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_mask_safe_softmax_fu_725/float_mask_safe_softmax_Loop_loop_max_broadcast_proc_U0" DEPTH="2" TYPE="function" MODULENAME="float_mask_safe_softmax_Loop_loop_max_broadcast_proc" DISPNAME="float_mask_safe_softmax_Loop_loop_max_broadcast_proc_U0" RTLNAME="activation_accelerator_float_mask_safe_softmax_Loop_loop_max_broadcast_proc">
+      <SubModules count="1">flow_control_loop_pipe_U</SubModules>
+      <Resources FF="45" LUT="17"/>
+      <LocalResources FF="44" LUT="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_mask_safe_softmax_fu_725/float_mask_safe_softmax_Loop_loop_max_broadcast_proc_U0/flow_control_loop_pipe_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe" DISPNAME="flow_control_loop_pipe_U" RTLNAME="activation_accelerator_flow_control_loop_pipe">
+      <Resources FF="1" LUT="16"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_mask_safe_softmax_fu_725/float_mask_safe_softmax_Loop_loop_sum_broadcast_proc_U0" DEPTH="2" TYPE="function" MODULENAME="float_mask_safe_softmax_Loop_loop_sum_broadcast_proc" DISPNAME="float_mask_safe_softmax_Loop_loop_sum_broadcast_proc_U0" RTLNAME="activation_accelerator_float_mask_safe_softmax_Loop_loop_sum_broadcast_proc">
+      <SubModules count="1">flow_control_loop_pipe_U</SubModules>
+      <Resources FF="45" LUT="16"/>
+      <LocalResources FF="44" LUT="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_mask_safe_softmax_fu_725/float_mask_safe_softmax_Loop_loop_sum_broadcast_proc_U0/flow_control_loop_pipe_U" BINDMODULE="activation_accelerator_flow_control_loop_pipe" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe" DISPNAME="flow_control_loop_pipe_U" RTLNAME="activation_accelerator_flow_control_loop_pipe">
+      <Resources FF="1" LUT="15"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_mask_safe_softmax_fu_725/max_broadcast_stream_U" BINDMODULE="activation_accelerator_fifo_w32_d32768_A" DEPTH="2" TYPE="resource" MODULENAME="fifo_w32_d32768_A" DISPNAME="max_broadcast_stream_U" RTLNAME="activation_accelerator_fifo_w32_d32768_A">
+      <Resources BRAM="58" FF="66" LUT="160"/>
+      <LocalResources FF="49" LUT="51"/>
+      <BindNode BINDTYPE="storage" BRAM="58" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="memory" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="max_broadcast_stream_U" SOURCE="activation_accelerator.cpp:401" URAM="0" VARIABLE="max_broadcast_stream"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_mask_safe_softmax_fu_725/max_val_loc_channel_U" BINDMODULE="activation_accelerator_fifo_w32_d2_S" DEPTH="2" TYPE="resource" MODULENAME="fifo_w32_d2_S_x0" DISPNAME="max_val_loc_channel_U" RTLNAME="activation_accelerator_fifo_w32_d2_S_x0">
+      <Resources FF="68" LUT="36"/>
+      <LocalResources FF="4" LUT="4"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="3" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="max_val_loc_channel_U" SOURCE="" URAM="0" VARIABLE="max_val_loc_channel"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_mask_safe_softmax_fu_725/max_val_to_broadcast_loc_channel_U" BINDMODULE="activation_accelerator_fifo_w32_d2_S" DEPTH="2" TYPE="resource" MODULENAME="fifo_w32_d2_S_x0" DISPNAME="max_val_to_broadcast_loc_channel_U" RTLNAME="activation_accelerator_fifo_w32_d2_S_x0">
+      <Resources FF="68" LUT="37"/>
+      <LocalResources FF="4" LUT="5"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="max_val_to_broadcast_loc_channel_U" SOURCE="" URAM="0" VARIABLE="max_val_to_broadcast_loc_channel"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_mask_safe_softmax_fu_725/start_for_float_mask_safe_softmax_Loop_loop_20_proc6_U0_U" BINDMODULE="activation_accelerator_start_for_float_mask_safe_softmax_Loop_loop_20_proc6_U0" DEPTH="2" TYPE="rtl" MODULENAME="start_for_float_mask_safe_softmax_Loop_loop_20_proc6_U0" DISPNAME="start_for_float_mask_safe_softmax_Loop_loop_20_proc6_U0_U" RTLNAME="activation_accelerator_start_for_float_mask_safe_softmax_Loop_loop_20_proc6_U0">
+      <Resources FF="5" LUT="7"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_mask_safe_softmax_fu_725/start_for_float_mask_safe_softmax_Loop_loop_22_proc7_U0_U" BINDMODULE="activation_accelerator_start_for_float_mask_safe_softmax_Loop_loop_22_proc7_U0" DEPTH="2" TYPE="rtl" MODULENAME="start_for_float_mask_safe_softmax_Loop_loop_22_proc7_U0" DISPNAME="start_for_float_mask_safe_softmax_Loop_loop_22_proc7_U0_U" RTLNAME="activation_accelerator_start_for_float_mask_safe_softmax_Loop_loop_22_proc7_U0">
+      <Resources FF="5" LUT="7"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_mask_safe_softmax_fu_725/sum_broadcast_stream_U" BINDMODULE="activation_accelerator_fifo_w32_d32768_A" DEPTH="2" TYPE="resource" MODULENAME="fifo_w32_d32768_A" DISPNAME="sum_broadcast_stream_U" RTLNAME="activation_accelerator_fifo_w32_d32768_A">
+      <Resources BRAM="58" FF="66" LUT="159"/>
+      <LocalResources FF="49" LUT="51"/>
+      <BindNode BINDTYPE="storage" BRAM="58" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="memory" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="sum_broadcast_stream_U" SOURCE="activation_accelerator.cpp:407" URAM="0" VARIABLE="sum_broadcast_stream"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_mask_safe_softmax_fu_725/sum_loc_channel_U" BINDMODULE="activation_accelerator_fifo_w32_d2_S" DEPTH="2" TYPE="resource" MODULENAME="fifo_w32_d2_S_x0" DISPNAME="sum_loc_channel_U" RTLNAME="activation_accelerator_fifo_w32_d2_S_x0">
+      <Resources FF="68" LUT="36"/>
+      <LocalResources FF="4" LUT="4"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="9" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="sum_loc_channel_U" SOURCE="" URAM="0" VARIABLE="sum_loc_channel"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_mask_safe_softmax_fu_725/sum_to_broadcast_loc_channel_U" BINDMODULE="activation_accelerator_fifo_w32_d2_S" DEPTH="2" TYPE="resource" MODULENAME="fifo_w32_d2_S_x0" DISPNAME="sum_to_broadcast_loc_channel_U" RTLNAME="activation_accelerator_fifo_w32_d2_S_x0">
+      <Resources FF="68" LUT="37"/>
+      <LocalResources FF="4" LUT="5"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="sum_to_broadcast_loc_channel_U" SOURCE="" URAM="0" VARIABLE="sum_to_broadcast_loc_channel"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_float_mask_safe_softmax_fu_725/x_mask_stream_U" BINDMODULE="activation_accelerator_fifo_w32_d32768_A" DEPTH="2" TYPE="resource" MODULENAME="fifo_w32_d32768_A" DISPNAME="x_mask_stream_U" RTLNAME="activation_accelerator_fifo_w32_d32768_A">
+      <Resources BRAM="58" FF="66" LUT="156"/>
+      <LocalResources FF="49" LUT="50"/>
+      <BindNode BINDTYPE="storage" BRAM="58" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="memory" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="x_mask_stream_U" SOURCE="activation_accelerator.cpp:395" URAM="0" VARIABLE="x_mask_stream"/>
+    </RtlModule>
+    <RtlModule CELL="inst/x_2_U" BINDMODULE="activation_accelerator_x_RAM_AUTO_1R1W" DEPTH="1" TYPE="resource" MODULENAME="x_RAM_AUTO_1R1W" DISPNAME="x_2_U" RTLNAME="activation_accelerator_x_RAM_AUTO_1R1W">
+      <Resources BRAM="2" LUT="16"/>
+      <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="x_2_U" SOURCE="activation_accelerator.cpp:481" URAM="0" VARIABLE="x_2"/>
+    </RtlModule>
+    <RtlModule CELL="inst/x_4_U" BINDMODULE="activation_accelerator_x_RAM_AUTO_1R1W" DEPTH="1" TYPE="resource" MODULENAME="x_RAM_AUTO_1R1W" DISPNAME="x_4_U" RTLNAME="activation_accelerator_x_RAM_AUTO_1R1W">
+      <Resources BRAM="2" LUT="3"/>
+      <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="x_4_U" SOURCE="activation_accelerator.cpp:481" URAM="0" VARIABLE="x_4"/>
+    </RtlModule>
+    <RtlModule CELL="inst/x_6_U" BINDMODULE="activation_accelerator_x_RAM_AUTO_1R1W" DEPTH="1" TYPE="resource" MODULENAME="x_RAM_AUTO_1R1W" DISPNAME="x_6_U" RTLNAME="activation_accelerator_x_RAM_AUTO_1R1W">
+      <Resources BRAM="2" LUT="5"/>
+      <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="x_6_U" SOURCE="activation_accelerator.cpp:481" URAM="0" VARIABLE="x_6"/>
+    </RtlModule>
     <RtlModule CELL="inst/x_U" BINDMODULE="activation_accelerator_x_RAM_AUTO_1R1W" DEPTH="1" TYPE="resource" MODULENAME="x_RAM_AUTO_1R1W" DISPNAME="x_U" RTLNAME="activation_accelerator_x_RAM_AUTO_1R1W">
-      <Resources BRAM="58" FF="1" LUT="15"/>
-      <BindNode BINDTYPE="storage" BRAM="58" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="x_U" SOURCE="activation_accelerator.cpp:259" URAM="0" VARIABLE="x"/>
+      <Resources BRAM="2" LUT="12"/>
+      <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="x_U" SOURCE="activation_accelerator.cpp:481" URAM="0" VARIABLE="x"/>
+    </RtlModule>
+    <RtlModule CELL="inst/y_1_U" BINDMODULE="activation_accelerator_x_RAM_AUTO_1R1W" DEPTH="1" TYPE="resource" MODULENAME="x_RAM_AUTO_1R1W" DISPNAME="y_1_U" RTLNAME="activation_accelerator_x_RAM_AUTO_1R1W">
+      <Resources BRAM="2" LUT="13"/>
+      <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="y_1_U" SOURCE="activation_accelerator.cpp:481" URAM="0" VARIABLE="y_1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/y_2_U" BINDMODULE="activation_accelerator_x_RAM_AUTO_1R1W" DEPTH="1" TYPE="resource" MODULENAME="x_RAM_AUTO_1R1W" DISPNAME="y_2_U" RTLNAME="activation_accelerator_x_RAM_AUTO_1R1W">
+      <Resources BRAM="2"/>
+      <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="y_2_U" SOURCE="activation_accelerator.cpp:481" URAM="0" VARIABLE="y_2"/>
+    </RtlModule>
+    <RtlModule CELL="inst/y_3_U" BINDMODULE="activation_accelerator_x_RAM_AUTO_1R1W" DEPTH="1" TYPE="resource" MODULENAME="x_RAM_AUTO_1R1W" DISPNAME="y_3_U" RTLNAME="activation_accelerator_x_RAM_AUTO_1R1W">
+      <Resources BRAM="2"/>
+      <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="y_3_U" SOURCE="activation_accelerator.cpp:481" URAM="0" VARIABLE="y_3"/>
     </RtlModule>
     <RtlModule CELL="inst/y_U" BINDMODULE="activation_accelerator_x_RAM_AUTO_1R1W" DEPTH="1" TYPE="resource" MODULENAME="x_RAM_AUTO_1R1W" DISPNAME="y_U" RTLNAME="activation_accelerator_x_RAM_AUTO_1R1W">
-      <Resources BRAM="30" LUT="15"/>
-      <BindNode BINDTYPE="storage" BRAM="58" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="y_U" SOURCE="activation_accelerator.cpp:259" URAM="0" VARIABLE="y"/>
+      <Resources BRAM="2" LUT="15"/>
+      <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="y_U" SOURCE="activation_accelerator.cpp:481" URAM="0" VARIABLE="y"/>
     </RtlModule>
   </RtlModules>
   <TimingPaths>
-    <TPATH DATAPATH_DELAY="5.084" DATAPATH_LOGIC_DELAY="1.695" DATAPATH_NET_DELAY="3.389" ENDPOINT_PIN="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/retval_2_reg_118_reg[0]/R" LOGIC_LEVELS="15" MAX_FANOUT="51" SLACK="4.751" STARTPOINT_PIN="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/buf1_load_reg_143_reg[14]/C">
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/buf1_load_reg_143_reg[14]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="101"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln79_reg_884[0]_i_12" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln52_fu_339_p2_carry_i_10" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln52_fu_339_p2_carry_i_4" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln52_fu_339_p2_carry" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_3_fu_485_p2_carry_i_22" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_3_fu_485_p2_carry_i_34" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_3_fu_485_p2_carry_i_6" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln69_fu_467_p2_carry_i_7" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln69_fu_467_p2_carry" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_2_fu_88[11]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/max_exp_2_fu_92[15]_i_30" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/max_exp_2_fu_92[15]_i_14" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/max_exp_2_fu_92[15]_i_5" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln79_reg_884[0]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/retval_2_reg_118[15]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/retval_2_reg_118_reg[0]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="209"/>
+    <TPATH DATAPATH_DELAY="5.372" DATAPATH_LOGIC_DELAY="1.627" DATAPATH_NET_DELAY="3.745" ENDPOINT_PIN="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/max_exp_2_fu_94_reg[0]/CE" LOGIC_LEVELS="16" MAX_FANOUT="35" SLACK="4.502" STARTPOINT_PIN="grp_activation_accelerator_Pipeline_loop_19_fu_826/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_112_reg_628_reg[14]/C">
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_112_reg_628_reg[14]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="346"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/icmp_ln81_reg_891[0]_i_18__0" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/icmp_ln81_reg_891[0]_i_13__0" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/max_exp_2_fu_94[0]_i_7__0" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="233"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90[17]_i_78" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90[17]_i_73" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90[0]_i_77__0" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90[0]_i_56__0" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90[17]_i_52" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90[17]_i_55" PRIMITIVE_TYPE="CLB.LUT.LUT1" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90_reg[17]_i_23" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="193"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90[12]_i_2__0" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/icmp_ln81_reg_891[0]_i_6__0" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/icmp_ln81_reg_891[0]_i_2__0" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/max_exp_2_fu_94[15]_i_4__0" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/max_exp_2_fu_94[15]_i_1__0" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="233"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/max_exp_2_fu_94[15]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="233"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/max_exp_2_fu_94_reg[0]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="194"/>
     </TPATH>
-    <TPATH DATAPATH_DELAY="5.084" DATAPATH_LOGIC_DELAY="1.695" DATAPATH_NET_DELAY="3.389" ENDPOINT_PIN="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/retval_2_reg_118_reg[10]/R" LOGIC_LEVELS="15" MAX_FANOUT="51" SLACK="4.751" STARTPOINT_PIN="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/buf1_load_reg_143_reg[14]/C">
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/buf1_load_reg_143_reg[14]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="101"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln79_reg_884[0]_i_12" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln52_fu_339_p2_carry_i_10" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln52_fu_339_p2_carry_i_4" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln52_fu_339_p2_carry" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_3_fu_485_p2_carry_i_22" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_3_fu_485_p2_carry_i_34" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_3_fu_485_p2_carry_i_6" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln69_fu_467_p2_carry_i_7" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln69_fu_467_p2_carry" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_2_fu_88[11]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/max_exp_2_fu_92[15]_i_30" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/max_exp_2_fu_92[15]_i_14" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/max_exp_2_fu_92[15]_i_5" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln79_reg_884[0]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/retval_2_reg_118[15]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/retval_2_reg_118_reg[10]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="209"/>
+    <TPATH DATAPATH_DELAY="5.372" DATAPATH_LOGIC_DELAY="1.627" DATAPATH_NET_DELAY="3.745" ENDPOINT_PIN="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/max_exp_2_fu_94_reg[10]/CE" LOGIC_LEVELS="16" MAX_FANOUT="35" SLACK="4.502" STARTPOINT_PIN="grp_activation_accelerator_Pipeline_loop_19_fu_826/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_112_reg_628_reg[14]/C">
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_112_reg_628_reg[14]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="346"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/icmp_ln81_reg_891[0]_i_18__0" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/icmp_ln81_reg_891[0]_i_13__0" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/max_exp_2_fu_94[0]_i_7__0" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="233"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90[17]_i_78" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90[17]_i_73" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90[0]_i_77__0" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90[0]_i_56__0" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90[17]_i_52" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90[17]_i_55" PRIMITIVE_TYPE="CLB.LUT.LUT1" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90_reg[17]_i_23" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="193"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90[12]_i_2__0" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/icmp_ln81_reg_891[0]_i_6__0" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/icmp_ln81_reg_891[0]_i_2__0" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/max_exp_2_fu_94[15]_i_4__0" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/max_exp_2_fu_94[15]_i_1__0" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="233"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/max_exp_2_fu_94[15]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="233"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/max_exp_2_fu_94_reg[10]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="194"/>
     </TPATH>
-    <TPATH DATAPATH_DELAY="5.084" DATAPATH_LOGIC_DELAY="1.695" DATAPATH_NET_DELAY="3.389" ENDPOINT_PIN="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/retval_2_reg_118_reg[11]/R" LOGIC_LEVELS="15" MAX_FANOUT="51" SLACK="4.751" STARTPOINT_PIN="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/buf1_load_reg_143_reg[14]/C">
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/buf1_load_reg_143_reg[14]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="101"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln79_reg_884[0]_i_12" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln52_fu_339_p2_carry_i_10" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln52_fu_339_p2_carry_i_4" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln52_fu_339_p2_carry" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_3_fu_485_p2_carry_i_22" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_3_fu_485_p2_carry_i_34" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_3_fu_485_p2_carry_i_6" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln69_fu_467_p2_carry_i_7" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln69_fu_467_p2_carry" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_2_fu_88[11]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/max_exp_2_fu_92[15]_i_30" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/max_exp_2_fu_92[15]_i_14" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/max_exp_2_fu_92[15]_i_5" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln79_reg_884[0]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/retval_2_reg_118[15]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/retval_2_reg_118_reg[11]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="209"/>
+    <TPATH DATAPATH_DELAY="5.372" DATAPATH_LOGIC_DELAY="1.627" DATAPATH_NET_DELAY="3.745" ENDPOINT_PIN="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/max_exp_2_fu_94_reg[11]/CE" LOGIC_LEVELS="16" MAX_FANOUT="35" SLACK="4.502" STARTPOINT_PIN="grp_activation_accelerator_Pipeline_loop_19_fu_826/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_112_reg_628_reg[14]/C">
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_112_reg_628_reg[14]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="346"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/icmp_ln81_reg_891[0]_i_18__0" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/icmp_ln81_reg_891[0]_i_13__0" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/max_exp_2_fu_94[0]_i_7__0" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="233"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90[17]_i_78" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90[17]_i_73" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90[0]_i_77__0" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90[0]_i_56__0" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90[17]_i_52" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90[17]_i_55" PRIMITIVE_TYPE="CLB.LUT.LUT1" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90_reg[17]_i_23" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="193"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90[12]_i_2__0" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/icmp_ln81_reg_891[0]_i_6__0" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/icmp_ln81_reg_891[0]_i_2__0" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/max_exp_2_fu_94[15]_i_4__0" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/max_exp_2_fu_94[15]_i_1__0" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="233"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/max_exp_2_fu_94[15]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="233"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/max_exp_2_fu_94_reg[11]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="194"/>
     </TPATH>
-    <TPATH DATAPATH_DELAY="5.084" DATAPATH_LOGIC_DELAY="1.695" DATAPATH_NET_DELAY="3.389" ENDPOINT_PIN="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/retval_2_reg_118_reg[12]/R" LOGIC_LEVELS="15" MAX_FANOUT="51" SLACK="4.751" STARTPOINT_PIN="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/buf1_load_reg_143_reg[14]/C">
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/buf1_load_reg_143_reg[14]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="101"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln79_reg_884[0]_i_12" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln52_fu_339_p2_carry_i_10" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln52_fu_339_p2_carry_i_4" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln52_fu_339_p2_carry" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_3_fu_485_p2_carry_i_22" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_3_fu_485_p2_carry_i_34" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_3_fu_485_p2_carry_i_6" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln69_fu_467_p2_carry_i_7" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln69_fu_467_p2_carry" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_2_fu_88[11]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/max_exp_2_fu_92[15]_i_30" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/max_exp_2_fu_92[15]_i_14" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/max_exp_2_fu_92[15]_i_5" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln79_reg_884[0]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/retval_2_reg_118[15]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/retval_2_reg_118_reg[12]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="209"/>
+    <TPATH DATAPATH_DELAY="5.372" DATAPATH_LOGIC_DELAY="1.627" DATAPATH_NET_DELAY="3.745" ENDPOINT_PIN="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/max_exp_2_fu_94_reg[12]/CE" LOGIC_LEVELS="16" MAX_FANOUT="35" SLACK="4.502" STARTPOINT_PIN="grp_activation_accelerator_Pipeline_loop_19_fu_826/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_112_reg_628_reg[14]/C">
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_112_reg_628_reg[14]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="346"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/icmp_ln81_reg_891[0]_i_18__0" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/icmp_ln81_reg_891[0]_i_13__0" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/max_exp_2_fu_94[0]_i_7__0" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="233"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90[17]_i_78" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90[17]_i_73" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90[0]_i_77__0" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90[0]_i_56__0" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90[17]_i_52" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90[17]_i_55" PRIMITIVE_TYPE="CLB.LUT.LUT1" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90_reg[17]_i_23" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="193"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90[12]_i_2__0" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/icmp_ln81_reg_891[0]_i_6__0" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/icmp_ln81_reg_891[0]_i_2__0" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/max_exp_2_fu_94[15]_i_4__0" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/max_exp_2_fu_94[15]_i_1__0" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="233"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/max_exp_2_fu_94[15]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="233"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/max_exp_2_fu_94_reg[12]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="194"/>
     </TPATH>
-    <TPATH DATAPATH_DELAY="5.084" DATAPATH_LOGIC_DELAY="1.695" DATAPATH_NET_DELAY="3.389" ENDPOINT_PIN="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/retval_2_reg_118_reg[13]/R" LOGIC_LEVELS="15" MAX_FANOUT="51" SLACK="4.751" STARTPOINT_PIN="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/buf1_load_reg_143_reg[14]/C">
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/buf1_load_reg_143_reg[14]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="101"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln79_reg_884[0]_i_12" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln52_fu_339_p2_carry_i_10" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln52_fu_339_p2_carry_i_4" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln52_fu_339_p2_carry" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_3_fu_485_p2_carry_i_22" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_3_fu_485_p2_carry_i_34" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_3_fu_485_p2_carry_i_6" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln69_fu_467_p2_carry_i_7" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln69_fu_467_p2_carry" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/result_mantissa_2_fu_88[11]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/max_exp_2_fu_92[15]_i_30" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/max_exp_2_fu_92[15]_i_14" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/max_exp_2_fu_92[15]_i_5" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/icmp_ln79_reg_884[0]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/retval_2_reg_118[15]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="229"/>
-      <CELL NAME="grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341/grp_bf16add_fu_75/retval_2_reg_118_reg[13]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="209"/>
+    <TPATH DATAPATH_DELAY="5.372" DATAPATH_LOGIC_DELAY="1.627" DATAPATH_NET_DELAY="3.745" ENDPOINT_PIN="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/max_exp_2_fu_94_reg[13]/CE" LOGIC_LEVELS="16" MAX_FANOUT="35" SLACK="4.502" STARTPOINT_PIN="grp_activation_accelerator_Pipeline_loop_19_fu_826/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_112_reg_628_reg[14]/C">
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_112_reg_628_reg[14]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="346"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/icmp_ln81_reg_891[0]_i_18__0" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/icmp_ln81_reg_891[0]_i_13__0" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/max_exp_2_fu_94[0]_i_7__0" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="233"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90[17]_i_78" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90[17]_i_73" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90[0]_i_77__0" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90[0]_i_56__0" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90[17]_i_52" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90[17]_i_55" PRIMITIVE_TYPE="CLB.LUT.LUT1" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90_reg[17]_i_23" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="193"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/result_mantissa_2_fu_90[12]_i_2__0" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/icmp_ln81_reg_891[0]_i_6__0" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/icmp_ln81_reg_891[0]_i_2__0" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/max_exp_2_fu_94[15]_i_4__0" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="186"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/max_exp_2_fu_94[15]_i_1__0" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="233"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/max_exp_2_fu_94[15]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="233"/>
+      <CELL NAME="grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_405/max_exp_2_fu_94_reg[13]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="194"/>
     </TPATH>
   </TimingPaths>
   <VivadoReportFiles>
@@ -391,7 +776,7 @@
     <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/activation_accelerator_utilization_hierarchical_synth.rpt"/>
   </VivadoReportFiles>
   <GeneralInfo NAME="General Information">
-    <item NAME="Date" VALUE="Tue Sep 23 22:31:06 CST 2025"/>
+    <item NAME="Date" VALUE="Wed Oct 08 16:13:12 CST 2025"/>
     <item NAME="Version" VALUE="2022.2 (Build 3670227 on Oct 13 2022)"/>
     <item NAME="Project" VALUE="activation_accelerator"/>
     <item NAME="Solution" VALUE="baseline (Vivado IP Flow Target)"/>

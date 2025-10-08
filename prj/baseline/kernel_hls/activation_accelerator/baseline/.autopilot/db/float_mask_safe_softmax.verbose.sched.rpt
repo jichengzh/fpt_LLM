@@ -1,0 +1,206 @@
+
+
+================================================================
+== Vitis HLS Report for 'float_mask_safe_softmax'
+================================================================
+* Date:           Wed Oct  8 15:53:22 2025
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        activation_accelerator
+* Solution:       baseline (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.057 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+----------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline |
+    |   min   |   max   |    min    |    max    |  min |  max |   Type   |
+    +---------+---------+-----------+-----------+------+------+----------+
+    |     3100|     3100|  31.000 us|  31.000 us|  3089|  3089|  dataflow|
+    +---------+---------+-----------+-----------+------+------+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 10
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 10, States = { 1 2 3 4 5 6 7 8 9 10 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%x_mask_stream = alloca i64 1" [activation_accelerator.cpp:395]   --->   Operation 11 'alloca' 'x_mask_stream' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 32768> <FIFO>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%max_broadcast_stream = alloca i64 1" [activation_accelerator.cpp:401]   --->   Operation 12 'alloca' 'max_broadcast_stream' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 32768> <FIFO>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%exp_stream = alloca i64 1" [activation_accelerator.cpp:403]   --->   Operation 13 'alloca' 'exp_stream' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 32768> <FIFO>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%sum_broadcast_stream = alloca i64 1" [activation_accelerator.cpp:407]   --->   Operation 14 'alloca' 'sum_broadcast_stream' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 32768> <FIFO>
+ST_1 : Operation 15 [2/2] (0.00ns)   --->   "%max_val_loc_channel = call i32 @float_mask_safe_softmax_Loop_loop_18_proc5, i32 %x_0, i32 %x_1, i32 %x_2, i32 %x_3, i32 %mask_0, i32 %mask_1, i32 %mask_2, i32 %mask_3, i32 %x_mask_stream"   --->   Operation 15 'call' 'max_val_loc_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+
+State 2 <SV = 1> <Delay = 4.10>
+ST_2 : Operation 16 [1/2] (0.42ns)   --->   "%max_val_loc_channel = call i32 @float_mask_safe_softmax_Loop_loop_18_proc5, i32 %x_0, i32 %x_1, i32 %x_2, i32 %x_3, i32 %mask_0, i32 %mask_1, i32 %mask_2, i32 %mask_3, i32 %x_mask_stream"   --->   Operation 16 'call' 'max_val_loc_channel' <Predicate = true> <Delay = 0.42> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_2 : Operation 17 [2/2] (3.67ns)   --->   "%max_val_to_broadcast_loc_channel = call i32 @float_mask_safe_softmax_Block_float_mask_safe_softmax_for.cond.i.exit_proc, i32 %max_val_loc_channel"   --->   Operation 17 'call' 'max_val_to_broadcast_loc_channel' <Predicate = true> <Delay = 3.67> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+
+State 3 <SV = 2> <Delay = 3.67>
+ST_3 : Operation 18 [1/2] (1.83ns)   --->   "%max_val_to_broadcast_loc_channel = call i32 @float_mask_safe_softmax_Block_float_mask_safe_softmax_for.cond.i.exit_proc, i32 %max_val_loc_channel"   --->   Operation 18 'call' 'max_val_to_broadcast_loc_channel' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_3 : Operation 19 [2/2] (1.83ns)   --->   "%call_ln0 = call void @float_mask_safe_softmax_Loop_loop_max_broadcast_proc, i32 %max_val_to_broadcast_loc_channel, i32 %max_broadcast_stream"   --->   Operation 19 'call' 'call_ln0' <Predicate = true> <Delay = 1.83> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 20 [1/2] (0.00ns)   --->   "%call_ln0 = call void @float_mask_safe_softmax_Loop_loop_max_broadcast_proc, i32 %max_val_to_broadcast_loc_channel, i32 %max_broadcast_stream"   --->   Operation 20 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 21 [2/2] (0.00ns)   --->   "%sum_loc_channel = call i32 @float_mask_safe_softmax_Loop_loop_20_proc6, i32 %x_mask_stream, i32 %max_broadcast_stream, i32 %exp_stream"   --->   Operation 21 'call' 'sum_loc_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+
+State 6 <SV = 5> <Delay = 4.10>
+ST_6 : Operation 22 [1/2] (0.42ns)   --->   "%sum_loc_channel = call i32 @float_mask_safe_softmax_Loop_loop_20_proc6, i32 %x_mask_stream, i32 %max_broadcast_stream, i32 %exp_stream"   --->   Operation 22 'call' 'sum_loc_channel' <Predicate = true> <Delay = 0.42> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_6 : Operation 23 [2/2] (3.67ns)   --->   "%sum_to_broadcast_loc_channel = call i32 @float_mask_safe_softmax_Block_for.end26_proc, i32 %sum_loc_channel"   --->   Operation 23 'call' 'sum_to_broadcast_loc_channel' <Predicate = true> <Delay = 3.67> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+
+State 7 <SV = 6> <Delay = 3.67>
+ST_7 : Operation 24 [1/2] (1.83ns)   --->   "%sum_to_broadcast_loc_channel = call i32 @float_mask_safe_softmax_Block_for.end26_proc, i32 %sum_loc_channel"   --->   Operation 24 'call' 'sum_to_broadcast_loc_channel' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_7 : Operation 25 [2/2] (1.83ns)   --->   "%call_ln0 = call void @float_mask_safe_softmax_Loop_loop_sum_broadcast_proc, i32 %sum_to_broadcast_loc_channel, i32 %sum_broadcast_stream"   --->   Operation 25 'call' 'call_ln0' <Predicate = true> <Delay = 1.83> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 0.00>
+ST_8 : Operation 26 [1/2] (0.00ns)   --->   "%call_ln0 = call void @float_mask_safe_softmax_Loop_loop_sum_broadcast_proc, i32 %sum_to_broadcast_loc_channel, i32 %sum_broadcast_stream"   --->   Operation 26 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 27 [2/2] (0.00ns)   --->   "%call_ln0 = call void @float_mask_safe_softmax_Loop_loop_22_proc7, i32 %exp_stream, i32 %sum_broadcast_stream, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i"   --->   Operation 27 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 28 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln0 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_1"   --->   Operation 28 'specdataflowpipeline' 'specdataflowpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 29 [1/1] (0.00ns)   --->   "%empty = specchannel i32 @_ssdm_op_SpecChannel, void @x_mask_stream_str, i32 1, void @p_str, void @p_str, i32 32768, i32 32768, i32 %x_mask_stream, i32 %x_mask_stream"   --->   Operation 29 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 30 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %x_mask_stream, void @empty_29, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 30 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 31 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_29, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 31 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 32 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_29, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 32 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 33 [1/1] (0.00ns)   --->   "%empty_51 = specchannel i32 @_ssdm_op_SpecChannel, void @max_broadcast_stream_str, i32 1, void @p_str, void @p_str, i32 32768, i32 32768, i32 %max_broadcast_stream, i32 %max_broadcast_stream"   --->   Operation 33 'specchannel' 'empty_51' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 34 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %max_broadcast_stream, void @empty_29, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 34 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 35 [1/1] (0.00ns)   --->   "%empty_52 = specchannel i32 @_ssdm_op_SpecChannel, void @exp_stream_str, i32 1, void @p_str, void @p_str, i32 32768, i32 32768, i32 %exp_stream, i32 %exp_stream"   --->   Operation 35 'specchannel' 'empty_52' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 36 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %exp_stream, void @empty_29, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 36 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 37 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_29, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 37 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 38 [1/1] (0.00ns)   --->   "%empty_53 = specchannel i32 @_ssdm_op_SpecChannel, void @sum_broadcast_stream_str, i32 1, void @p_str, void @p_str, i32 32768, i32 32768, i32 %sum_broadcast_stream, i32 %sum_broadcast_stream"   --->   Operation 38 'specchannel' 'empty_53' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 39 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %sum_broadcast_stream, void @empty_29, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 39 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 40 [1/2] (0.00ns)   --->   "%call_ln0 = call void @float_mask_safe_softmax_Loop_loop_22_proc7, i32 %exp_stream, i32 %sum_broadcast_stream, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i"   --->   Operation 40 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 41 [1/1] (0.00ns)   --->   "%ret_ln466 = ret" [activation_accelerator.cpp:466]   --->   Operation 41 'ret' 'ret_ln466' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 4.1ns
+The critical path consists of the following:
+	'call' operation ('max_val_loc_channel') to 'float_mask_safe_softmax_Loop_loop_18_proc5' [33]  (0.427 ns)
+	'call' operation ('max_val_to_broadcast_loc_channel') to 'float_mask_safe_softmax_Block_float_mask_safe_softmax_for.cond.i.exit_proc' [34]  (3.68 ns)
+
+ <State 3>: 3.68ns
+The critical path consists of the following:
+	'call' operation ('max_val_to_broadcast_loc_channel') to 'float_mask_safe_softmax_Block_float_mask_safe_softmax_for.cond.i.exit_proc' [34]  (1.84 ns)
+	'call' operation ('call_ln0') to 'float_mask_safe_softmax_Loop_loop_max_broadcast_proc' [35]  (1.84 ns)
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 4.1ns
+The critical path consists of the following:
+	'call' operation ('sum_loc_channel') to 'float_mask_safe_softmax_Loop_loop_20_proc6' [36]  (0.427 ns)
+	'call' operation ('sum_to_broadcast_loc_channel') to 'float_mask_safe_softmax_Block_for.end26_proc' [37]  (3.68 ns)
+
+ <State 7>: 3.68ns
+The critical path consists of the following:
+	'call' operation ('sum_to_broadcast_loc_channel') to 'float_mask_safe_softmax_Block_for.end26_proc' [37]  (1.84 ns)
+	'call' operation ('call_ln0') to 'float_mask_safe_softmax_Loop_loop_sum_broadcast_proc' [38]  (1.84 ns)
+
+ <State 8>: 0ns
+The critical path consists of the following:
+
+ <State 9>: 0ns
+The critical path consists of the following:
+
+ <State 10>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

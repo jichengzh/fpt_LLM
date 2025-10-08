@@ -3,10 +3,10 @@
 <!--                                                         -->
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="61" Path="/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/impl/verilog/project.xpr">
+<Project Version="7" Minor="61" Path="/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/impl/verilog/project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="309632399a6e4d9190dd153b54764629"/>
+    <Option Name="Id" Val="281c3541169340b0ac4d15e601859777"/>
     <Option Name="Part" Val="xck26-sfvc784-2LV-c"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>

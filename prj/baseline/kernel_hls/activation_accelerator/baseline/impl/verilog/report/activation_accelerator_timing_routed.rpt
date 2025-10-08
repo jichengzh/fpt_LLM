@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date              : Tue Sep 23 22:30:41 2025
+| Date              : Wed Oct  8 16:12:38 2025
 | Host              : super-test running 64-bit Ubuntu 20.04.6 LTS
 | Command           : report_timing_summary -file ./report/activation_accelerator_timing_routed.rpt
 | Design            : bd_0_wrapper
@@ -137,7 +137,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      2.016        0.000                      0                15007        0.055        0.000                      0                15007        4.238        0.000                       0                  7386  
+      2.104        0.000                      0                35432        0.054        0.000                      0                35432        4.238        0.000                       0                 14399  
 
 
 All user specified timing constraints are met.
@@ -160,7 +160,7 @@ ap_clk  {0.000 5.000}      10.000          100.000
 
 Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-ap_clk              2.016        0.000                      0                15007        0.055        0.000                      0                15007        4.238        0.000                       0                  7386  
+ap_clk              2.104        0.000                      0                35432        0.054        0.000                      0                35432        4.238        0.000                       0                 14399  
 
 
 ------------------------------------------------------------------------------------------------
@@ -191,27 +191,27 @@ Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing 
 From Clock:  ap_clk
   To Clock:  ap_clk
 
-Setup :            0  Failing Endpoints,  Worst Slack        2.016ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.055ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack        2.104ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.054ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack        4.238ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             2.016ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/inst/config_r_read_reg_476_reg[29]/C
+Slack (MET) :             2.104ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_127_reg_658_reg[14]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/x_U/ram_reg_bram_8/WEA[1]
-                            (rising edge-triggered cell RAMB36E2 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/max_exp_2_fu_94_reg[8]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        7.342ns  (logic 1.333ns (18.157%)  route 6.009ns (81.843%))
-  Logic Levels:           9  (LUT3=1 LUT4=1 LUT5=2 LUT6=5)
-  Clock Path Skew:        0.004ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.047ns = ( 10.047 - 10.000 ) 
-    Source Clock Delay      (SCD):    0.043ns
+  Data Path Delay:        7.770ns  (logic 2.236ns (28.777%)  route 5.534ns (71.223%))
+  Logic Levels:           17  (CARRY8=2 LUT2=2 LUT3=1 LUT4=3 LUT5=4 LUT6=5)
+  Clock Path Skew:        -0.012ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.029ns = ( 10.029 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.041ns
     Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -223,55 +223,79 @@ Slack (MET) :             2.016ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=7505, unset)         0.043     0.043    bd_0_i/hls_inst/inst/ap_clk
-    SLICE_X43Y235        FDRE                                         r  bd_0_i/hls_inst/inst/config_r_read_reg_476_reg[29]/C
+                         net (fo=14659, unset)        0.041     0.041    bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/ap_clk
+    SLICE_X47Y83         FDRE                                         r  bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_127_reg_658_reg[14]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X43Y235        FDRE (Prop_GFF2_SLICEM_C_Q)
-                                                      0.118     0.161 f  bd_0_i/hls_inst/inst/config_r_read_reg_476_reg[29]/Q
-                         net (fo=1, routed)           0.179     0.340    bd_0_i/hls_inst/inst/buf2_U/ap_CS_fsm[53]_i_9_0[29]
-    SLICE_X43Y235        LUT5 (Prop_G6LUT_SLICEM_I2_O)
-                                                      0.226     0.566 r  bd_0_i/hls_inst/inst/buf2_U/ap_CS_fsm[53]_i_12/O
-                         net (fo=1, routed)           0.059     0.625    bd_0_i/hls_inst/inst/buf2_U/ap_CS_fsm[53]_i_12_n_20
-    SLICE_X43Y235        LUT6 (Prop_H6LUT_SLICEM_I0_O)
-                                                      0.084     0.709 r  bd_0_i/hls_inst/inst/buf2_U/ap_CS_fsm[53]_i_9/O
-                         net (fo=1, routed)           0.457     1.166    bd_0_i/hls_inst/inst/buf2_U/ap_CS_fsm[53]_i_9_n_20
-    SLICE_X45Y227        LUT3 (Prop_F6LUT_SLICEM_I2_O)
-                                                      0.080     1.246 r  bd_0_i/hls_inst/inst/buf2_U/ap_CS_fsm[53]_i_6/O
-                         net (fo=5, routed)           0.385     1.631    bd_0_i/hls_inst/inst/buf2_U/ap_CS_fsm[53]_i_6_n_20
-    SLICE_X47Y221        LUT4 (Prop_D5LUT_SLICEL_I3_O)
-                                                      0.088     1.719 r  bd_0_i/hls_inst/inst/buf2_U/ap_CS_fsm[53]_i_3/O
-                         net (fo=61, routed)          1.219     2.938    bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_144_12_fu_238/buf0_address023_in
-    SLICE_X57Y152        LUT6 (Prop_C6LUT_SLICEL_I1_O)
-                                                      0.221     3.159 r  bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_144_12_fu_238/ram_reg_bram_16_i_12/O
-                         net (fo=1, routed)           0.174     3.333    bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_185_1_fu_283/flow_control_loop_pipe_sequential_init_U/ram_reg_bram_16_i_4_0
-    SLICE_X57Y156        LUT6 (Prop_E6LUT_SLICEL_I5_O)
-                                                      0.187     3.520 f  bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_185_1_fu_283/flow_control_loop_pipe_sequential_init_U/ram_reg_bram_16_i_7/O
-                         net (fo=1, routed)           0.203     3.723    bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_170_1_fu_305/flow_control_loop_pipe_sequential_init_U/ram_reg_bram_28_2
-    SLICE_X56Y158        LUT6 (Prop_F6LUT_SLICEL_I5_O)
-                                                      0.056     3.779 r  bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_170_1_fu_305/flow_control_loop_pipe_sequential_init_U/ram_reg_bram_16_i_4/O
-                         net (fo=1, routed)           0.376     4.155    bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_205_1_fu_333/flow_control_loop_pipe_sequential_init_U/ram_reg_bram_28_0
-    SLICE_X50Y156        LUT6 (Prop_H6LUT_SLICEL_I0_O)
-                                                      0.083     4.238 f  bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_205_1_fu_333/flow_control_loop_pipe_sequential_init_U/ram_reg_bram_16_i_2/O
-                         net (fo=52, routed)          2.167     6.405    bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_205_1_fu_333/flow_control_loop_pipe_sequential_init_U/ADDRARDADDR[10]
-    SLICE_X27Y59         LUT5 (Prop_C5LUT_SLICEL_I1_O)
-                                                      0.190     6.595 r  bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_VITIS_LOOP_205_1_fu_333/flow_control_loop_pipe_sequential_init_U/ram_reg_bram_8_i_2__2/O
-                         net (fo=4, routed)           0.790     7.385    bd_0_i/hls_inst/inst/x_U/ram_reg_bram_8_1[0]
-    RAMB36_X1Y12         RAMB36E2                                     r  bd_0_i/hls_inst/inst/x_U/ram_reg_bram_8/WEA[1]
+    SLICE_X47Y83         FDRE (Prop_CFF2_SLICEL_C_Q)
+                                                      0.115     0.156 r  bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_127_reg_658_reg[14]/Q
+                         net (fo=17, routed)          0.850     1.006    bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/Q[14]
+    SLICE_X51Y83         LUT4 (Prop_D6LUT_SLICEL_I0_O)
+                                                      0.152     1.158 r  bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/icmp_ln81_reg_891[0]_i_18__3/O
+                         net (fo=1, routed)           0.099     1.257    bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/icmp_ln81_reg_891[0]_i_18__3_n_17
+    SLICE_X51Y83         LUT5 (Prop_H6LUT_SLICEL_I4_O)
+                                                      0.058     1.315 f  bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/icmp_ln81_reg_891[0]_i_13__3/O
+                         net (fo=13, routed)          0.164     1.478    bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/icmp_ln81_reg_891[0]_i_13__3_n_17
+    SLICE_X51Y84         LUT6 (Prop_H6LUT_SLICEL_I2_O)
+                                                      0.083     1.561 f  bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/max_exp_2_fu_94[0]_i_7__3/O
+                         net (fo=4, routed)           0.152     1.714    bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/max_exp_2_fu_94[0]_i_7__3_n_17
+    SLICE_X50Y84         LUT5 (Prop_D5LUT_SLICEL_I0_O)
+                                                      0.088     1.802 r  bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/result_mantissa_2_fu_90[17]_i_78__2/O
+                         net (fo=5, routed)           0.260     2.062    bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/result_mantissa_2_fu_90[17]_i_78__2_n_17
+    SLICE_X50Y84         LUT5 (Prop_H5LUT_SLICEL_I2_O)
+                                                      0.088     2.150 f  bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/result_mantissa_2_fu_90[17]_i_73__2/O
+                         net (fo=8, routed)           0.213     2.362    bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/result_mantissa_2_fu_90[17]_i_73__2_n_17
+    SLICE_X50Y84         LUT6 (Prop_G6LUT_SLICEL_I5_O)
+                                                      0.057     2.419 f  bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/result_mantissa_2_fu_90[0]_i_77__3/O
+                         net (fo=12, routed)          0.550     2.970    bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/result_mantissa_2_fu_90[0]_i_77__3_n_17
+    SLICE_X48Y85         LUT6 (Prop_C6LUT_SLICEL_I2_O)
+                                                      0.150     3.120 f  bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/result_mantissa_2_fu_90[0]_i_57__3/O
+                         net (fo=3, routed)           0.177     3.296    bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/result_mantissa_2_fu_90[0]_i_57__3_n_17
+    SLICE_X48Y86         LUT5 (Prop_G5LUT_SLICEL_I1_O)
+                                                      0.153     3.449 r  bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/result_mantissa_2_fu_90[0]_i_8__3/O
+                         net (fo=7, routed)           0.611     4.061    bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/zext_ln53_2_fu_449_p1[4]
+    SLICE_X51Y87         LUT2 (Prop_E6LUT_SLICEL_I1_O)
+                                                      0.152     4.213 r  bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/result_mantissa_2_fu_90[0]_i_32__3/O
+                         net (fo=1, routed)           0.011     4.224    bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/result_mantissa_2_fu_90[0]_i_32__3_n_17
+    SLICE_X51Y87         CARRY8 (Prop_CARRY8_SLICEL_S[4]_CO[7])
+                                                      0.232     4.456 r  bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/result_mantissa_2_fu_90_reg[0]_i_3__3/CO[7]
+                         net (fo=1, routed)           0.030     4.486    bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/result_mantissa_2_fu_90_reg[0]_i_3__3_n_17
+    SLICE_X51Y88         CARRY8 (Prop_CARRY8_SLICEL_CI_O[2])
+                                                      0.093     4.579 r  bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/result_mantissa_2_fu_90_reg[17]_i_6__2/O[2]
+                         net (fo=1, routed)           0.660     5.239    bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/result_mantissa_1_fu_471_p2[10]
+    SLICE_X48Y88         LUT6 (Prop_C6LUT_SLICEL_I2_O)
+                                                      0.081     5.320 r  bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/result_mantissa_2_fu_90[10]_i_2__3/O
+                         net (fo=2, routed)           0.254     5.574    bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/result_mantissa_2_fu_90[10]_i_2__3_n_17
+    SLICE_X48Y88         LUT4 (Prop_E6LUT_SLICEL_I0_O)
+                                                      0.187     5.761 r  bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/icmp_ln81_reg_891[0]_i_6__3/O
+                         net (fo=1, routed)           0.159     5.920    bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/icmp_ln81_reg_891[0]_i_6__3_n_17
+    SLICE_X47Y87         LUT6 (Prop_G6LUT_SLICEL_I1_O)
+                                                      0.186     6.106 f  bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/icmp_ln81_reg_891[0]_i_2__3/O
+                         net (fo=3, routed)           0.343     6.448    bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/icmp_ln81_fu_529_p2
+    SLICE_X45Y88         LUT4 (Prop_C6LUT_SLICEM_I3_O)
+                                                      0.080     6.528 r  bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/max_exp_2_fu_94[15]_i_4__3/O
+                         net (fo=2, routed)           0.105     6.633    bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/select_ln88_reg_9090
+    SLICE_X45Y88         LUT2 (Prop_E6LUT_SLICEM_I0_O)
+                                                      0.057     6.690 r  bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/max_exp_2_fu_94[15]_i_1__3/O
+                         net (fo=35, routed)          0.083     6.773    bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/max_exp_2_fu_94[15]_i_1__3_n_17
+    SLICE_X45Y88         LUT3 (Prop_F6LUT_SLICEM_I2_O)
+                                                      0.224     6.997 r  bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/max_exp_2_fu_94[15]_i_2__2/O
+                         net (fo=34, routed)          0.814     7.811    bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/max_exp_2_fu_94[15]_i_2__2_n_17
+    SLICE_X51Y91         FDRE                                         r  bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/max_exp_2_fu_94_reg[8]/CE
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=7505, unset)         0.047    10.047    bd_0_i/hls_inst/inst/x_U/ap_clk
-    RAMB36_X1Y12         RAMB36E2                                     r  bd_0_i/hls_inst/inst/x_U/ram_reg_bram_8/CLKARDCLK
-                         clock pessimism              0.000    10.047    
-                         clock uncertainty           -0.035    10.012    
-    RAMB36_X1Y12         RAMB36E2 (Setup_RAMB36E2_RAMB36_CLKARDCLK_WEA[1])
-                                                     -0.611     9.401    bd_0_i/hls_inst/inst/x_U/ram_reg_bram_8
+                         net (fo=14659, unset)        0.029    10.029    bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/ap_clk
+    SLICE_X51Y91         FDRE                                         r  bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/max_exp_2_fu_94_reg[8]/C
+                         clock pessimism              0.000    10.029    
+                         clock uncertainty           -0.035     9.994    
+    SLICE_X51Y91         FDRE (Setup_DFF_SLICEL_C_CE)
+                                                     -0.079     9.915    bd_0_i/hls_inst/inst/grp_activation_accelerator_Pipeline_loop_19_fu_826/grp_bf16add_fu_426/max_exp_2_fu_94_reg[8]
   -------------------------------------------------------------------
-                         required time                          9.401    
-                         arrival time                          -7.385    
+                         required time                          9.915    
+                         arrival time                          -7.811    
   -------------------------------------------------------------------
-                         slack                                  2.016    
+                         slack                                  2.104    
 
 
 
@@ -279,46 +303,46 @@ Slack (MET) :             2.016ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.055ns  (arrival time - required time)
-  Source:                 bd_0_i/hls_inst/inst/reg_393_reg[11]/C
+Slack (MET) :             0.054ns  (arrival time - required time)
+  Source:                 bd_0_i/hls_inst/inst/gmem2_m_axi_U/bus_write/could_multi_bursts.awaddr_buf_reg[49]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/fsqrt_32ns_32ns_32_8_no_dsp_1_U70/din1_buf1_reg[11]/D
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/gmem2_m_axi_U/bus_write/wreq_throttle/req_fifo/U_fifo_srl/mem_reg[14][49]_srl15/D
+                            (rising edge-triggered cell SRL16E clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
-  Path Type:              Hold (Min at Slow Process Corner)
+  Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        0.171ns  (logic 0.112ns (65.497%)  route 0.059ns (34.503%))
+  Data Path Delay:        0.154ns  (logic 0.086ns (55.976%)  route 0.068ns (44.024%))
   Logic Levels:           0  
-  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.042ns
-    Source Clock Delay      (SCD):    0.029ns
+  Clock Path Skew:        0.043ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.057ns
+    Source Clock Delay      (SCD):    0.014ns
     Clock Pessimism Removal (CPR):    -0.000ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=7505, unset)         0.029     0.029    bd_0_i/hls_inst/inst/ap_clk
-    SLICE_X55Y177        FDRE                                         r  bd_0_i/hls_inst/inst/reg_393_reg[11]/C
+                         net (fo=14659, unset)        0.014     0.014    bd_0_i/hls_inst/inst/gmem2_m_axi_U/bus_write/ap_clk
+    SLICE_X59Y13         FDRE                                         r  bd_0_i/hls_inst/inst/gmem2_m_axi_U/bus_write/could_multi_bursts.awaddr_buf_reg[49]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X55Y177        FDRE (Prop_HFF_SLICEL_C_Q)
-                                                      0.112     0.141 r  bd_0_i/hls_inst/inst/reg_393_reg[11]/Q
-                         net (fo=1, routed)           0.059     0.200    bd_0_i/hls_inst/inst/fsqrt_32ns_32ns_32_8_no_dsp_1_U70/Q[11]
-    SLICE_X55Y177        FDRE                                         r  bd_0_i/hls_inst/inst/fsqrt_32ns_32ns_32_8_no_dsp_1_U70/din1_buf1_reg[11]/D
+    SLICE_X59Y13         FDRE (Prop_DFF2_SLICEL_C_Q)
+                                                      0.086     0.100 r  bd_0_i/hls_inst/inst/gmem2_m_axi_U/bus_write/could_multi_bursts.awaddr_buf_reg[49]/Q
+                         net (fo=2, routed)           0.068     0.168    bd_0_i/hls_inst/inst/gmem2_m_axi_U/bus_write/wreq_throttle/req_fifo/U_fifo_srl/in[47]
+    SLICE_X58Y12         SRL16E                                       r  bd_0_i/hls_inst/inst/gmem2_m_axi_U/bus_write/wreq_throttle/req_fifo/U_fifo_srl/mem_reg[14][49]_srl15/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=7505, unset)         0.042     0.042    bd_0_i/hls_inst/inst/fsqrt_32ns_32ns_32_8_no_dsp_1_U70/ap_clk
-    SLICE_X55Y177        FDRE                                         r  bd_0_i/hls_inst/inst/fsqrt_32ns_32ns_32_8_no_dsp_1_U70/din1_buf1_reg[11]/C
-                         clock pessimism              0.000     0.042    
-    SLICE_X55Y177        FDRE (Hold_HFF2_SLICEL_C_D)
-                                                      0.103     0.145    bd_0_i/hls_inst/inst/fsqrt_32ns_32ns_32_8_no_dsp_1_U70/din1_buf1_reg[11]
+                         net (fo=14659, unset)        0.057     0.057    bd_0_i/hls_inst/inst/gmem2_m_axi_U/bus_write/wreq_throttle/req_fifo/U_fifo_srl/ap_clk
+    SLICE_X58Y12         SRL16E                                       r  bd_0_i/hls_inst/inst/gmem2_m_axi_U/bus_write/wreq_throttle/req_fifo/U_fifo_srl/mem_reg[14][49]_srl15/CLK
+                         clock pessimism              0.000     0.057    
+    SLICE_X58Y12         SRL16E (Hold_H5LUT_SLICEM_CLK_D)
+                                                      0.057     0.114    bd_0_i/hls_inst/inst/gmem2_m_axi_U/bus_write/wreq_throttle/req_fifo/U_fifo_srl/mem_reg[14][49]_srl15
   -------------------------------------------------------------------
-                         required time                         -0.145    
-                         arrival time                           0.200    
+                         required time                         -0.114    
+                         arrival time                           0.168    
   -------------------------------------------------------------------
-                         slack                                  0.055    
+                         slack                                  0.054    
 
 
 
@@ -331,10 +355,10 @@ Waveform(ns):       { 0.000 5.000 }
 Period(ns):         10.000
 Sources:            { ap_clk }
 
-Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
-Min Period        n/a     RAMB36E2/CLKARDCLK  n/a            1.960         10.000      8.040      RAMB36_X2Y16   bd_0_i/hls_inst/inst/buf0_U/ram_reg_bram_0/CLKARDCLK
-Low Pulse Width   Slow    SRL16E/CLK          n/a            0.762         5.000       4.238      SLICE_X53Y148  bd_0_i/hls_inst/inst/fifo_burst/U_fifo_srl/mem_reg[14][0]_srl15/CLK
-High Pulse Width  Slow    SRL16E/CLK          n/a            0.762         5.000       4.238      SLICE_X53Y148  bd_0_i/hls_inst/inst/fifo_burst/U_fifo_srl/mem_reg[14][0]_srl15/CLK
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
+Min Period        n/a     RAMB18E2/CLKARDCLK  n/a            1.960         10.000      8.040      RAMB18_X0Y42  bd_0_i/hls_inst/inst/exp_vals_1_U/ram_reg/CLKARDCLK
+Low Pulse Width   Slow    SRL16E/CLK          n/a            0.762         5.000       4.238      SLICE_X53Y62  bd_0_i/hls_inst/inst/fifo_burst/U_fifo_srl/mem_reg[14][0]_srl15/CLK
+High Pulse Width  Slow    SRL16E/CLK          n/a            0.762         5.000       4.238      SLICE_X53Y62  bd_0_i/hls_inst/inst/fifo_burst/U_fifo_srl/mem_reg[14][0]_srl15/CLK
 
 
 

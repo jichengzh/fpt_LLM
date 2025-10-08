@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/impl/verilog/project.runs/impl_1/bd_0_wrapper.tcl"
+  variable script "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/impl/verilog/project.runs/impl_1/bd_0_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -129,12 +129,12 @@ set rc [catch {
   set_param power.enableUnconnectedCarry8PinPower 1
   set_param power.enableLutRouteBelPower 1
   reset_param project.defaultXPMLibraries 
-  open_checkpoint /data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/impl/verilog/project.runs/impl_1/bd_0_wrapper.dcp
-  set_property webtalk.parent_dir /data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/impl/verilog/project.cache/wt [current_project]
-  set_property parent.project_path /data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/impl/verilog/project.xpr [current_project]
-  set_property ip_repo_paths /data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/impl/ip [current_project]
+  open_checkpoint /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/impl/verilog/project.runs/impl_1/bd_0_wrapper.dcp
+  set_property webtalk.parent_dir /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/impl/verilog/project.cache/wt [current_project]
+  set_property parent.project_path /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/impl/verilog/project.xpr [current_project]
+  set_property ip_repo_paths /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/impl/ip [current_project]
   update_ip_catalog
-  set_property ip_output_repo /data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/impl/verilog/project.cache/ip [current_project]
+  set_property ip_output_repo /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/impl/verilog/project.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_FIFO XPM_MEMORY} [current_project]
 OPTRACE "init_design_reports" START { REPORT }

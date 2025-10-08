@@ -1,0 +1,181 @@
+
+
+================================================================
+== Vitis HLS Report for 'activation_accelerator_Pipeline_loop_23'
+================================================================
+* Date:           Wed Oct  8 15:53:26 2025
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        activation_accelerator
+* Solution:       baseline (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     1027|     1027|  10.270 us|  10.270 us|  1027|  1027|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------+---------+---------+----------+-----------+-----------+------+----------+
+        |           |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- loop_23  |     1025|     1025|         3|          1|          1|  1024|       yes|
+        +-----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 1 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.37>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 6 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%sext_ln490_read = read i63 @_ssdm_op_Read.ap_auto.i63, i63 %sext_ln490"   --->   Operation 7 'read' 'sext_ln490_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%sext_ln490_cast = sext i63 %sext_ln490_read"   --->   Operation 8 'sext' 'sext_ln490_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %gmem0, void @empty_19, i32 0, i32 0, void @empty_1, i32 0, i32 32768, void @empty_9, void @empty_26, void @empty_1, i32 16, i32 16, i32 16, i32 16, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.42ns)   --->   "%store_ln0 = store i11 0, i11 %i"   --->   Operation 10 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc"   --->   Operation 11 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%i_17 = load i11 %i" [activation_accelerator.cpp:491]   --->   Operation 12 'load' 'i_17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %gmem0"   --->   Operation 13 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%gmem0_addr = getelementptr i16 %gmem0, i64 %sext_ln490_cast" [activation_accelerator.cpp:490]   --->   Operation 14 'getelementptr' 'gmem0_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 15 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.94ns)   --->   "%icmp_ln490 = icmp_eq  i11 %i_17, i11 1024" [activation_accelerator.cpp:490]   --->   Operation 16 'icmp' 'icmp_ln490' <Predicate = true> <Delay = 0.94> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.94> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 1024, i64 1024, i64 1024"   --->   Operation 17 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.79ns)   --->   "%add_ln490 = add i11 %i_17, i11 1" [activation_accelerator.cpp:490]   --->   Operation 18 'add' 'add_ln490' <Predicate = true> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%br_ln490 = br i1 %icmp_ln490, void %for.inc.split, void %loop_24.exitStub" [activation_accelerator.cpp:490]   --->   Operation 19 'br' 'br_ln490' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%lshr_ln = partselect i7 @_ssdm_op_PartSelect.i7.i11.i32.i32, i11 %i_17, i32 3, i32 9" [activation_accelerator.cpp:491]   --->   Operation 20 'partselect' 'lshr_ln' <Predicate = (!icmp_ln490)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%trunc_ln491 = trunc i11 %i_17" [activation_accelerator.cpp:491]   --->   Operation 21 'trunc' 'trunc_ln491' <Predicate = (!icmp_ln490)> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.44ns)   --->   "%switch_ln491 = switch i3 %trunc_ln491, void %arrayidx3.case.7, i3 0, void %arrayidx3.case.0, i3 1, void %arrayidx3.case.1, i3 2, void %arrayidx3.case.2, i3 3, void %arrayidx3.case.3, i3 4, void %arrayidx3.case.4, i3 5, void %arrayidx3.case.5, i3 6, void %arrayidx3.case.6" [activation_accelerator.cpp:491]   --->   Operation 22 'switch' 'switch_ln491' <Predicate = (!icmp_ln490)> <Delay = 0.44>
+ST_1 : Operation 23 [1/1] (0.42ns)   --->   "%store_ln490 = store i11 %add_ln490, i11 %i" [activation_accelerator.cpp:490]   --->   Operation 23 'store' 'store_ln490' <Predicate = (!icmp_ln490)> <Delay = 0.42>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%br_ln490 = br void %for.inc" [activation_accelerator.cpp:490]   --->   Operation 24 'br' 'br_ln490' <Predicate = (!icmp_ln490)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 7.30>
+ST_2 : Operation 25 [1/1] (7.30ns)   --->   "%gmem0_addr_read = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem0_addr" [activation_accelerator.cpp:491]   --->   Operation 25 'read' 'gmem0_addr_read' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 52 'ret' 'ret_ln0' <Predicate = (icmp_ln490)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 1.23>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%specloopname_ln490 = specloopname void @_ssdm_op_SpecLoopName, void @empty_14" [activation_accelerator.cpp:490]   --->   Operation 26 'specloopname' 'specloopname_ln490' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%zext_ln491 = zext i7 %lshr_ln" [activation_accelerator.cpp:491]   --->   Operation 27 'zext' 'zext_ln491' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_88 = getelementptr i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23, i64 0, i64 %zext_ln491" [activation_accelerator.cpp:491]   --->   Operation 28 'getelementptr' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_88' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_89 = getelementptr i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22, i64 0, i64 %zext_ln491" [activation_accelerator.cpp:491]   --->   Operation 29 'getelementptr' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_89' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_90 = getelementptr i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21, i64 0, i64 %zext_ln491" [activation_accelerator.cpp:491]   --->   Operation 30 'getelementptr' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_90' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_91 = getelementptr i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20, i64 0, i64 %zext_ln491" [activation_accelerator.cpp:491]   --->   Operation 31 'getelementptr' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_91' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_92 = getelementptr i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19, i64 0, i64 %zext_ln491" [activation_accelerator.cpp:491]   --->   Operation 32 'getelementptr' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_92' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 33 [1/1] (0.00ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_93 = getelementptr i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18, i64 0, i64 %zext_ln491" [activation_accelerator.cpp:491]   --->   Operation 33 'getelementptr' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_93' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_94 = getelementptr i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17, i64 0, i64 %zext_ln491" [activation_accelerator.cpp:491]   --->   Operation 34 'getelementptr' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_94' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_95 = getelementptr i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16, i64 0, i64 %zext_ln491" [activation_accelerator.cpp:491]   --->   Operation 35 'getelementptr' 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_95' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 36 [1/1] (1.23ns)   --->   "%store_ln491 = store i16 %gmem0_addr_read, i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_94" [activation_accelerator.cpp:491]   --->   Operation 36 'store' 'store_ln491' <Predicate = (trunc_ln491 == 6)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%br_ln491 = br void %arrayidx3.exit" [activation_accelerator.cpp:491]   --->   Operation 37 'br' 'br_ln491' <Predicate = (trunc_ln491 == 6)> <Delay = 0.00>
+ST_3 : Operation 38 [1/1] (1.23ns)   --->   "%store_ln491 = store i16 %gmem0_addr_read, i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_93" [activation_accelerator.cpp:491]   --->   Operation 38 'store' 'store_ln491' <Predicate = (trunc_ln491 == 5)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%br_ln491 = br void %arrayidx3.exit" [activation_accelerator.cpp:491]   --->   Operation 39 'br' 'br_ln491' <Predicate = (trunc_ln491 == 5)> <Delay = 0.00>
+ST_3 : Operation 40 [1/1] (1.23ns)   --->   "%store_ln491 = store i16 %gmem0_addr_read, i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_92" [activation_accelerator.cpp:491]   --->   Operation 40 'store' 'store_ln491' <Predicate = (trunc_ln491 == 4)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%br_ln491 = br void %arrayidx3.exit" [activation_accelerator.cpp:491]   --->   Operation 41 'br' 'br_ln491' <Predicate = (trunc_ln491 == 4)> <Delay = 0.00>
+ST_3 : Operation 42 [1/1] (1.23ns)   --->   "%store_ln491 = store i16 %gmem0_addr_read, i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_91" [activation_accelerator.cpp:491]   --->   Operation 42 'store' 'store_ln491' <Predicate = (trunc_ln491 == 3)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%br_ln491 = br void %arrayidx3.exit" [activation_accelerator.cpp:491]   --->   Operation 43 'br' 'br_ln491' <Predicate = (trunc_ln491 == 3)> <Delay = 0.00>
+ST_3 : Operation 44 [1/1] (1.23ns)   --->   "%store_ln491 = store i16 %gmem0_addr_read, i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_90" [activation_accelerator.cpp:491]   --->   Operation 44 'store' 'store_ln491' <Predicate = (trunc_ln491 == 2)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_3 : Operation 45 [1/1] (0.00ns)   --->   "%br_ln491 = br void %arrayidx3.exit" [activation_accelerator.cpp:491]   --->   Operation 45 'br' 'br_ln491' <Predicate = (trunc_ln491 == 2)> <Delay = 0.00>
+ST_3 : Operation 46 [1/1] (1.23ns)   --->   "%store_ln491 = store i16 %gmem0_addr_read, i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_89" [activation_accelerator.cpp:491]   --->   Operation 46 'store' 'store_ln491' <Predicate = (trunc_ln491 == 1)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%br_ln491 = br void %arrayidx3.exit" [activation_accelerator.cpp:491]   --->   Operation 47 'br' 'br_ln491' <Predicate = (trunc_ln491 == 1)> <Delay = 0.00>
+ST_3 : Operation 48 [1/1] (1.23ns)   --->   "%store_ln491 = store i16 %gmem0_addr_read, i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_88" [activation_accelerator.cpp:491]   --->   Operation 48 'store' 'store_ln491' <Predicate = (trunc_ln491 == 0)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%br_ln491 = br void %arrayidx3.exit" [activation_accelerator.cpp:491]   --->   Operation 49 'br' 'br_ln491' <Predicate = (trunc_ln491 == 0)> <Delay = 0.00>
+ST_3 : Operation 50 [1/1] (1.23ns)   --->   "%store_ln491 = store i16 %gmem0_addr_read, i7 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_95" [activation_accelerator.cpp:491]   --->   Operation 50 'store' 'store_ln491' <Predicate = (trunc_ln491 == 7)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 128> <RAM>
+ST_3 : Operation 51 [1/1] (0.00ns)   --->   "%br_ln491 = br void %arrayidx3.exit" [activation_accelerator.cpp:491]   --->   Operation 51 'br' 'br_ln491' <Predicate = (trunc_ln491 == 7)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 1.37ns
+The critical path consists of the following:
+	'alloca' operation ('i') [11]  (0 ns)
+	'load' operation ('i', activation_accelerator.cpp:491) on local variable 'i' [18]  (0 ns)
+	'add' operation ('add_ln490', activation_accelerator.cpp:490) [24]  (0.798 ns)
+	'store' operation ('store_ln490', activation_accelerator.cpp:490) of variable 'add_ln490', activation_accelerator.cpp:490 on local variable 'i' [66]  (0.427 ns)
+	blocking operation 0.146 ns on control path)
+
+ <State 2>: 7.3ns
+The critical path consists of the following:
+	bus read operation ('gmem0_addr_read', activation_accelerator.cpp:491) on port 'gmem0' (activation_accelerator.cpp:491) [28]  (7.3 ns)
+
+ <State 3>: 1.24ns
+The critical path consists of the following:
+	'getelementptr' operation ('activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_93', activation_accelerator.cpp:491) [36]  (0 ns)
+	'store' operation ('store_ln491', activation_accelerator.cpp:491) of variable 'gmem0_addr_read', activation_accelerator.cpp:491 on array 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18' [45]  (1.24 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -3,13 +3,13 @@
 // Tool Version Limit: 2019.12
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // ==============================================================
-# 1 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp"
+# 1 "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 1 "<command-line>" 2
-# 1 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp"
-# 1 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator.h" 1
+# 1 "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp"
+# 1 "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator.h" 1
 
 
 
@@ -313,7 +313,7 @@ namespace std
   using ::uintmax_t;
   using ::uintptr_t;
 }
-# 5 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator.h" 2
+# 5 "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator.h" 2
 
 
 
@@ -322,7 +322,7 @@ namespace std
 
 
 
-# 12 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator.h"
+# 12 "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator.h"
 typedef uint16_t uint16;
 typedef int32_t int32;
 typedef int64_t int64;
@@ -338,9 +338,9 @@ extern "C"
 #endif
 void apatb_activation_accelerator_sw(unsigned short *, unsigned short *, unsigned short *, int, int);
 #endif
-# 20 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator.h"
+# 20 "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator.h"
 void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, int32 config);
-# 2 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp" 2
+# 2 "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp" 2
 # 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/iostream" 1 3
 # 36 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/iostream" 3
        
@@ -28431,7 +28431,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 3 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp" 2
+# 3 "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp" 2
 # 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/fstream" 1 3
 # 36 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/fstream" 3
        
@@ -30784,12 +30784,12 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 }
 # 1170 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/fstream" 2 3
-# 4 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp" 2
+# 4 "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp" 2
 # 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdlib" 1 3
 # 39 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdlib" 3
        
 # 40 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstdlib" 3
-# 5 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp" 2
+# 5 "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp" 2
 # 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/ctime" 1 3
 # 39 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/ctime" 3
        
@@ -30811,7 +30811,7 @@ namespace std
   using ::localtime;
   using ::strftime;
 }
-# 6 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp" 2
+# 6 "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp" 2
 # 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/iomanip" 1 3
 # 36 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/iomanip" 3
        
@@ -38596,7 +38596,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 7 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp" 2
+# 7 "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp" 2
 # 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstring" 1 3
 # 39 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstring" 3
        
@@ -39025,7 +39025,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 # 120 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cstring" 3
 
 }
-# 8 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp" 2
+# 8 "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp" 2
 # 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cmath" 1 3
 # 39 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/cmath" 3
        
@@ -43474,7 +43474,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 9 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp" 2
+# 9 "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp" 2
 # 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/chrono" 1 3
 # 32 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/chrono" 3
        
@@ -46491,7 +46491,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 10 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp" 2
+# 10 "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp" 2
 # 1 "/usr/include/unistd.h" 1 3 4
 # 27 "/usr/include/unistd.h" 3 4
 extern "C" {
@@ -47844,12 +47844,12 @@ extern __pid_t gettid (void) throw ();
 # 1171 "/usr/include/unistd.h" 2 3 4
 
 }
-# 11 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp" 2
+# 11 "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp" 2
 
 
 
 
-# 14 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp"
+# 14 "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp"
 bool load_binary_data(const std::string& filename, uint16* data) {
     std::ifstream file(filename, std::ios::binary);
     if (!file.is_open()) {
@@ -47924,10 +47924,10 @@ bool run_test(int config, uint16* in0, uint16* in1, uint16* out, uint16* golden_
 #ifndef HLS_FASTSIM
 #define activation_accelerator apatb_activation_accelerator_sw
 #endif
-# 84 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp"
+# 84 "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp"
 activation_accelerator(in0, current_in1, out, current_stage, config);
 #undef activation_accelerator
-# 84 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp"
+# 84 "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp"
 
 
 
@@ -47936,10 +47936,10 @@ activation_accelerator(in0, current_in1, out, current_stage, config);
 #ifndef HLS_FASTSIM
 #define activation_accelerator apatb_activation_accelerator_sw
 #endif
-# 88 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp"
+# 88 "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp"
 activation_accelerator(in0, current_in1, out, current_stage, config);
 #undef activation_accelerator
-# 88 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp"
+# 88 "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp"
 
 
 
@@ -47968,7 +47968,7 @@ std::string get_data_path() {
 
 
 #ifndef HLS_FASTSIM
-# 114 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp"
+# 114 "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp"
 int main() {
 
     uint16* in0 = new uint16[(32*1024)];
@@ -47986,9 +47986,9 @@ int main() {
         !load_binary_data(data_path + "mask_bf16.bin", mask)) {
         std::cerr << "Unable to load bf16 input data, using random data" << std::endl;
         srand(time(
-# 130 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp" 3 4
+# 130 "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp" 3 4
                   __null
-# 130 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp"
+# 130 "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp"
                       ));
         for(int i = 0; i < (32*1024); i++) {
             in0[i] = rand() % 1000 - 500;
@@ -48023,10 +48023,10 @@ int main() {
 #ifndef HLS_FASTSIM
 #define activation_accelerator apatb_activation_accelerator_sw
 #endif
-# 160 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp"
+# 160 "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp"
 activation_accelerator(in0, in1, out, stage, 0);
 #undef activation_accelerator
-# 160 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp"
+# 160 "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp"
 
     std::cout << "Data transfer complete" << std::endl;
 
@@ -48041,10 +48041,10 @@ activation_accelerator(in0, in1, out, stage, 0);
 #ifndef HLS_FASTSIM
 #define activation_accelerator apatb_activation_accelerator_sw
 #endif
-# 170 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp"
+# 170 "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp"
 activation_accelerator(in0, in1, out, stage, config);
 #undef activation_accelerator
-# 170 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp"
+# 170 "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp"
 
         auto t2 = std::chrono::high_resolution_clock::now();
         double elapsed = std::chrono::duration<double, std::milli>(t2 - t1).count();
@@ -48057,10 +48057,10 @@ activation_accelerator(in0, in1, out, stage, config);
 #ifndef HLS_FASTSIM
 #define activation_accelerator apatb_activation_accelerator_sw
 #endif
-# 178 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp"
+# 178 "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp"
 activation_accelerator(in0, in1, out, stage, config);
 #undef activation_accelerator
-# 178 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp"
+# 178 "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp"
 
         std::cout << "Output results saved to: " << data_path << "hls_output_config_" << config << ".bin" << std::endl;
         save_binary_data(data_path + "hls_output_config_" + std::to_string(config) + ".bin", out);
@@ -48085,5 +48085,5 @@ activation_accelerator(in0, in1, out, stage, config);
     return 0;
 }
 #endif
-# 200 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/testbench.cpp"
+# 200 "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp"
 

@@ -46,9 +46,8 @@
       <data key="VT">AC</data>
     </node>
     <node id="n2">
-      <data key="TU">active</data>
-      <data key="VH">2</data>
-      <data key="VT">PM</data>
+      <data key="VM">bd_0</data>
+      <data key="VT">BC</data>
     </node>
     <node id="n3">
       <data key="BA">0x0000000044A00000</data>
@@ -105,21 +104,22 @@
       <data key="VT">AC</data>
     </node>
     <node id="n6">
-      <data key="VM">bd_0</data>
-      <data key="VT">BC</data>
+      <data key="TU">active</data>
+      <data key="VH">2</data>
+      <data key="VT">PM</data>
     </node>
-    <edge id="e0" source="n6" target="n0"/>
-    <edge id="e1" source="n0" target="n2"/>
-    <edge id="e2" source="n5" target="n2">
+    <edge id="e0" source="n2" target="n0"/>
+    <edge id="e1" source="n0" target="n6"/>
+    <edge id="e2" source="n5" target="n6">
       <data key="EH">2</data>
     </edge>
-    <edge id="e3" source="n1" target="n2">
+    <edge id="e3" source="n1" target="n6">
       <data key="EH">2</data>
     </edge>
-    <edge id="e4" source="n4" target="n2">
+    <edge id="e4" source="n4" target="n6">
       <data key="EH">2</data>
     </edge>
-    <edge id="e5" source="n3" target="n2">
+    <edge id="e5" source="n3" target="n6">
       <data key="EH">2</data>
     </edge>
   </graph>

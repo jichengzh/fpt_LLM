@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/impl/verilog/project.runs/synth_1'
+HD_PWD='/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/impl/verilog/project.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

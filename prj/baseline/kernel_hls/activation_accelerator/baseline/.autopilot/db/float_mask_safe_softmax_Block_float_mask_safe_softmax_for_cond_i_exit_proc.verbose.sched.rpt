@@ -1,0 +1,121 @@
+
+
+================================================================
+== Vitis HLS Report for 'float_mask_safe_softmax_Block_float_mask_safe_softmax_for_cond_i_exit_proc'
+================================================================
+* Date:           Wed Oct  8 15:53:21 2025
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        activation_accelerator
+* Solution:       baseline (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  3.676 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        1|        1|  10.000 ns|  10.000 ns|    1|    1|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.67>
+ST_1 : Operation 3 [1/1] (1.83ns)   --->   "%p_read_4 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read"   --->   Operation 3 'read' 'p_read_4' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%max_val_stream = alloca i64 1" [activation_accelerator.cpp:399]   --->   Operation 4 'alloca' 'max_val_stream' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%bitcast_ln425 = bitcast i32 %p_read_4" [activation_accelerator.cpp:425]   --->   Operation 5 'bitcast' 'bitcast_ln425' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (1.83ns)   --->   "%write_ln425 = write void @_ssdm_op_Write.ap_fifo.volatile.i32P0A, i32 %max_val_stream, i32 %bitcast_ln425" [activation_accelerator.cpp:425]   --->   Operation 6 'write' 'write_ln425' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+
+State 2 <SV = 1> <Delay = 1.83>
+ST_2 : Operation 7 [1/1] (0.00ns)   --->   "%empty = specchannel i32 @_ssdm_op_SpecChannel, void @max_val_stream1_OC_i_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i32 %max_val_stream, i32 %max_val_stream"   --->   Operation 7 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %max_val_stream, void @empty_29, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 9 [1/1] (1.83ns)   --->   "%max_val_to_broadcast = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %max_val_stream" [activation_accelerator.cpp:428]   --->   Operation 9 'read' 'max_val_to_broadcast' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%ret_ln428 = ret i32 %max_val_to_broadcast" [activation_accelerator.cpp:428]   --->   Operation 10 'ret' 'ret_ln428' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 3.68ns
+The critical path consists of the following:
+	wire read operation ('p_read_4') on port 'p_read' [2]  (1.84 ns)
+	fifo write operation ('write_ln425', activation_accelerator.cpp:425) on port 'max_val_stream', activation_accelerator.cpp:399 (activation_accelerator.cpp:425) [7]  (1.84 ns)
+
+ <State 2>: 1.84ns
+The critical path consists of the following:
+	fifo read operation ('max_val_to_broadcast', activation_accelerator.cpp:428) on port 'max_val_stream', activation_accelerator.cpp:399 (activation_accelerator.cpp:428) [8]  (1.84 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

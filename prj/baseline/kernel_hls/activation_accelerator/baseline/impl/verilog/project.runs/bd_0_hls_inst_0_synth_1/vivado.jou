@@ -2,12 +2,12 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Tue Sep 23 22:19:48 2025
-# Process ID: 4000308
-# Current directory: /data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1
+# Start of session at: Wed Oct  8 15:57:26 2025
+# Process ID: 1993922
+# Current directory: /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1
 # Command line: vivado -log bd_0_hls_inst_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_0_hls_inst_0.tcl
-# Log file: /data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.vds
-# Journal file: /data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/vivado.jou
+# Log file: /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.vds
+# Journal file: /data1/jdn/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/vivado.jou
 # Running On: super-test, OS: Linux, CPU Frequency: 2700.000 MHz, CPU Physical cores: 20, Host memory: 134761 MB
 #-----------------------------------------------------------
 source bd_0_hls_inst_0.tcl -notrace

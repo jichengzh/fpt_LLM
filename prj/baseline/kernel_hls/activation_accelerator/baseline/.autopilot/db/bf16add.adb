@@ -34,7 +34,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3621216858</coreId>
+              <coreId>1718580063</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -70,7 +70,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1869635878</coreId>
+              <coreId>1718580063</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -95,14 +95,14 @@
               <name>b_bits_read</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>23</lineNumber>
+              <lineNumber>25</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item class_id="10" tracking_level="0" version="0">
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second class_id="11" tracking_level="0" version="0">
                     <count>1</count>
                     <item_version>0</item_version>
@@ -111,7 +111,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>23</second>
+                      <second>25</second>
                     </item>
                   </second>
                 </item>
@@ -152,14 +152,14 @@
               <name>a_bits_read</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>23</lineNumber>
+              <lineNumber>25</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -168,7 +168,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>23</second>
+                      <second>25</second>
                     </item>
                   </second>
                 </item>
@@ -209,14 +209,14 @@
               <name>b_mantissa</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>23</lineNumber>
+              <lineNumber>25</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -225,13 +225,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>23</second>
+                      <second>25</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName>b_mantissa</originalName>
-              <rtlName>b_mantissa_fu_135_p1</rtlName>
+              <rtlName>b_mantissa_fu_137_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
@@ -265,14 +265,14 @@
               <name>a_mantissa</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>23</lineNumber>
+              <lineNumber>25</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -281,20 +281,20 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>23</second>
+                      <second>25</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName>a_mantissa</originalName>
-              <rtlName>a_mantissa_fu_139_p1</rtlName>
+              <rtlName>a_mantissa_fu_141_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>224</coreId>
+              <coreId>1062360896</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>7</bitwidth>
@@ -318,17 +318,17 @@
             <Obj>
               <type>0</type>
               <id>7</id>
-              <name>tmp_1</name>
+              <name>tmp</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>25</lineNumber>
+              <lineNumber>27</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -337,20 +337,20 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>25</second>
+                      <second>27</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_1_fu_143_p3</rtlName>
+              <rtlName>tmp_fu_145_p3</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770206576</coreId>
+              <coreId>1598377545</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -376,17 +376,17 @@
             <Obj>
               <type>0</type>
               <id>8</id>
-              <name>tmp_2</name>
+              <name>tmp_1</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
+              <lineNumber>28</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -395,20 +395,20 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>26</second>
+                      <second>28</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_2_fu_151_p3</rtlName>
+              <rtlName>tmp_1_fu_153_p3</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770165856</coreId>
+              <coreId>1062361536</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -437,14 +437,14 @@
               <name>a_exp</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>27</lineNumber>
+              <lineNumber>29</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -453,20 +453,20 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>27</second>
+                      <second>29</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName>a_exp</originalName>
-              <rtlName>a_exp_fu_159_p4</rtlName>
+              <rtlName>a_exp_fu_161_p4</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770316256</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -496,14 +496,14 @@
               <name>b_exp</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>28</lineNumber>
+              <lineNumber>30</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -512,20 +512,20 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>28</second>
+                      <second>30</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName>b_exp</originalName>
-              <rtlName>b_exp_fu_169_p4</rtlName>
+              <rtlName>b_exp_fu_171_p4</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770165856</coreId>
+              <coreId>1440925456</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -552,17 +552,17 @@
             <Obj>
               <type>0</type>
               <id>11</id>
-              <name>zext_ln29</name>
+              <name>zext_ln31</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>29</lineNumber>
+              <lineNumber>31</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -571,20 +571,20 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>29</second>
+                      <second>31</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln29_fu_179_p1</rtlName>
+              <rtlName>zext_ln31_fu_181_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>639657324</coreId>
+              <coreId>1062926464</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -608,17 +608,17 @@
             <Obj>
               <type>0</type>
               <id>12</id>
-              <name>zext_ln30</name>
+              <name>zext_ln32</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>30</lineNumber>
+              <lineNumber>32</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -627,20 +627,20 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>30</second>
+                      <second>32</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln30_fu_183_p1</rtlName>
+              <rtlName>zext_ln32_fu_185_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770271408</coreId>
+              <coreId>1062927592</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -664,17 +664,17 @@
             <Obj>
               <type>0</type>
               <id>13</id>
-              <name>icmp_ln33</name>
+              <name>icmp_ln35</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>33</lineNumber>
+              <lineNumber>35</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -683,13 +683,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>33</second>
+                      <second>35</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln33_fu_187_p2</rtlName>
+              <rtlName>icmp_ln35_fu_189_p2</rtlName>
               <control>auto</control>
               <opType>icmp</opType>
               <implIndex>auto</implIndex>
@@ -721,17 +721,17 @@
             <Obj>
               <type>0</type>
               <id>14</id>
-              <name>trunc_ln2</name>
+              <name>trunc_ln3</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>33</lineNumber>
+              <lineNumber>35</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -740,20 +740,20 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>33</second>
+                      <second>35</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>trunc_ln2_fu_193_p4</rtlName>
+              <rtlName>trunc_ln3_fu_195_p4</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770165856</coreId>
+              <coreId>1052739680</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>7</bitwidth>
@@ -780,17 +780,17 @@
             <Obj>
               <type>0</type>
               <id>15</id>
-              <name>or_ln33</name>
+              <name>or_ln35</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>33</lineNumber>
+              <lineNumber>35</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -799,13 +799,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>33</second>
+                      <second>35</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>or_ln33_fu_203_p2</rtlName>
+              <rtlName>or_ln35_fu_205_p2</rtlName>
               <control>auto</control>
               <opType>or</opType>
               <implIndex>auto</implIndex>
@@ -840,14 +840,14 @@
               <name>tmp_3</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>33</lineNumber>
+              <lineNumber>35</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -856,20 +856,20 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>33</second>
+                      <second>35</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_3_fu_209_p3</rtlName>
+              <rtlName>tmp_3_fu_211_p3</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770278592</coreId>
+              <coreId>1062353696</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -898,14 +898,14 @@
               <name>or_ln</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>33</lineNumber>
+              <lineNumber>35</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -914,20 +914,20 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>33</second>
+                      <second>35</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>or_ln_fu_217_p3</rtlName>
+              <rtlName>or_ln_fu_219_p3</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770171808</coreId>
+              <coreId>1953394531</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -953,17 +953,17 @@
             <Obj>
               <type>0</type>
               <id>18</id>
-              <name>icmp_ln33_1</name>
+              <name>icmp_ln35_1</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>33</lineNumber>
+              <lineNumber>35</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -972,13 +972,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>33</second>
+                      <second>35</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln33_1_fu_225_p2</rtlName>
+              <rtlName>icmp_ln35_1_fu_227_p2</rtlName>
               <control>auto</control>
               <opType>icmp</opType>
               <implIndex>auto</implIndex>
@@ -1010,17 +1010,17 @@
             <Obj>
               <type>0</type>
               <id>19</id>
-              <name>br_ln33</name>
+              <name>br_ln35</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>33</lineNumber>
+              <lineNumber>35</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1029,7 +1029,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>33</second>
+                      <second>35</second>
                     </item>
                   </second>
                 </item>
@@ -1042,7 +1042,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>1717924464</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -1068,17 +1068,17 @@
             <Obj>
               <type>0</type>
               <id>21</id>
-              <name>icmp_ln34</name>
+              <name>icmp_ln36</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>34</lineNumber>
+              <lineNumber>36</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1087,13 +1087,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>34</second>
+                      <second>36</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln34_fu_231_p2</rtlName>
+              <rtlName>icmp_ln36_fu_233_p2</rtlName>
               <control>auto</control>
               <opType>icmp</opType>
               <implIndex>auto</implIndex>
@@ -1125,17 +1125,17 @@
             <Obj>
               <type>0</type>
               <id>22</id>
-              <name>trunc_ln3</name>
+              <name>trunc_ln4</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>34</lineNumber>
+              <lineNumber>36</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1144,20 +1144,20 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>34</second>
+                      <second>36</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>trunc_ln3_fu_237_p4</rtlName>
+              <rtlName>trunc_ln4_fu_239_p4</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>176</coreId>
+              <coreId>1061792832</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>7</bitwidth>
@@ -1184,17 +1184,17 @@
             <Obj>
               <type>0</type>
               <id>23</id>
-              <name>or_ln34</name>
+              <name>or_ln36</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>34</lineNumber>
+              <lineNumber>36</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1203,13 +1203,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>34</second>
+                      <second>36</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>or_ln34_fu_247_p2</rtlName>
+              <rtlName>or_ln36_fu_249_p2</rtlName>
               <control>auto</control>
               <opType>or</opType>
               <implIndex>auto</implIndex>
@@ -1244,14 +1244,14 @@
               <name>tmp_6</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>34</lineNumber>
+              <lineNumber>36</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1260,20 +1260,20 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>34</second>
+                      <second>36</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_6_fu_253_p3</rtlName>
+              <rtlName>tmp_6_fu_255_p3</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>176</coreId>
+              <coreId>1434617104</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -1302,14 +1302,14 @@
               <name>or_ln1</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>34</lineNumber>
+              <lineNumber>36</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1318,20 +1318,20 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>34</second>
+                      <second>36</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>or_ln1_fu_261_p3</rtlName>
+              <rtlName>or_ln1_fu_263_p3</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770159072</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -1357,17 +1357,17 @@
             <Obj>
               <type>0</type>
               <id>26</id>
-              <name>icmp_ln34_1</name>
+              <name>icmp_ln36_1</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>34</lineNumber>
+              <lineNumber>36</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1376,13 +1376,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>34</second>
+                      <second>36</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln34_1_fu_269_p2</rtlName>
+              <rtlName>icmp_ln36_1_fu_271_p2</rtlName>
               <control>auto</control>
               <opType>icmp</opType>
               <implIndex>auto</implIndex>
@@ -1414,17 +1414,17 @@
             <Obj>
               <type>0</type>
               <id>27</id>
-              <name>br_ln34</name>
+              <name>br_ln36</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>34</lineNumber>
+              <lineNumber>36</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1433,7 +1433,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>34</second>
+                      <second>36</second>
                     </item>
                   </second>
                 </item>
@@ -1446,7 +1446,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770888032</coreId>
+              <coreId>1063824800</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -1475,14 +1475,14 @@
               <name>or_ln2</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>40</lineNumber>
+              <lineNumber>42</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1491,20 +1491,20 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>40</second>
+                      <second>42</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>or_ln2_fu_275_p3</rtlName>
+              <rtlName>or_ln2_fu_277_p3</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770891424</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -1533,14 +1533,14 @@
               <name>or_ln3</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>41</lineNumber>
+              <lineNumber>43</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1549,20 +1549,20 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>41</second>
+                      <second>43</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>or_ln3_fu_283_p3</rtlName>
+              <rtlName>or_ln3_fu_285_p3</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>1063475632</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -1588,17 +1588,17 @@
             <Obj>
               <type>0</type>
               <id>31</id>
-              <name>select_ln40</name>
+              <name>select_ln42</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>40</lineNumber>
+              <lineNumber>42</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1607,13 +1607,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>40</second>
+                      <second>42</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>select_ln40_fu_291_p3</rtlName>
+              <rtlName>select_ln42_fu_293_p3</rtlName>
               <control>auto</control>
               <opType>select</opType>
               <implIndex>auto_sel</implIndex>
@@ -1649,14 +1649,14 @@
               <name>a_full_mantissa</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>43</lineNumber>
+              <lineNumber>45</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1665,20 +1665,20 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>43</second>
+                      <second>45</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName>a_full_mantissa</originalName>
-              <rtlName>a_full_mantissa_fu_299_p3</rtlName>
+              <rtlName>a_full_mantissa_fu_301_p3</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770852832</coreId>
+              <coreId>1061557728</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -1704,17 +1704,17 @@
             <Obj>
               <type>0</type>
               <id>33</id>
-              <name>select_ln41</name>
+              <name>select_ln43</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>41</lineNumber>
+              <lineNumber>43</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1723,13 +1723,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>41</second>
+                      <second>43</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>select_ln41_fu_307_p3</rtlName>
+              <rtlName>select_ln43_fu_309_p3</rtlName>
               <control>auto</control>
               <opType>select</opType>
               <implIndex>auto_sel</implIndex>
@@ -1765,14 +1765,14 @@
               <name>b_full_mantissa</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>44</lineNumber>
+              <lineNumber>46</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1781,20 +1781,20 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>44</second>
+                      <second>46</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName>b_full_mantissa</originalName>
-              <rtlName>b_full_mantissa_fu_315_p3</rtlName>
+              <rtlName>b_full_mantissa_fu_317_p3</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>1061810096</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -1823,14 +1823,14 @@
               <name>a_align_exp</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>47</lineNumber>
+              <lineNumber>49</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1839,13 +1839,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>47</second>
+                      <second>49</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName>a_align_exp</originalName>
-              <rtlName>a_align_exp_fu_323_p3</rtlName>
+              <rtlName>a_align_exp_fu_325_p3</rtlName>
               <control>auto</control>
               <opType>select</opType>
               <implIndex>auto_sel</implIndex>
@@ -1881,14 +1881,14 @@
               <name>b_align_exp</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>48</lineNumber>
+              <lineNumber>50</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1897,13 +1897,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>48</second>
+                      <second>50</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName>b_align_exp</originalName>
-              <rtlName>b_align_exp_fu_331_p3</rtlName>
+              <rtlName>b_align_exp_fu_333_p3</rtlName>
               <control>auto</control>
               <opType>select</opType>
               <implIndex>auto_sel</implIndex>
@@ -1936,17 +1936,17 @@
             <Obj>
               <type>0</type>
               <id>37</id>
-              <name>icmp_ln52</name>
+              <name>icmp_ln54</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>52</lineNumber>
+              <lineNumber>54</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1955,13 +1955,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>52</second>
+                      <second>54</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln52_fu_339_p2</rtlName>
+              <rtlName>icmp_ln54_fu_341_p2</rtlName>
               <control>auto</control>
               <opType>icmp</opType>
               <implIndex>auto</implIndex>
@@ -1993,17 +1993,17 @@
             <Obj>
               <type>0</type>
               <id>38</id>
-              <name>zext_ln54</name>
+              <name>zext_ln56</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>54</lineNumber>
+              <lineNumber>56</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2012,20 +2012,20 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>54</second>
+                      <second>56</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln54_fu_345_p1</rtlName>
+              <rtlName>zext_ln56_fu_347_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770804816</coreId>
+              <coreId>1062290784</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>9</bitwidth>
@@ -2049,17 +2049,17 @@
             <Obj>
               <type>0</type>
               <id>39</id>
-              <name>zext_ln54_1</name>
+              <name>zext_ln56_1</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>54</lineNumber>
+              <lineNumber>56</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2068,20 +2068,20 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>54</second>
+                      <second>56</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln54_1_fu_349_p1</rtlName>
+              <rtlName>zext_ln56_1_fu_351_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770803760</coreId>
+              <coreId>1330007625</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>9</bitwidth>
@@ -2105,17 +2105,17 @@
             <Obj>
               <type>0</type>
               <id>40</id>
-              <name>sub_ln54</name>
+              <name>sub_ln56</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>54</lineNumber>
+              <lineNumber>56</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2124,13 +2124,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>54</second>
+                      <second>56</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>sub_ln54_fu_353_p2</rtlName>
+              <rtlName>sub_ln56_fu_355_p2</rtlName>
               <control>auto</control>
               <opType>sub</opType>
               <implIndex>fabric</implIndex>
@@ -2162,17 +2162,17 @@
             <Obj>
               <type>0</type>
               <id>41</id>
-              <name>sext_ln54</name>
+              <name>sext_ln56</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>54</lineNumber>
+              <lineNumber>56</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2181,20 +2181,20 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>54</second>
+                      <second>56</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>sext_ln54_fu_359_p1</rtlName>
+              <rtlName>sext_ln56_fu_361_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770866880</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2218,17 +2218,17 @@
             <Obj>
               <type>0</type>
               <id>42</id>
-              <name>sext_ln54cast</name>
+              <name>sext_ln56cast</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>54</lineNumber>
+              <lineNumber>56</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2237,20 +2237,20 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>54</second>
+                      <second>56</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>sext_ln54cast_fu_363_p1</rtlName>
+              <rtlName>sext_ln56cast_fu_365_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770875216</coreId>
+              <coreId>1063822624</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -2277,14 +2277,14 @@
               <name>b_full_mantissa_1</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>54</lineNumber>
+              <lineNumber>56</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2293,13 +2293,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>54</second>
+                      <second>56</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>b_full_mantissa_1_fu_367_p2</rtlName>
+              <rtlName>b_full_mantissa_1_fu_369_p2</rtlName>
               <control>auto</control>
               <opType>lshr</opType>
               <implIndex>auto_pipe</implIndex>
@@ -2331,17 +2331,17 @@
             <Obj>
               <type>0</type>
               <id>44</id>
-              <name>icmp_ln55</name>
+              <name>icmp_ln57</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>55</lineNumber>
+              <lineNumber>57</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2350,13 +2350,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>55</second>
+                      <second>57</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln55_fu_373_p2</rtlName>
+              <rtlName>icmp_ln57_fu_375_p2</rtlName>
               <control>auto</control>
               <opType>icmp</opType>
               <implIndex>auto</implIndex>
@@ -2388,17 +2388,17 @@
             <Obj>
               <type>0</type>
               <id>45</id>
-              <name>sub_ln57</name>
+              <name>sub_ln59</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>57</lineNumber>
+              <lineNumber>59</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2407,13 +2407,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>57</second>
+                      <second>59</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>sub_ln57_fu_379_p2</rtlName>
+              <rtlName>sub_ln59_fu_381_p2</rtlName>
               <control>auto</control>
               <opType>sub</opType>
               <implIndex>fabric</implIndex>
@@ -2445,17 +2445,17 @@
             <Obj>
               <type>0</type>
               <id>46</id>
-              <name>sext_ln57</name>
+              <name>sext_ln59</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>57</lineNumber>
+              <lineNumber>59</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2464,20 +2464,20 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>57</second>
+                      <second>59</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>sext_ln57_fu_385_p1</rtlName>
+              <rtlName>sext_ln59_fu_387_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770153232</coreId>
+              <coreId>1060369664</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2501,17 +2501,17 @@
             <Obj>
               <type>0</type>
               <id>47</id>
-              <name>sext_ln57cast</name>
+              <name>sext_ln59cast</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>57</lineNumber>
+              <lineNumber>59</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2520,20 +2520,20 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>57</second>
+                      <second>59</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>sext_ln57cast_fu_389_p1</rtlName>
+              <rtlName>sext_ln59cast_fu_391_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770154448</coreId>
+              <coreId>1915712355</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -2560,14 +2560,14 @@
               <name>a_full_mantissa_1</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>57</lineNumber>
+              <lineNumber>59</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2576,13 +2576,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>57</second>
+                      <second>59</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>a_full_mantissa_1_fu_393_p2</rtlName>
+              <rtlName>a_full_mantissa_1_fu_395_p2</rtlName>
               <control>auto</control>
               <opType>lshr</opType>
               <implIndex>auto_pipe</implIndex>
@@ -2614,17 +2614,17 @@
             <Obj>
               <type>0</type>
               <id>49</id>
-              <name>xor_ln52</name>
+              <name>xor_ln54</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>52</lineNumber>
+              <lineNumber>54</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2633,13 +2633,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>52</second>
+                      <second>54</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>xor_ln52_fu_399_p2</rtlName>
+              <rtlName>xor_ln54_fu_401_p2</rtlName>
               <control>auto</control>
               <opType>xor</opType>
               <implIndex>auto</implIndex>
@@ -2671,17 +2671,17 @@
             <Obj>
               <type>0</type>
               <id>50</id>
-              <name>and_ln55</name>
+              <name>and_ln57</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>55</lineNumber>
+              <lineNumber>57</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2690,13 +2690,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>55</second>
+                      <second>57</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>and_ln55_fu_405_p2</rtlName>
+              <rtlName>and_ln57_fu_407_p2</rtlName>
               <control>auto</control>
               <opType>and</opType>
               <implIndex>auto</implIndex>
@@ -2731,14 +2731,14 @@
               <name>a_full_mantissa_2</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>55</lineNumber>
+              <lineNumber>57</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2747,13 +2747,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>55</second>
+                      <second>57</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName>a_full_mantissa</originalName>
-              <rtlName>a_full_mantissa_2_fu_411_p3</rtlName>
+              <rtlName>a_full_mantissa_2_fu_413_p3</rtlName>
               <control>auto</control>
               <opType>select</opType>
               <implIndex>auto_sel</implIndex>
@@ -2786,73 +2786,17 @@
             <Obj>
               <type>0</type>
               <id>52</id>
-              <name>zext_ln40_1</name>
-              <fileName>activation_accelerator.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>40</lineNumber>
-              <contextFuncName>bf16add</contextFuncName>
-              <contextNormFuncName>bf16add</contextNormFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>activation_accelerator.cpp</first>
-                        <second>bf16add</second>
-                      </first>
-                      <second>40</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName>zext_ln40_1_fu_419_p1</rtlName>
-              <control/>
-              <opType/>
-              <implIndex/>
-              <coreName/>
-              <isStorage>0</isStorage>
-              <storageDepth>0</storageDepth>
-              <coreId>1770695344</coreId>
-              <rtlModuleName/>
-            </Obj>
-            <bitwidth>17</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>266</item>
-          </oprand_edges>
-          <opcode>zext</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>0.00</m_delay>
-          <m_topoIndex>48</m_topoIndex>
-          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
-        </item>
-        <item class_id_reference="9" object_id="_51">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>53</id>
               <name>b_full_mantissa_2</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>52</lineNumber>
+              <lineNumber>54</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2861,13 +2805,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>52</second>
+                      <second>54</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName>b_full_mantissa</originalName>
-              <rtlName>b_full_mantissa_2_fu_423_p3</rtlName>
+              <rtlName>b_full_mantissa_2_fu_421_p3</rtlName>
               <control>auto</control>
               <opType>select</opType>
               <implIndex>auto_sel</implIndex>
@@ -2882,9 +2826,9 @@
           <oprand_edges>
             <count>3</count>
             <item_version>0</item_version>
+            <item>266</item>
             <item>267</item>
             <item>268</item>
-            <item>269</item>
           </oprand_edges>
           <opcode>select</opcode>
           <m_Display>0</m_Display>
@@ -2892,25 +2836,25 @@
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
           <m_delay>0.90</m_delay>
-          <m_topoIndex>49</m_topoIndex>
+          <m_topoIndex>48</m_topoIndex>
           <m_clusterGroupNumber>3</m_clusterGroupNumber>
         </item>
-        <item class_id_reference="9" object_id="_52">
+        <item class_id_reference="9" object_id="_51">
           <Value>
             <Obj>
               <type>0</type>
-              <id>54</id>
-              <name>zext_ln41_1</name>
+              <id>53</id>
+              <name>max_exp_4</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>41</lineNumber>
+              <lineNumber>57</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2919,28 +2863,86 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>41</second>
+                      <second>57</second>
+                    </item>
+                  </second>
+                </item>
+              </inlineStackInfo>
+              <originalName>max_exp</originalName>
+              <rtlName>max_exp_4_fu_429_p3</rtlName>
+              <control>auto</control>
+              <opType>select</opType>
+              <implIndex>auto_sel</implIndex>
+              <coreName>Sel</coreName>
+              <isStorage>0</isStorage>
+              <storageDepth>0</storageDepth>
+              <coreId>73</coreId>
+              <rtlModuleName/>
+            </Obj>
+            <bitwidth>8</bitwidth>
+          </Value>
+          <oprand_edges>
+            <count>3</count>
+            <item_version>0</item_version>
+            <item>269</item>
+            <item>270</item>
+            <item>271</item>
+          </oprand_edges>
+          <opcode>select</opcode>
+          <m_Display>0</m_Display>
+          <m_isOnCriticalPath>0</m_isOnCriticalPath>
+          <m_isLCDNode>0</m_isLCDNode>
+          <m_isStartOfPath>0</m_isStartOfPath>
+          <m_delay>0.39</m_delay>
+          <m_topoIndex>49</m_topoIndex>
+          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
+        </item>
+        <item class_id_reference="9" object_id="_52">
+          <Value>
+            <Obj>
+              <type>0</type>
+              <id>54</id>
+              <name>zext_ln53</name>
+              <fileName>activation_accelerator.cpp</fileName>
+              <fileDirectory>..</fileDirectory>
+              <lineNumber>53</lineNumber>
+              <contextFuncName>bf16add</contextFuncName>
+              <contextNormFuncName>bf16add</contextNormFuncName>
+              <inlineStackInfo>
+                <count>1</count>
+                <item_version>0</item_version>
+                <item>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <second>
+                    <count>1</count>
+                    <item_version>0</item_version>
+                    <item>
+                      <first>
+                        <first>activation_accelerator.cpp</first>
+                        <second>bf16add</second>
+                      </first>
+                      <second>53</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln41_1_fu_431_p1</rtlName>
+              <rtlName>zext_ln53_fu_437_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770698112</coreId>
+              <coreId>1061812816</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>17</bitwidth>
+            <bitwidth>16</bitwidth>
           </Value>
           <oprand_edges>
             <count>1</count>
             <item_version>0</item_version>
-            <item>270</item>
+            <item>272</item>
           </oprand_edges>
           <opcode>zext</opcode>
           <m_Display>0</m_Display>
@@ -2956,17 +2958,17 @@
             <Obj>
               <type>0</type>
               <id>55</id>
-              <name>max_exp_4</name>
+              <name>trunc_ln53</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>55</lineNumber>
+              <lineNumber>53</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2975,37 +2977,35 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>55</second>
+                      <second>53</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
-              <originalName>max_exp</originalName>
-              <rtlName>max_exp_4_fu_435_p3</rtlName>
-              <control>auto</control>
-              <opType>select</opType>
-              <implIndex>auto_sel</implIndex>
-              <coreName>Sel</coreName>
+              <originalName/>
+              <rtlName>trunc_ln53_fu_441_p1</rtlName>
+              <control/>
+              <opType/>
+              <implIndex/>
+              <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>73</coreId>
+              <coreId>1063298576</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>8</bitwidth>
+            <bitwidth>1</bitwidth>
           </Value>
           <oprand_edges>
-            <count>3</count>
+            <count>1</count>
             <item_version>0</item_version>
-            <item>271</item>
-            <item>272</item>
             <item>273</item>
           </oprand_edges>
-          <opcode>select</opcode>
+          <opcode>trunc</opcode>
           <m_Display>0</m_Display>
           <m_isOnCriticalPath>0</m_isOnCriticalPath>
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>0.39</m_delay>
+          <m_delay>0.00</m_delay>
           <m_topoIndex>51</m_topoIndex>
           <m_clusterGroupNumber>-1</m_clusterGroupNumber>
         </item>
@@ -3014,17 +3014,17 @@
             <Obj>
               <type>0</type>
               <id>56</id>
-              <name>zext_ln51</name>
+              <name>zext_ln53_1</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>51</lineNumber>
+              <lineNumber>53</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3033,23 +3033,23 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>51</second>
+                      <second>53</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln51_fu_443_p1</rtlName>
+              <rtlName>zext_ln53_1_fu_445_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770861376</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>16</bitwidth>
+            <bitwidth>17</bitwidth>
           </Value>
           <oprand_edges>
             <count>1</count>
@@ -3070,17 +3070,17 @@
             <Obj>
               <type>0</type>
               <id>57</id>
-              <name>trunc_ln51</name>
+              <name>zext_ln53_2</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>51</lineNumber>
+              <lineNumber>53</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3089,30 +3089,30 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>51</second>
+                      <second>53</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>trunc_ln51_fu_447_p1</rtlName>
+              <rtlName>zext_ln53_2_fu_449_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770862824</coreId>
+              <coreId>1063304720</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>1</bitwidth>
+            <bitwidth>17</bitwidth>
           </Value>
           <oprand_edges>
             <count>1</count>
             <item_version>0</item_version>
             <item>275</item>
           </oprand_edges>
-          <opcode>trunc</opcode>
+          <opcode>zext</opcode>
           <m_Display>0</m_Display>
           <m_isOnCriticalPath>0</m_isOnCriticalPath>
           <m_isLCDNode>0</m_isLCDNode>
@@ -3126,17 +3126,17 @@
             <Obj>
               <type>0</type>
               <id>58</id>
-              <name>xor_ln65</name>
+              <name>xor_ln67</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>65</lineNumber>
+              <lineNumber>67</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3145,13 +3145,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>65</second>
+                      <second>67</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>xor_ln65_fu_451_p2</rtlName>
+              <rtlName>xor_ln67_fu_453_p2</rtlName>
               <control>auto</control>
               <opType>xor</opType>
               <implIndex>auto</implIndex>
@@ -3183,17 +3183,17 @@
             <Obj>
               <type>0</type>
               <id>59</id>
-              <name>result_mantissa</name>
+              <name>icmp_ln71</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>66</lineNumber>
+              <lineNumber>71</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3202,126 +3202,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>66</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName>result_mantissa</originalName>
-              <rtlName>result_mantissa_fu_457_p2</rtlName>
-              <control>auto</control>
-              <opType>add</opType>
-              <implIndex>fabric</implIndex>
-              <coreName>Adder</coreName>
-              <isStorage>0</isStorage>
-              <storageDepth>0</storageDepth>
-              <coreId>1</coreId>
-              <rtlModuleName/>
-            </Obj>
-            <bitwidth>17</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>2</count>
-            <item_version>0</item_version>
-            <item>278</item>
-            <item>279</item>
-          </oprand_edges>
-          <opcode>add</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>0.85</m_delay>
-          <m_topoIndex>55</m_topoIndex>
-          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
-        </item>
-        <item class_id_reference="9" object_id="_58">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>60</id>
-              <name>zext_ln63</name>
-              <fileName>activation_accelerator.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>63</lineNumber>
-              <contextFuncName>bf16add</contextFuncName>
-              <contextNormFuncName>bf16add</contextNormFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>activation_accelerator.cpp</first>
-                        <second>bf16add</second>
-                      </first>
-                      <second>63</second>
+                      <second>71</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln63_fu_463_p1</rtlName>
-              <control/>
-              <opType/>
-              <implIndex/>
-              <coreName/>
-              <isStorage>0</isStorage>
-              <storageDepth>0</storageDepth>
-              <coreId>1770844976</coreId>
-              <rtlModuleName/>
-            </Obj>
-            <bitwidth>18</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>280</item>
-          </oprand_edges>
-          <opcode>zext</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>0.00</m_delay>
-          <m_topoIndex>56</m_topoIndex>
-          <m_clusterGroupNumber>6</m_clusterGroupNumber>
-        </item>
-        <item class_id_reference="9" object_id="_59">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>61</id>
-              <name>icmp_ln69</name>
-              <fileName>activation_accelerator.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>69</lineNumber>
-              <contextFuncName>bf16add</contextFuncName>
-              <contextNormFuncName>bf16add</contextNormFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>activation_accelerator.cpp</first>
-                        <second>bf16add</second>
-                      </first>
-                      <second>69</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName>icmp_ln69_fu_467_p2</rtlName>
+              <rtlName>icmp_ln71_fu_459_p2</rtlName>
               <control>auto</control>
               <opType>icmp</opType>
               <implIndex>auto</implIndex>
@@ -3336,8 +3223,8 @@
           <oprand_edges>
             <count>2</count>
             <item_version>0</item_version>
-            <item>281</item>
-            <item>282</item>
+            <item>278</item>
+            <item>279</item>
           </oprand_edges>
           <opcode>icmp</opcode>
           <m_Display>0</m_Display>
@@ -3345,25 +3232,25 @@
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
           <m_delay>1.10</m_delay>
-          <m_topoIndex>57</m_topoIndex>
+          <m_topoIndex>55</m_topoIndex>
           <m_clusterGroupNumber>-1</m_clusterGroupNumber>
         </item>
-        <item class_id_reference="9" object_id="_60">
+        <item class_id_reference="9" object_id="_58">
           <Value>
             <Obj>
               <type>0</type>
-              <id>62</id>
-              <name>xor_ln69</name>
+              <id>60</id>
+              <name>xor_ln71</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>69</lineNumber>
+              <lineNumber>71</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3372,13 +3259,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>69</second>
+                      <second>71</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>xor_ln69_fu_473_p2</rtlName>
+              <rtlName>xor_ln71_fu_465_p2</rtlName>
               <control>auto</control>
               <opType>xor</opType>
               <implIndex>auto</implIndex>
@@ -3393,8 +3280,8 @@
           <oprand_edges>
             <count>2</count>
             <item_version>0</item_version>
-            <item>283</item>
-            <item>284</item>
+            <item>280</item>
+            <item>281</item>
           </oprand_edges>
           <opcode>xor</opcode>
           <m_Display>0</m_Display>
@@ -3402,6 +3289,120 @@
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
           <m_delay>0.28</m_delay>
+          <m_topoIndex>56</m_topoIndex>
+          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
+        </item>
+        <item class_id_reference="9" object_id="_59">
+          <Value>
+            <Obj>
+              <type>0</type>
+              <id>61</id>
+              <name>result_mantissa_1</name>
+              <fileName>activation_accelerator.cpp</fileName>
+              <fileDirectory>..</fileDirectory>
+              <lineNumber>72</lineNumber>
+              <contextFuncName>bf16add</contextFuncName>
+              <contextNormFuncName>bf16add</contextNormFuncName>
+              <inlineStackInfo>
+                <count>1</count>
+                <item_version>0</item_version>
+                <item>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <second>
+                    <count>1</count>
+                    <item_version>0</item_version>
+                    <item>
+                      <first>
+                        <first>activation_accelerator.cpp</first>
+                        <second>bf16add</second>
+                      </first>
+                      <second>72</second>
+                    </item>
+                  </second>
+                </item>
+              </inlineStackInfo>
+              <originalName>result_mantissa</originalName>
+              <rtlName>result_mantissa_1_fu_471_p2</rtlName>
+              <control>auto</control>
+              <opType>sub</opType>
+              <implIndex>fabric</implIndex>
+              <coreName>Adder</coreName>
+              <isStorage>0</isStorage>
+              <storageDepth>0</storageDepth>
+              <coreId>1</coreId>
+              <rtlModuleName/>
+            </Obj>
+            <bitwidth>17</bitwidth>
+          </Value>
+          <oprand_edges>
+            <count>2</count>
+            <item_version>0</item_version>
+            <item>282</item>
+            <item>283</item>
+          </oprand_edges>
+          <opcode>sub</opcode>
+          <m_Display>0</m_Display>
+          <m_isOnCriticalPath>0</m_isOnCriticalPath>
+          <m_isLCDNode>0</m_isLCDNode>
+          <m_isStartOfPath>0</m_isStartOfPath>
+          <m_delay>0.85</m_delay>
+          <m_topoIndex>57</m_topoIndex>
+          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
+        </item>
+        <item class_id_reference="9" object_id="_60">
+          <Value>
+            <Obj>
+              <type>0</type>
+              <id>62</id>
+              <name>result_mantissa_3</name>
+              <fileName>activation_accelerator.cpp</fileName>
+              <fileDirectory>..</fileDirectory>
+              <lineNumber>75</lineNumber>
+              <contextFuncName>bf16add</contextFuncName>
+              <contextNormFuncName>bf16add</contextNormFuncName>
+              <inlineStackInfo>
+                <count>1</count>
+                <item_version>0</item_version>
+                <item>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <second>
+                    <count>1</count>
+                    <item_version>0</item_version>
+                    <item>
+                      <first>
+                        <first>activation_accelerator.cpp</first>
+                        <second>bf16add</second>
+                      </first>
+                      <second>75</second>
+                    </item>
+                  </second>
+                </item>
+              </inlineStackInfo>
+              <originalName>result_mantissa</originalName>
+              <rtlName>result_mantissa_3_fu_477_p2</rtlName>
+              <control>auto</control>
+              <opType>sub</opType>
+              <implIndex>fabric</implIndex>
+              <coreName>Adder</coreName>
+              <isStorage>0</isStorage>
+              <storageDepth>0</storageDepth>
+              <coreId>1</coreId>
+              <rtlModuleName/>
+            </Obj>
+            <bitwidth>17</bitwidth>
+          </Value>
+          <oprand_edges>
+            <count>2</count>
+            <item_version>0</item_version>
+            <item>284</item>
+            <item>285</item>
+          </oprand_edges>
+          <opcode>sub</opcode>
+          <m_Display>0</m_Display>
+          <m_isOnCriticalPath>0</m_isOnCriticalPath>
+          <m_isLCDNode>0</m_isLCDNode>
+          <m_isStartOfPath>0</m_isStartOfPath>
+          <m_delay>0.85</m_delay>
           <m_topoIndex>58</m_topoIndex>
           <m_clusterGroupNumber>-1</m_clusterGroupNumber>
         </item>
@@ -3410,131 +3411,17 @@
             <Obj>
               <type>0</type>
               <id>63</id>
-              <name>result_mantissa_1</name>
-              <fileName>activation_accelerator.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>70</lineNumber>
-              <contextFuncName>bf16add</contextFuncName>
-              <contextNormFuncName>bf16add</contextNormFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>activation_accelerator.cpp</first>
-                        <second>bf16add</second>
-                      </first>
-                      <second>70</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName>result_mantissa</originalName>
-              <rtlName>result_mantissa_1_fu_479_p2</rtlName>
-              <control>auto</control>
-              <opType>sub</opType>
-              <implIndex>fabric</implIndex>
-              <coreName>Adder</coreName>
-              <isStorage>0</isStorage>
-              <storageDepth>0</storageDepth>
-              <coreId>1</coreId>
-              <rtlModuleName/>
-            </Obj>
-            <bitwidth>17</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>2</count>
-            <item_version>0</item_version>
-            <item>285</item>
-            <item>286</item>
-          </oprand_edges>
-          <opcode>sub</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>0.85</m_delay>
-          <m_topoIndex>59</m_topoIndex>
-          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
-        </item>
-        <item class_id_reference="9" object_id="_62">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>64</id>
-              <name>result_mantissa_3</name>
-              <fileName>activation_accelerator.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>73</lineNumber>
-              <contextFuncName>bf16add</contextFuncName>
-              <contextNormFuncName>bf16add</contextNormFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>activation_accelerator.cpp</first>
-                        <second>bf16add</second>
-                      </first>
-                      <second>73</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName>result_mantissa</originalName>
-              <rtlName>result_mantissa_3_fu_485_p2</rtlName>
-              <control>auto</control>
-              <opType>sub</opType>
-              <implIndex>fabric</implIndex>
-              <coreName>Adder</coreName>
-              <isStorage>0</isStorage>
-              <storageDepth>0</storageDepth>
-              <coreId>1</coreId>
-              <rtlModuleName/>
-            </Obj>
-            <bitwidth>17</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>2</count>
-            <item_version>0</item_version>
-            <item>287</item>
-            <item>288</item>
-          </oprand_edges>
-          <opcode>sub</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>0.85</m_delay>
-          <m_topoIndex>60</m_topoIndex>
-          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
-        </item>
-        <item class_id_reference="9" object_id="_63">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>65</id>
               <name>result_mantissa_4</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>69</lineNumber>
+              <lineNumber>71</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3543,13 +3430,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>69</second>
+                      <second>71</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName>result_mantissa</originalName>
-              <rtlName>result_mantissa_4_fu_491_p3</rtlName>
+              <rtlName>result_mantissa_4_fu_483_p3</rtlName>
               <control>auto</control>
               <opType>select</opType>
               <implIndex>auto_sel</implIndex>
@@ -3564,9 +3451,9 @@
           <oprand_edges>
             <count>3</count>
             <item_version>0</item_version>
-            <item>289</item>
-            <item>290</item>
-            <item>291</item>
+            <item>286</item>
+            <item>287</item>
+            <item>288</item>
           </oprand_edges>
           <opcode>select</opcode>
           <m_Display>0</m_Display>
@@ -3574,25 +3461,25 @@
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
           <m_delay>0.00</m_delay>
-          <m_topoIndex>61</m_topoIndex>
+          <m_topoIndex>59</m_topoIndex>
           <m_clusterGroupNumber>6</m_clusterGroupNumber>
         </item>
-        <item class_id_reference="9" object_id="_64">
+        <item class_id_reference="9" object_id="_62">
           <Value>
             <Obj>
               <type>0</type>
-              <id>66</id>
-              <name>sext_ln69</name>
+              <id>64</id>
+              <name>sext_ln71</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>69</lineNumber>
+              <lineNumber>71</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3601,13 +3488,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>69</second>
+                      <second>71</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>sext_ln69_fu_499_p1</rtlName>
+              <rtlName>sext_ln71_fu_491_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
@@ -3622,7 +3509,7 @@
           <oprand_edges>
             <count>1</count>
             <item_version>0</item_version>
-            <item>292</item>
+            <item>289</item>
           </oprand_edges>
           <opcode>sext</opcode>
           <m_Display>0</m_Display>
@@ -3630,25 +3517,25 @@
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
           <m_delay>0.00</m_delay>
-          <m_topoIndex>62</m_topoIndex>
+          <m_topoIndex>60</m_topoIndex>
           <m_clusterGroupNumber>6</m_clusterGroupNumber>
         </item>
-        <item class_id_reference="9" object_id="_65">
+        <item class_id_reference="9" object_id="_63">
           <Value>
             <Obj>
               <type>0</type>
-              <id>67</id>
+              <id>65</id>
               <name>result_sign</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>69</lineNumber>
+              <lineNumber>71</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3657,13 +3544,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>69</second>
+                      <second>71</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName>result_sign</originalName>
-              <rtlName>result_sign_fu_503_p3</rtlName>
+              <rtlName>result_sign_fu_495_p3</rtlName>
               <control>auto</control>
               <opType>select</opType>
               <implIndex>auto_sel</implIndex>
@@ -3678,9 +3565,9 @@
           <oprand_edges>
             <count>3</count>
             <item_version>0</item_version>
-            <item>293</item>
-            <item>294</item>
-            <item>295</item>
+            <item>290</item>
+            <item>291</item>
+            <item>292</item>
           </oprand_edges>
           <opcode>select</opcode>
           <m_Display>0</m_Display>
@@ -3688,15 +3575,72 @@
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
           <m_delay>0.00</m_delay>
-          <m_topoIndex>63</m_topoIndex>
+          <m_topoIndex>61</m_topoIndex>
           <m_clusterGroupNumber>7</m_clusterGroupNumber>
         </item>
-        <item class_id_reference="9" object_id="_66">
+        <item class_id_reference="9" object_id="_64">
           <Value>
             <Obj>
               <type>0</type>
-              <id>68</id>
-              <name>result_mantissa_5</name>
+              <id>66</id>
+              <name>result_mantissa</name>
+              <fileName>activation_accelerator.cpp</fileName>
+              <fileDirectory>..</fileDirectory>
+              <lineNumber>68</lineNumber>
+              <contextFuncName>bf16add</contextFuncName>
+              <contextNormFuncName>bf16add</contextNormFuncName>
+              <inlineStackInfo>
+                <count>1</count>
+                <item_version>0</item_version>
+                <item>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <second>
+                    <count>1</count>
+                    <item_version>0</item_version>
+                    <item>
+                      <first>
+                        <first>activation_accelerator.cpp</first>
+                        <second>bf16add</second>
+                      </first>
+                      <second>68</second>
+                    </item>
+                  </second>
+                </item>
+              </inlineStackInfo>
+              <originalName>result_mantissa</originalName>
+              <rtlName>result_mantissa_fu_503_p2</rtlName>
+              <control>auto</control>
+              <opType>add</opType>
+              <implIndex>fabric</implIndex>
+              <coreName>Adder</coreName>
+              <isStorage>0</isStorage>
+              <storageDepth>0</storageDepth>
+              <coreId>1</coreId>
+              <rtlModuleName/>
+            </Obj>
+            <bitwidth>17</bitwidth>
+          </Value>
+          <oprand_edges>
+            <count>2</count>
+            <item_version>0</item_version>
+            <item>293</item>
+            <item>294</item>
+          </oprand_edges>
+          <opcode>add</opcode>
+          <m_Display>0</m_Display>
+          <m_isOnCriticalPath>0</m_isOnCriticalPath>
+          <m_isLCDNode>0</m_isLCDNode>
+          <m_isStartOfPath>0</m_isStartOfPath>
+          <m_delay>0.85</m_delay>
+          <m_topoIndex>62</m_topoIndex>
+          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
+        </item>
+        <item class_id_reference="9" object_id="_65">
+          <Value>
+            <Obj>
+              <type>0</type>
+              <id>67</id>
+              <name>zext_ln65</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>65</lineNumber>
@@ -3706,7 +3650,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3720,8 +3664,64 @@
                   </second>
                 </item>
               </inlineStackInfo>
+              <originalName/>
+              <rtlName>zext_ln65_fu_509_p1</rtlName>
+              <control/>
+              <opType/>
+              <implIndex/>
+              <coreName/>
+              <isStorage>0</isStorage>
+              <storageDepth>0</storageDepth>
+              <coreId>1061795424</coreId>
+              <rtlModuleName/>
+            </Obj>
+            <bitwidth>18</bitwidth>
+          </Value>
+          <oprand_edges>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>295</item>
+          </oprand_edges>
+          <opcode>zext</opcode>
+          <m_Display>0</m_Display>
+          <m_isOnCriticalPath>0</m_isOnCriticalPath>
+          <m_isLCDNode>0</m_isLCDNode>
+          <m_isStartOfPath>0</m_isStartOfPath>
+          <m_delay>0.00</m_delay>
+          <m_topoIndex>63</m_topoIndex>
+          <m_clusterGroupNumber>6</m_clusterGroupNumber>
+        </item>
+        <item class_id_reference="9" object_id="_66">
+          <Value>
+            <Obj>
+              <type>0</type>
+              <id>68</id>
+              <name>result_mantissa_5</name>
+              <fileName>activation_accelerator.cpp</fileName>
+              <fileDirectory>..</fileDirectory>
+              <lineNumber>67</lineNumber>
+              <contextFuncName>bf16add</contextFuncName>
+              <contextNormFuncName>bf16add</contextNormFuncName>
+              <inlineStackInfo>
+                <count>1</count>
+                <item_version>0</item_version>
+                <item>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <second>
+                    <count>1</count>
+                    <item_version>0</item_version>
+                    <item>
+                      <first>
+                        <first>activation_accelerator.cpp</first>
+                        <second>bf16add</second>
+                      </first>
+                      <second>67</second>
+                    </item>
+                  </second>
+                </item>
+              </inlineStackInfo>
               <originalName>result_mantissa</originalName>
-              <rtlName>result_mantissa_5_fu_511_p3</rtlName>
+              <rtlName>result_mantissa_5_fu_513_p3</rtlName>
               <control>auto</control>
               <opType>select</opType>
               <implIndex>auto_sel</implIndex>
@@ -3757,14 +3757,14 @@
               <name>result_sign_1</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>65</lineNumber>
+              <lineNumber>67</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3773,13 +3773,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>65</second>
+                      <second>67</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName>result_sign</originalName>
-              <rtlName>result_sign_1_fu_519_p3</rtlName>
+              <rtlName>result_sign_1_fu_521_p3</rtlName>
               <control>auto</control>
               <opType>select</opType>
               <implIndex>auto_sel</implIndex>
@@ -3812,17 +3812,17 @@
             <Obj>
               <type>0</type>
               <id>70</id>
-              <name>icmp_ln79</name>
+              <name>icmp_ln81</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>79</lineNumber>
+              <lineNumber>81</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3831,13 +3831,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>79</second>
+                      <second>81</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln79_fu_527_p2</rtlName>
+              <rtlName>icmp_ln81_fu_529_p2</rtlName>
               <control>auto</control>
               <opType>icmp</opType>
               <implIndex>auto</implIndex>
@@ -3869,17 +3869,17 @@
             <Obj>
               <type>0</type>
               <id>71</id>
-              <name>br_ln79</name>
+              <name>br_ln81</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>79</lineNumber>
+              <lineNumber>81</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3888,7 +3888,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>79</second>
+                      <second>81</second>
                     </item>
                   </second>
                 </item>
@@ -3901,7 +3901,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>1061657360</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -3945,7 +3945,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1771049072</coreId>
+              <coreId>1819113532</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>18</bitwidth>
@@ -3987,7 +3987,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1771048960</coreId>
+              <coreId>1061874368</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -4011,17 +4011,17 @@
             <Obj>
               <type>0</type>
               <id>75</id>
-              <name>icmp_ln90</name>
+              <name>icmp_ln92</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>92</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4030,13 +4030,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>90</second>
+                      <second>92</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln90_fu_533_p2</rtlName>
+              <rtlName>icmp_ln92_fu_535_p2</rtlName>
               <control>auto</control>
               <opType>icmp</opType>
               <implIndex>auto</implIndex>
@@ -4068,17 +4068,17 @@
             <Obj>
               <type>0</type>
               <id>76</id>
-              <name>xor_ln86</name>
+              <name>xor_ln88</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>86</lineNumber>
+              <lineNumber>88</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4087,13 +4087,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>86</second>
+                      <second>88</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>xor_ln86_fu_539_p2</rtlName>
+              <rtlName>xor_ln88_fu_541_p2</rtlName>
               <control>auto</control>
               <opType>xor</opType>
               <implIndex>auto</implIndex>
@@ -4125,17 +4125,17 @@
             <Obj>
               <type>0</type>
               <id>77</id>
-              <name>and_ln86_1</name>
+              <name>and_ln88_1</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>86</lineNumber>
+              <lineNumber>88</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4144,13 +4144,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>86</second>
+                      <second>88</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>and_ln86_1_fu_545_p2</rtlName>
+              <rtlName>and_ln88_1_fu_547_p2</rtlName>
               <control>auto</control>
               <opType>and</opType>
               <implIndex>auto</implIndex>
@@ -4182,17 +4182,17 @@
             <Obj>
               <type>0</type>
               <id>78</id>
-              <name>select_ln86</name>
+              <name>select_ln88</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>86</lineNumber>
+              <lineNumber>88</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4201,13 +4201,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>86</second>
+                      <second>88</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>select_ln86_fu_551_p3</rtlName>
+              <rtlName>select_ln88_fu_553_p3</rtlName>
               <control>auto</control>
               <opType>select</opType>
               <implIndex>auto_sel</implIndex>
@@ -4240,17 +4240,17 @@
             <Obj>
               <type>0</type>
               <id>79</id>
-              <name>max_exp_2_write_ln86</name>
+              <name>max_exp_2_write_ln88</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>86</lineNumber>
+              <lineNumber>88</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4259,7 +4259,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>86</second>
+                      <second>88</second>
                     </item>
                   </second>
                 </item>
@@ -4272,7 +4272,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1771057728</coreId>
+              <coreId>1062957312</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -4297,17 +4297,17 @@
             <Obj>
               <type>0</type>
               <id>80</id>
-              <name>result_mantissa_2_write_ln86</name>
+              <name>result_mantissa_2_write_ln88</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>86</lineNumber>
+              <lineNumber>88</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4316,7 +4316,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>86</second>
+                      <second>88</second>
                     </item>
                   </second>
                 </item>
@@ -4329,7 +4329,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>1062958624</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -4354,17 +4354,17 @@
             <Obj>
               <type>0</type>
               <id>81</id>
-              <name>br_ln86</name>
+              <name>br_ln88</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>86</lineNumber>
+              <lineNumber>88</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4373,7 +4373,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>86</second>
+                      <second>88</second>
                     </item>
                   </second>
                 </item>
@@ -4386,7 +4386,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>1061276176</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -4410,17 +4410,17 @@
             <Obj>
               <type>0</type>
               <id>83</id>
-              <name>max_exp_10</name>
+              <name>result_mantissa_6</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>88</lineNumber>
+              <lineNumber>95</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4429,12 +4429,12 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>88</second>
+                      <second>95</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
-              <originalName>max_exp</originalName>
+              <originalName>result_mantissa</originalName>
               <rtlName/>
               <control/>
               <opType/>
@@ -4442,16 +4442,16 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>480</coreId>
+              <coreId>1062708656</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>16</bitwidth>
+            <bitwidth>18</bitwidth>
           </Value>
           <oprand_edges>
             <count>2</count>
             <item_version>0</item_version>
             <item>327</item>
-            <item>501</item>
+            <item>505</item>
           </oprand_edges>
           <opcode>load</opcode>
           <m_Display>0</m_Display>
@@ -4467,7 +4467,7 @@
             <Obj>
               <type>0</type>
               <id>84</id>
-              <name>icmp_ln90_1</name>
+              <name>max_exp_10</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>90</lineNumber>
@@ -4477,7 +4477,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4491,180 +4491,8 @@
                   </second>
                 </item>
               </inlineStackInfo>
-              <originalName/>
-              <rtlName>icmp_ln90_1_fu_573_p2</rtlName>
-              <control>auto</control>
-              <opType>icmp</opType>
-              <implIndex>auto</implIndex>
-              <coreName>Cmp</coreName>
-              <isStorage>0</isStorage>
-              <storageDepth>0</storageDepth>
-              <coreId>9</coreId>
-              <rtlModuleName/>
-            </Obj>
-            <bitwidth>1</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>2</count>
-            <item_version>0</item_version>
-            <item>328</item>
-            <item>329</item>
-          </oprand_edges>
-          <opcode>icmp</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>1.10</m_delay>
-          <m_topoIndex>78</m_topoIndex>
-          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
-        </item>
-        <item class_id_reference="9" object_id="_81">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>85</id>
-              <name>br_ln90</name>
-              <fileName>activation_accelerator.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
-              <contextFuncName>bf16add</contextFuncName>
-              <contextNormFuncName>bf16add</contextNormFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>activation_accelerator.cpp</first>
-                        <second>bf16add</second>
-                      </first>
-                      <second>90</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
+              <originalName>max_exp</originalName>
               <rtlName/>
-              <control/>
-              <opType/>
-              <implIndex/>
-              <coreName/>
-              <isStorage>0</isStorage>
-              <storageDepth>0</storageDepth>
-              <coreId>1770732272</coreId>
-              <rtlModuleName/>
-            </Obj>
-            <bitwidth>0</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>3</count>
-            <item_version>0</item_version>
-            <item>330</item>
-            <item>331</item>
-            <item>332</item>
-          </oprand_edges>
-          <opcode>br</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>0.42</m_delay>
-          <m_topoIndex>79</m_topoIndex>
-          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
-        </item>
-        <item class_id_reference="9" object_id="_82">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>87</id>
-              <name>result_mantissa_2_load_1</name>
-              <fileName>activation_accelerator.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>86</lineNumber>
-              <contextFuncName>bf16add</contextFuncName>
-              <contextNormFuncName>bf16add</contextNormFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>activation_accelerator.cpp</first>
-                        <second>bf16add</second>
-                      </first>
-                      <second>86</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName/>
-              <control/>
-              <opType/>
-              <implIndex/>
-              <coreName/>
-              <isStorage>0</isStorage>
-              <storageDepth>0</storageDepth>
-              <coreId>1770736536</coreId>
-              <rtlModuleName/>
-            </Obj>
-            <bitwidth>18</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>2</count>
-            <item_version>0</item_version>
-            <item>333</item>
-            <item>503</item>
-          </oprand_edges>
-          <opcode>load</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>0.00</m_delay>
-          <m_topoIndex>80</m_topoIndex>
-          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
-        </item>
-        <item class_id_reference="9" object_id="_83">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>89</id>
-              <name>tmp_7</name>
-              <fileName>activation_accelerator.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>86</lineNumber>
-              <contextFuncName>bf16add</contextFuncName>
-              <contextNormFuncName>bf16add</contextNormFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>activation_accelerator.cpp</first>
-                        <second>bf16add</second>
-                      </first>
-                      <second>86</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName>tmp_7_fu_581_p4</rtlName>
               <control/>
               <opType/>
               <implIndex/>
@@ -4674,22 +4502,191 @@
               <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>3</bitwidth>
+            <bitwidth>16</bitwidth>
           </Value>
           <oprand_edges>
-            <count>4</count>
+            <count>2</count>
             <item_version>0</item_version>
-            <item>335</item>
-            <item>336</item>
-            <item>337</item>
-            <item>339</item>
+            <item>328</item>
+            <item>504</item>
           </oprand_edges>
-          <opcode>partselect</opcode>
+          <opcode>load</opcode>
           <m_Display>0</m_Display>
           <m_isOnCriticalPath>0</m_isOnCriticalPath>
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
           <m_delay>0.00</m_delay>
+          <m_topoIndex>78</m_topoIndex>
+          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
+        </item>
+        <item class_id_reference="9" object_id="_81">
+          <Value>
+            <Obj>
+              <type>0</type>
+              <id>85</id>
+              <name>trunc_ln92</name>
+              <fileName>activation_accelerator.cpp</fileName>
+              <fileDirectory>..</fileDirectory>
+              <lineNumber>92</lineNumber>
+              <contextFuncName>bf16add</contextFuncName>
+              <contextNormFuncName>bf16add</contextNormFuncName>
+              <inlineStackInfo>
+                <count>1</count>
+                <item_version>0</item_version>
+                <item>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <second>
+                    <count>1</count>
+                    <item_version>0</item_version>
+                    <item>
+                      <first>
+                        <first>activation_accelerator.cpp</first>
+                        <second>bf16add</second>
+                      </first>
+                      <second>92</second>
+                    </item>
+                  </second>
+                </item>
+              </inlineStackInfo>
+              <originalName/>
+              <rtlName>trunc_ln92_fu_578_p1</rtlName>
+              <control/>
+              <opType/>
+              <implIndex/>
+              <coreName/>
+              <isStorage>0</isStorage>
+              <storageDepth>0</storageDepth>
+              <coreId>1062709568</coreId>
+              <rtlModuleName/>
+            </Obj>
+            <bitwidth>17</bitwidth>
+          </Value>
+          <oprand_edges>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>329</item>
+          </oprand_edges>
+          <opcode>trunc</opcode>
+          <m_Display>0</m_Display>
+          <m_isOnCriticalPath>0</m_isOnCriticalPath>
+          <m_isLCDNode>0</m_isLCDNode>
+          <m_isStartOfPath>0</m_isStartOfPath>
+          <m_delay>0.00</m_delay>
+          <m_topoIndex>79</m_topoIndex>
+          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
+        </item>
+        <item class_id_reference="9" object_id="_82">
+          <Value>
+            <Obj>
+              <type>0</type>
+              <id>86</id>
+              <name>icmp_ln92_1</name>
+              <fileName>activation_accelerator.cpp</fileName>
+              <fileDirectory>..</fileDirectory>
+              <lineNumber>92</lineNumber>
+              <contextFuncName>bf16add</contextFuncName>
+              <contextNormFuncName>bf16add</contextNormFuncName>
+              <inlineStackInfo>
+                <count>1</count>
+                <item_version>0</item_version>
+                <item>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <second>
+                    <count>1</count>
+                    <item_version>0</item_version>
+                    <item>
+                      <first>
+                        <first>activation_accelerator.cpp</first>
+                        <second>bf16add</second>
+                      </first>
+                      <second>92</second>
+                    </item>
+                  </second>
+                </item>
+              </inlineStackInfo>
+              <originalName/>
+              <rtlName>icmp_ln92_1_fu_582_p2</rtlName>
+              <control>auto</control>
+              <opType>icmp</opType>
+              <implIndex>auto</implIndex>
+              <coreName>Cmp</coreName>
+              <isStorage>0</isStorage>
+              <storageDepth>0</storageDepth>
+              <coreId>9</coreId>
+              <rtlModuleName/>
+            </Obj>
+            <bitwidth>1</bitwidth>
+          </Value>
+          <oprand_edges>
+            <count>2</count>
+            <item_version>0</item_version>
+            <item>330</item>
+            <item>331</item>
+          </oprand_edges>
+          <opcode>icmp</opcode>
+          <m_Display>0</m_Display>
+          <m_isOnCriticalPath>0</m_isOnCriticalPath>
+          <m_isLCDNode>0</m_isLCDNode>
+          <m_isStartOfPath>0</m_isStartOfPath>
+          <m_delay>1.10</m_delay>
+          <m_topoIndex>80</m_topoIndex>
+          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
+        </item>
+        <item class_id_reference="9" object_id="_83">
+          <Value>
+            <Obj>
+              <type>0</type>
+              <id>87</id>
+              <name>br_ln92</name>
+              <fileName>activation_accelerator.cpp</fileName>
+              <fileDirectory>..</fileDirectory>
+              <lineNumber>92</lineNumber>
+              <contextFuncName>bf16add</contextFuncName>
+              <contextNormFuncName>bf16add</contextNormFuncName>
+              <inlineStackInfo>
+                <count>1</count>
+                <item_version>0</item_version>
+                <item>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <second>
+                    <count>1</count>
+                    <item_version>0</item_version>
+                    <item>
+                      <first>
+                        <first>activation_accelerator.cpp</first>
+                        <second>bf16add</second>
+                      </first>
+                      <second>92</second>
+                    </item>
+                  </second>
+                </item>
+              </inlineStackInfo>
+              <originalName/>
+              <rtlName/>
+              <control/>
+              <opType/>
+              <implIndex/>
+              <coreName/>
+              <isStorage>0</isStorage>
+              <storageDepth>0</storageDepth>
+              <coreId>0</coreId>
+              <rtlModuleName/>
+            </Obj>
+            <bitwidth>0</bitwidth>
+          </Value>
+          <oprand_edges>
+            <count>3</count>
+            <item_version>0</item_version>
+            <item>332</item>
+            <item>333</item>
+            <item>334</item>
+          </oprand_edges>
+          <opcode>br</opcode>
+          <m_Display>0</m_Display>
+          <m_isOnCriticalPath>0</m_isOnCriticalPath>
+          <m_isLCDNode>0</m_isLCDNode>
+          <m_isStartOfPath>0</m_isStartOfPath>
+          <m_delay>0.42</m_delay>
           <m_topoIndex>81</m_topoIndex>
           <m_clusterGroupNumber>-1</m_clusterGroupNumber>
         </item>
@@ -4698,17 +4695,17 @@
             <Obj>
               <type>0</type>
               <id>90</id>
-              <name>icmp_ln86</name>
+              <name>tmp_7</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>86</lineNumber>
+              <lineNumber>88</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4717,36 +4714,38 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>86</second>
+                      <second>88</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln86_fu_591_p2</rtlName>
-              <control>auto</control>
-              <opType>icmp</opType>
-              <implIndex>auto</implIndex>
-              <coreName>Cmp</coreName>
+              <rtlName>tmp_7_fu_587_p4</rtlName>
+              <control/>
+              <opType/>
+              <implIndex/>
+              <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>9</coreId>
+              <coreId>1062438880</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>1</bitwidth>
+            <bitwidth>3</bitwidth>
           </Value>
           <oprand_edges>
-            <count>2</count>
+            <count>4</count>
             <item_version>0</item_version>
+            <item>336</item>
+            <item>337</item>
+            <item>338</item>
             <item>340</item>
-            <item>342</item>
           </oprand_edges>
-          <opcode>icmp</opcode>
+          <opcode>partselect</opcode>
           <m_Display>0</m_Display>
           <m_isOnCriticalPath>0</m_isOnCriticalPath>
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>0.58</m_delay>
+          <m_delay>0.00</m_delay>
           <m_topoIndex>82</m_topoIndex>
           <m_clusterGroupNumber>-1</m_clusterGroupNumber>
         </item>
@@ -4755,17 +4754,17 @@
             <Obj>
               <type>0</type>
               <id>91</id>
-              <name>icmp_ln86_1</name>
+              <name>icmp_ln88</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>86</lineNumber>
+              <lineNumber>88</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4774,13 +4773,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>86</second>
+                      <second>88</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln86_1_fu_597_p2</rtlName>
+              <rtlName>icmp_ln88_fu_597_p2</rtlName>
               <control>auto</control>
               <opType>icmp</opType>
               <implIndex>auto</implIndex>
@@ -4795,15 +4794,15 @@
           <oprand_edges>
             <count>2</count>
             <item_version>0</item_version>
+            <item>341</item>
             <item>343</item>
-            <item>344</item>
           </oprand_edges>
           <opcode>icmp</opcode>
           <m_Display>0</m_Display>
           <m_isOnCriticalPath>0</m_isOnCriticalPath>
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>1.10</m_delay>
+          <m_delay>0.58</m_delay>
           <m_topoIndex>83</m_topoIndex>
           <m_clusterGroupNumber>-1</m_clusterGroupNumber>
         </item>
@@ -4812,17 +4811,17 @@
             <Obj>
               <type>0</type>
               <id>92</id>
-              <name>and_ln86</name>
+              <name>icmp_ln88_1</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>86</lineNumber>
+              <lineNumber>88</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4831,13 +4830,70 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>86</second>
+                      <second>88</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>and_ln86_fu_603_p2</rtlName>
+              <rtlName>icmp_ln88_1_fu_603_p2</rtlName>
+              <control>auto</control>
+              <opType>icmp</opType>
+              <implIndex>auto</implIndex>
+              <coreName>Cmp</coreName>
+              <isStorage>0</isStorage>
+              <storageDepth>0</storageDepth>
+              <coreId>9</coreId>
+              <rtlModuleName/>
+            </Obj>
+            <bitwidth>1</bitwidth>
+          </Value>
+          <oprand_edges>
+            <count>2</count>
+            <item_version>0</item_version>
+            <item>344</item>
+            <item>345</item>
+          </oprand_edges>
+          <opcode>icmp</opcode>
+          <m_Display>0</m_Display>
+          <m_isOnCriticalPath>0</m_isOnCriticalPath>
+          <m_isLCDNode>0</m_isLCDNode>
+          <m_isStartOfPath>0</m_isStartOfPath>
+          <m_delay>1.10</m_delay>
+          <m_topoIndex>84</m_topoIndex>
+          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
+        </item>
+        <item class_id_reference="9" object_id="_87">
+          <Value>
+            <Obj>
+              <type>0</type>
+              <id>93</id>
+              <name>and_ln88</name>
+              <fileName>activation_accelerator.cpp</fileName>
+              <fileDirectory>..</fileDirectory>
+              <lineNumber>88</lineNumber>
+              <contextFuncName>bf16add</contextFuncName>
+              <contextNormFuncName>bf16add</contextNormFuncName>
+              <inlineStackInfo>
+                <count>1</count>
+                <item_version>0</item_version>
+                <item>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <second>
+                    <count>1</count>
+                    <item_version>0</item_version>
+                    <item>
+                      <first>
+                        <first>activation_accelerator.cpp</first>
+                        <second>bf16add</second>
+                      </first>
+                      <second>88</second>
+                    </item>
+                  </second>
+                </item>
+              </inlineStackInfo>
+              <originalName/>
+              <rtlName>and_ln88_fu_609_p2</rtlName>
               <control>auto</control>
               <opType>and</opType>
               <implIndex>auto</implIndex>
@@ -4852,8 +4908,8 @@
           <oprand_edges>
             <count>2</count>
             <item_version>0</item_version>
-            <item>345</item>
             <item>346</item>
+            <item>347</item>
           </oprand_edges>
           <opcode>and</opcode>
           <m_Display>0</m_Display>
@@ -4861,64 +4917,6 @@
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
           <m_delay>0.28</m_delay>
-          <m_topoIndex>84</m_topoIndex>
-          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
-        </item>
-        <item class_id_reference="9" object_id="_87">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>93</id>
-              <name>br_ln86</name>
-              <fileName>activation_accelerator.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>86</lineNumber>
-              <contextFuncName>bf16add</contextFuncName>
-              <contextNormFuncName>bf16add</contextNormFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>activation_accelerator.cpp</first>
-                        <second>bf16add</second>
-                      </first>
-                      <second>86</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName/>
-              <control/>
-              <opType/>
-              <implIndex/>
-              <coreName/>
-              <isStorage>0</isStorage>
-              <storageDepth>0</storageDepth>
-              <coreId>1770742600</coreId>
-              <rtlModuleName/>
-            </Obj>
-            <bitwidth>0</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>3</count>
-            <item_version>0</item_version>
-            <item>347</item>
-            <item>348</item>
-            <item>349</item>
-          </oprand_edges>
-          <opcode>br</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>0.42</m_delay>
           <m_topoIndex>85</m_topoIndex>
           <m_clusterGroupNumber>-1</m_clusterGroupNumber>
         </item>
@@ -4926,65 +4924,8 @@
           <Value>
             <Obj>
               <type>0</type>
-              <id>95</id>
-              <name>result_mantissa_6</name>
-              <fileName>activation_accelerator.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>87</lineNumber>
-              <contextFuncName>bf16add</contextFuncName>
-              <contextNormFuncName>bf16add</contextNormFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>activation_accelerator.cpp</first>
-                        <second>bf16add</second>
-                      </first>
-                      <second>87</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName>result_mantissa</originalName>
-              <rtlName>result_mantissa_6_fu_609_p2</rtlName>
-              <control/>
-              <opType/>
-              <implIndex/>
-              <coreName/>
-              <isStorage>0</isStorage>
-              <storageDepth>0</storageDepth>
-              <coreId>1770743728</coreId>
-              <rtlModuleName/>
-            </Obj>
-            <bitwidth>18</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>2</count>
-            <item_version>0</item_version>
-            <item>350</item>
-            <item>352</item>
-          </oprand_edges>
-          <opcode>shl</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>0.00</m_delay>
-          <m_topoIndex>86</m_topoIndex>
-          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
-        </item>
-        <item class_id_reference="9" object_id="_89">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>96</id>
-              <name>max_exp_11</name>
+              <id>94</id>
+              <name>br_ln88</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>88</lineNumber>
@@ -4994,7 +4935,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5008,8 +4949,123 @@
                   </second>
                 </item>
               </inlineStackInfo>
+              <originalName/>
+              <rtlName/>
+              <control/>
+              <opType/>
+              <implIndex/>
+              <coreName/>
+              <isStorage>0</isStorage>
+              <storageDepth>0</storageDepth>
+              <coreId>0</coreId>
+              <rtlModuleName/>
+            </Obj>
+            <bitwidth>0</bitwidth>
+          </Value>
+          <oprand_edges>
+            <count>3</count>
+            <item_version>0</item_version>
+            <item>348</item>
+            <item>349</item>
+            <item>350</item>
+          </oprand_edges>
+          <opcode>br</opcode>
+          <m_Display>0</m_Display>
+          <m_isOnCriticalPath>0</m_isOnCriticalPath>
+          <m_isLCDNode>0</m_isLCDNode>
+          <m_isStartOfPath>0</m_isStartOfPath>
+          <m_delay>0.42</m_delay>
+          <m_topoIndex>86</m_topoIndex>
+          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
+        </item>
+        <item class_id_reference="9" object_id="_89">
+          <Value>
+            <Obj>
+              <type>0</type>
+              <id>96</id>
+              <name>result_mantissa_7</name>
+              <fileName>activation_accelerator.cpp</fileName>
+              <fileDirectory>..</fileDirectory>
+              <lineNumber>89</lineNumber>
+              <contextFuncName>bf16add</contextFuncName>
+              <contextNormFuncName>bf16add</contextNormFuncName>
+              <inlineStackInfo>
+                <count>1</count>
+                <item_version>0</item_version>
+                <item>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <second>
+                    <count>1</count>
+                    <item_version>0</item_version>
+                    <item>
+                      <first>
+                        <first>activation_accelerator.cpp</first>
+                        <second>bf16add</second>
+                      </first>
+                      <second>89</second>
+                    </item>
+                  </second>
+                </item>
+              </inlineStackInfo>
+              <originalName>result_mantissa</originalName>
+              <rtlName>result_mantissa_7_fu_615_p2</rtlName>
+              <control/>
+              <opType/>
+              <implIndex/>
+              <coreName/>
+              <isStorage>0</isStorage>
+              <storageDepth>0</storageDepth>
+              <coreId>1330007625</coreId>
+              <rtlModuleName/>
+            </Obj>
+            <bitwidth>18</bitwidth>
+          </Value>
+          <oprand_edges>
+            <count>2</count>
+            <item_version>0</item_version>
+            <item>351</item>
+            <item>353</item>
+          </oprand_edges>
+          <opcode>shl</opcode>
+          <m_Display>0</m_Display>
+          <m_isOnCriticalPath>0</m_isOnCriticalPath>
+          <m_isLCDNode>0</m_isLCDNode>
+          <m_isStartOfPath>0</m_isStartOfPath>
+          <m_delay>0.00</m_delay>
+          <m_topoIndex>87</m_topoIndex>
+          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
+        </item>
+        <item class_id_reference="9" object_id="_90">
+          <Value>
+            <Obj>
+              <type>0</type>
+              <id>97</id>
+              <name>max_exp_11</name>
+              <fileName>activation_accelerator.cpp</fileName>
+              <fileDirectory>..</fileDirectory>
+              <lineNumber>90</lineNumber>
+              <contextFuncName>bf16add</contextFuncName>
+              <contextNormFuncName>bf16add</contextNormFuncName>
+              <inlineStackInfo>
+                <count>1</count>
+                <item_version>0</item_version>
+                <item>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <second>
+                    <count>1</count>
+                    <item_version>0</item_version>
+                    <item>
+                      <first>
+                        <first>activation_accelerator.cpp</first>
+                        <second>bf16add</second>
+                      </first>
+                      <second>90</second>
+                    </item>
+                  </second>
+                </item>
+              </inlineStackInfo>
               <originalName>max_exp</originalName>
-              <rtlName>max_exp_11_fu_615_p2</rtlName>
+              <rtlName>max_exp_11_fu_621_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -5024,8 +5080,8 @@
           <oprand_edges>
             <count>2</count>
             <item_version>0</item_version>
-            <item>353</item>
             <item>354</item>
+            <item>355</item>
           </oprand_edges>
           <opcode>add</opcode>
           <m_Display>0</m_Display>
@@ -5033,65 +5089,6 @@
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
           <m_delay>0.85</m_delay>
-          <m_topoIndex>87</m_topoIndex>
-          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
-        </item>
-        <item class_id_reference="9" object_id="_90">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>97</id>
-              <name>max_exp_2_write_ln90</name>
-              <fileName>activation_accelerator.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
-              <contextFuncName>bf16add</contextFuncName>
-              <contextNormFuncName>bf16add</contextNormFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>activation_accelerator.cpp</first>
-                        <second>bf16add</second>
-                      </first>
-                      <second>90</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName/>
-              <control/>
-              <opType/>
-              <implIndex/>
-              <coreName/>
-              <isStorage>0</isStorage>
-              <storageDepth>0</storageDepth>
-              <coreId>1770748704</coreId>
-              <rtlModuleName/>
-            </Obj>
-            <bitwidth>0</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>355</item>
-            <item>356</item>
-            <item>504</item>
-            <item>506</item>
-          </oprand_edges>
-          <opcode>store</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>0.42</m_delay>
           <m_topoIndex>88</m_topoIndex>
           <m_clusterGroupNumber>-1</m_clusterGroupNumber>
         </item>
@@ -5100,17 +5097,17 @@
             <Obj>
               <type>0</type>
               <id>98</id>
-              <name>result_mantissa_2_write_ln90</name>
+              <name>max_exp_2_write_ln92</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>92</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5119,7 +5116,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>90</second>
+                      <second>92</second>
                     </item>
                   </second>
                 </item>
@@ -5132,7 +5129,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770946016</coreId>
+              <coreId>1062346848</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -5140,10 +5137,10 @@
           <oprand_edges>
             <count>4</count>
             <item_version>0</item_version>
+            <item>356</item>
             <item>357</item>
-            <item>358</item>
-            <item>505</item>
-            <item>507</item>
+            <item>506</item>
+            <item>509</item>
           </oprand_edges>
           <opcode>store</opcode>
           <m_Display>0</m_Display>
@@ -5159,17 +5156,17 @@
             <Obj>
               <type>0</type>
               <id>99</id>
-              <name>br_ln90</name>
+              <name>result_mantissa_2_write_ln92</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>92</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5178,7 +5175,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>90</second>
+                      <second>92</second>
                     </item>
                   </second>
                 </item>
@@ -5191,22 +5188,25 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1145981250</coreId>
+              <coreId>1061810096</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
           <oprand_edges>
-            <count>1</count>
+            <count>4</count>
             <item_version>0</item_version>
+            <item>358</item>
             <item>359</item>
+            <item>507</item>
+            <item>508</item>
           </oprand_edges>
-          <opcode>br</opcode>
+          <opcode>store</opcode>
           <m_Display>0</m_Display>
           <m_isOnCriticalPath>0</m_isOnCriticalPath>
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>0.00</m_delay>
+          <m_delay>0.42</m_delay>
           <m_topoIndex>90</m_topoIndex>
           <m_clusterGroupNumber>-1</m_clusterGroupNumber>
         </item>
@@ -5214,7 +5214,63 @@
           <Value>
             <Obj>
               <type>0</type>
-              <id>101</id>
+              <id>100</id>
+              <name>br_ln92</name>
+              <fileName>activation_accelerator.cpp</fileName>
+              <fileDirectory>..</fileDirectory>
+              <lineNumber>92</lineNumber>
+              <contextFuncName>bf16add</contextFuncName>
+              <contextNormFuncName>bf16add</contextNormFuncName>
+              <inlineStackInfo>
+                <count>1</count>
+                <item_version>0</item_version>
+                <item>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <second>
+                    <count>1</count>
+                    <item_version>0</item_version>
+                    <item>
+                      <first>
+                        <first>activation_accelerator.cpp</first>
+                        <second>bf16add</second>
+                      </first>
+                      <second>92</second>
+                    </item>
+                  </second>
+                </item>
+              </inlineStackInfo>
+              <originalName/>
+              <rtlName/>
+              <control/>
+              <opType/>
+              <implIndex/>
+              <coreName/>
+              <isStorage>0</isStorage>
+              <storageDepth>0</storageDepth>
+              <coreId>0</coreId>
+              <rtlModuleName/>
+            </Obj>
+            <bitwidth>0</bitwidth>
+          </Value>
+          <oprand_edges>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>360</item>
+          </oprand_edges>
+          <opcode>br</opcode>
+          <m_Display>0</m_Display>
+          <m_isOnCriticalPath>0</m_isOnCriticalPath>
+          <m_isLCDNode>0</m_isLCDNode>
+          <m_isStartOfPath>0</m_isStartOfPath>
+          <m_delay>0.00</m_delay>
+          <m_topoIndex>91</m_topoIndex>
+          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
+        </item>
+        <item class_id_reference="9" object_id="_94">
+          <Value>
+            <Obj>
+              <type>0</type>
+              <id>102</id>
               <name>max_exp_3</name>
               <fileName/>
               <fileDirectory/>
@@ -5233,7 +5289,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>1063033312</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -5241,69 +5297,12 @@
           <oprand_edges>
             <count>4</count>
             <item_version>0</item_version>
-            <item>360</item>
             <item>361</item>
             <item>362</item>
             <item>363</item>
+            <item>364</item>
           </oprand_edges>
           <opcode>phi</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>0.00</m_delay>
-          <m_topoIndex>91</m_topoIndex>
-          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
-        </item>
-        <item class_id_reference="9" object_id="_94">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>102</id>
-              <name>result_mantissa_2_load</name>
-              <fileName>activation_accelerator.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>93</lineNumber>
-              <contextFuncName>bf16add</contextFuncName>
-              <contextNormFuncName>bf16add</contextNormFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>activation_accelerator.cpp</first>
-                        <second>bf16add</second>
-                      </first>
-                      <second>93</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName/>
-              <control/>
-              <opType/>
-              <implIndex/>
-              <coreName/>
-              <isStorage>0</isStorage>
-              <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
-              <rtlModuleName/>
-            </Obj>
-            <bitwidth>18</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>2</count>
-            <item_version>0</item_version>
-            <item>364</item>
-            <item>502</item>
-          </oprand_edges>
-          <opcode>load</opcode>
           <m_Display>0</m_Display>
           <m_isOnCriticalPath>0</m_isOnCriticalPath>
           <m_isLCDNode>0</m_isLCDNode>
@@ -5320,14 +5319,14 @@
               <name>tmp_8</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>93</lineNumber>
+              <lineNumber>95</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5336,20 +5335,20 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>93</second>
+                      <second>95</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_8_fu_634_p4</rtlName>
+              <rtlName>tmp_8_fu_637_p4</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>1061810184</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>2</bitwidth>
@@ -5376,17 +5375,17 @@
             <Obj>
               <type>0</type>
               <id>104</id>
-              <name>icmp_ln93</name>
+              <name>icmp_ln95</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>93</lineNumber>
+              <lineNumber>95</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5395,13 +5394,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>93</second>
+                      <second>95</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln93_fu_644_p2</rtlName>
+              <rtlName>icmp_ln95_fu_647_p2</rtlName>
               <control>auto</control>
               <opType>icmp</opType>
               <implIndex>auto</implIndex>
@@ -5433,17 +5432,17 @@
             <Obj>
               <type>0</type>
               <id>105</id>
-              <name>trunc_ln7</name>
+              <name>lshr_ln</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>94</lineNumber>
+              <lineNumber>96</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5452,20 +5451,20 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>94</second>
+                      <second>96</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>trunc_ln7_fu_650_p4</rtlName>
+              <rtlName>lshr_ln_fu_653_p4</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770952864</coreId>
+              <coreId>1330007625</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>17</bitwidth>
@@ -5492,73 +5491,17 @@
             <Obj>
               <type>0</type>
               <id>106</id>
-              <name>sext_ln95</name>
-              <fileName>activation_accelerator.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>95</lineNumber>
-              <contextFuncName>bf16add</contextFuncName>
-              <contextNormFuncName>bf16add</contextNormFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>activation_accelerator.cpp</first>
-                        <second>bf16add</second>
-                      </first>
-                      <second>95</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName>sext_ln95_fu_660_p1</rtlName>
-              <control/>
-              <opType/>
-              <implIndex/>
-              <coreName/>
-              <isStorage>0</isStorage>
-              <storageDepth>0</storageDepth>
-              <coreId>1770954384</coreId>
-              <rtlModuleName/>
-            </Obj>
-            <bitwidth>18</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>379</item>
-          </oprand_edges>
-          <opcode>sext</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>0.00</m_delay>
-          <m_topoIndex>96</m_topoIndex>
-          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
-        </item>
-        <item class_id_reference="9" object_id="_99">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>107</id>
               <name>max_exp_12</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>95</lineNumber>
+              <lineNumber>97</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5567,13 +5510,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>95</second>
+                      <second>97</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName>max_exp</originalName>
-              <rtlName>max_exp_12_fu_664_p2</rtlName>
+              <rtlName>max_exp_12_fu_663_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -5588,8 +5531,8 @@
           <oprand_edges>
             <count>2</count>
             <item_version>0</item_version>
-            <item>380</item>
-            <item>382</item>
+            <item>379</item>
+            <item>381</item>
           </oprand_edges>
           <opcode>add</opcode>
           <m_Display>0</m_Display>
@@ -5597,25 +5540,25 @@
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
           <m_delay>0.85</m_delay>
-          <m_topoIndex>97</m_topoIndex>
+          <m_topoIndex>96</m_topoIndex>
           <m_clusterGroupNumber>-1</m_clusterGroupNumber>
         </item>
-        <item class_id_reference="9" object_id="_100">
+        <item class_id_reference="9" object_id="_99">
           <Value>
             <Obj>
               <type>0</type>
-              <id>108</id>
+              <id>107</id>
               <name>max_exp_13</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>93</lineNumber>
+              <lineNumber>95</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5624,13 +5567,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>93</second>
+                      <second>95</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName>max_exp</originalName>
-              <rtlName>max_exp_13_fu_670_p3</rtlName>
+              <rtlName>max_exp_13_fu_669_p3</rtlName>
               <control>auto</control>
               <opType>select</opType>
               <implIndex>auto_sel</implIndex>
@@ -5645,9 +5588,67 @@
           <oprand_edges>
             <count>3</count>
             <item_version>0</item_version>
+            <item>382</item>
             <item>383</item>
             <item>384</item>
+          </oprand_edges>
+          <opcode>select</opcode>
+          <m_Display>0</m_Display>
+          <m_isOnCriticalPath>0</m_isOnCriticalPath>
+          <m_isLCDNode>0</m_isLCDNode>
+          <m_isStartOfPath>0</m_isStartOfPath>
+          <m_delay>0.35</m_delay>
+          <m_topoIndex>97</m_topoIndex>
+          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
+        </item>
+        <item class_id_reference="9" object_id="_100">
+          <Value>
+            <Obj>
+              <type>0</type>
+              <id>108</id>
+              <name>result_mantissa_12</name>
+              <fileName>activation_accelerator.cpp</fileName>
+              <fileDirectory>..</fileDirectory>
+              <lineNumber>95</lineNumber>
+              <contextFuncName>bf16add</contextFuncName>
+              <contextNormFuncName>bf16add</contextNormFuncName>
+              <inlineStackInfo>
+                <count>1</count>
+                <item_version>0</item_version>
+                <item>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <second>
+                    <count>1</count>
+                    <item_version>0</item_version>
+                    <item>
+                      <first>
+                        <first>activation_accelerator.cpp</first>
+                        <second>bf16add</second>
+                      </first>
+                      <second>95</second>
+                    </item>
+                  </second>
+                </item>
+              </inlineStackInfo>
+              <originalName>result_mantissa</originalName>
+              <rtlName>result_mantissa_12_fu_677_p3</rtlName>
+              <control>auto</control>
+              <opType>select</opType>
+              <implIndex>auto_sel</implIndex>
+              <coreName>Sel</coreName>
+              <isStorage>0</isStorage>
+              <storageDepth>0</storageDepth>
+              <coreId>73</coreId>
+              <rtlModuleName/>
+            </Obj>
+            <bitwidth>17</bitwidth>
+          </Value>
+          <oprand_edges>
+            <count>3</count>
+            <item_version>0</item_version>
             <item>385</item>
+            <item>386</item>
+            <item>387</item>
           </oprand_edges>
           <opcode>select</opcode>
           <m_Display>0</m_Display>
@@ -5663,17 +5664,17 @@
             <Obj>
               <type>0</type>
               <id>109</id>
-              <name>result_mantissa_7</name>
+              <name>rounding_bits</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>93</lineNumber>
+              <lineNumber>65</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5682,37 +5683,35 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>93</second>
+                      <second>65</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
-              <originalName>result_mantissa</originalName>
-              <rtlName>result_mantissa_7_fu_678_p3</rtlName>
-              <control>auto</control>
-              <opType>select</opType>
-              <implIndex>auto_sel</implIndex>
-              <coreName>Sel</coreName>
+              <originalName>rounding_bits</originalName>
+              <rtlName>rounding_bits_fu_685_p1</rtlName>
+              <control/>
+              <opType/>
+              <implIndex/>
+              <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>73</coreId>
+              <coreId>1062047384</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>18</bitwidth>
+            <bitwidth>8</bitwidth>
           </Value>
           <oprand_edges>
-            <count>3</count>
+            <count>1</count>
             <item_version>0</item_version>
-            <item>386</item>
-            <item>387</item>
             <item>388</item>
           </oprand_edges>
-          <opcode>select</opcode>
+          <opcode>trunc</opcode>
           <m_Display>0</m_Display>
           <m_isOnCriticalPath>0</m_isOnCriticalPath>
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>0.36</m_delay>
+          <m_delay>0.00</m_delay>
           <m_topoIndex>99</m_topoIndex>
           <m_clusterGroupNumber>-1</m_clusterGroupNumber>
         </item>
@@ -5721,17 +5720,17 @@
             <Obj>
               <type>0</type>
               <id>110</id>
-              <name>sext_ln63</name>
+              <name>sext_ln65</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>63</lineNumber>
+              <lineNumber>65</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5740,20 +5739,20 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>63</second>
+                      <second>65</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>sext_ln63_fu_686_p1</rtlName>
+              <rtlName>sext_ln65_fu_689_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770959216</coreId>
+              <coreId>1062048528</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>31</bitwidth>
@@ -5777,17 +5776,17 @@
             <Obj>
               <type>0</type>
               <id>111</id>
-              <name>zext_ln63_1</name>
+              <name>zext_ln65_1</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>63</lineNumber>
+              <lineNumber>65</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5796,20 +5795,20 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>63</second>
+                      <second>65</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln63_1_fu_690_p1</rtlName>
+              <rtlName>zext_ln65_1_fu_693_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770873072</coreId>
+              <coreId>1667311648</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -5833,176 +5832,6 @@
             <Obj>
               <type>0</type>
               <id>112</id>
-              <name>rounding_bits</name>
-              <fileName>activation_accelerator.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>63</lineNumber>
-              <contextFuncName>bf16add</contextFuncName>
-              <contextNormFuncName>bf16add</contextNormFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>activation_accelerator.cpp</first>
-                        <second>bf16add</second>
-                      </first>
-                      <second>63</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName>rounding_bits</originalName>
-              <rtlName>rounding_bits_fu_694_p1</rtlName>
-              <control/>
-              <opType/>
-              <implIndex/>
-              <coreName/>
-              <isStorage>0</isStorage>
-              <storageDepth>0</storageDepth>
-              <coreId>1770876832</coreId>
-              <rtlModuleName/>
-            </Obj>
-            <bitwidth>8</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>391</item>
-          </oprand_edges>
-          <opcode>trunc</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>0.00</m_delay>
-          <m_topoIndex>102</m_topoIndex>
-          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
-        </item>
-        <item class_id_reference="9" object_id="_105">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>113</id>
-              <name>icmp_ln102</name>
-              <fileName>activation_accelerator.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>102</lineNumber>
-              <contextFuncName>bf16add</contextFuncName>
-              <contextNormFuncName>bf16add</contextNormFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>activation_accelerator.cpp</first>
-                        <second>bf16add</second>
-                      </first>
-                      <second>102</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName>icmp_ln102_fu_698_p2</rtlName>
-              <control>auto</control>
-              <opType>icmp</opType>
-              <implIndex>auto</implIndex>
-              <coreName>Cmp</coreName>
-              <isStorage>0</isStorage>
-              <storageDepth>0</storageDepth>
-              <coreId>9</coreId>
-              <rtlModuleName/>
-            </Obj>
-            <bitwidth>1</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>2</count>
-            <item_version>0</item_version>
-            <item>392</item>
-            <item>394</item>
-          </oprand_edges>
-          <opcode>icmp</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>0.84</m_delay>
-          <m_topoIndex>103</m_topoIndex>
-          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
-        </item>
-        <item class_id_reference="9" object_id="_106">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>114</id>
-              <name>result_mantissa_8</name>
-              <fileName>activation_accelerator.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>103</lineNumber>
-              <contextFuncName>bf16add</contextFuncName>
-              <contextNormFuncName>bf16add</contextNormFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>activation_accelerator.cpp</first>
-                        <second>bf16add</second>
-                      </first>
-                      <second>103</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName>result_mantissa</originalName>
-              <rtlName>result_mantissa_8_fu_704_p2</rtlName>
-              <control>auto</control>
-              <opType>add</opType>
-              <implIndex>fabric</implIndex>
-              <coreName>Adder</coreName>
-              <isStorage>0</isStorage>
-              <storageDepth>0</storageDepth>
-              <coreId>1</coreId>
-              <rtlModuleName/>
-            </Obj>
-            <bitwidth>32</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>2</count>
-            <item_version>0</item_version>
-            <item>395</item>
-            <item>397</item>
-          </oprand_edges>
-          <opcode>add</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>1.00</m_delay>
-          <m_topoIndex>104</m_topoIndex>
-          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
-        </item>
-        <item class_id_reference="9" object_id="_107">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>115</id>
               <name>icmp_ln104</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
@@ -6013,7 +5842,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -6028,7 +5857,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln104_fu_710_p2</rtlName>
+              <rtlName>icmp_ln104_fu_697_p2</rtlName>
               <control>auto</control>
               <opType>icmp</opType>
               <implIndex>auto</implIndex>
@@ -6043,8 +5872,8 @@
           <oprand_edges>
             <count>2</count>
             <item_version>0</item_version>
-            <item>398</item>
-            <item>399</item>
+            <item>391</item>
+            <item>393</item>
           </oprand_edges>
           <opcode>icmp</opcode>
           <m_Display>0</m_Display>
@@ -6052,15 +5881,72 @@
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
           <m_delay>0.84</m_delay>
-          <m_topoIndex>105</m_topoIndex>
+          <m_topoIndex>102</m_topoIndex>
           <m_clusterGroupNumber>-1</m_clusterGroupNumber>
         </item>
-        <item class_id_reference="9" object_id="_108">
+        <item class_id_reference="9" object_id="_105">
           <Value>
             <Obj>
               <type>0</type>
-              <id>116</id>
-              <name>tmp_9</name>
+              <id>113</id>
+              <name>result_mantissa_13</name>
+              <fileName>activation_accelerator.cpp</fileName>
+              <fileDirectory>..</fileDirectory>
+              <lineNumber>105</lineNumber>
+              <contextFuncName>bf16add</contextFuncName>
+              <contextNormFuncName>bf16add</contextNormFuncName>
+              <inlineStackInfo>
+                <count>1</count>
+                <item_version>0</item_version>
+                <item>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <second>
+                    <count>1</count>
+                    <item_version>0</item_version>
+                    <item>
+                      <first>
+                        <first>activation_accelerator.cpp</first>
+                        <second>bf16add</second>
+                      </first>
+                      <second>105</second>
+                    </item>
+                  </second>
+                </item>
+              </inlineStackInfo>
+              <originalName>result_mantissa</originalName>
+              <rtlName>result_mantissa_13_fu_703_p2</rtlName>
+              <control>auto</control>
+              <opType>add</opType>
+              <implIndex>fabric</implIndex>
+              <coreName>Adder</coreName>
+              <isStorage>0</isStorage>
+              <storageDepth>0</storageDepth>
+              <coreId>1</coreId>
+              <rtlModuleName/>
+            </Obj>
+            <bitwidth>32</bitwidth>
+          </Value>
+          <oprand_edges>
+            <count>2</count>
+            <item_version>0</item_version>
+            <item>394</item>
+            <item>396</item>
+          </oprand_edges>
+          <opcode>add</opcode>
+          <m_Display>0</m_Display>
+          <m_isOnCriticalPath>0</m_isOnCriticalPath>
+          <m_isLCDNode>0</m_isLCDNode>
+          <m_isStartOfPath>0</m_isStartOfPath>
+          <m_delay>1.00</m_delay>
+          <m_topoIndex>103</m_topoIndex>
+          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
+        </item>
+        <item class_id_reference="9" object_id="_106">
+          <Value>
+            <Obj>
+              <type>0</type>
+              <id>114</id>
+              <name>icmp_ln106</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>106</lineNumber>
@@ -6070,7 +5956,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -6085,14 +5971,71 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_9_fu_716_p3</rtlName>
+              <rtlName>icmp_ln106_fu_709_p2</rtlName>
+              <control>auto</control>
+              <opType>icmp</opType>
+              <implIndex>auto</implIndex>
+              <coreName>Cmp</coreName>
+              <isStorage>0</isStorage>
+              <storageDepth>0</storageDepth>
+              <coreId>9</coreId>
+              <rtlModuleName/>
+            </Obj>
+            <bitwidth>1</bitwidth>
+          </Value>
+          <oprand_edges>
+            <count>2</count>
+            <item_version>0</item_version>
+            <item>397</item>
+            <item>398</item>
+          </oprand_edges>
+          <opcode>icmp</opcode>
+          <m_Display>0</m_Display>
+          <m_isOnCriticalPath>0</m_isOnCriticalPath>
+          <m_isLCDNode>0</m_isLCDNode>
+          <m_isStartOfPath>0</m_isStartOfPath>
+          <m_delay>0.84</m_delay>
+          <m_topoIndex>104</m_topoIndex>
+          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
+        </item>
+        <item class_id_reference="9" object_id="_107">
+          <Value>
+            <Obj>
+              <type>0</type>
+              <id>115</id>
+              <name>tmp_9</name>
+              <fileName>activation_accelerator.cpp</fileName>
+              <fileDirectory>..</fileDirectory>
+              <lineNumber>108</lineNumber>
+              <contextFuncName>bf16add</contextFuncName>
+              <contextNormFuncName>bf16add</contextNormFuncName>
+              <inlineStackInfo>
+                <count>1</count>
+                <item_version>0</item_version>
+                <item>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <second>
+                    <count>1</count>
+                    <item_version>0</item_version>
+                    <item>
+                      <first>
+                        <first>activation_accelerator.cpp</first>
+                        <second>bf16add</second>
+                      </first>
+                      <second>108</second>
+                    </item>
+                  </second>
+                </item>
+              </inlineStackInfo>
+              <originalName/>
+              <rtlName>tmp_9_fu_715_p3</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>176</coreId>
+              <coreId>1060517616</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -6100,11 +6043,69 @@
           <oprand_edges>
             <count>3</count>
             <item_version>0</item_version>
+            <item>400</item>
             <item>401</item>
-            <item>402</item>
-            <item>404</item>
+            <item>403</item>
           </oprand_edges>
           <opcode>bitselect</opcode>
+          <m_Display>0</m_Display>
+          <m_isOnCriticalPath>0</m_isOnCriticalPath>
+          <m_isLCDNode>0</m_isLCDNode>
+          <m_isStartOfPath>0</m_isStartOfPath>
+          <m_delay>0.00</m_delay>
+          <m_topoIndex>105</m_topoIndex>
+          <m_clusterGroupNumber>9</m_clusterGroupNumber>
+        </item>
+        <item class_id_reference="9" object_id="_108">
+          <Value>
+            <Obj>
+              <type>0</type>
+              <id>116</id>
+              <name>result_mantissa_14</name>
+              <fileName>activation_accelerator.cpp</fileName>
+              <fileDirectory>..</fileDirectory>
+              <lineNumber>108</lineNumber>
+              <contextFuncName>bf16add</contextFuncName>
+              <contextNormFuncName>bf16add</contextNormFuncName>
+              <inlineStackInfo>
+                <count>1</count>
+                <item_version>0</item_version>
+                <item>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <second>
+                    <count>1</count>
+                    <item_version>0</item_version>
+                    <item>
+                      <first>
+                        <first>activation_accelerator.cpp</first>
+                        <second>bf16add</second>
+                      </first>
+                      <second>108</second>
+                    </item>
+                  </second>
+                </item>
+              </inlineStackInfo>
+              <originalName>result_mantissa</originalName>
+              <rtlName>result_mantissa_14_fu_723_p3</rtlName>
+              <control>auto</control>
+              <opType>select</opType>
+              <implIndex>auto_sel</implIndex>
+              <coreName>Sel</coreName>
+              <isStorage>0</isStorage>
+              <storageDepth>0</storageDepth>
+              <coreId>73</coreId>
+              <rtlModuleName/>
+            </Obj>
+            <bitwidth>32</bitwidth>
+          </Value>
+          <oprand_edges>
+            <count>3</count>
+            <item_version>0</item_version>
+            <item>404</item>
+            <item>405</item>
+            <item>406</item>
+          </oprand_edges>
+          <opcode>select</opcode>
           <m_Display>0</m_Display>
           <m_isOnCriticalPath>0</m_isOnCriticalPath>
           <m_isLCDNode>0</m_isLCDNode>
@@ -6118,17 +6119,17 @@
             <Obj>
               <type>0</type>
               <id>117</id>
-              <name>result_mantissa_9</name>
+              <name>result_mantissa_15</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>106</lineNumber>
+              <lineNumber>104</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -6137,13 +6138,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>106</second>
+                      <second>104</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName>result_mantissa</originalName>
-              <rtlName>result_mantissa_9_fu_724_p3</rtlName>
+              <rtlName>result_mantissa_15_fu_731_p3</rtlName>
               <control>auto</control>
               <opType>select</opType>
               <implIndex>auto_sel</implIndex>
@@ -6158,67 +6159,9 @@
           <oprand_edges>
             <count>3</count>
             <item_version>0</item_version>
-            <item>405</item>
-            <item>406</item>
             <item>407</item>
-          </oprand_edges>
-          <opcode>select</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>0.00</m_delay>
-          <m_topoIndex>107</m_topoIndex>
-          <m_clusterGroupNumber>9</m_clusterGroupNumber>
-        </item>
-        <item class_id_reference="9" object_id="_110">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>118</id>
-              <name>result_mantissa_10</name>
-              <fileName>activation_accelerator.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>102</lineNumber>
-              <contextFuncName>bf16add</contextFuncName>
-              <contextNormFuncName>bf16add</contextNormFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>activation_accelerator.cpp</first>
-                        <second>bf16add</second>
-                      </first>
-                      <second>102</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName>result_mantissa</originalName>
-              <rtlName>result_mantissa_10_fu_732_p3</rtlName>
-              <control>auto</control>
-              <opType>select</opType>
-              <implIndex>auto_sel</implIndex>
-              <coreName>Sel</coreName>
-              <isStorage>0</isStorage>
-              <storageDepth>0</storageDepth>
-              <coreId>73</coreId>
-              <rtlModuleName/>
-            </Obj>
-            <bitwidth>32</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>3</count>
-            <item_version>0</item_version>
             <item>408</item>
             <item>409</item>
-            <item>410</item>
           </oprand_edges>
           <opcode>select</opcode>
           <m_Display>0</m_Display>
@@ -6226,25 +6169,25 @@
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
           <m_delay>0.44</m_delay>
-          <m_topoIndex>108</m_topoIndex>
+          <m_topoIndex>107</m_topoIndex>
           <m_clusterGroupNumber>10</m_clusterGroupNumber>
         </item>
-        <item class_id_reference="9" object_id="_111">
+        <item class_id_reference="9" object_id="_110">
           <Value>
             <Obj>
               <type>0</type>
-              <id>119</id>
-              <name>xor_ln102</name>
+              <id>118</id>
+              <name>xor_ln104</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>102</lineNumber>
+              <lineNumber>104</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -6253,13 +6196,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>102</second>
+                      <second>104</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>xor_ln102_fu_740_p2</rtlName>
+              <rtlName>xor_ln104_fu_739_p2</rtlName>
               <control>auto</control>
               <opType>xor</opType>
               <implIndex>auto</implIndex>
@@ -6274,8 +6217,8 @@
           <oprand_edges>
             <count>2</count>
             <item_version>0</item_version>
+            <item>410</item>
             <item>411</item>
-            <item>412</item>
           </oprand_edges>
           <opcode>xor</opcode>
           <m_Display>0</m_Display>
@@ -6283,25 +6226,25 @@
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
           <m_delay>0.00</m_delay>
-          <m_topoIndex>109</m_topoIndex>
+          <m_topoIndex>108</m_topoIndex>
           <m_clusterGroupNumber>11</m_clusterGroupNumber>
         </item>
-        <item class_id_reference="9" object_id="_112">
+        <item class_id_reference="9" object_id="_111">
           <Value>
             <Obj>
               <type>0</type>
-              <id>120</id>
-              <name>and_ln104</name>
+              <id>119</id>
+              <name>and_ln106</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>104</lineNumber>
+              <lineNumber>106</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -6310,13 +6253,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>104</second>
+                      <second>106</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>and_ln104_fu_746_p2</rtlName>
+              <rtlName>and_ln106_fu_745_p2</rtlName>
               <control>auto</control>
               <opType>and</opType>
               <implIndex>auto</implIndex>
@@ -6331,8 +6274,8 @@
           <oprand_edges>
             <count>2</count>
             <item_version>0</item_version>
+            <item>412</item>
             <item>413</item>
-            <item>414</item>
           </oprand_edges>
           <opcode>and</opcode>
           <m_Display>0</m_Display>
@@ -6340,25 +6283,25 @@
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
           <m_delay>0.28</m_delay>
-          <m_topoIndex>110</m_topoIndex>
+          <m_topoIndex>109</m_topoIndex>
           <m_clusterGroupNumber>11</m_clusterGroupNumber>
         </item>
-        <item class_id_reference="9" object_id="_113">
+        <item class_id_reference="9" object_id="_112">
           <Value>
             <Obj>
               <type>0</type>
-              <id>121</id>
-              <name>result_mantissa_11</name>
+              <id>120</id>
+              <name>result_mantissa_16</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>104</lineNumber>
+              <lineNumber>106</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -6367,13 +6310,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>104</second>
+                      <second>106</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName>result_mantissa</originalName>
-              <rtlName>result_mantissa_11_fu_752_p3</rtlName>
+              <rtlName>result_mantissa_16_fu_751_p3</rtlName>
               <control>auto</control>
               <opType>select</opType>
               <implIndex>auto_sel</implIndex>
@@ -6388,9 +6331,9 @@
           <oprand_edges>
             <count>3</count>
             <item_version>0</item_version>
+            <item>414</item>
             <item>415</item>
             <item>416</item>
-            <item>417</item>
           </oprand_edges>
           <opcode>select</opcode>
           <m_Display>0</m_Display>
@@ -6398,25 +6341,25 @@
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
           <m_delay>0.44</m_delay>
-          <m_topoIndex>111</m_topoIndex>
+          <m_topoIndex>110</m_topoIndex>
           <m_clusterGroupNumber>9</m_clusterGroupNumber>
         </item>
-        <item class_id_reference="9" object_id="_114">
+        <item class_id_reference="9" object_id="_113">
           <Value>
             <Obj>
               <type>0</type>
-              <id>122</id>
+              <id>121</id>
               <name>tmp_10</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>114</lineNumber>
+              <lineNumber>116</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -6425,20 +6368,20 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>114</second>
+                      <second>116</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_10_fu_760_p4</rtlName>
+              <rtlName>tmp_10_fu_759_p4</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770888976</coreId>
+              <coreId>1062847064</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -6446,10 +6389,10 @@
           <oprand_edges>
             <count>4</count>
             <item_version>0</item_version>
+            <item>418</item>
             <item>419</item>
             <item>420</item>
-            <item>421</item>
-            <item>423</item>
+            <item>422</item>
           </oprand_edges>
           <opcode>partselect</opcode>
           <m_Display>0</m_Display>
@@ -6457,25 +6400,25 @@
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
           <m_delay>0.00</m_delay>
-          <m_topoIndex>112</m_topoIndex>
+          <m_topoIndex>111</m_topoIndex>
           <m_clusterGroupNumber>-1</m_clusterGroupNumber>
         </item>
-        <item class_id_reference="9" object_id="_115">
+        <item class_id_reference="9" object_id="_114">
           <Value>
             <Obj>
               <type>0</type>
-              <id>123</id>
-              <name>icmp_ln114</name>
+              <id>122</id>
+              <name>icmp_ln116</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>114</lineNumber>
+              <lineNumber>116</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -6484,13 +6427,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>114</second>
+                      <second>116</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln114_fu_770_p2</rtlName>
+              <rtlName>icmp_ln116_fu_769_p2</rtlName>
               <control>auto</control>
               <opType>icmp</opType>
               <implIndex>auto</implIndex>
@@ -6505,8 +6448,8 @@
           <oprand_edges>
             <count>2</count>
             <item_version>0</item_version>
+            <item>423</item>
             <item>424</item>
-            <item>425</item>
           </oprand_edges>
           <opcode>icmp</opcode>
           <m_Display>0</m_Display>
@@ -6514,25 +6457,25 @@
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
           <m_delay>1.10</m_delay>
-          <m_topoIndex>113</m_topoIndex>
+          <m_topoIndex>112</m_topoIndex>
           <m_clusterGroupNumber>-1</m_clusterGroupNumber>
         </item>
-        <item class_id_reference="9" object_id="_116">
+        <item class_id_reference="9" object_id="_115">
           <Value>
             <Obj>
               <type>0</type>
-              <id>124</id>
+              <id>123</id>
               <name>max_exp_14</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>116</lineNumber>
+              <lineNumber>118</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -6541,13 +6484,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>116</second>
+                      <second>118</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName>max_exp</originalName>
-              <rtlName>max_exp_14_fu_776_p2</rtlName>
+              <rtlName>max_exp_14_fu_775_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -6562,8 +6505,8 @@
           <oprand_edges>
             <count>2</count>
             <item_version>0</item_version>
+            <item>425</item>
             <item>426</item>
-            <item>427</item>
           </oprand_edges>
           <opcode>add</opcode>
           <m_Display>0</m_Display>
@@ -6571,25 +6514,25 @@
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
           <m_delay>0.85</m_delay>
-          <m_topoIndex>114</m_topoIndex>
+          <m_topoIndex>113</m_topoIndex>
           <m_clusterGroupNumber>-1</m_clusterGroupNumber>
         </item>
-        <item class_id_reference="9" object_id="_117">
+        <item class_id_reference="9" object_id="_116">
           <Value>
             <Obj>
               <type>0</type>
-              <id>125</id>
+              <id>124</id>
               <name>max_exp_15</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>114</lineNumber>
+              <lineNumber>116</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -6598,13 +6541,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>114</second>
+                      <second>116</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName>max_exp</originalName>
-              <rtlName>max_exp_15_fu_782_p3</rtlName>
+              <rtlName>max_exp_15_fu_781_p3</rtlName>
               <control>auto</control>
               <opType>select</opType>
               <implIndex>auto_sel</implIndex>
@@ -6619,9 +6562,9 @@
           <oprand_edges>
             <count>3</count>
             <item_version>0</item_version>
+            <item>427</item>
             <item>428</item>
             <item>429</item>
-            <item>430</item>
           </oprand_edges>
           <opcode>select</opcode>
           <m_Display>0</m_Display>
@@ -6629,25 +6572,25 @@
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
           <m_delay>0.35</m_delay>
-          <m_topoIndex>115</m_topoIndex>
+          <m_topoIndex>114</m_topoIndex>
           <m_clusterGroupNumber>-1</m_clusterGroupNumber>
         </item>
-        <item class_id_reference="9" object_id="_118">
+        <item class_id_reference="9" object_id="_117">
           <Value>
             <Obj>
               <type>0</type>
-              <id>126</id>
-              <name>tmp_4</name>
+              <id>125</id>
+              <name>tmp_2</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>120</lineNumber>
+              <lineNumber>122</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -6656,13 +6599,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>120</second>
+                      <second>122</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_4_fu_790_p4</rtlName>
+              <rtlName>tmp_2_fu_789_p4</rtlName>
               <control/>
               <opType/>
               <implIndex/>
@@ -6677,10 +6620,69 @@
           <oprand_edges>
             <count>4</count>
             <item_version>0</item_version>
+            <item>431</item>
             <item>432</item>
-            <item>433</item>
+            <item>434</item>
             <item>435</item>
+          </oprand_edges>
+          <opcode>partselect</opcode>
+          <m_Display>0</m_Display>
+          <m_isOnCriticalPath>0</m_isOnCriticalPath>
+          <m_isLCDNode>0</m_isLCDNode>
+          <m_isStartOfPath>0</m_isStartOfPath>
+          <m_delay>0.00</m_delay>
+          <m_topoIndex>115</m_topoIndex>
+          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
+        </item>
+        <item class_id_reference="9" object_id="_118">
+          <Value>
+            <Obj>
+              <type>0</type>
+              <id>126</id>
+              <name>tmp_5</name>
+              <fileName>activation_accelerator.cpp</fileName>
+              <fileDirectory>..</fileDirectory>
+              <lineNumber>122</lineNumber>
+              <contextFuncName>bf16add</contextFuncName>
+              <contextNormFuncName>bf16add</contextNormFuncName>
+              <inlineStackInfo>
+                <count>1</count>
+                <item_version>0</item_version>
+                <item>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <second>
+                    <count>1</count>
+                    <item_version>0</item_version>
+                    <item>
+                      <first>
+                        <first>activation_accelerator.cpp</first>
+                        <second>bf16add</second>
+                      </first>
+                      <second>122</second>
+                    </item>
+                  </second>
+                </item>
+              </inlineStackInfo>
+              <originalName/>
+              <rtlName>tmp_5_fu_799_p4</rtlName>
+              <control/>
+              <opType/>
+              <implIndex/>
+              <coreName/>
+              <isStorage>0</isStorage>
+              <storageDepth>0</storageDepth>
+              <coreId>1440921520</coreId>
+              <rtlModuleName/>
+            </Obj>
+            <bitwidth>7</bitwidth>
+          </Value>
+          <oprand_edges>
+            <count>4</count>
+            <item_version>0</item_version>
             <item>436</item>
+            <item>437</item>
+            <item>438</item>
+            <item>439</item>
           </oprand_edges>
           <opcode>partselect</opcode>
           <m_Display>0</m_Display>
@@ -6696,76 +6698,17 @@
             <Obj>
               <type>0</type>
               <id>127</id>
-              <name>tmp_5</name>
-              <fileName>activation_accelerator.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>120</lineNumber>
-              <contextFuncName>bf16add</contextFuncName>
-              <contextNormFuncName>bf16add</contextNormFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>activation_accelerator.cpp</first>
-                        <second>bf16add</second>
-                      </first>
-                      <second>120</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName>tmp_5_fu_800_p4</rtlName>
-              <control/>
-              <opType/>
-              <implIndex/>
-              <coreName/>
-              <isStorage>0</isStorage>
-              <storageDepth>0</storageDepth>
-              <coreId>224</coreId>
-              <rtlModuleName/>
-            </Obj>
-            <bitwidth>7</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>437</item>
-            <item>438</item>
-            <item>439</item>
-            <item>440</item>
-          </oprand_edges>
-          <opcode>partselect</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>0.00</m_delay>
-          <m_topoIndex>117</m_topoIndex>
-          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
-        </item>
-        <item class_id_reference="9" object_id="_120">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>128</id>
               <name>final_mantissa_full</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>114</lineNumber>
+              <lineNumber>116</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -6774,13 +6717,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>114</second>
+                      <second>116</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName>final_mantissa_full</originalName>
-              <rtlName>final_mantissa_full_fu_810_p3</rtlName>
+              <rtlName>final_mantissa_full_fu_809_p3</rtlName>
               <control>auto</control>
               <opType>select</opType>
               <implIndex>auto_sel</implIndex>
@@ -6795,9 +6738,9 @@
           <oprand_edges>
             <count>3</count>
             <item_version>0</item_version>
+            <item>440</item>
             <item>441</item>
             <item>442</item>
-            <item>443</item>
           </oprand_edges>
           <opcode>select</opcode>
           <m_Display>0</m_Display>
@@ -6805,25 +6748,25 @@
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
           <m_delay>0.36</m_delay>
-          <m_topoIndex>118</m_topoIndex>
+          <m_topoIndex>117</m_topoIndex>
           <m_clusterGroupNumber>-1</m_clusterGroupNumber>
         </item>
-        <item class_id_reference="9" object_id="_121">
+        <item class_id_reference="9" object_id="_120">
           <Value>
             <Obj>
               <type>0</type>
-              <id>129</id>
-              <name>icmp_ln131</name>
+              <id>128</id>
+              <name>icmp_ln133</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>131</lineNumber>
+              <lineNumber>133</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -6832,13 +6775,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>131</second>
+                      <second>133</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln131_fu_818_p2</rtlName>
+              <rtlName>icmp_ln133_fu_817_p2</rtlName>
               <control>auto</control>
               <opType>icmp</opType>
               <implIndex>auto</implIndex>
@@ -6853,8 +6796,8 @@
           <oprand_edges>
             <count>2</count>
             <item_version>0</item_version>
-            <item>444</item>
-            <item>446</item>
+            <item>443</item>
+            <item>445</item>
           </oprand_edges>
           <opcode>icmp</opcode>
           <m_Display>0</m_Display>
@@ -6862,6 +6805,64 @@
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
           <m_delay>1.10</m_delay>
+          <m_topoIndex>118</m_topoIndex>
+          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
+        </item>
+        <item class_id_reference="9" object_id="_121">
+          <Value>
+            <Obj>
+              <type>0</type>
+              <id>129</id>
+              <name>shl_ln138_1</name>
+              <fileName>activation_accelerator.cpp</fileName>
+              <fileDirectory>..</fileDirectory>
+              <lineNumber>138</lineNumber>
+              <contextFuncName>bf16add</contextFuncName>
+              <contextNormFuncName>bf16add</contextNormFuncName>
+              <inlineStackInfo>
+                <count>1</count>
+                <item_version>0</item_version>
+                <item>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <second>
+                    <count>1</count>
+                    <item_version>0</item_version>
+                    <item>
+                      <first>
+                        <first>activation_accelerator.cpp</first>
+                        <second>bf16add</second>
+                      </first>
+                      <second>138</second>
+                    </item>
+                  </second>
+                </item>
+              </inlineStackInfo>
+              <originalName/>
+              <rtlName>shl_ln138_1_fu_823_p3</rtlName>
+              <control/>
+              <opType/>
+              <implIndex/>
+              <coreName/>
+              <isStorage>0</isStorage>
+              <storageDepth>0</storageDepth>
+              <coreId>1062155869</coreId>
+              <rtlModuleName/>
+            </Obj>
+            <bitwidth>16</bitwidth>
+          </Value>
+          <oprand_edges>
+            <count>3</count>
+            <item_version>0</item_version>
+            <item>447</item>
+            <item>448</item>
+            <item>450</item>
+          </oprand_edges>
+          <opcode>bitconcatenate</opcode>
+          <m_Display>0</m_Display>
+          <m_isOnCriticalPath>0</m_isOnCriticalPath>
+          <m_isLCDNode>0</m_isLCDNode>
+          <m_isStartOfPath>0</m_isStartOfPath>
+          <m_delay>0.00</m_delay>
           <m_topoIndex>119</m_topoIndex>
           <m_clusterGroupNumber>-1</m_clusterGroupNumber>
         </item>
@@ -6870,17 +6871,17 @@
             <Obj>
               <type>0</type>
               <id>130</id>
-              <name>shl_ln136_1</name>
+              <name>br_ln133</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>136</lineNumber>
+              <lineNumber>133</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -6889,65 +6890,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>136</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName>shl_ln136_1_fu_824_p3</rtlName>
-              <control/>
-              <opType/>
-              <implIndex/>
-              <coreName/>
-              <isStorage>0</isStorage>
-              <storageDepth>0</storageDepth>
-              <coreId>1770813328</coreId>
-              <rtlModuleName/>
-            </Obj>
-            <bitwidth>16</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>3</count>
-            <item_version>0</item_version>
-            <item>448</item>
-            <item>449</item>
-            <item>451</item>
-          </oprand_edges>
-          <opcode>bitconcatenate</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>0.00</m_delay>
-          <m_topoIndex>120</m_topoIndex>
-          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
-        </item>
-        <item class_id_reference="9" object_id="_123">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>131</id>
-              <name>br_ln131</name>
-              <fileName>activation_accelerator.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>131</lineNumber>
-              <contextFuncName>bf16add</contextFuncName>
-              <contextNormFuncName>bf16add</contextNormFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>activation_accelerator.cpp</first>
-                        <second>bf16add</second>
-                      </first>
-                      <second>131</second>
+                      <second>133</second>
                     </item>
                   </second>
                 </item>
@@ -6960,7 +6903,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770814880</coreId>
+              <coreId>1062264928</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -6968,9 +6911,9 @@
           <oprand_edges>
             <count>3</count>
             <item_version>0</item_version>
+            <item>451</item>
             <item>452</item>
             <item>453</item>
-            <item>454</item>
           </oprand_edges>
           <opcode>br</opcode>
           <m_Display>0</m_Display>
@@ -6978,25 +6921,25 @@
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
           <m_delay>0.00</m_delay>
-          <m_topoIndex>121</m_topoIndex>
+          <m_topoIndex>120</m_topoIndex>
           <m_clusterGroupNumber>-1</m_clusterGroupNumber>
         </item>
-        <item class_id_reference="9" object_id="_124">
+        <item class_id_reference="9" object_id="_123">
           <Value>
             <Obj>
               <type>0</type>
-              <id>133</id>
-              <name>shl_ln136</name>
+              <id>132</id>
+              <name>shl_ln138</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>136</lineNumber>
+              <lineNumber>138</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -7005,20 +6948,20 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>136</second>
+                      <second>138</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>shl_ln136_fu_831_p2</rtlName>
+              <rtlName>shl_ln138_fu_830_p2</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>176</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -7026,8 +6969,8 @@
           <oprand_edges>
             <count>2</count>
             <item_version>0</item_version>
-            <item>459</item>
-            <item>461</item>
+            <item>458</item>
+            <item>460</item>
           </oprand_edges>
           <opcode>shl</opcode>
           <m_Display>0</m_Display>
@@ -7035,25 +6978,25 @@
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
           <m_delay>0.00</m_delay>
-          <m_topoIndex>122</m_topoIndex>
+          <m_topoIndex>121</m_topoIndex>
           <m_clusterGroupNumber>12</m_clusterGroupNumber>
         </item>
-        <item class_id_reference="9" object_id="_125">
+        <item class_id_reference="9" object_id="_124">
           <Value>
             <Obj>
               <type>0</type>
-              <id>134</id>
-              <name>tmp</name>
+              <id>133</id>
+              <name>or_ln138</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>136</lineNumber>
+              <lineNumber>138</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -7062,72 +7005,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>136</second>
+                      <second>138</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_fu_837_p4</rtlName>
-              <control/>
-              <opType/>
-              <implIndex/>
-              <coreName/>
-              <isStorage>0</isStorage>
-              <storageDepth>0</storageDepth>
-              <coreId>1770817912</coreId>
-              <rtlModuleName/>
-            </Obj>
-            <bitwidth>16</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>463</item>
-            <item>464</item>
-            <item>465</item>
-            <item>466</item>
-          </oprand_edges>
-          <opcode>bitconcatenate</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>0.00</m_delay>
-          <m_topoIndex>123</m_topoIndex>
-          <m_clusterGroupNumber>12</m_clusterGroupNumber>
-        </item>
-        <item class_id_reference="9" object_id="_126">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>135</id>
-              <name>or_ln136</name>
-              <fileName>activation_accelerator.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>136</lineNumber>
-              <contextFuncName>bf16add</contextFuncName>
-              <contextNormFuncName>bf16add</contextNormFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>activation_accelerator.cpp</first>
-                        <second>bf16add</second>
-                      </first>
-                      <second>136</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName>or_ln136_fu_846_p2</rtlName>
+              <rtlName>or_ln138_fu_836_p2</rtlName>
               <control>auto</control>
               <opType>or</opType>
               <implIndex>auto</implIndex>
@@ -7142,8 +7026,8 @@
           <oprand_edges>
             <count>2</count>
             <item_version>0</item_version>
-            <item>467</item>
-            <item>468</item>
+            <item>461</item>
+            <item>462</item>
           </oprand_edges>
           <opcode>or</opcode>
           <m_Display>0</m_Display>
@@ -7151,25 +7035,25 @@
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
           <m_delay>0.18</m_delay>
-          <m_topoIndex>124</m_topoIndex>
+          <m_topoIndex>122</m_topoIndex>
           <m_clusterGroupNumber>12</m_clusterGroupNumber>
         </item>
-        <item class_id_reference="9" object_id="_127">
+        <item class_id_reference="9" object_id="_125">
           <Value>
             <Obj>
               <type>0</type>
-              <id>136</id>
-              <name>br_ln136</name>
+              <id>134</id>
+              <name>tmp_4</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>136</lineNumber>
+              <lineNumber>138</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -7178,7 +7062,124 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>136</second>
+                      <second>138</second>
+                    </item>
+                  </second>
+                </item>
+              </inlineStackInfo>
+              <originalName/>
+              <rtlName>tmp_4_fu_842_p4</rtlName>
+              <control/>
+              <opType/>
+              <implIndex/>
+              <coreName/>
+              <isStorage>0</isStorage>
+              <storageDepth>0</storageDepth>
+              <coreId>0</coreId>
+              <rtlModuleName/>
+            </Obj>
+            <bitwidth>9</bitwidth>
+          </Value>
+          <oprand_edges>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>464</item>
+            <item>465</item>
+            <item>466</item>
+            <item>467</item>
+          </oprand_edges>
+          <opcode>partselect</opcode>
+          <m_Display>0</m_Display>
+          <m_isOnCriticalPath>0</m_isOnCriticalPath>
+          <m_isLCDNode>0</m_isLCDNode>
+          <m_isStartOfPath>0</m_isStartOfPath>
+          <m_delay>0.00</m_delay>
+          <m_topoIndex>123</m_topoIndex>
+          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
+        </item>
+        <item class_id_reference="9" object_id="_126">
+          <Value>
+            <Obj>
+              <type>0</type>
+              <id>135</id>
+              <name>or_ln138_1</name>
+              <fileName>activation_accelerator.cpp</fileName>
+              <fileDirectory>..</fileDirectory>
+              <lineNumber>138</lineNumber>
+              <contextFuncName>bf16add</contextFuncName>
+              <contextNormFuncName>bf16add</contextNormFuncName>
+              <inlineStackInfo>
+                <count>1</count>
+                <item_version>0</item_version>
+                <item>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <second>
+                    <count>1</count>
+                    <item_version>0</item_version>
+                    <item>
+                      <first>
+                        <first>activation_accelerator.cpp</first>
+                        <second>bf16add</second>
+                      </first>
+                      <second>138</second>
+                    </item>
+                  </second>
+                </item>
+              </inlineStackInfo>
+              <originalName/>
+              <rtlName>or_ln138_1_fu_852_p3</rtlName>
+              <control/>
+              <opType/>
+              <implIndex/>
+              <coreName/>
+              <isStorage>0</isStorage>
+              <storageDepth>0</storageDepth>
+              <coreId>0</coreId>
+              <rtlModuleName/>
+            </Obj>
+            <bitwidth>16</bitwidth>
+          </Value>
+          <oprand_edges>
+            <count>3</count>
+            <item_version>0</item_version>
+            <item>469</item>
+            <item>470</item>
+            <item>471</item>
+          </oprand_edges>
+          <opcode>bitconcatenate</opcode>
+          <m_Display>0</m_Display>
+          <m_isOnCriticalPath>0</m_isOnCriticalPath>
+          <m_isLCDNode>0</m_isLCDNode>
+          <m_isStartOfPath>0</m_isStartOfPath>
+          <m_delay>0.00</m_delay>
+          <m_topoIndex>124</m_topoIndex>
+          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
+        </item>
+        <item class_id_reference="9" object_id="_127">
+          <Value>
+            <Obj>
+              <type>0</type>
+              <id>136</id>
+              <name>br_ln138</name>
+              <fileName>activation_accelerator.cpp</fileName>
+              <fileDirectory>..</fileDirectory>
+              <lineNumber>138</lineNumber>
+              <contextFuncName>bf16add</contextFuncName>
+              <contextNormFuncName>bf16add</contextNormFuncName>
+              <inlineStackInfo>
+                <count>1</count>
+                <item_version>0</item_version>
+                <item>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <second>
+                    <count>1</count>
+                    <item_version>0</item_version>
+                    <item>
+                      <first>
+                        <first>activation_accelerator.cpp</first>
+                        <second>bf16add</second>
+                      </first>
+                      <second>138</second>
                     </item>
                   </second>
                 </item>
@@ -7191,7 +7192,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770820176</coreId>
+              <coreId>1063480144</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -7199,7 +7200,7 @@
           <oprand_edges>
             <count>1</count>
             <item_version>0</item_version>
-            <item>469</item>
+            <item>472</item>
           </oprand_edges>
           <opcode>br</opcode>
           <m_Display>0</m_Display>
@@ -7215,17 +7216,17 @@
             <Obj>
               <type>0</type>
               <id>138</id>
-              <name>or_ln132</name>
+              <name>or_ln134</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>132</lineNumber>
+              <lineNumber>134</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -7234,20 +7235,20 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>132</second>
+                      <second>134</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>or_ln132_fu_853_p2</rtlName>
+              <rtlName>or_ln134_fu_861_p2</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770821328</coreId>
+              <coreId>1063824800</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -7255,8 +7256,8 @@
           <oprand_edges>
             <count>2</count>
             <item_version>0</item_version>
-            <item>455</item>
-            <item>457</item>
+            <item>454</item>
+            <item>456</item>
           </oprand_edges>
           <opcode>or</opcode>
           <m_Display>0</m_Display>
@@ -7272,17 +7273,17 @@
             <Obj>
               <type>0</type>
               <id>139</id>
-              <name>br_ln132</name>
+              <name>br_ln134</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>132</lineNumber>
+              <lineNumber>134</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -7291,7 +7292,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>132</second>
+                      <second>134</second>
                     </item>
                   </second>
                 </item>
@@ -7304,7 +7305,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770809776</coreId>
+              <coreId>1063831728</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -7312,7 +7313,7 @@
           <oprand_edges>
             <count>1</count>
             <item_version>0</item_version>
-            <item>458</item>
+            <item>457</item>
           </oprand_edges>
           <opcode>br</opcode>
           <m_Display>0</m_Display>
@@ -7331,14 +7332,14 @@
               <name>retval_2</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>132</lineNumber>
+              <lineNumber>134</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -7347,7 +7348,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>132</second>
+                      <second>134</second>
                     </item>
                   </second>
                 </item>
@@ -7360,7 +7361,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770831680</coreId>
+              <coreId>480</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -7368,9 +7369,6 @@
           <oprand_edges>
             <count>10</count>
             <item_version>0</item_version>
-            <item>470</item>
-            <item>471</item>
-            <item>472</item>
             <item>473</item>
             <item>474</item>
             <item>475</item>
@@ -7378,6 +7376,9 @@
             <item>477</item>
             <item>478</item>
             <item>479</item>
+            <item>480</item>
+            <item>481</item>
+            <item>482</item>
           </oprand_edges>
           <opcode>phi</opcode>
           <m_Display>0</m_Display>
@@ -7393,17 +7394,17 @@
             <Obj>
               <type>0</type>
               <id>142</id>
-              <name>_ln137</name>
+              <name>_ln139</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>137</lineNumber>
+              <lineNumber>139</lineNumber>
               <contextFuncName>bf16add</contextFuncName>
               <contextNormFuncName>bf16add</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+                  <first>/data1/jdn/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -7412,7 +7413,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>bf16add</second>
                       </first>
-                      <second>137</second>
+                      <second>139</second>
                     </item>
                   </second>
                 </item>
@@ -7425,7 +7426,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>176</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -7433,7 +7434,7 @@
           <oprand_edges>
             <count>1</count>
             <item_version>0</item_version>
-            <item>480</item>
+            <item>483</item>
           </oprand_edges>
           <opcode>ret</opcode>
           <m_Display>0</m_Display>
@@ -7471,7 +7472,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770864800</coreId>
+              <coreId>1062692448</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -7502,7 +7503,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>1718580063</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -7595,7 +7596,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1769714864</coreId>
+              <coreId>1061970064</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -7626,7 +7627,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770165856</coreId>
+              <coreId>1060732368</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -7657,7 +7658,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>4992</coreId>
+              <coreId>1062361088</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -7688,7 +7689,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1769473872</coreId>
+              <coreId>1062388592</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>18</bitwidth>
@@ -7719,7 +7720,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>1062388288</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -7750,7 +7751,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>256</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -7781,7 +7782,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>1063870304</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -7793,7 +7794,7 @@
           <Value>
             <Obj>
               <type>2</type>
-              <id>338</id>
+              <id>339</id>
               <name>empty</name>
               <fileName/>
               <fileDirectory/>
@@ -7812,7 +7813,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>1063477776</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -7824,7 +7825,7 @@
           <Value>
             <Obj>
               <type>2</type>
-              <id>341</id>
+              <id>342</id>
               <name>empty</name>
               <fileName/>
               <fileDirectory/>
@@ -7843,7 +7844,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770847792</coreId>
+              <coreId>1063473712</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>3</bitwidth>
@@ -7855,7 +7856,7 @@
           <Value>
             <Obj>
               <type>2</type>
-              <id>351</id>
+              <id>352</id>
               <name>empty</name>
               <fileName/>
               <fileDirectory/>
@@ -7905,7 +7906,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770849696</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -7936,7 +7937,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770847920</coreId>
+              <coreId>1063477896</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>2</bitwidth>
@@ -7948,7 +7949,7 @@
           <Value>
             <Obj>
               <type>2</type>
-              <id>381</id>
+              <id>380</id>
               <name>empty</name>
               <fileName/>
               <fileDirectory/>
@@ -7967,7 +7968,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770851112</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -7979,7 +7980,7 @@
           <Value>
             <Obj>
               <type>2</type>
-              <id>393</id>
+              <id>392</id>
               <name>empty</name>
               <fileName/>
               <fileDirectory/>
@@ -7998,7 +7999,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770852048</coreId>
+              <coreId>1062369744</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -8010,7 +8011,7 @@
           <Value>
             <Obj>
               <type>2</type>
-              <id>396</id>
+              <id>395</id>
               <name>empty</name>
               <fileName/>
               <fileDirectory/>
@@ -8029,7 +8030,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770852680</coreId>
+              <coreId>51</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -8041,7 +8042,7 @@
           <Value>
             <Obj>
               <type>2</type>
-              <id>403</id>
+              <id>402</id>
               <name>empty</name>
               <fileName/>
               <fileDirectory/>
@@ -8060,7 +8061,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1330007625</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -8072,7 +8073,7 @@
           <Value>
             <Obj>
               <type>2</type>
-              <id>422</id>
+              <id>421</id>
               <name>empty</name>
               <fileName/>
               <fileDirectory/>
@@ -8091,7 +8092,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>1061130184</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -8103,7 +8104,7 @@
           <Value>
             <Obj>
               <type>2</type>
-              <id>434</id>
+              <id>433</id>
               <name>empty</name>
               <fileName/>
               <fileDirectory/>
@@ -8122,7 +8123,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1770749776</coreId>
+              <coreId>176</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -8134,7 +8135,7 @@
           <Value>
             <Obj>
               <type>2</type>
-              <id>445</id>
+              <id>444</id>
               <name>empty</name>
               <fileName/>
               <fileDirectory/>
@@ -8153,7 +8154,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>264</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -8165,38 +8166,7 @@
           <Value>
             <Obj>
               <type>2</type>
-              <id>450</id>
-              <name>empty</name>
-              <fileName/>
-              <fileDirectory/>
-              <lineNumber>0</lineNumber>
-              <contextFuncName/>
-              <contextNormFuncName/>
-              <inlineStackInfo>
-                <count>0</count>
-                <item_version>0</item_version>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName/>
-              <control/>
-              <opType/>
-              <implIndex/>
-              <coreName/>
-              <isStorage>0</isStorage>
-              <storageDepth>0</storageDepth>
-              <coreId>1770751216</coreId>
-              <rtlModuleName/>
-            </Obj>
-            <bitwidth>15</bitwidth>
-          </Value>
-          <const_type>0</const_type>
-          <content>0</content>
-        </item>
-        <item class_id_reference="16" object_id="_156">
-          <Value>
-            <Obj>
-              <type>2</type>
-              <id>456</id>
+              <id>449</id>
               <name>empty</name>
               <fileName/>
               <fileDirectory/>
@@ -8218,6 +8188,37 @@
               <coreId>1869833586</coreId>
               <rtlModuleName/>
             </Obj>
+            <bitwidth>15</bitwidth>
+          </Value>
+          <const_type>0</const_type>
+          <content>0</content>
+        </item>
+        <item class_id_reference="16" object_id="_156">
+          <Value>
+            <Obj>
+              <type>2</type>
+              <id>455</id>
+              <name>empty</name>
+              <fileName/>
+              <fileDirectory/>
+              <lineNumber>0</lineNumber>
+              <contextFuncName/>
+              <contextNormFuncName/>
+              <inlineStackInfo>
+                <count>0</count>
+                <item_version>0</item_version>
+              </inlineStackInfo>
+              <originalName/>
+              <rtlName/>
+              <control/>
+              <opType/>
+              <implIndex/>
+              <coreName/>
+              <isStorage>0</isStorage>
+              <storageDepth>0</storageDepth>
+              <coreId>1061128048</coreId>
+              <rtlModuleName/>
+            </Obj>
             <bitwidth>16</bitwidth>
           </Value>
           <const_type>0</const_type>
@@ -8227,7 +8228,7 @@
           <Value>
             <Obj>
               <type>2</type>
-              <id>460</id>
+              <id>459</id>
               <name>empty</name>
               <fileName/>
               <fileDirectory/>
@@ -8419,7 +8420,7 @@
           <Obj>
             <type>3</type>
             <id>82</id>
-            <name>VITIS_LOOP_86_1</name>
+            <name>VITIS_LOOP_88_1</name>
             <fileName/>
             <fileDirectory/>
             <lineNumber>0</lineNumber>
@@ -8437,7 +8438,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>1770166912</coreId>
+            <coreId>4294967290</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -8457,7 +8458,7 @@
         <item class_id_reference="18" object_id="_162">
           <Obj>
             <type>3</type>
-            <id>86</id>
+            <id>88</id>
             <name>while.cond</name>
             <fileName/>
             <fileDirectory/>
@@ -8476,21 +8477,23 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>1771060832</coreId>
+            <coreId>1061560528</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
-            <count>3</count>
+            <count>5</count>
             <item_version>0</item_version>
             <item>83</item>
             <item>84</item>
             <item>85</item>
+            <item>86</item>
+            <item>87</item>
           </node_objs>
         </item>
         <item class_id_reference="18" object_id="_163">
           <Obj>
             <type>3</type>
-            <id>94</id>
+            <id>95</id>
             <name>while.cond.split</name>
             <fileName/>
             <fileDirectory/>
@@ -8509,24 +8512,23 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>0</coreId>
+            <coreId>1061275920</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
-            <count>6</count>
+            <count>5</count>
             <item_version>0</item_version>
-            <item>87</item>
-            <item>89</item>
             <item>90</item>
             <item>91</item>
             <item>92</item>
             <item>93</item>
+            <item>94</item>
           </node_objs>
         </item>
         <item class_id_reference="18" object_id="_164">
           <Obj>
             <type>3</type>
-            <id>100</id>
+            <id>101</id>
             <name>while.body</name>
             <fileName/>
             <fileDirectory/>
@@ -8545,23 +8547,23 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>1770743712</coreId>
+            <coreId>757935405</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
             <count>5</count>
             <item_version>0</item_version>
-            <item>95</item>
             <item>96</item>
             <item>97</item>
             <item>98</item>
             <item>99</item>
+            <item>100</item>
           </node_objs>
         </item>
         <item class_id_reference="18" object_id="_165">
           <Obj>
             <type>3</type>
-            <id>132</id>
+            <id>131</id>
             <name>while.end_ifconv</name>
             <fileName/>
             <fileDirectory/>
@@ -8580,13 +8582,12 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>0</coreId>
+            <coreId>1063032368</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
-            <count>31</count>
+            <count>29</count>
             <item_version>0</item_version>
-            <item>101</item>
             <item>102</item>
             <item>103</item>
             <item>104</item>
@@ -8616,7 +8617,6 @@
             <item>128</item>
             <item>129</item>
             <item>130</item>
-            <item>131</item>
           </node_objs>
         </item>
         <item class_id_reference="18" object_id="_166">
@@ -8641,12 +8641,13 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>1770816016</coreId>
+            <coreId>1062265960</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
-            <count>4</count>
+            <count>5</count>
             <item_version>0</item_version>
+            <item>132</item>
             <item>133</item>
             <item>134</item>
             <item>135</item>
@@ -8675,7 +8676,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>1770821312</coreId>
+            <coreId>1062789216</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -8707,7 +8708,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>1770824288</coreId>
+            <coreId>1063833096</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -9375,70 +9376,70 @@
         <item class_id_reference="20" object_id="_262">
           <id>266</id>
           <edge_type>1</edge_type>
-          <source_obj>51</source_obj>
+          <source_obj>37</source_obj>
           <sink_obj>52</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_263">
           <id>267</id>
           <edge_type>1</edge_type>
-          <source_obj>37</source_obj>
-          <sink_obj>53</sink_obj>
+          <source_obj>43</source_obj>
+          <sink_obj>52</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_264">
           <id>268</id>
           <edge_type>1</edge_type>
-          <source_obj>43</source_obj>
-          <sink_obj>53</sink_obj>
+          <source_obj>34</source_obj>
+          <sink_obj>52</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_265">
           <id>269</id>
           <edge_type>1</edge_type>
-          <source_obj>34</source_obj>
+          <source_obj>50</source_obj>
           <sink_obj>53</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_266">
           <id>270</id>
           <edge_type>1</edge_type>
-          <source_obj>53</source_obj>
-          <sink_obj>54</sink_obj>
+          <source_obj>10</source_obj>
+          <sink_obj>53</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_267">
           <id>271</id>
           <edge_type>1</edge_type>
-          <source_obj>50</source_obj>
-          <sink_obj>55</sink_obj>
+          <source_obj>9</source_obj>
+          <sink_obj>53</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_268">
           <id>272</id>
           <edge_type>1</edge_type>
-          <source_obj>10</source_obj>
-          <sink_obj>55</sink_obj>
+          <source_obj>53</source_obj>
+          <sink_obj>54</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_269">
           <id>273</id>
           <edge_type>1</edge_type>
-          <source_obj>9</source_obj>
+          <source_obj>53</source_obj>
           <sink_obj>55</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_270">
           <id>274</id>
           <edge_type>1</edge_type>
-          <source_obj>55</source_obj>
+          <source_obj>51</source_obj>
           <sink_obj>56</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_271">
           <id>275</id>
           <edge_type>1</edge_type>
-          <source_obj>55</source_obj>
+          <source_obj>52</source_obj>
           <sink_obj>57</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -9459,7 +9460,7 @@
         <item class_id_reference="20" object_id="_274">
           <id>278</id>
           <edge_type>1</edge_type>
-          <source_obj>54</source_obj>
+          <source_obj>51</source_obj>
           <sink_obj>59</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -9480,105 +9481,105 @@
         <item class_id_reference="20" object_id="_277">
           <id>281</id>
           <edge_type>1</edge_type>
-          <source_obj>51</source_obj>
-          <sink_obj>61</sink_obj>
+          <source_obj>215</source_obj>
+          <sink_obj>60</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_278">
           <id>282</id>
           <edge_type>1</edge_type>
-          <source_obj>53</source_obj>
+          <source_obj>56</source_obj>
           <sink_obj>61</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_279">
           <id>283</id>
           <edge_type>1</edge_type>
-          <source_obj>61</source_obj>
-          <sink_obj>62</sink_obj>
+          <source_obj>57</source_obj>
+          <sink_obj>61</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_280">
           <id>284</id>
           <edge_type>1</edge_type>
-          <source_obj>215</source_obj>
+          <source_obj>57</source_obj>
           <sink_obj>62</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_281">
           <id>285</id>
           <edge_type>1</edge_type>
-          <source_obj>52</source_obj>
-          <sink_obj>63</sink_obj>
+          <source_obj>56</source_obj>
+          <sink_obj>62</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_282">
           <id>286</id>
           <edge_type>1</edge_type>
-          <source_obj>54</source_obj>
+          <source_obj>60</source_obj>
           <sink_obj>63</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_283">
           <id>287</id>
           <edge_type>1</edge_type>
-          <source_obj>54</source_obj>
-          <sink_obj>64</sink_obj>
+          <source_obj>61</source_obj>
+          <sink_obj>63</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_284">
           <id>288</id>
           <edge_type>1</edge_type>
-          <source_obj>52</source_obj>
-          <sink_obj>64</sink_obj>
+          <source_obj>62</source_obj>
+          <sink_obj>63</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_285">
           <id>289</id>
           <edge_type>1</edge_type>
-          <source_obj>62</source_obj>
-          <sink_obj>65</sink_obj>
+          <source_obj>63</source_obj>
+          <sink_obj>64</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_286">
           <id>290</id>
           <edge_type>1</edge_type>
-          <source_obj>63</source_obj>
+          <source_obj>60</source_obj>
           <sink_obj>65</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_287">
           <id>291</id>
           <edge_type>1</edge_type>
-          <source_obj>64</source_obj>
+          <source_obj>7</source_obj>
           <sink_obj>65</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_288">
           <id>292</id>
           <edge_type>1</edge_type>
-          <source_obj>65</source_obj>
-          <sink_obj>66</sink_obj>
+          <source_obj>8</source_obj>
+          <sink_obj>65</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_289">
           <id>293</id>
           <edge_type>1</edge_type>
-          <source_obj>62</source_obj>
-          <sink_obj>67</sink_obj>
+          <source_obj>57</source_obj>
+          <sink_obj>66</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_290">
           <id>294</id>
           <edge_type>1</edge_type>
-          <source_obj>7</source_obj>
-          <sink_obj>67</sink_obj>
+          <source_obj>56</source_obj>
+          <sink_obj>66</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_291">
           <id>295</id>
           <edge_type>1</edge_type>
-          <source_obj>8</source_obj>
+          <source_obj>66</source_obj>
           <sink_obj>67</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -9592,14 +9593,14 @@
         <item class_id_reference="20" object_id="_293">
           <id>297</id>
           <edge_type>1</edge_type>
-          <source_obj>66</source_obj>
+          <source_obj>64</source_obj>
           <sink_obj>68</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_294">
           <id>298</id>
           <edge_type>1</edge_type>
-          <source_obj>60</source_obj>
+          <source_obj>67</source_obj>
           <sink_obj>68</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -9613,7 +9614,7 @@
         <item class_id_reference="20" object_id="_296">
           <id>300</id>
           <edge_type>1</edge_type>
-          <source_obj>67</source_obj>
+          <source_obj>65</source_obj>
           <sink_obj>69</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -9676,7 +9677,7 @@
         <item class_id_reference="20" object_id="_305">
           <id>311</id>
           <edge_type>1</edge_type>
-          <source_obj>55</source_obj>
+          <source_obj>53</source_obj>
           <sink_obj>75</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -9690,7 +9691,7 @@
         <item class_id_reference="20" object_id="_307">
           <id>313</id>
           <edge_type>1</edge_type>
-          <source_obj>57</source_obj>
+          <source_obj>55</source_obj>
           <sink_obj>76</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -9739,7 +9740,7 @@
         <item class_id_reference="20" object_id="_314">
           <id>322</id>
           <edge_type>1</edge_type>
-          <source_obj>56</source_obj>
+          <source_obj>54</source_obj>
           <sink_obj>79</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -9767,112 +9768,112 @@
         <item class_id_reference="20" object_id="_318">
           <id>326</id>
           <edge_type>2</edge_type>
-          <source_obj>86</source_obj>
+          <source_obj>88</source_obj>
           <sink_obj>81</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_319">
           <id>327</id>
           <edge_type>1</edge_type>
-          <source_obj>74</source_obj>
+          <source_obj>73</source_obj>
           <sink_obj>83</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_320">
           <id>328</id>
           <edge_type>1</edge_type>
-          <source_obj>83</source_obj>
+          <source_obj>74</source_obj>
           <sink_obj>84</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_321">
           <id>329</id>
           <edge_type>1</edge_type>
-          <source_obj>78</source_obj>
-          <sink_obj>84</sink_obj>
+          <source_obj>83</source_obj>
+          <sink_obj>85</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_322">
           <id>330</id>
           <edge_type>1</edge_type>
           <source_obj>84</source_obj>
-          <sink_obj>85</sink_obj>
+          <sink_obj>86</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_323">
           <id>331</id>
-          <edge_type>2</edge_type>
-          <source_obj>94</source_obj>
-          <sink_obj>85</sink_obj>
+          <edge_type>1</edge_type>
+          <source_obj>78</source_obj>
+          <sink_obj>86</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_324">
           <id>332</id>
-          <edge_type>2</edge_type>
-          <source_obj>132</source_obj>
-          <sink_obj>85</sink_obj>
+          <edge_type>1</edge_type>
+          <source_obj>86</source_obj>
+          <sink_obj>87</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_325">
           <id>333</id>
-          <edge_type>1</edge_type>
-          <source_obj>73</source_obj>
+          <edge_type>2</edge_type>
+          <source_obj>95</source_obj>
           <sink_obj>87</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_326">
-          <id>336</id>
-          <edge_type>1</edge_type>
-          <source_obj>87</source_obj>
-          <sink_obj>89</sink_obj>
+          <id>334</id>
+          <edge_type>2</edge_type>
+          <source_obj>131</source_obj>
+          <sink_obj>87</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_327">
           <id>337</id>
           <edge_type>1</edge_type>
-          <source_obj>154</source_obj>
-          <sink_obj>89</sink_obj>
+          <source_obj>83</source_obj>
+          <sink_obj>90</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_328">
-          <id>339</id>
+          <id>338</id>
           <edge_type>1</edge_type>
-          <source_obj>338</source_obj>
-          <sink_obj>89</sink_obj>
+          <source_obj>154</source_obj>
+          <sink_obj>90</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_329">
           <id>340</id>
           <edge_type>1</edge_type>
-          <source_obj>89</source_obj>
+          <source_obj>339</source_obj>
           <sink_obj>90</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_330">
-          <id>342</id>
+          <id>341</id>
           <edge_type>1</edge_type>
-          <source_obj>341</source_obj>
-          <sink_obj>90</sink_obj>
+          <source_obj>90</source_obj>
+          <sink_obj>91</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_331">
           <id>343</id>
           <edge_type>1</edge_type>
-          <source_obj>83</source_obj>
+          <source_obj>342</source_obj>
           <sink_obj>91</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_332">
           <id>344</id>
           <edge_type>1</edge_type>
-          <source_obj>320</source_obj>
-          <sink_obj>91</sink_obj>
+          <source_obj>84</source_obj>
+          <sink_obj>92</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_333">
           <id>345</id>
           <edge_type>1</edge_type>
-          <source_obj>90</source_obj>
+          <source_obj>320</source_obj>
           <sink_obj>92</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -9880,7 +9881,7 @@
           <id>346</id>
           <edge_type>1</edge_type>
           <source_obj>91</source_obj>
-          <sink_obj>92</sink_obj>
+          <sink_obj>93</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_335">
@@ -9892,120 +9893,120 @@
         </item>
         <item class_id_reference="20" object_id="_336">
           <id>348</id>
-          <edge_type>2</edge_type>
-          <source_obj>132</source_obj>
-          <sink_obj>93</sink_obj>
+          <edge_type>1</edge_type>
+          <source_obj>93</source_obj>
+          <sink_obj>94</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_337">
           <id>349</id>
           <edge_type>2</edge_type>
-          <source_obj>100</source_obj>
-          <sink_obj>93</sink_obj>
+          <source_obj>131</source_obj>
+          <sink_obj>94</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_338">
           <id>350</id>
-          <edge_type>1</edge_type>
-          <source_obj>87</source_obj>
-          <sink_obj>95</sink_obj>
+          <edge_type>2</edge_type>
+          <source_obj>101</source_obj>
+          <sink_obj>94</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_339">
-          <id>352</id>
+          <id>351</id>
           <edge_type>1</edge_type>
-          <source_obj>351</source_obj>
-          <sink_obj>95</sink_obj>
+          <source_obj>83</source_obj>
+          <sink_obj>96</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_340">
           <id>353</id>
           <edge_type>1</edge_type>
-          <source_obj>83</source_obj>
+          <source_obj>352</source_obj>
           <sink_obj>96</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_341">
           <id>354</id>
           <edge_type>1</edge_type>
-          <source_obj>318</source_obj>
-          <sink_obj>96</sink_obj>
+          <source_obj>84</source_obj>
+          <sink_obj>97</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_342">
           <id>355</id>
           <edge_type>1</edge_type>
-          <source_obj>96</source_obj>
+          <source_obj>318</source_obj>
           <sink_obj>97</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_343">
           <id>356</id>
           <edge_type>1</edge_type>
-          <source_obj>74</source_obj>
-          <sink_obj>97</sink_obj>
+          <source_obj>97</source_obj>
+          <sink_obj>98</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_344">
           <id>357</id>
           <edge_type>1</edge_type>
-          <source_obj>95</source_obj>
+          <source_obj>74</source_obj>
           <sink_obj>98</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_345">
           <id>358</id>
           <edge_type>1</edge_type>
-          <source_obj>73</source_obj>
-          <sink_obj>98</sink_obj>
+          <source_obj>96</source_obj>
+          <sink_obj>99</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_346">
           <id>359</id>
-          <edge_type>2</edge_type>
-          <source_obj>86</source_obj>
+          <edge_type>1</edge_type>
+          <source_obj>73</source_obj>
           <sink_obj>99</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_347">
           <id>360</id>
-          <edge_type>1</edge_type>
-          <source_obj>320</source_obj>
-          <sink_obj>101</sink_obj>
+          <edge_type>2</edge_type>
+          <source_obj>88</source_obj>
+          <sink_obj>100</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_348">
           <id>361</id>
-          <edge_type>2</edge_type>
-          <source_obj>86</source_obj>
-          <sink_obj>101</sink_obj>
+          <edge_type>1</edge_type>
+          <source_obj>320</source_obj>
+          <sink_obj>102</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_349">
           <id>362</id>
-          <edge_type>1</edge_type>
-          <source_obj>83</source_obj>
-          <sink_obj>101</sink_obj>
+          <edge_type>2</edge_type>
+          <source_obj>88</source_obj>
+          <sink_obj>102</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_350">
           <id>363</id>
-          <edge_type>2</edge_type>
-          <source_obj>94</source_obj>
-          <sink_obj>101</sink_obj>
+          <edge_type>1</edge_type>
+          <source_obj>84</source_obj>
+          <sink_obj>102</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_351">
           <id>364</id>
-          <edge_type>1</edge_type>
-          <source_obj>73</source_obj>
+          <edge_type>2</edge_type>
+          <source_obj>95</source_obj>
           <sink_obj>102</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_352">
           <id>367</id>
           <edge_type>1</edge_type>
-          <source_obj>102</source_obj>
+          <source_obj>83</source_obj>
           <sink_obj>103</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -10019,7 +10020,7 @@
         <item class_id_reference="20" object_id="_354">
           <id>370</id>
           <edge_type>1</edge_type>
-          <source_obj>338</source_obj>
+          <source_obj>339</source_obj>
           <sink_obj>103</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -10040,7 +10041,7 @@
         <item class_id_reference="20" object_id="_357">
           <id>376</id>
           <edge_type>1</edge_type>
-          <source_obj>102</source_obj>
+          <source_obj>83</source_obj>
           <sink_obj>105</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -10054,77 +10055,77 @@
         <item class_id_reference="20" object_id="_359">
           <id>378</id>
           <edge_type>1</edge_type>
-          <source_obj>338</source_obj>
+          <source_obj>339</source_obj>
           <sink_obj>105</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_360">
           <id>379</id>
           <edge_type>1</edge_type>
-          <source_obj>105</source_obj>
+          <source_obj>102</source_obj>
           <sink_obj>106</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_361">
-          <id>380</id>
+          <id>381</id>
           <edge_type>1</edge_type>
-          <source_obj>101</source_obj>
-          <sink_obj>107</sink_obj>
+          <source_obj>380</source_obj>
+          <sink_obj>106</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_362">
           <id>382</id>
           <edge_type>1</edge_type>
-          <source_obj>381</source_obj>
+          <source_obj>104</source_obj>
           <sink_obj>107</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_363">
           <id>383</id>
           <edge_type>1</edge_type>
-          <source_obj>104</source_obj>
-          <sink_obj>108</sink_obj>
+          <source_obj>106</source_obj>
+          <sink_obj>107</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_364">
           <id>384</id>
           <edge_type>1</edge_type>
-          <source_obj>107</source_obj>
-          <sink_obj>108</sink_obj>
+          <source_obj>102</source_obj>
+          <sink_obj>107</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_365">
           <id>385</id>
           <edge_type>1</edge_type>
-          <source_obj>101</source_obj>
+          <source_obj>104</source_obj>
           <sink_obj>108</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_366">
           <id>386</id>
           <edge_type>1</edge_type>
-          <source_obj>104</source_obj>
-          <sink_obj>109</sink_obj>
+          <source_obj>105</source_obj>
+          <sink_obj>108</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_367">
           <id>387</id>
           <edge_type>1</edge_type>
-          <source_obj>106</source_obj>
-          <sink_obj>109</sink_obj>
+          <source_obj>85</source_obj>
+          <sink_obj>108</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_368">
           <id>388</id>
           <edge_type>1</edge_type>
-          <source_obj>102</source_obj>
+          <source_obj>108</source_obj>
           <sink_obj>109</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_369">
           <id>389</id>
           <edge_type>1</edge_type>
-          <source_obj>109</source_obj>
+          <source_obj>108</source_obj>
           <sink_obj>110</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -10143,79 +10144,79 @@
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_372">
-          <id>392</id>
+          <id>393</id>
           <edge_type>1</edge_type>
-          <source_obj>112</source_obj>
-          <sink_obj>113</sink_obj>
+          <source_obj>392</source_obj>
+          <sink_obj>112</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_373">
           <id>394</id>
           <edge_type>1</edge_type>
-          <source_obj>393</source_obj>
+          <source_obj>111</source_obj>
           <sink_obj>113</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_374">
-          <id>395</id>
+          <id>396</id>
           <edge_type>1</edge_type>
-          <source_obj>111</source_obj>
-          <sink_obj>114</sink_obj>
+          <source_obj>395</source_obj>
+          <sink_obj>113</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_375">
           <id>397</id>
           <edge_type>1</edge_type>
-          <source_obj>396</source_obj>
+          <source_obj>109</source_obj>
           <sink_obj>114</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_376">
           <id>398</id>
           <edge_type>1</edge_type>
-          <source_obj>112</source_obj>
-          <sink_obj>115</sink_obj>
+          <source_obj>392</source_obj>
+          <sink_obj>114</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_377">
-          <id>399</id>
+          <id>401</id>
           <edge_type>1</edge_type>
-          <source_obj>393</source_obj>
+          <source_obj>108</source_obj>
           <sink_obj>115</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_378">
-          <id>402</id>
+          <id>403</id>
           <edge_type>1</edge_type>
-          <source_obj>109</source_obj>
-          <sink_obj>116</sink_obj>
+          <source_obj>402</source_obj>
+          <sink_obj>115</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_379">
           <id>404</id>
           <edge_type>1</edge_type>
-          <source_obj>403</source_obj>
+          <source_obj>115</source_obj>
           <sink_obj>116</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_380">
           <id>405</id>
           <edge_type>1</edge_type>
-          <source_obj>116</source_obj>
-          <sink_obj>117</sink_obj>
+          <source_obj>113</source_obj>
+          <sink_obj>116</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_381">
           <id>406</id>
           <edge_type>1</edge_type>
-          <source_obj>114</source_obj>
-          <sink_obj>117</sink_obj>
+          <source_obj>111</source_obj>
+          <sink_obj>116</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_382">
           <id>407</id>
           <edge_type>1</edge_type>
-          <source_obj>111</source_obj>
+          <source_obj>112</source_obj>
           <sink_obj>117</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -10223,42 +10224,42 @@
           <id>408</id>
           <edge_type>1</edge_type>
           <source_obj>113</source_obj>
-          <sink_obj>118</sink_obj>
+          <sink_obj>117</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_384">
           <id>409</id>
           <edge_type>1</edge_type>
-          <source_obj>114</source_obj>
-          <sink_obj>118</sink_obj>
+          <source_obj>111</source_obj>
+          <sink_obj>117</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_385">
           <id>410</id>
           <edge_type>1</edge_type>
-          <source_obj>111</source_obj>
+          <source_obj>112</source_obj>
           <sink_obj>118</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_386">
           <id>411</id>
           <edge_type>1</edge_type>
-          <source_obj>113</source_obj>
-          <sink_obj>119</sink_obj>
+          <source_obj>215</source_obj>
+          <sink_obj>118</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_387">
           <id>412</id>
           <edge_type>1</edge_type>
-          <source_obj>215</source_obj>
+          <source_obj>114</source_obj>
           <sink_obj>119</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_388">
           <id>413</id>
           <edge_type>1</edge_type>
-          <source_obj>115</source_obj>
-          <sink_obj>120</sink_obj>
+          <source_obj>118</source_obj>
+          <sink_obj>119</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_389">
@@ -10271,70 +10272,70 @@
         <item class_id_reference="20" object_id="_390">
           <id>415</id>
           <edge_type>1</edge_type>
-          <source_obj>120</source_obj>
-          <sink_obj>121</sink_obj>
+          <source_obj>116</source_obj>
+          <sink_obj>120</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_391">
           <id>416</id>
           <edge_type>1</edge_type>
           <source_obj>117</source_obj>
-          <sink_obj>121</sink_obj>
+          <sink_obj>120</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_392">
-          <id>417</id>
+          <id>419</id>
           <edge_type>1</edge_type>
-          <source_obj>118</source_obj>
+          <source_obj>120</source_obj>
           <sink_obj>121</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_393">
           <id>420</id>
           <edge_type>1</edge_type>
-          <source_obj>121</source_obj>
-          <sink_obj>122</sink_obj>
+          <source_obj>368</source_obj>
+          <sink_obj>121</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_394">
-          <id>421</id>
+          <id>422</id>
           <edge_type>1</edge_type>
-          <source_obj>368</source_obj>
-          <sink_obj>122</sink_obj>
+          <source_obj>421</source_obj>
+          <sink_obj>121</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_395">
           <id>423</id>
           <edge_type>1</edge_type>
-          <source_obj>422</source_obj>
+          <source_obj>121</source_obj>
           <sink_obj>122</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_396">
           <id>424</id>
           <edge_type>1</edge_type>
-          <source_obj>122</source_obj>
-          <sink_obj>123</sink_obj>
+          <source_obj>320</source_obj>
+          <sink_obj>122</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_397">
           <id>425</id>
           <edge_type>1</edge_type>
-          <source_obj>320</source_obj>
+          <source_obj>107</source_obj>
           <sink_obj>123</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_398">
           <id>426</id>
           <edge_type>1</edge_type>
-          <source_obj>108</source_obj>
-          <sink_obj>124</sink_obj>
+          <source_obj>380</source_obj>
+          <sink_obj>123</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_399">
           <id>427</id>
           <edge_type>1</edge_type>
-          <source_obj>381</source_obj>
+          <source_obj>122</source_obj>
           <sink_obj>124</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -10342,447 +10343,447 @@
           <id>428</id>
           <edge_type>1</edge_type>
           <source_obj>123</source_obj>
-          <sink_obj>125</sink_obj>
+          <sink_obj>124</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_401">
           <id>429</id>
           <edge_type>1</edge_type>
-          <source_obj>124</source_obj>
-          <sink_obj>125</sink_obj>
+          <source_obj>107</source_obj>
+          <sink_obj>124</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_402">
-          <id>430</id>
+          <id>432</id>
           <edge_type>1</edge_type>
-          <source_obj>108</source_obj>
+          <source_obj>120</source_obj>
           <sink_obj>125</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_403">
-          <id>433</id>
+          <id>434</id>
           <edge_type>1</edge_type>
-          <source_obj>121</source_obj>
-          <sink_obj>126</sink_obj>
+          <source_obj>433</source_obj>
+          <sink_obj>125</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_404">
           <id>435</id>
           <edge_type>1</edge_type>
-          <source_obj>434</source_obj>
-          <sink_obj>126</sink_obj>
+          <source_obj>154</source_obj>
+          <sink_obj>125</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_405">
-          <id>436</id>
+          <id>437</id>
           <edge_type>1</edge_type>
-          <source_obj>154</source_obj>
+          <source_obj>120</source_obj>
           <sink_obj>126</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_406">
           <id>438</id>
           <edge_type>1</edge_type>
-          <source_obj>121</source_obj>
-          <sink_obj>127</sink_obj>
+          <source_obj>402</source_obj>
+          <sink_obj>126</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_407">
           <id>439</id>
           <edge_type>1</edge_type>
-          <source_obj>403</source_obj>
-          <sink_obj>127</sink_obj>
+          <source_obj>164</source_obj>
+          <sink_obj>126</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_408">
           <id>440</id>
           <edge_type>1</edge_type>
-          <source_obj>164</source_obj>
+          <source_obj>122</source_obj>
           <sink_obj>127</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_409">
           <id>441</id>
           <edge_type>1</edge_type>
-          <source_obj>123</source_obj>
-          <sink_obj>128</sink_obj>
+          <source_obj>125</source_obj>
+          <sink_obj>127</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_410">
           <id>442</id>
           <edge_type>1</edge_type>
           <source_obj>126</source_obj>
-          <sink_obj>128</sink_obj>
+          <sink_obj>127</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_411">
           <id>443</id>
           <edge_type>1</edge_type>
-          <source_obj>127</source_obj>
+          <source_obj>124</source_obj>
           <sink_obj>128</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_412">
-          <id>444</id>
+          <id>445</id>
           <edge_type>1</edge_type>
-          <source_obj>125</source_obj>
-          <sink_obj>129</sink_obj>
+          <source_obj>444</source_obj>
+          <sink_obj>128</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_413">
-          <id>446</id>
+          <id>448</id>
           <edge_type>1</edge_type>
-          <source_obj>445</source_obj>
+          <source_obj>69</source_obj>
           <sink_obj>129</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_414">
-          <id>449</id>
+          <id>450</id>
           <edge_type>1</edge_type>
-          <source_obj>69</source_obj>
-          <sink_obj>130</sink_obj>
+          <source_obj>449</source_obj>
+          <sink_obj>129</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_415">
           <id>451</id>
           <edge_type>1</edge_type>
-          <source_obj>450</source_obj>
+          <source_obj>128</source_obj>
           <sink_obj>130</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_416">
           <id>452</id>
-          <edge_type>1</edge_type>
-          <source_obj>129</source_obj>
-          <sink_obj>131</sink_obj>
+          <edge_type>2</edge_type>
+          <source_obj>137</source_obj>
+          <sink_obj>130</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_417">
           <id>453</id>
           <edge_type>2</edge_type>
-          <source_obj>137</source_obj>
-          <sink_obj>131</sink_obj>
+          <source_obj>140</source_obj>
+          <sink_obj>130</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_418">
           <id>454</id>
-          <edge_type>2</edge_type>
-          <source_obj>140</source_obj>
-          <sink_obj>131</sink_obj>
+          <edge_type>1</edge_type>
+          <source_obj>129</source_obj>
+          <sink_obj>138</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_419">
-          <id>455</id>
+          <id>456</id>
           <edge_type>1</edge_type>
-          <source_obj>130</source_obj>
+          <source_obj>455</source_obj>
           <sink_obj>138</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_420">
           <id>457</id>
-          <edge_type>1</edge_type>
-          <source_obj>456</source_obj>
-          <sink_obj>138</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_421">
-          <id>458</id>
           <edge_type>2</edge_type>
           <source_obj>143</source_obj>
           <sink_obj>139</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_422">
-          <id>459</id>
+        <item class_id_reference="20" object_id="_421">
+          <id>458</id>
           <edge_type>1</edge_type>
-          <source_obj>125</source_obj>
-          <sink_obj>133</sink_obj>
+          <source_obj>124</source_obj>
+          <sink_obj>132</sink_obj>
+          <is_back_edge>0</is_back_edge>
+        </item>
+        <item class_id_reference="20" object_id="_422">
+          <id>460</id>
+          <edge_type>1</edge_type>
+          <source_obj>459</source_obj>
+          <sink_obj>132</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_423">
           <id>461</id>
           <edge_type>1</edge_type>
-          <source_obj>460</source_obj>
+          <source_obj>132</source_obj>
           <sink_obj>133</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_424">
-          <id>464</id>
+          <id>462</id>
           <edge_type>1</edge_type>
-          <source_obj>69</source_obj>
-          <sink_obj>134</sink_obj>
+          <source_obj>129</source_obj>
+          <sink_obj>133</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_425">
           <id>465</id>
           <edge_type>1</edge_type>
-          <source_obj>173</source_obj>
+          <source_obj>133</source_obj>
           <sink_obj>134</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_426">
           <id>466</id>
           <edge_type>1</edge_type>
-          <source_obj>128</source_obj>
+          <source_obj>162</source_obj>
           <sink_obj>134</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_427">
           <id>467</id>
           <edge_type>1</edge_type>
+          <source_obj>154</source_obj>
+          <sink_obj>134</sink_obj>
+          <is_back_edge>0</is_back_edge>
+        </item>
+        <item class_id_reference="20" object_id="_428">
+          <id>470</id>
+          <edge_type>1</edge_type>
           <source_obj>134</source_obj>
           <sink_obj>135</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_428">
-          <id>468</id>
+        <item class_id_reference="20" object_id="_429">
+          <id>471</id>
           <edge_type>1</edge_type>
-          <source_obj>133</source_obj>
+          <source_obj>127</source_obj>
           <sink_obj>135</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_429">
-          <id>469</id>
+        <item class_id_reference="20" object_id="_430">
+          <id>472</id>
           <edge_type>2</edge_type>
           <source_obj>143</source_obj>
           <sink_obj>136</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_430">
-          <id>470</id>
+        <item class_id_reference="20" object_id="_431">
+          <id>473</id>
           <edge_type>1</edge_type>
           <source_obj>138</source_obj>
           <sink_obj>141</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_431">
-          <id>471</id>
+        <item class_id_reference="20" object_id="_432">
+          <id>474</id>
           <edge_type>2</edge_type>
           <source_obj>140</source_obj>
           <sink_obj>141</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_432">
-          <id>472</id>
+        <item class_id_reference="20" object_id="_433">
+          <id>475</id>
           <edge_type>1</edge_type>
           <source_obj>135</source_obj>
           <sink_obj>141</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_433">
-          <id>473</id>
+        <item class_id_reference="20" object_id="_434">
+          <id>476</id>
           <edge_type>2</edge_type>
           <source_obj>137</source_obj>
           <sink_obj>141</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_434">
-          <id>474</id>
+        <item class_id_reference="20" object_id="_435">
+          <id>477</id>
           <edge_type>1</edge_type>
           <source_obj>3</source_obj>
           <sink_obj>141</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_435">
-          <id>475</id>
+        <item class_id_reference="20" object_id="_436">
+          <id>478</id>
           <edge_type>2</edge_type>
           <source_obj>20</source_obj>
           <sink_obj>141</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_436">
-          <id>476</id>
+        <item class_id_reference="20" object_id="_437">
+          <id>479</id>
           <edge_type>1</edge_type>
           <source_obj>4</source_obj>
           <sink_obj>141</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_437">
-          <id>477</id>
+        <item class_id_reference="20" object_id="_438">
+          <id>480</id>
           <edge_type>2</edge_type>
           <source_obj>28</source_obj>
           <sink_obj>141</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_438">
-          <id>478</id>
+        <item class_id_reference="20" object_id="_439">
+          <id>481</id>
           <edge_type>1</edge_type>
           <source_obj>320</source_obj>
           <sink_obj>141</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_439">
-          <id>479</id>
+        <item class_id_reference="20" object_id="_440">
+          <id>482</id>
           <edge_type>2</edge_type>
           <source_obj>72</source_obj>
           <sink_obj>141</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_440">
-          <id>480</id>
+        <item class_id_reference="20" object_id="_441">
+          <id>483</id>
           <edge_type>1</edge_type>
           <source_obj>141</source_obj>
           <sink_obj>142</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_441">
-          <id>485</id>
+        <item class_id_reference="20" object_id="_442">
+          <id>488</id>
           <edge_type>2</edge_type>
           <source_obj>20</source_obj>
           <sink_obj>143</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_442">
-          <id>486</id>
+        <item class_id_reference="20" object_id="_443">
+          <id>489</id>
           <edge_type>2</edge_type>
           <source_obj>20</source_obj>
           <sink_obj>28</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_443">
-          <id>487</id>
+        <item class_id_reference="20" object_id="_444">
+          <id>490</id>
           <edge_type>2</edge_type>
           <source_obj>28</source_obj>
           <sink_obj>143</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_444">
-          <id>488</id>
+        <item class_id_reference="20" object_id="_445">
+          <id>491</id>
           <edge_type>2</edge_type>
           <source_obj>28</source_obj>
           <sink_obj>72</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_445">
-          <id>489</id>
+        <item class_id_reference="20" object_id="_446">
+          <id>492</id>
           <edge_type>2</edge_type>
           <source_obj>72</source_obj>
           <sink_obj>143</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_446">
-          <id>490</id>
+        <item class_id_reference="20" object_id="_447">
+          <id>493</id>
           <edge_type>2</edge_type>
           <source_obj>72</source_obj>
           <sink_obj>82</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_447">
-          <id>491</id>
+        <item class_id_reference="20" object_id="_448">
+          <id>494</id>
           <edge_type>2</edge_type>
           <source_obj>82</source_obj>
-          <sink_obj>86</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_448">
-          <id>492</id>
-          <edge_type>2</edge_type>
-          <source_obj>86</source_obj>
-          <sink_obj>132</sink_obj>
+          <sink_obj>88</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_449">
-          <id>493</id>
+          <id>495</id>
           <edge_type>2</edge_type>
-          <source_obj>86</source_obj>
-          <sink_obj>94</sink_obj>
+          <source_obj>88</source_obj>
+          <sink_obj>131</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_450">
-          <id>494</id>
+          <id>496</id>
           <edge_type>2</edge_type>
-          <source_obj>94</source_obj>
-          <sink_obj>100</sink_obj>
+          <source_obj>88</source_obj>
+          <sink_obj>95</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_451">
-          <id>495</id>
+          <id>497</id>
           <edge_type>2</edge_type>
-          <source_obj>94</source_obj>
-          <sink_obj>132</sink_obj>
+          <source_obj>95</source_obj>
+          <sink_obj>101</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_452">
-          <id>496</id>
+          <id>498</id>
           <edge_type>2</edge_type>
-          <source_obj>100</source_obj>
-          <sink_obj>86</sink_obj>
-          <is_back_edge>1</is_back_edge>
+          <source_obj>95</source_obj>
+          <sink_obj>131</sink_obj>
+          <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_453">
-          <id>497</id>
+          <id>499</id>
           <edge_type>2</edge_type>
-          <source_obj>132</source_obj>
+          <source_obj>101</source_obj>
+          <sink_obj>88</sink_obj>
+          <is_back_edge>1</is_back_edge>
+        </item>
+        <item class_id_reference="20" object_id="_454">
+          <id>500</id>
+          <edge_type>2</edge_type>
+          <source_obj>131</source_obj>
           <sink_obj>140</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_454">
-          <id>498</id>
+        <item class_id_reference="20" object_id="_455">
+          <id>501</id>
           <edge_type>2</edge_type>
-          <source_obj>132</source_obj>
+          <source_obj>131</source_obj>
           <sink_obj>137</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_455">
-          <id>499</id>
+        <item class_id_reference="20" object_id="_456">
+          <id>502</id>
           <edge_type>2</edge_type>
           <source_obj>137</source_obj>
           <sink_obj>143</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_456">
-          <id>500</id>
+        <item class_id_reference="20" object_id="_457">
+          <id>503</id>
           <edge_type>2</edge_type>
           <source_obj>140</source_obj>
           <sink_obj>143</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_457">
-          <id>501</id>
-          <edge_type>4</edge_type>
-          <source_obj>79</source_obj>
-          <sink_obj>83</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
         <item class_id_reference="20" object_id="_458">
-          <id>502</id>
-          <edge_type>4</edge_type>
-          <source_obj>80</source_obj>
-          <sink_obj>102</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_459">
-          <id>503</id>
-          <edge_type>4</edge_type>
-          <source_obj>80</source_obj>
-          <sink_obj>87</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_460">
           <id>504</id>
           <edge_type>4</edge_type>
           <source_obj>79</source_obj>
-          <sink_obj>97</sink_obj>
+          <sink_obj>84</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_461">
+        <item class_id_reference="20" object_id="_459">
           <id>505</id>
           <edge_type>4</edge_type>
           <source_obj>80</source_obj>
+          <sink_obj>83</sink_obj>
+          <is_back_edge>0</is_back_edge>
+        </item>
+        <item class_id_reference="20" object_id="_460">
+          <id>506</id>
+          <edge_type>4</edge_type>
+          <source_obj>79</source_obj>
           <sink_obj>98</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
+        <item class_id_reference="20" object_id="_461">
+          <id>507</id>
+          <edge_type>4</edge_type>
+          <source_obj>80</source_obj>
+          <sink_obj>99</sink_obj>
+          <is_back_edge>0</is_back_edge>
+        </item>
         <item class_id_reference="20" object_id="_462">
-          <id>506</id>
+          <id>508</id>
           <edge_type>4</edge_type>
           <source_obj>83</source_obj>
-          <sink_obj>97</sink_obj>
+          <sink_obj>99</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_463">
-          <id>507</id>
+          <id>509</id>
           <edge_type>4</edge_type>
-          <source_obj>87</source_obj>
+          <source_obj>84</source_obj>
           <sink_obj>98</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -10845,8 +10846,8 @@
       </item>
       <item class_id_reference="22" object_id="_466">
         <mId>3</mId>
-        <mTag>VITIS_LOOP_86_1</mTag>
-        <mNormTag>VITIS_LOOP_86_1</mNormTag>
+        <mTag>VITIS_LOOP_88_1</mTag>
+        <mNormTag>VITIS_LOOP_88_1</mNormTag>
         <mType>1</mType>
         <sub_regions>
           <count>0</count>
@@ -10855,9 +10856,9 @@
         <basic_blocks>
           <count>3</count>
           <item_version>0</item_version>
-          <item>86</item>
-          <item>94</item>
-          <item>100</item>
+          <item>88</item>
+          <item>95</item>
+          <item>101</item>
         </basic_blocks>
         <mII>-1</mII>
         <mDepth>-1</mDepth>
@@ -10880,7 +10881,7 @@
         <basic_blocks>
           <count>3</count>
           <item_version>0</item_version>
-          <item>132</item>
+          <item>131</item>
           <item>137</item>
           <item>140</item>
         </basic_blocks>
@@ -11329,12 +11330,12 @@
               <latency>1</latency>
             </item>
             <item class_id_reference="28" object_id="_551">
-              <id>87</id>
+              <id>86</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
             <item class_id_reference="28" object_id="_552">
-              <id>88</id>
+              <id>87</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
@@ -11364,7 +11365,7 @@
               <latency>1</latency>
             </item>
             <item class_id_reference="28" object_id="_558">
-              <id>95</id>
+              <id>94</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
@@ -11389,7 +11390,7 @@
               <latency>1</latency>
             </item>
             <item class_id_reference="28" object_id="_563">
-              <id>101</id>
+              <id>100</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
@@ -11539,7 +11540,7 @@
               <latency>1</latency>
             </item>
             <item class_id_reference="28" object_id="_593">
-              <id>131</id>
+              <id>132</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
@@ -11638,14 +11639,14 @@
                 </item>
                 <item>
                   <first>
-                    <first>84</first>
+                    <first>86</first>
                     <second>0</second>
                   </first>
                   <second>1</second>
                 </item>
                 <item>
                   <first>
-                    <first>92</first>
+                    <first>93</first>
                     <second>0</second>
                   </first>
                   <second>0</second>
@@ -11665,7 +11666,7 @@
         <count>63</count>
         <item_version>0</item_version>
         <item class_id="38" tracking_level="0" version="0">
-          <first>a_align_exp_fu_323_p3 ( select ) </first>
+          <first>a_align_exp_fu_325_p3 ( select ) </first>
           <second class_id="39" tracking_level="0" version="0">
             <count>5</count>
             <item_version>0</item_version>
@@ -11692,7 +11693,7 @@
           </second>
         </item>
         <item>
-          <first>a_full_mantissa_1_fu_393_p2 ( lshr ) </first>
+          <first>a_full_mantissa_1_fu_395_p2 ( lshr ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -11715,7 +11716,7 @@
           </second>
         </item>
         <item>
-          <first>a_full_mantissa_2_fu_411_p3 ( select ) </first>
+          <first>a_full_mantissa_2_fu_413_p3 ( select ) </first>
           <second>
             <count>5</count>
             <item_version>0</item_version>
@@ -11742,7 +11743,7 @@
           </second>
         </item>
         <item>
-          <first>and_ln104_fu_746_p2 ( and ) </first>
+          <first>and_ln106_fu_745_p2 ( and ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -11765,7 +11766,7 @@
           </second>
         </item>
         <item>
-          <first>and_ln55_fu_405_p2 ( and ) </first>
+          <first>and_ln57_fu_407_p2 ( and ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -11788,7 +11789,7 @@
           </second>
         </item>
         <item>
-          <first>and_ln86_1_fu_545_p2 ( and ) </first>
+          <first>and_ln88_1_fu_547_p2 ( and ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -11811,7 +11812,7 @@
           </second>
         </item>
         <item>
-          <first>and_ln86_fu_603_p2 ( and ) </first>
+          <first>and_ln88_fu_609_p2 ( and ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -11834,7 +11835,7 @@
           </second>
         </item>
         <item>
-          <first>ap_condition_117 ( and ) </first>
+          <first>ap_condition_108 ( and ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -11903,7 +11904,7 @@
           </second>
         </item>
         <item>
-          <first>b_align_exp_fu_331_p3 ( select ) </first>
+          <first>b_align_exp_fu_333_p3 ( select ) </first>
           <second>
             <count>5</count>
             <item_version>0</item_version>
@@ -11930,7 +11931,7 @@
           </second>
         </item>
         <item>
-          <first>b_full_mantissa_1_fu_367_p2 ( lshr ) </first>
+          <first>b_full_mantissa_1_fu_369_p2 ( lshr ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -11953,7 +11954,7 @@
           </second>
         </item>
         <item>
-          <first>b_full_mantissa_2_fu_423_p3 ( select ) </first>
+          <first>b_full_mantissa_2_fu_421_p3 ( select ) </first>
           <second>
             <count>5</count>
             <item_version>0</item_version>
@@ -11980,7 +11981,7 @@
           </second>
         </item>
         <item>
-          <first>final_mantissa_full_fu_810_p3 ( select ) </first>
+          <first>final_mantissa_full_fu_809_p3 ( select ) </first>
           <second>
             <count>5</count>
             <item_version>0</item_version>
@@ -12007,7 +12008,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln102_fu_698_p2 ( icmp ) </first>
+          <first>icmp_ln104_fu_697_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -12030,7 +12031,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln104_fu_710_p2 ( icmp ) </first>
+          <first>icmp_ln106_fu_709_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -12053,7 +12054,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln114_fu_770_p2 ( icmp ) </first>
+          <first>icmp_ln116_fu_769_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -12076,7 +12077,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln131_fu_818_p2 ( icmp ) </first>
+          <first>icmp_ln133_fu_817_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -12099,7 +12100,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln33_1_fu_225_p2 ( icmp ) </first>
+          <first>icmp_ln35_1_fu_227_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -12122,7 +12123,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln33_fu_187_p2 ( icmp ) </first>
+          <first>icmp_ln35_fu_189_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -12145,7 +12146,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln34_1_fu_269_p2 ( icmp ) </first>
+          <first>icmp_ln36_1_fu_271_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -12168,7 +12169,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln34_fu_231_p2 ( icmp ) </first>
+          <first>icmp_ln36_fu_233_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -12191,7 +12192,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln52_fu_339_p2 ( icmp ) </first>
+          <first>icmp_ln54_fu_341_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -12214,7 +12215,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln55_fu_373_p2 ( icmp ) </first>
+          <first>icmp_ln57_fu_375_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -12237,7 +12238,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln69_fu_467_p2 ( icmp ) </first>
+          <first>icmp_ln71_fu_459_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -12260,7 +12261,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln79_fu_527_p2 ( icmp ) </first>
+          <first>icmp_ln81_fu_529_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -12283,7 +12284,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln86_1_fu_597_p2 ( icmp ) </first>
+          <first>icmp_ln88_1_fu_603_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -12306,7 +12307,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln86_fu_591_p2 ( icmp ) </first>
+          <first>icmp_ln88_fu_597_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -12329,7 +12330,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln90_1_fu_573_p2 ( icmp ) </first>
+          <first>icmp_ln92_1_fu_582_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -12352,7 +12353,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln90_fu_533_p2 ( icmp ) </first>
+          <first>icmp_ln92_fu_535_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -12375,7 +12376,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln93_fu_644_p2 ( icmp ) </first>
+          <first>icmp_ln95_fu_647_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -12398,7 +12399,7 @@
           </second>
         </item>
         <item>
-          <first>max_exp_11_fu_615_p2 ( + ) </first>
+          <first>max_exp_11_fu_621_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -12421,7 +12422,7 @@
           </second>
         </item>
         <item>
-          <first>max_exp_12_fu_664_p2 ( + ) </first>
+          <first>max_exp_12_fu_663_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -12444,7 +12445,7 @@
           </second>
         </item>
         <item>
-          <first>max_exp_13_fu_670_p3 ( select ) </first>
+          <first>max_exp_13_fu_669_p3 ( select ) </first>
           <second>
             <count>5</count>
             <item_version>0</item_version>
@@ -12471,7 +12472,7 @@
           </second>
         </item>
         <item>
-          <first>max_exp_14_fu_776_p2 ( + ) </first>
+          <first>max_exp_14_fu_775_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -12494,7 +12495,7 @@
           </second>
         </item>
         <item>
-          <first>max_exp_15_fu_782_p3 ( select ) </first>
+          <first>max_exp_15_fu_781_p3 ( select ) </first>
           <second>
             <count>5</count>
             <item_version>0</item_version>
@@ -12521,7 +12522,7 @@
           </second>
         </item>
         <item>
-          <first>max_exp_4_fu_435_p3 ( select ) </first>
+          <first>max_exp_4_fu_429_p3 ( select ) </first>
           <second>
             <count>5</count>
             <item_version>0</item_version>
@@ -12548,7 +12549,7 @@
           </second>
         </item>
         <item>
-          <first>or_ln132_fu_853_p2 ( or ) </first>
+          <first>or_ln134_fu_861_p2 ( or ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -12571,7 +12572,7 @@
           </second>
         </item>
         <item>
-          <first>or_ln136_fu_846_p2 ( or ) </first>
+          <first>or_ln138_fu_836_p2 ( or ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -12594,7 +12595,7 @@
           </second>
         </item>
         <item>
-          <first>or_ln33_fu_203_p2 ( or ) </first>
+          <first>or_ln35_fu_205_p2 ( or ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -12617,7 +12618,7 @@
           </second>
         </item>
         <item>
-          <first>or_ln34_fu_247_p2 ( or ) </first>
+          <first>or_ln36_fu_249_p2 ( or ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -12640,107 +12641,7 @@
           </second>
         </item>
         <item>
-          <first>result_mantissa_10_fu_732_p3 ( select ) </first>
-          <second>
-            <count>5</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>32</second>
-            </item>
-            <item>
-              <first>(2P2)</first>
-              <second>32</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>32</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>result_mantissa_11_fu_752_p3 ( select ) </first>
-          <second>
-            <count>5</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>32</second>
-            </item>
-            <item>
-              <first>(2P2)</first>
-              <second>32</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>32</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>result_mantissa_1_fu_479_p2 ( - ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>17</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>17</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>24</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>result_mantissa_3_fu_485_p2 ( - ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>17</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>17</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>24</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>result_mantissa_4_fu_491_p3 ( select ) </first>
+          <first>result_mantissa_12_fu_677_p3 ( select ) </first>
           <second>
             <count>5</count>
             <item_version>0</item_version>
@@ -12767,61 +12668,7 @@
           </second>
         </item>
         <item>
-          <first>result_mantissa_5_fu_511_p3 ( select ) </first>
-          <second>
-            <count>5</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>18</second>
-            </item>
-            <item>
-              <first>(2P2)</first>
-              <second>18</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>17</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>result_mantissa_7_fu_678_p3 ( select ) </first>
-          <second>
-            <count>5</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>18</second>
-            </item>
-            <item>
-              <first>(2P2)</first>
-              <second>18</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>17</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>result_mantissa_8_fu_704_p2 ( + ) </first>
+          <first>result_mantissa_13_fu_703_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -12844,7 +12691,7 @@
           </second>
         </item>
         <item>
-          <first>result_mantissa_9_fu_724_p3 ( select ) </first>
+          <first>result_mantissa_14_fu_723_p3 ( select ) </first>
           <second>
             <count>5</count>
             <item_version>0</item_version>
@@ -12871,7 +12718,61 @@
           </second>
         </item>
         <item>
-          <first>result_mantissa_fu_457_p2 ( + ) </first>
+          <first>result_mantissa_15_fu_731_p3 ( select ) </first>
+          <second>
+            <count>5</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>32</second>
+            </item>
+            <item>
+              <first>(2P2)</first>
+              <second>32</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>32</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>result_mantissa_16_fu_751_p3 ( select ) </first>
+          <second>
+            <count>5</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>32</second>
+            </item>
+            <item>
+              <first>(2P2)</first>
+              <second>32</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>32</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>result_mantissa_1_fu_471_p2 ( - ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -12894,7 +12795,107 @@
           </second>
         </item>
         <item>
-          <first>result_sign_1_fu_519_p3 ( select ) </first>
+          <first>result_mantissa_3_fu_477_p2 ( - ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>17</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>17</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>24</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>result_mantissa_4_fu_483_p3 ( select ) </first>
+          <second>
+            <count>5</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>17</second>
+            </item>
+            <item>
+              <first>(2P2)</first>
+              <second>17</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>16</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>result_mantissa_5_fu_513_p3 ( select ) </first>
+          <second>
+            <count>5</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>18</second>
+            </item>
+            <item>
+              <first>(2P2)</first>
+              <second>18</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>17</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>result_mantissa_fu_503_p2 ( + ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>17</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>17</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>24</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>result_sign_1_fu_521_p3 ( select ) </first>
           <second>
             <count>5</count>
             <item_version>0</item_version>
@@ -12921,7 +12922,7 @@
           </second>
         </item>
         <item>
-          <first>result_sign_fu_503_p3 ( select ) </first>
+          <first>result_sign_fu_495_p3 ( select ) </first>
           <second>
             <count>5</count>
             <item_version>0</item_version>
@@ -12948,7 +12949,7 @@
           </second>
         </item>
         <item>
-          <first>select_ln40_fu_291_p3 ( select ) </first>
+          <first>select_ln42_fu_293_p3 ( select ) </first>
           <second>
             <count>5</count>
             <item_version>0</item_version>
@@ -12975,7 +12976,7 @@
           </second>
         </item>
         <item>
-          <first>select_ln41_fu_307_p3 ( select ) </first>
+          <first>select_ln43_fu_309_p3 ( select ) </first>
           <second>
             <count>5</count>
             <item_version>0</item_version>
@@ -13002,7 +13003,7 @@
           </second>
         </item>
         <item>
-          <first>select_ln86_fu_551_p3 ( select ) </first>
+          <first>select_ln88_fu_553_p3 ( select ) </first>
           <second>
             <count>5</count>
             <item_version>0</item_version>
@@ -13029,7 +13030,7 @@
           </second>
         </item>
         <item>
-          <first>sub_ln54_fu_353_p2 ( - ) </first>
+          <first>sub_ln56_fu_355_p2 ( - ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -13052,7 +13053,7 @@
           </second>
         </item>
         <item>
-          <first>sub_ln57_fu_379_p2 ( - ) </first>
+          <first>sub_ln59_fu_381_p2 ( - ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -13075,7 +13076,7 @@
           </second>
         </item>
         <item>
-          <first>xor_ln102_fu_740_p2 ( xor ) </first>
+          <first>xor_ln104_fu_739_p2 ( xor ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -13098,7 +13099,7 @@
           </second>
         </item>
         <item>
-          <first>xor_ln52_fu_399_p2 ( xor ) </first>
+          <first>xor_ln54_fu_401_p2 ( xor ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -13121,7 +13122,7 @@
           </second>
         </item>
         <item>
-          <first>xor_ln65_fu_451_p2 ( xor ) </first>
+          <first>xor_ln67_fu_453_p2 ( xor ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -13144,7 +13145,7 @@
           </second>
         </item>
         <item>
-          <first>xor_ln69_fu_473_p2 ( xor ) </first>
+          <first>xor_ln71_fu_465_p2 ( xor ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -13167,7 +13168,7 @@
           </second>
         </item>
         <item>
-          <first>xor_ln86_fu_539_p2 ( xor ) </first>
+          <first>xor_ln88_fu_541_p2 ( xor ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -13225,7 +13226,7 @@
           </second>
         </item>
         <item>
-          <first>ap_phi_mux_max_exp_3_phi_fu_111_p4</first>
+          <first>ap_phi_mux_max_exp_3_phi_fu_113_p4</first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -13248,7 +13249,7 @@
           </second>
         </item>
         <item>
-          <first>ap_phi_mux_retval_2_phi_fu_122_p10</first>
+          <first>ap_phi_mux_retval_2_phi_fu_124_p10</first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -13294,7 +13295,7 @@
           </second>
         </item>
         <item>
-          <first>max_exp_2_fu_92</first>
+          <first>max_exp_2_fu_94</first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -13317,7 +13318,7 @@
           </second>
         </item>
         <item>
-          <first>result_mantissa_2_fu_88</first>
+          <first>result_mantissa_2_fu_90</first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -13340,7 +13341,7 @@
           </second>
         </item>
         <item>
-          <first>retval_2_reg_118</first>
+          <first>retval_2_reg_120</first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -13405,7 +13406,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln33_1_reg_870</first>
+          <first>icmp_ln35_1_reg_878</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -13424,7 +13425,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln34_1_reg_874</first>
+          <first>icmp_ln36_1_reg_882</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -13443,7 +13444,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln79_reg_884</first>
+          <first>icmp_ln81_reg_891</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -13462,7 +13463,7 @@
           </second>
         </item>
         <item>
-          <first>max_exp_2_fu_92</first>
+          <first>max_exp_2_fu_94</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -13481,7 +13482,7 @@
           </second>
         </item>
         <item>
-          <first>result_mantissa_2_fu_88</first>
+          <first>result_mantissa_2_fu_90</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -13500,7 +13501,7 @@
           </second>
         </item>
         <item>
-          <first>result_sign_1_reg_878</first>
+          <first>result_sign_1_reg_886</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -13519,7 +13520,7 @@
           </second>
         </item>
         <item>
-          <first>retval_2_reg_118</first>
+          <first>retval_2_reg_120</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -13538,7 +13539,7 @@
           </second>
         </item>
         <item>
-          <first>select_ln86_reg_903</first>
+          <first>select_ln88_reg_909</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -13569,7 +13570,7 @@
         <count>60</count>
         <item_version>0</item_version>
         <item class_id="42" tracking_level="0" version="0">
-          <first>a_align_exp_fu_323_p3 ( select ) </first>
+          <first>a_align_exp_fu_325_p3 ( select ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -13577,7 +13578,7 @@
           </second>
         </item>
         <item>
-          <first>a_full_mantissa_1_fu_393_p2 ( lshr ) </first>
+          <first>a_full_mantissa_1_fu_395_p2 ( lshr ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -13585,7 +13586,7 @@
           </second>
         </item>
         <item>
-          <first>a_full_mantissa_2_fu_411_p3 ( select ) </first>
+          <first>a_full_mantissa_2_fu_413_p3 ( select ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -13593,423 +13594,7 @@
           </second>
         </item>
         <item>
-          <first>and_ln104_fu_746_p2 ( and ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>120</item>
-          </second>
-        </item>
-        <item>
-          <first>and_ln55_fu_405_p2 ( and ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>50</item>
-          </second>
-        </item>
-        <item>
-          <first>and_ln86_1_fu_545_p2 ( and ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>77</item>
-          </second>
-        </item>
-        <item>
-          <first>and_ln86_fu_603_p2 ( and ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>92</item>
-          </second>
-        </item>
-        <item>
-          <first>b_align_exp_fu_331_p3 ( select ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>36</item>
-          </second>
-        </item>
-        <item>
-          <first>b_full_mantissa_1_fu_367_p2 ( lshr ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>43</item>
-          </second>
-        </item>
-        <item>
-          <first>b_full_mantissa_2_fu_423_p3 ( select ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>53</item>
-          </second>
-        </item>
-        <item>
-          <first>final_mantissa_full_fu_810_p3 ( select ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>128</item>
-          </second>
-        </item>
-        <item>
-          <first>icmp_ln102_fu_698_p2 ( icmp ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>113</item>
-          </second>
-        </item>
-        <item>
-          <first>icmp_ln104_fu_710_p2 ( icmp ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>115</item>
-          </second>
-        </item>
-        <item>
-          <first>icmp_ln114_fu_770_p2 ( icmp ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>123</item>
-          </second>
-        </item>
-        <item>
-          <first>icmp_ln131_fu_818_p2 ( icmp ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>129</item>
-          </second>
-        </item>
-        <item>
-          <first>icmp_ln33_1_fu_225_p2 ( icmp ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>18</item>
-          </second>
-        </item>
-        <item>
-          <first>icmp_ln33_fu_187_p2 ( icmp ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>13</item>
-          </second>
-        </item>
-        <item>
-          <first>icmp_ln34_1_fu_269_p2 ( icmp ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>26</item>
-          </second>
-        </item>
-        <item>
-          <first>icmp_ln34_fu_231_p2 ( icmp ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>21</item>
-          </second>
-        </item>
-        <item>
-          <first>icmp_ln52_fu_339_p2 ( icmp ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>37</item>
-          </second>
-        </item>
-        <item>
-          <first>icmp_ln55_fu_373_p2 ( icmp ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>44</item>
-          </second>
-        </item>
-        <item>
-          <first>icmp_ln69_fu_467_p2 ( icmp ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>61</item>
-          </second>
-        </item>
-        <item>
-          <first>icmp_ln79_fu_527_p2 ( icmp ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>70</item>
-          </second>
-        </item>
-        <item>
-          <first>icmp_ln86_1_fu_597_p2 ( icmp ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>91</item>
-          </second>
-        </item>
-        <item>
-          <first>icmp_ln86_fu_591_p2 ( icmp ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>90</item>
-          </second>
-        </item>
-        <item>
-          <first>icmp_ln90_1_fu_573_p2 ( icmp ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>84</item>
-          </second>
-        </item>
-        <item>
-          <first>icmp_ln90_fu_533_p2 ( icmp ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>75</item>
-          </second>
-        </item>
-        <item>
-          <first>icmp_ln93_fu_644_p2 ( icmp ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>104</item>
-          </second>
-        </item>
-        <item>
-          <first>max_exp_11_fu_615_p2 ( + ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>96</item>
-          </second>
-        </item>
-        <item>
-          <first>max_exp_12_fu_664_p2 ( + ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>107</item>
-          </second>
-        </item>
-        <item>
-          <first>max_exp_13_fu_670_p3 ( select ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>108</item>
-          </second>
-        </item>
-        <item>
-          <first>max_exp_14_fu_776_p2 ( + ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>124</item>
-          </second>
-        </item>
-        <item>
-          <first>max_exp_15_fu_782_p3 ( select ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>125</item>
-          </second>
-        </item>
-        <item>
-          <first>max_exp_4_fu_435_p3 ( select ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>55</item>
-          </second>
-        </item>
-        <item>
-          <first>or_ln132_fu_853_p2 ( or ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>138</item>
-          </second>
-        </item>
-        <item>
-          <first>or_ln136_fu_846_p2 ( or ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>135</item>
-          </second>
-        </item>
-        <item>
-          <first>or_ln33_fu_203_p2 ( or ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>15</item>
-          </second>
-        </item>
-        <item>
-          <first>or_ln34_fu_247_p2 ( or ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>23</item>
-          </second>
-        </item>
-        <item>
-          <first>result_mantissa_10_fu_732_p3 ( select ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>118</item>
-          </second>
-        </item>
-        <item>
-          <first>result_mantissa_11_fu_752_p3 ( select ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>121</item>
-          </second>
-        </item>
-        <item>
-          <first>result_mantissa_1_fu_479_p2 ( - ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>63</item>
-          </second>
-        </item>
-        <item>
-          <first>result_mantissa_3_fu_485_p2 ( - ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>64</item>
-          </second>
-        </item>
-        <item>
-          <first>result_mantissa_4_fu_491_p3 ( select ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>65</item>
-          </second>
-        </item>
-        <item>
-          <first>result_mantissa_5_fu_511_p3 ( select ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>68</item>
-          </second>
-        </item>
-        <item>
-          <first>result_mantissa_7_fu_678_p3 ( select ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>109</item>
-          </second>
-        </item>
-        <item>
-          <first>result_mantissa_8_fu_704_p2 ( + ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>114</item>
-          </second>
-        </item>
-        <item>
-          <first>result_mantissa_9_fu_724_p3 ( select ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>117</item>
-          </second>
-        </item>
-        <item>
-          <first>result_mantissa_fu_457_p2 ( + ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>59</item>
-          </second>
-        </item>
-        <item>
-          <first>result_sign_1_fu_519_p3 ( select ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>69</item>
-          </second>
-        </item>
-        <item>
-          <first>result_sign_fu_503_p3 ( select ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>67</item>
-          </second>
-        </item>
-        <item>
-          <first>select_ln40_fu_291_p3 ( select ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>31</item>
-          </second>
-        </item>
-        <item>
-          <first>select_ln41_fu_307_p3 ( select ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>33</item>
-          </second>
-        </item>
-        <item>
-          <first>select_ln86_fu_551_p3 ( select ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>78</item>
-          </second>
-        </item>
-        <item>
-          <first>sub_ln54_fu_353_p2 ( - ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>40</item>
-          </second>
-        </item>
-        <item>
-          <first>sub_ln57_fu_379_p2 ( - ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>45</item>
-          </second>
-        </item>
-        <item>
-          <first>xor_ln102_fu_740_p2 ( xor ) </first>
+          <first>and_ln106_fu_745_p2 ( and ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -14017,23 +13602,327 @@
           </second>
         </item>
         <item>
-          <first>xor_ln52_fu_399_p2 ( xor ) </first>
+          <first>and_ln57_fu_407_p2 ( and ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
-            <item>49</item>
+            <item>50</item>
           </second>
         </item>
         <item>
-          <first>xor_ln65_fu_451_p2 ( xor ) </first>
+          <first>and_ln88_1_fu_547_p2 ( and ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
-            <item>58</item>
+            <item>77</item>
           </second>
         </item>
         <item>
-          <first>xor_ln69_fu_473_p2 ( xor ) </first>
+          <first>and_ln88_fu_609_p2 ( and ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>93</item>
+          </second>
+        </item>
+        <item>
+          <first>b_align_exp_fu_333_p3 ( select ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>36</item>
+          </second>
+        </item>
+        <item>
+          <first>b_full_mantissa_1_fu_369_p2 ( lshr ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>43</item>
+          </second>
+        </item>
+        <item>
+          <first>b_full_mantissa_2_fu_421_p3 ( select ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>52</item>
+          </second>
+        </item>
+        <item>
+          <first>final_mantissa_full_fu_809_p3 ( select ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>127</item>
+          </second>
+        </item>
+        <item>
+          <first>icmp_ln104_fu_697_p2 ( icmp ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>112</item>
+          </second>
+        </item>
+        <item>
+          <first>icmp_ln106_fu_709_p2 ( icmp ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>114</item>
+          </second>
+        </item>
+        <item>
+          <first>icmp_ln116_fu_769_p2 ( icmp ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>122</item>
+          </second>
+        </item>
+        <item>
+          <first>icmp_ln133_fu_817_p2 ( icmp ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>128</item>
+          </second>
+        </item>
+        <item>
+          <first>icmp_ln35_1_fu_227_p2 ( icmp ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>18</item>
+          </second>
+        </item>
+        <item>
+          <first>icmp_ln35_fu_189_p2 ( icmp ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>13</item>
+          </second>
+        </item>
+        <item>
+          <first>icmp_ln36_1_fu_271_p2 ( icmp ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>26</item>
+          </second>
+        </item>
+        <item>
+          <first>icmp_ln36_fu_233_p2 ( icmp ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>21</item>
+          </second>
+        </item>
+        <item>
+          <first>icmp_ln54_fu_341_p2 ( icmp ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>37</item>
+          </second>
+        </item>
+        <item>
+          <first>icmp_ln57_fu_375_p2 ( icmp ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>44</item>
+          </second>
+        </item>
+        <item>
+          <first>icmp_ln71_fu_459_p2 ( icmp ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>59</item>
+          </second>
+        </item>
+        <item>
+          <first>icmp_ln81_fu_529_p2 ( icmp ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>70</item>
+          </second>
+        </item>
+        <item>
+          <first>icmp_ln88_1_fu_603_p2 ( icmp ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>92</item>
+          </second>
+        </item>
+        <item>
+          <first>icmp_ln88_fu_597_p2 ( icmp ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>91</item>
+          </second>
+        </item>
+        <item>
+          <first>icmp_ln92_1_fu_582_p2 ( icmp ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>86</item>
+          </second>
+        </item>
+        <item>
+          <first>icmp_ln92_fu_535_p2 ( icmp ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>75</item>
+          </second>
+        </item>
+        <item>
+          <first>icmp_ln95_fu_647_p2 ( icmp ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>104</item>
+          </second>
+        </item>
+        <item>
+          <first>max_exp_11_fu_621_p2 ( + ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>97</item>
+          </second>
+        </item>
+        <item>
+          <first>max_exp_12_fu_663_p2 ( + ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>106</item>
+          </second>
+        </item>
+        <item>
+          <first>max_exp_13_fu_669_p3 ( select ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>107</item>
+          </second>
+        </item>
+        <item>
+          <first>max_exp_14_fu_775_p2 ( + ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>123</item>
+          </second>
+        </item>
+        <item>
+          <first>max_exp_15_fu_781_p3 ( select ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>124</item>
+          </second>
+        </item>
+        <item>
+          <first>max_exp_4_fu_429_p3 ( select ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>53</item>
+          </second>
+        </item>
+        <item>
+          <first>or_ln134_fu_861_p2 ( or ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>138</item>
+          </second>
+        </item>
+        <item>
+          <first>or_ln138_fu_836_p2 ( or ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>133</item>
+          </second>
+        </item>
+        <item>
+          <first>or_ln35_fu_205_p2 ( or ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>15</item>
+          </second>
+        </item>
+        <item>
+          <first>or_ln36_fu_249_p2 ( or ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>23</item>
+          </second>
+        </item>
+        <item>
+          <first>result_mantissa_12_fu_677_p3 ( select ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>108</item>
+          </second>
+        </item>
+        <item>
+          <first>result_mantissa_13_fu_703_p2 ( + ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>113</item>
+          </second>
+        </item>
+        <item>
+          <first>result_mantissa_14_fu_723_p3 ( select ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>116</item>
+          </second>
+        </item>
+        <item>
+          <first>result_mantissa_15_fu_731_p3 ( select ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>117</item>
+          </second>
+        </item>
+        <item>
+          <first>result_mantissa_16_fu_751_p3 ( select ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>120</item>
+          </second>
+        </item>
+        <item>
+          <first>result_mantissa_1_fu_471_p2 ( - ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>61</item>
+          </second>
+        </item>
+        <item>
+          <first>result_mantissa_3_fu_477_p2 ( - ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -14041,7 +13930,119 @@
           </second>
         </item>
         <item>
-          <first>xor_ln86_fu_539_p2 ( xor ) </first>
+          <first>result_mantissa_4_fu_483_p3 ( select ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>63</item>
+          </second>
+        </item>
+        <item>
+          <first>result_mantissa_5_fu_513_p3 ( select ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>68</item>
+          </second>
+        </item>
+        <item>
+          <first>result_mantissa_fu_503_p2 ( + ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>66</item>
+          </second>
+        </item>
+        <item>
+          <first>result_sign_1_fu_521_p3 ( select ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>69</item>
+          </second>
+        </item>
+        <item>
+          <first>result_sign_fu_495_p3 ( select ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>65</item>
+          </second>
+        </item>
+        <item>
+          <first>select_ln42_fu_293_p3 ( select ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>31</item>
+          </second>
+        </item>
+        <item>
+          <first>select_ln43_fu_309_p3 ( select ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>33</item>
+          </second>
+        </item>
+        <item>
+          <first>select_ln88_fu_553_p3 ( select ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>78</item>
+          </second>
+        </item>
+        <item>
+          <first>sub_ln56_fu_355_p2 ( - ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>40</item>
+          </second>
+        </item>
+        <item>
+          <first>sub_ln59_fu_381_p2 ( - ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>45</item>
+          </second>
+        </item>
+        <item>
+          <first>xor_ln104_fu_739_p2 ( xor ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>118</item>
+          </second>
+        </item>
+        <item>
+          <first>xor_ln54_fu_401_p2 ( xor ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>49</item>
+          </second>
+        </item>
+        <item>
+          <first>xor_ln67_fu_453_p2 ( xor ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>58</item>
+          </second>
+        </item>
+        <item>
+          <first>xor_ln71_fu_465_p2 ( xor ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>60</item>
+          </second>
+        </item>
+        <item>
+          <first>xor_ln88_fu_541_p2 ( xor ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -14615,14 +14616,14 @@
         </second>
       </item>
       <item>
-        <first>87</first>
+        <first>86</first>
         <second>
           <first>1</first>
           <second>0</second>
         </second>
       </item>
       <item>
-        <first>89</first>
+        <first>87</first>
         <second>
           <first>1</first>
           <second>0</second>
@@ -14657,7 +14658,7 @@
         </second>
       </item>
       <item>
-        <first>95</first>
+        <first>94</first>
         <second>
           <first>1</first>
           <second>0</second>
@@ -14692,7 +14693,7 @@
         </second>
       </item>
       <item>
-        <first>101</first>
+        <first>100</first>
         <second>
           <first>1</first>
           <second>0</second>
@@ -14902,7 +14903,7 @@
         </second>
       </item>
       <item>
-        <first>131</first>
+        <first>132</first>
         <second>
           <first>1</first>
           <second>0</second>
@@ -14997,28 +14998,28 @@
         </second>
       </item>
       <item>
-        <first>86</first>
+        <first>88</first>
         <second>
           <first>1</first>
           <second>1</second>
         </second>
       </item>
       <item>
-        <first>94</first>
+        <first>95</first>
         <second>
           <first>1</first>
           <second>1</second>
         </second>
       </item>
       <item>
-        <first>100</first>
+        <first>101</first>
         <second>
           <first>1</first>
           <second>1</second>
         </second>
       </item>
       <item>
-        <first>132</first>
+        <first>131</first>
         <second>
           <first>1</first>
           <second>1</second>
@@ -15054,7 +15055,7 @@
       <count>118</count>
       <item_version>0</item_version>
       <item class_id="51" tracking_level="0" version="0">
-        <first>88</first>
+        <first>90</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15062,7 +15063,7 @@
         </second>
       </item>
       <item>
-        <first>92</first>
+        <first>94</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15070,7 +15071,7 @@
         </second>
       </item>
       <item>
-        <first>96</first>
+        <first>98</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15078,7 +15079,7 @@
         </second>
       </item>
       <item>
-        <first>102</first>
+        <first>104</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15086,15 +15087,15 @@
         </second>
       </item>
       <item>
-        <first>111</first>
+        <first>113</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>101</item>
+          <item>102</item>
         </second>
       </item>
       <item>
-        <first>122</first>
+        <first>124</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15102,7 +15103,7 @@
         </second>
       </item>
       <item>
-        <first>135</first>
+        <first>137</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15110,7 +15111,7 @@
         </second>
       </item>
       <item>
-        <first>139</first>
+        <first>141</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15118,7 +15119,7 @@
         </second>
       </item>
       <item>
-        <first>143</first>
+        <first>145</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15126,7 +15127,7 @@
         </second>
       </item>
       <item>
-        <first>151</first>
+        <first>153</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15134,7 +15135,7 @@
         </second>
       </item>
       <item>
-        <first>159</first>
+        <first>161</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15142,7 +15143,7 @@
         </second>
       </item>
       <item>
-        <first>169</first>
+        <first>171</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15150,7 +15151,7 @@
         </second>
       </item>
       <item>
-        <first>179</first>
+        <first>181</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15158,7 +15159,7 @@
         </second>
       </item>
       <item>
-        <first>183</first>
+        <first>185</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15166,7 +15167,7 @@
         </second>
       </item>
       <item>
-        <first>187</first>
+        <first>189</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15174,7 +15175,7 @@
         </second>
       </item>
       <item>
-        <first>193</first>
+        <first>195</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15182,7 +15183,7 @@
         </second>
       </item>
       <item>
-        <first>203</first>
+        <first>205</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15190,7 +15191,7 @@
         </second>
       </item>
       <item>
-        <first>209</first>
+        <first>211</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15198,7 +15199,7 @@
         </second>
       </item>
       <item>
-        <first>217</first>
+        <first>219</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15206,7 +15207,7 @@
         </second>
       </item>
       <item>
-        <first>225</first>
+        <first>227</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15214,7 +15215,7 @@
         </second>
       </item>
       <item>
-        <first>231</first>
+        <first>233</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15222,7 +15223,7 @@
         </second>
       </item>
       <item>
-        <first>237</first>
+        <first>239</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15230,7 +15231,7 @@
         </second>
       </item>
       <item>
-        <first>247</first>
+        <first>249</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15238,7 +15239,7 @@
         </second>
       </item>
       <item>
-        <first>253</first>
+        <first>255</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15246,7 +15247,7 @@
         </second>
       </item>
       <item>
-        <first>261</first>
+        <first>263</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15254,7 +15255,7 @@
         </second>
       </item>
       <item>
-        <first>269</first>
+        <first>271</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15262,7 +15263,7 @@
         </second>
       </item>
       <item>
-        <first>275</first>
+        <first>277</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15270,7 +15271,7 @@
         </second>
       </item>
       <item>
-        <first>283</first>
+        <first>285</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15278,7 +15279,7 @@
         </second>
       </item>
       <item>
-        <first>291</first>
+        <first>293</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15286,7 +15287,7 @@
         </second>
       </item>
       <item>
-        <first>299</first>
+        <first>301</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15294,7 +15295,7 @@
         </second>
       </item>
       <item>
-        <first>307</first>
+        <first>309</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15302,7 +15303,7 @@
         </second>
       </item>
       <item>
-        <first>315</first>
+        <first>317</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15310,7 +15311,7 @@
         </second>
       </item>
       <item>
-        <first>323</first>
+        <first>325</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15318,7 +15319,7 @@
         </second>
       </item>
       <item>
-        <first>331</first>
+        <first>333</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15326,7 +15327,7 @@
         </second>
       </item>
       <item>
-        <first>339</first>
+        <first>341</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15334,7 +15335,7 @@
         </second>
       </item>
       <item>
-        <first>345</first>
+        <first>347</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15342,7 +15343,7 @@
         </second>
       </item>
       <item>
-        <first>349</first>
+        <first>351</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15350,7 +15351,7 @@
         </second>
       </item>
       <item>
-        <first>353</first>
+        <first>355</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15358,7 +15359,7 @@
         </second>
       </item>
       <item>
-        <first>359</first>
+        <first>361</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15366,7 +15367,7 @@
         </second>
       </item>
       <item>
-        <first>363</first>
+        <first>365</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15374,7 +15375,7 @@
         </second>
       </item>
       <item>
-        <first>367</first>
+        <first>369</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15382,7 +15383,7 @@
         </second>
       </item>
       <item>
-        <first>373</first>
+        <first>375</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15390,7 +15391,7 @@
         </second>
       </item>
       <item>
-        <first>379</first>
+        <first>381</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15398,7 +15399,7 @@
         </second>
       </item>
       <item>
-        <first>385</first>
+        <first>387</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15406,7 +15407,7 @@
         </second>
       </item>
       <item>
-        <first>389</first>
+        <first>391</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15414,7 +15415,7 @@
         </second>
       </item>
       <item>
-        <first>393</first>
+        <first>395</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15422,7 +15423,7 @@
         </second>
       </item>
       <item>
-        <first>399</first>
+        <first>401</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15430,7 +15431,7 @@
         </second>
       </item>
       <item>
-        <first>405</first>
+        <first>407</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15438,7 +15439,7 @@
         </second>
       </item>
       <item>
-        <first>411</first>
+        <first>413</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15446,7 +15447,7 @@
         </second>
       </item>
       <item>
-        <first>419</first>
+        <first>421</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15454,7 +15455,7 @@
         </second>
       </item>
       <item>
-        <first>423</first>
+        <first>429</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15462,7 +15463,7 @@
         </second>
       </item>
       <item>
-        <first>431</first>
+        <first>437</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15470,7 +15471,7 @@
         </second>
       </item>
       <item>
-        <first>435</first>
+        <first>441</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15478,7 +15479,7 @@
         </second>
       </item>
       <item>
-        <first>443</first>
+        <first>445</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15486,7 +15487,7 @@
         </second>
       </item>
       <item>
-        <first>447</first>
+        <first>449</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15494,7 +15495,7 @@
         </second>
       </item>
       <item>
-        <first>451</first>
+        <first>453</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15502,7 +15503,7 @@
         </second>
       </item>
       <item>
-        <first>457</first>
+        <first>459</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15510,7 +15511,7 @@
         </second>
       </item>
       <item>
-        <first>463</first>
+        <first>465</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15518,7 +15519,7 @@
         </second>
       </item>
       <item>
-        <first>467</first>
+        <first>471</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15526,7 +15527,7 @@
         </second>
       </item>
       <item>
-        <first>473</first>
+        <first>477</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15534,7 +15535,7 @@
         </second>
       </item>
       <item>
-        <first>479</first>
+        <first>483</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15542,7 +15543,7 @@
         </second>
       </item>
       <item>
-        <first>485</first>
+        <first>491</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15550,7 +15551,7 @@
         </second>
       </item>
       <item>
-        <first>491</first>
+        <first>495</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15558,7 +15559,7 @@
         </second>
       </item>
       <item>
-        <first>499</first>
+        <first>503</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15566,7 +15567,7 @@
         </second>
       </item>
       <item>
-        <first>503</first>
+        <first>509</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15574,7 +15575,7 @@
         </second>
       </item>
       <item>
-        <first>511</first>
+        <first>513</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15582,7 +15583,7 @@
         </second>
       </item>
       <item>
-        <first>519</first>
+        <first>521</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15590,7 +15591,7 @@
         </second>
       </item>
       <item>
-        <first>527</first>
+        <first>529</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15598,7 +15599,7 @@
         </second>
       </item>
       <item>
-        <first>533</first>
+        <first>535</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15606,7 +15607,7 @@
         </second>
       </item>
       <item>
-        <first>539</first>
+        <first>541</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15614,7 +15615,7 @@
         </second>
       </item>
       <item>
-        <first>545</first>
+        <first>547</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15622,7 +15623,7 @@
         </second>
       </item>
       <item>
-        <first>551</first>
+        <first>553</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15630,7 +15631,7 @@
         </second>
       </item>
       <item>
-        <first>559</first>
+        <first>561</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15638,7 +15639,7 @@
         </second>
       </item>
       <item>
-        <first>564</first>
+        <first>566</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15646,7 +15647,7 @@
         </second>
       </item>
       <item>
-        <first>569</first>
+        <first>571</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15654,7 +15655,7 @@
         </second>
       </item>
       <item>
-        <first>573</first>
+        <first>574</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15666,19 +15667,19 @@
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>87</item>
+          <item>85</item>
         </second>
       </item>
       <item>
-        <first>581</first>
+        <first>582</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>89</item>
+          <item>86</item>
         </second>
       </item>
       <item>
-        <first>591</first>
+        <first>587</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15706,7 +15707,7 @@
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>95</item>
+          <item>93</item>
         </second>
       </item>
       <item>
@@ -15726,7 +15727,7 @@
         </second>
       </item>
       <item>
-        <first>626</first>
+        <first>627</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15734,15 +15735,15 @@
         </second>
       </item>
       <item>
-        <first>631</first>
+        <first>632</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>102</item>
+          <item>99</item>
         </second>
       </item>
       <item>
-        <first>634</first>
+        <first>637</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15750,7 +15751,7 @@
         </second>
       </item>
       <item>
-        <first>644</first>
+        <first>647</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15758,7 +15759,7 @@
         </second>
       </item>
       <item>
-        <first>650</first>
+        <first>653</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15766,7 +15767,7 @@
         </second>
       </item>
       <item>
-        <first>660</first>
+        <first>663</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15774,7 +15775,7 @@
         </second>
       </item>
       <item>
-        <first>664</first>
+        <first>669</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15782,7 +15783,7 @@
         </second>
       </item>
       <item>
-        <first>670</first>
+        <first>677</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15790,7 +15791,7 @@
         </second>
       </item>
       <item>
-        <first>678</first>
+        <first>685</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15798,7 +15799,7 @@
         </second>
       </item>
       <item>
-        <first>686</first>
+        <first>689</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15806,7 +15807,7 @@
         </second>
       </item>
       <item>
-        <first>690</first>
+        <first>693</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15814,7 +15815,7 @@
         </second>
       </item>
       <item>
-        <first>694</first>
+        <first>697</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15822,7 +15823,7 @@
         </second>
       </item>
       <item>
-        <first>698</first>
+        <first>703</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15830,7 +15831,7 @@
         </second>
       </item>
       <item>
-        <first>704</first>
+        <first>709</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15838,7 +15839,7 @@
         </second>
       </item>
       <item>
-        <first>710</first>
+        <first>715</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15846,7 +15847,7 @@
         </second>
       </item>
       <item>
-        <first>716</first>
+        <first>723</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15854,7 +15855,7 @@
         </second>
       </item>
       <item>
-        <first>724</first>
+        <first>731</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15862,7 +15863,7 @@
         </second>
       </item>
       <item>
-        <first>732</first>
+        <first>739</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15870,7 +15871,7 @@
         </second>
       </item>
       <item>
-        <first>740</first>
+        <first>745</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15878,7 +15879,7 @@
         </second>
       </item>
       <item>
-        <first>746</first>
+        <first>751</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15886,7 +15887,7 @@
         </second>
       </item>
       <item>
-        <first>752</first>
+        <first>759</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15894,7 +15895,7 @@
         </second>
       </item>
       <item>
-        <first>760</first>
+        <first>769</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15902,7 +15903,7 @@
         </second>
       </item>
       <item>
-        <first>770</first>
+        <first>775</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15910,7 +15911,7 @@
         </second>
       </item>
       <item>
-        <first>776</first>
+        <first>781</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15918,7 +15919,7 @@
         </second>
       </item>
       <item>
-        <first>782</first>
+        <first>789</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15926,7 +15927,7 @@
         </second>
       </item>
       <item>
-        <first>790</first>
+        <first>799</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15934,7 +15935,7 @@
         </second>
       </item>
       <item>
-        <first>800</first>
+        <first>809</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15942,7 +15943,7 @@
         </second>
       </item>
       <item>
-        <first>810</first>
+        <first>817</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15950,7 +15951,7 @@
         </second>
       </item>
       <item>
-        <first>818</first>
+        <first>823</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15958,15 +15959,15 @@
         </second>
       </item>
       <item>
-        <first>824</first>
+        <first>830</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>130</item>
+          <item>132</item>
         </second>
       </item>
       <item>
-        <first>831</first>
+        <first>836</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15974,7 +15975,7 @@
         </second>
       </item>
       <item>
-        <first>837</first>
+        <first>842</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15982,7 +15983,7 @@
         </second>
       </item>
       <item>
-        <first>846</first>
+        <first>852</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15990,7 +15991,7 @@
         </second>
       </item>
       <item>
-        <first>853</first>
+        <first>861</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15999,10 +16000,10 @@
       </item>
     </dp_fu_nodes>
     <dp_fu_nodes_expression class_id="53" tracking_level="0" version="0">
-      <count>109</count>
+      <count>110</count>
       <item_version>0</item_version>
       <item class_id="54" tracking_level="0" version="0">
-        <first>a_align_exp_fu_323</first>
+        <first>a_align_exp_fu_325</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -16010,7 +16011,7 @@
         </second>
       </item>
       <item>
-        <first>a_exp_fu_159</first>
+        <first>a_exp_fu_161</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -16018,7 +16019,7 @@
         </second>
       </item>
       <item>
-        <first>a_full_mantissa_1_fu_393</first>
+        <first>a_full_mantissa_1_fu_395</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -16026,7 +16027,7 @@
         </second>
       </item>
       <item>
-        <first>a_full_mantissa_2_fu_411</first>
+        <first>a_full_mantissa_2_fu_413</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -16034,7 +16035,7 @@
         </second>
       </item>
       <item>
-        <first>a_full_mantissa_fu_299</first>
+        <first>a_full_mantissa_fu_301</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -16042,7 +16043,7 @@
         </second>
       </item>
       <item>
-        <first>a_mantissa_fu_139</first>
+        <first>a_mantissa_fu_141</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -16050,719 +16051,7 @@
         </second>
       </item>
       <item>
-        <first>and_ln104_fu_746</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>120</item>
-        </second>
-      </item>
-      <item>
-        <first>and_ln55_fu_405</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>50</item>
-        </second>
-      </item>
-      <item>
-        <first>and_ln86_1_fu_545</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>77</item>
-        </second>
-      </item>
-      <item>
-        <first>and_ln86_fu_603</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>92</item>
-        </second>
-      </item>
-      <item>
-        <first>b_align_exp_fu_331</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>36</item>
-        </second>
-      </item>
-      <item>
-        <first>b_exp_fu_169</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>10</item>
-        </second>
-      </item>
-      <item>
-        <first>b_full_mantissa_1_fu_367</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>43</item>
-        </second>
-      </item>
-      <item>
-        <first>b_full_mantissa_2_fu_423</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>53</item>
-        </second>
-      </item>
-      <item>
-        <first>b_full_mantissa_fu_315</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>34</item>
-        </second>
-      </item>
-      <item>
-        <first>b_mantissa_fu_135</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>5</item>
-        </second>
-      </item>
-      <item>
-        <first>final_mantissa_full_fu_810</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>128</item>
-        </second>
-      </item>
-      <item>
-        <first>icmp_ln102_fu_698</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>113</item>
-        </second>
-      </item>
-      <item>
-        <first>icmp_ln104_fu_710</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>115</item>
-        </second>
-      </item>
-      <item>
-        <first>icmp_ln114_fu_770</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>123</item>
-        </second>
-      </item>
-      <item>
-        <first>icmp_ln131_fu_818</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>129</item>
-        </second>
-      </item>
-      <item>
-        <first>icmp_ln33_1_fu_225</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>18</item>
-        </second>
-      </item>
-      <item>
-        <first>icmp_ln33_fu_187</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>13</item>
-        </second>
-      </item>
-      <item>
-        <first>icmp_ln34_1_fu_269</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>26</item>
-        </second>
-      </item>
-      <item>
-        <first>icmp_ln34_fu_231</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>21</item>
-        </second>
-      </item>
-      <item>
-        <first>icmp_ln52_fu_339</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>37</item>
-        </second>
-      </item>
-      <item>
-        <first>icmp_ln55_fu_373</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>44</item>
-        </second>
-      </item>
-      <item>
-        <first>icmp_ln69_fu_467</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>61</item>
-        </second>
-      </item>
-      <item>
-        <first>icmp_ln79_fu_527</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>70</item>
-        </second>
-      </item>
-      <item>
-        <first>icmp_ln86_1_fu_597</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>91</item>
-        </second>
-      </item>
-      <item>
-        <first>icmp_ln86_fu_591</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>90</item>
-        </second>
-      </item>
-      <item>
-        <first>icmp_ln90_1_fu_573</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>84</item>
-        </second>
-      </item>
-      <item>
-        <first>icmp_ln90_fu_533</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>75</item>
-        </second>
-      </item>
-      <item>
-        <first>icmp_ln93_fu_644</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>104</item>
-        </second>
-      </item>
-      <item>
-        <first>max_exp_11_fu_615</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>96</item>
-        </second>
-      </item>
-      <item>
-        <first>max_exp_12_fu_664</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>107</item>
-        </second>
-      </item>
-      <item>
-        <first>max_exp_13_fu_670</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>108</item>
-        </second>
-      </item>
-      <item>
-        <first>max_exp_14_fu_776</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>124</item>
-        </second>
-      </item>
-      <item>
-        <first>max_exp_15_fu_782</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>125</item>
-        </second>
-      </item>
-      <item>
-        <first>max_exp_2_fu_92</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>74</item>
-        </second>
-      </item>
-      <item>
-        <first>max_exp_3_phi_fu_111</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>101</item>
-        </second>
-      </item>
-      <item>
-        <first>max_exp_4_fu_435</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>55</item>
-        </second>
-      </item>
-      <item>
-        <first>or_ln132_fu_853</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>138</item>
-        </second>
-      </item>
-      <item>
-        <first>or_ln136_fu_846</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>135</item>
-        </second>
-      </item>
-      <item>
-        <first>or_ln1_fu_261</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>25</item>
-        </second>
-      </item>
-      <item>
-        <first>or_ln2_fu_275</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>29</item>
-        </second>
-      </item>
-      <item>
-        <first>or_ln33_fu_203</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>15</item>
-        </second>
-      </item>
-      <item>
-        <first>or_ln34_fu_247</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>23</item>
-        </second>
-      </item>
-      <item>
-        <first>or_ln3_fu_283</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>30</item>
-        </second>
-      </item>
-      <item>
-        <first>or_ln_fu_217</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>17</item>
-        </second>
-      </item>
-      <item>
-        <first>result_mantissa_10_fu_732</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>118</item>
-        </second>
-      </item>
-      <item>
-        <first>result_mantissa_11_fu_752</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>121</item>
-        </second>
-      </item>
-      <item>
-        <first>result_mantissa_1_fu_479</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>63</item>
-        </second>
-      </item>
-      <item>
-        <first>result_mantissa_2_fu_88</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>73</item>
-        </second>
-      </item>
-      <item>
-        <first>result_mantissa_3_fu_485</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>64</item>
-        </second>
-      </item>
-      <item>
-        <first>result_mantissa_4_fu_491</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>65</item>
-        </second>
-      </item>
-      <item>
-        <first>result_mantissa_5_fu_511</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>68</item>
-        </second>
-      </item>
-      <item>
-        <first>result_mantissa_6_fu_609</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>95</item>
-        </second>
-      </item>
-      <item>
-        <first>result_mantissa_7_fu_678</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>109</item>
-        </second>
-      </item>
-      <item>
-        <first>result_mantissa_8_fu_704</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>114</item>
-        </second>
-      </item>
-      <item>
-        <first>result_mantissa_9_fu_724</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>117</item>
-        </second>
-      </item>
-      <item>
-        <first>result_mantissa_fu_457</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>59</item>
-        </second>
-      </item>
-      <item>
-        <first>result_sign_1_fu_519</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>69</item>
-        </second>
-      </item>
-      <item>
-        <first>result_sign_fu_503</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>67</item>
-        </second>
-      </item>
-      <item>
-        <first>retval_2_phi_fu_122</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>141</item>
-        </second>
-      </item>
-      <item>
-        <first>rounding_bits_fu_694</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>112</item>
-        </second>
-      </item>
-      <item>
-        <first>select_ln40_fu_291</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>31</item>
-        </second>
-      </item>
-      <item>
-        <first>select_ln41_fu_307</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>33</item>
-        </second>
-      </item>
-      <item>
-        <first>select_ln86_fu_551</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>78</item>
-        </second>
-      </item>
-      <item>
-        <first>sext_ln54_fu_359</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>41</item>
-        </second>
-      </item>
-      <item>
-        <first>sext_ln54cast_fu_363</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>42</item>
-        </second>
-      </item>
-      <item>
-        <first>sext_ln57_fu_385</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>46</item>
-        </second>
-      </item>
-      <item>
-        <first>sext_ln57cast_fu_389</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>47</item>
-        </second>
-      </item>
-      <item>
-        <first>sext_ln63_fu_686</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>110</item>
-        </second>
-      </item>
-      <item>
-        <first>sext_ln69_fu_499</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>66</item>
-        </second>
-      </item>
-      <item>
-        <first>sext_ln95_fu_660</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>106</item>
-        </second>
-      </item>
-      <item>
-        <first>shl_ln136_1_fu_824</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>130</item>
-        </second>
-      </item>
-      <item>
-        <first>shl_ln136_fu_831</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>133</item>
-        </second>
-      </item>
-      <item>
-        <first>sub_ln54_fu_353</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>40</item>
-        </second>
-      </item>
-      <item>
-        <first>sub_ln57_fu_379</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>45</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_10_fu_760</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>122</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_1_fu_143</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>7</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_2_fu_151</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>8</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_3_fu_209</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>16</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_4_fu_790</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>126</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_5_fu_800</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>127</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_6_fu_253</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>24</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_7_fu_581</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>89</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_8_fu_634</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>103</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_9_fu_716</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>116</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_fu_837</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>134</item>
-        </second>
-      </item>
-      <item>
-        <first>trunc_ln2_fu_193</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>14</item>
-        </second>
-      </item>
-      <item>
-        <first>trunc_ln3_fu_237</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>22</item>
-        </second>
-      </item>
-      <item>
-        <first>trunc_ln51_fu_447</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>57</item>
-        </second>
-      </item>
-      <item>
-        <first>trunc_ln7_fu_650</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>105</item>
-        </second>
-      </item>
-      <item>
-        <first>xor_ln102_fu_740</first>
+        <first>and_ln106_fu_745</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -16770,55 +16059,55 @@
         </second>
       </item>
       <item>
-        <first>xor_ln52_fu_399</first>
+        <first>and_ln57_fu_407</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>49</item>
+          <item>50</item>
         </second>
       </item>
       <item>
-        <first>xor_ln65_fu_451</first>
+        <first>and_ln88_1_fu_547</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>58</item>
+          <item>77</item>
         </second>
       </item>
       <item>
-        <first>xor_ln69_fu_473</first>
+        <first>and_ln88_fu_609</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>62</item>
+          <item>93</item>
         </second>
       </item>
       <item>
-        <first>xor_ln86_fu_539</first>
+        <first>b_align_exp_fu_333</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>76</item>
+          <item>36</item>
         </second>
       </item>
       <item>
-        <first>zext_ln29_fu_179</first>
+        <first>b_exp_fu_171</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>11</item>
+          <item>10</item>
         </second>
       </item>
       <item>
-        <first>zext_ln30_fu_183</first>
+        <first>b_full_mantissa_1_fu_369</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>12</item>
+          <item>43</item>
         </second>
       </item>
       <item>
-        <first>zext_ln40_1_fu_419</first>
+        <first>b_full_mantissa_2_fu_421</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -16826,15 +16115,719 @@
         </second>
       </item>
       <item>
-        <first>zext_ln41_1_fu_431</first>
+        <first>b_full_mantissa_fu_317</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>54</item>
+          <item>34</item>
         </second>
       </item>
       <item>
-        <first>zext_ln51_fu_443</first>
+        <first>b_mantissa_fu_137</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>5</item>
+        </second>
+      </item>
+      <item>
+        <first>final_mantissa_full_fu_809</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>127</item>
+        </second>
+      </item>
+      <item>
+        <first>icmp_ln104_fu_697</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>112</item>
+        </second>
+      </item>
+      <item>
+        <first>icmp_ln106_fu_709</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>114</item>
+        </second>
+      </item>
+      <item>
+        <first>icmp_ln116_fu_769</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>122</item>
+        </second>
+      </item>
+      <item>
+        <first>icmp_ln133_fu_817</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>128</item>
+        </second>
+      </item>
+      <item>
+        <first>icmp_ln35_1_fu_227</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>18</item>
+        </second>
+      </item>
+      <item>
+        <first>icmp_ln35_fu_189</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>13</item>
+        </second>
+      </item>
+      <item>
+        <first>icmp_ln36_1_fu_271</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>26</item>
+        </second>
+      </item>
+      <item>
+        <first>icmp_ln36_fu_233</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>21</item>
+        </second>
+      </item>
+      <item>
+        <first>icmp_ln54_fu_341</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>37</item>
+        </second>
+      </item>
+      <item>
+        <first>icmp_ln57_fu_375</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>44</item>
+        </second>
+      </item>
+      <item>
+        <first>icmp_ln71_fu_459</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>59</item>
+        </second>
+      </item>
+      <item>
+        <first>icmp_ln81_fu_529</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>70</item>
+        </second>
+      </item>
+      <item>
+        <first>icmp_ln88_1_fu_603</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>92</item>
+        </second>
+      </item>
+      <item>
+        <first>icmp_ln88_fu_597</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>91</item>
+        </second>
+      </item>
+      <item>
+        <first>icmp_ln92_1_fu_582</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>86</item>
+        </second>
+      </item>
+      <item>
+        <first>icmp_ln92_fu_535</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>75</item>
+        </second>
+      </item>
+      <item>
+        <first>icmp_ln95_fu_647</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>104</item>
+        </second>
+      </item>
+      <item>
+        <first>lshr_ln_fu_653</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>105</item>
+        </second>
+      </item>
+      <item>
+        <first>max_exp_11_fu_621</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>97</item>
+        </second>
+      </item>
+      <item>
+        <first>max_exp_12_fu_663</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>106</item>
+        </second>
+      </item>
+      <item>
+        <first>max_exp_13_fu_669</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>107</item>
+        </second>
+      </item>
+      <item>
+        <first>max_exp_14_fu_775</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>123</item>
+        </second>
+      </item>
+      <item>
+        <first>max_exp_15_fu_781</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>124</item>
+        </second>
+      </item>
+      <item>
+        <first>max_exp_2_fu_94</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>74</item>
+        </second>
+      </item>
+      <item>
+        <first>max_exp_3_phi_fu_113</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>102</item>
+        </second>
+      </item>
+      <item>
+        <first>max_exp_4_fu_429</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>53</item>
+        </second>
+      </item>
+      <item>
+        <first>or_ln134_fu_861</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>138</item>
+        </second>
+      </item>
+      <item>
+        <first>or_ln138_1_fu_852</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>135</item>
+        </second>
+      </item>
+      <item>
+        <first>or_ln138_fu_836</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>133</item>
+        </second>
+      </item>
+      <item>
+        <first>or_ln1_fu_263</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>25</item>
+        </second>
+      </item>
+      <item>
+        <first>or_ln2_fu_277</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>29</item>
+        </second>
+      </item>
+      <item>
+        <first>or_ln35_fu_205</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>15</item>
+        </second>
+      </item>
+      <item>
+        <first>or_ln36_fu_249</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>23</item>
+        </second>
+      </item>
+      <item>
+        <first>or_ln3_fu_285</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>30</item>
+        </second>
+      </item>
+      <item>
+        <first>or_ln_fu_219</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>17</item>
+        </second>
+      </item>
+      <item>
+        <first>result_mantissa_12_fu_677</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>108</item>
+        </second>
+      </item>
+      <item>
+        <first>result_mantissa_13_fu_703</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>113</item>
+        </second>
+      </item>
+      <item>
+        <first>result_mantissa_14_fu_723</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>116</item>
+        </second>
+      </item>
+      <item>
+        <first>result_mantissa_15_fu_731</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>117</item>
+        </second>
+      </item>
+      <item>
+        <first>result_mantissa_16_fu_751</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>120</item>
+        </second>
+      </item>
+      <item>
+        <first>result_mantissa_1_fu_471</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>61</item>
+        </second>
+      </item>
+      <item>
+        <first>result_mantissa_2_fu_90</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>73</item>
+        </second>
+      </item>
+      <item>
+        <first>result_mantissa_3_fu_477</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>62</item>
+        </second>
+      </item>
+      <item>
+        <first>result_mantissa_4_fu_483</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>63</item>
+        </second>
+      </item>
+      <item>
+        <first>result_mantissa_5_fu_513</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>68</item>
+        </second>
+      </item>
+      <item>
+        <first>result_mantissa_7_fu_615</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>96</item>
+        </second>
+      </item>
+      <item>
+        <first>result_mantissa_fu_503</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>66</item>
+        </second>
+      </item>
+      <item>
+        <first>result_sign_1_fu_521</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>69</item>
+        </second>
+      </item>
+      <item>
+        <first>result_sign_fu_495</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>65</item>
+        </second>
+      </item>
+      <item>
+        <first>retval_2_phi_fu_124</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>141</item>
+        </second>
+      </item>
+      <item>
+        <first>rounding_bits_fu_685</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>109</item>
+        </second>
+      </item>
+      <item>
+        <first>select_ln42_fu_293</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>31</item>
+        </second>
+      </item>
+      <item>
+        <first>select_ln43_fu_309</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>33</item>
+        </second>
+      </item>
+      <item>
+        <first>select_ln88_fu_553</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>78</item>
+        </second>
+      </item>
+      <item>
+        <first>sext_ln56_fu_361</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>41</item>
+        </second>
+      </item>
+      <item>
+        <first>sext_ln56cast_fu_365</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>42</item>
+        </second>
+      </item>
+      <item>
+        <first>sext_ln59_fu_387</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>46</item>
+        </second>
+      </item>
+      <item>
+        <first>sext_ln59cast_fu_391</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>47</item>
+        </second>
+      </item>
+      <item>
+        <first>sext_ln65_fu_689</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>110</item>
+        </second>
+      </item>
+      <item>
+        <first>sext_ln71_fu_491</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>64</item>
+        </second>
+      </item>
+      <item>
+        <first>shl_ln138_1_fu_823</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>129</item>
+        </second>
+      </item>
+      <item>
+        <first>shl_ln138_fu_830</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>132</item>
+        </second>
+      </item>
+      <item>
+        <first>sub_ln56_fu_355</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>40</item>
+        </second>
+      </item>
+      <item>
+        <first>sub_ln59_fu_381</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>45</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_10_fu_759</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>121</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_1_fu_153</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>8</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_2_fu_789</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>125</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_3_fu_211</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>16</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_4_fu_842</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>134</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_5_fu_799</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>126</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_6_fu_255</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>24</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_7_fu_587</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>90</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_8_fu_637</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>103</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_9_fu_715</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>115</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_fu_145</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>7</item>
+        </second>
+      </item>
+      <item>
+        <first>trunc_ln3_fu_195</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>14</item>
+        </second>
+      </item>
+      <item>
+        <first>trunc_ln4_fu_239</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>22</item>
+        </second>
+      </item>
+      <item>
+        <first>trunc_ln53_fu_441</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>55</item>
+        </second>
+      </item>
+      <item>
+        <first>trunc_ln92_fu_578</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>85</item>
+        </second>
+      </item>
+      <item>
+        <first>xor_ln104_fu_739</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>118</item>
+        </second>
+      </item>
+      <item>
+        <first>xor_ln54_fu_401</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>49</item>
+        </second>
+      </item>
+      <item>
+        <first>xor_ln67_fu_453</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>58</item>
+        </second>
+      </item>
+      <item>
+        <first>xor_ln71_fu_465</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>60</item>
+        </second>
+      </item>
+      <item>
+        <first>xor_ln88_fu_541</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>76</item>
+        </second>
+      </item>
+      <item>
+        <first>zext_ln31_fu_181</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>11</item>
+        </second>
+      </item>
+      <item>
+        <first>zext_ln32_fu_185</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>12</item>
+        </second>
+      </item>
+      <item>
+        <first>zext_ln53_1_fu_445</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -16842,7 +16835,23 @@
         </second>
       </item>
       <item>
-        <first>zext_ln54_1_fu_349</first>
+        <first>zext_ln53_2_fu_449</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>57</item>
+        </second>
+      </item>
+      <item>
+        <first>zext_ln53_fu_437</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>54</item>
+        </second>
+      </item>
+      <item>
+        <first>zext_ln56_1_fu_351</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -16850,7 +16859,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln54_fu_345</first>
+        <first>zext_ln56_fu_347</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -16858,7 +16867,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln63_1_fu_690</first>
+        <first>zext_ln65_1_fu_693</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -16866,11 +16875,11 @@
         </second>
       </item>
       <item>
-        <first>zext_ln63_fu_463</first>
+        <first>zext_ln65_fu_509</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>60</item>
+          <item>67</item>
         </second>
       </item>
     </dp_fu_nodes_expression>
@@ -16879,10 +16888,10 @@
       <item_version>0</item_version>
     </dp_fu_nodes_module>
     <dp_fu_nodes_io>
-      <count>9</count>
+      <count>8</count>
       <item_version>0</item_version>
       <item>
-        <first>a_bits_read_read_fu_102</first>
+        <first>a_bits_read_read_fu_104</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -16890,7 +16899,7 @@
         </second>
       </item>
       <item>
-        <first>b_bits_read_read_fu_96</first>
+        <first>b_bits_read_read_fu_98</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -16898,7 +16907,15 @@
         </second>
       </item>
       <item>
-        <first>max_exp_10_load_fu_569</first>
+        <first>max_exp_10_load_fu_574</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>84</item>
+        </second>
+      </item>
+      <item>
+        <first>result_mantissa_6_load_fu_571</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -16906,23 +16923,7 @@
         </second>
       </item>
       <item>
-        <first>result_mantissa_2_load_1_load_fu_578</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>87</item>
-        </second>
-      </item>
-      <item>
-        <first>result_mantissa_2_load_load_fu_631</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>102</item>
-        </second>
-      </item>
-      <item>
-        <first>store_ln86_store_fu_559</first>
+        <first>store_ln88_store_fu_561</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -16930,7 +16931,7 @@
         </second>
       </item>
       <item>
-        <first>store_ln86_store_fu_564</first>
+        <first>store_ln88_store_fu_566</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -16938,19 +16939,19 @@
         </second>
       </item>
       <item>
-        <first>store_ln90_store_fu_621</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>97</item>
-        </second>
-      </item>
-      <item>
-        <first>store_ln90_store_fu_626</first>
+        <first>store_ln92_store_fu_627</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
           <item>98</item>
+        </second>
+      </item>
+      <item>
+        <first>store_ln92_store_fu_632</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>99</item>
         </second>
       </item>
     </dp_fu_nodes_io>
@@ -16974,15 +16975,15 @@
       <count>11</count>
       <item_version>0</item_version>
       <item>
-        <first>108</first>
+        <first>110</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>101</item>
+          <item>102</item>
         </second>
       </item>
       <item>
-        <first>118</first>
+        <first>120</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -16990,7 +16991,7 @@
         </second>
       </item>
       <item>
-        <first>860</first>
+        <first>868</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -16998,7 +16999,7 @@
         </second>
       </item>
       <item>
-        <first>865</first>
+        <first>873</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -17006,7 +17007,7 @@
         </second>
       </item>
       <item>
-        <first>870</first>
+        <first>878</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -17014,7 +17015,7 @@
         </second>
       </item>
       <item>
-        <first>874</first>
+        <first>882</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -17022,7 +17023,7 @@
         </second>
       </item>
       <item>
-        <first>878</first>
+        <first>886</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -17030,7 +17031,7 @@
         </second>
       </item>
       <item>
-        <first>884</first>
+        <first>891</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -17038,7 +17039,7 @@
         </second>
       </item>
       <item>
-        <first>888</first>
+        <first>895</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -17046,7 +17047,7 @@
         </second>
       </item>
       <item>
-        <first>896</first>
+        <first>902</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -17054,7 +17055,7 @@
         </second>
       </item>
       <item>
-        <first>903</first>
+        <first>909</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -17066,7 +17067,7 @@
       <count>11</count>
       <item_version>0</item_version>
       <item>
-        <first>a_bits_read_reg_865</first>
+        <first>a_bits_read_reg_873</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -17074,7 +17075,7 @@
         </second>
       </item>
       <item>
-        <first>b_bits_read_reg_860</first>
+        <first>b_bits_read_reg_868</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -17082,7 +17083,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln33_1_reg_870</first>
+        <first>icmp_ln35_1_reg_878</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -17090,7 +17091,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln34_1_reg_874</first>
+        <first>icmp_ln36_1_reg_882</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -17098,7 +17099,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln79_reg_884</first>
+        <first>icmp_ln81_reg_891</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -17106,7 +17107,7 @@
         </second>
       </item>
       <item>
-        <first>max_exp_2_reg_896</first>
+        <first>max_exp_2_reg_902</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -17114,15 +17115,15 @@
         </second>
       </item>
       <item>
-        <first>max_exp_3_reg_108</first>
+        <first>max_exp_3_reg_110</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>101</item>
+          <item>102</item>
         </second>
       </item>
       <item>
-        <first>result_mantissa_2_reg_888</first>
+        <first>result_mantissa_2_reg_895</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -17130,7 +17131,7 @@
         </second>
       </item>
       <item>
-        <first>result_sign_1_reg_878</first>
+        <first>result_sign_1_reg_886</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -17138,7 +17139,7 @@
         </second>
       </item>
       <item>
-        <first>retval_2_reg_118</first>
+        <first>retval_2_reg_120</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -17146,7 +17147,7 @@
         </second>
       </item>
       <item>
-        <first>select_ln86_reg_903</first>
+        <first>select_ln88_reg_909</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -17158,15 +17159,15 @@
       <count>2</count>
       <item_version>0</item_version>
       <item>
-        <first>108</first>
+        <first>110</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>101</item>
+          <item>102</item>
         </second>
       </item>
       <item>
-        <first>118</first>
+        <first>120</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -17178,15 +17179,15 @@
       <count>2</count>
       <item_version>0</item_version>
       <item>
-        <first>max_exp_3_reg_108</first>
+        <first>max_exp_3_reg_110</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>101</item>
+          <item>102</item>
         </second>
       </item>
       <item>
-        <first>retval_2_reg_118</first>
+        <first>retval_2_reg_120</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -17369,14 +17370,14 @@
         </second>
       </item>
       <item>
-        <first>53</first>
+        <first>52</first>
         <second>
           <first>49</first>
           <second>107</second>
         </second>
       </item>
       <item>
-        <first>55</first>
+        <first>53</first>
         <second>
           <first>49</first>
           <second>107</second>
@@ -17392,36 +17393,36 @@
       <item>
         <first>59</first>
         <second>
-          <first>8</first>
-          <second>4</second>
-        </second>
-      </item>
-      <item>
-        <first>61</first>
-        <second>
           <first>45</first>
           <second>0</second>
         </second>
       </item>
       <item>
-        <first>62</first>
+        <first>60</first>
         <second>
           <first>25</first>
           <second>0</second>
         </second>
       </item>
       <item>
-        <first>63</first>
+        <first>61</first>
         <second>
           <first>10</first>
           <second>4</second>
         </second>
       </item>
       <item>
-        <first>64</first>
+        <first>62</first>
         <second>
           <first>10</first>
           <second>4</second>
+        </second>
+      </item>
+      <item>
+        <first>63</first>
+        <second>
+          <first>49</first>
+          <second>107</second>
         </second>
       </item>
       <item>
@@ -17432,10 +17433,10 @@
         </second>
       </item>
       <item>
-        <first>67</first>
+        <first>66</first>
         <second>
-          <first>49</first>
-          <second>107</second>
+          <first>8</first>
+          <second>4</second>
         </second>
       </item>
       <item>
@@ -17488,14 +17489,7 @@
         </second>
       </item>
       <item>
-        <first>84</first>
-        <second>
-          <first>45</first>
-          <second>0</second>
-        </second>
-      </item>
-      <item>
-        <first>90</first>
+        <first>86</first>
         <second>
           <first>45</first>
           <second>0</second>
@@ -17511,12 +17505,19 @@
       <item>
         <first>92</first>
         <second>
+          <first>45</first>
+          <second>0</second>
+        </second>
+      </item>
+      <item>
+        <first>93</first>
+        <second>
           <first>23</first>
           <second>0</second>
         </second>
       </item>
       <item>
-        <first>96</first>
+        <first>97</first>
         <second>
           <first>8</first>
           <second>4</second>
@@ -17530,10 +17531,17 @@
         </second>
       </item>
       <item>
-        <first>107</first>
+        <first>106</first>
         <second>
           <first>8</first>
           <second>4</second>
+        </second>
+      </item>
+      <item>
+        <first>107</first>
+        <second>
+          <first>49</first>
+          <second>107</second>
         </second>
       </item>
       <item>
@@ -17544,31 +17552,31 @@
         </second>
       </item>
       <item>
-        <first>109</first>
-        <second>
-          <first>49</first>
-          <second>107</second>
-        </second>
-      </item>
-      <item>
-        <first>113</first>
+        <first>112</first>
         <second>
           <first>45</first>
           <second>0</second>
         </second>
       </item>
       <item>
-        <first>114</first>
+        <first>113</first>
         <second>
           <first>8</first>
           <second>4</second>
         </second>
       </item>
       <item>
-        <first>115</first>
+        <first>114</first>
         <second>
           <first>45</first>
           <second>0</second>
+        </second>
+      </item>
+      <item>
+        <first>116</first>
+        <second>
+          <first>49</first>
+          <second>107</second>
         </second>
       </item>
       <item>
@@ -17581,47 +17589,47 @@
       <item>
         <first>118</first>
         <second>
-          <first>49</first>
-          <second>107</second>
-        </second>
-      </item>
-      <item>
-        <first>119</first>
-        <second>
           <first>25</first>
           <second>0</second>
         </second>
       </item>
       <item>
-        <first>120</first>
+        <first>119</first>
         <second>
           <first>23</first>
           <second>0</second>
         </second>
       </item>
       <item>
-        <first>121</first>
+        <first>120</first>
         <second>
           <first>49</first>
           <second>107</second>
         </second>
       </item>
       <item>
-        <first>123</first>
+        <first>122</first>
         <second>
           <first>45</first>
           <second>0</second>
         </second>
       </item>
       <item>
-        <first>124</first>
+        <first>123</first>
         <second>
           <first>8</first>
           <second>4</second>
         </second>
       </item>
       <item>
-        <first>125</first>
+        <first>124</first>
+        <second>
+          <first>49</first>
+          <second>107</second>
+        </second>
+      </item>
+      <item>
+        <first>127</first>
         <second>
           <first>49</first>
           <second>107</second>
@@ -17630,19 +17638,12 @@
       <item>
         <first>128</first>
         <second>
-          <first>49</first>
-          <second>107</second>
-        </second>
-      </item>
-      <item>
-        <first>129</first>
-        <second>
           <first>45</first>
           <second>0</second>
         </second>
       </item>
       <item>
-        <first>135</first>
+        <first>133</first>
         <second>
           <first>24</first>
           <second>0</second>

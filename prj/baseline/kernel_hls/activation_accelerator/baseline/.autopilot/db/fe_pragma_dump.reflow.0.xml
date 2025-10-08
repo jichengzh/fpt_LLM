@@ -1,13 +1,49 @@
 <pragmas>
-<pragma file="/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/common/hls_exp_float.cpp" line="16" pragmaType="inline" parentfunction="exp" off="0" region="0" recursive="0"/>
+<pragma file="activation_accelerator.cpp" line="157" pragmaType="pipeline" parentfunction="float_sigmoid" off="0" ii="1" rewind="0" style=""/>
 <pragma file="/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/expfloat.cpp" line="21" pragmaType="inline" parentfunction="expf" off="0" region="0" recursive="0"/>
-<pragma file="activation_accelerator.cpp" line="276" pragmaType="pipeline" parentfunction="activation_accelerator" off="0" ii="1" rewind="0" style=""/>
-<pragma file="activation_accelerator.cpp" line="284" pragmaType="pipeline" parentfunction="activation_accelerator" off="0" ii="1" rewind="0" style=""/>
-<pragma file="activation_accelerator.cpp" line="293" pragmaType="pipeline" parentfunction="activation_accelerator" off="0" ii="1" rewind="0" style=""/>
-<pragma file="activation_accelerator.cpp" line="249" pragmaType="interface" parentfunction="activation_accelerator" mode="m_axi" port="in0" bundle="gmem0" offset="slave" name="" depth="32768" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
-<pragma file="activation_accelerator.cpp" line="250" pragmaType="interface" parentfunction="activation_accelerator" mode="m_axi" port="in1" bundle="gmem1" offset="slave" name="" depth="32768" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
-<pragma file="activation_accelerator.cpp" line="251" pragmaType="interface" parentfunction="activation_accelerator" mode="m_axi" port="out" bundle="gmem2" offset="slave" name="" depth="32768" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
-<pragma file="activation_accelerator.cpp" line="252" pragmaType="interface" parentfunction="activation_accelerator" mode="s_axilite" port="stage" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
-<pragma file="activation_accelerator.cpp" line="253" pragmaType="interface" parentfunction="activation_accelerator" mode="s_axilite" port="config" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
-<pragma file="activation_accelerator.cpp" line="254" pragmaType="interface" parentfunction="activation_accelerator" mode="s_axilite" port="" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/common/hls_exp_float.cpp" line="16" pragmaType="inline" parentfunction="exp" off="0" region="0" recursive="0"/>
+<pragma file="activation_accelerator.cpp" line="167" pragmaType="pipeline" parentfunction="float_silu" off="0" ii="1" rewind="0" style=""/>
+<pragma file="activation_accelerator.cpp" line="232" pragmaType="pipeline" parentfunction="float_rms_norm" off="0" ii="1" rewind="0" style=""/>
+<pragma file="activation_accelerator.cpp" line="221" pragmaType="pipeline" parentfunction="float_rms_norm" off="0" ii="1" rewind="0" style=""/>
+<pragma file="activation_accelerator.cpp" line="266" pragmaType="pipeline" parentfunction="float_layer_norm" off="0" ii="1" rewind="0" style=""/>
+<pragma file="activation_accelerator.cpp" line="256" pragmaType="pipeline" parentfunction="float_layer_norm" off="0" ii="1" rewind="0" style=""/>
+<pragma file="activation_accelerator.cpp" line="247" pragmaType="pipeline" parentfunction="float_layer_norm" off="0" ii="1" rewind="0" style=""/>
+<pragma file="activation_accelerator.cpp" line="279" pragmaType="unroll" parentfunction="float_add" factor="8" skip_exit_check="0"/>
+<pragma file="activation_accelerator.cpp" line="278" pragmaType="pipeline" parentfunction="float_add" off="0" ii="1" rewind="0" style=""/>
+<pragma file="activation_accelerator.cpp" line="384" pragmaType="pipeline" parentfunction="float_safe_softmax" off="0" ii="1" rewind="0" style=""/>
+<pragma file="activation_accelerator.cpp" line="376" pragmaType="pipeline" parentfunction="float_safe_softmax" off="0" ii="1" rewind="0" style=""/>
+<pragma file="activation_accelerator.cpp" line="363" pragmaType="pipeline" parentfunction="float_safe_softmax" off="0" ii="1" rewind="0" style=""/>
+<pragma file="activation_accelerator.cpp" line="372" pragmaType="array_partition" parentfunction="float_safe_softmax" dim="1" factor="2" mode="cyclic" dynamic="0" variable="exp_vals"/>
+<pragma file="activation_accelerator.cpp" line="393" pragmaType="dataflow" parentfunction="float_mask_safe_softmax" disable_start_propagation="0"/>
+<pragma file="activation_accelerator.cpp" line="459" pragmaType="pipeline" parentfunction="float_mask_safe_softmax" off="0" ii="1" rewind="0" style=""/>
+<pragma file="activation_accelerator.cpp" line="452" pragmaType="pipeline" parentfunction="float_mask_safe_softmax" off="0" ii="1" rewind="0" style=""/>
+<pragma file="activation_accelerator.cpp" line="439" pragmaType="pipeline" parentfunction="float_mask_safe_softmax" off="0" ii="1" rewind="0" style=""/>
+<pragma file="activation_accelerator.cpp" line="431" pragmaType="pipeline" parentfunction="float_mask_safe_softmax" off="0" ii="1" rewind="0" style=""/>
+<pragma file="activation_accelerator.cpp" line="414" pragmaType="pipeline" parentfunction="float_mask_safe_softmax" off="0" ii="1" rewind="0" style=""/>
+<pragma file="activation_accelerator.cpp" line="396" pragmaType="stream" parentfunction="float_mask_safe_softmax" depth="32768" type="fifo" variable="x_mask_stream"/>
+<pragma file="activation_accelerator.cpp" line="398" pragmaType="stream" parentfunction="float_mask_safe_softmax" depth="32768" type="fifo" variable="x_stream"/>
+<pragma file="activation_accelerator.cpp" line="400" pragmaType="stream" parentfunction="float_mask_safe_softmax" depth="2" type="fifo" variable="max_val_stream"/>
+<pragma file="activation_accelerator.cpp" line="402" pragmaType="stream" parentfunction="float_mask_safe_softmax" depth="32768" type="fifo" variable="max_broadcast_stream"/>
+<pragma file="activation_accelerator.cpp" line="404" pragmaType="stream" parentfunction="float_mask_safe_softmax" depth="32768" type="fifo" variable="exp_stream"/>
+<pragma file="activation_accelerator.cpp" line="406" pragmaType="stream" parentfunction="float_mask_safe_softmax" depth="2" type="fifo" variable="sum_stream"/>
+<pragma file="activation_accelerator.cpp" line="408" pragmaType="stream" parentfunction="float_mask_safe_softmax" depth="32768" type="fifo" variable="sum_broadcast_stream"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<float, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="activation_accelerator.cpp" line="570" pragmaType="pipeline" parentfunction="activation_accelerator" off="0" ii="1" rewind="0" style=""/>
+<pragma file="activation_accelerator.cpp" line="506" pragmaType="unroll" parentfunction="activation_accelerator" factor="8" skip_exit_check="0"/>
+<pragma file="activation_accelerator.cpp" line="505" pragmaType="pipeline" parentfunction="activation_accelerator" off="0" ii="1" rewind="0" style=""/>
+<pragma file="activation_accelerator.cpp" line="470" pragmaType="interface" parentfunction="activation_accelerator" mode="m_axi" port="in0" bundle="gmem0" offset="slave" name="" depth="32768" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="activation_accelerator.cpp" line="471" pragmaType="interface" parentfunction="activation_accelerator" mode="m_axi" port="in1" bundle="gmem1" offset="slave" name="" depth="32768" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="activation_accelerator.cpp" line="472" pragmaType="interface" parentfunction="activation_accelerator" mode="m_axi" port="out" bundle="gmem2" offset="slave" name="" depth="32768" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="activation_accelerator.cpp" line="473" pragmaType="interface" parentfunction="activation_accelerator" mode="s_axilite" port="stage" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="activation_accelerator.cpp" line="474" pragmaType="interface" parentfunction="activation_accelerator" mode="s_axilite" port="config" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="activation_accelerator.cpp" line="475" pragmaType="interface" parentfunction="activation_accelerator" mode="s_axilite" port="" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="activation_accelerator.cpp" line="482" pragmaType="array_partition" parentfunction="activation_accelerator" dim="1" factor="8" mode="cyclic" dynamic="0" variable="_ZZ22activation_acceleratorPtS_S_iiE4buf0"/>
+<pragma file="activation_accelerator.cpp" line="483" pragmaType="array_partition" parentfunction="activation_accelerator" dim="1" factor="8" mode="cyclic" dynamic="0" variable="_ZZ22activation_acceleratorPtS_S_iiE4buf1"/>
+<pragma file="activation_accelerator.cpp" line="484" pragmaType="array_partition" parentfunction="activation_accelerator" dim="1" factor="8" mode="cyclic" dynamic="0" variable="_ZZ22activation_acceleratorPtS_S_iiE4buf2"/>
+<pragma file="activation_accelerator.cpp" line="485" pragmaType="array_partition" parentfunction="activation_accelerator" dim="1" factor="4" mode="cyclic" dynamic="0" variable="x"/>
+<pragma file="activation_accelerator.cpp" line="486" pragmaType="array_partition" parentfunction="activation_accelerator" dim="1" factor="4" mode="cyclic" dynamic="0" variable="y"/>
+<pragma file="activation_accelerator.cpp" line="148" pragmaType="pipeline" parentfunction="bf16_to_float" off="0" ii="1" rewind="0" style=""/>
 </pragmas>

@@ -348,7 +348,7 @@ set NewPortList {[
  	{ "name": "m_axi_gmem2_BUSER", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem2", "role": "BUSER" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6", "8", "10", "12", "14", "16", "18", "20", "22", "24", "26", "28", "30", "32", "34", "39", "42", "44", "46", "48", "50", "51", "52", "53", "54", "55", "56", "57"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "38", "41", "44", "47", "50", "53", "56", "59", "62", "65", "68", "71", "74", "77", "80", "85", "88", "121", "125", "128", "131", "139", "148", "150", "152", "153", "154", "155", "156", "157", "158", "159", "160", "161", "162"],
 		"CDFG" : "activation_accelerator",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -358,7 +358,7 @@ set RtlHierarchyInfo {[
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
+		"HasSubDataflow" : "1",
 		"InDataflowNetwork" : "0",
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
@@ -367,60 +367,288 @@ set RtlHierarchyInfo {[
 				"BlockSignal" : [
 					{"Name" : "gmem0_blk_n_AR", "Type" : "RtlSignal"}],
 				"SubConnect" : [
-					{"ID" : "46", "SubInstance" : "grp_activation_accelerator_Pipeline_VITIS_LOOP_262_1_fu_351", "Port" : "gmem0", "Inst_start_state" : "69", "Inst_end_state" : "70"}]},
+					{"ID" : "148", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_23_fu_878", "Port" : "gmem0", "Inst_start_state" : "77", "Inst_end_state" : "78"}]},
 			{"Name" : "gmem1", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "gmem1_blk_n_AR", "Type" : "RtlSignal"}],
 				"SubConnect" : [
-					{"ID" : "48", "SubInstance" : "grp_activation_accelerator_Pipeline_VITIS_LOOP_265_2_fu_360", "Port" : "gmem1", "Inst_start_state" : "69", "Inst_end_state" : "70"}]},
+					{"ID" : "150", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_24_fu_901", "Port" : "gmem1", "Inst_start_state" : "77", "Inst_end_state" : "78"}]},
 			{"Name" : "gmem2", "Type" : "MAXI", "Direction" : "O",
 				"BlockSignal" : [
 					{"Name" : "gmem2_blk_n_AW", "Type" : "RtlSignal"},
 					{"Name" : "gmem2_blk_n_B", "Type" : "RtlSignal"}],
 				"SubConnect" : [
-					{"ID" : "22", "SubInstance" : "grp_activation_accelerator_Pipeline_VITIS_LOOP_316_6_fu_274", "Port" : "gmem2", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "62", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_25_fu_575", "Port" : "gmem2", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "in0", "Type" : "None", "Direction" : "I"},
 			{"Name" : "in1", "Type" : "None", "Direction" : "I"},
 			{"Name" : "out_r", "Type" : "None", "Direction" : "I"},
 			{"Name" : "stage", "Type" : "None", "Direction" : "I"},
 			{"Name" : "config_r", "Type" : "None", "Direction" : "I"},
-			{"Name" : "buf0", "Type" : "Memory", "Direction" : "IO",
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "6", "SubInstance" : "grp_activation_accelerator_Pipeline_VITIS_LOOP_144_15_fu_214", "Port" : "buf0", "Inst_start_state" : "1", "Inst_end_state" : "10"},
-					{"ID" : "8", "SubInstance" : "grp_activation_accelerator_Pipeline_VITIS_LOOP_144_14_fu_222", "Port" : "buf0", "Inst_start_state" : "1", "Inst_end_state" : "34"},
-					{"ID" : "10", "SubInstance" : "grp_activation_accelerator_Pipeline_VITIS_LOOP_144_13_fu_230", "Port" : "buf0", "Inst_start_state" : "1", "Inst_end_state" : "53"},
-					{"ID" : "12", "SubInstance" : "grp_activation_accelerator_Pipeline_VITIS_LOOP_144_12_fu_238", "Port" : "buf0", "Inst_start_state" : "1", "Inst_end_state" : "53"},
-					{"ID" : "18", "SubInstance" : "grp_activation_accelerator_Pipeline_VITIS_LOOP_144_1_fu_258", "Port" : "buf0", "Inst_start_state" : "1", "Inst_end_state" : "57"},
-					{"ID" : "44", "SubInstance" : "grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341", "Port" : "buf0", "Inst_start_state" : "60", "Inst_end_state" : "61"},
-					{"ID" : "46", "SubInstance" : "grp_activation_accelerator_Pipeline_VITIS_LOOP_262_1_fu_351", "Port" : "buf0", "Inst_start_state" : "69", "Inst_end_state" : "70"}]},
-			{"Name" : "buf1", "Type" : "Memory", "Direction" : "IO",
+					{"ID" : "35", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_110_fu_323", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23", "Inst_start_state" : "1", "Inst_end_state" : "10"},
+					{"ID" : "41", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_17_fu_379", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23", "Inst_start_state" : "1", "Inst_end_state" : "53"},
+					{"ID" : "38", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_18_fu_351", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23", "Inst_start_state" : "1", "Inst_end_state" : "34"},
+					{"ID" : "47", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_14_fu_435", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23", "Inst_start_state" : "1", "Inst_end_state" : "53"},
+					{"ID" : "44", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_16_fu_407", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23", "Inst_start_state" : "1", "Inst_end_state" : "53"},
+					{"ID" : "53", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_13_fu_491", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23", "Inst_start_state" : "1", "Inst_end_state" : "56"},
+					{"ID" : "56", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_1_fu_519", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23", "Inst_start_state" : "1", "Inst_end_state" : "65"},
+					{"ID" : "139", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_19_fu_826", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23", "Inst_start_state" : "68", "Inst_end_state" : "69"},
+					{"ID" : "148", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_23_fu_878", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23", "Inst_start_state" : "77", "Inst_end_state" : "78"}]},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "20", "SubInstance" : "grp_activation_accelerator_Pipeline_VITIS_LOOP_144_11_fu_266", "Port" : "buf1", "Inst_start_state" : "1", "Inst_end_state" : "57"},
-					{"ID" : "44", "SubInstance" : "grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341", "Port" : "buf1", "Inst_start_state" : "60", "Inst_end_state" : "61"},
-					{"ID" : "48", "SubInstance" : "grp_activation_accelerator_Pipeline_VITIS_LOOP_265_2_fu_360", "Port" : "buf1", "Inst_start_state" : "69", "Inst_end_state" : "70"}]},
-			{"Name" : "buf2", "Type" : "Memory", "Direction" : "IO",
+					{"ID" : "35", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_110_fu_323", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22", "Inst_start_state" : "1", "Inst_end_state" : "10"},
+					{"ID" : "41", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_17_fu_379", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22", "Inst_start_state" : "1", "Inst_end_state" : "53"},
+					{"ID" : "38", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_18_fu_351", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22", "Inst_start_state" : "1", "Inst_end_state" : "34"},
+					{"ID" : "47", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_14_fu_435", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22", "Inst_start_state" : "1", "Inst_end_state" : "53"},
+					{"ID" : "44", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_16_fu_407", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22", "Inst_start_state" : "1", "Inst_end_state" : "53"},
+					{"ID" : "53", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_13_fu_491", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22", "Inst_start_state" : "1", "Inst_end_state" : "56"},
+					{"ID" : "56", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_1_fu_519", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22", "Inst_start_state" : "1", "Inst_end_state" : "65"},
+					{"ID" : "139", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_19_fu_826", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22", "Inst_start_state" : "68", "Inst_end_state" : "69"},
+					{"ID" : "148", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_23_fu_878", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22", "Inst_start_state" : "77", "Inst_end_state" : "78"}]},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "14", "SubInstance" : "grp_activation_accelerator_Pipeline_VITIS_LOOP_292_5_fu_246", "Port" : "buf2", "Inst_start_state" : "1", "Inst_end_state" : "56"},
-					{"ID" : "16", "SubInstance" : "grp_activation_accelerator_Pipeline_VITIS_LOOP_283_4_fu_252", "Port" : "buf2", "Inst_start_state" : "1", "Inst_end_state" : "56"},
-					{"ID" : "22", "SubInstance" : "grp_activation_accelerator_Pipeline_VITIS_LOOP_316_6_fu_274", "Port" : "buf2", "Inst_start_state" : "3", "Inst_end_state" : "4"},
-					{"ID" : "28", "SubInstance" : "grp_activation_accelerator_Pipeline_VITIS_LOOP_196_3_fu_296", "Port" : "buf2", "Inst_start_state" : "32", "Inst_end_state" : "33"},
-					{"ID" : "32", "SubInstance" : "grp_activation_accelerator_Pipeline_VITIS_LOOP_175_2_fu_311", "Port" : "buf2", "Inst_start_state" : "51", "Inst_end_state" : "52"},
-					{"ID" : "34", "SubInstance" : "grp_activation_accelerator_Pipeline_VITIS_LOOP_159_1_fu_319", "Port" : "buf2", "Inst_start_state" : "54", "Inst_end_state" : "55"},
-					{"ID" : "39", "SubInstance" : "grp_activation_accelerator_Pipeline_VITIS_LOOP_151_1_fu_326", "Port" : "buf2", "Inst_start_state" : "54", "Inst_end_state" : "55"},
-					{"ID" : "42", "SubInstance" : "grp_activation_accelerator_Pipeline_VITIS_LOOP_205_1_fu_333", "Port" : "buf2", "Inst_start_state" : "58", "Inst_end_state" : "59"},
-					{"ID" : "44", "SubInstance" : "grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341", "Port" : "buf2", "Inst_start_state" : "60", "Inst_end_state" : "61"}]}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.buf0_U", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.buf1_U", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.buf2_U", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.x_U", "Parent" : "0"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.y_U", "Parent" : "0"},
-	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_144_15_fu_214", "Parent" : "0", "Child" : ["7"],
-		"CDFG" : "activation_accelerator_Pipeline_VITIS_LOOP_144_15",
+					{"ID" : "35", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_110_fu_323", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21", "Inst_start_state" : "1", "Inst_end_state" : "10"},
+					{"ID" : "41", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_17_fu_379", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21", "Inst_start_state" : "1", "Inst_end_state" : "53"},
+					{"ID" : "38", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_18_fu_351", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21", "Inst_start_state" : "1", "Inst_end_state" : "34"},
+					{"ID" : "47", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_14_fu_435", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21", "Inst_start_state" : "1", "Inst_end_state" : "53"},
+					{"ID" : "44", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_16_fu_407", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21", "Inst_start_state" : "1", "Inst_end_state" : "53"},
+					{"ID" : "53", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_13_fu_491", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21", "Inst_start_state" : "1", "Inst_end_state" : "56"},
+					{"ID" : "56", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_1_fu_519", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21", "Inst_start_state" : "1", "Inst_end_state" : "65"},
+					{"ID" : "139", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_19_fu_826", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21", "Inst_start_state" : "68", "Inst_end_state" : "69"},
+					{"ID" : "148", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_23_fu_878", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21", "Inst_start_state" : "77", "Inst_end_state" : "78"}]},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20", "Type" : "Memory", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "35", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_110_fu_323", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20", "Inst_start_state" : "1", "Inst_end_state" : "10"},
+					{"ID" : "41", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_17_fu_379", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20", "Inst_start_state" : "1", "Inst_end_state" : "53"},
+					{"ID" : "38", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_18_fu_351", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20", "Inst_start_state" : "1", "Inst_end_state" : "34"},
+					{"ID" : "47", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_14_fu_435", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20", "Inst_start_state" : "1", "Inst_end_state" : "53"},
+					{"ID" : "44", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_16_fu_407", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20", "Inst_start_state" : "1", "Inst_end_state" : "53"},
+					{"ID" : "53", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_13_fu_491", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20", "Inst_start_state" : "1", "Inst_end_state" : "56"},
+					{"ID" : "56", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_1_fu_519", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20", "Inst_start_state" : "1", "Inst_end_state" : "65"},
+					{"ID" : "139", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_19_fu_826", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20", "Inst_start_state" : "68", "Inst_end_state" : "69"},
+					{"ID" : "148", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_23_fu_878", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20", "Inst_start_state" : "77", "Inst_end_state" : "78"}]},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19", "Type" : "Memory", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "35", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_110_fu_323", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19", "Inst_start_state" : "1", "Inst_end_state" : "10"},
+					{"ID" : "41", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_17_fu_379", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19", "Inst_start_state" : "1", "Inst_end_state" : "53"},
+					{"ID" : "38", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_18_fu_351", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19", "Inst_start_state" : "1", "Inst_end_state" : "34"},
+					{"ID" : "47", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_14_fu_435", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19", "Inst_start_state" : "1", "Inst_end_state" : "53"},
+					{"ID" : "44", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_16_fu_407", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19", "Inst_start_state" : "1", "Inst_end_state" : "53"},
+					{"ID" : "53", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_13_fu_491", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19", "Inst_start_state" : "1", "Inst_end_state" : "56"},
+					{"ID" : "56", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_1_fu_519", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19", "Inst_start_state" : "1", "Inst_end_state" : "65"},
+					{"ID" : "139", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_19_fu_826", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19", "Inst_start_state" : "68", "Inst_end_state" : "69"},
+					{"ID" : "148", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_23_fu_878", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19", "Inst_start_state" : "77", "Inst_end_state" : "78"}]},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18", "Type" : "Memory", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "35", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_110_fu_323", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18", "Inst_start_state" : "1", "Inst_end_state" : "10"},
+					{"ID" : "41", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_17_fu_379", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18", "Inst_start_state" : "1", "Inst_end_state" : "53"},
+					{"ID" : "38", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_18_fu_351", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18", "Inst_start_state" : "1", "Inst_end_state" : "34"},
+					{"ID" : "47", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_14_fu_435", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18", "Inst_start_state" : "1", "Inst_end_state" : "53"},
+					{"ID" : "44", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_16_fu_407", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18", "Inst_start_state" : "1", "Inst_end_state" : "53"},
+					{"ID" : "53", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_13_fu_491", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18", "Inst_start_state" : "1", "Inst_end_state" : "56"},
+					{"ID" : "56", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_1_fu_519", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18", "Inst_start_state" : "1", "Inst_end_state" : "65"},
+					{"ID" : "139", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_19_fu_826", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18", "Inst_start_state" : "68", "Inst_end_state" : "69"},
+					{"ID" : "148", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_23_fu_878", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18", "Inst_start_state" : "77", "Inst_end_state" : "78"}]},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17", "Type" : "Memory", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "35", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_110_fu_323", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17", "Inst_start_state" : "1", "Inst_end_state" : "10"},
+					{"ID" : "41", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_17_fu_379", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17", "Inst_start_state" : "1", "Inst_end_state" : "53"},
+					{"ID" : "38", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_18_fu_351", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17", "Inst_start_state" : "1", "Inst_end_state" : "34"},
+					{"ID" : "47", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_14_fu_435", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17", "Inst_start_state" : "1", "Inst_end_state" : "53"},
+					{"ID" : "44", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_16_fu_407", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17", "Inst_start_state" : "1", "Inst_end_state" : "53"},
+					{"ID" : "53", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_13_fu_491", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17", "Inst_start_state" : "1", "Inst_end_state" : "56"},
+					{"ID" : "56", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_1_fu_519", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17", "Inst_start_state" : "1", "Inst_end_state" : "65"},
+					{"ID" : "139", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_19_fu_826", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17", "Inst_start_state" : "68", "Inst_end_state" : "69"},
+					{"ID" : "148", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_23_fu_878", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17", "Inst_start_state" : "77", "Inst_end_state" : "78"}]},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16", "Type" : "Memory", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "35", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_110_fu_323", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16", "Inst_start_state" : "1", "Inst_end_state" : "10"},
+					{"ID" : "41", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_17_fu_379", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16", "Inst_start_state" : "1", "Inst_end_state" : "53"},
+					{"ID" : "38", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_18_fu_351", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16", "Inst_start_state" : "1", "Inst_end_state" : "34"},
+					{"ID" : "47", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_14_fu_435", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16", "Inst_start_state" : "1", "Inst_end_state" : "53"},
+					{"ID" : "44", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_16_fu_407", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16", "Inst_start_state" : "1", "Inst_end_state" : "53"},
+					{"ID" : "53", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_13_fu_491", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16", "Inst_start_state" : "1", "Inst_end_state" : "56"},
+					{"ID" : "56", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_1_fu_519", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16", "Inst_start_state" : "1", "Inst_end_state" : "65"},
+					{"ID" : "139", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_19_fu_826", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16", "Inst_start_state" : "68", "Inst_end_state" : "69"},
+					{"ID" : "148", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_23_fu_878", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16", "Inst_start_state" : "77", "Inst_end_state" : "78"}]},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_15", "Type" : "Memory", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "50", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_15_fu_463", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_15", "Inst_start_state" : "1", "Inst_end_state" : "53"},
+					{"ID" : "59", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_11_fu_547", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_15", "Inst_start_state" : "1", "Inst_end_state" : "65"},
+					{"ID" : "139", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_19_fu_826", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_15", "Inst_start_state" : "68", "Inst_end_state" : "69"},
+					{"ID" : "150", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_24_fu_901", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_15", "Inst_start_state" : "77", "Inst_end_state" : "78"}]},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9", "Type" : "Memory", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "50", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_15_fu_463", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9", "Inst_start_state" : "1", "Inst_end_state" : "53"},
+					{"ID" : "59", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_11_fu_547", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9", "Inst_start_state" : "1", "Inst_end_state" : "65"},
+					{"ID" : "139", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_19_fu_826", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9", "Inst_start_state" : "68", "Inst_end_state" : "69"},
+					{"ID" : "150", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_24_fu_901", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9", "Inst_start_state" : "77", "Inst_end_state" : "78"}]},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8", "Type" : "Memory", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "50", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_15_fu_463", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8", "Inst_start_state" : "1", "Inst_end_state" : "53"},
+					{"ID" : "59", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_11_fu_547", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8", "Inst_start_state" : "1", "Inst_end_state" : "65"},
+					{"ID" : "139", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_19_fu_826", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8", "Inst_start_state" : "68", "Inst_end_state" : "69"},
+					{"ID" : "150", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_24_fu_901", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8", "Inst_start_state" : "77", "Inst_end_state" : "78"}]},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_14", "Type" : "Memory", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "50", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_15_fu_463", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_14", "Inst_start_state" : "1", "Inst_end_state" : "53"},
+					{"ID" : "59", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_11_fu_547", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_14", "Inst_start_state" : "1", "Inst_end_state" : "65"},
+					{"ID" : "139", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_19_fu_826", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_14", "Inst_start_state" : "68", "Inst_end_state" : "69"},
+					{"ID" : "150", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_24_fu_901", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_14", "Inst_start_state" : "77", "Inst_end_state" : "78"}]},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_13", "Type" : "Memory", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "50", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_15_fu_463", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_13", "Inst_start_state" : "1", "Inst_end_state" : "53"},
+					{"ID" : "59", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_11_fu_547", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_13", "Inst_start_state" : "1", "Inst_end_state" : "65"},
+					{"ID" : "139", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_19_fu_826", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_13", "Inst_start_state" : "68", "Inst_end_state" : "69"},
+					{"ID" : "150", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_24_fu_901", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_13", "Inst_start_state" : "77", "Inst_end_state" : "78"}]},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_12", "Type" : "Memory", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "50", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_15_fu_463", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_12", "Inst_start_state" : "1", "Inst_end_state" : "53"},
+					{"ID" : "59", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_11_fu_547", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_12", "Inst_start_state" : "1", "Inst_end_state" : "65"},
+					{"ID" : "139", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_19_fu_826", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_12", "Inst_start_state" : "68", "Inst_end_state" : "69"},
+					{"ID" : "150", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_24_fu_901", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_12", "Inst_start_state" : "77", "Inst_end_state" : "78"}]},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_11", "Type" : "Memory", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "50", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_15_fu_463", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_11", "Inst_start_state" : "1", "Inst_end_state" : "53"},
+					{"ID" : "59", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_11_fu_547", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_11", "Inst_start_state" : "1", "Inst_end_state" : "65"},
+					{"ID" : "139", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_19_fu_826", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_11", "Inst_start_state" : "68", "Inst_end_state" : "69"},
+					{"ID" : "150", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_24_fu_901", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_11", "Inst_start_state" : "77", "Inst_end_state" : "78"}]},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_10", "Type" : "Memory", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "50", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_15_fu_463", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_10", "Inst_start_state" : "1", "Inst_end_state" : "53"},
+					{"ID" : "59", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_11_fu_547", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_10", "Inst_start_state" : "1", "Inst_end_state" : "65"},
+					{"ID" : "139", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_19_fu_826", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_10", "Inst_start_state" : "68", "Inst_end_state" : "69"},
+					{"ID" : "150", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_24_fu_901", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_10", "Inst_start_state" : "77", "Inst_end_state" : "78"}]},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7", "Type" : "Memory", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "62", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_25_fu_575", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7", "Inst_start_state" : "3", "Inst_end_state" : "4"},
+					{"ID" : "71", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_norm11_fu_617", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7", "Inst_start_state" : "32", "Inst_end_state" : "33"},
+					{"ID" : "77", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_norm_fu_652", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7", "Inst_start_state" : "51", "Inst_end_state" : "52"},
+					{"ID" : "80", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_3_fu_677", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7", "Inst_start_state" : "54", "Inst_end_state" : "55"},
+					{"ID" : "85", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_2_fu_701", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7", "Inst_start_state" : "54", "Inst_end_state" : "55"},
+					{"ID" : "88", "SubInstance" : "grp_float_mask_safe_softmax_fu_725", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7", "Inst_start_state" : "54", "Inst_end_state" : "55"},
+					{"ID" : "128", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_output_fu_775", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7", "Inst_start_state" : "63", "Inst_end_state" : "64"},
+					{"ID" : "131", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_12_fu_798", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7", "Inst_start_state" : "66", "Inst_end_state" : "67"},
+					{"ID" : "139", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_19_fu_826", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7", "Inst_start_state" : "68", "Inst_end_state" : "69"}]},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6", "Type" : "Memory", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "62", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_25_fu_575", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6", "Inst_start_state" : "3", "Inst_end_state" : "4"},
+					{"ID" : "71", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_norm11_fu_617", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6", "Inst_start_state" : "32", "Inst_end_state" : "33"},
+					{"ID" : "77", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_norm_fu_652", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6", "Inst_start_state" : "51", "Inst_end_state" : "52"},
+					{"ID" : "80", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_3_fu_677", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6", "Inst_start_state" : "54", "Inst_end_state" : "55"},
+					{"ID" : "85", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_2_fu_701", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6", "Inst_start_state" : "54", "Inst_end_state" : "55"},
+					{"ID" : "88", "SubInstance" : "grp_float_mask_safe_softmax_fu_725", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6", "Inst_start_state" : "54", "Inst_end_state" : "55"},
+					{"ID" : "128", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_output_fu_775", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6", "Inst_start_state" : "63", "Inst_end_state" : "64"},
+					{"ID" : "131", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_12_fu_798", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6", "Inst_start_state" : "66", "Inst_end_state" : "67"},
+					{"ID" : "139", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_19_fu_826", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6", "Inst_start_state" : "68", "Inst_end_state" : "69"}]},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5", "Type" : "Memory", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "62", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_25_fu_575", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5", "Inst_start_state" : "3", "Inst_end_state" : "4"},
+					{"ID" : "71", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_norm11_fu_617", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5", "Inst_start_state" : "32", "Inst_end_state" : "33"},
+					{"ID" : "77", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_norm_fu_652", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5", "Inst_start_state" : "51", "Inst_end_state" : "52"},
+					{"ID" : "80", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_3_fu_677", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5", "Inst_start_state" : "54", "Inst_end_state" : "55"},
+					{"ID" : "85", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_2_fu_701", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5", "Inst_start_state" : "54", "Inst_end_state" : "55"},
+					{"ID" : "88", "SubInstance" : "grp_float_mask_safe_softmax_fu_725", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5", "Inst_start_state" : "54", "Inst_end_state" : "55"},
+					{"ID" : "128", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_output_fu_775", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5", "Inst_start_state" : "63", "Inst_end_state" : "64"},
+					{"ID" : "131", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_12_fu_798", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5", "Inst_start_state" : "66", "Inst_end_state" : "67"},
+					{"ID" : "139", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_19_fu_826", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5", "Inst_start_state" : "68", "Inst_end_state" : "69"}]},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4", "Type" : "Memory", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "62", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_25_fu_575", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4", "Inst_start_state" : "3", "Inst_end_state" : "4"},
+					{"ID" : "71", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_norm11_fu_617", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4", "Inst_start_state" : "32", "Inst_end_state" : "33"},
+					{"ID" : "77", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_norm_fu_652", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4", "Inst_start_state" : "51", "Inst_end_state" : "52"},
+					{"ID" : "80", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_3_fu_677", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4", "Inst_start_state" : "54", "Inst_end_state" : "55"},
+					{"ID" : "85", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_2_fu_701", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4", "Inst_start_state" : "54", "Inst_end_state" : "55"},
+					{"ID" : "88", "SubInstance" : "grp_float_mask_safe_softmax_fu_725", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4", "Inst_start_state" : "54", "Inst_end_state" : "55"},
+					{"ID" : "128", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_output_fu_775", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4", "Inst_start_state" : "63", "Inst_end_state" : "64"},
+					{"ID" : "131", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_12_fu_798", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4", "Inst_start_state" : "66", "Inst_end_state" : "67"},
+					{"ID" : "139", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_19_fu_826", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4", "Inst_start_state" : "68", "Inst_end_state" : "69"}]},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3", "Type" : "Memory", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "62", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_25_fu_575", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3", "Inst_start_state" : "3", "Inst_end_state" : "4"},
+					{"ID" : "71", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_norm11_fu_617", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3", "Inst_start_state" : "32", "Inst_end_state" : "33"},
+					{"ID" : "77", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_norm_fu_652", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3", "Inst_start_state" : "51", "Inst_end_state" : "52"},
+					{"ID" : "80", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_3_fu_677", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3", "Inst_start_state" : "54", "Inst_end_state" : "55"},
+					{"ID" : "85", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_2_fu_701", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3", "Inst_start_state" : "54", "Inst_end_state" : "55"},
+					{"ID" : "88", "SubInstance" : "grp_float_mask_safe_softmax_fu_725", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3", "Inst_start_state" : "54", "Inst_end_state" : "55"},
+					{"ID" : "128", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_output_fu_775", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3", "Inst_start_state" : "63", "Inst_end_state" : "64"},
+					{"ID" : "131", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_12_fu_798", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3", "Inst_start_state" : "66", "Inst_end_state" : "67"},
+					{"ID" : "139", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_19_fu_826", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3", "Inst_start_state" : "68", "Inst_end_state" : "69"}]},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2", "Type" : "Memory", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "62", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_25_fu_575", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2", "Inst_start_state" : "3", "Inst_end_state" : "4"},
+					{"ID" : "71", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_norm11_fu_617", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2", "Inst_start_state" : "32", "Inst_end_state" : "33"},
+					{"ID" : "77", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_norm_fu_652", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2", "Inst_start_state" : "51", "Inst_end_state" : "52"},
+					{"ID" : "80", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_3_fu_677", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2", "Inst_start_state" : "54", "Inst_end_state" : "55"},
+					{"ID" : "85", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_2_fu_701", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2", "Inst_start_state" : "54", "Inst_end_state" : "55"},
+					{"ID" : "88", "SubInstance" : "grp_float_mask_safe_softmax_fu_725", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2", "Inst_start_state" : "54", "Inst_end_state" : "55"},
+					{"ID" : "128", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_output_fu_775", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2", "Inst_start_state" : "63", "Inst_end_state" : "64"},
+					{"ID" : "131", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_12_fu_798", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2", "Inst_start_state" : "66", "Inst_end_state" : "67"},
+					{"ID" : "139", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_19_fu_826", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2", "Inst_start_state" : "68", "Inst_end_state" : "69"}]},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1", "Type" : "Memory", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "62", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_25_fu_575", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1", "Inst_start_state" : "3", "Inst_end_state" : "4"},
+					{"ID" : "71", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_norm11_fu_617", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1", "Inst_start_state" : "32", "Inst_end_state" : "33"},
+					{"ID" : "77", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_norm_fu_652", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1", "Inst_start_state" : "51", "Inst_end_state" : "52"},
+					{"ID" : "80", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_3_fu_677", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1", "Inst_start_state" : "54", "Inst_end_state" : "55"},
+					{"ID" : "85", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_2_fu_701", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1", "Inst_start_state" : "54", "Inst_end_state" : "55"},
+					{"ID" : "88", "SubInstance" : "grp_float_mask_safe_softmax_fu_725", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1", "Inst_start_state" : "54", "Inst_end_state" : "55"},
+					{"ID" : "128", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_output_fu_775", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1", "Inst_start_state" : "63", "Inst_end_state" : "64"},
+					{"ID" : "131", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_12_fu_798", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1", "Inst_start_state" : "66", "Inst_end_state" : "67"},
+					{"ID" : "139", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_19_fu_826", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1", "Inst_start_state" : "68", "Inst_end_state" : "69"}]},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i", "Type" : "Memory", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "62", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_25_fu_575", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i", "Inst_start_state" : "3", "Inst_end_state" : "4"},
+					{"ID" : "71", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_norm11_fu_617", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i", "Inst_start_state" : "32", "Inst_end_state" : "33"},
+					{"ID" : "77", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_norm_fu_652", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i", "Inst_start_state" : "51", "Inst_end_state" : "52"},
+					{"ID" : "80", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_3_fu_677", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i", "Inst_start_state" : "54", "Inst_end_state" : "55"},
+					{"ID" : "85", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_2_fu_701", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i", "Inst_start_state" : "54", "Inst_end_state" : "55"},
+					{"ID" : "88", "SubInstance" : "grp_float_mask_safe_softmax_fu_725", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i", "Inst_start_state" : "54", "Inst_end_state" : "55"},
+					{"ID" : "128", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_output_fu_775", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i", "Inst_start_state" : "63", "Inst_end_state" : "64"},
+					{"ID" : "131", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_12_fu_798", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i", "Inst_start_state" : "66", "Inst_end_state" : "67"},
+					{"ID" : "139", "SubInstance" : "grp_activation_accelerator_Pipeline_loop_19_fu_826", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i", "Inst_start_state" : "68", "Inst_end_state" : "69"}]}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_U", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22_U", "Parent" : "0"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21_U", "Parent" : "0"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20_U", "Parent" : "0"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19_U", "Parent" : "0"},
+	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18_U", "Parent" : "0"},
+	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17_U", "Parent" : "0"},
+	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16_U", "Parent" : "0"},
+	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_15_U", "Parent" : "0"},
+	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_U", "Parent" : "0"},
+	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_U", "Parent" : "0"},
+	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_14_U", "Parent" : "0"},
+	{"ID" : "13", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_13_U", "Parent" : "0"},
+	{"ID" : "14", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_12_U", "Parent" : "0"},
+	{"ID" : "15", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_11_U", "Parent" : "0"},
+	{"ID" : "16", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_10_U", "Parent" : "0"},
+	{"ID" : "17", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_U", "Parent" : "0"},
+	{"ID" : "18", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_U", "Parent" : "0"},
+	{"ID" : "19", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_U", "Parent" : "0"},
+	{"ID" : "20", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_U", "Parent" : "0"},
+	{"ID" : "21", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_U", "Parent" : "0"},
+	{"ID" : "22", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_U", "Parent" : "0"},
+	{"ID" : "23", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_U", "Parent" : "0"},
+	{"ID" : "24", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_U", "Parent" : "0"},
+	{"ID" : "25", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.exp_vals_U", "Parent" : "0"},
+	{"ID" : "26", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.exp_vals_1_U", "Parent" : "0"},
+	{"ID" : "27", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.x_U", "Parent" : "0"},
+	{"ID" : "28", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.x_2_U", "Parent" : "0"},
+	{"ID" : "29", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.x_4_U", "Parent" : "0"},
+	{"ID" : "30", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.x_6_U", "Parent" : "0"},
+	{"ID" : "31", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.y_U", "Parent" : "0"},
+	{"ID" : "32", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.y_1_U", "Parent" : "0"},
+	{"ID" : "33", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.y_2_U", "Parent" : "0"},
+	{"ID" : "34", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.y_3_U", "Parent" : "0"},
+	{"ID" : "35", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_110_fu_323", "Parent" : "0", "Child" : ["36", "37"],
+		"CDFG" : "activation_accelerator_Pipeline_loop_110",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "32770", "EstimateLatencyMax" : "32770",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1026", "EstimateLatencyMax" : "1026",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -429,19 +657,30 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
+			{"Name" : "x_6", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "x_4", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "x_2", "Type" : "Memory", "Direction" : "O"},
 			{"Name" : "x", "Type" : "Memory", "Direction" : "O"},
-			{"Name" : "buf0", "Type" : "Memory", "Direction" : "I"}],
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16", "Type" : "Memory", "Direction" : "I"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_144_1", "PipelineType" : "UPC",
+			{"Name" : "loop_1", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter0", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_144_15_fu_214.flow_control_loop_pipe_sequential_init_U", "Parent" : "6"},
-	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_144_14_fu_222", "Parent" : "0", "Child" : ["9"],
-		"CDFG" : "activation_accelerator_Pipeline_VITIS_LOOP_144_14",
+	{"ID" : "36", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_110_fu_323.mux_83_16_1_1_U13", "Parent" : "35"},
+	{"ID" : "37", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_110_fu_323.flow_control_loop_pipe_sequential_init_U", "Parent" : "35"},
+	{"ID" : "38", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_18_fu_351", "Parent" : "0", "Child" : ["39", "40"],
+		"CDFG" : "activation_accelerator_Pipeline_loop_18",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "32770", "EstimateLatencyMax" : "32770",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1026", "EstimateLatencyMax" : "1026",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -450,19 +689,30 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
+			{"Name" : "x_6", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "x_4", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "x_2", "Type" : "Memory", "Direction" : "O"},
 			{"Name" : "x", "Type" : "Memory", "Direction" : "O"},
-			{"Name" : "buf0", "Type" : "Memory", "Direction" : "I"}],
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16", "Type" : "Memory", "Direction" : "I"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_144_1", "PipelineType" : "UPC",
+			{"Name" : "loop_1", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter0", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "9", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_144_14_fu_222.flow_control_loop_pipe_sequential_init_U", "Parent" : "8"},
-	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_144_13_fu_230", "Parent" : "0", "Child" : ["11"],
-		"CDFG" : "activation_accelerator_Pipeline_VITIS_LOOP_144_13",
+	{"ID" : "39", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_18_fu_351.mux_83_16_1_1_U61", "Parent" : "38"},
+	{"ID" : "40", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_18_fu_351.flow_control_loop_pipe_sequential_init_U", "Parent" : "38"},
+	{"ID" : "41", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_17_fu_379", "Parent" : "0", "Child" : ["42", "43"],
+		"CDFG" : "activation_accelerator_Pipeline_loop_17",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "32770", "EstimateLatencyMax" : "32770",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1026", "EstimateLatencyMax" : "1026",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -471,19 +721,30 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
+			{"Name" : "x_6", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "x_4", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "x_2", "Type" : "Memory", "Direction" : "O"},
 			{"Name" : "x", "Type" : "Memory", "Direction" : "O"},
-			{"Name" : "buf0", "Type" : "Memory", "Direction" : "I"}],
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16", "Type" : "Memory", "Direction" : "I"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_144_1", "PipelineType" : "UPC",
+			{"Name" : "loop_1", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter0", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "11", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_144_13_fu_230.flow_control_loop_pipe_sequential_init_U", "Parent" : "10"},
-	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_144_12_fu_238", "Parent" : "0", "Child" : ["13"],
-		"CDFG" : "activation_accelerator_Pipeline_VITIS_LOOP_144_12",
+	{"ID" : "42", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_17_fu_379.mux_83_16_1_1_U97", "Parent" : "41"},
+	{"ID" : "43", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_17_fu_379.flow_control_loop_pipe_sequential_init_U", "Parent" : "41"},
+	{"ID" : "44", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_16_fu_407", "Parent" : "0", "Child" : ["45", "46"],
+		"CDFG" : "activation_accelerator_Pipeline_loop_16",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "32770", "EstimateLatencyMax" : "32770",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1026", "EstimateLatencyMax" : "1026",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -492,19 +753,30 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
+			{"Name" : "x_6", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "x_4", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "x_2", "Type" : "Memory", "Direction" : "O"},
 			{"Name" : "x", "Type" : "Memory", "Direction" : "O"},
-			{"Name" : "buf0", "Type" : "Memory", "Direction" : "I"}],
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16", "Type" : "Memory", "Direction" : "I"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_144_1", "PipelineType" : "UPC",
+			{"Name" : "loop_1", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter0", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "13", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_144_12_fu_238.flow_control_loop_pipe_sequential_init_U", "Parent" : "12"},
-	{"ID" : "14", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_292_5_fu_246", "Parent" : "0", "Child" : ["15"],
-		"CDFG" : "activation_accelerator_Pipeline_VITIS_LOOP_292_5",
+	{"ID" : "45", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_16_fu_407.mux_83_16_1_1_U128", "Parent" : "44"},
+	{"ID" : "46", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_16_fu_407.flow_control_loop_pipe_sequential_init_U", "Parent" : "44"},
+	{"ID" : "47", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_14_fu_435", "Parent" : "0", "Child" : ["48", "49"],
+		"CDFG" : "activation_accelerator_Pipeline_loop_14",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "32770", "EstimateLatencyMax" : "32770",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1026", "EstimateLatencyMax" : "1026",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -513,57 +785,30 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "buf2", "Type" : "Memory", "Direction" : "O"}],
-		"Loop" : [
-			{"Name" : "VITIS_LOOP_292_5", "PipelineType" : "NotSupport"}]},
-	{"ID" : "15", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_292_5_fu_246.flow_control_loop_pipe_sequential_init_U", "Parent" : "14"},
-	{"ID" : "16", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_283_4_fu_252", "Parent" : "0", "Child" : ["17"],
-		"CDFG" : "activation_accelerator_Pipeline_VITIS_LOOP_283_4",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "32770", "EstimateLatencyMax" : "32770",
-		"Combinational" : "0",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"IsBlackBox" : "0",
-		"Port" : [
-			{"Name" : "buf2", "Type" : "Memory", "Direction" : "O"}],
-		"Loop" : [
-			{"Name" : "VITIS_LOOP_283_4", "PipelineType" : "NotSupport"}]},
-	{"ID" : "17", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_283_4_fu_252.flow_control_loop_pipe_sequential_init_U", "Parent" : "16"},
-	{"ID" : "18", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_144_1_fu_258", "Parent" : "0", "Child" : ["19"],
-		"CDFG" : "activation_accelerator_Pipeline_VITIS_LOOP_144_1",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "32770", "EstimateLatencyMax" : "32770",
-		"Combinational" : "0",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"IsBlackBox" : "0",
-		"Port" : [
+			{"Name" : "x_6", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "x_4", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "x_2", "Type" : "Memory", "Direction" : "O"},
 			{"Name" : "x", "Type" : "Memory", "Direction" : "O"},
-			{"Name" : "buf0", "Type" : "Memory", "Direction" : "I"}],
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16", "Type" : "Memory", "Direction" : "I"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_144_1", "PipelineType" : "UPC",
+			{"Name" : "loop_1", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter0", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "19", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_144_1_fu_258.flow_control_loop_pipe_sequential_init_U", "Parent" : "18"},
-	{"ID" : "20", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_144_11_fu_266", "Parent" : "0", "Child" : ["21"],
-		"CDFG" : "activation_accelerator_Pipeline_VITIS_LOOP_144_11",
+	{"ID" : "48", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_14_fu_435.mux_83_16_1_1_U157", "Parent" : "47"},
+	{"ID" : "49", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_14_fu_435.flow_control_loop_pipe_sequential_init_U", "Parent" : "47"},
+	{"ID" : "50", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_15_fu_463", "Parent" : "0", "Child" : ["51", "52"],
+		"CDFG" : "activation_accelerator_Pipeline_loop_15",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "32770", "EstimateLatencyMax" : "32770",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1026", "EstimateLatencyMax" : "1026",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -572,19 +817,126 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
+			{"Name" : "y_3", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "y_2", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "y_1", "Type" : "Memory", "Direction" : "O"},
 			{"Name" : "y", "Type" : "Memory", "Direction" : "O"},
-			{"Name" : "buf1", "Type" : "Memory", "Direction" : "I"}],
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_15", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_14", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_13", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_12", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_11", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_10", "Type" : "Memory", "Direction" : "I"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_144_1", "PipelineType" : "UPC",
+			{"Name" : "loop_1", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter0", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "21", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_144_11_fu_266.flow_control_loop_pipe_sequential_init_U", "Parent" : "20"},
-	{"ID" : "22", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_316_6_fu_274", "Parent" : "0", "Child" : ["23"],
-		"CDFG" : "activation_accelerator_Pipeline_VITIS_LOOP_316_6",
+	{"ID" : "51", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_15_fu_463.mux_83_16_1_1_U170", "Parent" : "50"},
+	{"ID" : "52", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_15_fu_463.flow_control_loop_pipe_sequential_init_U", "Parent" : "50"},
+	{"ID" : "53", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_13_fu_491", "Parent" : "0", "Child" : ["54", "55"],
+		"CDFG" : "activation_accelerator_Pipeline_loop_13",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "32771", "EstimateLatencyMax" : "32771",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1026", "EstimateLatencyMax" : "1026",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"IsBlackBox" : "0",
+		"Port" : [
+			{"Name" : "x_6", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "x_4", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "x_2", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "x", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16", "Type" : "Memory", "Direction" : "I"}],
+		"Loop" : [
+			{"Name" : "loop_1", "PipelineType" : "UPC",
+				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter0", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
+	{"ID" : "54", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_13_fu_491.mux_83_16_1_1_U249", "Parent" : "53"},
+	{"ID" : "55", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_13_fu_491.flow_control_loop_pipe_sequential_init_U", "Parent" : "53"},
+	{"ID" : "56", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_1_fu_519", "Parent" : "0", "Child" : ["57", "58"],
+		"CDFG" : "activation_accelerator_Pipeline_loop_1",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1026", "EstimateLatencyMax" : "1026",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"IsBlackBox" : "0",
+		"Port" : [
+			{"Name" : "x_6", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "x_4", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "x_2", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "x", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16", "Type" : "Memory", "Direction" : "I"}],
+		"Loop" : [
+			{"Name" : "loop_1", "PipelineType" : "UPC",
+				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter0", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
+	{"ID" : "57", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_1_fu_519.mux_83_16_1_1_U296", "Parent" : "56"},
+	{"ID" : "58", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_1_fu_519.flow_control_loop_pipe_sequential_init_U", "Parent" : "56"},
+	{"ID" : "59", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_11_fu_547", "Parent" : "0", "Child" : ["60", "61"],
+		"CDFG" : "activation_accelerator_Pipeline_loop_11",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1026", "EstimateLatencyMax" : "1026",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"IsBlackBox" : "0",
+		"Port" : [
+			{"Name" : "y_3", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "y_2", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "y_1", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "y", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_15", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_14", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_13", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_12", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_11", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_10", "Type" : "Memory", "Direction" : "I"}],
+		"Loop" : [
+			{"Name" : "loop_1", "PipelineType" : "UPC",
+				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter0", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
+	{"ID" : "60", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_11_fu_547.mux_83_16_1_1_U309", "Parent" : "59"},
+	{"ID" : "61", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_11_fu_547.flow_control_loop_pipe_sequential_init_U", "Parent" : "59"},
+	{"ID" : "62", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_25_fu_575", "Parent" : "0", "Child" : ["63", "64"],
+		"CDFG" : "activation_accelerator_Pipeline_loop_25",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1027", "EstimateLatencyMax" : "1027",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -596,19 +948,27 @@ set RtlHierarchyInfo {[
 			{"Name" : "gmem2", "Type" : "MAXI", "Direction" : "O",
 				"BlockSignal" : [
 					{"Name" : "gmem2_blk_n_W", "Type" : "RtlSignal"}]},
-			{"Name" : "sext_ln316", "Type" : "None", "Direction" : "I"},
-			{"Name" : "buf2", "Type" : "Memory", "Direction" : "I"}],
+			{"Name" : "sext_ln569", "Type" : "None", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i", "Type" : "Memory", "Direction" : "I"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_316_6", "PipelineType" : "UPC",
+			{"Name" : "loop_25", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter2", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter2", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "23", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_316_6_fu_274.flow_control_loop_pipe_sequential_init_U", "Parent" : "22"},
-	{"ID" : "24", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_185_1_fu_283", "Parent" : "0", "Child" : ["25"],
-		"CDFG" : "activation_accelerator_Pipeline_VITIS_LOOP_185_1",
+	{"ID" : "63", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_25_fu_575.mux_83_16_1_1_U1", "Parent" : "62"},
+	{"ID" : "64", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_25_fu_575.flow_control_loop_pipe_sequential_init_U", "Parent" : "62"},
+	{"ID" : "65", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_mean_fu_598", "Parent" : "0", "Child" : ["66", "67"],
+		"CDFG" : "activation_accelerator_Pipeline_loop_mean",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "98308", "EstimateLatencyMax" : "98308",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "3075", "EstimateLatencyMax" : "3075",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -618,18 +978,22 @@ set RtlHierarchyInfo {[
 		"IsBlackBox" : "0",
 		"Port" : [
 			{"Name" : "x", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "x_2", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "x_4", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "x_6", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "sum_out", "Type" : "Vld", "Direction" : "O"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_185_1", "PipelineType" : "UPC",
-				"LoopDec" : {"FSMBitwidth" : "3", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage2", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage2_subdone", "QuitState" : "ap_ST_fsm_pp0_stage2", "QuitStateIter" : "ap_enable_reg_pp0_iter1", "QuitStateBlock" : "ap_block_pp0_stage2_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "25", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_185_1_fu_283.flow_control_loop_pipe_sequential_init_U", "Parent" : "24"},
-	{"ID" : "26", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_190_2_fu_289", "Parent" : "0", "Child" : ["27"],
-		"CDFG" : "activation_accelerator_Pipeline_VITIS_LOOP_190_2",
+			{"Name" : "loop_mean", "PipelineType" : "UPC",
+				"LoopDec" : {"FSMBitwidth" : "3", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage1", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage1_subdone", "QuitState" : "ap_ST_fsm_pp0_stage1", "QuitStateIter" : "ap_enable_reg_pp0_iter1", "QuitStateBlock" : "ap_block_pp0_stage1_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
+	{"ID" : "66", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_mean_fu_598.mux_42_32_1_1_U27", "Parent" : "65"},
+	{"ID" : "67", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_mean_fu_598.flow_control_loop_pipe_sequential_init_U", "Parent" : "65"},
+	{"ID" : "68", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_var_fu_607", "Parent" : "0", "Child" : ["69", "70"],
+		"CDFG" : "activation_accelerator_Pipeline_loop_var",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "98315", "EstimateLatencyMax" : "98315",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "3083", "EstimateLatencyMax" : "3083",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -639,19 +1003,23 @@ set RtlHierarchyInfo {[
 		"IsBlackBox" : "0",
 		"Port" : [
 			{"Name" : "x", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "x_2", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "x_4", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "x_6", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "mean", "Type" : "None", "Direction" : "I"},
 			{"Name" : "var_1_out", "Type" : "Vld", "Direction" : "O"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_190_2", "PipelineType" : "UPC",
+			{"Name" : "loop_var", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "3", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter4", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter4", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "27", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_190_2_fu_289.flow_control_loop_pipe_sequential_init_U", "Parent" : "26"},
-	{"ID" : "28", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_196_3_fu_296", "Parent" : "0", "Child" : ["29"],
-		"CDFG" : "activation_accelerator_Pipeline_VITIS_LOOP_196_3",
+	{"ID" : "69", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_var_fu_607.mux_42_32_1_1_U37", "Parent" : "68"},
+	{"ID" : "70", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_var_fu_607.flow_control_loop_pipe_sequential_init_U", "Parent" : "68"},
+	{"ID" : "71", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_norm11_fu_617", "Parent" : "0", "Child" : ["72", "73"],
+		"CDFG" : "activation_accelerator_Pipeline_loop_norm11",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "32784", "EstimateLatencyMax" : "32784",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1040", "EstimateLatencyMax" : "1040",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -661,20 +1029,31 @@ set RtlHierarchyInfo {[
 		"IsBlackBox" : "0",
 		"Port" : [
 			{"Name" : "x", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "x_2", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "x_4", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "x_6", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "mean", "Type" : "None", "Direction" : "I"},
 			{"Name" : "stddev", "Type" : "None", "Direction" : "I"},
-			{"Name" : "buf2", "Type" : "Memory", "Direction" : "O"}],
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i", "Type" : "Memory", "Direction" : "O"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_196_3", "PipelineType" : "UPC",
+			{"Name" : "loop_norm", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter15", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter15", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "29", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_196_3_fu_296.flow_control_loop_pipe_sequential_init_U", "Parent" : "28"},
-	{"ID" : "30", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_170_1_fu_305", "Parent" : "0", "Child" : ["31"],
-		"CDFG" : "activation_accelerator_Pipeline_VITIS_LOOP_170_1",
+	{"ID" : "72", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_norm11_fu_617.mux_42_32_1_1_U46", "Parent" : "71"},
+	{"ID" : "73", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_norm11_fu_617.flow_control_loop_pipe_sequential_init_U", "Parent" : "71"},
+	{"ID" : "74", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_sum_fu_643", "Parent" : "0", "Child" : ["75", "76"],
+		"CDFG" : "activation_accelerator_Pipeline_loop_sum",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "98311", "EstimateLatencyMax" : "98311",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "3079", "EstimateLatencyMax" : "3079",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -684,18 +1063,22 @@ set RtlHierarchyInfo {[
 		"IsBlackBox" : "0",
 		"Port" : [
 			{"Name" : "x", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "x_2", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "x_4", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "x_6", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "sum_sq_out", "Type" : "Vld", "Direction" : "O"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_170_1", "PipelineType" : "UPC",
+			{"Name" : "loop_sum", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "3", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage2", "LastStateIter" : "ap_enable_reg_pp0_iter2", "LastStateBlock" : "ap_block_pp0_stage2_subdone", "QuitState" : "ap_ST_fsm_pp0_stage2", "QuitStateIter" : "ap_enable_reg_pp0_iter2", "QuitStateBlock" : "ap_block_pp0_stage2_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "31", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_170_1_fu_305.flow_control_loop_pipe_sequential_init_U", "Parent" : "30"},
-	{"ID" : "32", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_175_2_fu_311", "Parent" : "0", "Child" : ["33"],
-		"CDFG" : "activation_accelerator_Pipeline_VITIS_LOOP_175_2",
+	{"ID" : "75", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_sum_fu_643.mux_42_32_1_1_U76", "Parent" : "74"},
+	{"ID" : "76", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_sum_fu_643.flow_control_loop_pipe_sequential_init_U", "Parent" : "74"},
+	{"ID" : "77", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_norm_fu_652", "Parent" : "0", "Child" : ["78", "79"],
+		"CDFG" : "activation_accelerator_Pipeline_loop_norm",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "32780", "EstimateLatencyMax" : "32780",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1036", "EstimateLatencyMax" : "1036",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -705,19 +1088,30 @@ set RtlHierarchyInfo {[
 		"IsBlackBox" : "0",
 		"Port" : [
 			{"Name" : "x", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "x_2", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "x_4", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "x_6", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "rms", "Type" : "None", "Direction" : "I"},
-			{"Name" : "buf2", "Type" : "Memory", "Direction" : "O"}],
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i", "Type" : "Memory", "Direction" : "O"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_175_2", "PipelineType" : "UPC",
+			{"Name" : "loop_norm", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter11", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter11", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "33", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_175_2_fu_311.flow_control_loop_pipe_sequential_init_U", "Parent" : "32"},
-	{"ID" : "34", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_159_1_fu_319", "Parent" : "0", "Child" : ["35", "36", "37", "38"],
-		"CDFG" : "activation_accelerator_Pipeline_VITIS_LOOP_159_1",
+	{"ID" : "78", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_norm_fu_652.mux_42_32_1_1_U83", "Parent" : "77"},
+	{"ID" : "79", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_norm_fu_652.flow_control_loop_pipe_sequential_init_U", "Parent" : "77"},
+	{"ID" : "80", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_3_fu_677", "Parent" : "0", "Child" : ["81", "82", "83", "84"],
+		"CDFG" : "activation_accelerator_Pipeline_loop_3",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "32794", "EstimateLatencyMax" : "32794",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1050", "EstimateLatencyMax" : "1050",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -727,21 +1121,31 @@ set RtlHierarchyInfo {[
 		"IsBlackBox" : "0",
 		"Port" : [
 			{"Name" : "x", "Type" : "Memory", "Direction" : "I"},
-			{"Name" : "buf2", "Type" : "Memory", "Direction" : "O"}],
+			{"Name" : "x_2", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "x_4", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "x_6", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i", "Type" : "Memory", "Direction" : "O"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_159_1", "PipelineType" : "UPC",
+			{"Name" : "loop_3", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter25", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter25", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "35", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_159_1_fu_319.fadd_32ns_32ns_32_4_full_dsp_1_U32", "Parent" : "34"},
-	{"ID" : "36", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_159_1_fu_319.fdiv_32ns_32ns_32_9_no_dsp_1_U34", "Parent" : "34"},
-	{"ID" : "37", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_159_1_fu_319.fexp_32ns_32ns_32_8_full_dsp_1_U35", "Parent" : "34"},
-	{"ID" : "38", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_159_1_fu_319.flow_control_loop_pipe_sequential_init_U", "Parent" : "34"},
-	{"ID" : "39", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_151_1_fu_326", "Parent" : "0", "Child" : ["40", "41"],
-		"CDFG" : "activation_accelerator_Pipeline_VITIS_LOOP_151_1",
+	{"ID" : "81", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_3_fu_677.fdiv_32ns_32ns_32_9_no_dsp_1_U112", "Parent" : "80"},
+	{"ID" : "82", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_3_fu_677.fexp_32ns_32ns_32_8_full_dsp_1_U113", "Parent" : "80"},
+	{"ID" : "83", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_3_fu_677.mux_42_32_1_1_U114", "Parent" : "80"},
+	{"ID" : "84", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_3_fu_677.flow_control_loop_pipe_sequential_init_U", "Parent" : "80"},
+	{"ID" : "85", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_2_fu_701", "Parent" : "0", "Child" : ["86", "87"],
+		"CDFG" : "activation_accelerator_Pipeline_loop_2",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "32791", "EstimateLatencyMax" : "32791",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1047", "EstimateLatencyMax" : "1047",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -751,19 +1155,375 @@ set RtlHierarchyInfo {[
 		"IsBlackBox" : "0",
 		"Port" : [
 			{"Name" : "x", "Type" : "Memory", "Direction" : "I"},
-			{"Name" : "buf2", "Type" : "Memory", "Direction" : "O"}],
+			{"Name" : "x_2", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "x_4", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "x_6", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i", "Type" : "Memory", "Direction" : "O"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_151_1", "PipelineType" : "UPC",
+			{"Name" : "loop_2", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter22", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter22", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "40", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_151_1_fu_326.fexp_32ns_32ns_32_8_full_dsp_1_U44", "Parent" : "39"},
-	{"ID" : "41", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_151_1_fu_326.flow_control_loop_pipe_sequential_init_U", "Parent" : "39"},
-	{"ID" : "42", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_205_1_fu_333", "Parent" : "0", "Child" : ["43"],
-		"CDFG" : "activation_accelerator_Pipeline_VITIS_LOOP_205_1",
+	{"ID" : "86", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_2_fu_701.mux_42_32_1_1_U144", "Parent" : "85"},
+	{"ID" : "87", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_2_fu_701.flow_control_loop_pipe_sequential_init_U", "Parent" : "85"},
+	{"ID" : "88", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_float_mask_safe_softmax_fu_725", "Parent" : "0", "Child" : ["89", "95", "97", "99", "104", "106", "108", "111", "112", "113", "114", "115", "116", "117", "118", "119", "120"],
+		"CDFG" : "float_mask_safe_softmax",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "0",
+		"Pipeline" : "Dataflow", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "1",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "3100", "EstimateLatencyMax" : "3100",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "1",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"IsBlackBox" : "0",
+		"InputProcess" : [
+			{"ID" : "89", "Name" : "float_mask_safe_softmax_Loop_loop_18_proc5_U0"}],
+		"OutputProcess" : [
+			{"ID" : "108", "Name" : "float_mask_safe_softmax_Loop_loop_22_proc7_U0"}],
+		"Port" : [
+			{"Name" : "x_0", "Type" : "Memory", "Direction" : "I",
+				"SubConnect" : [
+					{"ID" : "89", "SubInstance" : "float_mask_safe_softmax_Loop_loop_18_proc5_U0", "Port" : "x_0"}]},
+			{"Name" : "x_1", "Type" : "Memory", "Direction" : "I",
+				"SubConnect" : [
+					{"ID" : "89", "SubInstance" : "float_mask_safe_softmax_Loop_loop_18_proc5_U0", "Port" : "x_1"}]},
+			{"Name" : "x_2", "Type" : "Memory", "Direction" : "I",
+				"SubConnect" : [
+					{"ID" : "89", "SubInstance" : "float_mask_safe_softmax_Loop_loop_18_proc5_U0", "Port" : "x_2"}]},
+			{"Name" : "x_3", "Type" : "Memory", "Direction" : "I",
+				"SubConnect" : [
+					{"ID" : "89", "SubInstance" : "float_mask_safe_softmax_Loop_loop_18_proc5_U0", "Port" : "x_3"}]},
+			{"Name" : "mask_0", "Type" : "Memory", "Direction" : "I",
+				"SubConnect" : [
+					{"ID" : "89", "SubInstance" : "float_mask_safe_softmax_Loop_loop_18_proc5_U0", "Port" : "mask_0"}]},
+			{"Name" : "mask_1", "Type" : "Memory", "Direction" : "I",
+				"SubConnect" : [
+					{"ID" : "89", "SubInstance" : "float_mask_safe_softmax_Loop_loop_18_proc5_U0", "Port" : "mask_1"}]},
+			{"Name" : "mask_2", "Type" : "Memory", "Direction" : "I",
+				"SubConnect" : [
+					{"ID" : "89", "SubInstance" : "float_mask_safe_softmax_Loop_loop_18_proc5_U0", "Port" : "mask_2"}]},
+			{"Name" : "mask_3", "Type" : "Memory", "Direction" : "I",
+				"SubConnect" : [
+					{"ID" : "89", "SubInstance" : "float_mask_safe_softmax_Loop_loop_18_proc5_U0", "Port" : "mask_3"}]},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7", "Type" : "Memory", "Direction" : "O",
+				"SubConnect" : [
+					{"ID" : "108", "SubInstance" : "float_mask_safe_softmax_Loop_loop_22_proc7_U0", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7"}]},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6", "Type" : "Memory", "Direction" : "O",
+				"SubConnect" : [
+					{"ID" : "108", "SubInstance" : "float_mask_safe_softmax_Loop_loop_22_proc7_U0", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6"}]},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5", "Type" : "Memory", "Direction" : "O",
+				"SubConnect" : [
+					{"ID" : "108", "SubInstance" : "float_mask_safe_softmax_Loop_loop_22_proc7_U0", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5"}]},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4", "Type" : "Memory", "Direction" : "O",
+				"SubConnect" : [
+					{"ID" : "108", "SubInstance" : "float_mask_safe_softmax_Loop_loop_22_proc7_U0", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4"}]},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3", "Type" : "Memory", "Direction" : "O",
+				"SubConnect" : [
+					{"ID" : "108", "SubInstance" : "float_mask_safe_softmax_Loop_loop_22_proc7_U0", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3"}]},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2", "Type" : "Memory", "Direction" : "O",
+				"SubConnect" : [
+					{"ID" : "108", "SubInstance" : "float_mask_safe_softmax_Loop_loop_22_proc7_U0", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2"}]},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1", "Type" : "Memory", "Direction" : "O",
+				"SubConnect" : [
+					{"ID" : "108", "SubInstance" : "float_mask_safe_softmax_Loop_loop_22_proc7_U0", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1"}]},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i", "Type" : "Memory", "Direction" : "O",
+				"SubConnect" : [
+					{"ID" : "108", "SubInstance" : "float_mask_safe_softmax_Loop_loop_22_proc7_U0", "Port" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i"}]}]},
+	{"ID" : "89", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_float_mask_safe_softmax_fu_725.float_mask_safe_softmax_Loop_loop_18_proc5_U0", "Parent" : "88", "Child" : ["90", "91", "92", "93", "94"],
+		"CDFG" : "float_mask_safe_softmax_Loop_loop_18_proc5",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "1",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1031", "EstimateLatencyMax" : "1031",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "1",
+		"HasNonBlockingOperation" : "0",
+		"IsBlackBox" : "0",
+		"Port" : [
+			{"Name" : "x_0", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "x_1", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "x_2", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "x_3", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "mask_0", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "mask_1", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "mask_2", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "mask_3", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "x_mask_stream", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["99"], "DependentChan" : "111", "DependentChanDepth" : "32768", "DependentChanType" : "0",
+				"BlockSignal" : [
+					{"Name" : "x_mask_stream_blk_n", "Type" : "RtlSignal"}]}],
+		"Loop" : [
+			{"Name" : "loop_18", "PipelineType" : "UPC",
+				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter6", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter6", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "1"}}]},
+	{"ID" : "90", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_float_mask_safe_softmax_fu_725.float_mask_safe_softmax_Loop_loop_18_proc5_U0.fmul_32ns_32ns_32_3_max_dsp_1_U183", "Parent" : "89"},
+	{"ID" : "91", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_float_mask_safe_softmax_fu_725.float_mask_safe_softmax_Loop_loop_18_proc5_U0.fcmp_32ns_32ns_1_2_no_dsp_1_U184", "Parent" : "89"},
+	{"ID" : "92", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_float_mask_safe_softmax_fu_725.float_mask_safe_softmax_Loop_loop_18_proc5_U0.mux_42_32_1_1_U185", "Parent" : "89"},
+	{"ID" : "93", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_float_mask_safe_softmax_fu_725.float_mask_safe_softmax_Loop_loop_18_proc5_U0.mux_42_32_1_1_U186", "Parent" : "89"},
+	{"ID" : "94", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_float_mask_safe_softmax_fu_725.float_mask_safe_softmax_Loop_loop_18_proc5_U0.flow_control_loop_pipe_U", "Parent" : "89"},
+	{"ID" : "95", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_float_mask_safe_softmax_fu_725.float_mask_safe_softmax_Block_float_mask_safe_softmax_for_cond_i_exit_proc_U0", "Parent" : "88", "Child" : ["96"],
+		"CDFG" : "float_mask_safe_softmax_Block_float_mask_safe_softmax_for_cond_i_exit_proc",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1", "EstimateLatencyMax" : "1",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "1",
+		"HasNonBlockingOperation" : "0",
+		"IsBlackBox" : "0",
+		"Port" : [
+			{"Name" : "p_read", "Type" : "None", "Direction" : "I", "DependentProc" : ["89"], "DependentChan" : "112", "DependentChanDepth" : "2", "DependentChanType" : "1"}]},
+	{"ID" : "96", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_float_mask_safe_softmax_fu_725.float_mask_safe_softmax_Block_float_mask_safe_softmax_for_cond_i_exit_proc_U0.max_val_stream_fifo_U", "Parent" : "95"},
+	{"ID" : "97", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_float_mask_safe_softmax_fu_725.float_mask_safe_softmax_Loop_loop_max_broadcast_proc_U0", "Parent" : "88", "Child" : ["98"],
+		"CDFG" : "float_mask_safe_softmax_Loop_loop_max_broadcast_proc",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1026", "EstimateLatencyMax" : "1026",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "1",
+		"HasNonBlockingOperation" : "0",
+		"IsBlackBox" : "0",
+		"Port" : [
+			{"Name" : "p_read", "Type" : "None", "Direction" : "I", "DependentProc" : ["95"], "DependentChan" : "113", "DependentChanDepth" : "2", "DependentChanType" : "1"},
+			{"Name" : "max_broadcast_stream", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["99"], "DependentChan" : "114", "DependentChanDepth" : "32768", "DependentChanType" : "0",
+				"BlockSignal" : [
+					{"Name" : "max_broadcast_stream_blk_n", "Type" : "RtlSignal"}]}],
+		"Loop" : [
+			{"Name" : "loop_max_broadcast", "PipelineType" : "UPC",
+				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter0", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "1"}}]},
+	{"ID" : "98", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_float_mask_safe_softmax_fu_725.float_mask_safe_softmax_Loop_loop_max_broadcast_proc_U0.flow_control_loop_pipe_U", "Parent" : "97"},
+	{"ID" : "99", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_float_mask_safe_softmax_fu_725.float_mask_safe_softmax_Loop_loop_20_proc6_U0", "Parent" : "88", "Child" : ["100", "101", "102", "103"],
+		"CDFG" : "float_mask_safe_softmax_Loop_loop_20_proc6",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "1",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "3088", "EstimateLatencyMax" : "3088",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "1",
+		"HasNonBlockingOperation" : "0",
+		"IsBlackBox" : "0",
+		"StartSource" : "89",
+		"StartFifo" : "start_for_float_mask_safe_softmax_Loop_loop_20_proc6_U0_U",
+		"Port" : [
+			{"Name" : "x_mask_stream", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["89"], "DependentChan" : "111", "DependentChanDepth" : "32768", "DependentChanType" : "0",
+				"BlockSignal" : [
+					{"Name" : "x_mask_stream_blk_n", "Type" : "RtlSignal"}]},
+			{"Name" : "max_broadcast_stream", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["97"], "DependentChan" : "114", "DependentChanDepth" : "32768", "DependentChanType" : "0",
+				"BlockSignal" : [
+					{"Name" : "max_broadcast_stream_blk_n", "Type" : "RtlSignal"}]},
+			{"Name" : "exp_stream", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["108"], "DependentChan" : "115", "DependentChanDepth" : "32768", "DependentChanType" : "0",
+				"BlockSignal" : [
+					{"Name" : "exp_stream_blk_n", "Type" : "RtlSignal"}]}],
+		"Loop" : [
+			{"Name" : "loop_20", "PipelineType" : "UPC",
+				"LoopDec" : {"FSMBitwidth" : "3", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage2", "LastStateIter" : "ap_enable_reg_pp0_iter5", "LastStateBlock" : "ap_block_pp0_stage2_subdone", "QuitState" : "ap_ST_fsm_pp0_stage2", "QuitStateIter" : "ap_enable_reg_pp0_iter5", "QuitStateBlock" : "ap_block_pp0_stage2_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "1"}}]},
+	{"ID" : "100", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_float_mask_safe_softmax_fu_725.float_mask_safe_softmax_Loop_loop_20_proc6_U0.fsub_32ns_32ns_32_4_full_dsp_1_U201", "Parent" : "99"},
+	{"ID" : "101", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_float_mask_safe_softmax_fu_725.float_mask_safe_softmax_Loop_loop_20_proc6_U0.fadd_32ns_32ns_32_4_no_dsp_1_U202", "Parent" : "99"},
+	{"ID" : "102", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_float_mask_safe_softmax_fu_725.float_mask_safe_softmax_Loop_loop_20_proc6_U0.fexp_32ns_32ns_32_8_full_dsp_1_U203", "Parent" : "99"},
+	{"ID" : "103", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_float_mask_safe_softmax_fu_725.float_mask_safe_softmax_Loop_loop_20_proc6_U0.flow_control_loop_pipe_U", "Parent" : "99"},
+	{"ID" : "104", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_float_mask_safe_softmax_fu_725.float_mask_safe_softmax_Block_for_end26_proc_U0", "Parent" : "88", "Child" : ["105"],
+		"CDFG" : "float_mask_safe_softmax_Block_for_end26_proc",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1", "EstimateLatencyMax" : "1",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "1",
+		"HasNonBlockingOperation" : "0",
+		"IsBlackBox" : "0",
+		"Port" : [
+			{"Name" : "p_read", "Type" : "None", "Direction" : "I", "DependentProc" : ["99"], "DependentChan" : "116", "DependentChanDepth" : "2", "DependentChanType" : "1"}]},
+	{"ID" : "105", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_float_mask_safe_softmax_fu_725.float_mask_safe_softmax_Block_for_end26_proc_U0.sum_stream_fifo_U", "Parent" : "104"},
+	{"ID" : "106", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_float_mask_safe_softmax_fu_725.float_mask_safe_softmax_Loop_loop_sum_broadcast_proc_U0", "Parent" : "88", "Child" : ["107"],
+		"CDFG" : "float_mask_safe_softmax_Loop_loop_sum_broadcast_proc",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1026", "EstimateLatencyMax" : "1026",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "1",
+		"HasNonBlockingOperation" : "0",
+		"IsBlackBox" : "0",
+		"Port" : [
+			{"Name" : "p_read", "Type" : "None", "Direction" : "I", "DependentProc" : ["104"], "DependentChan" : "117", "DependentChanDepth" : "2", "DependentChanType" : "1"},
+			{"Name" : "sum_broadcast_stream", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["108"], "DependentChan" : "118", "DependentChanDepth" : "32768", "DependentChanType" : "0",
+				"BlockSignal" : [
+					{"Name" : "sum_broadcast_stream_blk_n", "Type" : "RtlSignal"}]}],
+		"Loop" : [
+			{"Name" : "loop_sum_broadcast", "PipelineType" : "UPC",
+				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter0", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "1"}}]},
+	{"ID" : "107", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_float_mask_safe_softmax_fu_725.float_mask_safe_softmax_Loop_loop_sum_broadcast_proc_U0.flow_control_loop_pipe_U", "Parent" : "106"},
+	{"ID" : "108", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_float_mask_safe_softmax_fu_725.float_mask_safe_softmax_Loop_loop_22_proc7_U0", "Parent" : "88", "Child" : ["109", "110"],
+		"CDFG" : "float_mask_safe_softmax_Loop_loop_22_proc7",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1036", "EstimateLatencyMax" : "1036",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "1",
+		"HasNonBlockingOperation" : "0",
+		"IsBlackBox" : "0",
+		"StartSource" : "99",
+		"StartFifo" : "start_for_float_mask_safe_softmax_Loop_loop_22_proc7_U0_U",
+		"Port" : [
+			{"Name" : "exp_stream", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["99"], "DependentChan" : "115", "DependentChanDepth" : "32768", "DependentChanType" : "0",
+				"BlockSignal" : [
+					{"Name" : "exp_stream_blk_n", "Type" : "RtlSignal"}]},
+			{"Name" : "sum_broadcast_stream", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["106"], "DependentChan" : "118", "DependentChanDepth" : "32768", "DependentChanType" : "0",
+				"BlockSignal" : [
+					{"Name" : "sum_broadcast_stream_blk_n", "Type" : "RtlSignal"}]},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i", "Type" : "Memory", "Direction" : "O"}],
+		"Loop" : [
+			{"Name" : "loop_22", "PipelineType" : "UPC",
+				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter11", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter11", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "1"}}]},
+	{"ID" : "109", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_float_mask_safe_softmax_fu_725.float_mask_safe_softmax_Loop_loop_22_proc7_U0.fdiv_32ns_32ns_32_9_no_dsp_1_U212", "Parent" : "108"},
+	{"ID" : "110", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_float_mask_safe_softmax_fu_725.float_mask_safe_softmax_Loop_loop_22_proc7_U0.flow_control_loop_pipe_U", "Parent" : "108"},
+	{"ID" : "111", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_float_mask_safe_softmax_fu_725.x_mask_stream_U", "Parent" : "88"},
+	{"ID" : "112", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_float_mask_safe_softmax_fu_725.max_val_loc_channel_U", "Parent" : "88"},
+	{"ID" : "113", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_float_mask_safe_softmax_fu_725.max_val_to_broadcast_loc_channel_U", "Parent" : "88"},
+	{"ID" : "114", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_float_mask_safe_softmax_fu_725.max_broadcast_stream_U", "Parent" : "88"},
+	{"ID" : "115", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_float_mask_safe_softmax_fu_725.exp_stream_U", "Parent" : "88"},
+	{"ID" : "116", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_float_mask_safe_softmax_fu_725.sum_loc_channel_U", "Parent" : "88"},
+	{"ID" : "117", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_float_mask_safe_softmax_fu_725.sum_to_broadcast_loc_channel_U", "Parent" : "88"},
+	{"ID" : "118", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_float_mask_safe_softmax_fu_725.sum_broadcast_stream_U", "Parent" : "88"},
+	{"ID" : "119", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_float_mask_safe_softmax_fu_725.start_for_float_mask_safe_softmax_Loop_loop_20_proc6_U0_U", "Parent" : "88"},
+	{"ID" : "120", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_float_mask_safe_softmax_fu_725.start_for_float_mask_safe_softmax_Loop_loop_22_proc7_U0_U", "Parent" : "88"},
+	{"ID" : "121", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_max_fu_753", "Parent" : "0", "Child" : ["122", "123", "124"],
+		"CDFG" : "activation_accelerator_Pipeline_loop_max",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "32775", "EstimateLatencyMax" : "32775",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1026", "EstimateLatencyMax" : "1026",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"IsBlackBox" : "0",
+		"Port" : [
+			{"Name" : "max_val", "Type" : "None", "Direction" : "I"},
+			{"Name" : "x", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "x_2", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "x_4", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "x_6", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "max_val_3_out", "Type" : "Vld", "Direction" : "O"}],
+		"Loop" : [
+			{"Name" : "loop_max", "PipelineType" : "UPC",
+				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter2", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter2", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
+	{"ID" : "122", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_max_fu_753.fcmp_32ns_32ns_1_2_no_dsp_1_U262", "Parent" : "121"},
+	{"ID" : "123", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_max_fu_753.mux_42_32_1_1_U263", "Parent" : "121"},
+	{"ID" : "124", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_max_fu_753.flow_control_loop_pipe_sequential_init_U", "Parent" : "121"},
+	{"ID" : "125", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_exp_fu_763", "Parent" : "0", "Child" : ["126", "127"],
+		"CDFG" : "activation_accelerator_Pipeline_loop_exp",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "3088", "EstimateLatencyMax" : "3088",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"IsBlackBox" : "0",
+		"Port" : [
+			{"Name" : "exp_vals_1", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "exp_vals", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "x", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "x_2", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "x_4", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "x_6", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "max_val_3_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sum_11_out", "Type" : "Vld", "Direction" : "O"}],
+		"Loop" : [
+			{"Name" : "loop_exp", "PipelineType" : "UPC",
+				"LoopDec" : {"FSMBitwidth" : "3", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage2", "LastStateIter" : "ap_enable_reg_pp0_iter5", "LastStateBlock" : "ap_block_pp0_stage2_subdone", "QuitState" : "ap_ST_fsm_pp0_stage2", "QuitStateIter" : "ap_enable_reg_pp0_iter5", "QuitStateBlock" : "ap_block_pp0_stage2_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
+	{"ID" : "126", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_exp_fu_763.mux_42_32_1_1_U273", "Parent" : "125"},
+	{"ID" : "127", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_exp_fu_763.flow_control_loop_pipe_sequential_init_U", "Parent" : "125"},
+	{"ID" : "128", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_output_fu_775", "Parent" : "0", "Child" : ["129", "130"],
+		"CDFG" : "activation_accelerator_Pipeline_loop_output",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1036", "EstimateLatencyMax" : "1036",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"IsBlackBox" : "0",
+		"Port" : [
+			{"Name" : "exp_vals", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "exp_vals_1", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "sum_11_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i", "Type" : "Memory", "Direction" : "O"}],
+		"Loop" : [
+			{"Name" : "loop_output", "PipelineType" : "UPC",
+				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter11", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter11", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
+	{"ID" : "129", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_output_fu_775.mux_21_32_1_1_U283", "Parent" : "128"},
+	{"ID" : "130", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_output_fu_775.flow_control_loop_pipe_sequential_init_U", "Parent" : "128"},
+	{"ID" : "131", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_12_fu_798", "Parent" : "0", "Child" : ["132", "133", "134", "135", "136", "137", "138"],
+		"CDFG" : "activation_accelerator_Pipeline_loop_12",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "135", "EstimateLatencyMax" : "135",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -774,13 +1534,32 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "x", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "y", "Type" : "Memory", "Direction" : "I"},
-			{"Name" : "buf2", "Type" : "Memory", "Direction" : "O"}],
+			{"Name" : "x_2", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "y_1", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "x_4", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "y_2", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "x_6", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "y_3", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i", "Type" : "Memory", "Direction" : "O"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_205_1", "PipelineType" : "UPC",
+			{"Name" : "loop_12", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter6", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter6", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "43", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_205_1_fu_333.flow_control_loop_pipe_sequential_init_U", "Parent" : "42"},
-	{"ID" : "44", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341", "Parent" : "0", "Child" : ["45"],
-		"CDFG" : "activation_accelerator_Pipeline_VITIS_LOOP_275_3",
+	{"ID" : "132", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_12_fu_798.fadd_32ns_32ns_32_4_full_dsp_1_U324", "Parent" : "131"},
+	{"ID" : "133", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_12_fu_798.fadd_32ns_32ns_32_4_full_dsp_1_U325", "Parent" : "131"},
+	{"ID" : "134", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_12_fu_798.fadd_32ns_32ns_32_4_full_dsp_1_U326", "Parent" : "131"},
+	{"ID" : "135", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_12_fu_798.fadd_32ns_32ns_32_4_full_dsp_1_U327", "Parent" : "131"},
+	{"ID" : "136", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_12_fu_798.fadd_32ns_32ns_32_4_full_dsp_1_U328", "Parent" : "131"},
+	{"ID" : "137", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_12_fu_798.fadd_32ns_32ns_32_4_full_dsp_1_U329", "Parent" : "131"},
+	{"ID" : "138", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_12_fu_798.flow_control_loop_pipe_sequential_init_U", "Parent" : "131"},
+	{"ID" : "139", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_19_fu_826", "Parent" : "0", "Child" : ["140", "141", "142", "143", "144", "145", "146", "147"],
+		"CDFG" : "activation_accelerator_Pipeline_loop_19",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -794,13 +1573,34 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "buf0", "Type" : "Memory", "Direction" : "I"},
-			{"Name" : "buf1", "Type" : "Memory", "Direction" : "I"},
-			{"Name" : "buf2", "Type" : "Memory", "Direction" : "O"}],
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_15", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_14", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_13", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_12", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_11", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_10", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i", "Type" : "Memory", "Direction" : "O"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_275_3", "PipelineType" : "no",
+			{"Name" : "loop_19", "PipelineType" : "no",
 				"LoopDec" : {"FSMBitwidth" : "5", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state5"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
-	{"ID" : "45", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_275_3_fu_341.grp_bf16add_fu_75", "Parent" : "44",
+	{"ID" : "140", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_19_fu_826.grp_bf16add_fu_398", "Parent" : "139",
 		"CDFG" : "bf16add",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -818,15 +1618,155 @@ set RtlHierarchyInfo {[
 			{"Name" : "a_bits", "Type" : "None", "Direction" : "I"},
 			{"Name" : "b_bits", "Type" : "None", "Direction" : "I"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_86_1", "PipelineType" : "no",
+			{"Name" : "VITIS_LOOP_88_1", "PipelineType" : "no",
 				"LoopDec" : {"FSMBitwidth" : "2", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state2"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "1", "OneStateBlock": "ap_ST_fsm_state2_blk"}}]},
-	{"ID" : "46", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_262_1_fu_351", "Parent" : "0", "Child" : ["47"],
-		"CDFG" : "activation_accelerator_Pipeline_VITIS_LOOP_262_1",
+	{"ID" : "141", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_19_fu_826.grp_bf16add_fu_405", "Parent" : "139",
+		"CDFG" : "bf16add",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "32771", "EstimateLatencyMax" : "32771",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "-1", "EstimateLatencyMax" : "-1",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"IsBlackBox" : "0",
+		"Port" : [
+			{"Name" : "a_bits", "Type" : "None", "Direction" : "I"},
+			{"Name" : "b_bits", "Type" : "None", "Direction" : "I"}],
+		"Loop" : [
+			{"Name" : "VITIS_LOOP_88_1", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "2", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state2"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "1", "OneStateBlock": "ap_ST_fsm_state2_blk"}}]},
+	{"ID" : "142", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_19_fu_826.grp_bf16add_fu_412", "Parent" : "139",
+		"CDFG" : "bf16add",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "-1", "EstimateLatencyMax" : "-1",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"IsBlackBox" : "0",
+		"Port" : [
+			{"Name" : "a_bits", "Type" : "None", "Direction" : "I"},
+			{"Name" : "b_bits", "Type" : "None", "Direction" : "I"}],
+		"Loop" : [
+			{"Name" : "VITIS_LOOP_88_1", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "2", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state2"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "1", "OneStateBlock": "ap_ST_fsm_state2_blk"}}]},
+	{"ID" : "143", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_19_fu_826.grp_bf16add_fu_419", "Parent" : "139",
+		"CDFG" : "bf16add",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "-1", "EstimateLatencyMax" : "-1",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"IsBlackBox" : "0",
+		"Port" : [
+			{"Name" : "a_bits", "Type" : "None", "Direction" : "I"},
+			{"Name" : "b_bits", "Type" : "None", "Direction" : "I"}],
+		"Loop" : [
+			{"Name" : "VITIS_LOOP_88_1", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "2", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state2"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "1", "OneStateBlock": "ap_ST_fsm_state2_blk"}}]},
+	{"ID" : "144", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_19_fu_826.grp_bf16add_fu_426", "Parent" : "139",
+		"CDFG" : "bf16add",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "-1", "EstimateLatencyMax" : "-1",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"IsBlackBox" : "0",
+		"Port" : [
+			{"Name" : "a_bits", "Type" : "None", "Direction" : "I"},
+			{"Name" : "b_bits", "Type" : "None", "Direction" : "I"}],
+		"Loop" : [
+			{"Name" : "VITIS_LOOP_88_1", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "2", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state2"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "1", "OneStateBlock": "ap_ST_fsm_state2_blk"}}]},
+	{"ID" : "145", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_19_fu_826.grp_bf16add_fu_433", "Parent" : "139",
+		"CDFG" : "bf16add",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "-1", "EstimateLatencyMax" : "-1",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"IsBlackBox" : "0",
+		"Port" : [
+			{"Name" : "a_bits", "Type" : "None", "Direction" : "I"},
+			{"Name" : "b_bits", "Type" : "None", "Direction" : "I"}],
+		"Loop" : [
+			{"Name" : "VITIS_LOOP_88_1", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "2", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state2"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "1", "OneStateBlock": "ap_ST_fsm_state2_blk"}}]},
+	{"ID" : "146", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_19_fu_826.grp_bf16add_fu_440", "Parent" : "139",
+		"CDFG" : "bf16add",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "-1", "EstimateLatencyMax" : "-1",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"IsBlackBox" : "0",
+		"Port" : [
+			{"Name" : "a_bits", "Type" : "None", "Direction" : "I"},
+			{"Name" : "b_bits", "Type" : "None", "Direction" : "I"}],
+		"Loop" : [
+			{"Name" : "VITIS_LOOP_88_1", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "2", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state2"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "1", "OneStateBlock": "ap_ST_fsm_state2_blk"}}]},
+	{"ID" : "147", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_19_fu_826.grp_bf16add_fu_447", "Parent" : "139",
+		"CDFG" : "bf16add",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "-1", "EstimateLatencyMax" : "-1",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"IsBlackBox" : "0",
+		"Port" : [
+			{"Name" : "a_bits", "Type" : "None", "Direction" : "I"},
+			{"Name" : "b_bits", "Type" : "None", "Direction" : "I"}],
+		"Loop" : [
+			{"Name" : "VITIS_LOOP_88_1", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "2", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state2"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "1", "OneStateBlock": "ap_ST_fsm_state2_blk"}}]},
+	{"ID" : "148", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_23_fu_878", "Parent" : "0", "Child" : ["149"],
+		"CDFG" : "activation_accelerator_Pipeline_loop_23",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1027", "EstimateLatencyMax" : "1027",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -838,19 +1778,26 @@ set RtlHierarchyInfo {[
 			{"Name" : "gmem0", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "gmem0_blk_n_R", "Type" : "RtlSignal"}]},
-			{"Name" : "sext_ln262", "Type" : "None", "Direction" : "I"},
-			{"Name" : "buf0", "Type" : "Memory", "Direction" : "O"}],
+			{"Name" : "sext_ln490", "Type" : "None", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16", "Type" : "Memory", "Direction" : "O"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_262_1", "PipelineType" : "UPC",
+			{"Name" : "loop_23", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter2", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter2", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "47", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_262_1_fu_351.flow_control_loop_pipe_sequential_init_U", "Parent" : "46"},
-	{"ID" : "48", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_265_2_fu_360", "Parent" : "0", "Child" : ["49"],
-		"CDFG" : "activation_accelerator_Pipeline_VITIS_LOOP_265_2",
+	{"ID" : "149", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_23_fu_878.flow_control_loop_pipe_sequential_init_U", "Parent" : "148"},
+	{"ID" : "150", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_24_fu_901", "Parent" : "0", "Child" : ["151"],
+		"CDFG" : "activation_accelerator_Pipeline_loop_24",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "32771", "EstimateLatencyMax" : "32771",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1027", "EstimateLatencyMax" : "1027",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -862,20 +1809,30 @@ set RtlHierarchyInfo {[
 			{"Name" : "gmem1", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "gmem1_blk_n_R", "Type" : "RtlSignal"}]},
-			{"Name" : "sext_ln265", "Type" : "None", "Direction" : "I"},
-			{"Name" : "buf1", "Type" : "Memory", "Direction" : "O"}],
+			{"Name" : "sext_ln494", "Type" : "None", "Direction" : "I"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_15", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_14", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_13", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_12", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_11", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_10", "Type" : "Memory", "Direction" : "O"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_265_2", "PipelineType" : "UPC",
+			{"Name" : "loop_24", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter2", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter2", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "49", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_VITIS_LOOP_265_2_fu_360.flow_control_loop_pipe_sequential_init_U", "Parent" : "48"},
-	{"ID" : "50", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.control_s_axi_U", "Parent" : "0"},
-	{"ID" : "51", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.gmem0_m_axi_U", "Parent" : "0"},
-	{"ID" : "52", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.gmem1_m_axi_U", "Parent" : "0"},
-	{"ID" : "53", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.gmem2_m_axi_U", "Parent" : "0"},
-	{"ID" : "54", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.faddfsub_32ns_32ns_32_4_full_dsp_1_U68", "Parent" : "0"},
-	{"ID" : "55", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.fmul_32ns_32ns_32_3_max_dsp_1_U69", "Parent" : "0"},
-	{"ID" : "56", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.fsqrt_32ns_32ns_32_8_no_dsp_1_U70", "Parent" : "0"},
-	{"ID" : "57", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.fdiv_32ns_32ns_32_9_no_dsp_1_U71", "Parent" : "0"}]}
+	{"ID" : "151", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_activation_accelerator_Pipeline_loop_24_fu_901.flow_control_loop_pipe_sequential_init_U", "Parent" : "150"},
+	{"ID" : "152", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.control_s_axi_U", "Parent" : "0"},
+	{"ID" : "153", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.gmem0_m_axi_U", "Parent" : "0"},
+	{"ID" : "154", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.gmem1_m_axi_U", "Parent" : "0"},
+	{"ID" : "155", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.gmem2_m_axi_U", "Parent" : "0"},
+	{"ID" : "156", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.faddfsub_32ns_32ns_32_4_full_dsp_1_U392", "Parent" : "0"},
+	{"ID" : "157", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.fmul_32ns_32ns_32_3_max_dsp_1_U393", "Parent" : "0"},
+	{"ID" : "158", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.fsqrt_32ns_32ns_32_8_no_dsp_1_U394", "Parent" : "0"},
+	{"ID" : "159", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.fadd_32ns_32ns_32_4_no_dsp_1_U395", "Parent" : "0"},
+	{"ID" : "160", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.fdiv_32ns_32ns_32_9_no_dsp_1_U396", "Parent" : "0"},
+	{"ID" : "161", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.fadd_32ns_32ns_32_4_full_dsp_1_U397", "Parent" : "0"},
+	{"ID" : "162", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.fexp_32ns_32ns_32_8_full_dsp_1_U398", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
@@ -888,79 +1845,400 @@ set ArgLastReadFirstWriteLatency {
 		out_r {Type I LastRead 0 FirstWrite -1}
 		stage {Type I LastRead 0 FirstWrite -1}
 		config_r {Type I LastRead 0 FirstWrite -1}
-		buf0 {Type IO LastRead -1 FirstWrite -1}
-		buf1 {Type IO LastRead -1 FirstWrite -1}
-		buf2 {Type IO LastRead -1 FirstWrite -1}}
-	activation_accelerator_Pipeline_VITIS_LOOP_144_15 {
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23 {Type IO LastRead -1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22 {Type IO LastRead -1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21 {Type IO LastRead -1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20 {Type IO LastRead -1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19 {Type IO LastRead -1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18 {Type IO LastRead -1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17 {Type IO LastRead -1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16 {Type IO LastRead -1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_15 {Type IO LastRead -1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9 {Type IO LastRead -1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8 {Type IO LastRead -1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_14 {Type IO LastRead -1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_13 {Type IO LastRead -1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_12 {Type IO LastRead -1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_11 {Type IO LastRead -1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_10 {Type IO LastRead -1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7 {Type IO LastRead -1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6 {Type IO LastRead -1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5 {Type IO LastRead -1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4 {Type IO LastRead -1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3 {Type IO LastRead -1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2 {Type IO LastRead -1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1 {Type IO LastRead -1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i {Type IO LastRead -1 FirstWrite -1}}
+	activation_accelerator_Pipeline_loop_110 {
+		x_6 {Type O LastRead -1 FirstWrite 1}
+		x_4 {Type O LastRead -1 FirstWrite 1}
+		x_2 {Type O LastRead -1 FirstWrite 1}
 		x {Type O LastRead -1 FirstWrite 1}
-		buf0 {Type I LastRead 0 FirstWrite -1}}
-	activation_accelerator_Pipeline_VITIS_LOOP_144_14 {
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16 {Type I LastRead 0 FirstWrite -1}}
+	activation_accelerator_Pipeline_loop_18 {
+		x_6 {Type O LastRead -1 FirstWrite 1}
+		x_4 {Type O LastRead -1 FirstWrite 1}
+		x_2 {Type O LastRead -1 FirstWrite 1}
 		x {Type O LastRead -1 FirstWrite 1}
-		buf0 {Type I LastRead 0 FirstWrite -1}}
-	activation_accelerator_Pipeline_VITIS_LOOP_144_13 {
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16 {Type I LastRead 0 FirstWrite -1}}
+	activation_accelerator_Pipeline_loop_17 {
+		x_6 {Type O LastRead -1 FirstWrite 1}
+		x_4 {Type O LastRead -1 FirstWrite 1}
+		x_2 {Type O LastRead -1 FirstWrite 1}
 		x {Type O LastRead -1 FirstWrite 1}
-		buf0 {Type I LastRead 0 FirstWrite -1}}
-	activation_accelerator_Pipeline_VITIS_LOOP_144_12 {
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16 {Type I LastRead 0 FirstWrite -1}}
+	activation_accelerator_Pipeline_loop_16 {
+		x_6 {Type O LastRead -1 FirstWrite 1}
+		x_4 {Type O LastRead -1 FirstWrite 1}
+		x_2 {Type O LastRead -1 FirstWrite 1}
 		x {Type O LastRead -1 FirstWrite 1}
-		buf0 {Type I LastRead 0 FirstWrite -1}}
-	activation_accelerator_Pipeline_VITIS_LOOP_292_5 {
-		buf2 {Type O LastRead -1 FirstWrite 0}}
-	activation_accelerator_Pipeline_VITIS_LOOP_283_4 {
-		buf2 {Type O LastRead -1 FirstWrite 0}}
-	activation_accelerator_Pipeline_VITIS_LOOP_144_1 {
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16 {Type I LastRead 0 FirstWrite -1}}
+	activation_accelerator_Pipeline_loop_14 {
+		x_6 {Type O LastRead -1 FirstWrite 1}
+		x_4 {Type O LastRead -1 FirstWrite 1}
+		x_2 {Type O LastRead -1 FirstWrite 1}
 		x {Type O LastRead -1 FirstWrite 1}
-		buf0 {Type I LastRead 0 FirstWrite -1}}
-	activation_accelerator_Pipeline_VITIS_LOOP_144_11 {
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16 {Type I LastRead 0 FirstWrite -1}}
+	activation_accelerator_Pipeline_loop_15 {
+		y_3 {Type O LastRead -1 FirstWrite 1}
+		y_2 {Type O LastRead -1 FirstWrite 1}
+		y_1 {Type O LastRead -1 FirstWrite 1}
 		y {Type O LastRead -1 FirstWrite 1}
-		buf1 {Type I LastRead 0 FirstWrite -1}}
-	activation_accelerator_Pipeline_VITIS_LOOP_316_6 {
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_15 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_14 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_13 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_12 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_11 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_10 {Type I LastRead 0 FirstWrite -1}}
+	activation_accelerator_Pipeline_loop_13 {
+		x_6 {Type O LastRead -1 FirstWrite 1}
+		x_4 {Type O LastRead -1 FirstWrite 1}
+		x_2 {Type O LastRead -1 FirstWrite 1}
+		x {Type O LastRead -1 FirstWrite 1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16 {Type I LastRead 0 FirstWrite -1}}
+	activation_accelerator_Pipeline_loop_1 {
+		x_6 {Type O LastRead -1 FirstWrite 1}
+		x_4 {Type O LastRead -1 FirstWrite 1}
+		x_2 {Type O LastRead -1 FirstWrite 1}
+		x {Type O LastRead -1 FirstWrite 1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16 {Type I LastRead 0 FirstWrite -1}}
+	activation_accelerator_Pipeline_loop_11 {
+		y_3 {Type O LastRead -1 FirstWrite 1}
+		y_2 {Type O LastRead -1 FirstWrite 1}
+		y_1 {Type O LastRead -1 FirstWrite 1}
+		y {Type O LastRead -1 FirstWrite 1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_15 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_14 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_13 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_12 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_11 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_10 {Type I LastRead 0 FirstWrite -1}}
+	activation_accelerator_Pipeline_loop_25 {
 		gmem2 {Type O LastRead -1 FirstWrite 2}
-		sext_ln316 {Type I LastRead 0 FirstWrite -1}
-		buf2 {Type I LastRead 0 FirstWrite -1}}
-	activation_accelerator_Pipeline_VITIS_LOOP_185_1 {
+		sext_ln569 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i {Type I LastRead 0 FirstWrite -1}}
+	activation_accelerator_Pipeline_loop_mean {
 		x {Type I LastRead 0 FirstWrite -1}
-		sum_out {Type O LastRead -1 FirstWrite 2}}
-	activation_accelerator_Pipeline_VITIS_LOOP_190_2 {
+		x_2 {Type I LastRead 0 FirstWrite -1}
+		x_4 {Type I LastRead 0 FirstWrite -1}
+		x_6 {Type I LastRead 0 FirstWrite -1}
+		sum_out {Type O LastRead -1 FirstWrite 1}}
+	activation_accelerator_Pipeline_loop_var {
 		x {Type I LastRead 0 FirstWrite -1}
+		x_2 {Type I LastRead 0 FirstWrite -1}
+		x_4 {Type I LastRead 0 FirstWrite -1}
+		x_6 {Type I LastRead 0 FirstWrite -1}
 		mean {Type I LastRead 0 FirstWrite -1}
 		var_1_out {Type O LastRead -1 FirstWrite 9}}
-	activation_accelerator_Pipeline_VITIS_LOOP_196_3 {
+	activation_accelerator_Pipeline_loop_norm11 {
 		x {Type I LastRead 0 FirstWrite -1}
+		x_2 {Type I LastRead 0 FirstWrite -1}
+		x_4 {Type I LastRead 0 FirstWrite -1}
+		x_6 {Type I LastRead 0 FirstWrite -1}
 		mean {Type I LastRead 0 FirstWrite -1}
 		stddev {Type I LastRead 0 FirstWrite -1}
-		buf2 {Type O LastRead -1 FirstWrite 15}}
-	activation_accelerator_Pipeline_VITIS_LOOP_170_1 {
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7 {Type O LastRead -1 FirstWrite 15}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6 {Type O LastRead -1 FirstWrite 15}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5 {Type O LastRead -1 FirstWrite 15}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4 {Type O LastRead -1 FirstWrite 15}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3 {Type O LastRead -1 FirstWrite 15}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2 {Type O LastRead -1 FirstWrite 15}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1 {Type O LastRead -1 FirstWrite 15}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i {Type O LastRead -1 FirstWrite 15}}
+	activation_accelerator_Pipeline_loop_sum {
 		x {Type I LastRead 0 FirstWrite -1}
+		x_2 {Type I LastRead 0 FirstWrite -1}
+		x_4 {Type I LastRead 0 FirstWrite -1}
+		x_6 {Type I LastRead 0 FirstWrite -1}
 		sum_sq_out {Type O LastRead -1 FirstWrite 5}}
-	activation_accelerator_Pipeline_VITIS_LOOP_175_2 {
+	activation_accelerator_Pipeline_loop_norm {
 		x {Type I LastRead 0 FirstWrite -1}
+		x_2 {Type I LastRead 0 FirstWrite -1}
+		x_4 {Type I LastRead 0 FirstWrite -1}
+		x_6 {Type I LastRead 0 FirstWrite -1}
 		rms {Type I LastRead 0 FirstWrite -1}
-		buf2 {Type O LastRead -1 FirstWrite 11}}
-	activation_accelerator_Pipeline_VITIS_LOOP_159_1 {
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7 {Type O LastRead -1 FirstWrite 11}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6 {Type O LastRead -1 FirstWrite 11}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5 {Type O LastRead -1 FirstWrite 11}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4 {Type O LastRead -1 FirstWrite 11}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3 {Type O LastRead -1 FirstWrite 11}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2 {Type O LastRead -1 FirstWrite 11}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1 {Type O LastRead -1 FirstWrite 11}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i {Type O LastRead -1 FirstWrite 11}}
+	activation_accelerator_Pipeline_loop_3 {
 		x {Type I LastRead 0 FirstWrite -1}
-		buf2 {Type O LastRead -1 FirstWrite 25}}
-	activation_accelerator_Pipeline_VITIS_LOOP_151_1 {
+		x_2 {Type I LastRead 0 FirstWrite -1}
+		x_4 {Type I LastRead 0 FirstWrite -1}
+		x_6 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7 {Type O LastRead -1 FirstWrite 25}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6 {Type O LastRead -1 FirstWrite 25}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5 {Type O LastRead -1 FirstWrite 25}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4 {Type O LastRead -1 FirstWrite 25}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3 {Type O LastRead -1 FirstWrite 25}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2 {Type O LastRead -1 FirstWrite 25}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1 {Type O LastRead -1 FirstWrite 25}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i {Type O LastRead -1 FirstWrite 25}}
+	activation_accelerator_Pipeline_loop_2 {
 		x {Type I LastRead 0 FirstWrite -1}
-		buf2 {Type O LastRead -1 FirstWrite 22}}
-	activation_accelerator_Pipeline_VITIS_LOOP_205_1 {
+		x_2 {Type I LastRead 0 FirstWrite -1}
+		x_4 {Type I LastRead 0 FirstWrite -1}
+		x_6 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7 {Type O LastRead -1 FirstWrite 22}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6 {Type O LastRead -1 FirstWrite 22}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5 {Type O LastRead -1 FirstWrite 22}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4 {Type O LastRead -1 FirstWrite 22}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3 {Type O LastRead -1 FirstWrite 22}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2 {Type O LastRead -1 FirstWrite 22}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1 {Type O LastRead -1 FirstWrite 22}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i {Type O LastRead -1 FirstWrite 22}}
+	float_mask_safe_softmax {
+		x_0 {Type I LastRead 0 FirstWrite -1}
+		x_1 {Type I LastRead 0 FirstWrite -1}
+		x_2 {Type I LastRead 0 FirstWrite -1}
+		x_3 {Type I LastRead 0 FirstWrite -1}
+		mask_0 {Type I LastRead 0 FirstWrite -1}
+		mask_1 {Type I LastRead 0 FirstWrite -1}
+		mask_2 {Type I LastRead 0 FirstWrite -1}
+		mask_3 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7 {Type O LastRead -1 FirstWrite 11}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6 {Type O LastRead -1 FirstWrite 11}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5 {Type O LastRead -1 FirstWrite 11}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4 {Type O LastRead -1 FirstWrite 11}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3 {Type O LastRead -1 FirstWrite 11}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2 {Type O LastRead -1 FirstWrite 11}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1 {Type O LastRead -1 FirstWrite 11}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i {Type O LastRead -1 FirstWrite 11}}
+	float_mask_safe_softmax_Loop_loop_18_proc5 {
+		x_0 {Type I LastRead 0 FirstWrite -1}
+		x_1 {Type I LastRead 0 FirstWrite -1}
+		x_2 {Type I LastRead 0 FirstWrite -1}
+		x_3 {Type I LastRead 0 FirstWrite -1}
+		mask_0 {Type I LastRead 0 FirstWrite -1}
+		mask_1 {Type I LastRead 0 FirstWrite -1}
+		mask_2 {Type I LastRead 0 FirstWrite -1}
+		mask_3 {Type I LastRead 0 FirstWrite -1}
+		x_mask_stream {Type O LastRead -1 FirstWrite 5}}
+	float_mask_safe_softmax_Block_float_mask_safe_softmax_for_cond_i_exit_proc {
+		p_read {Type I LastRead 0 FirstWrite -1}}
+	float_mask_safe_softmax_Loop_loop_max_broadcast_proc {
+		p_read {Type I LastRead 0 FirstWrite -1}
+		max_broadcast_stream {Type O LastRead -1 FirstWrite 1}}
+	float_mask_safe_softmax_Loop_loop_20_proc6 {
+		x_mask_stream {Type I LastRead 1 FirstWrite -1}
+		max_broadcast_stream {Type I LastRead 1 FirstWrite -1}
+		exp_stream {Type O LastRead -1 FirstWrite 13}}
+	float_mask_safe_softmax_Block_for_end26_proc {
+		p_read {Type I LastRead 0 FirstWrite -1}}
+	float_mask_safe_softmax_Loop_loop_sum_broadcast_proc {
+		p_read {Type I LastRead 0 FirstWrite -1}
+		sum_broadcast_stream {Type O LastRead -1 FirstWrite 1}}
+	float_mask_safe_softmax_Loop_loop_22_proc7 {
+		exp_stream {Type I LastRead 1 FirstWrite -1}
+		sum_broadcast_stream {Type I LastRead 1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7 {Type O LastRead -1 FirstWrite 11}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6 {Type O LastRead -1 FirstWrite 11}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5 {Type O LastRead -1 FirstWrite 11}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4 {Type O LastRead -1 FirstWrite 11}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3 {Type O LastRead -1 FirstWrite 11}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2 {Type O LastRead -1 FirstWrite 11}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1 {Type O LastRead -1 FirstWrite 11}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i {Type O LastRead -1 FirstWrite 11}}
+	activation_accelerator_Pipeline_loop_max {
+		max_val {Type I LastRead 0 FirstWrite -1}
 		x {Type I LastRead 0 FirstWrite -1}
-		y {Type I LastRead 0 FirstWrite -1}
-		buf2 {Type O LastRead -1 FirstWrite 6}}
-	activation_accelerator_Pipeline_VITIS_LOOP_275_3 {
-		buf0 {Type I LastRead 1 FirstWrite -1}
-		buf1 {Type I LastRead 1 FirstWrite -1}
-		buf2 {Type O LastRead -1 FirstWrite 4}}
+		x_2 {Type I LastRead 0 FirstWrite -1}
+		x_4 {Type I LastRead 0 FirstWrite -1}
+		x_6 {Type I LastRead 0 FirstWrite -1}
+		max_val_3_out {Type O LastRead -1 FirstWrite 1}}
+	activation_accelerator_Pipeline_loop_exp {
+		exp_vals_1 {Type O LastRead -1 FirstWrite 13}
+		exp_vals {Type O LastRead -1 FirstWrite 13}
+		x {Type I LastRead 0 FirstWrite -1}
+		x_2 {Type I LastRead 0 FirstWrite -1}
+		x_4 {Type I LastRead 0 FirstWrite -1}
+		x_6 {Type I LastRead 0 FirstWrite -1}
+		max_val_3_reload {Type I LastRead 0 FirstWrite -1}
+		sum_11_out {Type O LastRead -1 FirstWrite 14}}
+	activation_accelerator_Pipeline_loop_output {
+		exp_vals {Type I LastRead 0 FirstWrite -1}
+		exp_vals_1 {Type I LastRead 0 FirstWrite -1}
+		sum_11_reload {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7 {Type O LastRead -1 FirstWrite 11}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6 {Type O LastRead -1 FirstWrite 11}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5 {Type O LastRead -1 FirstWrite 11}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4 {Type O LastRead -1 FirstWrite 11}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3 {Type O LastRead -1 FirstWrite 11}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2 {Type O LastRead -1 FirstWrite 11}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1 {Type O LastRead -1 FirstWrite 11}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i {Type O LastRead -1 FirstWrite 11}}
+	activation_accelerator_Pipeline_loop_12 {
+		x {Type I LastRead 1 FirstWrite -1}
+		y {Type I LastRead 1 FirstWrite -1}
+		x_2 {Type I LastRead 1 FirstWrite -1}
+		y_1 {Type I LastRead 1 FirstWrite -1}
+		x_4 {Type I LastRead 1 FirstWrite -1}
+		y_2 {Type I LastRead 1 FirstWrite -1}
+		x_6 {Type I LastRead 1 FirstWrite -1}
+		y_3 {Type I LastRead 1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7 {Type O LastRead -1 FirstWrite 6}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6 {Type O LastRead -1 FirstWrite 6}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5 {Type O LastRead -1 FirstWrite 6}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4 {Type O LastRead -1 FirstWrite 6}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3 {Type O LastRead -1 FirstWrite 6}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2 {Type O LastRead -1 FirstWrite 6}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1 {Type O LastRead -1 FirstWrite 6}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i {Type O LastRead -1 FirstWrite 6}}
+	activation_accelerator_Pipeline_loop_19 {
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23 {Type I LastRead 1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_15 {Type I LastRead 1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7 {Type O LastRead -1 FirstWrite 4}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22 {Type I LastRead 1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9 {Type I LastRead 1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6 {Type O LastRead -1 FirstWrite 4}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21 {Type I LastRead 1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8 {Type I LastRead 1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5 {Type O LastRead -1 FirstWrite 4}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20 {Type I LastRead 1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_14 {Type I LastRead 1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4 {Type O LastRead -1 FirstWrite 4}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19 {Type I LastRead 1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_13 {Type I LastRead 1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3 {Type O LastRead -1 FirstWrite 4}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18 {Type I LastRead 1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_12 {Type I LastRead 1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2 {Type O LastRead -1 FirstWrite 4}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17 {Type I LastRead 1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_11 {Type I LastRead 1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1 {Type O LastRead -1 FirstWrite 4}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16 {Type I LastRead 1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_10 {Type I LastRead 1 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i {Type O LastRead -1 FirstWrite 4}}
 	bf16add {
 		a_bits {Type I LastRead 0 FirstWrite -1}
 		b_bits {Type I LastRead 0 FirstWrite -1}}
-	activation_accelerator_Pipeline_VITIS_LOOP_262_1 {
+	bf16add {
+		a_bits {Type I LastRead 0 FirstWrite -1}
+		b_bits {Type I LastRead 0 FirstWrite -1}}
+	bf16add {
+		a_bits {Type I LastRead 0 FirstWrite -1}
+		b_bits {Type I LastRead 0 FirstWrite -1}}
+	bf16add {
+		a_bits {Type I LastRead 0 FirstWrite -1}
+		b_bits {Type I LastRead 0 FirstWrite -1}}
+	bf16add {
+		a_bits {Type I LastRead 0 FirstWrite -1}
+		b_bits {Type I LastRead 0 FirstWrite -1}}
+	bf16add {
+		a_bits {Type I LastRead 0 FirstWrite -1}
+		b_bits {Type I LastRead 0 FirstWrite -1}}
+	bf16add {
+		a_bits {Type I LastRead 0 FirstWrite -1}
+		b_bits {Type I LastRead 0 FirstWrite -1}}
+	bf16add {
+		a_bits {Type I LastRead 0 FirstWrite -1}
+		b_bits {Type I LastRead 0 FirstWrite -1}}
+	activation_accelerator_Pipeline_loop_23 {
 		gmem0 {Type I LastRead 1 FirstWrite -1}
-		sext_ln262 {Type I LastRead 0 FirstWrite -1}
-		buf0 {Type O LastRead -1 FirstWrite 2}}
-	activation_accelerator_Pipeline_VITIS_LOOP_265_2 {
+		sext_ln490 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23 {Type O LastRead -1 FirstWrite 2}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22 {Type O LastRead -1 FirstWrite 2}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21 {Type O LastRead -1 FirstWrite 2}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20 {Type O LastRead -1 FirstWrite 2}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19 {Type O LastRead -1 FirstWrite 2}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18 {Type O LastRead -1 FirstWrite 2}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17 {Type O LastRead -1 FirstWrite 2}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16 {Type O LastRead -1 FirstWrite 2}}
+	activation_accelerator_Pipeline_loop_24 {
 		gmem1 {Type I LastRead 1 FirstWrite -1}
-		sext_ln265 {Type I LastRead 0 FirstWrite -1}
-		buf1 {Type O LastRead -1 FirstWrite 2}}}
+		sext_ln494 {Type I LastRead 0 FirstWrite -1}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_15 {Type O LastRead -1 FirstWrite 2}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9 {Type O LastRead -1 FirstWrite 2}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8 {Type O LastRead -1 FirstWrite 2}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_14 {Type O LastRead -1 FirstWrite 2}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_13 {Type O LastRead -1 FirstWrite 2}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_12 {Type O LastRead -1 FirstWrite 2}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_11 {Type O LastRead -1 FirstWrite 2}
+		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_10 {Type O LastRead -1 FirstWrite 2}}}
 
 set hasDtUnsupportedChannel 0
 

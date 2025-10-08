@@ -1,0 +1,234 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'activation_accelerator_Pipeline_loop_19'" level="0">
+<item name = "Date">Wed Oct  8 15:53:34 2025
+</item>
+<item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
+<item name = "Project">activation_accelerator</item>
+<item name = "Solution">baseline (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xck26-sfvc784-2LV-c</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 6.832 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_bf16add_fu_398">bf16add, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_bf16add_fu_405">bf16add, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_bf16add_fu_412">bf16add, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_bf16add_fu_419">bf16add, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_bf16add_fu_426">bf16add, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_bf16add_fu_433">bf16add, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_bf16add_fu_440">bf16add, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_bf16add_fu_447">bf16add, ?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- loop_19">?, ?, ?, -, -, 128, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 20, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, 704, 7216, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 40, -</column>
+<column name="Register">-, -, 287, -, -</column>
+<specialColumn name="Available">288, 1248, 234240, 117120, 64</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, 6, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="grp_bf16add_fu_398">bf16add, 0, 0, 88, 902, 0</column>
+<column name="grp_bf16add_fu_405">bf16add, 0, 0, 88, 902, 0</column>
+<column name="grp_bf16add_fu_412">bf16add, 0, 0, 88, 902, 0</column>
+<column name="grp_bf16add_fu_419">bf16add, 0, 0, 88, 902, 0</column>
+<column name="grp_bf16add_fu_426">bf16add, 0, 0, 88, 902, 0</column>
+<column name="grp_bf16add_fu_433">bf16add, 0, 0, 88, 902, 0</column>
+<column name="grp_bf16add_fu_440">bf16add, 0, 0, 88, 902, 0</column>
+<column name="grp_bf16add_fu_447">bf16add, 0, 0, 88, 902, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln504_fu_500_p2">+, 0, 0, 18, 11, 4</column>
+<column name="ap_block_state5_on_subcall_done">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">31, 6, 1, 6</column>
+<column name="i_fu_82">9, 2, 11, 22</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_105_reg_613">16, 0, 16, 0</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_107_reg_618">16, 0, 16, 0</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_110_reg_623">16, 0, 16, 0</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_112_reg_628">16, 0, 16, 0</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_115_reg_633">16, 0, 16, 0</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_117_reg_638">16, 0, 16, 0</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_120_reg_643">16, 0, 16, 0</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_122_reg_648">16, 0, 16, 0</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_125_reg_653">16, 0, 16, 0</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_127_reg_658">16, 0, 16, 0</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_130_reg_663">16, 0, 16, 0</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_132_reg_668">16, 0, 16, 0</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_135_reg_673">16, 0, 16, 0</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_137_reg_678">16, 0, 16, 0</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_140_reg_683">16, 0, 16, 0</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_142_reg_688">16, 0, 16, 0</column>
+<column name="ap_CS_fsm">5, 0, 5, 0</column>
+<column name="grp_bf16add_fu_398_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_bf16add_fu_405_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_bf16add_fu_412_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_bf16add_fu_419_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_bf16add_fu_426_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_bf16add_fu_433_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_bf16add_fu_440_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_bf16add_fu_447_ap_start_reg">1, 0, 1, 0</column>
+<column name="i_fu_82">11, 0, 11, 0</column>
+<column name="zext_ln507_reg_521">7, 0, 64, 57</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, activation_accelerator_Pipeline_loop_19, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, activation_accelerator_Pipeline_loop_19, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, activation_accelerator_Pipeline_loop_19, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, activation_accelerator_Pipeline_loop_19, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, activation_accelerator_Pipeline_loop_19, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, activation_accelerator_Pipeline_loop_19, return value</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_address0">out, 7, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_ce0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_q0">in, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_15_address0">out, 7, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_15, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_15_ce0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_15, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_15_q0">in, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_15, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0">out, 7, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0">out, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22_address0">out, 7, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22_ce0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22_q0">in, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0">out, 7, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_q0">in, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0">out, 7, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0">out, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21_address0">out, 7, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21_ce0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21_q0">in, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0">out, 7, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_q0">in, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0">out, 7, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0">out, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20_address0">out, 7, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20_ce0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20_q0">in, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_14_address0">out, 7, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_14, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_14_ce0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_14, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_14_q0">in, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_14, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0">out, 7, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0">out, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19_address0">out, 7, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19_ce0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19_q0">in, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_13_address0">out, 7, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_13, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_13_ce0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_13, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_13_q0">in, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_13, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0">out, 7, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0">out, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18_address0">out, 7, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18_ce0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18_q0">in, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_12_address0">out, 7, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_12, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_12_ce0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_12, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_12_q0">in, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_12, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0">out, 7, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0">out, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17_address0">out, 7, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17_ce0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17_q0">in, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_11_address0">out, 7, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_11, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_11_ce0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_11, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_11_q0">in, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_11, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0">out, 7, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0">out, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16_address0">out, 7, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16_ce0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16_q0">in, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_10_address0">out, 7, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_10, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_10_ce0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_10, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_10_q0">in, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_10, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0">out, 7, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0">out, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i, array</column>
+</table>
+</item>
+</section>
+</profile>
