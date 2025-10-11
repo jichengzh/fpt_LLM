@@ -68,6 +68,25 @@ bool save_binary_data(const std::string& filename, uint16* data) {
     return true;
 }
 
+//保存float数据为CSV文本
+bool save_float_data(const std::string& filename,
+                     const float* data,
+                     size_t rows,
+                     size_t cols) {
+    std::ofstream file(filename);
+    if (!file) return false;
+
+    for (size_t i = 0; i < rows; ++i) {
+        for (size_t j = 0; j < cols; ++j) {
+            file << data[i * cols + j];  // 按行访问一维数组
+            if (j < cols - 1) file << ","; // 列之间加逗号
+        }
+        file << "\n"; // 每行结束换行
+    }
+    return file.good();
+}
+
+
 // Print data statistics
 void print_data_stats(uint16* data, const std::string& name) {
     uint16 min_val = data[0];
@@ -98,12 +117,34 @@ int compare_results(uint16* result, uint16* golden, uint16* in0, uint16* in1, in
             errors++;
         }
     }
-
     
     // 输出最大误差统计
     std::cout << "Max Difference: " << max_diff << std::endl;
     return errors;
 }
+
+//新添加用于输出误差真值
+void bf16_to_float2(const uint16* in, float* out, int len) {
+    for (int i = 0; i < len; ++i) { 
+        uint32_t x_f32 = ((uint32_t)in[i]) << 16;
+        out[i] = *(float*)&x_f32;
+    }
+}
+
+//输出所有误差（真值）
+void compare_result2(const uint16* result, const uint16* golden, float* true_errors) {
+
+    float golden_float[DATA_SIZE] = {0};
+    float result_float[DATA_SIZE] = {0};
+
+    bf16_to_float2(result, result_float, DATA_SIZE);
+    bf16_to_float2(golden, golden_float, DATA_SIZE);
+       
+    for (int i = 0; i < DATA_SIZE; ++i) {
+        true_errors[i] = result_float[i] - golden_float[i];
+    }
+}
+
 
 // A wrapper function to run a single test configuration
 // bool run_test(int config, uint16* in0, uint16* in1, uint16* out, uint16* golden_data_ptr, const std::string& data_path, uint16* mask_data) {
@@ -144,8 +185,13 @@ int compare_results(uint16* result, uint16* golden, uint16* in0, uint16* in1, in
 // }
 
 std::string get_data_path() {
+<<<<<<< HEAD
     std::string rel_path = "/data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors2";
     std::string test_file = rel_path + "/X_test_tensor_bf16.bin";
+=======
+    std::string rel_path = "/home/xushaohui/FPT/fpt_LLM/prj/testvector_example/bf16_vectors2/";
+    std::string test_file = rel_path + "X_test_tensor_bf16.bin";
+>>>>>>> origin/feature/RaiderSetsuna
     std::ifstream f(test_file.c_str());
     if (f.good()) {
         std::cout << "Using relative data path: " << rel_path << std::endl;
@@ -254,6 +300,12 @@ int main() {
         unpack512_to_16(out_512, out, NW);
         std::cout << "Output results saved to: " << data_path << "hls_output_config_" << config << ".bin" << std::endl;
         save_binary_data(data_path + "hls_output_config_" + std::to_string(config) + ".bin", out);
+
+        //计算并保存误差真值
+        float true_errors[DATA_SIZE] = {0};
+        compare_result2(out, golden_data[config], true_errors);
+        std::cout << "Output results saved to: " << data_path << "hls_output_true_errors_config_" << config << ".csv" << std::endl;
+        save_float_data(data_path + "hls_output_true_errors_config_" + std::to_string(config) + ".csv", true_errors, 64, 768);
 
         // int errors = compare_results(out, golden_data[config], in0,
         //                             (config==2 ? mask : in1),
