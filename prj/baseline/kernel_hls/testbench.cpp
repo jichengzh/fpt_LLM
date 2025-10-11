@@ -185,13 +185,8 @@ void compare_result2(const uint16* result, const uint16* golden, float* true_err
 // }
 
 std::string get_data_path() {
-<<<<<<< HEAD
     std::string rel_path = "/data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors2";
     std::string test_file = rel_path + "/X_test_tensor_bf16.bin";
-=======
-    std::string rel_path = "/home/xushaohui/FPT/fpt_LLM/prj/testvector_example/bf16_vectors2/";
-    std::string test_file = rel_path + "X_test_tensor_bf16.bin";
->>>>>>> origin/feature/RaiderSetsuna
     std::ifstream f(test_file.c_str());
     if (f.good()) {
         std::cout << "Using relative data path: " << rel_path << std::endl;
