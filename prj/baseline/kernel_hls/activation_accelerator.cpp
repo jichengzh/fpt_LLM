@@ -257,6 +257,61 @@ float Q_rsqrt(float number)
 	return y;
 }
 
+
+
+uint16_t round_float32_to_bf16_ieee(float x_in) {
+    uint32_t fbits = *reinterpret_cast<uint32_t*>(&x_in);
+
+    // static_assert(sizeof(float) == 4, "This code assumes 32-bit float");
+    // std::memcpy(&fbits, &x_in, sizeof(fbits));
+
+    const uint32_t LOW16_MASK = 0xFFFFu;
+    uint32_t upper = fbits >> 16;        // 高 16 位（将成为 bfloat16 的位模式）
+    uint32_t lower = fbits & LOW16_MASK; // 低 16 位（被丢弃部分）
+
+    uint32_t exp_field = (fbits >> 23) & 0xFFu;
+
+    // 如果是 Inf 或 NaN，直接返回高 16 位（保留 NaN/Inf 表示）
+    if (exp_field == 0xFFu) {
+        uint16_t ret = static_cast<uint16_t>(upper);
+        // 如果原始是 NaN（mantissa != 0），但高 7 位恰好被截掉为 0，
+        // 为确保返回值仍为 NaN（而不是正负无穷），至少保留一个非零位。
+        uint32_t full_mant = fbits & 0x7FFFFFu;
+        if (full_mant != 0 && (ret & 0x7Fu) == 0) {
+            ret |= 1u; // 保留最小 payload 位（使其成为 NaN）
+        }
+        return ret;
+    }
+
+    // round-to-nearest-even: 比较被丢弃的低 16 位和 0x8000
+    // lower > 0x8000 -> round up
+    // lower < 0x8000 -> round down
+    // lower == 0x8000 -> tie -> round to even (看 upper 的最低位)
+    const uint32_t HALF = 0x8000u; // 1 << 15
+    bool round_up = false;
+    if (lower > HALF) {
+        round_up = true;
+    } else if (lower < HALF) {
+        round_up = false;
+    } else { // lower == HALF: tie
+        if (upper & 1u) { // 如果当前保留位的最低位为 1（奇数），则进位成偶数
+            round_up = true;
+        }
+    }
+
+    uint32_t rounded = upper + (round_up ? 1u : 0u);
+
+    // 检查进位是否造成指数变为全 1（溢出 -> ±Inf），若是则清零尾数
+    uint32_t new_exp = (rounded >> 7) & 0xFFu;
+    uint32_t sign = (rounded >> 15) & 0x1u;
+    if (new_exp == 0xFFu) {
+        uint16_t res = static_cast<uint16_t>((sign << 15) | (0xFFu << 7));
+        return res;
+    }
+
+    return static_cast<uint16_t>(rounded & 0xFFFFu);
+}
+
 //exp近似计算
 float fast_exp1(float x) {
 x = 1.0 + x / 256;
@@ -266,7 +321,7 @@ x *= x;
 return x;
 }
 
-// silu
+// silu  ACT_SILU = 1,
 void float_silu(const float* x, uint16* y, int len) {
 #pragma HLS INLINE
     silu_loop:
@@ -278,7 +333,8 @@ void float_silu(const float* x, uint16* y, int len) {
     }
 }
 
-// rms_norm(使用雷神之锤)
+
+// rms_norm(使用雷神之锤) ACT_RMSNORM = 2,
 void float_rmsnorm(const float* x, uint16* y_bf16, int len) {
     const float eps = 1e-6f;
     float sum_sq = 0.0f;
@@ -297,13 +353,13 @@ void float_rmsnorm(const float* x, uint16* y_bf16, int len) {
 }
 
 
-// layer_norm
+// layer_norm ACT_LAYERNORM = 3,
 void float_layernorm(const float* x, uint16* y_bf16, int len) {
     const float eps = 1e-6f;
     float sum = 0.0f;
     layer_loop_0:
     for (int i = 0; i < len; ++i) { 
-    #pragma HLS PIPELINE II=1
+    #pragma HLS PIPELINE II=1//这里的流水线可能没法实现II=1,因为结果依赖上一个循环。
         sum += x[i];
     }
     float mean = sum / len;
@@ -322,7 +378,7 @@ void float_layernorm(const float* x, uint16* y_bf16, int len) {
     }
 }
 
-// float加法
+// float加法 ACT_ADD = 5,
 void float_add(const float* x, const float* y, uint16* out, int len) {
 #pragma HLS INLINE
     add_loop:
@@ -332,8 +388,19 @@ void float_add(const float* x, const float* y, uint16* out, int len) {
         out[i] = f32_to_bf16_scalar(sum);
     }
 }
+ 
+//float逐元素乘法 ACT_MUL = 6,
+void float_Multiply(const float* x, const float* y, uint16* out, int len) {
+#pragma HLS INLINE
+    multiply_loop:
+    for (int i = 0; i < len; ++i) { 
+    #pragma HLS PIPELINE II=1
+        float mut = x[i] * y[i];
+        out[i] = f32_to_bf16_scalar(mut);
+    }
+}
 
-// safe softmax
+// safe softmax ACT_SOFTMAX = 0     检查输出：row(0-19)(20-25)(54-63) (1-20)(21-26)(55-64)
 void float_softmax(const float* x, uint16* y_bf16, int len) {
 #pragma HLS INLINE
     float xmax = x[0];
@@ -355,9 +422,24 @@ void float_softmax(const float* x, uint16* y_bf16, int len) {
     for (int i = 0; i < len; ++i) {
     #pragma HLS PIPELINE II=1
         float e = hls::expf(x[i] - xmax);
-        y_bf16[i] = f32_to_bf16_scalar(e / sum);
+        // y_bf16[i] = f32_to_bf16_scalar(e / sum);
+        y_bf16[i] = round_float32_to_bf16_ieee(e / sum);//初步采用进位
     }
 }
+
+//GELU ACT_GELU = 4   检查输出：row(0-19)(42-45)(54-63)  (1-20)(43-46)(55-64)(初步检查无nan和inf问题)
+void float_gelu(const float* x, uint16* y_bf16, int len){
+#pragma HLS INLINE   
+    float xtrue = 0.0f;
+    float down2 = Q_rsqrt(2.0f);
+    for (int i = 0; i < len; ++i) {
+    #pragma HLS PIPELINE II=1
+        xtrue = 0.5f * x[i] * (1.0f + std::erff(x[i]*down2));
+        y_bf16[i] = f32_to_bf16_scalar(xtrue);
+    }
+}
+
+
 
 // ==================== Stage A: LOAD ====================
 // load_rows：从两路源数据 in0、in1 逐“行”读取 512-bit 宽度的数据，写入到两条 HLS 流 s0、s1。
@@ -380,6 +462,7 @@ static void load_rows(const u512* __restrict in0,
 #pragma HLS STREAM variable=s0 depth=64
 #pragma HLS STREAM variable=s1 depth=64
 
+//元素读取，读取NR0WS行=64乘以COLS列=768
 LOAD_ROW:
     for (int r = 0; r < NROWS; ++r) {
         //LOOP_TRIPCOUNT 指示仿真/性能估算时该循环迭代次数，帮助 HLS 估算吞吐/时延（不改变功能）。
@@ -410,6 +493,8 @@ static void compute_rows(hls::stream<u512> &s0,
 
     // 行级缓存：两输入 + 输出
     bf16 tile0[COLS], tile1[COLS], tile2[COLS];
+
+
 // BIND_STORAGE把数组强制映射到BRAM
 #pragma HLS BIND_STORAGE variable=tile0 type=ram_2p impl=bram
 #pragma HLS BIND_STORAGE variable=tile1 type=ram_2p impl=bram
@@ -460,14 +545,16 @@ COMPUTE_ROW:
             bf16_to_float(tile1, yt, COLS);
         }
 
+
+        // ------- 选择算子并计算（以行为单位） -------
         switch (op) {
         case ACT_ADD:       float_add(xt, yt, tile2, COLS); break;
         case ACT_SILU:      float_silu(xt,      tile2, COLS); break;
         case ACT_LAYERNORM: float_layernorm(xt, tile2, COLS); break;
         case ACT_RMSNORM:   float_rmsnorm(xt,   tile2, COLS); break;
         case ACT_SOFTMAX:   float_softmax(xt,   tile2, COLS); break;
-        case ACT_GELU:      float_silu(xt,      tile2, COLS); break; // 占位：用SiLU近似
-        case ACT_MUL:       float_add(xt, yt,   tile2, COLS); break; // 占位：先按加法
+        case ACT_GELU:      float_gelu(xt,      tile2, COLS); break; // 修改为GELU
+        case ACT_MUL:       float_Multiply(xt, yt,   tile2, COLS); break; // 修改为乘法
         default:            float_add(xt, yt,   tile2, COLS); break;
         }
     

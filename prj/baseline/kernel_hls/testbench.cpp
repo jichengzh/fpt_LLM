@@ -144,7 +144,7 @@ int compare_results(uint16* result, uint16* golden, uint16* in0, uint16* in1, in
 // }
 
 std::string get_data_path() {
-    std::string rel_path = "/data1/jcz/activation_accelerator_tutorial/prj/testvector_example/bf16_vectors2/";
+    std::string rel_path = "/home/xushaohui/FPT/fpt_LLM/prj/testvector_example/bf16_vectors3/";
     std::string test_file = rel_path + "X_test_tensor_bf16.bin";
     std::ifstream f(test_file.c_str());
     if (f.good()) {
