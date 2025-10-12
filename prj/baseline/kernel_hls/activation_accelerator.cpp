@@ -217,7 +217,7 @@ void float_safe_softmax(const float* x, uint16* y_bf16, int len) {
     softmax_loop_1:
     for (int i = 1; i < len; ++i) if (x[i] > max_val) max_val = x[i];
     float sum = 0.0f;
-    float exp_x[32768];
+    float exp_x[49152];
     softmax_loop_2:
     for (int i = 0; i < len; ++i) {
         exp_x[i] = hls::expf(x[i] - max_val);
@@ -237,7 +237,7 @@ void float_safe_softmax2(const float* x, uint16* y_bf16, int len) {
     const int ACC = 32;
 
     // 中间缓冲（本段未使用，只保留声明也 OK）
-    float exp_x[32768];
+    float exp_x[49152];
 #pragma HLS BIND_STORAGE variable=exp_x type=ram_1p impl=bram
 #pragma HLS DEPENDENCE variable=exp_x inter false
 #pragma HLS ARRAY_PARTITION variable=exp_x cyclic factor=UF dim=1
@@ -349,94 +349,94 @@ normalize_inner:
 
 
 // mask safe softmax
-void float_mask_safe_softmax(const float* x, const float* mask, uint16* y_bf16, int len) {
-    float x_mask[32768];
-    for (int i = 0; i < len; ++i) x_mask[i] = x[i] * mask[i];
-    float max_val = x_mask[0];
-    for (int i = 1; i < len; ++i) if (x_mask[i] > max_val) max_val = x_mask[i];
-    float sum = 0.0f;
-    float exp_x[32768];
-    for (int i = 0; i < len; ++i) {
-        exp_x[i] = hls::expf(x[i] - max_val);
-        sum += exp_x[i];
-    }
-    for (int i = 0; i < len; ++i) {
-        float y = exp_x[i] / sum;
-        uint32_t* y_f32_ptr = (uint32_t*)&y;
-        y_bf16[i] = (*y_f32_ptr) >> 16;
-    }
-}
+// void float_mask_safe_softmax(const float* x, const float* mask, uint16* y_bf16, int len) {
+//     float x_mask[49152];
+//     for (int i = 0; i < len; ++i) x_mask[i] = x[i] * mask[i];
+//     float max_val = x_mask[0];
+//     for (int i = 1; i < len; ++i) if (x_mask[i] > max_val) max_val = x_mask[i];
+//     float sum = 0.0f;
+//     float exp_x[49152];
+//     for (int i = 0; i < len; ++i) {
+//         exp_x[i] = hls::expf(x[i] - max_val);
+//         sum += exp_x[i];
+//     }
+//     for (int i = 0; i < len; ++i) {
+//         float y = exp_x[i] / sum;
+//         uint32_t* y_f32_ptr = (uint32_t*)&y;
+//         y_bf16[i] = (*y_f32_ptr) >> 16;
+//     }
+// }
 
 
 void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, int32 config) {
-#pragma HLS INTERFACE m_axi port=in0 offset=slave bundle=gmem0 depth=32768
-#pragma HLS INTERFACE m_axi port=in1 offset=slave bundle=gmem1 depth=32768
-#pragma HLS INTERFACE m_axi port=out offset=slave bundle=gmem2 depth=32768
+#pragma HLS INTERFACE m_axi port=in0 offset=slave bundle=gmem0 depth=49152
+#pragma HLS INTERFACE m_axi port=in1 offset=slave bundle=gmem1 depth=49152
+#pragma HLS INTERFACE m_axi port=out offset=slave bundle=gmem2 depth=49152
 #pragma HLS INTERFACE s_axilite port=stage
 #pragma HLS INTERFACE s_axilite port=config
 #pragma HLS INTERFACE s_axilite port=return
 
-    static uint16 buf0[32*1024];
-    static uint16 buf1[32*1024];
-    static uint16 buf2[32*1024];
-    float x[32*1024], y[32*1024];
+    static uint16 buf0[64*768];
+    static uint16 buf1[64*768];
+    static uint16 buf2[64*768];
+    float x[64*768], y[64*768];
     
     if(stage == 0) { // Stage 0: Load data from PS to PL
-        for(int i = 0; i <32*1024 ; i++) {
+        for(int i = 0; i <64*768 ; i++) {
             buf0[i] = in0[i];
         }
-        for(int i = 0; i <32*1024 ; i++) {
+        for(int i = 0; i <64*768 ; i++) {
             buf1[i] = in1[i];
         }
     }
     
     if(stage == 1) { // Stage 1: Compute
         if(config == 0) { // Element-wise addition
-            bf16_to_float(buf0, x, 32*1024);
-            bf16_to_float(buf1, y, 32*1024);
-            float_add(x, y, buf2, 32*1024);
-            for(int i = 0; i < 32*1024; i++) {
+            bf16_to_float(buf0, x, 64*768);
+            bf16_to_float(buf1, y, 64*768);
+            float_add(x, y, buf2, 64*768);
+            for(int i = 0; i < 64*768; i++) {
 #pragma HLS PIPELINE II=1
                 buf2[i] = bf16add(buf0[i], buf1[i]);
             }
         }
         else if(config == 1) { // safe softmax
-            bf16_to_float(buf0, x, 32*1024);
-            float_safe_softmax(x, buf2, 32*1024);
+            bf16_to_float(buf0, x, 64*768);
+            float_safe_softmax(x, buf2, 64*768);
 //             for(int i = 0; i < ; i++) {
 // #pragma HLS PIPELINE II=1
 //                 buf2[i] = 0;
 //             }
         }
         else if(config == 2) { // mask safe softmax
-            bf16_to_float(buf0, x, 32*1024);
-            bf16_to_float(buf1, y, 32*1024);
-            float_mask_safe_softmax(x, y, buf2, 32*1024);
-//             for(int i = 0; i < ; i++) {
-// #pragma HLS PIPELINE II=1
-//                 buf2[i] = 0;
-//             }
+            // bf16_to_float(buf0, x, 64*768);
+            // bf16_to_float(buf1, y, 64*768);
+            // float_mask_safe_softmax(x, y, buf2, 64*768);
+            for(int i = 0; i <64*768 ; i++) {
+#pragma HLS PIPELINE II=1
+                buf2[i] = 0;
+            }
         }
         else if(config == 3) { // Sigmoid
-            bf16_to_float(buf0, x, 32*1024);
-            float_sigmoid(x, buf2, 32*1024);
+            bf16_to_float(buf0, x, 64*768);
+            float_sigmoid(x, buf2, 64*768);
         }
         else if(config == 4) { // SiLU
-            bf16_to_float(buf0, x, 32*1024);
-            float_silu(x, buf2, 32*1024);
+            bf16_to_float(buf0, x, 64*768);
+            float_silu(x, buf2, 64*768);
         }
         else if(config == 5) { // RMS normalization
-            bf16_to_float(buf0, x, 32*1024);
-            float_rms_norm(x, buf2, 32*1024);
+            bf16_to_float(buf0, x, 64*768);
+            float_rms_norm(x, buf2, 64*768);
         }
         else if(config == 6) { // Layer normalization
-            bf16_to_float(buf0, x, 32*1024);
-            float_layer_norm(x, buf2, 32*1024);
+            bf16_to_float(buf0, x, 64*768);
+            float_layer_norm(x, buf2, 64*768);
         }
     }
     
     if(stage == 2) { // Stage 2: Load data from PL to PS
-        for(int i = 0; i < 32*1024; i++) {
+        for(int i = 0; i < 64*768; i++) {
             out[i] = buf2[i];
         }
     }
