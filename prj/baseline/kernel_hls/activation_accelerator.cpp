@@ -257,62 +257,60 @@ float Q_rsqrt(float number)
 	return y;
 }
 
-//进位操作
-uint16_t round_float32_to_bf16(uint32_t fbits) {
-    const uint32_t LOW16_MASK = 0xFFFFu;
 
-    uint16_t high16 = static_cast<uint16_t>(fbits >> 16); // 包含 sign | exp(8) | top7(mantissa)
+
+uint16_t round_float32_to_bf16_ieee(float x_in) {
+    uint32_t fbits = *reinterpret_cast<uint32_t*>(&x_in);
+
+    // static_assert(sizeof(float) == 4, "This code assumes 32-bit float");
+    // std::memcpy(&fbits, &x_in, sizeof(fbits));
+
+    const uint32_t LOW16_MASK = 0xFFFFu;
+    uint32_t upper = fbits >> 16;        // 高 16 位（将成为 bfloat16 的位模式）
+    uint32_t lower = fbits & LOW16_MASK; // 低 16 位（被丢弃部分）
+
     uint32_t exp_field = (fbits >> 23) & 0xFFu;
 
-    // 如果是 Inf/NaN，直接返回高 16 位（保留 NaN/Inf 表示）
+    // 如果是 Inf 或 NaN，直接返回高 16 位（保留 NaN/Inf 表示）
     if (exp_field == 0xFFu) {
-        return high16;
+        uint16_t ret = static_cast<uint16_t>(upper);
+        // 如果原始是 NaN（mantissa != 0），但高 7 位恰好被截掉为 0，
+        // 为确保返回值仍为 NaN（而不是正负无穷），至少保留一个非零位。
+        uint32_t full_mant = fbits & 0x7FFFFFu;
+        if (full_mant != 0 && (ret & 0x7Fu) == 0) {
+            ret |= 1u; // 保留最小 payload 位（使其成为 NaN）
+        }
+        return ret;
     }
 
-    // round bit 位（第 16 位）
-    uint32_t round_bit = (fbits >> 16) & 1u;
-    // sticky bits：被丢弃区段中的低 16 位（位 0..15）
-    uint32_t sticky = fbits & LOW16_MASK;
-
-    if (round_bit == 0u) {
-        // 无需进位，直接截断
-        return high16;
-    }
-
-    // round_bit == 1: 需要判断是否进位（实现 round-to-nearest-even）
-    bool do_round_up = false;
-    if (sticky != 0u) {
-        // round bit 后还有非零位 -> 必须 round up
-        do_round_up = true;
-    } else {
-        // 恰好是 tie (1000...000)，只在当前 high16 的最低位为 1 时进位（ties-to-even）
-        if ((high16 & 1u) != 0u) {
-            do_round_up = true;
+    // round-to-nearest-even: 比较被丢弃的低 16 位和 0x8000
+    // lower > 0x8000 -> round up
+    // lower < 0x8000 -> round down
+    // lower == 0x8000 -> tie -> round to even (看 upper 的最低位)
+    const uint32_t HALF = 0x8000u; // 1 << 15
+    bool round_up = false;
+    if (lower > HALF) {
+        round_up = true;
+    } else if (lower < HALF) {
+        round_up = false;
+    } else { // lower == HALF: tie
+        if (upper & 1u) { // 如果当前保留位的最低位为 1（奇数），则进位成偶数
+            round_up = true;
         }
     }
 
-    if (!do_round_up) {
-        return high16;
-    }
+    uint32_t rounded = upper + (round_up ? 1u : 0u);
 
-    // 执行进位（用 32 位算以检测是否进位到 exponent）
-    uint32_t rounded = static_cast<uint32_t>(high16) + 1u;
-    const uint32_t BF16_MANT_MASK = 0x7Fu;   // 7 位
-    const uint32_t BF16_EXP_MASK  = 0xFFu;   // 8 位
-
-    uint32_t new_mant = rounded & BF16_MANT_MASK;
-    uint32_t new_exp  = (rounded >> 7) & BF16_EXP_MASK;
-    uint32_t sign     = (rounded >> 15) & 0x1u;
-
+    // 检查进位是否造成指数变为全 1（溢出 -> ±Inf），若是则清零尾数
+    uint32_t new_exp = (rounded >> 7) & 0xFFu;
+    uint32_t sign = (rounded >> 15) & 0x1u;
     if (new_exp == 0xFFu) {
-        // 进位导致指数变为全 1 -> ±Inf，mantissa 清零
-        uint16_t result = static_cast<uint16_t>((sign << 15) | (0xFFu << 7));
-        return result;
+        uint16_t res = static_cast<uint16_t>((sign << 15) | (0xFFu << 7));
+        return res;
     }
 
-    return static_cast<uint16_t>(rounded & LOW16_MASK);
+    return static_cast<uint16_t>(rounded & 0xFFFFu);
 }
-
 
 //exp近似计算
 float fast_exp1(float x) {
@@ -323,19 +321,7 @@ x *= x;
 return x;
 }
 
-// sigmoid
-// void float_sigmoid(const float* x, uint16* y, int len) {
-//     sigmoid_loop:
-//     for (int i = 0; i < len; ++i) { 
-//         #pragma HLS PIPELINE II=1
-//         float val = 1.0f / (1.0f + hls::expf(-x[i]));
-//         uint32_t* y_f32_ptr = (uint32_t*)&val;
-//         y[i] = (*y_f32_ptr) >> 16;
-//     }
-// }
-
-
-// silu
+// silu  ACT_SILU = 1,
 void float_silu(const float* x, uint16* y, int len) {
 #pragma HLS INLINE
     silu_loop:
@@ -346,21 +332,9 @@ void float_silu(const float* x, uint16* y, int len) {
         y[i] = f32_to_bf16_scalar(x[i] * sig);
     }
 }
-// void float_rms_norm(const float* x, uint16* y_bf16, int len) {
-//     const float eps = 1e-6f;
-//     float sum_sq = 0.0f;
-//     for (int i = 0; i < len; ++i) {
-//         sum_sq += x[i] * x[i];
-//     }
-//     float mean_sq = sum_sq / len;
-//     float rms = hls::sqrtf(mean_sq + eps);
-//     for (int i = 0; i < len; ++i) {
-//         float y = x[i] / rms;
-//         uint32_t* y_f32_ptr = (uint32_t*)&y;
-//         y_bf16[i] = (*y_f32_ptr) >> 16;
-//     }
-// }
-// rms_norm(使用雷神之锤)
+
+
+// rms_norm(使用雷神之锤) ACT_RMSNORM = 2,
 void float_rmsnorm(const float* x, uint16* y_bf16, int len) {
     const float eps = 1e-6f;
     float sum_sq = 0.0f;
@@ -429,7 +403,7 @@ void float_rmsnorm(const float* x, uint16* y_bf16, int len) {
 //     }
 // }
 
-// layer_norm
+// layer_norm ACT_LAYERNORM = 3,
 void float_layernorm(const float* x, uint16* y_bf16, int len) {
     const float eps = 1e-6f;
     float sum = 0.0f;
@@ -574,7 +548,7 @@ void float_layernorm(const float* x, uint16* y_bf16, int len) {
 //     }
 // }
 
-// float加法
+// float加法 ACT_ADD = 5,
 void float_add(const float* x, const float* y, uint16* out, int len) {
 #pragma HLS INLINE
     add_loop:
@@ -584,79 +558,19 @@ void float_add(const float* x, const float* y, uint16* out, int len) {
         out[i] = f32_to_bf16_scalar(sum);
     }
 }
-
-
-// safe softmax
-void float_safe_softmax(const float* x, uint16* y_bf16, int len) {
-#pragma HLS INLINE off
-    float max_val = x[0];
-    softmax_loop_0:
-    for (int i = 1; i < len; ++i) { 
-        #pragma HLS PIPELINE II=1
-        if (x[i] > max_val) max_val = x[i];
-    }
-    float sum = 0.0f;
-    float exp_x[TILE];
-#pragma HLS BIND_STORAGE variable=exp_x type=ram_s2p impl=bram
-    softmax_loop_1:
+ 
+//float逐元素乘法 ACT_MUL = 6,
+void float_Multiply(const float* x, const float* y, uint16* out, int len) {
+#pragma HLS INLINE
+    multiply_loop:
     for (int i = 0; i < len; ++i) { 
-        #pragma HLS PIPELINE II=1
-        exp_x[i] = hls::expf(x[i] - max_val);
-        sum += exp_x[i];
-    }
-    softmax_loop_2:
-    for (int i = 0; i < len; ++i) {
-        #pragma HLS PIPELINE II=1
-        float y = exp_x[i] / sum;
-        uint32_t* y_f32_ptr = (uint32_t*)&y;
-        y_bf16[i] = round_float32_to_bf16(*y_f32_ptr);
+    #pragma HLS PIPELINE II=1
+        float mut = x[i] * y[i];
+        out[i] = f32_to_bf16_scalar(mut);
     }
 }
 
-
-
-// void float_gelu(const float* x, uint16* y_bf16, int len) {
-//     const double inv_sqrt2 = 1.0 / std::sqrt(2.0);
-//     for (int i = 0; i < n; ++i) {
-//         float y = 0.5 * x[i] * (1.0 + std::erf(in[i] * inv_sqrt2));
-//         uint32_t* y_f32_ptr = (uint32_t*)&y;
-//         y_bf16[i] = (*y_f32_ptr) >> 16;
-//     }
-// }
-
-
-
-
-// mask safe softmax
-// void float_mask_safe_softmax(const float* x, const float* mask, uint16* y_bf16, int len) {
-// #pragma HLS INLINE off
-//     float x_mask[TILE];
-// #pragma HLS BIND_STORAGE variable=x_mask type=ram_s2p impl=bram
-//     mask_softmax_loop_0:
-//     for (int i = 0; i < len; ++i) { 
-//         #pragma HLS PIPELINE II=1
-//         x_mask[i] = (mask[i] > 0.5f) ? x[i] : (-1e30f);
-//     }
-
-//     // 小规模归约（树形/全展开）
-//     float sum0 = 0.f;
-//     reduce_partial:
-//     for (int k = 0; k < ACC; ++k) {
-//     #pragma HLS UNROLL
-//         sum0 += partial[k];
-//     }
-//     float sum = sum0;
-//     float inv = 1.0f / sum;
-
-//     smx_2:
-//     for (int i = 0; i < len; ++i) {
-//     #pragma HLS PIPELINE II=1
-//     float e = hls::expf(x[i] - xmax);
-//     y_bf16[i] = f32_to_bf16_scalar(e * inv);  // 用乘法替代逐元素除法
-//     }
-// }
-
-// safe softmax
+// safe softmax ACT_SOFTMAX = 0     检查输出：row(0-19)(20-25)(54-63) (1-20)(21-26)(55-64)
 void float_softmax(const float* x, uint16* y_bf16, int len) {
 #pragma HLS INLINE
     float xmax = x[0];
@@ -699,9 +613,25 @@ void float_softmax(const float* x, uint16* y_bf16, int len) {
     for (int i = 0; i < len; ++i) {
     #pragma HLS PIPELINE II=1
         float e = hls::expf(x[i] - xmax);
-        y_bf16[i] = f32_to_bf16_scalar(e / sum);
+        // y_bf16[i] = f32_to_bf16_scalar(e / sum);
+        y_bf16[i] = round_float32_to_bf16_ieee(e / sum);//初步采用进位
     }
 }
+
+//GELU ACT_GELU = 4   检查输出：row(0-19)(42-45)(54-63)  (1-20)(43-46)(55-64)(初步检查无nan和inf问题)
+void float_gelu(const float* x, uint16* y_bf16, int len){
+#pragma HLS INLINE   
+    float xtrue = 0.0f;
+    float down2 = Q_rsqrt(2.0f);
+    for (int i = 0; i < len; ++i) {
+    #pragma HLS PIPELINE II=1
+        xtrue = 0.5f * x[i] * (1.0f + std::erff(x[i]*down2));
+        y_bf16[i] = f32_to_bf16_scalar(xtrue);
+    }
+}
+
+
+
 // ==================== Stage A: LOAD ====================
 // load_rows：从两路源数据 in0、in1 逐“行”读取 512-bit 宽度的数据，写入到两条 HLS 流 s0、s1。
 static void load_rows(const u512* __restrict in0,
@@ -723,6 +653,7 @@ static void load_rows(const u512* __restrict in0,
 #pragma HLS STREAM variable=s0 depth=64
 #pragma HLS STREAM variable=s1 depth=64
 
+//元素读取，读取NR0WS行=64乘以COLS列=768
 LOAD_ROW:
     for (int r = 0; r < NROWS; ++r) {
         //LOOP_TRIPCOUNT 指示仿真/性能估算时该循环迭代次数，帮助 HLS 估算吞吐/时延（不改变功能）。
@@ -753,6 +684,8 @@ static void compute_rows(hls::stream<u512> &s0,
 
     // 行级缓存：两输入 + 输出
     bf16 tile0[COLS], tile1[COLS], tile2[COLS];
+
+
 // BIND_STORAGE把数组强制映射到BRAM
 #pragma HLS BIND_STORAGE variable=tile0 type=ram_2p impl=bram
 #pragma HLS BIND_STORAGE variable=tile1 type=ram_2p impl=bram
@@ -803,14 +736,16 @@ COMPUTE_ROW:
             bf16_to_float(tile1, yt, COLS);
         }
 
+
+        // ------- 选择算子并计算（以行为单位） -------
         switch (op) {
         case ACT_ADD:       float_add(xt, yt, tile2, COLS); break;
         case ACT_SILU:      float_silu(xt,      tile2, COLS); break;
         case ACT_LAYERNORM: float_layernorm(xt, tile2, COLS); break;
         case ACT_RMSNORM:   float_rmsnorm(xt,   tile2, COLS); break;
         case ACT_SOFTMAX:   float_softmax(xt,   tile2, COLS); break;
-        case ACT_GELU:      float_silu(xt,      tile2, COLS); break; // 占位：用SiLU近似
-        case ACT_MUL:       float_add(xt, yt,   tile2, COLS); break; // 占位：先按加法
+        case ACT_GELU:      float_gelu(xt,      tile2, COLS); break; // 修改为GELU
+        case ACT_MUL:       float_Multiply(xt, yt,   tile2, COLS); break; // 修改为乘法
         default:            float_add(xt, yt,   tile2, COLS); break;
         }
     

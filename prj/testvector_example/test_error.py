@@ -6,8 +6,8 @@ import pandas as pd
 config = "0"
 
 N, D = 64, 768
-path_output= "/home/xushaohui/FPT/fpt_LLM/prj/testvector_example/bf16_vectors2/hls_output_config_" + config + ".bin"
-path_golden = "/home/xushaohui/FPT/fpt_LLM/prj/testvector_example/bf16_vectors2/golden_out_config_"+ config + "_bf16.bin"
+path_output= "/home/xushaohui/FPT/fpt_LLM/prj/testvector_example/bf16_vectors3/hls_output_config_" + config + ".bin"
+path_golden = "/home/xushaohui/FPT/fpt_LLM/prj/testvector_example/bf16_vectors3/golden_out_config_"+ config + "_bf16.bin"
 
 
 # 读作 uint16 并 reshape
@@ -34,15 +34,78 @@ golden_f32 = golden_bf16.to(torch.float32).numpy()
 f32_max = np.finfo(np.float32).max
 f32_min = -f32_max
 
-# 替换 nan -> 0, +inf -> f32_max, -inf -> f32_min
-output_f32 = np.nan_to_num(output_f32, nan=0.0, posinf=f32_max, neginf=f32_min)
-golden_f32 = np.nan_to_num(golden_f32, nan=0.0, posinf=f32_max, neginf=f32_min)
+
+# # 替换 nan -> 0, +inf -> f32_max, -inf -> f32_min
+# output_f32 = np.nan_to_num(output_f32, nan=0.0, posinf=f32_max, neginf=f32_min)
+# golden_f32 = np.nan_to_num(golden_f32, nan=0.0, posinf=f32_max, neginf=f32_min)
 
 df_error = pd.DataFrame(output_f32)
-df_error.to_csv("/home/xushaohui/FPT/fpt_LLM/seedata/output_f32.csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
+# df_error.to_csv("/home/xushaohui/FPT/fpt_LLM/seedata/output_f32.csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
 df_error = pd.DataFrame(golden_f32)
-df_error.to_csv("/home/xushaohui/FPT/fpt_LLM/seedata/golden_f32.csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
+# df_error.to_csv("/home/xushaohui/FPT/fpt_LLM/seedata/golden_f32.csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
 eps =1e-12
+
+
+#判断nan分布情况并输出结果，并将所有nan置零
+nandif_out = np.empty((0, 2))
+nandif_gold = np.empty((0, 2))
+
+for i in range(0,64):
+    for j in range(0,768):
+        out = output_f32[i,j]
+        gold = golden_f32[i,j]
+        if pd.isna(out) and pd.isna(gold):
+            output_f32[i,j] = 0
+            golden_f32[i,j] = 0
+        elif pd.isna(out) and not pd.isna(gold):
+            new_out = np.array([[i,j]])   # 注意这里要是二维形状 (1, 2)
+            nandif_out = np.vstack((nandif_out, new_out))
+            output_f32[i,j] = 0
+            golden_f32[i,j] = 0 
+        elif not pd.isna(out) and pd.isna(gold):
+            new_gold = np.array([[i,j]])
+            nandif_gold = np.vstack((nandif_gold, new_gold))
+            output_f32[i,j] = 0
+            golden_f32[i,j] = 0 
+
+df_nandif_out = pd.DataFrame(nandif_out)
+df_nandif_gold = pd.DataFrame(nandif_gold)
+df_nandif_out.to_csv("/home/xushaohui/FPT/fpt_LLM/seedata/config_"+ config +"/df_nandif_out_config_"+ config +".csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
+df_nandif_gold.to_csv("/home/xushaohui/FPT/fpt_LLM/seedata/config_"+ config +"/df_nandif_gold_config_"+ config +".csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
+
+
+#判断inf分布情况并输出结果，并将所有inf置零
+infdif_out = np.empty((0, 2))
+infdif_gold = np.empty((0, 2))
+infdif_sign = np.empty((0, 2))
+
+for i in range(0,64):
+    for j in range(0,768):
+        out = output_f32[i,j]
+        gold = golden_f32[i,j]
+        if np.isinf(out) and np.isinf(gold):
+            if out != gold:
+                new_sign= np.array([[i,j]]) 
+                infdif_sign = p.vstack((infdif_sign, new_sign))
+            output_f32[i,j] = 0
+            golden_f32[i,j] = 0
+        elif np.isinf(out) and not np.isinf(gold):
+            new_out = np.array([[i,j]])   # 注意这里要是二维形状 (1, 2)
+            infdif_out = np.vstack((infdif_out, new_out))
+            output_f32[i,j] = 0
+            golden_f32[i,j] = 0 
+        elif not np.isinf(out) and np.isinf(gold):
+            new_gold = np.array([[i,j]])
+            infdif_gold = np.vstack((infdif_gold, new_gold))
+            output_f32[i,j] = 0
+            golden_f32[i,j] = 0 
+
+df_infdif_out = pd.DataFrame(infdif_out)
+df_infdif_gold = pd.DataFrame(infdif_gold)
+df_infdif_sign = pd.DataFrame(infdif_sign)
+df_infdif_out.to_csv("/home/xushaohui/FPT/fpt_LLM/seedata/config_"+ config +"/df_infdif_out_config_"+ config +".csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
+df_infdif_gold.to_csv("/home/xushaohui/FPT/fpt_LLM/seedata/config_"+ config +"/df_infdif_gold_config_"+ config +".csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
+df_infdif_sign.to_csv("/home/xushaohui/FPT/fpt_LLM/seedata/config_"+ config +"/df_infdif_sign_config_"+ config +".csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
 
 #误差计算并计算精度得分
 errors_per_row = []
@@ -68,12 +131,12 @@ for f in range(N):
     errors_per_row.append(numerator / denominator)
     errors_point_per_row.append(calculate_point(errors_per_row[f]))
 
-#计算总误差和总评分
-numerator_all   = np.linalg.norm(output_f32 - golden_f32, ord=2)
-denominator_all = np.linalg.norm(golden_f32 , ord=2) + eps
-errors = numerator_all / denominator_all
+# #计算总误差和总评分
+# numerator_all   = np.linalg.norm(output_f32 - golden_f32, ord=2)
+# denominator_all = np.linalg.norm(golden_f32 , ord=2) + eps
+# errors = numerator_all / denominator_all
 
-errors_point = calculate_point(errors)
+# errors_point = calculate_point(errors)
 
 # t_int16 = torch.from_numpy(errors.view(np.int16))
 
@@ -87,12 +150,16 @@ errors_point = calculate_point(errors)
 df_error = pd.DataFrame(errors_per_row)
 df_error_point = pd.DataFrame(errors_point_per_row)
 
-#输出总真实误差
-print("评分用真实误差：", errors)
-#输出总评分
-print("总评分：", errors_point)
+# #输出总真实误差
+# print("评分用真实误差：", errors)
+# #输出总评分
+# print("总评分：", errors_point)
 
 # 将DataFrame输出为Excel文件
-df_error.to_csv("/home/xushaohui/FPT/fpt_LLM/seedata/config_"+ config +"/errors_per_row_config_"+ config +"2.csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
-df_error_point.to_csv("/home/xushaohui/FPT/fpt_LLM/seedata/config_"+ config +"/errors_point_per_row_config_"+ config +"2.csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
+#df_error.to_csv("/home/xushaohui/FPT/fpt_LLM/seedata/config_"+ config +"/errors_per_row_config_"+ config +".csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
+#df_error_point.to_csv("/home/xushaohui/FPT/fpt_LLM/seedata/config_"+ config +"/errors_point_per_row_config_"+ config +".csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
+
+#输出使用进位算法的结果
+df_error.to_csv("/home/xushaohui/FPT/fpt_LLM/seedata/config_"+ config +"/errors_per_row_config_"+ config +"_round.csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
+df_error_point.to_csv("/home/xushaohui/FPT/fpt_LLM/seedata/config_"+ config +"/errors_point_per_row_config_"+ config +"_round.csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
 

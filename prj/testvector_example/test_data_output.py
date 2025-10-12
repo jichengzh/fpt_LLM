@@ -12,7 +12,9 @@ config = "0"
 # Name = "X_test_tensor_bf16"
 Name = "hls_output_config_" + config
 # Name = "golden_out_config_" + config + "_bf16"
-path = "/home/xushaohui/FPT/fpt_LLM/prj/testvector_example/bf16_vectors2/"+ Name + ".bin" 
+# Name = "X_test_tensor_bf16"
+# Name = "Y_test_tensor_bf16"
+path = "/home/xushaohui/FPT/fpt_LLM/prj/testvector_example/bf16_vectors3/"+ Name + ".bin" 
 
 
 # 读作 uint16 并 reshape
@@ -46,6 +48,8 @@ df = pd.DataFrame(t_f32)
 
 # df = df.fillna(0.0)
 
-# 3. 将 DataFrame 输出为 Excel 文件
-df.to_csv("/home/xushaohui/FPT/fpt_LLM/seedata/config_"+ config +"/"+ Name + ".csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
+# # 3. 将 DataFrame 输出为 Excel 文件
+# df.to_csv("/home/xushaohui/FPT/fpt_LLM/seedata/config_"+ config +"/"+ Name + ".csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
 
+# 3. 将 DataFrame 输出为 Excel 文件 进位版
+df.to_csv("/home/xushaohui/FPT/fpt_LLM/seedata/config_"+ config +"/"+ Name + "_round.csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
