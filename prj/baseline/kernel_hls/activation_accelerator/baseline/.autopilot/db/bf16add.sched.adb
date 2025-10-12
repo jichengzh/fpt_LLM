@@ -70,7 +70,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1869635878</coreId>
+						<coreId>1631286127</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -94,15 +94,15 @@
 						<id>3</id>
 						<name>b_bits_read</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>23</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>24</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item class_id="10" tracking_level="0" version="0">
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second class_id="11" tracking_level="0" version="0">
 									<count>1</count>
 									<item_version>0</item_version>
@@ -111,7 +111,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>23</second>
+										<second>24</second>
 									</item>
 								</second>
 							</item>
@@ -151,15 +151,15 @@
 						<id>4</id>
 						<name>a_bits_read</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>23</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>24</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -168,7 +168,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>23</second>
+										<second>24</second>
 									</item>
 								</second>
 							</item>
@@ -208,15 +208,15 @@
 						<id>5</id>
 						<name>b_mantissa</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>23</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>24</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -225,7 +225,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>23</second>
+										<second>24</second>
 									</item>
 								</second>
 							</item>
@@ -264,15 +264,15 @@
 						<id>6</id>
 						<name>a_mantissa</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>23</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>24</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -281,7 +281,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>23</second>
+										<second>24</second>
 									</item>
 								</second>
 							</item>
@@ -294,7 +294,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>224</coreId>
+						<coreId>1638074912</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>7</bitwidth>
@@ -320,15 +320,15 @@
 						<id>7</id>
 						<name>tmp_1</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>25</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>26</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -337,7 +337,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>25</second>
+										<second>26</second>
 									</item>
 								</second>
 							</item>
@@ -350,7 +350,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770206576</coreId>
+						<coreId>1638501344</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -376,17 +376,17 @@
 					<Obj>
 						<type>0</type>
 						<id>8</id>
-						<name>tmp_2</name>
+						<name>tmp_4</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>27</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -395,7 +395,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>26</second>
+										<second>27</second>
 									</item>
 								</second>
 							</item>
@@ -408,7 +408,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770165856</coreId>
+						<coreId>1638347504</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -436,15 +436,15 @@
 						<id>9</id>
 						<name>a_exp</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>28</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -453,7 +453,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>27</second>
+										<second>28</second>
 									</item>
 								</second>
 							</item>
@@ -466,7 +466,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770316256</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -495,15 +495,15 @@
 						<id>10</id>
 						<name>b_exp</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>28</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>29</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -512,7 +512,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>28</second>
+										<second>29</second>
 									</item>
 								</second>
 							</item>
@@ -525,7 +525,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770165856</coreId>
+						<coreId>1638837360</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -552,17 +552,17 @@
 					<Obj>
 						<type>0</type>
 						<id>11</id>
-						<name>zext_ln29</name>
+						<name>zext_ln30</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>29</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -571,7 +571,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>29</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -584,7 +584,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>639657324</coreId>
+						<coreId>1639326528</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -608,17 +608,17 @@
 					<Obj>
 						<type>0</type>
 						<id>12</id>
-						<name>zext_ln30</name>
+						<name>zext_ln31</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>30</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -627,7 +627,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>30</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -640,7 +640,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770271408</coreId>
+						<coreId>1638837968</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -664,17 +664,17 @@
 					<Obj>
 						<type>0</type>
 						<id>13</id>
-						<name>icmp_ln33</name>
+						<name>icmp_ln34</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>33</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>34</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -683,7 +683,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>33</second>
+										<second>34</second>
 									</item>
 								</second>
 							</item>
@@ -696,7 +696,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770142192</coreId>
+						<coreId>1638073488</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -721,17 +721,17 @@
 					<Obj>
 						<type>0</type>
 						<id>14</id>
-						<name>trunc_ln2</name>
+						<name>trunc_ln3</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>33</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>34</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -740,7 +740,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>33</second>
+										<second>34</second>
 									</item>
 								</second>
 							</item>
@@ -753,7 +753,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770165856</coreId>
+						<coreId>1639415088</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>7</bitwidth>
@@ -780,17 +780,17 @@
 					<Obj>
 						<type>0</type>
 						<id>15</id>
-						<name>or_ln33</name>
+						<name>or_ln34</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>33</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>34</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -799,7 +799,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>33</second>
+										<second>34</second>
 									</item>
 								</second>
 							</item>
@@ -812,7 +812,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>7</bitwidth>
@@ -837,17 +837,17 @@
 					<Obj>
 						<type>0</type>
 						<id>16</id>
-						<name>tmp_3</name>
+						<name>tmp_5</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>33</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>34</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -856,7 +856,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>33</second>
+										<second>34</second>
 									</item>
 								</second>
 							</item>
@@ -869,7 +869,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770278592</coreId>
+						<coreId>448</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -897,15 +897,15 @@
 						<id>17</id>
 						<name>or_ln</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>33</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>34</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -914,7 +914,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>33</second>
+										<second>34</second>
 									</item>
 								</second>
 							</item>
@@ -927,7 +927,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770171808</coreId>
+						<coreId>1638168992</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -953,17 +953,17 @@
 					<Obj>
 						<type>0</type>
 						<id>18</id>
-						<name>icmp_ln33_1</name>
+						<name>icmp_ln34_1</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>33</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>34</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -972,7 +972,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>33</second>
+										<second>34</second>
 									</item>
 								</second>
 							</item>
@@ -985,7 +985,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770689072</coreId>
+						<coreId>1638318128</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1010,17 +1010,17 @@
 					<Obj>
 						<type>0</type>
 						<id>19</id>
-						<name>br_ln33</name>
+						<name>br_ln34</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>33</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>34</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1029,7 +1029,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>33</second>
+										<second>34</second>
 									</item>
 								</second>
 							</item>
@@ -1042,7 +1042,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1638077216</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1068,17 +1068,17 @@
 					<Obj>
 						<type>0</type>
 						<id>21</id>
-						<name>icmp_ln34</name>
+						<name>icmp_ln35</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>34</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>35</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1087,7 +1087,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>34</second>
+										<second>35</second>
 									</item>
 								</second>
 							</item>
@@ -1100,7 +1100,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770165856</coreId>
+						<coreId>1639322720</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1125,17 +1125,17 @@
 					<Obj>
 						<type>0</type>
 						<id>22</id>
-						<name>trunc_ln3</name>
+						<name>trunc_ln4</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>34</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>35</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1144,7 +1144,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>34</second>
+										<second>35</second>
 									</item>
 								</second>
 							</item>
@@ -1157,7 +1157,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>1638075584</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>7</bitwidth>
@@ -1184,17 +1184,17 @@
 					<Obj>
 						<type>0</type>
 						<id>23</id>
-						<name>or_ln34</name>
+						<name>or_ln35</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>34</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>35</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1203,7 +1203,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>34</second>
+										<second>35</second>
 									</item>
 								</second>
 							</item>
@@ -1216,7 +1216,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770165856</coreId>
+						<coreId>1638073696</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>7</bitwidth>
@@ -1243,15 +1243,15 @@
 						<id>24</id>
 						<name>tmp_6</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>34</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>35</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1260,7 +1260,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>34</second>
+										<second>35</second>
 									</item>
 								</second>
 							</item>
@@ -1273,7 +1273,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>1639328368</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1301,15 +1301,15 @@
 						<id>25</id>
 						<name>or_ln1</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>34</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>35</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1318,7 +1318,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>34</second>
+										<second>35</second>
 									</item>
 								</second>
 							</item>
@@ -1331,7 +1331,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770159072</coreId>
+						<coreId>1638076800</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -1357,17 +1357,17 @@
 					<Obj>
 						<type>0</type>
 						<id>26</id>
-						<name>icmp_ln34_1</name>
+						<name>icmp_ln35_1</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>34</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>35</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1376,7 +1376,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>34</second>
+										<second>35</second>
 									</item>
 								</second>
 							</item>
@@ -1389,7 +1389,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1638169600</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1414,17 +1414,17 @@
 					<Obj>
 						<type>0</type>
 						<id>27</id>
-						<name>br_ln34</name>
+						<name>br_ln35</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>34</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>35</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1433,7 +1433,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>34</second>
+										<second>35</second>
 									</item>
 								</second>
 							</item>
@@ -1446,7 +1446,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770888032</coreId>
+						<coreId>1639416032</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1474,15 +1474,15 @@
 						<id>29</id>
 						<name>or_ln2</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>40</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>41</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1491,7 +1491,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>40</second>
+										<second>41</second>
 									</item>
 								</second>
 							</item>
@@ -1504,7 +1504,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770891424</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -1532,15 +1532,15 @@
 						<id>30</id>
 						<name>or_ln3</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>41</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>42</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1549,7 +1549,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>41</second>
+										<second>42</second>
 									</item>
 								</second>
 							</item>
@@ -1562,7 +1562,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1639328368</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -1588,17 +1588,17 @@
 					<Obj>
 						<type>0</type>
 						<id>31</id>
-						<name>select_ln40</name>
+						<name>select_ln41</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>40</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>41</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1607,7 +1607,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>40</second>
+										<second>41</second>
 									</item>
 								</second>
 							</item>
@@ -1620,7 +1620,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770894936</coreId>
+						<coreId>1520</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -1648,15 +1648,15 @@
 						<id>32</id>
 						<name>a_full_mantissa</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>43</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>44</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1665,7 +1665,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>43</second>
+										<second>44</second>
 									</item>
 								</second>
 							</item>
@@ -1678,7 +1678,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770852832</coreId>
+						<coreId>1638422672</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -1704,17 +1704,17 @@
 					<Obj>
 						<type>0</type>
 						<id>33</id>
-						<name>select_ln41</name>
+						<name>select_ln42</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>41</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>42</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1723,7 +1723,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>41</second>
+										<second>42</second>
 									</item>
 								</second>
 							</item>
@@ -1736,7 +1736,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -1764,15 +1764,15 @@
 						<id>34</id>
 						<name>b_full_mantissa</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>44</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>45</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1781,7 +1781,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>44</second>
+										<second>45</second>
 									</item>
 								</second>
 							</item>
@@ -1794,7 +1794,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1638116432</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -1822,15 +1822,15 @@
 						<id>35</id>
 						<name>a_align_exp</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>47</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>48</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1839,7 +1839,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>47</second>
+										<second>48</second>
 									</item>
 								</second>
 							</item>
@@ -1852,7 +1852,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>1638322784</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -1880,15 +1880,15 @@
 						<id>36</id>
 						<name>b_align_exp</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>48</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>49</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1897,7 +1897,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>48</second>
+										<second>49</second>
 									</item>
 								</second>
 							</item>
@@ -1910,7 +1910,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770796480</coreId>
+						<coreId>1639240928</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -1936,17 +1936,17 @@
 					<Obj>
 						<type>0</type>
 						<id>37</id>
-						<name>icmp_ln52</name>
+						<name>icmp_ln53</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>52</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>53</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1955,7 +1955,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>52</second>
+										<second>53</second>
 									</item>
 								</second>
 							</item>
@@ -1968,7 +1968,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770801088</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1993,17 +1993,17 @@
 					<Obj>
 						<type>0</type>
 						<id>38</id>
-						<name>zext_ln54</name>
+						<name>zext_ln55</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>54</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>55</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2012,7 +2012,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>54</second>
+										<second>55</second>
 									</item>
 								</second>
 							</item>
@@ -2025,7 +2025,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770804816</coreId>
+						<coreId>1635736640</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -2049,17 +2049,17 @@
 					<Obj>
 						<type>0</type>
 						<id>39</id>
-						<name>zext_ln54_1</name>
+						<name>zext_ln55_1</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>54</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>55</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2068,7 +2068,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>54</second>
+										<second>55</second>
 									</item>
 								</second>
 							</item>
@@ -2081,7 +2081,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770803760</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -2105,17 +2105,17 @@
 					<Obj>
 						<type>0</type>
 						<id>40</id>
-						<name>sub_ln54</name>
+						<name>sub_ln55</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>54</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>55</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2124,7 +2124,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>54</second>
+										<second>55</second>
 									</item>
 								</second>
 							</item>
@@ -2137,7 +2137,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770866880</coreId>
+						<coreId>1639328368</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -2162,17 +2162,17 @@
 					<Obj>
 						<type>0</type>
 						<id>41</id>
-						<name>sext_ln54</name>
+						<name>sext_ln55</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>54</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>55</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2181,7 +2181,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>54</second>
+										<second>55</second>
 									</item>
 								</second>
 							</item>
@@ -2194,7 +2194,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770866880</coreId>
+						<coreId>608</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2218,17 +2218,17 @@
 					<Obj>
 						<type>0</type>
 						<id>42</id>
-						<name>sext_ln54cast</name>
+						<name>sext_ln55cast</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>54</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>55</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2237,7 +2237,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>54</second>
+										<second>55</second>
 									</item>
 								</second>
 							</item>
@@ -2250,7 +2250,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770875216</coreId>
+						<coreId>1639015968</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -2276,15 +2276,15 @@
 						<id>43</id>
 						<name>b_full_mantissa_1</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>54</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>55</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2293,7 +2293,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>54</second>
+										<second>55</second>
 									</item>
 								</second>
 							</item>
@@ -2306,7 +2306,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770875216</coreId>
+						<coreId>784</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -2331,17 +2331,17 @@
 					<Obj>
 						<type>0</type>
 						<id>44</id>
-						<name>icmp_ln55</name>
+						<name>icmp_ln56</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>55</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>56</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2350,7 +2350,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>55</second>
+										<second>56</second>
 									</item>
 								</second>
 							</item>
@@ -2363,7 +2363,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770151392</coreId>
+						<coreId>1639328368</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -2388,17 +2388,17 @@
 					<Obj>
 						<type>0</type>
 						<id>45</id>
-						<name>sub_ln57</name>
+						<name>sub_ln58</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2407,7 +2407,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -2420,7 +2420,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>574449505</coreId>
+						<coreId>304</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -2445,17 +2445,17 @@
 					<Obj>
 						<type>0</type>
 						<id>46</id>
-						<name>sext_ln57</name>
+						<name>sext_ln58</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2464,7 +2464,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -2477,7 +2477,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770153232</coreId>
+						<coreId>1638811392</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2501,17 +2501,17 @@
 					<Obj>
 						<type>0</type>
 						<id>47</id>
-						<name>sext_ln57cast</name>
+						<name>sext_ln58cast</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2520,7 +2520,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -2533,7 +2533,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770154448</coreId>
+						<coreId>1639328368</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -2559,15 +2559,15 @@
 						<id>48</id>
 						<name>a_full_mantissa_1</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2576,7 +2576,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -2589,7 +2589,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770155664</coreId>
+						<coreId>1638811568</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -2614,17 +2614,17 @@
 					<Obj>
 						<type>0</type>
 						<id>49</id>
-						<name>xor_ln52</name>
+						<name>xor_ln53</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>52</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>53</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2633,7 +2633,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>52</second>
+										<second>53</second>
 									</item>
 								</second>
 							</item>
@@ -2646,7 +2646,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770692112</coreId>
+						<coreId>1638114784</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -2671,17 +2671,17 @@
 					<Obj>
 						<type>0</type>
 						<id>50</id>
-						<name>and_ln55</name>
+						<name>and_ln56</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>55</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>56</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2690,7 +2690,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>55</second>
+										<second>56</second>
 									</item>
 								</second>
 							</item>
@@ -2703,7 +2703,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770693248</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -2730,15 +2730,15 @@
 						<id>51</id>
 						<name>a_full_mantissa_2</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>55</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>56</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2747,7 +2747,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>55</second>
+										<second>56</second>
 									</item>
 								</second>
 							</item>
@@ -2760,7 +2760,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770694464</coreId>
+						<coreId>1637717120</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -2786,17 +2786,17 @@
 					<Obj>
 						<type>0</type>
 						<id>52</id>
-						<name>zext_ln40_1</name>
+						<name>zext_ln41_1</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>40</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>41</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2805,7 +2805,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>40</second>
+										<second>41</second>
 									</item>
 								</second>
 							</item>
@@ -2818,7 +2818,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770695344</coreId>
+						<coreId>176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>17</bitwidth>
@@ -2844,15 +2844,15 @@
 						<id>53</id>
 						<name>b_full_mantissa_2</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>52</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>53</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2861,7 +2861,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>52</second>
+										<second>53</second>
 									</item>
 								</second>
 							</item>
@@ -2874,7 +2874,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770696816</coreId>
+						<coreId>1638323104</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -2900,17 +2900,17 @@
 					<Obj>
 						<type>0</type>
 						<id>54</id>
-						<name>zext_ln41_1</name>
+						<name>zext_ln42_1</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>41</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>42</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2919,7 +2919,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>41</second>
+										<second>42</second>
 									</item>
 								</second>
 							</item>
@@ -2932,7 +2932,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770698112</coreId>
+						<coreId>1638902184</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>17</bitwidth>
@@ -2958,15 +2958,15 @@
 						<id>55</id>
 						<name>max_exp_4</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>55</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>56</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2975,7 +2975,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>55</second>
+										<second>56</second>
 									</item>
 								</second>
 							</item>
@@ -2988,7 +2988,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770844976</coreId>
+						<coreId>1637501904</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -3014,17 +3014,17 @@
 					<Obj>
 						<type>0</type>
 						<id>56</id>
-						<name>zext_ln51</name>
+						<name>zext_ln52</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>51</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>52</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3033,7 +3033,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>51</second>
+										<second>52</second>
 									</item>
 								</second>
 							</item>
@@ -3046,7 +3046,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770861376</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -3070,17 +3070,17 @@
 					<Obj>
 						<type>0</type>
 						<id>57</id>
-						<name>trunc_ln51</name>
+						<name>trunc_ln52</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>51</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>52</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3089,7 +3089,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>51</second>
+										<second>52</second>
 									</item>
 								</second>
 							</item>
@@ -3102,7 +3102,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770862824</coreId>
+						<coreId>1637501296</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -3126,17 +3126,17 @@
 					<Obj>
 						<type>0</type>
 						<id>58</id>
-						<name>xor_ln65</name>
+						<name>xor_ln66</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>65</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>66</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3145,7 +3145,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>65</second>
+										<second>66</second>
 									</item>
 								</second>
 							</item>
@@ -3185,15 +3185,15 @@
 						<id>59</id>
 						<name>result_mantissa</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>66</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>67</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3202,7 +3202,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>66</second>
+										<second>67</second>
 									</item>
 								</second>
 							</item>
@@ -3215,7 +3215,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>208</coreId>
+						<coreId>1637374080</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>17</bitwidth>
@@ -3240,17 +3240,17 @@
 					<Obj>
 						<type>0</type>
 						<id>60</id>
-						<name>zext_ln63</name>
+						<name>zext_ln64</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>63</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>64</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3259,7 +3259,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>63</second>
+										<second>64</second>
 									</item>
 								</second>
 							</item>
@@ -3272,7 +3272,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770844976</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>18</bitwidth>
@@ -3296,17 +3296,17 @@
 					<Obj>
 						<type>0</type>
 						<id>61</id>
-						<name>icmp_ln69</name>
+						<name>icmp_ln70</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>69</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>70</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3315,7 +3315,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>69</second>
+										<second>70</second>
 									</item>
 								</second>
 							</item>
@@ -3328,7 +3328,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1637135056</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -3353,17 +3353,17 @@
 					<Obj>
 						<type>0</type>
 						<id>62</id>
-						<name>xor_ln69</name>
+						<name>xor_ln70</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>69</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>70</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3372,7 +3372,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>69</second>
+										<second>70</second>
 									</item>
 								</second>
 							</item>
@@ -3385,7 +3385,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770868784</coreId>
+						<coreId>1637114368</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -3412,15 +3412,15 @@
 						<id>63</id>
 						<name>result_mantissa_1</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>70</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>71</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3429,7 +3429,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>70</second>
+										<second>71</second>
 									</item>
 								</second>
 							</item>
@@ -3442,7 +3442,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>85</coreId>
+						<coreId>1638902224</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>17</bitwidth>
@@ -3469,15 +3469,15 @@
 						<id>64</id>
 						<name>result_mantissa_3</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>73</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>74</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3486,7 +3486,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>73</second>
+										<second>74</second>
 									</item>
 								</second>
 							</item>
@@ -3499,7 +3499,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770809776</coreId>
+						<coreId>1637135448</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>17</bitwidth>
@@ -3526,15 +3526,15 @@
 						<id>65</id>
 						<name>result_mantissa_4</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>69</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>70</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3543,7 +3543,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>69</second>
+										<second>70</second>
 									</item>
 								</second>
 							</item>
@@ -3556,7 +3556,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1636094192</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>17</bitwidth>
@@ -3582,17 +3582,17 @@
 					<Obj>
 						<type>0</type>
 						<id>66</id>
-						<name>sext_ln69</name>
+						<name>sext_ln70</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>69</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>70</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3601,7 +3601,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>69</second>
+										<second>70</second>
 									</item>
 								</second>
 							</item>
@@ -3614,7 +3614,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1636094624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>18</bitwidth>
@@ -3640,15 +3640,15 @@
 						<id>67</id>
 						<name>result_sign</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>69</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>70</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3657,7 +3657,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>69</second>
+										<second>70</second>
 									</item>
 								</second>
 							</item>
@@ -3670,7 +3670,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1637113792</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -3698,15 +3698,15 @@
 						<id>68</id>
 						<name>result_mantissa_5</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>65</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>66</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3715,7 +3715,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>65</second>
+										<second>66</second>
 									</item>
 								</second>
 							</item>
@@ -3728,7 +3728,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1636658192</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>18</bitwidth>
@@ -3756,15 +3756,15 @@
 						<id>69</id>
 						<name>result_sign_1</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>65</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>66</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3773,7 +3773,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>65</second>
+										<second>66</second>
 									</item>
 								</second>
 							</item>
@@ -3786,7 +3786,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770832120</coreId>
+						<coreId>1638076192</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -3812,17 +3812,17 @@
 					<Obj>
 						<type>0</type>
 						<id>70</id>
-						<name>icmp_ln79</name>
+						<name>icmp_ln80</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>79</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>80</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3831,7 +3831,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>79</second>
+										<second>80</second>
 									</item>
 								</second>
 							</item>
@@ -3869,17 +3869,17 @@
 					<Obj>
 						<type>0</type>
 						<id>71</id>
-						<name>br_ln79</name>
+						<name>br_ln80</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>79</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>80</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3888,7 +3888,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>79</second>
+										<second>80</second>
 									</item>
 								</second>
 							</item>
@@ -3901,7 +3901,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1639342976</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -3945,7 +3945,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1771049072</coreId>
+						<coreId>1636094928</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>18</bitwidth>
@@ -3987,7 +3987,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1771048960</coreId>
+						<coreId>1637379584</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -4011,17 +4011,17 @@
 					<Obj>
 						<type>0</type>
 						<id>75</id>
-						<name>icmp_ln90</name>
+						<name>icmp_ln91</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>90</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>91</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4030,7 +4030,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>90</second>
+										<second>91</second>
 									</item>
 								</second>
 							</item>
@@ -4043,7 +4043,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>128</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -4068,17 +4068,17 @@
 					<Obj>
 						<type>0</type>
 						<id>76</id>
-						<name>xor_ln86</name>
+						<name>xor_ln87</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>86</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>87</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4087,7 +4087,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>86</second>
+										<second>87</second>
 									</item>
 								</second>
 							</item>
@@ -4100,7 +4100,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1771051664</coreId>
+						<coreId>1638978472</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -4125,17 +4125,17 @@
 					<Obj>
 						<type>0</type>
 						<id>77</id>
-						<name>and_ln86_1</name>
+						<name>and_ln87_1</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>86</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>87</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4144,7 +4144,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>86</second>
+										<second>87</second>
 									</item>
 								</second>
 							</item>
@@ -4157,7 +4157,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1771055408</coreId>
+						<coreId>1819113532</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -4182,17 +4182,17 @@
 					<Obj>
 						<type>0</type>
 						<id>78</id>
-						<name>select_ln86</name>
+						<name>select_ln87</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>86</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>87</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4201,7 +4201,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>86</second>
+										<second>87</second>
 									</item>
 								</second>
 							</item>
@@ -4214,7 +4214,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1771056488</coreId>
+						<coreId>1638980160</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -4240,17 +4240,17 @@
 					<Obj>
 						<type>0</type>
 						<id>79</id>
-						<name>max_exp_2_write_ln86</name>
+						<name>max_exp_2_write_ln87</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>86</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>87</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4259,7 +4259,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>86</second>
+										<second>87</second>
 									</item>
 								</second>
 							</item>
@@ -4272,7 +4272,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1771057728</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -4297,17 +4297,17 @@
 					<Obj>
 						<type>0</type>
 						<id>80</id>
-						<name>result_mantissa_2_write_ln86</name>
+						<name>result_mantissa_2_write_ln87</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>86</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>87</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4316,7 +4316,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>86</second>
+										<second>87</second>
 									</item>
 								</second>
 							</item>
@@ -4329,7 +4329,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1638418928</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -4354,17 +4354,17 @@
 					<Obj>
 						<type>0</type>
 						<id>81</id>
-						<name>br_ln86</name>
+						<name>br_ln87</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>86</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>87</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4373,7 +4373,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>86</second>
+										<second>87</second>
 									</item>
 								</second>
 							</item>
@@ -4386,7 +4386,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1637881584</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -4412,15 +4412,15 @@
 						<id>83</id>
 						<name>max_exp_10</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>88</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>89</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4429,7 +4429,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>88</second>
+										<second>89</second>
 									</item>
 								</second>
 							</item>
@@ -4442,7 +4442,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>480</coreId>
+						<coreId>1637882640</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -4467,17 +4467,17 @@
 					<Obj>
 						<type>0</type>
 						<id>84</id>
-						<name>icmp_ln90_1</name>
+						<name>icmp_ln91_1</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>90</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>91</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4486,7 +4486,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>90</second>
+										<second>91</second>
 									</item>
 								</second>
 							</item>
@@ -4499,7 +4499,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1771062656</coreId>
+						<coreId>1638973696</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -4524,17 +4524,17 @@
 					<Obj>
 						<type>0</type>
 						<id>85</id>
-						<name>br_ln90</name>
+						<name>br_ln91</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>90</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>91</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4543,7 +4543,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>90</second>
+										<second>91</second>
 									</item>
 								</second>
 							</item>
@@ -4556,7 +4556,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770732272</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -4584,15 +4584,15 @@
 						<id>87</id>
 						<name>result_mantissa_2_load_1</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>86</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>87</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4601,7 +4601,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>86</second>
+										<second>87</second>
 									</item>
 								</second>
 							</item>
@@ -4614,7 +4614,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770736536</coreId>
+						<coreId>1636658512</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>18</bitwidth>
@@ -4641,15 +4641,15 @@
 						<id>89</id>
 						<name>tmp_7</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>86</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>87</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4658,7 +4658,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>86</second>
+										<second>87</second>
 									</item>
 								</second>
 							</item>
@@ -4671,7 +4671,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1639008736</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>3</bitwidth>
@@ -4698,17 +4698,17 @@
 					<Obj>
 						<type>0</type>
 						<id>90</id>
-						<name>icmp_ln86</name>
+						<name>icmp_ln87</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>86</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>87</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4717,7 +4717,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>86</second>
+										<second>87</second>
 									</item>
 								</second>
 							</item>
@@ -4730,7 +4730,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770738464</coreId>
+						<coreId>1638417536</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -4755,17 +4755,17 @@
 					<Obj>
 						<type>0</type>
 						<id>91</id>
-						<name>icmp_ln86_1</name>
+						<name>icmp_ln87_1</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>86</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>87</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4774,7 +4774,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>86</second>
+										<second>87</second>
 									</item>
 								</second>
 							</item>
@@ -4787,7 +4787,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770740016</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -4812,17 +4812,17 @@
 					<Obj>
 						<type>0</type>
 						<id>92</id>
-						<name>and_ln86</name>
+						<name>and_ln87</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>86</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>87</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4831,7 +4831,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>86</second>
+										<second>87</second>
 									</item>
 								</second>
 							</item>
@@ -4844,7 +4844,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770741392</coreId>
+						<coreId>1638969664</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -4869,17 +4869,17 @@
 					<Obj>
 						<type>0</type>
 						<id>93</id>
-						<name>br_ln86</name>
+						<name>br_ln87</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>86</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>87</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4888,7 +4888,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>86</second>
+										<second>87</second>
 									</item>
 								</second>
 							</item>
@@ -4901,7 +4901,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770742600</coreId>
+						<coreId>1638406912</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -4929,15 +4929,15 @@
 						<id>95</id>
 						<name>result_mantissa_6</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>87</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>88</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4946,7 +4946,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>87</second>
+										<second>88</second>
 									</item>
 								</second>
 							</item>
@@ -4959,7 +4959,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770743728</coreId>
+						<coreId>1637139920</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>18</bitwidth>
@@ -4986,15 +4986,15 @@
 						<id>96</id>
 						<name>max_exp_11</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>88</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>89</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5003,7 +5003,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>88</second>
+										<second>89</second>
 									</item>
 								</second>
 							</item>
@@ -5016,7 +5016,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1638406240</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -5041,17 +5041,17 @@
 					<Obj>
 						<type>0</type>
 						<id>97</id>
-						<name>max_exp_2_write_ln90</name>
+						<name>max_exp_2_write_ln91</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>90</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>91</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5060,7 +5060,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>90</second>
+										<second>91</second>
 									</item>
 								</second>
 							</item>
@@ -5073,7 +5073,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770748704</coreId>
+						<coreId>648</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -5100,17 +5100,17 @@
 					<Obj>
 						<type>0</type>
 						<id>98</id>
-						<name>result_mantissa_2_write_ln90</name>
+						<name>result_mantissa_2_write_ln91</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>90</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>91</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5119,7 +5119,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>90</second>
+										<second>91</second>
 									</item>
 								</second>
 							</item>
@@ -5132,7 +5132,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770946016</coreId>
+						<coreId>1636644800</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -5159,17 +5159,17 @@
 					<Obj>
 						<type>0</type>
 						<id>99</id>
-						<name>br_ln90</name>
+						<name>br_ln91</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>90</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>91</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5178,7 +5178,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>90</second>
+										<second>91</second>
 									</item>
 								</second>
 							</item>
@@ -5191,7 +5191,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1145981250</coreId>
+						<coreId>1637141568</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -5233,7 +5233,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>6775156</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -5262,15 +5262,15 @@
 						<id>102</id>
 						<name>result_mantissa_2_load</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>93</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>94</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5279,7 +5279,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>93</second>
+										<second>94</second>
 									</item>
 								</second>
 							</item>
@@ -5292,7 +5292,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>673195825</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>18</bitwidth>
@@ -5319,15 +5319,15 @@
 						<id>103</id>
 						<name>tmp_8</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>93</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>94</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5336,7 +5336,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>93</second>
+										<second>94</second>
 									</item>
 								</second>
 							</item>
@@ -5349,7 +5349,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1638722752</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2</bitwidth>
@@ -5376,17 +5376,17 @@
 					<Obj>
 						<type>0</type>
 						<id>104</id>
-						<name>icmp_ln93</name>
+						<name>icmp_ln94</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>93</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>94</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5395,7 +5395,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>93</second>
+										<second>94</second>
 									</item>
 								</second>
 							</item>
@@ -5408,7 +5408,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770951536</coreId>
+						<coreId>1638723296</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -5433,17 +5433,17 @@
 					<Obj>
 						<type>0</type>
 						<id>105</id>
-						<name>trunc_ln7</name>
+						<name>trunc_ln8</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>94</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>95</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5452,7 +5452,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>94</second>
+										<second>95</second>
 									</item>
 								</second>
 							</item>
@@ -5465,7 +5465,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770952864</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>17</bitwidth>
@@ -5492,17 +5492,17 @@
 					<Obj>
 						<type>0</type>
 						<id>106</id>
-						<name>sext_ln95</name>
+						<name>sext_ln96</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>95</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>96</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5511,7 +5511,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>95</second>
+										<second>96</second>
 									</item>
 								</second>
 							</item>
@@ -5524,7 +5524,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770954384</coreId>
+						<coreId>1330007625</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>18</bitwidth>
@@ -5550,15 +5550,15 @@
 						<id>107</id>
 						<name>max_exp_12</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>95</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>96</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5567,7 +5567,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>95</second>
+										<second>96</second>
 									</item>
 								</second>
 							</item>
@@ -5580,7 +5580,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>3</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -5607,15 +5607,15 @@
 						<id>108</id>
 						<name>max_exp_13</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>93</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>94</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5624,7 +5624,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>93</second>
+										<second>94</second>
 									</item>
 								</second>
 							</item>
@@ -5637,7 +5637,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1639366368</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -5665,15 +5665,15 @@
 						<id>109</id>
 						<name>result_mantissa_7</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>93</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>94</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5682,7 +5682,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>93</second>
+										<second>94</second>
 									</item>
 								</second>
 							</item>
@@ -5721,17 +5721,17 @@
 					<Obj>
 						<type>0</type>
 						<id>110</id>
-						<name>sext_ln63</name>
+						<name>sext_ln64</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>63</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>64</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5740,7 +5740,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>63</second>
+										<second>64</second>
 									</item>
 								</second>
 							</item>
@@ -5753,7 +5753,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770959216</coreId>
+						<coreId>1638676392</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>31</bitwidth>
@@ -5777,17 +5777,17 @@
 					<Obj>
 						<type>0</type>
 						<id>111</id>
-						<name>zext_ln63_1</name>
+						<name>zext_ln64_1</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>63</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>64</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5796,7 +5796,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>63</second>
+										<second>64</second>
 									</item>
 								</second>
 							</item>
@@ -5809,7 +5809,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770873072</coreId>
+						<coreId>1638677200</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5835,15 +5835,15 @@
 						<id>112</id>
 						<name>rounding_bits</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>63</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>64</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5852,7 +5852,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>63</second>
+										<second>64</second>
 									</item>
 								</second>
 							</item>
@@ -5865,7 +5865,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770876832</coreId>
+						<coreId>1638587680</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -5889,17 +5889,17 @@
 					<Obj>
 						<type>0</type>
 						<id>113</id>
-						<name>icmp_ln102</name>
+						<name>icmp_ln103</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>102</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>103</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5908,7 +5908,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>102</second>
+										<second>103</second>
 									</item>
 								</second>
 							</item>
@@ -5921,7 +5921,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>376</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -5948,15 +5948,15 @@
 						<id>114</id>
 						<name>result_mantissa_8</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>103</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>104</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -5965,7 +5965,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>103</second>
+										<second>104</second>
 									</item>
 								</second>
 							</item>
@@ -5978,7 +5978,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1638489376</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6003,17 +6003,17 @@
 					<Obj>
 						<type>0</type>
 						<id>115</id>
-						<name>icmp_ln104</name>
+						<name>icmp_ln105</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>104</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>105</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6022,7 +6022,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>104</second>
+										<second>105</second>
 									</item>
 								</second>
 							</item>
@@ -6035,7 +6035,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1638723792</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -6062,15 +6062,15 @@
 						<id>116</id>
 						<name>tmp_9</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>106</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>107</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6079,7 +6079,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>106</second>
+										<second>107</second>
 									</item>
 								</second>
 							</item>
@@ -6092,7 +6092,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>1637289344</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -6120,15 +6120,15 @@
 						<id>117</id>
 						<name>result_mantissa_9</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>106</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>107</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6137,7 +6137,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>106</second>
+										<second>107</second>
 									</item>
 								</second>
 							</item>
@@ -6150,7 +6150,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1637291136</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6178,15 +6178,15 @@
 						<id>118</id>
 						<name>result_mantissa_10</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>102</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>103</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6195,7 +6195,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>102</second>
+										<second>103</second>
 									</item>
 								</second>
 							</item>
@@ -6208,7 +6208,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1638111320</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6234,17 +6234,17 @@
 					<Obj>
 						<type>0</type>
 						<id>119</id>
-						<name>xor_ln102</name>
+						<name>xor_ln103</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>102</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>103</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6253,7 +6253,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>102</second>
+										<second>103</second>
 									</item>
 								</second>
 							</item>
@@ -6266,7 +6266,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770884832</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -6291,17 +6291,17 @@
 					<Obj>
 						<type>0</type>
 						<id>120</id>
-						<name>and_ln104</name>
+						<name>and_ln105</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>104</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>105</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6310,7 +6310,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>104</second>
+										<second>105</second>
 									</item>
 								</second>
 							</item>
@@ -6323,7 +6323,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1638113120</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -6350,15 +6350,15 @@
 						<id>121</id>
 						<name>result_mantissa_11</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>104</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>105</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6367,7 +6367,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>104</second>
+										<second>105</second>
 									</item>
 								</second>
 							</item>
@@ -6380,7 +6380,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770887680</coreId>
+						<coreId>1637573968</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6408,15 +6408,15 @@
 						<id>122</id>
 						<name>tmp_10</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>114</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>115</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6425,7 +6425,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>114</second>
+										<second>115</second>
 									</item>
 								</second>
 							</item>
@@ -6438,7 +6438,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770888976</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -6465,17 +6465,17 @@
 					<Obj>
 						<type>0</type>
 						<id>123</id>
-						<name>icmp_ln114</name>
+						<name>icmp_ln115</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>114</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>115</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6484,7 +6484,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>114</second>
+										<second>115</second>
 									</item>
 								</second>
 							</item>
@@ -6497,7 +6497,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770802672</coreId>
+						<coreId>1638113616</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -6524,15 +6524,15 @@
 						<id>124</id>
 						<name>max_exp_14</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>116</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>117</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6541,7 +6541,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>116</second>
+										<second>117</second>
 									</item>
 								</second>
 							</item>
@@ -6554,7 +6554,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770806512</coreId>
+						<coreId>1638675088</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -6581,15 +6581,15 @@
 						<id>125</id>
 						<name>max_exp_15</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>114</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>115</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6598,7 +6598,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>114</second>
+										<second>115</second>
 									</item>
 								</second>
 							</item>
@@ -6611,7 +6611,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770807632</coreId>
+						<coreId>1638348000</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -6637,17 +6637,17 @@
 					<Obj>
 						<type>0</type>
 						<id>126</id>
-						<name>tmp_4</name>
+						<name>tmp_2</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>120</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>121</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6656,7 +6656,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>120</second>
+										<second>121</second>
 									</item>
 								</second>
 							</item>
@@ -6669,7 +6669,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1637575008</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>7</bitwidth>
@@ -6696,17 +6696,17 @@
 					<Obj>
 						<type>0</type>
 						<id>127</id>
-						<name>tmp_5</name>
+						<name>tmp_3</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>120</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>121</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6715,7 +6715,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>120</second>
+										<second>121</second>
 									</item>
 								</second>
 							</item>
@@ -6728,7 +6728,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>224</coreId>
+						<coreId>1638677696</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>7</bitwidth>
@@ -6757,15 +6757,15 @@
 						<id>128</id>
 						<name>final_mantissa_full</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>114</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>115</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6774,7 +6774,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>114</second>
+										<second>115</second>
 									</item>
 								</second>
 							</item>
@@ -6787,7 +6787,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770797136</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>7</bitwidth>
@@ -6813,17 +6813,17 @@
 					<Obj>
 						<type>0</type>
 						<id>129</id>
-						<name>icmp_ln131</name>
+						<name>icmp_ln132</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>131</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>132</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6832,7 +6832,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>131</second>
+										<second>132</second>
 									</item>
 								</second>
 							</item>
@@ -6845,7 +6845,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>224</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -6870,17 +6870,17 @@
 					<Obj>
 						<type>0</type>
 						<id>130</id>
-						<name>shl_ln136_1</name>
+						<name>shl_ln137_1</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>136</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>137</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6889,7 +6889,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>136</second>
+										<second>137</second>
 									</item>
 								</second>
 							</item>
@@ -6902,7 +6902,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770813328</coreId>
+						<coreId>1638663696</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -6928,17 +6928,17 @@
 					<Obj>
 						<type>0</type>
 						<id>131</id>
-						<name>br_ln131</name>
+						<name>br_ln132</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>131</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>132</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -6947,7 +6947,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>131</second>
+										<second>132</second>
 									</item>
 								</second>
 							</item>
@@ -6960,7 +6960,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770814880</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -6986,17 +6986,17 @@
 					<Obj>
 						<type>0</type>
 						<id>133</id>
-						<name>shl_ln136</name>
+						<name>shl_ln137</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>136</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>137</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7005,7 +7005,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>136</second>
+										<second>137</second>
 									</item>
 								</second>
 							</item>
@@ -7018,7 +7018,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1638666264</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -7045,15 +7045,15 @@
 						<id>134</id>
 						<name>tmp</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>136</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>137</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7062,7 +7062,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>136</second>
+										<second>137</second>
 									</item>
 								</second>
 							</item>
@@ -7075,7 +7075,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770817912</coreId>
+						<coreId>1638054160</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -7102,17 +7102,17 @@
 					<Obj>
 						<type>0</type>
 						<id>135</id>
-						<name>or_ln136</name>
+						<name>or_ln137</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>136</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>137</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7121,7 +7121,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>136</second>
+										<second>137</second>
 									</item>
 								</second>
 							</item>
@@ -7134,7 +7134,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1638905920</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -7159,17 +7159,17 @@
 					<Obj>
 						<type>0</type>
 						<id>136</id>
-						<name>br_ln136</name>
+						<name>br_ln137</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>136</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>137</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7178,7 +7178,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>136</second>
+										<second>137</second>
 									</item>
 								</second>
 							</item>
@@ -7191,7 +7191,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770820176</coreId>
+						<coreId>1638289792</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -7215,17 +7215,17 @@
 					<Obj>
 						<type>0</type>
 						<id>138</id>
-						<name>or_ln132</name>
+						<name>or_ln133</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>132</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>133</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7234,7 +7234,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>132</second>
+										<second>133</second>
 									</item>
 								</second>
 							</item>
@@ -7247,7 +7247,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770821328</coreId>
+						<coreId>1638905920</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -7272,17 +7272,17 @@
 					<Obj>
 						<type>0</type>
 						<id>139</id>
-						<name>br_ln132</name>
+						<name>br_ln133</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>132</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>133</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7291,7 +7291,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>132</second>
+										<second>133</second>
 									</item>
 								</second>
 							</item>
@@ -7304,7 +7304,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770809776</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -7330,15 +7330,15 @@
 						<id>141</id>
 						<name>retval_2</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>132</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>133</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7347,7 +7347,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>132</second>
+										<second>133</second>
 									</item>
 								</second>
 							</item>
@@ -7360,7 +7360,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770831680</coreId>
+						<coreId>2885681600</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -7393,17 +7393,17 @@
 					<Obj>
 						<type>0</type>
 						<id>142</id>
-						<name>_ln137</name>
+						<name>_ln138</name>
 						<fileName>activation_accelerator.cpp</fileName>
-						<fileDirectory>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>137</lineNumber>
+						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
+						<lineNumber>138</lineNumber>
 						<contextFuncName>bf16add</contextFuncName>
 						<contextNormFuncName>bf16add</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls</first>
+								<first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -7412,7 +7412,7 @@
 											<first>activation_accelerator.cpp</first>
 											<second>bf16add</second>
 										</first>
-										<second>137</second>
+										<second>138</second>
 									</item>
 								</second>
 							</item>
@@ -7425,7 +7425,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>1635773344</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -7471,7 +7471,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770864800</coreId>
+						<coreId>1637113376</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -7595,7 +7595,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1769714864</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -7626,7 +7626,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770165856</coreId>
+						<coreId>1639009768</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -7657,7 +7657,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4992</coreId>
+						<coreId>1638501344</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -7688,7 +7688,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1769473872</coreId>
+						<coreId>1637452912</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>18</bitwidth>
@@ -7719,7 +7719,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1635736640</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -7750,7 +7750,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1638116752</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -7781,7 +7781,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1637800704</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -7812,7 +7812,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1637114144</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -7843,7 +7843,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770847792</coreId>
+						<coreId>1638971296</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>3</bitwidth>
@@ -7905,7 +7905,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770849696</coreId>
+						<coreId>1638480896</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -7936,7 +7936,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770847920</coreId>
+						<coreId>1639463168</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2</bitwidth>
@@ -7967,7 +7967,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770851112</coreId>
+						<coreId>176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -7998,7 +7998,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770852048</coreId>
+						<coreId>1639464208</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -8029,7 +8029,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770852680</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -8060,7 +8060,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330007625</coreId>
+						<coreId>1638425648</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -8091,7 +8091,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1639465120</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -8122,7 +8122,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770749776</coreId>
+						<coreId>1638134872</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -8153,7 +8153,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>3834512688</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -8184,7 +8184,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1770751216</coreId>
+						<coreId>3834512688</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>15</bitwidth>
@@ -8215,7 +8215,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1869833586</coreId>
+						<coreId>1638137184</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -8246,7 +8246,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1638426256</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -8419,7 +8419,7 @@
 				<Obj>
 					<type>3</type>
 					<id>82</id>
-					<name>VITIS_LOOP_86_1</name>
+					<name>VITIS_LOOP_87_1</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -8437,7 +8437,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1770166912</coreId>
+					<coreId>1969516397</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -8476,7 +8476,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1771060832</coreId>
+					<coreId>1637878656</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -8509,7 +8509,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>1637881192</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -8545,7 +8545,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1770743712</coreId>
+					<coreId>1638407744</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -8580,7 +8580,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>1638586880</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -8641,7 +8641,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1770816016</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -8675,7 +8675,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1770821312</coreId>
+					<coreId>2624</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -8707,7 +8707,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1770824288</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -10845,8 +10845,8 @@
 		</item>
 		<item class_id_reference="22" object_id="_466">
 			<mId>3</mId>
-			<mTag>VITIS_LOOP_86_1</mTag>
-			<mNormTag>VITIS_LOOP_86_1</mNormTag>
+			<mTag>VITIS_LOOP_87_1</mTag>
+			<mNormTag>VITIS_LOOP_87_1</mNormTag>
 			<mType>1</mType>
 			<sub_regions>
 				<count>0</count>

@@ -1,1 +1,0 @@
-set ::AESL_AUTOSIM::gTopFileName /data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/activation_accelerator/baseline/./sim/autowrap/testbench/activation_accelerator.cpp_pre.cpp.tb.cpp

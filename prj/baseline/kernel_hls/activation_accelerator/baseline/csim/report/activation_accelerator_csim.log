@@ -28,48 +28,48 @@ Set activation_accelerator.stage = 0
 Data transfer complete
 
 --- Testing Config 0 ---
-Config 0 compute time: 2.69088 ms
+Config 0 compute time: 2.1195 ms
 Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/data/hls_output_config_0.bin
 Max Difference: 0
 Config 0 test passed!
 
 --- Testing Config 1 ---
-Config 1 compute time: 0.204418 ms
+Config 1 compute time: 5817.05 ms
 Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/data/hls_output_config_1.bin
-Max Difference: 14595
-Config 1 test failed with 32768 errors
+Max Difference: 1
+Config 1 test failed with 15834 errors
 
 --- Testing Config 2 ---
-Config 2 compute time: 0.166759 ms
+Config 2 compute time: 5095.54 ms
 Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/data/hls_output_config_2.bin
-Max Difference: 14595
-Config 2 test failed with 32768 errors
+Max Difference: 1
+Config 2 test failed with 15805 errors
 
 --- Testing Config 3 ---
-Config 3 compute time: 5670.33 ms
+Config 3 compute time: 5204.37 ms
 Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/data/hls_output_config_3.bin
 Max Difference: 1
 Config 3 test failed with 16816 errors
 
 --- Testing Config 4 ---
-Config 4 compute time: 5198.87 ms
+Config 4 compute time: 5195.17 ms
 Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/data/hls_output_config_4.bin
 Max Difference: 1
 Config 4 test failed with 16222 errors
 
 --- Testing Config 5 ---
-Config 5 compute time: 0.546455 ms
+Config 5 compute time: 0.490348 ms
 Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/data/hls_output_config_5.bin
 Max Difference: 1
 Config 5 test failed with 16535 errors
 
 --- Testing Config 6 ---
-Config 6 compute time: 0.454736 ms
+Config 6 compute time: 0.435971 ms
 Output results saved to: /data1/jcz/activation_accelerator_tutorial/prj/data/hls_output_config_6.bin
 Max Difference: 1
 Config 6 test failed with 16123 errors
 
-Total compute time for all configs: 10873.3 ms
+Total compute time for all configs: 21315.2 ms
 
 === Test Complete ===
 INFO: [SIM 1] CSim done with 0 errors.

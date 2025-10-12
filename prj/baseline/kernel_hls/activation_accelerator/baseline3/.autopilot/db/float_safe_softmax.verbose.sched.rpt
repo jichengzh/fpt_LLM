@@ -1,0 +1,1697 @@
+
+
+================================================================
+== Vitis HLS Report for 'float_safe_softmax'
+================================================================
+* Date:           Sun Oct 12 10:40:06 2025
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        activation_accelerator
+* Solution:       baseline (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.186 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     5314|     5314|  53.140 us|  53.140 us|  5314|  5314|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 148
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 41 
+41 --> 42 
+42 --> 43 
+43 --> 44 
+44 --> 45 
+45 --> 46 
+46 --> 47 
+47 --> 48 
+48 --> 49 
+49 --> 50 
+50 --> 51 
+51 --> 52 
+52 --> 53 
+53 --> 54 
+54 --> 55 
+55 --> 56 
+56 --> 57 
+57 --> 58 
+58 --> 59 
+59 --> 60 
+60 --> 61 
+61 --> 62 
+62 --> 63 
+63 --> 64 
+64 --> 65 
+65 --> 66 
+66 --> 67 
+67 --> 68 
+68 --> 69 
+69 --> 70 
+70 --> 71 
+71 --> 72 
+72 --> 73 
+73 --> 74 
+74 --> 75 
+75 --> 76 
+76 --> 77 
+77 --> 78 
+78 --> 79 
+79 --> 80 
+80 --> 81 
+81 --> 82 
+82 --> 83 
+83 --> 84 
+84 --> 85 
+85 --> 86 
+86 --> 87 
+87 --> 88 
+88 --> 89 
+89 --> 90 
+90 --> 91 
+91 --> 92 
+92 --> 93 
+93 --> 94 
+94 --> 95 
+95 --> 96 
+96 --> 97 
+97 --> 98 
+98 --> 99 
+99 --> 100 
+100 --> 101 
+101 --> 102 
+102 --> 103 
+103 --> 104 
+104 --> 105 
+105 --> 106 
+106 --> 107 
+107 --> 108 
+108 --> 109 
+109 --> 110 
+110 --> 111 
+111 --> 112 
+112 --> 113 
+113 --> 114 
+114 --> 115 
+115 --> 116 
+116 --> 117 
+117 --> 118 
+118 --> 119 
+119 --> 120 
+120 --> 121 
+121 --> 122 
+122 --> 123 
+123 --> 124 
+124 --> 125 
+125 --> 126 
+126 --> 127 
+127 --> 128 
+128 --> 129 
+129 --> 130 
+130 --> 131 
+131 --> 132 
+132 --> 133 
+133 --> 134 
+134 --> 135 
+135 --> 136 
+136 --> 137 
+137 --> 138 
+138 --> 139 
+139 --> 140 
+140 --> 141 
+141 --> 142 
+142 --> 143 
+143 --> 144 
+144 --> 145 
+145 --> 146 
+146 --> 147 
+147 --> 148 
+148 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 149 [1/1] (0.00ns)   --->   "%add10418_loc = alloca i64 1"   --->   Operation 149 'alloca' 'add10418_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 150 [1/1] (0.00ns)   --->   "%add104_120_loc = alloca i64 1"   --->   Operation 150 'alloca' 'add104_120_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 151 [1/1] (0.00ns)   --->   "%add104_222_loc = alloca i64 1"   --->   Operation 151 'alloca' 'add104_222_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 152 [1/1] (0.00ns)   --->   "%add104_324_loc = alloca i64 1"   --->   Operation 152 'alloca' 'add104_324_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 153 [1/1] (0.00ns)   --->   "%add104_426_loc = alloca i64 1"   --->   Operation 153 'alloca' 'add104_426_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 154 [1/1] (0.00ns)   --->   "%add104_528_loc = alloca i64 1"   --->   Operation 154 'alloca' 'add104_528_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 155 [1/1] (0.00ns)   --->   "%add104_630_loc = alloca i64 1"   --->   Operation 155 'alloca' 'add104_630_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 156 [1/1] (0.00ns)   --->   "%add104_732_loc = alloca i64 1"   --->   Operation 156 'alloca' 'add104_732_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 157 [1/1] (0.00ns)   --->   "%add104_834_loc = alloca i64 1"   --->   Operation 157 'alloca' 'add104_834_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 158 [1/1] (0.00ns)   --->   "%add104_936_loc = alloca i64 1"   --->   Operation 158 'alloca' 'add104_936_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 159 [1/1] (0.00ns)   --->   "%add104_1038_loc = alloca i64 1"   --->   Operation 159 'alloca' 'add104_1038_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 160 [1/1] (0.00ns)   --->   "%add104_1140_loc = alloca i64 1"   --->   Operation 160 'alloca' 'add104_1140_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 161 [1/1] (0.00ns)   --->   "%add104_1242_loc = alloca i64 1"   --->   Operation 161 'alloca' 'add104_1242_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 162 [1/1] (0.00ns)   --->   "%add104_1344_loc = alloca i64 1"   --->   Operation 162 'alloca' 'add104_1344_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 163 [1/1] (0.00ns)   --->   "%add104_1446_loc = alloca i64 1"   --->   Operation 163 'alloca' 'add104_1446_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 164 [1/1] (0.00ns)   --->   "%add104_1548_loc = alloca i64 1"   --->   Operation 164 'alloca' 'add104_1548_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 165 [1/1] (0.00ns)   --->   "%add104_1650_loc = alloca i64 1"   --->   Operation 165 'alloca' 'add104_1650_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 166 [1/1] (0.00ns)   --->   "%add104_1752_loc = alloca i64 1"   --->   Operation 166 'alloca' 'add104_1752_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 167 [1/1] (0.00ns)   --->   "%add104_1854_loc = alloca i64 1"   --->   Operation 167 'alloca' 'add104_1854_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 168 [1/1] (0.00ns)   --->   "%add104_1956_loc = alloca i64 1"   --->   Operation 168 'alloca' 'add104_1956_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 169 [1/1] (0.00ns)   --->   "%add104_2058_loc = alloca i64 1"   --->   Operation 169 'alloca' 'add104_2058_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 170 [1/1] (0.00ns)   --->   "%add104_2160_loc = alloca i64 1"   --->   Operation 170 'alloca' 'add104_2160_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 171 [1/1] (0.00ns)   --->   "%add104_2262_loc = alloca i64 1"   --->   Operation 171 'alloca' 'add104_2262_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 172 [1/1] (0.00ns)   --->   "%add104_2364_loc = alloca i64 1"   --->   Operation 172 'alloca' 'add104_2364_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 173 [1/1] (0.00ns)   --->   "%add104_2466_loc = alloca i64 1"   --->   Operation 173 'alloca' 'add104_2466_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 174 [1/1] (0.00ns)   --->   "%add104_2568_loc = alloca i64 1"   --->   Operation 174 'alloca' 'add104_2568_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 175 [1/1] (0.00ns)   --->   "%add104_2670_loc = alloca i64 1"   --->   Operation 175 'alloca' 'add104_2670_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 176 [1/1] (0.00ns)   --->   "%add104_2772_loc = alloca i64 1"   --->   Operation 176 'alloca' 'add104_2772_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 177 [1/1] (0.00ns)   --->   "%add104_2874_loc = alloca i64 1"   --->   Operation 177 'alloca' 'add104_2874_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 178 [1/1] (0.00ns)   --->   "%add104_2976_loc = alloca i64 1"   --->   Operation 178 'alloca' 'add104_2976_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 179 [1/1] (0.00ns)   --->   "%add104_3078_loc = alloca i64 1"   --->   Operation 179 'alloca' 'add104_3078_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 180 [1/1] (0.00ns)   --->   "%add104_3180_loc = alloca i64 1"   --->   Operation 180 'alloca' 'add104_3180_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 181 [1/1] (0.00ns)   --->   "%mux_case_0_loc = alloca i64 1"   --->   Operation 181 'alloca' 'mux_case_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 182 [1/1] (0.00ns)   --->   "%mux_case_1_loc = alloca i64 1"   --->   Operation 182 'alloca' 'mux_case_1_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 183 [1/1] (0.00ns)   --->   "%mux_case_2_loc = alloca i64 1"   --->   Operation 183 'alloca' 'mux_case_2_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 184 [1/1] (0.00ns)   --->   "%mux_case_3_loc = alloca i64 1"   --->   Operation 184 'alloca' 'mux_case_3_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 185 [1/1] (0.00ns)   --->   "%mux_case_4_loc = alloca i64 1"   --->   Operation 185 'alloca' 'mux_case_4_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 186 [1/1] (0.00ns)   --->   "%mux_case_5_loc = alloca i64 1"   --->   Operation 186 'alloca' 'mux_case_5_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 187 [1/1] (0.00ns)   --->   "%mux_case_6_loc = alloca i64 1"   --->   Operation 187 'alloca' 'mux_case_6_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 188 [1/1] (0.00ns)   --->   "%mux_case_7_loc = alloca i64 1"   --->   Operation 188 'alloca' 'mux_case_7_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 189 [1/1] (0.00ns)   --->   "%mux_case_8_loc = alloca i64 1"   --->   Operation 189 'alloca' 'mux_case_8_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 190 [1/1] (0.00ns)   --->   "%mux_case_9_loc = alloca i64 1"   --->   Operation 190 'alloca' 'mux_case_9_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 191 [1/1] (0.00ns)   --->   "%mux_case_10_loc = alloca i64 1"   --->   Operation 191 'alloca' 'mux_case_10_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 192 [1/1] (0.00ns)   --->   "%mux_case_11_loc = alloca i64 1"   --->   Operation 192 'alloca' 'mux_case_11_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 193 [1/1] (0.00ns)   --->   "%mux_case_12_loc = alloca i64 1"   --->   Operation 193 'alloca' 'mux_case_12_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 194 [1/1] (0.00ns)   --->   "%mux_case_13_loc = alloca i64 1"   --->   Operation 194 'alloca' 'mux_case_13_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 195 [1/1] (0.00ns)   --->   "%mux_case_14_loc = alloca i64 1"   --->   Operation 195 'alloca' 'mux_case_14_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 196 [1/1] (0.00ns)   --->   "%mux_case_15_loc = alloca i64 1"   --->   Operation 196 'alloca' 'mux_case_15_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 197 [1/1] (0.00ns)   --->   "%mux_case_16_loc = alloca i64 1"   --->   Operation 197 'alloca' 'mux_case_16_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 198 [1/1] (0.00ns)   --->   "%mux_case_17_loc = alloca i64 1"   --->   Operation 198 'alloca' 'mux_case_17_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 199 [1/1] (0.00ns)   --->   "%mux_case_18_loc = alloca i64 1"   --->   Operation 199 'alloca' 'mux_case_18_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 200 [1/1] (0.00ns)   --->   "%mux_case_19_loc = alloca i64 1"   --->   Operation 200 'alloca' 'mux_case_19_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 201 [1/1] (0.00ns)   --->   "%mux_case_20_loc = alloca i64 1"   --->   Operation 201 'alloca' 'mux_case_20_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 202 [1/1] (0.00ns)   --->   "%mux_case_21_loc = alloca i64 1"   --->   Operation 202 'alloca' 'mux_case_21_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 203 [1/1] (0.00ns)   --->   "%mux_case_22_loc = alloca i64 1"   --->   Operation 203 'alloca' 'mux_case_22_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 204 [1/1] (0.00ns)   --->   "%mux_case_23_loc = alloca i64 1"   --->   Operation 204 'alloca' 'mux_case_23_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 205 [1/1] (0.00ns)   --->   "%mux_case_24_loc = alloca i64 1"   --->   Operation 205 'alloca' 'mux_case_24_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 206 [1/1] (0.00ns)   --->   "%mux_case_25_loc = alloca i64 1"   --->   Operation 206 'alloca' 'mux_case_25_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 207 [1/1] (0.00ns)   --->   "%mux_case_26_loc = alloca i64 1"   --->   Operation 207 'alloca' 'mux_case_26_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 208 [1/1] (0.00ns)   --->   "%mux_case_27_loc = alloca i64 1"   --->   Operation 208 'alloca' 'mux_case_27_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 209 [1/1] (0.00ns)   --->   "%mux_case_28_loc = alloca i64 1"   --->   Operation 209 'alloca' 'mux_case_28_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 210 [1/1] (0.00ns)   --->   "%mux_case_29_loc = alloca i64 1"   --->   Operation 210 'alloca' 'mux_case_29_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 211 [1/1] (0.00ns)   --->   "%mux_case_30_loc = alloca i64 1"   --->   Operation 211 'alloca' 'mux_case_30_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 212 [1/1] (0.00ns)   --->   "%mux_case_31_loc = alloca i64 1"   --->   Operation 212 'alloca' 'mux_case_31_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 213 [1/1] (0.00ns)   --->   "%exp_x = alloca i64 1" [activation_accelerator.cpp:240]   --->   Operation 213 'alloca' 'exp_x' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 90 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1024> <RAM>
+ST_1 : Operation 214 [1/1] (0.00ns)   --->   "%exp_x_1 = alloca i64 1" [activation_accelerator.cpp:240]   --->   Operation 214 'alloca' 'exp_x_1' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 90 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1024> <RAM>
+ST_1 : Operation 215 [1/1] (0.00ns)   --->   "%exp_x_2 = alloca i64 1" [activation_accelerator.cpp:240]   --->   Operation 215 'alloca' 'exp_x_2' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 90 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1024> <RAM>
+ST_1 : Operation 216 [1/1] (0.00ns)   --->   "%exp_x_3 = alloca i64 1" [activation_accelerator.cpp:240]   --->   Operation 216 'alloca' 'exp_x_3' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 90 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1024> <RAM>
+ST_1 : Operation 217 [1/1] (0.00ns)   --->   "%exp_x_4 = alloca i64 1" [activation_accelerator.cpp:240]   --->   Operation 217 'alloca' 'exp_x_4' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 90 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1024> <RAM>
+ST_1 : Operation 218 [1/1] (0.00ns)   --->   "%exp_x_5 = alloca i64 1" [activation_accelerator.cpp:240]   --->   Operation 218 'alloca' 'exp_x_5' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 90 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1024> <RAM>
+ST_1 : Operation 219 [1/1] (0.00ns)   --->   "%exp_x_6 = alloca i64 1" [activation_accelerator.cpp:240]   --->   Operation 219 'alloca' 'exp_x_6' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 90 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1024> <RAM>
+ST_1 : Operation 220 [1/1] (0.00ns)   --->   "%exp_x_7 = alloca i64 1" [activation_accelerator.cpp:240]   --->   Operation 220 'alloca' 'exp_x_7' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 90 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1024> <RAM>
+ST_1 : Operation 221 [1/1] (0.00ns)   --->   "%exp_x_8 = alloca i64 1" [activation_accelerator.cpp:240]   --->   Operation 221 'alloca' 'exp_x_8' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 90 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1024> <RAM>
+ST_1 : Operation 222 [1/1] (0.00ns)   --->   "%exp_x_9 = alloca i64 1" [activation_accelerator.cpp:240]   --->   Operation 222 'alloca' 'exp_x_9' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 90 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1024> <RAM>
+ST_1 : Operation 223 [1/1] (0.00ns)   --->   "%exp_x_10 = alloca i64 1" [activation_accelerator.cpp:240]   --->   Operation 223 'alloca' 'exp_x_10' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 90 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1024> <RAM>
+ST_1 : Operation 224 [1/1] (0.00ns)   --->   "%exp_x_11 = alloca i64 1" [activation_accelerator.cpp:240]   --->   Operation 224 'alloca' 'exp_x_11' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 90 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1024> <RAM>
+ST_1 : Operation 225 [1/1] (0.00ns)   --->   "%exp_x_12 = alloca i64 1" [activation_accelerator.cpp:240]   --->   Operation 225 'alloca' 'exp_x_12' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 90 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1024> <RAM>
+ST_1 : Operation 226 [1/1] (0.00ns)   --->   "%exp_x_13 = alloca i64 1" [activation_accelerator.cpp:240]   --->   Operation 226 'alloca' 'exp_x_13' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 90 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1024> <RAM>
+ST_1 : Operation 227 [1/1] (0.00ns)   --->   "%exp_x_14 = alloca i64 1" [activation_accelerator.cpp:240]   --->   Operation 227 'alloca' 'exp_x_14' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 90 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1024> <RAM>
+ST_1 : Operation 228 [1/1] (0.00ns)   --->   "%exp_x_15 = alloca i64 1" [activation_accelerator.cpp:240]   --->   Operation 228 'alloca' 'exp_x_15' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 90 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1024> <RAM>
+ST_1 : Operation 229 [1/1] (0.00ns)   --->   "%exp_x_16 = alloca i64 1" [activation_accelerator.cpp:240]   --->   Operation 229 'alloca' 'exp_x_16' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 90 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1024> <RAM>
+ST_1 : Operation 230 [1/1] (0.00ns)   --->   "%exp_x_17 = alloca i64 1" [activation_accelerator.cpp:240]   --->   Operation 230 'alloca' 'exp_x_17' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 90 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1024> <RAM>
+ST_1 : Operation 231 [1/1] (0.00ns)   --->   "%exp_x_18 = alloca i64 1" [activation_accelerator.cpp:240]   --->   Operation 231 'alloca' 'exp_x_18' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 90 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1024> <RAM>
+ST_1 : Operation 232 [1/1] (0.00ns)   --->   "%exp_x_19 = alloca i64 1" [activation_accelerator.cpp:240]   --->   Operation 232 'alloca' 'exp_x_19' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 90 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1024> <RAM>
+ST_1 : Operation 233 [1/1] (0.00ns)   --->   "%exp_x_20 = alloca i64 1" [activation_accelerator.cpp:240]   --->   Operation 233 'alloca' 'exp_x_20' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 90 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1024> <RAM>
+ST_1 : Operation 234 [1/1] (0.00ns)   --->   "%exp_x_21 = alloca i64 1" [activation_accelerator.cpp:240]   --->   Operation 234 'alloca' 'exp_x_21' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 90 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1024> <RAM>
+ST_1 : Operation 235 [1/1] (0.00ns)   --->   "%exp_x_22 = alloca i64 1" [activation_accelerator.cpp:240]   --->   Operation 235 'alloca' 'exp_x_22' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 90 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1024> <RAM>
+ST_1 : Operation 236 [1/1] (0.00ns)   --->   "%exp_x_23 = alloca i64 1" [activation_accelerator.cpp:240]   --->   Operation 236 'alloca' 'exp_x_23' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 90 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1024> <RAM>
+ST_1 : Operation 237 [1/1] (0.00ns)   --->   "%exp_x_24 = alloca i64 1" [activation_accelerator.cpp:240]   --->   Operation 237 'alloca' 'exp_x_24' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 90 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1024> <RAM>
+ST_1 : Operation 238 [1/1] (0.00ns)   --->   "%exp_x_25 = alloca i64 1" [activation_accelerator.cpp:240]   --->   Operation 238 'alloca' 'exp_x_25' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 90 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1024> <RAM>
+ST_1 : Operation 239 [1/1] (0.00ns)   --->   "%exp_x_26 = alloca i64 1" [activation_accelerator.cpp:240]   --->   Operation 239 'alloca' 'exp_x_26' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 90 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1024> <RAM>
+ST_1 : Operation 240 [1/1] (0.00ns)   --->   "%exp_x_27 = alloca i64 1" [activation_accelerator.cpp:240]   --->   Operation 240 'alloca' 'exp_x_27' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 90 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1024> <RAM>
+ST_1 : Operation 241 [1/1] (0.00ns)   --->   "%exp_x_28 = alloca i64 1" [activation_accelerator.cpp:240]   --->   Operation 241 'alloca' 'exp_x_28' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 90 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1024> <RAM>
+ST_1 : Operation 242 [1/1] (0.00ns)   --->   "%exp_x_29 = alloca i64 1" [activation_accelerator.cpp:240]   --->   Operation 242 'alloca' 'exp_x_29' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 90 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1024> <RAM>
+ST_1 : Operation 243 [1/1] (0.00ns)   --->   "%exp_x_30 = alloca i64 1" [activation_accelerator.cpp:240]   --->   Operation 243 'alloca' 'exp_x_30' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 90 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1024> <RAM>
+ST_1 : Operation 244 [1/1] (0.00ns)   --->   "%exp_x_31 = alloca i64 1" [activation_accelerator.cpp:240]   --->   Operation 244 'alloca' 'exp_x_31' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 90 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1024> <RAM>
+ST_1 : Operation 245 [2/2] (0.00ns)   --->   "%call_ln0 = call void @float_safe_softmax_Pipeline_find_max_blocks, i32 %x_0, i32 %x_1, i32 %x_2, i32 %x_3, i32 %x_4, i32 %x_5, i32 %x_6, i32 %x_7, i32 %x_8, i32 %x_9, i32 %x_10, i32 %x_11, i32 %x_12, i32 %x_13, i32 %x_14, i32 %x_15, i32 %mux_case_31_loc, i32 %mux_case_30_loc, i32 %mux_case_29_loc, i32 %mux_case_28_loc, i32 %mux_case_27_loc, i32 %mux_case_26_loc, i32 %mux_case_25_loc, i32 %mux_case_24_loc, i32 %mux_case_23_loc, i32 %mux_case_22_loc, i32 %mux_case_21_loc, i32 %mux_case_20_loc, i32 %mux_case_19_loc, i32 %mux_case_18_loc, i32 %mux_case_17_loc, i32 %mux_case_16_loc, i32 %mux_case_15_loc, i32 %mux_case_14_loc, i32 %mux_case_13_loc, i32 %mux_case_12_loc, i32 %mux_case_11_loc, i32 %mux_case_10_loc, i32 %mux_case_9_loc, i32 %mux_case_8_loc, i32 %mux_case_7_loc, i32 %mux_case_6_loc, i32 %mux_case_5_loc, i32 %mux_case_4_loc, i32 %mux_case_3_loc, i32 %mux_case_2_loc, i32 %mux_case_1_loc, i32 %mux_case_0_loc"   --->   Operation 245 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 246 [1/2] (0.00ns)   --->   "%call_ln0 = call void @float_safe_softmax_Pipeline_find_max_blocks, i32 %x_0, i32 %x_1, i32 %x_2, i32 %x_3, i32 %x_4, i32 %x_5, i32 %x_6, i32 %x_7, i32 %x_8, i32 %x_9, i32 %x_10, i32 %x_11, i32 %x_12, i32 %x_13, i32 %x_14, i32 %x_15, i32 %mux_case_31_loc, i32 %mux_case_30_loc, i32 %mux_case_29_loc, i32 %mux_case_28_loc, i32 %mux_case_27_loc, i32 %mux_case_26_loc, i32 %mux_case_25_loc, i32 %mux_case_24_loc, i32 %mux_case_23_loc, i32 %mux_case_22_loc, i32 %mux_case_21_loc, i32 %mux_case_20_loc, i32 %mux_case_19_loc, i32 %mux_case_18_loc, i32 %mux_case_17_loc, i32 %mux_case_16_loc, i32 %mux_case_15_loc, i32 %mux_case_14_loc, i32 %mux_case_13_loc, i32 %mux_case_12_loc, i32 %mux_case_11_loc, i32 %mux_case_10_loc, i32 %mux_case_9_loc, i32 %mux_case_8_loc, i32 %mux_case_7_loc, i32 %mux_case_6_loc, i32 %mux_case_5_loc, i32 %mux_case_4_loc, i32 %mux_case_3_loc, i32 %mux_case_2_loc, i32 %mux_case_1_loc, i32 %mux_case_0_loc"   --->   Operation 246 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 2.97>
+ST_3 : Operation 247 [1/1] (0.00ns)   --->   "%mux_case_1_loc_load = load i32 %mux_case_1_loc"   --->   Operation 247 'load' 'mux_case_1_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 248 [1/1] (0.00ns)   --->   "%mux_case_0_loc_load = load i32 %mux_case_0_loc"   --->   Operation 248 'load' 'mux_case_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 249 [1/1] (2.97ns)   --->   "%max_val = call i32 @fmaxf, i32 %mux_case_0_loc_load, i32 %mux_case_1_loc_load" [activation_accelerator.cpp:290]   --->   Operation 249 'call' 'max_val' <Predicate = true> <Delay = 2.97> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 5.94>
+ST_4 : Operation 250 [1/1] (0.00ns)   --->   "%mux_case_3_loc_load = load i32 %mux_case_3_loc"   --->   Operation 250 'load' 'mux_case_3_loc_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 251 [1/1] (0.00ns)   --->   "%mux_case_2_loc_load = load i32 %mux_case_2_loc"   --->   Operation 251 'load' 'mux_case_2_loc_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 252 [1/1] (2.97ns)   --->   "%max_val_1 = call i32 @fmaxf, i32 %max_val, i32 %mux_case_2_loc_load" [activation_accelerator.cpp:290]   --->   Operation 252 'call' 'max_val_1' <Predicate = true> <Delay = 2.97> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 253 [1/1] (2.97ns)   --->   "%max_val_2 = call i32 @fmaxf, i32 %max_val_1, i32 %mux_case_3_loc_load" [activation_accelerator.cpp:290]   --->   Operation 253 'call' 'max_val_2' <Predicate = true> <Delay = 2.97> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 5.94>
+ST_5 : Operation 254 [1/1] (0.00ns)   --->   "%mux_case_5_loc_load = load i32 %mux_case_5_loc"   --->   Operation 254 'load' 'mux_case_5_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 255 [1/1] (0.00ns)   --->   "%mux_case_4_loc_load = load i32 %mux_case_4_loc"   --->   Operation 255 'load' 'mux_case_4_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 256 [1/1] (2.97ns)   --->   "%max_val_3 = call i32 @fmaxf, i32 %max_val_2, i32 %mux_case_4_loc_load" [activation_accelerator.cpp:290]   --->   Operation 256 'call' 'max_val_3' <Predicate = true> <Delay = 2.97> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 257 [1/1] (2.97ns)   --->   "%max_val_4 = call i32 @fmaxf, i32 %max_val_3, i32 %mux_case_5_loc_load" [activation_accelerator.cpp:290]   --->   Operation 257 'call' 'max_val_4' <Predicate = true> <Delay = 2.97> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 5.94>
+ST_6 : Operation 258 [1/1] (0.00ns)   --->   "%mux_case_7_loc_load = load i32 %mux_case_7_loc"   --->   Operation 258 'load' 'mux_case_7_loc_load' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 259 [1/1] (0.00ns)   --->   "%mux_case_6_loc_load = load i32 %mux_case_6_loc"   --->   Operation 259 'load' 'mux_case_6_loc_load' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 260 [1/1] (2.97ns)   --->   "%max_val_5 = call i32 @fmaxf, i32 %max_val_4, i32 %mux_case_6_loc_load" [activation_accelerator.cpp:290]   --->   Operation 260 'call' 'max_val_5' <Predicate = true> <Delay = 2.97> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 261 [1/1] (2.97ns)   --->   "%max_val_6 = call i32 @fmaxf, i32 %max_val_5, i32 %mux_case_7_loc_load" [activation_accelerator.cpp:290]   --->   Operation 261 'call' 'max_val_6' <Predicate = true> <Delay = 2.97> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 5.94>
+ST_7 : Operation 262 [1/1] (0.00ns)   --->   "%mux_case_9_loc_load = load i32 %mux_case_9_loc"   --->   Operation 262 'load' 'mux_case_9_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 263 [1/1] (0.00ns)   --->   "%mux_case_8_loc_load = load i32 %mux_case_8_loc"   --->   Operation 263 'load' 'mux_case_8_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 264 [1/1] (2.97ns)   --->   "%max_val_7 = call i32 @fmaxf, i32 %max_val_6, i32 %mux_case_8_loc_load" [activation_accelerator.cpp:290]   --->   Operation 264 'call' 'max_val_7' <Predicate = true> <Delay = 2.97> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 265 [1/1] (2.97ns)   --->   "%max_val_8 = call i32 @fmaxf, i32 %max_val_7, i32 %mux_case_9_loc_load" [activation_accelerator.cpp:290]   --->   Operation 265 'call' 'max_val_8' <Predicate = true> <Delay = 2.97> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 5.94>
+ST_8 : Operation 266 [1/1] (0.00ns)   --->   "%mux_case_11_loc_load = load i32 %mux_case_11_loc"   --->   Operation 266 'load' 'mux_case_11_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 267 [1/1] (0.00ns)   --->   "%mux_case_10_loc_load = load i32 %mux_case_10_loc"   --->   Operation 267 'load' 'mux_case_10_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 268 [1/1] (2.97ns)   --->   "%max_val_9 = call i32 @fmaxf, i32 %max_val_8, i32 %mux_case_10_loc_load" [activation_accelerator.cpp:290]   --->   Operation 268 'call' 'max_val_9' <Predicate = true> <Delay = 2.97> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 269 [1/1] (2.97ns)   --->   "%max_val_10 = call i32 @fmaxf, i32 %max_val_9, i32 %mux_case_11_loc_load" [activation_accelerator.cpp:290]   --->   Operation 269 'call' 'max_val_10' <Predicate = true> <Delay = 2.97> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 5.94>
+ST_9 : Operation 270 [1/1] (0.00ns)   --->   "%mux_case_13_loc_load = load i32 %mux_case_13_loc"   --->   Operation 270 'load' 'mux_case_13_loc_load' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 271 [1/1] (0.00ns)   --->   "%mux_case_12_loc_load = load i32 %mux_case_12_loc"   --->   Operation 271 'load' 'mux_case_12_loc_load' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 272 [1/1] (2.97ns)   --->   "%max_val_11 = call i32 @fmaxf, i32 %max_val_10, i32 %mux_case_12_loc_load" [activation_accelerator.cpp:290]   --->   Operation 272 'call' 'max_val_11' <Predicate = true> <Delay = 2.97> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 273 [1/1] (2.97ns)   --->   "%max_val_12 = call i32 @fmaxf, i32 %max_val_11, i32 %mux_case_13_loc_load" [activation_accelerator.cpp:290]   --->   Operation 273 'call' 'max_val_12' <Predicate = true> <Delay = 2.97> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 5.94>
+ST_10 : Operation 274 [1/1] (0.00ns)   --->   "%mux_case_15_loc_load = load i32 %mux_case_15_loc"   --->   Operation 274 'load' 'mux_case_15_loc_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 275 [1/1] (0.00ns)   --->   "%mux_case_14_loc_load = load i32 %mux_case_14_loc"   --->   Operation 275 'load' 'mux_case_14_loc_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 276 [1/1] (2.97ns)   --->   "%max_val_13 = call i32 @fmaxf, i32 %max_val_12, i32 %mux_case_14_loc_load" [activation_accelerator.cpp:290]   --->   Operation 276 'call' 'max_val_13' <Predicate = true> <Delay = 2.97> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 277 [1/1] (2.97ns)   --->   "%max_val_14 = call i32 @fmaxf, i32 %max_val_13, i32 %mux_case_15_loc_load" [activation_accelerator.cpp:290]   --->   Operation 277 'call' 'max_val_14' <Predicate = true> <Delay = 2.97> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 5.94>
+ST_11 : Operation 278 [1/1] (0.00ns)   --->   "%mux_case_17_loc_load = load i32 %mux_case_17_loc"   --->   Operation 278 'load' 'mux_case_17_loc_load' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 279 [1/1] (0.00ns)   --->   "%mux_case_16_loc_load = load i32 %mux_case_16_loc"   --->   Operation 279 'load' 'mux_case_16_loc_load' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 280 [1/1] (2.97ns)   --->   "%max_val_15 = call i32 @fmaxf, i32 %max_val_14, i32 %mux_case_16_loc_load" [activation_accelerator.cpp:290]   --->   Operation 280 'call' 'max_val_15' <Predicate = true> <Delay = 2.97> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 281 [1/1] (2.97ns)   --->   "%max_val_16 = call i32 @fmaxf, i32 %max_val_15, i32 %mux_case_17_loc_load" [activation_accelerator.cpp:290]   --->   Operation 281 'call' 'max_val_16' <Predicate = true> <Delay = 2.97> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 11> <Delay = 5.94>
+ST_12 : Operation 282 [1/1] (0.00ns)   --->   "%mux_case_19_loc_load = load i32 %mux_case_19_loc"   --->   Operation 282 'load' 'mux_case_19_loc_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 283 [1/1] (0.00ns)   --->   "%mux_case_18_loc_load = load i32 %mux_case_18_loc"   --->   Operation 283 'load' 'mux_case_18_loc_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 284 [1/1] (2.97ns)   --->   "%max_val_17 = call i32 @fmaxf, i32 %max_val_16, i32 %mux_case_18_loc_load" [activation_accelerator.cpp:290]   --->   Operation 284 'call' 'max_val_17' <Predicate = true> <Delay = 2.97> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_12 : Operation 285 [1/1] (2.97ns)   --->   "%max_val_18 = call i32 @fmaxf, i32 %max_val_17, i32 %mux_case_19_loc_load" [activation_accelerator.cpp:290]   --->   Operation 285 'call' 'max_val_18' <Predicate = true> <Delay = 2.97> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 13 <SV = 12> <Delay = 5.94>
+ST_13 : Operation 286 [1/1] (0.00ns)   --->   "%mux_case_21_loc_load = load i32 %mux_case_21_loc"   --->   Operation 286 'load' 'mux_case_21_loc_load' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 287 [1/1] (0.00ns)   --->   "%mux_case_20_loc_load = load i32 %mux_case_20_loc"   --->   Operation 287 'load' 'mux_case_20_loc_load' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 288 [1/1] (2.97ns)   --->   "%max_val_19 = call i32 @fmaxf, i32 %max_val_18, i32 %mux_case_20_loc_load" [activation_accelerator.cpp:290]   --->   Operation 288 'call' 'max_val_19' <Predicate = true> <Delay = 2.97> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_13 : Operation 289 [1/1] (2.97ns)   --->   "%max_val_20 = call i32 @fmaxf, i32 %max_val_19, i32 %mux_case_21_loc_load" [activation_accelerator.cpp:290]   --->   Operation 289 'call' 'max_val_20' <Predicate = true> <Delay = 2.97> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 14 <SV = 13> <Delay = 5.94>
+ST_14 : Operation 290 [1/1] (0.00ns)   --->   "%mux_case_23_loc_load = load i32 %mux_case_23_loc"   --->   Operation 290 'load' 'mux_case_23_loc_load' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 291 [1/1] (0.00ns)   --->   "%mux_case_22_loc_load = load i32 %mux_case_22_loc"   --->   Operation 291 'load' 'mux_case_22_loc_load' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 292 [1/1] (2.97ns)   --->   "%max_val_21 = call i32 @fmaxf, i32 %max_val_20, i32 %mux_case_22_loc_load" [activation_accelerator.cpp:290]   --->   Operation 292 'call' 'max_val_21' <Predicate = true> <Delay = 2.97> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_14 : Operation 293 [1/1] (2.97ns)   --->   "%max_val_22 = call i32 @fmaxf, i32 %max_val_21, i32 %mux_case_23_loc_load" [activation_accelerator.cpp:290]   --->   Operation 293 'call' 'max_val_22' <Predicate = true> <Delay = 2.97> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 15 <SV = 14> <Delay = 5.94>
+ST_15 : Operation 294 [1/1] (0.00ns)   --->   "%mux_case_25_loc_load = load i32 %mux_case_25_loc"   --->   Operation 294 'load' 'mux_case_25_loc_load' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 295 [1/1] (0.00ns)   --->   "%mux_case_24_loc_load = load i32 %mux_case_24_loc"   --->   Operation 295 'load' 'mux_case_24_loc_load' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 296 [1/1] (2.97ns)   --->   "%max_val_23 = call i32 @fmaxf, i32 %max_val_22, i32 %mux_case_24_loc_load" [activation_accelerator.cpp:290]   --->   Operation 296 'call' 'max_val_23' <Predicate = true> <Delay = 2.97> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_15 : Operation 297 [1/1] (2.97ns)   --->   "%max_val_24 = call i32 @fmaxf, i32 %max_val_23, i32 %mux_case_25_loc_load" [activation_accelerator.cpp:290]   --->   Operation 297 'call' 'max_val_24' <Predicate = true> <Delay = 2.97> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 16 <SV = 15> <Delay = 5.94>
+ST_16 : Operation 298 [1/1] (0.00ns)   --->   "%mux_case_27_loc_load = load i32 %mux_case_27_loc"   --->   Operation 298 'load' 'mux_case_27_loc_load' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 299 [1/1] (0.00ns)   --->   "%mux_case_26_loc_load = load i32 %mux_case_26_loc"   --->   Operation 299 'load' 'mux_case_26_loc_load' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 300 [1/1] (2.97ns)   --->   "%max_val_25 = call i32 @fmaxf, i32 %max_val_24, i32 %mux_case_26_loc_load" [activation_accelerator.cpp:290]   --->   Operation 300 'call' 'max_val_25' <Predicate = true> <Delay = 2.97> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_16 : Operation 301 [1/1] (2.97ns)   --->   "%max_val_26 = call i32 @fmaxf, i32 %max_val_25, i32 %mux_case_27_loc_load" [activation_accelerator.cpp:290]   --->   Operation 301 'call' 'max_val_26' <Predicate = true> <Delay = 2.97> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 17 <SV = 16> <Delay = 5.94>
+ST_17 : Operation 302 [1/1] (0.00ns)   --->   "%mux_case_29_loc_load = load i32 %mux_case_29_loc"   --->   Operation 302 'load' 'mux_case_29_loc_load' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 303 [1/1] (0.00ns)   --->   "%mux_case_28_loc_load = load i32 %mux_case_28_loc"   --->   Operation 303 'load' 'mux_case_28_loc_load' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 304 [1/1] (2.97ns)   --->   "%max_val_27 = call i32 @fmaxf, i32 %max_val_26, i32 %mux_case_28_loc_load" [activation_accelerator.cpp:290]   --->   Operation 304 'call' 'max_val_27' <Predicate = true> <Delay = 2.97> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_17 : Operation 305 [1/1] (2.97ns)   --->   "%max_val_28 = call i32 @fmaxf, i32 %max_val_27, i32 %mux_case_29_loc_load" [activation_accelerator.cpp:290]   --->   Operation 305 'call' 'max_val_28' <Predicate = true> <Delay = 2.97> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 18 <SV = 17> <Delay = 5.94>
+ST_18 : Operation 306 [1/1] (0.00ns)   --->   "%mux_case_31_loc_load = load i32 %mux_case_31_loc"   --->   Operation 306 'load' 'mux_case_31_loc_load' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 307 [1/1] (0.00ns)   --->   "%mux_case_30_loc_load = load i32 %mux_case_30_loc"   --->   Operation 307 'load' 'mux_case_30_loc_load' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 308 [1/1] (2.97ns)   --->   "%max_val_29 = call i32 @fmaxf, i32 %max_val_28, i32 %mux_case_30_loc_load" [activation_accelerator.cpp:290]   --->   Operation 308 'call' 'max_val_29' <Predicate = true> <Delay = 2.97> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_18 : Operation 309 [1/1] (2.97ns)   --->   "%max_val_30 = call i32 @fmaxf, i32 %max_val_29, i32 %mux_case_31_loc_load" [activation_accelerator.cpp:290]   --->   Operation 309 'call' 'max_val_30' <Predicate = true> <Delay = 2.97> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_18 : Operation 310 [2/2] (0.00ns)   --->   "%call_ln290 = call void @float_safe_softmax_Pipeline_exp_and_bucket, i32 %exp_x_31, i32 %exp_x_30, i32 %exp_x_29, i32 %exp_x_28, i32 %exp_x_27, i32 %exp_x_26, i32 %exp_x_25, i32 %exp_x_24, i32 %exp_x_23, i32 %exp_x_22, i32 %exp_x_21, i32 %exp_x_20, i32 %exp_x_19, i32 %exp_x_18, i32 %exp_x_17, i32 %exp_x_16, i32 %exp_x_15, i32 %exp_x_14, i32 %exp_x_13, i32 %exp_x_12, i32 %exp_x_11, i32 %exp_x_10, i32 %exp_x_9, i32 %exp_x_8, i32 %exp_x_7, i32 %exp_x_6, i32 %exp_x_5, i32 %exp_x_4, i32 %exp_x_3, i32 %exp_x_2, i32 %exp_x_1, i32 %exp_x, i32 %x_0, i32 %max_val_30, i32 %x_1, i32 %x_2, i32 %x_3, i32 %x_4, i32 %x_5, i32 %x_6, i32 %x_7, i32 %x_8, i32 %x_9, i32 %x_10, i32 %x_11, i32 %x_12, i32 %x_13, i32 %x_14, i32 %x_15, i32 %add104_3180_loc, i32 %add104_3078_loc, i32 %add104_2976_loc, i32 %add104_2874_loc, i32 %add104_2772_loc, i32 %add104_2670_loc, i32 %add104_2568_loc, i32 %add104_2466_loc, i32 %add104_2364_loc, i32 %add104_2262_loc, i32 %add104_2160_loc, i32 %add104_2058_loc, i32 %add104_1956_loc, i32 %add104_1854_loc, i32 %add104_1752_loc, i32 %add104_1650_loc, i32 %add104_1548_loc, i32 %add104_1446_loc, i32 %add104_1344_loc, i32 %add104_1242_loc, i32 %add104_1140_loc, i32 %add104_1038_loc, i32 %add104_936_loc, i32 %add104_834_loc, i32 %add104_732_loc, i32 %add104_630_loc, i32 %add104_528_loc, i32 %add104_426_loc, i32 %add104_324_loc, i32 %add104_222_loc, i32 %add104_120_loc, i32 %add10418_loc" [activation_accelerator.cpp:290]   --->   Operation 310 'call' 'call_ln290' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 19 <SV = 18> <Delay = 0.00>
+ST_19 : Operation 311 [1/2] (0.00ns)   --->   "%call_ln290 = call void @float_safe_softmax_Pipeline_exp_and_bucket, i32 %exp_x_31, i32 %exp_x_30, i32 %exp_x_29, i32 %exp_x_28, i32 %exp_x_27, i32 %exp_x_26, i32 %exp_x_25, i32 %exp_x_24, i32 %exp_x_23, i32 %exp_x_22, i32 %exp_x_21, i32 %exp_x_20, i32 %exp_x_19, i32 %exp_x_18, i32 %exp_x_17, i32 %exp_x_16, i32 %exp_x_15, i32 %exp_x_14, i32 %exp_x_13, i32 %exp_x_12, i32 %exp_x_11, i32 %exp_x_10, i32 %exp_x_9, i32 %exp_x_8, i32 %exp_x_7, i32 %exp_x_6, i32 %exp_x_5, i32 %exp_x_4, i32 %exp_x_3, i32 %exp_x_2, i32 %exp_x_1, i32 %exp_x, i32 %x_0, i32 %max_val_30, i32 %x_1, i32 %x_2, i32 %x_3, i32 %x_4, i32 %x_5, i32 %x_6, i32 %x_7, i32 %x_8, i32 %x_9, i32 %x_10, i32 %x_11, i32 %x_12, i32 %x_13, i32 %x_14, i32 %x_15, i32 %add104_3180_loc, i32 %add104_3078_loc, i32 %add104_2976_loc, i32 %add104_2874_loc, i32 %add104_2772_loc, i32 %add104_2670_loc, i32 %add104_2568_loc, i32 %add104_2466_loc, i32 %add104_2364_loc, i32 %add104_2262_loc, i32 %add104_2160_loc, i32 %add104_2058_loc, i32 %add104_1956_loc, i32 %add104_1854_loc, i32 %add104_1752_loc, i32 %add104_1650_loc, i32 %add104_1548_loc, i32 %add104_1446_loc, i32 %add104_1344_loc, i32 %add104_1242_loc, i32 %add104_1140_loc, i32 %add104_1038_loc, i32 %add104_936_loc, i32 %add104_834_loc, i32 %add104_732_loc, i32 %add104_630_loc, i32 %add104_528_loc, i32 %add104_426_loc, i32 %add104_324_loc, i32 %add104_222_loc, i32 %add104_120_loc, i32 %add10418_loc" [activation_accelerator.cpp:290]   --->   Operation 311 'call' 'call_ln290' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 20 <SV = 19> <Delay = 6.43>
+ST_20 : Operation 312 [1/1] (0.00ns)   --->   "%add10418_loc_load = load i32 %add10418_loc"   --->   Operation 312 'load' 'add10418_loc_load' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 313 [4/4] (6.43ns)   --->   "%sum = fadd i32 %add10418_loc_load, i32 0" [activation_accelerator.cpp:355]   --->   Operation 313 'fadd' 'sum' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 6.43>
+ST_21 : Operation 314 [3/4] (6.43ns)   --->   "%sum = fadd i32 %add10418_loc_load, i32 0" [activation_accelerator.cpp:355]   --->   Operation 314 'fadd' 'sum' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 21> <Delay = 6.43>
+ST_22 : Operation 315 [2/4] (6.43ns)   --->   "%sum = fadd i32 %add10418_loc_load, i32 0" [activation_accelerator.cpp:355]   --->   Operation 315 'fadd' 'sum' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 6.43>
+ST_23 : Operation 316 [1/4] (6.43ns)   --->   "%sum = fadd i32 %add10418_loc_load, i32 0" [activation_accelerator.cpp:355]   --->   Operation 316 'fadd' 'sum' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 24 <SV = 23> <Delay = 6.43>
+ST_24 : Operation 317 [1/1] (0.00ns)   --->   "%add104_120_loc_load = load i32 %add104_120_loc"   --->   Operation 317 'load' 'add104_120_loc_load' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 318 [4/4] (6.43ns)   --->   "%sum_1 = fadd i32 %sum, i32 %add104_120_loc_load" [activation_accelerator.cpp:355]   --->   Operation 318 'fadd' 'sum_1' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 25 <SV = 24> <Delay = 6.43>
+ST_25 : Operation 319 [3/4] (6.43ns)   --->   "%sum_1 = fadd i32 %sum, i32 %add104_120_loc_load" [activation_accelerator.cpp:355]   --->   Operation 319 'fadd' 'sum_1' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 26 <SV = 25> <Delay = 6.43>
+ST_26 : Operation 320 [2/4] (6.43ns)   --->   "%sum_1 = fadd i32 %sum, i32 %add104_120_loc_load" [activation_accelerator.cpp:355]   --->   Operation 320 'fadd' 'sum_1' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 27 <SV = 26> <Delay = 6.43>
+ST_27 : Operation 321 [1/4] (6.43ns)   --->   "%sum_1 = fadd i32 %sum, i32 %add104_120_loc_load" [activation_accelerator.cpp:355]   --->   Operation 321 'fadd' 'sum_1' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 28 <SV = 27> <Delay = 6.43>
+ST_28 : Operation 322 [1/1] (0.00ns)   --->   "%add104_222_loc_load = load i32 %add104_222_loc"   --->   Operation 322 'load' 'add104_222_loc_load' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 323 [4/4] (6.43ns)   --->   "%sum_2 = fadd i32 %sum_1, i32 %add104_222_loc_load" [activation_accelerator.cpp:355]   --->   Operation 323 'fadd' 'sum_2' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 29 <SV = 28> <Delay = 6.43>
+ST_29 : Operation 324 [3/4] (6.43ns)   --->   "%sum_2 = fadd i32 %sum_1, i32 %add104_222_loc_load" [activation_accelerator.cpp:355]   --->   Operation 324 'fadd' 'sum_2' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 30 <SV = 29> <Delay = 6.43>
+ST_30 : Operation 325 [2/4] (6.43ns)   --->   "%sum_2 = fadd i32 %sum_1, i32 %add104_222_loc_load" [activation_accelerator.cpp:355]   --->   Operation 325 'fadd' 'sum_2' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 31 <SV = 30> <Delay = 6.43>
+ST_31 : Operation 326 [1/4] (6.43ns)   --->   "%sum_2 = fadd i32 %sum_1, i32 %add104_222_loc_load" [activation_accelerator.cpp:355]   --->   Operation 326 'fadd' 'sum_2' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 32 <SV = 31> <Delay = 6.43>
+ST_32 : Operation 327 [1/1] (0.00ns)   --->   "%add104_324_loc_load = load i32 %add104_324_loc"   --->   Operation 327 'load' 'add104_324_loc_load' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 328 [4/4] (6.43ns)   --->   "%sum_3 = fadd i32 %sum_2, i32 %add104_324_loc_load" [activation_accelerator.cpp:355]   --->   Operation 328 'fadd' 'sum_3' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 33 <SV = 32> <Delay = 6.43>
+ST_33 : Operation 329 [3/4] (6.43ns)   --->   "%sum_3 = fadd i32 %sum_2, i32 %add104_324_loc_load" [activation_accelerator.cpp:355]   --->   Operation 329 'fadd' 'sum_3' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 34 <SV = 33> <Delay = 6.43>
+ST_34 : Operation 330 [2/4] (6.43ns)   --->   "%sum_3 = fadd i32 %sum_2, i32 %add104_324_loc_load" [activation_accelerator.cpp:355]   --->   Operation 330 'fadd' 'sum_3' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 35 <SV = 34> <Delay = 6.43>
+ST_35 : Operation 331 [1/4] (6.43ns)   --->   "%sum_3 = fadd i32 %sum_2, i32 %add104_324_loc_load" [activation_accelerator.cpp:355]   --->   Operation 331 'fadd' 'sum_3' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 36 <SV = 35> <Delay = 6.43>
+ST_36 : Operation 332 [1/1] (0.00ns)   --->   "%add104_426_loc_load = load i32 %add104_426_loc"   --->   Operation 332 'load' 'add104_426_loc_load' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 333 [4/4] (6.43ns)   --->   "%sum_4 = fadd i32 %sum_3, i32 %add104_426_loc_load" [activation_accelerator.cpp:355]   --->   Operation 333 'fadd' 'sum_4' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 37 <SV = 36> <Delay = 6.43>
+ST_37 : Operation 334 [3/4] (6.43ns)   --->   "%sum_4 = fadd i32 %sum_3, i32 %add104_426_loc_load" [activation_accelerator.cpp:355]   --->   Operation 334 'fadd' 'sum_4' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 38 <SV = 37> <Delay = 6.43>
+ST_38 : Operation 335 [2/4] (6.43ns)   --->   "%sum_4 = fadd i32 %sum_3, i32 %add104_426_loc_load" [activation_accelerator.cpp:355]   --->   Operation 335 'fadd' 'sum_4' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 39 <SV = 38> <Delay = 6.43>
+ST_39 : Operation 336 [1/4] (6.43ns)   --->   "%sum_4 = fadd i32 %sum_3, i32 %add104_426_loc_load" [activation_accelerator.cpp:355]   --->   Operation 336 'fadd' 'sum_4' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 40 <SV = 39> <Delay = 6.43>
+ST_40 : Operation 337 [1/1] (0.00ns)   --->   "%add104_528_loc_load = load i32 %add104_528_loc"   --->   Operation 337 'load' 'add104_528_loc_load' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 338 [4/4] (6.43ns)   --->   "%sum_5 = fadd i32 %sum_4, i32 %add104_528_loc_load" [activation_accelerator.cpp:355]   --->   Operation 338 'fadd' 'sum_5' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 41 <SV = 40> <Delay = 6.43>
+ST_41 : Operation 339 [3/4] (6.43ns)   --->   "%sum_5 = fadd i32 %sum_4, i32 %add104_528_loc_load" [activation_accelerator.cpp:355]   --->   Operation 339 'fadd' 'sum_5' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 42 <SV = 41> <Delay = 6.43>
+ST_42 : Operation 340 [2/4] (6.43ns)   --->   "%sum_5 = fadd i32 %sum_4, i32 %add104_528_loc_load" [activation_accelerator.cpp:355]   --->   Operation 340 'fadd' 'sum_5' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 43 <SV = 42> <Delay = 6.43>
+ST_43 : Operation 341 [1/4] (6.43ns)   --->   "%sum_5 = fadd i32 %sum_4, i32 %add104_528_loc_load" [activation_accelerator.cpp:355]   --->   Operation 341 'fadd' 'sum_5' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 44 <SV = 43> <Delay = 6.43>
+ST_44 : Operation 342 [1/1] (0.00ns)   --->   "%add104_630_loc_load = load i32 %add104_630_loc"   --->   Operation 342 'load' 'add104_630_loc_load' <Predicate = true> <Delay = 0.00>
+ST_44 : Operation 343 [4/4] (6.43ns)   --->   "%sum_6 = fadd i32 %sum_5, i32 %add104_630_loc_load" [activation_accelerator.cpp:355]   --->   Operation 343 'fadd' 'sum_6' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 45 <SV = 44> <Delay = 6.43>
+ST_45 : Operation 344 [3/4] (6.43ns)   --->   "%sum_6 = fadd i32 %sum_5, i32 %add104_630_loc_load" [activation_accelerator.cpp:355]   --->   Operation 344 'fadd' 'sum_6' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 46 <SV = 45> <Delay = 6.43>
+ST_46 : Operation 345 [2/4] (6.43ns)   --->   "%sum_6 = fadd i32 %sum_5, i32 %add104_630_loc_load" [activation_accelerator.cpp:355]   --->   Operation 345 'fadd' 'sum_6' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 47 <SV = 46> <Delay = 6.43>
+ST_47 : Operation 346 [1/4] (6.43ns)   --->   "%sum_6 = fadd i32 %sum_5, i32 %add104_630_loc_load" [activation_accelerator.cpp:355]   --->   Operation 346 'fadd' 'sum_6' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 48 <SV = 47> <Delay = 6.43>
+ST_48 : Operation 347 [1/1] (0.00ns)   --->   "%add104_732_loc_load = load i32 %add104_732_loc"   --->   Operation 347 'load' 'add104_732_loc_load' <Predicate = true> <Delay = 0.00>
+ST_48 : Operation 348 [4/4] (6.43ns)   --->   "%sum_7 = fadd i32 %sum_6, i32 %add104_732_loc_load" [activation_accelerator.cpp:355]   --->   Operation 348 'fadd' 'sum_7' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 49 <SV = 48> <Delay = 6.43>
+ST_49 : Operation 349 [3/4] (6.43ns)   --->   "%sum_7 = fadd i32 %sum_6, i32 %add104_732_loc_load" [activation_accelerator.cpp:355]   --->   Operation 349 'fadd' 'sum_7' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 50 <SV = 49> <Delay = 6.43>
+ST_50 : Operation 350 [2/4] (6.43ns)   --->   "%sum_7 = fadd i32 %sum_6, i32 %add104_732_loc_load" [activation_accelerator.cpp:355]   --->   Operation 350 'fadd' 'sum_7' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 51 <SV = 50> <Delay = 6.43>
+ST_51 : Operation 351 [1/4] (6.43ns)   --->   "%sum_7 = fadd i32 %sum_6, i32 %add104_732_loc_load" [activation_accelerator.cpp:355]   --->   Operation 351 'fadd' 'sum_7' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 52 <SV = 51> <Delay = 6.43>
+ST_52 : Operation 352 [1/1] (0.00ns)   --->   "%add104_834_loc_load = load i32 %add104_834_loc"   --->   Operation 352 'load' 'add104_834_loc_load' <Predicate = true> <Delay = 0.00>
+ST_52 : Operation 353 [4/4] (6.43ns)   --->   "%sum_8 = fadd i32 %sum_7, i32 %add104_834_loc_load" [activation_accelerator.cpp:355]   --->   Operation 353 'fadd' 'sum_8' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 53 <SV = 52> <Delay = 6.43>
+ST_53 : Operation 354 [3/4] (6.43ns)   --->   "%sum_8 = fadd i32 %sum_7, i32 %add104_834_loc_load" [activation_accelerator.cpp:355]   --->   Operation 354 'fadd' 'sum_8' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 54 <SV = 53> <Delay = 6.43>
+ST_54 : Operation 355 [2/4] (6.43ns)   --->   "%sum_8 = fadd i32 %sum_7, i32 %add104_834_loc_load" [activation_accelerator.cpp:355]   --->   Operation 355 'fadd' 'sum_8' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 55 <SV = 54> <Delay = 6.43>
+ST_55 : Operation 356 [1/4] (6.43ns)   --->   "%sum_8 = fadd i32 %sum_7, i32 %add104_834_loc_load" [activation_accelerator.cpp:355]   --->   Operation 356 'fadd' 'sum_8' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 56 <SV = 55> <Delay = 6.43>
+ST_56 : Operation 357 [1/1] (0.00ns)   --->   "%add104_936_loc_load = load i32 %add104_936_loc"   --->   Operation 357 'load' 'add104_936_loc_load' <Predicate = true> <Delay = 0.00>
+ST_56 : Operation 358 [4/4] (6.43ns)   --->   "%sum_9 = fadd i32 %sum_8, i32 %add104_936_loc_load" [activation_accelerator.cpp:355]   --->   Operation 358 'fadd' 'sum_9' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 57 <SV = 56> <Delay = 6.43>
+ST_57 : Operation 359 [3/4] (6.43ns)   --->   "%sum_9 = fadd i32 %sum_8, i32 %add104_936_loc_load" [activation_accelerator.cpp:355]   --->   Operation 359 'fadd' 'sum_9' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 58 <SV = 57> <Delay = 6.43>
+ST_58 : Operation 360 [2/4] (6.43ns)   --->   "%sum_9 = fadd i32 %sum_8, i32 %add104_936_loc_load" [activation_accelerator.cpp:355]   --->   Operation 360 'fadd' 'sum_9' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 59 <SV = 58> <Delay = 6.43>
+ST_59 : Operation 361 [1/4] (6.43ns)   --->   "%sum_9 = fadd i32 %sum_8, i32 %add104_936_loc_load" [activation_accelerator.cpp:355]   --->   Operation 361 'fadd' 'sum_9' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 60 <SV = 59> <Delay = 6.43>
+ST_60 : Operation 362 [1/1] (0.00ns)   --->   "%add104_1038_loc_load = load i32 %add104_1038_loc"   --->   Operation 362 'load' 'add104_1038_loc_load' <Predicate = true> <Delay = 0.00>
+ST_60 : Operation 363 [4/4] (6.43ns)   --->   "%sum_10 = fadd i32 %sum_9, i32 %add104_1038_loc_load" [activation_accelerator.cpp:355]   --->   Operation 363 'fadd' 'sum_10' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 61 <SV = 60> <Delay = 6.43>
+ST_61 : Operation 364 [3/4] (6.43ns)   --->   "%sum_10 = fadd i32 %sum_9, i32 %add104_1038_loc_load" [activation_accelerator.cpp:355]   --->   Operation 364 'fadd' 'sum_10' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 62 <SV = 61> <Delay = 6.43>
+ST_62 : Operation 365 [2/4] (6.43ns)   --->   "%sum_10 = fadd i32 %sum_9, i32 %add104_1038_loc_load" [activation_accelerator.cpp:355]   --->   Operation 365 'fadd' 'sum_10' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 63 <SV = 62> <Delay = 6.43>
+ST_63 : Operation 366 [1/4] (6.43ns)   --->   "%sum_10 = fadd i32 %sum_9, i32 %add104_1038_loc_load" [activation_accelerator.cpp:355]   --->   Operation 366 'fadd' 'sum_10' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 64 <SV = 63> <Delay = 6.43>
+ST_64 : Operation 367 [1/1] (0.00ns)   --->   "%add104_1140_loc_load = load i32 %add104_1140_loc"   --->   Operation 367 'load' 'add104_1140_loc_load' <Predicate = true> <Delay = 0.00>
+ST_64 : Operation 368 [4/4] (6.43ns)   --->   "%sum_11 = fadd i32 %sum_10, i32 %add104_1140_loc_load" [activation_accelerator.cpp:355]   --->   Operation 368 'fadd' 'sum_11' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 65 <SV = 64> <Delay = 6.43>
+ST_65 : Operation 369 [3/4] (6.43ns)   --->   "%sum_11 = fadd i32 %sum_10, i32 %add104_1140_loc_load" [activation_accelerator.cpp:355]   --->   Operation 369 'fadd' 'sum_11' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 66 <SV = 65> <Delay = 6.43>
+ST_66 : Operation 370 [2/4] (6.43ns)   --->   "%sum_11 = fadd i32 %sum_10, i32 %add104_1140_loc_load" [activation_accelerator.cpp:355]   --->   Operation 370 'fadd' 'sum_11' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 67 <SV = 66> <Delay = 6.43>
+ST_67 : Operation 371 [1/4] (6.43ns)   --->   "%sum_11 = fadd i32 %sum_10, i32 %add104_1140_loc_load" [activation_accelerator.cpp:355]   --->   Operation 371 'fadd' 'sum_11' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 68 <SV = 67> <Delay = 6.43>
+ST_68 : Operation 372 [1/1] (0.00ns)   --->   "%add104_1242_loc_load = load i32 %add104_1242_loc"   --->   Operation 372 'load' 'add104_1242_loc_load' <Predicate = true> <Delay = 0.00>
+ST_68 : Operation 373 [4/4] (6.43ns)   --->   "%sum_12 = fadd i32 %sum_11, i32 %add104_1242_loc_load" [activation_accelerator.cpp:355]   --->   Operation 373 'fadd' 'sum_12' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 69 <SV = 68> <Delay = 6.43>
+ST_69 : Operation 374 [3/4] (6.43ns)   --->   "%sum_12 = fadd i32 %sum_11, i32 %add104_1242_loc_load" [activation_accelerator.cpp:355]   --->   Operation 374 'fadd' 'sum_12' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 70 <SV = 69> <Delay = 6.43>
+ST_70 : Operation 375 [2/4] (6.43ns)   --->   "%sum_12 = fadd i32 %sum_11, i32 %add104_1242_loc_load" [activation_accelerator.cpp:355]   --->   Operation 375 'fadd' 'sum_12' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 71 <SV = 70> <Delay = 6.43>
+ST_71 : Operation 376 [1/4] (6.43ns)   --->   "%sum_12 = fadd i32 %sum_11, i32 %add104_1242_loc_load" [activation_accelerator.cpp:355]   --->   Operation 376 'fadd' 'sum_12' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 72 <SV = 71> <Delay = 6.43>
+ST_72 : Operation 377 [1/1] (0.00ns)   --->   "%add104_1344_loc_load = load i32 %add104_1344_loc"   --->   Operation 377 'load' 'add104_1344_loc_load' <Predicate = true> <Delay = 0.00>
+ST_72 : Operation 378 [4/4] (6.43ns)   --->   "%sum_13 = fadd i32 %sum_12, i32 %add104_1344_loc_load" [activation_accelerator.cpp:355]   --->   Operation 378 'fadd' 'sum_13' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 73 <SV = 72> <Delay = 6.43>
+ST_73 : Operation 379 [3/4] (6.43ns)   --->   "%sum_13 = fadd i32 %sum_12, i32 %add104_1344_loc_load" [activation_accelerator.cpp:355]   --->   Operation 379 'fadd' 'sum_13' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 74 <SV = 73> <Delay = 6.43>
+ST_74 : Operation 380 [2/4] (6.43ns)   --->   "%sum_13 = fadd i32 %sum_12, i32 %add104_1344_loc_load" [activation_accelerator.cpp:355]   --->   Operation 380 'fadd' 'sum_13' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 75 <SV = 74> <Delay = 6.43>
+ST_75 : Operation 381 [1/4] (6.43ns)   --->   "%sum_13 = fadd i32 %sum_12, i32 %add104_1344_loc_load" [activation_accelerator.cpp:355]   --->   Operation 381 'fadd' 'sum_13' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 76 <SV = 75> <Delay = 6.43>
+ST_76 : Operation 382 [1/1] (0.00ns)   --->   "%add104_1446_loc_load = load i32 %add104_1446_loc"   --->   Operation 382 'load' 'add104_1446_loc_load' <Predicate = true> <Delay = 0.00>
+ST_76 : Operation 383 [4/4] (6.43ns)   --->   "%sum_14 = fadd i32 %sum_13, i32 %add104_1446_loc_load" [activation_accelerator.cpp:355]   --->   Operation 383 'fadd' 'sum_14' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 77 <SV = 76> <Delay = 6.43>
+ST_77 : Operation 384 [3/4] (6.43ns)   --->   "%sum_14 = fadd i32 %sum_13, i32 %add104_1446_loc_load" [activation_accelerator.cpp:355]   --->   Operation 384 'fadd' 'sum_14' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 78 <SV = 77> <Delay = 6.43>
+ST_78 : Operation 385 [2/4] (6.43ns)   --->   "%sum_14 = fadd i32 %sum_13, i32 %add104_1446_loc_load" [activation_accelerator.cpp:355]   --->   Operation 385 'fadd' 'sum_14' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 79 <SV = 78> <Delay = 6.43>
+ST_79 : Operation 386 [1/4] (6.43ns)   --->   "%sum_14 = fadd i32 %sum_13, i32 %add104_1446_loc_load" [activation_accelerator.cpp:355]   --->   Operation 386 'fadd' 'sum_14' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 80 <SV = 79> <Delay = 6.43>
+ST_80 : Operation 387 [1/1] (0.00ns)   --->   "%add104_1548_loc_load = load i32 %add104_1548_loc"   --->   Operation 387 'load' 'add104_1548_loc_load' <Predicate = true> <Delay = 0.00>
+ST_80 : Operation 388 [4/4] (6.43ns)   --->   "%sum_15 = fadd i32 %sum_14, i32 %add104_1548_loc_load" [activation_accelerator.cpp:355]   --->   Operation 388 'fadd' 'sum_15' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 81 <SV = 80> <Delay = 6.43>
+ST_81 : Operation 389 [3/4] (6.43ns)   --->   "%sum_15 = fadd i32 %sum_14, i32 %add104_1548_loc_load" [activation_accelerator.cpp:355]   --->   Operation 389 'fadd' 'sum_15' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 82 <SV = 81> <Delay = 6.43>
+ST_82 : Operation 390 [2/4] (6.43ns)   --->   "%sum_15 = fadd i32 %sum_14, i32 %add104_1548_loc_load" [activation_accelerator.cpp:355]   --->   Operation 390 'fadd' 'sum_15' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 83 <SV = 82> <Delay = 6.43>
+ST_83 : Operation 391 [1/4] (6.43ns)   --->   "%sum_15 = fadd i32 %sum_14, i32 %add104_1548_loc_load" [activation_accelerator.cpp:355]   --->   Operation 391 'fadd' 'sum_15' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 84 <SV = 83> <Delay = 6.43>
+ST_84 : Operation 392 [1/1] (0.00ns)   --->   "%add104_1650_loc_load = load i32 %add104_1650_loc"   --->   Operation 392 'load' 'add104_1650_loc_load' <Predicate = true> <Delay = 0.00>
+ST_84 : Operation 393 [4/4] (6.43ns)   --->   "%sum_16 = fadd i32 %sum_15, i32 %add104_1650_loc_load" [activation_accelerator.cpp:355]   --->   Operation 393 'fadd' 'sum_16' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 85 <SV = 84> <Delay = 6.43>
+ST_85 : Operation 394 [3/4] (6.43ns)   --->   "%sum_16 = fadd i32 %sum_15, i32 %add104_1650_loc_load" [activation_accelerator.cpp:355]   --->   Operation 394 'fadd' 'sum_16' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 86 <SV = 85> <Delay = 6.43>
+ST_86 : Operation 395 [2/4] (6.43ns)   --->   "%sum_16 = fadd i32 %sum_15, i32 %add104_1650_loc_load" [activation_accelerator.cpp:355]   --->   Operation 395 'fadd' 'sum_16' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 87 <SV = 86> <Delay = 6.43>
+ST_87 : Operation 396 [1/4] (6.43ns)   --->   "%sum_16 = fadd i32 %sum_15, i32 %add104_1650_loc_load" [activation_accelerator.cpp:355]   --->   Operation 396 'fadd' 'sum_16' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 88 <SV = 87> <Delay = 6.43>
+ST_88 : Operation 397 [1/1] (0.00ns)   --->   "%add104_1752_loc_load = load i32 %add104_1752_loc"   --->   Operation 397 'load' 'add104_1752_loc_load' <Predicate = true> <Delay = 0.00>
+ST_88 : Operation 398 [4/4] (6.43ns)   --->   "%sum_17 = fadd i32 %sum_16, i32 %add104_1752_loc_load" [activation_accelerator.cpp:355]   --->   Operation 398 'fadd' 'sum_17' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 89 <SV = 88> <Delay = 6.43>
+ST_89 : Operation 399 [3/4] (6.43ns)   --->   "%sum_17 = fadd i32 %sum_16, i32 %add104_1752_loc_load" [activation_accelerator.cpp:355]   --->   Operation 399 'fadd' 'sum_17' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 90 <SV = 89> <Delay = 6.43>
+ST_90 : Operation 400 [2/4] (6.43ns)   --->   "%sum_17 = fadd i32 %sum_16, i32 %add104_1752_loc_load" [activation_accelerator.cpp:355]   --->   Operation 400 'fadd' 'sum_17' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 91 <SV = 90> <Delay = 6.43>
+ST_91 : Operation 401 [1/4] (6.43ns)   --->   "%sum_17 = fadd i32 %sum_16, i32 %add104_1752_loc_load" [activation_accelerator.cpp:355]   --->   Operation 401 'fadd' 'sum_17' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 92 <SV = 91> <Delay = 6.43>
+ST_92 : Operation 402 [1/1] (0.00ns)   --->   "%add104_1854_loc_load = load i32 %add104_1854_loc"   --->   Operation 402 'load' 'add104_1854_loc_load' <Predicate = true> <Delay = 0.00>
+ST_92 : Operation 403 [4/4] (6.43ns)   --->   "%sum_18 = fadd i32 %sum_17, i32 %add104_1854_loc_load" [activation_accelerator.cpp:355]   --->   Operation 403 'fadd' 'sum_18' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 93 <SV = 92> <Delay = 6.43>
+ST_93 : Operation 404 [3/4] (6.43ns)   --->   "%sum_18 = fadd i32 %sum_17, i32 %add104_1854_loc_load" [activation_accelerator.cpp:355]   --->   Operation 404 'fadd' 'sum_18' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 94 <SV = 93> <Delay = 6.43>
+ST_94 : Operation 405 [2/4] (6.43ns)   --->   "%sum_18 = fadd i32 %sum_17, i32 %add104_1854_loc_load" [activation_accelerator.cpp:355]   --->   Operation 405 'fadd' 'sum_18' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 95 <SV = 94> <Delay = 6.43>
+ST_95 : Operation 406 [1/4] (6.43ns)   --->   "%sum_18 = fadd i32 %sum_17, i32 %add104_1854_loc_load" [activation_accelerator.cpp:355]   --->   Operation 406 'fadd' 'sum_18' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 96 <SV = 95> <Delay = 6.43>
+ST_96 : Operation 407 [1/1] (0.00ns)   --->   "%add104_1956_loc_load = load i32 %add104_1956_loc"   --->   Operation 407 'load' 'add104_1956_loc_load' <Predicate = true> <Delay = 0.00>
+ST_96 : Operation 408 [4/4] (6.43ns)   --->   "%sum_19 = fadd i32 %sum_18, i32 %add104_1956_loc_load" [activation_accelerator.cpp:355]   --->   Operation 408 'fadd' 'sum_19' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 97 <SV = 96> <Delay = 6.43>
+ST_97 : Operation 409 [3/4] (6.43ns)   --->   "%sum_19 = fadd i32 %sum_18, i32 %add104_1956_loc_load" [activation_accelerator.cpp:355]   --->   Operation 409 'fadd' 'sum_19' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 98 <SV = 97> <Delay = 6.43>
+ST_98 : Operation 410 [2/4] (6.43ns)   --->   "%sum_19 = fadd i32 %sum_18, i32 %add104_1956_loc_load" [activation_accelerator.cpp:355]   --->   Operation 410 'fadd' 'sum_19' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 99 <SV = 98> <Delay = 6.43>
+ST_99 : Operation 411 [1/4] (6.43ns)   --->   "%sum_19 = fadd i32 %sum_18, i32 %add104_1956_loc_load" [activation_accelerator.cpp:355]   --->   Operation 411 'fadd' 'sum_19' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 100 <SV = 99> <Delay = 6.43>
+ST_100 : Operation 412 [1/1] (0.00ns)   --->   "%add104_2058_loc_load = load i32 %add104_2058_loc"   --->   Operation 412 'load' 'add104_2058_loc_load' <Predicate = true> <Delay = 0.00>
+ST_100 : Operation 413 [4/4] (6.43ns)   --->   "%sum_20 = fadd i32 %sum_19, i32 %add104_2058_loc_load" [activation_accelerator.cpp:355]   --->   Operation 413 'fadd' 'sum_20' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 101 <SV = 100> <Delay = 6.43>
+ST_101 : Operation 414 [3/4] (6.43ns)   --->   "%sum_20 = fadd i32 %sum_19, i32 %add104_2058_loc_load" [activation_accelerator.cpp:355]   --->   Operation 414 'fadd' 'sum_20' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 102 <SV = 101> <Delay = 6.43>
+ST_102 : Operation 415 [2/4] (6.43ns)   --->   "%sum_20 = fadd i32 %sum_19, i32 %add104_2058_loc_load" [activation_accelerator.cpp:355]   --->   Operation 415 'fadd' 'sum_20' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 103 <SV = 102> <Delay = 6.43>
+ST_103 : Operation 416 [1/4] (6.43ns)   --->   "%sum_20 = fadd i32 %sum_19, i32 %add104_2058_loc_load" [activation_accelerator.cpp:355]   --->   Operation 416 'fadd' 'sum_20' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 104 <SV = 103> <Delay = 6.43>
+ST_104 : Operation 417 [1/1] (0.00ns)   --->   "%add104_2160_loc_load = load i32 %add104_2160_loc"   --->   Operation 417 'load' 'add104_2160_loc_load' <Predicate = true> <Delay = 0.00>
+ST_104 : Operation 418 [4/4] (6.43ns)   --->   "%sum_21 = fadd i32 %sum_20, i32 %add104_2160_loc_load" [activation_accelerator.cpp:355]   --->   Operation 418 'fadd' 'sum_21' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 105 <SV = 104> <Delay = 6.43>
+ST_105 : Operation 419 [3/4] (6.43ns)   --->   "%sum_21 = fadd i32 %sum_20, i32 %add104_2160_loc_load" [activation_accelerator.cpp:355]   --->   Operation 419 'fadd' 'sum_21' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 106 <SV = 105> <Delay = 6.43>
+ST_106 : Operation 420 [2/4] (6.43ns)   --->   "%sum_21 = fadd i32 %sum_20, i32 %add104_2160_loc_load" [activation_accelerator.cpp:355]   --->   Operation 420 'fadd' 'sum_21' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 107 <SV = 106> <Delay = 6.43>
+ST_107 : Operation 421 [1/4] (6.43ns)   --->   "%sum_21 = fadd i32 %sum_20, i32 %add104_2160_loc_load" [activation_accelerator.cpp:355]   --->   Operation 421 'fadd' 'sum_21' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 108 <SV = 107> <Delay = 6.43>
+ST_108 : Operation 422 [1/1] (0.00ns)   --->   "%add104_2262_loc_load = load i32 %add104_2262_loc"   --->   Operation 422 'load' 'add104_2262_loc_load' <Predicate = true> <Delay = 0.00>
+ST_108 : Operation 423 [4/4] (6.43ns)   --->   "%sum_22 = fadd i32 %sum_21, i32 %add104_2262_loc_load" [activation_accelerator.cpp:355]   --->   Operation 423 'fadd' 'sum_22' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 109 <SV = 108> <Delay = 6.43>
+ST_109 : Operation 424 [3/4] (6.43ns)   --->   "%sum_22 = fadd i32 %sum_21, i32 %add104_2262_loc_load" [activation_accelerator.cpp:355]   --->   Operation 424 'fadd' 'sum_22' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 110 <SV = 109> <Delay = 6.43>
+ST_110 : Operation 425 [2/4] (6.43ns)   --->   "%sum_22 = fadd i32 %sum_21, i32 %add104_2262_loc_load" [activation_accelerator.cpp:355]   --->   Operation 425 'fadd' 'sum_22' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 111 <SV = 110> <Delay = 6.43>
+ST_111 : Operation 426 [1/4] (6.43ns)   --->   "%sum_22 = fadd i32 %sum_21, i32 %add104_2262_loc_load" [activation_accelerator.cpp:355]   --->   Operation 426 'fadd' 'sum_22' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 112 <SV = 111> <Delay = 6.43>
+ST_112 : Operation 427 [1/1] (0.00ns)   --->   "%add104_2364_loc_load = load i32 %add104_2364_loc"   --->   Operation 427 'load' 'add104_2364_loc_load' <Predicate = true> <Delay = 0.00>
+ST_112 : Operation 428 [4/4] (6.43ns)   --->   "%sum_23 = fadd i32 %sum_22, i32 %add104_2364_loc_load" [activation_accelerator.cpp:355]   --->   Operation 428 'fadd' 'sum_23' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 113 <SV = 112> <Delay = 6.43>
+ST_113 : Operation 429 [3/4] (6.43ns)   --->   "%sum_23 = fadd i32 %sum_22, i32 %add104_2364_loc_load" [activation_accelerator.cpp:355]   --->   Operation 429 'fadd' 'sum_23' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 114 <SV = 113> <Delay = 6.43>
+ST_114 : Operation 430 [2/4] (6.43ns)   --->   "%sum_23 = fadd i32 %sum_22, i32 %add104_2364_loc_load" [activation_accelerator.cpp:355]   --->   Operation 430 'fadd' 'sum_23' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 115 <SV = 114> <Delay = 6.43>
+ST_115 : Operation 431 [1/4] (6.43ns)   --->   "%sum_23 = fadd i32 %sum_22, i32 %add104_2364_loc_load" [activation_accelerator.cpp:355]   --->   Operation 431 'fadd' 'sum_23' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 116 <SV = 115> <Delay = 6.43>
+ST_116 : Operation 432 [1/1] (0.00ns)   --->   "%add104_2466_loc_load = load i32 %add104_2466_loc"   --->   Operation 432 'load' 'add104_2466_loc_load' <Predicate = true> <Delay = 0.00>
+ST_116 : Operation 433 [4/4] (6.43ns)   --->   "%sum_24 = fadd i32 %sum_23, i32 %add104_2466_loc_load" [activation_accelerator.cpp:355]   --->   Operation 433 'fadd' 'sum_24' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 117 <SV = 116> <Delay = 6.43>
+ST_117 : Operation 434 [3/4] (6.43ns)   --->   "%sum_24 = fadd i32 %sum_23, i32 %add104_2466_loc_load" [activation_accelerator.cpp:355]   --->   Operation 434 'fadd' 'sum_24' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 118 <SV = 117> <Delay = 6.43>
+ST_118 : Operation 435 [2/4] (6.43ns)   --->   "%sum_24 = fadd i32 %sum_23, i32 %add104_2466_loc_load" [activation_accelerator.cpp:355]   --->   Operation 435 'fadd' 'sum_24' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 119 <SV = 118> <Delay = 6.43>
+ST_119 : Operation 436 [1/4] (6.43ns)   --->   "%sum_24 = fadd i32 %sum_23, i32 %add104_2466_loc_load" [activation_accelerator.cpp:355]   --->   Operation 436 'fadd' 'sum_24' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 120 <SV = 119> <Delay = 6.43>
+ST_120 : Operation 437 [1/1] (0.00ns)   --->   "%add104_2568_loc_load = load i32 %add104_2568_loc"   --->   Operation 437 'load' 'add104_2568_loc_load' <Predicate = true> <Delay = 0.00>
+ST_120 : Operation 438 [4/4] (6.43ns)   --->   "%sum_25 = fadd i32 %sum_24, i32 %add104_2568_loc_load" [activation_accelerator.cpp:355]   --->   Operation 438 'fadd' 'sum_25' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 121 <SV = 120> <Delay = 6.43>
+ST_121 : Operation 439 [3/4] (6.43ns)   --->   "%sum_25 = fadd i32 %sum_24, i32 %add104_2568_loc_load" [activation_accelerator.cpp:355]   --->   Operation 439 'fadd' 'sum_25' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 122 <SV = 121> <Delay = 6.43>
+ST_122 : Operation 440 [2/4] (6.43ns)   --->   "%sum_25 = fadd i32 %sum_24, i32 %add104_2568_loc_load" [activation_accelerator.cpp:355]   --->   Operation 440 'fadd' 'sum_25' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 123 <SV = 122> <Delay = 6.43>
+ST_123 : Operation 441 [1/4] (6.43ns)   --->   "%sum_25 = fadd i32 %sum_24, i32 %add104_2568_loc_load" [activation_accelerator.cpp:355]   --->   Operation 441 'fadd' 'sum_25' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 124 <SV = 123> <Delay = 6.43>
+ST_124 : Operation 442 [1/1] (0.00ns)   --->   "%add104_2670_loc_load = load i32 %add104_2670_loc"   --->   Operation 442 'load' 'add104_2670_loc_load' <Predicate = true> <Delay = 0.00>
+ST_124 : Operation 443 [4/4] (6.43ns)   --->   "%sum_26 = fadd i32 %sum_25, i32 %add104_2670_loc_load" [activation_accelerator.cpp:355]   --->   Operation 443 'fadd' 'sum_26' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 125 <SV = 124> <Delay = 6.43>
+ST_125 : Operation 444 [3/4] (6.43ns)   --->   "%sum_26 = fadd i32 %sum_25, i32 %add104_2670_loc_load" [activation_accelerator.cpp:355]   --->   Operation 444 'fadd' 'sum_26' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 126 <SV = 125> <Delay = 6.43>
+ST_126 : Operation 445 [2/4] (6.43ns)   --->   "%sum_26 = fadd i32 %sum_25, i32 %add104_2670_loc_load" [activation_accelerator.cpp:355]   --->   Operation 445 'fadd' 'sum_26' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 127 <SV = 126> <Delay = 6.43>
+ST_127 : Operation 446 [1/4] (6.43ns)   --->   "%sum_26 = fadd i32 %sum_25, i32 %add104_2670_loc_load" [activation_accelerator.cpp:355]   --->   Operation 446 'fadd' 'sum_26' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 128 <SV = 127> <Delay = 6.43>
+ST_128 : Operation 447 [1/1] (0.00ns)   --->   "%add104_2772_loc_load = load i32 %add104_2772_loc"   --->   Operation 447 'load' 'add104_2772_loc_load' <Predicate = true> <Delay = 0.00>
+ST_128 : Operation 448 [4/4] (6.43ns)   --->   "%sum_27 = fadd i32 %sum_26, i32 %add104_2772_loc_load" [activation_accelerator.cpp:355]   --->   Operation 448 'fadd' 'sum_27' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 129 <SV = 128> <Delay = 6.43>
+ST_129 : Operation 449 [3/4] (6.43ns)   --->   "%sum_27 = fadd i32 %sum_26, i32 %add104_2772_loc_load" [activation_accelerator.cpp:355]   --->   Operation 449 'fadd' 'sum_27' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 130 <SV = 129> <Delay = 6.43>
+ST_130 : Operation 450 [2/4] (6.43ns)   --->   "%sum_27 = fadd i32 %sum_26, i32 %add104_2772_loc_load" [activation_accelerator.cpp:355]   --->   Operation 450 'fadd' 'sum_27' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 131 <SV = 130> <Delay = 6.43>
+ST_131 : Operation 451 [1/4] (6.43ns)   --->   "%sum_27 = fadd i32 %sum_26, i32 %add104_2772_loc_load" [activation_accelerator.cpp:355]   --->   Operation 451 'fadd' 'sum_27' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 132 <SV = 131> <Delay = 6.43>
+ST_132 : Operation 452 [1/1] (0.00ns)   --->   "%add104_2874_loc_load = load i32 %add104_2874_loc"   --->   Operation 452 'load' 'add104_2874_loc_load' <Predicate = true> <Delay = 0.00>
+ST_132 : Operation 453 [4/4] (6.43ns)   --->   "%sum_28 = fadd i32 %sum_27, i32 %add104_2874_loc_load" [activation_accelerator.cpp:355]   --->   Operation 453 'fadd' 'sum_28' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 133 <SV = 132> <Delay = 6.43>
+ST_133 : Operation 454 [3/4] (6.43ns)   --->   "%sum_28 = fadd i32 %sum_27, i32 %add104_2874_loc_load" [activation_accelerator.cpp:355]   --->   Operation 454 'fadd' 'sum_28' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 134 <SV = 133> <Delay = 6.43>
+ST_134 : Operation 455 [2/4] (6.43ns)   --->   "%sum_28 = fadd i32 %sum_27, i32 %add104_2874_loc_load" [activation_accelerator.cpp:355]   --->   Operation 455 'fadd' 'sum_28' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 135 <SV = 134> <Delay = 6.43>
+ST_135 : Operation 456 [1/4] (6.43ns)   --->   "%sum_28 = fadd i32 %sum_27, i32 %add104_2874_loc_load" [activation_accelerator.cpp:355]   --->   Operation 456 'fadd' 'sum_28' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 136 <SV = 135> <Delay = 6.43>
+ST_136 : Operation 457 [1/1] (0.00ns)   --->   "%add104_2976_loc_load = load i32 %add104_2976_loc"   --->   Operation 457 'load' 'add104_2976_loc_load' <Predicate = true> <Delay = 0.00>
+ST_136 : Operation 458 [4/4] (6.43ns)   --->   "%sum_29 = fadd i32 %sum_28, i32 %add104_2976_loc_load" [activation_accelerator.cpp:355]   --->   Operation 458 'fadd' 'sum_29' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 137 <SV = 136> <Delay = 6.43>
+ST_137 : Operation 459 [3/4] (6.43ns)   --->   "%sum_29 = fadd i32 %sum_28, i32 %add104_2976_loc_load" [activation_accelerator.cpp:355]   --->   Operation 459 'fadd' 'sum_29' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 138 <SV = 137> <Delay = 6.43>
+ST_138 : Operation 460 [2/4] (6.43ns)   --->   "%sum_29 = fadd i32 %sum_28, i32 %add104_2976_loc_load" [activation_accelerator.cpp:355]   --->   Operation 460 'fadd' 'sum_29' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 139 <SV = 138> <Delay = 6.43>
+ST_139 : Operation 461 [1/4] (6.43ns)   --->   "%sum_29 = fadd i32 %sum_28, i32 %add104_2976_loc_load" [activation_accelerator.cpp:355]   --->   Operation 461 'fadd' 'sum_29' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 140 <SV = 139> <Delay = 6.43>
+ST_140 : Operation 462 [1/1] (0.00ns)   --->   "%add104_3078_loc_load = load i32 %add104_3078_loc"   --->   Operation 462 'load' 'add104_3078_loc_load' <Predicate = true> <Delay = 0.00>
+ST_140 : Operation 463 [4/4] (6.43ns)   --->   "%sum_30 = fadd i32 %sum_29, i32 %add104_3078_loc_load" [activation_accelerator.cpp:355]   --->   Operation 463 'fadd' 'sum_30' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 141 <SV = 140> <Delay = 6.43>
+ST_141 : Operation 464 [3/4] (6.43ns)   --->   "%sum_30 = fadd i32 %sum_29, i32 %add104_3078_loc_load" [activation_accelerator.cpp:355]   --->   Operation 464 'fadd' 'sum_30' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 142 <SV = 141> <Delay = 6.43>
+ST_142 : Operation 465 [2/4] (6.43ns)   --->   "%sum_30 = fadd i32 %sum_29, i32 %add104_3078_loc_load" [activation_accelerator.cpp:355]   --->   Operation 465 'fadd' 'sum_30' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 143 <SV = 142> <Delay = 6.43>
+ST_143 : Operation 466 [1/4] (6.43ns)   --->   "%sum_30 = fadd i32 %sum_29, i32 %add104_3078_loc_load" [activation_accelerator.cpp:355]   --->   Operation 466 'fadd' 'sum_30' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 144 <SV = 143> <Delay = 6.43>
+ST_144 : Operation 467 [1/1] (0.00ns)   --->   "%add104_3180_loc_load = load i32 %add104_3180_loc"   --->   Operation 467 'load' 'add104_3180_loc_load' <Predicate = true> <Delay = 0.00>
+ST_144 : Operation 468 [4/4] (6.43ns)   --->   "%sum_31 = fadd i32 %sum_30, i32 %add104_3180_loc_load" [activation_accelerator.cpp:355]   --->   Operation 468 'fadd' 'sum_31' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 145 <SV = 144> <Delay = 6.43>
+ST_145 : Operation 469 [3/4] (6.43ns)   --->   "%sum_31 = fadd i32 %sum_30, i32 %add104_3180_loc_load" [activation_accelerator.cpp:355]   --->   Operation 469 'fadd' 'sum_31' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 146 <SV = 145> <Delay = 6.43>
+ST_146 : Operation 470 [2/4] (6.43ns)   --->   "%sum_31 = fadd i32 %sum_30, i32 %add104_3180_loc_load" [activation_accelerator.cpp:355]   --->   Operation 470 'fadd' 'sum_31' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 147 <SV = 146> <Delay = 6.43>
+ST_147 : Operation 471 [1/4] (6.43ns)   --->   "%sum_31 = fadd i32 %sum_30, i32 %add104_3180_loc_load" [activation_accelerator.cpp:355]   --->   Operation 471 'fadd' 'sum_31' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_147 : Operation 472 [2/2] (0.00ns)   --->   "%call_ln355 = call void @float_safe_softmax_Pipeline_normalize_blocks, i32 %exp_x, i32 %sum_31, i32 %exp_x_1, i32 %exp_x_2, i32 %exp_x_3, i32 %exp_x_4, i32 %exp_x_5, i32 %exp_x_6, i32 %exp_x_7, i32 %exp_x_8, i32 %exp_x_9, i32 %exp_x_10, i32 %exp_x_11, i32 %exp_x_12, i32 %exp_x_13, i32 %exp_x_14, i32 %exp_x_15, i32 %exp_x_16, i32 %exp_x_17, i32 %exp_x_18, i32 %exp_x_19, i32 %exp_x_20, i32 %exp_x_21, i32 %exp_x_22, i32 %exp_x_23, i32 %exp_x_24, i32 %exp_x_25, i32 %exp_x_26, i32 %exp_x_27, i32 %exp_x_28, i32 %exp_x_29, i32 %exp_x_30, i32 %exp_x_31, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15" [activation_accelerator.cpp:355]   --->   Operation 472 'call' 'call_ln355' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 148 <SV = 147> <Delay = 0.00>
+ST_148 : Operation 473 [1/1] (0.00ns)   --->   "%specmemcore_ln241 = specmemcore void @_ssdm_op_SpecMemCore, i32 %exp_x_31, i64 666, i64 18, i64 18446744073709551615" [activation_accelerator.cpp:241]   --->   Operation 473 'specmemcore' 'specmemcore_ln241' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 474 [1/1] (0.00ns)   --->   "%specmemcore_ln241 = specmemcore void @_ssdm_op_SpecMemCore, i32 %exp_x_30, i64 666, i64 18, i64 18446744073709551615" [activation_accelerator.cpp:241]   --->   Operation 474 'specmemcore' 'specmemcore_ln241' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 475 [1/1] (0.00ns)   --->   "%specmemcore_ln241 = specmemcore void @_ssdm_op_SpecMemCore, i32 %exp_x_29, i64 666, i64 18, i64 18446744073709551615" [activation_accelerator.cpp:241]   --->   Operation 475 'specmemcore' 'specmemcore_ln241' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 476 [1/1] (0.00ns)   --->   "%specmemcore_ln241 = specmemcore void @_ssdm_op_SpecMemCore, i32 %exp_x_28, i64 666, i64 18, i64 18446744073709551615" [activation_accelerator.cpp:241]   --->   Operation 476 'specmemcore' 'specmemcore_ln241' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 477 [1/1] (0.00ns)   --->   "%specmemcore_ln241 = specmemcore void @_ssdm_op_SpecMemCore, i32 %exp_x_27, i64 666, i64 18, i64 18446744073709551615" [activation_accelerator.cpp:241]   --->   Operation 477 'specmemcore' 'specmemcore_ln241' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 478 [1/1] (0.00ns)   --->   "%specmemcore_ln241 = specmemcore void @_ssdm_op_SpecMemCore, i32 %exp_x_26, i64 666, i64 18, i64 18446744073709551615" [activation_accelerator.cpp:241]   --->   Operation 478 'specmemcore' 'specmemcore_ln241' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 479 [1/1] (0.00ns)   --->   "%specmemcore_ln241 = specmemcore void @_ssdm_op_SpecMemCore, i32 %exp_x_25, i64 666, i64 18, i64 18446744073709551615" [activation_accelerator.cpp:241]   --->   Operation 479 'specmemcore' 'specmemcore_ln241' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 480 [1/1] (0.00ns)   --->   "%specmemcore_ln241 = specmemcore void @_ssdm_op_SpecMemCore, i32 %exp_x_24, i64 666, i64 18, i64 18446744073709551615" [activation_accelerator.cpp:241]   --->   Operation 480 'specmemcore' 'specmemcore_ln241' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 481 [1/1] (0.00ns)   --->   "%specmemcore_ln241 = specmemcore void @_ssdm_op_SpecMemCore, i32 %exp_x_23, i64 666, i64 18, i64 18446744073709551615" [activation_accelerator.cpp:241]   --->   Operation 481 'specmemcore' 'specmemcore_ln241' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 482 [1/1] (0.00ns)   --->   "%specmemcore_ln241 = specmemcore void @_ssdm_op_SpecMemCore, i32 %exp_x_22, i64 666, i64 18, i64 18446744073709551615" [activation_accelerator.cpp:241]   --->   Operation 482 'specmemcore' 'specmemcore_ln241' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 483 [1/1] (0.00ns)   --->   "%specmemcore_ln241 = specmemcore void @_ssdm_op_SpecMemCore, i32 %exp_x_21, i64 666, i64 18, i64 18446744073709551615" [activation_accelerator.cpp:241]   --->   Operation 483 'specmemcore' 'specmemcore_ln241' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 484 [1/1] (0.00ns)   --->   "%specmemcore_ln241 = specmemcore void @_ssdm_op_SpecMemCore, i32 %exp_x_20, i64 666, i64 18, i64 18446744073709551615" [activation_accelerator.cpp:241]   --->   Operation 484 'specmemcore' 'specmemcore_ln241' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 485 [1/1] (0.00ns)   --->   "%specmemcore_ln241 = specmemcore void @_ssdm_op_SpecMemCore, i32 %exp_x_19, i64 666, i64 18, i64 18446744073709551615" [activation_accelerator.cpp:241]   --->   Operation 485 'specmemcore' 'specmemcore_ln241' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 486 [1/1] (0.00ns)   --->   "%specmemcore_ln241 = specmemcore void @_ssdm_op_SpecMemCore, i32 %exp_x_18, i64 666, i64 18, i64 18446744073709551615" [activation_accelerator.cpp:241]   --->   Operation 486 'specmemcore' 'specmemcore_ln241' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 487 [1/1] (0.00ns)   --->   "%specmemcore_ln241 = specmemcore void @_ssdm_op_SpecMemCore, i32 %exp_x_17, i64 666, i64 18, i64 18446744073709551615" [activation_accelerator.cpp:241]   --->   Operation 487 'specmemcore' 'specmemcore_ln241' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 488 [1/1] (0.00ns)   --->   "%specmemcore_ln241 = specmemcore void @_ssdm_op_SpecMemCore, i32 %exp_x_16, i64 666, i64 18, i64 18446744073709551615" [activation_accelerator.cpp:241]   --->   Operation 488 'specmemcore' 'specmemcore_ln241' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 489 [1/1] (0.00ns)   --->   "%specmemcore_ln241 = specmemcore void @_ssdm_op_SpecMemCore, i32 %exp_x_15, i64 666, i64 18, i64 18446744073709551615" [activation_accelerator.cpp:241]   --->   Operation 489 'specmemcore' 'specmemcore_ln241' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 490 [1/1] (0.00ns)   --->   "%specmemcore_ln241 = specmemcore void @_ssdm_op_SpecMemCore, i32 %exp_x_14, i64 666, i64 18, i64 18446744073709551615" [activation_accelerator.cpp:241]   --->   Operation 490 'specmemcore' 'specmemcore_ln241' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 491 [1/1] (0.00ns)   --->   "%specmemcore_ln241 = specmemcore void @_ssdm_op_SpecMemCore, i32 %exp_x_13, i64 666, i64 18, i64 18446744073709551615" [activation_accelerator.cpp:241]   --->   Operation 491 'specmemcore' 'specmemcore_ln241' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 492 [1/1] (0.00ns)   --->   "%specmemcore_ln241 = specmemcore void @_ssdm_op_SpecMemCore, i32 %exp_x_12, i64 666, i64 18, i64 18446744073709551615" [activation_accelerator.cpp:241]   --->   Operation 492 'specmemcore' 'specmemcore_ln241' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 493 [1/1] (0.00ns)   --->   "%specmemcore_ln241 = specmemcore void @_ssdm_op_SpecMemCore, i32 %exp_x_11, i64 666, i64 18, i64 18446744073709551615" [activation_accelerator.cpp:241]   --->   Operation 493 'specmemcore' 'specmemcore_ln241' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 494 [1/1] (0.00ns)   --->   "%specmemcore_ln241 = specmemcore void @_ssdm_op_SpecMemCore, i32 %exp_x_10, i64 666, i64 18, i64 18446744073709551615" [activation_accelerator.cpp:241]   --->   Operation 494 'specmemcore' 'specmemcore_ln241' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 495 [1/1] (0.00ns)   --->   "%specmemcore_ln241 = specmemcore void @_ssdm_op_SpecMemCore, i32 %exp_x_9, i64 666, i64 18, i64 18446744073709551615" [activation_accelerator.cpp:241]   --->   Operation 495 'specmemcore' 'specmemcore_ln241' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 496 [1/1] (0.00ns)   --->   "%specmemcore_ln241 = specmemcore void @_ssdm_op_SpecMemCore, i32 %exp_x_8, i64 666, i64 18, i64 18446744073709551615" [activation_accelerator.cpp:241]   --->   Operation 496 'specmemcore' 'specmemcore_ln241' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 497 [1/1] (0.00ns)   --->   "%specmemcore_ln241 = specmemcore void @_ssdm_op_SpecMemCore, i32 %exp_x_7, i64 666, i64 18, i64 18446744073709551615" [activation_accelerator.cpp:241]   --->   Operation 497 'specmemcore' 'specmemcore_ln241' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 498 [1/1] (0.00ns)   --->   "%specmemcore_ln241 = specmemcore void @_ssdm_op_SpecMemCore, i32 %exp_x_6, i64 666, i64 18, i64 18446744073709551615" [activation_accelerator.cpp:241]   --->   Operation 498 'specmemcore' 'specmemcore_ln241' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 499 [1/1] (0.00ns)   --->   "%specmemcore_ln241 = specmemcore void @_ssdm_op_SpecMemCore, i32 %exp_x_5, i64 666, i64 18, i64 18446744073709551615" [activation_accelerator.cpp:241]   --->   Operation 499 'specmemcore' 'specmemcore_ln241' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 500 [1/1] (0.00ns)   --->   "%specmemcore_ln241 = specmemcore void @_ssdm_op_SpecMemCore, i32 %exp_x_4, i64 666, i64 18, i64 18446744073709551615" [activation_accelerator.cpp:241]   --->   Operation 500 'specmemcore' 'specmemcore_ln241' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 501 [1/1] (0.00ns)   --->   "%specmemcore_ln241 = specmemcore void @_ssdm_op_SpecMemCore, i32 %exp_x_3, i64 666, i64 18, i64 18446744073709551615" [activation_accelerator.cpp:241]   --->   Operation 501 'specmemcore' 'specmemcore_ln241' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 502 [1/1] (0.00ns)   --->   "%specmemcore_ln241 = specmemcore void @_ssdm_op_SpecMemCore, i32 %exp_x_2, i64 666, i64 18, i64 18446744073709551615" [activation_accelerator.cpp:241]   --->   Operation 502 'specmemcore' 'specmemcore_ln241' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 503 [1/1] (0.00ns)   --->   "%specmemcore_ln241 = specmemcore void @_ssdm_op_SpecMemCore, i32 %exp_x_1, i64 666, i64 18, i64 18446744073709551615" [activation_accelerator.cpp:241]   --->   Operation 503 'specmemcore' 'specmemcore_ln241' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 504 [1/1] (0.00ns)   --->   "%specmemcore_ln241 = specmemcore void @_ssdm_op_SpecMemCore, i32 %exp_x, i64 666, i64 18, i64 18446744073709551615" [activation_accelerator.cpp:241]   --->   Operation 504 'specmemcore' 'specmemcore_ln241' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 505 [1/2] (0.00ns)   --->   "%call_ln355 = call void @float_safe_softmax_Pipeline_normalize_blocks, i32 %exp_x, i32 %sum_31, i32 %exp_x_1, i32 %exp_x_2, i32 %exp_x_3, i32 %exp_x_4, i32 %exp_x_5, i32 %exp_x_6, i32 %exp_x_7, i32 %exp_x_8, i32 %exp_x_9, i32 %exp_x_10, i32 %exp_x_11, i32 %exp_x_12, i32 %exp_x_13, i32 %exp_x_14, i32 %exp_x_15, i32 %exp_x_16, i32 %exp_x_17, i32 %exp_x_18, i32 %exp_x_19, i32 %exp_x_20, i32 %exp_x_21, i32 %exp_x_22, i32 %exp_x_23, i32 %exp_x_24, i32 %exp_x_25, i32 %exp_x_26, i32 %exp_x_27, i32 %exp_x_28, i32 %exp_x_29, i32 %exp_x_30, i32 %exp_x_31, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15" [activation_accelerator.cpp:355]   --->   Operation 505 'call' 'call_ln355' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_148 : Operation 506 [1/1] (0.00ns)   --->   "%ret_ln373 = ret" [activation_accelerator.cpp:373]   --->   Operation 506 'ret' 'ret_ln373' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 2.97ns
+The critical path consists of the following:
+	'load' operation ('mux_case_1_loc_load') on local variable 'mux_case_1_loc' [192]  (0 ns)
+	'call' operation ('max_val', activation_accelerator.cpp:290) to 'fmaxf' [194]  (2.97 ns)
+
+ <State 4>: 5.95ns
+The critical path consists of the following:
+	'load' operation ('mux_case_2_loc_load') on local variable 'mux_case_2_loc' [191]  (0 ns)
+	'call' operation ('max_val', activation_accelerator.cpp:290) to 'fmaxf' [195]  (2.97 ns)
+	'call' operation ('max_val', activation_accelerator.cpp:290) to 'fmaxf' [196]  (2.97 ns)
+
+ <State 5>: 5.95ns
+The critical path consists of the following:
+	'load' operation ('mux_case_4_loc_load') on local variable 'mux_case_4_loc' [189]  (0 ns)
+	'call' operation ('max_val', activation_accelerator.cpp:290) to 'fmaxf' [197]  (2.97 ns)
+	'call' operation ('max_val', activation_accelerator.cpp:290) to 'fmaxf' [198]  (2.97 ns)
+
+ <State 6>: 5.95ns
+The critical path consists of the following:
+	'load' operation ('mux_case_6_loc_load') on local variable 'mux_case_6_loc' [187]  (0 ns)
+	'call' operation ('max_val', activation_accelerator.cpp:290) to 'fmaxf' [199]  (2.97 ns)
+	'call' operation ('max_val', activation_accelerator.cpp:290) to 'fmaxf' [200]  (2.97 ns)
+
+ <State 7>: 5.95ns
+The critical path consists of the following:
+	'load' operation ('mux_case_8_loc_load') on local variable 'mux_case_8_loc' [185]  (0 ns)
+	'call' operation ('max_val', activation_accelerator.cpp:290) to 'fmaxf' [201]  (2.97 ns)
+	'call' operation ('max_val', activation_accelerator.cpp:290) to 'fmaxf' [202]  (2.97 ns)
+
+ <State 8>: 5.95ns
+The critical path consists of the following:
+	'load' operation ('mux_case_10_loc_load') on local variable 'mux_case_10_loc' [183]  (0 ns)
+	'call' operation ('max_val', activation_accelerator.cpp:290) to 'fmaxf' [203]  (2.97 ns)
+	'call' operation ('max_val', activation_accelerator.cpp:290) to 'fmaxf' [204]  (2.97 ns)
+
+ <State 9>: 5.95ns
+The critical path consists of the following:
+	'load' operation ('mux_case_12_loc_load') on local variable 'mux_case_12_loc' [181]  (0 ns)
+	'call' operation ('max_val', activation_accelerator.cpp:290) to 'fmaxf' [205]  (2.97 ns)
+	'call' operation ('max_val', activation_accelerator.cpp:290) to 'fmaxf' [206]  (2.97 ns)
+
+ <State 10>: 5.95ns
+The critical path consists of the following:
+	'load' operation ('mux_case_14_loc_load') on local variable 'mux_case_14_loc' [179]  (0 ns)
+	'call' operation ('max_val', activation_accelerator.cpp:290) to 'fmaxf' [207]  (2.97 ns)
+	'call' operation ('max_val', activation_accelerator.cpp:290) to 'fmaxf' [208]  (2.97 ns)
+
+ <State 11>: 5.95ns
+The critical path consists of the following:
+	'load' operation ('mux_case_16_loc_load') on local variable 'mux_case_16_loc' [177]  (0 ns)
+	'call' operation ('max_val', activation_accelerator.cpp:290) to 'fmaxf' [209]  (2.97 ns)
+	'call' operation ('max_val', activation_accelerator.cpp:290) to 'fmaxf' [210]  (2.97 ns)
+
+ <State 12>: 5.95ns
+The critical path consists of the following:
+	'load' operation ('mux_case_18_loc_load') on local variable 'mux_case_18_loc' [175]  (0 ns)
+	'call' operation ('max_val', activation_accelerator.cpp:290) to 'fmaxf' [211]  (2.97 ns)
+	'call' operation ('max_val', activation_accelerator.cpp:290) to 'fmaxf' [212]  (2.97 ns)
+
+ <State 13>: 5.95ns
+The critical path consists of the following:
+	'load' operation ('mux_case_20_loc_load') on local variable 'mux_case_20_loc' [173]  (0 ns)
+	'call' operation ('max_val', activation_accelerator.cpp:290) to 'fmaxf' [213]  (2.97 ns)
+	'call' operation ('max_val', activation_accelerator.cpp:290) to 'fmaxf' [214]  (2.97 ns)
+
+ <State 14>: 5.95ns
+The critical path consists of the following:
+	'load' operation ('mux_case_22_loc_load') on local variable 'mux_case_22_loc' [171]  (0 ns)
+	'call' operation ('max_val', activation_accelerator.cpp:290) to 'fmaxf' [215]  (2.97 ns)
+	'call' operation ('max_val', activation_accelerator.cpp:290) to 'fmaxf' [216]  (2.97 ns)
+
+ <State 15>: 5.95ns
+The critical path consists of the following:
+	'load' operation ('mux_case_24_loc_load') on local variable 'mux_case_24_loc' [169]  (0 ns)
+	'call' operation ('max_val', activation_accelerator.cpp:290) to 'fmaxf' [217]  (2.97 ns)
+	'call' operation ('max_val', activation_accelerator.cpp:290) to 'fmaxf' [218]  (2.97 ns)
+
+ <State 16>: 5.95ns
+The critical path consists of the following:
+	'load' operation ('mux_case_26_loc_load') on local variable 'mux_case_26_loc' [167]  (0 ns)
+	'call' operation ('max_val', activation_accelerator.cpp:290) to 'fmaxf' [219]  (2.97 ns)
+	'call' operation ('max_val', activation_accelerator.cpp:290) to 'fmaxf' [220]  (2.97 ns)
+
+ <State 17>: 5.95ns
+The critical path consists of the following:
+	'load' operation ('mux_case_28_loc_load') on local variable 'mux_case_28_loc' [165]  (0 ns)
+	'call' operation ('max_val', activation_accelerator.cpp:290) to 'fmaxf' [221]  (2.97 ns)
+	'call' operation ('max_val', activation_accelerator.cpp:290) to 'fmaxf' [222]  (2.97 ns)
+
+ <State 18>: 5.95ns
+The critical path consists of the following:
+	'load' operation ('mux_case_30_loc_load') on local variable 'mux_case_30_loc' [163]  (0 ns)
+	'call' operation ('max_val', activation_accelerator.cpp:290) to 'fmaxf' [223]  (2.97 ns)
+	'call' operation ('max_val', activation_accelerator.cpp:290) to 'fmaxf' [224]  (2.97 ns)
+
+ <State 19>: 0ns
+The critical path consists of the following:
+
+ <State 20>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add10418_loc_load') on local variable 'add10418_loc' [257]  (0 ns)
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [258]  (6.44 ns)
+
+ <State 21>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [258]  (6.44 ns)
+
+ <State 22>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [258]  (6.44 ns)
+
+ <State 23>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [258]  (6.44 ns)
+
+ <State 24>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add104_120_loc_load') on local variable 'add104_120_loc' [256]  (0 ns)
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [259]  (6.44 ns)
+
+ <State 25>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [259]  (6.44 ns)
+
+ <State 26>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [259]  (6.44 ns)
+
+ <State 27>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [259]  (6.44 ns)
+
+ <State 28>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add104_222_loc_load') on local variable 'add104_222_loc' [255]  (0 ns)
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [260]  (6.44 ns)
+
+ <State 29>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [260]  (6.44 ns)
+
+ <State 30>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [260]  (6.44 ns)
+
+ <State 31>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [260]  (6.44 ns)
+
+ <State 32>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add104_324_loc_load') on local variable 'add104_324_loc' [254]  (0 ns)
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [261]  (6.44 ns)
+
+ <State 33>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [261]  (6.44 ns)
+
+ <State 34>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [261]  (6.44 ns)
+
+ <State 35>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [261]  (6.44 ns)
+
+ <State 36>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add104_426_loc_load') on local variable 'add104_426_loc' [253]  (0 ns)
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [262]  (6.44 ns)
+
+ <State 37>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [262]  (6.44 ns)
+
+ <State 38>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [262]  (6.44 ns)
+
+ <State 39>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [262]  (6.44 ns)
+
+ <State 40>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add104_528_loc_load') on local variable 'add104_528_loc' [252]  (0 ns)
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [263]  (6.44 ns)
+
+ <State 41>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [263]  (6.44 ns)
+
+ <State 42>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [263]  (6.44 ns)
+
+ <State 43>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [263]  (6.44 ns)
+
+ <State 44>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add104_630_loc_load') on local variable 'add104_630_loc' [251]  (0 ns)
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [264]  (6.44 ns)
+
+ <State 45>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [264]  (6.44 ns)
+
+ <State 46>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [264]  (6.44 ns)
+
+ <State 47>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [264]  (6.44 ns)
+
+ <State 48>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add104_732_loc_load') on local variable 'add104_732_loc' [250]  (0 ns)
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [265]  (6.44 ns)
+
+ <State 49>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [265]  (6.44 ns)
+
+ <State 50>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [265]  (6.44 ns)
+
+ <State 51>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [265]  (6.44 ns)
+
+ <State 52>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add104_834_loc_load') on local variable 'add104_834_loc' [249]  (0 ns)
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [266]  (6.44 ns)
+
+ <State 53>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [266]  (6.44 ns)
+
+ <State 54>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [266]  (6.44 ns)
+
+ <State 55>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [266]  (6.44 ns)
+
+ <State 56>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add104_936_loc_load') on local variable 'add104_936_loc' [248]  (0 ns)
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [267]  (6.44 ns)
+
+ <State 57>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [267]  (6.44 ns)
+
+ <State 58>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [267]  (6.44 ns)
+
+ <State 59>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [267]  (6.44 ns)
+
+ <State 60>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add104_1038_loc_load') on local variable 'add104_1038_loc' [247]  (0 ns)
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [268]  (6.44 ns)
+
+ <State 61>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [268]  (6.44 ns)
+
+ <State 62>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [268]  (6.44 ns)
+
+ <State 63>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [268]  (6.44 ns)
+
+ <State 64>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add104_1140_loc_load') on local variable 'add104_1140_loc' [246]  (0 ns)
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [269]  (6.44 ns)
+
+ <State 65>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [269]  (6.44 ns)
+
+ <State 66>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [269]  (6.44 ns)
+
+ <State 67>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [269]  (6.44 ns)
+
+ <State 68>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add104_1242_loc_load') on local variable 'add104_1242_loc' [245]  (0 ns)
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [270]  (6.44 ns)
+
+ <State 69>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [270]  (6.44 ns)
+
+ <State 70>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [270]  (6.44 ns)
+
+ <State 71>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [270]  (6.44 ns)
+
+ <State 72>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add104_1344_loc_load') on local variable 'add104_1344_loc' [244]  (0 ns)
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [271]  (6.44 ns)
+
+ <State 73>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [271]  (6.44 ns)
+
+ <State 74>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [271]  (6.44 ns)
+
+ <State 75>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [271]  (6.44 ns)
+
+ <State 76>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add104_1446_loc_load') on local variable 'add104_1446_loc' [243]  (0 ns)
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [272]  (6.44 ns)
+
+ <State 77>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [272]  (6.44 ns)
+
+ <State 78>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [272]  (6.44 ns)
+
+ <State 79>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [272]  (6.44 ns)
+
+ <State 80>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add104_1548_loc_load') on local variable 'add104_1548_loc' [242]  (0 ns)
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [273]  (6.44 ns)
+
+ <State 81>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [273]  (6.44 ns)
+
+ <State 82>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [273]  (6.44 ns)
+
+ <State 83>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [273]  (6.44 ns)
+
+ <State 84>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add104_1650_loc_load') on local variable 'add104_1650_loc' [241]  (0 ns)
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [274]  (6.44 ns)
+
+ <State 85>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [274]  (6.44 ns)
+
+ <State 86>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [274]  (6.44 ns)
+
+ <State 87>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [274]  (6.44 ns)
+
+ <State 88>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add104_1752_loc_load') on local variable 'add104_1752_loc' [240]  (0 ns)
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [275]  (6.44 ns)
+
+ <State 89>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [275]  (6.44 ns)
+
+ <State 90>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [275]  (6.44 ns)
+
+ <State 91>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [275]  (6.44 ns)
+
+ <State 92>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add104_1854_loc_load') on local variable 'add104_1854_loc' [239]  (0 ns)
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [276]  (6.44 ns)
+
+ <State 93>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [276]  (6.44 ns)
+
+ <State 94>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [276]  (6.44 ns)
+
+ <State 95>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [276]  (6.44 ns)
+
+ <State 96>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add104_1956_loc_load') on local variable 'add104_1956_loc' [238]  (0 ns)
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [277]  (6.44 ns)
+
+ <State 97>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [277]  (6.44 ns)
+
+ <State 98>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [277]  (6.44 ns)
+
+ <State 99>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [277]  (6.44 ns)
+
+ <State 100>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add104_2058_loc_load') on local variable 'add104_2058_loc' [237]  (0 ns)
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [278]  (6.44 ns)
+
+ <State 101>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [278]  (6.44 ns)
+
+ <State 102>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [278]  (6.44 ns)
+
+ <State 103>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [278]  (6.44 ns)
+
+ <State 104>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add104_2160_loc_load') on local variable 'add104_2160_loc' [236]  (0 ns)
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [279]  (6.44 ns)
+
+ <State 105>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [279]  (6.44 ns)
+
+ <State 106>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [279]  (6.44 ns)
+
+ <State 107>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [279]  (6.44 ns)
+
+ <State 108>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add104_2262_loc_load') on local variable 'add104_2262_loc' [235]  (0 ns)
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [280]  (6.44 ns)
+
+ <State 109>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [280]  (6.44 ns)
+
+ <State 110>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [280]  (6.44 ns)
+
+ <State 111>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [280]  (6.44 ns)
+
+ <State 112>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add104_2364_loc_load') on local variable 'add104_2364_loc' [234]  (0 ns)
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [281]  (6.44 ns)
+
+ <State 113>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [281]  (6.44 ns)
+
+ <State 114>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [281]  (6.44 ns)
+
+ <State 115>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [281]  (6.44 ns)
+
+ <State 116>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add104_2466_loc_load') on local variable 'add104_2466_loc' [233]  (0 ns)
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [282]  (6.44 ns)
+
+ <State 117>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [282]  (6.44 ns)
+
+ <State 118>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [282]  (6.44 ns)
+
+ <State 119>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [282]  (6.44 ns)
+
+ <State 120>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add104_2568_loc_load') on local variable 'add104_2568_loc' [232]  (0 ns)
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [283]  (6.44 ns)
+
+ <State 121>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [283]  (6.44 ns)
+
+ <State 122>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [283]  (6.44 ns)
+
+ <State 123>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [283]  (6.44 ns)
+
+ <State 124>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add104_2670_loc_load') on local variable 'add104_2670_loc' [231]  (0 ns)
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [284]  (6.44 ns)
+
+ <State 125>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [284]  (6.44 ns)
+
+ <State 126>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [284]  (6.44 ns)
+
+ <State 127>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [284]  (6.44 ns)
+
+ <State 128>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add104_2772_loc_load') on local variable 'add104_2772_loc' [230]  (0 ns)
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [285]  (6.44 ns)
+
+ <State 129>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [285]  (6.44 ns)
+
+ <State 130>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [285]  (6.44 ns)
+
+ <State 131>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [285]  (6.44 ns)
+
+ <State 132>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add104_2874_loc_load') on local variable 'add104_2874_loc' [229]  (0 ns)
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [286]  (6.44 ns)
+
+ <State 133>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [286]  (6.44 ns)
+
+ <State 134>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [286]  (6.44 ns)
+
+ <State 135>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [286]  (6.44 ns)
+
+ <State 136>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add104_2976_loc_load') on local variable 'add104_2976_loc' [228]  (0 ns)
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [287]  (6.44 ns)
+
+ <State 137>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [287]  (6.44 ns)
+
+ <State 138>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [287]  (6.44 ns)
+
+ <State 139>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [287]  (6.44 ns)
+
+ <State 140>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add104_3078_loc_load') on local variable 'add104_3078_loc' [227]  (0 ns)
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [288]  (6.44 ns)
+
+ <State 141>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [288]  (6.44 ns)
+
+ <State 142>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [288]  (6.44 ns)
+
+ <State 143>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [288]  (6.44 ns)
+
+ <State 144>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add104_3180_loc_load') on local variable 'add104_3180_loc' [226]  (0 ns)
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [289]  (6.44 ns)
+
+ <State 145>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [289]  (6.44 ns)
+
+ <State 146>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [289]  (6.44 ns)
+
+ <State 147>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', activation_accelerator.cpp:355) [289]  (6.44 ns)
+
+ <State 148>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+	State 75
+	State 76
+	State 77
+	State 78
+	State 79
+	State 80
+	State 81
+	State 82
+	State 83
+	State 84
+	State 85
+	State 86
+	State 87
+	State 88
+	State 89
+	State 90
+	State 91
+	State 92
+	State 93
+	State 94
+	State 95
+	State 96
+	State 97
+	State 98
+	State 99
+	State 100
+	State 101
+	State 102
+	State 103
+	State 104
+	State 105
+	State 106
+	State 107
+	State 108
+	State 109
+	State 110
+	State 111
+	State 112
+	State 113
+	State 114
+	State 115
+	State 116
+	State 117
+	State 118
+	State 119
+	State 120
+	State 121
+	State 122
+	State 123
+	State 124
+	State 125
+	State 126
+	State 127
+	State 128
+	State 129
+	State 130
+	State 131
+	State 132
+	State 133
+	State 134
+	State 135
+	State 136
+	State 137
+	State 138
+	State 139
+	State 140
+	State 141
+	State 142
+	State 143
+	State 144
+	State 145
+	State 146
+	State 147
+	State 148
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

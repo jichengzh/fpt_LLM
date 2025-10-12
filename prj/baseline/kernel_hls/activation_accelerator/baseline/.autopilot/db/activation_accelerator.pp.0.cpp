@@ -55029,7 +55029,15 @@ namespace hls {
 
 };
 # 5 "activation_accelerator.cpp" 2
-# 23 "activation_accelerator.cpp"
+
+# 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cfloat" 1 3
+# 40 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cfloat" 3
+
+
+# 1 "/data/xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/lib/clang/7.0.0/include/float.h" 1 3
+# 43 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cfloat" 2 3
+# 7 "activation_accelerator.cpp" 2
+# 24 "activation_accelerator.cpp"
 uint16 bf16add(uint16 a_bits, uint16 b_bits) {
 
     uint16_t a_sign = (a_bits >> 15) & 0x1;
@@ -55093,7 +55101,7 @@ uint16 bf16add(uint16 a_bits, uint16 b_bits) {
 
 
 
-    VITIS_LOOP_86_1: while (result_mantissa < (0x80 << precision_shift) && max_exp > 0) {
+    VITIS_LOOP_87_1: while (result_mantissa < (0x80 << precision_shift) && max_exp > 0) {
         result_mantissa <<= 1;
         max_exp--;
 
@@ -55151,14 +55159,14 @@ uint16 bf16add(uint16 a_bits, uint16 b_bits) {
 
 
 void bf16_to_float(const uint16* in, float* out, int len) {
-    VITIS_LOOP_144_1: for (int i = 0; i < len; ++i) {
+    VITIS_LOOP_145_1: for (int i = 0; i < len; ++i) {
         uint32_t x_f32 = ((uint32_t)in[i]) << 16;
         out[i] = *(float*)&x_f32;
     }
 }
 
 void float_sigmoid(const float* x, uint16* y, int len) {
-    VITIS_LOOP_151_1: for (int i = 0; i < len; ++i) {
+    VITIS_LOOP_152_1: for (int i = 0; i < len; ++i) {
         float val = 1.0f / (1.0f + hls::expf(-x[i]));
         uint32_t* y_f32_ptr = (uint32_t*)&val;
         y[i] = (*y_f32_ptr) >> 16;
@@ -55166,7 +55174,7 @@ void float_sigmoid(const float* x, uint16* y, int len) {
 }
 
 void float_silu(const float* x, uint16* y, int len) {
-    VITIS_LOOP_159_1: for (int i = 0; i < len; ++i) {
+    VITIS_LOOP_160_1: for (int i = 0; i < len; ++i) {
         float sig = 1.0f / (1.0f + hls::expf(-x[i]));
         float val = x[i] * sig;
         uint32_t* y_f32_ptr = (uint32_t*)&val;
@@ -55177,12 +55185,12 @@ void float_silu(const float* x, uint16* y, int len) {
 void float_rms_norm(const float* x, uint16* y_bf16, int len) {
     const float eps = 1e-6f;
     float sum_sq = 0.0f;
-    VITIS_LOOP_170_1: for (int i = 0; i < len; ++i) {
+    VITIS_LOOP_171_1: for (int i = 0; i < len; ++i) {
         sum_sq += x[i] * x[i];
     }
     float mean_sq = sum_sq / len;
     float rms = hls::sqrtf(mean_sq + eps);
-    VITIS_LOOP_175_2: for (int i = 0; i < len; ++i) {
+    VITIS_LOOP_176_2: for (int i = 0; i < len; ++i) {
         float y = x[i] / rms;
         uint32_t* y_f32_ptr = (uint32_t*)&y;
         y_bf16[i] = (*y_f32_ptr) >> 16;
@@ -55192,18 +55200,18 @@ void float_rms_norm(const float* x, uint16* y_bf16, int len) {
 void float_layer_norm(const float* x, uint16* y_bf16, int len) {
     const float eps = 1e-6f;
     float sum = 0.0f;
-    VITIS_LOOP_185_1: for (int i = 0; i < len; ++i) {
+    VITIS_LOOP_186_1: for (int i = 0; i < len; ++i) {
         sum += x[i];
     }
     float mean = sum / len;
     float var = 0.0f;
-    VITIS_LOOP_190_2: for (int i = 0; i < len; ++i) {
+    VITIS_LOOP_191_2: for (int i = 0; i < len; ++i) {
         float diff = x[i] - mean;
         var += diff * diff;
     }
     var /= len;
     float stddev = hls::sqrtf(var + eps);
-    VITIS_LOOP_196_3: for (int i = 0; i < len; ++i) {
+    VITIS_LOOP_197_3: for (int i = 0; i < len; ++i) {
         float y = (x[i] - mean) / stddev;
         uint32_t* y_f32_ptr = (uint32_t*)&y;
         y_bf16[i] = (*y_f32_ptr) >> 16;
@@ -55212,7 +55220,7 @@ void float_layer_norm(const float* x, uint16* y_bf16, int len) {
 
 
 void float_add(const float* x, const float* y, uint16* out, int len) {
-    VITIS_LOOP_205_1: for (int i = 0; i < len; ++i) {
+    VITIS_LOOP_206_1: for (int i = 0; i < len; ++i) {
         float sum = x[i] + y[i];
         uint32_t* sum_f32_ptr = (uint32_t*)&sum;
         out[i] = (*sum_f32_ptr) >> 16;
@@ -55221,33 +55229,154 @@ void float_add(const float* x, const float* y, uint16* out, int len) {
 
 
 void float_safe_softmax(const float* x, uint16* y_bf16, int len) {
-    float max_val = x[0];
-    VITIS_LOOP_215_1: for (int i = 1; i < len; ++i) if (x[i] > max_val) max_val = x[i];
+#pragma HLS INLINE off
+ float max_val = x[0];
+    softmax_loop_1:
+    for (int i = 1; i < len; ++i) if (x[i] > max_val) max_val = x[i];
     float sum = 0.0f;
     float exp_x[32768];
-    VITIS_LOOP_218_2: for (int i = 0; i < len; ++i) {
+    softmax_loop_2:
+    for (int i = 0; i < len; ++i) {
         exp_x[i] = hls::expf(x[i] - max_val);
         sum += exp_x[i];
     }
-    VITIS_LOOP_222_3: for (int i = 0; i < len; ++i) {
+    softmax_loop_3:
+    for (int i = 0; i < len; ++i) {
         float y = exp_x[i] / sum;
         uint32_t* y_f32_ptr = (uint32_t*)&y;
         y_bf16[i] = (*y_f32_ptr) >> 16;
     }
 }
 
+void float_safe_softmax2(const float* x, uint16* y_bf16, int len) {
+#pragma HLS INLINE off
+ const int UF = 32;
+    const int ACC = 32;
+
+
+    float exp_x[32768];
+#pragma HLS BIND_STORAGE variable=exp_x type=ram_1p impl=bram
+#pragma HLS DEPENDENCE variable=exp_x inter false
+#pragma HLS ARRAY_PARTITION variable=exp_x cyclic factor=UF dim=1
+
+
+
+ float partial_max[ACC];
+#pragma HLS ARRAY_PARTITION variable=partial_max complete
+#pragma HLS DEPENDENCE variable=partial_max inter false
+
+init_partial_max:
+    for (int k = 0; k < ACC; ++k) {
+#pragma HLS UNROLL
+
+ partial_max[k] = -std::numeric_limits<float>::max();
+    }
+
+find_max_blocks:
+    for (int i = 0; i < len; i += UF) {
+#pragma HLS PIPELINE II=1
+ float blk[UF];
+#pragma HLS ARRAY_PARTITION variable=blk complete
+
+ load_blk_max:
+        for (int u = 0; u < UF; ++u) {
+#pragma HLS UNROLL
+ int idx = i + u;
+            blk[u] = (idx < len) ? x[idx] : -std::numeric_limits<float>::max();
+        }
+
+
+        float local_max = blk[0];
+    reduce_blk_max:
+        for (int u = 1; u < UF; ++u) {
+#pragma HLS UNROLL
+
+ local_max = hls::fmaxf(local_max, blk[u]);
+        }
+
+
+        int b = (i / UF) % ACC;
+        partial_max[b] = hls::fmaxf(partial_max[b], local_max);
+    }
+
+
+    float max_val = partial_max[0];
+final_reduce_max:
+    for (int k = 1; k < ACC; ++k) {
+#pragma HLS UNROLL
+ max_val = hls::fmaxf(max_val, partial_max[k]);
+    }
+# 320 "activation_accelerator.cpp"
+    float partial[ACC];
+#pragma HLS ARRAY_PARTITION variable=partial complete
+init_partial:
+    for (int k = 0; k < ACC; ++k) {
+#pragma HLS UNROLL
+ partial[k] = 0.f;
+    }
+
+exp_and_bucket:
+    for (int i = 0; i < len; i += UF) {
+#pragma HLS PIPELINE II=1
+ float e[UF];
+#pragma HLS ARRAY_PARTITION variable=e complete
+
+exp_inner:
+        for (int u = 0; u < UF; ++u) {
+#pragma HLS UNROLL
+ int idx = i + u;
+            float ex = (idx < len) ? hls::expf(x[idx] - max_val) : 0.f;
+            e[u] = ex;
+            if (idx < len) exp_x[idx] = ex;
+        }
+bucket_add:
+        for (int u = 0; u < UF; ++u) {
+#pragma HLS UNROLL
+ int idx = i + u;
+            if (idx < len) partial[idx % ACC] += e[u];
+        }
+    }
+
+
+    float sum = 0.f;
+reduce_partial:
+    for (int k = 0; k < ACC; ++k) {
+#pragma HLS UNROLL
+ sum += partial[k];
+    }
+
+
+normalize_blocks:
+    for (int i = 0; i < len; i += UF) {
+#pragma HLS PIPELINE II=1
+normalize_inner:
+        for (int u = 0; u < UF; ++u) {
+#pragma HLS UNROLL
+ int idx = i + u;
+            if (idx < len) {
+                float y = exp_x[idx] / sum;
+                uint32_t* y_f32_ptr = (uint32_t*)&y;
+                y_bf16[idx] = (uint16)((*y_f32_ptr) >> 16);
+            }
+        }
+    }
+}
+
+
+
+
 void float_mask_safe_softmax(const float* x, const float* mask, uint16* y_bf16, int len) {
     float x_mask[32768];
-    VITIS_LOOP_231_1: for (int i = 0; i < len; ++i) x_mask[i] = x[i] * mask[i];
+    VITIS_LOOP_380_1: for (int i = 0; i < len; ++i) x_mask[i] = x[i] * mask[i];
     float max_val = x_mask[0];
-    VITIS_LOOP_233_2: for (int i = 1; i < len; ++i) if (x_mask[i] > max_val) max_val = x_mask[i];
+    VITIS_LOOP_382_2: for (int i = 1; i < len; ++i) if (x_mask[i] > max_val) max_val = x_mask[i];
     float sum = 0.0f;
     float exp_x[32768];
-    VITIS_LOOP_236_3: for (int i = 0; i < len; ++i) {
+    VITIS_LOOP_385_3: for (int i = 0; i < len; ++i) {
         exp_x[i] = hls::expf(x[i] - max_val);
         sum += exp_x[i];
     }
-    VITIS_LOOP_240_4: for (int i = 0; i < len; ++i) {
+    VITIS_LOOP_389_4: for (int i = 0; i < len; ++i) {
         float y = exp_x[i] / sum;
         uint32_t* y_f32_ptr = (uint32_t*)&y;
         y_bf16[i] = (*y_f32_ptr) >> 16;
@@ -55256,9 +55385,9 @@ void float_mask_safe_softmax(const float* x, const float* mask, uint16* y_bf16, 
 
 
 __attribute__((sdx_kernel("activation_accelerator", 0))) void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, int32 config) {
-#line 39 "/data1/jcz/activation_accelerator_tutorial/prj/baseline/kernel_hls/run_hls.tcl"
+#line 39 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/run_hls.tcl"
 #pragma HLSDIRECTIVE TOP name=activation_accelerator
-# 248 "activation_accelerator.cpp"
+# 397 "activation_accelerator.cpp"
 
 #pragma HLS INTERFACE m_axi port=in0 offset=slave bundle=gmem0 depth=32768
 #pragma HLS INTERFACE m_axi port=in1 offset=slave bundle=gmem1 depth=32768
@@ -55273,10 +55402,10 @@ __attribute__((sdx_kernel("activation_accelerator", 0))) void activation_acceler
     float x[32*1024], y[32*1024];
 
     if(stage == 0) {
-        VITIS_LOOP_262_1: for(int i = 0; i < 32*1024; i++) {
+        VITIS_LOOP_411_1: for(int i = 0; i <32*1024 ; i++) {
             buf0[i] = in0[i];
         }
-        VITIS_LOOP_265_2: for(int i = 0; i < 32*1024; i++) {
+        VITIS_LOOP_414_2: for(int i = 0; i <32*1024 ; i++) {
             buf1[i] = in1[i];
         }
     }
@@ -55286,27 +55415,27 @@ __attribute__((sdx_kernel("activation_accelerator", 0))) void activation_acceler
             bf16_to_float(buf0, x, 32*1024);
             bf16_to_float(buf1, y, 32*1024);
             float_add(x, y, buf2, 32*1024);
-            VITIS_LOOP_275_3: for(int i = 0; i < 32*1024; i++) {
+            VITIS_LOOP_424_3: for(int i = 0; i < 32*1024; i++) {
 #pragma HLS PIPELINE II=1
  buf2[i] = bf16add(buf0[i], buf1[i]);
             }
         }
         else if(config == 1) {
+            bf16_to_float(buf0, x, 32*1024);
+            float_safe_softmax(x, buf2, 32*1024);
 
 
-            VITIS_LOOP_283_4: for(int i = 0; i < 32*1024; i++) {
-#pragma HLS PIPELINE II=1
- buf2[i] = 0;
-            }
+
+
         }
         else if(config == 2) {
+            bf16_to_float(buf0, x, 32*1024);
+            bf16_to_float(buf1, y, 32*1024);
+            float_mask_safe_softmax(x, y, buf2, 32*1024);
 
 
 
-            VITIS_LOOP_292_5: for(int i = 0; i < 32*1024; i++) {
-#pragma HLS PIPELINE II=1
- buf2[i] = 0;
-            }
+
         }
         else if(config == 3) {
             bf16_to_float(buf0, x, 32*1024);
@@ -55327,7 +55456,7 @@ __attribute__((sdx_kernel("activation_accelerator", 0))) void activation_acceler
     }
 
     if(stage == 2) {
-        VITIS_LOOP_316_6: for(int i = 0; i < 32*1024; i++) {
+        VITIS_LOOP_465_4: for(int i = 0; i < 32*1024; i++) {
             out[i] = buf2[i];
         }
     }
