@@ -77,7 +77,7 @@ bool run_test(int config, uint16* in0, uint16* in1, uint16* out, uint16* golden_
     std::cout << "\n--- Testing Config " << config << " ---" << std::endl;
 
     // Select input1 based on config (only config 2 uses mask)
-    uint16* current_in1 = (config == 2) ? mask_data : in1;
+    // uint16* current_in1 = (config == 2) ? mask_data : in1;
 
     // Stage 1: Compute
     int32 current_stage = STAGE_COMPUTE;
@@ -99,8 +99,8 @@ bool run_test(int config, uint16* in0, uint16* in1, uint16* out, uint16* golden_
 }
 
 std::string get_data_path() {
-    std::string rel_path = "/data1/jcz/activation_accelerator_tutorial/prj/data/";
-    std::string test_file = rel_path + "in0_bf16.bin";
+    std::string rel_path = "/data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors3/";
+    std::string test_file = rel_path + "X_test_tensor_bf16.bin";
     std::ifstream f(test_file.c_str());
     if (f.good()) {
         std::cout << "Using relative data path: " << rel_path << std::endl;
@@ -116,29 +116,28 @@ int main() {
     uint16* in0 = new uint16[DATA_SIZE];
     uint16* in1 = new uint16[DATA_SIZE];
     uint16* out = new uint16[DATA_SIZE];
-    uint16* mask = new uint16[DATA_SIZE];
+    // uint16* mask = new uint16[DATA_SIZE];
     uint16* golden_data[7];
     for (int i = 0; i < 7; ++i) golden_data[i] = new uint16[DATA_SIZE];
 
     // Load test data
     std::cout << "Loading test data..." << std::endl;
     std::string data_path = get_data_path();
-    if (!load_binary_data(data_path + "in0_bf16.bin", in0) ||
-        !load_binary_data(data_path + "in1_bf16.bin", in1) ||
-        !load_binary_data(data_path + "mask_bf16.bin", mask)) {
+    if (!load_binary_data(data_path + "X_test_tensor_bf16.bin", in0) ||
+        !load_binary_data(data_path + "Y_test_tensor_bf16.bin", in1) ) {
         std::cerr << "Unable to load bf16 input data, using random data" << std::endl;
         srand(time(NULL));
         for(int i = 0; i < DATA_SIZE; i++) {
             in0[i] = rand() % 1000 - 500;
             in1[i] = rand() % 1000 - 500;
-            mask[i] = rand() % 2;
+            // mask[i] = rand() % 2;
         }
     } else {
         std::cout << "BF16 data loaded successfully" << std::endl;
     }
     print_data_stats(in0, "in0");
     print_data_stats(in1, "in1");
-    print_data_stats(mask, "mask");
+    // print_data_stats(mask, "mask");
     std::cout << "=== HLS Activation Accelerator Testbench ===" << std::endl;
 
     // Load all golden results
@@ -194,7 +193,7 @@ int main() {
     delete[] in0;
     delete[] in1;
     delete[] out;
-    delete[] mask;
+    // delete[] mask;
     std::cout << "\n=== Test Complete ===" << std::endl;
     return 0;
 }
