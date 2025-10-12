@@ -1,0 +1,71 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'activation_accelerator'" level="0">
+<item name = "Date">Sun Oct 12 09:48:11 2025
+</item>
+<item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
+<item name = "Project">activation_accelerator</item>
+<item name = "Solution">baseline (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xck26-sfvc784-2LV-c</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.674 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_275">activation_accelerator_Pipeline_VITIS_LOOP_145_18, 32770, 32770, 0.328 ms, 0.328 ms, 32770, 32770, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_289">activation_accelerator_Pipeline_VITIS_LOOP_145_17, 32770, 32770, 0.328 ms, 0.328 ms, 32770, 32770, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_303">activation_accelerator_Pipeline_VITIS_LOOP_145_16, 32770, 32770, 0.328 ms, 0.328 ms, 32770, 32770, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_317">activation_accelerator_Pipeline_VITIS_LOOP_145_15, 32770, 32770, 0.328 ms, 0.328 ms, 32770, 32770, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_331">activation_accelerator_Pipeline_VITIS_LOOP_145_13, 32770, 32770, 0.328 ms, 0.328 ms, 32770, 32770, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_345">activation_accelerator_Pipeline_VITIS_LOOP_145_14, 32770, 32770, 0.328 ms, 0.328 ms, 32770, 32770, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_353">activation_accelerator_Pipeline_VITIS_LOOP_145_12, 32770, 32770, 0.328 ms, 0.328 ms, 32770, 32770, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_367">activation_accelerator_Pipeline_VITIS_LOOP_145_1, 32770, 32770, 0.328 ms, 0.328 ms, 32770, 32770, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_381">activation_accelerator_Pipeline_VITIS_LOOP_145_11, 32770, 32770, 0.328 ms, 0.328 ms, 32770, 32770, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_409_4_fu_389">activation_accelerator_Pipeline_VITIS_LOOP_409_4, 32771, 32771, 0.328 ms, 0.328 ms, 32771, 32771, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_186_1_fu_404">activation_accelerator_Pipeline_VITIS_LOOP_186_1, 98308, 98308, 0.983 ms, 0.983 ms, 98308, 98308, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_191_2_fu_413">activation_accelerator_Pipeline_VITIS_LOOP_191_2, 98315, 98315, 0.983 ms, 0.983 ms, 98315, 98315, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_197_3_fu_423">activation_accelerator_Pipeline_VITIS_LOOP_197_3, 32784, 32784, 0.328 ms, 0.328 ms, 32784, 32784, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_171_1_fu_441">activation_accelerator_Pipeline_VITIS_LOOP_171_1, 98311, 98311, 0.983 ms, 0.983 ms, 98311, 98311, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_176_2_fu_450">activation_accelerator_Pipeline_VITIS_LOOP_176_2, 32780, 32780, 0.328 ms, 0.328 ms, 32780, 32780, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_160_1_fu_467">activation_accelerator_Pipeline_VITIS_LOOP_160_1, 32794, 32794, 0.328 ms, 0.328 ms, 32794, 32794, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_152_1_fu_483">activation_accelerator_Pipeline_VITIS_LOOP_152_1, 32791, 32791, 0.328 ms, 0.328 ms, 32791, 32791, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_324_1_fu_499">activation_accelerator_Pipeline_VITIS_LOOP_324_1, 32774, 32774, 0.328 ms, 0.328 ms, 32774, 32774, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_326_2_fu_509">activation_accelerator_Pipeline_VITIS_LOOP_326_2, 32770, 32770, 0.328 ms, 0.328 ms, 32770, 32770, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_329_3_fu_516">activation_accelerator_Pipeline_VITIS_LOOP_329_3, 98321, 98321, 0.983 ms, 0.983 ms, 98321, 98321, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_333_4_fu_527">activation_accelerator_Pipeline_VITIS_LOOP_333_4, 32780, 32780, 0.328 ms, 0.328 ms, 32780, 32780, no</column>
+<column name="grp_float_safe_softmax_fu_541">float_safe_softmax, 49318, 49318, 0.493 ms, 0.493 ms, 49318, 49318, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_206_1_fu_557">activation_accelerator_Pipeline_VITIS_LOOP_206_1, 32775, 32775, 0.328 ms, 0.328 ms, 32775, 32775, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_368_3_fu_574">activation_accelerator_Pipeline_VITIS_LOOP_368_3, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_355_1_fu_590">activation_accelerator_Pipeline_VITIS_LOOP_355_1, 32771, 32771, 0.328 ms, 0.328 ms, 32771, 32771, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_358_2_fu_599">activation_accelerator_Pipeline_VITIS_LOOP_358_2, 32771, 32771, 0.328 ms, 0.328 ms, 32771, 32771, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

@@ -2,7 +2,8 @@
 #include <iostream>
 #include <cmath>
 #include <hls_math.h>
-
+#include <limits> 
+#include <cfloat>  
 /*
 0 eltwise add
 1 safe softmax tbd
@@ -211,20 +212,142 @@ void float_add(const float* x, const float* y, uint16* out, int len) {
 
 // safe softmax
 void float_safe_softmax(const float* x, uint16* y_bf16, int len) {
+#pragma HLS INLINE off
     float max_val = x[0];
+    softmax_loop_1:
     for (int i = 1; i < len; ++i) if (x[i] > max_val) max_val = x[i];
     float sum = 0.0f;
     float exp_x[32768];
+    softmax_loop_2:
     for (int i = 0; i < len; ++i) {
         exp_x[i] = hls::expf(x[i] - max_val);
         sum += exp_x[i];
     }
+    softmax_loop_3:
     for (int i = 0; i < len; ++i) {
         float y = exp_x[i] / sum;
         uint32_t* y_f32_ptr = (uint32_t*)&y;
         y_bf16[i] = (*y_f32_ptr) >> 16;
     }
 }
+
+void float_safe_softmax2(const float* x, uint16* y_bf16, int len) {
+#pragma HLS INLINE off
+    const int UF  = 32;
+    const int ACC = 32;
+
+    // 中间缓冲（本段未使用，只保留声明也 OK）
+    float exp_x[32768];
+#pragma HLS BIND_STORAGE variable=exp_x type=ram_1p impl=bram
+#pragma HLS DEPENDENCE variable=exp_x inter false
+#pragma HLS ARRAY_PARTITION variable=exp_x cyclic factor=UF dim=1
+
+    // -------- 1) 找最大值：块处理 + UNROLL 比较，外层 PIPELINE --------
+    // -------- 1) 两层循环找最大值（外层 PIPELINE，内层 UNROLL） --------
+    float partial_max[ACC];
+#pragma HLS ARRAY_PARTITION variable=partial_max complete
+#pragma HLS DEPENDENCE variable=partial_max inter false
+
+init_partial_max:
+    for (int k = 0; k < ACC; ++k) {
+    #pragma HLS UNROLL
+    // 初始化桶，用一个非常小的数
+        partial_max[k] = -std::numeric_limits<float>::max();
+    }
+
+find_max_blocks:
+    for (int i = 0; i < len; i += UF) {
+    #pragma HLS PIPELINE II=1
+        float blk[UF];
+    #pragma HLS ARRAY_PARTITION variable=blk complete
+
+    load_blk_max:
+        for (int u = 0; u < UF; ++u) {
+        #pragma HLS UNROLL
+            int idx = i + u;
+            blk[u] = (idx < len) ? x[idx] : -std::numeric_limits<float>::max();
+        }
+
+        // 块内规约（可换成成对树形比较）
+        float local_max = blk[0];
+    reduce_blk_max:
+        for (int u = 1; u < UF; ++u) {
+        #pragma HLS UNROLL
+        //  fmaxf 是 HLS 提供的硬件友好型浮点比较函数
+            local_max = hls::fmaxf(local_max, blk[u]);
+        }
+
+        // 写入环形桶，消除 max 的跨迭代写后读依赖
+        int b = (i / UF) % ACC;
+        partial_max[b] = hls::fmaxf(partial_max[b], local_max);
+    }
+
+    // 桶规约得到全局最大值（完全 UNROLL，不影响外层 II）
+    float max_val = partial_max[0];
+final_reduce_max:
+    for (int k = 1; k < ACC; ++k) {
+    #pragma HLS UNROLL
+        max_val = hls::fmaxf(max_val, partial_max[k]);
+    }
+
+    // -------- 2) 计算 exp 并分桶累加：外层 PIPELINE，内层 UNROLL --------
+    float partial[ACC];
+#pragma HLS ARRAY_PARTITION variable=partial complete
+init_partial:
+    for (int k = 0; k < ACC; ++k) {
+#pragma HLS UNROLL
+        partial[k] = 0.f;
+    }
+
+exp_and_bucket:
+    for (int i = 0; i < len; i += UF) {
+#pragma HLS PIPELINE II=1
+        float e[UF];
+#pragma HLS ARRAY_PARTITION variable=e complete
+
+exp_inner:
+        for (int u = 0; u < UF; ++u) {
+#pragma HLS UNROLL
+            int idx = i + u;
+            float ex = (idx < len) ? hls::expf(x[idx] - max_val) : 0.f;
+            e[u] = ex;
+            if (idx < len) exp_x[idx] = ex;   // 写回中间结果
+        }
+bucket_add:
+        for (int u = 0; u < UF; ++u) {
+#pragma HLS UNROLL
+            int idx = i + u;
+            if (idx < len) partial[idx % ACC] += e[u];
+        }
+    }
+
+    // 桶规约得到 sum（完全展开，无环路相关）
+    float sum = 0.f;
+reduce_partial:
+    for (int k = 0; k < ACC; ++k) {
+#pragma HLS UNROLL
+        sum += partial[k];
+    }
+
+    // -------- 3) 归一化并转 bfloat16：外层 PIPELINE，内层 UNROLL --------
+normalize_blocks:
+    for (int i = 0; i < len; i += UF) {
+#pragma HLS PIPELINE II=1
+normalize_inner:
+        for (int u = 0; u < UF; ++u) {
+#pragma HLS UNROLL
+            int idx = i + u;
+            if (idx < len) {
+                float y = exp_x[idx] / sum;
+                uint32_t* y_f32_ptr = (uint32_t*)&y;
+                y_bf16[idx] = (uint16)((*y_f32_ptr) >> 16);
+            }
+        }
+    }
+}
+
+
+
 // mask safe softmax
 void float_mask_safe_softmax(const float* x, const float* mask, uint16* y_bf16, int len) {
     float x_mask[32768];
@@ -253,67 +376,67 @@ void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, 
 #pragma HLS INTERFACE s_axilite port=config
 #pragma HLS INTERFACE s_axilite port=return
 
-    static uint16 buf0[64*768];
-    static uint16 buf1[64*768];
-    static uint16 buf2[64*768];
-    float x[64*768], y[64*768];
+    static uint16 buf0[32*1024];
+    static uint16 buf1[32*1024];
+    static uint16 buf2[32*1024];
+    float x[32*1024], y[32*1024];
     
     if(stage == 0) { // Stage 0: Load data from PS to PL
-        for(int i = 0; i < 64*768; i++) {
+        for(int i = 0; i <32*1024 ; i++) {
             buf0[i] = in0[i];
         }
-        for(int i = 0; i < 64*768; i++) {
+        for(int i = 0; i <32*1024 ; i++) {
             buf1[i] = in1[i];
         }
     }
     
     if(stage == 1) { // Stage 1: Compute
         if(config == 0) { // Element-wise addition
-            bf16_to_float(buf0, x, 64*768);
-            bf16_to_float(buf1, y, 64*768);
-            float_add(x, y, buf2, 64*768);
-            for(int i = 0; i < 64*768; i++) {
+            bf16_to_float(buf0, x, 32*1024);
+            bf16_to_float(buf1, y, 32*1024);
+            float_add(x, y, buf2, 32*1024);
+            for(int i = 0; i < 32*1024; i++) {
 #pragma HLS PIPELINE II=1
                 buf2[i] = bf16add(buf0[i], buf1[i]);
             }
         }
         else if(config == 1) { // safe softmax
-            bf16_to_float(buf0, x, 64*768);
-            float_safe_softmax(x, buf2, 64*768);
-//             for(int i = 0; i < 64*768; i++) {
+            bf16_to_float(buf0, x, 32*1024);
+            float_safe_softmax(x, buf2, 32*1024);
+//             for(int i = 0; i < ; i++) {
 // #pragma HLS PIPELINE II=1
 //                 buf2[i] = 0;
 //             }
         }
         else if(config == 2) { // mask safe softmax
-            bf16_to_float(buf0, x, 64*768);
-            bf16_to_float(buf1, y, 64*768);
-            float_mask_safe_softmax(x, y, buf2, 64*768);
-//             for(int i = 0; i < 64*768; i++) {
+            bf16_to_float(buf0, x, 32*1024);
+            bf16_to_float(buf1, y, 32*1024);
+            float_mask_safe_softmax(x, y, buf2, 32*1024);
+//             for(int i = 0; i < ; i++) {
 // #pragma HLS PIPELINE II=1
 //                 buf2[i] = 0;
 //             }
         }
         else if(config == 3) { // Sigmoid
-            bf16_to_float(buf0, x, 64*768);
-            float_sigmoid(x, buf2, 64*768);
+            bf16_to_float(buf0, x, 32*1024);
+            float_sigmoid(x, buf2, 32*1024);
         }
         else if(config == 4) { // SiLU
-            bf16_to_float(buf0, x, 64*768);
-            float_silu(x, buf2, 64*768);
+            bf16_to_float(buf0, x, 32*1024);
+            float_silu(x, buf2, 32*1024);
         }
         else if(config == 5) { // RMS normalization
-            bf16_to_float(buf0, x, 64*768);
-            float_rms_norm(x, buf2, 64*768);
+            bf16_to_float(buf0, x, 32*1024);
+            float_rms_norm(x, buf2, 32*1024);
         }
         else if(config == 6) { // Layer normalization
-            bf16_to_float(buf0, x, 64*768);
-            float_layer_norm(x, buf2, 64*768);
+            bf16_to_float(buf0, x, 32*1024);
+            float_layer_norm(x, buf2, 32*1024);
         }
     }
     
     if(stage == 2) { // Stage 2: Load data from PL to PS
-        for(int i = 0; i < 64*768; i++) {
+        for(int i = 0; i < 32*1024; i++) {
             out[i] = buf2[i];
         }
     }

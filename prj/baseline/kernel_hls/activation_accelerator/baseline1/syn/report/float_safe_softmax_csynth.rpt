@@ -1,0 +1,286 @@
+
+
+================================================================
+== Vitis HLS Report for 'float_safe_softmax'
+================================================================
+* Date:           Sun Oct 12 09:48:17 2025
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        activation_accelerator
+* Solution:       baseline (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.674 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+    +---------+---------+----------+----------+-------+-------+---------+
+    |    49318|    49318|  0.493 ms|  0.493 ms|  49318|  49318|       no|
+    +---------+---------+----------+----------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------------------------------------+----------------------------------------------+---------+---------+-----------+-----------+-------+-------+---------+
+        |                                                         |                                              |  Latency (cycles) |   Latency (absolute)  |    Interval   | Pipeline|
+        |                         Instance                        |                    Module                    |   min   |   max   |    min    |    max    |  min  |  max  |   Type  |
+        +---------------------------------------------------------+----------------------------------------------+---------+---------+-----------+-----------+-------+-------+---------+
+        |grp_float_safe_softmax_Pipeline_find_max_blocks_fu_214   |float_safe_softmax_Pipeline_find_max_blocks   |    32771|    32771|   0.328 ms|   0.328 ms|  32771|  32771|       no|
+        |grp_float_safe_softmax_Pipeline_exp_and_bucket_fu_228    |float_safe_softmax_Pipeline_exp_and_bucket    |    12305|    12305|   0.123 ms|   0.123 ms|  12305|  12305|       no|
+        |grp_float_safe_softmax_Pipeline_normalize_blocks_fu_281  |float_safe_softmax_Pipeline_normalize_blocks  |     4108|     4108|  41.080 us|  41.080 us|   4108|   4108|       no|
+        +---------------------------------------------------------+----------------------------------------------+---------+---------+-----------+-----------+-------+-------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       -|       -|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|    13|    4115|    5579|    -|
+|Memory           |       64|     -|       0|       0|    -|
+|Multiplexer      |        -|     -|       -|    1500|    -|
+|Register         |        -|     -|     202|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |       64|    13|    4317|    7079|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      288|  1248|  234240|  117120|   64|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |       22|     1|       1|       6|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------------------------------------+----------------------------------------------+---------+----+------+------+-----+
+    |                         Instance                        |                    Module                    | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +---------------------------------------------------------+----------------------------------------------+---------+----+------+------+-----+
+    |grp_float_safe_softmax_Pipeline_exp_and_bucket_fu_228    |float_safe_softmax_Pipeline_exp_and_bucket    |        0|  13|  3027|  4242|    0|
+    |grp_float_safe_softmax_Pipeline_find_max_blocks_fu_214   |float_safe_softmax_Pipeline_find_max_blocks   |        0|   0|   588|  1231|    0|
+    |grp_float_safe_softmax_Pipeline_normalize_blocks_fu_281  |float_safe_softmax_Pipeline_normalize_blocks  |        0|   0|   500|   106|    0|
+    +---------------------------------------------------------+----------------------------------------------+---------+----+------+------+-----+
+    |Total                                                    |                                              |        0|  13|  4115|  5579|    0|
+    +---------------------------------------------------------+----------------------------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +-----------+-------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |   Memory  |                   Module                  | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +-----------+-------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |exp_x_U    |float_safe_softmax_exp_x_RAM_1P_BRAM_1R1W  |        8|  0|   0|    0|  4096|   32|     1|       131072|
+    |exp_x_1_U  |float_safe_softmax_exp_x_RAM_1P_BRAM_1R1W  |        8|  0|   0|    0|  4096|   32|     1|       131072|
+    |exp_x_2_U  |float_safe_softmax_exp_x_RAM_1P_BRAM_1R1W  |        8|  0|   0|    0|  4096|   32|     1|       131072|
+    |exp_x_3_U  |float_safe_softmax_exp_x_RAM_1P_BRAM_1R1W  |        8|  0|   0|    0|  4096|   32|     1|       131072|
+    |exp_x_4_U  |float_safe_softmax_exp_x_RAM_1P_BRAM_1R1W  |        8|  0|   0|    0|  4096|   32|     1|       131072|
+    |exp_x_5_U  |float_safe_softmax_exp_x_RAM_1P_BRAM_1R1W  |        8|  0|   0|    0|  4096|   32|     1|       131072|
+    |exp_x_6_U  |float_safe_softmax_exp_x_RAM_1P_BRAM_1R1W  |        8|  0|   0|    0|  4096|   32|     1|       131072|
+    |exp_x_7_U  |float_safe_softmax_exp_x_RAM_1P_BRAM_1R1W  |        8|  0|   0|    0|  4096|   32|     1|       131072|
+    +-----------+-------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total      |                                           |       64|  0|   0|    0| 32768|  256|     8|      1048576|
+    +-----------+-------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +-------------------+-----+-----------+-----+-----------+
+    |        Name       | LUT | Input Size| Bits| Total Bits|
+    +-------------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm          |  716|        136|    1|        136|
+    |exp_x_1_address0   |   14|          3|   12|         36|
+    |exp_x_1_ce0        |   14|          3|    1|          3|
+    |exp_x_1_we0        |    9|          2|    1|          2|
+    |exp_x_2_address0   |   14|          3|   12|         36|
+    |exp_x_2_ce0        |   14|          3|    1|          3|
+    |exp_x_2_we0        |    9|          2|    1|          2|
+    |exp_x_3_address0   |   14|          3|   12|         36|
+    |exp_x_3_ce0        |   14|          3|    1|          3|
+    |exp_x_3_we0        |    9|          2|    1|          2|
+    |exp_x_4_address0   |   14|          3|   12|         36|
+    |exp_x_4_ce0        |   14|          3|    1|          3|
+    |exp_x_4_we0        |    9|          2|    1|          2|
+    |exp_x_5_address0   |   14|          3|   12|         36|
+    |exp_x_5_ce0        |   14|          3|    1|          3|
+    |exp_x_5_we0        |    9|          2|    1|          2|
+    |exp_x_6_address0   |   14|          3|   12|         36|
+    |exp_x_6_ce0        |   14|          3|    1|          3|
+    |exp_x_6_we0        |    9|          2|    1|          2|
+    |exp_x_7_address0   |   14|          3|   12|         36|
+    |exp_x_7_ce0        |   14|          3|    1|          3|
+    |exp_x_7_we0        |    9|          2|    1|          2|
+    |exp_x_address0     |   14|          3|   12|         36|
+    |exp_x_ce0          |   14|          3|    1|          3|
+    |exp_x_we0          |    9|          2|    1|          2|
+    |grp_fu_302_ce      |    9|          2|    1|          2|
+    |grp_fu_302_opcode  |   14|          3|    2|          6|
+    |grp_fu_302_p0      |   20|          4|   32|        128|
+    |grp_fu_302_p1      |  155|         34|   32|       1088|
+    |grp_fu_753_ce      |    9|          2|    1|          2|
+    |grp_fu_757_ce      |    9|          2|    1|          2|
+    |grp_fu_761_ce      |    9|          2|    1|          2|
+    |grp_fu_765_ce      |    9|          2|    1|          2|
+    |grp_fu_769_ce      |    9|          2|    1|          2|
+    |grp_fu_773_ce      |    9|          2|    1|          2|
+    |x_0_address0       |   20|          4|   13|         52|
+    |x_0_address1       |   14|          3|   13|         39|
+    |x_0_ce0            |   20|          4|    1|          4|
+    |x_0_ce1            |   14|          3|    1|          3|
+    |x_1_address0       |   14|          3|   13|         39|
+    |x_1_address1       |   14|          3|   13|         39|
+    |x_1_ce0            |   14|          3|    1|          3|
+    |x_1_ce1            |   14|          3|    1|          3|
+    |x_2_address0       |   14|          3|   13|         39|
+    |x_2_address1       |   14|          3|   13|         39|
+    |x_2_ce0            |   14|          3|    1|          3|
+    |x_2_ce1            |   14|          3|    1|          3|
+    |x_3_address0       |   14|          3|   13|         39|
+    |x_3_address1       |   14|          3|   13|         39|
+    |x_3_ce0            |   14|          3|    1|          3|
+    |x_3_ce1            |   14|          3|    1|          3|
+    +-------------------+-----+-----------+-----+-----------+
+    |Total              | 1500|        305|  298|       2050|
+    +-------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------------------------------+-----+----+-----+-----------+
+    |                                 Name                                 |  FF | LUT| Bits| Const Bits|
+    +----------------------------------------------------------------------+-----+----+-----+-----------+
+    |ap_CS_fsm                                                             |  135|   0|  135|          0|
+    |grp_float_safe_softmax_Pipeline_exp_and_bucket_fu_228_ap_start_reg    |    1|   0|    1|          0|
+    |grp_float_safe_softmax_Pipeline_find_max_blocks_fu_214_ap_start_reg   |    1|   0|    1|          0|
+    |grp_float_safe_softmax_Pipeline_normalize_blocks_fu_281_ap_start_reg  |    1|   0|    1|          0|
+    |max_val_reg_649                                                       |   32|   0|   32|          0|
+    |reg_308                                                               |   32|   0|   32|          0|
+    +----------------------------------------------------------------------+-----+----+-----+-----------+
+    |Total                                                                 |  202|   0|  202|          0|
+    +----------------------------------------------------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------------------------------------------------------------------+-----+-----+------------+-----------------------------------------------------------------------------+--------------+
+|                                       RTL Ports                                      | Dir | Bits|  Protocol  |                                Source Object                                |    C Type    |
++--------------------------------------------------------------------------------------+-----+-----+------------+-----------------------------------------------------------------------------+--------------+
+|ap_clk                                                                                |   in|    1|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|ap_rst                                                                                |   in|    1|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|ap_start                                                                              |   in|    1|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|ap_done                                                                               |  out|    1|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|ap_idle                                                                               |  out|    1|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|ap_ready                                                                              |  out|    1|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|grp_fu_608_p_din0                                                                     |  out|   32|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|grp_fu_608_p_din1                                                                     |  out|   32|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|grp_fu_608_p_opcode                                                                   |  out|    2|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|grp_fu_608_p_dout0                                                                    |   in|   32|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|grp_fu_608_p_ce                                                                       |  out|    1|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|grp_fu_844_p_din0                                                                     |  out|   32|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|grp_fu_844_p_din1                                                                     |  out|   32|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|grp_fu_844_p_opcode                                                                   |  out|    5|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|grp_fu_844_p_dout0                                                                    |   in|    1|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|grp_fu_844_p_ce                                                                       |  out|    1|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|grp_fu_828_p_din0                                                                     |  out|   32|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|grp_fu_828_p_din1                                                                     |  out|   32|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|grp_fu_828_p_opcode                                                                   |  out|    2|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|grp_fu_828_p_dout0                                                                    |   in|   32|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|grp_fu_828_p_ce                                                                       |  out|    1|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|grp_fu_840_p_din0                                                                     |  out|   32|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|grp_fu_840_p_din1                                                                     |  out|   32|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|grp_fu_840_p_dout0                                                                    |   in|   32|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|grp_fu_840_p_ce                                                                       |  out|    1|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|grp_fu_836_p_din0                                                                     |  out|   32|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|grp_fu_836_p_din1                                                                     |  out|   32|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|grp_fu_836_p_dout0                                                                    |   in|   32|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|grp_fu_836_p_ce                                                                       |  out|    1|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|grp_fu_824_p_din0                                                                     |  out|   32|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|grp_fu_824_p_din1                                                                     |  out|   32|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|grp_fu_824_p_dout0                                                                    |   in|   32|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|grp_fu_824_p_ce                                                                       |  out|    1|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|grp_fu_832_p_din0                                                                     |  out|   32|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|grp_fu_832_p_din1                                                                     |  out|   32|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|grp_fu_832_p_dout0                                                                    |   in|   32|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|grp_fu_832_p_ce                                                                       |  out|    1|  ap_ctrl_hs|                                                           float_safe_softmax|  return value|
+|x_0_address0                                                                          |  out|   13|   ap_memory|                                                                          x_0|         array|
+|x_0_ce0                                                                               |  out|    1|   ap_memory|                                                                          x_0|         array|
+|x_0_q0                                                                                |   in|   32|   ap_memory|                                                                          x_0|         array|
+|x_0_address1                                                                          |  out|   13|   ap_memory|                                                                          x_0|         array|
+|x_0_ce1                                                                               |  out|    1|   ap_memory|                                                                          x_0|         array|
+|x_0_q1                                                                                |   in|   32|   ap_memory|                                                                          x_0|         array|
+|x_1_address0                                                                          |  out|   13|   ap_memory|                                                                          x_1|         array|
+|x_1_ce0                                                                               |  out|    1|   ap_memory|                                                                          x_1|         array|
+|x_1_q0                                                                                |   in|   32|   ap_memory|                                                                          x_1|         array|
+|x_1_address1                                                                          |  out|   13|   ap_memory|                                                                          x_1|         array|
+|x_1_ce1                                                                               |  out|    1|   ap_memory|                                                                          x_1|         array|
+|x_1_q1                                                                                |   in|   32|   ap_memory|                                                                          x_1|         array|
+|x_2_address0                                                                          |  out|   13|   ap_memory|                                                                          x_2|         array|
+|x_2_ce0                                                                               |  out|    1|   ap_memory|                                                                          x_2|         array|
+|x_2_q0                                                                                |   in|   32|   ap_memory|                                                                          x_2|         array|
+|x_2_address1                                                                          |  out|   13|   ap_memory|                                                                          x_2|         array|
+|x_2_ce1                                                                               |  out|    1|   ap_memory|                                                                          x_2|         array|
+|x_2_q1                                                                                |   in|   32|   ap_memory|                                                                          x_2|         array|
+|x_3_address0                                                                          |  out|   13|   ap_memory|                                                                          x_3|         array|
+|x_3_ce0                                                                               |  out|    1|   ap_memory|                                                                          x_3|         array|
+|x_3_q0                                                                                |   in|   32|   ap_memory|                                                                          x_3|         array|
+|x_3_address1                                                                          |  out|   13|   ap_memory|                                                                          x_3|         array|
+|x_3_ce1                                                                               |  out|    1|   ap_memory|                                                                          x_3|         array|
+|x_3_q1                                                                                |   in|   32|   ap_memory|                                                                          x_3|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0  |  out|   13|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0       |  out|    1|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0       |  out|    1|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0        |  out|   16|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1  |  out|   13|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1       |  out|    1|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1       |  out|    1|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1        |  out|   16|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0  |  out|   13|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0       |  out|    1|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0       |  out|    1|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0        |  out|   16|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1  |  out|   13|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1       |  out|    1|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1       |  out|    1|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1        |  out|   16|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0  |  out|   13|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0       |  out|    1|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0       |  out|    1|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0        |  out|   16|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1  |  out|   13|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1       |  out|    1|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1       |  out|    1|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1        |  out|   16|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0    |  out|   13|   ap_memory|    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0         |  out|    1|   ap_memory|    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0         |  out|    1|   ap_memory|    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0          |  out|   16|   ap_memory|    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1    |  out|   13|   ap_memory|    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1         |  out|    1|   ap_memory|    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1         |  out|    1|   ap_memory|    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i|         array|
+|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1          |  out|   16|   ap_memory|    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i|         array|
++--------------------------------------------------------------------------------------+-----+-----+------------+-----------------------------------------------------------------------------+--------------+
+
