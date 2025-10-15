@@ -22,8 +22,8 @@ void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, 
 // Configuration definitions
 #define CONFIG_ELTWISE_ADD 0     // Element-wise addition
 #define CONFIG_SAFE_SOFTMAX 1    // Safe softmax activation function
-#define CONFIG_MASK_SOFTMAX 2    // Masked softmax activation function
-#define CONFIG_SIGMOID 3         // Sigmoid activation function
+#define CONFIG_MULTIPLY 2    // Multiply activation function
+#define CONFIG_GELU 3         // Gelu activation function
 #define CONFIG_SILU 4            // SiLU (Swish) activation function
 #define CONFIG_RMS_NORM 5        // RMS normalization
 #define CONFIG_LAYER_NORM 6      // Layer normalization
@@ -34,6 +34,6 @@ void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, 
 #define STAGE_STORE 2     // Data storage stage
 
 // Data size
-#define DATA_SIZE (32*1024)
+#define DATA_SIZE (64*768)
 
 #endif // ACTIVATION_ACCELERATOR_H

@@ -1,0 +1,68 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'activation_accelerator'" level="0">
+<item name = "Date">Tue Oct 14 10:12:06 2025
+</item>
+<item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
+<item name = "Project">activation_accelerator</item>
+<item name = "Solution">baseline (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xck26-sfvc784-2LV-c</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220">activation_accelerator_Pipeline_VITIS_LOOP_145_18, 49154, 49154, 0.492 ms, 0.492 ms, 49154, 49154, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228">activation_accelerator_Pipeline_VITIS_LOOP_145_17, 49154, 49154, 0.492 ms, 0.492 ms, 49154, 49154, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236">activation_accelerator_Pipeline_VITIS_LOOP_145_16, 49154, 49154, 0.492 ms, 0.492 ms, 49154, 49154, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244">activation_accelerator_Pipeline_VITIS_LOOP_145_15, 49154, 49154, 0.492 ms, 0.492 ms, 49154, 49154, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252">activation_accelerator_Pipeline_VITIS_LOOP_145_13, 49154, 49154, 0.492 ms, 0.492 ms, 49154, 49154, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260">activation_accelerator_Pipeline_VITIS_LOOP_145_14, 49154, 49154, 0.492 ms, 0.492 ms, 49154, 49154, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268">activation_accelerator_Pipeline_VITIS_LOOP_145_12, 49154, 49154, 0.492 ms, 0.492 ms, 49154, 49154, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276">activation_accelerator_Pipeline_VITIS_LOOP_145_1, 49154, 49154, 0.492 ms, 0.492 ms, 49154, 49154, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284">activation_accelerator_Pipeline_VITIS_LOOP_145_11, 49154, 49154, 0.492 ms, 0.492 ms, 49154, 49154, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292">activation_accelerator_Pipeline_VITIS_LOOP_499_4, 49155, 49155, 0.492 ms, 0.492 ms, 49155, 49155, no</column>
+<column name="grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301">activation_accelerator_Pipeline_layer_norm_loop1, 147460, 147460, 1.475 ms, 1.475 ms, 147460, 147460, no</column>
+<column name="grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307">activation_accelerator_Pipeline_layer_norm_loop2, 147467, 147467, 1.475 ms, 1.475 ms, 147467, 147467, no</column>
+<column name="grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314">activation_accelerator_Pipeline_layer_norm_loop3, 49168, 49168, 0.492 ms, 0.492 ms, 49168, 49168, no</column>
+<column name="grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323">activation_accelerator_Pipeline_rms_norm_loop1, 147463, 147463, 1.475 ms, 1.475 ms, 147463, 147463, no</column>
+<column name="grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329">activation_accelerator_Pipeline_rms_norm_loop2, 49164, 49164, 0.492 ms, 0.492 ms, 49164, 49164, no</column>
+<column name="grp_activation_accelerator_Pipeline_silu_loop_fu_337">activation_accelerator_Pipeline_silu_loop, 49178, 49178, 0.492 ms, 0.492 ms, 49178, 49178, no</column>
+<column name="grp_activation_accelerator_Pipeline_gelu_loop_fu_344">activation_accelerator_Pipeline_gelu_loop, 49241, 49241, 0.492 ms, 0.492 ms, 49241, 49241, no</column>
+<column name="grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351">activation_accelerator_Pipeline_float_multiply_loop, 49158, 49158, 0.492 ms, 0.492 ms, 49158, 49158, no</column>
+<column name="grp_float_safe_softmax_fu_359">float_safe_softmax, 245798, 245798, 2.458 ms, 2.458 ms, 245798, 245798, no</column>
+<column name="grp_activation_accelerator_Pipeline_float_add_loop_fu_366">activation_accelerator_Pipeline_float_add_loop, 49159, 49159, 0.492 ms, 0.492 ms, 49159, 49159, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374">activation_accelerator_Pipeline_VITIS_LOOP_458_3, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384">activation_accelerator_Pipeline_VITIS_LOOP_445_1, 49155, 49155, 0.492 ms, 0.492 ms, 49155, 49155, no</column>
+<column name="grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393">activation_accelerator_Pipeline_VITIS_LOOP_448_2, 49155, 49155, 0.492 ms, 0.492 ms, 49155, 49155, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>
