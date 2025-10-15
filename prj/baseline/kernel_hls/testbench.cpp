@@ -77,7 +77,7 @@ bool run_test(int config, uint16* in0, uint16* in1, uint16* out, uint16* golden_
     std::cout << "\n--- Testing Config " << config << " ---" << std::endl;
 
     // Select input1 based on config (only config 2 uses mask)
-    // uint16* current_in1 = (config == 2) ? mask_data : in1;
+    uint16* current_in1 = (config == 2) ? mask_data : in1;
 
     // Stage 1: Compute
     int32 current_stage = STAGE_COMPUTE;
