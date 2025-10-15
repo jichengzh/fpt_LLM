@@ -4,6 +4,7 @@
 #include <hls_math.h>
 #include <limits> 
 #include <cfloat>  
+#include <string.h>   // 或者 <cstring>
 /*
 0 eltwise add
 1 safe softmax tbd
@@ -13,6 +14,63 @@
 5 rms norm
 6 layer norm
 */
+
+
+uint16_t round_float32_to_bf16_ieee(float x_in) {
+    uint32_t fbits = *reinterpret_cast<uint32_t*>(&x_in);
+
+    // static_assert(sizeof(float) == 4, "This code assumes 32-bit float");
+    // std::memcpy(&fbits, &x_in, sizeof(fbits));
+
+    const uint32_t LOW16_MASK = 0xFFFFu;
+    uint32_t upper = fbits >> 16;        // 高 16 位（将成为 bfloat16 的位模式）
+    uint32_t lower = fbits & LOW16_MASK; // 低 16 位（被丢弃部分）
+
+    uint32_t exp_field = (fbits >> 23) & 0xFFu;
+
+    // 如果是 Inf 或 NaN，直接返回高 16 位（保留 NaN/Inf 表示）
+    if (exp_field == 0xFFu) {
+        uint16_t ret = static_cast<uint16_t>(upper);
+        // 如果原始是 NaN（mantissa != 0），但高 7 位恰好被截掉为 0，
+        // 为确保返回值仍为 NaN（而不是正负无穷），至少保留一个非零位。
+        uint32_t full_mant = fbits & 0x7FFFFFu;
+        if (full_mant != 0 && (ret & 0x7Fu) == 0) {
+            ret |= 1u; // 保留最小 payload 位（使其成为 NaN）
+        }
+        return ret;
+    }
+
+    // round-to-nearest-even: 比较被丢弃的低 16 位和 0x8000
+    // lower > 0x8000 -> round up
+    // lower < 0x8000 -> round down
+    // lower == 0x8000 -> tie -> round to even (看 upper 的最低位)
+    const uint32_t HALF = 0x8000u; // 1 << 15
+    bool round_up = false;
+    if (lower > HALF) {
+        round_up = true;
+    } else if (lower < HALF) {
+        round_up = false;
+    } else { // lower == HALF: tie
+        if (upper & 1u) { // 如果当前保留位的最低位为 1（奇数），则进位成偶数
+            round_up = true;
+        }
+    }
+
+    uint32_t rounded = upper + (round_up ? 1u : 0u);
+
+    // 检查进位是否造成指数变为全 1（溢出 -> ±Inf），若是则清零尾数
+    uint32_t new_exp = (rounded >> 7) & 0xFFu;
+    uint32_t sign = (rounded >> 15) & 0x1u;
+    if (new_exp == 0xFFu) {
+        uint16_t res = static_cast<uint16_t>((sign << 15) | (0xFFu << 7));
+        return res;
+    }
+
+    return static_cast<uint16_t>(rounded & 0xFFFFu);
+}
+
+
+
 static inline int clz32(uint32_t x) { return x ? __builtin_clz(x) : 32; }
 
 static inline uint16_t pack_bf16(uint16_t s, uint16_t e, uint16_t m7) {
@@ -113,11 +171,8 @@ uint16 bf16add_fast(uint16 a_bits, uint16 b_bits) {
 
     if (M == 0) return 0; // 结果为零
 
-    // Return directly if the result is zero
-    // 尾数为0判定
-    if (result_mantissa == 0) {
-        return 0;
-    }
+
+
     // ---- 6) 一次性规格化（用 CLZ 替代 while），并处理溢出
     // 目标规格化区间：[0x80<<PREC_SHIFT, 0x100<<PREC_SHIFT)
     const uint32_t LO = (ONE_I << PREC_SHIFT);
@@ -319,26 +374,42 @@ uint16 bf16add(uint16 a_bits, uint16 b_bits) {
     return (result_sign << 15) | (max_exp << 7) | final_mantissa;
 }
 
+static inline float bf16_to_f32(uint16_t b) {
+    union { uint32_t u; float f; } cvt;
+    cvt.u = ((uint32_t)b) << 16;
+    return cvt.f;
+}
 
-
+static inline uint16 f32_to_bf16_rne(float f) {
+    uint32_t u; memcpy(&u, &f, 4);
+    // 最近偶数（ties to even）：在第16位上做进位偏置
+    uint32_t lsb  = (u >> 16) & 1u;
+    uint32_t bias = 0x7FFFu + lsb;
+    u += bias;
+    return (uint16)(u >> 16);
+}
 
 // bf16编码(uint16)批量转float32
 void bf16_to_float(const uint16* in, float* out, int len) {
+    bf16_to_float_loop:
     for (int i = 0; i < len; ++i) {
         uint32_t x_f32 = ((uint32_t)in[i]) << 16;
         out[i] = *(float*)&x_f32;
     }
 }
-// sigmoid
+/* // sigmoid
 void float_sigmoid(const float* x, uint16* y, int len) {
+    sigmoid_loop:
     for (int i = 0; i < len; ++i) {
         float val = 1.0f / (1.0f + hls::expf(-x[i]));
         uint32_t* y_f32_ptr = (uint32_t*)&val;
         y[i] = (*y_f32_ptr) >> 16;
     }
-}
+} */
+
 // silu
 void float_silu(const float* x, uint16* y, int len) {
+    silu_loop:
     for (int i = 0; i < len; ++i) {
         float sig = 1.0f / (1.0f + hls::expf(-x[i]));
         float val = x[i] * sig;
@@ -346,49 +417,511 @@ void float_silu(const float* x, uint16* y, int len) {
         y[i] = (*y_f32_ptr) >> 16;
     }
 }
+void float_silu2(const float* x, uint16* y, int len) {
+#pragma HLS INLINE off
+    const int UF = 32;    // 展开因子
+
+    // -------- SiLU计算：外层PIPELINE，内层UNROLL --------
+    silu_blocks:
+    for (int i = 0; i < len; i += UF) {
+#pragma HLS PIPELINE II=1
+        silu_inner:
+        for (int u = 0; u < UF; ++u) {
+#pragma HLS UNROLL
+            int idx = i + u;
+            if (idx < len) {
+                // 计算Sigmoid: 1.0f / (1.0f + hls::expf(-x[i]))
+                float sig = 1.0f / (1.0f + hls::expf(-x[idx]));
+                // SiLU: x * sigmoid(x)
+                float val = x[idx] * sig;
+                // 转换为bfloat16
+                uint32_t* y_f32_ptr = (uint32_t*)&val;
+                y[idx] = (uint16)((*y_f32_ptr) >> 16);
+            }
+        }
+    }
+}
+
 // rms_norm
 void float_rms_norm(const float* x, uint16* y_bf16, int len) {
     const float eps = 1e-6f;
     float sum_sq = 0.0f;
+    rms_norm_loop1:
     for (int i = 0; i < len; ++i) {
         sum_sq += x[i] * x[i];
     }
     float mean_sq = sum_sq / len;
     float rms = hls::sqrtf(mean_sq + eps);
+    rms_norm_loop2:
     for (int i = 0; i < len; ++i) {
         float y = x[i] / rms;
         uint32_t* y_f32_ptr = (uint32_t*)&y;
         y_bf16[i] = (*y_f32_ptr) >> 16;
     }
 }
-// layer_norm
-void float_layer_norm(const float* x, uint16* y_bf16, int len) {
+// void float_rms_norm2(const float* x, uint16* y_bf16, int len) {
+// #pragma HLS INLINE off
+//     const int UF = 32;    // 展开因子
+//     const int ACC = 32;   // 累加器数量
+//     const float eps = 1e-6f;
+
+//     // -------- 1) 计算平方和：分块累加 --------
+//     float partial_sum_sq[ACC];
+// #pragma HLS ARRAY_PARTITION variable=partial_sum_sq complete
+// #pragma HLS DEPENDENCE variable=partial_sum_sq inter false
+
+//     init_partial_sum_sq:
+//     for (int k = 0; k < ACC; ++k) {
+// #pragma HLS UNROLL
+//         partial_sum_sq[k] = 0.f;
+//     }
+
+//     sum_sq_blocks:
+//     for (int i = 0; i < len; i += UF) {
+// #pragma HLS PIPELINE II=1
+//         float sq[UF];
+// #pragma HLS ARRAY_PARTITION variable=sq complete
+
+//         compute_sq:
+//         for (int u = 0; u < UF; ++u) {
+// #pragma HLS UNROLL
+//             int idx = i + u;
+//             if (idx < len) {
+//                 sq[u] = x[idx] * x[idx];
+//             } else {
+//                 sq[u] = 0.f;
+//             }
+//         }
+
+//         bucket_add_sq:
+//         for (int u = 0; u < UF; ++u) {
+// #pragma HLS UNROLL
+//             int idx = i + u;
+//             if (idx < len) partial_sum_sq[idx % ACC] += sq[u];
+//         }
+//     }
+
+//     // 桶规约得到平方和
+//     float sum_sq = 0.f;
+//     reduce_partial_sum_sq:
+//     for (int k = 0; k < ACC; ++k) {
+// #pragma HLS UNROLL
+//         sum_sq += partial_sum_sq[k];
+//     }
+
+//     // -------- 2) 计算 RMS 值 --------
+//     float mean_sq = sum_sq / len;
+//     float rms = hls::sqrtf(mean_sq + eps);
+
+//     // -------- 3) 归一化并转 bfloat16 --------
+//     normalize_blocks:
+//     for (int i = 0; i < len; i += UF) {
+// #pragma HLS PIPELINE II=1
+//         normalize_inner:
+//         for (int u = 0; u < UF; ++u) {
+// #pragma HLS UNROLL
+//             int idx = i + u;
+//             if (idx < len) {
+//                 float y = x[idx] / rms;
+//                 uint32_t* y_f32_ptr = (uint32_t*)&y;
+//                 y_bf16[idx] = (uint16)((*y_f32_ptr) >> 16);
+//             }
+//         }
+//     }
+// }
+void float_rms_norm3(const float* x, uint16* y_bf16, int len) {
+#pragma HLS INLINE off
+    const int UF = 32;    // 增加展开因子
+    const int ACC = 32;   // 增加累加器数量
     const float eps = 1e-6f;
-    float sum = 0.0f;
-    for (int i = 0; i < len; ++i) {
-        sum += x[i];
+
+    // -------- 1) 计算平方和：激进的分块累加 --------
+    float partial_sum_sq[ACC];
+#pragma HLS ARRAY_PARTITION variable=partial_sum_sq complete
+#pragma HLS DEPENDENCE variable=partial_sum_sq inter false
+
+    // 初始化累加器
+init_partial_sum_sq:
+    for (int k = 0; k < ACC; ++k) {
+#pragma HLS UNROLL
+        partial_sum_sq[k] = 0.f;
     }
+
+    // 平方和计算 - 完全流水线并行
+sum_sq_blocks:
+    for (int i = 0; i < len; i += UF) {
+#pragma HLS PIPELINE II=1
+    sum_sq_inner:
+        for (int u = 0; u < UF; ++u) {
+#pragma HLS UNROLL
+            int idx = i + u;
+            if (idx < len) {
+                partial_sum_sq[idx % ACC] += x[idx] * x[idx];
+            }
+        }
+    }
+
+    // 桶规约得到平方和
+    float sum_sq = 0.f;
+reduce_partial_sum_sq:
+    for (int k = 0; k < ACC; ++k) {
+#pragma HLS UNROLL
+        sum_sq += partial_sum_sq[k];
+    }
+
+    // -------- 2) 计算 RMS 值 --------
+    float mean_sq = sum_sq / len;
+    float rms = hls::sqrtf(mean_sq + eps);
+
+    // -------- 3) 归一化并转 bfloat16 --------
+normalize_blocks:
+    for (int i = 0; i < len; i += UF) {
+#pragma HLS PIPELINE II=1
+    normalize_inner:
+        for (int u = 0; u < UF; ++u) {
+#pragma HLS UNROLL
+            int idx = i + u;
+            if (idx < len) {
+                float y = x[idx] / rms;
+                uint32_t* y_f32_ptr = (uint32_t*)&y;
+                y_bf16[idx] = (uint16)((*y_f32_ptr) >> 16);
+            }
+        }
+    }
+}
+
+// layer_norm
+// void float_layer_norm(const float* x, uint16* y_bf16, int len) {
+//     const float eps = 1e-6f;
+//     float sum = 0.0f;
+//     layer_norm_loop1:
+//     for (int i = 0; i < len; ++i) {
+//         sum += x[i];
+//     }
+//     float mean = sum / len;
+//     float var = 0.0f;
+//     layer_norm_loop2:
+//     for (int i = 0; i < len; ++i) {
+//         float diff = x[i] - mean;
+//         var += diff * diff;
+//     }
+//     var /= len;
+//     float stddev = hls::sqrtf(var + eps);
+//     layer_norm_loop3:
+//     for (int i = 0; i < len; ++i) {
+//         float y = (x[i] - mean) / stddev;
+//         uint32_t* y_f32_ptr = (uint32_t*)&y;
+//         y_bf16[i] = (*y_f32_ptr) >> 16;
+//     }
+// }
+// void float_layer_norm2(const float* x, uint16* y_bf16, int len) {
+// #pragma HLS INLINE off
+//     const int UF = 32;    // 展开因子
+//     const int ACC = 32;   // 累加器数量
+//     const float eps = 1e-6f;
+
+//     // -------- 1) 计算均值：分块累加 --------
+//     float partial_sum[ACC];
+// #pragma HLS ARRAY_PARTITION variable=partial_sum complete
+// #pragma HLS DEPENDENCE variable=partial_sum inter false
+
+//     init_partial_sum:
+//     for (int k = 0; k < ACC; ++k) {
+// #pragma HLS UNROLL
+//         partial_sum[k] = 0.f;
+//     }
+
+//     sum_blocks:
+//     for (int i = 0; i < len; i += UF) {
+// #pragma HLS PIPELINE II=1
+//         float blk[UF];
+// #pragma HLS ARRAY_PARTITION variable=blk complete
+
+//         load_blk_sum:
+//         for (int u = 0; u < UF; ++u) {
+// #pragma HLS UNROLL
+//             int idx = i + u;
+//             blk[u] = (idx < len) ? x[idx] : 0.f;
+//         }
+
+//         bucket_add_sum:
+//         for (int u = 0; u < UF; ++u) {
+// #pragma HLS UNROLL
+//             int idx = i + u;
+//             if (idx < len) partial_sum[idx % ACC] += blk[u];
+//         }
+//     }
+
+//     // 桶规约得到总和
+//     float sum = 0.f;
+//     reduce_partial_sum:
+//     for (int k = 0; k < ACC; ++k) {
+// #pragma HLS UNROLL
+//         sum += partial_sum[k];
+//     }
+
+//     float mean = sum / len;
+
+//     // -------- 2) 计算方差：分块累加平方差 --------
+//     float partial_var[ACC];
+// #pragma HLS ARRAY_PARTITION variable=partial_var complete
+// #pragma HLS DEPENDENCE variable=partial_var inter false
+
+//     init_partial_var:
+//     for (int k = 0; k < ACC; ++k) {
+// #pragma HLS UNROLL
+//         partial_var[k] = 0.f;
+//     }
+
+//     var_blocks:
+//     for (int i = 0; i < len; i += UF) {
+// #pragma HLS PIPELINE II=1
+//         float diff_sq[UF];
+// #pragma HLS ARRAY_PARTITION variable=diff_sq complete
+
+//         compute_diff_sq:
+//         for (int u = 0; u < UF; ++u) {
+// #pragma HLS UNROLL
+//             int idx = i + u;
+//             if (idx < len) {
+//                 float diff = x[idx] - mean;
+//                 diff_sq[u] = diff * diff;
+//             } else {
+//                 diff_sq[u] = 0.f;
+//             }
+//         }
+
+//         bucket_add_var:
+//         for (int u = 0; u < UF; ++u) {
+// #pragma HLS UNROLL
+//             int idx = i + u;
+//             if (idx < len) partial_var[idx % ACC] += diff_sq[u];
+//         }
+//     }
+
+//     // 桶规约得到方差总和
+//     float var_sum = 0.f;
+//     reduce_partial_var:
+//     for (int k = 0; k < ACC; ++k) {
+// #pragma HLS UNROLL
+//         var_sum += partial_var[k];
+//     }
+
+//     float var = var_sum / len;
+//     float stddev = hls::sqrtf(var + eps);
+
+//     // -------- 3) 归一化并转 bfloat16 --------
+//     normalize_blocks:
+//     for (int i = 0; i < len; i += UF) {
+// #pragma HLS PIPELINE II=1
+//         normalize_inner:
+//         for (int u = 0; u < UF; ++u) {
+// #pragma HLS UNROLL
+//             int idx = i + u;
+//             if (idx < len) {
+//                 float y = (x[idx] - mean) / stddev;
+//                 uint32_t* y_f32_ptr = (uint32_t*)&y;
+//                 y_bf16[idx] = (uint16)((*y_f32_ptr) >> 16);
+//             }
+//         }
+//     }
+// }
+void float_layer_norm3(const float* x, uint16* y_bf16, int len) {
+#pragma HLS INLINE off
+    const int UF = 32;    // 增加展开因子
+    const int ACC = 32;   // 增加累加器数量
+    const float eps = 1e-6f;
+
+    // -------- 1) 计算均值：更激进的分块累加 --------
+    float partial_sum[ACC];
+#pragma HLS ARRAY_PARTITION variable=partial_sum complete
+#pragma HLS DEPENDENCE variable=partial_sum inter false
+
+    // 初始化累加器
+init_partial_sum:
+    for (int k = 0; k < ACC; ++k) {
+#pragma HLS UNROLL
+        partial_sum[k] = 0.f;
+    }
+
+    // 均值计算 - 完全流水线并行
+sum_blocks:
+    for (int i = 0; i < len; i += UF) {
+#pragma HLS PIPELINE II=1
+    sum_inner:
+        for (int u = 0; u < UF; ++u) {
+#pragma HLS UNROLL
+            int idx = i + u;
+            if (idx < len) {
+                partial_sum[idx % ACC] += x[idx];
+            }
+        }
+    }
+
+    // 桶规约得到总和
+    float sum = 0.f;
+reduce_partial_sum:
+    for (int k = 0; k < ACC; ++k) {
+#pragma HLS UNROLL
+        sum += partial_sum[k];
+    }
+
     float mean = sum / len;
-    float var = 0.0f;
-    for (int i = 0; i < len; ++i) {
-        float diff = x[i] - mean;
-        var += diff * diff;
+
+    // -------- 2) 计算方差：同样激进的分块策略 --------
+    float partial_var[ACC];
+#pragma HLS ARRAY_PARTITION variable=partial_var complete
+#pragma HLS DEPENDENCE variable=partial_var inter false
+
+    // 初始化方差累加器
+init_partial_var:
+    for (int k = 0; k < ACC; ++k) {
+#pragma HLS UNROLL
+        partial_var[k] = 0.f;
     }
-    var /= len;
+
+    // 方差计算 - 完全流水线并行
+var_blocks:
+    for (int i = 0; i < len; i += UF) {
+#pragma HLS PIPELINE II=1
+    var_inner:
+        for (int u = 0; u < UF; ++u) {
+#pragma HLS UNROLL
+            int idx = i + u;
+            if (idx < len) {
+                float diff = x[idx] - mean;
+                partial_var[idx % ACC] += diff * diff;
+            }
+        }
+    }
+
+    // 桶规约得到方差总和
+    float var_sum = 0.f;
+reduce_partial_var:
+    for (int k = 0; k < ACC; ++k) {
+#pragma HLS UNROLL
+        var_sum += partial_var[k];
+    }
+
+    float var = var_sum / len;
     float stddev = hls::sqrtf(var + eps);
-    for (int i = 0; i < len; ++i) {
-        float y = (x[i] - mean) / stddev;
-        uint32_t* y_f32_ptr = (uint32_t*)&y;
-        y_bf16[i] = (*y_f32_ptr) >> 16;
+
+    // -------- 3) 归一化并转 bfloat16 --------
+normalize_blocks:
+    for (int i = 0; i < len; i += UF) {
+#pragma HLS PIPELINE II=1
+    normalize_inner:
+        for (int u = 0; u < UF; ++u) {
+#pragma HLS UNROLL
+            int idx = i + u;
+            if (idx < len) {
+                float y = (x[idx] - mean) / stddev;
+                uint32_t* y_f32_ptr = (uint32_t*)&y;
+                y_bf16[idx] = (uint16)((*y_f32_ptr) >> 16);
+            }
+        }
+    }
+}
+
+//雷神之锤求平方根倒数
+float Q_rsqrt(float number)
+{
+	// long i;
+	float x2, y;
+	const float threehalfs = 1.5F;
+	x2 = number * 0.5F;
+	y  = number;
+    
+    /*核心代码*/
+    // 1. reinterpret_cast from float to int
+    int32_t i = *reinterpret_cast<int32_t*>(&y);  // 32-bit
+	i  = * ( long * ) &y;                       // evil floating point bit level hacking（对浮点数的邪恶位元hack）
+    // 2. 估算平方根倒数
+	i  = 0x5f3759df - ( i >> 1 );               // what the fuck? (....why not 0x69696969?)
+    // reinterpret_cast from int to float
+	y  = * ( float * ) &i;
+  	// 3. 牛顿法
+	y  = y * ( threehalfs - ( x2 * y * y ) );   // 1st iteration 
+    // y  = y * ( threehalfs - ( x2 * y * y ) );   // 2nd iteration, this can be removed
+
+	return y;
+}
+
+//GELU
+// void float_gelu(const float* x, uint16* y_bf16, int len){
+// #pragma HLS INLINE   
+//     float xtrue = 0.0f;
+//     float down2 = Q_rsqrt(2.0f);
+//     gelu_loop:
+//     for (int i = 0; i < len; ++i) {
+//     #pragma HLS PIPELINE II=1
+//         xtrue = 0.5f * x[i] * (1.0f + std::erff(x[i]*down2));
+//         uint32_t* xtrue_f32_ptr = (uint32_t*)&xtrue;
+//         y_bf16[i] = (*xtrue_f32_ptr) >> 16;
+//     }
+// }
+
+void float_gelu2(const float* x, uint16* y_bf16, int len) {
+#pragma HLS INLINE off
+    const int UF = 32;    // 展开因子
+    
+    // 预先计算常数
+    float down2 = Q_rsqrt(2.0f);
+    float half = 0.5f;
+    float one = 1.0f;
+
+    // -------- GELU计算：外层PIPELINE，内层UNROLL --------
+    gelu_blocks:
+    for (int i = 0; i < len; i += UF) {
+#pragma HLS PIPELINE II=1
+        gelu_inner:
+        for (int u = 0; u < UF; ++u) {
+#pragma HLS UNROLL
+            int idx = i + u;
+            if (idx < len) {
+                // GELU公式: 0.5 * x * (1 + erf(x / sqrt(2)))
+                float x_val = x[idx];
+                float erf_arg = x_val * down2;  // x / sqrt(2)
+                float erf_val = std::erff(erf_arg);
+                float xtrue = half * x_val * (one + erf_val);
+                
+                // 转换为bfloat16
+                uint32_t* xtrue_f32_ptr = (uint32_t*)&xtrue;
+                y_bf16[idx] = (uint16)((*xtrue_f32_ptr) >> 16);
+            }
+        }
     }
 }
 
 // float加法
-void float_add(const float* x, const float* y, uint16* out, int len) {
-    for (int i = 0; i < len; ++i) {
-        float sum = x[i] + y[i];
-        uint32_t* sum_f32_ptr = (uint32_t*)&sum;
-        out[i] = (*sum_f32_ptr) >> 16;
+// void float_add(const float* x, const float* y, uint16* out, int len) {
+//     float_add_loop:
+//     for (int i = 0; i < len; ++i) {
+//         float sum = x[i] + y[i];
+//         uint32_t* sum_f32_ptr = (uint32_t*)&sum;
+//         out[i] = (*sum_f32_ptr) >> 16;
+//     }
+// }
+void float_add2(const float* x, const float* y, uint16* out, int len) {
+#pragma HLS INLINE off
+    const int UF = 32;    // 展开因子
+
+    // -------- 向量加法：外层PIPELINE，内层UNROLL --------
+    add_blocks:
+    for (int i = 0; i < len; i += UF) {
+#pragma HLS PIPELINE II=1
+        add_inner:
+        for (int u = 0; u < UF; ++u) {
+#pragma HLS UNROLL
+            int idx = i + u;
+            if (idx < len) {
+                // 向量加法: x[i] + y[i]
+                float sum = x[idx] + y[idx];
+                // 转换为bfloat16
+                uint32_t* sum_f32_ptr = (uint32_t*)&sum;
+                out[idx] = (uint16)((*sum_f32_ptr) >> 16);
+            }
+        }
     }
 }
 
@@ -473,12 +1006,21 @@ final_reduce_max:
     }
 
     // -------- 2) 计算 exp 并分桶累加：外层 PIPELINE，内层 UNROLL --------
-    float partial[ACC];
+//     float partial[ACC];
+// #pragma HLS ARRAY_PARTITION variable=partial complete
+// init_partial:
+//     for (int k = 0; k < ACC; ++k) {
+// #pragma HLS UNROLL
+//         partial[k] = 0.f;
+//     }
+
+    uint16 partial[ACC];
 #pragma HLS ARRAY_PARTITION variable=partial complete
-init_partial:
+
+init_partial_bf16:
     for (int k = 0; k < ACC; ++k) {
-#pragma HLS UNROLL
-        partial[k] = 0.f;
+    #pragma HLS UNROLL
+        partial[k] = 0;  // bf16 +0
     }
 
 exp_and_bucket:
@@ -499,17 +1041,25 @@ bucket_add:
         for (int u = 0; u < UF; ++u) {
 #pragma HLS UNROLL
             int idx = i + u;
-            if (idx < len) partial[idx % ACC] += e[u];
+            if (idx < len) {
+                int b = idx % ACC;
+                // 将 e[u] 转成 bf16，再用 bf16add_fast 累加到桶里
+                uint16 e_b = f32_to_bf16_rne(e[u]);
+                partial[b] = bf16add_fast(partial[b], e_b);
+            }
         }
     }
 
     // 桶规约得到 sum（完全展开，无环路相关）
     float sum = 0.f;
+    uint16 sum_b = 0;
 reduce_partial:
     for (int k = 0; k < ACC; ++k) {
-#pragma HLS UNROLL
-        sum += partial[k];
+    #pragma HLS UNROLL
+        sum_b = bf16add_fast(sum_b, partial[k]);
     }
+        sum = bf16_to_f32(sum_b);
+
 
     // -------- 3) 归一化并转 bfloat16：外层 PIPELINE，内层 UNROLL --------
 normalize_blocks:
@@ -523,31 +1073,68 @@ normalize_inner:
                 float y = exp_x[idx] / sum;
                 uint32_t* y_f32_ptr = (uint32_t*)&y;
                 y_bf16[idx] = (uint16)((*y_f32_ptr) >> 16);
+
+                // y_bf16[i] = f32_to_bf16_scalar(e / sum);
+                y_bf16[idx] = round_float32_to_bf16_ieee(y);//初步采用进位
             }
         }
     }
 }
 
 
+//float逐元素乘法
+// void float_Multiply(const float* x, const float* y, uint16* out, int len) {
+// #pragma HLS INLINE
+//     float_multiply_loop:
+//     for (int i = 0; i < len; ++i) { 
+//     #pragma HLS PIPELINE II=1
+//         float mut = x[i] * y[i];
+//         uint32_t* mut_f32_ptr = (uint32_t*)&mut;
+//         out[i] = (*mut_f32_ptr) >> 16;
+//     }
+// }
+void float_Multiply2(const float* x, const float* y, uint16* out, int len) {
+#pragma HLS INLINE off
+    const int UF = 32;    // 展开因子
 
-// mask safe softmax
-void float_mask_safe_softmax(const float* x, const float* mask, uint16* y_bf16, int len) {
-    float x_mask[49152];
-    for (int i = 0; i < len; ++i) x_mask[i] = x[i] * mask[i];
-    float max_val = x_mask[0];
-    for (int i = 1; i < len; ++i) if (x_mask[i] > max_val) max_val = x_mask[i];
-    float sum = 0.0f;
-    float exp_x[49152];
-    for (int i = 0; i < len; ++i) {
-        exp_x[i] = hls::expf(x[i] - max_val);
-        sum += exp_x[i];
-    }
-    for (int i = 0; i < len; ++i) {
-        float y = exp_x[i] / sum;
-        uint32_t* y_f32_ptr = (uint32_t*)&y;
-        y_bf16[i] = (*y_f32_ptr) >> 16;
+    // -------- 逐元素乘法：外层PIPELINE，内层UNROLL --------
+    multiply_blocks:
+    for (int i = 0; i < len; i += UF) {
+#pragma HLS PIPELINE II=1
+        multiply_inner:
+        for (int u = 0; u < UF; ++u) {
+#pragma HLS UNROLL
+            int idx = i + u;
+            if (idx < len) {
+                // 逐元素乘法: x[i] * y[i]
+                float mut = x[idx] * y[idx];
+                // 转换为bfloat16
+                uint32_t* mut_f32_ptr = (uint32_t*)&mut;
+                out[idx] = (uint16)((*mut_f32_ptr) >> 16);
+            }
+        }
     }
 }
+
+
+// mask safe softmax
+// void float_mask_safe_softmax(const float* x, const float* mask, uint16* y_bf16, int len) {
+//     float x_mask[49152];
+//     for (int i = 0; i < len; ++i) x_mask[i] = x[i] * mask[i];
+//     float max_val = x_mask[0];
+//     for (int i = 1; i < len; ++i) if (x_mask[i] > max_val) max_val = x_mask[i];
+//     float sum = 0.0f;
+//     float exp_x[49152];
+//     for (int i = 0; i < len; ++i) {
+//         exp_x[i] = hls::expf(x[i] - max_val);
+//         sum += exp_x[i];
+//     }
+//     for (int i = 0; i < len; ++i) {
+//         float y = exp_x[i] / sum;
+//         uint32_t* y_f32_ptr = (uint32_t*)&y;
+//         y_bf16[i] = (*y_f32_ptr) >> 16;
+//     }
+// }
 
 
 void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, int32 config) {
@@ -564,9 +1151,11 @@ void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, 
     float x[64*768], y[64*768];
     
     if(stage == 0) { // Stage 0: Load data from PS to PL
+        stage_0_load0:
         for(int i = 0; i <64*768 ; i++) {
             buf0[i] = in0[i];
         }
+        stage_0_load1:
         for(int i = 0; i <64*768 ; i++) {
             buf1[i] = in1[i];
         }
@@ -576,48 +1165,49 @@ void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, 
         if(config == 0) { // Element-wise addition
             bf16_to_float(buf0, x, 64*768);
             bf16_to_float(buf1, y, 64*768);
-            float_add(x, y, buf2, 64*768);
-            for(int i = 0; i < 64*768; i++) {
-#pragma HLS PIPELINE II=1
-                buf2[i] = bf16add(buf0[i], buf1[i]);
-            }
+            float_add2(x, y, buf2, 64*768);
+//             for(int i = 0; i < 64*768; i++) {
+// #pragma HLS PIPELINE II=1
+//                 buf2[i] = bf16add(buf0[i], buf1[i]);
+//             }
         }
         else if(config == 1) { // safe softmax
             bf16_to_float(buf0, x, 64*768);
-            float_safe_softmax(x, buf2, 64*768);
+            float_safe_softmax2(x, buf2, 64*768);
 //             for(int i = 0; i < ; i++) {
 // #pragma HLS PIPELINE II=1
 //                 buf2[i] = 0;
 //             }
         }
-        else if(config == 2) { // mask safe softmax
-            // bf16_to_float(buf0, x, 64*768);
-            // bf16_to_float(buf1, y, 64*768);
-            // float_mask_safe_softmax(x, y, buf2, 64*768);
-            for(int i = 0; i <64*768 ; i++) {
+        else if(config == 2) { // float_Multiply
+            bf16_to_float(buf0, x, 64*768);
+            bf16_to_float(buf1, y, 64*768);
+            float_Multiply2(x, y, buf2, 64*768);
+/*             for(int i = 0; i <64*768 ; i++) {
 #pragma HLS PIPELINE II=1
                 buf2[i] = 0;
-            }
+            } */
         }
-        else if(config == 3) { // Sigmoid
+        else if(config == 3) { // Gelu
             bf16_to_float(buf0, x, 64*768);
-            float_sigmoid(x, buf2, 64*768);
+            float_gelu2(x, buf2, 64*768);
         }
         else if(config == 4) { // SiLU
             bf16_to_float(buf0, x, 64*768);
-            float_silu(x, buf2, 64*768);
+            float_silu2(x, buf2, 64*768);
         }
         else if(config == 5) { // RMS normalization
             bf16_to_float(buf0, x, 64*768);
-            float_rms_norm(x, buf2, 64*768);
+            float_rms_norm3(x, buf2, 64*768);
         }
         else if(config == 6) { // Layer normalization
             bf16_to_float(buf0, x, 64*768);
-            float_layer_norm(x, buf2, 64*768);
+            float_layer_norm3(x, buf2, 64*768);
         }
     }
     
     if(stage == 2) { // Stage 2: Load data from PL to PS
+        stage_2_store:
         for(int i = 0; i < 64*768; i++) {
             out[i] = buf2[i];
         }
