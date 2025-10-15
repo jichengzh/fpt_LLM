@@ -1,0 +1,947 @@
+
+
+================================================================
+== Vitis HLS Report for 'activation_accelerator'
+================================================================
+* Date:           Tue Oct 14 10:12:05 2025
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        activation_accelerator
+* Solution:       baseline (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 86
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 44 78 10 45 70 73 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 44 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 41 
+41 --> 42 
+42 --> 43 
+43 --> 44 
+44 --> 
+45 --> 46 
+46 --> 47 
+47 --> 48 
+48 --> 49 
+49 --> 50 
+50 --> 51 
+51 --> 52 
+52 --> 53 
+53 --> 54 
+54 --> 55 
+55 --> 56 
+56 --> 57 
+57 --> 58 
+58 --> 59 
+59 --> 60 
+60 --> 61 
+61 --> 62 
+62 --> 63 
+63 --> 64 
+64 --> 65 
+65 --> 66 
+66 --> 67 
+67 --> 68 
+68 --> 69 
+69 --> 44 
+70 --> 71 
+71 --> 72 
+72 --> 44 
+73 --> 74 
+74 --> 75 
+75 --> 76 
+76 --> 77 
+77 --> 44 
+78 --> 79 
+79 --> 80 
+80 --> 81 
+81 --> 82 
+82 --> 83 
+83 --> 84 
+84 --> 85 
+85 --> 86 
+86 --> 44 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.44>
+ST_1 : Operation 87 [1/1] (1.00ns)   --->   "%config_r_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %config_r"   --->   Operation 87 'read' 'config_r_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 88 [1/1] (1.00ns)   --->   "%stage_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %stage"   --->   Operation 88 'read' 'stage_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 89 [1/1] (1.00ns)   --->   "%out_r_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %out_r"   --->   Operation 89 'read' 'out_r_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 90 [1/1] (1.00ns)   --->   "%in1_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %in1"   --->   Operation 90 'read' 'in1_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 91 [1/1] (1.00ns)   --->   "%in0_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %in0"   --->   Operation 91 'read' 'in0_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%var_1_loc = alloca i64 1"   --->   Operation 92 'alloca' 'var_1_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "%sum_loc = alloca i64 1"   --->   Operation 93 'alloca' 'sum_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 94 [1/1] (0.00ns)   --->   "%sum_sq_loc = alloca i64 1"   --->   Operation 94 'alloca' 'sum_sq_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%spectopmodule_ln431 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_19" [activation_accelerator.cpp:431]   --->   Operation 95 'spectopmodule' 'spectopmodule_ln431' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 96 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %gmem0, void @empty_0, i32 0, i32 0, void @empty_1, i32 0, i32 49152, void @empty_2, void @empty_3, void @empty_1, i32 16, i32 16, i32 16, i32 16, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 96 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 97 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %gmem0"   --->   Operation 97 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %gmem1, void @empty_0, i32 0, i32 0, void @empty_1, i32 0, i32 49152, void @empty_4, void @empty_3, void @empty_1, i32 16, i32 16, i32 16, i32 16, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 98 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 99 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %gmem1"   --->   Operation 99 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 100 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %gmem2, void @empty_0, i32 0, i32 0, void @empty_1, i32 0, i32 49152, void @empty_5, void @empty_3, void @empty_1, i32 16, i32 16, i32 16, i32 16, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 100 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 101 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %gmem2"   --->   Operation 101 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 102 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %in0, void @empty_22, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_6, void @empty_7, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_8, i32 4294967295, i32 0"   --->   Operation 102 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 103 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %in0, void @empty_9, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_8, i32 4294967295, i32 0"   --->   Operation 103 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 104 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %in1, void @empty_22, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_6, void @empty_10, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_8, i32 4294967295, i32 0"   --->   Operation 104 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 105 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %in1, void @empty_9, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_8, i32 4294967295, i32 0"   --->   Operation 105 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 106 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %out_r, void @empty_22, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_6, void @empty_11, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_8, i32 4294967295, i32 0"   --->   Operation 106 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 107 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %out_r, void @empty_9, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_8, i32 4294967295, i32 0"   --->   Operation 107 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 108 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %stage"   --->   Operation 108 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 109 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %stage, void @empty_22, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_6, void @empty_32, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 109 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 110 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %stage, void @empty_9, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 110 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 111 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %config_r"   --->   Operation 111 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 112 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %config_r, void @empty_22, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_6, void @empty_13, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 112 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 113 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %config_r, void @empty_9, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 113 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 114 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_22, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_6, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 114 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 115 [1/1] (0.00ns)   --->   "%x = alloca i64 1" [activation_accelerator.cpp:442]   --->   Operation 115 'alloca' 'x' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 116 [1/1] (0.00ns)   --->   "%y = alloca i64 1" [activation_accelerator.cpp:442]   --->   Operation 116 'alloca' 'y' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 117 [1/1] (0.44ns)   --->   "%switch_ln444 = switch i32 %stage_read, void %if.end90, i32 0, void %VITIS_LOOP_445_1, i32 1, void %if.then17, i32 2, void %VITIS_LOOP_499_4" [activation_accelerator.cpp:444]   --->   Operation 117 'switch' 'switch_ln444' <Predicate = true> <Delay = 0.44>
+ST_1 : Operation 118 [1/1] (0.00ns)   --->   "%trunc_ln2 = partselect i63 @_ssdm_op_PartSelect.i63.i64.i32.i32, i64 %out_r_read, i32 1, i32 63" [activation_accelerator.cpp:499]   --->   Operation 118 'partselect' 'trunc_ln2' <Predicate = (stage_read == 2)> <Delay = 0.00>
+ST_1 : Operation 119 [1/1] (0.44ns)   --->   "%switch_ln454 = switch i32 %config_r_read, void %if.end68, i32 0, void %for.inc.i.preheader, i32 1, void %for.inc.i57.preheader, i32 2, void %for.inc.i67.preheader, i32 3, void %for.inc.i87.preheader, i32 4, void %for.inc.i99.preheader, i32 5, void %for.inc.i121.preheader, i32 6, void %for.inc.i140.preheader" [activation_accelerator.cpp:454]   --->   Operation 119 'switch' 'switch_ln454' <Predicate = (stage_read == 1)> <Delay = 0.44>
+ST_1 : Operation 120 [2/2] (0.00ns)   --->   "%call_ln0 = call void @activation_accelerator_Pipeline_VITIS_LOOP_145_18, i32 %x, i16 %buf0"   --->   Operation 120 'call' 'call_ln0' <Predicate = (stage_read == 1 & config_r_read == 6)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 121 [2/2] (0.00ns)   --->   "%call_ln0 = call void @activation_accelerator_Pipeline_VITIS_LOOP_145_17, i32 %x, i16 %buf0"   --->   Operation 121 'call' 'call_ln0' <Predicate = (stage_read == 1 & config_r_read == 5)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 122 [2/2] (0.00ns)   --->   "%call_ln0 = call void @activation_accelerator_Pipeline_VITIS_LOOP_145_16, i32 %x, i16 %buf0"   --->   Operation 122 'call' 'call_ln0' <Predicate = (stage_read == 1 & config_r_read == 4)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 123 [2/2] (0.00ns)   --->   "%call_ln0 = call void @activation_accelerator_Pipeline_VITIS_LOOP_145_15, i32 %x, i16 %buf0"   --->   Operation 123 'call' 'call_ln0' <Predicate = (stage_read == 1 & config_r_read == 3)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 124 [2/2] (0.00ns)   --->   "%call_ln0 = call void @activation_accelerator_Pipeline_VITIS_LOOP_145_13, i32 %x, i16 %buf0"   --->   Operation 124 'call' 'call_ln0' <Predicate = (stage_read == 1 & config_r_read == 2)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 125 [2/2] (0.00ns)   --->   "%call_ln0 = call void @activation_accelerator_Pipeline_VITIS_LOOP_145_14, i32 %y, i16 %buf1"   --->   Operation 125 'call' 'call_ln0' <Predicate = (stage_read == 1 & config_r_read == 2)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 126 [2/2] (0.00ns)   --->   "%call_ln0 = call void @activation_accelerator_Pipeline_VITIS_LOOP_145_12, i32 %x, i16 %buf0"   --->   Operation 126 'call' 'call_ln0' <Predicate = (stage_read == 1 & config_r_read == 1)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 127 [2/2] (0.00ns)   --->   "%call_ln0 = call void @activation_accelerator_Pipeline_VITIS_LOOP_145_1, i32 %x, i16 %buf0"   --->   Operation 127 'call' 'call_ln0' <Predicate = (stage_read == 1 & config_r_read == 0)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 128 [2/2] (0.00ns)   --->   "%call_ln0 = call void @activation_accelerator_Pipeline_VITIS_LOOP_145_11, i32 %y, i16 %buf1"   --->   Operation 128 'call' 'call_ln0' <Predicate = (stage_read == 1 & config_r_read == 0)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 129 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i63 @_ssdm_op_PartSelect.i63.i64.i32.i32, i64 %in0_read, i32 1, i32 63" [activation_accelerator.cpp:445]   --->   Operation 129 'partselect' 'trunc_ln' <Predicate = (stage_read == 0)> <Delay = 0.00>
+ST_1 : Operation 130 [1/1] (0.00ns)   --->   "%trunc_ln1 = partselect i63 @_ssdm_op_PartSelect.i63.i64.i32.i32, i64 %in1_read, i32 1, i32 63" [activation_accelerator.cpp:448]   --->   Operation 130 'partselect' 'trunc_ln1' <Predicate = (stage_read == 0)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 7.30>
+ST_2 : Operation 131 [1/1] (0.00ns)   --->   "%sext_ln499 = sext i63 %trunc_ln2" [activation_accelerator.cpp:499]   --->   Operation 131 'sext' 'sext_ln499' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 132 [1/1] (0.00ns)   --->   "%gmem2_addr = getelementptr i16 %gmem2, i64 %sext_ln499" [activation_accelerator.cpp:499]   --->   Operation 132 'getelementptr' 'gmem2_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 133 [1/1] (7.30ns)   --->   "%empty_45 = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i16, i16 %gmem2_addr, i32 49152" [activation_accelerator.cpp:499]   --->   Operation 133 'writereq' 'empty_45' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 134 [2/2] (0.00ns)   --->   "%call_ln499 = call void @activation_accelerator_Pipeline_VITIS_LOOP_499_4, i16 %gmem2, i63 %trunc_ln2, i16 %buf2" [activation_accelerator.cpp:499]   --->   Operation 134 'call' 'call_ln499' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 135 [1/2] (0.00ns)   --->   "%call_ln499 = call void @activation_accelerator_Pipeline_VITIS_LOOP_499_4, i16 %gmem2, i63 %trunc_ln2, i16 %buf2" [activation_accelerator.cpp:499]   --->   Operation 135 'call' 'call_ln499' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 7.30>
+ST_5 : Operation 136 [5/5] (7.30ns)   --->   "%empty_46 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i16, i16 %gmem2_addr" [activation_accelerator.cpp:503]   --->   Operation 136 'writeresp' 'empty_46' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 6 <SV = 5> <Delay = 7.30>
+ST_6 : Operation 137 [4/5] (7.30ns)   --->   "%empty_46 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i16, i16 %gmem2_addr" [activation_accelerator.cpp:503]   --->   Operation 137 'writeresp' 'empty_46' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 7 <SV = 6> <Delay = 7.30>
+ST_7 : Operation 138 [3/5] (7.30ns)   --->   "%empty_46 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i16, i16 %gmem2_addr" [activation_accelerator.cpp:503]   --->   Operation 138 'writeresp' 'empty_46' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 8 <SV = 7> <Delay = 7.30>
+ST_8 : Operation 139 [2/5] (7.30ns)   --->   "%empty_46 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i16, i16 %gmem2_addr" [activation_accelerator.cpp:503]   --->   Operation 139 'writeresp' 'empty_46' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 9 <SV = 8> <Delay = 7.30>
+ST_9 : Operation 140 [1/5] (7.30ns)   --->   "%empty_46 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i16, i16 %gmem2_addr" [activation_accelerator.cpp:503]   --->   Operation 140 'writeresp' 'empty_46' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_9 : Operation 141 [1/1] (0.00ns)   --->   "%br_ln503 = br void %if.end90" [activation_accelerator.cpp:503]   --->   Operation 141 'br' 'br_ln503' <Predicate = true> <Delay = 0.00>
+
+State 10 <SV = 1> <Delay = 0.00>
+ST_10 : Operation 142 [1/2] (0.00ns)   --->   "%call_ln0 = call void @activation_accelerator_Pipeline_VITIS_LOOP_145_18, i32 %x, i16 %buf0"   --->   Operation 142 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 2> <Delay = 0.00>
+ST_11 : Operation 143 [2/2] (0.00ns)   --->   "%call_ln0 = call void @activation_accelerator_Pipeline_layer_norm_loop1, i32 %x, i32 %sum_loc"   --->   Operation 143 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 3> <Delay = 0.00>
+ST_12 : Operation 144 [1/2] (0.00ns)   --->   "%call_ln0 = call void @activation_accelerator_Pipeline_layer_norm_loop1, i32 %x, i32 %sum_loc"   --->   Operation 144 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 13 <SV = 4> <Delay = 7.05>
+ST_13 : Operation 145 [1/1] (0.00ns)   --->   "%sum_loc_load = load i32 %sum_loc"   --->   Operation 145 'load' 'sum_loc_load' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 146 [9/9] (7.05ns)   --->   "%mean = fdiv i32 %sum_loc_load, i32 49152" [activation_accelerator.cpp:194]   --->   Operation 146 'fdiv' 'mean' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 5> <Delay = 7.05>
+ST_14 : Operation 147 [8/9] (7.05ns)   --->   "%mean = fdiv i32 %sum_loc_load, i32 49152" [activation_accelerator.cpp:194]   --->   Operation 147 'fdiv' 'mean' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 6> <Delay = 7.05>
+ST_15 : Operation 148 [7/9] (7.05ns)   --->   "%mean = fdiv i32 %sum_loc_load, i32 49152" [activation_accelerator.cpp:194]   --->   Operation 148 'fdiv' 'mean' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 7> <Delay = 7.05>
+ST_16 : Operation 149 [6/9] (7.05ns)   --->   "%mean = fdiv i32 %sum_loc_load, i32 49152" [activation_accelerator.cpp:194]   --->   Operation 149 'fdiv' 'mean' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 8> <Delay = 7.05>
+ST_17 : Operation 150 [5/9] (7.05ns)   --->   "%mean = fdiv i32 %sum_loc_load, i32 49152" [activation_accelerator.cpp:194]   --->   Operation 150 'fdiv' 'mean' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 9> <Delay = 7.05>
+ST_18 : Operation 151 [4/9] (7.05ns)   --->   "%mean = fdiv i32 %sum_loc_load, i32 49152" [activation_accelerator.cpp:194]   --->   Operation 151 'fdiv' 'mean' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 10> <Delay = 7.05>
+ST_19 : Operation 152 [3/9] (7.05ns)   --->   "%mean = fdiv i32 %sum_loc_load, i32 49152" [activation_accelerator.cpp:194]   --->   Operation 152 'fdiv' 'mean' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 11> <Delay = 7.05>
+ST_20 : Operation 153 [2/9] (7.05ns)   --->   "%mean = fdiv i32 %sum_loc_load, i32 49152" [activation_accelerator.cpp:194]   --->   Operation 153 'fdiv' 'mean' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 12> <Delay = 7.05>
+ST_21 : Operation 154 [1/9] (7.05ns)   --->   "%mean = fdiv i32 %sum_loc_load, i32 49152" [activation_accelerator.cpp:194]   --->   Operation 154 'fdiv' 'mean' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 155 [2/2] (0.00ns)   --->   "%call_ln194 = call void @activation_accelerator_Pipeline_layer_norm_loop2, i32 %x, i32 %mean, i32 %var_1_loc" [activation_accelerator.cpp:194]   --->   Operation 155 'call' 'call_ln194' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 22 <SV = 13> <Delay = 0.00>
+ST_22 : Operation 156 [1/2] (0.00ns)   --->   "%call_ln194 = call void @activation_accelerator_Pipeline_layer_norm_loop2, i32 %x, i32 %mean, i32 %var_1_loc" [activation_accelerator.cpp:194]   --->   Operation 156 'call' 'call_ln194' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 23 <SV = 14> <Delay = 7.05>
+ST_23 : Operation 157 [1/1] (0.00ns)   --->   "%var_1_loc_load = load i32 %var_1_loc"   --->   Operation 157 'load' 'var_1_loc_load' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 158 [9/9] (7.05ns)   --->   "%var = fdiv i32 %var_1_loc_load, i32 49152" [activation_accelerator.cpp:201]   --->   Operation 158 'fdiv' 'var' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 24 <SV = 15> <Delay = 7.05>
+ST_24 : Operation 159 [8/9] (7.05ns)   --->   "%var = fdiv i32 %var_1_loc_load, i32 49152" [activation_accelerator.cpp:201]   --->   Operation 159 'fdiv' 'var' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 25 <SV = 16> <Delay = 7.05>
+ST_25 : Operation 160 [7/9] (7.05ns)   --->   "%var = fdiv i32 %var_1_loc_load, i32 49152" [activation_accelerator.cpp:201]   --->   Operation 160 'fdiv' 'var' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 26 <SV = 17> <Delay = 7.05>
+ST_26 : Operation 161 [6/9] (7.05ns)   --->   "%var = fdiv i32 %var_1_loc_load, i32 49152" [activation_accelerator.cpp:201]   --->   Operation 161 'fdiv' 'var' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 27 <SV = 18> <Delay = 7.05>
+ST_27 : Operation 162 [5/9] (7.05ns)   --->   "%var = fdiv i32 %var_1_loc_load, i32 49152" [activation_accelerator.cpp:201]   --->   Operation 162 'fdiv' 'var' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 28 <SV = 19> <Delay = 7.05>
+ST_28 : Operation 163 [4/9] (7.05ns)   --->   "%var = fdiv i32 %var_1_loc_load, i32 49152" [activation_accelerator.cpp:201]   --->   Operation 163 'fdiv' 'var' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 29 <SV = 20> <Delay = 7.05>
+ST_29 : Operation 164 [3/9] (7.05ns)   --->   "%var = fdiv i32 %var_1_loc_load, i32 49152" [activation_accelerator.cpp:201]   --->   Operation 164 'fdiv' 'var' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 30 <SV = 21> <Delay = 7.05>
+ST_30 : Operation 165 [2/9] (7.05ns)   --->   "%var = fdiv i32 %var_1_loc_load, i32 49152" [activation_accelerator.cpp:201]   --->   Operation 165 'fdiv' 'var' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 31 <SV = 22> <Delay = 7.05>
+ST_31 : Operation 166 [1/9] (7.05ns)   --->   "%var = fdiv i32 %var_1_loc_load, i32 49152" [activation_accelerator.cpp:201]   --->   Operation 166 'fdiv' 'var' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 32 <SV = 23> <Delay = 6.43>
+ST_32 : Operation 167 [4/4] (6.43ns)   --->   "%x_assign_5 = fadd i32 %var, i32 1e-06" [activation_accelerator.cpp:202]   --->   Operation 167 'fadd' 'x_assign_5' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 33 <SV = 24> <Delay = 6.43>
+ST_33 : Operation 168 [3/4] (6.43ns)   --->   "%x_assign_5 = fadd i32 %var, i32 1e-06" [activation_accelerator.cpp:202]   --->   Operation 168 'fadd' 'x_assign_5' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 34 <SV = 25> <Delay = 6.43>
+ST_34 : Operation 169 [2/4] (6.43ns)   --->   "%x_assign_5 = fadd i32 %var, i32 1e-06" [activation_accelerator.cpp:202]   --->   Operation 169 'fadd' 'x_assign_5' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 35 <SV = 26> <Delay = 6.43>
+ST_35 : Operation 170 [1/4] (6.43ns)   --->   "%x_assign_5 = fadd i32 %var, i32 1e-06" [activation_accelerator.cpp:202]   --->   Operation 170 'fadd' 'x_assign_5' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 36 <SV = 27> <Delay = 6.57>
+ST_36 : Operation 171 [8/8] (6.57ns)   --->   "%stddev = fsqrt i32 @llvm.sqrt.f32, i32 %x_assign_5" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13]   --->   Operation 171 'fsqrt' 'stddev' <Predicate = true> <Delay = 6.57> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 7> <II = 1> <Delay = 6.57> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 37 <SV = 28> <Delay = 6.57>
+ST_37 : Operation 172 [7/8] (6.57ns)   --->   "%stddev = fsqrt i32 @llvm.sqrt.f32, i32 %x_assign_5" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13]   --->   Operation 172 'fsqrt' 'stddev' <Predicate = true> <Delay = 6.57> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 7> <II = 1> <Delay = 6.57> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 38 <SV = 29> <Delay = 6.57>
+ST_38 : Operation 173 [6/8] (6.57ns)   --->   "%stddev = fsqrt i32 @llvm.sqrt.f32, i32 %x_assign_5" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13]   --->   Operation 173 'fsqrt' 'stddev' <Predicate = true> <Delay = 6.57> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 7> <II = 1> <Delay = 6.57> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 39 <SV = 30> <Delay = 6.57>
+ST_39 : Operation 174 [5/8] (6.57ns)   --->   "%stddev = fsqrt i32 @llvm.sqrt.f32, i32 %x_assign_5" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13]   --->   Operation 174 'fsqrt' 'stddev' <Predicate = true> <Delay = 6.57> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 7> <II = 1> <Delay = 6.57> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 40 <SV = 31> <Delay = 6.57>
+ST_40 : Operation 175 [4/8] (6.57ns)   --->   "%stddev = fsqrt i32 @llvm.sqrt.f32, i32 %x_assign_5" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13]   --->   Operation 175 'fsqrt' 'stddev' <Predicate = true> <Delay = 6.57> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 7> <II = 1> <Delay = 6.57> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 41 <SV = 32> <Delay = 6.57>
+ST_41 : Operation 176 [3/8] (6.57ns)   --->   "%stddev = fsqrt i32 @llvm.sqrt.f32, i32 %x_assign_5" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13]   --->   Operation 176 'fsqrt' 'stddev' <Predicate = true> <Delay = 6.57> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 7> <II = 1> <Delay = 6.57> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 42 <SV = 33> <Delay = 6.57>
+ST_42 : Operation 177 [2/8] (6.57ns)   --->   "%stddev = fsqrt i32 @llvm.sqrt.f32, i32 %x_assign_5" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13]   --->   Operation 177 'fsqrt' 'stddev' <Predicate = true> <Delay = 6.57> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 7> <II = 1> <Delay = 6.57> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 43 <SV = 34> <Delay = 6.57>
+ST_43 : Operation 178 [1/8] (6.57ns)   --->   "%stddev = fsqrt i32 @llvm.sqrt.f32, i32 %x_assign_5" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13]   --->   Operation 178 'fsqrt' 'stddev' <Predicate = true> <Delay = 6.57> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 7> <II = 1> <Delay = 6.57> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_43 : Operation 179 [2/2] (0.00ns)   --->   "%call_ln194 = call void @activation_accelerator_Pipeline_layer_norm_loop3, i32 %x, i32 %mean, i32 %stddev, i16 %buf2" [activation_accelerator.cpp:194]   --->   Operation 179 'call' 'call_ln194' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 44 <SV = 35> <Delay = 0.00>
+ST_44 : Operation 180 [1/2] (0.00ns)   --->   "%call_ln194 = call void @activation_accelerator_Pipeline_layer_norm_loop3, i32 %x, i32 %mean, i32 %stddev, i16 %buf2" [activation_accelerator.cpp:194]   --->   Operation 180 'call' 'call_ln194' <Predicate = (stage_read == 1 & config_r_read == 6)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_44 : Operation 181 [1/1] (0.00ns)   --->   "%br_ln0 = br void %if.end68"   --->   Operation 181 'br' 'br_ln0' <Predicate = (stage_read == 1 & config_r_read == 6)> <Delay = 0.00>
+ST_44 : Operation 182 [1/1] (0.00ns)   --->   "%br_ln0 = br void %if.end69"   --->   Operation 182 'br' 'br_ln0' <Predicate = (stage_read == 1 & config_r_read != 0 & config_r_read != 1 & config_r_read != 2 & config_r_read != 3 & config_r_read != 4 & config_r_read != 5)> <Delay = 0.00>
+ST_44 : Operation 183 [1/1] (0.00ns)   --->   "%br_ln0 = br void %if.end70"   --->   Operation 183 'br' 'br_ln0' <Predicate = (stage_read == 1 & config_r_read != 0 & config_r_read != 1 & config_r_read != 2 & config_r_read != 3 & config_r_read != 4)> <Delay = 0.00>
+ST_44 : Operation 184 [1/1] (0.00ns)   --->   "%br_ln0 = br void %if.end71"   --->   Operation 184 'br' 'br_ln0' <Predicate = (stage_read == 1 & config_r_read != 0 & config_r_read != 1 & config_r_read != 2 & config_r_read != 3)> <Delay = 0.00>
+ST_44 : Operation 185 [1/1] (0.00ns)   --->   "%br_ln0 = br void %if.end72"   --->   Operation 185 'br' 'br_ln0' <Predicate = (stage_read == 1 & config_r_read != 0 & config_r_read != 1 & config_r_read != 2)> <Delay = 0.00>
+ST_44 : Operation 186 [1/1] (0.00ns)   --->   "%br_ln0 = br void %if.end73"   --->   Operation 186 'br' 'br_ln0' <Predicate = (stage_read == 1 & config_r_read != 0 & config_r_read != 1)> <Delay = 0.00>
+ST_44 : Operation 187 [1/1] (0.00ns)   --->   "%br_ln0 = br void %if.end74"   --->   Operation 187 'br' 'br_ln0' <Predicate = (stage_read == 1 & config_r_read != 0)> <Delay = 0.00>
+ST_44 : Operation 188 [1/1] (0.00ns)   --->   "%br_ln498 = br void %if.end90" [activation_accelerator.cpp:498]   --->   Operation 188 'br' 'br_ln498' <Predicate = (stage_read == 1)> <Delay = 0.00>
+ST_44 : Operation 189 [1/1] (0.00ns)   --->   "%ret_ln503 = ret" [activation_accelerator.cpp:503]   --->   Operation 189 'ret' 'ret_ln503' <Predicate = true> <Delay = 0.00>
+
+State 45 <SV = 1> <Delay = 0.00>
+ST_45 : Operation 190 [1/2] (0.00ns)   --->   "%call_ln0 = call void @activation_accelerator_Pipeline_VITIS_LOOP_145_17, i32 %x, i16 %buf0"   --->   Operation 190 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 46 <SV = 2> <Delay = 0.00>
+ST_46 : Operation 191 [2/2] (0.00ns)   --->   "%call_ln0 = call void @activation_accelerator_Pipeline_rms_norm_loop1, i32 %x, i32 %sum_sq_loc"   --->   Operation 191 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 47 <SV = 3> <Delay = 0.00>
+ST_47 : Operation 192 [1/2] (0.00ns)   --->   "%call_ln0 = call void @activation_accelerator_Pipeline_rms_norm_loop1, i32 %x, i32 %sum_sq_loc"   --->   Operation 192 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 48 <SV = 4> <Delay = 7.05>
+ST_48 : Operation 193 [1/1] (0.00ns)   --->   "%sum_sq_loc_load = load i32 %sum_sq_loc"   --->   Operation 193 'load' 'sum_sq_loc_load' <Predicate = true> <Delay = 0.00>
+ST_48 : Operation 194 [9/9] (7.05ns)   --->   "%mean_sq = fdiv i32 %sum_sq_loc_load, i32 49152" [activation_accelerator.cpp:177]   --->   Operation 194 'fdiv' 'mean_sq' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 49 <SV = 5> <Delay = 7.05>
+ST_49 : Operation 195 [8/9] (7.05ns)   --->   "%mean_sq = fdiv i32 %sum_sq_loc_load, i32 49152" [activation_accelerator.cpp:177]   --->   Operation 195 'fdiv' 'mean_sq' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 50 <SV = 6> <Delay = 7.05>
+ST_50 : Operation 196 [7/9] (7.05ns)   --->   "%mean_sq = fdiv i32 %sum_sq_loc_load, i32 49152" [activation_accelerator.cpp:177]   --->   Operation 196 'fdiv' 'mean_sq' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 51 <SV = 7> <Delay = 7.05>
+ST_51 : Operation 197 [6/9] (7.05ns)   --->   "%mean_sq = fdiv i32 %sum_sq_loc_load, i32 49152" [activation_accelerator.cpp:177]   --->   Operation 197 'fdiv' 'mean_sq' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 52 <SV = 8> <Delay = 7.05>
+ST_52 : Operation 198 [5/9] (7.05ns)   --->   "%mean_sq = fdiv i32 %sum_sq_loc_load, i32 49152" [activation_accelerator.cpp:177]   --->   Operation 198 'fdiv' 'mean_sq' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 53 <SV = 9> <Delay = 7.05>
+ST_53 : Operation 199 [4/9] (7.05ns)   --->   "%mean_sq = fdiv i32 %sum_sq_loc_load, i32 49152" [activation_accelerator.cpp:177]   --->   Operation 199 'fdiv' 'mean_sq' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 54 <SV = 10> <Delay = 7.05>
+ST_54 : Operation 200 [3/9] (7.05ns)   --->   "%mean_sq = fdiv i32 %sum_sq_loc_load, i32 49152" [activation_accelerator.cpp:177]   --->   Operation 200 'fdiv' 'mean_sq' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 55 <SV = 11> <Delay = 7.05>
+ST_55 : Operation 201 [2/9] (7.05ns)   --->   "%mean_sq = fdiv i32 %sum_sq_loc_load, i32 49152" [activation_accelerator.cpp:177]   --->   Operation 201 'fdiv' 'mean_sq' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 56 <SV = 12> <Delay = 7.05>
+ST_56 : Operation 202 [1/9] (7.05ns)   --->   "%mean_sq = fdiv i32 %sum_sq_loc_load, i32 49152" [activation_accelerator.cpp:177]   --->   Operation 202 'fdiv' 'mean_sq' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 57 <SV = 13> <Delay = 6.43>
+ST_57 : Operation 203 [4/4] (6.43ns)   --->   "%x_assign_4 = fadd i32 %mean_sq, i32 1e-06" [activation_accelerator.cpp:178]   --->   Operation 203 'fadd' 'x_assign_4' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 58 <SV = 14> <Delay = 6.43>
+ST_58 : Operation 204 [3/4] (6.43ns)   --->   "%x_assign_4 = fadd i32 %mean_sq, i32 1e-06" [activation_accelerator.cpp:178]   --->   Operation 204 'fadd' 'x_assign_4' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 59 <SV = 15> <Delay = 6.43>
+ST_59 : Operation 205 [2/4] (6.43ns)   --->   "%x_assign_4 = fadd i32 %mean_sq, i32 1e-06" [activation_accelerator.cpp:178]   --->   Operation 205 'fadd' 'x_assign_4' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 60 <SV = 16> <Delay = 6.43>
+ST_60 : Operation 206 [1/4] (6.43ns)   --->   "%x_assign_4 = fadd i32 %mean_sq, i32 1e-06" [activation_accelerator.cpp:178]   --->   Operation 206 'fadd' 'x_assign_4' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 61 <SV = 17> <Delay = 6.57>
+ST_61 : Operation 207 [8/8] (6.57ns)   --->   "%rms = fsqrt i32 @llvm.sqrt.f32, i32 %x_assign_4" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13]   --->   Operation 207 'fsqrt' 'rms' <Predicate = true> <Delay = 6.57> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 7> <II = 1> <Delay = 6.57> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 62 <SV = 18> <Delay = 6.57>
+ST_62 : Operation 208 [7/8] (6.57ns)   --->   "%rms = fsqrt i32 @llvm.sqrt.f32, i32 %x_assign_4" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13]   --->   Operation 208 'fsqrt' 'rms' <Predicate = true> <Delay = 6.57> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 7> <II = 1> <Delay = 6.57> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 63 <SV = 19> <Delay = 6.57>
+ST_63 : Operation 209 [6/8] (6.57ns)   --->   "%rms = fsqrt i32 @llvm.sqrt.f32, i32 %x_assign_4" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13]   --->   Operation 209 'fsqrt' 'rms' <Predicate = true> <Delay = 6.57> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 7> <II = 1> <Delay = 6.57> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 64 <SV = 20> <Delay = 6.57>
+ST_64 : Operation 210 [5/8] (6.57ns)   --->   "%rms = fsqrt i32 @llvm.sqrt.f32, i32 %x_assign_4" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13]   --->   Operation 210 'fsqrt' 'rms' <Predicate = true> <Delay = 6.57> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 7> <II = 1> <Delay = 6.57> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 65 <SV = 21> <Delay = 6.57>
+ST_65 : Operation 211 [4/8] (6.57ns)   --->   "%rms = fsqrt i32 @llvm.sqrt.f32, i32 %x_assign_4" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13]   --->   Operation 211 'fsqrt' 'rms' <Predicate = true> <Delay = 6.57> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 7> <II = 1> <Delay = 6.57> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 66 <SV = 22> <Delay = 6.57>
+ST_66 : Operation 212 [3/8] (6.57ns)   --->   "%rms = fsqrt i32 @llvm.sqrt.f32, i32 %x_assign_4" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13]   --->   Operation 212 'fsqrt' 'rms' <Predicate = true> <Delay = 6.57> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 7> <II = 1> <Delay = 6.57> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 67 <SV = 23> <Delay = 6.57>
+ST_67 : Operation 213 [2/8] (6.57ns)   --->   "%rms = fsqrt i32 @llvm.sqrt.f32, i32 %x_assign_4" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13]   --->   Operation 213 'fsqrt' 'rms' <Predicate = true> <Delay = 6.57> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 7> <II = 1> <Delay = 6.57> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 68 <SV = 24> <Delay = 6.57>
+ST_68 : Operation 214 [1/8] (6.57ns)   --->   "%rms = fsqrt i32 @llvm.sqrt.f32, i32 %x_assign_4" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13]   --->   Operation 214 'fsqrt' 'rms' <Predicate = true> <Delay = 6.57> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 7> <II = 1> <Delay = 6.57> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_68 : Operation 215 [2/2] (0.00ns)   --->   "%call_ln13 = call void @activation_accelerator_Pipeline_rms_norm_loop2, i32 %x, i32 %rms, i16 %buf2" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13]   --->   Operation 215 'call' 'call_ln13' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 69 <SV = 25> <Delay = 0.00>
+ST_69 : Operation 216 [1/2] (0.00ns)   --->   "%call_ln13 = call void @activation_accelerator_Pipeline_rms_norm_loop2, i32 %x, i32 %rms, i16 %buf2" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13]   --->   Operation 216 'call' 'call_ln13' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_69 : Operation 217 [1/1] (0.00ns)   --->   "%br_ln0 = br void %if.end69"   --->   Operation 217 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 70 <SV = 1> <Delay = 0.00>
+ST_70 : Operation 218 [1/2] (0.00ns)   --->   "%call_ln0 = call void @activation_accelerator_Pipeline_VITIS_LOOP_145_16, i32 %x, i16 %buf0"   --->   Operation 218 'call' 'call_ln0' <Predicate = (config_r_read == 4)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_70 : Operation 219 [1/2] (0.00ns)   --->   "%call_ln0 = call void @activation_accelerator_Pipeline_VITIS_LOOP_145_15, i32 %x, i16 %buf0"   --->   Operation 219 'call' 'call_ln0' <Predicate = (config_r_read == 3)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_70 : Operation 220 [1/2] (0.00ns)   --->   "%call_ln0 = call void @activation_accelerator_Pipeline_VITIS_LOOP_145_13, i32 %x, i16 %buf0"   --->   Operation 220 'call' 'call_ln0' <Predicate = (config_r_read == 2)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_70 : Operation 221 [1/2] (0.00ns)   --->   "%call_ln0 = call void @activation_accelerator_Pipeline_VITIS_LOOP_145_14, i32 %y, i16 %buf1"   --->   Operation 221 'call' 'call_ln0' <Predicate = (config_r_read == 2)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_70 : Operation 222 [1/2] (0.00ns)   --->   "%call_ln0 = call void @activation_accelerator_Pipeline_VITIS_LOOP_145_12, i32 %x, i16 %buf0"   --->   Operation 222 'call' 'call_ln0' <Predicate = (config_r_read == 1)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 71 <SV = 2> <Delay = 0.00>
+ST_71 : Operation 223 [2/2] (0.00ns)   --->   "%call_ln0 = call void @activation_accelerator_Pipeline_silu_loop, i32 %x, i16 %buf2"   --->   Operation 223 'call' 'call_ln0' <Predicate = (config_r_read == 4)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_71 : Operation 224 [2/2] (0.00ns)   --->   "%call_ln0 = call void @activation_accelerator_Pipeline_gelu_loop, i32 %x, i16 %buf2"   --->   Operation 224 'call' 'call_ln0' <Predicate = (config_r_read == 3)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_71 : Operation 225 [2/2] (0.00ns)   --->   "%call_ln0 = call void @activation_accelerator_Pipeline_float_multiply_loop, i32 %x, i32 %y, i16 %buf2"   --->   Operation 225 'call' 'call_ln0' <Predicate = (config_r_read == 2)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_71 : Operation 226 [2/2] (0.00ns)   --->   "%call_ln465 = call void @float_safe_softmax, i32 %x, i16 %buf2" [activation_accelerator.cpp:465]   --->   Operation 226 'call' 'call_ln465' <Predicate = (config_r_read == 1)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 72 <SV = 3> <Delay = 0.00>
+ST_72 : Operation 227 [1/2] (0.00ns)   --->   "%call_ln0 = call void @activation_accelerator_Pipeline_silu_loop, i32 %x, i16 %buf2"   --->   Operation 227 'call' 'call_ln0' <Predicate = (config_r_read == 4)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_72 : Operation 228 [1/1] (0.00ns)   --->   "%br_ln0 = br void %if.end70"   --->   Operation 228 'br' 'br_ln0' <Predicate = (config_r_read == 4)> <Delay = 0.00>
+ST_72 : Operation 229 [1/2] (0.00ns)   --->   "%call_ln0 = call void @activation_accelerator_Pipeline_gelu_loop, i32 %x, i16 %buf2"   --->   Operation 229 'call' 'call_ln0' <Predicate = (config_r_read == 3)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_72 : Operation 230 [1/1] (0.00ns)   --->   "%br_ln0 = br void %if.end71"   --->   Operation 230 'br' 'br_ln0' <Predicate = (config_r_read == 3)> <Delay = 0.00>
+ST_72 : Operation 231 [1/2] (0.00ns)   --->   "%call_ln0 = call void @activation_accelerator_Pipeline_float_multiply_loop, i32 %x, i32 %y, i16 %buf2"   --->   Operation 231 'call' 'call_ln0' <Predicate = (config_r_read == 2)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_72 : Operation 232 [1/1] (0.00ns)   --->   "%br_ln0 = br void %if.end72"   --->   Operation 232 'br' 'br_ln0' <Predicate = (config_r_read == 2)> <Delay = 0.00>
+ST_72 : Operation 233 [1/2] (0.00ns)   --->   "%call_ln465 = call void @float_safe_softmax, i32 %x, i16 %buf2" [activation_accelerator.cpp:465]   --->   Operation 233 'call' 'call_ln465' <Predicate = (config_r_read == 1)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_72 : Operation 234 [1/1] (0.00ns)   --->   "%br_ln470 = br void %if.end73" [activation_accelerator.cpp:470]   --->   Operation 234 'br' 'br_ln470' <Predicate = (config_r_read == 1)> <Delay = 0.00>
+
+State 73 <SV = 1> <Delay = 0.00>
+ST_73 : Operation 235 [1/2] (0.00ns)   --->   "%call_ln0 = call void @activation_accelerator_Pipeline_VITIS_LOOP_145_1, i32 %x, i16 %buf0"   --->   Operation 235 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_73 : Operation 236 [1/2] (0.00ns)   --->   "%call_ln0 = call void @activation_accelerator_Pipeline_VITIS_LOOP_145_11, i32 %y, i16 %buf1"   --->   Operation 236 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 74 <SV = 2> <Delay = 0.00>
+ST_74 : Operation 237 [2/2] (0.00ns)   --->   "%call_ln0 = call void @activation_accelerator_Pipeline_float_add_loop, i32 %x, i32 %y, i16 %buf2"   --->   Operation 237 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 75 <SV = 3> <Delay = 0.00>
+ST_75 : Operation 238 [1/2] (0.00ns)   --->   "%call_ln0 = call void @activation_accelerator_Pipeline_float_add_loop, i32 %x, i32 %y, i16 %buf2"   --->   Operation 238 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 76 <SV = 4> <Delay = 0.00>
+ST_76 : Operation 239 [2/2] (0.00ns)   --->   "%call_ln0 = call void @activation_accelerator_Pipeline_VITIS_LOOP_458_3, i16 %buf0, i16 %buf1, i16 %buf2"   --->   Operation 239 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 77 <SV = 5> <Delay = 0.00>
+ST_77 : Operation 240 [1/2] (0.00ns)   --->   "%call_ln0 = call void @activation_accelerator_Pipeline_VITIS_LOOP_458_3, i16 %buf0, i16 %buf1, i16 %buf2"   --->   Operation 240 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_77 : Operation 241 [1/1] (0.00ns)   --->   "%br_ln0 = br void %if.end74"   --->   Operation 241 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 78 <SV = 1> <Delay = 7.30>
+ST_78 : Operation 242 [1/1] (0.00ns)   --->   "%sext_ln445 = sext i63 %trunc_ln" [activation_accelerator.cpp:445]   --->   Operation 242 'sext' 'sext_ln445' <Predicate = true> <Delay = 0.00>
+ST_78 : Operation 243 [1/1] (0.00ns)   --->   "%gmem0_addr = getelementptr i16 %gmem0, i64 %sext_ln445" [activation_accelerator.cpp:445]   --->   Operation 243 'getelementptr' 'gmem0_addr' <Predicate = true> <Delay = 0.00>
+ST_78 : Operation 244 [7/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem0_addr, i32 49152" [activation_accelerator.cpp:445]   --->   Operation 244 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_78 : Operation 245 [1/1] (0.00ns)   --->   "%sext_ln448 = sext i63 %trunc_ln1" [activation_accelerator.cpp:448]   --->   Operation 245 'sext' 'sext_ln448' <Predicate = true> <Delay = 0.00>
+ST_78 : Operation 246 [1/1] (0.00ns)   --->   "%gmem1_addr = getelementptr i16 %gmem1, i64 %sext_ln448" [activation_accelerator.cpp:448]   --->   Operation 246 'getelementptr' 'gmem1_addr' <Predicate = true> <Delay = 0.00>
+ST_78 : Operation 247 [7/7] (7.30ns)   --->   "%empty_44 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem1_addr, i32 49152" [activation_accelerator.cpp:448]   --->   Operation 247 'readreq' 'empty_44' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 79 <SV = 2> <Delay = 7.30>
+ST_79 : Operation 248 [6/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem0_addr, i32 49152" [activation_accelerator.cpp:445]   --->   Operation 248 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_79 : Operation 249 [6/7] (7.30ns)   --->   "%empty_44 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem1_addr, i32 49152" [activation_accelerator.cpp:448]   --->   Operation 249 'readreq' 'empty_44' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 80 <SV = 3> <Delay = 7.30>
+ST_80 : Operation 250 [5/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem0_addr, i32 49152" [activation_accelerator.cpp:445]   --->   Operation 250 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_80 : Operation 251 [5/7] (7.30ns)   --->   "%empty_44 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem1_addr, i32 49152" [activation_accelerator.cpp:448]   --->   Operation 251 'readreq' 'empty_44' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 81 <SV = 4> <Delay = 7.30>
+ST_81 : Operation 252 [4/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem0_addr, i32 49152" [activation_accelerator.cpp:445]   --->   Operation 252 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_81 : Operation 253 [4/7] (7.30ns)   --->   "%empty_44 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem1_addr, i32 49152" [activation_accelerator.cpp:448]   --->   Operation 253 'readreq' 'empty_44' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 82 <SV = 5> <Delay = 7.30>
+ST_82 : Operation 254 [3/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem0_addr, i32 49152" [activation_accelerator.cpp:445]   --->   Operation 254 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_82 : Operation 255 [3/7] (7.30ns)   --->   "%empty_44 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem1_addr, i32 49152" [activation_accelerator.cpp:448]   --->   Operation 255 'readreq' 'empty_44' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 83 <SV = 6> <Delay = 7.30>
+ST_83 : Operation 256 [2/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem0_addr, i32 49152" [activation_accelerator.cpp:445]   --->   Operation 256 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_83 : Operation 257 [2/7] (7.30ns)   --->   "%empty_44 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem1_addr, i32 49152" [activation_accelerator.cpp:448]   --->   Operation 257 'readreq' 'empty_44' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 84 <SV = 7> <Delay = 7.30>
+ST_84 : Operation 258 [1/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem0_addr, i32 49152" [activation_accelerator.cpp:445]   --->   Operation 258 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_84 : Operation 259 [1/7] (7.30ns)   --->   "%empty_44 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem1_addr, i32 49152" [activation_accelerator.cpp:448]   --->   Operation 259 'readreq' 'empty_44' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 85 <SV = 8> <Delay = 0.00>
+ST_85 : Operation 260 [2/2] (0.00ns)   --->   "%call_ln445 = call void @activation_accelerator_Pipeline_VITIS_LOOP_445_1, i16 %gmem0, i63 %trunc_ln, i16 %buf0" [activation_accelerator.cpp:445]   --->   Operation 260 'call' 'call_ln445' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_85 : Operation 261 [2/2] (0.00ns)   --->   "%call_ln448 = call void @activation_accelerator_Pipeline_VITIS_LOOP_448_2, i16 %gmem1, i63 %trunc_ln1, i16 %buf1" [activation_accelerator.cpp:448]   --->   Operation 261 'call' 'call_ln448' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 86 <SV = 9> <Delay = 0.00>
+ST_86 : Operation 262 [1/2] (0.00ns)   --->   "%call_ln445 = call void @activation_accelerator_Pipeline_VITIS_LOOP_445_1, i16 %gmem0, i63 %trunc_ln, i16 %buf0" [activation_accelerator.cpp:445]   --->   Operation 262 'call' 'call_ln445' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_86 : Operation 263 [1/2] (0.00ns)   --->   "%call_ln448 = call void @activation_accelerator_Pipeline_VITIS_LOOP_448_2, i16 %gmem1, i63 %trunc_ln1, i16 %buf1" [activation_accelerator.cpp:448]   --->   Operation 263 'call' 'call_ln448' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_86 : Operation 264 [1/1] (0.00ns)   --->   "%br_ln0 = br void %if.end90"   --->   Operation 264 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 1.45ns
+The critical path consists of the following:
+	s_axi read operation ('config') on port 'config_r' [12]  (1 ns)
+	blocking operation 0.446 ns on control path)
+
+ <State 2>: 7.3ns
+The critical path consists of the following:
+	'getelementptr' operation ('gmem2_addr', activation_accelerator.cpp:499) [46]  (0 ns)
+	bus request operation ('empty_45', activation_accelerator.cpp:499) on port 'gmem2' (activation_accelerator.cpp:499) [47]  (7.3 ns)
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_46', activation_accelerator.cpp:503) on port 'gmem2' (activation_accelerator.cpp:503) [49]  (7.3 ns)
+
+ <State 6>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_46', activation_accelerator.cpp:503) on port 'gmem2' (activation_accelerator.cpp:503) [49]  (7.3 ns)
+
+ <State 7>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_46', activation_accelerator.cpp:503) on port 'gmem2' (activation_accelerator.cpp:503) [49]  (7.3 ns)
+
+ <State 8>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_46', activation_accelerator.cpp:503) on port 'gmem2' (activation_accelerator.cpp:503) [49]  (7.3 ns)
+
+ <State 9>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_46', activation_accelerator.cpp:503) on port 'gmem2' (activation_accelerator.cpp:503) [49]  (7.3 ns)
+
+ <State 10>: 0ns
+The critical path consists of the following:
+
+ <State 11>: 0ns
+The critical path consists of the following:
+
+ <State 12>: 0ns
+The critical path consists of the following:
+
+ <State 13>: 7.06ns
+The critical path consists of the following:
+	'load' operation ('sum_loc_load') on local variable 'sum_loc' [56]  (0 ns)
+	'fdiv' operation ('mean', activation_accelerator.cpp:194) [57]  (7.06 ns)
+
+ <State 14>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('mean', activation_accelerator.cpp:194) [57]  (7.06 ns)
+
+ <State 15>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('mean', activation_accelerator.cpp:194) [57]  (7.06 ns)
+
+ <State 16>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('mean', activation_accelerator.cpp:194) [57]  (7.06 ns)
+
+ <State 17>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('mean', activation_accelerator.cpp:194) [57]  (7.06 ns)
+
+ <State 18>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('mean', activation_accelerator.cpp:194) [57]  (7.06 ns)
+
+ <State 19>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('mean', activation_accelerator.cpp:194) [57]  (7.06 ns)
+
+ <State 20>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('mean', activation_accelerator.cpp:194) [57]  (7.06 ns)
+
+ <State 21>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('mean', activation_accelerator.cpp:194) [57]  (7.06 ns)
+
+ <State 22>: 0ns
+The critical path consists of the following:
+
+ <State 23>: 7.06ns
+The critical path consists of the following:
+	'load' operation ('var_1_loc_load') on local variable 'var_1_loc' [59]  (0 ns)
+	'fdiv' operation ('var', activation_accelerator.cpp:201) [60]  (7.06 ns)
+
+ <State 24>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('var', activation_accelerator.cpp:201) [60]  (7.06 ns)
+
+ <State 25>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('var', activation_accelerator.cpp:201) [60]  (7.06 ns)
+
+ <State 26>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('var', activation_accelerator.cpp:201) [60]  (7.06 ns)
+
+ <State 27>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('var', activation_accelerator.cpp:201) [60]  (7.06 ns)
+
+ <State 28>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('var', activation_accelerator.cpp:201) [60]  (7.06 ns)
+
+ <State 29>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('var', activation_accelerator.cpp:201) [60]  (7.06 ns)
+
+ <State 30>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('var', activation_accelerator.cpp:201) [60]  (7.06 ns)
+
+ <State 31>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('var', activation_accelerator.cpp:201) [60]  (7.06 ns)
+
+ <State 32>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('x', activation_accelerator.cpp:202) [61]  (6.44 ns)
+
+ <State 33>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('x', activation_accelerator.cpp:202) [61]  (6.44 ns)
+
+ <State 34>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('x', activation_accelerator.cpp:202) [61]  (6.44 ns)
+
+ <State 35>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('x', activation_accelerator.cpp:202) [61]  (6.44 ns)
+
+ <State 36>: 6.58ns
+The critical path consists of the following:
+	'fsqrt' operation ('stddev', /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13) [62]  (6.58 ns)
+
+ <State 37>: 6.58ns
+The critical path consists of the following:
+	'fsqrt' operation ('stddev', /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13) [62]  (6.58 ns)
+
+ <State 38>: 6.58ns
+The critical path consists of the following:
+	'fsqrt' operation ('stddev', /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13) [62]  (6.58 ns)
+
+ <State 39>: 6.58ns
+The critical path consists of the following:
+	'fsqrt' operation ('stddev', /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13) [62]  (6.58 ns)
+
+ <State 40>: 6.58ns
+The critical path consists of the following:
+	'fsqrt' operation ('stddev', /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13) [62]  (6.58 ns)
+
+ <State 41>: 6.58ns
+The critical path consists of the following:
+	'fsqrt' operation ('stddev', /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13) [62]  (6.58 ns)
+
+ <State 42>: 6.58ns
+The critical path consists of the following:
+	'fsqrt' operation ('stddev', /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13) [62]  (6.58 ns)
+
+ <State 43>: 6.58ns
+The critical path consists of the following:
+	'fsqrt' operation ('stddev', /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13) [62]  (6.58 ns)
+
+ <State 44>: 0ns
+The critical path consists of the following:
+
+ <State 45>: 0ns
+The critical path consists of the following:
+
+ <State 46>: 0ns
+The critical path consists of the following:
+
+ <State 47>: 0ns
+The critical path consists of the following:
+
+ <State 48>: 7.06ns
+The critical path consists of the following:
+	'load' operation ('sum_sq_loc_load') on local variable 'sum_sq_loc' [68]  (0 ns)
+	'fdiv' operation ('mean_sq', activation_accelerator.cpp:177) [69]  (7.06 ns)
+
+ <State 49>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('mean_sq', activation_accelerator.cpp:177) [69]  (7.06 ns)
+
+ <State 50>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('mean_sq', activation_accelerator.cpp:177) [69]  (7.06 ns)
+
+ <State 51>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('mean_sq', activation_accelerator.cpp:177) [69]  (7.06 ns)
+
+ <State 52>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('mean_sq', activation_accelerator.cpp:177) [69]  (7.06 ns)
+
+ <State 53>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('mean_sq', activation_accelerator.cpp:177) [69]  (7.06 ns)
+
+ <State 54>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('mean_sq', activation_accelerator.cpp:177) [69]  (7.06 ns)
+
+ <State 55>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('mean_sq', activation_accelerator.cpp:177) [69]  (7.06 ns)
+
+ <State 56>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('mean_sq', activation_accelerator.cpp:177) [69]  (7.06 ns)
+
+ <State 57>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('x', activation_accelerator.cpp:178) [70]  (6.44 ns)
+
+ <State 58>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('x', activation_accelerator.cpp:178) [70]  (6.44 ns)
+
+ <State 59>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('x', activation_accelerator.cpp:178) [70]  (6.44 ns)
+
+ <State 60>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('x', activation_accelerator.cpp:178) [70]  (6.44 ns)
+
+ <State 61>: 6.58ns
+The critical path consists of the following:
+	'fsqrt' operation ('rms', /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13) [71]  (6.58 ns)
+
+ <State 62>: 6.58ns
+The critical path consists of the following:
+	'fsqrt' operation ('rms', /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13) [71]  (6.58 ns)
+
+ <State 63>: 6.58ns
+The critical path consists of the following:
+	'fsqrt' operation ('rms', /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13) [71]  (6.58 ns)
+
+ <State 64>: 6.58ns
+The critical path consists of the following:
+	'fsqrt' operation ('rms', /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13) [71]  (6.58 ns)
+
+ <State 65>: 6.58ns
+The critical path consists of the following:
+	'fsqrt' operation ('rms', /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13) [71]  (6.58 ns)
+
+ <State 66>: 6.58ns
+The critical path consists of the following:
+	'fsqrt' operation ('rms', /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13) [71]  (6.58 ns)
+
+ <State 67>: 6.58ns
+The critical path consists of the following:
+	'fsqrt' operation ('rms', /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13) [71]  (6.58 ns)
+
+ <State 68>: 6.58ns
+The critical path consists of the following:
+	'fsqrt' operation ('rms', /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13) [71]  (6.58 ns)
+
+ <State 69>: 0ns
+The critical path consists of the following:
+
+ <State 70>: 0ns
+The critical path consists of the following:
+
+ <State 71>: 0ns
+The critical path consists of the following:
+
+ <State 72>: 0ns
+The critical path consists of the following:
+
+ <State 73>: 0ns
+The critical path consists of the following:
+
+ <State 74>: 0ns
+The critical path consists of the following:
+
+ <State 75>: 0ns
+The critical path consists of the following:
+
+ <State 76>: 0ns
+The critical path consists of the following:
+
+ <State 77>: 0ns
+The critical path consists of the following:
+
+ <State 78>: 7.3ns
+The critical path consists of the following:
+	'getelementptr' operation ('gmem0_addr', activation_accelerator.cpp:445) [114]  (0 ns)
+	bus request operation ('empty', activation_accelerator.cpp:445) on port 'gmem0' (activation_accelerator.cpp:445) [115]  (7.3 ns)
+
+ <State 79>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty', activation_accelerator.cpp:445) on port 'gmem0' (activation_accelerator.cpp:445) [115]  (7.3 ns)
+
+ <State 80>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty', activation_accelerator.cpp:445) on port 'gmem0' (activation_accelerator.cpp:445) [115]  (7.3 ns)
+
+ <State 81>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty', activation_accelerator.cpp:445) on port 'gmem0' (activation_accelerator.cpp:445) [115]  (7.3 ns)
+
+ <State 82>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty', activation_accelerator.cpp:445) on port 'gmem0' (activation_accelerator.cpp:445) [115]  (7.3 ns)
+
+ <State 83>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty', activation_accelerator.cpp:445) on port 'gmem0' (activation_accelerator.cpp:445) [115]  (7.3 ns)
+
+ <State 84>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty', activation_accelerator.cpp:445) on port 'gmem0' (activation_accelerator.cpp:445) [115]  (7.3 ns)
+
+ <State 85>: 0ns
+The critical path consists of the following:
+
+ <State 86>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+	State 75
+	State 76
+	State 77
+	State 78
+	State 79
+	State 80
+	State 81
+	State 82
+	State 83
+	State 84
+	State 85
+	State 86
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
