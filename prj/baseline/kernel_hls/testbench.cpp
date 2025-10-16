@@ -99,7 +99,7 @@ bool run_test(int config, uint16* in0, uint16* in1, uint16* out, uint16* golden_
 }
 
 std::string get_data_path() {
-    std::string rel_path = "/data1/jdn/fpt_LLM/prj/testvector_example/bf16_vectors/";
+    std::string rel_path = "/data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors3/";
     std::string test_file = rel_path + "X_test_tensor_bf16.bin";
     std::ifstream f(test_file.c_str());
     if (f.good()) {

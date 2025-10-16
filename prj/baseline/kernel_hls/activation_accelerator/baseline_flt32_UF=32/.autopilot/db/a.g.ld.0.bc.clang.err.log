@@ -1,0 +1,91 @@
+remark: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/expfloat.cpp:22:9: Inlining function 'exp_reduce_::exp(float)' into 'hls::expf(float)'
+remark: activation_accelerator.cpp:876:38: Inlining function 'hls::expf(float)' into 'float_safe_softmax2(float const*, unsigned short*, int)'
+remark: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_erf.h:545:39: Inlining function 'exp_reduce_::exp(float)' into 'float erf_approx::generic_erf<float>(float)'
+remark: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_erf.h:545:6: Inlining function 'exp_reduce_::exp(float)' into 'float erf_approx::generic_erf<float>(float)'
+remark: activation_accelerator.cpp:283:44: Inlining function 'hls::expf(float)' into 'float_silu2(float const*, unsigned short*, int)'
+remark: activation_accelerator.cpp:663:9: Loop 'normalize_inner' is marked as complete unroll implied by the pipeline pragma
+remark: activation_accelerator.cpp:637:9: Loop 'var_inner' is marked as complete unroll implied by the pipeline pragma
+remark: activation_accelerator.cpp:601:9: Loop 'sum_inner' is marked as complete unroll implied by the pipeline pragma
+remark: activation_accelerator.cpp:430:9: Loop 'normalize_inner' is marked as complete unroll implied by the pipeline pragma
+remark: activation_accelerator.cpp:404:9: Loop 'sum_sq_inner' is marked as complete unroll implied by the pipeline pragma
+remark: activation_accelerator.cpp:278:9: Loop 'silu_inner' is marked as complete unroll implied by the pipeline pragma
+remark: activation_accelerator.cpp:727:9: Loop 'gelu_inner' is marked as complete unroll implied by the pipeline pragma
+remark: activation_accelerator.cpp:1070:9: Loop 'multiply_inner' is marked as complete unroll implied by the pipeline pragma
+remark: activation_accelerator.cpp:901:9: Loop 'normalize_inner' is marked as complete unroll implied by the pipeline pragma
+remark: activation_accelerator.cpp:873:9: Loop 'exp_inner' is marked as complete unroll implied by the pipeline pragma
+remark: activation_accelerator.cpp:881:9: Loop 'bucket_add' is marked as complete unroll implied by the pipeline pragma
+remark: activation_accelerator.cpp:829:9: Loop 'load_blk_max' is marked as complete unroll implied by the pipeline pragma
+remark: activation_accelerator.cpp:838:9: Loop 'reduce_blk_max' is marked as complete unroll implied by the pipeline pragma
+remark: activation_accelerator.cpp:763:9: Loop 'add_inner' is marked as complete unroll implied by the pipeline pragma
+remark: activation_accelerator.cpp:578:0: Unrolling loop 'normalize_inner' (activation_accelerator.cpp:663:9) in function 'float_layer_norm3' completely with a factor of 32
+remark: activation_accelerator.cpp:578:0: Unrolling loop 'reduce_partial_var' (activation_accelerator.cpp:650:5) in function 'float_layer_norm3' completely with a factor of 32
+remark: activation_accelerator.cpp:578:0: Unrolling loop 'var_inner' (activation_accelerator.cpp:637:9) in function 'float_layer_norm3' completely with a factor of 32
+remark: activation_accelerator.cpp:578:0: Unrolling loop 'init_partial_var' (activation_accelerator.cpp:627:5) in function 'float_layer_norm3' completely with a factor of 32
+remark: activation_accelerator.cpp:578:0: Unrolling loop 'reduce_partial_sum' (activation_accelerator.cpp:613:5) in function 'float_layer_norm3' completely with a factor of 32
+remark: activation_accelerator.cpp:578:0: Unrolling loop 'sum_inner' (activation_accelerator.cpp:601:9) in function 'float_layer_norm3' completely with a factor of 32
+remark: activation_accelerator.cpp:578:0: Unrolling loop 'init_partial_sum' (activation_accelerator.cpp:591:5) in function 'float_layer_norm3' completely with a factor of 32
+remark: activation_accelerator.cpp:381:0: Unrolling loop 'normalize_inner' (activation_accelerator.cpp:430:9) in function 'float_rms_norm3' completely with a factor of 32
+remark: activation_accelerator.cpp:381:0: Unrolling loop 'reduce_partial_sum_sq' (activation_accelerator.cpp:416:5) in function 'float_rms_norm3' completely with a factor of 32
+remark: activation_accelerator.cpp:381:0: Unrolling loop 'sum_sq_inner' (activation_accelerator.cpp:404:9) in function 'float_rms_norm3' completely with a factor of 32
+remark: activation_accelerator.cpp:381:0: Unrolling loop 'init_partial_sum_sq' (activation_accelerator.cpp:394:5) in function 'float_rms_norm3' completely with a factor of 32
+remark: activation_accelerator.cpp:269:0: Unrolling loop 'silu_inner' (activation_accelerator.cpp:278:9) in function 'float_silu2' completely with a factor of 32
+remark: activation_accelerator.cpp:713:0: Unrolling loop 'gelu_inner' (activation_accelerator.cpp:727:9) in function 'float_gelu2' completely with a factor of 32
+remark: activation_accelerator.cpp:1061:0: Unrolling loop 'multiply_inner' (activation_accelerator.cpp:1070:9) in function 'float_Multiply2' completely with a factor of 32
+remark: activation_accelerator.cpp:798:0: Unrolling loop 'normalize_inner' (activation_accelerator.cpp:901:9) in function 'float_safe_softmax2' completely with a factor of 32
+remark: activation_accelerator.cpp:798:0: Unrolling loop 'exp_inner' (activation_accelerator.cpp:873:9) in function 'float_safe_softmax2' completely with a factor of 32
+remark: activation_accelerator.cpp:798:0: Unrolling loop 'bucket_add' (activation_accelerator.cpp:881:9) in function 'float_safe_softmax2' completely with a factor of 32
+remark: activation_accelerator.cpp:798:0: Unrolling loop 'init_partial' (activation_accelerator.cpp:861:5) in function 'float_safe_softmax2' completely with a factor of 32
+remark: activation_accelerator.cpp:798:0: Unrolling loop 'final_reduce_max' (activation_accelerator.cpp:852:5) in function 'float_safe_softmax2' completely with a factor of 31
+remark: activation_accelerator.cpp:798:0: Unrolling loop 'load_blk_max' (activation_accelerator.cpp:829:9) in function 'float_safe_softmax2' completely with a factor of 32
+remark: activation_accelerator.cpp:798:0: Unrolling loop 'reduce_blk_max' (activation_accelerator.cpp:838:9) in function 'float_safe_softmax2' completely with a factor of 31
+remark: activation_accelerator.cpp:798:0: Unrolling loop 'init_partial_max' (activation_accelerator.cpp:816:5) in function 'float_safe_softmax2' completely with a factor of 32
+remark: activation_accelerator.cpp:754:0: Unrolling loop 'add_inner' (activation_accelerator.cpp:763:9) in function 'float_add2' completely with a factor of 32
+remark: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h:16:0: Inlining function 'fp_struct<float>::fp_struct(float)' into 'int generic_isnan<float>(float)'
+remark: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:351:0: Inlining function 'fp_struct<float>::data() const (.33.36.47.54.60.68.74.82.88.96.102.110)' into 'fp_struct<float>::to_float() const (.117.124.132.140.148.156.164.172.180.188)'
+remark: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:375:0: Inlining function 'fp_struct<float>::to_float() const (.117.124.132.140.148.156.164.172.180.188)' into 'fp_struct<float>::to_ieee() const'
+remark: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:348:0: Inlining function 'fp_struct<float>::data() const (.33.36.47.54.60.68.74.82.88.96.102.110)' into 'fp_struct<float>::to_int() const'
+remark: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmax.h:20:0: Inlining function 'fp_struct<float>::fp_struct(float)' into 'float generic_fmax<float>(float, float)'
+remark: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmax.h:20:0: Inlining function 'int generic_isnan<float>(float)' into 'float generic_fmax<float>(float, float)'
+remark: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmax.h:20:0: Inlining function 'fp_struct<float>::to_ieee() const' into 'float generic_fmax<float>(float, float)'
+remark: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmax.h:20:0: Inlining function 'fp_struct<float>::to_int() const' into 'float generic_fmax<float>(float, float)'
+remark: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp:10:0: Inlining function 'hls::fmax(float, float)' into 'hls::fmaxf(float, float)'
+remark: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fpclassify.h:37:0: Inlining function 'fp_struct<float>::fp_struct(float)' into 'int generic_fpclassify<float>(float)'
+remark: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h:10:0: Inlining function 'fp_struct<float>::fp_struct(float)' into 'float generic_copysign<float>(float, float)'
+remark: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h:10:0: Inlining function 'fp_struct<float>::to_ieee() const' into 'float generic_copysign<float>(float, float)'
+remark: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fabs.h:12:0: Inlining function 'float generic_copysign<float>(float, float)' into 'float generic_fabs<float>(float)'
+remark: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_erf.h:430:0: Inlining function 'fp_struct<float>::fp_struct(float)' into 'float erf_approx::generic_erf<float>(float)'
+remark: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_erf.h:430:0: Inlining function 'fp_struct<float>::data() const (.33.36.47.54.60.68.74.82.88.96.102.110)' into 'float erf_approx::generic_erf<float>(float)'
+remark: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_erf.h:430:0: Inlining function 'int generic_fpclassify<float>(float)' into 'float erf_approx::generic_erf<float>(float)'
+remark: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_erf.h:430:0: Inlining function 'float generic_fabs<float>(float)' into 'float erf_approx::generic_erf<float>(float)'
+remark: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_erf.h:430:0: Inlining function 'fp_struct<float>::fp_struct(ap_uint<32>)' into 'float erf_approx::generic_erf<float>(float)'
+remark: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_erf.h:430:0: Inlining function 'fp_struct<float>::to_ieee() const' into 'float erf_approx::generic_erf<float>(float)'
+remark: activation_accelerator.cpp:713:0: Inlining function 'Q_rsqrt(float)' into 'float_gelu2(float const*, unsigned short*, int)'
+remark: activation_accelerator.cpp:713:0: Inlining function 'erff' into 'float_gelu2(float const*, unsigned short*, int)'
+remark: activation_accelerator.cpp:381:0: Inlining function 'hls::sqrtf(float)' into 'float_rms_norm3(float const*, unsigned short*, int)'
+remark: activation_accelerator.cpp:578:0: Inlining function 'hls::sqrtf(float)' into 'float_layer_norm3(float const*, unsigned short*, int)'
+remark: activation_accelerator.cpp:804:11: Applying array_partition to 'exp_x': Cyclic partitioning with factor 32 on dimension 1.
+remark: activation_accelerator.cpp:811:8: Applying array_partition to 'partial_max': Complete partitioning on dimension 1.
+remark: activation_accelerator.cpp:858:11: Applying array_partition to 'partial': Complete partitioning on dimension 1.
+remark: activation_accelerator.cpp:1120:9: Sequential read of length 49152 has been inferred _XLX_SEP_ OldID=for.inc.load.4,  _XLX_SEP_ in0seq in0 gmem0 stage_0_load0 activation_accelerator.cpp:1120:9 activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int) 
+remark: activation_accelerator.cpp:1124:9: Sequential read of length 49152 has been inferred _XLX_SEP_ OldID=for.inc13.load.4,  _XLX_SEP_ in1seq in1 gmem1 stage_0_load1 activation_accelerator.cpp:1124:9 activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int) 
+remark: activation_accelerator.cpp:1176:9: Sequential write of length 49152 has been inferred _XLX_SEP_ OldID=for.inc73.store.6,  _XLX_SEP_ outseq out gmem2 stage_2_store activation_accelerator.cpp:1176:9 activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int) 
+remark: activation_accelerator.cpp:1124:9: Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0 _XLX_SEP_ in1seq in1 gmem1 stage_0_load1 activation_accelerator.cpp:1124:9 activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int) 
+remark: activation_accelerator.cpp:1120:9: Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0 _XLX_SEP_ in0seq in0 gmem0 stage_0_load0 activation_accelerator.cpp:1120:9 activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int) 
+remark: activation_accelerator.cpp:1176:9: Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0 _XLX_SEP_ outseq out gmem2 stage_2_store activation_accelerator.cpp:1176:9 activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int) 
+remark: activation_accelerator.cpp:846:26: Automatically inlining function 'hls::fmaxf(float, float)' to improve effectiveness of pipeline pragma in function 'float_safe_softmax2(float const*, unsigned short*, int)'
+remark: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp:7:12: Automatically inlining function 'float generic_fmax<float>(float, float)' to improve effectiveness of pipeline pragma in function 'float_safe_softmax2(float const*, unsigned short*, int)'
+remark: <unknown>:0:0: array_partition dim=1 type=cyclic factor=16 variable=_ZZ22activation_acceleratorPtS_S_iiE4buf2 1 float_add2 activation_accelerator.cpp:1115:0 activation_accelerator.cpp:276:9activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)::buf2 
+remark: activation_accelerator.cpp:276:9: Inferring pragma 'array_partition type=cyclic factor=16 dim=1' for array 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)::buf2' due to pipeline pragma
+remark: activation_accelerator.cpp:0:1: array_partition dim=1 type=cyclic factor=16 variable=x 1 activation_accelerator activation_accelerator.cpp:1116:11 activation_accelerator.cpp:402:9x 
+remark: activation_accelerator.cpp:402:9: Inferring pragma 'array_partition type=cyclic factor=16 dim=1' for array 'x' due to pipeline pragma
+remark: activation_accelerator.cpp:0:2: array_partition dim=1 type=cyclic factor=16 variable=y 1 activation_accelerator activation_accelerator.cpp:1116:22 activation_accelerator.cpp:1068:9y 
+remark: activation_accelerator.cpp:1068:9: Inferring pragma 'array_partition type=cyclic factor=16 dim=1' for array 'y' due to pipeline pragma
+remark: activation_accelerator.cpp:1115:0: Applying array_partition to '_ZZ22activation_acceleratorPtS_S_iiE4buf2': Cyclic partitioning with factor 16 on dimension 1.
+remark: activation_accelerator.cpp:1116:11: Applying array_partition to 'x': Cyclic partitioning with factor 16 on dimension 1.
+remark: activation_accelerator.cpp:1116:22: Applying array_partition to 'y': Cyclic partitioning with factor 16 on dimension 1.
+remark: activation_accelerator.cpp:1120:9: Multiple burst reads of length 49152 and bit width 16 has been inferred. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. _XLX_SEP_ seq1  gmem0 stage_0_load0 activation_accelerator.cpp:1120:9 activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int) 
+remark: activation_accelerator.cpp:1120:9: Multiple burst reads of length 49152 and bit width 16 in loop 'stage_0_load0'(activation_accelerator.cpp:1120:9) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+remark: activation_accelerator.cpp:1124:9: Multiple burst reads of length 49152 and bit width 16 has been inferred. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. _XLX_SEP_ seq2  gmem1 stage_0_load1 activation_accelerator.cpp:1124:9 activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int) 
+remark: activation_accelerator.cpp:1124:9: Multiple burst reads of length 49152 and bit width 16 in loop 'stage_0_load1'(activation_accelerator.cpp:1124:9) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+remark: activation_accelerator.cpp:1176:9: Multiple burst writes of length 49152 and bit width 16 has been inferred. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. _XLX_SEP_ seq  gmem2 stage_2_store activation_accelerator.cpp:1176:9 activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int) 
+remark: activation_accelerator.cpp:1176:9: Multiple burst writes of length 49152 and bit width 16 in loop 'stage_2_store'(activation_accelerator.cpp:1176:9) has been inferred on bundle 'gmem2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.

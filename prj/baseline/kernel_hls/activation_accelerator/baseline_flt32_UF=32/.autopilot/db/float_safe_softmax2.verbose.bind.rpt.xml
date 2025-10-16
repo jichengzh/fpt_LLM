@@ -1,0 +1,51 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'float_safe_softmax2'" level="0">
+<item name = "Date">Thu Oct 16 15:27:33 2025
+</item>
+<item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
+<item name = "Project">activation_accelerator</item>
+<item name = "Solution">baseline (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xck26-sfvc784-2LV-c</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.226 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">7847, 7847, 78.470 us, 78.470 us, 7847, 7847, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_float_safe_softmax2_Pipeline_find_max_blocks_fu_472">float_safe_softmax2_Pipeline_find_max_blocks, 1553, 1553, 15.530 us, 15.530 us, 1553, 1553, no</column>
+<column name="grp_fmaxf_fu_540">fmaxf, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="grp_fmaxf_fu_546">fmaxf, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="grp_float_safe_softmax2_Pipeline_exp_and_bucket_fu_553">float_safe_softmax2_Pipeline_exp_and_bucket, 4626, 4626, 46.260 us, 46.260 us, 4626, 4626, no</column>
+<column name="grp_float_safe_softmax2_Pipeline_reduce_partial_fu_655">float_safe_softmax2_Pipeline_reduce_partial, 98, 98, 0.980 us, 0.980 us, 98, 98, no</column>
+<column name="grp_float_safe_softmax2_Pipeline_normalize_blocks_fu_692">float_safe_softmax2_Pipeline_normalize_blocks, 1548, 1548, 15.480 us, 15.480 us, 1548, 1548, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

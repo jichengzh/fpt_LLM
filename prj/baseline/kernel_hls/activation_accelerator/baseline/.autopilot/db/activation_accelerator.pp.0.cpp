@@ -55037,143 +55037,638 @@ namespace hls {
 # 1 "/data/xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/lib/clang/7.0.0/include/float.h" 1 3
 # 43 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cfloat" 2 3
 # 7 "activation_accelerator.cpp" 2
-# 24 "activation_accelerator.cpp"
-uint16 bf16add(uint16 a_bits, uint16 b_bits) {
+# 1 "/usr/include/string.h" 1 3 4
+# 26 "/usr/include/string.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/libc-header-start.h" 1 3 4
+# 27 "/usr/include/string.h" 2 3 4
 
-    uint16_t a_sign = (a_bits >> 15) & 0x1;
-    uint16_t b_sign = (b_bits >> 15) & 0x1;
-    uint16_t a_exp = (a_bits >> 7) & 0xFF;
-    uint16_t b_exp = (b_bits >> 7) & 0xFF;
-    uint16_t a_mantissa = a_bits & 0x7F;
-    uint16_t b_mantissa = b_bits & 0x7F;
-
-
-    if (a_exp == 0 && a_mantissa == 0) return b_bits;
-    if (b_exp == 0 && b_mantissa == 0) return a_bits;
-
-
-    const int precision_shift = 8;
-
-
-    uint32_t a_full_mantissa = (a_exp == 0) ? (a_mantissa) : ((0x80 | a_mantissa));
-    uint32_t b_full_mantissa = (b_exp == 0) ? (b_mantissa) : ((0x80 | b_mantissa));
-
-    a_full_mantissa <<= precision_shift;
-    b_full_mantissa <<= precision_shift;
-
-
-    uint16_t a_align_exp = (a_exp == 0) ? 1 : a_exp;
-    uint16_t b_align_exp = (b_exp == 0) ? 1 : b_exp;
-
-
-    uint16_t max_exp;
-    if (a_align_exp > b_align_exp) {
-        max_exp = a_exp;
-        b_full_mantissa >>= (a_align_exp - b_align_exp);
-    } else if (b_align_exp > a_align_exp) {
-        max_exp = b_exp;
-        a_full_mantissa >>= (b_align_exp - a_align_exp);
-    } else {
-        max_exp = a_exp;
-    }
-
-
-    uint32_t result_mantissa;
-    uint16_t result_sign;
-    if (a_sign == b_sign) {
-        result_mantissa = a_full_mantissa + b_full_mantissa;
-        result_sign = a_sign;
-    } else {
-        if (a_full_mantissa >= b_full_mantissa) {
-            result_mantissa = a_full_mantissa - b_full_mantissa;
-            result_sign = a_sign;
-        } else {
-            result_mantissa = b_full_mantissa - a_full_mantissa;
-            result_sign = b_sign;
-        }
-    }
-
-
-    if (result_mantissa == 0) {
-        return 0;
-    }
+extern "C" {
 
 
 
 
-    VITIS_LOOP_87_1: while (result_mantissa < (0x80 << precision_shift) && max_exp > 0) {
-        result_mantissa <<= 1;
-        max_exp--;
 
-        if (max_exp == 0) break;
-    }
-
-    if (result_mantissa >= (0x100 << precision_shift)) {
-        result_mantissa >>= 1;
-        max_exp++;
-    }
+# 1 "/data/xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/lib/clang/7.0.0/include/stddef.h" 1 3 4
+# 34 "/usr/include/string.h" 2 3 4
+# 43 "/usr/include/string.h" 3 4
+extern void *memcpy (void *__restrict __dest, const void *__restrict __src,
+       size_t __n) throw () __attribute__ ((__nonnull__ (1, 2)));
 
 
-    uint32_t rounding_bits = result_mantissa & ((1 << precision_shift) - 1);
-    uint32_t halfway = (1 << (precision_shift - 1));
-
-    if (rounding_bits > halfway) {
-        result_mantissa += (1 << precision_shift);
-    } else if (rounding_bits == halfway) {
-
-        if (((result_mantissa >> precision_shift) & 1) != 0) {
-            result_mantissa += (1 << precision_shift);
-        }
-    }
+extern void *memmove (void *__dest, const void *__src, size_t __n)
+     throw () __attribute__ ((__nonnull__ (1, 2)));
 
 
 
 
-    if (result_mantissa >= (0x100 << precision_shift)) {
-        result_mantissa >>= 1;
-        max_exp++;
-    }
+
+extern void *memccpy (void *__restrict __dest, const void *__restrict __src,
+        int __c, size_t __n)
+     throw () __attribute__ ((__nonnull__ (1, 2)));
 
 
-    uint16_t final_mantissa_full = result_mantissa >> precision_shift;
 
 
-    if (max_exp == 0) {
-        final_mantissa_full &= 0x7F;
-    }
+extern void *memset (void *__s, int __c, size_t __n) throw () __attribute__ ((__nonnull__ (1)));
 
 
-    uint16_t final_mantissa = final_mantissa_full & 0x7F;
+extern int memcmp (const void *__s1, const void *__s2, size_t __n)
+     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
 
 
-    if (max_exp >= 0xFF) {
-        return (result_sign << 15) | (0xFF << 7);
-    }
+
+extern "C++"
+{
+extern void *memchr (void *__s, int __c, size_t __n)
+      throw () __asm ("memchr") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+extern const void *memchr (const void *__s, int __c, size_t __n)
+      throw () __asm ("memchr") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+# 89 "/usr/include/string.h" 3 4
+}
+# 99 "/usr/include/string.h" 3 4
+extern "C++" void *rawmemchr (void *__s, int __c)
+     throw () __asm ("rawmemchr") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+extern "C++" const void *rawmemchr (const void *__s, int __c)
+     throw () __asm ("rawmemchr") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
 
 
-    return (result_sign << 15) | (max_exp << 7) | final_mantissa;
+
+
+
+
+
+extern "C++" void *memrchr (void *__s, int __c, size_t __n)
+      throw () __asm ("memrchr") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+extern "C++" const void *memrchr (const void *__s, int __c, size_t __n)
+      throw () __asm ("memrchr") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+# 122 "/usr/include/string.h" 3 4
+extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+     throw () __attribute__ ((__nonnull__ (1, 2)));
+
+extern char *strncpy (char *__restrict __dest,
+        const char *__restrict __src, size_t __n)
+     throw () __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern char *strcat (char *__restrict __dest, const char *__restrict __src)
+     throw () __attribute__ ((__nonnull__ (1, 2)));
+
+extern char *strncat (char *__restrict __dest, const char *__restrict __src,
+        size_t __n) throw () __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern int strcmp (const char *__s1, const char *__s2)
+     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+
+extern int strncmp (const char *__s1, const char *__s2, size_t __n)
+     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern int strcoll (const char *__s1, const char *__s2)
+     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+
+extern size_t strxfrm (char *__restrict __dest,
+         const char *__restrict __src, size_t __n)
+     throw () __attribute__ ((__nonnull__ (2)));
+
+
+
+
+
+
+extern int strcoll_l (const char *__s1, const char *__s2, locale_t __l)
+     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2, 3)));
+
+
+extern size_t strxfrm_l (char *__dest, const char *__src, size_t __n,
+    locale_t __l) throw () __attribute__ ((__nonnull__ (2, 4)));
+
+
+
+
+
+extern char *strdup (const char *__s)
+     throw () __attribute__ ((__malloc__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+
+extern char *strndup (const char *__string, size_t __n)
+     throw () __attribute__ ((__malloc__)) __attribute__ ((__nonnull__ (1)));
+# 204 "/usr/include/string.h" 3 4
+extern "C++"
+{
+extern char *strchr (char *__s, int __c)
+     throw () __asm ("strchr") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+extern const char *strchr (const char *__s, int __c)
+     throw () __asm ("strchr") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+# 224 "/usr/include/string.h" 3 4
 }
 
 
 
 
 
-void bf16_to_float(const uint16* in, float* out, int len) {
-    VITIS_LOOP_145_1: for (int i = 0; i < len; ++i) {
+
+extern "C++"
+{
+extern char *strrchr (char *__s, int __c)
+     throw () __asm ("strrchr") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+extern const char *strrchr (const char *__s, int __c)
+     throw () __asm ("strrchr") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+# 251 "/usr/include/string.h" 3 4
+}
+# 261 "/usr/include/string.h" 3 4
+extern "C++" char *strchrnul (char *__s, int __c)
+     throw () __asm ("strchrnul") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+extern "C++" const char *strchrnul (const char *__s, int __c)
+     throw () __asm ("strchrnul") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+# 273 "/usr/include/string.h" 3 4
+extern size_t strcspn (const char *__s, const char *__reject)
+     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern size_t strspn (const char *__s, const char *__accept)
+     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern "C++"
+{
+extern char *strpbrk (char *__s, const char *__accept)
+     throw () __asm ("strpbrk") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+extern const char *strpbrk (const char *__s, const char *__accept)
+     throw () __asm ("strpbrk") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+# 301 "/usr/include/string.h" 3 4
+}
+
+
+
+
+
+
+extern "C++"
+{
+extern char *strstr (char *__haystack, const char *__needle)
+     throw () __asm ("strstr") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+extern const char *strstr (const char *__haystack, const char *__needle)
+     throw () __asm ("strstr") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+# 328 "/usr/include/string.h" 3 4
+}
+
+
+
+
+
+
+
+extern char *strtok (char *__restrict __s, const char *__restrict __delim)
+     throw () __attribute__ ((__nonnull__ (2)));
+
+
+
+extern char *__strtok_r (char *__restrict __s,
+    const char *__restrict __delim,
+    char **__restrict __save_ptr)
+     throw () __attribute__ ((__nonnull__ (2, 3)));
+
+extern char *strtok_r (char *__restrict __s, const char *__restrict __delim,
+         char **__restrict __save_ptr)
+     throw () __attribute__ ((__nonnull__ (2, 3)));
+
+
+
+
+
+extern "C++" char *strcasestr (char *__haystack, const char *__needle)
+     throw () __asm ("strcasestr") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+extern "C++" const char *strcasestr (const char *__haystack,
+         const char *__needle)
+     throw () __asm ("strcasestr") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+# 369 "/usr/include/string.h" 3 4
+extern void *memmem (const void *__haystack, size_t __haystacklen,
+       const void *__needle, size_t __needlelen)
+     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 3)));
+
+
+
+extern void *__mempcpy (void *__restrict __dest,
+   const void *__restrict __src, size_t __n)
+     throw () __attribute__ ((__nonnull__ (1, 2)));
+extern void *mempcpy (void *__restrict __dest,
+        const void *__restrict __src, size_t __n)
+     throw () __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+extern size_t strlen (const char *__s)
+     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+extern size_t strnlen (const char *__string, size_t __maxlen)
+     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+extern char *strerror (int __errnum) throw ();
+# 421 "/usr/include/string.h" 3 4
+extern char *strerror_r (int __errnum, char *__buf, size_t __buflen)
+     throw () __attribute__ ((__nonnull__ (2))) ;
+
+
+
+
+
+extern char *strerror_l (int __errnum, locale_t __l) throw ();
+
+
+
+
+# 1 "/usr/include/strings.h" 1 3 4
+# 23 "/usr/include/strings.h" 3 4
+# 1 "/data/xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/lib/clang/7.0.0/include/stddef.h" 1 3 4
+# 24 "/usr/include/strings.h" 2 3 4
+
+
+
+
+
+
+extern "C" {
+
+
+
+extern int bcmp (const void *__s1, const void *__s2, size_t __n)
+     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern void bcopy (const void *__src, void *__dest, size_t __n)
+  throw () __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern void bzero (void *__s, size_t __n) throw () __attribute__ ((__nonnull__ (1)));
+# 68 "/usr/include/strings.h" 3 4
+extern char *index (const char *__s, int __c)
+     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+# 96 "/usr/include/strings.h" 3 4
+extern char *rindex (const char *__s, int __c)
+     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+
+extern int ffs (int __i) throw () __attribute__ ((__const__));
+
+
+
+
+
+extern int ffsl (long int __l) throw () __attribute__ ((__const__));
+__extension__ extern int ffsll (long long int __ll)
+     throw () __attribute__ ((__const__));
+
+
+
+extern int strcasecmp (const char *__s1, const char *__s2)
+     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern int strncasecmp (const char *__s1, const char *__s2, size_t __n)
+     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+
+
+extern int strcasecmp_l (const char *__s1, const char *__s2, locale_t __loc)
+     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2, 3)));
+
+
+
+extern int strncasecmp_l (const char *__s1, const char *__s2,
+     size_t __n, locale_t __loc)
+     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2, 4)));
+
+
+}
+# 433 "/usr/include/string.h" 2 3 4
+
+
+
+extern void explicit_bzero (void *__s, size_t __n) throw () __attribute__ ((__nonnull__ (1)));
+
+
+
+extern char *strsep (char **__restrict __stringp,
+       const char *__restrict __delim)
+     throw () __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+extern char *strsignal (int __sig) throw ();
+
+
+extern char *__stpcpy (char *__restrict __dest, const char *__restrict __src)
+     throw () __attribute__ ((__nonnull__ (1, 2)));
+extern char *stpcpy (char *__restrict __dest, const char *__restrict __src)
+     throw () __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+extern char *__stpncpy (char *__restrict __dest,
+   const char *__restrict __src, size_t __n)
+     throw () __attribute__ ((__nonnull__ (1, 2)));
+extern char *stpncpy (char *__restrict __dest,
+        const char *__restrict __src, size_t __n)
+     throw () __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+extern int strverscmp (const char *__s1, const char *__s2)
+     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern char *strfry (char *__string) throw () __attribute__ ((__nonnull__ (1)));
+
+
+extern void *memfrob (void *__s, size_t __n) throw () __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+
+
+extern "C++" char *basename (char *__filename)
+     throw () __asm ("basename") __attribute__ ((__nonnull__ (1)));
+extern "C++" const char *basename (const char *__filename)
+     throw () __asm ("basename") __attribute__ ((__nonnull__ (1)));
+# 499 "/usr/include/string.h" 3 4
+}
+# 8 "activation_accelerator.cpp" 2
+
+# 1 "./bf16_accl.h" 1
+
+
+
+
+
+# 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath" 1 3
+# 40 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath" 3
+# 7 "./bf16_accl.h" 2
+
+
+# 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cfloat" 1 3
+# 40 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cfloat" 3
+# 10 "./bf16_accl.h" 2
+
+
+
+
+
+
+typedef uint16_t u16;
+typedef uint32_t u32;
+
+
+static inline int clz32(uint32_t x) { return x ? __builtin_clz(x) : 32; }
+
+static inline uint16_t pack_bf16(uint16_t s, uint16_t e, uint16_t m7) {
+    return (uint16_t)((s << 15) | (e << 7) | (m7 & 0x7F));
+}
+
+static inline float bf16_to_f32(uint16_t b) {
+#pragma HLS inline off
+ union { uint32_t u; float f; } cvt;
+    cvt.u = ((uint32_t)b) << 16;
+    return cvt.f;
+}
+
+
+
+static inline uint16_t round_float32_to_bf16_ieee(float x_in);
+
+
+static inline u16 f32_to_bf16_rne(float f) {
+#pragma HLS inline off
+ return round_float32_to_bf16_ieee(f);
+}
+
+
+
+
+static inline void bf16_to_float(const uint16* in, float* out, int len) {
+#pragma HLS inline off
+ bf16_to_float_loop:
+    for (int i = 0; i < len; ++i) {
         uint32_t x_f32 = ((uint32_t)in[i]) << 16;
         out[i] = *(float*)&x_f32;
     }
 }
 
-void float_sigmoid(const float* x, uint16* y, int len) {
-    sigmoid_loop:
-    for (int i = 0; i < len; ++i) {
-        float val = 1.0f / (1.0f + hls::expf(-x[i]));
-        uint32_t* y_f32_ptr = (uint32_t*)&val;
-        y[i] = (*y_f32_ptr) >> 16;
+
+static inline uint16_t round_float32_to_bf16_ieee(float x_in) {
+#pragma HLS inline off
+ uint32_t fbits = *reinterpret_cast<uint32_t*>(&x_in);
+
+
+
+
+    const uint32_t LOW16_MASK = 0xFFFFu;
+    uint32_t upper = fbits >> 16;
+    uint32_t lower = fbits & LOW16_MASK;
+
+    uint32_t exp_field = (fbits >> 23) & 0xFFu;
+
+
+    if (exp_field == 0xFFu) {
+        uint16_t ret = static_cast<uint16_t>(upper);
+
+
+        uint32_t full_mant = fbits & 0x7FFFFFu;
+        if (full_mant != 0 && (ret & 0x7Fu) == 0) {
+            ret |= 1u;
+        }
+        return ret;
     }
+
+
+
+
+
+    const uint32_t HALF = 0x8000u;
+    bool round_up = false;
+    if (lower > HALF) {
+        round_up = true;
+    } else if (lower < HALF) {
+        round_up = false;
+    } else {
+        if (upper & 1u) {
+            round_up = true;
+        }
+    }
+
+    uint32_t rounded = upper + (round_up ? 1u : 0u);
+
+
+    uint32_t new_exp = (rounded >> 7) & 0xFFu;
+    uint32_t sign = (rounded >> 15) & 0x1u;
+    if (new_exp == 0xFFu) {
+        uint16_t res = static_cast<uint16_t>((sign << 15) | (0xFFu << 7));
+        return res;
+    }
+
+    return static_cast<uint16_t>(rounded & 0xFFFFu);
 }
 
+
+
+
+
+static inline uint16 bf16add_fast(uint16 a_bits, uint16 b_bits) {
+
+
+
+
+
+
+
+    const int PREC_SHIFT = 8;
+    const uint32_t ONE_I = 0x80u;
+    const int NEAR_THRESH = 1;
+
+
+    uint16_t sa = (a_bits >> 15) & 1, sb = (b_bits >> 15) & 1;
+    uint16_t ea = (a_bits >> 7) & 0xFF, eb = (b_bits >> 7) & 0xFF;
+    uint16_t ma = a_bits & 0x7F, mb = b_bits & 0x7F;
+
+
+
+
+    if (ea == 0xFF) {
+        if (ma) return a_bits;
+
+        if (eb == 0xFF && mb && 0) {}
+        if (eb == 0xFF && mb == 0 && sa != sb) return pack_bf16(0, 0xFF, 1);
+        return a_bits;
+    }
+
+    if (eb == 0xFF) { if (mb) return b_bits; return b_bits; }
+
+    if ((ea | ma) == 0) return b_bits;
+    if ((eb | mb) == 0) return a_bits;
+# 158 "./bf16_accl.h"
+    uint32_t A = (ea ? (ONE_I | ma) : ma), B = (eb ? (ONE_I | mb) : mb);
+    A <<= PREC_SHIFT; B <<= PREC_SHIFT;
+
+
+    uint16_t ea1 = (ea == 0) ? 1 : ea;
+    uint16_t eb1 = (eb == 0) ? 1 : eb;
+
+
+    uint16_t maxe = (ea1 >= eb1) ? ea : eb;
+    int diff = (ea1 >= eb1) ? (ea1 - eb1) : (eb1 - ea1);
+
+
+
+
+    if (diff >= (8 + 4)) {
+
+        return (ea1 >= eb1) ? a_bits : b_bits;
+    }
+
+
+    if (ea1 < eb1) { uint32_t tmp = A; A = B; B = tmp; uint16_t ts = sa; sa = sb; sb = ts; uint16_t te = ea; ea = eb; eb = te; maxe = ea; }
+
+
+    uint32_t B_aln, sticky = 0;
+    if (diff <= NEAR_THRESH) {
+
+        B_aln = (diff == 0) ? B : (B >> 1);
+
+        if (diff == 1) sticky = (B & 1u);
+    } else {
+
+        if (diff >= 32) { sticky = (B != 0); B_aln = 0; }
+        else {
+            uint32_t lost = B & ((1u << diff) - 1u);
+            sticky = (lost != 0);
+            B_aln = B >> diff;
+        }
+    }
+
+
+    uint32_t M;
+    uint16_t s = sa;
+    if (sa == sb) {
+        M = A + B_aln;
+    } else {
+        if (A >= B_aln) { M = A - B_aln; s = sa; }
+        else { M = B_aln - A; s = sb; }
+    }
+
+    if (M == 0) return 0;
+
+
+
+
+
+    const uint32_t LO = (ONE_I << PREC_SHIFT);
+    const uint32_t HI = (0x100u << PREC_SHIFT);
+
+
+    if (M >= HI) { M >>= 1; maxe++; }
+
+
+    if (M < LO && maxe > 0) {
+        int lz = clz32(M) - clz32(LO);
+        if (lz > 0) {
+            if (lz >= maxe) lz = maxe;
+            M <<= lz;
+            maxe -= lz;
+        }
+    }
+
+
+    uint32_t frac_full = (M >> PREC_SHIFT);
+    uint32_t frac_keep = frac_full & 0xFFu;
+    uint32_t chop = M & ((1u << PREC_SHIFT) - 1u);
+
+    int G = (chop >> (PREC_SHIFT - 1)) & 1;
+    int R = (chop >> (PREC_SHIFT - 2)) & 1;
+    int S = ((PREC_SHIFT > 2) ? ((chop & ((1u << (PREC_SHIFT - 2)) - 1u)) != 0) : 0) || sticky;
+
+    int round_up = 0;
+    if (G) {
+        if (R || S) round_up = 1;
+        else if ( (frac_keep & 1u) ) round_up = 1;
+    }
+
+    uint32_t rounded = frac_keep + (uint32_t)round_up;
+
+
+    if (rounded >= 0x100u) { rounded >>= 1; maxe++; }
+
+
+    if (maxe >= 0xFF) return pack_bf16(s, 0xFF, 0);
+    if (maxe == 0) rounded &= 0x7Fu;
+    uint16_t m7 = (uint16_t)(rounded & 0x7Fu);
+    return pack_bf16(s, maxe, m7);
+}
+# 10 "activation_accelerator.cpp" 2
+# 1 "./bf16_fmax.h" 1
+# 11 "activation_accelerator.cpp" 2
+# 260 "activation_accelerator.cpp"
 void float_silu(const float* x, uint16* y, int len) {
     silu_loop:
     for (int i = 0; i < len; ++i) {
@@ -55183,6 +55678,31 @@ void float_silu(const float* x, uint16* y, int len) {
         y[i] = (*y_f32_ptr) >> 16;
     }
 }
+void float_silu2(const float* x, uint16* y, int len) {
+#pragma HLS INLINE off
+ const int UF = 32;
+
+
+    silu_blocks:
+    for (int i = 0; i < len; i += UF) {
+#pragma HLS PIPELINE II=1
+ silu_inner:
+        for (int u = 0; u < UF; ++u) {
+#pragma HLS UNROLL
+ int idx = i + u;
+            if (idx < len) {
+
+                float sig = 1.0f / (1.0f + hls::expf(-x[idx]));
+
+                float val = x[idx] * sig;
+
+                uint32_t* y_f32_ptr = (uint32_t*)&val;
+                y[idx] = (uint16)((*y_f32_ptr) >> 16);
+            }
+        }
+    }
+}
+
 
 void float_rms_norm(const float* x, uint16* y_bf16, int len) {
     const float eps = 1e-6f;
@@ -55200,28 +55720,162 @@ void float_rms_norm(const float* x, uint16* y_bf16, int len) {
         y_bf16[i] = (*y_f32_ptr) >> 16;
     }
 }
-
-void float_layer_norm(const float* x, uint16* y_bf16, int len) {
+# 381 "activation_accelerator.cpp"
+void float_rms_norm3(const float* x, uint16* y_bf16, int len) {
+#pragma HLS INLINE off
+ const int UF = 32;
+    const int ACC = 32;
     const float eps = 1e-6f;
-    float sum = 0.0f;
-    layer_norm_loop1:
-    for (int i = 0; i < len; ++i) {
-        sum += x[i];
+
+
+    float partial_sum_sq[ACC];
+#pragma HLS ARRAY_PARTITION variable=partial_sum_sq complete
+#pragma HLS DEPENDENCE variable=partial_sum_sq inter false
+
+
+init_partial_sum_sq:
+    for (int k = 0; k < ACC; ++k) {
+#pragma HLS UNROLL
+ partial_sum_sq[k] = 0.f;
     }
+
+
+sum_sq_blocks:
+    for (int i = 0; i < len; i += UF) {
+#pragma HLS PIPELINE II=1
+ sum_sq_inner:
+        for (int u = 0; u < UF; ++u) {
+#pragma HLS UNROLL
+ int idx = i + u;
+            if (idx < len) {
+                partial_sum_sq[idx % ACC] += x[idx] * x[idx];
+            }
+        }
+    }
+
+
+    float sum_sq = 0.f;
+reduce_partial_sum_sq:
+    for (int k = 0; k < ACC; ++k) {
+#pragma HLS UNROLL
+ sum_sq += partial_sum_sq[k];
+    }
+
+
+    float mean_sq = sum_sq / len;
+    float rms = hls::sqrtf(mean_sq + eps);
+
+
+normalize_blocks:
+    for (int i = 0; i < len; i += UF) {
+#pragma HLS PIPELINE II=1
+ normalize_inner:
+        for (int u = 0; u < UF; ++u) {
+#pragma HLS UNROLL
+ int idx = i + u;
+            if (idx < len) {
+                float y = x[idx] / rms;
+                uint32_t* y_f32_ptr = (uint32_t*)&y;
+                y_bf16[idx] = (uint16)((*y_f32_ptr) >> 16);
+            }
+        }
+    }
+}
+# 578 "activation_accelerator.cpp"
+void float_layer_norm3(const float* x, uint16* y_bf16, int len) {
+#pragma HLS INLINE off
+ const int UF = 32;
+    const int ACC = 32;
+    const float eps = 1e-6f;
+
+
+    float partial_sum[ACC];
+#pragma HLS ARRAY_PARTITION variable=partial_sum complete
+#pragma HLS DEPENDENCE variable=partial_sum inter false
+
+
+init_partial_sum:
+    for (int k = 0; k < ACC; ++k) {
+#pragma HLS UNROLL
+ partial_sum[k] = 0.f;
+    }
+
+
+sum_blocks:
+    for (int i = 0; i < len; i += UF) {
+#pragma HLS PIPELINE II=1
+ sum_inner:
+        for (int u = 0; u < UF; ++u) {
+#pragma HLS UNROLL
+ int idx = i + u;
+            if (idx < len) {
+                partial_sum[idx % ACC] += x[idx];
+            }
+        }
+    }
+
+
+    float sum = 0.f;
+reduce_partial_sum:
+    for (int k = 0; k < ACC; ++k) {
+#pragma HLS UNROLL
+ sum += partial_sum[k];
+    }
+
     float mean = sum / len;
-    float var = 0.0f;
-    layer_norm_loop2:
-    for (int i = 0; i < len; ++i) {
-        float diff = x[i] - mean;
-        var += diff * diff;
+
+
+    float partial_var[ACC];
+#pragma HLS ARRAY_PARTITION variable=partial_var complete
+#pragma HLS DEPENDENCE variable=partial_var inter false
+
+
+init_partial_var:
+    for (int k = 0; k < ACC; ++k) {
+#pragma HLS UNROLL
+ partial_var[k] = 0.f;
     }
-    var /= len;
+
+
+var_blocks:
+    for (int i = 0; i < len; i += UF) {
+#pragma HLS PIPELINE II=1
+ var_inner:
+        for (int u = 0; u < UF; ++u) {
+#pragma HLS UNROLL
+ int idx = i + u;
+            if (idx < len) {
+                float diff = x[idx] - mean;
+                partial_var[idx % ACC] += diff * diff;
+            }
+        }
+    }
+
+
+    float var_sum = 0.f;
+reduce_partial_var:
+    for (int k = 0; k < ACC; ++k) {
+#pragma HLS UNROLL
+ var_sum += partial_var[k];
+    }
+
+    float var = var_sum / len;
     float stddev = hls::sqrtf(var + eps);
-    layer_norm_loop3:
-    for (int i = 0; i < len; ++i) {
-        float y = (x[i] - mean) / stddev;
-        uint32_t* y_f32_ptr = (uint32_t*)&y;
-        y_bf16[i] = (*y_f32_ptr) >> 16;
+
+
+normalize_blocks:
+    for (int i = 0; i < len; i += UF) {
+#pragma HLS PIPELINE II=1
+ normalize_inner:
+        for (int u = 0; u < UF; ++u) {
+#pragma HLS UNROLL
+ int idx = i + u;
+            if (idx < len) {
+                float y = (x[idx] - mean) / stddev;
+                uint32_t* y_f32_ptr = (uint32_t*)&y;
+                y_bf16[idx] = (uint16)((*y_f32_ptr) >> 16);
+            }
+        }
     }
 }
 
@@ -55248,56 +55902,67 @@ float Q_rsqrt(float number)
 
  return y;
 }
-
-
-void float_gelu(const float* x, uint16* y_bf16, int len){
-#pragma HLS INLINE
- float xtrue = 0.0f;
-    float down2 = Q_rsqrt(2.0f);
-    gelu_loop:
-    for (int i = 0; i < len; ++i) {
-#pragma HLS PIPELINE II=1
- float y = xtrue = 0.5f * x[i] * (1.0f + std::erff(x[i]*down2));
-        uint32_t* y_f32_ptr = (uint32_t*)&y;
-        y_bf16[i] = (*y_f32_ptr) >> 16;
-    }
-}
-
-
-
-void float_add(const float* x, const float* y, uint16* out, int len) {
-    float_add_loop:
-    for (int i = 0; i < len; ++i) {
-        float sum = x[i] + y[i];
-        uint32_t* sum_f32_ptr = (uint32_t*)&sum;
-        out[i] = (*sum_f32_ptr) >> 16;
-    }
-}
-
-
-void float_safe_softmax(const float* x, uint16* y_bf16, int len) {
-#pragma HLS INLINE off
- float max_val = x[0];
-    softmax_loop_1:
-    for (int i = 1; i < len; ++i) if (x[i] > max_val) max_val = x[i];
-    float sum = 0.0f;
-    float exp_x[49152];
-    softmax_loop_2:
-    for (int i = 0; i < len; ++i) {
-        exp_x[i] = hls::expf(x[i] - max_val);
-        sum += exp_x[i];
-    }
-    softmax_loop_3:
-    for (int i = 0; i < len; ++i) {
-        float y = exp_x[i] / sum;
-        uint32_t* y_f32_ptr = (uint32_t*)&y;
-        y_bf16[i] = (*y_f32_ptr) >> 16;
-    }
-}
-
-void float_safe_softmax2(const float* x, uint16* y_bf16, int len) {
+# 713 "activation_accelerator.cpp"
+void float_gelu2(const float* x, uint16* y_bf16, int len) {
 #pragma HLS INLINE off
  const int UF = 32;
+
+
+    float down2 = Q_rsqrt(2.0f);
+    float half = 0.5f;
+    float one = 1.0f;
+
+
+    gelu_blocks:
+    for (int i = 0; i < len; i += UF) {
+#pragma HLS PIPELINE II=1
+ gelu_inner:
+        for (int u = 0; u < UF; ++u) {
+#pragma HLS UNROLL
+ int idx = i + u;
+            if (idx < len) {
+
+                float x_val = x[idx];
+                float erf_arg = x_val * down2;
+                float erf_val = std::erff(erf_arg);
+                float xtrue = half * x_val * (one + erf_val);
+
+
+                uint32_t* xtrue_f32_ptr = (uint32_t*)&xtrue;
+                y_bf16[idx] = (uint16)((*xtrue_f32_ptr) >> 16);
+            }
+        }
+    }
+}
+# 754 "activation_accelerator.cpp"
+void float_add2(const float* x, const float* y, uint16* out, int len) {
+
+    const int UF = 32;
+
+add_blocks:
+    for (int i = 0; i < len; i += UF) {
+#pragma HLS PIPELINE II=1
+ add_inner:
+        for (int u = 0; u < UF; ++u) {
+#pragma HLS UNROLL
+ int idx = i + u;
+
+
+            uint16 xb = 0, yb = 0, sb = 0;
+
+            if (idx < len) {
+
+
+                sb = bf16add_fast(x[idx], y[idx]);
+                out[idx] = sb;
+            }
+        }
+    }
+}
+# 916 "activation_accelerator.cpp"
+void float_safe_softmax2(const float* x, uint16* y_bf16, int len) {
+
+    const int UF = 32;
     const int ACC = 32;
 
 
@@ -55353,14 +56018,14 @@ final_reduce_max:
 #pragma HLS UNROLL
  max_val = hls::fmaxf(max_val, partial_max[k]);
     }
-
-
-    float partial[ACC];
+# 984 "activation_accelerator.cpp"
+    uint16 partial[ACC];
 #pragma HLS ARRAY_PARTITION variable=partial complete
-init_partial:
+
+init_partial_bf16:
     for (int k = 0; k < ACC; ++k) {
 #pragma HLS UNROLL
- partial[k] = 0.f;
+ partial[k] = 0;
     }
 
 exp_and_bucket:
@@ -55371,7 +56036,7 @@ exp_and_bucket:
 
 exp_inner:
         for (int u = 0; u < UF; ++u) {
-#pragma HLS UNROLL
+#pragma HLS UNROLL factor=8
  int idx = i + u;
             float ex = (idx < len) ? hls::expf(x[idx] - max_val) : 0.f;
             e[u] = ex;
@@ -55379,19 +56044,27 @@ exp_inner:
         }
 bucket_add:
         for (int u = 0; u < UF; ++u) {
-#pragma HLS UNROLL
+#pragma HLS UNROLL factor=8
  int idx = i + u;
-            if (idx < len) partial[idx % ACC] += e[u];
+            if (idx < len) {
+                int b = idx % ACC;
+
+                uint16 e_b = f32_to_bf16_rne(e[u]);
+                partial[b] = bf16add_fast(partial[b], e_b);
+            }
         }
     }
 
 
     float sum = 0.f;
+    uint16 sum_b = 0;
 reduce_partial:
     for (int k = 0; k < ACC; ++k) {
 #pragma HLS UNROLL
- sum += partial[k];
+ sum_b = bf16add_fast(sum_b, partial[k]);
     }
+        sum = bf16_to_f32(sum_b);
+
 
 
 normalize_blocks:
@@ -55405,28 +56078,41 @@ normalize_inner:
                 float y = exp_x[idx] / sum;
                 uint32_t* y_f32_ptr = (uint32_t*)&y;
                 y_bf16[idx] = (uint16)((*y_f32_ptr) >> 16);
+
+
+                y_bf16[idx] = round_float32_to_bf16_ieee(y);
             }
         }
     }
 }
+# 1063 "activation_accelerator.cpp"
+void float_Multiply2(const float* x, const float* y, uint16* out, int len) {
+#pragma HLS INLINE off
+ const int UF = 32;
 
 
-
-void float_Multiply(const float* x, const float* y, uint16* out, int len) {
-#pragma HLS INLINE
- float_multiply_loop:
-    for (int i = 0; i < len; ++i) {
+    multiply_blocks:
+    for (int i = 0; i < len; i += UF) {
 #pragma HLS PIPELINE II=1
- float mut = x[i] * y[i];
-        uint32_t* mut_f32_ptr = (uint32_t*)&mut;
-        out[i] = (*mut_f32_ptr) >> 16;
+ multiply_inner:
+        for (int u = 0; u < UF; ++u) {
+#pragma HLS UNROLL
+ int idx = i + u;
+            if (idx < len) {
+
+                float mut = x[idx] * y[idx];
+
+                uint32_t* mut_f32_ptr = (uint32_t*)&mut;
+                out[idx] = (uint16)((*mut_f32_ptr) >> 16);
+            }
+        }
     }
 }
-# 431 "activation_accelerator.cpp"
+# 1107 "activation_accelerator.cpp"
 __attribute__((sdx_kernel("activation_accelerator", 0))) void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, int32 config) {
-#line 39 "/data1/jdn/fpt_LLM/prj/baseline/kernel_hls/run_hls.tcl"
+#line 39 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/run_hls.tcl"
 #pragma HLSDIRECTIVE TOP name=activation_accelerator
-# 431 "activation_accelerator.cpp"
+# 1107 "activation_accelerator.cpp"
 
 #pragma HLS INTERFACE m_axi port=in0 offset=slave bundle=gmem0 depth=49152
 #pragma HLS INTERFACE m_axi port=in1 offset=slave bundle=gmem1 depth=49152
@@ -55441,27 +56127,29 @@ __attribute__((sdx_kernel("activation_accelerator", 0))) void activation_acceler
     float x[64*768], y[64*768];
 
     if(stage == 0) {
-        VITIS_LOOP_445_1: for(int i = 0; i <64*768 ; i++) {
+        stage_0_load0:
+        for(int i = 0; i <64*768 ; i++) {
             buf0[i] = in0[i];
         }
-        VITIS_LOOP_448_2: for(int i = 0; i <64*768 ; i++) {
+        stage_0_load1:
+        for(int i = 0; i <64*768 ; i++) {
             buf1[i] = in1[i];
         }
     }
 
     if(stage == 1) {
         if(config == 0) {
-            bf16_to_float(buf0, x, 64*768);
-            bf16_to_float(buf1, y, 64*768);
-            float_add(x, y, buf2, 64*768);
-            VITIS_LOOP_458_3: for(int i = 0; i < 64*768; i++) {
-#pragma HLS PIPELINE II=1
- buf2[i] = bf16add(buf0[i], buf1[i]);
-            }
+
+
+            float_add2(x, y, buf2, 64*768);
+
+
+
+
         }
         else if(config == 1) {
             bf16_to_float(buf0, x, 64*768);
-            float_safe_softmax(x, buf2, 64*768);
+            float_safe_softmax2(x, buf2, 64*768);
 
 
 
@@ -55470,7 +56158,7 @@ __attribute__((sdx_kernel("activation_accelerator", 0))) void activation_acceler
         else if(config == 2) {
             bf16_to_float(buf0, x, 64*768);
             bf16_to_float(buf1, y, 64*768);
-            float_Multiply(x, y, buf2, 64*768);
+            float_Multiply2(x, y, buf2, 64*768);
 
 
 
@@ -55478,24 +56166,25 @@ __attribute__((sdx_kernel("activation_accelerator", 0))) void activation_acceler
         }
         else if(config == 3) {
             bf16_to_float(buf0, x, 64*768);
-            float_gelu(x, buf2, 64*768);
+            float_gelu2(x, buf2, 64*768);
         }
         else if(config == 4) {
             bf16_to_float(buf0, x, 64*768);
-            float_silu(x, buf2, 64*768);
+            float_silu2(x, buf2, 64*768);
         }
         else if(config == 5) {
             bf16_to_float(buf0, x, 64*768);
-            float_rms_norm(x, buf2, 64*768);
+            float_rms_norm3(x, buf2, 64*768);
         }
         else if(config == 6) {
             bf16_to_float(buf0, x, 64*768);
-            float_layer_norm(x, buf2, 64*768);
+            float_layer_norm3(x, buf2, 64*768);
         }
     }
 
     if(stage == 2) {
-        VITIS_LOOP_499_4: for(int i = 0; i < 64*768; i++) {
+        stage_2_store:
+        for(int i = 0; i < 64*768; i++) {
             out[i] = buf2[i];
         }
     }

@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="activation_accelerator_activation_accelerator,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xck26-sfvc784-2LV-c,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=402,HLS_SYN_DSP=0,HLS_SYN_FF=32713,HLS_SYN_LUT=32862,HLS_VERSION=2022_2}" *)
+(* CORE_GENERATION_INFO="activation_accelerator_activation_accelerator,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xck26-sfvc784-2LV-c,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=16.140792,HLS_SYN_LAT=31256,HLS_SYN_TPT=none,HLS_SYN_MEM=540,HLS_SYN_DSP=0,HLS_SYN_FF=906060,HLS_SYN_LUT=909183,HLS_VERSION=2022_2}" *)
 
 module activation_accelerator (
         ap_clk,
@@ -167,92 +167,28 @@ module activation_accelerator (
         interrupt
 );
 
-parameter    ap_ST_fsm_state1 = 86'd1;
-parameter    ap_ST_fsm_state2 = 86'd2;
-parameter    ap_ST_fsm_state3 = 86'd4;
-parameter    ap_ST_fsm_state4 = 86'd8;
-parameter    ap_ST_fsm_state5 = 86'd16;
-parameter    ap_ST_fsm_state6 = 86'd32;
-parameter    ap_ST_fsm_state7 = 86'd64;
-parameter    ap_ST_fsm_state8 = 86'd128;
-parameter    ap_ST_fsm_state9 = 86'd256;
-parameter    ap_ST_fsm_state10 = 86'd512;
-parameter    ap_ST_fsm_state11 = 86'd1024;
-parameter    ap_ST_fsm_state12 = 86'd2048;
-parameter    ap_ST_fsm_state13 = 86'd4096;
-parameter    ap_ST_fsm_state14 = 86'd8192;
-parameter    ap_ST_fsm_state15 = 86'd16384;
-parameter    ap_ST_fsm_state16 = 86'd32768;
-parameter    ap_ST_fsm_state17 = 86'd65536;
-parameter    ap_ST_fsm_state18 = 86'd131072;
-parameter    ap_ST_fsm_state19 = 86'd262144;
-parameter    ap_ST_fsm_state20 = 86'd524288;
-parameter    ap_ST_fsm_state21 = 86'd1048576;
-parameter    ap_ST_fsm_state22 = 86'd2097152;
-parameter    ap_ST_fsm_state23 = 86'd4194304;
-parameter    ap_ST_fsm_state24 = 86'd8388608;
-parameter    ap_ST_fsm_state25 = 86'd16777216;
-parameter    ap_ST_fsm_state26 = 86'd33554432;
-parameter    ap_ST_fsm_state27 = 86'd67108864;
-parameter    ap_ST_fsm_state28 = 86'd134217728;
-parameter    ap_ST_fsm_state29 = 86'd268435456;
-parameter    ap_ST_fsm_state30 = 86'd536870912;
-parameter    ap_ST_fsm_state31 = 86'd1073741824;
-parameter    ap_ST_fsm_state32 = 86'd2147483648;
-parameter    ap_ST_fsm_state33 = 86'd4294967296;
-parameter    ap_ST_fsm_state34 = 86'd8589934592;
-parameter    ap_ST_fsm_state35 = 86'd17179869184;
-parameter    ap_ST_fsm_state36 = 86'd34359738368;
-parameter    ap_ST_fsm_state37 = 86'd68719476736;
-parameter    ap_ST_fsm_state38 = 86'd137438953472;
-parameter    ap_ST_fsm_state39 = 86'd274877906944;
-parameter    ap_ST_fsm_state40 = 86'd549755813888;
-parameter    ap_ST_fsm_state41 = 86'd1099511627776;
-parameter    ap_ST_fsm_state42 = 86'd2199023255552;
-parameter    ap_ST_fsm_state43 = 86'd4398046511104;
-parameter    ap_ST_fsm_state44 = 86'd8796093022208;
-parameter    ap_ST_fsm_state45 = 86'd17592186044416;
-parameter    ap_ST_fsm_state46 = 86'd35184372088832;
-parameter    ap_ST_fsm_state47 = 86'd70368744177664;
-parameter    ap_ST_fsm_state48 = 86'd140737488355328;
-parameter    ap_ST_fsm_state49 = 86'd281474976710656;
-parameter    ap_ST_fsm_state50 = 86'd562949953421312;
-parameter    ap_ST_fsm_state51 = 86'd1125899906842624;
-parameter    ap_ST_fsm_state52 = 86'd2251799813685248;
-parameter    ap_ST_fsm_state53 = 86'd4503599627370496;
-parameter    ap_ST_fsm_state54 = 86'd9007199254740992;
-parameter    ap_ST_fsm_state55 = 86'd18014398509481984;
-parameter    ap_ST_fsm_state56 = 86'd36028797018963968;
-parameter    ap_ST_fsm_state57 = 86'd72057594037927936;
-parameter    ap_ST_fsm_state58 = 86'd144115188075855872;
-parameter    ap_ST_fsm_state59 = 86'd288230376151711744;
-parameter    ap_ST_fsm_state60 = 86'd576460752303423488;
-parameter    ap_ST_fsm_state61 = 86'd1152921504606846976;
-parameter    ap_ST_fsm_state62 = 86'd2305843009213693952;
-parameter    ap_ST_fsm_state63 = 86'd4611686018427387904;
-parameter    ap_ST_fsm_state64 = 86'd9223372036854775808;
-parameter    ap_ST_fsm_state65 = 86'd18446744073709551616;
-parameter    ap_ST_fsm_state66 = 86'd36893488147419103232;
-parameter    ap_ST_fsm_state67 = 86'd73786976294838206464;
-parameter    ap_ST_fsm_state68 = 86'd147573952589676412928;
-parameter    ap_ST_fsm_state69 = 86'd295147905179352825856;
-parameter    ap_ST_fsm_state70 = 86'd590295810358705651712;
-parameter    ap_ST_fsm_state71 = 86'd1180591620717411303424;
-parameter    ap_ST_fsm_state72 = 86'd2361183241434822606848;
-parameter    ap_ST_fsm_state73 = 86'd4722366482869645213696;
-parameter    ap_ST_fsm_state74 = 86'd9444732965739290427392;
-parameter    ap_ST_fsm_state75 = 86'd18889465931478580854784;
-parameter    ap_ST_fsm_state76 = 86'd37778931862957161709568;
-parameter    ap_ST_fsm_state77 = 86'd75557863725914323419136;
-parameter    ap_ST_fsm_state78 = 86'd151115727451828646838272;
-parameter    ap_ST_fsm_state79 = 86'd302231454903657293676544;
-parameter    ap_ST_fsm_state80 = 86'd604462909807314587353088;
-parameter    ap_ST_fsm_state81 = 86'd1208925819614629174706176;
-parameter    ap_ST_fsm_state82 = 86'd2417851639229258349412352;
-parameter    ap_ST_fsm_state83 = 86'd4835703278458516698824704;
-parameter    ap_ST_fsm_state84 = 86'd9671406556917033397649408;
-parameter    ap_ST_fsm_state85 = 86'd19342813113834066795298816;
-parameter    ap_ST_fsm_state86 = 86'd38685626227668133590597632;
+parameter    ap_ST_fsm_state1 = 22'd1;
+parameter    ap_ST_fsm_state2 = 22'd2;
+parameter    ap_ST_fsm_state3 = 22'd4;
+parameter    ap_ST_fsm_state4 = 22'd8;
+parameter    ap_ST_fsm_state5 = 22'd16;
+parameter    ap_ST_fsm_state6 = 22'd32;
+parameter    ap_ST_fsm_state7 = 22'd64;
+parameter    ap_ST_fsm_state8 = 22'd128;
+parameter    ap_ST_fsm_state9 = 22'd256;
+parameter    ap_ST_fsm_state10 = 22'd512;
+parameter    ap_ST_fsm_state11 = 22'd1024;
+parameter    ap_ST_fsm_state12 = 22'd2048;
+parameter    ap_ST_fsm_state13 = 22'd4096;
+parameter    ap_ST_fsm_state14 = 22'd8192;
+parameter    ap_ST_fsm_state15 = 22'd16384;
+parameter    ap_ST_fsm_state16 = 22'd32768;
+parameter    ap_ST_fsm_state17 = 22'd65536;
+parameter    ap_ST_fsm_state18 = 22'd131072;
+parameter    ap_ST_fsm_state19 = 22'd262144;
+parameter    ap_ST_fsm_state20 = 22'd524288;
+parameter    ap_ST_fsm_state21 = 22'd1048576;
+parameter    ap_ST_fsm_state22 = 22'd2097152;
 parameter    C_S_AXI_CONTROL_DATA_WIDTH = 32;
 parameter    C_S_AXI_CONTROL_ADDR_WIDTH = 7;
 parameter    C_S_AXI_DATA_WIDTH = 32;
@@ -458,7 +394,7 @@ output   interrupt;
 wire    ap_start;
 reg    ap_done;
 reg    ap_idle;
-(* fsm_encoding = "none" *) reg   [85:0] ap_CS_fsm;
+(* fsm_encoding = "none" *) reg   [21:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
 reg    ap_ready;
 wire   [63:0] in0;
@@ -474,409 +410,2186 @@ reg   [15:0] buf1_address0;
 reg    buf1_ce0;
 reg    buf1_we0;
 wire   [15:0] buf1_q0;
-reg   [15:0] buf2_address0;
-reg    buf2_ce0;
-reg    buf2_we0;
-reg   [15:0] buf2_d0;
-wire   [15:0] buf2_q0;
+reg   [11:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0;
+reg   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0;
+wire   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_q0;
+reg   [11:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1;
+reg   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1;
+reg   [11:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0;
+reg   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0;
+wire   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_q0;
+reg   [11:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1;
+reg   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1;
+reg   [11:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0;
+reg   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0;
+wire   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_q0;
+reg   [11:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1;
+reg   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1;
+reg   [11:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0;
+reg   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0;
+wire   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_q0;
+reg   [11:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1;
+reg   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1;
+reg   [11:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0;
+reg   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0;
+wire   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_q0;
+reg   [11:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1;
+reg   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1;
+reg   [11:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0;
+reg   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0;
+wire   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_q0;
+reg   [11:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1;
+reg   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1;
+reg   [11:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0;
+reg   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0;
+wire   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_q0;
+reg   [11:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1;
+reg   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1;
+reg   [11:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0;
+reg   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0;
+wire   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_q0;
+reg   [11:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1;
+reg   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1;
+reg   [11:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0;
+reg   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0;
+wire   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_q0;
+reg   [11:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1;
+reg   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1;
+reg   [11:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0;
+reg   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0;
+wire   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_q0;
+reg   [11:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1;
+reg   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1;
+reg   [11:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0;
+reg   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_q0;
+reg   [11:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1;
+reg   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1;
+reg   [11:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0;
+reg   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_q0;
+reg   [11:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1;
+reg   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1;
+reg   [11:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0;
+reg   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_q0;
+reg   [11:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1;
+reg   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1;
+reg   [11:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0;
+reg   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_q0;
+reg   [11:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1;
+reg   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1;
+reg   [11:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0;
+reg   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_q0;
+reg   [11:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1;
+reg   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1;
+reg   [11:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0;
+reg   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_q0;
+reg   [11:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1;
+reg   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1;
 reg    gmem0_blk_n_AR;
-wire    ap_CS_fsm_state78;
+wire    ap_CS_fsm_state14;
 reg    gmem1_blk_n_AR;
 reg    gmem2_blk_n_AW;
 wire    ap_CS_fsm_state2;
 reg    gmem2_blk_n_B;
 wire    ap_CS_fsm_state9;
-wire   [31:0] grp_fu_407_p2;
-reg   [31:0] reg_420;
-wire    ap_CS_fsm_state21;
-wire    ap_CS_fsm_state56;
-wire   [31:0] grp_fu_402_p2;
-reg   [31:0] reg_427;
-wire    ap_CS_fsm_state35;
-wire    ap_CS_fsm_state60;
-wire   [31:0] grp_fu_413_p2;
-reg   [31:0] reg_432;
-wire    ap_CS_fsm_state43;
-wire    ap_CS_fsm_state68;
-wire   [31:0] config_r_read_read_fu_168_p2;
-reg   [31:0] config_r_read_reg_510;
-wire   [31:0] stage_read_read_fu_174_p2;
-reg   [31:0] stage_read_reg_514;
-reg   [62:0] trunc_ln2_reg_536;
-reg   [62:0] trunc_ln_reg_542;
-reg   [62:0] trunc_ln1_reg_548;
-reg   [31:0] var_reg_565;
-wire    ap_CS_fsm_state31;
-reg   [15:0] x_address0;
+wire   [31:0] config_r_read_read_fu_276_p2;
+reg   [31:0] config_r_read_reg_949;
+wire   [31:0] stage_read_read_fu_282_p2;
+reg   [31:0] stage_read_reg_953;
+reg   [62:0] trunc_ln7_reg_957;
+reg   [62:0] trunc_ln_reg_963;
+reg   [62:0] trunc_ln6_reg_969;
+reg   [11:0] x_address0;
 reg    x_ce0;
 reg    x_we0;
-reg   [31:0] x_d0;
 wire   [31:0] x_q0;
-reg   [15:0] y_address0;
+reg   [11:0] x_address1;
+reg    x_ce1;
+wire   [31:0] x_q1;
+reg   [11:0] x_1_address0;
+reg    x_1_ce0;
+reg    x_1_we0;
+wire   [31:0] x_1_q0;
+reg   [11:0] x_1_address1;
+reg    x_1_ce1;
+wire   [31:0] x_1_q1;
+reg   [11:0] x_2_address0;
+reg    x_2_ce0;
+reg    x_2_we0;
+wire   [31:0] x_2_q0;
+reg   [11:0] x_2_address1;
+reg    x_2_ce1;
+wire   [31:0] x_2_q1;
+reg   [11:0] x_3_address0;
+reg    x_3_ce0;
+reg    x_3_we0;
+wire   [31:0] x_3_q0;
+reg   [11:0] x_3_address1;
+reg    x_3_ce1;
+wire   [31:0] x_3_q1;
+reg   [11:0] x_4_address0;
+reg    x_4_ce0;
+reg    x_4_we0;
+wire   [31:0] x_4_q0;
+reg   [11:0] x_4_address1;
+reg    x_4_ce1;
+wire   [31:0] x_4_q1;
+reg   [11:0] x_5_address0;
+reg    x_5_ce0;
+reg    x_5_we0;
+wire   [31:0] x_5_q0;
+reg   [11:0] x_5_address1;
+reg    x_5_ce1;
+wire   [31:0] x_5_q1;
+reg   [11:0] x_6_address0;
+reg    x_6_ce0;
+reg    x_6_we0;
+wire   [31:0] x_6_q0;
+reg   [11:0] x_6_address1;
+reg    x_6_ce1;
+wire   [31:0] x_6_q1;
+reg   [11:0] x_7_address0;
+reg    x_7_ce0;
+reg    x_7_we0;
+wire   [31:0] x_7_q0;
+reg   [11:0] x_7_address1;
+reg    x_7_ce1;
+wire   [31:0] x_7_q1;
+reg   [11:0] x_8_address0;
+reg    x_8_ce0;
+reg    x_8_we0;
+wire   [31:0] x_8_q0;
+reg   [11:0] x_8_address1;
+reg    x_8_ce1;
+wire   [31:0] x_8_q1;
+reg   [11:0] x_9_address0;
+reg    x_9_ce0;
+reg    x_9_we0;
+wire   [31:0] x_9_q0;
+reg   [11:0] x_9_address1;
+reg    x_9_ce1;
+wire   [31:0] x_9_q1;
+reg   [11:0] x_10_address0;
+reg    x_10_ce0;
+reg    x_10_we0;
+wire   [31:0] x_10_q0;
+reg   [11:0] x_10_address1;
+reg    x_10_ce1;
+wire   [31:0] x_10_q1;
+reg   [11:0] x_11_address0;
+reg    x_11_ce0;
+reg    x_11_we0;
+wire   [31:0] x_11_q0;
+reg   [11:0] x_11_address1;
+reg    x_11_ce1;
+wire   [31:0] x_11_q1;
+reg   [11:0] x_12_address0;
+reg    x_12_ce0;
+reg    x_12_we0;
+wire   [31:0] x_12_q0;
+reg   [11:0] x_12_address1;
+reg    x_12_ce1;
+wire   [31:0] x_12_q1;
+reg   [11:0] x_13_address0;
+reg    x_13_ce0;
+reg    x_13_we0;
+wire   [31:0] x_13_q0;
+reg   [11:0] x_13_address1;
+reg    x_13_ce1;
+wire   [31:0] x_13_q1;
+reg   [11:0] x_14_address0;
+reg    x_14_ce0;
+reg    x_14_we0;
+wire   [31:0] x_14_q0;
+reg   [11:0] x_14_address1;
+reg    x_14_ce1;
+wire   [31:0] x_14_q1;
+reg   [11:0] x_15_address0;
+reg    x_15_ce0;
+reg    x_15_we0;
+wire   [31:0] x_15_q0;
+reg   [11:0] x_15_address1;
+reg    x_15_ce1;
+wire   [31:0] x_15_q1;
+reg   [11:0] y_address0;
 reg    y_ce0;
 reg    y_we0;
-reg   [31:0] y_d0;
 wire   [31:0] y_q0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_ap_start;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_ap_done;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_ap_idle;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_ap_ready;
-wire   [15:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_x_address0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_x_ce0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_x_we0;
-wire   [31:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_x_d0;
-wire   [15:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_buf0_address0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_buf0_ce0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_ap_start;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_ap_done;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_ap_idle;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_ap_ready;
-wire   [15:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_x_address0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_x_ce0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_x_we0;
-wire   [31:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_x_d0;
-wire   [15:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_buf0_address0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_buf0_ce0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236_ap_start;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236_ap_done;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236_ap_idle;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236_ap_ready;
-wire   [15:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236_x_address0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236_x_ce0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236_x_we0;
-wire   [31:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236_x_d0;
-wire   [15:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236_buf0_address0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236_buf0_ce0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244_ap_start;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244_ap_done;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244_ap_idle;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244_ap_ready;
-wire   [15:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244_x_address0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244_x_ce0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244_x_we0;
-wire   [31:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244_x_d0;
-wire   [15:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244_buf0_address0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244_buf0_ce0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252_ap_start;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252_ap_done;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252_ap_idle;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252_ap_ready;
-wire   [15:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252_x_address0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252_x_ce0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252_x_we0;
-wire   [31:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252_x_d0;
-wire   [15:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252_buf0_address0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252_buf0_ce0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260_ap_start;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260_ap_done;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260_ap_idle;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260_ap_ready;
-wire   [15:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260_y_address0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260_y_ce0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260_y_we0;
-wire   [31:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260_y_d0;
-wire   [15:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260_buf1_address0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260_buf1_ce0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268_ap_start;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268_ap_done;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268_ap_idle;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268_ap_ready;
-wire   [15:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268_x_address0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268_x_ce0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268_x_we0;
-wire   [31:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268_x_d0;
-wire   [15:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268_buf0_address0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268_buf0_ce0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276_ap_start;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276_ap_done;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276_ap_idle;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276_ap_ready;
-wire   [15:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276_x_address0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276_x_ce0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276_x_we0;
-wire   [31:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276_x_d0;
-wire   [15:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276_buf0_address0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276_buf0_ce0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284_ap_start;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284_ap_done;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284_ap_idle;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284_ap_ready;
-wire   [15:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284_y_address0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284_y_ce0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284_y_we0;
-wire   [31:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284_y_d0;
-wire   [15:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284_buf1_address0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284_buf1_ce0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_ap_start;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_ap_done;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_ap_idle;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_ap_ready;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_AWVALID;
-wire   [63:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_AWADDR;
-wire   [0:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_AWID;
-wire   [31:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_AWLEN;
-wire   [2:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_AWSIZE;
-wire   [1:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_AWBURST;
-wire   [1:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_AWLOCK;
-wire   [3:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_AWCACHE;
-wire   [2:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_AWPROT;
-wire   [3:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_AWQOS;
-wire   [3:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_AWREGION;
-wire   [0:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_AWUSER;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_WVALID;
-wire   [15:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_WDATA;
-wire   [1:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_WSTRB;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_WLAST;
-wire   [0:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_WID;
-wire   [0:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_WUSER;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_ARVALID;
-wire   [63:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_ARADDR;
-wire   [0:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_ARID;
-wire   [31:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_ARLEN;
-wire   [2:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_ARSIZE;
-wire   [1:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_ARBURST;
-wire   [1:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_ARLOCK;
-wire   [3:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_ARCACHE;
-wire   [2:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_ARPROT;
-wire   [3:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_ARQOS;
-wire   [3:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_ARREGION;
-wire   [0:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_ARUSER;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_RREADY;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_BREADY;
-wire   [15:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_buf2_address0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_buf2_ce0;
-wire    grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_ap_start;
-wire    grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_ap_done;
-wire    grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_ap_idle;
-wire    grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_ap_ready;
-wire   [15:0] grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_x_address0;
-wire    grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_x_ce0;
-wire   [31:0] grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_sum_out;
-wire    grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_sum_out_ap_vld;
-wire   [31:0] grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_grp_fu_402_p_din0;
-wire   [31:0] grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_grp_fu_402_p_din1;
-wire   [0:0] grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_grp_fu_402_p_opcode;
-wire    grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_grp_fu_402_p_ce;
-wire    grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_ap_start;
-wire    grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_ap_done;
-wire    grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_ap_idle;
-wire    grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_ap_ready;
-wire   [15:0] grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_x_address0;
-wire    grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_x_ce0;
-wire   [31:0] grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_var_1_out;
-wire    grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_var_1_out_ap_vld;
-wire   [31:0] grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_grp_fu_402_p_din0;
-wire   [31:0] grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_grp_fu_402_p_din1;
-wire   [1:0] grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_grp_fu_402_p_opcode;
-wire    grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_grp_fu_402_p_ce;
-wire   [31:0] grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_grp_fu_583_p_din0;
-wire   [31:0] grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_grp_fu_583_p_din1;
-wire    grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_grp_fu_583_p_ce;
-wire    grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_ap_start;
-wire    grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_ap_done;
-wire    grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_ap_idle;
-wire    grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_ap_ready;
-wire   [15:0] grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_x_address0;
-wire    grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_x_ce0;
-wire   [15:0] grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_buf2_address0;
-wire    grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_buf2_ce0;
-wire    grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_buf2_we0;
-wire   [15:0] grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_buf2_d0;
-wire   [31:0] grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_grp_fu_402_p_din0;
-wire   [31:0] grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_grp_fu_402_p_din1;
-wire   [0:0] grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_grp_fu_402_p_opcode;
-wire    grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_grp_fu_402_p_ce;
-wire   [31:0] grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_grp_fu_407_p_din0;
-wire   [31:0] grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_grp_fu_407_p_din1;
-wire    grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_grp_fu_407_p_ce;
-wire    grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_ap_start;
-wire    grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_ap_done;
-wire    grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_ap_idle;
-wire    grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_ap_ready;
-wire   [15:0] grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_x_address0;
-wire    grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_x_ce0;
-wire   [31:0] grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_sum_sq_out;
-wire    grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_sum_sq_out_ap_vld;
-wire   [31:0] grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_grp_fu_402_p_din0;
-wire   [31:0] grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_grp_fu_402_p_din1;
-wire   [0:0] grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_grp_fu_402_p_opcode;
-wire    grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_grp_fu_402_p_ce;
-wire   [31:0] grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_grp_fu_583_p_din0;
-wire   [31:0] grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_grp_fu_583_p_din1;
-wire    grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_grp_fu_583_p_ce;
-wire    grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_ap_start;
-wire    grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_ap_done;
-wire    grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_ap_idle;
-wire    grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_ap_ready;
-wire   [15:0] grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_x_address0;
-wire    grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_x_ce0;
-wire   [15:0] grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_buf2_address0;
-wire    grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_buf2_ce0;
-wire    grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_buf2_we0;
-wire   [15:0] grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_buf2_d0;
-wire   [31:0] grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_grp_fu_407_p_din0;
-wire   [31:0] grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_grp_fu_407_p_din1;
-wire    grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_grp_fu_407_p_ce;
-wire    grp_activation_accelerator_Pipeline_silu_loop_fu_337_ap_start;
-wire    grp_activation_accelerator_Pipeline_silu_loop_fu_337_ap_done;
-wire    grp_activation_accelerator_Pipeline_silu_loop_fu_337_ap_idle;
-wire    grp_activation_accelerator_Pipeline_silu_loop_fu_337_ap_ready;
-wire   [15:0] grp_activation_accelerator_Pipeline_silu_loop_fu_337_x_address0;
-wire    grp_activation_accelerator_Pipeline_silu_loop_fu_337_x_ce0;
-wire   [15:0] grp_activation_accelerator_Pipeline_silu_loop_fu_337_buf2_address0;
-wire    grp_activation_accelerator_Pipeline_silu_loop_fu_337_buf2_ce0;
-wire    grp_activation_accelerator_Pipeline_silu_loop_fu_337_buf2_we0;
-wire   [15:0] grp_activation_accelerator_Pipeline_silu_loop_fu_337_buf2_d0;
-wire   [31:0] grp_activation_accelerator_Pipeline_silu_loop_fu_337_grp_fu_407_p_din0;
-wire   [31:0] grp_activation_accelerator_Pipeline_silu_loop_fu_337_grp_fu_407_p_din1;
-wire    grp_activation_accelerator_Pipeline_silu_loop_fu_337_grp_fu_407_p_ce;
-wire    grp_activation_accelerator_Pipeline_gelu_loop_fu_344_ap_start;
-wire    grp_activation_accelerator_Pipeline_gelu_loop_fu_344_ap_done;
-wire    grp_activation_accelerator_Pipeline_gelu_loop_fu_344_ap_idle;
-wire    grp_activation_accelerator_Pipeline_gelu_loop_fu_344_ap_ready;
-wire   [15:0] grp_activation_accelerator_Pipeline_gelu_loop_fu_344_x_address0;
-wire    grp_activation_accelerator_Pipeline_gelu_loop_fu_344_x_ce0;
-wire   [15:0] grp_activation_accelerator_Pipeline_gelu_loop_fu_344_buf2_address0;
-wire    grp_activation_accelerator_Pipeline_gelu_loop_fu_344_buf2_ce0;
-wire    grp_activation_accelerator_Pipeline_gelu_loop_fu_344_buf2_we0;
-wire   [15:0] grp_activation_accelerator_Pipeline_gelu_loop_fu_344_buf2_d0;
-wire   [31:0] grp_activation_accelerator_Pipeline_gelu_loop_fu_344_grp_fu_402_p_din0;
-wire   [31:0] grp_activation_accelerator_Pipeline_gelu_loop_fu_344_grp_fu_402_p_din1;
-wire   [0:0] grp_activation_accelerator_Pipeline_gelu_loop_fu_344_grp_fu_402_p_opcode;
-wire    grp_activation_accelerator_Pipeline_gelu_loop_fu_344_grp_fu_402_p_ce;
-wire    grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_ap_start;
-wire    grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_ap_done;
-wire    grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_ap_idle;
-wire    grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_ap_ready;
-wire   [15:0] grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_x_address0;
-wire    grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_x_ce0;
-wire   [15:0] grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_y_address0;
-wire    grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_y_ce0;
-wire   [15:0] grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_buf2_address0;
-wire    grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_buf2_ce0;
-wire    grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_buf2_we0;
-wire   [15:0] grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_buf2_d0;
-wire   [31:0] grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_grp_fu_583_p_din0;
-wire   [31:0] grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_grp_fu_583_p_din1;
-wire    grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_grp_fu_583_p_ce;
-wire    grp_float_safe_softmax_fu_359_ap_start;
-wire    grp_float_safe_softmax_fu_359_ap_done;
-wire    grp_float_safe_softmax_fu_359_ap_idle;
-wire    grp_float_safe_softmax_fu_359_ap_ready;
-wire   [15:0] grp_float_safe_softmax_fu_359_x_address0;
-wire    grp_float_safe_softmax_fu_359_x_ce0;
-wire   [15:0] grp_float_safe_softmax_fu_359_buf2_address0;
-wire    grp_float_safe_softmax_fu_359_buf2_ce0;
-wire    grp_float_safe_softmax_fu_359_buf2_we0;
-wire   [15:0] grp_float_safe_softmax_fu_359_buf2_d0;
-wire    grp_activation_accelerator_Pipeline_float_add_loop_fu_366_ap_start;
-wire    grp_activation_accelerator_Pipeline_float_add_loop_fu_366_ap_done;
-wire    grp_activation_accelerator_Pipeline_float_add_loop_fu_366_ap_idle;
-wire    grp_activation_accelerator_Pipeline_float_add_loop_fu_366_ap_ready;
-wire   [15:0] grp_activation_accelerator_Pipeline_float_add_loop_fu_366_x_address0;
-wire    grp_activation_accelerator_Pipeline_float_add_loop_fu_366_x_ce0;
-wire   [15:0] grp_activation_accelerator_Pipeline_float_add_loop_fu_366_y_address0;
-wire    grp_activation_accelerator_Pipeline_float_add_loop_fu_366_y_ce0;
-wire   [15:0] grp_activation_accelerator_Pipeline_float_add_loop_fu_366_buf2_address0;
-wire    grp_activation_accelerator_Pipeline_float_add_loop_fu_366_buf2_ce0;
-wire    grp_activation_accelerator_Pipeline_float_add_loop_fu_366_buf2_we0;
-wire   [15:0] grp_activation_accelerator_Pipeline_float_add_loop_fu_366_buf2_d0;
-wire   [31:0] grp_activation_accelerator_Pipeline_float_add_loop_fu_366_grp_fu_402_p_din0;
-wire   [31:0] grp_activation_accelerator_Pipeline_float_add_loop_fu_366_grp_fu_402_p_din1;
-wire   [0:0] grp_activation_accelerator_Pipeline_float_add_loop_fu_366_grp_fu_402_p_opcode;
-wire    grp_activation_accelerator_Pipeline_float_add_loop_fu_366_grp_fu_402_p_ce;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_ap_start;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_ap_done;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_ap_idle;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_ap_ready;
-wire   [15:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_buf0_address0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_buf0_ce0;
-wire   [15:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_buf1_address0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_buf1_ce0;
-wire   [15:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_buf2_address0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_buf2_ce0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_buf2_we0;
-wire   [15:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_buf2_d0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_ap_start;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_ap_done;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_ap_idle;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_ap_ready;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_AWVALID;
-wire   [63:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_AWADDR;
-wire   [0:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_AWID;
-wire   [31:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_AWLEN;
-wire   [2:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_AWSIZE;
-wire   [1:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_AWBURST;
-wire   [1:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_AWLOCK;
-wire   [3:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_AWCACHE;
-wire   [2:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_AWPROT;
-wire   [3:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_AWQOS;
-wire   [3:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_AWREGION;
-wire   [0:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_AWUSER;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_WVALID;
-wire   [15:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_WDATA;
-wire   [1:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_WSTRB;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_WLAST;
-wire   [0:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_WID;
-wire   [0:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_WUSER;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_ARVALID;
-wire   [63:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_ARADDR;
-wire   [0:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_ARID;
-wire   [31:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_ARLEN;
-wire   [2:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_ARSIZE;
-wire   [1:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_ARBURST;
-wire   [1:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_ARLOCK;
-wire   [3:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_ARCACHE;
-wire   [2:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_ARPROT;
-wire   [3:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_ARQOS;
-wire   [3:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_ARREGION;
-wire   [0:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_ARUSER;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_RREADY;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_BREADY;
-wire   [15:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_buf0_address0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_buf0_ce0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_buf0_we0;
-wire   [15:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_buf0_d0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_ap_start;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_ap_done;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_ap_idle;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_ap_ready;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_AWVALID;
-wire   [63:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_AWADDR;
-wire   [0:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_AWID;
-wire   [31:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_AWLEN;
-wire   [2:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_AWSIZE;
-wire   [1:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_AWBURST;
-wire   [1:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_AWLOCK;
-wire   [3:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_AWCACHE;
-wire   [2:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_AWPROT;
-wire   [3:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_AWQOS;
-wire   [3:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_AWREGION;
-wire   [0:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_AWUSER;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_WVALID;
-wire   [15:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_WDATA;
-wire   [1:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_WSTRB;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_WLAST;
-wire   [0:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_WID;
-wire   [0:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_WUSER;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_ARVALID;
-wire   [63:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_ARADDR;
-wire   [0:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_ARID;
-wire   [31:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_ARLEN;
-wire   [2:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_ARSIZE;
-wire   [1:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_ARBURST;
-wire   [1:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_ARLOCK;
-wire   [3:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_ARCACHE;
-wire   [2:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_ARPROT;
-wire   [3:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_ARQOS;
-wire   [3:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_ARREGION;
-wire   [0:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_ARUSER;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_RREADY;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_BREADY;
-wire   [15:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_buf1_address0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_buf1_ce0;
-wire    grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_buf1_we0;
-wire   [15:0] grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_buf1_d0;
+reg   [11:0] y_address1;
+reg    y_ce1;
+wire   [31:0] y_q1;
+reg   [11:0] y_1_address0;
+reg    y_1_ce0;
+reg    y_1_we0;
+wire   [31:0] y_1_q0;
+reg   [11:0] y_1_address1;
+reg    y_1_ce1;
+wire   [31:0] y_1_q1;
+reg   [11:0] y_2_address0;
+reg    y_2_ce0;
+reg    y_2_we0;
+wire   [31:0] y_2_q0;
+reg   [11:0] y_2_address1;
+reg    y_2_ce1;
+wire   [31:0] y_2_q1;
+reg   [11:0] y_3_address0;
+reg    y_3_ce0;
+reg    y_3_we0;
+wire   [31:0] y_3_q0;
+reg   [11:0] y_3_address1;
+reg    y_3_ce1;
+wire   [31:0] y_3_q1;
+reg   [11:0] y_4_address0;
+reg    y_4_ce0;
+reg    y_4_we0;
+wire   [31:0] y_4_q0;
+reg   [11:0] y_4_address1;
+reg    y_4_ce1;
+wire   [31:0] y_4_q1;
+reg   [11:0] y_5_address0;
+reg    y_5_ce0;
+reg    y_5_we0;
+wire   [31:0] y_5_q0;
+reg   [11:0] y_5_address1;
+reg    y_5_ce1;
+wire   [31:0] y_5_q1;
+reg   [11:0] y_6_address0;
+reg    y_6_ce0;
+reg    y_6_we0;
+wire   [31:0] y_6_q0;
+reg   [11:0] y_6_address1;
+reg    y_6_ce1;
+wire   [31:0] y_6_q1;
+reg   [11:0] y_7_address0;
+reg    y_7_ce0;
+reg    y_7_we0;
+wire   [31:0] y_7_q0;
+reg   [11:0] y_7_address1;
+reg    y_7_ce1;
+wire   [31:0] y_7_q1;
+reg   [11:0] y_8_address0;
+reg    y_8_ce0;
+reg    y_8_we0;
+wire   [31:0] y_8_q0;
+reg   [11:0] y_8_address1;
+reg    y_8_ce1;
+wire   [31:0] y_8_q1;
+reg   [11:0] y_9_address0;
+reg    y_9_ce0;
+reg    y_9_we0;
+wire   [31:0] y_9_q0;
+reg   [11:0] y_9_address1;
+reg    y_9_ce1;
+wire   [31:0] y_9_q1;
+reg   [11:0] y_10_address0;
+reg    y_10_ce0;
+reg    y_10_we0;
+wire   [31:0] y_10_q0;
+reg   [11:0] y_10_address1;
+reg    y_10_ce1;
+wire   [31:0] y_10_q1;
+reg   [11:0] y_11_address0;
+reg    y_11_ce0;
+reg    y_11_we0;
+wire   [31:0] y_11_q0;
+reg   [11:0] y_11_address1;
+reg    y_11_ce1;
+wire   [31:0] y_11_q1;
+reg   [11:0] y_12_address0;
+reg    y_12_ce0;
+reg    y_12_we0;
+wire   [31:0] y_12_q0;
+reg   [11:0] y_12_address1;
+reg    y_12_ce1;
+wire   [31:0] y_12_q1;
+reg   [11:0] y_13_address0;
+reg    y_13_ce0;
+reg    y_13_we0;
+wire   [31:0] y_13_q0;
+reg   [11:0] y_13_address1;
+reg    y_13_ce1;
+wire   [31:0] y_13_q1;
+reg   [11:0] y_14_address0;
+reg    y_14_ce0;
+reg    y_14_we0;
+wire   [31:0] y_14_q0;
+reg   [11:0] y_14_address1;
+reg    y_14_ce1;
+wire   [31:0] y_14_q1;
+reg   [11:0] y_15_address0;
+reg    y_15_ce0;
+reg    y_15_we0;
+wire   [31:0] y_15_q0;
+reg   [11:0] y_15_address1;
+reg    y_15_ce1;
+wire   [31:0] y_15_q1;
+wire    grp_bf16_to_float_fu_328_ap_start;
+wire    grp_bf16_to_float_fu_328_ap_done;
+wire    grp_bf16_to_float_fu_328_ap_idle;
+wire    grp_bf16_to_float_fu_328_ap_ready;
+wire   [15:0] grp_bf16_to_float_fu_328_in_r_address0;
+wire    grp_bf16_to_float_fu_328_in_r_ce0;
+wire   [11:0] grp_bf16_to_float_fu_328_out_0_address0;
+wire    grp_bf16_to_float_fu_328_out_0_ce0;
+wire    grp_bf16_to_float_fu_328_out_0_we0;
+wire   [31:0] grp_bf16_to_float_fu_328_out_0_d0;
+wire   [11:0] grp_bf16_to_float_fu_328_out_1_address0;
+wire    grp_bf16_to_float_fu_328_out_1_ce0;
+wire    grp_bf16_to_float_fu_328_out_1_we0;
+wire   [31:0] grp_bf16_to_float_fu_328_out_1_d0;
+wire   [11:0] grp_bf16_to_float_fu_328_out_2_address0;
+wire    grp_bf16_to_float_fu_328_out_2_ce0;
+wire    grp_bf16_to_float_fu_328_out_2_we0;
+wire   [31:0] grp_bf16_to_float_fu_328_out_2_d0;
+wire   [11:0] grp_bf16_to_float_fu_328_out_3_address0;
+wire    grp_bf16_to_float_fu_328_out_3_ce0;
+wire    grp_bf16_to_float_fu_328_out_3_we0;
+wire   [31:0] grp_bf16_to_float_fu_328_out_3_d0;
+wire   [11:0] grp_bf16_to_float_fu_328_out_4_address0;
+wire    grp_bf16_to_float_fu_328_out_4_ce0;
+wire    grp_bf16_to_float_fu_328_out_4_we0;
+wire   [31:0] grp_bf16_to_float_fu_328_out_4_d0;
+wire   [11:0] grp_bf16_to_float_fu_328_out_5_address0;
+wire    grp_bf16_to_float_fu_328_out_5_ce0;
+wire    grp_bf16_to_float_fu_328_out_5_we0;
+wire   [31:0] grp_bf16_to_float_fu_328_out_5_d0;
+wire   [11:0] grp_bf16_to_float_fu_328_out_6_address0;
+wire    grp_bf16_to_float_fu_328_out_6_ce0;
+wire    grp_bf16_to_float_fu_328_out_6_we0;
+wire   [31:0] grp_bf16_to_float_fu_328_out_6_d0;
+wire   [11:0] grp_bf16_to_float_fu_328_out_7_address0;
+wire    grp_bf16_to_float_fu_328_out_7_ce0;
+wire    grp_bf16_to_float_fu_328_out_7_we0;
+wire   [31:0] grp_bf16_to_float_fu_328_out_7_d0;
+wire   [11:0] grp_bf16_to_float_fu_328_out_8_address0;
+wire    grp_bf16_to_float_fu_328_out_8_ce0;
+wire    grp_bf16_to_float_fu_328_out_8_we0;
+wire   [31:0] grp_bf16_to_float_fu_328_out_8_d0;
+wire   [11:0] grp_bf16_to_float_fu_328_out_9_address0;
+wire    grp_bf16_to_float_fu_328_out_9_ce0;
+wire    grp_bf16_to_float_fu_328_out_9_we0;
+wire   [31:0] grp_bf16_to_float_fu_328_out_9_d0;
+wire   [11:0] grp_bf16_to_float_fu_328_out_10_address0;
+wire    grp_bf16_to_float_fu_328_out_10_ce0;
+wire    grp_bf16_to_float_fu_328_out_10_we0;
+wire   [31:0] grp_bf16_to_float_fu_328_out_10_d0;
+wire   [11:0] grp_bf16_to_float_fu_328_out_11_address0;
+wire    grp_bf16_to_float_fu_328_out_11_ce0;
+wire    grp_bf16_to_float_fu_328_out_11_we0;
+wire   [31:0] grp_bf16_to_float_fu_328_out_11_d0;
+wire   [11:0] grp_bf16_to_float_fu_328_out_12_address0;
+wire    grp_bf16_to_float_fu_328_out_12_ce0;
+wire    grp_bf16_to_float_fu_328_out_12_we0;
+wire   [31:0] grp_bf16_to_float_fu_328_out_12_d0;
+wire   [11:0] grp_bf16_to_float_fu_328_out_13_address0;
+wire    grp_bf16_to_float_fu_328_out_13_ce0;
+wire    grp_bf16_to_float_fu_328_out_13_we0;
+wire   [31:0] grp_bf16_to_float_fu_328_out_13_d0;
+wire   [11:0] grp_bf16_to_float_fu_328_out_14_address0;
+wire    grp_bf16_to_float_fu_328_out_14_ce0;
+wire    grp_bf16_to_float_fu_328_out_14_we0;
+wire   [31:0] grp_bf16_to_float_fu_328_out_14_d0;
+wire   [11:0] grp_bf16_to_float_fu_328_out_15_address0;
+wire    grp_bf16_to_float_fu_328_out_15_ce0;
+wire    grp_bf16_to_float_fu_328_out_15_we0;
+wire   [31:0] grp_bf16_to_float_fu_328_out_15_d0;
+wire    grp_bf16_to_float_fu_366_ap_start;
+wire    grp_bf16_to_float_fu_366_ap_done;
+wire    grp_bf16_to_float_fu_366_ap_idle;
+wire    grp_bf16_to_float_fu_366_ap_ready;
+wire   [15:0] grp_bf16_to_float_fu_366_in_r_address0;
+wire    grp_bf16_to_float_fu_366_in_r_ce0;
+wire   [11:0] grp_bf16_to_float_fu_366_out_0_address0;
+wire    grp_bf16_to_float_fu_366_out_0_ce0;
+wire    grp_bf16_to_float_fu_366_out_0_we0;
+wire   [31:0] grp_bf16_to_float_fu_366_out_0_d0;
+wire   [11:0] grp_bf16_to_float_fu_366_out_1_address0;
+wire    grp_bf16_to_float_fu_366_out_1_ce0;
+wire    grp_bf16_to_float_fu_366_out_1_we0;
+wire   [31:0] grp_bf16_to_float_fu_366_out_1_d0;
+wire   [11:0] grp_bf16_to_float_fu_366_out_2_address0;
+wire    grp_bf16_to_float_fu_366_out_2_ce0;
+wire    grp_bf16_to_float_fu_366_out_2_we0;
+wire   [31:0] grp_bf16_to_float_fu_366_out_2_d0;
+wire   [11:0] grp_bf16_to_float_fu_366_out_3_address0;
+wire    grp_bf16_to_float_fu_366_out_3_ce0;
+wire    grp_bf16_to_float_fu_366_out_3_we0;
+wire   [31:0] grp_bf16_to_float_fu_366_out_3_d0;
+wire   [11:0] grp_bf16_to_float_fu_366_out_4_address0;
+wire    grp_bf16_to_float_fu_366_out_4_ce0;
+wire    grp_bf16_to_float_fu_366_out_4_we0;
+wire   [31:0] grp_bf16_to_float_fu_366_out_4_d0;
+wire   [11:0] grp_bf16_to_float_fu_366_out_5_address0;
+wire    grp_bf16_to_float_fu_366_out_5_ce0;
+wire    grp_bf16_to_float_fu_366_out_5_we0;
+wire   [31:0] grp_bf16_to_float_fu_366_out_5_d0;
+wire   [11:0] grp_bf16_to_float_fu_366_out_6_address0;
+wire    grp_bf16_to_float_fu_366_out_6_ce0;
+wire    grp_bf16_to_float_fu_366_out_6_we0;
+wire   [31:0] grp_bf16_to_float_fu_366_out_6_d0;
+wire   [11:0] grp_bf16_to_float_fu_366_out_7_address0;
+wire    grp_bf16_to_float_fu_366_out_7_ce0;
+wire    grp_bf16_to_float_fu_366_out_7_we0;
+wire   [31:0] grp_bf16_to_float_fu_366_out_7_d0;
+wire   [11:0] grp_bf16_to_float_fu_366_out_8_address0;
+wire    grp_bf16_to_float_fu_366_out_8_ce0;
+wire    grp_bf16_to_float_fu_366_out_8_we0;
+wire   [31:0] grp_bf16_to_float_fu_366_out_8_d0;
+wire   [11:0] grp_bf16_to_float_fu_366_out_9_address0;
+wire    grp_bf16_to_float_fu_366_out_9_ce0;
+wire    grp_bf16_to_float_fu_366_out_9_we0;
+wire   [31:0] grp_bf16_to_float_fu_366_out_9_d0;
+wire   [11:0] grp_bf16_to_float_fu_366_out_10_address0;
+wire    grp_bf16_to_float_fu_366_out_10_ce0;
+wire    grp_bf16_to_float_fu_366_out_10_we0;
+wire   [31:0] grp_bf16_to_float_fu_366_out_10_d0;
+wire   [11:0] grp_bf16_to_float_fu_366_out_11_address0;
+wire    grp_bf16_to_float_fu_366_out_11_ce0;
+wire    grp_bf16_to_float_fu_366_out_11_we0;
+wire   [31:0] grp_bf16_to_float_fu_366_out_11_d0;
+wire   [11:0] grp_bf16_to_float_fu_366_out_12_address0;
+wire    grp_bf16_to_float_fu_366_out_12_ce0;
+wire    grp_bf16_to_float_fu_366_out_12_we0;
+wire   [31:0] grp_bf16_to_float_fu_366_out_12_d0;
+wire   [11:0] grp_bf16_to_float_fu_366_out_13_address0;
+wire    grp_bf16_to_float_fu_366_out_13_ce0;
+wire    grp_bf16_to_float_fu_366_out_13_we0;
+wire   [31:0] grp_bf16_to_float_fu_366_out_13_d0;
+wire   [11:0] grp_bf16_to_float_fu_366_out_14_address0;
+wire    grp_bf16_to_float_fu_366_out_14_ce0;
+wire    grp_bf16_to_float_fu_366_out_14_we0;
+wire   [31:0] grp_bf16_to_float_fu_366_out_14_d0;
+wire   [11:0] grp_bf16_to_float_fu_366_out_15_address0;
+wire    grp_bf16_to_float_fu_366_out_15_ce0;
+wire    grp_bf16_to_float_fu_366_out_15_we0;
+wire   [31:0] grp_bf16_to_float_fu_366_out_15_d0;
+wire    grp_float_add2_fu_404_ap_start;
+wire    grp_float_add2_fu_404_ap_done;
+wire    grp_float_add2_fu_404_ap_idle;
+wire    grp_float_add2_fu_404_ap_ready;
+wire   [11:0] grp_float_add2_fu_404_x_0_address0;
+wire    grp_float_add2_fu_404_x_0_ce0;
+wire   [11:0] grp_float_add2_fu_404_x_0_address1;
+wire    grp_float_add2_fu_404_x_0_ce1;
+wire   [11:0] grp_float_add2_fu_404_x_1_address0;
+wire    grp_float_add2_fu_404_x_1_ce0;
+wire   [11:0] grp_float_add2_fu_404_x_1_address1;
+wire    grp_float_add2_fu_404_x_1_ce1;
+wire   [11:0] grp_float_add2_fu_404_x_2_address0;
+wire    grp_float_add2_fu_404_x_2_ce0;
+wire   [11:0] grp_float_add2_fu_404_x_2_address1;
+wire    grp_float_add2_fu_404_x_2_ce1;
+wire   [11:0] grp_float_add2_fu_404_x_3_address0;
+wire    grp_float_add2_fu_404_x_3_ce0;
+wire   [11:0] grp_float_add2_fu_404_x_3_address1;
+wire    grp_float_add2_fu_404_x_3_ce1;
+wire   [11:0] grp_float_add2_fu_404_x_4_address0;
+wire    grp_float_add2_fu_404_x_4_ce0;
+wire   [11:0] grp_float_add2_fu_404_x_4_address1;
+wire    grp_float_add2_fu_404_x_4_ce1;
+wire   [11:0] grp_float_add2_fu_404_x_5_address0;
+wire    grp_float_add2_fu_404_x_5_ce0;
+wire   [11:0] grp_float_add2_fu_404_x_5_address1;
+wire    grp_float_add2_fu_404_x_5_ce1;
+wire   [11:0] grp_float_add2_fu_404_x_6_address0;
+wire    grp_float_add2_fu_404_x_6_ce0;
+wire   [11:0] grp_float_add2_fu_404_x_6_address1;
+wire    grp_float_add2_fu_404_x_6_ce1;
+wire   [11:0] grp_float_add2_fu_404_x_7_address0;
+wire    grp_float_add2_fu_404_x_7_ce0;
+wire   [11:0] grp_float_add2_fu_404_x_7_address1;
+wire    grp_float_add2_fu_404_x_7_ce1;
+wire   [11:0] grp_float_add2_fu_404_x_8_address0;
+wire    grp_float_add2_fu_404_x_8_ce0;
+wire   [11:0] grp_float_add2_fu_404_x_8_address1;
+wire    grp_float_add2_fu_404_x_8_ce1;
+wire   [11:0] grp_float_add2_fu_404_x_9_address0;
+wire    grp_float_add2_fu_404_x_9_ce0;
+wire   [11:0] grp_float_add2_fu_404_x_9_address1;
+wire    grp_float_add2_fu_404_x_9_ce1;
+wire   [11:0] grp_float_add2_fu_404_x_10_address0;
+wire    grp_float_add2_fu_404_x_10_ce0;
+wire   [11:0] grp_float_add2_fu_404_x_10_address1;
+wire    grp_float_add2_fu_404_x_10_ce1;
+wire   [11:0] grp_float_add2_fu_404_x_11_address0;
+wire    grp_float_add2_fu_404_x_11_ce0;
+wire   [11:0] grp_float_add2_fu_404_x_11_address1;
+wire    grp_float_add2_fu_404_x_11_ce1;
+wire   [11:0] grp_float_add2_fu_404_x_12_address0;
+wire    grp_float_add2_fu_404_x_12_ce0;
+wire   [11:0] grp_float_add2_fu_404_x_12_address1;
+wire    grp_float_add2_fu_404_x_12_ce1;
+wire   [11:0] grp_float_add2_fu_404_x_13_address0;
+wire    grp_float_add2_fu_404_x_13_ce0;
+wire   [11:0] grp_float_add2_fu_404_x_13_address1;
+wire    grp_float_add2_fu_404_x_13_ce1;
+wire   [11:0] grp_float_add2_fu_404_x_14_address0;
+wire    grp_float_add2_fu_404_x_14_ce0;
+wire   [11:0] grp_float_add2_fu_404_x_14_address1;
+wire    grp_float_add2_fu_404_x_14_ce1;
+wire   [11:0] grp_float_add2_fu_404_x_15_address0;
+wire    grp_float_add2_fu_404_x_15_ce0;
+wire   [11:0] grp_float_add2_fu_404_x_15_address1;
+wire    grp_float_add2_fu_404_x_15_ce1;
+wire   [11:0] grp_float_add2_fu_404_y_0_address0;
+wire    grp_float_add2_fu_404_y_0_ce0;
+wire   [11:0] grp_float_add2_fu_404_y_0_address1;
+wire    grp_float_add2_fu_404_y_0_ce1;
+wire   [11:0] grp_float_add2_fu_404_y_1_address0;
+wire    grp_float_add2_fu_404_y_1_ce0;
+wire   [11:0] grp_float_add2_fu_404_y_1_address1;
+wire    grp_float_add2_fu_404_y_1_ce1;
+wire   [11:0] grp_float_add2_fu_404_y_2_address0;
+wire    grp_float_add2_fu_404_y_2_ce0;
+wire   [11:0] grp_float_add2_fu_404_y_2_address1;
+wire    grp_float_add2_fu_404_y_2_ce1;
+wire   [11:0] grp_float_add2_fu_404_y_3_address0;
+wire    grp_float_add2_fu_404_y_3_ce0;
+wire   [11:0] grp_float_add2_fu_404_y_3_address1;
+wire    grp_float_add2_fu_404_y_3_ce1;
+wire   [11:0] grp_float_add2_fu_404_y_4_address0;
+wire    grp_float_add2_fu_404_y_4_ce0;
+wire   [11:0] grp_float_add2_fu_404_y_4_address1;
+wire    grp_float_add2_fu_404_y_4_ce1;
+wire   [11:0] grp_float_add2_fu_404_y_5_address0;
+wire    grp_float_add2_fu_404_y_5_ce0;
+wire   [11:0] grp_float_add2_fu_404_y_5_address1;
+wire    grp_float_add2_fu_404_y_5_ce1;
+wire   [11:0] grp_float_add2_fu_404_y_6_address0;
+wire    grp_float_add2_fu_404_y_6_ce0;
+wire   [11:0] grp_float_add2_fu_404_y_6_address1;
+wire    grp_float_add2_fu_404_y_6_ce1;
+wire   [11:0] grp_float_add2_fu_404_y_7_address0;
+wire    grp_float_add2_fu_404_y_7_ce0;
+wire   [11:0] grp_float_add2_fu_404_y_7_address1;
+wire    grp_float_add2_fu_404_y_7_ce1;
+wire   [11:0] grp_float_add2_fu_404_y_8_address0;
+wire    grp_float_add2_fu_404_y_8_ce0;
+wire   [11:0] grp_float_add2_fu_404_y_8_address1;
+wire    grp_float_add2_fu_404_y_8_ce1;
+wire   [11:0] grp_float_add2_fu_404_y_9_address0;
+wire    grp_float_add2_fu_404_y_9_ce0;
+wire   [11:0] grp_float_add2_fu_404_y_9_address1;
+wire    grp_float_add2_fu_404_y_9_ce1;
+wire   [11:0] grp_float_add2_fu_404_y_10_address0;
+wire    grp_float_add2_fu_404_y_10_ce0;
+wire   [11:0] grp_float_add2_fu_404_y_10_address1;
+wire    grp_float_add2_fu_404_y_10_ce1;
+wire   [11:0] grp_float_add2_fu_404_y_11_address0;
+wire    grp_float_add2_fu_404_y_11_ce0;
+wire   [11:0] grp_float_add2_fu_404_y_11_address1;
+wire    grp_float_add2_fu_404_y_11_ce1;
+wire   [11:0] grp_float_add2_fu_404_y_12_address0;
+wire    grp_float_add2_fu_404_y_12_ce0;
+wire   [11:0] grp_float_add2_fu_404_y_12_address1;
+wire    grp_float_add2_fu_404_y_12_ce1;
+wire   [11:0] grp_float_add2_fu_404_y_13_address0;
+wire    grp_float_add2_fu_404_y_13_ce0;
+wire   [11:0] grp_float_add2_fu_404_y_13_address1;
+wire    grp_float_add2_fu_404_y_13_ce1;
+wire   [11:0] grp_float_add2_fu_404_y_14_address0;
+wire    grp_float_add2_fu_404_y_14_ce0;
+wire   [11:0] grp_float_add2_fu_404_y_14_address1;
+wire    grp_float_add2_fu_404_y_14_ce1;
+wire   [11:0] grp_float_add2_fu_404_y_15_address0;
+wire    grp_float_add2_fu_404_y_15_ce0;
+wire   [11:0] grp_float_add2_fu_404_y_15_address1;
+wire    grp_float_add2_fu_404_y_15_ce1;
+wire   [11:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0;
+wire   [15:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0;
+wire   [11:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1;
+wire   [15:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1;
+wire   [11:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0;
+wire   [15:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0;
+wire   [11:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1;
+wire   [15:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1;
+wire   [11:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0;
+wire   [15:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0;
+wire   [11:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1;
+wire   [15:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1;
+wire   [11:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0;
+wire   [15:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0;
+wire   [11:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1;
+wire   [15:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1;
+wire   [11:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0;
+wire   [15:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0;
+wire   [11:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1;
+wire   [15:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1;
+wire   [11:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0;
+wire   [15:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0;
+wire   [11:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1;
+wire   [15:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1;
+wire   [11:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0;
+wire   [15:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0;
+wire   [11:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1;
+wire   [15:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1;
+wire   [11:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0;
+wire   [15:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0;
+wire   [11:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1;
+wire   [15:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1;
+wire   [11:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0;
+wire   [15:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0;
+wire   [11:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1;
+wire   [15:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1;
+wire   [11:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0;
+wire   [15:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0;
+wire   [11:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1;
+wire    grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1;
+wire   [15:0] grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1;
+wire   [11:0] grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0;
+wire    grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0;
+wire    grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0;
+wire   [15:0] grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0;
+wire   [11:0] grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1;
+wire    grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1;
+wire    grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1;
+wire   [15:0] grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1;
+wire   [11:0] grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0;
+wire    grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0;
+wire    grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0;
+wire   [15:0] grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0;
+wire   [11:0] grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1;
+wire    grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1;
+wire    grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1;
+wire   [15:0] grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1;
+wire   [11:0] grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0;
+wire    grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0;
+wire    grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0;
+wire   [15:0] grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0;
+wire   [11:0] grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1;
+wire    grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1;
+wire    grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1;
+wire   [15:0] grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1;
+wire   [11:0] grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0;
+wire    grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0;
+wire    grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0;
+wire   [15:0] grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0;
+wire   [11:0] grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1;
+wire    grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1;
+wire    grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1;
+wire   [15:0] grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1;
+wire   [11:0] grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0;
+wire    grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0;
+wire    grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0;
+wire   [15:0] grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0;
+wire   [11:0] grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1;
+wire    grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1;
+wire    grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1;
+wire   [15:0] grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1;
+wire   [11:0] grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0;
+wire    grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0;
+wire    grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0;
+wire   [15:0] grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0;
+wire   [11:0] grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1;
+wire    grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1;
+wire    grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1;
+wire   [15:0] grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1;
+wire   [15:0] grp_float_add2_fu_404_grp_bf16add_fast_fu_990_p_din1;
+wire   [15:0] grp_float_add2_fu_404_grp_bf16add_fast_fu_990_p_din2;
+wire    grp_float_add2_fu_404_grp_bf16add_fast_fu_990_p_ce;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_504_ap_start;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_504_ap_done;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_504_ap_idle;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_504_ap_ready;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_AWVALID;
+wire   [63:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_AWADDR;
+wire   [0:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_AWID;
+wire   [31:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_AWLEN;
+wire   [2:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_AWSIZE;
+wire   [1:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_AWBURST;
+wire   [1:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_AWLOCK;
+wire   [3:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_AWCACHE;
+wire   [2:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_AWPROT;
+wire   [3:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_AWQOS;
+wire   [3:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_AWREGION;
+wire   [0:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_AWUSER;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_WVALID;
+wire   [15:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_WDATA;
+wire   [1:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_WSTRB;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_WLAST;
+wire   [0:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_WID;
+wire   [0:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_WUSER;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_ARVALID;
+wire   [63:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_ARADDR;
+wire   [0:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_ARID;
+wire   [31:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_ARLEN;
+wire   [2:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_ARSIZE;
+wire   [1:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_ARBURST;
+wire   [1:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_ARLOCK;
+wire   [3:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_ARCACHE;
+wire   [2:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_ARPROT;
+wire   [3:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_ARQOS;
+wire   [3:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_ARREGION;
+wire   [0:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_ARUSER;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_RREADY;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_BREADY;
+wire   [11:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0;
+wire   [11:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0;
+wire   [11:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0;
+wire   [11:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0;
+wire   [11:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0;
+wire   [11:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0;
+wire   [11:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0;
+wire   [11:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0;
+wire   [11:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0;
+wire   [11:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0;
+wire   [11:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0;
+wire   [11:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0;
+wire   [11:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0;
+wire   [11:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0;
+wire   [11:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0;
+wire   [11:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0;
+wire    grp_float_layer_norm3_fu_543_ap_start;
+wire    grp_float_layer_norm3_fu_543_ap_done;
+wire    grp_float_layer_norm3_fu_543_ap_idle;
+wire    grp_float_layer_norm3_fu_543_ap_ready;
+wire   [11:0] grp_float_layer_norm3_fu_543_x_0_address0;
+wire    grp_float_layer_norm3_fu_543_x_0_ce0;
+wire   [11:0] grp_float_layer_norm3_fu_543_x_0_address1;
+wire    grp_float_layer_norm3_fu_543_x_0_ce1;
+wire   [11:0] grp_float_layer_norm3_fu_543_x_1_address0;
+wire    grp_float_layer_norm3_fu_543_x_1_ce0;
+wire   [11:0] grp_float_layer_norm3_fu_543_x_1_address1;
+wire    grp_float_layer_norm3_fu_543_x_1_ce1;
+wire   [11:0] grp_float_layer_norm3_fu_543_x_2_address0;
+wire    grp_float_layer_norm3_fu_543_x_2_ce0;
+wire   [11:0] grp_float_layer_norm3_fu_543_x_2_address1;
+wire    grp_float_layer_norm3_fu_543_x_2_ce1;
+wire   [11:0] grp_float_layer_norm3_fu_543_x_3_address0;
+wire    grp_float_layer_norm3_fu_543_x_3_ce0;
+wire   [11:0] grp_float_layer_norm3_fu_543_x_3_address1;
+wire    grp_float_layer_norm3_fu_543_x_3_ce1;
+wire   [11:0] grp_float_layer_norm3_fu_543_x_4_address0;
+wire    grp_float_layer_norm3_fu_543_x_4_ce0;
+wire   [11:0] grp_float_layer_norm3_fu_543_x_4_address1;
+wire    grp_float_layer_norm3_fu_543_x_4_ce1;
+wire   [11:0] grp_float_layer_norm3_fu_543_x_5_address0;
+wire    grp_float_layer_norm3_fu_543_x_5_ce0;
+wire   [11:0] grp_float_layer_norm3_fu_543_x_5_address1;
+wire    grp_float_layer_norm3_fu_543_x_5_ce1;
+wire   [11:0] grp_float_layer_norm3_fu_543_x_6_address0;
+wire    grp_float_layer_norm3_fu_543_x_6_ce0;
+wire   [11:0] grp_float_layer_norm3_fu_543_x_6_address1;
+wire    grp_float_layer_norm3_fu_543_x_6_ce1;
+wire   [11:0] grp_float_layer_norm3_fu_543_x_7_address0;
+wire    grp_float_layer_norm3_fu_543_x_7_ce0;
+wire   [11:0] grp_float_layer_norm3_fu_543_x_7_address1;
+wire    grp_float_layer_norm3_fu_543_x_7_ce1;
+wire   [11:0] grp_float_layer_norm3_fu_543_x_8_address0;
+wire    grp_float_layer_norm3_fu_543_x_8_ce0;
+wire   [11:0] grp_float_layer_norm3_fu_543_x_8_address1;
+wire    grp_float_layer_norm3_fu_543_x_8_ce1;
+wire   [11:0] grp_float_layer_norm3_fu_543_x_9_address0;
+wire    grp_float_layer_norm3_fu_543_x_9_ce0;
+wire   [11:0] grp_float_layer_norm3_fu_543_x_9_address1;
+wire    grp_float_layer_norm3_fu_543_x_9_ce1;
+wire   [11:0] grp_float_layer_norm3_fu_543_x_10_address0;
+wire    grp_float_layer_norm3_fu_543_x_10_ce0;
+wire   [11:0] grp_float_layer_norm3_fu_543_x_10_address1;
+wire    grp_float_layer_norm3_fu_543_x_10_ce1;
+wire   [11:0] grp_float_layer_norm3_fu_543_x_11_address0;
+wire    grp_float_layer_norm3_fu_543_x_11_ce0;
+wire   [11:0] grp_float_layer_norm3_fu_543_x_11_address1;
+wire    grp_float_layer_norm3_fu_543_x_11_ce1;
+wire   [11:0] grp_float_layer_norm3_fu_543_x_12_address0;
+wire    grp_float_layer_norm3_fu_543_x_12_ce0;
+wire   [11:0] grp_float_layer_norm3_fu_543_x_12_address1;
+wire    grp_float_layer_norm3_fu_543_x_12_ce1;
+wire   [11:0] grp_float_layer_norm3_fu_543_x_13_address0;
+wire    grp_float_layer_norm3_fu_543_x_13_ce0;
+wire   [11:0] grp_float_layer_norm3_fu_543_x_13_address1;
+wire    grp_float_layer_norm3_fu_543_x_13_ce1;
+wire   [11:0] grp_float_layer_norm3_fu_543_x_14_address0;
+wire    grp_float_layer_norm3_fu_543_x_14_ce0;
+wire   [11:0] grp_float_layer_norm3_fu_543_x_14_address1;
+wire    grp_float_layer_norm3_fu_543_x_14_ce1;
+wire   [11:0] grp_float_layer_norm3_fu_543_x_15_address0;
+wire    grp_float_layer_norm3_fu_543_x_15_ce0;
+wire   [11:0] grp_float_layer_norm3_fu_543_x_15_address1;
+wire    grp_float_layer_norm3_fu_543_x_15_ce1;
+wire   [11:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0;
+wire   [15:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0;
+wire   [11:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1;
+wire   [15:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1;
+wire   [11:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0;
+wire   [15:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0;
+wire   [11:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1;
+wire   [15:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1;
+wire   [11:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0;
+wire   [15:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0;
+wire   [11:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1;
+wire   [15:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1;
+wire   [11:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0;
+wire   [15:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0;
+wire   [11:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1;
+wire   [15:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1;
+wire   [11:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0;
+wire   [15:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0;
+wire   [11:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1;
+wire   [15:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1;
+wire   [11:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0;
+wire   [15:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0;
+wire   [11:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1;
+wire   [15:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1;
+wire   [11:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0;
+wire   [15:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0;
+wire   [11:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1;
+wire   [15:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1;
+wire   [11:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0;
+wire   [15:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0;
+wire   [11:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1;
+wire   [15:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1;
+wire   [11:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0;
+wire   [15:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0;
+wire   [11:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1;
+wire   [15:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1;
+wire   [11:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0;
+wire   [15:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0;
+wire   [11:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1;
+wire    grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1;
+wire   [15:0] grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1;
+wire   [11:0] grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0;
+wire    grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0;
+wire    grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0;
+wire   [15:0] grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0;
+wire   [11:0] grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1;
+wire    grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1;
+wire    grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1;
+wire   [15:0] grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1;
+wire   [11:0] grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0;
+wire    grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0;
+wire    grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0;
+wire   [15:0] grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0;
+wire   [11:0] grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1;
+wire    grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1;
+wire    grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1;
+wire   [15:0] grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1;
+wire   [11:0] grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0;
+wire    grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0;
+wire    grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0;
+wire   [15:0] grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0;
+wire   [11:0] grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1;
+wire    grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1;
+wire    grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1;
+wire   [15:0] grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1;
+wire   [11:0] grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0;
+wire    grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0;
+wire    grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0;
+wire   [15:0] grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0;
+wire   [11:0] grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1;
+wire    grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1;
+wire    grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1;
+wire   [15:0] grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1;
+wire   [11:0] grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0;
+wire    grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0;
+wire    grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0;
+wire   [15:0] grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0;
+wire   [11:0] grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1;
+wire    grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1;
+wire    grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1;
+wire   [15:0] grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1;
+wire   [11:0] grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0;
+wire    grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0;
+wire    grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0;
+wire   [15:0] grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0;
+wire   [11:0] grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1;
+wire    grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1;
+wire    grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1;
+wire   [15:0] grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1;
+wire    grp_float_rms_norm3_fu_595_ap_start;
+wire    grp_float_rms_norm3_fu_595_ap_done;
+wire    grp_float_rms_norm3_fu_595_ap_idle;
+wire    grp_float_rms_norm3_fu_595_ap_ready;
+wire   [11:0] grp_float_rms_norm3_fu_595_x_0_address0;
+wire    grp_float_rms_norm3_fu_595_x_0_ce0;
+wire   [11:0] grp_float_rms_norm3_fu_595_x_0_address1;
+wire    grp_float_rms_norm3_fu_595_x_0_ce1;
+wire   [11:0] grp_float_rms_norm3_fu_595_x_1_address0;
+wire    grp_float_rms_norm3_fu_595_x_1_ce0;
+wire   [11:0] grp_float_rms_norm3_fu_595_x_1_address1;
+wire    grp_float_rms_norm3_fu_595_x_1_ce1;
+wire   [11:0] grp_float_rms_norm3_fu_595_x_2_address0;
+wire    grp_float_rms_norm3_fu_595_x_2_ce0;
+wire   [11:0] grp_float_rms_norm3_fu_595_x_2_address1;
+wire    grp_float_rms_norm3_fu_595_x_2_ce1;
+wire   [11:0] grp_float_rms_norm3_fu_595_x_3_address0;
+wire    grp_float_rms_norm3_fu_595_x_3_ce0;
+wire   [11:0] grp_float_rms_norm3_fu_595_x_3_address1;
+wire    grp_float_rms_norm3_fu_595_x_3_ce1;
+wire   [11:0] grp_float_rms_norm3_fu_595_x_4_address0;
+wire    grp_float_rms_norm3_fu_595_x_4_ce0;
+wire   [11:0] grp_float_rms_norm3_fu_595_x_4_address1;
+wire    grp_float_rms_norm3_fu_595_x_4_ce1;
+wire   [11:0] grp_float_rms_norm3_fu_595_x_5_address0;
+wire    grp_float_rms_norm3_fu_595_x_5_ce0;
+wire   [11:0] grp_float_rms_norm3_fu_595_x_5_address1;
+wire    grp_float_rms_norm3_fu_595_x_5_ce1;
+wire   [11:0] grp_float_rms_norm3_fu_595_x_6_address0;
+wire    grp_float_rms_norm3_fu_595_x_6_ce0;
+wire   [11:0] grp_float_rms_norm3_fu_595_x_6_address1;
+wire    grp_float_rms_norm3_fu_595_x_6_ce1;
+wire   [11:0] grp_float_rms_norm3_fu_595_x_7_address0;
+wire    grp_float_rms_norm3_fu_595_x_7_ce0;
+wire   [11:0] grp_float_rms_norm3_fu_595_x_7_address1;
+wire    grp_float_rms_norm3_fu_595_x_7_ce1;
+wire   [11:0] grp_float_rms_norm3_fu_595_x_8_address0;
+wire    grp_float_rms_norm3_fu_595_x_8_ce0;
+wire   [11:0] grp_float_rms_norm3_fu_595_x_8_address1;
+wire    grp_float_rms_norm3_fu_595_x_8_ce1;
+wire   [11:0] grp_float_rms_norm3_fu_595_x_9_address0;
+wire    grp_float_rms_norm3_fu_595_x_9_ce0;
+wire   [11:0] grp_float_rms_norm3_fu_595_x_9_address1;
+wire    grp_float_rms_norm3_fu_595_x_9_ce1;
+wire   [11:0] grp_float_rms_norm3_fu_595_x_10_address0;
+wire    grp_float_rms_norm3_fu_595_x_10_ce0;
+wire   [11:0] grp_float_rms_norm3_fu_595_x_10_address1;
+wire    grp_float_rms_norm3_fu_595_x_10_ce1;
+wire   [11:0] grp_float_rms_norm3_fu_595_x_11_address0;
+wire    grp_float_rms_norm3_fu_595_x_11_ce0;
+wire   [11:0] grp_float_rms_norm3_fu_595_x_11_address1;
+wire    grp_float_rms_norm3_fu_595_x_11_ce1;
+wire   [11:0] grp_float_rms_norm3_fu_595_x_12_address0;
+wire    grp_float_rms_norm3_fu_595_x_12_ce0;
+wire   [11:0] grp_float_rms_norm3_fu_595_x_12_address1;
+wire    grp_float_rms_norm3_fu_595_x_12_ce1;
+wire   [11:0] grp_float_rms_norm3_fu_595_x_13_address0;
+wire    grp_float_rms_norm3_fu_595_x_13_ce0;
+wire   [11:0] grp_float_rms_norm3_fu_595_x_13_address1;
+wire    grp_float_rms_norm3_fu_595_x_13_ce1;
+wire   [11:0] grp_float_rms_norm3_fu_595_x_14_address0;
+wire    grp_float_rms_norm3_fu_595_x_14_ce0;
+wire   [11:0] grp_float_rms_norm3_fu_595_x_14_address1;
+wire    grp_float_rms_norm3_fu_595_x_14_ce1;
+wire   [11:0] grp_float_rms_norm3_fu_595_x_15_address0;
+wire    grp_float_rms_norm3_fu_595_x_15_ce0;
+wire   [11:0] grp_float_rms_norm3_fu_595_x_15_address1;
+wire    grp_float_rms_norm3_fu_595_x_15_ce1;
+wire   [11:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0;
+wire   [15:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0;
+wire   [11:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1;
+wire   [15:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1;
+wire   [11:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0;
+wire   [15:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0;
+wire   [11:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1;
+wire   [15:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1;
+wire   [11:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0;
+wire   [15:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0;
+wire   [11:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1;
+wire   [15:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1;
+wire   [11:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0;
+wire   [15:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0;
+wire   [11:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1;
+wire   [15:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1;
+wire   [11:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0;
+wire   [15:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0;
+wire   [11:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1;
+wire   [15:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1;
+wire   [11:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0;
+wire   [15:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0;
+wire   [11:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1;
+wire   [15:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1;
+wire   [11:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0;
+wire   [15:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0;
+wire   [11:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1;
+wire   [15:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1;
+wire   [11:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0;
+wire   [15:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0;
+wire   [11:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1;
+wire   [15:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1;
+wire   [11:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0;
+wire   [15:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0;
+wire   [11:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1;
+wire   [15:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1;
+wire   [11:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0;
+wire   [15:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0;
+wire   [11:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1;
+wire    grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1;
+wire   [15:0] grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1;
+wire   [11:0] grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0;
+wire    grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0;
+wire    grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0;
+wire   [15:0] grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0;
+wire   [11:0] grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1;
+wire    grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1;
+wire    grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1;
+wire   [15:0] grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1;
+wire   [11:0] grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0;
+wire    grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0;
+wire    grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0;
+wire   [15:0] grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0;
+wire   [11:0] grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1;
+wire    grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1;
+wire    grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1;
+wire   [15:0] grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1;
+wire   [11:0] grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0;
+wire    grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0;
+wire    grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0;
+wire   [15:0] grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0;
+wire   [11:0] grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1;
+wire    grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1;
+wire    grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1;
+wire   [15:0] grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1;
+wire   [11:0] grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0;
+wire    grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0;
+wire    grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0;
+wire   [15:0] grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0;
+wire   [11:0] grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1;
+wire    grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1;
+wire    grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1;
+wire   [15:0] grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1;
+wire   [11:0] grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0;
+wire    grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0;
+wire    grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0;
+wire   [15:0] grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0;
+wire   [11:0] grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1;
+wire    grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1;
+wire    grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1;
+wire   [15:0] grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1;
+wire   [11:0] grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0;
+wire    grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0;
+wire    grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0;
+wire   [15:0] grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0;
+wire   [11:0] grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1;
+wire    grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1;
+wire    grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1;
+wire   [15:0] grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1;
+wire    grp_float_silu2_fu_647_ap_start;
+wire    grp_float_silu2_fu_647_ap_done;
+wire    grp_float_silu2_fu_647_ap_idle;
+wire    grp_float_silu2_fu_647_ap_ready;
+wire   [11:0] grp_float_silu2_fu_647_x_0_address0;
+wire    grp_float_silu2_fu_647_x_0_ce0;
+wire   [11:0] grp_float_silu2_fu_647_x_0_address1;
+wire    grp_float_silu2_fu_647_x_0_ce1;
+wire   [11:0] grp_float_silu2_fu_647_x_1_address0;
+wire    grp_float_silu2_fu_647_x_1_ce0;
+wire   [11:0] grp_float_silu2_fu_647_x_1_address1;
+wire    grp_float_silu2_fu_647_x_1_ce1;
+wire   [11:0] grp_float_silu2_fu_647_x_2_address0;
+wire    grp_float_silu2_fu_647_x_2_ce0;
+wire   [11:0] grp_float_silu2_fu_647_x_2_address1;
+wire    grp_float_silu2_fu_647_x_2_ce1;
+wire   [11:0] grp_float_silu2_fu_647_x_3_address0;
+wire    grp_float_silu2_fu_647_x_3_ce0;
+wire   [11:0] grp_float_silu2_fu_647_x_3_address1;
+wire    grp_float_silu2_fu_647_x_3_ce1;
+wire   [11:0] grp_float_silu2_fu_647_x_4_address0;
+wire    grp_float_silu2_fu_647_x_4_ce0;
+wire   [11:0] grp_float_silu2_fu_647_x_4_address1;
+wire    grp_float_silu2_fu_647_x_4_ce1;
+wire   [11:0] grp_float_silu2_fu_647_x_5_address0;
+wire    grp_float_silu2_fu_647_x_5_ce0;
+wire   [11:0] grp_float_silu2_fu_647_x_5_address1;
+wire    grp_float_silu2_fu_647_x_5_ce1;
+wire   [11:0] grp_float_silu2_fu_647_x_6_address0;
+wire    grp_float_silu2_fu_647_x_6_ce0;
+wire   [11:0] grp_float_silu2_fu_647_x_6_address1;
+wire    grp_float_silu2_fu_647_x_6_ce1;
+wire   [11:0] grp_float_silu2_fu_647_x_7_address0;
+wire    grp_float_silu2_fu_647_x_7_ce0;
+wire   [11:0] grp_float_silu2_fu_647_x_7_address1;
+wire    grp_float_silu2_fu_647_x_7_ce1;
+wire   [11:0] grp_float_silu2_fu_647_x_8_address0;
+wire    grp_float_silu2_fu_647_x_8_ce0;
+wire   [11:0] grp_float_silu2_fu_647_x_8_address1;
+wire    grp_float_silu2_fu_647_x_8_ce1;
+wire   [11:0] grp_float_silu2_fu_647_x_9_address0;
+wire    grp_float_silu2_fu_647_x_9_ce0;
+wire   [11:0] grp_float_silu2_fu_647_x_9_address1;
+wire    grp_float_silu2_fu_647_x_9_ce1;
+wire   [11:0] grp_float_silu2_fu_647_x_10_address0;
+wire    grp_float_silu2_fu_647_x_10_ce0;
+wire   [11:0] grp_float_silu2_fu_647_x_10_address1;
+wire    grp_float_silu2_fu_647_x_10_ce1;
+wire   [11:0] grp_float_silu2_fu_647_x_11_address0;
+wire    grp_float_silu2_fu_647_x_11_ce0;
+wire   [11:0] grp_float_silu2_fu_647_x_11_address1;
+wire    grp_float_silu2_fu_647_x_11_ce1;
+wire   [11:0] grp_float_silu2_fu_647_x_12_address0;
+wire    grp_float_silu2_fu_647_x_12_ce0;
+wire   [11:0] grp_float_silu2_fu_647_x_12_address1;
+wire    grp_float_silu2_fu_647_x_12_ce1;
+wire   [11:0] grp_float_silu2_fu_647_x_13_address0;
+wire    grp_float_silu2_fu_647_x_13_ce0;
+wire   [11:0] grp_float_silu2_fu_647_x_13_address1;
+wire    grp_float_silu2_fu_647_x_13_ce1;
+wire   [11:0] grp_float_silu2_fu_647_x_14_address0;
+wire    grp_float_silu2_fu_647_x_14_ce0;
+wire   [11:0] grp_float_silu2_fu_647_x_14_address1;
+wire    grp_float_silu2_fu_647_x_14_ce1;
+wire   [11:0] grp_float_silu2_fu_647_x_15_address0;
+wire    grp_float_silu2_fu_647_x_15_ce0;
+wire   [11:0] grp_float_silu2_fu_647_x_15_address1;
+wire    grp_float_silu2_fu_647_x_15_ce1;
+wire   [11:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0;
+wire   [15:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0;
+wire   [11:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1;
+wire   [15:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1;
+wire   [11:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0;
+wire   [15:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0;
+wire   [11:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1;
+wire   [15:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1;
+wire   [11:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0;
+wire   [15:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0;
+wire   [11:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1;
+wire   [15:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1;
+wire   [11:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0;
+wire   [15:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0;
+wire   [11:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1;
+wire   [15:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1;
+wire   [11:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0;
+wire   [15:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0;
+wire   [11:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1;
+wire   [15:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1;
+wire   [11:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0;
+wire   [15:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0;
+wire   [11:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1;
+wire   [15:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1;
+wire   [11:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0;
+wire   [15:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0;
+wire   [11:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1;
+wire   [15:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1;
+wire   [11:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0;
+wire   [15:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0;
+wire   [11:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1;
+wire   [15:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1;
+wire   [11:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0;
+wire   [15:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0;
+wire   [11:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1;
+wire   [15:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1;
+wire   [11:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0;
+wire   [15:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0;
+wire   [11:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1;
+wire    grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1;
+wire   [15:0] grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1;
+wire   [11:0] grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0;
+wire    grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0;
+wire    grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0;
+wire   [15:0] grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0;
+wire   [11:0] grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1;
+wire    grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1;
+wire    grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1;
+wire   [15:0] grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1;
+wire   [11:0] grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0;
+wire    grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0;
+wire    grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0;
+wire   [15:0] grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0;
+wire   [11:0] grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1;
+wire    grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1;
+wire    grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1;
+wire   [15:0] grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1;
+wire   [11:0] grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0;
+wire    grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0;
+wire    grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0;
+wire   [15:0] grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0;
+wire   [11:0] grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1;
+wire    grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1;
+wire    grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1;
+wire   [15:0] grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1;
+wire   [11:0] grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0;
+wire    grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0;
+wire    grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0;
+wire   [15:0] grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0;
+wire   [11:0] grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1;
+wire    grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1;
+wire    grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1;
+wire   [15:0] grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1;
+wire   [11:0] grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0;
+wire    grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0;
+wire    grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0;
+wire   [15:0] grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0;
+wire   [11:0] grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1;
+wire    grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1;
+wire    grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1;
+wire   [15:0] grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1;
+wire   [11:0] grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0;
+wire    grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0;
+wire    grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0;
+wire   [15:0] grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0;
+wire   [11:0] grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1;
+wire    grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1;
+wire    grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1;
+wire   [15:0] grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1;
+wire    grp_float_gelu2_fu_699_ap_start;
+wire    grp_float_gelu2_fu_699_ap_done;
+wire    grp_float_gelu2_fu_699_ap_idle;
+wire    grp_float_gelu2_fu_699_ap_ready;
+wire   [11:0] grp_float_gelu2_fu_699_x_0_address0;
+wire    grp_float_gelu2_fu_699_x_0_ce0;
+wire   [11:0] grp_float_gelu2_fu_699_x_0_address1;
+wire    grp_float_gelu2_fu_699_x_0_ce1;
+wire   [11:0] grp_float_gelu2_fu_699_x_1_address0;
+wire    grp_float_gelu2_fu_699_x_1_ce0;
+wire   [11:0] grp_float_gelu2_fu_699_x_1_address1;
+wire    grp_float_gelu2_fu_699_x_1_ce1;
+wire   [11:0] grp_float_gelu2_fu_699_x_2_address0;
+wire    grp_float_gelu2_fu_699_x_2_ce0;
+wire   [11:0] grp_float_gelu2_fu_699_x_2_address1;
+wire    grp_float_gelu2_fu_699_x_2_ce1;
+wire   [11:0] grp_float_gelu2_fu_699_x_3_address0;
+wire    grp_float_gelu2_fu_699_x_3_ce0;
+wire   [11:0] grp_float_gelu2_fu_699_x_3_address1;
+wire    grp_float_gelu2_fu_699_x_3_ce1;
+wire   [11:0] grp_float_gelu2_fu_699_x_4_address0;
+wire    grp_float_gelu2_fu_699_x_4_ce0;
+wire   [11:0] grp_float_gelu2_fu_699_x_4_address1;
+wire    grp_float_gelu2_fu_699_x_4_ce1;
+wire   [11:0] grp_float_gelu2_fu_699_x_5_address0;
+wire    grp_float_gelu2_fu_699_x_5_ce0;
+wire   [11:0] grp_float_gelu2_fu_699_x_5_address1;
+wire    grp_float_gelu2_fu_699_x_5_ce1;
+wire   [11:0] grp_float_gelu2_fu_699_x_6_address0;
+wire    grp_float_gelu2_fu_699_x_6_ce0;
+wire   [11:0] grp_float_gelu2_fu_699_x_6_address1;
+wire    grp_float_gelu2_fu_699_x_6_ce1;
+wire   [11:0] grp_float_gelu2_fu_699_x_7_address0;
+wire    grp_float_gelu2_fu_699_x_7_ce0;
+wire   [11:0] grp_float_gelu2_fu_699_x_7_address1;
+wire    grp_float_gelu2_fu_699_x_7_ce1;
+wire   [11:0] grp_float_gelu2_fu_699_x_8_address0;
+wire    grp_float_gelu2_fu_699_x_8_ce0;
+wire   [11:0] grp_float_gelu2_fu_699_x_8_address1;
+wire    grp_float_gelu2_fu_699_x_8_ce1;
+wire   [11:0] grp_float_gelu2_fu_699_x_9_address0;
+wire    grp_float_gelu2_fu_699_x_9_ce0;
+wire   [11:0] grp_float_gelu2_fu_699_x_9_address1;
+wire    grp_float_gelu2_fu_699_x_9_ce1;
+wire   [11:0] grp_float_gelu2_fu_699_x_10_address0;
+wire    grp_float_gelu2_fu_699_x_10_ce0;
+wire   [11:0] grp_float_gelu2_fu_699_x_10_address1;
+wire    grp_float_gelu2_fu_699_x_10_ce1;
+wire   [11:0] grp_float_gelu2_fu_699_x_11_address0;
+wire    grp_float_gelu2_fu_699_x_11_ce0;
+wire   [11:0] grp_float_gelu2_fu_699_x_11_address1;
+wire    grp_float_gelu2_fu_699_x_11_ce1;
+wire   [11:0] grp_float_gelu2_fu_699_x_12_address0;
+wire    grp_float_gelu2_fu_699_x_12_ce0;
+wire   [11:0] grp_float_gelu2_fu_699_x_12_address1;
+wire    grp_float_gelu2_fu_699_x_12_ce1;
+wire   [11:0] grp_float_gelu2_fu_699_x_13_address0;
+wire    grp_float_gelu2_fu_699_x_13_ce0;
+wire   [11:0] grp_float_gelu2_fu_699_x_13_address1;
+wire    grp_float_gelu2_fu_699_x_13_ce1;
+wire   [11:0] grp_float_gelu2_fu_699_x_14_address0;
+wire    grp_float_gelu2_fu_699_x_14_ce0;
+wire   [11:0] grp_float_gelu2_fu_699_x_14_address1;
+wire    grp_float_gelu2_fu_699_x_14_ce1;
+wire   [11:0] grp_float_gelu2_fu_699_x_15_address0;
+wire    grp_float_gelu2_fu_699_x_15_ce0;
+wire   [11:0] grp_float_gelu2_fu_699_x_15_address1;
+wire    grp_float_gelu2_fu_699_x_15_ce1;
+wire   [11:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0;
+wire   [15:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0;
+wire   [11:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1;
+wire   [15:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1;
+wire   [11:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0;
+wire   [15:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0;
+wire   [11:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1;
+wire   [15:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1;
+wire   [11:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0;
+wire   [15:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0;
+wire   [11:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1;
+wire   [15:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1;
+wire   [11:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0;
+wire   [15:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0;
+wire   [11:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1;
+wire   [15:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1;
+wire   [11:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0;
+wire   [15:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0;
+wire   [11:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1;
+wire   [15:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1;
+wire   [11:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0;
+wire   [15:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0;
+wire   [11:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1;
+wire   [15:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1;
+wire   [11:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0;
+wire   [15:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0;
+wire   [11:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1;
+wire   [15:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1;
+wire   [11:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0;
+wire   [15:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0;
+wire   [11:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1;
+wire   [15:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1;
+wire   [11:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0;
+wire   [15:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0;
+wire   [11:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1;
+wire   [15:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1;
+wire   [11:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0;
+wire   [15:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0;
+wire   [11:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1;
+wire    grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1;
+wire   [15:0] grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1;
+wire   [11:0] grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0;
+wire    grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0;
+wire    grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0;
+wire   [15:0] grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0;
+wire   [11:0] grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1;
+wire    grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1;
+wire    grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1;
+wire   [15:0] grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1;
+wire   [11:0] grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0;
+wire    grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0;
+wire    grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0;
+wire   [15:0] grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0;
+wire   [11:0] grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1;
+wire    grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1;
+wire    grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1;
+wire   [15:0] grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1;
+wire   [11:0] grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0;
+wire    grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0;
+wire    grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0;
+wire   [15:0] grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0;
+wire   [11:0] grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1;
+wire    grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1;
+wire    grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1;
+wire   [15:0] grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1;
+wire   [11:0] grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0;
+wire    grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0;
+wire    grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0;
+wire   [15:0] grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0;
+wire   [11:0] grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1;
+wire    grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1;
+wire    grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1;
+wire   [15:0] grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1;
+wire   [11:0] grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0;
+wire    grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0;
+wire    grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0;
+wire   [15:0] grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0;
+wire   [11:0] grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1;
+wire    grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1;
+wire    grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1;
+wire   [15:0] grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1;
+wire   [11:0] grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0;
+wire    grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0;
+wire    grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0;
+wire   [15:0] grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0;
+wire   [11:0] grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1;
+wire    grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1;
+wire    grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1;
+wire   [15:0] grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1;
+wire    grp_float_Multiply2_fu_751_ap_start;
+wire    grp_float_Multiply2_fu_751_ap_done;
+wire    grp_float_Multiply2_fu_751_ap_idle;
+wire    grp_float_Multiply2_fu_751_ap_ready;
+wire   [11:0] grp_float_Multiply2_fu_751_x_0_address0;
+wire    grp_float_Multiply2_fu_751_x_0_ce0;
+wire   [11:0] grp_float_Multiply2_fu_751_x_0_address1;
+wire    grp_float_Multiply2_fu_751_x_0_ce1;
+wire   [11:0] grp_float_Multiply2_fu_751_x_1_address0;
+wire    grp_float_Multiply2_fu_751_x_1_ce0;
+wire   [11:0] grp_float_Multiply2_fu_751_x_1_address1;
+wire    grp_float_Multiply2_fu_751_x_1_ce1;
+wire   [11:0] grp_float_Multiply2_fu_751_x_2_address0;
+wire    grp_float_Multiply2_fu_751_x_2_ce0;
+wire   [11:0] grp_float_Multiply2_fu_751_x_2_address1;
+wire    grp_float_Multiply2_fu_751_x_2_ce1;
+wire   [11:0] grp_float_Multiply2_fu_751_x_3_address0;
+wire    grp_float_Multiply2_fu_751_x_3_ce0;
+wire   [11:0] grp_float_Multiply2_fu_751_x_3_address1;
+wire    grp_float_Multiply2_fu_751_x_3_ce1;
+wire   [11:0] grp_float_Multiply2_fu_751_x_4_address0;
+wire    grp_float_Multiply2_fu_751_x_4_ce0;
+wire   [11:0] grp_float_Multiply2_fu_751_x_4_address1;
+wire    grp_float_Multiply2_fu_751_x_4_ce1;
+wire   [11:0] grp_float_Multiply2_fu_751_x_5_address0;
+wire    grp_float_Multiply2_fu_751_x_5_ce0;
+wire   [11:0] grp_float_Multiply2_fu_751_x_5_address1;
+wire    grp_float_Multiply2_fu_751_x_5_ce1;
+wire   [11:0] grp_float_Multiply2_fu_751_x_6_address0;
+wire    grp_float_Multiply2_fu_751_x_6_ce0;
+wire   [11:0] grp_float_Multiply2_fu_751_x_6_address1;
+wire    grp_float_Multiply2_fu_751_x_6_ce1;
+wire   [11:0] grp_float_Multiply2_fu_751_x_7_address0;
+wire    grp_float_Multiply2_fu_751_x_7_ce0;
+wire   [11:0] grp_float_Multiply2_fu_751_x_7_address1;
+wire    grp_float_Multiply2_fu_751_x_7_ce1;
+wire   [11:0] grp_float_Multiply2_fu_751_x_8_address0;
+wire    grp_float_Multiply2_fu_751_x_8_ce0;
+wire   [11:0] grp_float_Multiply2_fu_751_x_8_address1;
+wire    grp_float_Multiply2_fu_751_x_8_ce1;
+wire   [11:0] grp_float_Multiply2_fu_751_x_9_address0;
+wire    grp_float_Multiply2_fu_751_x_9_ce0;
+wire   [11:0] grp_float_Multiply2_fu_751_x_9_address1;
+wire    grp_float_Multiply2_fu_751_x_9_ce1;
+wire   [11:0] grp_float_Multiply2_fu_751_x_10_address0;
+wire    grp_float_Multiply2_fu_751_x_10_ce0;
+wire   [11:0] grp_float_Multiply2_fu_751_x_10_address1;
+wire    grp_float_Multiply2_fu_751_x_10_ce1;
+wire   [11:0] grp_float_Multiply2_fu_751_x_11_address0;
+wire    grp_float_Multiply2_fu_751_x_11_ce0;
+wire   [11:0] grp_float_Multiply2_fu_751_x_11_address1;
+wire    grp_float_Multiply2_fu_751_x_11_ce1;
+wire   [11:0] grp_float_Multiply2_fu_751_x_12_address0;
+wire    grp_float_Multiply2_fu_751_x_12_ce0;
+wire   [11:0] grp_float_Multiply2_fu_751_x_12_address1;
+wire    grp_float_Multiply2_fu_751_x_12_ce1;
+wire   [11:0] grp_float_Multiply2_fu_751_x_13_address0;
+wire    grp_float_Multiply2_fu_751_x_13_ce0;
+wire   [11:0] grp_float_Multiply2_fu_751_x_13_address1;
+wire    grp_float_Multiply2_fu_751_x_13_ce1;
+wire   [11:0] grp_float_Multiply2_fu_751_x_14_address0;
+wire    grp_float_Multiply2_fu_751_x_14_ce0;
+wire   [11:0] grp_float_Multiply2_fu_751_x_14_address1;
+wire    grp_float_Multiply2_fu_751_x_14_ce1;
+wire   [11:0] grp_float_Multiply2_fu_751_x_15_address0;
+wire    grp_float_Multiply2_fu_751_x_15_ce0;
+wire   [11:0] grp_float_Multiply2_fu_751_x_15_address1;
+wire    grp_float_Multiply2_fu_751_x_15_ce1;
+wire   [11:0] grp_float_Multiply2_fu_751_y_0_address0;
+wire    grp_float_Multiply2_fu_751_y_0_ce0;
+wire   [11:0] grp_float_Multiply2_fu_751_y_0_address1;
+wire    grp_float_Multiply2_fu_751_y_0_ce1;
+wire   [11:0] grp_float_Multiply2_fu_751_y_1_address0;
+wire    grp_float_Multiply2_fu_751_y_1_ce0;
+wire   [11:0] grp_float_Multiply2_fu_751_y_1_address1;
+wire    grp_float_Multiply2_fu_751_y_1_ce1;
+wire   [11:0] grp_float_Multiply2_fu_751_y_2_address0;
+wire    grp_float_Multiply2_fu_751_y_2_ce0;
+wire   [11:0] grp_float_Multiply2_fu_751_y_2_address1;
+wire    grp_float_Multiply2_fu_751_y_2_ce1;
+wire   [11:0] grp_float_Multiply2_fu_751_y_3_address0;
+wire    grp_float_Multiply2_fu_751_y_3_ce0;
+wire   [11:0] grp_float_Multiply2_fu_751_y_3_address1;
+wire    grp_float_Multiply2_fu_751_y_3_ce1;
+wire   [11:0] grp_float_Multiply2_fu_751_y_4_address0;
+wire    grp_float_Multiply2_fu_751_y_4_ce0;
+wire   [11:0] grp_float_Multiply2_fu_751_y_4_address1;
+wire    grp_float_Multiply2_fu_751_y_4_ce1;
+wire   [11:0] grp_float_Multiply2_fu_751_y_5_address0;
+wire    grp_float_Multiply2_fu_751_y_5_ce0;
+wire   [11:0] grp_float_Multiply2_fu_751_y_5_address1;
+wire    grp_float_Multiply2_fu_751_y_5_ce1;
+wire   [11:0] grp_float_Multiply2_fu_751_y_6_address0;
+wire    grp_float_Multiply2_fu_751_y_6_ce0;
+wire   [11:0] grp_float_Multiply2_fu_751_y_6_address1;
+wire    grp_float_Multiply2_fu_751_y_6_ce1;
+wire   [11:0] grp_float_Multiply2_fu_751_y_7_address0;
+wire    grp_float_Multiply2_fu_751_y_7_ce0;
+wire   [11:0] grp_float_Multiply2_fu_751_y_7_address1;
+wire    grp_float_Multiply2_fu_751_y_7_ce1;
+wire   [11:0] grp_float_Multiply2_fu_751_y_8_address0;
+wire    grp_float_Multiply2_fu_751_y_8_ce0;
+wire   [11:0] grp_float_Multiply2_fu_751_y_8_address1;
+wire    grp_float_Multiply2_fu_751_y_8_ce1;
+wire   [11:0] grp_float_Multiply2_fu_751_y_9_address0;
+wire    grp_float_Multiply2_fu_751_y_9_ce0;
+wire   [11:0] grp_float_Multiply2_fu_751_y_9_address1;
+wire    grp_float_Multiply2_fu_751_y_9_ce1;
+wire   [11:0] grp_float_Multiply2_fu_751_y_10_address0;
+wire    grp_float_Multiply2_fu_751_y_10_ce0;
+wire   [11:0] grp_float_Multiply2_fu_751_y_10_address1;
+wire    grp_float_Multiply2_fu_751_y_10_ce1;
+wire   [11:0] grp_float_Multiply2_fu_751_y_11_address0;
+wire    grp_float_Multiply2_fu_751_y_11_ce0;
+wire   [11:0] grp_float_Multiply2_fu_751_y_11_address1;
+wire    grp_float_Multiply2_fu_751_y_11_ce1;
+wire   [11:0] grp_float_Multiply2_fu_751_y_12_address0;
+wire    grp_float_Multiply2_fu_751_y_12_ce0;
+wire   [11:0] grp_float_Multiply2_fu_751_y_12_address1;
+wire    grp_float_Multiply2_fu_751_y_12_ce1;
+wire   [11:0] grp_float_Multiply2_fu_751_y_13_address0;
+wire    grp_float_Multiply2_fu_751_y_13_ce0;
+wire   [11:0] grp_float_Multiply2_fu_751_y_13_address1;
+wire    grp_float_Multiply2_fu_751_y_13_ce1;
+wire   [11:0] grp_float_Multiply2_fu_751_y_14_address0;
+wire    grp_float_Multiply2_fu_751_y_14_ce0;
+wire   [11:0] grp_float_Multiply2_fu_751_y_14_address1;
+wire    grp_float_Multiply2_fu_751_y_14_ce1;
+wire   [11:0] grp_float_Multiply2_fu_751_y_15_address0;
+wire    grp_float_Multiply2_fu_751_y_15_ce0;
+wire   [11:0] grp_float_Multiply2_fu_751_y_15_address1;
+wire    grp_float_Multiply2_fu_751_y_15_ce1;
+wire   [11:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0;
+wire   [15:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0;
+wire   [11:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1;
+wire   [15:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1;
+wire   [11:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0;
+wire   [15:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0;
+wire   [11:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1;
+wire   [15:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1;
+wire   [11:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0;
+wire   [15:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0;
+wire   [11:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1;
+wire   [15:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1;
+wire   [11:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0;
+wire   [15:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0;
+wire   [11:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1;
+wire   [15:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1;
+wire   [11:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0;
+wire   [15:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0;
+wire   [11:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1;
+wire   [15:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1;
+wire   [11:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0;
+wire   [15:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0;
+wire   [11:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1;
+wire   [15:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1;
+wire   [11:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0;
+wire   [15:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0;
+wire   [11:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1;
+wire   [15:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1;
+wire   [11:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0;
+wire   [15:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0;
+wire   [11:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1;
+wire   [15:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1;
+wire   [11:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0;
+wire   [15:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0;
+wire   [11:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1;
+wire   [15:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1;
+wire   [11:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0;
+wire   [15:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0;
+wire   [11:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1;
+wire    grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1;
+wire   [15:0] grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1;
+wire   [11:0] grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0;
+wire    grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0;
+wire    grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0;
+wire   [15:0] grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0;
+wire   [11:0] grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1;
+wire    grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1;
+wire    grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1;
+wire   [15:0] grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1;
+wire   [11:0] grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0;
+wire    grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0;
+wire    grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0;
+wire   [15:0] grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0;
+wire   [11:0] grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1;
+wire    grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1;
+wire    grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1;
+wire   [15:0] grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1;
+wire   [11:0] grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0;
+wire    grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0;
+wire    grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0;
+wire   [15:0] grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0;
+wire   [11:0] grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1;
+wire    grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1;
+wire    grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1;
+wire   [15:0] grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1;
+wire   [11:0] grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0;
+wire    grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0;
+wire    grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0;
+wire   [15:0] grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0;
+wire   [11:0] grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1;
+wire    grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1;
+wire    grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1;
+wire   [15:0] grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1;
+wire   [11:0] grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0;
+wire    grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0;
+wire    grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0;
+wire   [15:0] grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0;
+wire   [11:0] grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1;
+wire    grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1;
+wire    grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1;
+wire   [15:0] grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1;
+wire   [11:0] grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0;
+wire    grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0;
+wire    grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0;
+wire   [15:0] grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0;
+wire   [11:0] grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1;
+wire    grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1;
+wire    grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1;
+wire   [15:0] grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1;
+wire    grp_float_safe_softmax2_fu_819_ap_start;
+wire    grp_float_safe_softmax2_fu_819_ap_done;
+wire    grp_float_safe_softmax2_fu_819_ap_idle;
+wire    grp_float_safe_softmax2_fu_819_ap_ready;
+wire   [11:0] grp_float_safe_softmax2_fu_819_x_0_address0;
+wire    grp_float_safe_softmax2_fu_819_x_0_ce0;
+wire   [11:0] grp_float_safe_softmax2_fu_819_x_0_address1;
+wire    grp_float_safe_softmax2_fu_819_x_0_ce1;
+wire   [11:0] grp_float_safe_softmax2_fu_819_x_1_address0;
+wire    grp_float_safe_softmax2_fu_819_x_1_ce0;
+wire   [11:0] grp_float_safe_softmax2_fu_819_x_1_address1;
+wire    grp_float_safe_softmax2_fu_819_x_1_ce1;
+wire   [11:0] grp_float_safe_softmax2_fu_819_x_2_address0;
+wire    grp_float_safe_softmax2_fu_819_x_2_ce0;
+wire   [11:0] grp_float_safe_softmax2_fu_819_x_2_address1;
+wire    grp_float_safe_softmax2_fu_819_x_2_ce1;
+wire   [11:0] grp_float_safe_softmax2_fu_819_x_3_address0;
+wire    grp_float_safe_softmax2_fu_819_x_3_ce0;
+wire   [11:0] grp_float_safe_softmax2_fu_819_x_3_address1;
+wire    grp_float_safe_softmax2_fu_819_x_3_ce1;
+wire   [11:0] grp_float_safe_softmax2_fu_819_x_4_address0;
+wire    grp_float_safe_softmax2_fu_819_x_4_ce0;
+wire   [11:0] grp_float_safe_softmax2_fu_819_x_4_address1;
+wire    grp_float_safe_softmax2_fu_819_x_4_ce1;
+wire   [11:0] grp_float_safe_softmax2_fu_819_x_5_address0;
+wire    grp_float_safe_softmax2_fu_819_x_5_ce0;
+wire   [11:0] grp_float_safe_softmax2_fu_819_x_5_address1;
+wire    grp_float_safe_softmax2_fu_819_x_5_ce1;
+wire   [11:0] grp_float_safe_softmax2_fu_819_x_6_address0;
+wire    grp_float_safe_softmax2_fu_819_x_6_ce0;
+wire   [11:0] grp_float_safe_softmax2_fu_819_x_6_address1;
+wire    grp_float_safe_softmax2_fu_819_x_6_ce1;
+wire   [11:0] grp_float_safe_softmax2_fu_819_x_7_address0;
+wire    grp_float_safe_softmax2_fu_819_x_7_ce0;
+wire   [11:0] grp_float_safe_softmax2_fu_819_x_7_address1;
+wire    grp_float_safe_softmax2_fu_819_x_7_ce1;
+wire   [11:0] grp_float_safe_softmax2_fu_819_x_8_address0;
+wire    grp_float_safe_softmax2_fu_819_x_8_ce0;
+wire   [11:0] grp_float_safe_softmax2_fu_819_x_8_address1;
+wire    grp_float_safe_softmax2_fu_819_x_8_ce1;
+wire   [11:0] grp_float_safe_softmax2_fu_819_x_9_address0;
+wire    grp_float_safe_softmax2_fu_819_x_9_ce0;
+wire   [11:0] grp_float_safe_softmax2_fu_819_x_9_address1;
+wire    grp_float_safe_softmax2_fu_819_x_9_ce1;
+wire   [11:0] grp_float_safe_softmax2_fu_819_x_10_address0;
+wire    grp_float_safe_softmax2_fu_819_x_10_ce0;
+wire   [11:0] grp_float_safe_softmax2_fu_819_x_10_address1;
+wire    grp_float_safe_softmax2_fu_819_x_10_ce1;
+wire   [11:0] grp_float_safe_softmax2_fu_819_x_11_address0;
+wire    grp_float_safe_softmax2_fu_819_x_11_ce0;
+wire   [11:0] grp_float_safe_softmax2_fu_819_x_11_address1;
+wire    grp_float_safe_softmax2_fu_819_x_11_ce1;
+wire   [11:0] grp_float_safe_softmax2_fu_819_x_12_address0;
+wire    grp_float_safe_softmax2_fu_819_x_12_ce0;
+wire   [11:0] grp_float_safe_softmax2_fu_819_x_12_address1;
+wire    grp_float_safe_softmax2_fu_819_x_12_ce1;
+wire   [11:0] grp_float_safe_softmax2_fu_819_x_13_address0;
+wire    grp_float_safe_softmax2_fu_819_x_13_ce0;
+wire   [11:0] grp_float_safe_softmax2_fu_819_x_13_address1;
+wire    grp_float_safe_softmax2_fu_819_x_13_ce1;
+wire   [11:0] grp_float_safe_softmax2_fu_819_x_14_address0;
+wire    grp_float_safe_softmax2_fu_819_x_14_ce0;
+wire   [11:0] grp_float_safe_softmax2_fu_819_x_14_address1;
+wire    grp_float_safe_softmax2_fu_819_x_14_ce1;
+wire   [11:0] grp_float_safe_softmax2_fu_819_x_15_address0;
+wire    grp_float_safe_softmax2_fu_819_x_15_ce0;
+wire   [11:0] grp_float_safe_softmax2_fu_819_x_15_address1;
+wire    grp_float_safe_softmax2_fu_819_x_15_ce1;
+wire   [11:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0;
+wire   [15:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0;
+wire   [11:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1;
+wire   [15:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1;
+wire   [11:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0;
+wire   [15:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0;
+wire   [11:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1;
+wire   [15:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1;
+wire   [11:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0;
+wire   [15:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0;
+wire   [11:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1;
+wire   [15:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1;
+wire   [11:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0;
+wire   [15:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0;
+wire   [11:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1;
+wire   [15:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1;
+wire   [11:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0;
+wire   [15:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0;
+wire   [11:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1;
+wire   [15:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1;
+wire   [11:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0;
+wire   [15:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0;
+wire   [11:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1;
+wire   [15:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1;
+wire   [11:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0;
+wire   [15:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0;
+wire   [11:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1;
+wire   [15:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1;
+wire   [11:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0;
+wire   [15:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0;
+wire   [11:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1;
+wire   [15:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1;
+wire   [11:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0;
+wire   [15:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0;
+wire   [11:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1;
+wire   [15:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1;
+wire   [11:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0;
+wire   [15:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0;
+wire   [11:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1;
+wire    grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1;
+wire   [15:0] grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1;
+wire   [11:0] grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0;
+wire    grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0;
+wire    grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0;
+wire   [15:0] grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0;
+wire   [11:0] grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1;
+wire    grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1;
+wire    grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1;
+wire   [15:0] grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1;
+wire   [11:0] grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0;
+wire    grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0;
+wire    grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0;
+wire   [15:0] grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0;
+wire   [11:0] grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1;
+wire    grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1;
+wire    grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1;
+wire   [15:0] grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1;
+wire   [11:0] grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0;
+wire    grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0;
+wire    grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0;
+wire   [15:0] grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0;
+wire   [11:0] grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1;
+wire    grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1;
+wire    grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1;
+wire   [15:0] grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1;
+wire   [11:0] grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0;
+wire    grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0;
+wire    grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0;
+wire   [15:0] grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0;
+wire   [11:0] grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1;
+wire    grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1;
+wire    grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1;
+wire   [15:0] grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1;
+wire   [11:0] grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0;
+wire    grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0;
+wire    grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0;
+wire   [15:0] grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0;
+wire   [11:0] grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1;
+wire    grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1;
+wire    grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1;
+wire   [15:0] grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1;
+wire   [11:0] grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0;
+wire    grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0;
+wire    grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0;
+wire   [15:0] grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0;
+wire   [11:0] grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1;
+wire    grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1;
+wire    grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1;
+wire   [15:0] grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1;
+wire   [15:0] grp_float_safe_softmax2_fu_819_grp_bf16add_fast_fu_990_p_din1;
+wire   [15:0] grp_float_safe_softmax2_fu_819_grp_bf16add_fast_fu_990_p_din2;
+wire    grp_float_safe_softmax2_fu_819_grp_bf16add_fast_fu_990_p_ce;
+wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_ap_start;
+wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_ap_done;
+wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_ap_idle;
+wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_ap_ready;
+wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_AWVALID;
+wire   [63:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_AWADDR;
+wire   [0:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_AWID;
+wire   [31:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_AWLEN;
+wire   [2:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_AWSIZE;
+wire   [1:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_AWBURST;
+wire   [1:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_AWLOCK;
+wire   [3:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_AWCACHE;
+wire   [2:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_AWPROT;
+wire   [3:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_AWQOS;
+wire   [3:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_AWREGION;
+wire   [0:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_AWUSER;
+wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_WVALID;
+wire   [15:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_WDATA;
+wire   [1:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_WSTRB;
+wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_WLAST;
+wire   [0:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_WID;
+wire   [0:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_WUSER;
+wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_ARVALID;
+wire   [63:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_ARADDR;
+wire   [0:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_ARID;
+wire   [31:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_ARLEN;
+wire   [2:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_ARSIZE;
+wire   [1:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_ARBURST;
+wire   [1:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_ARLOCK;
+wire   [3:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_ARCACHE;
+wire   [2:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_ARPROT;
+wire   [3:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_ARQOS;
+wire   [3:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_ARREGION;
+wire   [0:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_ARUSER;
+wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_RREADY;
+wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_BREADY;
+wire   [15:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_buf0_address0;
+wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_buf0_ce0;
+wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_buf0_we0;
+wire   [15:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_buf0_d0;
+wire    grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_ap_start;
+wire    grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_ap_done;
+wire    grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_ap_idle;
+wire    grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_ap_ready;
+wire    grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_AWVALID;
+wire   [63:0] grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_AWADDR;
+wire   [0:0] grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_AWID;
+wire   [31:0] grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_AWLEN;
+wire   [2:0] grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_AWSIZE;
+wire   [1:0] grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_AWBURST;
+wire   [1:0] grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_AWLOCK;
+wire   [3:0] grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_AWCACHE;
+wire   [2:0] grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_AWPROT;
+wire   [3:0] grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_AWQOS;
+wire   [3:0] grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_AWREGION;
+wire   [0:0] grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_AWUSER;
+wire    grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_WVALID;
+wire   [15:0] grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_WDATA;
+wire   [1:0] grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_WSTRB;
+wire    grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_WLAST;
+wire   [0:0] grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_WID;
+wire   [0:0] grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_WUSER;
+wire    grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_ARVALID;
+wire   [63:0] grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_ARADDR;
+wire   [0:0] grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_ARID;
+wire   [31:0] grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_ARLEN;
+wire   [2:0] grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_ARSIZE;
+wire   [1:0] grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_ARBURST;
+wire   [1:0] grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_ARLOCK;
+wire   [3:0] grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_ARCACHE;
+wire   [2:0] grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_ARPROT;
+wire   [3:0] grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_ARQOS;
+wire   [3:0] grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_ARREGION;
+wire   [0:0] grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_ARUSER;
+wire    grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_RREADY;
+wire    grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_BREADY;
+wire   [15:0] grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_buf1_address0;
+wire    grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_buf1_ce0;
+wire    grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_buf1_we0;
+wire   [15:0] grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_buf1_d0;
+reg   [15:0] grp_bf16add_fast_fu_990_a_bits;
+reg   [15:0] grp_bf16add_fast_fu_990_b_bits;
+wire   [15:0] grp_bf16add_fast_fu_990_ap_return;
+reg    grp_bf16add_fast_fu_990_ap_ce;
 wire    gmem0_AWREADY;
 wire    gmem0_WREADY;
 reg    gmem0_ARVALID;
@@ -911,75 +2624,32 @@ wire   [15:0] gmem2_RDATA;
 wire   [9:0] gmem2_RFIFONUM;
 wire    gmem2_BVALID;
 reg    gmem2_BREADY;
-reg    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_ap_start_reg;
+reg    grp_bf16_to_float_fu_328_ap_start_reg;
 wire    ap_CS_fsm_state10;
-reg    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_ap_start_reg;
-wire    ap_CS_fsm_state45;
-reg    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236_ap_start_reg;
-wire    ap_CS_fsm_state70;
-reg    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244_ap_start_reg;
-reg    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252_ap_start_reg;
-reg    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260_ap_start_reg;
-reg    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268_ap_start_reg;
-reg    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276_ap_start_reg;
-wire    ap_CS_fsm_state73;
-reg    grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284_ap_start_reg;
-reg    grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_ap_start_reg;
+reg    grp_bf16_to_float_fu_366_ap_start_reg;
+reg    grp_float_add2_fu_404_ap_start_reg;
+wire    ap_CS_fsm_state13;
+reg    grp_activation_accelerator_Pipeline_stage_2_store_fu_504_ap_start_reg;
 wire    ap_CS_fsm_state3;
 wire    ap_CS_fsm_state4;
-reg    grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_ap_start_reg;
+reg    grp_float_layer_norm3_fu_543_ap_start_reg;
 wire    ap_CS_fsm_state11;
 wire    ap_CS_fsm_state12;
-reg    grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_ap_start_reg;
+reg    grp_float_rms_norm3_fu_595_ap_start_reg;
+reg    grp_float_silu2_fu_647_ap_start_reg;
+reg    grp_float_gelu2_fu_699_ap_start_reg;
+reg    grp_float_Multiply2_fu_751_ap_start_reg;
+reg    grp_float_safe_softmax2_fu_819_ap_start_reg;
+reg    grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_ap_start_reg;
+wire    ap_CS_fsm_state21;
 wire    ap_CS_fsm_state22;
-reg    grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_ap_start_reg;
-wire    ap_CS_fsm_state44;
-reg    grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_ap_start_reg;
-wire    ap_CS_fsm_state46;
-wire    ap_CS_fsm_state47;
-reg    grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_ap_start_reg;
-wire    ap_CS_fsm_state69;
-reg    grp_activation_accelerator_Pipeline_silu_loop_fu_337_ap_start_reg;
-wire    ap_CS_fsm_state71;
-wire    ap_CS_fsm_state72;
-reg    grp_activation_accelerator_Pipeline_gelu_loop_fu_344_ap_start_reg;
-reg    grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_ap_start_reg;
-reg    grp_float_safe_softmax_fu_359_ap_start_reg;
-reg    grp_activation_accelerator_Pipeline_float_add_loop_fu_366_ap_start_reg;
-wire    ap_CS_fsm_state74;
-wire    ap_CS_fsm_state75;
-reg    grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_ap_start_reg;
-wire    ap_CS_fsm_state76;
-wire    ap_CS_fsm_state77;
-reg    grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_ap_start_reg;
-wire    ap_CS_fsm_state85;
-wire    ap_CS_fsm_state86;
-reg    grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_ap_start_reg;
-wire  signed [63:0] sext_ln499_fu_468_p1;
-wire  signed [63:0] sext_ln445_fu_490_p1;
-wire  signed [63:0] sext_ln448_fu_500_p1;
-reg    ap_block_state78_io;
-wire    ap_CS_fsm_state23;
-wire    ap_CS_fsm_state13;
-wire    ap_CS_fsm_state48;
-reg   [31:0] grp_fu_402_p0;
-reg   [31:0] grp_fu_402_p1;
-wire    ap_CS_fsm_state32;
-wire    ap_CS_fsm_state57;
-reg   [31:0] grp_fu_407_p0;
-reg   [31:0] grp_fu_407_p1;
-wire    ap_CS_fsm_state36;
-wire    ap_CS_fsm_state61;
-reg   [1:0] grp_fu_402_opcode;
-reg    grp_fu_402_ce;
-reg    grp_fu_407_ce;
-wire   [31:0] grp_fu_583_p2;
-reg   [31:0] grp_fu_583_p0;
-reg   [31:0] grp_fu_583_p1;
-reg    grp_fu_583_ce;
-reg    ap_predicate_op180_call_state44;
-reg    ap_block_state44_on_subcall_done;
-reg   [85:0] ap_NS_fsm;
+reg    grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_ap_start_reg;
+wire  signed [63:0] sext_ln1178_fu_919_p1;
+wire  signed [63:0] sext_ln1122_fu_929_p1;
+wire  signed [63:0] sext_ln1126_fu_939_p1;
+reg    ap_block_state14_io;
+reg    ap_block_state22_on_subcall_done;
+reg   [21:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
 reg    ap_ST_fsm_state2_blk;
 wire    ap_ST_fsm_state3_blk;
@@ -989,11 +2659,13 @@ wire    ap_ST_fsm_state6_blk;
 wire    ap_ST_fsm_state7_blk;
 wire    ap_ST_fsm_state8_blk;
 reg    ap_ST_fsm_state9_blk;
+reg    ap_block_state10_on_subcall_done;
 reg    ap_ST_fsm_state10_blk;
 wire    ap_ST_fsm_state11_blk;
+reg    ap_block_state12_on_subcall_done;
 reg    ap_ST_fsm_state12_blk;
-wire    ap_ST_fsm_state13_blk;
-wire    ap_ST_fsm_state14_blk;
+reg    ap_ST_fsm_state13_blk;
+reg    ap_ST_fsm_state14_blk;
 wire    ap_ST_fsm_state15_blk;
 wire    ap_ST_fsm_state16_blk;
 wire    ap_ST_fsm_state17_blk;
@@ -1002,102 +2674,23 @@ wire    ap_ST_fsm_state19_blk;
 wire    ap_ST_fsm_state20_blk;
 wire    ap_ST_fsm_state21_blk;
 reg    ap_ST_fsm_state22_blk;
-wire    ap_ST_fsm_state23_blk;
-wire    ap_ST_fsm_state24_blk;
-wire    ap_ST_fsm_state25_blk;
-wire    ap_ST_fsm_state26_blk;
-wire    ap_ST_fsm_state27_blk;
-wire    ap_ST_fsm_state28_blk;
-wire    ap_ST_fsm_state29_blk;
-wire    ap_ST_fsm_state30_blk;
-wire    ap_ST_fsm_state31_blk;
-wire    ap_ST_fsm_state32_blk;
-wire    ap_ST_fsm_state33_blk;
-wire    ap_ST_fsm_state34_blk;
-wire    ap_ST_fsm_state35_blk;
-wire    ap_ST_fsm_state36_blk;
-wire    ap_ST_fsm_state37_blk;
-wire    ap_ST_fsm_state38_blk;
-wire    ap_ST_fsm_state39_blk;
-wire    ap_ST_fsm_state40_blk;
-wire    ap_ST_fsm_state41_blk;
-wire    ap_ST_fsm_state42_blk;
-wire    ap_ST_fsm_state43_blk;
-reg    ap_ST_fsm_state44_blk;
-reg    ap_ST_fsm_state45_blk;
-wire    ap_ST_fsm_state46_blk;
-reg    ap_ST_fsm_state47_blk;
-wire    ap_ST_fsm_state48_blk;
-wire    ap_ST_fsm_state49_blk;
-wire    ap_ST_fsm_state50_blk;
-wire    ap_ST_fsm_state51_blk;
-wire    ap_ST_fsm_state52_blk;
-wire    ap_ST_fsm_state53_blk;
-wire    ap_ST_fsm_state54_blk;
-wire    ap_ST_fsm_state55_blk;
-wire    ap_ST_fsm_state56_blk;
-wire    ap_ST_fsm_state57_blk;
-wire    ap_ST_fsm_state58_blk;
-wire    ap_ST_fsm_state59_blk;
-wire    ap_ST_fsm_state60_blk;
-wire    ap_ST_fsm_state61_blk;
-wire    ap_ST_fsm_state62_blk;
-wire    ap_ST_fsm_state63_blk;
-wire    ap_ST_fsm_state64_blk;
-wire    ap_ST_fsm_state65_blk;
-wire    ap_ST_fsm_state66_blk;
-wire    ap_ST_fsm_state67_blk;
-wire    ap_ST_fsm_state68_blk;
-reg    ap_ST_fsm_state69_blk;
-reg    ap_block_state70_on_subcall_done;
-reg    ap_ST_fsm_state70_blk;
-wire    ap_ST_fsm_state71_blk;
-reg    ap_block_state72_on_subcall_done;
-reg    ap_ST_fsm_state72_blk;
-reg    ap_block_state73_on_subcall_done;
-reg    ap_ST_fsm_state73_blk;
-wire    ap_ST_fsm_state74_blk;
-reg    ap_ST_fsm_state75_blk;
-wire    ap_ST_fsm_state76_blk;
-reg    ap_ST_fsm_state77_blk;
-reg    ap_ST_fsm_state78_blk;
-wire    ap_ST_fsm_state79_blk;
-wire    ap_ST_fsm_state80_blk;
-wire    ap_ST_fsm_state81_blk;
-wire    ap_ST_fsm_state82_blk;
-wire    ap_ST_fsm_state83_blk;
-wire    ap_ST_fsm_state84_blk;
-wire    ap_ST_fsm_state85_blk;
-reg    ap_block_state86_on_subcall_done;
-reg    ap_ST_fsm_state86_blk;
 wire    ap_ce_reg;
 
 // power-on initialization
 initial begin
-#0 ap_CS_fsm = 86'd1;
-#0 grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_ap_start_reg = 1'b0;
-#0 grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_ap_start_reg = 1'b0;
-#0 grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236_ap_start_reg = 1'b0;
-#0 grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244_ap_start_reg = 1'b0;
-#0 grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252_ap_start_reg = 1'b0;
-#0 grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260_ap_start_reg = 1'b0;
-#0 grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268_ap_start_reg = 1'b0;
-#0 grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276_ap_start_reg = 1'b0;
-#0 grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284_ap_start_reg = 1'b0;
-#0 grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_ap_start_reg = 1'b0;
-#0 grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_ap_start_reg = 1'b0;
-#0 grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_ap_start_reg = 1'b0;
-#0 grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_ap_start_reg = 1'b0;
-#0 grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_ap_start_reg = 1'b0;
-#0 grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_ap_start_reg = 1'b0;
-#0 grp_activation_accelerator_Pipeline_silu_loop_fu_337_ap_start_reg = 1'b0;
-#0 grp_activation_accelerator_Pipeline_gelu_loop_fu_344_ap_start_reg = 1'b0;
-#0 grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_ap_start_reg = 1'b0;
-#0 grp_float_safe_softmax_fu_359_ap_start_reg = 1'b0;
-#0 grp_activation_accelerator_Pipeline_float_add_loop_fu_366_ap_start_reg = 1'b0;
-#0 grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_ap_start_reg = 1'b0;
-#0 grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_ap_start_reg = 1'b0;
-#0 grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_ap_start_reg = 1'b0;
+#0 ap_CS_fsm = 22'd1;
+#0 grp_bf16_to_float_fu_328_ap_start_reg = 1'b0;
+#0 grp_bf16_to_float_fu_366_ap_start_reg = 1'b0;
+#0 grp_float_add2_fu_404_ap_start_reg = 1'b0;
+#0 grp_activation_accelerator_Pipeline_stage_2_store_fu_504_ap_start_reg = 1'b0;
+#0 grp_float_layer_norm3_fu_543_ap_start_reg = 1'b0;
+#0 grp_float_rms_norm3_fu_595_ap_start_reg = 1'b0;
+#0 grp_float_silu2_fu_647_ap_start_reg = 1'b0;
+#0 grp_float_gelu2_fu_699_ap_start_reg = 1'b0;
+#0 grp_float_Multiply2_fu_751_ap_start_reg = 1'b0;
+#0 grp_float_safe_softmax2_fu_819_ap_start_reg = 1'b0;
+#0 grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_ap_start_reg = 1'b0;
+#0 grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_ap_start_reg = 1'b0;
 end
 
 activation_accelerator_buf0_RAM_AUTO_1R1W #(
@@ -1110,7 +2703,7 @@ buf0_U(
     .address0(buf0_address0),
     .ce0(buf0_ce0),
     .we0(buf0_we0),
-    .d0(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_buf0_d0),
+    .d0(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_buf0_d0),
     .q0(buf0_q0)
 );
 
@@ -1124,238 +2717,1369 @@ buf1_U(
     .address0(buf1_address0),
     .ce0(buf1_ce0),
     .we0(buf1_we0),
-    .d0(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_buf1_d0),
+    .d0(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_buf1_d0),
     .q0(buf1_q0)
 );
 
-activation_accelerator_buf0_RAM_AUTO_1R1W #(
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
     .DataWidth( 16 ),
-    .AddressRange( 49152 ),
-    .AddressWidth( 16 ))
-buf2_U(
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(buf2_address0),
-    .ce0(buf2_ce0),
-    .we0(buf2_we0),
-    .d0(buf2_d0),
-    .q0(buf2_q0)
+    .address0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0),
+    .ce0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0),
+    .we0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0),
+    .d0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0),
+    .q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_q0),
+    .address1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1),
+    .ce1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1),
+    .we1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1),
+    .d1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0),
+    .ce0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0),
+    .we0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0),
+    .d0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0),
+    .q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_q0),
+    .address1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1),
+    .ce1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1),
+    .we1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1),
+    .d1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0),
+    .ce0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0),
+    .we0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0),
+    .d0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0),
+    .q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_q0),
+    .address1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1),
+    .ce1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1),
+    .we1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1),
+    .d1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0),
+    .ce0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0),
+    .we0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0),
+    .d0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0),
+    .q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_q0),
+    .address1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1),
+    .ce1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1),
+    .we1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1),
+    .d1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0),
+    .ce0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0),
+    .we0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0),
+    .d0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0),
+    .q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_q0),
+    .address1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1),
+    .ce1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1),
+    .we1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1),
+    .d1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0),
+    .ce0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0),
+    .we0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0),
+    .d0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0),
+    .q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_q0),
+    .address1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1),
+    .ce1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1),
+    .we1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1),
+    .d1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0),
+    .ce0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0),
+    .we0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0),
+    .d0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0),
+    .q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_q0),
+    .address1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1),
+    .ce1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1),
+    .we1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1),
+    .d1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0),
+    .ce0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0),
+    .we0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0),
+    .d0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0),
+    .q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_q0),
+    .address1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1),
+    .ce1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1),
+    .we1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1),
+    .d1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0),
+    .ce0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0),
+    .we0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0),
+    .d0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0),
+    .q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_q0),
+    .address1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1),
+    .ce1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1),
+    .we1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1),
+    .d1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0),
+    .ce0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0),
+    .we0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0),
+    .d0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0),
+    .q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_q0),
+    .address1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1),
+    .ce1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1),
+    .we1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1),
+    .d1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0),
+    .d0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_q0),
+    .address1(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1),
+    .ce1(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1),
+    .we1(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1),
+    .d1(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0),
+    .d0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_q0),
+    .address1(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1),
+    .ce1(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1),
+    .we1(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1),
+    .d1(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0),
+    .d0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_q0),
+    .address1(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1),
+    .ce1(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1),
+    .we1(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1),
+    .d1(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0),
+    .d0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_q0),
+    .address1(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1),
+    .ce1(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1),
+    .we1(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1),
+    .d1(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0),
+    .d0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_q0),
+    .address1(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1),
+    .ce1(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1),
+    .we1(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1),
+    .d1(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0),
+    .d0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_q0),
+    .address1(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1),
+    .ce1(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1),
+    .we1(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1),
+    .d1(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1)
 );
 
 activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
-    .AddressRange( 49152 ),
-    .AddressWidth( 16 ))
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
 x_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .address0(x_address0),
     .ce0(x_ce0),
     .we0(x_we0),
-    .d0(x_d0),
-    .q0(x_q0)
+    .d0(grp_bf16_to_float_fu_328_out_0_d0),
+    .q0(x_q0),
+    .address1(x_address1),
+    .ce1(x_ce1),
+    .q1(x_q1)
 );
 
 activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
-    .AddressRange( 49152 ),
-    .AddressWidth( 16 ))
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+x_1_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(x_1_address0),
+    .ce0(x_1_ce0),
+    .we0(x_1_we0),
+    .d0(grp_bf16_to_float_fu_328_out_1_d0),
+    .q0(x_1_q0),
+    .address1(x_1_address1),
+    .ce1(x_1_ce1),
+    .q1(x_1_q1)
+);
+
+activation_accelerator_x_RAM_AUTO_1R1W #(
+    .DataWidth( 32 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+x_2_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(x_2_address0),
+    .ce0(x_2_ce0),
+    .we0(x_2_we0),
+    .d0(grp_bf16_to_float_fu_328_out_2_d0),
+    .q0(x_2_q0),
+    .address1(x_2_address1),
+    .ce1(x_2_ce1),
+    .q1(x_2_q1)
+);
+
+activation_accelerator_x_RAM_AUTO_1R1W #(
+    .DataWidth( 32 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+x_3_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(x_3_address0),
+    .ce0(x_3_ce0),
+    .we0(x_3_we0),
+    .d0(grp_bf16_to_float_fu_328_out_3_d0),
+    .q0(x_3_q0),
+    .address1(x_3_address1),
+    .ce1(x_3_ce1),
+    .q1(x_3_q1)
+);
+
+activation_accelerator_x_RAM_AUTO_1R1W #(
+    .DataWidth( 32 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+x_4_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(x_4_address0),
+    .ce0(x_4_ce0),
+    .we0(x_4_we0),
+    .d0(grp_bf16_to_float_fu_328_out_4_d0),
+    .q0(x_4_q0),
+    .address1(x_4_address1),
+    .ce1(x_4_ce1),
+    .q1(x_4_q1)
+);
+
+activation_accelerator_x_RAM_AUTO_1R1W #(
+    .DataWidth( 32 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+x_5_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(x_5_address0),
+    .ce0(x_5_ce0),
+    .we0(x_5_we0),
+    .d0(grp_bf16_to_float_fu_328_out_5_d0),
+    .q0(x_5_q0),
+    .address1(x_5_address1),
+    .ce1(x_5_ce1),
+    .q1(x_5_q1)
+);
+
+activation_accelerator_x_RAM_AUTO_1R1W #(
+    .DataWidth( 32 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+x_6_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(x_6_address0),
+    .ce0(x_6_ce0),
+    .we0(x_6_we0),
+    .d0(grp_bf16_to_float_fu_328_out_6_d0),
+    .q0(x_6_q0),
+    .address1(x_6_address1),
+    .ce1(x_6_ce1),
+    .q1(x_6_q1)
+);
+
+activation_accelerator_x_RAM_AUTO_1R1W #(
+    .DataWidth( 32 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+x_7_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(x_7_address0),
+    .ce0(x_7_ce0),
+    .we0(x_7_we0),
+    .d0(grp_bf16_to_float_fu_328_out_7_d0),
+    .q0(x_7_q0),
+    .address1(x_7_address1),
+    .ce1(x_7_ce1),
+    .q1(x_7_q1)
+);
+
+activation_accelerator_x_RAM_AUTO_1R1W #(
+    .DataWidth( 32 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+x_8_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(x_8_address0),
+    .ce0(x_8_ce0),
+    .we0(x_8_we0),
+    .d0(grp_bf16_to_float_fu_328_out_8_d0),
+    .q0(x_8_q0),
+    .address1(x_8_address1),
+    .ce1(x_8_ce1),
+    .q1(x_8_q1)
+);
+
+activation_accelerator_x_RAM_AUTO_1R1W #(
+    .DataWidth( 32 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+x_9_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(x_9_address0),
+    .ce0(x_9_ce0),
+    .we0(x_9_we0),
+    .d0(grp_bf16_to_float_fu_328_out_9_d0),
+    .q0(x_9_q0),
+    .address1(x_9_address1),
+    .ce1(x_9_ce1),
+    .q1(x_9_q1)
+);
+
+activation_accelerator_x_RAM_AUTO_1R1W #(
+    .DataWidth( 32 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+x_10_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(x_10_address0),
+    .ce0(x_10_ce0),
+    .we0(x_10_we0),
+    .d0(grp_bf16_to_float_fu_328_out_10_d0),
+    .q0(x_10_q0),
+    .address1(x_10_address1),
+    .ce1(x_10_ce1),
+    .q1(x_10_q1)
+);
+
+activation_accelerator_x_RAM_AUTO_1R1W #(
+    .DataWidth( 32 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+x_11_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(x_11_address0),
+    .ce0(x_11_ce0),
+    .we0(x_11_we0),
+    .d0(grp_bf16_to_float_fu_328_out_11_d0),
+    .q0(x_11_q0),
+    .address1(x_11_address1),
+    .ce1(x_11_ce1),
+    .q1(x_11_q1)
+);
+
+activation_accelerator_x_RAM_AUTO_1R1W #(
+    .DataWidth( 32 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+x_12_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(x_12_address0),
+    .ce0(x_12_ce0),
+    .we0(x_12_we0),
+    .d0(grp_bf16_to_float_fu_328_out_12_d0),
+    .q0(x_12_q0),
+    .address1(x_12_address1),
+    .ce1(x_12_ce1),
+    .q1(x_12_q1)
+);
+
+activation_accelerator_x_RAM_AUTO_1R1W #(
+    .DataWidth( 32 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+x_13_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(x_13_address0),
+    .ce0(x_13_ce0),
+    .we0(x_13_we0),
+    .d0(grp_bf16_to_float_fu_328_out_13_d0),
+    .q0(x_13_q0),
+    .address1(x_13_address1),
+    .ce1(x_13_ce1),
+    .q1(x_13_q1)
+);
+
+activation_accelerator_x_RAM_AUTO_1R1W #(
+    .DataWidth( 32 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+x_14_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(x_14_address0),
+    .ce0(x_14_ce0),
+    .we0(x_14_we0),
+    .d0(grp_bf16_to_float_fu_328_out_14_d0),
+    .q0(x_14_q0),
+    .address1(x_14_address1),
+    .ce1(x_14_ce1),
+    .q1(x_14_q1)
+);
+
+activation_accelerator_x_RAM_AUTO_1R1W #(
+    .DataWidth( 32 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+x_15_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(x_15_address0),
+    .ce0(x_15_ce0),
+    .we0(x_15_we0),
+    .d0(grp_bf16_to_float_fu_328_out_15_d0),
+    .q0(x_15_q0),
+    .address1(x_15_address1),
+    .ce1(x_15_ce1),
+    .q1(x_15_q1)
+);
+
+activation_accelerator_x_RAM_AUTO_1R1W #(
+    .DataWidth( 32 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
 y_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .address0(y_address0),
     .ce0(y_ce0),
     .we0(y_we0),
-    .d0(y_d0),
-    .q0(y_q0)
+    .d0(grp_bf16_to_float_fu_366_out_0_d0),
+    .q0(y_q0),
+    .address1(y_address1),
+    .ce1(y_ce1),
+    .q1(y_q1)
 );
 
-activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_145_18 grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_ap_start),
-    .ap_done(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_ap_done),
-    .ap_idle(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_ap_idle),
-    .ap_ready(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_ap_ready),
-    .x_address0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_x_address0),
-    .x_ce0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_x_ce0),
-    .x_we0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_x_we0),
-    .x_d0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_x_d0),
-    .buf0_address0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_buf0_address0),
-    .buf0_ce0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_buf0_ce0),
-    .buf0_q0(buf0_q0)
+activation_accelerator_x_RAM_AUTO_1R1W #(
+    .DataWidth( 32 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+y_1_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(y_1_address0),
+    .ce0(y_1_ce0),
+    .we0(y_1_we0),
+    .d0(grp_bf16_to_float_fu_366_out_1_d0),
+    .q0(y_1_q0),
+    .address1(y_1_address1),
+    .ce1(y_1_ce1),
+    .q1(y_1_q1)
 );
 
-activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_145_17 grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_ap_start),
-    .ap_done(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_ap_done),
-    .ap_idle(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_ap_idle),
-    .ap_ready(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_ap_ready),
-    .x_address0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_x_address0),
-    .x_ce0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_x_ce0),
-    .x_we0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_x_we0),
-    .x_d0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_x_d0),
-    .buf0_address0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_buf0_address0),
-    .buf0_ce0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_buf0_ce0),
-    .buf0_q0(buf0_q0)
+activation_accelerator_x_RAM_AUTO_1R1W #(
+    .DataWidth( 32 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+y_2_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(y_2_address0),
+    .ce0(y_2_ce0),
+    .we0(y_2_we0),
+    .d0(grp_bf16_to_float_fu_366_out_2_d0),
+    .q0(y_2_q0),
+    .address1(y_2_address1),
+    .ce1(y_2_ce1),
+    .q1(y_2_q1)
 );
 
-activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_145_16 grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236_ap_start),
-    .ap_done(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236_ap_done),
-    .ap_idle(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236_ap_idle),
-    .ap_ready(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236_ap_ready),
-    .x_address0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236_x_address0),
-    .x_ce0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236_x_ce0),
-    .x_we0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236_x_we0),
-    .x_d0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236_x_d0),
-    .buf0_address0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236_buf0_address0),
-    .buf0_ce0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236_buf0_ce0),
-    .buf0_q0(buf0_q0)
+activation_accelerator_x_RAM_AUTO_1R1W #(
+    .DataWidth( 32 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+y_3_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(y_3_address0),
+    .ce0(y_3_ce0),
+    .we0(y_3_we0),
+    .d0(grp_bf16_to_float_fu_366_out_3_d0),
+    .q0(y_3_q0),
+    .address1(y_3_address1),
+    .ce1(y_3_ce1),
+    .q1(y_3_q1)
 );
 
-activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_145_15 grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244_ap_start),
-    .ap_done(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244_ap_done),
-    .ap_idle(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244_ap_idle),
-    .ap_ready(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244_ap_ready),
-    .x_address0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244_x_address0),
-    .x_ce0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244_x_ce0),
-    .x_we0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244_x_we0),
-    .x_d0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244_x_d0),
-    .buf0_address0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244_buf0_address0),
-    .buf0_ce0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244_buf0_ce0),
-    .buf0_q0(buf0_q0)
+activation_accelerator_x_RAM_AUTO_1R1W #(
+    .DataWidth( 32 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+y_4_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(y_4_address0),
+    .ce0(y_4_ce0),
+    .we0(y_4_we0),
+    .d0(grp_bf16_to_float_fu_366_out_4_d0),
+    .q0(y_4_q0),
+    .address1(y_4_address1),
+    .ce1(y_4_ce1),
+    .q1(y_4_q1)
 );
 
-activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_145_13 grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252_ap_start),
-    .ap_done(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252_ap_done),
-    .ap_idle(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252_ap_idle),
-    .ap_ready(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252_ap_ready),
-    .x_address0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252_x_address0),
-    .x_ce0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252_x_ce0),
-    .x_we0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252_x_we0),
-    .x_d0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252_x_d0),
-    .buf0_address0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252_buf0_address0),
-    .buf0_ce0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252_buf0_ce0),
-    .buf0_q0(buf0_q0)
+activation_accelerator_x_RAM_AUTO_1R1W #(
+    .DataWidth( 32 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+y_5_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(y_5_address0),
+    .ce0(y_5_ce0),
+    .we0(y_5_we0),
+    .d0(grp_bf16_to_float_fu_366_out_5_d0),
+    .q0(y_5_q0),
+    .address1(y_5_address1),
+    .ce1(y_5_ce1),
+    .q1(y_5_q1)
 );
 
-activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_145_14 grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260_ap_start),
-    .ap_done(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260_ap_done),
-    .ap_idle(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260_ap_idle),
-    .ap_ready(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260_ap_ready),
-    .y_address0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260_y_address0),
-    .y_ce0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260_y_ce0),
-    .y_we0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260_y_we0),
-    .y_d0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260_y_d0),
-    .buf1_address0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260_buf1_address0),
-    .buf1_ce0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260_buf1_ce0),
-    .buf1_q0(buf1_q0)
+activation_accelerator_x_RAM_AUTO_1R1W #(
+    .DataWidth( 32 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+y_6_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(y_6_address0),
+    .ce0(y_6_ce0),
+    .we0(y_6_we0),
+    .d0(grp_bf16_to_float_fu_366_out_6_d0),
+    .q0(y_6_q0),
+    .address1(y_6_address1),
+    .ce1(y_6_ce1),
+    .q1(y_6_q1)
 );
 
-activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_145_12 grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268_ap_start),
-    .ap_done(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268_ap_done),
-    .ap_idle(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268_ap_idle),
-    .ap_ready(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268_ap_ready),
-    .x_address0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268_x_address0),
-    .x_ce0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268_x_ce0),
-    .x_we0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268_x_we0),
-    .x_d0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268_x_d0),
-    .buf0_address0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268_buf0_address0),
-    .buf0_ce0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268_buf0_ce0),
-    .buf0_q0(buf0_q0)
+activation_accelerator_x_RAM_AUTO_1R1W #(
+    .DataWidth( 32 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+y_7_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(y_7_address0),
+    .ce0(y_7_ce0),
+    .we0(y_7_we0),
+    .d0(grp_bf16_to_float_fu_366_out_7_d0),
+    .q0(y_7_q0),
+    .address1(y_7_address1),
+    .ce1(y_7_ce1),
+    .q1(y_7_q1)
 );
 
-activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_145_1 grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276_ap_start),
-    .ap_done(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276_ap_done),
-    .ap_idle(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276_ap_idle),
-    .ap_ready(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276_ap_ready),
-    .x_address0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276_x_address0),
-    .x_ce0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276_x_ce0),
-    .x_we0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276_x_we0),
-    .x_d0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276_x_d0),
-    .buf0_address0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276_buf0_address0),
-    .buf0_ce0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276_buf0_ce0),
-    .buf0_q0(buf0_q0)
+activation_accelerator_x_RAM_AUTO_1R1W #(
+    .DataWidth( 32 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+y_8_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(y_8_address0),
+    .ce0(y_8_ce0),
+    .we0(y_8_we0),
+    .d0(grp_bf16_to_float_fu_366_out_8_d0),
+    .q0(y_8_q0),
+    .address1(y_8_address1),
+    .ce1(y_8_ce1),
+    .q1(y_8_q1)
 );
 
-activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_145_11 grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284_ap_start),
-    .ap_done(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284_ap_done),
-    .ap_idle(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284_ap_idle),
-    .ap_ready(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284_ap_ready),
-    .y_address0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284_y_address0),
-    .y_ce0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284_y_ce0),
-    .y_we0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284_y_we0),
-    .y_d0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284_y_d0),
-    .buf1_address0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284_buf1_address0),
-    .buf1_ce0(grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284_buf1_ce0),
-    .buf1_q0(buf1_q0)
+activation_accelerator_x_RAM_AUTO_1R1W #(
+    .DataWidth( 32 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+y_9_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(y_9_address0),
+    .ce0(y_9_ce0),
+    .we0(y_9_we0),
+    .d0(grp_bf16_to_float_fu_366_out_9_d0),
+    .q0(y_9_q0),
+    .address1(y_9_address1),
+    .ce1(y_9_ce1),
+    .q1(y_9_q1)
 );
 
-activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_499_4 grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292(
+activation_accelerator_x_RAM_AUTO_1R1W #(
+    .DataWidth( 32 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+y_10_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(y_10_address0),
+    .ce0(y_10_ce0),
+    .we0(y_10_we0),
+    .d0(grp_bf16_to_float_fu_366_out_10_d0),
+    .q0(y_10_q0),
+    .address1(y_10_address1),
+    .ce1(y_10_ce1),
+    .q1(y_10_q1)
+);
+
+activation_accelerator_x_RAM_AUTO_1R1W #(
+    .DataWidth( 32 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+y_11_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(y_11_address0),
+    .ce0(y_11_ce0),
+    .we0(y_11_we0),
+    .d0(grp_bf16_to_float_fu_366_out_11_d0),
+    .q0(y_11_q0),
+    .address1(y_11_address1),
+    .ce1(y_11_ce1),
+    .q1(y_11_q1)
+);
+
+activation_accelerator_x_RAM_AUTO_1R1W #(
+    .DataWidth( 32 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+y_12_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(y_12_address0),
+    .ce0(y_12_ce0),
+    .we0(y_12_we0),
+    .d0(grp_bf16_to_float_fu_366_out_12_d0),
+    .q0(y_12_q0),
+    .address1(y_12_address1),
+    .ce1(y_12_ce1),
+    .q1(y_12_q1)
+);
+
+activation_accelerator_x_RAM_AUTO_1R1W #(
+    .DataWidth( 32 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+y_13_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(y_13_address0),
+    .ce0(y_13_ce0),
+    .we0(y_13_we0),
+    .d0(grp_bf16_to_float_fu_366_out_13_d0),
+    .q0(y_13_q0),
+    .address1(y_13_address1),
+    .ce1(y_13_ce1),
+    .q1(y_13_q1)
+);
+
+activation_accelerator_x_RAM_AUTO_1R1W #(
+    .DataWidth( 32 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+y_14_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(y_14_address0),
+    .ce0(y_14_ce0),
+    .we0(y_14_we0),
+    .d0(grp_bf16_to_float_fu_366_out_14_d0),
+    .q0(y_14_q0),
+    .address1(y_14_address1),
+    .ce1(y_14_ce1),
+    .q1(y_14_q1)
+);
+
+activation_accelerator_x_RAM_AUTO_1R1W #(
+    .DataWidth( 32 ),
+    .AddressRange( 3072 ),
+    .AddressWidth( 12 ))
+y_15_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(y_15_address0),
+    .ce0(y_15_ce0),
+    .we0(y_15_we0),
+    .d0(grp_bf16_to_float_fu_366_out_15_d0),
+    .q0(y_15_q0),
+    .address1(y_15_address1),
+    .ce1(y_15_ce1),
+    .q1(y_15_q1)
+);
+
+activation_accelerator_bf16_to_float grp_bf16_to_float_fu_328(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_ap_start),
-    .ap_done(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_ap_done),
-    .ap_idle(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_ap_idle),
-    .ap_ready(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_ap_ready),
-    .m_axi_gmem2_AWVALID(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_AWVALID),
+    .ap_start(grp_bf16_to_float_fu_328_ap_start),
+    .ap_done(grp_bf16_to_float_fu_328_ap_done),
+    .ap_idle(grp_bf16_to_float_fu_328_ap_idle),
+    .ap_ready(grp_bf16_to_float_fu_328_ap_ready),
+    .in_r_address0(grp_bf16_to_float_fu_328_in_r_address0),
+    .in_r_ce0(grp_bf16_to_float_fu_328_in_r_ce0),
+    .in_r_q0(buf0_q0),
+    .out_0_address0(grp_bf16_to_float_fu_328_out_0_address0),
+    .out_0_ce0(grp_bf16_to_float_fu_328_out_0_ce0),
+    .out_0_we0(grp_bf16_to_float_fu_328_out_0_we0),
+    .out_0_d0(grp_bf16_to_float_fu_328_out_0_d0),
+    .out_1_address0(grp_bf16_to_float_fu_328_out_1_address0),
+    .out_1_ce0(grp_bf16_to_float_fu_328_out_1_ce0),
+    .out_1_we0(grp_bf16_to_float_fu_328_out_1_we0),
+    .out_1_d0(grp_bf16_to_float_fu_328_out_1_d0),
+    .out_2_address0(grp_bf16_to_float_fu_328_out_2_address0),
+    .out_2_ce0(grp_bf16_to_float_fu_328_out_2_ce0),
+    .out_2_we0(grp_bf16_to_float_fu_328_out_2_we0),
+    .out_2_d0(grp_bf16_to_float_fu_328_out_2_d0),
+    .out_3_address0(grp_bf16_to_float_fu_328_out_3_address0),
+    .out_3_ce0(grp_bf16_to_float_fu_328_out_3_ce0),
+    .out_3_we0(grp_bf16_to_float_fu_328_out_3_we0),
+    .out_3_d0(grp_bf16_to_float_fu_328_out_3_d0),
+    .out_4_address0(grp_bf16_to_float_fu_328_out_4_address0),
+    .out_4_ce0(grp_bf16_to_float_fu_328_out_4_ce0),
+    .out_4_we0(grp_bf16_to_float_fu_328_out_4_we0),
+    .out_4_d0(grp_bf16_to_float_fu_328_out_4_d0),
+    .out_5_address0(grp_bf16_to_float_fu_328_out_5_address0),
+    .out_5_ce0(grp_bf16_to_float_fu_328_out_5_ce0),
+    .out_5_we0(grp_bf16_to_float_fu_328_out_5_we0),
+    .out_5_d0(grp_bf16_to_float_fu_328_out_5_d0),
+    .out_6_address0(grp_bf16_to_float_fu_328_out_6_address0),
+    .out_6_ce0(grp_bf16_to_float_fu_328_out_6_ce0),
+    .out_6_we0(grp_bf16_to_float_fu_328_out_6_we0),
+    .out_6_d0(grp_bf16_to_float_fu_328_out_6_d0),
+    .out_7_address0(grp_bf16_to_float_fu_328_out_7_address0),
+    .out_7_ce0(grp_bf16_to_float_fu_328_out_7_ce0),
+    .out_7_we0(grp_bf16_to_float_fu_328_out_7_we0),
+    .out_7_d0(grp_bf16_to_float_fu_328_out_7_d0),
+    .out_8_address0(grp_bf16_to_float_fu_328_out_8_address0),
+    .out_8_ce0(grp_bf16_to_float_fu_328_out_8_ce0),
+    .out_8_we0(grp_bf16_to_float_fu_328_out_8_we0),
+    .out_8_d0(grp_bf16_to_float_fu_328_out_8_d0),
+    .out_9_address0(grp_bf16_to_float_fu_328_out_9_address0),
+    .out_9_ce0(grp_bf16_to_float_fu_328_out_9_ce0),
+    .out_9_we0(grp_bf16_to_float_fu_328_out_9_we0),
+    .out_9_d0(grp_bf16_to_float_fu_328_out_9_d0),
+    .out_10_address0(grp_bf16_to_float_fu_328_out_10_address0),
+    .out_10_ce0(grp_bf16_to_float_fu_328_out_10_ce0),
+    .out_10_we0(grp_bf16_to_float_fu_328_out_10_we0),
+    .out_10_d0(grp_bf16_to_float_fu_328_out_10_d0),
+    .out_11_address0(grp_bf16_to_float_fu_328_out_11_address0),
+    .out_11_ce0(grp_bf16_to_float_fu_328_out_11_ce0),
+    .out_11_we0(grp_bf16_to_float_fu_328_out_11_we0),
+    .out_11_d0(grp_bf16_to_float_fu_328_out_11_d0),
+    .out_12_address0(grp_bf16_to_float_fu_328_out_12_address0),
+    .out_12_ce0(grp_bf16_to_float_fu_328_out_12_ce0),
+    .out_12_we0(grp_bf16_to_float_fu_328_out_12_we0),
+    .out_12_d0(grp_bf16_to_float_fu_328_out_12_d0),
+    .out_13_address0(grp_bf16_to_float_fu_328_out_13_address0),
+    .out_13_ce0(grp_bf16_to_float_fu_328_out_13_ce0),
+    .out_13_we0(grp_bf16_to_float_fu_328_out_13_we0),
+    .out_13_d0(grp_bf16_to_float_fu_328_out_13_d0),
+    .out_14_address0(grp_bf16_to_float_fu_328_out_14_address0),
+    .out_14_ce0(grp_bf16_to_float_fu_328_out_14_ce0),
+    .out_14_we0(grp_bf16_to_float_fu_328_out_14_we0),
+    .out_14_d0(grp_bf16_to_float_fu_328_out_14_d0),
+    .out_15_address0(grp_bf16_to_float_fu_328_out_15_address0),
+    .out_15_ce0(grp_bf16_to_float_fu_328_out_15_ce0),
+    .out_15_we0(grp_bf16_to_float_fu_328_out_15_we0),
+    .out_15_d0(grp_bf16_to_float_fu_328_out_15_d0)
+);
+
+activation_accelerator_bf16_to_float grp_bf16_to_float_fu_366(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst_n_inv),
+    .ap_start(grp_bf16_to_float_fu_366_ap_start),
+    .ap_done(grp_bf16_to_float_fu_366_ap_done),
+    .ap_idle(grp_bf16_to_float_fu_366_ap_idle),
+    .ap_ready(grp_bf16_to_float_fu_366_ap_ready),
+    .in_r_address0(grp_bf16_to_float_fu_366_in_r_address0),
+    .in_r_ce0(grp_bf16_to_float_fu_366_in_r_ce0),
+    .in_r_q0(buf1_q0),
+    .out_0_address0(grp_bf16_to_float_fu_366_out_0_address0),
+    .out_0_ce0(grp_bf16_to_float_fu_366_out_0_ce0),
+    .out_0_we0(grp_bf16_to_float_fu_366_out_0_we0),
+    .out_0_d0(grp_bf16_to_float_fu_366_out_0_d0),
+    .out_1_address0(grp_bf16_to_float_fu_366_out_1_address0),
+    .out_1_ce0(grp_bf16_to_float_fu_366_out_1_ce0),
+    .out_1_we0(grp_bf16_to_float_fu_366_out_1_we0),
+    .out_1_d0(grp_bf16_to_float_fu_366_out_1_d0),
+    .out_2_address0(grp_bf16_to_float_fu_366_out_2_address0),
+    .out_2_ce0(grp_bf16_to_float_fu_366_out_2_ce0),
+    .out_2_we0(grp_bf16_to_float_fu_366_out_2_we0),
+    .out_2_d0(grp_bf16_to_float_fu_366_out_2_d0),
+    .out_3_address0(grp_bf16_to_float_fu_366_out_3_address0),
+    .out_3_ce0(grp_bf16_to_float_fu_366_out_3_ce0),
+    .out_3_we0(grp_bf16_to_float_fu_366_out_3_we0),
+    .out_3_d0(grp_bf16_to_float_fu_366_out_3_d0),
+    .out_4_address0(grp_bf16_to_float_fu_366_out_4_address0),
+    .out_4_ce0(grp_bf16_to_float_fu_366_out_4_ce0),
+    .out_4_we0(grp_bf16_to_float_fu_366_out_4_we0),
+    .out_4_d0(grp_bf16_to_float_fu_366_out_4_d0),
+    .out_5_address0(grp_bf16_to_float_fu_366_out_5_address0),
+    .out_5_ce0(grp_bf16_to_float_fu_366_out_5_ce0),
+    .out_5_we0(grp_bf16_to_float_fu_366_out_5_we0),
+    .out_5_d0(grp_bf16_to_float_fu_366_out_5_d0),
+    .out_6_address0(grp_bf16_to_float_fu_366_out_6_address0),
+    .out_6_ce0(grp_bf16_to_float_fu_366_out_6_ce0),
+    .out_6_we0(grp_bf16_to_float_fu_366_out_6_we0),
+    .out_6_d0(grp_bf16_to_float_fu_366_out_6_d0),
+    .out_7_address0(grp_bf16_to_float_fu_366_out_7_address0),
+    .out_7_ce0(grp_bf16_to_float_fu_366_out_7_ce0),
+    .out_7_we0(grp_bf16_to_float_fu_366_out_7_we0),
+    .out_7_d0(grp_bf16_to_float_fu_366_out_7_d0),
+    .out_8_address0(grp_bf16_to_float_fu_366_out_8_address0),
+    .out_8_ce0(grp_bf16_to_float_fu_366_out_8_ce0),
+    .out_8_we0(grp_bf16_to_float_fu_366_out_8_we0),
+    .out_8_d0(grp_bf16_to_float_fu_366_out_8_d0),
+    .out_9_address0(grp_bf16_to_float_fu_366_out_9_address0),
+    .out_9_ce0(grp_bf16_to_float_fu_366_out_9_ce0),
+    .out_9_we0(grp_bf16_to_float_fu_366_out_9_we0),
+    .out_9_d0(grp_bf16_to_float_fu_366_out_9_d0),
+    .out_10_address0(grp_bf16_to_float_fu_366_out_10_address0),
+    .out_10_ce0(grp_bf16_to_float_fu_366_out_10_ce0),
+    .out_10_we0(grp_bf16_to_float_fu_366_out_10_we0),
+    .out_10_d0(grp_bf16_to_float_fu_366_out_10_d0),
+    .out_11_address0(grp_bf16_to_float_fu_366_out_11_address0),
+    .out_11_ce0(grp_bf16_to_float_fu_366_out_11_ce0),
+    .out_11_we0(grp_bf16_to_float_fu_366_out_11_we0),
+    .out_11_d0(grp_bf16_to_float_fu_366_out_11_d0),
+    .out_12_address0(grp_bf16_to_float_fu_366_out_12_address0),
+    .out_12_ce0(grp_bf16_to_float_fu_366_out_12_ce0),
+    .out_12_we0(grp_bf16_to_float_fu_366_out_12_we0),
+    .out_12_d0(grp_bf16_to_float_fu_366_out_12_d0),
+    .out_13_address0(grp_bf16_to_float_fu_366_out_13_address0),
+    .out_13_ce0(grp_bf16_to_float_fu_366_out_13_ce0),
+    .out_13_we0(grp_bf16_to_float_fu_366_out_13_we0),
+    .out_13_d0(grp_bf16_to_float_fu_366_out_13_d0),
+    .out_14_address0(grp_bf16_to_float_fu_366_out_14_address0),
+    .out_14_ce0(grp_bf16_to_float_fu_366_out_14_ce0),
+    .out_14_we0(grp_bf16_to_float_fu_366_out_14_we0),
+    .out_14_d0(grp_bf16_to_float_fu_366_out_14_d0),
+    .out_15_address0(grp_bf16_to_float_fu_366_out_15_address0),
+    .out_15_ce0(grp_bf16_to_float_fu_366_out_15_ce0),
+    .out_15_we0(grp_bf16_to_float_fu_366_out_15_we0),
+    .out_15_d0(grp_bf16_to_float_fu_366_out_15_d0)
+);
+
+activation_accelerator_float_add2 grp_float_add2_fu_404(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst_n_inv),
+    .ap_start(grp_float_add2_fu_404_ap_start),
+    .ap_done(grp_float_add2_fu_404_ap_done),
+    .ap_idle(grp_float_add2_fu_404_ap_idle),
+    .ap_ready(grp_float_add2_fu_404_ap_ready),
+    .x_0_address0(grp_float_add2_fu_404_x_0_address0),
+    .x_0_ce0(grp_float_add2_fu_404_x_0_ce0),
+    .x_0_q0(x_q0),
+    .x_0_address1(grp_float_add2_fu_404_x_0_address1),
+    .x_0_ce1(grp_float_add2_fu_404_x_0_ce1),
+    .x_0_q1(x_q1),
+    .x_1_address0(grp_float_add2_fu_404_x_1_address0),
+    .x_1_ce0(grp_float_add2_fu_404_x_1_ce0),
+    .x_1_q0(x_1_q0),
+    .x_1_address1(grp_float_add2_fu_404_x_1_address1),
+    .x_1_ce1(grp_float_add2_fu_404_x_1_ce1),
+    .x_1_q1(x_1_q1),
+    .x_2_address0(grp_float_add2_fu_404_x_2_address0),
+    .x_2_ce0(grp_float_add2_fu_404_x_2_ce0),
+    .x_2_q0(x_2_q0),
+    .x_2_address1(grp_float_add2_fu_404_x_2_address1),
+    .x_2_ce1(grp_float_add2_fu_404_x_2_ce1),
+    .x_2_q1(x_2_q1),
+    .x_3_address0(grp_float_add2_fu_404_x_3_address0),
+    .x_3_ce0(grp_float_add2_fu_404_x_3_ce0),
+    .x_3_q0(x_3_q0),
+    .x_3_address1(grp_float_add2_fu_404_x_3_address1),
+    .x_3_ce1(grp_float_add2_fu_404_x_3_ce1),
+    .x_3_q1(x_3_q1),
+    .x_4_address0(grp_float_add2_fu_404_x_4_address0),
+    .x_4_ce0(grp_float_add2_fu_404_x_4_ce0),
+    .x_4_q0(x_4_q0),
+    .x_4_address1(grp_float_add2_fu_404_x_4_address1),
+    .x_4_ce1(grp_float_add2_fu_404_x_4_ce1),
+    .x_4_q1(x_4_q1),
+    .x_5_address0(grp_float_add2_fu_404_x_5_address0),
+    .x_5_ce0(grp_float_add2_fu_404_x_5_ce0),
+    .x_5_q0(x_5_q0),
+    .x_5_address1(grp_float_add2_fu_404_x_5_address1),
+    .x_5_ce1(grp_float_add2_fu_404_x_5_ce1),
+    .x_5_q1(x_5_q1),
+    .x_6_address0(grp_float_add2_fu_404_x_6_address0),
+    .x_6_ce0(grp_float_add2_fu_404_x_6_ce0),
+    .x_6_q0(x_6_q0),
+    .x_6_address1(grp_float_add2_fu_404_x_6_address1),
+    .x_6_ce1(grp_float_add2_fu_404_x_6_ce1),
+    .x_6_q1(x_6_q1),
+    .x_7_address0(grp_float_add2_fu_404_x_7_address0),
+    .x_7_ce0(grp_float_add2_fu_404_x_7_ce0),
+    .x_7_q0(x_7_q0),
+    .x_7_address1(grp_float_add2_fu_404_x_7_address1),
+    .x_7_ce1(grp_float_add2_fu_404_x_7_ce1),
+    .x_7_q1(x_7_q1),
+    .x_8_address0(grp_float_add2_fu_404_x_8_address0),
+    .x_8_ce0(grp_float_add2_fu_404_x_8_ce0),
+    .x_8_q0(x_8_q0),
+    .x_8_address1(grp_float_add2_fu_404_x_8_address1),
+    .x_8_ce1(grp_float_add2_fu_404_x_8_ce1),
+    .x_8_q1(x_8_q1),
+    .x_9_address0(grp_float_add2_fu_404_x_9_address0),
+    .x_9_ce0(grp_float_add2_fu_404_x_9_ce0),
+    .x_9_q0(x_9_q0),
+    .x_9_address1(grp_float_add2_fu_404_x_9_address1),
+    .x_9_ce1(grp_float_add2_fu_404_x_9_ce1),
+    .x_9_q1(x_9_q1),
+    .x_10_address0(grp_float_add2_fu_404_x_10_address0),
+    .x_10_ce0(grp_float_add2_fu_404_x_10_ce0),
+    .x_10_q0(x_10_q0),
+    .x_10_address1(grp_float_add2_fu_404_x_10_address1),
+    .x_10_ce1(grp_float_add2_fu_404_x_10_ce1),
+    .x_10_q1(x_10_q1),
+    .x_11_address0(grp_float_add2_fu_404_x_11_address0),
+    .x_11_ce0(grp_float_add2_fu_404_x_11_ce0),
+    .x_11_q0(x_11_q0),
+    .x_11_address1(grp_float_add2_fu_404_x_11_address1),
+    .x_11_ce1(grp_float_add2_fu_404_x_11_ce1),
+    .x_11_q1(x_11_q1),
+    .x_12_address0(grp_float_add2_fu_404_x_12_address0),
+    .x_12_ce0(grp_float_add2_fu_404_x_12_ce0),
+    .x_12_q0(x_12_q0),
+    .x_12_address1(grp_float_add2_fu_404_x_12_address1),
+    .x_12_ce1(grp_float_add2_fu_404_x_12_ce1),
+    .x_12_q1(x_12_q1),
+    .x_13_address0(grp_float_add2_fu_404_x_13_address0),
+    .x_13_ce0(grp_float_add2_fu_404_x_13_ce0),
+    .x_13_q0(x_13_q0),
+    .x_13_address1(grp_float_add2_fu_404_x_13_address1),
+    .x_13_ce1(grp_float_add2_fu_404_x_13_ce1),
+    .x_13_q1(x_13_q1),
+    .x_14_address0(grp_float_add2_fu_404_x_14_address0),
+    .x_14_ce0(grp_float_add2_fu_404_x_14_ce0),
+    .x_14_q0(x_14_q0),
+    .x_14_address1(grp_float_add2_fu_404_x_14_address1),
+    .x_14_ce1(grp_float_add2_fu_404_x_14_ce1),
+    .x_14_q1(x_14_q1),
+    .x_15_address0(grp_float_add2_fu_404_x_15_address0),
+    .x_15_ce0(grp_float_add2_fu_404_x_15_ce0),
+    .x_15_q0(x_15_q0),
+    .x_15_address1(grp_float_add2_fu_404_x_15_address1),
+    .x_15_ce1(grp_float_add2_fu_404_x_15_ce1),
+    .x_15_q1(x_15_q1),
+    .y_0_address0(grp_float_add2_fu_404_y_0_address0),
+    .y_0_ce0(grp_float_add2_fu_404_y_0_ce0),
+    .y_0_q0(y_q0),
+    .y_0_address1(grp_float_add2_fu_404_y_0_address1),
+    .y_0_ce1(grp_float_add2_fu_404_y_0_ce1),
+    .y_0_q1(y_q1),
+    .y_1_address0(grp_float_add2_fu_404_y_1_address0),
+    .y_1_ce0(grp_float_add2_fu_404_y_1_ce0),
+    .y_1_q0(y_1_q0),
+    .y_1_address1(grp_float_add2_fu_404_y_1_address1),
+    .y_1_ce1(grp_float_add2_fu_404_y_1_ce1),
+    .y_1_q1(y_1_q1),
+    .y_2_address0(grp_float_add2_fu_404_y_2_address0),
+    .y_2_ce0(grp_float_add2_fu_404_y_2_ce0),
+    .y_2_q0(y_2_q0),
+    .y_2_address1(grp_float_add2_fu_404_y_2_address1),
+    .y_2_ce1(grp_float_add2_fu_404_y_2_ce1),
+    .y_2_q1(y_2_q1),
+    .y_3_address0(grp_float_add2_fu_404_y_3_address0),
+    .y_3_ce0(grp_float_add2_fu_404_y_3_ce0),
+    .y_3_q0(y_3_q0),
+    .y_3_address1(grp_float_add2_fu_404_y_3_address1),
+    .y_3_ce1(grp_float_add2_fu_404_y_3_ce1),
+    .y_3_q1(y_3_q1),
+    .y_4_address0(grp_float_add2_fu_404_y_4_address0),
+    .y_4_ce0(grp_float_add2_fu_404_y_4_ce0),
+    .y_4_q0(y_4_q0),
+    .y_4_address1(grp_float_add2_fu_404_y_4_address1),
+    .y_4_ce1(grp_float_add2_fu_404_y_4_ce1),
+    .y_4_q1(y_4_q1),
+    .y_5_address0(grp_float_add2_fu_404_y_5_address0),
+    .y_5_ce0(grp_float_add2_fu_404_y_5_ce0),
+    .y_5_q0(y_5_q0),
+    .y_5_address1(grp_float_add2_fu_404_y_5_address1),
+    .y_5_ce1(grp_float_add2_fu_404_y_5_ce1),
+    .y_5_q1(y_5_q1),
+    .y_6_address0(grp_float_add2_fu_404_y_6_address0),
+    .y_6_ce0(grp_float_add2_fu_404_y_6_ce0),
+    .y_6_q0(y_6_q0),
+    .y_6_address1(grp_float_add2_fu_404_y_6_address1),
+    .y_6_ce1(grp_float_add2_fu_404_y_6_ce1),
+    .y_6_q1(y_6_q1),
+    .y_7_address0(grp_float_add2_fu_404_y_7_address0),
+    .y_7_ce0(grp_float_add2_fu_404_y_7_ce0),
+    .y_7_q0(y_7_q0),
+    .y_7_address1(grp_float_add2_fu_404_y_7_address1),
+    .y_7_ce1(grp_float_add2_fu_404_y_7_ce1),
+    .y_7_q1(y_7_q1),
+    .y_8_address0(grp_float_add2_fu_404_y_8_address0),
+    .y_8_ce0(grp_float_add2_fu_404_y_8_ce0),
+    .y_8_q0(y_8_q0),
+    .y_8_address1(grp_float_add2_fu_404_y_8_address1),
+    .y_8_ce1(grp_float_add2_fu_404_y_8_ce1),
+    .y_8_q1(y_8_q1),
+    .y_9_address0(grp_float_add2_fu_404_y_9_address0),
+    .y_9_ce0(grp_float_add2_fu_404_y_9_ce0),
+    .y_9_q0(y_9_q0),
+    .y_9_address1(grp_float_add2_fu_404_y_9_address1),
+    .y_9_ce1(grp_float_add2_fu_404_y_9_ce1),
+    .y_9_q1(y_9_q1),
+    .y_10_address0(grp_float_add2_fu_404_y_10_address0),
+    .y_10_ce0(grp_float_add2_fu_404_y_10_ce0),
+    .y_10_q0(y_10_q0),
+    .y_10_address1(grp_float_add2_fu_404_y_10_address1),
+    .y_10_ce1(grp_float_add2_fu_404_y_10_ce1),
+    .y_10_q1(y_10_q1),
+    .y_11_address0(grp_float_add2_fu_404_y_11_address0),
+    .y_11_ce0(grp_float_add2_fu_404_y_11_ce0),
+    .y_11_q0(y_11_q0),
+    .y_11_address1(grp_float_add2_fu_404_y_11_address1),
+    .y_11_ce1(grp_float_add2_fu_404_y_11_ce1),
+    .y_11_q1(y_11_q1),
+    .y_12_address0(grp_float_add2_fu_404_y_12_address0),
+    .y_12_ce0(grp_float_add2_fu_404_y_12_ce0),
+    .y_12_q0(y_12_q0),
+    .y_12_address1(grp_float_add2_fu_404_y_12_address1),
+    .y_12_ce1(grp_float_add2_fu_404_y_12_ce1),
+    .y_12_q1(y_12_q1),
+    .y_13_address0(grp_float_add2_fu_404_y_13_address0),
+    .y_13_ce0(grp_float_add2_fu_404_y_13_ce0),
+    .y_13_q0(y_13_q0),
+    .y_13_address1(grp_float_add2_fu_404_y_13_address1),
+    .y_13_ce1(grp_float_add2_fu_404_y_13_ce1),
+    .y_13_q1(y_13_q1),
+    .y_14_address0(grp_float_add2_fu_404_y_14_address0),
+    .y_14_ce0(grp_float_add2_fu_404_y_14_ce0),
+    .y_14_q0(y_14_q0),
+    .y_14_address1(grp_float_add2_fu_404_y_14_address1),
+    .y_14_ce1(grp_float_add2_fu_404_y_14_ce1),
+    .y_14_q1(y_14_q1),
+    .y_15_address0(grp_float_add2_fu_404_y_15_address0),
+    .y_15_ce0(grp_float_add2_fu_404_y_15_ce0),
+    .y_15_q0(y_15_q0),
+    .y_15_address1(grp_float_add2_fu_404_y_15_address1),
+    .y_15_ce1(grp_float_add2_fu_404_y_15_ce1),
+    .y_15_q1(y_15_q1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1(grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1(grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1),
+    .grp_bf16add_fast_fu_990_p_din1(grp_float_add2_fu_404_grp_bf16add_fast_fu_990_p_din1),
+    .grp_bf16add_fast_fu_990_p_din2(grp_float_add2_fu_404_grp_bf16add_fast_fu_990_p_din2),
+    .grp_bf16add_fast_fu_990_p_dout0(grp_bf16add_fast_fu_990_ap_return),
+    .grp_bf16add_fast_fu_990_p_ce(grp_float_add2_fu_404_grp_bf16add_fast_fu_990_p_ce)
+);
+
+activation_accelerator_activation_accelerator_Pipeline_stage_2_store grp_activation_accelerator_Pipeline_stage_2_store_fu_504(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst_n_inv),
+    .ap_start(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_ap_start),
+    .ap_done(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_ap_done),
+    .ap_idle(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_ap_idle),
+    .ap_ready(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_ap_ready),
+    .m_axi_gmem2_AWVALID(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_AWVALID),
     .m_axi_gmem2_AWREADY(gmem2_AWREADY),
-    .m_axi_gmem2_AWADDR(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_AWADDR),
-    .m_axi_gmem2_AWID(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_AWID),
-    .m_axi_gmem2_AWLEN(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_AWLEN),
-    .m_axi_gmem2_AWSIZE(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_AWSIZE),
-    .m_axi_gmem2_AWBURST(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_AWBURST),
-    .m_axi_gmem2_AWLOCK(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_AWLOCK),
-    .m_axi_gmem2_AWCACHE(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_AWCACHE),
-    .m_axi_gmem2_AWPROT(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_AWPROT),
-    .m_axi_gmem2_AWQOS(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_AWQOS),
-    .m_axi_gmem2_AWREGION(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_AWREGION),
-    .m_axi_gmem2_AWUSER(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_AWUSER),
-    .m_axi_gmem2_WVALID(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_WVALID),
+    .m_axi_gmem2_AWADDR(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_AWADDR),
+    .m_axi_gmem2_AWID(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_AWID),
+    .m_axi_gmem2_AWLEN(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_AWLEN),
+    .m_axi_gmem2_AWSIZE(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_AWSIZE),
+    .m_axi_gmem2_AWBURST(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_AWBURST),
+    .m_axi_gmem2_AWLOCK(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_AWLOCK),
+    .m_axi_gmem2_AWCACHE(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_AWCACHE),
+    .m_axi_gmem2_AWPROT(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_AWPROT),
+    .m_axi_gmem2_AWQOS(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_AWQOS),
+    .m_axi_gmem2_AWREGION(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_AWREGION),
+    .m_axi_gmem2_AWUSER(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_AWUSER),
+    .m_axi_gmem2_WVALID(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_WVALID),
     .m_axi_gmem2_WREADY(gmem2_WREADY),
-    .m_axi_gmem2_WDATA(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_WDATA),
-    .m_axi_gmem2_WSTRB(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_WSTRB),
-    .m_axi_gmem2_WLAST(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_WLAST),
-    .m_axi_gmem2_WID(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_WID),
-    .m_axi_gmem2_WUSER(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_WUSER),
-    .m_axi_gmem2_ARVALID(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_ARVALID),
+    .m_axi_gmem2_WDATA(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_WDATA),
+    .m_axi_gmem2_WSTRB(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_WSTRB),
+    .m_axi_gmem2_WLAST(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_WLAST),
+    .m_axi_gmem2_WID(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_WID),
+    .m_axi_gmem2_WUSER(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_WUSER),
+    .m_axi_gmem2_ARVALID(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_ARVALID),
     .m_axi_gmem2_ARREADY(1'b0),
-    .m_axi_gmem2_ARADDR(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_ARADDR),
-    .m_axi_gmem2_ARID(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_ARID),
-    .m_axi_gmem2_ARLEN(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_ARLEN),
-    .m_axi_gmem2_ARSIZE(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_ARSIZE),
-    .m_axi_gmem2_ARBURST(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_ARBURST),
-    .m_axi_gmem2_ARLOCK(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_ARLOCK),
-    .m_axi_gmem2_ARCACHE(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_ARCACHE),
-    .m_axi_gmem2_ARPROT(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_ARPROT),
-    .m_axi_gmem2_ARQOS(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_ARQOS),
-    .m_axi_gmem2_ARREGION(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_ARREGION),
-    .m_axi_gmem2_ARUSER(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_ARUSER),
+    .m_axi_gmem2_ARADDR(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_ARADDR),
+    .m_axi_gmem2_ARID(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_ARID),
+    .m_axi_gmem2_ARLEN(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_ARLEN),
+    .m_axi_gmem2_ARSIZE(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_ARSIZE),
+    .m_axi_gmem2_ARBURST(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_ARBURST),
+    .m_axi_gmem2_ARLOCK(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_ARLOCK),
+    .m_axi_gmem2_ARCACHE(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_ARCACHE),
+    .m_axi_gmem2_ARPROT(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_ARPROT),
+    .m_axi_gmem2_ARQOS(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_ARQOS),
+    .m_axi_gmem2_ARREGION(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_ARREGION),
+    .m_axi_gmem2_ARUSER(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_ARUSER),
     .m_axi_gmem2_RVALID(1'b0),
-    .m_axi_gmem2_RREADY(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_RREADY),
+    .m_axi_gmem2_RREADY(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_RREADY),
     .m_axi_gmem2_RDATA(16'd0),
     .m_axi_gmem2_RLAST(1'b0),
     .m_axi_gmem2_RID(1'd0),
@@ -1363,295 +4087,1601 @@ activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_499_4 grp_acti
     .m_axi_gmem2_RUSER(1'd0),
     .m_axi_gmem2_RRESP(2'd0),
     .m_axi_gmem2_BVALID(gmem2_BVALID),
-    .m_axi_gmem2_BREADY(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_BREADY),
+    .m_axi_gmem2_BREADY(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_BREADY),
     .m_axi_gmem2_BRESP(2'd0),
     .m_axi_gmem2_BID(1'd0),
     .m_axi_gmem2_BUSER(1'd0),
-    .sext_ln499(trunc_ln2_reg_536),
-    .buf2_address0(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_buf2_address0),
-    .buf2_ce0(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_buf2_ce0),
-    .buf2_q0(buf2_q0)
+    .sext_ln1178(trunc_ln7_reg_957),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_q0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_q0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_q0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_q0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_q0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_q0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_q0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_q0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_q0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_q0)
 );
 
-activation_accelerator_activation_accelerator_Pipeline_layer_norm_loop1 grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301(
+activation_accelerator_float_layer_norm3 grp_float_layer_norm3_fu_543(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_ap_start),
-    .ap_done(grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_ap_done),
-    .ap_idle(grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_ap_idle),
-    .ap_ready(grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_ap_ready),
-    .x_address0(grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_x_address0),
-    .x_ce0(grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_x_ce0),
-    .x_q0(x_q0),
-    .sum_out(grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_sum_out),
-    .sum_out_ap_vld(grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_sum_out_ap_vld),
-    .grp_fu_402_p_din0(grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_grp_fu_402_p_din0),
-    .grp_fu_402_p_din1(grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_grp_fu_402_p_din1),
-    .grp_fu_402_p_opcode(grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_grp_fu_402_p_opcode),
-    .grp_fu_402_p_dout0(grp_fu_402_p2),
-    .grp_fu_402_p_ce(grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_grp_fu_402_p_ce)
+    .ap_start(grp_float_layer_norm3_fu_543_ap_start),
+    .ap_done(grp_float_layer_norm3_fu_543_ap_done),
+    .ap_idle(grp_float_layer_norm3_fu_543_ap_idle),
+    .ap_ready(grp_float_layer_norm3_fu_543_ap_ready),
+    .x_0_address0(grp_float_layer_norm3_fu_543_x_0_address0),
+    .x_0_ce0(grp_float_layer_norm3_fu_543_x_0_ce0),
+    .x_0_q0(x_q0),
+    .x_0_address1(grp_float_layer_norm3_fu_543_x_0_address1),
+    .x_0_ce1(grp_float_layer_norm3_fu_543_x_0_ce1),
+    .x_0_q1(x_q1),
+    .x_1_address0(grp_float_layer_norm3_fu_543_x_1_address0),
+    .x_1_ce0(grp_float_layer_norm3_fu_543_x_1_ce0),
+    .x_1_q0(x_1_q0),
+    .x_1_address1(grp_float_layer_norm3_fu_543_x_1_address1),
+    .x_1_ce1(grp_float_layer_norm3_fu_543_x_1_ce1),
+    .x_1_q1(x_1_q1),
+    .x_2_address0(grp_float_layer_norm3_fu_543_x_2_address0),
+    .x_2_ce0(grp_float_layer_norm3_fu_543_x_2_ce0),
+    .x_2_q0(x_2_q0),
+    .x_2_address1(grp_float_layer_norm3_fu_543_x_2_address1),
+    .x_2_ce1(grp_float_layer_norm3_fu_543_x_2_ce1),
+    .x_2_q1(x_2_q1),
+    .x_3_address0(grp_float_layer_norm3_fu_543_x_3_address0),
+    .x_3_ce0(grp_float_layer_norm3_fu_543_x_3_ce0),
+    .x_3_q0(x_3_q0),
+    .x_3_address1(grp_float_layer_norm3_fu_543_x_3_address1),
+    .x_3_ce1(grp_float_layer_norm3_fu_543_x_3_ce1),
+    .x_3_q1(x_3_q1),
+    .x_4_address0(grp_float_layer_norm3_fu_543_x_4_address0),
+    .x_4_ce0(grp_float_layer_norm3_fu_543_x_4_ce0),
+    .x_4_q0(x_4_q0),
+    .x_4_address1(grp_float_layer_norm3_fu_543_x_4_address1),
+    .x_4_ce1(grp_float_layer_norm3_fu_543_x_4_ce1),
+    .x_4_q1(x_4_q1),
+    .x_5_address0(grp_float_layer_norm3_fu_543_x_5_address0),
+    .x_5_ce0(grp_float_layer_norm3_fu_543_x_5_ce0),
+    .x_5_q0(x_5_q0),
+    .x_5_address1(grp_float_layer_norm3_fu_543_x_5_address1),
+    .x_5_ce1(grp_float_layer_norm3_fu_543_x_5_ce1),
+    .x_5_q1(x_5_q1),
+    .x_6_address0(grp_float_layer_norm3_fu_543_x_6_address0),
+    .x_6_ce0(grp_float_layer_norm3_fu_543_x_6_ce0),
+    .x_6_q0(x_6_q0),
+    .x_6_address1(grp_float_layer_norm3_fu_543_x_6_address1),
+    .x_6_ce1(grp_float_layer_norm3_fu_543_x_6_ce1),
+    .x_6_q1(x_6_q1),
+    .x_7_address0(grp_float_layer_norm3_fu_543_x_7_address0),
+    .x_7_ce0(grp_float_layer_norm3_fu_543_x_7_ce0),
+    .x_7_q0(x_7_q0),
+    .x_7_address1(grp_float_layer_norm3_fu_543_x_7_address1),
+    .x_7_ce1(grp_float_layer_norm3_fu_543_x_7_ce1),
+    .x_7_q1(x_7_q1),
+    .x_8_address0(grp_float_layer_norm3_fu_543_x_8_address0),
+    .x_8_ce0(grp_float_layer_norm3_fu_543_x_8_ce0),
+    .x_8_q0(x_8_q0),
+    .x_8_address1(grp_float_layer_norm3_fu_543_x_8_address1),
+    .x_8_ce1(grp_float_layer_norm3_fu_543_x_8_ce1),
+    .x_8_q1(x_8_q1),
+    .x_9_address0(grp_float_layer_norm3_fu_543_x_9_address0),
+    .x_9_ce0(grp_float_layer_norm3_fu_543_x_9_ce0),
+    .x_9_q0(x_9_q0),
+    .x_9_address1(grp_float_layer_norm3_fu_543_x_9_address1),
+    .x_9_ce1(grp_float_layer_norm3_fu_543_x_9_ce1),
+    .x_9_q1(x_9_q1),
+    .x_10_address0(grp_float_layer_norm3_fu_543_x_10_address0),
+    .x_10_ce0(grp_float_layer_norm3_fu_543_x_10_ce0),
+    .x_10_q0(x_10_q0),
+    .x_10_address1(grp_float_layer_norm3_fu_543_x_10_address1),
+    .x_10_ce1(grp_float_layer_norm3_fu_543_x_10_ce1),
+    .x_10_q1(x_10_q1),
+    .x_11_address0(grp_float_layer_norm3_fu_543_x_11_address0),
+    .x_11_ce0(grp_float_layer_norm3_fu_543_x_11_ce0),
+    .x_11_q0(x_11_q0),
+    .x_11_address1(grp_float_layer_norm3_fu_543_x_11_address1),
+    .x_11_ce1(grp_float_layer_norm3_fu_543_x_11_ce1),
+    .x_11_q1(x_11_q1),
+    .x_12_address0(grp_float_layer_norm3_fu_543_x_12_address0),
+    .x_12_ce0(grp_float_layer_norm3_fu_543_x_12_ce0),
+    .x_12_q0(x_12_q0),
+    .x_12_address1(grp_float_layer_norm3_fu_543_x_12_address1),
+    .x_12_ce1(grp_float_layer_norm3_fu_543_x_12_ce1),
+    .x_12_q1(x_12_q1),
+    .x_13_address0(grp_float_layer_norm3_fu_543_x_13_address0),
+    .x_13_ce0(grp_float_layer_norm3_fu_543_x_13_ce0),
+    .x_13_q0(x_13_q0),
+    .x_13_address1(grp_float_layer_norm3_fu_543_x_13_address1),
+    .x_13_ce1(grp_float_layer_norm3_fu_543_x_13_ce1),
+    .x_13_q1(x_13_q1),
+    .x_14_address0(grp_float_layer_norm3_fu_543_x_14_address0),
+    .x_14_ce0(grp_float_layer_norm3_fu_543_x_14_ce0),
+    .x_14_q0(x_14_q0),
+    .x_14_address1(grp_float_layer_norm3_fu_543_x_14_address1),
+    .x_14_ce1(grp_float_layer_norm3_fu_543_x_14_ce1),
+    .x_14_q1(x_14_q1),
+    .x_15_address0(grp_float_layer_norm3_fu_543_x_15_address0),
+    .x_15_ce0(grp_float_layer_norm3_fu_543_x_15_ce0),
+    .x_15_q0(x_15_q0),
+    .x_15_address1(grp_float_layer_norm3_fu_543_x_15_address1),
+    .x_15_ce1(grp_float_layer_norm3_fu_543_x_15_ce1),
+    .x_15_q1(x_15_q1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1(grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1(grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1)
 );
 
-activation_accelerator_activation_accelerator_Pipeline_layer_norm_loop2 grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307(
+activation_accelerator_float_rms_norm3 grp_float_rms_norm3_fu_595(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_ap_start),
-    .ap_done(grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_ap_done),
-    .ap_idle(grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_ap_idle),
-    .ap_ready(grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_ap_ready),
-    .x_address0(grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_x_address0),
-    .x_ce0(grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_x_ce0),
-    .x_q0(x_q0),
-    .mean(reg_420),
-    .var_1_out(grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_var_1_out),
-    .var_1_out_ap_vld(grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_var_1_out_ap_vld),
-    .grp_fu_402_p_din0(grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_grp_fu_402_p_din0),
-    .grp_fu_402_p_din1(grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_grp_fu_402_p_din1),
-    .grp_fu_402_p_opcode(grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_grp_fu_402_p_opcode),
-    .grp_fu_402_p_dout0(grp_fu_402_p2),
-    .grp_fu_402_p_ce(grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_grp_fu_402_p_ce),
-    .grp_fu_583_p_din0(grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_grp_fu_583_p_din0),
-    .grp_fu_583_p_din1(grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_grp_fu_583_p_din1),
-    .grp_fu_583_p_dout0(grp_fu_583_p2),
-    .grp_fu_583_p_ce(grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_grp_fu_583_p_ce)
+    .ap_start(grp_float_rms_norm3_fu_595_ap_start),
+    .ap_done(grp_float_rms_norm3_fu_595_ap_done),
+    .ap_idle(grp_float_rms_norm3_fu_595_ap_idle),
+    .ap_ready(grp_float_rms_norm3_fu_595_ap_ready),
+    .x_0_address0(grp_float_rms_norm3_fu_595_x_0_address0),
+    .x_0_ce0(grp_float_rms_norm3_fu_595_x_0_ce0),
+    .x_0_q0(x_q0),
+    .x_0_address1(grp_float_rms_norm3_fu_595_x_0_address1),
+    .x_0_ce1(grp_float_rms_norm3_fu_595_x_0_ce1),
+    .x_0_q1(x_q1),
+    .x_1_address0(grp_float_rms_norm3_fu_595_x_1_address0),
+    .x_1_ce0(grp_float_rms_norm3_fu_595_x_1_ce0),
+    .x_1_q0(x_1_q0),
+    .x_1_address1(grp_float_rms_norm3_fu_595_x_1_address1),
+    .x_1_ce1(grp_float_rms_norm3_fu_595_x_1_ce1),
+    .x_1_q1(x_1_q1),
+    .x_2_address0(grp_float_rms_norm3_fu_595_x_2_address0),
+    .x_2_ce0(grp_float_rms_norm3_fu_595_x_2_ce0),
+    .x_2_q0(x_2_q0),
+    .x_2_address1(grp_float_rms_norm3_fu_595_x_2_address1),
+    .x_2_ce1(grp_float_rms_norm3_fu_595_x_2_ce1),
+    .x_2_q1(x_2_q1),
+    .x_3_address0(grp_float_rms_norm3_fu_595_x_3_address0),
+    .x_3_ce0(grp_float_rms_norm3_fu_595_x_3_ce0),
+    .x_3_q0(x_3_q0),
+    .x_3_address1(grp_float_rms_norm3_fu_595_x_3_address1),
+    .x_3_ce1(grp_float_rms_norm3_fu_595_x_3_ce1),
+    .x_3_q1(x_3_q1),
+    .x_4_address0(grp_float_rms_norm3_fu_595_x_4_address0),
+    .x_4_ce0(grp_float_rms_norm3_fu_595_x_4_ce0),
+    .x_4_q0(x_4_q0),
+    .x_4_address1(grp_float_rms_norm3_fu_595_x_4_address1),
+    .x_4_ce1(grp_float_rms_norm3_fu_595_x_4_ce1),
+    .x_4_q1(x_4_q1),
+    .x_5_address0(grp_float_rms_norm3_fu_595_x_5_address0),
+    .x_5_ce0(grp_float_rms_norm3_fu_595_x_5_ce0),
+    .x_5_q0(x_5_q0),
+    .x_5_address1(grp_float_rms_norm3_fu_595_x_5_address1),
+    .x_5_ce1(grp_float_rms_norm3_fu_595_x_5_ce1),
+    .x_5_q1(x_5_q1),
+    .x_6_address0(grp_float_rms_norm3_fu_595_x_6_address0),
+    .x_6_ce0(grp_float_rms_norm3_fu_595_x_6_ce0),
+    .x_6_q0(x_6_q0),
+    .x_6_address1(grp_float_rms_norm3_fu_595_x_6_address1),
+    .x_6_ce1(grp_float_rms_norm3_fu_595_x_6_ce1),
+    .x_6_q1(x_6_q1),
+    .x_7_address0(grp_float_rms_norm3_fu_595_x_7_address0),
+    .x_7_ce0(grp_float_rms_norm3_fu_595_x_7_ce0),
+    .x_7_q0(x_7_q0),
+    .x_7_address1(grp_float_rms_norm3_fu_595_x_7_address1),
+    .x_7_ce1(grp_float_rms_norm3_fu_595_x_7_ce1),
+    .x_7_q1(x_7_q1),
+    .x_8_address0(grp_float_rms_norm3_fu_595_x_8_address0),
+    .x_8_ce0(grp_float_rms_norm3_fu_595_x_8_ce0),
+    .x_8_q0(x_8_q0),
+    .x_8_address1(grp_float_rms_norm3_fu_595_x_8_address1),
+    .x_8_ce1(grp_float_rms_norm3_fu_595_x_8_ce1),
+    .x_8_q1(x_8_q1),
+    .x_9_address0(grp_float_rms_norm3_fu_595_x_9_address0),
+    .x_9_ce0(grp_float_rms_norm3_fu_595_x_9_ce0),
+    .x_9_q0(x_9_q0),
+    .x_9_address1(grp_float_rms_norm3_fu_595_x_9_address1),
+    .x_9_ce1(grp_float_rms_norm3_fu_595_x_9_ce1),
+    .x_9_q1(x_9_q1),
+    .x_10_address0(grp_float_rms_norm3_fu_595_x_10_address0),
+    .x_10_ce0(grp_float_rms_norm3_fu_595_x_10_ce0),
+    .x_10_q0(x_10_q0),
+    .x_10_address1(grp_float_rms_norm3_fu_595_x_10_address1),
+    .x_10_ce1(grp_float_rms_norm3_fu_595_x_10_ce1),
+    .x_10_q1(x_10_q1),
+    .x_11_address0(grp_float_rms_norm3_fu_595_x_11_address0),
+    .x_11_ce0(grp_float_rms_norm3_fu_595_x_11_ce0),
+    .x_11_q0(x_11_q0),
+    .x_11_address1(grp_float_rms_norm3_fu_595_x_11_address1),
+    .x_11_ce1(grp_float_rms_norm3_fu_595_x_11_ce1),
+    .x_11_q1(x_11_q1),
+    .x_12_address0(grp_float_rms_norm3_fu_595_x_12_address0),
+    .x_12_ce0(grp_float_rms_norm3_fu_595_x_12_ce0),
+    .x_12_q0(x_12_q0),
+    .x_12_address1(grp_float_rms_norm3_fu_595_x_12_address1),
+    .x_12_ce1(grp_float_rms_norm3_fu_595_x_12_ce1),
+    .x_12_q1(x_12_q1),
+    .x_13_address0(grp_float_rms_norm3_fu_595_x_13_address0),
+    .x_13_ce0(grp_float_rms_norm3_fu_595_x_13_ce0),
+    .x_13_q0(x_13_q0),
+    .x_13_address1(grp_float_rms_norm3_fu_595_x_13_address1),
+    .x_13_ce1(grp_float_rms_norm3_fu_595_x_13_ce1),
+    .x_13_q1(x_13_q1),
+    .x_14_address0(grp_float_rms_norm3_fu_595_x_14_address0),
+    .x_14_ce0(grp_float_rms_norm3_fu_595_x_14_ce0),
+    .x_14_q0(x_14_q0),
+    .x_14_address1(grp_float_rms_norm3_fu_595_x_14_address1),
+    .x_14_ce1(grp_float_rms_norm3_fu_595_x_14_ce1),
+    .x_14_q1(x_14_q1),
+    .x_15_address0(grp_float_rms_norm3_fu_595_x_15_address0),
+    .x_15_ce0(grp_float_rms_norm3_fu_595_x_15_ce0),
+    .x_15_q0(x_15_q0),
+    .x_15_address1(grp_float_rms_norm3_fu_595_x_15_address1),
+    .x_15_ce1(grp_float_rms_norm3_fu_595_x_15_ce1),
+    .x_15_q1(x_15_q1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1(grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1(grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1)
 );
 
-activation_accelerator_activation_accelerator_Pipeline_layer_norm_loop3 grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314(
+activation_accelerator_float_silu2 grp_float_silu2_fu_647(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_ap_start),
-    .ap_done(grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_ap_done),
-    .ap_idle(grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_ap_idle),
-    .ap_ready(grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_ap_ready),
-    .x_address0(grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_x_address0),
-    .x_ce0(grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_x_ce0),
-    .x_q0(x_q0),
-    .mean(reg_420),
-    .stddev(reg_432),
-    .buf2_address0(grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_buf2_address0),
-    .buf2_ce0(grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_buf2_ce0),
-    .buf2_we0(grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_buf2_we0),
-    .buf2_d0(grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_buf2_d0),
-    .grp_fu_402_p_din0(grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_grp_fu_402_p_din0),
-    .grp_fu_402_p_din1(grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_grp_fu_402_p_din1),
-    .grp_fu_402_p_opcode(grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_grp_fu_402_p_opcode),
-    .grp_fu_402_p_dout0(grp_fu_402_p2),
-    .grp_fu_402_p_ce(grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_grp_fu_402_p_ce),
-    .grp_fu_407_p_din0(grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_grp_fu_407_p_din0),
-    .grp_fu_407_p_din1(grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_grp_fu_407_p_din1),
-    .grp_fu_407_p_dout0(grp_fu_407_p2),
-    .grp_fu_407_p_ce(grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_grp_fu_407_p_ce)
+    .ap_start(grp_float_silu2_fu_647_ap_start),
+    .ap_done(grp_float_silu2_fu_647_ap_done),
+    .ap_idle(grp_float_silu2_fu_647_ap_idle),
+    .ap_ready(grp_float_silu2_fu_647_ap_ready),
+    .x_0_address0(grp_float_silu2_fu_647_x_0_address0),
+    .x_0_ce0(grp_float_silu2_fu_647_x_0_ce0),
+    .x_0_q0(x_q0),
+    .x_0_address1(grp_float_silu2_fu_647_x_0_address1),
+    .x_0_ce1(grp_float_silu2_fu_647_x_0_ce1),
+    .x_0_q1(x_q1),
+    .x_1_address0(grp_float_silu2_fu_647_x_1_address0),
+    .x_1_ce0(grp_float_silu2_fu_647_x_1_ce0),
+    .x_1_q0(x_1_q0),
+    .x_1_address1(grp_float_silu2_fu_647_x_1_address1),
+    .x_1_ce1(grp_float_silu2_fu_647_x_1_ce1),
+    .x_1_q1(x_1_q1),
+    .x_2_address0(grp_float_silu2_fu_647_x_2_address0),
+    .x_2_ce0(grp_float_silu2_fu_647_x_2_ce0),
+    .x_2_q0(x_2_q0),
+    .x_2_address1(grp_float_silu2_fu_647_x_2_address1),
+    .x_2_ce1(grp_float_silu2_fu_647_x_2_ce1),
+    .x_2_q1(x_2_q1),
+    .x_3_address0(grp_float_silu2_fu_647_x_3_address0),
+    .x_3_ce0(grp_float_silu2_fu_647_x_3_ce0),
+    .x_3_q0(x_3_q0),
+    .x_3_address1(grp_float_silu2_fu_647_x_3_address1),
+    .x_3_ce1(grp_float_silu2_fu_647_x_3_ce1),
+    .x_3_q1(x_3_q1),
+    .x_4_address0(grp_float_silu2_fu_647_x_4_address0),
+    .x_4_ce0(grp_float_silu2_fu_647_x_4_ce0),
+    .x_4_q0(x_4_q0),
+    .x_4_address1(grp_float_silu2_fu_647_x_4_address1),
+    .x_4_ce1(grp_float_silu2_fu_647_x_4_ce1),
+    .x_4_q1(x_4_q1),
+    .x_5_address0(grp_float_silu2_fu_647_x_5_address0),
+    .x_5_ce0(grp_float_silu2_fu_647_x_5_ce0),
+    .x_5_q0(x_5_q0),
+    .x_5_address1(grp_float_silu2_fu_647_x_5_address1),
+    .x_5_ce1(grp_float_silu2_fu_647_x_5_ce1),
+    .x_5_q1(x_5_q1),
+    .x_6_address0(grp_float_silu2_fu_647_x_6_address0),
+    .x_6_ce0(grp_float_silu2_fu_647_x_6_ce0),
+    .x_6_q0(x_6_q0),
+    .x_6_address1(grp_float_silu2_fu_647_x_6_address1),
+    .x_6_ce1(grp_float_silu2_fu_647_x_6_ce1),
+    .x_6_q1(x_6_q1),
+    .x_7_address0(grp_float_silu2_fu_647_x_7_address0),
+    .x_7_ce0(grp_float_silu2_fu_647_x_7_ce0),
+    .x_7_q0(x_7_q0),
+    .x_7_address1(grp_float_silu2_fu_647_x_7_address1),
+    .x_7_ce1(grp_float_silu2_fu_647_x_7_ce1),
+    .x_7_q1(x_7_q1),
+    .x_8_address0(grp_float_silu2_fu_647_x_8_address0),
+    .x_8_ce0(grp_float_silu2_fu_647_x_8_ce0),
+    .x_8_q0(x_8_q0),
+    .x_8_address1(grp_float_silu2_fu_647_x_8_address1),
+    .x_8_ce1(grp_float_silu2_fu_647_x_8_ce1),
+    .x_8_q1(x_8_q1),
+    .x_9_address0(grp_float_silu2_fu_647_x_9_address0),
+    .x_9_ce0(grp_float_silu2_fu_647_x_9_ce0),
+    .x_9_q0(x_9_q0),
+    .x_9_address1(grp_float_silu2_fu_647_x_9_address1),
+    .x_9_ce1(grp_float_silu2_fu_647_x_9_ce1),
+    .x_9_q1(x_9_q1),
+    .x_10_address0(grp_float_silu2_fu_647_x_10_address0),
+    .x_10_ce0(grp_float_silu2_fu_647_x_10_ce0),
+    .x_10_q0(x_10_q0),
+    .x_10_address1(grp_float_silu2_fu_647_x_10_address1),
+    .x_10_ce1(grp_float_silu2_fu_647_x_10_ce1),
+    .x_10_q1(x_10_q1),
+    .x_11_address0(grp_float_silu2_fu_647_x_11_address0),
+    .x_11_ce0(grp_float_silu2_fu_647_x_11_ce0),
+    .x_11_q0(x_11_q0),
+    .x_11_address1(grp_float_silu2_fu_647_x_11_address1),
+    .x_11_ce1(grp_float_silu2_fu_647_x_11_ce1),
+    .x_11_q1(x_11_q1),
+    .x_12_address0(grp_float_silu2_fu_647_x_12_address0),
+    .x_12_ce0(grp_float_silu2_fu_647_x_12_ce0),
+    .x_12_q0(x_12_q0),
+    .x_12_address1(grp_float_silu2_fu_647_x_12_address1),
+    .x_12_ce1(grp_float_silu2_fu_647_x_12_ce1),
+    .x_12_q1(x_12_q1),
+    .x_13_address0(grp_float_silu2_fu_647_x_13_address0),
+    .x_13_ce0(grp_float_silu2_fu_647_x_13_ce0),
+    .x_13_q0(x_13_q0),
+    .x_13_address1(grp_float_silu2_fu_647_x_13_address1),
+    .x_13_ce1(grp_float_silu2_fu_647_x_13_ce1),
+    .x_13_q1(x_13_q1),
+    .x_14_address0(grp_float_silu2_fu_647_x_14_address0),
+    .x_14_ce0(grp_float_silu2_fu_647_x_14_ce0),
+    .x_14_q0(x_14_q0),
+    .x_14_address1(grp_float_silu2_fu_647_x_14_address1),
+    .x_14_ce1(grp_float_silu2_fu_647_x_14_ce1),
+    .x_14_q1(x_14_q1),
+    .x_15_address0(grp_float_silu2_fu_647_x_15_address0),
+    .x_15_ce0(grp_float_silu2_fu_647_x_15_ce0),
+    .x_15_q0(x_15_q0),
+    .x_15_address1(grp_float_silu2_fu_647_x_15_address1),
+    .x_15_ce1(grp_float_silu2_fu_647_x_15_ce1),
+    .x_15_q1(x_15_q1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1(grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1(grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1)
 );
 
-activation_accelerator_activation_accelerator_Pipeline_rms_norm_loop1 grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323(
+activation_accelerator_float_gelu2 grp_float_gelu2_fu_699(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_ap_start),
-    .ap_done(grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_ap_done),
-    .ap_idle(grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_ap_idle),
-    .ap_ready(grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_ap_ready),
-    .x_address0(grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_x_address0),
-    .x_ce0(grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_x_ce0),
-    .x_q0(x_q0),
-    .sum_sq_out(grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_sum_sq_out),
-    .sum_sq_out_ap_vld(grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_sum_sq_out_ap_vld),
-    .grp_fu_402_p_din0(grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_grp_fu_402_p_din0),
-    .grp_fu_402_p_din1(grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_grp_fu_402_p_din1),
-    .grp_fu_402_p_opcode(grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_grp_fu_402_p_opcode),
-    .grp_fu_402_p_dout0(grp_fu_402_p2),
-    .grp_fu_402_p_ce(grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_grp_fu_402_p_ce),
-    .grp_fu_583_p_din0(grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_grp_fu_583_p_din0),
-    .grp_fu_583_p_din1(grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_grp_fu_583_p_din1),
-    .grp_fu_583_p_dout0(grp_fu_583_p2),
-    .grp_fu_583_p_ce(grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_grp_fu_583_p_ce)
+    .ap_start(grp_float_gelu2_fu_699_ap_start),
+    .ap_done(grp_float_gelu2_fu_699_ap_done),
+    .ap_idle(grp_float_gelu2_fu_699_ap_idle),
+    .ap_ready(grp_float_gelu2_fu_699_ap_ready),
+    .x_0_address0(grp_float_gelu2_fu_699_x_0_address0),
+    .x_0_ce0(grp_float_gelu2_fu_699_x_0_ce0),
+    .x_0_q0(x_q0),
+    .x_0_address1(grp_float_gelu2_fu_699_x_0_address1),
+    .x_0_ce1(grp_float_gelu2_fu_699_x_0_ce1),
+    .x_0_q1(x_q1),
+    .x_1_address0(grp_float_gelu2_fu_699_x_1_address0),
+    .x_1_ce0(grp_float_gelu2_fu_699_x_1_ce0),
+    .x_1_q0(x_1_q0),
+    .x_1_address1(grp_float_gelu2_fu_699_x_1_address1),
+    .x_1_ce1(grp_float_gelu2_fu_699_x_1_ce1),
+    .x_1_q1(x_1_q1),
+    .x_2_address0(grp_float_gelu2_fu_699_x_2_address0),
+    .x_2_ce0(grp_float_gelu2_fu_699_x_2_ce0),
+    .x_2_q0(x_2_q0),
+    .x_2_address1(grp_float_gelu2_fu_699_x_2_address1),
+    .x_2_ce1(grp_float_gelu2_fu_699_x_2_ce1),
+    .x_2_q1(x_2_q1),
+    .x_3_address0(grp_float_gelu2_fu_699_x_3_address0),
+    .x_3_ce0(grp_float_gelu2_fu_699_x_3_ce0),
+    .x_3_q0(x_3_q0),
+    .x_3_address1(grp_float_gelu2_fu_699_x_3_address1),
+    .x_3_ce1(grp_float_gelu2_fu_699_x_3_ce1),
+    .x_3_q1(x_3_q1),
+    .x_4_address0(grp_float_gelu2_fu_699_x_4_address0),
+    .x_4_ce0(grp_float_gelu2_fu_699_x_4_ce0),
+    .x_4_q0(x_4_q0),
+    .x_4_address1(grp_float_gelu2_fu_699_x_4_address1),
+    .x_4_ce1(grp_float_gelu2_fu_699_x_4_ce1),
+    .x_4_q1(x_4_q1),
+    .x_5_address0(grp_float_gelu2_fu_699_x_5_address0),
+    .x_5_ce0(grp_float_gelu2_fu_699_x_5_ce0),
+    .x_5_q0(x_5_q0),
+    .x_5_address1(grp_float_gelu2_fu_699_x_5_address1),
+    .x_5_ce1(grp_float_gelu2_fu_699_x_5_ce1),
+    .x_5_q1(x_5_q1),
+    .x_6_address0(grp_float_gelu2_fu_699_x_6_address0),
+    .x_6_ce0(grp_float_gelu2_fu_699_x_6_ce0),
+    .x_6_q0(x_6_q0),
+    .x_6_address1(grp_float_gelu2_fu_699_x_6_address1),
+    .x_6_ce1(grp_float_gelu2_fu_699_x_6_ce1),
+    .x_6_q1(x_6_q1),
+    .x_7_address0(grp_float_gelu2_fu_699_x_7_address0),
+    .x_7_ce0(grp_float_gelu2_fu_699_x_7_ce0),
+    .x_7_q0(x_7_q0),
+    .x_7_address1(grp_float_gelu2_fu_699_x_7_address1),
+    .x_7_ce1(grp_float_gelu2_fu_699_x_7_ce1),
+    .x_7_q1(x_7_q1),
+    .x_8_address0(grp_float_gelu2_fu_699_x_8_address0),
+    .x_8_ce0(grp_float_gelu2_fu_699_x_8_ce0),
+    .x_8_q0(x_8_q0),
+    .x_8_address1(grp_float_gelu2_fu_699_x_8_address1),
+    .x_8_ce1(grp_float_gelu2_fu_699_x_8_ce1),
+    .x_8_q1(x_8_q1),
+    .x_9_address0(grp_float_gelu2_fu_699_x_9_address0),
+    .x_9_ce0(grp_float_gelu2_fu_699_x_9_ce0),
+    .x_9_q0(x_9_q0),
+    .x_9_address1(grp_float_gelu2_fu_699_x_9_address1),
+    .x_9_ce1(grp_float_gelu2_fu_699_x_9_ce1),
+    .x_9_q1(x_9_q1),
+    .x_10_address0(grp_float_gelu2_fu_699_x_10_address0),
+    .x_10_ce0(grp_float_gelu2_fu_699_x_10_ce0),
+    .x_10_q0(x_10_q0),
+    .x_10_address1(grp_float_gelu2_fu_699_x_10_address1),
+    .x_10_ce1(grp_float_gelu2_fu_699_x_10_ce1),
+    .x_10_q1(x_10_q1),
+    .x_11_address0(grp_float_gelu2_fu_699_x_11_address0),
+    .x_11_ce0(grp_float_gelu2_fu_699_x_11_ce0),
+    .x_11_q0(x_11_q0),
+    .x_11_address1(grp_float_gelu2_fu_699_x_11_address1),
+    .x_11_ce1(grp_float_gelu2_fu_699_x_11_ce1),
+    .x_11_q1(x_11_q1),
+    .x_12_address0(grp_float_gelu2_fu_699_x_12_address0),
+    .x_12_ce0(grp_float_gelu2_fu_699_x_12_ce0),
+    .x_12_q0(x_12_q0),
+    .x_12_address1(grp_float_gelu2_fu_699_x_12_address1),
+    .x_12_ce1(grp_float_gelu2_fu_699_x_12_ce1),
+    .x_12_q1(x_12_q1),
+    .x_13_address0(grp_float_gelu2_fu_699_x_13_address0),
+    .x_13_ce0(grp_float_gelu2_fu_699_x_13_ce0),
+    .x_13_q0(x_13_q0),
+    .x_13_address1(grp_float_gelu2_fu_699_x_13_address1),
+    .x_13_ce1(grp_float_gelu2_fu_699_x_13_ce1),
+    .x_13_q1(x_13_q1),
+    .x_14_address0(grp_float_gelu2_fu_699_x_14_address0),
+    .x_14_ce0(grp_float_gelu2_fu_699_x_14_ce0),
+    .x_14_q0(x_14_q0),
+    .x_14_address1(grp_float_gelu2_fu_699_x_14_address1),
+    .x_14_ce1(grp_float_gelu2_fu_699_x_14_ce1),
+    .x_14_q1(x_14_q1),
+    .x_15_address0(grp_float_gelu2_fu_699_x_15_address0),
+    .x_15_ce0(grp_float_gelu2_fu_699_x_15_ce0),
+    .x_15_q0(x_15_q0),
+    .x_15_address1(grp_float_gelu2_fu_699_x_15_address1),
+    .x_15_ce1(grp_float_gelu2_fu_699_x_15_ce1),
+    .x_15_q1(x_15_q1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1(grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1(grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1)
 );
 
-activation_accelerator_activation_accelerator_Pipeline_rms_norm_loop2 grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329(
+activation_accelerator_float_Multiply2 grp_float_Multiply2_fu_751(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_ap_start),
-    .ap_done(grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_ap_done),
-    .ap_idle(grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_ap_idle),
-    .ap_ready(grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_ap_ready),
-    .x_address0(grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_x_address0),
-    .x_ce0(grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_x_ce0),
-    .x_q0(x_q0),
-    .rms(reg_432),
-    .buf2_address0(grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_buf2_address0),
-    .buf2_ce0(grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_buf2_ce0),
-    .buf2_we0(grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_buf2_we0),
-    .buf2_d0(grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_buf2_d0),
-    .grp_fu_407_p_din0(grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_grp_fu_407_p_din0),
-    .grp_fu_407_p_din1(grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_grp_fu_407_p_din1),
-    .grp_fu_407_p_dout0(grp_fu_407_p2),
-    .grp_fu_407_p_ce(grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_grp_fu_407_p_ce)
+    .ap_start(grp_float_Multiply2_fu_751_ap_start),
+    .ap_done(grp_float_Multiply2_fu_751_ap_done),
+    .ap_idle(grp_float_Multiply2_fu_751_ap_idle),
+    .ap_ready(grp_float_Multiply2_fu_751_ap_ready),
+    .x_0_address0(grp_float_Multiply2_fu_751_x_0_address0),
+    .x_0_ce0(grp_float_Multiply2_fu_751_x_0_ce0),
+    .x_0_q0(x_q0),
+    .x_0_address1(grp_float_Multiply2_fu_751_x_0_address1),
+    .x_0_ce1(grp_float_Multiply2_fu_751_x_0_ce1),
+    .x_0_q1(x_q1),
+    .x_1_address0(grp_float_Multiply2_fu_751_x_1_address0),
+    .x_1_ce0(grp_float_Multiply2_fu_751_x_1_ce0),
+    .x_1_q0(x_1_q0),
+    .x_1_address1(grp_float_Multiply2_fu_751_x_1_address1),
+    .x_1_ce1(grp_float_Multiply2_fu_751_x_1_ce1),
+    .x_1_q1(x_1_q1),
+    .x_2_address0(grp_float_Multiply2_fu_751_x_2_address0),
+    .x_2_ce0(grp_float_Multiply2_fu_751_x_2_ce0),
+    .x_2_q0(x_2_q0),
+    .x_2_address1(grp_float_Multiply2_fu_751_x_2_address1),
+    .x_2_ce1(grp_float_Multiply2_fu_751_x_2_ce1),
+    .x_2_q1(x_2_q1),
+    .x_3_address0(grp_float_Multiply2_fu_751_x_3_address0),
+    .x_3_ce0(grp_float_Multiply2_fu_751_x_3_ce0),
+    .x_3_q0(x_3_q0),
+    .x_3_address1(grp_float_Multiply2_fu_751_x_3_address1),
+    .x_3_ce1(grp_float_Multiply2_fu_751_x_3_ce1),
+    .x_3_q1(x_3_q1),
+    .x_4_address0(grp_float_Multiply2_fu_751_x_4_address0),
+    .x_4_ce0(grp_float_Multiply2_fu_751_x_4_ce0),
+    .x_4_q0(x_4_q0),
+    .x_4_address1(grp_float_Multiply2_fu_751_x_4_address1),
+    .x_4_ce1(grp_float_Multiply2_fu_751_x_4_ce1),
+    .x_4_q1(x_4_q1),
+    .x_5_address0(grp_float_Multiply2_fu_751_x_5_address0),
+    .x_5_ce0(grp_float_Multiply2_fu_751_x_5_ce0),
+    .x_5_q0(x_5_q0),
+    .x_5_address1(grp_float_Multiply2_fu_751_x_5_address1),
+    .x_5_ce1(grp_float_Multiply2_fu_751_x_5_ce1),
+    .x_5_q1(x_5_q1),
+    .x_6_address0(grp_float_Multiply2_fu_751_x_6_address0),
+    .x_6_ce0(grp_float_Multiply2_fu_751_x_6_ce0),
+    .x_6_q0(x_6_q0),
+    .x_6_address1(grp_float_Multiply2_fu_751_x_6_address1),
+    .x_6_ce1(grp_float_Multiply2_fu_751_x_6_ce1),
+    .x_6_q1(x_6_q1),
+    .x_7_address0(grp_float_Multiply2_fu_751_x_7_address0),
+    .x_7_ce0(grp_float_Multiply2_fu_751_x_7_ce0),
+    .x_7_q0(x_7_q0),
+    .x_7_address1(grp_float_Multiply2_fu_751_x_7_address1),
+    .x_7_ce1(grp_float_Multiply2_fu_751_x_7_ce1),
+    .x_7_q1(x_7_q1),
+    .x_8_address0(grp_float_Multiply2_fu_751_x_8_address0),
+    .x_8_ce0(grp_float_Multiply2_fu_751_x_8_ce0),
+    .x_8_q0(x_8_q0),
+    .x_8_address1(grp_float_Multiply2_fu_751_x_8_address1),
+    .x_8_ce1(grp_float_Multiply2_fu_751_x_8_ce1),
+    .x_8_q1(x_8_q1),
+    .x_9_address0(grp_float_Multiply2_fu_751_x_9_address0),
+    .x_9_ce0(grp_float_Multiply2_fu_751_x_9_ce0),
+    .x_9_q0(x_9_q0),
+    .x_9_address1(grp_float_Multiply2_fu_751_x_9_address1),
+    .x_9_ce1(grp_float_Multiply2_fu_751_x_9_ce1),
+    .x_9_q1(x_9_q1),
+    .x_10_address0(grp_float_Multiply2_fu_751_x_10_address0),
+    .x_10_ce0(grp_float_Multiply2_fu_751_x_10_ce0),
+    .x_10_q0(x_10_q0),
+    .x_10_address1(grp_float_Multiply2_fu_751_x_10_address1),
+    .x_10_ce1(grp_float_Multiply2_fu_751_x_10_ce1),
+    .x_10_q1(x_10_q1),
+    .x_11_address0(grp_float_Multiply2_fu_751_x_11_address0),
+    .x_11_ce0(grp_float_Multiply2_fu_751_x_11_ce0),
+    .x_11_q0(x_11_q0),
+    .x_11_address1(grp_float_Multiply2_fu_751_x_11_address1),
+    .x_11_ce1(grp_float_Multiply2_fu_751_x_11_ce1),
+    .x_11_q1(x_11_q1),
+    .x_12_address0(grp_float_Multiply2_fu_751_x_12_address0),
+    .x_12_ce0(grp_float_Multiply2_fu_751_x_12_ce0),
+    .x_12_q0(x_12_q0),
+    .x_12_address1(grp_float_Multiply2_fu_751_x_12_address1),
+    .x_12_ce1(grp_float_Multiply2_fu_751_x_12_ce1),
+    .x_12_q1(x_12_q1),
+    .x_13_address0(grp_float_Multiply2_fu_751_x_13_address0),
+    .x_13_ce0(grp_float_Multiply2_fu_751_x_13_ce0),
+    .x_13_q0(x_13_q0),
+    .x_13_address1(grp_float_Multiply2_fu_751_x_13_address1),
+    .x_13_ce1(grp_float_Multiply2_fu_751_x_13_ce1),
+    .x_13_q1(x_13_q1),
+    .x_14_address0(grp_float_Multiply2_fu_751_x_14_address0),
+    .x_14_ce0(grp_float_Multiply2_fu_751_x_14_ce0),
+    .x_14_q0(x_14_q0),
+    .x_14_address1(grp_float_Multiply2_fu_751_x_14_address1),
+    .x_14_ce1(grp_float_Multiply2_fu_751_x_14_ce1),
+    .x_14_q1(x_14_q1),
+    .x_15_address0(grp_float_Multiply2_fu_751_x_15_address0),
+    .x_15_ce0(grp_float_Multiply2_fu_751_x_15_ce0),
+    .x_15_q0(x_15_q0),
+    .x_15_address1(grp_float_Multiply2_fu_751_x_15_address1),
+    .x_15_ce1(grp_float_Multiply2_fu_751_x_15_ce1),
+    .x_15_q1(x_15_q1),
+    .y_0_address0(grp_float_Multiply2_fu_751_y_0_address0),
+    .y_0_ce0(grp_float_Multiply2_fu_751_y_0_ce0),
+    .y_0_q0(y_q0),
+    .y_0_address1(grp_float_Multiply2_fu_751_y_0_address1),
+    .y_0_ce1(grp_float_Multiply2_fu_751_y_0_ce1),
+    .y_0_q1(y_q1),
+    .y_1_address0(grp_float_Multiply2_fu_751_y_1_address0),
+    .y_1_ce0(grp_float_Multiply2_fu_751_y_1_ce0),
+    .y_1_q0(y_1_q0),
+    .y_1_address1(grp_float_Multiply2_fu_751_y_1_address1),
+    .y_1_ce1(grp_float_Multiply2_fu_751_y_1_ce1),
+    .y_1_q1(y_1_q1),
+    .y_2_address0(grp_float_Multiply2_fu_751_y_2_address0),
+    .y_2_ce0(grp_float_Multiply2_fu_751_y_2_ce0),
+    .y_2_q0(y_2_q0),
+    .y_2_address1(grp_float_Multiply2_fu_751_y_2_address1),
+    .y_2_ce1(grp_float_Multiply2_fu_751_y_2_ce1),
+    .y_2_q1(y_2_q1),
+    .y_3_address0(grp_float_Multiply2_fu_751_y_3_address0),
+    .y_3_ce0(grp_float_Multiply2_fu_751_y_3_ce0),
+    .y_3_q0(y_3_q0),
+    .y_3_address1(grp_float_Multiply2_fu_751_y_3_address1),
+    .y_3_ce1(grp_float_Multiply2_fu_751_y_3_ce1),
+    .y_3_q1(y_3_q1),
+    .y_4_address0(grp_float_Multiply2_fu_751_y_4_address0),
+    .y_4_ce0(grp_float_Multiply2_fu_751_y_4_ce0),
+    .y_4_q0(y_4_q0),
+    .y_4_address1(grp_float_Multiply2_fu_751_y_4_address1),
+    .y_4_ce1(grp_float_Multiply2_fu_751_y_4_ce1),
+    .y_4_q1(y_4_q1),
+    .y_5_address0(grp_float_Multiply2_fu_751_y_5_address0),
+    .y_5_ce0(grp_float_Multiply2_fu_751_y_5_ce0),
+    .y_5_q0(y_5_q0),
+    .y_5_address1(grp_float_Multiply2_fu_751_y_5_address1),
+    .y_5_ce1(grp_float_Multiply2_fu_751_y_5_ce1),
+    .y_5_q1(y_5_q1),
+    .y_6_address0(grp_float_Multiply2_fu_751_y_6_address0),
+    .y_6_ce0(grp_float_Multiply2_fu_751_y_6_ce0),
+    .y_6_q0(y_6_q0),
+    .y_6_address1(grp_float_Multiply2_fu_751_y_6_address1),
+    .y_6_ce1(grp_float_Multiply2_fu_751_y_6_ce1),
+    .y_6_q1(y_6_q1),
+    .y_7_address0(grp_float_Multiply2_fu_751_y_7_address0),
+    .y_7_ce0(grp_float_Multiply2_fu_751_y_7_ce0),
+    .y_7_q0(y_7_q0),
+    .y_7_address1(grp_float_Multiply2_fu_751_y_7_address1),
+    .y_7_ce1(grp_float_Multiply2_fu_751_y_7_ce1),
+    .y_7_q1(y_7_q1),
+    .y_8_address0(grp_float_Multiply2_fu_751_y_8_address0),
+    .y_8_ce0(grp_float_Multiply2_fu_751_y_8_ce0),
+    .y_8_q0(y_8_q0),
+    .y_8_address1(grp_float_Multiply2_fu_751_y_8_address1),
+    .y_8_ce1(grp_float_Multiply2_fu_751_y_8_ce1),
+    .y_8_q1(y_8_q1),
+    .y_9_address0(grp_float_Multiply2_fu_751_y_9_address0),
+    .y_9_ce0(grp_float_Multiply2_fu_751_y_9_ce0),
+    .y_9_q0(y_9_q0),
+    .y_9_address1(grp_float_Multiply2_fu_751_y_9_address1),
+    .y_9_ce1(grp_float_Multiply2_fu_751_y_9_ce1),
+    .y_9_q1(y_9_q1),
+    .y_10_address0(grp_float_Multiply2_fu_751_y_10_address0),
+    .y_10_ce0(grp_float_Multiply2_fu_751_y_10_ce0),
+    .y_10_q0(y_10_q0),
+    .y_10_address1(grp_float_Multiply2_fu_751_y_10_address1),
+    .y_10_ce1(grp_float_Multiply2_fu_751_y_10_ce1),
+    .y_10_q1(y_10_q1),
+    .y_11_address0(grp_float_Multiply2_fu_751_y_11_address0),
+    .y_11_ce0(grp_float_Multiply2_fu_751_y_11_ce0),
+    .y_11_q0(y_11_q0),
+    .y_11_address1(grp_float_Multiply2_fu_751_y_11_address1),
+    .y_11_ce1(grp_float_Multiply2_fu_751_y_11_ce1),
+    .y_11_q1(y_11_q1),
+    .y_12_address0(grp_float_Multiply2_fu_751_y_12_address0),
+    .y_12_ce0(grp_float_Multiply2_fu_751_y_12_ce0),
+    .y_12_q0(y_12_q0),
+    .y_12_address1(grp_float_Multiply2_fu_751_y_12_address1),
+    .y_12_ce1(grp_float_Multiply2_fu_751_y_12_ce1),
+    .y_12_q1(y_12_q1),
+    .y_13_address0(grp_float_Multiply2_fu_751_y_13_address0),
+    .y_13_ce0(grp_float_Multiply2_fu_751_y_13_ce0),
+    .y_13_q0(y_13_q0),
+    .y_13_address1(grp_float_Multiply2_fu_751_y_13_address1),
+    .y_13_ce1(grp_float_Multiply2_fu_751_y_13_ce1),
+    .y_13_q1(y_13_q1),
+    .y_14_address0(grp_float_Multiply2_fu_751_y_14_address0),
+    .y_14_ce0(grp_float_Multiply2_fu_751_y_14_ce0),
+    .y_14_q0(y_14_q0),
+    .y_14_address1(grp_float_Multiply2_fu_751_y_14_address1),
+    .y_14_ce1(grp_float_Multiply2_fu_751_y_14_ce1),
+    .y_14_q1(y_14_q1),
+    .y_15_address0(grp_float_Multiply2_fu_751_y_15_address0),
+    .y_15_ce0(grp_float_Multiply2_fu_751_y_15_ce0),
+    .y_15_q0(y_15_q0),
+    .y_15_address1(grp_float_Multiply2_fu_751_y_15_address1),
+    .y_15_ce1(grp_float_Multiply2_fu_751_y_15_ce1),
+    .y_15_q1(y_15_q1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1(grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1(grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1)
 );
 
-activation_accelerator_activation_accelerator_Pipeline_silu_loop grp_activation_accelerator_Pipeline_silu_loop_fu_337(
+activation_accelerator_float_safe_softmax2 grp_float_safe_softmax2_fu_819(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_activation_accelerator_Pipeline_silu_loop_fu_337_ap_start),
-    .ap_done(grp_activation_accelerator_Pipeline_silu_loop_fu_337_ap_done),
-    .ap_idle(grp_activation_accelerator_Pipeline_silu_loop_fu_337_ap_idle),
-    .ap_ready(grp_activation_accelerator_Pipeline_silu_loop_fu_337_ap_ready),
-    .x_address0(grp_activation_accelerator_Pipeline_silu_loop_fu_337_x_address0),
-    .x_ce0(grp_activation_accelerator_Pipeline_silu_loop_fu_337_x_ce0),
-    .x_q0(x_q0),
-    .buf2_address0(grp_activation_accelerator_Pipeline_silu_loop_fu_337_buf2_address0),
-    .buf2_ce0(grp_activation_accelerator_Pipeline_silu_loop_fu_337_buf2_ce0),
-    .buf2_we0(grp_activation_accelerator_Pipeline_silu_loop_fu_337_buf2_we0),
-    .buf2_d0(grp_activation_accelerator_Pipeline_silu_loop_fu_337_buf2_d0),
-    .grp_fu_407_p_din0(grp_activation_accelerator_Pipeline_silu_loop_fu_337_grp_fu_407_p_din0),
-    .grp_fu_407_p_din1(grp_activation_accelerator_Pipeline_silu_loop_fu_337_grp_fu_407_p_din1),
-    .grp_fu_407_p_dout0(grp_fu_407_p2),
-    .grp_fu_407_p_ce(grp_activation_accelerator_Pipeline_silu_loop_fu_337_grp_fu_407_p_ce)
+    .ap_start(grp_float_safe_softmax2_fu_819_ap_start),
+    .ap_done(grp_float_safe_softmax2_fu_819_ap_done),
+    .ap_idle(grp_float_safe_softmax2_fu_819_ap_idle),
+    .ap_ready(grp_float_safe_softmax2_fu_819_ap_ready),
+    .x_0_address0(grp_float_safe_softmax2_fu_819_x_0_address0),
+    .x_0_ce0(grp_float_safe_softmax2_fu_819_x_0_ce0),
+    .x_0_q0(x_q0),
+    .x_0_address1(grp_float_safe_softmax2_fu_819_x_0_address1),
+    .x_0_ce1(grp_float_safe_softmax2_fu_819_x_0_ce1),
+    .x_0_q1(x_q1),
+    .x_1_address0(grp_float_safe_softmax2_fu_819_x_1_address0),
+    .x_1_ce0(grp_float_safe_softmax2_fu_819_x_1_ce0),
+    .x_1_q0(x_1_q0),
+    .x_1_address1(grp_float_safe_softmax2_fu_819_x_1_address1),
+    .x_1_ce1(grp_float_safe_softmax2_fu_819_x_1_ce1),
+    .x_1_q1(x_1_q1),
+    .x_2_address0(grp_float_safe_softmax2_fu_819_x_2_address0),
+    .x_2_ce0(grp_float_safe_softmax2_fu_819_x_2_ce0),
+    .x_2_q0(x_2_q0),
+    .x_2_address1(grp_float_safe_softmax2_fu_819_x_2_address1),
+    .x_2_ce1(grp_float_safe_softmax2_fu_819_x_2_ce1),
+    .x_2_q1(x_2_q1),
+    .x_3_address0(grp_float_safe_softmax2_fu_819_x_3_address0),
+    .x_3_ce0(grp_float_safe_softmax2_fu_819_x_3_ce0),
+    .x_3_q0(x_3_q0),
+    .x_3_address1(grp_float_safe_softmax2_fu_819_x_3_address1),
+    .x_3_ce1(grp_float_safe_softmax2_fu_819_x_3_ce1),
+    .x_3_q1(x_3_q1),
+    .x_4_address0(grp_float_safe_softmax2_fu_819_x_4_address0),
+    .x_4_ce0(grp_float_safe_softmax2_fu_819_x_4_ce0),
+    .x_4_q0(x_4_q0),
+    .x_4_address1(grp_float_safe_softmax2_fu_819_x_4_address1),
+    .x_4_ce1(grp_float_safe_softmax2_fu_819_x_4_ce1),
+    .x_4_q1(x_4_q1),
+    .x_5_address0(grp_float_safe_softmax2_fu_819_x_5_address0),
+    .x_5_ce0(grp_float_safe_softmax2_fu_819_x_5_ce0),
+    .x_5_q0(x_5_q0),
+    .x_5_address1(grp_float_safe_softmax2_fu_819_x_5_address1),
+    .x_5_ce1(grp_float_safe_softmax2_fu_819_x_5_ce1),
+    .x_5_q1(x_5_q1),
+    .x_6_address0(grp_float_safe_softmax2_fu_819_x_6_address0),
+    .x_6_ce0(grp_float_safe_softmax2_fu_819_x_6_ce0),
+    .x_6_q0(x_6_q0),
+    .x_6_address1(grp_float_safe_softmax2_fu_819_x_6_address1),
+    .x_6_ce1(grp_float_safe_softmax2_fu_819_x_6_ce1),
+    .x_6_q1(x_6_q1),
+    .x_7_address0(grp_float_safe_softmax2_fu_819_x_7_address0),
+    .x_7_ce0(grp_float_safe_softmax2_fu_819_x_7_ce0),
+    .x_7_q0(x_7_q0),
+    .x_7_address1(grp_float_safe_softmax2_fu_819_x_7_address1),
+    .x_7_ce1(grp_float_safe_softmax2_fu_819_x_7_ce1),
+    .x_7_q1(x_7_q1),
+    .x_8_address0(grp_float_safe_softmax2_fu_819_x_8_address0),
+    .x_8_ce0(grp_float_safe_softmax2_fu_819_x_8_ce0),
+    .x_8_q0(x_8_q0),
+    .x_8_address1(grp_float_safe_softmax2_fu_819_x_8_address1),
+    .x_8_ce1(grp_float_safe_softmax2_fu_819_x_8_ce1),
+    .x_8_q1(x_8_q1),
+    .x_9_address0(grp_float_safe_softmax2_fu_819_x_9_address0),
+    .x_9_ce0(grp_float_safe_softmax2_fu_819_x_9_ce0),
+    .x_9_q0(x_9_q0),
+    .x_9_address1(grp_float_safe_softmax2_fu_819_x_9_address1),
+    .x_9_ce1(grp_float_safe_softmax2_fu_819_x_9_ce1),
+    .x_9_q1(x_9_q1),
+    .x_10_address0(grp_float_safe_softmax2_fu_819_x_10_address0),
+    .x_10_ce0(grp_float_safe_softmax2_fu_819_x_10_ce0),
+    .x_10_q0(x_10_q0),
+    .x_10_address1(grp_float_safe_softmax2_fu_819_x_10_address1),
+    .x_10_ce1(grp_float_safe_softmax2_fu_819_x_10_ce1),
+    .x_10_q1(x_10_q1),
+    .x_11_address0(grp_float_safe_softmax2_fu_819_x_11_address0),
+    .x_11_ce0(grp_float_safe_softmax2_fu_819_x_11_ce0),
+    .x_11_q0(x_11_q0),
+    .x_11_address1(grp_float_safe_softmax2_fu_819_x_11_address1),
+    .x_11_ce1(grp_float_safe_softmax2_fu_819_x_11_ce1),
+    .x_11_q1(x_11_q1),
+    .x_12_address0(grp_float_safe_softmax2_fu_819_x_12_address0),
+    .x_12_ce0(grp_float_safe_softmax2_fu_819_x_12_ce0),
+    .x_12_q0(x_12_q0),
+    .x_12_address1(grp_float_safe_softmax2_fu_819_x_12_address1),
+    .x_12_ce1(grp_float_safe_softmax2_fu_819_x_12_ce1),
+    .x_12_q1(x_12_q1),
+    .x_13_address0(grp_float_safe_softmax2_fu_819_x_13_address0),
+    .x_13_ce0(grp_float_safe_softmax2_fu_819_x_13_ce0),
+    .x_13_q0(x_13_q0),
+    .x_13_address1(grp_float_safe_softmax2_fu_819_x_13_address1),
+    .x_13_ce1(grp_float_safe_softmax2_fu_819_x_13_ce1),
+    .x_13_q1(x_13_q1),
+    .x_14_address0(grp_float_safe_softmax2_fu_819_x_14_address0),
+    .x_14_ce0(grp_float_safe_softmax2_fu_819_x_14_ce0),
+    .x_14_q0(x_14_q0),
+    .x_14_address1(grp_float_safe_softmax2_fu_819_x_14_address1),
+    .x_14_ce1(grp_float_safe_softmax2_fu_819_x_14_ce1),
+    .x_14_q1(x_14_q1),
+    .x_15_address0(grp_float_safe_softmax2_fu_819_x_15_address0),
+    .x_15_ce0(grp_float_safe_softmax2_fu_819_x_15_ce0),
+    .x_15_q0(x_15_q0),
+    .x_15_address1(grp_float_safe_softmax2_fu_819_x_15_address1),
+    .x_15_ce1(grp_float_safe_softmax2_fu_819_x_15_ce1),
+    .x_15_q1(x_15_q1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1(grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1(grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1),
+    .grp_bf16add_fast_fu_990_p_din1(grp_float_safe_softmax2_fu_819_grp_bf16add_fast_fu_990_p_din1),
+    .grp_bf16add_fast_fu_990_p_din2(grp_float_safe_softmax2_fu_819_grp_bf16add_fast_fu_990_p_din2),
+    .grp_bf16add_fast_fu_990_p_dout0(grp_bf16add_fast_fu_990_ap_return),
+    .grp_bf16add_fast_fu_990_p_ce(grp_float_safe_softmax2_fu_819_grp_bf16add_fast_fu_990_p_ce)
 );
 
-activation_accelerator_activation_accelerator_Pipeline_gelu_loop grp_activation_accelerator_Pipeline_gelu_loop_fu_344(
+activation_accelerator_activation_accelerator_Pipeline_stage_0_load0 grp_activation_accelerator_Pipeline_stage_0_load0_fu_871(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_activation_accelerator_Pipeline_gelu_loop_fu_344_ap_start),
-    .ap_done(grp_activation_accelerator_Pipeline_gelu_loop_fu_344_ap_done),
-    .ap_idle(grp_activation_accelerator_Pipeline_gelu_loop_fu_344_ap_idle),
-    .ap_ready(grp_activation_accelerator_Pipeline_gelu_loop_fu_344_ap_ready),
-    .x_address0(grp_activation_accelerator_Pipeline_gelu_loop_fu_344_x_address0),
-    .x_ce0(grp_activation_accelerator_Pipeline_gelu_loop_fu_344_x_ce0),
-    .x_q0(x_q0),
-    .buf2_address0(grp_activation_accelerator_Pipeline_gelu_loop_fu_344_buf2_address0),
-    .buf2_ce0(grp_activation_accelerator_Pipeline_gelu_loop_fu_344_buf2_ce0),
-    .buf2_we0(grp_activation_accelerator_Pipeline_gelu_loop_fu_344_buf2_we0),
-    .buf2_d0(grp_activation_accelerator_Pipeline_gelu_loop_fu_344_buf2_d0),
-    .grp_fu_402_p_din0(grp_activation_accelerator_Pipeline_gelu_loop_fu_344_grp_fu_402_p_din0),
-    .grp_fu_402_p_din1(grp_activation_accelerator_Pipeline_gelu_loop_fu_344_grp_fu_402_p_din1),
-    .grp_fu_402_p_opcode(grp_activation_accelerator_Pipeline_gelu_loop_fu_344_grp_fu_402_p_opcode),
-    .grp_fu_402_p_dout0(grp_fu_402_p2),
-    .grp_fu_402_p_ce(grp_activation_accelerator_Pipeline_gelu_loop_fu_344_grp_fu_402_p_ce)
-);
-
-activation_accelerator_activation_accelerator_Pipeline_float_multiply_loop grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_ap_start),
-    .ap_done(grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_ap_done),
-    .ap_idle(grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_ap_idle),
-    .ap_ready(grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_ap_ready),
-    .x_address0(grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_x_address0),
-    .x_ce0(grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_x_ce0),
-    .x_q0(x_q0),
-    .y_address0(grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_y_address0),
-    .y_ce0(grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_y_ce0),
-    .y_q0(y_q0),
-    .buf2_address0(grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_buf2_address0),
-    .buf2_ce0(grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_buf2_ce0),
-    .buf2_we0(grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_buf2_we0),
-    .buf2_d0(grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_buf2_d0),
-    .grp_fu_583_p_din0(grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_grp_fu_583_p_din0),
-    .grp_fu_583_p_din1(grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_grp_fu_583_p_din1),
-    .grp_fu_583_p_dout0(grp_fu_583_p2),
-    .grp_fu_583_p_ce(grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_grp_fu_583_p_ce)
-);
-
-activation_accelerator_float_safe_softmax grp_float_safe_softmax_fu_359(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_float_safe_softmax_fu_359_ap_start),
-    .ap_done(grp_float_safe_softmax_fu_359_ap_done),
-    .ap_idle(grp_float_safe_softmax_fu_359_ap_idle),
-    .ap_ready(grp_float_safe_softmax_fu_359_ap_ready),
-    .x_address0(grp_float_safe_softmax_fu_359_x_address0),
-    .x_ce0(grp_float_safe_softmax_fu_359_x_ce0),
-    .x_q0(x_q0),
-    .buf2_address0(grp_float_safe_softmax_fu_359_buf2_address0),
-    .buf2_ce0(grp_float_safe_softmax_fu_359_buf2_ce0),
-    .buf2_we0(grp_float_safe_softmax_fu_359_buf2_we0),
-    .buf2_d0(grp_float_safe_softmax_fu_359_buf2_d0)
-);
-
-activation_accelerator_activation_accelerator_Pipeline_float_add_loop grp_activation_accelerator_Pipeline_float_add_loop_fu_366(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_activation_accelerator_Pipeline_float_add_loop_fu_366_ap_start),
-    .ap_done(grp_activation_accelerator_Pipeline_float_add_loop_fu_366_ap_done),
-    .ap_idle(grp_activation_accelerator_Pipeline_float_add_loop_fu_366_ap_idle),
-    .ap_ready(grp_activation_accelerator_Pipeline_float_add_loop_fu_366_ap_ready),
-    .x_address0(grp_activation_accelerator_Pipeline_float_add_loop_fu_366_x_address0),
-    .x_ce0(grp_activation_accelerator_Pipeline_float_add_loop_fu_366_x_ce0),
-    .x_q0(x_q0),
-    .y_address0(grp_activation_accelerator_Pipeline_float_add_loop_fu_366_y_address0),
-    .y_ce0(grp_activation_accelerator_Pipeline_float_add_loop_fu_366_y_ce0),
-    .y_q0(y_q0),
-    .buf2_address0(grp_activation_accelerator_Pipeline_float_add_loop_fu_366_buf2_address0),
-    .buf2_ce0(grp_activation_accelerator_Pipeline_float_add_loop_fu_366_buf2_ce0),
-    .buf2_we0(grp_activation_accelerator_Pipeline_float_add_loop_fu_366_buf2_we0),
-    .buf2_d0(grp_activation_accelerator_Pipeline_float_add_loop_fu_366_buf2_d0),
-    .grp_fu_402_p_din0(grp_activation_accelerator_Pipeline_float_add_loop_fu_366_grp_fu_402_p_din0),
-    .grp_fu_402_p_din1(grp_activation_accelerator_Pipeline_float_add_loop_fu_366_grp_fu_402_p_din1),
-    .grp_fu_402_p_opcode(grp_activation_accelerator_Pipeline_float_add_loop_fu_366_grp_fu_402_p_opcode),
-    .grp_fu_402_p_dout0(grp_fu_402_p2),
-    .grp_fu_402_p_ce(grp_activation_accelerator_Pipeline_float_add_loop_fu_366_grp_fu_402_p_ce)
-);
-
-activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_458_3 grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_ap_start),
-    .ap_done(grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_ap_done),
-    .ap_idle(grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_ap_idle),
-    .ap_ready(grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_ap_ready),
-    .buf0_address0(grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_buf0_address0),
-    .buf0_ce0(grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_buf0_ce0),
-    .buf0_q0(buf0_q0),
-    .buf1_address0(grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_buf1_address0),
-    .buf1_ce0(grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_buf1_ce0),
-    .buf1_q0(buf1_q0),
-    .buf2_address0(grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_buf2_address0),
-    .buf2_ce0(grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_buf2_ce0),
-    .buf2_we0(grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_buf2_we0),
-    .buf2_d0(grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_buf2_d0)
-);
-
-activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_445_1 grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_ap_start),
-    .ap_done(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_ap_done),
-    .ap_idle(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_ap_idle),
-    .ap_ready(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_ap_ready),
-    .m_axi_gmem0_AWVALID(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_AWVALID),
+    .ap_start(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_ap_start),
+    .ap_done(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_ap_done),
+    .ap_idle(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_ap_idle),
+    .ap_ready(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_ap_ready),
+    .m_axi_gmem0_AWVALID(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_AWVALID),
     .m_axi_gmem0_AWREADY(1'b0),
-    .m_axi_gmem0_AWADDR(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_AWADDR),
-    .m_axi_gmem0_AWID(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_AWID),
-    .m_axi_gmem0_AWLEN(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_AWLEN),
-    .m_axi_gmem0_AWSIZE(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_AWSIZE),
-    .m_axi_gmem0_AWBURST(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_AWBURST),
-    .m_axi_gmem0_AWLOCK(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_AWLOCK),
-    .m_axi_gmem0_AWCACHE(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_AWCACHE),
-    .m_axi_gmem0_AWPROT(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_AWPROT),
-    .m_axi_gmem0_AWQOS(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_AWQOS),
-    .m_axi_gmem0_AWREGION(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_AWREGION),
-    .m_axi_gmem0_AWUSER(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_AWUSER),
-    .m_axi_gmem0_WVALID(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_WVALID),
+    .m_axi_gmem0_AWADDR(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_AWADDR),
+    .m_axi_gmem0_AWID(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_AWID),
+    .m_axi_gmem0_AWLEN(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_AWLEN),
+    .m_axi_gmem0_AWSIZE(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_AWSIZE),
+    .m_axi_gmem0_AWBURST(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_AWBURST),
+    .m_axi_gmem0_AWLOCK(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_AWLOCK),
+    .m_axi_gmem0_AWCACHE(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_AWCACHE),
+    .m_axi_gmem0_AWPROT(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_AWPROT),
+    .m_axi_gmem0_AWQOS(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_AWQOS),
+    .m_axi_gmem0_AWREGION(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_AWREGION),
+    .m_axi_gmem0_AWUSER(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_AWUSER),
+    .m_axi_gmem0_WVALID(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_WVALID),
     .m_axi_gmem0_WREADY(1'b0),
-    .m_axi_gmem0_WDATA(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_WDATA),
-    .m_axi_gmem0_WSTRB(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_WSTRB),
-    .m_axi_gmem0_WLAST(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_WLAST),
-    .m_axi_gmem0_WID(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_WID),
-    .m_axi_gmem0_WUSER(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_WUSER),
-    .m_axi_gmem0_ARVALID(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_ARVALID),
+    .m_axi_gmem0_WDATA(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_WDATA),
+    .m_axi_gmem0_WSTRB(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_WSTRB),
+    .m_axi_gmem0_WLAST(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_WLAST),
+    .m_axi_gmem0_WID(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_WID),
+    .m_axi_gmem0_WUSER(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_WUSER),
+    .m_axi_gmem0_ARVALID(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_ARVALID),
     .m_axi_gmem0_ARREADY(gmem0_ARREADY),
-    .m_axi_gmem0_ARADDR(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_ARADDR),
-    .m_axi_gmem0_ARID(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_ARID),
-    .m_axi_gmem0_ARLEN(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_ARLEN),
-    .m_axi_gmem0_ARSIZE(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_ARSIZE),
-    .m_axi_gmem0_ARBURST(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_ARBURST),
-    .m_axi_gmem0_ARLOCK(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_ARLOCK),
-    .m_axi_gmem0_ARCACHE(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_ARCACHE),
-    .m_axi_gmem0_ARPROT(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_ARPROT),
-    .m_axi_gmem0_ARQOS(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_ARQOS),
-    .m_axi_gmem0_ARREGION(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_ARREGION),
-    .m_axi_gmem0_ARUSER(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_ARUSER),
+    .m_axi_gmem0_ARADDR(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_ARADDR),
+    .m_axi_gmem0_ARID(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_ARID),
+    .m_axi_gmem0_ARLEN(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_ARLEN),
+    .m_axi_gmem0_ARSIZE(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_ARSIZE),
+    .m_axi_gmem0_ARBURST(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_ARBURST),
+    .m_axi_gmem0_ARLOCK(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_ARLOCK),
+    .m_axi_gmem0_ARCACHE(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_ARCACHE),
+    .m_axi_gmem0_ARPROT(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_ARPROT),
+    .m_axi_gmem0_ARQOS(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_ARQOS),
+    .m_axi_gmem0_ARREGION(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_ARREGION),
+    .m_axi_gmem0_ARUSER(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_ARUSER),
     .m_axi_gmem0_RVALID(gmem0_RVALID),
-    .m_axi_gmem0_RREADY(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_RREADY),
+    .m_axi_gmem0_RREADY(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_RREADY),
     .m_axi_gmem0_RDATA(gmem0_RDATA),
     .m_axi_gmem0_RLAST(1'b0),
     .m_axi_gmem0_RID(1'd0),
@@ -1659,59 +5689,59 @@ activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_445_1 grp_acti
     .m_axi_gmem0_RUSER(1'd0),
     .m_axi_gmem0_RRESP(2'd0),
     .m_axi_gmem0_BVALID(1'b0),
-    .m_axi_gmem0_BREADY(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_BREADY),
+    .m_axi_gmem0_BREADY(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_BREADY),
     .m_axi_gmem0_BRESP(2'd0),
     .m_axi_gmem0_BID(1'd0),
     .m_axi_gmem0_BUSER(1'd0),
-    .sext_ln445(trunc_ln_reg_542),
-    .buf0_address0(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_buf0_address0),
-    .buf0_ce0(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_buf0_ce0),
-    .buf0_we0(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_buf0_we0),
-    .buf0_d0(grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_buf0_d0)
+    .sext_ln1122(trunc_ln_reg_963),
+    .buf0_address0(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_buf0_address0),
+    .buf0_ce0(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_buf0_ce0),
+    .buf0_we0(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_buf0_we0),
+    .buf0_d0(grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_buf0_d0)
 );
 
-activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_448_2 grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393(
+activation_accelerator_activation_accelerator_Pipeline_stage_0_load1 grp_activation_accelerator_Pipeline_stage_0_load1_fu_880(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_ap_start),
-    .ap_done(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_ap_done),
-    .ap_idle(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_ap_idle),
-    .ap_ready(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_ap_ready),
-    .m_axi_gmem1_AWVALID(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_AWVALID),
+    .ap_start(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_ap_start),
+    .ap_done(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_ap_done),
+    .ap_idle(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_ap_idle),
+    .ap_ready(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_ap_ready),
+    .m_axi_gmem1_AWVALID(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_AWVALID),
     .m_axi_gmem1_AWREADY(1'b0),
-    .m_axi_gmem1_AWADDR(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_AWADDR),
-    .m_axi_gmem1_AWID(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_AWID),
-    .m_axi_gmem1_AWLEN(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_AWLEN),
-    .m_axi_gmem1_AWSIZE(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_AWSIZE),
-    .m_axi_gmem1_AWBURST(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_AWBURST),
-    .m_axi_gmem1_AWLOCK(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_AWLOCK),
-    .m_axi_gmem1_AWCACHE(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_AWCACHE),
-    .m_axi_gmem1_AWPROT(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_AWPROT),
-    .m_axi_gmem1_AWQOS(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_AWQOS),
-    .m_axi_gmem1_AWREGION(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_AWREGION),
-    .m_axi_gmem1_AWUSER(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_AWUSER),
-    .m_axi_gmem1_WVALID(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_WVALID),
+    .m_axi_gmem1_AWADDR(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_AWADDR),
+    .m_axi_gmem1_AWID(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_AWID),
+    .m_axi_gmem1_AWLEN(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_AWLEN),
+    .m_axi_gmem1_AWSIZE(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_AWSIZE),
+    .m_axi_gmem1_AWBURST(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_AWBURST),
+    .m_axi_gmem1_AWLOCK(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_AWLOCK),
+    .m_axi_gmem1_AWCACHE(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_AWCACHE),
+    .m_axi_gmem1_AWPROT(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_AWPROT),
+    .m_axi_gmem1_AWQOS(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_AWQOS),
+    .m_axi_gmem1_AWREGION(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_AWREGION),
+    .m_axi_gmem1_AWUSER(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_AWUSER),
+    .m_axi_gmem1_WVALID(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_WVALID),
     .m_axi_gmem1_WREADY(1'b0),
-    .m_axi_gmem1_WDATA(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_WDATA),
-    .m_axi_gmem1_WSTRB(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_WSTRB),
-    .m_axi_gmem1_WLAST(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_WLAST),
-    .m_axi_gmem1_WID(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_WID),
-    .m_axi_gmem1_WUSER(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_WUSER),
-    .m_axi_gmem1_ARVALID(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_ARVALID),
+    .m_axi_gmem1_WDATA(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_WDATA),
+    .m_axi_gmem1_WSTRB(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_WSTRB),
+    .m_axi_gmem1_WLAST(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_WLAST),
+    .m_axi_gmem1_WID(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_WID),
+    .m_axi_gmem1_WUSER(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_WUSER),
+    .m_axi_gmem1_ARVALID(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_ARVALID),
     .m_axi_gmem1_ARREADY(gmem1_ARREADY),
-    .m_axi_gmem1_ARADDR(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_ARADDR),
-    .m_axi_gmem1_ARID(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_ARID),
-    .m_axi_gmem1_ARLEN(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_ARLEN),
-    .m_axi_gmem1_ARSIZE(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_ARSIZE),
-    .m_axi_gmem1_ARBURST(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_ARBURST),
-    .m_axi_gmem1_ARLOCK(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_ARLOCK),
-    .m_axi_gmem1_ARCACHE(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_ARCACHE),
-    .m_axi_gmem1_ARPROT(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_ARPROT),
-    .m_axi_gmem1_ARQOS(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_ARQOS),
-    .m_axi_gmem1_ARREGION(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_ARREGION),
-    .m_axi_gmem1_ARUSER(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_ARUSER),
+    .m_axi_gmem1_ARADDR(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_ARADDR),
+    .m_axi_gmem1_ARID(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_ARID),
+    .m_axi_gmem1_ARLEN(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_ARLEN),
+    .m_axi_gmem1_ARSIZE(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_ARSIZE),
+    .m_axi_gmem1_ARBURST(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_ARBURST),
+    .m_axi_gmem1_ARLOCK(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_ARLOCK),
+    .m_axi_gmem1_ARCACHE(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_ARCACHE),
+    .m_axi_gmem1_ARPROT(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_ARPROT),
+    .m_axi_gmem1_ARQOS(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_ARQOS),
+    .m_axi_gmem1_ARREGION(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_ARREGION),
+    .m_axi_gmem1_ARUSER(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_ARUSER),
     .m_axi_gmem1_RVALID(gmem1_RVALID),
-    .m_axi_gmem1_RREADY(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_RREADY),
+    .m_axi_gmem1_RREADY(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_RREADY),
     .m_axi_gmem1_RDATA(gmem1_RDATA),
     .m_axi_gmem1_RLAST(1'b0),
     .m_axi_gmem1_RID(1'd0),
@@ -1719,15 +5749,24 @@ activation_accelerator_activation_accelerator_Pipeline_VITIS_LOOP_448_2 grp_acti
     .m_axi_gmem1_RUSER(1'd0),
     .m_axi_gmem1_RRESP(2'd0),
     .m_axi_gmem1_BVALID(1'b0),
-    .m_axi_gmem1_BREADY(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_BREADY),
+    .m_axi_gmem1_BREADY(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_BREADY),
     .m_axi_gmem1_BRESP(2'd0),
     .m_axi_gmem1_BID(1'd0),
     .m_axi_gmem1_BUSER(1'd0),
-    .sext_ln448(trunc_ln1_reg_548),
-    .buf1_address0(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_buf1_address0),
-    .buf1_ce0(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_buf1_ce0),
-    .buf1_we0(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_buf1_we0),
-    .buf1_d0(grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_buf1_d0)
+    .sext_ln1126(trunc_ln6_reg_969),
+    .buf1_address0(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_buf1_address0),
+    .buf1_ce0(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_buf1_ce0),
+    .buf1_we0(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_buf1_we0),
+    .buf1_d0(grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_buf1_d0)
+);
+
+activation_accelerator_bf16add_fast grp_bf16add_fast_fu_990(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst_n_inv),
+    .a_bits(grp_bf16add_fast_fu_990_a_bits),
+    .b_bits(grp_bf16add_fast_fu_990_b_bits),
+    .ap_return(grp_bf16add_fast_fu_990_ap_return),
+    .ap_ce(grp_bf16add_fast_fu_990_ap_ce)
 );
 
 activation_accelerator_control_s_axi #(
@@ -2030,71 +6069,10 @@ gmem2_m_axi_U(
     .I_AWLEN(gmem2_AWLEN),
     .I_WVALID(gmem2_WVALID),
     .I_WREADY(gmem2_WREADY),
-    .I_WDATA(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_WDATA),
-    .I_WSTRB(grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_WSTRB),
+    .I_WDATA(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_WDATA),
+    .I_WSTRB(grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_WSTRB),
     .I_BVALID(gmem2_BVALID),
     .I_BREADY(gmem2_BREADY)
-);
-
-activation_accelerator_faddfsub_32ns_32ns_32_4_full_dsp_1 #(
-    .ID( 1 ),
-    .NUM_STAGE( 4 ),
-    .din0_WIDTH( 32 ),
-    .din1_WIDTH( 32 ),
-    .dout_WIDTH( 32 ))
-faddfsub_32ns_32ns_32_4_full_dsp_1_U199(
-    .clk(ap_clk),
-    .reset(ap_rst_n_inv),
-    .din0(grp_fu_402_p0),
-    .din1(grp_fu_402_p1),
-    .opcode(grp_fu_402_opcode),
-    .ce(grp_fu_402_ce),
-    .dout(grp_fu_402_p2)
-);
-
-activation_accelerator_fdiv_32ns_32ns_32_9_no_dsp_1 #(
-    .ID( 1 ),
-    .NUM_STAGE( 9 ),
-    .din0_WIDTH( 32 ),
-    .din1_WIDTH( 32 ),
-    .dout_WIDTH( 32 ))
-fdiv_32ns_32ns_32_9_no_dsp_1_U200(
-    .clk(ap_clk),
-    .reset(ap_rst_n_inv),
-    .din0(grp_fu_407_p0),
-    .din1(grp_fu_407_p1),
-    .ce(grp_fu_407_ce),
-    .dout(grp_fu_407_p2)
-);
-
-activation_accelerator_fsqrt_32ns_32ns_32_8_no_dsp_1 #(
-    .ID( 1 ),
-    .NUM_STAGE( 8 ),
-    .din0_WIDTH( 32 ),
-    .din1_WIDTH( 32 ),
-    .dout_WIDTH( 32 ))
-fsqrt_32ns_32ns_32_8_no_dsp_1_U201(
-    .clk(ap_clk),
-    .reset(ap_rst_n_inv),
-    .din0(32'd0),
-    .din1(reg_427),
-    .ce(1'b1),
-    .dout(grp_fu_413_p2)
-);
-
-activation_accelerator_fmul_32ns_32ns_32_3_max_dsp_1 #(
-    .ID( 1 ),
-    .NUM_STAGE( 3 ),
-    .din0_WIDTH( 32 ),
-    .din1_WIDTH( 32 ),
-    .dout_WIDTH( 32 ))
-fmul_32ns_32ns_32_3_max_dsp_1_U202(
-    .clk(ap_clk),
-    .reset(ap_rst_n_inv),
-    .din0(grp_fu_583_p0),
-    .din1(grp_fu_583_p1),
-    .ce(grp_fu_583_ce),
-    .dout(grp_fu_583_p2)
 );
 
 always @ (posedge ap_clk) begin
@@ -2107,326 +6085,1810 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284_ap_start_reg <= 1'b0;
-    end else begin
-        if (((ap_start == 1'b1) & (stage_read_read_fu_174_p2 == 32'd1) & (config_r_read_read_fu_168_p2 == 32'd0) & (1'b1 == ap_CS_fsm_state1))) begin
-            grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284_ap_start_reg <= 1'b1;
-        end else if ((grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284_ap_ready == 1'b1)) begin
-            grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284_ap_start_reg <= 1'b0;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268_ap_start_reg <= 1'b0;
-    end else begin
-        if (((ap_start == 1'b1) & (stage_read_read_fu_174_p2 == 32'd1) & (config_r_read_read_fu_168_p2 == 32'd1) & (1'b1 == ap_CS_fsm_state1))) begin
-            grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268_ap_start_reg <= 1'b1;
-        end else if ((grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268_ap_ready == 1'b1)) begin
-            grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268_ap_start_reg <= 1'b0;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252_ap_start_reg <= 1'b0;
-    end else begin
-        if (((ap_start == 1'b1) & (stage_read_read_fu_174_p2 == 32'd1) & (config_r_read_read_fu_168_p2 == 32'd2) & (1'b1 == ap_CS_fsm_state1))) begin
-            grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252_ap_start_reg <= 1'b1;
-        end else if ((grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252_ap_ready == 1'b1)) begin
-            grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252_ap_start_reg <= 1'b0;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260_ap_start_reg <= 1'b0;
-    end else begin
-        if (((ap_start == 1'b1) & (stage_read_read_fu_174_p2 == 32'd1) & (config_r_read_read_fu_168_p2 == 32'd2) & (1'b1 == ap_CS_fsm_state1))) begin
-            grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260_ap_start_reg <= 1'b1;
-        end else if ((grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260_ap_ready == 1'b1)) begin
-            grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260_ap_start_reg <= 1'b0;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244_ap_start_reg <= 1'b0;
-    end else begin
-        if (((ap_start == 1'b1) & (stage_read_read_fu_174_p2 == 32'd1) & (config_r_read_read_fu_168_p2 == 32'd3) & (1'b1 == ap_CS_fsm_state1))) begin
-            grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244_ap_start_reg <= 1'b1;
-        end else if ((grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244_ap_ready == 1'b1)) begin
-            grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244_ap_start_reg <= 1'b0;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236_ap_start_reg <= 1'b0;
-    end else begin
-        if (((ap_start == 1'b1) & (stage_read_read_fu_174_p2 == 32'd1) & (config_r_read_read_fu_168_p2 == 32'd4) & (1'b1 == ap_CS_fsm_state1))) begin
-            grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236_ap_start_reg <= 1'b1;
-        end else if ((grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236_ap_ready == 1'b1)) begin
-            grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236_ap_start_reg <= 1'b0;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_ap_start_reg <= 1'b0;
-    end else begin
-        if (((ap_start == 1'b1) & (stage_read_read_fu_174_p2 == 32'd1) & (config_r_read_read_fu_168_p2 == 32'd5) & (1'b1 == ap_CS_fsm_state1))) begin
-            grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_ap_start_reg <= 1'b1;
-        end else if ((grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_ap_ready == 1'b1)) begin
-            grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_ap_start_reg <= 1'b0;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_ap_start_reg <= 1'b0;
-    end else begin
-        if (((ap_start == 1'b1) & (stage_read_read_fu_174_p2 == 32'd1) & (config_r_read_read_fu_168_p2 == 32'd6) & (1'b1 == ap_CS_fsm_state1))) begin
-            grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_ap_start_reg <= 1'b1;
-        end else if ((grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_ap_ready == 1'b1)) begin
-            grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_ap_start_reg <= 1'b0;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276_ap_start_reg <= 1'b0;
-    end else begin
-        if (((ap_start == 1'b1) & (stage_read_read_fu_174_p2 == 32'd1) & (config_r_read_read_fu_168_p2 == 32'd0) & (1'b1 == ap_CS_fsm_state1))) begin
-            grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276_ap_start_reg <= 1'b1;
-        end else if ((grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276_ap_ready == 1'b1)) begin
-            grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276_ap_start_reg <= 1'b0;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_ap_start_reg <= 1'b0;
-    end else begin
-        if ((1'b1 == ap_CS_fsm_state85)) begin
-            grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_ap_start_reg <= 1'b1;
-        end else if ((grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_ap_ready == 1'b1)) begin
-            grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_ap_start_reg <= 1'b0;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_ap_start_reg <= 1'b0;
-    end else begin
-        if ((1'b1 == ap_CS_fsm_state85)) begin
-            grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_ap_start_reg <= 1'b1;
-        end else if ((grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_ap_ready == 1'b1)) begin
-            grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_ap_start_reg <= 1'b0;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_ap_start_reg <= 1'b0;
-    end else begin
-        if ((1'b1 == ap_CS_fsm_state76)) begin
-            grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_ap_start_reg <= 1'b1;
-        end else if ((grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_ap_ready == 1'b1)) begin
-            grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_ap_start_reg <= 1'b0;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_ap_start_reg <= 1'b0;
-    end else begin
-        if ((1'b1 == ap_CS_fsm_state3)) begin
-            grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_ap_start_reg <= 1'b1;
-        end else if ((grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_ap_ready == 1'b1)) begin
-            grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_ap_start_reg <= 1'b0;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        grp_activation_accelerator_Pipeline_float_add_loop_fu_366_ap_start_reg <= 1'b0;
-    end else begin
-        if ((1'b1 == ap_CS_fsm_state74)) begin
-            grp_activation_accelerator_Pipeline_float_add_loop_fu_366_ap_start_reg <= 1'b1;
-        end else if ((grp_activation_accelerator_Pipeline_float_add_loop_fu_366_ap_ready == 1'b1)) begin
-            grp_activation_accelerator_Pipeline_float_add_loop_fu_366_ap_start_reg <= 1'b0;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_ap_start_reg <= 1'b0;
-    end else begin
-        if (((config_r_read_reg_510 == 32'd2) & (1'b1 == ap_CS_fsm_state71))) begin
-            grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_ap_start_reg <= 1'b1;
-        end else if ((grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_ap_ready == 1'b1)) begin
-            grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_ap_start_reg <= 1'b0;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        grp_activation_accelerator_Pipeline_gelu_loop_fu_344_ap_start_reg <= 1'b0;
-    end else begin
-        if (((config_r_read_reg_510 == 32'd3) & (1'b1 == ap_CS_fsm_state71))) begin
-            grp_activation_accelerator_Pipeline_gelu_loop_fu_344_ap_start_reg <= 1'b1;
-        end else if ((grp_activation_accelerator_Pipeline_gelu_loop_fu_344_ap_ready == 1'b1)) begin
-            grp_activation_accelerator_Pipeline_gelu_loop_fu_344_ap_start_reg <= 1'b0;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_ap_start_reg <= 1'b0;
-    end else begin
-        if ((1'b1 == ap_CS_fsm_state11)) begin
-            grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_ap_start_reg <= 1'b1;
-        end else if ((grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_ap_ready == 1'b1)) begin
-            grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_ap_start_reg <= 1'b0;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_ap_start_reg <= 1'b0;
+        grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_ap_start_reg <= 1'b0;
     end else begin
         if ((1'b1 == ap_CS_fsm_state21)) begin
-            grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_ap_start_reg <= 1'b1;
-        end else if ((grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_ap_ready == 1'b1)) begin
-            grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_ap_start_reg <= 1'b0;
+            grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_ap_start_reg <= 1'b1;
+        end else if ((grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_ap_ready == 1'b1)) begin
+            grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_ap_start_reg <= 1'b0;
+        grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_ap_start_reg <= 1'b0;
     end else begin
-        if ((1'b1 == ap_CS_fsm_state43)) begin
-            grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_ap_start_reg <= 1'b1;
-        end else if ((grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_ap_ready == 1'b1)) begin
-            grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_ap_start_reg <= 1'b0;
+        if ((1'b1 == ap_CS_fsm_state21)) begin
+            grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_ap_start_reg <= 1'b1;
+        end else if ((grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_ap_ready == 1'b1)) begin
+            grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_ap_start_reg <= 1'b0;
+        grp_activation_accelerator_Pipeline_stage_2_store_fu_504_ap_start_reg <= 1'b0;
     end else begin
-        if ((1'b1 == ap_CS_fsm_state46)) begin
-            grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_ap_start_reg <= 1'b1;
-        end else if ((grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_ap_ready == 1'b1)) begin
-            grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_ap_start_reg <= 1'b0;
+        if ((1'b1 == ap_CS_fsm_state3)) begin
+            grp_activation_accelerator_Pipeline_stage_2_store_fu_504_ap_start_reg <= 1'b1;
+        end else if ((grp_activation_accelerator_Pipeline_stage_2_store_fu_504_ap_ready == 1'b1)) begin
+            grp_activation_accelerator_Pipeline_stage_2_store_fu_504_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_ap_start_reg <= 1'b0;
+        grp_bf16_to_float_fu_328_ap_start_reg <= 1'b0;
     end else begin
-        if ((1'b1 == ap_CS_fsm_state68)) begin
-            grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_ap_start_reg <= 1'b1;
-        end else if ((grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_ap_ready == 1'b1)) begin
-            grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_ap_start_reg <= 1'b0;
+        if ((((stage_read_read_fu_282_p2 == 32'd1) & (config_r_read_read_fu_276_p2 == 32'd1) & (ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1)) | ((stage_read_read_fu_282_p2 == 32'd1) & (config_r_read_read_fu_276_p2 == 32'd2) & (ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1)) | ((stage_read_read_fu_282_p2 == 32'd1) & (config_r_read_read_fu_276_p2 == 32'd3) & (ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1)) | ((stage_read_read_fu_282_p2 == 32'd1) & (config_r_read_read_fu_276_p2 == 32'd4) & (ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1)) | ((stage_read_read_fu_282_p2 == 32'd1) & (config_r_read_read_fu_276_p2 == 32'd5) & (ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1)) | ((stage_read_read_fu_282_p2 == 32'd1) & (config_r_read_read_fu_276_p2 == 32'd6) & (ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1)))) begin
+            grp_bf16_to_float_fu_328_ap_start_reg <= 1'b1;
+        end else if ((grp_bf16_to_float_fu_328_ap_ready == 1'b1)) begin
+            grp_bf16_to_float_fu_328_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        grp_activation_accelerator_Pipeline_silu_loop_fu_337_ap_start_reg <= 1'b0;
+        grp_bf16_to_float_fu_366_ap_start_reg <= 1'b0;
     end else begin
-        if (((config_r_read_reg_510 == 32'd4) & (1'b1 == ap_CS_fsm_state71))) begin
-            grp_activation_accelerator_Pipeline_silu_loop_fu_337_ap_start_reg <= 1'b1;
-        end else if ((grp_activation_accelerator_Pipeline_silu_loop_fu_337_ap_ready == 1'b1)) begin
-            grp_activation_accelerator_Pipeline_silu_loop_fu_337_ap_start_reg <= 1'b0;
+        if (((stage_read_read_fu_282_p2 == 32'd1) & (config_r_read_read_fu_276_p2 == 32'd2) & (ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
+            grp_bf16_to_float_fu_366_ap_start_reg <= 1'b1;
+        end else if ((grp_bf16_to_float_fu_366_ap_ready == 1'b1)) begin
+            grp_bf16_to_float_fu_366_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        grp_float_safe_softmax_fu_359_ap_start_reg <= 1'b0;
+        grp_float_Multiply2_fu_751_ap_start_reg <= 1'b0;
     end else begin
-        if (((config_r_read_reg_510 == 32'd1) & (1'b1 == ap_CS_fsm_state71))) begin
-            grp_float_safe_softmax_fu_359_ap_start_reg <= 1'b1;
-        end else if ((grp_float_safe_softmax_fu_359_ap_ready == 1'b1)) begin
-            grp_float_safe_softmax_fu_359_ap_start_reg <= 1'b0;
+        if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state11))) begin
+            grp_float_Multiply2_fu_751_ap_start_reg <= 1'b1;
+        end else if ((grp_float_Multiply2_fu_751_ap_ready == 1'b1)) begin
+            grp_float_Multiply2_fu_751_ap_start_reg <= 1'b0;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        grp_float_add2_fu_404_ap_start_reg <= 1'b0;
+    end else begin
+        if (((stage_read_read_fu_282_p2 == 32'd1) & (config_r_read_read_fu_276_p2 == 32'd0) & (ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
+            grp_float_add2_fu_404_ap_start_reg <= 1'b1;
+        end else if ((grp_float_add2_fu_404_ap_ready == 1'b1)) begin
+            grp_float_add2_fu_404_ap_start_reg <= 1'b0;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        grp_float_gelu2_fu_699_ap_start_reg <= 1'b0;
+    end else begin
+        if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state11))) begin
+            grp_float_gelu2_fu_699_ap_start_reg <= 1'b1;
+        end else if ((grp_float_gelu2_fu_699_ap_ready == 1'b1)) begin
+            grp_float_gelu2_fu_699_ap_start_reg <= 1'b0;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        grp_float_layer_norm3_fu_543_ap_start_reg <= 1'b0;
+    end else begin
+        if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state11))) begin
+            grp_float_layer_norm3_fu_543_ap_start_reg <= 1'b1;
+        end else if ((grp_float_layer_norm3_fu_543_ap_ready == 1'b1)) begin
+            grp_float_layer_norm3_fu_543_ap_start_reg <= 1'b0;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        grp_float_rms_norm3_fu_595_ap_start_reg <= 1'b0;
+    end else begin
+        if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state11))) begin
+            grp_float_rms_norm3_fu_595_ap_start_reg <= 1'b1;
+        end else if ((grp_float_rms_norm3_fu_595_ap_ready == 1'b1)) begin
+            grp_float_rms_norm3_fu_595_ap_start_reg <= 1'b0;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        grp_float_safe_softmax2_fu_819_ap_start_reg <= 1'b0;
+    end else begin
+        if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state11))) begin
+            grp_float_safe_softmax2_fu_819_ap_start_reg <= 1'b1;
+        end else if ((grp_float_safe_softmax2_fu_819_ap_ready == 1'b1)) begin
+            grp_float_safe_softmax2_fu_819_ap_start_reg <= 1'b0;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        grp_float_silu2_fu_647_ap_start_reg <= 1'b0;
+    end else begin
+        if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state11))) begin
+            grp_float_silu2_fu_647_ap_start_reg <= 1'b1;
+        end else if ((grp_float_silu2_fu_647_ap_ready == 1'b1)) begin
+            grp_float_silu2_fu_647_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state1)) begin
-        config_r_read_reg_510 <= config_r;
-        stage_read_reg_514 <= stage;
+        config_r_read_reg_949 <= config_r;
+        stage_read_reg_953 <= stage;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state56) | (1'b1 == ap_CS_fsm_state21))) begin
-        reg_420 <= grp_fu_407_p2;
+    if (((stage_read_read_fu_282_p2 == 32'd0) & (1'b1 == ap_CS_fsm_state1))) begin
+        trunc_ln6_reg_969 <= {{in1[63:1]}};
+        trunc_ln_reg_963 <= {{in0[63:1]}};
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state60) | (1'b1 == ap_CS_fsm_state35))) begin
-        reg_427 <= grp_fu_402_p2;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state68) | (1'b1 == ap_CS_fsm_state43))) begin
-        reg_432 <= grp_fu_413_p2;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((stage_read_read_fu_174_p2 == 32'd0) & (1'b1 == ap_CS_fsm_state1))) begin
-        trunc_ln1_reg_548 <= {{in1[63:1]}};
-        trunc_ln_reg_542 <= {{in0[63:1]}};
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((stage_read_read_fu_174_p2 == 32'd2) & (1'b1 == ap_CS_fsm_state1))) begin
-        trunc_ln2_reg_536 <= {{out_r[63:1]}};
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state31)) begin
-        var_reg_565 <= grp_fu_407_p2;
+    if (((stage_read_read_fu_282_p2 == 32'd2) & (1'b1 == ap_CS_fsm_state1))) begin
+        trunc_ln7_reg_957 <= {{out_r[63:1]}};
     end
 end
 
 always @ (*) begin
-    if ((grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_ap_done == 1'b0)) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1 = grp_float_safe_softmax2_fu_819_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1 = grp_float_Multiply2_fu_751_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1 = grp_float_gelu2_fu_699_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1 = grp_float_silu2_fu_647_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1 = grp_float_rms_norm3_fu_595_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1 = grp_float_layer_norm3_fu_543_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1 = grp_float_add2_fu_404_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_block_state10_on_subcall_done)) begin
         ap_ST_fsm_state10_blk = 1'b1;
     end else begin
         ap_ST_fsm_state10_blk = 1'b0;
@@ -2436,16 +7898,28 @@ end
 assign ap_ST_fsm_state11_blk = 1'b0;
 
 always @ (*) begin
-    if ((grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_ap_done == 1'b0)) begin
+    if ((1'b1 == ap_block_state12_on_subcall_done)) begin
         ap_ST_fsm_state12_blk = 1'b1;
     end else begin
         ap_ST_fsm_state12_blk = 1'b0;
     end
 end
 
-assign ap_ST_fsm_state13_blk = 1'b0;
+always @ (*) begin
+    if ((grp_float_add2_fu_404_ap_done == 1'b0)) begin
+        ap_ST_fsm_state13_blk = 1'b1;
+    end else begin
+        ap_ST_fsm_state13_blk = 1'b0;
+    end
+end
 
-assign ap_ST_fsm_state14_blk = 1'b0;
+always @ (*) begin
+    if ((1'b1 == ap_block_state14_io)) begin
+        ap_ST_fsm_state14_blk = 1'b1;
+    end else begin
+        ap_ST_fsm_state14_blk = 1'b0;
+    end
+end
 
 assign ap_ST_fsm_state15_blk = 1'b0;
 
@@ -2470,26 +7944,12 @@ assign ap_ST_fsm_state20_blk = 1'b0;
 assign ap_ST_fsm_state21_blk = 1'b0;
 
 always @ (*) begin
-    if ((grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_ap_done == 1'b0)) begin
+    if ((1'b1 == ap_block_state22_on_subcall_done)) begin
         ap_ST_fsm_state22_blk = 1'b1;
     end else begin
         ap_ST_fsm_state22_blk = 1'b0;
     end
 end
-
-assign ap_ST_fsm_state23_blk = 1'b0;
-
-assign ap_ST_fsm_state24_blk = 1'b0;
-
-assign ap_ST_fsm_state25_blk = 1'b0;
-
-assign ap_ST_fsm_state26_blk = 1'b0;
-
-assign ap_ST_fsm_state27_blk = 1'b0;
-
-assign ap_ST_fsm_state28_blk = 1'b0;
-
-assign ap_ST_fsm_state29_blk = 1'b0;
 
 always @ (*) begin
     if ((gmem2_AWREADY == 1'b0)) begin
@@ -2499,201 +7959,21 @@ always @ (*) begin
     end
 end
 
-assign ap_ST_fsm_state30_blk = 1'b0;
-
-assign ap_ST_fsm_state31_blk = 1'b0;
-
-assign ap_ST_fsm_state32_blk = 1'b0;
-
-assign ap_ST_fsm_state33_blk = 1'b0;
-
-assign ap_ST_fsm_state34_blk = 1'b0;
-
-assign ap_ST_fsm_state35_blk = 1'b0;
-
-assign ap_ST_fsm_state36_blk = 1'b0;
-
-assign ap_ST_fsm_state37_blk = 1'b0;
-
-assign ap_ST_fsm_state38_blk = 1'b0;
-
-assign ap_ST_fsm_state39_blk = 1'b0;
-
 assign ap_ST_fsm_state3_blk = 1'b0;
 
-assign ap_ST_fsm_state40_blk = 1'b0;
-
-assign ap_ST_fsm_state41_blk = 1'b0;
-
-assign ap_ST_fsm_state42_blk = 1'b0;
-
-assign ap_ST_fsm_state43_blk = 1'b0;
-
 always @ (*) begin
-    if ((1'b1 == ap_block_state44_on_subcall_done)) begin
-        ap_ST_fsm_state44_blk = 1'b1;
-    end else begin
-        ap_ST_fsm_state44_blk = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_ap_done == 1'b0)) begin
-        ap_ST_fsm_state45_blk = 1'b1;
-    end else begin
-        ap_ST_fsm_state45_blk = 1'b0;
-    end
-end
-
-assign ap_ST_fsm_state46_blk = 1'b0;
-
-always @ (*) begin
-    if ((grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_ap_done == 1'b0)) begin
-        ap_ST_fsm_state47_blk = 1'b1;
-    end else begin
-        ap_ST_fsm_state47_blk = 1'b0;
-    end
-end
-
-assign ap_ST_fsm_state48_blk = 1'b0;
-
-assign ap_ST_fsm_state49_blk = 1'b0;
-
-always @ (*) begin
-    if ((grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_ap_done == 1'b0)) begin
+    if ((grp_activation_accelerator_Pipeline_stage_2_store_fu_504_ap_done == 1'b0)) begin
         ap_ST_fsm_state4_blk = 1'b1;
     end else begin
         ap_ST_fsm_state4_blk = 1'b0;
     end
 end
 
-assign ap_ST_fsm_state50_blk = 1'b0;
-
-assign ap_ST_fsm_state51_blk = 1'b0;
-
-assign ap_ST_fsm_state52_blk = 1'b0;
-
-assign ap_ST_fsm_state53_blk = 1'b0;
-
-assign ap_ST_fsm_state54_blk = 1'b0;
-
-assign ap_ST_fsm_state55_blk = 1'b0;
-
-assign ap_ST_fsm_state56_blk = 1'b0;
-
-assign ap_ST_fsm_state57_blk = 1'b0;
-
-assign ap_ST_fsm_state58_blk = 1'b0;
-
-assign ap_ST_fsm_state59_blk = 1'b0;
-
 assign ap_ST_fsm_state5_blk = 1'b0;
-
-assign ap_ST_fsm_state60_blk = 1'b0;
-
-assign ap_ST_fsm_state61_blk = 1'b0;
-
-assign ap_ST_fsm_state62_blk = 1'b0;
-
-assign ap_ST_fsm_state63_blk = 1'b0;
-
-assign ap_ST_fsm_state64_blk = 1'b0;
-
-assign ap_ST_fsm_state65_blk = 1'b0;
-
-assign ap_ST_fsm_state66_blk = 1'b0;
-
-assign ap_ST_fsm_state67_blk = 1'b0;
-
-assign ap_ST_fsm_state68_blk = 1'b0;
-
-always @ (*) begin
-    if ((grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_ap_done == 1'b0)) begin
-        ap_ST_fsm_state69_blk = 1'b1;
-    end else begin
-        ap_ST_fsm_state69_blk = 1'b0;
-    end
-end
 
 assign ap_ST_fsm_state6_blk = 1'b0;
 
-always @ (*) begin
-    if ((1'b1 == ap_block_state70_on_subcall_done)) begin
-        ap_ST_fsm_state70_blk = 1'b1;
-    end else begin
-        ap_ST_fsm_state70_blk = 1'b0;
-    end
-end
-
-assign ap_ST_fsm_state71_blk = 1'b0;
-
-always @ (*) begin
-    if ((1'b1 == ap_block_state72_on_subcall_done)) begin
-        ap_ST_fsm_state72_blk = 1'b1;
-    end else begin
-        ap_ST_fsm_state72_blk = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_block_state73_on_subcall_done)) begin
-        ap_ST_fsm_state73_blk = 1'b1;
-    end else begin
-        ap_ST_fsm_state73_blk = 1'b0;
-    end
-end
-
-assign ap_ST_fsm_state74_blk = 1'b0;
-
-always @ (*) begin
-    if ((grp_activation_accelerator_Pipeline_float_add_loop_fu_366_ap_done == 1'b0)) begin
-        ap_ST_fsm_state75_blk = 1'b1;
-    end else begin
-        ap_ST_fsm_state75_blk = 1'b0;
-    end
-end
-
-assign ap_ST_fsm_state76_blk = 1'b0;
-
-always @ (*) begin
-    if ((grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_ap_done == 1'b0)) begin
-        ap_ST_fsm_state77_blk = 1'b1;
-    end else begin
-        ap_ST_fsm_state77_blk = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_block_state78_io)) begin
-        ap_ST_fsm_state78_blk = 1'b1;
-    end else begin
-        ap_ST_fsm_state78_blk = 1'b0;
-    end
-end
-
-assign ap_ST_fsm_state79_blk = 1'b0;
-
 assign ap_ST_fsm_state7_blk = 1'b0;
-
-assign ap_ST_fsm_state80_blk = 1'b0;
-
-assign ap_ST_fsm_state81_blk = 1'b0;
-
-assign ap_ST_fsm_state82_blk = 1'b0;
-
-assign ap_ST_fsm_state83_blk = 1'b0;
-
-assign ap_ST_fsm_state84_blk = 1'b0;
-
-assign ap_ST_fsm_state85_blk = 1'b0;
-
-always @ (*) begin
-    if ((1'b1 == ap_block_state86_on_subcall_done)) begin
-        ap_ST_fsm_state86_blk = 1'b1;
-    end else begin
-        ap_ST_fsm_state86_blk = 1'b0;
-    end
-end
 
 assign ap_ST_fsm_state8_blk = 1'b0;
 
@@ -2706,7 +7986,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state44) & (1'b0 == ap_block_state44_on_subcall_done))) begin
+    if (((1'b0 == ap_block_state22_on_subcall_done) & (1'b1 == ap_CS_fsm_state22))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -2722,7 +8002,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state44) & (1'b0 == ap_block_state44_on_subcall_done))) begin
+    if (((1'b0 == ap_block_state22_on_subcall_done) & (1'b1 == ap_CS_fsm_state22))) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -2730,229 +8010,101 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state86)) begin
-        buf0_address0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_buf0_address0;
-    end else if ((1'b1 == ap_CS_fsm_state77)) begin
-        buf0_address0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_buf0_address0;
-    end else if ((1'b1 == ap_CS_fsm_state73)) begin
-        buf0_address0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276_buf0_address0;
-    end else if (((config_r_read_reg_510 == 32'd1) & (1'b1 == ap_CS_fsm_state70))) begin
-        buf0_address0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268_buf0_address0;
-    end else if (((config_r_read_reg_510 == 32'd2) & (1'b1 == ap_CS_fsm_state70))) begin
-        buf0_address0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252_buf0_address0;
-    end else if (((config_r_read_reg_510 == 32'd3) & (1'b1 == ap_CS_fsm_state70))) begin
-        buf0_address0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244_buf0_address0;
-    end else if (((config_r_read_reg_510 == 32'd4) & (1'b1 == ap_CS_fsm_state70))) begin
-        buf0_address0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236_buf0_address0;
-    end else if ((1'b1 == ap_CS_fsm_state45)) begin
-        buf0_address0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_buf0_address0;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        buf0_address0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_buf0_address0;
+    if (((stage_read_reg_953 == 32'd0) & (1'b1 == ap_CS_fsm_state22))) begin
+        buf0_address0 = grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_buf0_address0;
+    end else if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        buf0_address0 = grp_bf16_to_float_fu_328_in_r_address0;
     end else begin
         buf0_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state86)) begin
-        buf0_ce0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_buf0_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state77)) begin
-        buf0_ce0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_buf0_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state73)) begin
-        buf0_ce0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276_buf0_ce0;
-    end else if (((config_r_read_reg_510 == 32'd1) & (1'b1 == ap_CS_fsm_state70))) begin
-        buf0_ce0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268_buf0_ce0;
-    end else if (((config_r_read_reg_510 == 32'd2) & (1'b1 == ap_CS_fsm_state70))) begin
-        buf0_ce0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252_buf0_ce0;
-    end else if (((config_r_read_reg_510 == 32'd3) & (1'b1 == ap_CS_fsm_state70))) begin
-        buf0_ce0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244_buf0_ce0;
-    end else if (((config_r_read_reg_510 == 32'd4) & (1'b1 == ap_CS_fsm_state70))) begin
-        buf0_ce0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236_buf0_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state45)) begin
-        buf0_ce0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_buf0_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        buf0_ce0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_buf0_ce0;
+    if (((stage_read_reg_953 == 32'd0) & (1'b1 == ap_CS_fsm_state22))) begin
+        buf0_ce0 = grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_buf0_ce0;
+    end else if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        buf0_ce0 = grp_bf16_to_float_fu_328_in_r_ce0;
     end else begin
         buf0_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state86)) begin
-        buf0_we0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_buf0_we0;
+    if (((stage_read_reg_953 == 32'd0) & (1'b1 == ap_CS_fsm_state22))) begin
+        buf0_we0 = grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_buf0_we0;
     end else begin
         buf0_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state86)) begin
-        buf1_address0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_buf1_address0;
-    end else if ((1'b1 == ap_CS_fsm_state77)) begin
-        buf1_address0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_buf1_address0;
-    end else if ((1'b1 == ap_CS_fsm_state73)) begin
-        buf1_address0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284_buf1_address0;
-    end else if (((config_r_read_reg_510 == 32'd2) & (1'b1 == ap_CS_fsm_state70))) begin
-        buf1_address0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260_buf1_address0;
+    if (((stage_read_reg_953 == 32'd0) & (1'b1 == ap_CS_fsm_state22))) begin
+        buf1_address0 = grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_buf1_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        buf1_address0 = grp_bf16_to_float_fu_366_in_r_address0;
     end else begin
         buf1_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state86)) begin
-        buf1_ce0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_buf1_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state77)) begin
-        buf1_ce0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_buf1_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state73)) begin
-        buf1_ce0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284_buf1_ce0;
-    end else if (((config_r_read_reg_510 == 32'd2) & (1'b1 == ap_CS_fsm_state70))) begin
-        buf1_ce0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260_buf1_ce0;
+    if (((stage_read_reg_953 == 32'd0) & (1'b1 == ap_CS_fsm_state22))) begin
+        buf1_ce0 = grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_buf1_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        buf1_ce0 = grp_bf16_to_float_fu_366_in_r_ce0;
     end else begin
         buf1_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state86)) begin
-        buf1_we0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_buf1_we0;
+    if (((stage_read_reg_953 == 32'd0) & (1'b1 == ap_CS_fsm_state22))) begin
+        buf1_we0 = grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_buf1_we0;
     end else begin
         buf1_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state77)) begin
-        buf2_address0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_buf2_address0;
-    end else if ((1'b1 == ap_CS_fsm_state75)) begin
-        buf2_address0 = grp_activation_accelerator_Pipeline_float_add_loop_fu_366_buf2_address0;
-    end else if (((config_r_read_reg_510 == 32'd1) & (1'b1 == ap_CS_fsm_state72))) begin
-        buf2_address0 = grp_float_safe_softmax_fu_359_buf2_address0;
-    end else if (((config_r_read_reg_510 == 32'd2) & (1'b1 == ap_CS_fsm_state72))) begin
-        buf2_address0 = grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_buf2_address0;
-    end else if (((config_r_read_reg_510 == 32'd3) & (1'b1 == ap_CS_fsm_state72))) begin
-        buf2_address0 = grp_activation_accelerator_Pipeline_gelu_loop_fu_344_buf2_address0;
-    end else if (((config_r_read_reg_510 == 32'd4) & (1'b1 == ap_CS_fsm_state72))) begin
-        buf2_address0 = grp_activation_accelerator_Pipeline_silu_loop_fu_337_buf2_address0;
-    end else if ((1'b1 == ap_CS_fsm_state69)) begin
-        buf2_address0 = grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_buf2_address0;
-    end else if (((stage_read_reg_514 == 32'd1) & (config_r_read_reg_510 == 32'd6) & (1'b1 == ap_CS_fsm_state44))) begin
-        buf2_address0 = grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_buf2_address0;
-    end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        buf2_address0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_buf2_address0;
-    end else begin
-        buf2_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state77)) begin
-        buf2_ce0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_buf2_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state75)) begin
-        buf2_ce0 = grp_activation_accelerator_Pipeline_float_add_loop_fu_366_buf2_ce0;
-    end else if (((config_r_read_reg_510 == 32'd1) & (1'b1 == ap_CS_fsm_state72))) begin
-        buf2_ce0 = grp_float_safe_softmax_fu_359_buf2_ce0;
-    end else if (((config_r_read_reg_510 == 32'd2) & (1'b1 == ap_CS_fsm_state72))) begin
-        buf2_ce0 = grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_buf2_ce0;
-    end else if (((config_r_read_reg_510 == 32'd3) & (1'b1 == ap_CS_fsm_state72))) begin
-        buf2_ce0 = grp_activation_accelerator_Pipeline_gelu_loop_fu_344_buf2_ce0;
-    end else if (((config_r_read_reg_510 == 32'd4) & (1'b1 == ap_CS_fsm_state72))) begin
-        buf2_ce0 = grp_activation_accelerator_Pipeline_silu_loop_fu_337_buf2_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state69)) begin
-        buf2_ce0 = grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_buf2_ce0;
-    end else if (((stage_read_reg_514 == 32'd1) & (config_r_read_reg_510 == 32'd6) & (1'b1 == ap_CS_fsm_state44))) begin
-        buf2_ce0 = grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_buf2_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        buf2_ce0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_buf2_ce0;
-    end else begin
-        buf2_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state77)) begin
-        buf2_d0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_buf2_d0;
-    end else if ((1'b1 == ap_CS_fsm_state75)) begin
-        buf2_d0 = grp_activation_accelerator_Pipeline_float_add_loop_fu_366_buf2_d0;
-    end else if (((config_r_read_reg_510 == 32'd1) & (1'b1 == ap_CS_fsm_state72))) begin
-        buf2_d0 = grp_float_safe_softmax_fu_359_buf2_d0;
-    end else if (((config_r_read_reg_510 == 32'd2) & (1'b1 == ap_CS_fsm_state72))) begin
-        buf2_d0 = grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_buf2_d0;
-    end else if (((config_r_read_reg_510 == 32'd3) & (1'b1 == ap_CS_fsm_state72))) begin
-        buf2_d0 = grp_activation_accelerator_Pipeline_gelu_loop_fu_344_buf2_d0;
-    end else if (((config_r_read_reg_510 == 32'd4) & (1'b1 == ap_CS_fsm_state72))) begin
-        buf2_d0 = grp_activation_accelerator_Pipeline_silu_loop_fu_337_buf2_d0;
-    end else if ((1'b1 == ap_CS_fsm_state69)) begin
-        buf2_d0 = grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_buf2_d0;
-    end else if (((stage_read_reg_514 == 32'd1) & (config_r_read_reg_510 == 32'd6) & (1'b1 == ap_CS_fsm_state44))) begin
-        buf2_d0 = grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_buf2_d0;
-    end else begin
-        buf2_d0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state77)) begin
-        buf2_we0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_buf2_we0;
-    end else if ((1'b1 == ap_CS_fsm_state75)) begin
-        buf2_we0 = grp_activation_accelerator_Pipeline_float_add_loop_fu_366_buf2_we0;
-    end else if (((config_r_read_reg_510 == 32'd1) & (1'b1 == ap_CS_fsm_state72))) begin
-        buf2_we0 = grp_float_safe_softmax_fu_359_buf2_we0;
-    end else if (((config_r_read_reg_510 == 32'd2) & (1'b1 == ap_CS_fsm_state72))) begin
-        buf2_we0 = grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_buf2_we0;
-    end else if (((config_r_read_reg_510 == 32'd3) & (1'b1 == ap_CS_fsm_state72))) begin
-        buf2_we0 = grp_activation_accelerator_Pipeline_gelu_loop_fu_344_buf2_we0;
-    end else if (((config_r_read_reg_510 == 32'd4) & (1'b1 == ap_CS_fsm_state72))) begin
-        buf2_we0 = grp_activation_accelerator_Pipeline_silu_loop_fu_337_buf2_we0;
-    end else if ((1'b1 == ap_CS_fsm_state69)) begin
-        buf2_we0 = grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_buf2_we0;
-    end else if (((stage_read_reg_514 == 32'd1) & (config_r_read_reg_510 == 32'd6) & (1'b1 == ap_CS_fsm_state44))) begin
-        buf2_we0 = grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_buf2_we0;
-    end else begin
-        buf2_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state78) & (1'b0 == ap_block_state78_io))) begin
-        gmem0_ARADDR = sext_ln445_fu_490_p1;
-    end else if (((1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state85))) begin
-        gmem0_ARADDR = grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_ARADDR;
+    if (((1'b0 == ap_block_state14_io) & (1'b1 == ap_CS_fsm_state14))) begin
+        gmem0_ARADDR = sext_ln1122_fu_929_p1;
+    end else if (((1'b1 == ap_CS_fsm_state21) | ((stage_read_reg_953 == 32'd0) & (1'b1 == ap_CS_fsm_state22)))) begin
+        gmem0_ARADDR = grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_ARADDR;
     end else begin
         gmem0_ARADDR = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state78) & (1'b0 == ap_block_state78_io))) begin
+    if (((1'b0 == ap_block_state14_io) & (1'b1 == ap_CS_fsm_state14))) begin
         gmem0_ARLEN = 32'd49152;
-    end else if (((1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state85))) begin
-        gmem0_ARLEN = grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_ARLEN;
+    end else if (((1'b1 == ap_CS_fsm_state21) | ((stage_read_reg_953 == 32'd0) & (1'b1 == ap_CS_fsm_state22)))) begin
+        gmem0_ARLEN = grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_ARLEN;
     end else begin
         gmem0_ARLEN = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state78) & (1'b0 == ap_block_state78_io))) begin
+    if (((1'b0 == ap_block_state14_io) & (1'b1 == ap_CS_fsm_state14))) begin
         gmem0_ARVALID = 1'b1;
-    end else if (((1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state85))) begin
-        gmem0_ARVALID = grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_ARVALID;
+    end else if (((1'b1 == ap_CS_fsm_state21) | ((stage_read_reg_953 == 32'd0) & (1'b1 == ap_CS_fsm_state22)))) begin
+        gmem0_ARVALID = grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_ARVALID;
     end else begin
         gmem0_ARVALID = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state85))) begin
-        gmem0_RREADY = grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_m_axi_gmem0_RREADY;
+    if (((1'b1 == ap_CS_fsm_state21) | ((stage_read_reg_953 == 32'd0) & (1'b1 == ap_CS_fsm_state22)))) begin
+        gmem0_RREADY = grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_m_axi_gmem0_RREADY;
     end else begin
         gmem0_RREADY = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state78)) begin
+    if ((1'b1 == ap_CS_fsm_state14)) begin
         gmem0_blk_n_AR = m_axi_gmem0_ARREADY;
     end else begin
         gmem0_blk_n_AR = 1'b1;
@@ -2960,45 +8112,45 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state78) & (1'b0 == ap_block_state78_io))) begin
-        gmem1_ARADDR = sext_ln448_fu_500_p1;
-    end else if (((1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state85))) begin
-        gmem1_ARADDR = grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_ARADDR;
+    if (((1'b0 == ap_block_state14_io) & (1'b1 == ap_CS_fsm_state14))) begin
+        gmem1_ARADDR = sext_ln1126_fu_939_p1;
+    end else if (((1'b1 == ap_CS_fsm_state21) | ((stage_read_reg_953 == 32'd0) & (1'b1 == ap_CS_fsm_state22)))) begin
+        gmem1_ARADDR = grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_ARADDR;
     end else begin
         gmem1_ARADDR = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state78) & (1'b0 == ap_block_state78_io))) begin
+    if (((1'b0 == ap_block_state14_io) & (1'b1 == ap_CS_fsm_state14))) begin
         gmem1_ARLEN = 32'd49152;
-    end else if (((1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state85))) begin
-        gmem1_ARLEN = grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_ARLEN;
+    end else if (((1'b1 == ap_CS_fsm_state21) | ((stage_read_reg_953 == 32'd0) & (1'b1 == ap_CS_fsm_state22)))) begin
+        gmem1_ARLEN = grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_ARLEN;
     end else begin
         gmem1_ARLEN = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state78) & (1'b0 == ap_block_state78_io))) begin
+    if (((1'b0 == ap_block_state14_io) & (1'b1 == ap_CS_fsm_state14))) begin
         gmem1_ARVALID = 1'b1;
-    end else if (((1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state85))) begin
-        gmem1_ARVALID = grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_ARVALID;
+    end else if (((1'b1 == ap_CS_fsm_state21) | ((stage_read_reg_953 == 32'd0) & (1'b1 == ap_CS_fsm_state22)))) begin
+        gmem1_ARVALID = grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_ARVALID;
     end else begin
         gmem1_ARVALID = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state86) | (1'b1 == ap_CS_fsm_state85))) begin
-        gmem1_RREADY = grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_m_axi_gmem1_RREADY;
+    if (((1'b1 == ap_CS_fsm_state21) | ((stage_read_reg_953 == 32'd0) & (1'b1 == ap_CS_fsm_state22)))) begin
+        gmem1_RREADY = grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_m_axi_gmem1_RREADY;
     end else begin
         gmem1_RREADY = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state78)) begin
+    if ((1'b1 == ap_CS_fsm_state14)) begin
         gmem1_blk_n_AR = m_axi_gmem1_ARREADY;
     end else begin
         gmem1_blk_n_AR = 1'b1;
@@ -3006,40 +8158,40 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state2) & (gmem2_AWREADY == 1'b1))) begin
-        gmem2_AWADDR = sext_ln499_fu_468_p1;
+    if (((gmem2_AWREADY == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
+        gmem2_AWADDR = sext_ln1178_fu_919_p1;
     end else if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem2_AWADDR = grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_AWADDR;
+        gmem2_AWADDR = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_AWADDR;
     end else begin
         gmem2_AWADDR = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state2) & (gmem2_AWREADY == 1'b1))) begin
+    if (((gmem2_AWREADY == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
         gmem2_AWLEN = 32'd49152;
     end else if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem2_AWLEN = grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_AWLEN;
+        gmem2_AWLEN = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_AWLEN;
     end else begin
         gmem2_AWLEN = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state2) & (gmem2_AWREADY == 1'b1))) begin
+    if (((gmem2_AWREADY == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
         gmem2_AWVALID = 1'b1;
     end else if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem2_AWVALID = grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_AWVALID;
+        gmem2_AWVALID = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_AWVALID;
     end else begin
         gmem2_AWVALID = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state9) & (gmem2_BVALID == 1'b1))) begin
+    if (((gmem2_BVALID == 1'b1) & (1'b1 == ap_CS_fsm_state9))) begin
         gmem2_BREADY = 1'b1;
     end else if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem2_BREADY = grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_BREADY;
+        gmem2_BREADY = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_BREADY;
     end else begin
         gmem2_BREADY = 1'b0;
     end
@@ -3047,7 +8199,7 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem2_WVALID = grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_m_axi_gmem2_WVALID;
+        gmem2_WVALID = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_m_axi_gmem2_WVALID;
     end else begin
         gmem2_WVALID = 1'b0;
     end
@@ -3070,328 +8222,3320 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state75)) begin
-        grp_fu_402_ce = grp_activation_accelerator_Pipeline_float_add_loop_fu_366_grp_fu_402_p_ce;
-    end else if ((1'b1 == ap_CS_fsm_state72)) begin
-        grp_fu_402_ce = grp_activation_accelerator_Pipeline_gelu_loop_fu_344_grp_fu_402_p_ce;
-    end else if ((1'b1 == ap_CS_fsm_state47)) begin
-        grp_fu_402_ce = grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_grp_fu_402_p_ce;
-    end else if ((1'b1 == ap_CS_fsm_state44)) begin
-        grp_fu_402_ce = grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_grp_fu_402_p_ce;
-    end else if ((1'b1 == ap_CS_fsm_state22)) begin
-        grp_fu_402_ce = grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_grp_fu_402_p_ce;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        grp_fu_402_ce = grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_grp_fu_402_p_ce;
-    end else begin
-        grp_fu_402_ce = 1'b1;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state75)) begin
-        grp_fu_402_opcode = grp_activation_accelerator_Pipeline_float_add_loop_fu_366_grp_fu_402_p_opcode;
-    end else if ((1'b1 == ap_CS_fsm_state72)) begin
-        grp_fu_402_opcode = grp_activation_accelerator_Pipeline_gelu_loop_fu_344_grp_fu_402_p_opcode;
-    end else if ((1'b1 == ap_CS_fsm_state47)) begin
-        grp_fu_402_opcode = grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_grp_fu_402_p_opcode;
-    end else if ((1'b1 == ap_CS_fsm_state44)) begin
-        grp_fu_402_opcode = grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_grp_fu_402_p_opcode;
-    end else if ((1'b1 == ap_CS_fsm_state22)) begin
-        grp_fu_402_opcode = grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_grp_fu_402_p_opcode;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        grp_fu_402_opcode = grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_grp_fu_402_p_opcode;
-    end else if (((1'b1 == ap_CS_fsm_state57) | (1'b1 == ap_CS_fsm_state32))) begin
-        grp_fu_402_opcode = 2'd0;
-    end else begin
-        grp_fu_402_opcode = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state75)) begin
-        grp_fu_402_p0 = grp_activation_accelerator_Pipeline_float_add_loop_fu_366_grp_fu_402_p_din0;
-    end else if ((1'b1 == ap_CS_fsm_state72)) begin
-        grp_fu_402_p0 = grp_activation_accelerator_Pipeline_gelu_loop_fu_344_grp_fu_402_p_din0;
-    end else if ((1'b1 == ap_CS_fsm_state47)) begin
-        grp_fu_402_p0 = grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_grp_fu_402_p_din0;
-    end else if ((1'b1 == ap_CS_fsm_state44)) begin
-        grp_fu_402_p0 = grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_grp_fu_402_p_din0;
-    end else if ((1'b1 == ap_CS_fsm_state22)) begin
-        grp_fu_402_p0 = grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_grp_fu_402_p_din0;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        grp_fu_402_p0 = grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_grp_fu_402_p_din0;
-    end else if ((1'b1 == ap_CS_fsm_state57)) begin
-        grp_fu_402_p0 = reg_420;
-    end else if ((1'b1 == ap_CS_fsm_state32)) begin
-        grp_fu_402_p0 = var_reg_565;
-    end else begin
-        grp_fu_402_p0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state75)) begin
-        grp_fu_402_p1 = grp_activation_accelerator_Pipeline_float_add_loop_fu_366_grp_fu_402_p_din1;
-    end else if ((1'b1 == ap_CS_fsm_state72)) begin
-        grp_fu_402_p1 = grp_activation_accelerator_Pipeline_gelu_loop_fu_344_grp_fu_402_p_din1;
-    end else if ((1'b1 == ap_CS_fsm_state47)) begin
-        grp_fu_402_p1 = grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_grp_fu_402_p_din1;
-    end else if ((1'b1 == ap_CS_fsm_state44)) begin
-        grp_fu_402_p1 = grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_grp_fu_402_p_din1;
-    end else if ((1'b1 == ap_CS_fsm_state22)) begin
-        grp_fu_402_p1 = grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_grp_fu_402_p_din1;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        grp_fu_402_p1 = grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_grp_fu_402_p_din1;
-    end else if (((1'b1 == ap_CS_fsm_state57) | (1'b1 == ap_CS_fsm_state32))) begin
-        grp_fu_402_p1 = 32'd897988541;
-    end else begin
-        grp_fu_402_p1 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state72)) begin
-        grp_fu_407_ce = grp_activation_accelerator_Pipeline_silu_loop_fu_337_grp_fu_407_p_ce;
-    end else if ((1'b1 == ap_CS_fsm_state69)) begin
-        grp_fu_407_ce = grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_grp_fu_407_p_ce;
-    end else if ((1'b1 == ap_CS_fsm_state44)) begin
-        grp_fu_407_ce = grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_grp_fu_407_p_ce;
-    end else begin
-        grp_fu_407_ce = 1'b1;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state72)) begin
-        grp_fu_407_p0 = grp_activation_accelerator_Pipeline_silu_loop_fu_337_grp_fu_407_p_din0;
-    end else if ((1'b1 == ap_CS_fsm_state69)) begin
-        grp_fu_407_p0 = grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_grp_fu_407_p_din0;
-    end else if ((1'b1 == ap_CS_fsm_state44)) begin
-        grp_fu_407_p0 = grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_grp_fu_407_p_din0;
-    end else if ((1'b1 == ap_CS_fsm_state48)) begin
-        grp_fu_407_p0 = grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_sum_sq_out;
-    end else if ((1'b1 == ap_CS_fsm_state23)) begin
-        grp_fu_407_p0 = grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_var_1_out;
+    if ((1'b1 == ap_CS_fsm_state12)) begin
+        grp_bf16add_fast_fu_990_a_bits = grp_float_safe_softmax2_fu_819_grp_bf16add_fast_fu_990_p_din1;
     end else if ((1'b1 == ap_CS_fsm_state13)) begin
-        grp_fu_407_p0 = grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_sum_out;
+        grp_bf16add_fast_fu_990_a_bits = grp_float_add2_fu_404_grp_bf16add_fast_fu_990_p_din1;
     end else begin
-        grp_fu_407_p0 = 'bx;
+        grp_bf16add_fast_fu_990_a_bits = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state72)) begin
-        grp_fu_407_p1 = grp_activation_accelerator_Pipeline_silu_loop_fu_337_grp_fu_407_p_din1;
-    end else if ((1'b1 == ap_CS_fsm_state69)) begin
-        grp_fu_407_p1 = grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_grp_fu_407_p_din1;
-    end else if ((1'b1 == ap_CS_fsm_state44)) begin
-        grp_fu_407_p1 = grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_grp_fu_407_p_din1;
-    end else if (((1'b1 == ap_CS_fsm_state48) | (1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state23))) begin
-        grp_fu_407_p1 = 32'd1195376640;
+    if ((1'b1 == ap_CS_fsm_state12)) begin
+        grp_bf16add_fast_fu_990_ap_ce = grp_float_safe_softmax2_fu_819_grp_bf16add_fast_fu_990_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        grp_bf16add_fast_fu_990_ap_ce = grp_float_add2_fu_404_grp_bf16add_fast_fu_990_p_ce;
+    end else if (~(1'b1 == 1'b1)) begin
+        grp_bf16add_fast_fu_990_ap_ce = 1'b0;
     end else begin
-        grp_fu_407_p1 = 'bx;
+        grp_bf16add_fast_fu_990_ap_ce = 1'b1;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state72)) begin
-        grp_fu_583_ce = grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_grp_fu_583_p_ce;
-    end else if ((1'b1 == ap_CS_fsm_state47)) begin
-        grp_fu_583_ce = grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_grp_fu_583_p_ce;
-    end else if ((1'b1 == ap_CS_fsm_state22)) begin
-        grp_fu_583_ce = grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_grp_fu_583_p_ce;
+    if ((1'b1 == ap_CS_fsm_state12)) begin
+        grp_bf16add_fast_fu_990_b_bits = grp_float_safe_softmax2_fu_819_grp_bf16add_fast_fu_990_p_din2;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        grp_bf16add_fast_fu_990_b_bits = grp_float_add2_fu_404_grp_bf16add_fast_fu_990_p_din2;
     end else begin
-        grp_fu_583_ce = 1'b1;
+        grp_bf16add_fast_fu_990_b_bits = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state72)) begin
-        grp_fu_583_p0 = grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_grp_fu_583_p_din0;
-    end else if ((1'b1 == ap_CS_fsm_state47)) begin
-        grp_fu_583_p0 = grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_grp_fu_583_p_din0;
-    end else if ((1'b1 == ap_CS_fsm_state22)) begin
-        grp_fu_583_p0 = grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_grp_fu_583_p_din0;
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0;
     end else begin
-        grp_fu_583_p0 = 'bx;
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state72)) begin
-        grp_fu_583_p1 = grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_grp_fu_583_p_din1;
-    end else if ((1'b1 == ap_CS_fsm_state47)) begin
-        grp_fu_583_p1 = grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_grp_fu_583_p_din1;
-    end else if ((1'b1 == ap_CS_fsm_state22)) begin
-        grp_fu_583_p1 = grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_grp_fu_583_p_din1;
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1;
     end else begin
-        grp_fu_583_p1 = 'bx;
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state75)) begin
-        x_address0 = grp_activation_accelerator_Pipeline_float_add_loop_fu_366_x_address0;
-    end else if (((config_r_read_reg_510 == 32'd1) & (1'b1 == ap_CS_fsm_state72))) begin
-        x_address0 = grp_float_safe_softmax_fu_359_x_address0;
-    end else if (((config_r_read_reg_510 == 32'd2) & (1'b1 == ap_CS_fsm_state72))) begin
-        x_address0 = grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_x_address0;
-    end else if (((config_r_read_reg_510 == 32'd3) & (1'b1 == ap_CS_fsm_state72))) begin
-        x_address0 = grp_activation_accelerator_Pipeline_gelu_loop_fu_344_x_address0;
-    end else if (((config_r_read_reg_510 == 32'd4) & (1'b1 == ap_CS_fsm_state72))) begin
-        x_address0 = grp_activation_accelerator_Pipeline_silu_loop_fu_337_x_address0;
-    end else if ((1'b1 == ap_CS_fsm_state69)) begin
-        x_address0 = grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_x_address0;
-    end else if ((1'b1 == ap_CS_fsm_state47)) begin
-        x_address0 = grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_x_address0;
-    end else if (((stage_read_reg_514 == 32'd1) & (config_r_read_reg_510 == 32'd6) & (1'b1 == ap_CS_fsm_state44))) begin
-        x_address0 = grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_x_address0;
-    end else if ((1'b1 == ap_CS_fsm_state22)) begin
-        x_address0 = grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_x_address0;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        x_address0 = grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_x_address0;
-    end else if ((1'b1 == ap_CS_fsm_state73)) begin
-        x_address0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276_x_address0;
-    end else if (((config_r_read_reg_510 == 32'd1) & (1'b1 == ap_CS_fsm_state70))) begin
-        x_address0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268_x_address0;
-    end else if (((config_r_read_reg_510 == 32'd2) & (1'b1 == ap_CS_fsm_state70))) begin
-        x_address0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252_x_address0;
-    end else if (((config_r_read_reg_510 == 32'd3) & (1'b1 == ap_CS_fsm_state70))) begin
-        x_address0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244_x_address0;
-    end else if (((config_r_read_reg_510 == 32'd4) & (1'b1 == ap_CS_fsm_state70))) begin
-        x_address0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236_x_address0;
-    end else if ((1'b1 == ap_CS_fsm_state45)) begin
-        x_address0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_x_address0;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        x_address0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_x_address0;
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1 = grp_float_safe_softmax2_fu_819_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1 = grp_float_Multiply2_fu_751_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1 = grp_float_gelu2_fu_699_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1 = grp_float_silu2_fu_647_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1 = grp_float_rms_norm3_fu_595_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1 = grp_float_layer_norm3_fu_543_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1 = grp_float_add2_fu_404_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_10_address0 = grp_float_safe_softmax2_fu_819_x_10_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_10_address0 = grp_float_Multiply2_fu_751_x_10_address0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_10_address0 = grp_float_gelu2_fu_699_x_10_address0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_10_address0 = grp_float_silu2_fu_647_x_10_address0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_10_address0 = grp_float_rms_norm3_fu_595_x_10_address0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_10_address0 = grp_float_layer_norm3_fu_543_x_10_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_10_address0 = grp_float_add2_fu_404_x_10_address0;
+    end else if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_10_address0 = grp_bf16_to_float_fu_328_out_10_address0;
+    end else begin
+        x_10_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_10_address1 = grp_float_safe_softmax2_fu_819_x_10_address1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_10_address1 = grp_float_Multiply2_fu_751_x_10_address1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_10_address1 = grp_float_gelu2_fu_699_x_10_address1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_10_address1 = grp_float_silu2_fu_647_x_10_address1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_10_address1 = grp_float_rms_norm3_fu_595_x_10_address1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_10_address1 = grp_float_layer_norm3_fu_543_x_10_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_10_address1 = grp_float_add2_fu_404_x_10_address1;
+    end else begin
+        x_10_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_10_ce0 = grp_float_safe_softmax2_fu_819_x_10_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_10_ce0 = grp_float_Multiply2_fu_751_x_10_ce0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_10_ce0 = grp_float_gelu2_fu_699_x_10_ce0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_10_ce0 = grp_float_silu2_fu_647_x_10_ce0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_10_ce0 = grp_float_rms_norm3_fu_595_x_10_ce0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_10_ce0 = grp_float_layer_norm3_fu_543_x_10_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_10_ce0 = grp_float_add2_fu_404_x_10_ce0;
+    end else if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_10_ce0 = grp_bf16_to_float_fu_328_out_10_ce0;
+    end else begin
+        x_10_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_10_ce1 = grp_float_safe_softmax2_fu_819_x_10_ce1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_10_ce1 = grp_float_Multiply2_fu_751_x_10_ce1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_10_ce1 = grp_float_gelu2_fu_699_x_10_ce1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_10_ce1 = grp_float_silu2_fu_647_x_10_ce1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_10_ce1 = grp_float_rms_norm3_fu_595_x_10_ce1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_10_ce1 = grp_float_layer_norm3_fu_543_x_10_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_10_ce1 = grp_float_add2_fu_404_x_10_ce1;
+    end else begin
+        x_10_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_10_we0 = grp_bf16_to_float_fu_328_out_10_we0;
+    end else begin
+        x_10_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_11_address0 = grp_float_safe_softmax2_fu_819_x_11_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_11_address0 = grp_float_Multiply2_fu_751_x_11_address0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_11_address0 = grp_float_gelu2_fu_699_x_11_address0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_11_address0 = grp_float_silu2_fu_647_x_11_address0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_11_address0 = grp_float_rms_norm3_fu_595_x_11_address0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_11_address0 = grp_float_layer_norm3_fu_543_x_11_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_11_address0 = grp_float_add2_fu_404_x_11_address0;
+    end else if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_11_address0 = grp_bf16_to_float_fu_328_out_11_address0;
+    end else begin
+        x_11_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_11_address1 = grp_float_safe_softmax2_fu_819_x_11_address1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_11_address1 = grp_float_Multiply2_fu_751_x_11_address1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_11_address1 = grp_float_gelu2_fu_699_x_11_address1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_11_address1 = grp_float_silu2_fu_647_x_11_address1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_11_address1 = grp_float_rms_norm3_fu_595_x_11_address1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_11_address1 = grp_float_layer_norm3_fu_543_x_11_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_11_address1 = grp_float_add2_fu_404_x_11_address1;
+    end else begin
+        x_11_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_11_ce0 = grp_float_safe_softmax2_fu_819_x_11_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_11_ce0 = grp_float_Multiply2_fu_751_x_11_ce0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_11_ce0 = grp_float_gelu2_fu_699_x_11_ce0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_11_ce0 = grp_float_silu2_fu_647_x_11_ce0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_11_ce0 = grp_float_rms_norm3_fu_595_x_11_ce0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_11_ce0 = grp_float_layer_norm3_fu_543_x_11_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_11_ce0 = grp_float_add2_fu_404_x_11_ce0;
+    end else if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_11_ce0 = grp_bf16_to_float_fu_328_out_11_ce0;
+    end else begin
+        x_11_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_11_ce1 = grp_float_safe_softmax2_fu_819_x_11_ce1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_11_ce1 = grp_float_Multiply2_fu_751_x_11_ce1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_11_ce1 = grp_float_gelu2_fu_699_x_11_ce1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_11_ce1 = grp_float_silu2_fu_647_x_11_ce1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_11_ce1 = grp_float_rms_norm3_fu_595_x_11_ce1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_11_ce1 = grp_float_layer_norm3_fu_543_x_11_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_11_ce1 = grp_float_add2_fu_404_x_11_ce1;
+    end else begin
+        x_11_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_11_we0 = grp_bf16_to_float_fu_328_out_11_we0;
+    end else begin
+        x_11_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_12_address0 = grp_float_safe_softmax2_fu_819_x_12_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_12_address0 = grp_float_Multiply2_fu_751_x_12_address0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_12_address0 = grp_float_gelu2_fu_699_x_12_address0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_12_address0 = grp_float_silu2_fu_647_x_12_address0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_12_address0 = grp_float_rms_norm3_fu_595_x_12_address0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_12_address0 = grp_float_layer_norm3_fu_543_x_12_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_12_address0 = grp_float_add2_fu_404_x_12_address0;
+    end else if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_12_address0 = grp_bf16_to_float_fu_328_out_12_address0;
+    end else begin
+        x_12_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_12_address1 = grp_float_safe_softmax2_fu_819_x_12_address1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_12_address1 = grp_float_Multiply2_fu_751_x_12_address1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_12_address1 = grp_float_gelu2_fu_699_x_12_address1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_12_address1 = grp_float_silu2_fu_647_x_12_address1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_12_address1 = grp_float_rms_norm3_fu_595_x_12_address1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_12_address1 = grp_float_layer_norm3_fu_543_x_12_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_12_address1 = grp_float_add2_fu_404_x_12_address1;
+    end else begin
+        x_12_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_12_ce0 = grp_float_safe_softmax2_fu_819_x_12_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_12_ce0 = grp_float_Multiply2_fu_751_x_12_ce0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_12_ce0 = grp_float_gelu2_fu_699_x_12_ce0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_12_ce0 = grp_float_silu2_fu_647_x_12_ce0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_12_ce0 = grp_float_rms_norm3_fu_595_x_12_ce0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_12_ce0 = grp_float_layer_norm3_fu_543_x_12_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_12_ce0 = grp_float_add2_fu_404_x_12_ce0;
+    end else if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_12_ce0 = grp_bf16_to_float_fu_328_out_12_ce0;
+    end else begin
+        x_12_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_12_ce1 = grp_float_safe_softmax2_fu_819_x_12_ce1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_12_ce1 = grp_float_Multiply2_fu_751_x_12_ce1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_12_ce1 = grp_float_gelu2_fu_699_x_12_ce1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_12_ce1 = grp_float_silu2_fu_647_x_12_ce1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_12_ce1 = grp_float_rms_norm3_fu_595_x_12_ce1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_12_ce1 = grp_float_layer_norm3_fu_543_x_12_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_12_ce1 = grp_float_add2_fu_404_x_12_ce1;
+    end else begin
+        x_12_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_12_we0 = grp_bf16_to_float_fu_328_out_12_we0;
+    end else begin
+        x_12_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_13_address0 = grp_float_safe_softmax2_fu_819_x_13_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_13_address0 = grp_float_Multiply2_fu_751_x_13_address0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_13_address0 = grp_float_gelu2_fu_699_x_13_address0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_13_address0 = grp_float_silu2_fu_647_x_13_address0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_13_address0 = grp_float_rms_norm3_fu_595_x_13_address0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_13_address0 = grp_float_layer_norm3_fu_543_x_13_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_13_address0 = grp_float_add2_fu_404_x_13_address0;
+    end else if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_13_address0 = grp_bf16_to_float_fu_328_out_13_address0;
+    end else begin
+        x_13_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_13_address1 = grp_float_safe_softmax2_fu_819_x_13_address1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_13_address1 = grp_float_Multiply2_fu_751_x_13_address1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_13_address1 = grp_float_gelu2_fu_699_x_13_address1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_13_address1 = grp_float_silu2_fu_647_x_13_address1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_13_address1 = grp_float_rms_norm3_fu_595_x_13_address1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_13_address1 = grp_float_layer_norm3_fu_543_x_13_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_13_address1 = grp_float_add2_fu_404_x_13_address1;
+    end else begin
+        x_13_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_13_ce0 = grp_float_safe_softmax2_fu_819_x_13_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_13_ce0 = grp_float_Multiply2_fu_751_x_13_ce0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_13_ce0 = grp_float_gelu2_fu_699_x_13_ce0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_13_ce0 = grp_float_silu2_fu_647_x_13_ce0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_13_ce0 = grp_float_rms_norm3_fu_595_x_13_ce0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_13_ce0 = grp_float_layer_norm3_fu_543_x_13_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_13_ce0 = grp_float_add2_fu_404_x_13_ce0;
+    end else if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_13_ce0 = grp_bf16_to_float_fu_328_out_13_ce0;
+    end else begin
+        x_13_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_13_ce1 = grp_float_safe_softmax2_fu_819_x_13_ce1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_13_ce1 = grp_float_Multiply2_fu_751_x_13_ce1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_13_ce1 = grp_float_gelu2_fu_699_x_13_ce1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_13_ce1 = grp_float_silu2_fu_647_x_13_ce1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_13_ce1 = grp_float_rms_norm3_fu_595_x_13_ce1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_13_ce1 = grp_float_layer_norm3_fu_543_x_13_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_13_ce1 = grp_float_add2_fu_404_x_13_ce1;
+    end else begin
+        x_13_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_13_we0 = grp_bf16_to_float_fu_328_out_13_we0;
+    end else begin
+        x_13_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_14_address0 = grp_float_safe_softmax2_fu_819_x_14_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_14_address0 = grp_float_Multiply2_fu_751_x_14_address0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_14_address0 = grp_float_gelu2_fu_699_x_14_address0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_14_address0 = grp_float_silu2_fu_647_x_14_address0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_14_address0 = grp_float_rms_norm3_fu_595_x_14_address0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_14_address0 = grp_float_layer_norm3_fu_543_x_14_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_14_address0 = grp_float_add2_fu_404_x_14_address0;
+    end else if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_14_address0 = grp_bf16_to_float_fu_328_out_14_address0;
+    end else begin
+        x_14_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_14_address1 = grp_float_safe_softmax2_fu_819_x_14_address1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_14_address1 = grp_float_Multiply2_fu_751_x_14_address1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_14_address1 = grp_float_gelu2_fu_699_x_14_address1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_14_address1 = grp_float_silu2_fu_647_x_14_address1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_14_address1 = grp_float_rms_norm3_fu_595_x_14_address1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_14_address1 = grp_float_layer_norm3_fu_543_x_14_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_14_address1 = grp_float_add2_fu_404_x_14_address1;
+    end else begin
+        x_14_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_14_ce0 = grp_float_safe_softmax2_fu_819_x_14_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_14_ce0 = grp_float_Multiply2_fu_751_x_14_ce0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_14_ce0 = grp_float_gelu2_fu_699_x_14_ce0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_14_ce0 = grp_float_silu2_fu_647_x_14_ce0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_14_ce0 = grp_float_rms_norm3_fu_595_x_14_ce0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_14_ce0 = grp_float_layer_norm3_fu_543_x_14_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_14_ce0 = grp_float_add2_fu_404_x_14_ce0;
+    end else if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_14_ce0 = grp_bf16_to_float_fu_328_out_14_ce0;
+    end else begin
+        x_14_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_14_ce1 = grp_float_safe_softmax2_fu_819_x_14_ce1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_14_ce1 = grp_float_Multiply2_fu_751_x_14_ce1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_14_ce1 = grp_float_gelu2_fu_699_x_14_ce1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_14_ce1 = grp_float_silu2_fu_647_x_14_ce1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_14_ce1 = grp_float_rms_norm3_fu_595_x_14_ce1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_14_ce1 = grp_float_layer_norm3_fu_543_x_14_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_14_ce1 = grp_float_add2_fu_404_x_14_ce1;
+    end else begin
+        x_14_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_14_we0 = grp_bf16_to_float_fu_328_out_14_we0;
+    end else begin
+        x_14_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_15_address0 = grp_float_safe_softmax2_fu_819_x_15_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_15_address0 = grp_float_Multiply2_fu_751_x_15_address0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_15_address0 = grp_float_gelu2_fu_699_x_15_address0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_15_address0 = grp_float_silu2_fu_647_x_15_address0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_15_address0 = grp_float_rms_norm3_fu_595_x_15_address0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_15_address0 = grp_float_layer_norm3_fu_543_x_15_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_15_address0 = grp_float_add2_fu_404_x_15_address0;
+    end else if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_15_address0 = grp_bf16_to_float_fu_328_out_15_address0;
+    end else begin
+        x_15_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_15_address1 = grp_float_safe_softmax2_fu_819_x_15_address1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_15_address1 = grp_float_Multiply2_fu_751_x_15_address1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_15_address1 = grp_float_gelu2_fu_699_x_15_address1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_15_address1 = grp_float_silu2_fu_647_x_15_address1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_15_address1 = grp_float_rms_norm3_fu_595_x_15_address1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_15_address1 = grp_float_layer_norm3_fu_543_x_15_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_15_address1 = grp_float_add2_fu_404_x_15_address1;
+    end else begin
+        x_15_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_15_ce0 = grp_float_safe_softmax2_fu_819_x_15_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_15_ce0 = grp_float_Multiply2_fu_751_x_15_ce0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_15_ce0 = grp_float_gelu2_fu_699_x_15_ce0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_15_ce0 = grp_float_silu2_fu_647_x_15_ce0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_15_ce0 = grp_float_rms_norm3_fu_595_x_15_ce0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_15_ce0 = grp_float_layer_norm3_fu_543_x_15_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_15_ce0 = grp_float_add2_fu_404_x_15_ce0;
+    end else if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_15_ce0 = grp_bf16_to_float_fu_328_out_15_ce0;
+    end else begin
+        x_15_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_15_ce1 = grp_float_safe_softmax2_fu_819_x_15_ce1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_15_ce1 = grp_float_Multiply2_fu_751_x_15_ce1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_15_ce1 = grp_float_gelu2_fu_699_x_15_ce1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_15_ce1 = grp_float_silu2_fu_647_x_15_ce1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_15_ce1 = grp_float_rms_norm3_fu_595_x_15_ce1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_15_ce1 = grp_float_layer_norm3_fu_543_x_15_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_15_ce1 = grp_float_add2_fu_404_x_15_ce1;
+    end else begin
+        x_15_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_15_we0 = grp_bf16_to_float_fu_328_out_15_we0;
+    end else begin
+        x_15_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_1_address0 = grp_float_safe_softmax2_fu_819_x_1_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_1_address0 = grp_float_Multiply2_fu_751_x_1_address0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_1_address0 = grp_float_gelu2_fu_699_x_1_address0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_1_address0 = grp_float_silu2_fu_647_x_1_address0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_1_address0 = grp_float_rms_norm3_fu_595_x_1_address0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_1_address0 = grp_float_layer_norm3_fu_543_x_1_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_1_address0 = grp_float_add2_fu_404_x_1_address0;
+    end else if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_1_address0 = grp_bf16_to_float_fu_328_out_1_address0;
+    end else begin
+        x_1_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_1_address1 = grp_float_safe_softmax2_fu_819_x_1_address1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_1_address1 = grp_float_Multiply2_fu_751_x_1_address1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_1_address1 = grp_float_gelu2_fu_699_x_1_address1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_1_address1 = grp_float_silu2_fu_647_x_1_address1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_1_address1 = grp_float_rms_norm3_fu_595_x_1_address1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_1_address1 = grp_float_layer_norm3_fu_543_x_1_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_1_address1 = grp_float_add2_fu_404_x_1_address1;
+    end else begin
+        x_1_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_1_ce0 = grp_float_safe_softmax2_fu_819_x_1_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_1_ce0 = grp_float_Multiply2_fu_751_x_1_ce0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_1_ce0 = grp_float_gelu2_fu_699_x_1_ce0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_1_ce0 = grp_float_silu2_fu_647_x_1_ce0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_1_ce0 = grp_float_rms_norm3_fu_595_x_1_ce0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_1_ce0 = grp_float_layer_norm3_fu_543_x_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_1_ce0 = grp_float_add2_fu_404_x_1_ce0;
+    end else if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_1_ce0 = grp_bf16_to_float_fu_328_out_1_ce0;
+    end else begin
+        x_1_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_1_ce1 = grp_float_safe_softmax2_fu_819_x_1_ce1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_1_ce1 = grp_float_Multiply2_fu_751_x_1_ce1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_1_ce1 = grp_float_gelu2_fu_699_x_1_ce1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_1_ce1 = grp_float_silu2_fu_647_x_1_ce1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_1_ce1 = grp_float_rms_norm3_fu_595_x_1_ce1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_1_ce1 = grp_float_layer_norm3_fu_543_x_1_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_1_ce1 = grp_float_add2_fu_404_x_1_ce1;
+    end else begin
+        x_1_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_1_we0 = grp_bf16_to_float_fu_328_out_1_we0;
+    end else begin
+        x_1_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_2_address0 = grp_float_safe_softmax2_fu_819_x_2_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_2_address0 = grp_float_Multiply2_fu_751_x_2_address0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_2_address0 = grp_float_gelu2_fu_699_x_2_address0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_2_address0 = grp_float_silu2_fu_647_x_2_address0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_2_address0 = grp_float_rms_norm3_fu_595_x_2_address0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_2_address0 = grp_float_layer_norm3_fu_543_x_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_2_address0 = grp_float_add2_fu_404_x_2_address0;
+    end else if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_2_address0 = grp_bf16_to_float_fu_328_out_2_address0;
+    end else begin
+        x_2_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_2_address1 = grp_float_safe_softmax2_fu_819_x_2_address1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_2_address1 = grp_float_Multiply2_fu_751_x_2_address1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_2_address1 = grp_float_gelu2_fu_699_x_2_address1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_2_address1 = grp_float_silu2_fu_647_x_2_address1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_2_address1 = grp_float_rms_norm3_fu_595_x_2_address1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_2_address1 = grp_float_layer_norm3_fu_543_x_2_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_2_address1 = grp_float_add2_fu_404_x_2_address1;
+    end else begin
+        x_2_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_2_ce0 = grp_float_safe_softmax2_fu_819_x_2_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_2_ce0 = grp_float_Multiply2_fu_751_x_2_ce0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_2_ce0 = grp_float_gelu2_fu_699_x_2_ce0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_2_ce0 = grp_float_silu2_fu_647_x_2_ce0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_2_ce0 = grp_float_rms_norm3_fu_595_x_2_ce0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_2_ce0 = grp_float_layer_norm3_fu_543_x_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_2_ce0 = grp_float_add2_fu_404_x_2_ce0;
+    end else if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_2_ce0 = grp_bf16_to_float_fu_328_out_2_ce0;
+    end else begin
+        x_2_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_2_ce1 = grp_float_safe_softmax2_fu_819_x_2_ce1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_2_ce1 = grp_float_Multiply2_fu_751_x_2_ce1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_2_ce1 = grp_float_gelu2_fu_699_x_2_ce1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_2_ce1 = grp_float_silu2_fu_647_x_2_ce1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_2_ce1 = grp_float_rms_norm3_fu_595_x_2_ce1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_2_ce1 = grp_float_layer_norm3_fu_543_x_2_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_2_ce1 = grp_float_add2_fu_404_x_2_ce1;
+    end else begin
+        x_2_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_2_we0 = grp_bf16_to_float_fu_328_out_2_we0;
+    end else begin
+        x_2_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_3_address0 = grp_float_safe_softmax2_fu_819_x_3_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_3_address0 = grp_float_Multiply2_fu_751_x_3_address0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_3_address0 = grp_float_gelu2_fu_699_x_3_address0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_3_address0 = grp_float_silu2_fu_647_x_3_address0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_3_address0 = grp_float_rms_norm3_fu_595_x_3_address0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_3_address0 = grp_float_layer_norm3_fu_543_x_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_3_address0 = grp_float_add2_fu_404_x_3_address0;
+    end else if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_3_address0 = grp_bf16_to_float_fu_328_out_3_address0;
+    end else begin
+        x_3_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_3_address1 = grp_float_safe_softmax2_fu_819_x_3_address1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_3_address1 = grp_float_Multiply2_fu_751_x_3_address1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_3_address1 = grp_float_gelu2_fu_699_x_3_address1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_3_address1 = grp_float_silu2_fu_647_x_3_address1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_3_address1 = grp_float_rms_norm3_fu_595_x_3_address1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_3_address1 = grp_float_layer_norm3_fu_543_x_3_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_3_address1 = grp_float_add2_fu_404_x_3_address1;
+    end else begin
+        x_3_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_3_ce0 = grp_float_safe_softmax2_fu_819_x_3_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_3_ce0 = grp_float_Multiply2_fu_751_x_3_ce0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_3_ce0 = grp_float_gelu2_fu_699_x_3_ce0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_3_ce0 = grp_float_silu2_fu_647_x_3_ce0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_3_ce0 = grp_float_rms_norm3_fu_595_x_3_ce0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_3_ce0 = grp_float_layer_norm3_fu_543_x_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_3_ce0 = grp_float_add2_fu_404_x_3_ce0;
+    end else if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_3_ce0 = grp_bf16_to_float_fu_328_out_3_ce0;
+    end else begin
+        x_3_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_3_ce1 = grp_float_safe_softmax2_fu_819_x_3_ce1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_3_ce1 = grp_float_Multiply2_fu_751_x_3_ce1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_3_ce1 = grp_float_gelu2_fu_699_x_3_ce1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_3_ce1 = grp_float_silu2_fu_647_x_3_ce1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_3_ce1 = grp_float_rms_norm3_fu_595_x_3_ce1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_3_ce1 = grp_float_layer_norm3_fu_543_x_3_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_3_ce1 = grp_float_add2_fu_404_x_3_ce1;
+    end else begin
+        x_3_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_3_we0 = grp_bf16_to_float_fu_328_out_3_we0;
+    end else begin
+        x_3_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_4_address0 = grp_float_safe_softmax2_fu_819_x_4_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_4_address0 = grp_float_Multiply2_fu_751_x_4_address0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_4_address0 = grp_float_gelu2_fu_699_x_4_address0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_4_address0 = grp_float_silu2_fu_647_x_4_address0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_4_address0 = grp_float_rms_norm3_fu_595_x_4_address0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_4_address0 = grp_float_layer_norm3_fu_543_x_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_4_address0 = grp_float_add2_fu_404_x_4_address0;
+    end else if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_4_address0 = grp_bf16_to_float_fu_328_out_4_address0;
+    end else begin
+        x_4_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_4_address1 = grp_float_safe_softmax2_fu_819_x_4_address1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_4_address1 = grp_float_Multiply2_fu_751_x_4_address1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_4_address1 = grp_float_gelu2_fu_699_x_4_address1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_4_address1 = grp_float_silu2_fu_647_x_4_address1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_4_address1 = grp_float_rms_norm3_fu_595_x_4_address1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_4_address1 = grp_float_layer_norm3_fu_543_x_4_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_4_address1 = grp_float_add2_fu_404_x_4_address1;
+    end else begin
+        x_4_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_4_ce0 = grp_float_safe_softmax2_fu_819_x_4_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_4_ce0 = grp_float_Multiply2_fu_751_x_4_ce0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_4_ce0 = grp_float_gelu2_fu_699_x_4_ce0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_4_ce0 = grp_float_silu2_fu_647_x_4_ce0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_4_ce0 = grp_float_rms_norm3_fu_595_x_4_ce0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_4_ce0 = grp_float_layer_norm3_fu_543_x_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_4_ce0 = grp_float_add2_fu_404_x_4_ce0;
+    end else if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_4_ce0 = grp_bf16_to_float_fu_328_out_4_ce0;
+    end else begin
+        x_4_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_4_ce1 = grp_float_safe_softmax2_fu_819_x_4_ce1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_4_ce1 = grp_float_Multiply2_fu_751_x_4_ce1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_4_ce1 = grp_float_gelu2_fu_699_x_4_ce1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_4_ce1 = grp_float_silu2_fu_647_x_4_ce1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_4_ce1 = grp_float_rms_norm3_fu_595_x_4_ce1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_4_ce1 = grp_float_layer_norm3_fu_543_x_4_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_4_ce1 = grp_float_add2_fu_404_x_4_ce1;
+    end else begin
+        x_4_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_4_we0 = grp_bf16_to_float_fu_328_out_4_we0;
+    end else begin
+        x_4_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_5_address0 = grp_float_safe_softmax2_fu_819_x_5_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_5_address0 = grp_float_Multiply2_fu_751_x_5_address0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_5_address0 = grp_float_gelu2_fu_699_x_5_address0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_5_address0 = grp_float_silu2_fu_647_x_5_address0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_5_address0 = grp_float_rms_norm3_fu_595_x_5_address0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_5_address0 = grp_float_layer_norm3_fu_543_x_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_5_address0 = grp_float_add2_fu_404_x_5_address0;
+    end else if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_5_address0 = grp_bf16_to_float_fu_328_out_5_address0;
+    end else begin
+        x_5_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_5_address1 = grp_float_safe_softmax2_fu_819_x_5_address1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_5_address1 = grp_float_Multiply2_fu_751_x_5_address1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_5_address1 = grp_float_gelu2_fu_699_x_5_address1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_5_address1 = grp_float_silu2_fu_647_x_5_address1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_5_address1 = grp_float_rms_norm3_fu_595_x_5_address1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_5_address1 = grp_float_layer_norm3_fu_543_x_5_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_5_address1 = grp_float_add2_fu_404_x_5_address1;
+    end else begin
+        x_5_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_5_ce0 = grp_float_safe_softmax2_fu_819_x_5_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_5_ce0 = grp_float_Multiply2_fu_751_x_5_ce0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_5_ce0 = grp_float_gelu2_fu_699_x_5_ce0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_5_ce0 = grp_float_silu2_fu_647_x_5_ce0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_5_ce0 = grp_float_rms_norm3_fu_595_x_5_ce0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_5_ce0 = grp_float_layer_norm3_fu_543_x_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_5_ce0 = grp_float_add2_fu_404_x_5_ce0;
+    end else if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_5_ce0 = grp_bf16_to_float_fu_328_out_5_ce0;
+    end else begin
+        x_5_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_5_ce1 = grp_float_safe_softmax2_fu_819_x_5_ce1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_5_ce1 = grp_float_Multiply2_fu_751_x_5_ce1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_5_ce1 = grp_float_gelu2_fu_699_x_5_ce1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_5_ce1 = grp_float_silu2_fu_647_x_5_ce1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_5_ce1 = grp_float_rms_norm3_fu_595_x_5_ce1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_5_ce1 = grp_float_layer_norm3_fu_543_x_5_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_5_ce1 = grp_float_add2_fu_404_x_5_ce1;
+    end else begin
+        x_5_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_5_we0 = grp_bf16_to_float_fu_328_out_5_we0;
+    end else begin
+        x_5_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_6_address0 = grp_float_safe_softmax2_fu_819_x_6_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_6_address0 = grp_float_Multiply2_fu_751_x_6_address0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_6_address0 = grp_float_gelu2_fu_699_x_6_address0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_6_address0 = grp_float_silu2_fu_647_x_6_address0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_6_address0 = grp_float_rms_norm3_fu_595_x_6_address0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_6_address0 = grp_float_layer_norm3_fu_543_x_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_6_address0 = grp_float_add2_fu_404_x_6_address0;
+    end else if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_6_address0 = grp_bf16_to_float_fu_328_out_6_address0;
+    end else begin
+        x_6_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_6_address1 = grp_float_safe_softmax2_fu_819_x_6_address1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_6_address1 = grp_float_Multiply2_fu_751_x_6_address1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_6_address1 = grp_float_gelu2_fu_699_x_6_address1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_6_address1 = grp_float_silu2_fu_647_x_6_address1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_6_address1 = grp_float_rms_norm3_fu_595_x_6_address1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_6_address1 = grp_float_layer_norm3_fu_543_x_6_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_6_address1 = grp_float_add2_fu_404_x_6_address1;
+    end else begin
+        x_6_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_6_ce0 = grp_float_safe_softmax2_fu_819_x_6_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_6_ce0 = grp_float_Multiply2_fu_751_x_6_ce0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_6_ce0 = grp_float_gelu2_fu_699_x_6_ce0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_6_ce0 = grp_float_silu2_fu_647_x_6_ce0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_6_ce0 = grp_float_rms_norm3_fu_595_x_6_ce0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_6_ce0 = grp_float_layer_norm3_fu_543_x_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_6_ce0 = grp_float_add2_fu_404_x_6_ce0;
+    end else if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_6_ce0 = grp_bf16_to_float_fu_328_out_6_ce0;
+    end else begin
+        x_6_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_6_ce1 = grp_float_safe_softmax2_fu_819_x_6_ce1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_6_ce1 = grp_float_Multiply2_fu_751_x_6_ce1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_6_ce1 = grp_float_gelu2_fu_699_x_6_ce1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_6_ce1 = grp_float_silu2_fu_647_x_6_ce1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_6_ce1 = grp_float_rms_norm3_fu_595_x_6_ce1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_6_ce1 = grp_float_layer_norm3_fu_543_x_6_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_6_ce1 = grp_float_add2_fu_404_x_6_ce1;
+    end else begin
+        x_6_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_6_we0 = grp_bf16_to_float_fu_328_out_6_we0;
+    end else begin
+        x_6_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_7_address0 = grp_float_safe_softmax2_fu_819_x_7_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_7_address0 = grp_float_Multiply2_fu_751_x_7_address0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_7_address0 = grp_float_gelu2_fu_699_x_7_address0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_7_address0 = grp_float_silu2_fu_647_x_7_address0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_7_address0 = grp_float_rms_norm3_fu_595_x_7_address0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_7_address0 = grp_float_layer_norm3_fu_543_x_7_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_7_address0 = grp_float_add2_fu_404_x_7_address0;
+    end else if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_7_address0 = grp_bf16_to_float_fu_328_out_7_address0;
+    end else begin
+        x_7_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_7_address1 = grp_float_safe_softmax2_fu_819_x_7_address1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_7_address1 = grp_float_Multiply2_fu_751_x_7_address1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_7_address1 = grp_float_gelu2_fu_699_x_7_address1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_7_address1 = grp_float_silu2_fu_647_x_7_address1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_7_address1 = grp_float_rms_norm3_fu_595_x_7_address1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_7_address1 = grp_float_layer_norm3_fu_543_x_7_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_7_address1 = grp_float_add2_fu_404_x_7_address1;
+    end else begin
+        x_7_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_7_ce0 = grp_float_safe_softmax2_fu_819_x_7_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_7_ce0 = grp_float_Multiply2_fu_751_x_7_ce0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_7_ce0 = grp_float_gelu2_fu_699_x_7_ce0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_7_ce0 = grp_float_silu2_fu_647_x_7_ce0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_7_ce0 = grp_float_rms_norm3_fu_595_x_7_ce0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_7_ce0 = grp_float_layer_norm3_fu_543_x_7_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_7_ce0 = grp_float_add2_fu_404_x_7_ce0;
+    end else if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_7_ce0 = grp_bf16_to_float_fu_328_out_7_ce0;
+    end else begin
+        x_7_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_7_ce1 = grp_float_safe_softmax2_fu_819_x_7_ce1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_7_ce1 = grp_float_Multiply2_fu_751_x_7_ce1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_7_ce1 = grp_float_gelu2_fu_699_x_7_ce1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_7_ce1 = grp_float_silu2_fu_647_x_7_ce1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_7_ce1 = grp_float_rms_norm3_fu_595_x_7_ce1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_7_ce1 = grp_float_layer_norm3_fu_543_x_7_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_7_ce1 = grp_float_add2_fu_404_x_7_ce1;
+    end else begin
+        x_7_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_7_we0 = grp_bf16_to_float_fu_328_out_7_we0;
+    end else begin
+        x_7_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_8_address0 = grp_float_safe_softmax2_fu_819_x_8_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_8_address0 = grp_float_Multiply2_fu_751_x_8_address0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_8_address0 = grp_float_gelu2_fu_699_x_8_address0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_8_address0 = grp_float_silu2_fu_647_x_8_address0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_8_address0 = grp_float_rms_norm3_fu_595_x_8_address0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_8_address0 = grp_float_layer_norm3_fu_543_x_8_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_8_address0 = grp_float_add2_fu_404_x_8_address0;
+    end else if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_8_address0 = grp_bf16_to_float_fu_328_out_8_address0;
+    end else begin
+        x_8_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_8_address1 = grp_float_safe_softmax2_fu_819_x_8_address1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_8_address1 = grp_float_Multiply2_fu_751_x_8_address1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_8_address1 = grp_float_gelu2_fu_699_x_8_address1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_8_address1 = grp_float_silu2_fu_647_x_8_address1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_8_address1 = grp_float_rms_norm3_fu_595_x_8_address1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_8_address1 = grp_float_layer_norm3_fu_543_x_8_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_8_address1 = grp_float_add2_fu_404_x_8_address1;
+    end else begin
+        x_8_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_8_ce0 = grp_float_safe_softmax2_fu_819_x_8_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_8_ce0 = grp_float_Multiply2_fu_751_x_8_ce0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_8_ce0 = grp_float_gelu2_fu_699_x_8_ce0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_8_ce0 = grp_float_silu2_fu_647_x_8_ce0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_8_ce0 = grp_float_rms_norm3_fu_595_x_8_ce0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_8_ce0 = grp_float_layer_norm3_fu_543_x_8_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_8_ce0 = grp_float_add2_fu_404_x_8_ce0;
+    end else if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_8_ce0 = grp_bf16_to_float_fu_328_out_8_ce0;
+    end else begin
+        x_8_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_8_ce1 = grp_float_safe_softmax2_fu_819_x_8_ce1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_8_ce1 = grp_float_Multiply2_fu_751_x_8_ce1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_8_ce1 = grp_float_gelu2_fu_699_x_8_ce1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_8_ce1 = grp_float_silu2_fu_647_x_8_ce1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_8_ce1 = grp_float_rms_norm3_fu_595_x_8_ce1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_8_ce1 = grp_float_layer_norm3_fu_543_x_8_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_8_ce1 = grp_float_add2_fu_404_x_8_ce1;
+    end else begin
+        x_8_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_8_we0 = grp_bf16_to_float_fu_328_out_8_we0;
+    end else begin
+        x_8_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_9_address0 = grp_float_safe_softmax2_fu_819_x_9_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_9_address0 = grp_float_Multiply2_fu_751_x_9_address0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_9_address0 = grp_float_gelu2_fu_699_x_9_address0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_9_address0 = grp_float_silu2_fu_647_x_9_address0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_9_address0 = grp_float_rms_norm3_fu_595_x_9_address0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_9_address0 = grp_float_layer_norm3_fu_543_x_9_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_9_address0 = grp_float_add2_fu_404_x_9_address0;
+    end else if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_9_address0 = grp_bf16_to_float_fu_328_out_9_address0;
+    end else begin
+        x_9_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_9_address1 = grp_float_safe_softmax2_fu_819_x_9_address1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_9_address1 = grp_float_Multiply2_fu_751_x_9_address1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_9_address1 = grp_float_gelu2_fu_699_x_9_address1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_9_address1 = grp_float_silu2_fu_647_x_9_address1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_9_address1 = grp_float_rms_norm3_fu_595_x_9_address1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_9_address1 = grp_float_layer_norm3_fu_543_x_9_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_9_address1 = grp_float_add2_fu_404_x_9_address1;
+    end else begin
+        x_9_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_9_ce0 = grp_float_safe_softmax2_fu_819_x_9_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_9_ce0 = grp_float_Multiply2_fu_751_x_9_ce0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_9_ce0 = grp_float_gelu2_fu_699_x_9_ce0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_9_ce0 = grp_float_silu2_fu_647_x_9_ce0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_9_ce0 = grp_float_rms_norm3_fu_595_x_9_ce0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_9_ce0 = grp_float_layer_norm3_fu_543_x_9_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_9_ce0 = grp_float_add2_fu_404_x_9_ce0;
+    end else if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_9_ce0 = grp_bf16_to_float_fu_328_out_9_ce0;
+    end else begin
+        x_9_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_9_ce1 = grp_float_safe_softmax2_fu_819_x_9_ce1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_9_ce1 = grp_float_Multiply2_fu_751_x_9_ce1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_9_ce1 = grp_float_gelu2_fu_699_x_9_ce1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_9_ce1 = grp_float_silu2_fu_647_x_9_ce1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_9_ce1 = grp_float_rms_norm3_fu_595_x_9_ce1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_9_ce1 = grp_float_layer_norm3_fu_543_x_9_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_9_ce1 = grp_float_add2_fu_404_x_9_ce1;
+    end else begin
+        x_9_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_9_we0 = grp_bf16_to_float_fu_328_out_9_we0;
+    end else begin
+        x_9_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_address0 = grp_float_safe_softmax2_fu_819_x_0_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_address0 = grp_float_Multiply2_fu_751_x_0_address0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_address0 = grp_float_gelu2_fu_699_x_0_address0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_address0 = grp_float_silu2_fu_647_x_0_address0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_address0 = grp_float_rms_norm3_fu_595_x_0_address0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_address0 = grp_float_layer_norm3_fu_543_x_0_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_address0 = grp_float_add2_fu_404_x_0_address0;
+    end else if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_address0 = grp_bf16_to_float_fu_328_out_0_address0;
     end else begin
         x_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state75)) begin
-        x_ce0 = grp_activation_accelerator_Pipeline_float_add_loop_fu_366_x_ce0;
-    end else if (((config_r_read_reg_510 == 32'd1) & (1'b1 == ap_CS_fsm_state72))) begin
-        x_ce0 = grp_float_safe_softmax_fu_359_x_ce0;
-    end else if (((config_r_read_reg_510 == 32'd2) & (1'b1 == ap_CS_fsm_state72))) begin
-        x_ce0 = grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_x_ce0;
-    end else if (((config_r_read_reg_510 == 32'd3) & (1'b1 == ap_CS_fsm_state72))) begin
-        x_ce0 = grp_activation_accelerator_Pipeline_gelu_loop_fu_344_x_ce0;
-    end else if (((config_r_read_reg_510 == 32'd4) & (1'b1 == ap_CS_fsm_state72))) begin
-        x_ce0 = grp_activation_accelerator_Pipeline_silu_loop_fu_337_x_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state69)) begin
-        x_ce0 = grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_x_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state47)) begin
-        x_ce0 = grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_x_ce0;
-    end else if (((stage_read_reg_514 == 32'd1) & (config_r_read_reg_510 == 32'd6) & (1'b1 == ap_CS_fsm_state44))) begin
-        x_ce0 = grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_x_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state22)) begin
-        x_ce0 = grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_x_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state12)) begin
-        x_ce0 = grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_x_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state73)) begin
-        x_ce0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276_x_ce0;
-    end else if (((config_r_read_reg_510 == 32'd1) & (1'b1 == ap_CS_fsm_state70))) begin
-        x_ce0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268_x_ce0;
-    end else if (((config_r_read_reg_510 == 32'd2) & (1'b1 == ap_CS_fsm_state70))) begin
-        x_ce0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252_x_ce0;
-    end else if (((config_r_read_reg_510 == 32'd3) & (1'b1 == ap_CS_fsm_state70))) begin
-        x_ce0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244_x_ce0;
-    end else if (((config_r_read_reg_510 == 32'd4) & (1'b1 == ap_CS_fsm_state70))) begin
-        x_ce0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236_x_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state45)) begin
-        x_ce0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_x_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        x_ce0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_x_ce0;
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_address1 = grp_float_safe_softmax2_fu_819_x_0_address1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_address1 = grp_float_Multiply2_fu_751_x_0_address1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_address1 = grp_float_gelu2_fu_699_x_0_address1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_address1 = grp_float_silu2_fu_647_x_0_address1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_address1 = grp_float_rms_norm3_fu_595_x_0_address1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_address1 = grp_float_layer_norm3_fu_543_x_0_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_address1 = grp_float_add2_fu_404_x_0_address1;
+    end else begin
+        x_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_ce0 = grp_float_safe_softmax2_fu_819_x_0_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_ce0 = grp_float_Multiply2_fu_751_x_0_ce0;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_ce0 = grp_float_gelu2_fu_699_x_0_ce0;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_ce0 = grp_float_silu2_fu_647_x_0_ce0;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_ce0 = grp_float_rms_norm3_fu_595_x_0_ce0;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_ce0 = grp_float_layer_norm3_fu_543_x_0_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_ce0 = grp_float_add2_fu_404_x_0_ce0;
+    end else if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_ce0 = grp_bf16_to_float_fu_328_out_0_ce0;
     end else begin
         x_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state73)) begin
-        x_d0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276_x_d0;
-    end else if (((config_r_read_reg_510 == 32'd1) & (1'b1 == ap_CS_fsm_state70))) begin
-        x_d0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268_x_d0;
-    end else if (((config_r_read_reg_510 == 32'd2) & (1'b1 == ap_CS_fsm_state70))) begin
-        x_d0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252_x_d0;
-    end else if (((config_r_read_reg_510 == 32'd3) & (1'b1 == ap_CS_fsm_state70))) begin
-        x_d0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244_x_d0;
-    end else if (((config_r_read_reg_510 == 32'd4) & (1'b1 == ap_CS_fsm_state70))) begin
-        x_d0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236_x_d0;
-    end else if ((1'b1 == ap_CS_fsm_state45)) begin
-        x_d0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_x_d0;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        x_d0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_x_d0;
+    if (((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_ce1 = grp_float_safe_softmax2_fu_819_x_0_ce1;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_ce1 = grp_float_Multiply2_fu_751_x_0_ce1;
+    end else if (((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_ce1 = grp_float_gelu2_fu_699_x_0_ce1;
+    end else if (((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_ce1 = grp_float_silu2_fu_647_x_0_ce1;
+    end else if (((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_ce1 = grp_float_rms_norm3_fu_595_x_0_ce1;
+    end else if (((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_ce1 = grp_float_layer_norm3_fu_543_x_0_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        x_ce1 = grp_float_add2_fu_404_x_0_ce1;
     end else begin
-        x_d0 = 'bx;
+        x_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state73)) begin
-        x_we0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276_x_we0;
-    end else if (((config_r_read_reg_510 == 32'd1) & (1'b1 == ap_CS_fsm_state70))) begin
-        x_we0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268_x_we0;
-    end else if (((config_r_read_reg_510 == 32'd2) & (1'b1 == ap_CS_fsm_state70))) begin
-        x_we0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252_x_we0;
-    end else if (((config_r_read_reg_510 == 32'd3) & (1'b1 == ap_CS_fsm_state70))) begin
-        x_we0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244_x_we0;
-    end else if (((config_r_read_reg_510 == 32'd4) & (1'b1 == ap_CS_fsm_state70))) begin
-        x_we0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236_x_we0;
-    end else if ((1'b1 == ap_CS_fsm_state45)) begin
-        x_we0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_x_we0;
-    end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        x_we0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_x_we0;
+    if ((((config_r_read_reg_949 == 32'd1) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd3) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd4) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd5) & (1'b1 == ap_CS_fsm_state10)) | ((config_r_read_reg_949 == 32'd6) & (1'b1 == ap_CS_fsm_state10)))) begin
+        x_we0 = grp_bf16_to_float_fu_328_out_0_we0;
     end else begin
         x_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state75)) begin
-        y_address0 = grp_activation_accelerator_Pipeline_float_add_loop_fu_366_y_address0;
-    end else if (((config_r_read_reg_510 == 32'd2) & (1'b1 == ap_CS_fsm_state72))) begin
-        y_address0 = grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_y_address0;
-    end else if ((1'b1 == ap_CS_fsm_state73)) begin
-        y_address0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284_y_address0;
-    end else if (((config_r_read_reg_510 == 32'd2) & (1'b1 == ap_CS_fsm_state70))) begin
-        y_address0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260_y_address0;
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_10_address0 = grp_float_Multiply2_fu_751_y_10_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_10_address0 = grp_float_add2_fu_404_y_10_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_10_address0 = grp_bf16_to_float_fu_366_out_10_address0;
+    end else begin
+        y_10_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_10_address1 = grp_float_Multiply2_fu_751_y_10_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_10_address1 = grp_float_add2_fu_404_y_10_address1;
+    end else begin
+        y_10_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_10_ce0 = grp_float_Multiply2_fu_751_y_10_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_10_ce0 = grp_float_add2_fu_404_y_10_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_10_ce0 = grp_bf16_to_float_fu_366_out_10_ce0;
+    end else begin
+        y_10_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_10_ce1 = grp_float_Multiply2_fu_751_y_10_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_10_ce1 = grp_float_add2_fu_404_y_10_ce1;
+    end else begin
+        y_10_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_10_we0 = grp_bf16_to_float_fu_366_out_10_we0;
+    end else begin
+        y_10_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_11_address0 = grp_float_Multiply2_fu_751_y_11_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_11_address0 = grp_float_add2_fu_404_y_11_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_11_address0 = grp_bf16_to_float_fu_366_out_11_address0;
+    end else begin
+        y_11_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_11_address1 = grp_float_Multiply2_fu_751_y_11_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_11_address1 = grp_float_add2_fu_404_y_11_address1;
+    end else begin
+        y_11_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_11_ce0 = grp_float_Multiply2_fu_751_y_11_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_11_ce0 = grp_float_add2_fu_404_y_11_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_11_ce0 = grp_bf16_to_float_fu_366_out_11_ce0;
+    end else begin
+        y_11_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_11_ce1 = grp_float_Multiply2_fu_751_y_11_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_11_ce1 = grp_float_add2_fu_404_y_11_ce1;
+    end else begin
+        y_11_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_11_we0 = grp_bf16_to_float_fu_366_out_11_we0;
+    end else begin
+        y_11_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_12_address0 = grp_float_Multiply2_fu_751_y_12_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_12_address0 = grp_float_add2_fu_404_y_12_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_12_address0 = grp_bf16_to_float_fu_366_out_12_address0;
+    end else begin
+        y_12_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_12_address1 = grp_float_Multiply2_fu_751_y_12_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_12_address1 = grp_float_add2_fu_404_y_12_address1;
+    end else begin
+        y_12_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_12_ce0 = grp_float_Multiply2_fu_751_y_12_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_12_ce0 = grp_float_add2_fu_404_y_12_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_12_ce0 = grp_bf16_to_float_fu_366_out_12_ce0;
+    end else begin
+        y_12_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_12_ce1 = grp_float_Multiply2_fu_751_y_12_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_12_ce1 = grp_float_add2_fu_404_y_12_ce1;
+    end else begin
+        y_12_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_12_we0 = grp_bf16_to_float_fu_366_out_12_we0;
+    end else begin
+        y_12_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_13_address0 = grp_float_Multiply2_fu_751_y_13_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_13_address0 = grp_float_add2_fu_404_y_13_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_13_address0 = grp_bf16_to_float_fu_366_out_13_address0;
+    end else begin
+        y_13_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_13_address1 = grp_float_Multiply2_fu_751_y_13_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_13_address1 = grp_float_add2_fu_404_y_13_address1;
+    end else begin
+        y_13_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_13_ce0 = grp_float_Multiply2_fu_751_y_13_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_13_ce0 = grp_float_add2_fu_404_y_13_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_13_ce0 = grp_bf16_to_float_fu_366_out_13_ce0;
+    end else begin
+        y_13_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_13_ce1 = grp_float_Multiply2_fu_751_y_13_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_13_ce1 = grp_float_add2_fu_404_y_13_ce1;
+    end else begin
+        y_13_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_13_we0 = grp_bf16_to_float_fu_366_out_13_we0;
+    end else begin
+        y_13_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_14_address0 = grp_float_Multiply2_fu_751_y_14_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_14_address0 = grp_float_add2_fu_404_y_14_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_14_address0 = grp_bf16_to_float_fu_366_out_14_address0;
+    end else begin
+        y_14_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_14_address1 = grp_float_Multiply2_fu_751_y_14_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_14_address1 = grp_float_add2_fu_404_y_14_address1;
+    end else begin
+        y_14_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_14_ce0 = grp_float_Multiply2_fu_751_y_14_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_14_ce0 = grp_float_add2_fu_404_y_14_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_14_ce0 = grp_bf16_to_float_fu_366_out_14_ce0;
+    end else begin
+        y_14_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_14_ce1 = grp_float_Multiply2_fu_751_y_14_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_14_ce1 = grp_float_add2_fu_404_y_14_ce1;
+    end else begin
+        y_14_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_14_we0 = grp_bf16_to_float_fu_366_out_14_we0;
+    end else begin
+        y_14_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_15_address0 = grp_float_Multiply2_fu_751_y_15_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_15_address0 = grp_float_add2_fu_404_y_15_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_15_address0 = grp_bf16_to_float_fu_366_out_15_address0;
+    end else begin
+        y_15_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_15_address1 = grp_float_Multiply2_fu_751_y_15_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_15_address1 = grp_float_add2_fu_404_y_15_address1;
+    end else begin
+        y_15_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_15_ce0 = grp_float_Multiply2_fu_751_y_15_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_15_ce0 = grp_float_add2_fu_404_y_15_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_15_ce0 = grp_bf16_to_float_fu_366_out_15_ce0;
+    end else begin
+        y_15_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_15_ce1 = grp_float_Multiply2_fu_751_y_15_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_15_ce1 = grp_float_add2_fu_404_y_15_ce1;
+    end else begin
+        y_15_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_15_we0 = grp_bf16_to_float_fu_366_out_15_we0;
+    end else begin
+        y_15_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_1_address0 = grp_float_Multiply2_fu_751_y_1_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_1_address0 = grp_float_add2_fu_404_y_1_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_1_address0 = grp_bf16_to_float_fu_366_out_1_address0;
+    end else begin
+        y_1_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_1_address1 = grp_float_Multiply2_fu_751_y_1_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_1_address1 = grp_float_add2_fu_404_y_1_address1;
+    end else begin
+        y_1_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_1_ce0 = grp_float_Multiply2_fu_751_y_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_1_ce0 = grp_float_add2_fu_404_y_1_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_1_ce0 = grp_bf16_to_float_fu_366_out_1_ce0;
+    end else begin
+        y_1_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_1_ce1 = grp_float_Multiply2_fu_751_y_1_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_1_ce1 = grp_float_add2_fu_404_y_1_ce1;
+    end else begin
+        y_1_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_1_we0 = grp_bf16_to_float_fu_366_out_1_we0;
+    end else begin
+        y_1_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_2_address0 = grp_float_Multiply2_fu_751_y_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_2_address0 = grp_float_add2_fu_404_y_2_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_2_address0 = grp_bf16_to_float_fu_366_out_2_address0;
+    end else begin
+        y_2_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_2_address1 = grp_float_Multiply2_fu_751_y_2_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_2_address1 = grp_float_add2_fu_404_y_2_address1;
+    end else begin
+        y_2_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_2_ce0 = grp_float_Multiply2_fu_751_y_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_2_ce0 = grp_float_add2_fu_404_y_2_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_2_ce0 = grp_bf16_to_float_fu_366_out_2_ce0;
+    end else begin
+        y_2_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_2_ce1 = grp_float_Multiply2_fu_751_y_2_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_2_ce1 = grp_float_add2_fu_404_y_2_ce1;
+    end else begin
+        y_2_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_2_we0 = grp_bf16_to_float_fu_366_out_2_we0;
+    end else begin
+        y_2_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_3_address0 = grp_float_Multiply2_fu_751_y_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_3_address0 = grp_float_add2_fu_404_y_3_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_3_address0 = grp_bf16_to_float_fu_366_out_3_address0;
+    end else begin
+        y_3_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_3_address1 = grp_float_Multiply2_fu_751_y_3_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_3_address1 = grp_float_add2_fu_404_y_3_address1;
+    end else begin
+        y_3_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_3_ce0 = grp_float_Multiply2_fu_751_y_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_3_ce0 = grp_float_add2_fu_404_y_3_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_3_ce0 = grp_bf16_to_float_fu_366_out_3_ce0;
+    end else begin
+        y_3_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_3_ce1 = grp_float_Multiply2_fu_751_y_3_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_3_ce1 = grp_float_add2_fu_404_y_3_ce1;
+    end else begin
+        y_3_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_3_we0 = grp_bf16_to_float_fu_366_out_3_we0;
+    end else begin
+        y_3_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_4_address0 = grp_float_Multiply2_fu_751_y_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_4_address0 = grp_float_add2_fu_404_y_4_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_4_address0 = grp_bf16_to_float_fu_366_out_4_address0;
+    end else begin
+        y_4_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_4_address1 = grp_float_Multiply2_fu_751_y_4_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_4_address1 = grp_float_add2_fu_404_y_4_address1;
+    end else begin
+        y_4_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_4_ce0 = grp_float_Multiply2_fu_751_y_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_4_ce0 = grp_float_add2_fu_404_y_4_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_4_ce0 = grp_bf16_to_float_fu_366_out_4_ce0;
+    end else begin
+        y_4_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_4_ce1 = grp_float_Multiply2_fu_751_y_4_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_4_ce1 = grp_float_add2_fu_404_y_4_ce1;
+    end else begin
+        y_4_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_4_we0 = grp_bf16_to_float_fu_366_out_4_we0;
+    end else begin
+        y_4_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_5_address0 = grp_float_Multiply2_fu_751_y_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_5_address0 = grp_float_add2_fu_404_y_5_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_5_address0 = grp_bf16_to_float_fu_366_out_5_address0;
+    end else begin
+        y_5_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_5_address1 = grp_float_Multiply2_fu_751_y_5_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_5_address1 = grp_float_add2_fu_404_y_5_address1;
+    end else begin
+        y_5_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_5_ce0 = grp_float_Multiply2_fu_751_y_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_5_ce0 = grp_float_add2_fu_404_y_5_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_5_ce0 = grp_bf16_to_float_fu_366_out_5_ce0;
+    end else begin
+        y_5_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_5_ce1 = grp_float_Multiply2_fu_751_y_5_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_5_ce1 = grp_float_add2_fu_404_y_5_ce1;
+    end else begin
+        y_5_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_5_we0 = grp_bf16_to_float_fu_366_out_5_we0;
+    end else begin
+        y_5_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_6_address0 = grp_float_Multiply2_fu_751_y_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_6_address0 = grp_float_add2_fu_404_y_6_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_6_address0 = grp_bf16_to_float_fu_366_out_6_address0;
+    end else begin
+        y_6_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_6_address1 = grp_float_Multiply2_fu_751_y_6_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_6_address1 = grp_float_add2_fu_404_y_6_address1;
+    end else begin
+        y_6_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_6_ce0 = grp_float_Multiply2_fu_751_y_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_6_ce0 = grp_float_add2_fu_404_y_6_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_6_ce0 = grp_bf16_to_float_fu_366_out_6_ce0;
+    end else begin
+        y_6_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_6_ce1 = grp_float_Multiply2_fu_751_y_6_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_6_ce1 = grp_float_add2_fu_404_y_6_ce1;
+    end else begin
+        y_6_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_6_we0 = grp_bf16_to_float_fu_366_out_6_we0;
+    end else begin
+        y_6_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_7_address0 = grp_float_Multiply2_fu_751_y_7_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_7_address0 = grp_float_add2_fu_404_y_7_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_7_address0 = grp_bf16_to_float_fu_366_out_7_address0;
+    end else begin
+        y_7_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_7_address1 = grp_float_Multiply2_fu_751_y_7_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_7_address1 = grp_float_add2_fu_404_y_7_address1;
+    end else begin
+        y_7_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_7_ce0 = grp_float_Multiply2_fu_751_y_7_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_7_ce0 = grp_float_add2_fu_404_y_7_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_7_ce0 = grp_bf16_to_float_fu_366_out_7_ce0;
+    end else begin
+        y_7_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_7_ce1 = grp_float_Multiply2_fu_751_y_7_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_7_ce1 = grp_float_add2_fu_404_y_7_ce1;
+    end else begin
+        y_7_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_7_we0 = grp_bf16_to_float_fu_366_out_7_we0;
+    end else begin
+        y_7_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_8_address0 = grp_float_Multiply2_fu_751_y_8_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_8_address0 = grp_float_add2_fu_404_y_8_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_8_address0 = grp_bf16_to_float_fu_366_out_8_address0;
+    end else begin
+        y_8_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_8_address1 = grp_float_Multiply2_fu_751_y_8_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_8_address1 = grp_float_add2_fu_404_y_8_address1;
+    end else begin
+        y_8_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_8_ce0 = grp_float_Multiply2_fu_751_y_8_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_8_ce0 = grp_float_add2_fu_404_y_8_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_8_ce0 = grp_bf16_to_float_fu_366_out_8_ce0;
+    end else begin
+        y_8_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_8_ce1 = grp_float_Multiply2_fu_751_y_8_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_8_ce1 = grp_float_add2_fu_404_y_8_ce1;
+    end else begin
+        y_8_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_8_we0 = grp_bf16_to_float_fu_366_out_8_we0;
+    end else begin
+        y_8_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_9_address0 = grp_float_Multiply2_fu_751_y_9_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_9_address0 = grp_float_add2_fu_404_y_9_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_9_address0 = grp_bf16_to_float_fu_366_out_9_address0;
+    end else begin
+        y_9_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_9_address1 = grp_float_Multiply2_fu_751_y_9_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_9_address1 = grp_float_add2_fu_404_y_9_address1;
+    end else begin
+        y_9_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_9_ce0 = grp_float_Multiply2_fu_751_y_9_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_9_ce0 = grp_float_add2_fu_404_y_9_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_9_ce0 = grp_bf16_to_float_fu_366_out_9_ce0;
+    end else begin
+        y_9_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_9_ce1 = grp_float_Multiply2_fu_751_y_9_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_9_ce1 = grp_float_add2_fu_404_y_9_ce1;
+    end else begin
+        y_9_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_9_we0 = grp_bf16_to_float_fu_366_out_9_we0;
+    end else begin
+        y_9_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_address0 = grp_float_Multiply2_fu_751_y_0_address0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_address0 = grp_float_add2_fu_404_y_0_address0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_address0 = grp_bf16_to_float_fu_366_out_0_address0;
     end else begin
         y_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state75)) begin
-        y_ce0 = grp_activation_accelerator_Pipeline_float_add_loop_fu_366_y_ce0;
-    end else if (((config_r_read_reg_510 == 32'd2) & (1'b1 == ap_CS_fsm_state72))) begin
-        y_ce0 = grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_y_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state73)) begin
-        y_ce0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284_y_ce0;
-    end else if (((config_r_read_reg_510 == 32'd2) & (1'b1 == ap_CS_fsm_state70))) begin
-        y_ce0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260_y_ce0;
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_address1 = grp_float_Multiply2_fu_751_y_0_address1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_address1 = grp_float_add2_fu_404_y_0_address1;
+    end else begin
+        y_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_ce0 = grp_float_Multiply2_fu_751_y_0_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_ce0 = grp_float_add2_fu_404_y_0_ce0;
+    end else if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_ce0 = grp_bf16_to_float_fu_366_out_0_ce0;
     end else begin
         y_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state73)) begin
-        y_d0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284_y_d0;
-    end else if (((config_r_read_reg_510 == 32'd2) & (1'b1 == ap_CS_fsm_state70))) begin
-        y_d0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260_y_d0;
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state12))) begin
+        y_ce1 = grp_float_Multiply2_fu_751_y_0_ce1;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        y_ce1 = grp_float_add2_fu_404_y_0_ce1;
     end else begin
-        y_d0 = 'bx;
+        y_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state73)) begin
-        y_we0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284_y_we0;
-    end else if (((config_r_read_reg_510 == 32'd2) & (1'b1 == ap_CS_fsm_state70))) begin
-        y_we0 = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260_y_we0;
+    if (((config_r_read_reg_949 == 32'd2) & (1'b1 == ap_CS_fsm_state10))) begin
+        y_we0 = grp_bf16_to_float_fu_366_out_0_we0;
     end else begin
         y_we0 = 1'b0;
     end
@@ -3400,26 +11544,24 @@ end
 always @ (*) begin
     case (ap_CS_fsm)
         ap_ST_fsm_state1 : begin
-            if (((ap_start == 1'b1) & (stage_read_read_fu_174_p2 == 32'd1) & (config_r_read_read_fu_168_p2 == 32'd0) & (1'b1 == ap_CS_fsm_state1))) begin
-                ap_NS_fsm = ap_ST_fsm_state73;
-            end else if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1) & (((((stage_read_read_fu_174_p2 == 32'd1) & (config_r_read_read_fu_168_p2 == 32'd3)) | ((stage_read_read_fu_174_p2 == 32'd1) & (config_r_read_read_fu_168_p2 == 32'd4))) | ((stage_read_read_fu_174_p2 == 32'd1) & (config_r_read_read_fu_168_p2 == 32'd2))) | ((stage_read_read_fu_174_p2 == 32'd1) & (config_r_read_read_fu_168_p2 == 32'd1))))) begin
-                ap_NS_fsm = ap_ST_fsm_state70;
-            end else if (((ap_start == 1'b1) & (stage_read_read_fu_174_p2 == 32'd1) & (config_r_read_read_fu_168_p2 == 32'd5) & (1'b1 == ap_CS_fsm_state1))) begin
-                ap_NS_fsm = ap_ST_fsm_state45;
-            end else if (((ap_start == 1'b1) & (stage_read_read_fu_174_p2 == 32'd1) & (config_r_read_read_fu_168_p2 == 32'd6) & (1'b1 == ap_CS_fsm_state1))) begin
+            if (((stage_read_read_fu_282_p2 == 32'd1) & (config_r_read_read_fu_276_p2 == 32'd0) & (ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
+                ap_NS_fsm = ap_ST_fsm_state13;
+            end else if ((~(config_r_read_read_fu_276_p2 == 32'd0) & ~(config_r_read_read_fu_276_p2 == 32'd1) & ~(config_r_read_read_fu_276_p2 == 32'd2) & ~(config_r_read_read_fu_276_p2 == 32'd3) & ~(config_r_read_read_fu_276_p2 == 32'd4) & ~(config_r_read_read_fu_276_p2 == 32'd5) & ~(config_r_read_read_fu_276_p2 == 32'd6) & (stage_read_read_fu_282_p2 == 32'd1) & (ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
+                ap_NS_fsm = ap_ST_fsm_state12;
+            end else if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1) & (((((((stage_read_read_fu_282_p2 == 32'd1) & (config_r_read_read_fu_276_p2 == 32'd5)) | ((stage_read_read_fu_282_p2 == 32'd1) & (config_r_read_read_fu_276_p2 == 32'd6))) | ((stage_read_read_fu_282_p2 == 32'd1) & (config_r_read_read_fu_276_p2 == 32'd4))) | ((stage_read_read_fu_282_p2 == 32'd1) & (config_r_read_read_fu_276_p2 == 32'd3))) | ((stage_read_read_fu_282_p2 == 32'd1) & (config_r_read_read_fu_276_p2 == 32'd2))) | ((stage_read_read_fu_282_p2 == 32'd1) & (config_r_read_read_fu_276_p2 == 32'd1))))) begin
                 ap_NS_fsm = ap_ST_fsm_state10;
-            end else if (((ap_start == 1'b1) & (stage_read_read_fu_174_p2 == 32'd0) & (1'b1 == ap_CS_fsm_state1))) begin
-                ap_NS_fsm = ap_ST_fsm_state78;
-            end else if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1) & ((~(stage_read_read_fu_174_p2 == 32'd0) & ~(stage_read_read_fu_174_p2 == 32'd2) & ~(stage_read_read_fu_174_p2 == 32'd1)) | (~(config_r_read_read_fu_168_p2 == 32'd0) & ~(config_r_read_read_fu_168_p2 == 32'd1) & ~(config_r_read_read_fu_168_p2 == 32'd2) & ~(config_r_read_read_fu_168_p2 == 32'd3) & ~(config_r_read_read_fu_168_p2 == 32'd4) & ~(config_r_read_read_fu_168_p2 == 32'd5) & ~(config_r_read_read_fu_168_p2 == 32'd6) & (stage_read_read_fu_174_p2 == 32'd1))))) begin
-                ap_NS_fsm = ap_ST_fsm_state44;
-            end else if (((ap_start == 1'b1) & (stage_read_read_fu_174_p2 == 32'd2) & (1'b1 == ap_CS_fsm_state1))) begin
+            end else if ((~(stage_read_read_fu_282_p2 == 32'd0) & ~(stage_read_read_fu_282_p2 == 32'd2) & ~(stage_read_read_fu_282_p2 == 32'd1) & (ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
+                ap_NS_fsm = ap_ST_fsm_state22;
+            end else if (((stage_read_read_fu_282_p2 == 32'd0) & (ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
+                ap_NS_fsm = ap_ST_fsm_state14;
+            end else if (((stage_read_read_fu_282_p2 == 32'd2) & (ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
                 ap_NS_fsm = ap_ST_fsm_state2;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end
         end
         ap_ST_fsm_state2 : begin
-            if (((1'b1 == ap_CS_fsm_state2) & (gmem2_AWREADY == 1'b1))) begin
+            if (((gmem2_AWREADY == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
                 ap_NS_fsm = ap_ST_fsm_state3;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state2;
@@ -3429,7 +11571,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state4;
         end
         ap_ST_fsm_state4 : begin
-            if (((grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state4))) begin
+            if (((1'b1 == ap_CS_fsm_state4) & (grp_activation_accelerator_Pipeline_stage_2_store_fu_504_ap_done == 1'b1))) begin
                 ap_NS_fsm = ap_ST_fsm_state5;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state4;
@@ -3448,14 +11590,14 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state9;
         end
         ap_ST_fsm_state9 : begin
-            if (((1'b1 == ap_CS_fsm_state9) & (gmem2_BVALID == 1'b1))) begin
-                ap_NS_fsm = ap_ST_fsm_state44;
+            if (((gmem2_BVALID == 1'b1) & (1'b1 == ap_CS_fsm_state9))) begin
+                ap_NS_fsm = ap_ST_fsm_state22;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state9;
             end
         end
         ap_ST_fsm_state10 : begin
-            if (((grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state10))) begin
+            if (((1'b0 == ap_block_state10_on_subcall_done) & (1'b1 == ap_CS_fsm_state10) & ((config_r_read_reg_949 == 32'd1) | ((config_r_read_reg_949 == 32'd2) | ((config_r_read_reg_949 == 32'd3) | ((config_r_read_reg_949 == 32'd4) | ((config_r_read_reg_949 == 32'd5) | (config_r_read_reg_949 == 32'd6)))))))) begin
                 ap_NS_fsm = ap_ST_fsm_state11;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state10;
@@ -3465,17 +11607,25 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state12;
         end
         ap_ST_fsm_state12 : begin
-            if (((grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state12))) begin
-                ap_NS_fsm = ap_ST_fsm_state13;
+            if (((1'b0 == ap_block_state12_on_subcall_done) & (1'b1 == ap_CS_fsm_state12))) begin
+                ap_NS_fsm = ap_ST_fsm_state22;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state12;
             end
         end
         ap_ST_fsm_state13 : begin
-            ap_NS_fsm = ap_ST_fsm_state14;
+            if (((1'b1 == ap_CS_fsm_state13) & (grp_float_add2_fu_404_ap_done == 1'b1))) begin
+                ap_NS_fsm = ap_ST_fsm_state12;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state13;
+            end
         end
         ap_ST_fsm_state14 : begin
-            ap_NS_fsm = ap_ST_fsm_state15;
+            if (((1'b0 == ap_block_state14_io) & (1'b1 == ap_CS_fsm_state14))) begin
+                ap_NS_fsm = ap_ST_fsm_state15;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state14;
+            end
         end
         ap_ST_fsm_state15 : begin
             ap_NS_fsm = ap_ST_fsm_state16;
@@ -3499,246 +11649,10 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state22;
         end
         ap_ST_fsm_state22 : begin
-            if (((grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state22))) begin
-                ap_NS_fsm = ap_ST_fsm_state23;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state22;
-            end
-        end
-        ap_ST_fsm_state23 : begin
-            ap_NS_fsm = ap_ST_fsm_state24;
-        end
-        ap_ST_fsm_state24 : begin
-            ap_NS_fsm = ap_ST_fsm_state25;
-        end
-        ap_ST_fsm_state25 : begin
-            ap_NS_fsm = ap_ST_fsm_state26;
-        end
-        ap_ST_fsm_state26 : begin
-            ap_NS_fsm = ap_ST_fsm_state27;
-        end
-        ap_ST_fsm_state27 : begin
-            ap_NS_fsm = ap_ST_fsm_state28;
-        end
-        ap_ST_fsm_state28 : begin
-            ap_NS_fsm = ap_ST_fsm_state29;
-        end
-        ap_ST_fsm_state29 : begin
-            ap_NS_fsm = ap_ST_fsm_state30;
-        end
-        ap_ST_fsm_state30 : begin
-            ap_NS_fsm = ap_ST_fsm_state31;
-        end
-        ap_ST_fsm_state31 : begin
-            ap_NS_fsm = ap_ST_fsm_state32;
-        end
-        ap_ST_fsm_state32 : begin
-            ap_NS_fsm = ap_ST_fsm_state33;
-        end
-        ap_ST_fsm_state33 : begin
-            ap_NS_fsm = ap_ST_fsm_state34;
-        end
-        ap_ST_fsm_state34 : begin
-            ap_NS_fsm = ap_ST_fsm_state35;
-        end
-        ap_ST_fsm_state35 : begin
-            ap_NS_fsm = ap_ST_fsm_state36;
-        end
-        ap_ST_fsm_state36 : begin
-            ap_NS_fsm = ap_ST_fsm_state37;
-        end
-        ap_ST_fsm_state37 : begin
-            ap_NS_fsm = ap_ST_fsm_state38;
-        end
-        ap_ST_fsm_state38 : begin
-            ap_NS_fsm = ap_ST_fsm_state39;
-        end
-        ap_ST_fsm_state39 : begin
-            ap_NS_fsm = ap_ST_fsm_state40;
-        end
-        ap_ST_fsm_state40 : begin
-            ap_NS_fsm = ap_ST_fsm_state41;
-        end
-        ap_ST_fsm_state41 : begin
-            ap_NS_fsm = ap_ST_fsm_state42;
-        end
-        ap_ST_fsm_state42 : begin
-            ap_NS_fsm = ap_ST_fsm_state43;
-        end
-        ap_ST_fsm_state43 : begin
-            ap_NS_fsm = ap_ST_fsm_state44;
-        end
-        ap_ST_fsm_state44 : begin
-            if (((1'b1 == ap_CS_fsm_state44) & (1'b0 == ap_block_state44_on_subcall_done))) begin
+            if (((1'b0 == ap_block_state22_on_subcall_done) & (1'b1 == ap_CS_fsm_state22))) begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end else begin
-                ap_NS_fsm = ap_ST_fsm_state44;
-            end
-        end
-        ap_ST_fsm_state45 : begin
-            if (((grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state45))) begin
-                ap_NS_fsm = ap_ST_fsm_state46;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state45;
-            end
-        end
-        ap_ST_fsm_state46 : begin
-            ap_NS_fsm = ap_ST_fsm_state47;
-        end
-        ap_ST_fsm_state47 : begin
-            if (((grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state47))) begin
-                ap_NS_fsm = ap_ST_fsm_state48;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state47;
-            end
-        end
-        ap_ST_fsm_state48 : begin
-            ap_NS_fsm = ap_ST_fsm_state49;
-        end
-        ap_ST_fsm_state49 : begin
-            ap_NS_fsm = ap_ST_fsm_state50;
-        end
-        ap_ST_fsm_state50 : begin
-            ap_NS_fsm = ap_ST_fsm_state51;
-        end
-        ap_ST_fsm_state51 : begin
-            ap_NS_fsm = ap_ST_fsm_state52;
-        end
-        ap_ST_fsm_state52 : begin
-            ap_NS_fsm = ap_ST_fsm_state53;
-        end
-        ap_ST_fsm_state53 : begin
-            ap_NS_fsm = ap_ST_fsm_state54;
-        end
-        ap_ST_fsm_state54 : begin
-            ap_NS_fsm = ap_ST_fsm_state55;
-        end
-        ap_ST_fsm_state55 : begin
-            ap_NS_fsm = ap_ST_fsm_state56;
-        end
-        ap_ST_fsm_state56 : begin
-            ap_NS_fsm = ap_ST_fsm_state57;
-        end
-        ap_ST_fsm_state57 : begin
-            ap_NS_fsm = ap_ST_fsm_state58;
-        end
-        ap_ST_fsm_state58 : begin
-            ap_NS_fsm = ap_ST_fsm_state59;
-        end
-        ap_ST_fsm_state59 : begin
-            ap_NS_fsm = ap_ST_fsm_state60;
-        end
-        ap_ST_fsm_state60 : begin
-            ap_NS_fsm = ap_ST_fsm_state61;
-        end
-        ap_ST_fsm_state61 : begin
-            ap_NS_fsm = ap_ST_fsm_state62;
-        end
-        ap_ST_fsm_state62 : begin
-            ap_NS_fsm = ap_ST_fsm_state63;
-        end
-        ap_ST_fsm_state63 : begin
-            ap_NS_fsm = ap_ST_fsm_state64;
-        end
-        ap_ST_fsm_state64 : begin
-            ap_NS_fsm = ap_ST_fsm_state65;
-        end
-        ap_ST_fsm_state65 : begin
-            ap_NS_fsm = ap_ST_fsm_state66;
-        end
-        ap_ST_fsm_state66 : begin
-            ap_NS_fsm = ap_ST_fsm_state67;
-        end
-        ap_ST_fsm_state67 : begin
-            ap_NS_fsm = ap_ST_fsm_state68;
-        end
-        ap_ST_fsm_state68 : begin
-            ap_NS_fsm = ap_ST_fsm_state69;
-        end
-        ap_ST_fsm_state69 : begin
-            if (((grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state69))) begin
-                ap_NS_fsm = ap_ST_fsm_state44;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state69;
-            end
-        end
-        ap_ST_fsm_state70 : begin
-            if (((1'b1 == ap_CS_fsm_state70) & (1'b0 == ap_block_state70_on_subcall_done) & ((config_r_read_reg_510 == 32'd1) | ((config_r_read_reg_510 == 32'd2) | ((config_r_read_reg_510 == 32'd3) | (config_r_read_reg_510 == 32'd4)))))) begin
-                ap_NS_fsm = ap_ST_fsm_state71;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state70;
-            end
-        end
-        ap_ST_fsm_state71 : begin
-            ap_NS_fsm = ap_ST_fsm_state72;
-        end
-        ap_ST_fsm_state72 : begin
-            if (((1'b1 == ap_CS_fsm_state72) & (1'b0 == ap_block_state72_on_subcall_done) & ((config_r_read_reg_510 == 32'd1) | ((config_r_read_reg_510 == 32'd2) | ((config_r_read_reg_510 == 32'd3) | (config_r_read_reg_510 == 32'd4)))))) begin
-                ap_NS_fsm = ap_ST_fsm_state44;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state72;
-            end
-        end
-        ap_ST_fsm_state73 : begin
-            if (((1'b1 == ap_CS_fsm_state73) & (1'b0 == ap_block_state73_on_subcall_done))) begin
-                ap_NS_fsm = ap_ST_fsm_state74;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state73;
-            end
-        end
-        ap_ST_fsm_state74 : begin
-            ap_NS_fsm = ap_ST_fsm_state75;
-        end
-        ap_ST_fsm_state75 : begin
-            if (((grp_activation_accelerator_Pipeline_float_add_loop_fu_366_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state75))) begin
-                ap_NS_fsm = ap_ST_fsm_state76;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state75;
-            end
-        end
-        ap_ST_fsm_state76 : begin
-            ap_NS_fsm = ap_ST_fsm_state77;
-        end
-        ap_ST_fsm_state77 : begin
-            if (((grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state77))) begin
-                ap_NS_fsm = ap_ST_fsm_state44;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state77;
-            end
-        end
-        ap_ST_fsm_state78 : begin
-            if (((1'b1 == ap_CS_fsm_state78) & (1'b0 == ap_block_state78_io))) begin
-                ap_NS_fsm = ap_ST_fsm_state79;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state78;
-            end
-        end
-        ap_ST_fsm_state79 : begin
-            ap_NS_fsm = ap_ST_fsm_state80;
-        end
-        ap_ST_fsm_state80 : begin
-            ap_NS_fsm = ap_ST_fsm_state81;
-        end
-        ap_ST_fsm_state81 : begin
-            ap_NS_fsm = ap_ST_fsm_state82;
-        end
-        ap_ST_fsm_state82 : begin
-            ap_NS_fsm = ap_ST_fsm_state83;
-        end
-        ap_ST_fsm_state83 : begin
-            ap_NS_fsm = ap_ST_fsm_state84;
-        end
-        ap_ST_fsm_state84 : begin
-            ap_NS_fsm = ap_ST_fsm_state85;
-        end
-        ap_ST_fsm_state85 : begin
-            ap_NS_fsm = ap_ST_fsm_state86;
-        end
-        ap_ST_fsm_state86 : begin
-            if (((1'b1 == ap_CS_fsm_state86) & (1'b0 == ap_block_state86_on_subcall_done))) begin
-                ap_NS_fsm = ap_ST_fsm_state44;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state86;
+                ap_NS_fsm = ap_ST_fsm_state22;
             end
         end
         default : begin
@@ -3757,160 +11671,72 @@ assign ap_CS_fsm_state12 = ap_CS_fsm[32'd11];
 
 assign ap_CS_fsm_state13 = ap_CS_fsm[32'd12];
 
+assign ap_CS_fsm_state14 = ap_CS_fsm[32'd13];
+
 assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
 
 assign ap_CS_fsm_state21 = ap_CS_fsm[32'd20];
 
 assign ap_CS_fsm_state22 = ap_CS_fsm[32'd21];
 
-assign ap_CS_fsm_state23 = ap_CS_fsm[32'd22];
-
 assign ap_CS_fsm_state3 = ap_CS_fsm[32'd2];
 
-assign ap_CS_fsm_state31 = ap_CS_fsm[32'd30];
-
-assign ap_CS_fsm_state32 = ap_CS_fsm[32'd31];
-
-assign ap_CS_fsm_state35 = ap_CS_fsm[32'd34];
-
-assign ap_CS_fsm_state36 = ap_CS_fsm[32'd35];
-
 assign ap_CS_fsm_state4 = ap_CS_fsm[32'd3];
-
-assign ap_CS_fsm_state43 = ap_CS_fsm[32'd42];
-
-assign ap_CS_fsm_state44 = ap_CS_fsm[32'd43];
-
-assign ap_CS_fsm_state45 = ap_CS_fsm[32'd44];
-
-assign ap_CS_fsm_state46 = ap_CS_fsm[32'd45];
-
-assign ap_CS_fsm_state47 = ap_CS_fsm[32'd46];
-
-assign ap_CS_fsm_state48 = ap_CS_fsm[32'd47];
-
-assign ap_CS_fsm_state56 = ap_CS_fsm[32'd55];
-
-assign ap_CS_fsm_state57 = ap_CS_fsm[32'd56];
-
-assign ap_CS_fsm_state60 = ap_CS_fsm[32'd59];
-
-assign ap_CS_fsm_state61 = ap_CS_fsm[32'd60];
-
-assign ap_CS_fsm_state68 = ap_CS_fsm[32'd67];
-
-assign ap_CS_fsm_state69 = ap_CS_fsm[32'd68];
-
-assign ap_CS_fsm_state70 = ap_CS_fsm[32'd69];
-
-assign ap_CS_fsm_state71 = ap_CS_fsm[32'd70];
-
-assign ap_CS_fsm_state72 = ap_CS_fsm[32'd71];
-
-assign ap_CS_fsm_state73 = ap_CS_fsm[32'd72];
-
-assign ap_CS_fsm_state74 = ap_CS_fsm[32'd73];
-
-assign ap_CS_fsm_state75 = ap_CS_fsm[32'd74];
-
-assign ap_CS_fsm_state76 = ap_CS_fsm[32'd75];
-
-assign ap_CS_fsm_state77 = ap_CS_fsm[32'd76];
-
-assign ap_CS_fsm_state78 = ap_CS_fsm[32'd77];
-
-assign ap_CS_fsm_state85 = ap_CS_fsm[32'd84];
-
-assign ap_CS_fsm_state86 = ap_CS_fsm[32'd85];
 
 assign ap_CS_fsm_state9 = ap_CS_fsm[32'd8];
 
 always @ (*) begin
-    ap_block_state44_on_subcall_done = ((grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_ap_done == 1'b0) & (ap_predicate_op180_call_state44 == 1'b1));
+    ap_block_state10_on_subcall_done = (((grp_bf16_to_float_fu_366_ap_done == 1'b0) & (config_r_read_reg_949 == 32'd2)) | ((grp_bf16_to_float_fu_328_ap_done == 1'b0) & (config_r_read_reg_949 == 32'd1)) | ((grp_bf16_to_float_fu_328_ap_done == 1'b0) & (config_r_read_reg_949 == 32'd2)) | ((grp_bf16_to_float_fu_328_ap_done == 1'b0) & (config_r_read_reg_949 == 32'd3)) | ((grp_bf16_to_float_fu_328_ap_done == 1'b0) & (config_r_read_reg_949 == 32'd4)) | ((grp_bf16_to_float_fu_328_ap_done == 1'b0) & (config_r_read_reg_949 == 32'd5)) | ((grp_bf16_to_float_fu_328_ap_done == 1'b0) & (config_r_read_reg_949 == 32'd6)));
 end
 
 always @ (*) begin
-    ap_block_state70_on_subcall_done = (((grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268_ap_done == 1'b0) & (config_r_read_reg_510 == 32'd1)) | ((grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260_ap_done == 1'b0) & (config_r_read_reg_510 == 32'd2)) | ((grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252_ap_done == 1'b0) & (config_r_read_reg_510 == 32'd2)) | ((grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244_ap_done == 1'b0) & (config_r_read_reg_510 == 32'd3)) | ((grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236_ap_done == 1'b0) & (config_r_read_reg_510 == 32'd4)));
+    ap_block_state12_on_subcall_done = (((config_r_read_reg_949 == 32'd1) & (grp_float_safe_softmax2_fu_819_ap_done == 1'b0)) | ((config_r_read_reg_949 == 32'd2) & (grp_float_Multiply2_fu_751_ap_done == 1'b0)) | ((config_r_read_reg_949 == 32'd3) & (grp_float_gelu2_fu_699_ap_done == 1'b0)) | ((config_r_read_reg_949 == 32'd4) & (grp_float_silu2_fu_647_ap_done == 1'b0)) | ((config_r_read_reg_949 == 32'd5) & (grp_float_rms_norm3_fu_595_ap_done == 1'b0)) | ((config_r_read_reg_949 == 32'd6) & (grp_float_layer_norm3_fu_543_ap_done == 1'b0)));
 end
 
 always @ (*) begin
-    ap_block_state72_on_subcall_done = (((grp_float_safe_softmax_fu_359_ap_done == 1'b0) & (config_r_read_reg_510 == 32'd1)) | ((grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_ap_done == 1'b0) & (config_r_read_reg_510 == 32'd2)) | ((grp_activation_accelerator_Pipeline_gelu_loop_fu_344_ap_done == 1'b0) & (config_r_read_reg_510 == 32'd3)) | ((grp_activation_accelerator_Pipeline_silu_loop_fu_337_ap_done == 1'b0) & (config_r_read_reg_510 == 32'd4)));
+    ap_block_state14_io = ((gmem1_ARREADY == 1'b0) | (gmem0_ARREADY == 1'b0));
 end
 
 always @ (*) begin
-    ap_block_state73_on_subcall_done = ((grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284_ap_done == 1'b0) | (grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276_ap_done == 1'b0));
-end
-
-always @ (*) begin
-    ap_block_state78_io = ((gmem0_ARREADY == 1'b0) | (gmem1_ARREADY == 1'b0));
-end
-
-always @ (*) begin
-    ap_block_state86_on_subcall_done = ((grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_ap_done == 1'b0) | (grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_ap_done == 1'b0));
-end
-
-always @ (*) begin
-    ap_predicate_op180_call_state44 = ((stage_read_reg_514 == 32'd1) & (config_r_read_reg_510 == 32'd6));
+    ap_block_state22_on_subcall_done = (((stage_read_reg_953 == 32'd0) & (grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_ap_done == 1'b0)) | ((stage_read_reg_953 == 32'd0) & (grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_ap_done == 1'b0)));
 end
 
 always @ (*) begin
     ap_rst_n_inv = ~ap_rst_n;
 end
 
-assign config_r_read_read_fu_168_p2 = config_r;
+assign config_r_read_read_fu_276_p2 = config_r;
 
-assign grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284_ap_start = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_11_fu_284_ap_start_reg;
+assign grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_ap_start = grp_activation_accelerator_Pipeline_stage_0_load0_fu_871_ap_start_reg;
 
-assign grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268_ap_start = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_12_fu_268_ap_start_reg;
+assign grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_ap_start = grp_activation_accelerator_Pipeline_stage_0_load1_fu_880_ap_start_reg;
 
-assign grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252_ap_start = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_13_fu_252_ap_start_reg;
+assign grp_activation_accelerator_Pipeline_stage_2_store_fu_504_ap_start = grp_activation_accelerator_Pipeline_stage_2_store_fu_504_ap_start_reg;
 
-assign grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260_ap_start = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_14_fu_260_ap_start_reg;
+assign grp_bf16_to_float_fu_328_ap_start = grp_bf16_to_float_fu_328_ap_start_reg;
 
-assign grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244_ap_start = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_15_fu_244_ap_start_reg;
+assign grp_bf16_to_float_fu_366_ap_start = grp_bf16_to_float_fu_366_ap_start_reg;
 
-assign grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236_ap_start = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_16_fu_236_ap_start_reg;
+assign grp_float_Multiply2_fu_751_ap_start = grp_float_Multiply2_fu_751_ap_start_reg;
 
-assign grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_ap_start = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_17_fu_228_ap_start_reg;
+assign grp_float_add2_fu_404_ap_start = grp_float_add2_fu_404_ap_start_reg;
 
-assign grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_ap_start = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_18_fu_220_ap_start_reg;
+assign grp_float_gelu2_fu_699_ap_start = grp_float_gelu2_fu_699_ap_start_reg;
 
-assign grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276_ap_start = grp_activation_accelerator_Pipeline_VITIS_LOOP_145_1_fu_276_ap_start_reg;
+assign grp_float_layer_norm3_fu_543_ap_start = grp_float_layer_norm3_fu_543_ap_start_reg;
 
-assign grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_ap_start = grp_activation_accelerator_Pipeline_VITIS_LOOP_445_1_fu_384_ap_start_reg;
+assign grp_float_rms_norm3_fu_595_ap_start = grp_float_rms_norm3_fu_595_ap_start_reg;
 
-assign grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_ap_start = grp_activation_accelerator_Pipeline_VITIS_LOOP_448_2_fu_393_ap_start_reg;
+assign grp_float_safe_softmax2_fu_819_ap_start = grp_float_safe_softmax2_fu_819_ap_start_reg;
 
-assign grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_ap_start = grp_activation_accelerator_Pipeline_VITIS_LOOP_458_3_fu_374_ap_start_reg;
+assign grp_float_silu2_fu_647_ap_start = grp_float_silu2_fu_647_ap_start_reg;
 
-assign grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_ap_start = grp_activation_accelerator_Pipeline_VITIS_LOOP_499_4_fu_292_ap_start_reg;
+assign sext_ln1122_fu_929_p1 = $signed(trunc_ln_reg_963);
 
-assign grp_activation_accelerator_Pipeline_float_add_loop_fu_366_ap_start = grp_activation_accelerator_Pipeline_float_add_loop_fu_366_ap_start_reg;
+assign sext_ln1126_fu_939_p1 = $signed(trunc_ln6_reg_969);
 
-assign grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_ap_start = grp_activation_accelerator_Pipeline_float_multiply_loop_fu_351_ap_start_reg;
+assign sext_ln1178_fu_919_p1 = $signed(trunc_ln7_reg_957);
 
-assign grp_activation_accelerator_Pipeline_gelu_loop_fu_344_ap_start = grp_activation_accelerator_Pipeline_gelu_loop_fu_344_ap_start_reg;
-
-assign grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_ap_start = grp_activation_accelerator_Pipeline_layer_norm_loop1_fu_301_ap_start_reg;
-
-assign grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_ap_start = grp_activation_accelerator_Pipeline_layer_norm_loop2_fu_307_ap_start_reg;
-
-assign grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_ap_start = grp_activation_accelerator_Pipeline_layer_norm_loop3_fu_314_ap_start_reg;
-
-assign grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_ap_start = grp_activation_accelerator_Pipeline_rms_norm_loop1_fu_323_ap_start_reg;
-
-assign grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_ap_start = grp_activation_accelerator_Pipeline_rms_norm_loop2_fu_329_ap_start_reg;
-
-assign grp_activation_accelerator_Pipeline_silu_loop_fu_337_ap_start = grp_activation_accelerator_Pipeline_silu_loop_fu_337_ap_start_reg;
-
-assign grp_float_safe_softmax_fu_359_ap_start = grp_float_safe_softmax_fu_359_ap_start_reg;
-
-assign sext_ln445_fu_490_p1 = $signed(trunc_ln_reg_542);
-
-assign sext_ln448_fu_500_p1 = $signed(trunc_ln1_reg_548);
-
-assign sext_ln499_fu_468_p1 = $signed(trunc_ln2_reg_536);
-
-assign stage_read_read_fu_174_p2 = stage;
+assign stage_read_read_fu_282_p2 = stage;
 
 endmodule //activation_accelerator
