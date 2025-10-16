@@ -1,0 +1,147 @@
+
+
+================================================================
+== Vitis HLS Report for 'round_float32_to_bf16_ieee'
+================================================================
+* Date:           Thu Oct 16 17:32:22 2025
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        activation_accelerator
+* Solution:       baseline (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  4.015 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 4.01>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%x_in_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %x_in" [activation_accelerator.cpp:19]   --->   Operation 2 'read' 'x_in_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%fbits = bitcast i32 %x_in_read" [activation_accelerator.cpp:20]   --->   Operation 3 'bitcast' 'fbits' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%full_mant = trunc i32 %fbits" [activation_accelerator.cpp:20]   --->   Operation 4 'trunc' 'full_mant' <Predicate = (icmp_ln32)> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%lower = trunc i32 %fbits" [activation_accelerator.cpp:20]   --->   Operation 5 'trunc' 'lower' <Predicate = (!icmp_ln32)> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i15 @_ssdm_op_PartSelect.i15.i32.i32.i32, i32 %fbits, i32 16, i32 30" [activation_accelerator.cpp:26]   --->   Operation 6 'partselect' 'trunc_ln' <Predicate = (!icmp_ln32)> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns) (grouped into LUT with out node or_ln51)   --->   "%round_up = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %fbits, i32 16" [activation_accelerator.cpp:26]   --->   Operation 7 'bitselect' 'round_up' <Predicate = (!icmp_ln32)> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%tmp = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %fbits, i32 23, i32 30" [activation_accelerator.cpp:29]   --->   Operation 8 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%exp_field = bitconcatenate i31 @_ssdm_op_BitConcatenate.i31.i8.i23, i8 %tmp, i23 0" [activation_accelerator.cpp:29]   --->   Operation 9 'bitconcatenate' 'exp_field' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.99ns)   --->   "%icmp_ln32 = icmp_eq  i31 %exp_field, i31 2139095040" [activation_accelerator.cpp:32]   --->   Operation 10 'icmp' 'icmp_ln32' <Predicate = true> <Delay = 0.99> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%ret = partselect i16 @_ssdm_op_PartSelect.i16.i32.i32.i32, i32 %fbits, i32 16, i32 31" [activation_accelerator.cpp:33]   --->   Operation 11 'partselect' 'ret' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%trunc_ln33_1 = partselect i7 @_ssdm_op_PartSelect.i7.i32.i32.i32, i32 %fbits, i32 16, i32 22" [activation_accelerator.cpp:33]   --->   Operation 12 'partselect' 'trunc_ln33_1' <Predicate = (icmp_ln32)> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (1.05ns)   --->   "%icmp_ln37 = icmp_ne  i23 %full_mant, i23 0" [activation_accelerator.cpp:37]   --->   Operation 13 'icmp' 'icmp_ln37' <Predicate = (icmp_ln32)> <Delay = 1.05> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.05> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 14 [1/1] (0.81ns)   --->   "%icmp_ln37_1 = icmp_eq  i7 %trunc_ln33_1, i7 0" [activation_accelerator.cpp:37]   --->   Operation 14 'icmp' 'icmp_ln37_1' <Predicate = (icmp_ln32)> <Delay = 0.81> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.81> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 15 [1/1] (0.00ns) (grouped into LUT with out node select_ln32)   --->   "%and_ln37 = and i1 %icmp_ln37, i1 %icmp_ln37_1" [activation_accelerator.cpp:37]   --->   Operation 15 'and' 'and_ln37' <Predicate = (icmp_ln32)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 16 [1/1] (0.00ns) (grouped into LUT with out node select_ln32)   --->   "%ret_1 = or i16 %ret, i16 1" [activation_accelerator.cpp:38]   --->   Operation 16 'or' 'ret_1' <Predicate = (and_ln37 & icmp_ln32)> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns) (grouped into LUT with out node select_ln32)   --->   "%ret_2 = select i1 %and_ln37, i16 %ret_1, i16 %ret" [activation_accelerator.cpp:37]   --->   Operation 17 'select' 'ret_2' <Predicate = (icmp_ln32)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 18 [1/1] (1.10ns)   --->   "%icmp_ln49 = icmp_ugt  i16 %lower, i16 32768" [activation_accelerator.cpp:49]   --->   Operation 18 'icmp' 'icmp_ln49' <Predicate = (!icmp_ln32)> <Delay = 1.10> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.10> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 19 [1/1] (0.00ns) (grouped into LUT with out node or_ln51)   --->   "%tmp_3 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %fbits, i32 15" [activation_accelerator.cpp:51]   --->   Operation 19 'bitselect' 'tmp_3' <Predicate = (!icmp_ln32)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns) (grouped into LUT with out node or_ln51)   --->   "%round_up_1 = and i1 %round_up, i1 %tmp_3" [activation_accelerator.cpp:51]   --->   Operation 20 'and' 'round_up_1' <Predicate = (!icmp_ln32)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 21 [1/1] (0.28ns) (out node of the LUT)   --->   "%or_ln51 = or i1 %icmp_ln49, i1 %round_up_1" [activation_accelerator.cpp:51]   --->   Operation 21 'or' 'or_ln51' <Predicate = (!icmp_ln32)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%zext_ln59 = zext i1 %or_ln51" [activation_accelerator.cpp:59]   --->   Operation 22 'zext' 'zext_ln59' <Predicate = (!icmp_ln32)> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%zext_ln59_1 = zext i1 %or_ln51" [activation_accelerator.cpp:59]   --->   Operation 23 'zext' 'zext_ln59_1' <Predicate = (!icmp_ln32)> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.84ns)   --->   "%rounded = add i15 %trunc_ln, i15 %zext_ln59" [activation_accelerator.cpp:59]   --->   Operation 24 'add' 'rounded' <Predicate = (!icmp_ln32)> <Delay = 0.84> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%tmp_1 = partselect i8 @_ssdm_op_PartSelect.i8.i15.i32.i32, i15 %rounded, i32 7, i32 14" [activation_accelerator.cpp:62]   --->   Operation 25 'partselect' 'tmp_1' <Predicate = (!icmp_ln32)> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%new_exp = bitconcatenate i15 @_ssdm_op_BitConcatenate.i15.i8.i7, i8 %tmp_1, i7 0" [activation_accelerator.cpp:62]   --->   Operation 26 'bitconcatenate' 'new_exp' <Predicate = (!icmp_ln32)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.85ns)   --->   "%add_ln63 = add i16 %ret, i16 %zext_ln59_1" [activation_accelerator.cpp:63]   --->   Operation 27 'add' 'add_ln63' <Predicate = (!icmp_ln32)> <Delay = 0.85> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 28 [1/1] (1.07ns)   --->   "%icmp_ln64 = icmp_eq  i15 %new_exp, i15 32640" [activation_accelerator.cpp:64]   --->   Operation 28 'icmp' 'icmp_ln64' <Predicate = (!icmp_ln32)> <Delay = 1.07> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 29 [1/1] (0.00ns) (grouped into LUT with out node select_ln64)   --->   "%tmp_4 = bitselect i1 @_ssdm_op_BitSelect.i1.i16.i32, i16 %add_ln63, i32 15" [activation_accelerator.cpp:65]   --->   Operation 29 'bitselect' 'tmp_4' <Predicate = (icmp_ln64 & !icmp_ln32)> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns) (grouped into LUT with out node select_ln64)   --->   "%and_ln = bitconcatenate i16 @_ssdm_op_BitConcatenate.i16.i1.i15, i1 %tmp_4, i15 0" [activation_accelerator.cpp:65]   --->   Operation 30 'bitconcatenate' 'and_ln' <Predicate = (icmp_ln64 & !icmp_ln32)> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns) (grouped into LUT with out node select_ln64)   --->   "%res = or i16 %and_ln, i16 32640" [activation_accelerator.cpp:65]   --->   Operation 31 'or' 'res' <Predicate = (icmp_ln64 & !icmp_ln32)> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.35ns) (out node of the LUT)   --->   "%select_ln64 = select i1 %icmp_ln64, i16 %res, i16 %add_ln63" [activation_accelerator.cpp:64]   --->   Operation 32 'select' 'select_ln64' <Predicate = (!icmp_ln32)> <Delay = 0.35> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 33 [1/1] (0.35ns) (out node of the LUT)   --->   "%select_ln32 = select i1 %icmp_ln32, i16 %ret_2, i16 %select_ln64" [activation_accelerator.cpp:32]   --->   Operation 33 'select' 'select_ln32' <Predicate = true> <Delay = 0.35> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%ret_ln70 = ret i16 %select_ln32" [activation_accelerator.cpp:70]   --->   Operation 34 'ret' 'ret_ln70' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 4.02ns
+The critical path consists of the following:
+	wire read operation ('x_in', activation_accelerator.cpp:19) on port 'x_in' (activation_accelerator.cpp:19) [2]  (0 ns)
+	'icmp' operation ('icmp_ln49', activation_accelerator.cpp:49) [18]  (1.1 ns)
+	'or' operation ('or_ln51', activation_accelerator.cpp:51) [21]  (0.287 ns)
+	'add' operation ('rounded', activation_accelerator.cpp:59) [24]  (0.842 ns)
+	'icmp' operation ('icmp_ln64', activation_accelerator.cpp:64) [28]  (1.07 ns)
+	'select' operation ('select_ln64', activation_accelerator.cpp:64) [32]  (0.357 ns)
+	'select' operation ('select_ln32', activation_accelerator.cpp:32) [33]  (0.357 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

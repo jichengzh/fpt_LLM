@@ -925,7 +925,7 @@ void float_add2(const float* x, const float* y, uint16* out, int len) {
     }
 }
 
-// safe softmax
+/* // safe softmax
 void float_safe_softmax(const float* x, uint16* y_bf16, int len) {
 #pragma HLS INLINE off
     float max_val = x[0];
@@ -944,19 +944,25 @@ void float_safe_softmax(const float* x, uint16* y_bf16, int len) {
         uint32_t* y_f32_ptr = (uint32_t*)&y;
         y_bf16[i] = (*y_f32_ptr) >> 16;
     }
-}
+} */
 
-void float_safe_softmax2(const float* x, uint16* y_bf16, int len) {
+
+/* void float_safe_softmax2(const float* x, uint16* y_bf16, int rows, int cols) {
 #pragma HLS INLINE off
     const int UF  = 32;
     const int ACC = 32;
 
     // 中间缓冲（本段未使用，只保留声明也 OK）
-    float exp_x[49152];
+    float exp_x[768];
 #pragma HLS BIND_STORAGE variable=exp_x type=ram_1p impl=bram
 #pragma HLS DEPENDENCE variable=exp_x inter false
 #pragma HLS ARRAY_PARTITION variable=exp_x cyclic factor=UF dim=1
 
+row_loop:
+for (int r = 0; r < rows; ++r) {
+
+    const float* current_row = x + r * cols;
+    uint16* output_row = y_bf16 + r * cols;
     // -------- 1) 找最大值：块处理 + UNROLL 比较，外层 PIPELINE --------
     // -------- 1) 两层循环找最大值（外层 PIPELINE，内层 UNROLL） --------
     float partial_max[ACC];
@@ -971,7 +977,7 @@ init_partial_max:
     }
 
 find_max_blocks:
-    for (int i = 0; i < len; i += UF) {
+    for (int i = 0; i < cols; i += UF) {
     #pragma HLS PIPELINE II=1
         float blk[UF];
     #pragma HLS ARRAY_PARTITION variable=blk complete
@@ -980,7 +986,7 @@ find_max_blocks:
         for (int u = 0; u < UF; ++u) {
         #pragma HLS UNROLL
             int idx = i + u;
-            blk[u] = (idx < len) ? x[idx] : -std::numeric_limits<float>::max();
+            blk[u] = (idx < cols) ? current_row[idx] : -std::numeric_limits<float>::max();
         }
 
         // 块内规约（可换成成对树形比较）
@@ -1024,7 +1030,7 @@ init_partial_bf16:
     }
 
 exp_and_bucket:
-    for (int i = 0; i < len; i += UF) {
+    for (int i = 0; i < cols; i += UF) {
 #pragma HLS PIPELINE II=1
         float e[UF];
 #pragma HLS ARRAY_PARTITION variable=e complete
@@ -1033,15 +1039,15 @@ exp_inner:
         for (int u = 0; u < UF; ++u) {
 #pragma HLS UNROLL
             int idx = i + u;
-            float ex = (idx < len) ? hls::expf(x[idx] - max_val) : 0.f;
+            float ex = (idx < cols) ? hls::expf(current_row[idx] - max_val) : 0.f;
             e[u] = ex;
-            if (idx < len) exp_x[idx] = ex;   // 写回中间结果
+            if (idx < cols) exp_x[idx] = ex;   // 写回中间结果
         }
 bucket_add:
         for (int u = 0; u < UF; ++u) {
 #pragma HLS UNROLL
             int idx = i + u;
-            if (idx < len) {
+            if (idx < cols) {
                 int b = idx % ACC;
                 // 将 e[u] 转成 bf16，再用 bf16add_fast 累加到桶里
                 uint16 e_b = f32_to_bf16_rne(e[u]);
@@ -1063,23 +1069,166 @@ reduce_partial:
 
     // -------- 3) 归一化并转 bfloat16：外层 PIPELINE，内层 UNROLL --------
 normalize_blocks:
-    for (int i = 0; i < len; i += UF) {
+    for (int i = 0; i < cols; i += UF) {
 #pragma HLS PIPELINE II=1
 normalize_inner:
         for (int u = 0; u < UF; ++u) {
 #pragma HLS UNROLL
             int idx = i + u;
-            if (idx < len) {
+            if (idx < cols) {
                 float y = exp_x[idx] / sum;
                 uint32_t* y_f32_ptr = (uint32_t*)&y;
-                y_bf16[idx] = (uint16)((*y_f32_ptr) >> 16);
+                output_row[idx] = (uint16)((*y_f32_ptr) >> 16);
 
                 // y_bf16[i] = f32_to_bf16_scalar(e / sum);
-                y_bf16[idx] = round_float32_to_bf16_ieee(y);//初步采用进位
+                output_row[idx] = round_float32_to_bf16_ieee(y);//初步采用进位
+            }
             }
         }
     }
+} */
+void float_safe_softmax3(const float* x, uint16_t* y_bf16, int rows, int cols) {
+#pragma HLS INLINE off
+    const int UF = 32;
+    const int ACC = 32;
+    const int ROW_UF = 2;     // 行展开因子
+    const int TILE_SIZE = 8;  // 平铺大小
+    
+    // 中间缓冲区 - 存储平铺块的数据
+    float exp_x[TILE_SIZE][768];
+#pragma HLS BIND_STORAGE variable=exp_x type=ram_1p impl=bram
+#pragma HLS DEPENDENCE variable=exp_x inter false
+#pragma HLS ARRAY_PARTITION variable=exp_x cyclic factor=UF dim=2
+#pragma HLS ARRAY_PARTITION variable=exp_x complete dim=1
+
+    // 外层循环：按平铺块处理
+tile_loop:
+    for (int tile_start = 0; tile_start < rows; tile_start += TILE_SIZE) {
+        
+        int tile_end = (tile_start + TILE_SIZE < rows) ? tile_start + TILE_SIZE : rows;
+        int tile_rows = tile_end - tile_start;
+
+        // 平铺内循环：按行展开因子处理
+    tile_inner_loop:
+        for (int r_base = 0; r_base < tile_rows; r_base += ROW_UF) {
+            
+            // 处理ROW_UF行并行
+        row_unroll_loop:
+            for (int r_offset = 0; r_offset < ROW_UF; r_offset++) {
+#pragma HLS UNROLL
+                
+                int r = tile_start + r_base + r_offset;
+                if (r < rows && r < tile_end) {
+                    
+                    const float* current_row = x + r * cols;
+                    uint16_t* output_row = y_bf16 + r * cols;
+
+                    // -------- 1) 找当前行的最大值 --------
+                    float partial_max[ACC];
+                #pragma HLS ARRAY_PARTITION variable=partial_max complete
+                #pragma HLS DEPENDENCE variable=partial_max inter false
+
+                init_partial_max:
+                    for (int k = 0; k < ACC; ++k) {
+                    #pragma HLS UNROLL
+                        partial_max[k] = -std::numeric_limits<float>::max();
+                    }
+
+                find_max_blocks:
+                    for (int i = 0; i < cols; i += UF) {
+                    #pragma HLS PIPELINE II=1
+                        float blk[UF];
+                    #pragma HLS ARRAY_PARTITION variable=blk complete
+
+                    load_blk_max:
+                        for (int u = 0; u < UF; ++u) {
+                        #pragma HLS UNROLL
+                            int idx = i + u;
+                            blk[u] = (idx < cols) ? current_row[idx] : -std::numeric_limits<float>::max();
+                        }
+
+                        // 块内规约
+                        float local_max = blk[0];
+                    reduce_blk_max:
+                        for (int u = 1; u < UF; ++u) {
+                        #pragma HLS UNROLL
+                            local_max = hls::fmaxf(local_max, blk[u]);
+                        }
+
+                        // 写入环形桶
+                        int b = (i / UF) % ACC;
+                        partial_max[b] = hls::fmaxf(partial_max[b], local_max);
+                    }
+
+                    // 桶规约得到全局最大值
+                    float max_val = partial_max[0];
+                final_reduce_max:
+                    for (int k = 1; k < ACC; ++k) {
+                    #pragma HLS UNROLL
+                        max_val = hls::fmaxf(max_val, partial_max[k]);
+                    }
+
+                    // -------- 2) 计算exp并分桶累加 --------
+                    float partial[ACC];
+                #pragma HLS ARRAY_PARTITION variable=partial complete
+                init_partial:
+                    for (int k = 0; k < ACC; ++k) {
+                    #pragma HLS UNROLL
+                        partial[k] = 0.f;
+                    }
+
+                exp_and_bucket:
+                    for (int i = 0; i < cols; i += UF) {
+                    #pragma HLS PIPELINE II=1
+                        float e[UF];
+                    #pragma HLS ARRAY_PARTITION variable=e complete
+
+                    exp_inner:
+                        for (int u = 0; u < UF; ++u) {
+                        #pragma HLS UNROLL
+                            int idx = i + u;
+                            float ex = (idx < cols) ? hls::expf(current_row[idx] - max_val) : 0.f;
+                            e[u] = ex;
+                            if (idx < cols) exp_x[r_base + r_offset][idx] = ex;
+                        }
+                    bucket_add:
+                        for (int u = 0; u < UF; ++u) {
+                        #pragma HLS UNROLL
+                            int idx = i + u;
+                            if (idx < cols) partial[idx % ACC] += e[u];
+                        }
+                    }
+
+                    // 桶规约得到sum
+                    float sum = 0.f;
+                reduce_partial:
+                    for (int k = 0; k < ACC; ++k) {
+                    #pragma HLS UNROLL
+                        sum += partial[k];
+                    }
+
+                    // -------- 3) 归一化并转bfloat16 --------
+                normalize_blocks:
+                    for (int i = 0; i < cols; i += UF) {
+                    #pragma HLS PIPELINE II=1
+                    normalize_inner:
+                        for (int u = 0; u < UF; ++u) {
+                        #pragma HLS UNROLL
+                            int idx = i + u;
+                            if (idx < cols) {
+                                float y = exp_x[r_base + r_offset][idx] / sum;
+                                uint32_t* y_f32_ptr = (uint32_t*)&y;
+                                output_row[idx] = (uint16_t)((*y_f32_ptr) >> 16);
+                                output_row[idx] = round_float32_to_bf16_ieee(y);//初步采用进位
+                            }
+                        }
+                    }
+                } // if (r < rows)
+            } // row_unroll_loop
+        } // tile_inner_loop
+    } // tile_loop
 }
+
 
 
 //float逐元素乘法
@@ -1137,6 +1286,7 @@ void float_Multiply2(const float* x, const float* y, uint16* out, int len) {
 // }
 
 
+
 void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, int32 config) {
 #pragma HLS INTERFACE m_axi port=in0 offset=slave bundle=gmem0 depth=49152
 #pragma HLS INTERFACE m_axi port=in1 offset=slave bundle=gmem1 depth=49152
@@ -1173,7 +1323,7 @@ void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, 
         }
         else if(config == 1) { // safe softmax
             bf16_to_float(buf0, x, 64*768);
-            float_safe_softmax2(x, buf2, 64*768);
+            float_safe_softmax3(x, buf2, 64, 768);
 //             for(int i = 0; i < ; i++) {
 // #pragma HLS PIPELINE II=1
 //                 buf2[i] = 0;
