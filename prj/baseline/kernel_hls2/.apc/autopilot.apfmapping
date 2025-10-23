@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="activation_accelerator.cpp" path="/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator.cpp"/>
+    <originFiles name="activation_accelerator.h" path="/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator.h"/>
+  </source>
+  <testbench>
+    <originFiles name="testbench.cpp" path="/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/testbench.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,531 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'float_safe_softmax3_Pipeline_normalize_blocks'" level="0">
+<item name = "Date">Mon Oct 20 22:47:07 2025
+</item>
+<item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
+<item name = "Project">activation_accelerator</item>
+<item name = "Solution">baseline (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xck26-sfvc784-2LV-c</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.057 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">36, 36, 0.360 us, 0.360 us, 36, 36, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="tmp_round_float32_to_bf16_ieee_fu_992">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1_round_float32_to_bf16_ieee_fu_998">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_2_round_float32_to_bf16_ieee_fu_1004">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_3_round_float32_to_bf16_ieee_fu_1010">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_4_round_float32_to_bf16_ieee_fu_1016">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_5_round_float32_to_bf16_ieee_fu_1022">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_6_round_float32_to_bf16_ieee_fu_1028">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_7_round_float32_to_bf16_ieee_fu_1034">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_8_round_float32_to_bf16_ieee_fu_1040">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_9_round_float32_to_bf16_ieee_fu_1046">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_s_round_float32_to_bf16_ieee_fu_1052">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_10_round_float32_to_bf16_ieee_fu_1058">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_11_round_float32_to_bf16_ieee_fu_1064">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_12_round_float32_to_bf16_ieee_fu_1070">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_13_round_float32_to_bf16_ieee_fu_1076">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_14_round_float32_to_bf16_ieee_fu_1082">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_15_round_float32_to_bf16_ieee_fu_1088">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_16_round_float32_to_bf16_ieee_fu_1094">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_17_round_float32_to_bf16_ieee_fu_1100">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_18_round_float32_to_bf16_ieee_fu_1106">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_19_round_float32_to_bf16_ieee_fu_1112">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_20_round_float32_to_bf16_ieee_fu_1118">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_21_round_float32_to_bf16_ieee_fu_1124">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_22_round_float32_to_bf16_ieee_fu_1130">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_23_round_float32_to_bf16_ieee_fu_1136">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_24_round_float32_to_bf16_ieee_fu_1142">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_25_round_float32_to_bf16_ieee_fu_1148">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_26_round_float32_to_bf16_ieee_fu_1154">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_27_round_float32_to_bf16_ieee_fu_1160">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_28_round_float32_to_bf16_ieee_fu_1166">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_29_round_float32_to_bf16_ieee_fu_1172">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_30_round_float32_to_bf16_ieee_fu_1178">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- normalize_blocks">34, 34, 12, 1, 1, 24, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 89, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, 0, 6432, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 36, -</column>
+<column name="Register">-, -, 2151, 32, -</column>
+<specialColumn name="Available">288, 1248, 234240, 117120, 64</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, 5, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="fdiv_32ns_32ns_32_9_no_dsp_1_U203">fdiv_32ns_32ns_32_9_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fdiv_32ns_32ns_32_9_no_dsp_1_U204">fdiv_32ns_32ns_32_9_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fdiv_32ns_32ns_32_9_no_dsp_1_U205">fdiv_32ns_32ns_32_9_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fdiv_32ns_32ns_32_9_no_dsp_1_U206">fdiv_32ns_32ns_32_9_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fdiv_32ns_32ns_32_9_no_dsp_1_U207">fdiv_32ns_32ns_32_9_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fdiv_32ns_32ns_32_9_no_dsp_1_U208">fdiv_32ns_32ns_32_9_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fdiv_32ns_32ns_32_9_no_dsp_1_U209">fdiv_32ns_32ns_32_9_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fdiv_32ns_32ns_32_9_no_dsp_1_U210">fdiv_32ns_32ns_32_9_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fdiv_32ns_32ns_32_9_no_dsp_1_U211">fdiv_32ns_32ns_32_9_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fdiv_32ns_32ns_32_9_no_dsp_1_U212">fdiv_32ns_32ns_32_9_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fdiv_32ns_32ns_32_9_no_dsp_1_U213">fdiv_32ns_32ns_32_9_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fdiv_32ns_32ns_32_9_no_dsp_1_U214">fdiv_32ns_32ns_32_9_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fdiv_32ns_32ns_32_9_no_dsp_1_U215">fdiv_32ns_32ns_32_9_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fdiv_32ns_32ns_32_9_no_dsp_1_U216">fdiv_32ns_32ns_32_9_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fdiv_32ns_32ns_32_9_no_dsp_1_U217">fdiv_32ns_32ns_32_9_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fdiv_32ns_32ns_32_9_no_dsp_1_U218">fdiv_32ns_32ns_32_9_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fdiv_32ns_32ns_32_9_no_dsp_1_U219">fdiv_32ns_32ns_32_9_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fdiv_32ns_32ns_32_9_no_dsp_1_U220">fdiv_32ns_32ns_32_9_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fdiv_32ns_32ns_32_9_no_dsp_1_U221">fdiv_32ns_32ns_32_9_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fdiv_32ns_32ns_32_9_no_dsp_1_U222">fdiv_32ns_32ns_32_9_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fdiv_32ns_32ns_32_9_no_dsp_1_U223">fdiv_32ns_32ns_32_9_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fdiv_32ns_32ns_32_9_no_dsp_1_U224">fdiv_32ns_32ns_32_9_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fdiv_32ns_32ns_32_9_no_dsp_1_U225">fdiv_32ns_32ns_32_9_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fdiv_32ns_32ns_32_9_no_dsp_1_U226">fdiv_32ns_32ns_32_9_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fdiv_32ns_32ns_32_9_no_dsp_1_U227">fdiv_32ns_32ns_32_9_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fdiv_32ns_32ns_32_9_no_dsp_1_U228">fdiv_32ns_32ns_32_9_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fdiv_32ns_32ns_32_9_no_dsp_1_U229">fdiv_32ns_32ns_32_9_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fdiv_32ns_32ns_32_9_no_dsp_1_U230">fdiv_32ns_32ns_32_9_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fdiv_32ns_32ns_32_9_no_dsp_1_U231">fdiv_32ns_32ns_32_9_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fdiv_32ns_32ns_32_9_no_dsp_1_U232">fdiv_32ns_32ns_32_9_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fdiv_32ns_32ns_32_9_no_dsp_1_U233">fdiv_32ns_32ns_32_9_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fdiv_32ns_32ns_32_9_no_dsp_1_U234">fdiv_32ns_32ns_32_9_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="tmp_round_float32_to_bf16_ieee_fu_992">round_float32_to_bf16_ieee, 0, 0, 0, 201, 0</column>
+<column name="tmp_1_round_float32_to_bf16_ieee_fu_998">round_float32_to_bf16_ieee, 0, 0, 0, 201, 0</column>
+<column name="tmp_2_round_float32_to_bf16_ieee_fu_1004">round_float32_to_bf16_ieee, 0, 0, 0, 201, 0</column>
+<column name="tmp_3_round_float32_to_bf16_ieee_fu_1010">round_float32_to_bf16_ieee, 0, 0, 0, 201, 0</column>
+<column name="tmp_4_round_float32_to_bf16_ieee_fu_1016">round_float32_to_bf16_ieee, 0, 0, 0, 201, 0</column>
+<column name="tmp_5_round_float32_to_bf16_ieee_fu_1022">round_float32_to_bf16_ieee, 0, 0, 0, 201, 0</column>
+<column name="tmp_6_round_float32_to_bf16_ieee_fu_1028">round_float32_to_bf16_ieee, 0, 0, 0, 201, 0</column>
+<column name="tmp_7_round_float32_to_bf16_ieee_fu_1034">round_float32_to_bf16_ieee, 0, 0, 0, 201, 0</column>
+<column name="tmp_8_round_float32_to_bf16_ieee_fu_1040">round_float32_to_bf16_ieee, 0, 0, 0, 201, 0</column>
+<column name="tmp_9_round_float32_to_bf16_ieee_fu_1046">round_float32_to_bf16_ieee, 0, 0, 0, 201, 0</column>
+<column name="tmp_s_round_float32_to_bf16_ieee_fu_1052">round_float32_to_bf16_ieee, 0, 0, 0, 201, 0</column>
+<column name="tmp_10_round_float32_to_bf16_ieee_fu_1058">round_float32_to_bf16_ieee, 0, 0, 0, 201, 0</column>
+<column name="tmp_11_round_float32_to_bf16_ieee_fu_1064">round_float32_to_bf16_ieee, 0, 0, 0, 201, 0</column>
+<column name="tmp_12_round_float32_to_bf16_ieee_fu_1070">round_float32_to_bf16_ieee, 0, 0, 0, 201, 0</column>
+<column name="tmp_13_round_float32_to_bf16_ieee_fu_1076">round_float32_to_bf16_ieee, 0, 0, 0, 201, 0</column>
+<column name="tmp_14_round_float32_to_bf16_ieee_fu_1082">round_float32_to_bf16_ieee, 0, 0, 0, 201, 0</column>
+<column name="tmp_15_round_float32_to_bf16_ieee_fu_1088">round_float32_to_bf16_ieee, 0, 0, 0, 201, 0</column>
+<column name="tmp_16_round_float32_to_bf16_ieee_fu_1094">round_float32_to_bf16_ieee, 0, 0, 0, 201, 0</column>
+<column name="tmp_17_round_float32_to_bf16_ieee_fu_1100">round_float32_to_bf16_ieee, 0, 0, 0, 201, 0</column>
+<column name="tmp_18_round_float32_to_bf16_ieee_fu_1106">round_float32_to_bf16_ieee, 0, 0, 0, 201, 0</column>
+<column name="tmp_19_round_float32_to_bf16_ieee_fu_1112">round_float32_to_bf16_ieee, 0, 0, 0, 201, 0</column>
+<column name="tmp_20_round_float32_to_bf16_ieee_fu_1118">round_float32_to_bf16_ieee, 0, 0, 0, 201, 0</column>
+<column name="tmp_21_round_float32_to_bf16_ieee_fu_1124">round_float32_to_bf16_ieee, 0, 0, 0, 201, 0</column>
+<column name="tmp_22_round_float32_to_bf16_ieee_fu_1130">round_float32_to_bf16_ieee, 0, 0, 0, 201, 0</column>
+<column name="tmp_23_round_float32_to_bf16_ieee_fu_1136">round_float32_to_bf16_ieee, 0, 0, 0, 201, 0</column>
+<column name="tmp_24_round_float32_to_bf16_ieee_fu_1142">round_float32_to_bf16_ieee, 0, 0, 0, 201, 0</column>
+<column name="tmp_25_round_float32_to_bf16_ieee_fu_1148">round_float32_to_bf16_ieee, 0, 0, 0, 201, 0</column>
+<column name="tmp_26_round_float32_to_bf16_ieee_fu_1154">round_float32_to_bf16_ieee, 0, 0, 0, 201, 0</column>
+<column name="tmp_27_round_float32_to_bf16_ieee_fu_1160">round_float32_to_bf16_ieee, 0, 0, 0, 201, 0</column>
+<column name="tmp_28_round_float32_to_bf16_ieee_fu_1166">round_float32_to_bf16_ieee, 0, 0, 0, 201, 0</column>
+<column name="tmp_29_round_float32_to_bf16_ieee_fu_1172">round_float32_to_bf16_ieee, 0, 0, 0, 201, 0</column>
+<column name="tmp_30_round_float32_to_bf16_ieee_fu_1178">round_float32_to_bf16_ieee, 0, 0, 0, 201, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln1212_fu_1392_p2">+, 0, 0, 17, 10, 6</column>
+<column name="add_ln1219_fu_1340_p2">+, 0, 0, 15, 8, 8</column>
+<column name="add_ln1220_1_fu_1440_p2">+, 0, 0, 19, 12, 12</column>
+<column name="add_ln1220_fu_1406_p2">+, 0, 0, 19, 12, 12</column>
+<column name="icmp_ln1212_fu_1320_p2">icmp, 0, 0, 11, 10, 10</column>
+<column name="or_ln1220_fu_1431_p2">or, 0, 0, 6, 6, 1</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_done_int">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
+<column name="ap_sig_allocacmp_i">9, 2, 10, 20</column>
+<column name="idx_fu_154">9, 2, 10, 20</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">1, 0, 1, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter10">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter11">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter3">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter4">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter5">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter6">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter7">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter8">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter9">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter10_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter1_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter2_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter3_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter4_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter5_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter6_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter7_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter8_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter9_reg">1, 0, 1, 0</column>
+<column name="exp_x_10_load_reg_1734">32, 0, 32, 0</column>
+<column name="exp_x_11_load_reg_1739">32, 0, 32, 0</column>
+<column name="exp_x_12_load_reg_1744">32, 0, 32, 0</column>
+<column name="exp_x_13_load_reg_1749">32, 0, 32, 0</column>
+<column name="exp_x_14_load_reg_1754">32, 0, 32, 0</column>
+<column name="exp_x_15_load_reg_1759">32, 0, 32, 0</column>
+<column name="exp_x_16_load_reg_1764">32, 0, 32, 0</column>
+<column name="exp_x_17_load_reg_1769">32, 0, 32, 0</column>
+<column name="exp_x_18_load_reg_1774">32, 0, 32, 0</column>
+<column name="exp_x_19_load_reg_1779">32, 0, 32, 0</column>
+<column name="exp_x_1_load_reg_1689">32, 0, 32, 0</column>
+<column name="exp_x_20_load_reg_1784">32, 0, 32, 0</column>
+<column name="exp_x_21_load_reg_1789">32, 0, 32, 0</column>
+<column name="exp_x_22_load_reg_1794">32, 0, 32, 0</column>
+<column name="exp_x_23_load_reg_1799">32, 0, 32, 0</column>
+<column name="exp_x_24_load_reg_1804">32, 0, 32, 0</column>
+<column name="exp_x_25_load_reg_1809">32, 0, 32, 0</column>
+<column name="exp_x_26_load_reg_1814">32, 0, 32, 0</column>
+<column name="exp_x_27_load_reg_1819">32, 0, 32, 0</column>
+<column name="exp_x_28_load_reg_1824">32, 0, 32, 0</column>
+<column name="exp_x_29_load_reg_1829">32, 0, 32, 0</column>
+<column name="exp_x_2_load_reg_1694">32, 0, 32, 0</column>
+<column name="exp_x_30_load_reg_1834">32, 0, 32, 0</column>
+<column name="exp_x_31_load_reg_1839">32, 0, 32, 0</column>
+<column name="exp_x_3_load_reg_1699">32, 0, 32, 0</column>
+<column name="exp_x_4_load_reg_1704">32, 0, 32, 0</column>
+<column name="exp_x_5_load_reg_1709">32, 0, 32, 0</column>
+<column name="exp_x_6_load_reg_1714">32, 0, 32, 0</column>
+<column name="exp_x_7_load_reg_1719">32, 0, 32, 0</column>
+<column name="exp_x_8_load_reg_1724">32, 0, 32, 0</column>
+<column name="exp_x_9_load_reg_1729">32, 0, 32, 0</column>
+<column name="exp_x_load_reg_1684">32, 0, 32, 0</column>
+<column name="idx_fu_154">10, 0, 10, 0</column>
+<column name="lshr_ln4_reg_1678">6, 0, 6, 0</column>
+<column name="y_10_reg_1894">32, 0, 32, 0</column>
+<column name="y_11_reg_1899">32, 0, 32, 0</column>
+<column name="y_12_reg_1904">32, 0, 32, 0</column>
+<column name="y_13_reg_1909">32, 0, 32, 0</column>
+<column name="y_14_reg_1914">32, 0, 32, 0</column>
+<column name="y_15_reg_1919">32, 0, 32, 0</column>
+<column name="y_16_reg_1924">32, 0, 32, 0</column>
+<column name="y_17_reg_1929">32, 0, 32, 0</column>
+<column name="y_18_reg_1934">32, 0, 32, 0</column>
+<column name="y_19_reg_1939">32, 0, 32, 0</column>
+<column name="y_1_reg_1849">32, 0, 32, 0</column>
+<column name="y_20_reg_1944">32, 0, 32, 0</column>
+<column name="y_21_reg_1949">32, 0, 32, 0</column>
+<column name="y_22_reg_1954">32, 0, 32, 0</column>
+<column name="y_23_reg_1959">32, 0, 32, 0</column>
+<column name="y_24_reg_1964">32, 0, 32, 0</column>
+<column name="y_25_reg_1969">32, 0, 32, 0</column>
+<column name="y_26_reg_1974">32, 0, 32, 0</column>
+<column name="y_27_reg_1979">32, 0, 32, 0</column>
+<column name="y_28_reg_1984">32, 0, 32, 0</column>
+<column name="y_29_reg_1989">32, 0, 32, 0</column>
+<column name="y_2_reg_1854">32, 0, 32, 0</column>
+<column name="y_30_reg_1994">32, 0, 32, 0</column>
+<column name="y_31_reg_1999">32, 0, 32, 0</column>
+<column name="y_3_reg_1859">32, 0, 32, 0</column>
+<column name="y_4_reg_1864">32, 0, 32, 0</column>
+<column name="y_5_reg_1869">32, 0, 32, 0</column>
+<column name="y_6_reg_1874">32, 0, 32, 0</column>
+<column name="y_7_reg_1879">32, 0, 32, 0</column>
+<column name="y_8_reg_1884">32, 0, 32, 0</column>
+<column name="y_9_reg_1889">32, 0, 32, 0</column>
+<column name="y_reg_1844">32, 0, 32, 0</column>
+<column name="lshr_ln4_reg_1678">64, 32, 6, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, float_safe_softmax3_Pipeline_normalize_blocks, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, float_safe_softmax3_Pipeline_normalize_blocks, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, float_safe_softmax3_Pipeline_normalize_blocks, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, float_safe_softmax3_Pipeline_normalize_blocks, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, float_safe_softmax3_Pipeline_normalize_blocks, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, float_safe_softmax3_Pipeline_normalize_blocks, return value</column>
+<column name="sub_ln1179">in, 8, ap_none, sub_ln1179, scalar</column>
+<column name="exp_x_address0">out, 8, ap_memory, exp_x, array</column>
+<column name="exp_x_ce0">out, 1, ap_memory, exp_x, array</column>
+<column name="exp_x_q0">in, 32, ap_memory, exp_x, array</column>
+<column name="exp_x_1_address0">out, 8, ap_memory, exp_x_1, array</column>
+<column name="exp_x_1_ce0">out, 1, ap_memory, exp_x_1, array</column>
+<column name="exp_x_1_q0">in, 32, ap_memory, exp_x_1, array</column>
+<column name="exp_x_2_address0">out, 8, ap_memory, exp_x_2, array</column>
+<column name="exp_x_2_ce0">out, 1, ap_memory, exp_x_2, array</column>
+<column name="exp_x_2_q0">in, 32, ap_memory, exp_x_2, array</column>
+<column name="exp_x_3_address0">out, 8, ap_memory, exp_x_3, array</column>
+<column name="exp_x_3_ce0">out, 1, ap_memory, exp_x_3, array</column>
+<column name="exp_x_3_q0">in, 32, ap_memory, exp_x_3, array</column>
+<column name="exp_x_4_address0">out, 8, ap_memory, exp_x_4, array</column>
+<column name="exp_x_4_ce0">out, 1, ap_memory, exp_x_4, array</column>
+<column name="exp_x_4_q0">in, 32, ap_memory, exp_x_4, array</column>
+<column name="exp_x_5_address0">out, 8, ap_memory, exp_x_5, array</column>
+<column name="exp_x_5_ce0">out, 1, ap_memory, exp_x_5, array</column>
+<column name="exp_x_5_q0">in, 32, ap_memory, exp_x_5, array</column>
+<column name="exp_x_6_address0">out, 8, ap_memory, exp_x_6, array</column>
+<column name="exp_x_6_ce0">out, 1, ap_memory, exp_x_6, array</column>
+<column name="exp_x_6_q0">in, 32, ap_memory, exp_x_6, array</column>
+<column name="exp_x_7_address0">out, 8, ap_memory, exp_x_7, array</column>
+<column name="exp_x_7_ce0">out, 1, ap_memory, exp_x_7, array</column>
+<column name="exp_x_7_q0">in, 32, ap_memory, exp_x_7, array</column>
+<column name="exp_x_8_address0">out, 8, ap_memory, exp_x_8, array</column>
+<column name="exp_x_8_ce0">out, 1, ap_memory, exp_x_8, array</column>
+<column name="exp_x_8_q0">in, 32, ap_memory, exp_x_8, array</column>
+<column name="exp_x_9_address0">out, 8, ap_memory, exp_x_9, array</column>
+<column name="exp_x_9_ce0">out, 1, ap_memory, exp_x_9, array</column>
+<column name="exp_x_9_q0">in, 32, ap_memory, exp_x_9, array</column>
+<column name="exp_x_10_address0">out, 8, ap_memory, exp_x_10, array</column>
+<column name="exp_x_10_ce0">out, 1, ap_memory, exp_x_10, array</column>
+<column name="exp_x_10_q0">in, 32, ap_memory, exp_x_10, array</column>
+<column name="exp_x_11_address0">out, 8, ap_memory, exp_x_11, array</column>
+<column name="exp_x_11_ce0">out, 1, ap_memory, exp_x_11, array</column>
+<column name="exp_x_11_q0">in, 32, ap_memory, exp_x_11, array</column>
+<column name="exp_x_12_address0">out, 8, ap_memory, exp_x_12, array</column>
+<column name="exp_x_12_ce0">out, 1, ap_memory, exp_x_12, array</column>
+<column name="exp_x_12_q0">in, 32, ap_memory, exp_x_12, array</column>
+<column name="exp_x_13_address0">out, 8, ap_memory, exp_x_13, array</column>
+<column name="exp_x_13_ce0">out, 1, ap_memory, exp_x_13, array</column>
+<column name="exp_x_13_q0">in, 32, ap_memory, exp_x_13, array</column>
+<column name="exp_x_14_address0">out, 8, ap_memory, exp_x_14, array</column>
+<column name="exp_x_14_ce0">out, 1, ap_memory, exp_x_14, array</column>
+<column name="exp_x_14_q0">in, 32, ap_memory, exp_x_14, array</column>
+<column name="exp_x_15_address0">out, 8, ap_memory, exp_x_15, array</column>
+<column name="exp_x_15_ce0">out, 1, ap_memory, exp_x_15, array</column>
+<column name="exp_x_15_q0">in, 32, ap_memory, exp_x_15, array</column>
+<column name="exp_x_16_address0">out, 8, ap_memory, exp_x_16, array</column>
+<column name="exp_x_16_ce0">out, 1, ap_memory, exp_x_16, array</column>
+<column name="exp_x_16_q0">in, 32, ap_memory, exp_x_16, array</column>
+<column name="exp_x_17_address0">out, 8, ap_memory, exp_x_17, array</column>
+<column name="exp_x_17_ce0">out, 1, ap_memory, exp_x_17, array</column>
+<column name="exp_x_17_q0">in, 32, ap_memory, exp_x_17, array</column>
+<column name="exp_x_18_address0">out, 8, ap_memory, exp_x_18, array</column>
+<column name="exp_x_18_ce0">out, 1, ap_memory, exp_x_18, array</column>
+<column name="exp_x_18_q0">in, 32, ap_memory, exp_x_18, array</column>
+<column name="exp_x_19_address0">out, 8, ap_memory, exp_x_19, array</column>
+<column name="exp_x_19_ce0">out, 1, ap_memory, exp_x_19, array</column>
+<column name="exp_x_19_q0">in, 32, ap_memory, exp_x_19, array</column>
+<column name="exp_x_20_address0">out, 8, ap_memory, exp_x_20, array</column>
+<column name="exp_x_20_ce0">out, 1, ap_memory, exp_x_20, array</column>
+<column name="exp_x_20_q0">in, 32, ap_memory, exp_x_20, array</column>
+<column name="exp_x_21_address0">out, 8, ap_memory, exp_x_21, array</column>
+<column name="exp_x_21_ce0">out, 1, ap_memory, exp_x_21, array</column>
+<column name="exp_x_21_q0">in, 32, ap_memory, exp_x_21, array</column>
+<column name="exp_x_22_address0">out, 8, ap_memory, exp_x_22, array</column>
+<column name="exp_x_22_ce0">out, 1, ap_memory, exp_x_22, array</column>
+<column name="exp_x_22_q0">in, 32, ap_memory, exp_x_22, array</column>
+<column name="exp_x_23_address0">out, 8, ap_memory, exp_x_23, array</column>
+<column name="exp_x_23_ce0">out, 1, ap_memory, exp_x_23, array</column>
+<column name="exp_x_23_q0">in, 32, ap_memory, exp_x_23, array</column>
+<column name="exp_x_24_address0">out, 8, ap_memory, exp_x_24, array</column>
+<column name="exp_x_24_ce0">out, 1, ap_memory, exp_x_24, array</column>
+<column name="exp_x_24_q0">in, 32, ap_memory, exp_x_24, array</column>
+<column name="exp_x_25_address0">out, 8, ap_memory, exp_x_25, array</column>
+<column name="exp_x_25_ce0">out, 1, ap_memory, exp_x_25, array</column>
+<column name="exp_x_25_q0">in, 32, ap_memory, exp_x_25, array</column>
+<column name="exp_x_26_address0">out, 8, ap_memory, exp_x_26, array</column>
+<column name="exp_x_26_ce0">out, 1, ap_memory, exp_x_26, array</column>
+<column name="exp_x_26_q0">in, 32, ap_memory, exp_x_26, array</column>
+<column name="exp_x_27_address0">out, 8, ap_memory, exp_x_27, array</column>
+<column name="exp_x_27_ce0">out, 1, ap_memory, exp_x_27, array</column>
+<column name="exp_x_27_q0">in, 32, ap_memory, exp_x_27, array</column>
+<column name="exp_x_28_address0">out, 8, ap_memory, exp_x_28, array</column>
+<column name="exp_x_28_ce0">out, 1, ap_memory, exp_x_28, array</column>
+<column name="exp_x_28_q0">in, 32, ap_memory, exp_x_28, array</column>
+<column name="exp_x_29_address0">out, 8, ap_memory, exp_x_29, array</column>
+<column name="exp_x_29_ce0">out, 1, ap_memory, exp_x_29, array</column>
+<column name="exp_x_29_q0">in, 32, ap_memory, exp_x_29, array</column>
+<column name="exp_x_30_address0">out, 8, ap_memory, exp_x_30, array</column>
+<column name="exp_x_30_ce0">out, 1, ap_memory, exp_x_30, array</column>
+<column name="exp_x_30_q0">in, 32, ap_memory, exp_x_30, array</column>
+<column name="exp_x_31_address0">out, 8, ap_memory, exp_x_31, array</column>
+<column name="exp_x_31_ce0">out, 1, ap_memory, exp_x_31, array</column>
+<column name="exp_x_31_q0">in, 32, ap_memory, exp_x_31, array</column>
+<column name="sum">in, 32, ap_none, sum, scalar</column>
+<column name="select_ln1256">in, 12, ap_none, select_ln1256, scalar</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0">out, 12, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0">out, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address1">out, 12, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce1">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we1">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d1">out, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0">out, 12, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0">out, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address1">out, 12, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce1">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we1">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d1">out, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0">out, 12, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0">out, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address1">out, 12, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce1">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we1">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d1">out, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0">out, 12, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0">out, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address1">out, 12, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce1">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we1">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d1">out, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0">out, 12, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0">out, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address1">out, 12, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce1">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we1">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d1">out, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0">out, 12, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0">out, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address1">out, 12, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce1">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we1">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d1">out, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0">out, 12, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0">out, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address1">out, 12, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce1">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we1">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d1">out, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0">out, 12, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0">out, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address1">out, 12, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce1">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we1">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d1">out, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0">out, 12, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0">out, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address1">out, 12, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce1">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we1">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d1">out, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0">out, 12, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0">out, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1">out, 12, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i, array</column>
+<column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1">out, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0">out, 12, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0">out, 1, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0">out, 1, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0">out, 16, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address1">out, 12, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce1">out, 1, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we1">out, 1, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d1">out, 16, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0">out, 12, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0">out, 1, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0">out, 1, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0">out, 16, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address1">out, 12, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce1">out, 1, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we1">out, 1, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d1">out, 16, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0">out, 12, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0">out, 1, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0">out, 1, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0">out, 16, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address1">out, 12, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce1">out, 1, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we1">out, 1, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d1">out, 16, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0">out, 12, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0">out, 1, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0">out, 1, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0">out, 16, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address1">out, 12, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce1">out, 1, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we1">out, 1, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d1">out, 16, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0">out, 12, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0">out, 1, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0">out, 1, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0">out, 16, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address1">out, 12, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce1">out, 1, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we1">out, 1, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d1">out, 16, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0">out, 12, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0">out, 1, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0">out, 1, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0">out, 16, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address1">out, 12, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce1">out, 1, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we1">out, 1, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15, array</column>
+<column name="p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d1">out, 16, ap_memory, p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15, array</column>
+</table>
+</item>
+</section>
+</profile>

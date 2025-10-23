@@ -1,0 +1,626 @@
+
+
+================================================================
+== Synthesis Summary Report of 'activation_accelerator'
+================================================================
++ General Information: 
+    * Date:           Mon Oct 20 22:47:19 2025
+    * Version:        2022.2 (Build 3670227 on Oct 13 2022)
+    * Project:        activation_accelerator
+    * Solution:       baseline (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xck26-sfvc784-2LV-c
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+-----------+-----------+-------------+-------------+-----+
+    |                       Modules                      | Issue|      | Latency |  Latency  | Iteration|         |  Trip |          |           |           |             |             |     |
+    |                       & Loops                      | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count | Pipelined|   BRAM    |    DSP    |      FF     |     LUT     | URAM|
+    +----------------------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+-----------+-----------+-------------+-------------+-----+
+    |+ activation_accelerator                            |     -|  0.00|    57868|  5.787e+05|         -|    57869|      -|        no|  270 (93%)|  288 (23%)|  25970 (11%)|  62772 (53%)|    -|
+    | + bf16_to_float                                    |     -|  4.83|    49154|  4.915e+05|         -|    49154|      -|        no|          -|          -|     35 (~0%)|     74 (~0%)|    -|
+    |  o bf16_to_float_loop                              |     -|  7.30|    49152|  4.915e+05|         2|        1|  49152|       yes|          -|          -|            -|            -|    -|
+    | + activation_accelerator_Pipeline_stage_2_store    |     -|  0.00|    49155|  4.916e+05|         -|    49155|      -|        no|          -|          -|     41 (~0%)|    150 (~0%)|    -|
+    |  o stage_2_store                                   |     -|  7.30|    49153|  4.915e+05|         3|        1|  49152|       yes|          -|          -|            -|            -|    -|
+    | + float_safe_softmax3                              |     -|  0.06|     8710|  8.710e+04|         -|     8710|      -|        no|   32 (11%)|  288 (23%)|  23849 (10%)|  55564 (47%)|    -|
+    |  + bf16add_fast                                    |     -|  6.09|        0|      0.000|         -|        0|      -|        no|          -|          -|            -|     61 (~0%)|    -|
+    |  + bf16add_fast                                    |     -|  6.09|        0|      0.000|         -|        0|      -|        no|          -|          -|            -|     61 (~0%)|    -|
+    |  + bf16add_fast                                    |     -|  6.09|        0|      0.000|         -|        0|      -|        no|          -|          -|            -|     61 (~0%)|    -|
+    |  + bf16add_fast                                    |     -|  6.09|        0|      0.000|         -|        0|      -|        no|          -|          -|            -|     61 (~0%)|    -|
+    |  + bf16add_fast                                    |     -|  6.09|        0|      0.000|         -|        0|      -|        no|          -|          -|            -|     61 (~0%)|    -|
+    |  + bf16add_fast                                    |     -|  6.09|        0|      0.000|         -|        0|      -|        no|          -|          -|            -|     61 (~0%)|    -|
+    |  + bf16_to_f32                                     |     -|  7.30|        0|      0.000|         -|        0|      -|        no|          -|          -|            -|            -|    -|
+    |  o tile_loop_tile_inner_loop                       |     -|  7.30|     8704|  8.704e+04|       136|        -|     64|        no|          -|          -|            -|            -|    -|
+    |   + float_safe_softmax3_Pipeline_find_max_blocks   |     -|  0.11|       41|    410.000|         -|       41|      -|        no|          -|          -|   1679 (~0%)|    9429 (8%)|    -|
+    |    o find_max_blocks                               |     -|  7.30|       39|    390.000|        17|        1|     24|       yes|          -|          -|            -|            -|    -|
+    |     + fmaxf                                        |     -|  4.33|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    294 (~0%)|    -|
+    |     + fmaxf                                        |     -|  4.33|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    294 (~0%)|    -|
+    |     + fmaxf                                        |     -|  4.33|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    294 (~0%)|    -|
+    |     + fmaxf                                        |     -|  4.33|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    294 (~0%)|    -|
+    |     + fmaxf                                        |     -|  4.33|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    294 (~0%)|    -|
+    |     + fmaxf                                        |     -|  4.33|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    294 (~0%)|    -|
+    |     + fmaxf                                        |     -|  4.33|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    294 (~0%)|    -|
+    |     + fmaxf                                        |     -|  4.33|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    294 (~0%)|    -|
+    |     + fmaxf                                        |     -|  4.33|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    294 (~0%)|    -|
+    |     + fmaxf                                        |     -|  4.33|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    294 (~0%)|    -|
+    |     + fmaxf                                        |     -|  4.33|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    294 (~0%)|    -|
+    |     + fmaxf                                        |     -|  4.33|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    294 (~0%)|    -|
+    |     + fmaxf                                        |     -|  4.33|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    294 (~0%)|    -|
+    |     + fmaxf                                        |     -|  4.33|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    294 (~0%)|    -|
+    |     + fmaxf                                        |     -|  4.33|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    294 (~0%)|    -|
+    |     + fmaxf                                        |     -|  4.33|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    294 (~0%)|    -|
+    |     + fmaxf                                        |     -|  4.33|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    294 (~0%)|    -|
+    |     + fmaxf                                        |     -|  4.33|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    294 (~0%)|    -|
+    |     + fmaxf                                        |     -|  4.33|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    294 (~0%)|    -|
+    |     + fmaxf                                        |     -|  4.33|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    294 (~0%)|    -|
+    |     + fmaxf                                        |     -|  4.33|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    294 (~0%)|    -|
+    |     + fmaxf                                        |     -|  4.33|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    294 (~0%)|    -|
+    |     + fmaxf                                        |     -|  4.33|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    294 (~0%)|    -|
+    |     + fmaxf                                        |     -|  4.33|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    294 (~0%)|    -|
+    |     + fmaxf                                        |     -|  4.33|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    294 (~0%)|    -|
+    |     + fmaxf                                        |     -|  4.33|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    294 (~0%)|    -|
+    |     + fmaxf                                        |     -|  4.33|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    294 (~0%)|    -|
+    |     + fmaxf                                        |     -|  4.33|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    294 (~0%)|    -|
+    |     + fmaxf                                        |     -|  4.33|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    294 (~0%)|    -|
+    |     + fmaxf                                        |     -|  4.33|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    294 (~0%)|    -|
+    |     + fmaxf                                        |     -|  4.33|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    294 (~0%)|    -|
+    |   + fmaxf                                          |     -|  4.33|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    294 (~0%)|    -|
+    |   + fmaxf                                          |     -|  4.33|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    294 (~0%)|    -|
+    |   + float_safe_softmax3_Pipeline_exp_and_bucket    |     -|  0.86|       38|    380.000|         -|       38|      -|        no|          -|  288 (23%)|   19786 (8%)|  35965 (30%)|    -|
+    |    o exp_and_bucket                                |     -|  7.30|       36|    360.000|        14|        1|     24|       yes|          -|          -|            -|            -|    -|
+    |   + float_safe_softmax3_Pipeline_normalize_blocks  |     -|  0.24|       36|    360.000|         -|       36|      -|        no|          -|          -|   2151 (~0%)|    6589 (5%)|    -|
+    |    o normalize_blocks                              |     -|  7.30|       34|    340.000|        12|        1|     24|       yes|          -|          -|            -|            -|    -|
+    |     + round_float32_to_bf16_ieee                   |     -|  3.29|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    201 (~0%)|    -|
+    |     + round_float32_to_bf16_ieee                   |     -|  3.29|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    201 (~0%)|    -|
+    |     + round_float32_to_bf16_ieee                   |     -|  3.29|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    201 (~0%)|    -|
+    |     + round_float32_to_bf16_ieee                   |     -|  3.29|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    201 (~0%)|    -|
+    |     + round_float32_to_bf16_ieee                   |     -|  3.29|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    201 (~0%)|    -|
+    |     + round_float32_to_bf16_ieee                   |     -|  3.29|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    201 (~0%)|    -|
+    |     + round_float32_to_bf16_ieee                   |     -|  3.29|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    201 (~0%)|    -|
+    |     + round_float32_to_bf16_ieee                   |     -|  3.29|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    201 (~0%)|    -|
+    |     + round_float32_to_bf16_ieee                   |     -|  3.29|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    201 (~0%)|    -|
+    |     + round_float32_to_bf16_ieee                   |     -|  3.29|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    201 (~0%)|    -|
+    |     + round_float32_to_bf16_ieee                   |     -|  3.29|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    201 (~0%)|    -|
+    |     + round_float32_to_bf16_ieee                   |     -|  3.29|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    201 (~0%)|    -|
+    |     + round_float32_to_bf16_ieee                   |     -|  3.29|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    201 (~0%)|    -|
+    |     + round_float32_to_bf16_ieee                   |     -|  3.29|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    201 (~0%)|    -|
+    |     + round_float32_to_bf16_ieee                   |     -|  3.29|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    201 (~0%)|    -|
+    |     + round_float32_to_bf16_ieee                   |     -|  3.29|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    201 (~0%)|    -|
+    |     + round_float32_to_bf16_ieee                   |     -|  3.29|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    201 (~0%)|    -|
+    |     + round_float32_to_bf16_ieee                   |     -|  3.29|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    201 (~0%)|    -|
+    |     + round_float32_to_bf16_ieee                   |     -|  3.29|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    201 (~0%)|    -|
+    |     + round_float32_to_bf16_ieee                   |     -|  3.29|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    201 (~0%)|    -|
+    |     + round_float32_to_bf16_ieee                   |     -|  3.29|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    201 (~0%)|    -|
+    |     + round_float32_to_bf16_ieee                   |     -|  3.29|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    201 (~0%)|    -|
+    |     + round_float32_to_bf16_ieee                   |     -|  3.29|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    201 (~0%)|    -|
+    |     + round_float32_to_bf16_ieee                   |     -|  3.29|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    201 (~0%)|    -|
+    |     + round_float32_to_bf16_ieee                   |     -|  3.29|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    201 (~0%)|    -|
+    |     + round_float32_to_bf16_ieee                   |     -|  3.29|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    201 (~0%)|    -|
+    |     + round_float32_to_bf16_ieee                   |     -|  3.29|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    201 (~0%)|    -|
+    |     + round_float32_to_bf16_ieee                   |     -|  3.29|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    201 (~0%)|    -|
+    |     + round_float32_to_bf16_ieee                   |     -|  3.29|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    201 (~0%)|    -|
+    |     + round_float32_to_bf16_ieee                   |     -|  3.29|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    201 (~0%)|    -|
+    |     + round_float32_to_bf16_ieee                   |     -|  3.29|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    201 (~0%)|    -|
+    |     + round_float32_to_bf16_ieee                   |     -|  3.29|        0|      0.000|         -|        1|      -|       yes|          -|          -|            -|    201 (~0%)|    -|
+    | + activation_accelerator_Pipeline_stage_0_load0    |     -|  0.00|    49155|  4.916e+05|         -|    49155|      -|        no|          -|          -|     69 (~0%)|     85 (~0%)|    -|
+    |  o stage_0_load0                                   |     -|  7.30|    49153|  4.915e+05|         3|        1|  49152|       yes|          -|          -|            -|            -|    -|
+    +----------------------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+-----------+-----------+-------------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| Interface   | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   |
+|             | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| m_axi_gmem0 | 16 -> 16   | 64            | 0       | slave  | 0        | 0         | 256          | 16           | 64          | 16          |
+| m_axi_gmem1 | 16 -> 16   | 64            | 0       | slave  | 0        | 0         | 256          | 16           | 64          | 16          |
+| m_axi_gmem2 | 16 -> 16   | 64            | 0       | slave  | 0        | 0         | 256          | 16           | 64          | 16          |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 7             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | in0_1    | 0x10   | 32    | W      | Data signal of in0               |                                                                      |
+| s_axi_control | in0_2    | 0x14   | 32    | W      | Data signal of in0               |                                                                      |
+| s_axi_control | in1_1    | 0x1c   | 32    | W      | Data signal of in1               |                                                                      |
+| s_axi_control | in1_2    | 0x20   | 32    | W      | Data signal of in1               |                                                                      |
+| s_axi_control | out_r_1  | 0x28   | 32    | W      | Data signal of out_r             |                                                                      |
+| s_axi_control | out_r_2  | 0x2c   | 32    | W      | Data signal of out_r             |                                                                      |
+| s_axi_control | stage    | 0x34   | 32    | W      | Data signal of stage             |                                                                      |
+| s_axi_control | config_r | 0x3c   | 32    | W      | Data signal of config_r          |                                                                      |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+-----------------+
+| Argument | Direction | Datatype        |
++----------+-----------+-----------------+
+| in0      | in        | unsigned short* |
+| in1      | unused    | unsigned short* |
+| out      | out       | unsigned short* |
+| stage    | in        | int             |
+| config   | in        | int             |
++----------+-----------+-----------------+
+
+* SW-to-HW Mapping
++----------+---------------+-----------+----------+---------------------------------+
+| Argument | HW Interface  | HW Type   | HW Usage | HW Info                         |
++----------+---------------+-----------+----------+---------------------------------+
+| in0      | m_axi_gmem0   | interface |          |                                 |
+| in0      | s_axi_control | register  | offset   | name=in0_1 offset=0x10 range=32 |
+| in0      | s_axi_control | register  | offset   | name=in0_2 offset=0x14 range=32 |
+| in1      | m_axi_gmem1   | interface |          |                                 |
+| in1      | s_axi_control | register  | offset   | name=in1_1 offset=0x1c range=32 |
+| in1      | s_axi_control | register  | offset   | name=in1_2 offset=0x20 range=32 |
+| out      | m_axi_gmem2   | interface |          |                                 |
+| out      | s_axi_control | interface | offset   |                                 |
+| stage    | s_axi_control | register  |          | name=stage offset=0x34 range=32 |
+| config   | s_axi_control | interface |          |                                 |
++----------+---------------+-----------+----------+---------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+---------------+-----------+--------+-------+-----------------------------------+
+| HW Interface | Loop          | Direction | Length | Width | Location                          |
++--------------+---------------+-----------+--------+-------+-----------------------------------+
+| m_axi_gmem0  | stage_0_load0 | read      | 49152  | 16    | activation_accelerator.cpp:1365:9 |
+| m_axi_gmem2  | stage_2_store | write     | 49152  | 16    | activation_accelerator.cpp:1421:9 |
++--------------+---------------+-----------+--------+-------+-----------------------------------+
+
+* Inferred Bursts and Widening Missed
++--------------+----------+---------------+-------------------------------------------------------------------------------------------------------+------------+-----------------------------------+
+| HW Interface | Variable | Loop          | Problem                                                                                               | Resolution | Location                          |
++--------------+----------+---------------+-------------------------------------------------------------------------------------------------------+------------+-----------------------------------+
+| m_axi_gmem0  | in0      | stage_0_load0 | Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | activation_accelerator.cpp:1365:9 |
+| m_axi_gmem2  | out      | stage_2_store | Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | activation_accelerator.cpp:1421:9 |
++--------------+----------+---------------+-------------------------------------------------------------------------------------------------------+------------+-----------------------------------+
+
+    * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------------------------------------------------+-----+--------+--------------+------+---------+---------+
+| Name                                                                        | DSP | Pragma | Variable     | Op   | Impl    | Latency |
++-----------------------------------------------------------------------------+-----+--------+--------------+------+---------+---------+
+| + activation_accelerator                                                    | 288 |        |              |      |         |         |
+|  + bf16_to_float                                                            | 0   |        |              |      |         |         |
+|    add_ln49_fu_337_p2                                                       | -   |        | add_ln49     | add  | fabric  | 0       |
+|  + activation_accelerator_Pipeline_stage_2_store                            | 0   |        |              |      |         |         |
+|    add_ln1421_fu_346_p2                                                     | -   |        | add_ln1421   | add  | fabric  | 0       |
+|  + float_safe_softmax3                                                      | 288 |        |              |      |         |         |
+|    add_ln1256_1_fu_685_p2                                                   | -   |        | add_ln1256_1 | add  | fabric  | 0       |
+|    add_ln1256_fu_697_p2                                                     | -   |        | add_ln1256   | add  | fabric  | 0       |
+|    add_ln1254_fu_893_p2                                                     | -   |        | add_ln1254   | add  | fabric  | 0       |
+|    sub_ln1179_fu_932_p2                                                     | -   |        | sub_ln1179   | sub  | fabric  | 0       |
+|    empty_35_fu_737_p2                                                       | -   |        | empty_35     | add  | fabric  | 0       |
+|    sub_ln1122_fu_763_p2                                                     | -   |        | sub_ln1122   | sub  | fabric  | 0       |
+|    add_ln1261_fu_770_p2                                                     | -   |        | add_ln1261   | add  | fabric  | 0       |
+|    add_ln1261_1_fu_939_p2                                                   | -   |        | add_ln1261_1 | add  | fabric  | 0       |
+|   + float_safe_softmax3_Pipeline_find_max_blocks                            | 0   |        |              |      |         |         |
+|     add_ln1122_fu_1252_p2                                                   | -   |        | add_ln1122   | add  | fabric  | 0       |
+|     add_ln1122_1_fu_1295_p2                                                 | -   |        | add_ln1122_1 | add  | fabric  | 0       |
+|     add_ln1113_fu_1275_p2                                                   | -   |        | add_ln1113   | add  | fabric  | 0       |
+|   + float_safe_softmax3_Pipeline_exp_and_bucket                             | 288 |        |              |      |         |         |
+|     add_ln1177_fu_1340_p2                                                   | -   |        | add_ln1177   | add  | fabric  | 0       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U85                                      | 2   |        | x_assign     | fsub | fulldsp | 3       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U117                                     | 7   |        | ex           | fexp | fulldsp | 7       |
+|     add_ln1179_fu_1426_p2                                                   | -   |        | add_ln1179   | add  | fabric  | 0       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U86                                      | 2   |        | x_assign_1   | fsub | fulldsp | 3       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U118                                     | 7   |        | ex_1         | fexp | fulldsp | 7       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U87                                      | 2   |        | x_assign_2   | fsub | fulldsp | 3       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U119                                     | 7   |        | ex_2         | fexp | fulldsp | 7       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U88                                      | 2   |        | x_assign_3   | fsub | fulldsp | 3       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U120                                     | 7   |        | ex_3         | fexp | fulldsp | 7       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U89                                      | 2   |        | x_assign_4   | fsub | fulldsp | 3       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U121                                     | 7   |        | ex_4         | fexp | fulldsp | 7       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U90                                      | 2   |        | x_assign_5   | fsub | fulldsp | 3       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U122                                     | 7   |        | ex_5         | fexp | fulldsp | 7       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U91                                      | 2   |        | x_assign_6   | fsub | fulldsp | 3       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U123                                     | 7   |        | ex_6         | fexp | fulldsp | 7       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U92                                      | 2   |        | x_assign_7   | fsub | fulldsp | 3       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U124                                     | 7   |        | ex_7         | fexp | fulldsp | 7       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U93                                      | 2   |        | x_assign_8   | fsub | fulldsp | 3       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U125                                     | 7   |        | ex_8         | fexp | fulldsp | 7       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U94                                      | 2   |        | x_assign_9   | fsub | fulldsp | 3       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U126                                     | 7   |        | ex_9         | fexp | fulldsp | 7       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U95                                      | 2   |        | x_assign_s   | fsub | fulldsp | 3       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U127                                     | 7   |        | ex_10        | fexp | fulldsp | 7       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U96                                      | 2   |        | x_assign_10  | fsub | fulldsp | 3       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U128                                     | 7   |        | ex_11        | fexp | fulldsp | 7       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U97                                      | 2   |        | x_assign_11  | fsub | fulldsp | 3       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U129                                     | 7   |        | ex_12        | fexp | fulldsp | 7       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U98                                      | 2   |        | x_assign_12  | fsub | fulldsp | 3       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U130                                     | 7   |        | ex_13        | fexp | fulldsp | 7       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U99                                      | 2   |        | x_assign_13  | fsub | fulldsp | 3       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U131                                     | 7   |        | ex_14        | fexp | fulldsp | 7       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U100                                     | 2   |        | x_assign_14  | fsub | fulldsp | 3       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U132                                     | 7   |        | ex_15        | fexp | fulldsp | 7       |
+|     add_ln1177_1_fu_1386_p2                                                 | -   |        | add_ln1177_1 | add  | fabric  | 0       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U101                                     | 2   |        | x_assign_15  | fsub | fulldsp | 3       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U133                                     | 7   |        | ex_16        | fexp | fulldsp | 7       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U102                                     | 2   |        | x_assign_16  | fsub | fulldsp | 3       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U134                                     | 7   |        | ex_17        | fexp | fulldsp | 7       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U103                                     | 2   |        | x_assign_17  | fsub | fulldsp | 3       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U135                                     | 7   |        | ex_18        | fexp | fulldsp | 7       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U104                                     | 2   |        | x_assign_18  | fsub | fulldsp | 3       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U136                                     | 7   |        | ex_19        | fexp | fulldsp | 7       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U105                                     | 2   |        | x_assign_19  | fsub | fulldsp | 3       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U137                                     | 7   |        | ex_20        | fexp | fulldsp | 7       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U106                                     | 2   |        | x_assign_20  | fsub | fulldsp | 3       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U138                                     | 7   |        | ex_21        | fexp | fulldsp | 7       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U107                                     | 2   |        | x_assign_21  | fsub | fulldsp | 3       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U139                                     | 7   |        | ex_22        | fexp | fulldsp | 7       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U108                                     | 2   |        | x_assign_22  | fsub | fulldsp | 3       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U140                                     | 7   |        | ex_23        | fexp | fulldsp | 7       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U109                                     | 2   |        | x_assign_23  | fsub | fulldsp | 3       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U141                                     | 7   |        | ex_24        | fexp | fulldsp | 7       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U110                                     | 2   |        | x_assign_24  | fsub | fulldsp | 3       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U142                                     | 7   |        | ex_25        | fexp | fulldsp | 7       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U111                                     | 2   |        | x_assign_25  | fsub | fulldsp | 3       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U143                                     | 7   |        | ex_26        | fexp | fulldsp | 7       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U112                                     | 2   |        | x_assign_26  | fsub | fulldsp | 3       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U144                                     | 7   |        | ex_27        | fexp | fulldsp | 7       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U113                                     | 2   |        | x_assign_27  | fsub | fulldsp | 3       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U145                                     | 7   |        | ex_28        | fexp | fulldsp | 7       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U114                                     | 2   |        | x_assign_28  | fsub | fulldsp | 3       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U146                                     | 7   |        | ex_29        | fexp | fulldsp | 7       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U115                                     | 2   |        | x_assign_29  | fsub | fulldsp | 3       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U147                                     | 7   |        | ex_30        | fexp | fulldsp | 7       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U116                                     | 2   |        | x_assign_30  | fsub | fulldsp | 3       |
+|     fexp_32ns_32ns_32_8_full_dsp_1_U148                                     | 7   |        | ex_31        | fexp | fulldsp | 7       |
+|     add_ln1167_fu_1412_p2                                                   | -   |        | add_ln1167   | add  | fabric  | 0       |
+|   + float_safe_softmax3_Pipeline_normalize_blocks                           | 0   |        |              |      |         |         |
+|     add_ln1219_fu_1340_p2                                                   | -   |        | add_ln1219   | add  | fabric  | 0       |
+|     fdiv_32ns_32ns_32_9_no_dsp_1_U203                                       | -   |        | y            | fdiv | fabric  | 8       |
+|     add_ln1220_fu_1406_p2                                                   | -   |        | add_ln1220   | add  | fabric  | 0       |
+|     fdiv_32ns_32ns_32_9_no_dsp_1_U204                                       | -   |        | y_1          | fdiv | fabric  | 8       |
+|     fdiv_32ns_32ns_32_9_no_dsp_1_U205                                       | -   |        | y_2          | fdiv | fabric  | 8       |
+|     fdiv_32ns_32ns_32_9_no_dsp_1_U206                                       | -   |        | y_3          | fdiv | fabric  | 8       |
+|     fdiv_32ns_32ns_32_9_no_dsp_1_U207                                       | -   |        | y_4          | fdiv | fabric  | 8       |
+|     fdiv_32ns_32ns_32_9_no_dsp_1_U208                                       | -   |        | y_5          | fdiv | fabric  | 8       |
+|     fdiv_32ns_32ns_32_9_no_dsp_1_U209                                       | -   |        | y_6          | fdiv | fabric  | 8       |
+|     fdiv_32ns_32ns_32_9_no_dsp_1_U210                                       | -   |        | y_7          | fdiv | fabric  | 8       |
+|     fdiv_32ns_32ns_32_9_no_dsp_1_U211                                       | -   |        | y_8          | fdiv | fabric  | 8       |
+|     fdiv_32ns_32ns_32_9_no_dsp_1_U212                                       | -   |        | y_9          | fdiv | fabric  | 8       |
+|     fdiv_32ns_32ns_32_9_no_dsp_1_U213                                       | -   |        | y_10         | fdiv | fabric  | 8       |
+|     fdiv_32ns_32ns_32_9_no_dsp_1_U214                                       | -   |        | y_11         | fdiv | fabric  | 8       |
+|     fdiv_32ns_32ns_32_9_no_dsp_1_U215                                       | -   |        | y_12         | fdiv | fabric  | 8       |
+|     fdiv_32ns_32ns_32_9_no_dsp_1_U216                                       | -   |        | y_13         | fdiv | fabric  | 8       |
+|     fdiv_32ns_32ns_32_9_no_dsp_1_U217                                       | -   |        | y_14         | fdiv | fabric  | 8       |
+|     fdiv_32ns_32ns_32_9_no_dsp_1_U218                                       | -   |        | y_15         | fdiv | fabric  | 8       |
+|     fdiv_32ns_32ns_32_9_no_dsp_1_U219                                       | -   |        | y_16         | fdiv | fabric  | 8       |
+|     add_ln1220_1_fu_1440_p2                                                 | -   |        | add_ln1220_1 | add  | fabric  | 0       |
+|     fdiv_32ns_32ns_32_9_no_dsp_1_U220                                       | -   |        | y_17         | fdiv | fabric  | 8       |
+|     fdiv_32ns_32ns_32_9_no_dsp_1_U221                                       | -   |        | y_18         | fdiv | fabric  | 8       |
+|     fdiv_32ns_32ns_32_9_no_dsp_1_U222                                       | -   |        | y_19         | fdiv | fabric  | 8       |
+|     fdiv_32ns_32ns_32_9_no_dsp_1_U223                                       | -   |        | y_20         | fdiv | fabric  | 8       |
+|     fdiv_32ns_32ns_32_9_no_dsp_1_U224                                       | -   |        | y_21         | fdiv | fabric  | 8       |
+|     fdiv_32ns_32ns_32_9_no_dsp_1_U225                                       | -   |        | y_22         | fdiv | fabric  | 8       |
+|     fdiv_32ns_32ns_32_9_no_dsp_1_U226                                       | -   |        | y_23         | fdiv | fabric  | 8       |
+|     fdiv_32ns_32ns_32_9_no_dsp_1_U227                                       | -   |        | y_24         | fdiv | fabric  | 8       |
+|     fdiv_32ns_32ns_32_9_no_dsp_1_U228                                       | -   |        | y_25         | fdiv | fabric  | 8       |
+|     fdiv_32ns_32ns_32_9_no_dsp_1_U229                                       | -   |        | y_26         | fdiv | fabric  | 8       |
+|     fdiv_32ns_32ns_32_9_no_dsp_1_U230                                       | -   |        | y_27         | fdiv | fabric  | 8       |
+|     fdiv_32ns_32ns_32_9_no_dsp_1_U231                                       | -   |        | y_28         | fdiv | fabric  | 8       |
+|     fdiv_32ns_32ns_32_9_no_dsp_1_U232                                       | -   |        | y_29         | fdiv | fabric  | 8       |
+|     fdiv_32ns_32ns_32_9_no_dsp_1_U233                                       | -   |        | y_30         | fdiv | fabric  | 8       |
+|     fdiv_32ns_32ns_32_9_no_dsp_1_U234                                       | -   |        | y_31         | fdiv | fabric  | 8       |
+|     add_ln1212_fu_1392_p2                                                   | -   |        | add_ln1212   | add  | fabric  | 0       |
+|    + round_float32_to_bf16_ieee (tmp_round_float32_to_bf16_ieee_fu_992)     | 0   |        |              |      |         |         |
+|      rounded_fu_202_p2                                                      | -   |        | rounded      | add  | fabric  | 0       |
+|      add_ln101_fu_226_p2                                                    | -   |        | add_ln101    | add  | fabric  | 0       |
+|    + round_float32_to_bf16_ieee (tmp_1_round_float32_to_bf16_ieee_fu_998)   | 0   |        |              |      |         |         |
+|      rounded_fu_202_p2                                                      | -   |        | rounded      | add  | fabric  | 0       |
+|      add_ln101_fu_226_p2                                                    | -   |        | add_ln101    | add  | fabric  | 0       |
+|    + round_float32_to_bf16_ieee (tmp_2_round_float32_to_bf16_ieee_fu_1004)  | 0   |        |              |      |         |         |
+|      rounded_fu_202_p2                                                      | -   |        | rounded      | add  | fabric  | 0       |
+|      add_ln101_fu_226_p2                                                    | -   |        | add_ln101    | add  | fabric  | 0       |
+|    + round_float32_to_bf16_ieee (tmp_3_round_float32_to_bf16_ieee_fu_1010)  | 0   |        |              |      |         |         |
+|      rounded_fu_202_p2                                                      | -   |        | rounded      | add  | fabric  | 0       |
+|      add_ln101_fu_226_p2                                                    | -   |        | add_ln101    | add  | fabric  | 0       |
+|    + round_float32_to_bf16_ieee (tmp_4_round_float32_to_bf16_ieee_fu_1016)  | 0   |        |              |      |         |         |
+|      rounded_fu_202_p2                                                      | -   |        | rounded      | add  | fabric  | 0       |
+|      add_ln101_fu_226_p2                                                    | -   |        | add_ln101    | add  | fabric  | 0       |
+|    + round_float32_to_bf16_ieee (tmp_5_round_float32_to_bf16_ieee_fu_1022)  | 0   |        |              |      |         |         |
+|      rounded_fu_202_p2                                                      | -   |        | rounded      | add  | fabric  | 0       |
+|      add_ln101_fu_226_p2                                                    | -   |        | add_ln101    | add  | fabric  | 0       |
+|    + round_float32_to_bf16_ieee (tmp_6_round_float32_to_bf16_ieee_fu_1028)  | 0   |        |              |      |         |         |
+|      rounded_fu_202_p2                                                      | -   |        | rounded      | add  | fabric  | 0       |
+|      add_ln101_fu_226_p2                                                    | -   |        | add_ln101    | add  | fabric  | 0       |
+|    + round_float32_to_bf16_ieee (tmp_7_round_float32_to_bf16_ieee_fu_1034)  | 0   |        |              |      |         |         |
+|      rounded_fu_202_p2                                                      | -   |        | rounded      | add  | fabric  | 0       |
+|      add_ln101_fu_226_p2                                                    | -   |        | add_ln101    | add  | fabric  | 0       |
+|    + round_float32_to_bf16_ieee (tmp_8_round_float32_to_bf16_ieee_fu_1040)  | 0   |        |              |      |         |         |
+|      rounded_fu_202_p2                                                      | -   |        | rounded      | add  | fabric  | 0       |
+|      add_ln101_fu_226_p2                                                    | -   |        | add_ln101    | add  | fabric  | 0       |
+|    + round_float32_to_bf16_ieee (tmp_9_round_float32_to_bf16_ieee_fu_1046)  | 0   |        |              |      |         |         |
+|      rounded_fu_202_p2                                                      | -   |        | rounded      | add  | fabric  | 0       |
+|      add_ln101_fu_226_p2                                                    | -   |        | add_ln101    | add  | fabric  | 0       |
+|    + round_float32_to_bf16_ieee (tmp_s_round_float32_to_bf16_ieee_fu_1052)  | 0   |        |              |      |         |         |
+|      rounded_fu_202_p2                                                      | -   |        | rounded      | add  | fabric  | 0       |
+|      add_ln101_fu_226_p2                                                    | -   |        | add_ln101    | add  | fabric  | 0       |
+|    + round_float32_to_bf16_ieee (tmp_10_round_float32_to_bf16_ieee_fu_1058) | 0   |        |              |      |         |         |
+|      rounded_fu_202_p2                                                      | -   |        | rounded      | add  | fabric  | 0       |
+|      add_ln101_fu_226_p2                                                    | -   |        | add_ln101    | add  | fabric  | 0       |
+|    + round_float32_to_bf16_ieee (tmp_11_round_float32_to_bf16_ieee_fu_1064) | 0   |        |              |      |         |         |
+|      rounded_fu_202_p2                                                      | -   |        | rounded      | add  | fabric  | 0       |
+|      add_ln101_fu_226_p2                                                    | -   |        | add_ln101    | add  | fabric  | 0       |
+|    + round_float32_to_bf16_ieee (tmp_12_round_float32_to_bf16_ieee_fu_1070) | 0   |        |              |      |         |         |
+|      rounded_fu_202_p2                                                      | -   |        | rounded      | add  | fabric  | 0       |
+|      add_ln101_fu_226_p2                                                    | -   |        | add_ln101    | add  | fabric  | 0       |
+|    + round_float32_to_bf16_ieee (tmp_13_round_float32_to_bf16_ieee_fu_1076) | 0   |        |              |      |         |         |
+|      rounded_fu_202_p2                                                      | -   |        | rounded      | add  | fabric  | 0       |
+|      add_ln101_fu_226_p2                                                    | -   |        | add_ln101    | add  | fabric  | 0       |
+|    + round_float32_to_bf16_ieee (tmp_14_round_float32_to_bf16_ieee_fu_1082) | 0   |        |              |      |         |         |
+|      rounded_fu_202_p2                                                      | -   |        | rounded      | add  | fabric  | 0       |
+|      add_ln101_fu_226_p2                                                    | -   |        | add_ln101    | add  | fabric  | 0       |
+|    + round_float32_to_bf16_ieee (tmp_15_round_float32_to_bf16_ieee_fu_1088) | 0   |        |              |      |         |         |
+|      rounded_fu_202_p2                                                      | -   |        | rounded      | add  | fabric  | 0       |
+|      add_ln101_fu_226_p2                                                    | -   |        | add_ln101    | add  | fabric  | 0       |
+|    + round_float32_to_bf16_ieee (tmp_16_round_float32_to_bf16_ieee_fu_1094) | 0   |        |              |      |         |         |
+|      rounded_fu_202_p2                                                      | -   |        | rounded      | add  | fabric  | 0       |
+|      add_ln101_fu_226_p2                                                    | -   |        | add_ln101    | add  | fabric  | 0       |
+|    + round_float32_to_bf16_ieee (tmp_17_round_float32_to_bf16_ieee_fu_1100) | 0   |        |              |      |         |         |
+|      rounded_fu_202_p2                                                      | -   |        | rounded      | add  | fabric  | 0       |
+|      add_ln101_fu_226_p2                                                    | -   |        | add_ln101    | add  | fabric  | 0       |
+|    + round_float32_to_bf16_ieee (tmp_18_round_float32_to_bf16_ieee_fu_1106) | 0   |        |              |      |         |         |
+|      rounded_fu_202_p2                                                      | -   |        | rounded      | add  | fabric  | 0       |
+|      add_ln101_fu_226_p2                                                    | -   |        | add_ln101    | add  | fabric  | 0       |
+|    + round_float32_to_bf16_ieee (tmp_19_round_float32_to_bf16_ieee_fu_1112) | 0   |        |              |      |         |         |
+|      rounded_fu_202_p2                                                      | -   |        | rounded      | add  | fabric  | 0       |
+|      add_ln101_fu_226_p2                                                    | -   |        | add_ln101    | add  | fabric  | 0       |
+|    + round_float32_to_bf16_ieee (tmp_20_round_float32_to_bf16_ieee_fu_1118) | 0   |        |              |      |         |         |
+|      rounded_fu_202_p2                                                      | -   |        | rounded      | add  | fabric  | 0       |
+|      add_ln101_fu_226_p2                                                    | -   |        | add_ln101    | add  | fabric  | 0       |
+|    + round_float32_to_bf16_ieee (tmp_21_round_float32_to_bf16_ieee_fu_1124) | 0   |        |              |      |         |         |
+|      rounded_fu_202_p2                                                      | -   |        | rounded      | add  | fabric  | 0       |
+|      add_ln101_fu_226_p2                                                    | -   |        | add_ln101    | add  | fabric  | 0       |
+|    + round_float32_to_bf16_ieee (tmp_22_round_float32_to_bf16_ieee_fu_1130) | 0   |        |              |      |         |         |
+|      rounded_fu_202_p2                                                      | -   |        | rounded      | add  | fabric  | 0       |
+|      add_ln101_fu_226_p2                                                    | -   |        | add_ln101    | add  | fabric  | 0       |
+|    + round_float32_to_bf16_ieee (tmp_23_round_float32_to_bf16_ieee_fu_1136) | 0   |        |              |      |         |         |
+|      rounded_fu_202_p2                                                      | -   |        | rounded      | add  | fabric  | 0       |
+|      add_ln101_fu_226_p2                                                    | -   |        | add_ln101    | add  | fabric  | 0       |
+|    + round_float32_to_bf16_ieee (tmp_24_round_float32_to_bf16_ieee_fu_1142) | 0   |        |              |      |         |         |
+|      rounded_fu_202_p2                                                      | -   |        | rounded      | add  | fabric  | 0       |
+|      add_ln101_fu_226_p2                                                    | -   |        | add_ln101    | add  | fabric  | 0       |
+|    + round_float32_to_bf16_ieee (tmp_25_round_float32_to_bf16_ieee_fu_1148) | 0   |        |              |      |         |         |
+|      rounded_fu_202_p2                                                      | -   |        | rounded      | add  | fabric  | 0       |
+|      add_ln101_fu_226_p2                                                    | -   |        | add_ln101    | add  | fabric  | 0       |
+|    + round_float32_to_bf16_ieee (tmp_26_round_float32_to_bf16_ieee_fu_1154) | 0   |        |              |      |         |         |
+|      rounded_fu_202_p2                                                      | -   |        | rounded      | add  | fabric  | 0       |
+|      add_ln101_fu_226_p2                                                    | -   |        | add_ln101    | add  | fabric  | 0       |
+|    + round_float32_to_bf16_ieee (tmp_27_round_float32_to_bf16_ieee_fu_1160) | 0   |        |              |      |         |         |
+|      rounded_fu_202_p2                                                      | -   |        | rounded      | add  | fabric  | 0       |
+|      add_ln101_fu_226_p2                                                    | -   |        | add_ln101    | add  | fabric  | 0       |
+|    + round_float32_to_bf16_ieee (tmp_28_round_float32_to_bf16_ieee_fu_1166) | 0   |        |              |      |         |         |
+|      rounded_fu_202_p2                                                      | -   |        | rounded      | add  | fabric  | 0       |
+|      add_ln101_fu_226_p2                                                    | -   |        | add_ln101    | add  | fabric  | 0       |
+|    + round_float32_to_bf16_ieee (tmp_29_round_float32_to_bf16_ieee_fu_1172) | 0   |        |              |      |         |         |
+|      rounded_fu_202_p2                                                      | -   |        | rounded      | add  | fabric  | 0       |
+|      add_ln101_fu_226_p2                                                    | -   |        | add_ln101    | add  | fabric  | 0       |
+|    + round_float32_to_bf16_ieee (tmp_30_round_float32_to_bf16_ieee_fu_1178) | 0   |        |              |      |         |         |
+|      rounded_fu_202_p2                                                      | -   |        | rounded      | add  | fabric  | 0       |
+|      add_ln101_fu_226_p2                                                    | -   |        | add_ln101    | add  | fabric  | 0       |
+|  + activation_accelerator_Pipeline_stage_0_load0                            | 0   |        |              |      |         |         |
+|    add_ln1365_fu_108_p2                                                     | -   |        | add_ln1365   | add  | fabric  | 0       |
++-----------------------------------------------------------------------------+-----+--------+--------------+------+---------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++---------------------------------------------------------------------------------+------+------+--------+-----------------------------------------------------------------------------+---------+------+---------+
+| Name                                                                            | BRAM | URAM | Pragma | Variable                                                                    | Storage | Impl | Latency |
++---------------------------------------------------------------------------------+------+------+--------+-----------------------------------------------------------------------------+---------+------+---------+
+| + activation_accelerator                                                        | 270  | 0    |        |                                                                             |         |      |         |
+|   x_U                                                                           | 8    | -    |        | x                                                                           | ram_s2p | auto | 1       |
+|   x_1_U                                                                         | 8    | -    |        | x_1                                                                         | ram_s2p | auto | 1       |
+|   x_2_U                                                                         | 8    | -    |        | x_2                                                                         | ram_s2p | auto | 1       |
+|   x_3_U                                                                         | 8    | -    |        | x_3                                                                         | ram_s2p | auto | 1       |
+|   x_4_U                                                                         | 8    | -    |        | x_4                                                                         | ram_s2p | auto | 1       |
+|   x_5_U                                                                         | 8    | -    |        | x_5                                                                         | ram_s2p | auto | 1       |
+|   x_6_U                                                                         | 8    | -    |        | x_6                                                                         | ram_s2p | auto | 1       |
+|   x_7_U                                                                         | 8    | -    |        | x_7                                                                         | ram_s2p | auto | 1       |
+|   x_8_U                                                                         | 8    | -    |        | x_8                                                                         | ram_s2p | auto | 1       |
+|   x_9_U                                                                         | 8    | -    |        | x_9                                                                         | ram_s2p | auto | 1       |
+|   x_10_U                                                                        | 8    | -    |        | x_10                                                                        | ram_s2p | auto | 1       |
+|   x_11_U                                                                        | 8    | -    |        | x_11                                                                        | ram_s2p | auto | 1       |
+|   x_12_U                                                                        | 8    | -    |        | x_12                                                                        | ram_s2p | auto | 1       |
+|   x_13_U                                                                        | 8    | -    |        | x_13                                                                        | ram_s2p | auto | 1       |
+|   x_14_U                                                                        | 8    | -    |        | x_14                                                                        | ram_s2p | auto | 1       |
+|   x_15_U                                                                        | 8    | -    |        | x_15                                                                        | ram_s2p | auto | 1       |
+|   buf0_U                                                                        | 46   | -    |        | buf0                                                                        | ram_1p  | auto | 1       |
+|   activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_U | 4    | -    |        | activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9 | ram_t2p | auto | 1       |
+|   activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_U | 4    | -    |        | activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8 | ram_t2p | auto | 1       |
+|   activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_U | 4    | -    |        | activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7 | ram_t2p | auto | 1       |
+|   activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_U | 4    | -    |        | activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6 | ram_t2p | auto | 1       |
+|   activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_U | 4    | -    |        | activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5 | ram_t2p | auto | 1       |
+|   activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_U | 4    | -    |        | activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4 | ram_t2p | auto | 1       |
+|   activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_U | 4    | -    |        | activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3 | ram_t2p | auto | 1       |
+|   activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_U | 4    | -    |        | activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2 | ram_t2p | auto | 1       |
+|   activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_U | 4    | -    |        | activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1 | ram_t2p | auto | 1       |
+|   activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_U   | 4    | -    |        | activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i   | ram_t2p | auto | 1       |
+|   p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_U                               | 4    | -    |        | p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10                               | ram_t2p | auto | 1       |
+|   p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_U                               | 4    | -    |        | p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11                               | ram_t2p | auto | 1       |
+|   p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_U                               | 4    | -    |        | p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12                               | ram_t2p | auto | 1       |
+|   p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_U                               | 4    | -    |        | p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13                               | ram_t2p | auto | 1       |
+|   p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_U                               | 4    | -    |        | p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14                               | ram_t2p | auto | 1       |
+|   p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_U                               | 4    | -    |        | p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15                               | ram_t2p | auto | 1       |
+|  + float_safe_softmax3                                                          | 32   | 0    |        |                                                                             |         |      |         |
+|    exp_x_U                                                                      | 1    | -    | yes    | exp_x                                                                       | ram_1p  | bram | 1       |
+|    exp_x_1_U                                                                    | 1    | -    | yes    | exp_x_1                                                                     | ram_1p  | bram | 1       |
+|    exp_x_2_U                                                                    | 1    | -    | yes    | exp_x_2                                                                     | ram_1p  | bram | 1       |
+|    exp_x_3_U                                                                    | 1    | -    | yes    | exp_x_3                                                                     | ram_1p  | bram | 1       |
+|    exp_x_4_U                                                                    | 1    | -    | yes    | exp_x_4                                                                     | ram_1p  | bram | 1       |
+|    exp_x_5_U                                                                    | 1    | -    | yes    | exp_x_5                                                                     | ram_1p  | bram | 1       |
+|    exp_x_6_U                                                                    | 1    | -    | yes    | exp_x_6                                                                     | ram_1p  | bram | 1       |
+|    exp_x_7_U                                                                    | 1    | -    | yes    | exp_x_7                                                                     | ram_1p  | bram | 1       |
+|    exp_x_8_U                                                                    | 1    | -    | yes    | exp_x_8                                                                     | ram_1p  | bram | 1       |
+|    exp_x_9_U                                                                    | 1    | -    | yes    | exp_x_9                                                                     | ram_1p  | bram | 1       |
+|    exp_x_10_U                                                                   | 1    | -    | yes    | exp_x_10                                                                    | ram_1p  | bram | 1       |
+|    exp_x_11_U                                                                   | 1    | -    | yes    | exp_x_11                                                                    | ram_1p  | bram | 1       |
+|    exp_x_12_U                                                                   | 1    | -    | yes    | exp_x_12                                                                    | ram_1p  | bram | 1       |
+|    exp_x_13_U                                                                   | 1    | -    | yes    | exp_x_13                                                                    | ram_1p  | bram | 1       |
+|    exp_x_14_U                                                                   | 1    | -    | yes    | exp_x_14                                                                    | ram_1p  | bram | 1       |
+|    exp_x_15_U                                                                   | 1    | -    | yes    | exp_x_15                                                                    | ram_1p  | bram | 1       |
+|    exp_x_16_U                                                                   | 1    | -    | yes    | exp_x_16                                                                    | ram_1p  | bram | 1       |
+|    exp_x_17_U                                                                   | 1    | -    | yes    | exp_x_17                                                                    | ram_1p  | bram | 1       |
+|    exp_x_18_U                                                                   | 1    | -    | yes    | exp_x_18                                                                    | ram_1p  | bram | 1       |
+|    exp_x_19_U                                                                   | 1    | -    | yes    | exp_x_19                                                                    | ram_1p  | bram | 1       |
+|    exp_x_20_U                                                                   | 1    | -    | yes    | exp_x_20                                                                    | ram_1p  | bram | 1       |
+|    exp_x_21_U                                                                   | 1    | -    | yes    | exp_x_21                                                                    | ram_1p  | bram | 1       |
+|    exp_x_22_U                                                                   | 1    | -    | yes    | exp_x_22                                                                    | ram_1p  | bram | 1       |
+|    exp_x_23_U                                                                   | 1    | -    | yes    | exp_x_23                                                                    | ram_1p  | bram | 1       |
+|    exp_x_24_U                                                                   | 1    | -    | yes    | exp_x_24                                                                    | ram_1p  | bram | 1       |
+|    exp_x_25_U                                                                   | 1    | -    | yes    | exp_x_25                                                                    | ram_1p  | bram | 1       |
+|    exp_x_26_U                                                                   | 1    | -    | yes    | exp_x_26                                                                    | ram_1p  | bram | 1       |
+|    exp_x_27_U                                                                   | 1    | -    | yes    | exp_x_27                                                                    | ram_1p  | bram | 1       |
+|    exp_x_28_U                                                                   | 1    | -    | yes    | exp_x_28                                                                    | ram_1p  | bram | 1       |
+|    exp_x_29_U                                                                   | 1    | -    | yes    | exp_x_29                                                                    | ram_1p  | bram | 1       |
+|    exp_x_30_U                                                                   | 1    | -    | yes    | exp_x_30                                                                    | ram_1p  | bram | 1       |
+|    exp_x_31_U                                                                   | 1    | -    | yes    | exp_x_31                                                                    | ram_1p  | bram | 1       |
++---------------------------------------------------------------------------------+------+------+--------+-----------------------------------------------------------------------------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Ignored Pragmas
++------------+------------------------------------------+--------------------------------------------------------+-----------------------------------------------------------------------------------------+
+| Type       | Options                                  | Location                                               | Messages                                                                                |
++------------+------------------------------------------+--------------------------------------------------------+-----------------------------------------------------------------------------------------+
+| allocation | instances=fexp_32ns_32ns_32_8_full_dsp_1 | activation_accelerator.cpp:1242 in float_safe_softmax3 | unexpected pragma argument 'fexp_32ns_32ns_32_8_full_dsp_1', expects function/operation |
+| allocation | instances=hls                            | activation_accelerator.cpp:1244 in float_safe_softmax3 | unexpected pragma argument 'hls', expects function/operation                            |
+| allocation | instances=fadd                           | activation_accelerator.cpp:1247 in float_safe_softmax3 | unexpected pragma argument 'fadd', expects function/operation                           |
+| allocation | instances=fsub                           | activation_accelerator.cpp:1248 in float_safe_softmax3 | unexpected pragma argument 'fsub', expects function/operation                           |
+| allocation | instances=fdiv                           | activation_accelerator.cpp:1249 in float_safe_softmax3 | unexpected pragma argument 'fdiv', expects function/operation                           |
+| allocation | instances=fmul                           | activation_accelerator.cpp:1251 in float_safe_softmax3 | unexpected pragma argument 'fmul', expects function/operation                           |
++------------+------------------------------------------+--------------------------------------------------------+-----------------------------------------------------------------------------------------+
+
+* Pragmas with Warnings
++------------+----------------------------------+-------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
+| Type       | Options                          | Location                                                    | Messages                                                                                                                            |
++------------+----------------------------------+-------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
+| dependence | variable=partial_max inter false | activation_accelerator.cpp:1102 in row_max_hls, partial_max | Dependence pragma in loop 'row_unroll_loop' (activation_accelerator.cpp:1265:13) is removed because the loop is unrolled completely |
++------------+----------------------------------+-------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
+
+* Valid Pragma Syntax
++-----------------+--------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------+
+| Type            | Options                                                                                                | Location                                                          |
++-----------------+--------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------+
+| inline          | off                                                                                                    | ./bf16_accl.h:27 in bf16_to_f32                                   |
+| inline          | off                                                                                                    | ./bf16_accl.h:39 in f32_to_bf16_rne                               |
+| inline          | off                                                                                                    | ./bf16_accl.h:47 in bf16_to_float                                 |
+| inline          | off                                                                                                    | ./bf16_accl.h:57 in round_float32_to_bf16_ieee                    |
+| inline          | off                                                                                                    | ./bf16_accl.h:115 in bf16add_fast                                 |
+| inline          | off                                                                                                    | activation_accelerator.cpp:427 in float_silu2                     |
+| pipeline        | II=1                                                                                                   | activation_accelerator.cpp:433 in float_silu2                     |
+| unroll          |                                                                                                        | activation_accelerator.cpp:436 in float_silu2                     |
+| inline          | off                                                                                                    | activation_accelerator.cpp:539 in float_rms_norm3                 |
+| array_partition | variable=partial_sum_sq complete                                                                       | activation_accelerator.cpp:546 in float_rms_norm3, partial_sum_sq |
+| dependence      | variable=partial_sum_sq inter false                                                                    | activation_accelerator.cpp:547 in float_rms_norm3, partial_sum_sq |
+| unroll          |                                                                                                        | activation_accelerator.cpp:552 in float_rms_norm3                 |
+| pipeline        | II=1                                                                                                   | activation_accelerator.cpp:559 in float_rms_norm3                 |
+| unroll          |                                                                                                        | activation_accelerator.cpp:562 in float_rms_norm3                 |
+| unroll          |                                                                                                        | activation_accelerator.cpp:574 in float_rms_norm3                 |
+| pipeline        | II=1                                                                                                   | activation_accelerator.cpp:585 in float_rms_norm3                 |
+| unroll          |                                                                                                        | activation_accelerator.cpp:588 in float_rms_norm3                 |
+| inline          | off                                                                                                    | activation_accelerator.cpp:736 in float_layer_norm3               |
+| array_partition | variable=partial_sum complete                                                                          | activation_accelerator.cpp:743 in float_layer_norm3, partial_sum  |
+| dependence      | variable=partial_sum inter false                                                                       | activation_accelerator.cpp:744 in float_layer_norm3, partial_sum  |
+| unroll          |                                                                                                        | activation_accelerator.cpp:749 in float_layer_norm3               |
+| pipeline        | II=1                                                                                                   | activation_accelerator.cpp:756 in float_layer_norm3               |
+| unroll          |                                                                                                        | activation_accelerator.cpp:759 in float_layer_norm3               |
+| unroll          |                                                                                                        | activation_accelerator.cpp:771 in float_layer_norm3               |
+| array_partition | variable=partial_var complete                                                                          | activation_accelerator.cpp:779 in float_layer_norm3, partial_var  |
+| dependence      | variable=partial_var inter false                                                                       | activation_accelerator.cpp:780 in float_layer_norm3, partial_var  |
+| unroll          |                                                                                                        | activation_accelerator.cpp:785 in float_layer_norm3               |
+| pipeline        | II=1                                                                                                   | activation_accelerator.cpp:792 in float_layer_norm3               |
+| unroll          |                                                                                                        | activation_accelerator.cpp:795 in float_layer_norm3               |
+| unroll          |                                                                                                        | activation_accelerator.cpp:808 in float_layer_norm3               |
+| pipeline        | II=1                                                                                                   | activation_accelerator.cpp:818 in float_layer_norm3               |
+| unroll          |                                                                                                        | activation_accelerator.cpp:821 in float_layer_norm3               |
+| inline          | off                                                                                                    | activation_accelerator.cpp:871 in float_gelu2                     |
+| pipeline        | II=1                                                                                                   | activation_accelerator.cpp:882 in float_gelu2                     |
+| unroll          |                                                                                                        | activation_accelerator.cpp:885 in float_gelu2                     |
+| inline          | off                                                                                                    | activation_accelerator.cpp:912 in float_add2                      |
+| pipeline        | II=1                                                                                                   | activation_accelerator.cpp:918 in float_add2                      |
+| unroll          |                                                                                                        | activation_accelerator.cpp:921 in float_add2                      |
+| inline          |                                                                                                        | activation_accelerator.cpp:1099 in row_max_hls                    |
+| array_partition | variable=partial_max complete                                                                          | activation_accelerator.cpp:1101 in row_max_hls, partial_max       |
+| unroll          |                                                                                                        | activation_accelerator.cpp:1107 in row_max_hls                    |
+| pipeline        | II=1                                                                                                   | activation_accelerator.cpp:1114 in row_max_hls                    |
+| array_partition | variable=blk complete                                                                                  | activation_accelerator.cpp:1116 in row_max_hls, blk               |
+| unroll          |                                                                                                        | activation_accelerator.cpp:1120 in row_max_hls                    |
+| unroll          |                                                                                                        | activation_accelerator.cpp:1128 in row_max_hls                    |
+| unroll          |                                                                                                        | activation_accelerator.cpp:1140 in row_max_hls                    |
+| inline          |                                                                                                        | activation_accelerator.cpp:1154 in row_exp_bucket_sum             |
+| array_partition | variable=partial complete                                                                              | activation_accelerator.cpp:1156 in row_exp_bucket_sum, partial    |
+| unroll          |                                                                                                        | activation_accelerator.cpp:1161 in row_exp_bucket_sum             |
+| pipeline        | II=1                                                                                                   | activation_accelerator.cpp:1168 in row_exp_bucket_sum             |
+| array_partition | variable=e complete                                                                                    | activation_accelerator.cpp:1170 in row_exp_bucket_sum, e          |
+| unroll          |                                                                                                        | activation_accelerator.cpp:1175 in row_exp_bucket_sum             |
+| unroll          |                                                                                                        | activation_accelerator.cpp:1196 in row_exp_bucket_sum             |
+| inline          |                                                                                                        | activation_accelerator.cpp:1210 in row_norm_store_hls             |
+| pipeline        | II=1                                                                                                   | activation_accelerator.cpp:1213 in row_norm_store_hls             |
+| unroll          |                                                                                                        | activation_accelerator.cpp:1216 in row_norm_store_hls             |
+| bind_storage    | variable=exp_x type=ram_1p impl=bram                                                                   | activation_accelerator.cpp:1236 in float_safe_softmax3, exp_x     |
+| dependence      | variable=exp_x inter false                                                                             | activation_accelerator.cpp:1237 in float_safe_softmax3, exp_x     |
+| array_partition | variable=exp_x cyclic factor=UF dim=2                                                                  | activation_accelerator.cpp:1238 in float_safe_softmax3, exp_x     |
+| unroll          |                                                                                                        | activation_accelerator.cpp:1266 in float_safe_softmax3            |
+| inline          | off                                                                                                    | activation_accelerator.cpp:1306 in float_multiply2                |
+| pipeline        | II=1                                                                                                   | activation_accelerator.cpp:1312 in float_multiply2                |
+| unroll          |                                                                                                        | activation_accelerator.cpp:1315 in float_multiply2                |
+| interface       | m_axi port=in0 offset=slave bundle=gmem0 max_read_burst_length=256 num_read_outstanding=64 depth=49152 | activation_accelerator.cpp:1351 in activation_accelerator, in0    |
+| interface       | m_axi port=in1 offset=slave bundle=gmem1 max_read_burst_length=256 num_read_outstanding=64 depth=49152 | activation_accelerator.cpp:1352 in activation_accelerator, in1    |
+| interface       | m_axi port=out offset=slave bundle=gmem2 max_read_burst_length=256 num_read_outstanding=64 depth=49152 | activation_accelerator.cpp:1353 in activation_accelerator, out    |
+| interface       | s_axilite port=stage                                                                                   | activation_accelerator.cpp:1354 in activation_accelerator, stage  |
+| interface       | s_axilite port=config                                                                                  | activation_accelerator.cpp:1355 in activation_accelerator, config |
+| interface       | s_axilite port=return                                                                                  | activation_accelerator.cpp:1356 in activation_accelerator, return |
++-----------------+--------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------+
+
+* Inferred Pragmas
++------------------------------------------+-----------------+----------------------------------------+--------------------------------------+
+| Source Pragma                            | Inferred Pragma | Options                                | Location                             |
++------------------------------------------+-----------------+----------------------------------------+--------------------------------------+
+| pipeline activation_accelerator.cpp:1168 | array_partition | dim=1 type=cyclic factor=16 variable=x | variable x in activation_accelerator |
++------------------------------------------+-----------------+----------------------------------------+--------------------------------------+
+
+
