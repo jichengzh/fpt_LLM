@@ -99,7 +99,7 @@ bool run_test(int config, uint16* in0, uint16* in1, uint16* out, uint16* golden_
 }
 
 std::string get_data_path() {
-    std::string rel_path = "/data1/jdn/fpt_LLM/prj/testvector_example/bf16_vectors/";
+    std::string rel_path = "/home/xushaohui/FPT/fpt_LLM/prj/testvector_example/bf16_vectors3/";
     std::string test_file = rel_path + "X_test_tensor_bf16.bin";
     std::ifstream f(test_file.c_str());
     if (f.good()) {
@@ -159,9 +159,12 @@ int main() {
     activation_accelerator(in0, in1, out, stage, 0);
     std::cout << "Data transfer complete" << std::endl;
 
-    // Main loop for all configs
+
+//修改文件使得仅计算一个函数
+
+    // Main loop for all configs Stage 1 + Stage 2
     double total_time = 0.0;
-    for (int config = 0; config < 7; ++config) {
+    for (int config = 0; config < 2; ++config) {
         // Stage 1: Compute
         stage = STAGE_COMPUTE;
         std::cout << "\n--- Testing Config " << config << " ---" << std::endl;

@@ -15,11 +15,6 @@
 */
 
 
-
-
-
-
-
 // bf16 bitwise addition function implementation
 uint16 bf16add(uint16 a_bits, uint16 b_bits) {
     // Extract sign, exponent, and mantissa
@@ -157,6 +152,168 @@ void float_sigmoid(const float* x, uint16* y, int len) {
     }
 } */
 
+uint16_t round_float32_to_bf16_ieee(float x_in) {
+    uint32_t fbits = *reinterpret_cast<uint32_t*>(&x_in);
+
+    // static_assert(sizeof(float) == 4, "This code assumes 32-bit float");
+    // std::memcpy(&fbits, &x_in, sizeof(fbits));
+
+    const uint32_t LOW16_MASK = 0xFFFFu;
+    uint32_t upper = fbits >> 16;        // 高 16 位（将成为 bfloat16 的位模式）
+    uint32_t lower = fbits & LOW16_MASK; // 低 16 位（被丢弃部分）
+
+    uint32_t exp_field = (fbits >> 23) & 0xFFu;
+
+    // 如果是 Inf 或 NaN，直接返回高 16 位（保留 NaN/Inf 表示）
+    if (exp_field == 0xFFu) {
+        uint16_t ret = static_cast<uint16_t>(upper);
+        // 如果原始是 NaN（mantissa != 0），但高 7 位恰好被截掉为 0，
+        // 为确保返回值仍为 NaN（而不是正负无穷），至少保留一个非零位。
+        uint32_t full_mant = fbits & 0x7FFFFFu;
+        if (full_mant != 0 && (ret & 0x7Fu) == 0) {
+            ret |= 1u; // 保留最小 payload 位（使其成为 NaN）
+        }
+        return ret;
+    }
+
+    // round-to-nearest-even: 比较被丢弃的低 16 位和 0x8000
+    // lower > 0x8000 -> round up
+    // lower < 0x8000 -> round down
+    // lower == 0x8000 -> tie -> round to even (看 upper 的最低位)
+    const uint32_t HALF = 0x8000u; // 1 << 15
+    bool round_up = false;
+    if (lower > HALF) {
+        round_up = true;
+    } else if (lower < HALF) {
+        round_up = false;
+    } else { // lower == HALF: tie
+        if (upper & 1u) { // 如果当前保留位的最低位为 1（奇数），则进位成偶数
+            round_up = true;
+        }
+    }
+
+    uint32_t rounded = upper + (round_up ? 1u : 0u);
+
+    // 检查进位是否造成指数变为全 1（溢出 -> ±Inf），若是则清零尾数
+    uint32_t new_exp = (rounded >> 7) & 0xFFu;
+    uint32_t sign = (rounded >> 15) & 0x1u;
+    if (new_exp == 0xFFu) {
+        uint16_t res = static_cast<uint16_t>((sign << 15) | (0xFFu << 7));
+        return res;
+    }
+
+    return static_cast<uint16_t>(rounded & 0xFFFFu);
+}
+
+//求平方和平均值的算法,仅注释有依赖的展开
+
+void square(const float* x, float* y_sum_sq, int len){
+#pragma HLS INLINE off
+    const int col_len = 64;   //向量数
+    const int row_len = len / col_len;
+
+sum_square:
+    for (int i = 0; i < row_len; ++i) {
+// #pragma HLS PIPELINE II = 1 
+    sum_inner_square:
+        for (int j = 0; j < col_len; ++j) {
+#pragma HLS UNROLL
+            int idx = i + j * row_len;
+            y_sum_sq[j] += x[idx] * x[idx] / row_len;
+        }
+    }
+}//属于函数的括号
+
+
+//已经验证的正常函数
+// //求平方和平均值的算法,仅注释有依赖的展开
+// void square(const float* x, float* y_sum_sq, int len){
+// #pragma HLS INLINE off
+//     const int UF = 32;   //展开参数
+//     const int col_len = 64;   //向量数
+//     const int row_len = len / col_len;
+
+// // 局部累加器数组（保存32路并行部分和）
+//     float partial_sum_sq[UF];
+//     float partial_sum_sq_temp[UF];
+
+// // 完全分区：让数组的每个元素都能独立访问（并行计算）
+// // dim=1 表示按第一个维度（即普通一维数组）分区
+// #pragma HLS ARRAY_PARTITION variable=partial_sum_sq complete dim=1
+// #pragma HLS ARRAY_PARTITION variable=partial_sum_sq_temp complete dim=1
+
+
+// // 告诉 HLS：不同循环迭代间，这些数组没有数据依赖（inter-loop independence）
+// #pragma HLS DEPENDENCE variable=partial_sum_sq inter false
+// #pragma HLS DEPENDENCE variable=partial_sum_sq_temp inter false
+
+//     // 初始化累加器和目录器
+// init_partial_sum_sq_square:
+//     for (int m = 0; m < UF; ++m) {
+// //#pragma HLS UNROLL factor = 32//由于内存写入限制，无法达到同时写入32，最多达到2，使用命令分区储存数组
+// #pragma HLS UNROLL factor = 32
+//         partial_sum_sq[m] = 0.f;
+//         partial_sum_sq_temp[m] = 0.f;
+//     }
+
+//     sum_square:
+//     for (int i = 0; i < col_len; ++i) {
+
+// // 第一部分，针对某一列，计算每列的平方和并存在32个桶中。
+//         sum_per_row_square:      
+//         for (int j = 0; j < row_len; j += UF) { 
+// #pragma HLS PIPELINE II = 1        
+//             compute_square:
+//             for (int u = 0; u < UF; ++u) {
+// #pragma HLS UNROLL
+//                 int idx = i * col_len + j + u;
+//                 partial_sum_sq_temp[u] = x[idx] * x[idx];
+//             }
+//             bucket_add_square:
+//             for (int l = 0; l < UF; ++l) {
+// #pragma HLS UNROLL
+// //注意此处每个for循环都是对不同的桶做加法，针对UF个桶，每个循环32个桶都做一个加法，l变化32次
+//                 partial_sum_sq[l] += partial_sum_sq_temp[l];
+//             }
+//         }
+
+// //第二部分，将每列的平方和累加起来
+//         y_add_square:
+//         for (int k = 0; k < UF; ++k) {
+// #pragma HLS PIPELINE II = 1
+//             y_sum_sq[i] += partial_sum_sq[k];
+//             partial_sum_sq[k] = 0;
+//         }
+//     y_sum_sq[i] = y_sum_sq[i]/row_len;
+//     }
+// }//属于函数的括号
+
+// //第二部分，将每列的平方和累加起来
+//         y_add_square:
+//         for (int k = 0; k < UF; ++k) {
+// // #pragma HLS PIPELINE II = 1
+//         y_add_square_8:  
+//             for (int n = 0; n < 8; ++n) {
+// // #pragma HLS UNROLL
+// #pragma HLS PIPELINE II = 1
+//                 int base1 = n * 4;
+//                 partial_sum_sq_temp[base1] = partial_sum_sq[base1] + partial_sum_sq[base1+1] + partial_sum_sq[base1+2] + partial_sum_sq[base1+3];
+//                 partial_sum_sq[base1] = 0;
+//                 partial_sum_sq[base1+1] = 0;
+//                 partial_sum_sq[base1+2] = 0;
+//                 partial_sum_sq[base1+3] = 0;
+//             }
+//         y_add_square_leijia: 
+//             for (int o = 0; o < 8; ++o) {
+// #pragma HLS PIPELINE II = 1
+//                 int base2 = o * 4;
+//                 y_sum_sq[i] += partial_sum_sq_temp[base2];
+//             }
+//         y_sum_sq[i] = y_sum_sq[i]/row_len;
+//         }
+        
+
+
 // silu
 void float_silu(const float* x, uint16* y, int len) {
     silu_loop:
@@ -279,66 +436,53 @@ void float_rms_norm2(const float* x, uint16* y_bf16, int len) {
         }
     }
 }
+
+//rms_norm config = 5
 void float_rms_norm3(const float* x, uint16* y_bf16, int len) {
-#pragma HLS INLINE off
-    const int UF = 32;    // 增加展开因子
-    const int ACC = 32;   // 增加累加器数量
+    const int col_len = 64;    // 平方和序列长度
+    const int row_len = len/col_len;
     const float eps = 1e-6f;
 
-    // -------- 1) 计算平方和：激进的分块累加 --------
-    float partial_sum_sq[ACC];
-#pragma HLS ARRAY_PARTITION variable=partial_sum_sq complete
-#pragma HLS DEPENDENCE variable=partial_sum_sq inter false
+    float y_sum_sq[col_len];// 初始化平方和平均值序列
+    float rms_sq[col_len];// 初始化rms序列
 
-    // 初始化累加器
-init_partial_sum_sq:
-    for (int k = 0; k < ACC; ++k) {
+#pragma HLS ARRAY_PARTITION variable=y_sum_sq complete
+#pragma HLS DEPENDENCE variable=y_sum_sq inter false
+#pragma HLS ARRAY_PARTITION variable=rms_sq complete
+#pragma HLS DEPENDENCE variable=rms_sq inter false
+
+//初始化赋值
+init_y_sum_and_rms_sq:
+    for (int k = 0; k < col_len; ++k) {
 #pragma HLS UNROLL
-        partial_sum_sq[k] = 0.f;
+        y_sum_sq[k] = 0.f;
+        rms_sq[k] = 0.f;
     }
 
-    // 平方和计算 - 完全流水线并行
-sum_sq_blocks:
-    for (int i = 0; i < len; i += UF) {
-#pragma HLS PIPELINE II=1
-    sum_sq_inner:
-        for (int u = 0; u < UF; ++u) {
-#pragma HLS UNROLL
-            int idx = i + u;
-            if (idx < len) {
-                partial_sum_sq[idx % ACC] += x[idx] * x[idx];
-            }
-        }
-    }
+    square(x, y_sum_sq, len);
 
-    // 桶规约得到平方和
-    float sum_sq = 0.f;
-reduce_partial_sum_sq:
-    for (int k = 0; k < ACC; ++k) {
+rms_calculate_loop_rms_norm3:
+    for (int k = 0; k < col_len; ++k) {
 #pragma HLS UNROLL
-        sum_sq += partial_sum_sq[k];
-    }
-
-    // -------- 2) 计算 RMS 值 --------
-    float mean_sq = sum_sq / len;
-    float rms = hls::sqrtf(mean_sq + eps);
+        rms_sq[k] = hls::sqrtf(y_sum_sq[k] + eps);
+    } 
 
     // -------- 3) 归一化并转 bfloat16 --------
-normalize_blocks:
-    for (int i = 0; i < len; i += UF) {
-#pragma HLS PIPELINE II=1
-    normalize_inner:
-        for (int u = 0; u < UF; ++u) {
+normalize_blocks_rms_norm3:
+    for (int i = 0; i < row_len; ++i) {
+// #pragma HLS PIPELINE II=1
+    normalize_inner_rms_norm3:
+        for (int u = 0; u < col_len; ++u) {
 #pragma HLS UNROLL
-            int idx = i + u;
-            if (idx < len) {
-                float y = x[idx] / rms;
-                uint32_t* y_f32_ptr = (uint32_t*)&y;
-                y_bf16[idx] = (uint16)((*y_f32_ptr) >> 16);
-            }
+            int idx = u * row_len + i;
+            float y = x[idx] / rms_sq[u];
+            y_bf16[idx] = round_float32_to_bf16_ieee(y);
         }
     }
 }
+
+
+
 
 // layer_norm
 void float_layer_norm(const float* x, uint16* y_bf16, int len) {
@@ -364,6 +508,8 @@ void float_layer_norm(const float* x, uint16* y_bf16, int len) {
         y_bf16[i] = (*y_f32_ptr) >> 16;
     }
 }
+
+
 void float_layer_norm2(const float* x, uint16* y_bf16, int len) {
 #pragma HLS INLINE off
     const int UF = 32;    // 展开因子
@@ -476,102 +622,128 @@ void float_layer_norm2(const float* x, uint16* y_bf16, int len) {
         }
     }
 }
+
+
+//layer_norm config=5,暂时完全注释HLS命令
 void float_layer_norm3(const float* x, uint16* y_bf16, int len) {
 #pragma HLS INLINE off
-    const int UF = 32;    // 增加展开因子
-    const int ACC = 32;   // 增加累加器数量
+    const int UF = 32;
+    const int col_len = 64;    // 平方和序列长度
+    const int row_len = len/col_len;
     const float eps = 1e-6f;
 
-    // -------- 1) 计算均值：更激进的分块累加 --------
-    float partial_sum[ACC];
-#pragma HLS ARRAY_PARTITION variable=partial_sum complete
-#pragma HLS DEPENDENCE variable=partial_sum inter false
+    //分两个数组
+    float partial_mean[col_len];    
+    float y_sum_sq[col_len];
 
-    // 初始化累加器
-init_partial_sum:
-    for (int k = 0; k < ACC; ++k) {
+#pragma HLS ARRAY_PARTITION variable=partial_mean complete
+#pragma HLS ARRAY_PARTITION variable=y_sum_sq complete
+
+#pragma HLS DEPENDENCE variable=partial_mean inter false
+#pragma HLS DEPENDENCE variable=y_sum_sq inter false
+
+
+    // 初始化平均值序列，方差序列，检查去除这里的unroll的资源节省
+init_partial_layernorm:
+    for (int k = 0; k < col_len; ++k) {
 #pragma HLS UNROLL
-        partial_sum[k] = 0.f;
+        partial_mean[k] = 0.f;
+        y_sum_sq[k] = 0.f;
     }
 
-    // 均值计算 - 完全流水线并行
-sum_blocks:
-    for (int i = 0; i < len; i += UF) {
-#pragma HLS PIPELINE II=1
-    sum_inner:
-        for (int u = 0; u < UF; ++u) {
+//平方和平均值计算
+    square(x, y_sum_sq, len);
+
+// 均值计算 - 完全流水线并行。
+mean_blocks_layer_norm3:
+    for (int i = 0; i < row_len; ++i) {
+    mean_inner_layer_norm3:
+        for (int j = 0; j < col_len; ++j) {
 #pragma HLS UNROLL
-            int idx = i + u;
-            if (idx < len) {
-                partial_sum[idx % ACC] += x[idx];
-            }
+            int idx = i + j * row_len;
+            partial_mean[j] += x[idx] / row_len;
         }
     }
 
-    // 桶规约得到总和
-    float sum = 0.f;
-reduce_partial_sum:
-    for (int k = 0; k < ACC; ++k) {
+//标准差计算循环
+std_blocks_layer_norm3:  
+    for (int i = 0; i < col_len; ++i) {
 #pragma HLS UNROLL
-        sum += partial_sum[k];
+            y_sum_sq[i] = hls::sqrtf(y_sum_sq[i] - partial_mean[i] * partial_mean[i]  + eps);
     }
-
-    float mean = sum / len;
-
-    // -------- 2) 计算方差：同样激进的分块策略 --------
-    float partial_var[ACC];
-#pragma HLS ARRAY_PARTITION variable=partial_var complete
-#pragma HLS DEPENDENCE variable=partial_var inter false
-
-    // 初始化方差累加器
-init_partial_var:
-    for (int k = 0; k < ACC; ++k) {
-#pragma HLS UNROLL
-        partial_var[k] = 0.f;
-    }
-
-    // 方差计算 - 完全流水线并行
-var_blocks:
-    for (int i = 0; i < len; i += UF) {
-#pragma HLS PIPELINE II=1
-    var_inner:
-        for (int u = 0; u < UF; ++u) {
-#pragma HLS UNROLL
-            int idx = i + u;
-            if (idx < len) {
-                float diff = x[idx] - mean;
-                partial_var[idx % ACC] += diff * diff;
-            }
-        }
-    }
-
-    // 桶规约得到方差总和
-    float var_sum = 0.f;
-reduce_partial_var:
-    for (int k = 0; k < ACC; ++k) {
-#pragma HLS UNROLL
-        var_sum += partial_var[k];
-    }
-
-    float var = var_sum / len;
-    float stddev = hls::sqrtf(var + eps);
 
     // -------- 3) 归一化并转 bfloat16 --------
-normalize_blocks:
-    for (int i = 0; i < len; i += UF) {
-#pragma HLS PIPELINE II=1
-    normalize_inner:
-        for (int u = 0; u < UF; ++u) {
+normalize_blocks_layer_norm3:
+    for (int i = 0; i < row_len; ++i) {
+    normalize_inner_layer_norm3:
+        for (int u = 0; u < col_len; ++u) {
 #pragma HLS UNROLL
-            int idx = i + u;
-            if (idx < len) {
-                float y = (x[idx] - mean) / stddev;
-                uint32_t* y_f32_ptr = (uint32_t*)&y;
-                y_bf16[idx] = (uint16)((*y_f32_ptr) >> 16);
-            }
+            int idx = i + u * row_len;
+            float y = (x[idx] - partial_mean[u]) /  y_sum_sq[u];
+            y_bf16[idx] = round_float32_to_bf16_ieee(y);
         }
     }
 }
+
+// // 均值计算 - 完全流水线并行。外圈可并行部分，分为32路，内圈加法计算循环不并行
+// mean_blocks_layer_norm3:
+//     for (int i = 0; i < col_len; ++i) {
+//     mean_inner_layer_norm3:
+// //第一步，32个筐并行计算
+//         for (int j = 0; j < row_len; j += UF) { 
+// // #pragma HLS PIPELINE II = 1        
+//         bucket_add_mean_layer_norm3:
+//             for (int l = 0; l < UF; ++l) {
+// #pragma HLS UNROLL
+//                 int idx = i * row_len + j + l;
+//                 mean_bucket[l] += x[idx];
+//             }
+//         }
+// //第二步，32个框累加
+//     partial_mean_layer_norm3:
+//         for (int u = 0; u < UF; ++u) {
+// #pragma HLS PIPELINE II = 1 
+//             partial_mean[i] += mean_bucket[u];
+//             mean_bucket[u] = 0;
+//         }
+//         partial_mean[i] = partial_mean[i] / row_len;
+//     }
+
+
+
+// normalize_blocks_layer_norm3:
+//     for (int i = 0; i < col_len; ++i){
+//         int ix = i * row_len;
+// // #pragma HLS PIPELINE II=1
+//     normalize_inner_1_layer_norm3:
+//         for (int j = 0; j < row_len; j = j + UF) {
+//             int jx = ix + j;
+//         normalize_inner_2_layer_norm3:
+//             for (int k = 0; k < UF; ++k) {
+// #pragma HLS pipeline II = 1          
+//                 // int idx = ;怀疑设置中间变量拖慢计算，无法多次读取
+//                 mean_bucket[k] = x[jx + k];
+//             }
+//         normalize_inner_3_layer_norm3:
+//             for (int u = 0; u < UF; ++u) {
+// #pragma HLS UNROLL
+//                 mean_bucket2[u] = (mean_bucket[u] - partial_mean[i]) /  y_sum_sq[i];
+//             }
+//         normalize_inner_4_layer_norm3:
+//             for (int l = 0; l < UF; ++l) {
+// #pragma HLS pipeline II = 1
+//                 y_bf16[jx + l] = round_float32_to_bf16_ieee(mean_bucket2[l]);
+//             }
+//         }
+//     }
+   
+
+    
+
+
+
+
+
 
 //雷神之锤求平方根倒数
 float Q_rsqrt(float number)
@@ -879,7 +1051,15 @@ void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, 
     static uint16 buf1[64*768];
     static uint16 buf2[64*768];
     float x[64*768], y[64*768];
-    
+
+#pragma HLS ARRAY_PARTITION variable=x block factor = 64 //拆分数组为64块
+#pragma HLS DEPENDENCE variable=x inter false
+#pragma HLS ARRAY_PARTITION variable=buf2 block factor = 64 //拆分数组为64块
+#pragma HLS DEPENDENCE variable=buf2 inter false
+
+//限制复用次数，square函数设置为单一模块
+#pragma HLS ALLOCATION instances=square limit=1 function
+
     if(stage == 0) { // Stage 0: Load data from PS to PL
         for(int i = 0; i <64*768 ; i++) {
             buf0[i] = in0[i];
@@ -888,47 +1068,49 @@ void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, 
             buf1[i] = in1[i];
         }
     }
-    
+
+  //修改两个config，把需要计算的函数改为0
+
     if(stage == 1) { // Stage 1: Compute
-        if(config == 0) { // Element-wise addition
-            bf16_to_float(buf0, x, 64*768);
-            bf16_to_float(buf1, y, 64*768);
-            float_add2(x, y, buf2, 64*768);
-            for(int i = 0; i < 64*768; i++) {
-#pragma HLS PIPELINE II=1
-                buf2[i] = bf16add(buf0[i], buf1[i]);
-            }
-        }
-        else if(config == 1) { // safe softmax
-            bf16_to_float(buf0, x, 64*768);
-            float_safe_softmax2(x, buf2, 64*768);
-//             for(int i = 0; i < ; i++) {
+//         if(config == 10) { // Element-wise addition
+//             bf16_to_float(buf0, x, 64*768);
+//             bf16_to_float(buf1, y, 64*768);
+//             float_add2(x, y, buf2, 64*768);
+//             for(int i = 0; i < 64*768; i++) {
+// #pragma HLS PIPELINE II=1
+//                 buf2[i] = bf16add(buf0[i], buf1[i]);
+//             }
+//         }
+//         else if(config == 1) { // safe softmax
+//             bf16_to_float(buf0, x, 64*768);
+//             float_safe_softmax2(x, buf2, 64*768);
+// //             for(int i = 0; i < ; i++) {
+// // #pragma HLS PIPELINE II=1
+// //                 buf2[i] = 0;
+// //             }
+//         }
+//         else if(config == 2) { // float_Multiply
+//             bf16_to_float(buf0, x, 64*768);
+//             bf16_to_float(buf1, y, 64*768);
+//             float_Multiply2(x, y, buf2, 64*768);
+// /*             for(int i = 0; i <64*768 ; i++) {
 // #pragma HLS PIPELINE II=1
 //                 buf2[i] = 0;
-//             }
-        }
-        else if(config == 2) { // float_Multiply
-            bf16_to_float(buf0, x, 64*768);
-            bf16_to_float(buf1, y, 64*768);
-            float_Multiply2(x, y, buf2, 64*768);
-/*             for(int i = 0; i <64*768 ; i++) {
-#pragma HLS PIPELINE II=1
-                buf2[i] = 0;
-            } */
-        }
-        else if(config == 3) { // Gelu
-            bf16_to_float(buf0, x, 64*768);
-            float_gelu2(x, buf2, 64*768);
-        }
-        else if(config == 4) { // SiLU
-            bf16_to_float(buf0, x, 64*768);
-            float_silu2(x, buf2, 64*768);
-        }
-        else if(config == 5) { // RMS normalization
+//             } */
+//         }
+//         else if(config == 3) { // Gelu
+//             bf16_to_float(buf0, x, 64*768);
+//             float_gelu2(x, buf2, 64*768);
+//         }
+//         else if(config == 4) { // SiLU
+//             bf16_to_float(buf0, x, 64*768);
+//             float_silu2(x, buf2, 64*768);
+//         }
+        if(config == 0) { // RMS normalization
             bf16_to_float(buf0, x, 64*768);
             float_rms_norm3(x, buf2, 64*768);
         }
-        else if(config == 6) { // Layer normalization
+        else if(config == 1) { // Layer normalization
             bf16_to_float(buf0, x, 64*768);
             float_layer_norm3(x, buf2, 64*768);
         }
