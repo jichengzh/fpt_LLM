@@ -1,0 +1,186 @@
+
+
+================================================================
+== Vitis HLS Report for 'float_safe_softmax3_Pipeline_reduce_partial'
+================================================================
+* Date:           Fri Oct 17 22:20:58 2025
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        activation_accelerator
+* Solution:       baseline (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.226 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       98|       98|  0.980 us|  0.980 us|   98|   98|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                  |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name    |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- reduce_partial  |       96|       96|         4|          3|          1|    32|       yes|
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      25|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       0|     148|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      83|    -|
+|Register         |        -|     -|      44|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|      44|     256|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      288|  1248|  234240|  117120|   64|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------+----------------+---------+----+---+-----+-----+
+    |       Instance      |     Module     | BRAM_18K| DSP| FF| LUT | URAM|
+    +---------------------+----------------+---------+----+---+-----+-----+
+    |mux_325_32_1_1_U490  |mux_325_32_1_1  |        0|   0|  0|  148|    0|
+    +---------------------+----------------+---------+----+---+-----+-----+
+    |Total                |                |        0|   0|  0|  148|    0|
+    +---------------------+----------------+---------+----+---+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |add_ln1188_fu_328_p2   |         +|   0|  0|  13|           6|           1|
+    |icmp_ln1188_fu_322_p2  |      icmp|   0|  0|  10|           6|           7|
+    |ap_enable_pp0          |       xor|   0|  0|   2|           1|           2|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |Total                  |          |   0|  0|  25|          13|          10|
+    +-----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------+----+-----------+-----+-----------+
+    |             Name            | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                    |  20|          4|    1|          4|
+    |ap_done_int                  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter0      |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter0_reg  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1      |   9|          2|    1|          2|
+    |ap_sig_allocacmp_sum_load    |   9|          2|   32|         64|
+    |k_fu_102                     |   9|          2|    6|         12|
+    |sum_fu_98                    |   9|          2|   32|         64|
+    +-----------------------------+----+-----------+-----+-----------+
+    |Total                        |  83|         18|   75|        152|
+    +-----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------+----+----+-----+-----------+
+    |             Name            | FF | LUT| Bits| Const Bits|
+    +-----------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                    |   3|   0|    3|          0|
+    |ap_done_reg                  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0_reg  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1      |   1|   0|    1|          0|
+    |k_fu_102                     |   6|   0|    6|          0|
+    |sum_fu_98                    |  32|   0|   32|          0|
+    +-----------------------------+----+----+-----+-----------+
+    |Total                        |  44|   0|   44|          0|
+    +-----------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+---------------------------------------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  |                Source Object                |    C Type    |
++----------------------+-----+-----+------------+---------------------------------------------+--------------+
+|ap_clk                |   in|    1|  ap_ctrl_hs|  float_safe_softmax3_Pipeline_reduce_partial|  return value|
+|ap_rst                |   in|    1|  ap_ctrl_hs|  float_safe_softmax3_Pipeline_reduce_partial|  return value|
+|ap_start              |   in|    1|  ap_ctrl_hs|  float_safe_softmax3_Pipeline_reduce_partial|  return value|
+|ap_done               |  out|    1|  ap_ctrl_hs|  float_safe_softmax3_Pipeline_reduce_partial|  return value|
+|ap_idle               |  out|    1|  ap_ctrl_hs|  float_safe_softmax3_Pipeline_reduce_partial|  return value|
+|ap_ready              |  out|    1|  ap_ctrl_hs|  float_safe_softmax3_Pipeline_reduce_partial|  return value|
+|grp_fu_3102_p_din0    |  out|   32|  ap_ctrl_hs|  float_safe_softmax3_Pipeline_reduce_partial|  return value|
+|grp_fu_3102_p_din1    |  out|   32|  ap_ctrl_hs|  float_safe_softmax3_Pipeline_reduce_partial|  return value|
+|grp_fu_3102_p_opcode  |  out|    1|  ap_ctrl_hs|  float_safe_softmax3_Pipeline_reduce_partial|  return value|
+|grp_fu_3102_p_dout0   |   in|   32|  ap_ctrl_hs|  float_safe_softmax3_Pipeline_reduce_partial|  return value|
+|grp_fu_3102_p_ce      |  out|    1|  ap_ctrl_hs|  float_safe_softmax3_Pipeline_reduce_partial|  return value|
+|add33_i85_reload      |   in|   32|     ap_none|                             add33_i85_reload|        scalar|
+|add33_i_187_reload    |   in|   32|     ap_none|                           add33_i_187_reload|        scalar|
+|add33_i_289_reload    |   in|   32|     ap_none|                           add33_i_289_reload|        scalar|
+|add33_i_391_reload    |   in|   32|     ap_none|                           add33_i_391_reload|        scalar|
+|add33_i_493_reload    |   in|   32|     ap_none|                           add33_i_493_reload|        scalar|
+|add33_i_595_reload    |   in|   32|     ap_none|                           add33_i_595_reload|        scalar|
+|add33_i_697_reload    |   in|   32|     ap_none|                           add33_i_697_reload|        scalar|
+|add33_i_799_reload    |   in|   32|     ap_none|                           add33_i_799_reload|        scalar|
+|add33_i_8101_reload   |   in|   32|     ap_none|                          add33_i_8101_reload|        scalar|
+|add33_i_9103_reload   |   in|   32|     ap_none|                          add33_i_9103_reload|        scalar|
+|add33_i_10105_reload  |   in|   32|     ap_none|                         add33_i_10105_reload|        scalar|
+|add33_i_11107_reload  |   in|   32|     ap_none|                         add33_i_11107_reload|        scalar|
+|add33_i_12109_reload  |   in|   32|     ap_none|                         add33_i_12109_reload|        scalar|
+|add33_i_13111_reload  |   in|   32|     ap_none|                         add33_i_13111_reload|        scalar|
+|add33_i_14113_reload  |   in|   32|     ap_none|                         add33_i_14113_reload|        scalar|
+|add33_i_15115_reload  |   in|   32|     ap_none|                         add33_i_15115_reload|        scalar|
+|add33_i_16117_reload  |   in|   32|     ap_none|                         add33_i_16117_reload|        scalar|
+|add33_i_17119_reload  |   in|   32|     ap_none|                         add33_i_17119_reload|        scalar|
+|add33_i_18121_reload  |   in|   32|     ap_none|                         add33_i_18121_reload|        scalar|
+|add33_i_19123_reload  |   in|   32|     ap_none|                         add33_i_19123_reload|        scalar|
+|add33_i_20125_reload  |   in|   32|     ap_none|                         add33_i_20125_reload|        scalar|
+|add33_i_21127_reload  |   in|   32|     ap_none|                         add33_i_21127_reload|        scalar|
+|add33_i_22129_reload  |   in|   32|     ap_none|                         add33_i_22129_reload|        scalar|
+|add33_i_23131_reload  |   in|   32|     ap_none|                         add33_i_23131_reload|        scalar|
+|add33_i_24133_reload  |   in|   32|     ap_none|                         add33_i_24133_reload|        scalar|
+|add33_i_25135_reload  |   in|   32|     ap_none|                         add33_i_25135_reload|        scalar|
+|add33_i_26137_reload  |   in|   32|     ap_none|                         add33_i_26137_reload|        scalar|
+|add33_i_27139_reload  |   in|   32|     ap_none|                         add33_i_27139_reload|        scalar|
+|add33_i_28141_reload  |   in|   32|     ap_none|                         add33_i_28141_reload|        scalar|
+|add33_i_29143_reload  |   in|   32|     ap_none|                         add33_i_29143_reload|        scalar|
+|add33_i_30145_reload  |   in|   32|     ap_none|                         add33_i_30145_reload|        scalar|
+|add33_i_31147_reload  |   in|   32|     ap_none|                         add33_i_31147_reload|        scalar|
+|sum_out               |  out|   32|      ap_vld|                                      sum_out|       pointer|
+|sum_out_ap_vld        |  out|    1|      ap_vld|                                      sum_out|       pointer|
++----------------------+-----+-----+------------+---------------------------------------------+--------------+
+

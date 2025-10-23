@@ -1,0 +1,28 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../testbench.cpp in debug mode
+   Compiling ../../../../activation_accelerator.cpp in debug mode
+   Generating csim.exe
+Loading test data...
+Using relative data path: /data1/jdn/fpt_LLM/prj/testvector_example/bf16_vectors/
+BF16 data loaded successfully
+in0 statistics: min=0, max=65535, mean=26455.6
+in1 statistics: min=0, max=65535, mean=3607.68
+=== HLS Activation Accelerator Testbench ===
+Trying to load: /data1/jdn/fpt_LLM/prj/testvector_example/bf16_vectors/golden_out_config_1_bf16.bin
+Unable to load Config 1 golden data
+Using random data as golden reference for Config 1
+Set activation_accelerator.stage = 0
+Data transfer complete
+
+--- Testing Config 1 ---
+Config 1 compute time: 8376.63 ms
+Output results saved to: /data1/jdn/fpt_LLM/prj/testvector_example/bf16_vectors/hls_output_config_1.bin
+Max Difference: 65535
+Config 1 test failed with 49148 errors
+
+Total compute time for all configs: 8376.63 ms
+
+=== Test Complete ===
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

@@ -1,0 +1,16 @@
+activation_accelerator.cpp:1344:34: warning: unexpected pragma argument 'fexp', expects function/operation [-Winvalid-hls-pragmas]
+#pragma HLS ALLOCATION instances=fexp limit=8 function
+                                 ^
+activation_accelerator.cpp:1345:34: warning: unexpected pragma argument 'fdiv', expects function/operation [-Winvalid-hls-pragmas]
+#pragma HLS ALLOCATION instances=fdiv limit=8 operation
+                                 ^
+activation_accelerator.cpp:1346:34: warning: unexpected pragma argument 'fadd', expects function/operation [-Winvalid-hls-pragmas]
+#pragma HLS ALLOCATION instances=fadd limit=16 operation
+                                 ^
+activation_accelerator.cpp:1347:34: warning: unexpected pragma argument 'fsub', expects function/operation [-Winvalid-hls-pragmas]
+#pragma HLS ALLOCATION instances=fsub limit=16 operation
+                                 ^
+activation_accelerator.cpp:1348:34: warning: unexpected pragma argument 'faddfsub', expects function/operation [-Winvalid-hls-pragmas]
+#pragma HLS ALLOCATION instances=faddfsub limit=16 operation
+                                 ^
+5 warnings generated.
