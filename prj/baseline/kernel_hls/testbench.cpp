@@ -99,7 +99,7 @@ bool run_test(int config, uint16* in0, uint16* in1, uint16* out, uint16* golden_
 }
 
 std::string get_data_path() {
-    std::string rel_path = "/home/xushaohui/FPT/fpt_LLM/prj/testvector_example/bf16_vectors3/";
+    std::string rel_path = "/home/xushaohui/FPT/fpt_LLM/prj/testvector_example/bf16_vectors4/";
     std::string test_file = rel_path + "X_test_tensor_bf16.bin";
     std::ifstream f(test_file.c_str());
     if (f.good()) {
@@ -164,7 +164,7 @@ int main() {
 
     // Main loop for all configs Stage 1 + Stage 2
     double total_time = 0.0;
-    for (int config = 0; config < 2; ++config) {
+    for (int config = 2; config < 4; ++config) {
         // Stage 1: Compute
         stage = STAGE_COMPUTE;
         std::cout << "\n--- Testing Config " << config << " ---" << std::endl;

@@ -4,15 +4,13 @@
 #include <hls_math.h>
 #include <limits> 
 #include <cfloat>  
-/*
-0 eltwise add
-1 safe softmax tbd
-2 mask safe softmax tbd
-3 sigmoid
-4 silu
-5 rms norm
-6 layer norm
-*/
+// "softmax":    0,
+// "silu":       1,
+// "rmsnorm":    2,
+// "layernorm":  3,
+// "gelu":       4, 
+// "add":        5,
+// "mul":        6,
 
 
 // bf16 bitwise addition function implementation
@@ -219,8 +217,13 @@ sum_square:
         for (int j = 0; j < col_len; ++j) {
 #pragma HLS UNROLL
             int idx = i + j * row_len;
-            y_sum_sq[j] += x[idx] * x[idx] / row_len;
+            y_sum_sq[j] += x[idx] * x[idx] ;
         }
+    }
+sum_square2://在内部循环里多次分开除好像影响精度了，合起来除
+    for (int i = 0; i < col_len; ++i) {
+#pragma HLS UNROLL   
+        y_sum_sq[i] = y_sum_sq[i]/ row_len;
     }
 }//属于函数的括号
 
@@ -441,7 +444,7 @@ void float_rms_norm2(const float* x, uint16* y_bf16, int len) {
 void float_rms_norm3(const float* x, uint16* y_bf16, int len) {
     const int col_len = 64;    // 平方和序列长度
     const int row_len = len/col_len;
-    const float eps = 1e-6f;
+    const float eps = 1e-5f;//好像生成使用的是1e-5
 
     float y_sum_sq[col_len];// 初始化平方和平均值序列
     float rms_sq[col_len];// 初始化rms序列
@@ -630,7 +633,7 @@ void float_layer_norm3(const float* x, uint16* y_bf16, int len) {
     const int UF = 32;
     const int col_len = 64;    // 平方和序列长度
     const int row_len = len/col_len;
-    const float eps = 1e-6f;
+    const float eps = 1e-5f;
 
     //分两个数组
     float partial_mean[col_len];    
@@ -661,9 +664,15 @@ mean_blocks_layer_norm3:
         for (int j = 0; j < col_len; ++j) {
 #pragma HLS UNROLL
             int idx = i + j * row_len;
-            partial_mean[j] += x[idx] / row_len;
+            partial_mean[j] += x[idx];
         }
     }
+mean_blocks2_layer_norm3://观察到除太多次好像影响误差了把除法分出来
+    for (int i = 0; i < col_len; i++){
+#pragma HLS UNROLL     
+        partial_mean[i] = partial_mean[i] / row_len;
+    }
+    
 
 //标准差计算循环
 std_blocks_layer_norm3:  
@@ -1106,11 +1115,11 @@ void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, 
 //             bf16_to_float(buf0, x, 64*768);
 //             float_silu2(x, buf2, 64*768);
 //         }
-        if(config == 0) { // RMS normalization
+        if(config == 2) { // RMS normalization
             bf16_to_float(buf0, x, 64*768);
             float_rms_norm3(x, buf2, 64*768);
         }
-        else if(config == 1) { // Layer normalization
+        else if(config == 3) { // Layer normalization
             bf16_to_float(buf0, x, 64*768);
             float_layer_norm3(x, buf2, 64*768);
         }

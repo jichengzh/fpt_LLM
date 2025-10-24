@@ -3,11 +3,11 @@ import pandas as pd
 
 #启动方式：python test_error.py
 
-config = "0"
+config = "3"
 
 N, D = 64, 768
-path_output= "/home/xushaohui/FPT/fpt_LLM/prj/testvector_example/bf16_vectors3/hls_output_config_" + config + ".bin"
-path_golden = "/home/xushaohui/FPT/fpt_LLM/prj/testvector_example/bf16_vectors3/golden_out_config_"+ config + "_bf16.bin"
+path_output= "/home/xushaohui/FPT/fpt_LLM/prj/testvector_example/bf16_vectors4/hls_output_config_" + config + ".bin"
+path_golden = "/home/xushaohui/FPT/fpt_LLM/prj/testvector_example/bf16_vectors4/golden_out_config_"+ config + "_bf16.bin"
 
 
 # 读作 uint16 并 reshape
