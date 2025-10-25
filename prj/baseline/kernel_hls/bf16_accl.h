@@ -194,7 +194,7 @@ static inline uint16 bf16add_fast(uint16 a_bits, uint16 b_bits) {
         }
     }
 
-    // ---- 5) 同号加/异号减（大减小），得到中间尾数
+    // // ---- 5) 同号加/异号减（大减小），得到中间尾数
     uint32_t M;
     uint16_t s = sa;
     if (sa == sb) {
@@ -205,6 +205,10 @@ static inline uint16 bf16add_fast(uint16 a_bits, uint16 b_bits) {
     }
 
     if (M == 0) return 0; // 结果为零
+        // 5) 只做同号加法（我们假设 softmax 场景下全是正数，sa=sb=0）
+    // 不再支持异号相减
+    // uint32_t M = A + B_aln;
+    // uint16_t s  = 0; // 正号
 
 
 
@@ -253,5 +257,16 @@ static inline uint16 bf16add_fast(uint16 a_bits, uint16 b_bits) {
     return pack_bf16(s, maxe, m7);
 }
 
+static float f32_add(float a, float b) {
+#pragma HLS INLINE off
+    float c = a + b;
+    return c;
+}
 
+static float f32_expf(float v) {
+#pragma HLS INLINE off
+    // 这里依然调用 hls::expf，保持数值一致
+    float r = hls::expf(v);
+    return r;
+}
 #endif // BF16_ACCL_H_

@@ -3,7 +3,7 @@ import pandas as pd
 
 #启动方式：python test_error.py
 
-config = "1"
+config = "0"
 
 N, D = 64, 768
 path_output= "/data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors3/hls_output_config_" + config + ".bin"

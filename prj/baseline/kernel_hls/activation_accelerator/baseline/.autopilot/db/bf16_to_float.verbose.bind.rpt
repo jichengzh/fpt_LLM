@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'bf16_to_float'
 ================================================================
-* Date:           Thu Oct 23 18:51:01 2025
+* Date:           Sat Oct 25 22:45:36 2025
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        activation_accelerator
@@ -114,7 +114,7 @@ ST_2 : Operation 231 [1/1] (0.00ns)   --->   "%ret_ln53 = ret" [./bf16_accl.h:53
 
 State 3 <SV = 2> <Delay = 2.73>
 ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%phi_urem_load_1 = load i16 %phi_urem" [./bf16_accl.h:51]   --->   Operation 27 'load' 'phi_urem_load_1' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%specloopname_ln49 = specloopname void @_ssdm_op_SpecLoopName, void @empty_16" [./bf16_accl.h:49]   --->   Operation 28 'specloopname' 'specloopname_ln49' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%specloopname_ln49 = specloopname void @_ssdm_op_SpecLoopName, void @empty_11" [./bf16_accl.h:49]   --->   Operation 28 'specloopname' 'specloopname_ln49' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 29 [1/2] (1.23ns)   --->   "%buf0_load = load i16 %buf0_addr" [./bf16_accl.h:50]   --->   Operation 29 'load' 'buf0_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 49152> <RAM>
 ST_3 : Operation 30 [1/1] (0.00ns)   --->   "%x_f32 = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i16.i16, i16 %buf0_load, i16 0" [./bf16_accl.h:50]   --->   Operation 30 'bitconcatenate' 'x_f32' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%bitcast_ln51 = bitcast i32 %x_f32" [./bf16_accl.h:51]   --->   Operation 31 'bitcast' 'bitcast_ln51' <Predicate = true> <Delay = 0.00>
@@ -307,7 +307,7 @@ ST_3 : Operation 217 [1/1] (1.23ns)   --->   "%store_ln51 = store i32 %bitcast_l
 ST_3 : Operation 218 [1/1] (0.00ns)   --->   "%br_ln51 = br void %arrayidx21.exit" [./bf16_accl.h:51]   --->   Operation 218 'br' 'br_ln51' <Predicate = (trunc_ln == 2)> <Delay = 0.00>
 ST_3 : Operation 219 [1/1] (1.23ns)   --->   "%store_ln51 = store i32 %bitcast_ln51, i10 %out_1_addr" [./bf16_accl.h:51]   --->   Operation 219 'store' 'store_ln51' <Predicate = (trunc_ln == 1)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 768> <RAM>
 ST_3 : Operation 220 [1/1] (0.00ns)   --->   "%br_ln51 = br void %arrayidx21.exit" [./bf16_accl.h:51]   --->   Operation 220 'br' 'br_ln51' <Predicate = (trunc_ln == 1)> <Delay = 0.00>
-ST_3 : Operation 221 [1/1] (1.23ns)   --->   "%store_ln51 = store i32 %bitcast_ln51, i10 %out_0_addr" [./bf16_accl.h:51]   --->   Operation 221 'store' 'store_ln51' <Predicate = (trunc_ln == 0)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 84 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 768> <RAM>
+ST_3 : Operation 221 [1/1] (1.23ns)   --->   "%store_ln51 = store i32 %bitcast_ln51, i10 %out_0_addr" [./bf16_accl.h:51]   --->   Operation 221 'store' 'store_ln51' <Predicate = (trunc_ln == 0)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 768> <RAM>
 ST_3 : Operation 222 [1/1] (0.00ns)   --->   "%br_ln51 = br void %arrayidx21.exit" [./bf16_accl.h:51]   --->   Operation 222 'br' 'br_ln51' <Predicate = (trunc_ln == 0)> <Delay = 0.00>
 ST_3 : Operation 223 [1/1] (1.23ns)   --->   "%store_ln51 = store i32 %bitcast_ln51, i10 %out_63_addr" [./bf16_accl.h:51]   --->   Operation 223 'store' 'store_ln51' <Predicate = (trunc_ln == 63)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 768> <RAM>
 ST_3 : Operation 224 [1/1] (0.00ns)   --->   "%br_ln51 = br void %arrayidx21.exit" [./bf16_accl.h:51]   --->   Operation 224 'br' 'br_ln51' <Predicate = (trunc_ln == 63)> <Delay = 0.00>
@@ -330,7 +330,7 @@ STG Binding:
 - Is pipelined: 0
 - Is top level: 0
 Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
-Port [ out_0]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; pingpong=0; private_global=0; MemPort=[03333333333333333]; IO mode=ap_memory:ce=0
+Port [ out_0]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; pingpong=0; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
 Port [ out_1]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; pingpong=0; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
 Port [ out_2]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; pingpong=0; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
 Port [ out_3]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; pingpong=0; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
@@ -637,7 +637,7 @@ ret_ln53          (ret              ) [ 0000]
 <pin id="1" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="out_0"/><MemPortTyVec>0 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 </MemPortTyVec>
+<StgValue><ssdm name="out_0"/><MemPortTyVec>0 3 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
@@ -2007,7 +2007,7 @@ ret_ln53          (ret              ) [ 0000]
 <pin id="291" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_16"/></StgValue>
+<StgValue><ssdm name="empty_11"/></StgValue>
 </bind>
 </comp>
 

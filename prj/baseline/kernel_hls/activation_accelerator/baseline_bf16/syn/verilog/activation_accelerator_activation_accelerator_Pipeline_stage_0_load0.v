@@ -60,7 +60,7 @@ module activation_accelerator_activation_accelerator_Pipeline_stage_0_load0 (
         m_axi_gmem0_BRESP,
         m_axi_gmem0_BID,
         m_axi_gmem0_BUSER,
-        sext_ln1365,
+        sext_ln1078,
         buf0_address0,
         buf0_ce0,
         buf0_we0,
@@ -113,7 +113,7 @@ output   m_axi_gmem0_RREADY;
 input  [15:0] m_axi_gmem0_RDATA;
 input   m_axi_gmem0_RLAST;
 input  [0:0] m_axi_gmem0_RID;
-input  [15:0] m_axi_gmem0_RFIFONUM;
+input  [9:0] m_axi_gmem0_RFIFONUM;
 input  [0:0] m_axi_gmem0_RUSER;
 input  [1:0] m_axi_gmem0_RRESP;
 input   m_axi_gmem0_BVALID;
@@ -121,7 +121,7 @@ output   m_axi_gmem0_BREADY;
 input  [1:0] m_axi_gmem0_BRESP;
 input  [0:0] m_axi_gmem0_BID;
 input  [0:0] m_axi_gmem0_BUSER;
-input  [62:0] sext_ln1365;
+input  [62:0] sext_ln1078;
 output  [15:0] buf0_address0;
 output   buf0_ce0;
 output   buf0_we0;
@@ -142,19 +142,19 @@ wire    ap_block_state1_pp0_stage0_iter0;
 reg    ap_block_state2_pp0_stage0_iter1;
 wire    ap_block_state3_pp0_stage0_iter2;
 reg    ap_block_pp0_stage0_subdone;
-wire   [0:0] icmp_ln1365_fu_102_p2;
+wire   [0:0] icmp_ln1078_fu_98_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
 reg    gmem0_blk_n_R;
 wire    ap_block_pp0_stage0;
-reg   [15:0] i_3_reg_130;
+reg   [15:0] i_3_reg_126;
 reg    ap_block_pp0_stage0_11001;
-reg   [15:0] i_3_reg_130_pp0_iter1_reg;
-reg   [15:0] gmem0_addr_read_reg_144;
-wire   [63:0] i_cast_fu_119_p1;
-reg   [15:0] i_fu_56;
-wire   [15:0] add_ln1365_fu_108_p2;
+reg   [15:0] i_3_reg_126_pp0_iter1_reg;
+reg   [15:0] gmem0_addr_read_reg_140;
+wire   [63:0] i_cast_fu_115_p1;
+reg   [15:0] i_fu_52;
+wire   [15:0] add_ln1078_fu_104_p2;
 wire    ap_loop_init;
 reg   [15:0] ap_sig_allocacmp_i_3;
 reg    ap_done_reg;
@@ -233,10 +233,10 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        if (((icmp_ln1365_fu_102_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
-            i_fu_56 <= add_ln1365_fu_108_p2;
+        if (((icmp_ln1078_fu_98_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+            i_fu_52 <= add_ln1078_fu_104_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            i_fu_56 <= 16'd0;
+            i_fu_52 <= 16'd0;
         end
     end
 end
@@ -244,14 +244,14 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         ap_loop_exit_ready_pp0_iter1_reg <= ap_loop_exit_ready;
-        gmem0_addr_read_reg_144 <= m_axi_gmem0_RDATA;
-        i_3_reg_130 <= ap_sig_allocacmp_i_3;
-        i_3_reg_130_pp0_iter1_reg <= i_3_reg_130;
+        gmem0_addr_read_reg_140 <= m_axi_gmem0_RDATA;
+        i_3_reg_126 <= ap_sig_allocacmp_i_3;
+        i_3_reg_126_pp0_iter1_reg <= i_3_reg_126;
     end
 end
 
 always @ (*) begin
-    if (((icmp_ln1365_fu_102_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((icmp_ln1078_fu_98_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b1;
     end else begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b0;
@@ -294,7 +294,7 @@ always @ (*) begin
     if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_loop_init == 1'b1))) begin
         ap_sig_allocacmp_i_3 = 16'd0;
     end else begin
-        ap_sig_allocacmp_i_3 = i_fu_56;
+        ap_sig_allocacmp_i_3 = i_fu_52;
     end
 end
 
@@ -341,7 +341,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln1365_fu_108_p2 = (ap_sig_allocacmp_i_3 + 16'd1);
+assign add_ln1078_fu_104_p2 = (ap_sig_allocacmp_i_3 + 16'd1);
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 
@@ -369,13 +369,13 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign buf0_address0 = i_cast_fu_119_p1;
+assign buf0_address0 = i_cast_fu_115_p1;
 
-assign buf0_d0 = gmem0_addr_read_reg_144;
+assign buf0_d0 = gmem0_addr_read_reg_140;
 
-assign i_cast_fu_119_p1 = i_3_reg_130_pp0_iter1_reg;
+assign i_cast_fu_115_p1 = i_3_reg_126_pp0_iter1_reg;
 
-assign icmp_ln1365_fu_102_p2 = ((ap_sig_allocacmp_i_3 == 16'd49152) ? 1'b1 : 1'b0);
+assign icmp_ln1078_fu_98_p2 = ((ap_sig_allocacmp_i_3 == 16'd49152) ? 1'b1 : 1'b0);
 
 assign m_axi_gmem0_ARADDR = 64'd0;
 

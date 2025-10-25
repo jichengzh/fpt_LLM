@@ -30,18 +30,18 @@ wire   [0:0] and_ln75_fu_148_p2;
 wire   [15:0] ret_1_fu_154_p2;
 wire   [15:0] lower_fu_70_p1;
 wire   [0:0] round_up_fu_84_p3;
-wire   [0:0] tmp_3_fu_174_p3;
+wire   [0:0] tmp_2_fu_174_p3;
 wire   [0:0] icmp_ln87_fu_168_p2;
 wire   [0:0] round_up_1_fu_182_p2;
 wire   [0:0] or_ln89_fu_188_p2;
 wire   [14:0] trunc_ln_fu_74_p4;
 wire   [14:0] zext_ln97_fu_194_p1;
 wire   [14:0] rounded_fu_202_p2;
-wire   [7:0] tmp_1_fu_208_p4;
+wire   [7:0] tmp_s_fu_208_p4;
 wire   [15:0] zext_ln97_1_fu_198_p1;
 wire   [14:0] new_exp_fu_218_p3;
 wire   [15:0] add_ln101_fu_226_p2;
-wire   [0:0] tmp_4_fu_238_p3;
+wire   [0:0] tmp_3_fu_238_p3;
 wire   [15:0] and_ln_fu_246_p3;
 wire   [0:0] icmp_ln102_fu_232_p2;
 wire   [15:0] res_fu_254_p2;
@@ -54,7 +54,7 @@ assign add_ln101_fu_226_p2 = (ret_fu_116_p4 + zext_ln97_1_fu_198_p1);
 
 assign and_ln75_fu_148_p2 = (icmp_ln75_fu_136_p2 & icmp_ln75_1_fu_142_p2);
 
-assign and_ln_fu_246_p3 = {{tmp_4_fu_238_p3}, {15'd0}};
+assign and_ln_fu_246_p3 = {{tmp_3_fu_238_p3}, {15'd0}};
 
 assign ap_ready = 1'b1;
 
@@ -74,7 +74,7 @@ assign icmp_ln87_fu_168_p2 = ((lower_fu_70_p1 > 16'd32768) ? 1'b1 : 1'b0);
 
 assign lower_fu_70_p1 = fbits_fu_62_p1[15:0];
 
-assign new_exp_fu_218_p3 = {{tmp_1_fu_208_p4}, {7'd0}};
+assign new_exp_fu_218_p3 = {{tmp_s_fu_208_p4}, {7'd0}};
 
 assign or_ln89_fu_188_p2 = (round_up_1_fu_182_p2 | icmp_ln87_fu_168_p2);
 
@@ -86,7 +86,7 @@ assign ret_2_fu_160_p3 = ((and_ln75_fu_148_p2[0:0] == 1'b1) ? ret_1_fu_154_p2 : 
 
 assign ret_fu_116_p4 = {{fbits_fu_62_p1[31:16]}};
 
-assign round_up_1_fu_182_p2 = (tmp_3_fu_174_p3 & round_up_fu_84_p3);
+assign round_up_1_fu_182_p2 = (tmp_2_fu_174_p3 & round_up_fu_84_p3);
 
 assign round_up_fu_84_p3 = fbits_fu_62_p1[32'd16];
 
@@ -94,13 +94,13 @@ assign rounded_fu_202_p2 = (trunc_ln_fu_74_p4 + zext_ln97_fu_194_p1);
 
 assign select_ln102_fu_260_p3 = ((icmp_ln102_fu_232_p2[0:0] == 1'b1) ? res_fu_254_p2 : add_ln101_fu_226_p2);
 
-assign tmp_1_fu_208_p4 = {{rounded_fu_202_p2[14:7]}};
+assign tmp_2_fu_174_p3 = fbits_fu_62_p1[32'd15];
 
-assign tmp_3_fu_174_p3 = fbits_fu_62_p1[32'd15];
-
-assign tmp_4_fu_238_p3 = add_ln101_fu_226_p2[32'd15];
+assign tmp_3_fu_238_p3 = add_ln101_fu_226_p2[32'd15];
 
 assign tmp_fu_92_p4 = {{fbits_fu_62_p1[30:23]}};
+
+assign tmp_s_fu_208_p4 = {{rounded_fu_202_p2[14:7]}};
 
 assign trunc_ln71_1_fu_126_p4 = {{fbits_fu_62_p1[22:16]}};
 

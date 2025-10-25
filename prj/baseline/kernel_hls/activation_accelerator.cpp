@@ -597,141 +597,7 @@ normalize_blocks:
 }
 
 // layer_norm
-// void float_layer_norm(const float* x, uint16* y_bf16, int len) {
-//     const float eps = 1e-6f;
-//     float sum = 0.0f;
-//     layer_norm_loop1:
-//     for (int i = 0; i < len; ++i) {
-//         sum += x[i];
-//     }
-//     float mean = sum / len;
-//     float var = 0.0f;
-//     layer_norm_loop2:
-//     for (int i = 0; i < len; ++i) {
-//         float diff = x[i] - mean;
-//         var += diff * diff;
-//     }
-//     var /= len;
-//     float stddev = hls::sqrtf(var + eps);
-//     layer_norm_loop3:
-//     for (int i = 0; i < len; ++i) {
-//         float y = (x[i] - mean) / stddev;
-//         uint32_t* y_f32_ptr = (uint32_t*)&y;
-//         y_bf16[i] = (*y_f32_ptr) >> 16;
-//     }
-// }
-// void float_layer_norm2(const float* x, uint16* y_bf16, int len) {
-// #pragma HLS INLINE off
-//     const int UF = 32;    // 展开因子
-//     const int ACC = 32;   // 累加器数量
-//     const float eps = 1e-6f;
 
-//     // -------- 1) 计算均值：分块累加 --------
-//     float partial_sum[ACC];
-// #pragma HLS ARRAY_PARTITION variable=partial_sum complete
-// #pragma HLS DEPENDENCE variable=partial_sum inter false
-
-//     init_partial_sum:
-//     for (int k = 0; k < ACC; ++k) {
-// #pragma HLS UNROLL
-//         partial_sum[k] = 0.f;
-//     }
-
-//     sum_blocks:
-//     for (int i = 0; i < len; i += UF) {
-// #pragma HLS PIPELINE II=1
-//         float blk[UF];
-// #pragma HLS ARRAY_PARTITION variable=blk complete
-
-//         load_blk_sum:
-//         for (int u = 0; u < UF; ++u) {
-// #pragma HLS UNROLL
-//             int idx = i + u;
-//             blk[u] = (idx < len) ? x[idx] : 0.f;
-//         }
-
-//         bucket_add_sum:
-//         for (int u = 0; u < UF; ++u) {
-// #pragma HLS UNROLL
-//             int idx = i + u;
-//             if (idx < len) partial_sum[idx % ACC] += blk[u];
-//         }
-//     }
-
-//     // 桶规约得到总和
-//     float sum = 0.f;
-//     reduce_partial_sum:
-//     for (int k = 0; k < ACC; ++k) {
-// #pragma HLS UNROLL
-//         sum += partial_sum[k];
-//     }
-
-//     float mean = sum / len;
-
-//     // -------- 2) 计算方差：分块累加平方差 --------
-//     float partial_var[ACC];
-// #pragma HLS ARRAY_PARTITION variable=partial_var complete
-// #pragma HLS DEPENDENCE variable=partial_var inter false
-
-//     init_partial_var:
-//     for (int k = 0; k < ACC; ++k) {
-// #pragma HLS UNROLL
-//         partial_var[k] = 0.f;
-//     }
-
-//     var_blocks:
-//     for (int i = 0; i < len; i += UF) {
-// #pragma HLS PIPELINE II=1
-//         float diff_sq[UF];
-// #pragma HLS ARRAY_PARTITION variable=diff_sq complete
-
-//         compute_diff_sq:
-//         for (int u = 0; u < UF; ++u) {
-// #pragma HLS UNROLL
-//             int idx = i + u;
-//             if (idx < len) {
-//                 float diff = x[idx] - mean;
-//                 diff_sq[u] = diff * diff;
-//             } else {
-//                 diff_sq[u] = 0.f;
-//             }
-//         }
-
-//         bucket_add_var:
-//         for (int u = 0; u < UF; ++u) {
-// #pragma HLS UNROLL
-//             int idx = i + u;
-//             if (idx < len) partial_var[idx % ACC] += diff_sq[u];
-//         }
-//     }
-
-//     // 桶规约得到方差总和
-//     float var_sum = 0.f;
-//     reduce_partial_var:
-//     for (int k = 0; k < ACC; ++k) {
-// #pragma HLS UNROLL
-//         var_sum += partial_var[k];
-//     }
-
-//     float var = var_sum / len;
-//     float stddev = hls::sqrtf(var + eps);
-
-//     // -------- 3) 归一化并转 bfloat16 --------
-//     normalize_blocks:
-//     for (int i = 0; i < len; i += UF) {
-// #pragma HLS PIPELINE II=1
-//         normalize_inner:
-//         for (int u = 0; u < UF; ++u) {
-// #pragma HLS UNROLL
-//             int idx = i + u;
-//             if (idx < len) {
-//                 float y = (x[idx] - mean) / stddev;
-//                 uint32_t* y_f32_ptr = (uint32_t*)&y;
-//                 y_bf16[idx] = (uint16)((*y_f32_ptr) >> 16);
-//             }
-//         }
-//     }
-// }
 void float_layer_norm3(const float* x, uint16* y_bf16, int len) {
 #pragma HLS INLINE off
     const int UF = 32;    // 增加展开因子
@@ -853,19 +719,7 @@ float Q_rsqrt(float number)
 	return y;
 }
 
-//GELU
-// void float_gelu(const float* x, uint16* y_bf16, int len){
-// #pragma HLS INLINE   
-//     float xtrue = 0.0f;
-//     float down2 = Q_rsqrt(2.0f);
-//     gelu_loop:
-//     for (int i = 0; i < len; ++i) {
-//     #pragma HLS PIPELINE II=1
-//         xtrue = 0.5f * x[i] * (1.0f + std::erff(x[i]*down2));
-//         uint32_t* xtrue_f32_ptr = (uint32_t*)&xtrue;
-//         y_bf16[i] = (*xtrue_f32_ptr) >> 16;
-//     }
-// }
+
 
 void float_gelu2(const float* x, uint16* y_bf16, int len) {
 #pragma HLS INLINE off
@@ -899,15 +753,7 @@ void float_gelu2(const float* x, uint16* y_bf16, int len) {
     }
 }
 
-// float加法
-// void float_add(const float* x, const float* y, uint16* out, int len) {
-//     float_add_loop:
-//     for (int i = 0; i < len; ++i) {
-//         float sum = x[i] + y[i];
-//         uint32_t* sum_f32_ptr = (uint32_t*)&sum;
-//         out[i] = (*sum_f32_ptr) >> 16;
-//     }
-// }
+
 void float_add2(const float* x, const float* y, uint16* out, int len) {
 #pragma HLS INLINE off
     const int UF = 32;    // 展开因子
@@ -931,317 +777,222 @@ void float_add2(const float* x, const float* y, uint16* out, int len) {
     }
 }
 
-/* // safe softmax
-void float_safe_softmax(const float* x, uint16* y_bf16, int len) {
-#pragma HLS INLINE off
-    float max_val = x[0];
-    softmax_loop_1:
-    for (int i = 1; i < len; ++i) if (x[i] > max_val) max_val = x[i];
-    float sum = 0.0f;
-    float exp_x[49152];
-    softmax_loop_2:
-    for (int i = 0; i < len; ++i) {
-        exp_x[i] = hls::expf(x[i] - max_val);
-        sum += exp_x[i];
-    }
-    softmax_loop_3:
-    for (int i = 0; i < len; ++i) {
-        float y = exp_x[i] / sum;
-        uint32_t* y_f32_ptr = (uint32_t*)&y;
-        y_bf16[i] = (*y_f32_ptr) >> 16;
-    }
-} */
 
-
-/* void float_safe_softmax2(const float* x, uint16* y_bf16, int rows, int cols) {
-#pragma HLS INLINE off
-    const int UF  = 32;
-    const int ACC = 32;
-
-    // 中间缓冲（本段未使用，只保留声明也 OK）
-    float exp_x[768];
-#pragma HLS BIND_STORAGE variable=exp_x type=ram_1p impl=bram
-#pragma HLS DEPENDENCE variable=exp_x inter false
-#pragma HLS ARRAY_PARTITION variable=exp_x cyclic factor=UF dim=1
-
-row_loop:
-for (int r = 0; r < rows; ++r) {
-
-    const float* current_row = x + r * cols;
-    uint16* output_row = y_bf16 + r * cols;
-    // -------- 1) 找最大值：块处理 + UNROLL 比较，外层 PIPELINE --------
-    // -------- 1) 两层循环找最大值（外层 PIPELINE，内层 UNROLL） --------
-    float partial_max[ACC];
-#pragma HLS ARRAY_PARTITION variable=partial_max complete
-#pragma HLS DEPENDENCE variable=partial_max inter false
-
-init_partial_max:
-    for (int k = 0; k < ACC; ++k) {
-    #pragma HLS UNROLL
-    // 初始化桶，用一个非常小的数
-        partial_max[k] = -std::numeric_limits<float>::max();
-    }
-
-find_max_blocks:
-    for (int i = 0; i < cols; i += UF) {
-    #pragma HLS PIPELINE II=1
-        float blk[UF];
-    #pragma HLS ARRAY_PARTITION variable=blk complete
-
-    load_blk_max:
-        for (int u = 0; u < UF; ++u) {
-        #pragma HLS UNROLL
-            int idx = i + u;
-            blk[u] = (idx < cols) ? current_row[idx] : -std::numeric_limits<float>::max();
-        }
-
-        // 块内规约（可换成成对树形比较）
-        float local_max = blk[0];
-    reduce_blk_max:
-        for (int u = 1; u < UF; ++u) {
-        #pragma HLS UNROLL
-        //  fmaxf 是 HLS 提供的硬件友好型浮点比较函数
-            local_max = hls::fmaxf(local_max, blk[u]);
-        }
-
-        // 写入环形桶，消除 max 的跨迭代写后读依赖
-        int b = (i / UF) % ACC;
-        partial_max[b] = hls::fmaxf(partial_max[b], local_max);
-    }
-
-    // 桶规约得到全局最大值（完全 UNROLL，不影响外层 II）
-    float max_val = partial_max[0];
-final_reduce_max:
-    for (int k = 1; k < ACC; ++k) {
-    #pragma HLS UNROLL
-        max_val = hls::fmaxf(max_val, partial_max[k]);
-    }
-
-    // -------- 2) 计算 exp 并分桶累加：外层 PIPELINE，内层 UNROLL --------
-//     float partial[ACC];
-// #pragma HLS ARRAY_PARTITION variable=partial complete
-// init_partial:
-//     for (int k = 0; k < ACC; ++k) {
-// #pragma HLS UNROLL
-//         partial[k] = 0.f;
-//     }
-
-    uint16 partial[ACC];
-#pragma HLS ARRAY_PARTITION variable=partial complete
-
-init_partial_bf16:
-    for (int k = 0; k < ACC; ++k) {
-    #pragma HLS UNROLL
-        partial[k] = 0;  // bf16 +0
-    }
-
-exp_and_bucket:
-    for (int i = 0; i < cols; i += UF) {
-#pragma HLS PIPELINE II=1
-        float e[UF];
-#pragma HLS ARRAY_PARTITION variable=e complete
-
-exp_inner:
-        for (int u = 0; u < UF; ++u) {
-#pragma HLS UNROLL
-            int idx = i + u;
-            float ex = (idx < cols) ? hls::expf(current_row[idx] - max_val) : 0.f;
-            e[u] = ex;
-            if (idx < cols) exp_x[idx] = ex;   // 写回中间结果
-        }
-bucket_add:
-        for (int u = 0; u < UF; ++u) {
-#pragma HLS UNROLL
-            int idx = i + u;
-            if (idx < cols) {
-                int b = idx % ACC;
-                // 将 e[u] 转成 bf16，再用 bf16add_fast 累加到桶里
-                uint16 e_b = f32_to_bf16_rne(e[u]);
-                partial[b] = bf16add_fast(partial[b], e_b);
-            }
-        }
-    }
-
-    // 桶规约得到 sum（完全展开，无环路相关）
-    float sum = 0.f;
-    uint16 sum_b = 0;
-reduce_partial:
-    for (int k = 0; k < ACC; ++k) {
-    #pragma HLS UNROLL
-        sum_b = bf16add_fast(sum_b, partial[k]);
-    }
-        sum = bf16_to_f32(sum_b);
-
-
-    // -------- 3) 归一化并转 bfloat16：外层 PIPELINE，内层 UNROLL --------
-normalize_blocks:
-    for (int i = 0; i < cols; i += UF) {
-#pragma HLS PIPELINE II=1
-normalize_inner:
-        for (int u = 0; u < UF; ++u) {
-#pragma HLS UNROLL
-            int idx = i + u;
-            if (idx < cols) {
-                float y = exp_x[idx] / sum;
-                uint32_t* y_f32_ptr = (uint32_t*)&y;
-                output_row[idx] = (uint16)((*y_f32_ptr) >> 16);
-
-                // y_bf16[i] = f32_to_bf16_scalar(e / sum);
-                output_row[idx] = round_float32_to_bf16_ieee(y);//初步采用进位
-            }
-            }
-        }
-    }
-} */
-
-template<int LANES = 64>
-static float row_max_hls(const float* x, int cols) {
+// ============================ bf16版本 ===========================================================
+template<int ROWS = 64, int COLS_PER_ROW = 768>
+static void row_max_hls(const float* x, float max_row[ROWS]) {
 #pragma HLS INLINE
-    const int steps = cols / LANES;
 
-    float lane_max[LANES];
-#pragma HLS ARRAY_PARTITION variable=lane_max complete
 
 // 初始化每个并行 lane 的局部最大值
 init_lane_max:
-    for (int u = 0; u < LANES; ++u) {
+    for (int u = 0; u < ROWS; ++u) {
     #pragma HLS UNROLL
-        lane_max[u] = -std::numeric_limits<float>::max();
+        max_row[u] = -std::numeric_limits<float>::max();
     }
 
 // 外层步进（列方向），II=1
 step_loop:
-    for (int i = 0; i < steps; ++i) {
+    for (int i = 0; i < COLS_PER_ROW; ++i) {
     // #pragma HLS PIPELINE II=1
     // 内层 64 路并行（完全展开）
     lane_reduce:
-        for (int u = 0; u < LANES; ++u) {
+        for (int u = 0; u < ROWS; ++u) {
         #pragma HLS UNROLL
             // 索引规则与你 rms_norm 相同：u 是“行/通道”lane，i 是“步”
-            int idx = u * steps + i;
-            float v = (idx < cols) ? x[idx] : -std::numeric_limits<float>::max();
-            lane_max[u] = hls::fmaxf(lane_max[u], v);
+            int idx = u * COLS_PER_ROW + i;
+            float v = x[idx];
+            max_row[u] = hls::fmaxf(max_row[u], v);
         }
     }
-
-// 将 64 个 lane 的最大值做最终规约
-    float max_val = lane_max[0];
-final_reduce:
-    for (int u = 1; u < LANES; ++u) {
-    #pragma HLS UNROLL
-        max_val = hls::fmaxf(max_val, lane_max[u]);
-    }
-    return max_val;
 }
 
-template<int LANES = 64>
-static float row_exp_bucket_sum(const float* x, int cols, float max_val, float* exp_x) {
+template<int ROWS = 64, int COLS_PER_ROW = 768>
+static void row_exp_bucket_sum(const float* x, const float max_row[ROWS], float* exp_buf, uint16_t sum_row_bf16[ROWS] ) {
 #pragma HLS INLINE  // 若想多处共享该核，改成 "INLINE off" 并配合 ALLOCATION limit
-    const int steps = cols / LANES; // 768
-
-    float partial[LANES];
-#pragma HLS ARRAY_PARTITION variable=partial complete
 
 // 初始化桶
 init_partial:
-    for (int k = 0; k < LANES; ++k) {
+    for (int u = 0; u < ROWS; ++u) {
     #pragma HLS UNROLL
-        partial[k] = 0.f;
+        sum_row_bf16[u] = f32_to_bf16_rne(0.0f);  // 0x0000
     }
 
 
 exp_and_bucket:
-    for (int i = 0; i < steps; ++i) {
+    for (int i = 0; i < COLS_PER_ROW; ++i) {
     // #pragma HLS PIPELINE II=1
-        float e[LANES];
-    #pragma HLS ARRAY_PARTITION variable=e complete
 
     // 计算 exp，并可选写回 exp_row[idx]
     exp_inner:
-        for (int u = 0; u < LANES; ++u) {
+        for (int u = 0; u < ROWS; ++u) {
         #pragma HLS UNROLL
-            int idx = u * steps + i;
-            float ex = (idx < cols) ? hls::expf(x[idx] - max_val) : 0.f;
-            e[u] = ex;
-            if (exp_x && idx < cols) exp_x[idx] = ex;
+            int idx = u * COLS_PER_ROW + i;
+            float ex = f32_expf(x[idx] - max_row[u]);
+            exp_buf[idx] = ex;
+
+            uint16_t addend_bf16 = f32_to_bf16_rne(ex);
+            sum_row_bf16[u] = bf16add_fast(sum_row_bf16[u], addend_bf16);
         }
 
-    // 分桶累加：用 idx % ACC 打散跨拍相关
-    bucket_add:
-        for (int u = 0; u < LANES; ++u) {
-        #pragma HLS UNROLL
-            uint16_t addend_bf16 = f32_to_bf16_rne(e[u]);
-            bf16add_fast(partial[u], addend_bf16);
-        }
     }
 
-    // 桶规约得到 sum
-    uint16_t sum_bf16 = (uint16_t)0;
-reduce_partial:
-    for (int k = 0; k < LANES; ++k) {
-    #pragma HLS UNROLL
-        sum_bf16 = bf16add_fast(sum_bf16, partial[k]);
-    }
-    return bf16_to_f32(sum_bf16);
 }
 
 // 64-lane 并行归一化并写回 BF16；与 rms_norm 的索引一致
-template<int LANES = 64>
-static void row_norm_store_hls(const float* exp_x, float sum, uint16_t* output, int cols) {
+template<int ROWS = 64, int COLS_PER_ROW = 768>
+static void row_norm_store_hls(const float* exp_buf, const uint16_t sum_row_bf16[ROWS], uint16_t* output) {
 #pragma HLS INLINE
-    if (!exp_x || cols <= 0) return;
-
-    // 先算倒数，减少 fdiv 次数（用 fmul）
-    float inv_sum = (sum > 0.f) ? (1.0f / sum) : 0.f;
-
-    const int steps = cols / LANES;
 
 step_loop:
-    for (int i = 0; i < steps; ++i) {
+    for (int i = 0; i < COLS_PER_ROW; ++i) {
     // #pragma HLS PIPELINE II=1
     lane_loop:
-        for (int u = 0; u < LANES; ++u) {
+        for (int u = 0; u < ROWS; ++u) {
         #pragma HLS UNROLL
-            int idx = u * steps + i;   // 与前面 row_max/exp 的索引一致
-            if (idx < cols) {
-                float y = exp_x[idx] * inv_sum;
-                output[idx] = round_float32_to_bf16_ieee(y);
-            }
+            int idx = u * COLS_PER_ROW + i;   // 与前面 row_max/exp 的索引一致
+            float denom = bf16_to_f32(sum_row_bf16[u]);
+            float inv_sum = (denom > 0.f) ? (1.0f / denom) : 0.f;
+
+            float y = exp_buf[idx] * inv_sum;
+            output[idx] = round_float32_to_bf16_ieee(y);
         }
     }
 }
 
-template<int LANES = 64>
-void float_safe_softmax3(const float* x, uint16_t* out, int rows, int cols) {
+
+// 4. 顶层核：输入 float[64*768]，输出 bf16[64*768]
+template<int ROWS = 64, int COLS_PER_ROW = 768>
+void float_safe_softmax3(const float* x, uint16_t* out) {
 #pragma HLS INLINE off
 
-    // 单行中间缓冲：存 exp(x - max) 供归一化使用
-    // 若 cols 固定为 768，可直接写成 float exp_row[768];
-    float exp_x[64*768];
-#pragma HLS DEPENDENCE variable=exp_x inter false
-#pragma HLS ARRAY_PARTITION variable=exp_x cyclic factor=LANES dim=1
-    // 可选：按列做循环分块并行（如果你的 row_XXX_hls 需要）
-    // #pragma HLS ARRAY_PARTITION variable=exp_x cyclic factor=LANES dim=1
+    float exp_buf[ROWS * COLS_PER_ROW];
+#pragma HLS DEPENDENCE variable=exp_buf inter false
+#pragma HLS ARRAY_PARTITION variable=exp_buf block factor=ROWS
+    // 之后可以尝试 #pragma HLS ARRAY_PARTITION / CYCLIC 优化访存带宽
 
-//     // （可选）约束 expf 与基本浮点运算的实例数，视资源调
-// #pragma HLS ALLOCATION instances=hls::expf limit=8 function
-// #pragma HLS ALLOCATION instances=fadd     limit=16 operation
-// #pragma HLS ALLOCATION instances=fsub     limit=16 operation
-// #pragma HLS ALLOCATION instances=fmul     limit=8  operation
-// #pragma HLS ALLOCATION instances=fdiv     limit=8  operation
+    float max_row[ROWS];
+#pragma HLS ARRAY_PARTITION variable=max_row complete
 
+    uint16_t sum_row_bf16[ROWS];
+#pragma HLS ARRAY_PARTITION variable=sum_row_bf16 complete
 
+    // 1) 每行最大值
+    row_max_hls<ROWS, COLS_PER_ROW>(x, max_row);
 
-        // 1) 行最大值
-    float max_val = row_max_hls<LANES>(x, cols);
-    // 2) 计算 exp 写入 exp_row，并返回分桶求和结果
-    float sum = row_exp_bucket_sum<LANES>(x, cols, max_val, exp_x);
-    // 3) 归一化并写出 bf16
-    row_norm_store_hls<LANES>(exp_x, sum, out, cols);
+    // 2) 计算 exp(...) 并做 per-row bf16 Σexp 累加
+    row_exp_bucket_sum<ROWS, COLS_PER_ROW>(x, max_row, exp_buf, sum_row_bf16);
+
+    // 3) 用各自行的 Σexp 做 softmax 归一化并写出 bf16
+    row_norm_store_hls<ROWS, COLS_PER_ROW>(exp_buf, sum_row_bf16, out);
 }
 
 
+// -============================ float32 版本 ===========================================
+// template<int ROWS = 64, int COLS_PER_ROW = 768>
+// static void row_max_hls(const float* x, float max_row[ROWS]) {
+// #pragma HLS INLINE off
 
+// // 初始化每个并行 lane 的局部最大值
+// init_lane_max:
+//     for (int u = 0; u < ROWS; ++u) {
+//     #pragma HLS UNROLL
+//         max_row[u] = -std::numeric_limits<float>::max();
+//     }
+
+// // 外层步进（列方向），II=1
+// step_loop:
+//     for (int i = 0; i < COLS_PER_ROW; ++i) {
+//     // #pragma HLS PIPELINE II=1
+//     // 内层 64 路并行（完全展开）
+//     lane_reduce:
+//         for (int u = 0; u < ROWS; ++u) {
+//         #pragma HLS UNROLL
+//             // 索引规则与你 rms_norm 相同：u 是“行/通道”lane，i 是“步”
+//             int idx = u * COLS_PER_ROW + i;
+//             float v = x[idx];
+//             max_row[u] = hls::fmaxf(max_row[u], v);
+//         }
+//     }
+// }
+
+// template<int ROWS = 64, int COLS_PER_ROW = 768>
+// static void row_exp_bucket_sum(const float* x, const float max_row[ROWS], float* exp_buf, float sum_row[ROWS] ) {
+// #pragma HLS INLINE off// 若想多处共享该核，改成 "INLINE off" 并配合 ALLOCATION limit
+
+// // 初始化桶
+// init_partial:
+//     for (int u = 0; u < ROWS; ++u) {
+//     #pragma HLS UNROLL
+//         sum_row[u] = 0.f;  // 0x0000
+//     }
+
+
+// exp_and_bucket:
+//     for (int i = 0; i < COLS_PER_ROW; ++i) {
+//     // #pragma HLS PIPELINE II=1
+
+//     // 计算 exp，并可选写回 exp_row[idx]
+//     exp_inner:
+//         for (int u = 0; u < ROWS; ++u) {
+//         #pragma HLS UNROLL
+//             int idx = u * COLS_PER_ROW + i;
+//             float ex = hls::expf(x[idx] - max_row[u]);
+//             exp_buf[idx] = ex;
+//             sum_row[u] = f32_add(sum_row[u], ex);
+//         }
+
+//     }
+
+// }
+
+// // 64-lane 并行归一化并写回 BF16；与 rms_norm 的索引一致
+// template<int ROWS = 64, int COLS_PER_ROW = 768>
+// static void row_norm_store_hls(const float* exp_buf, float sum_row[ROWS], uint16_t* output) {
+// #pragma HLS INLINE off
+
+// step_loop:
+//     for (int i = 0; i < COLS_PER_ROW; ++i) {
+//     // #pragma HLS PIPELINE II=1
+//     lane_loop:
+//         for (int u = 0; u < ROWS; ++u) {
+//         #pragma HLS UNROLL
+//             int idx = u * COLS_PER_ROW + i;   // 与前面 row_max/exp 的索引一致
+//             float denom = sum_row[u];
+//             float inv_sum = (denom > 0.f) ? (1.0f / denom) : 0.f;
+
+//             float y = exp_buf[idx] * inv_sum;
+//             output[idx] = round_float32_to_bf16_ieee(y);
+//         }
+//     }
+// }
+
+
+// // 4. 顶层核：输入 float[64*768]，输出 bf16[64*768]
+// template<int ROWS = 64, int COLS_PER_ROW = 768>
+// void float_safe_softmax3(const float* x, uint16_t* out) {
+// #pragma HLS INLINE off
+
+//     float exp_buf[ROWS * COLS_PER_ROW];
+// #pragma HLS DEPENDENCE variable=exp_buf inter false
+// #pragma HLS ARRAY_PARTITION variable=exp_buf block factor=ROWS
+//     // 之后可以尝试 #pragma HLS ARRAY_PARTITION / CYCLIC 优化访存带宽
+
+//     float max_row[ROWS];
+// #pragma HLS ARRAY_PARTITION variable=max_row complete
+
+//     float sum_row[ROWS];
+// #pragma HLS ARRAY_PARTITION variable=sum_row complete
+
+//     // 1) 每行最大值
+//     row_max_hls<ROWS, COLS_PER_ROW>(x, max_row);
+
+//     // 2) 计算 exp(...) 并做 per-row bf16 Σexp 累加
+//     row_exp_bucket_sum<ROWS, COLS_PER_ROW>(x, max_row, exp_buf, sum_row);
+
+//     // 3) 用各自行的 Σexp 做 softmax 归一化并写出 bf16
+//     row_norm_store_hls<ROWS, COLS_PER_ROW>(exp_buf, sum_row, out);
+// }
 
 
 //float逐元素乘法
@@ -1342,7 +1093,7 @@ void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, 
 //         }
         if(config == 0) { // safe softmax
             bf16_to_float(buf0, x, 64*768);
-            float_safe_softmax3(x, buf2, 64, 768);
+            float_safe_softmax3(x, buf2);
 //             for(int i = 0; i < ; i++) {
 // #pragma HLS PIPELINE II=1
 //                 buf2[i] = 0;

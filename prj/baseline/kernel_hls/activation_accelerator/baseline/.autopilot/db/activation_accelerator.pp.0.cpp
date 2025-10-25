@@ -55618,11 +55618,7 @@ static inline uint16 bf16add_fast(uint16 a_bits, uint16 b_bits) {
     }
 
     if (M == 0) return 0;
-
-
-
-
-
+# 217 "./bf16_accl.h"
     const uint32_t LO = (ONE_I << PREC_SHIFT);
     const uint32_t HI = (0x100u << PREC_SHIFT);
 
@@ -55664,6 +55660,19 @@ static inline uint16 bf16add_fast(uint16 a_bits, uint16 b_bits) {
     if (maxe == 0) rounded &= 0x7Fu;
     uint16_t m7 = (uint16_t)(rounded & 0x7Fu);
     return pack_bf16(s, maxe, m7);
+}
+
+static float f32_add(float a, float b) {
+#pragma HLS INLINE off
+ float c = a + b;
+    return c;
+}
+
+static float f32_expf(float v) {
+#pragma HLS INLINE off
+
+ float r = hls::expf(v);
+    return r;
 }
 # 10 "activation_accelerator.cpp" 2
 # 417 "activation_accelerator.cpp"
@@ -55779,7 +55788,9 @@ normalize_blocks:
         }
     }
 }
-# 735 "activation_accelerator.cpp"
+
+
+
 void float_layer_norm3(const float* x, uint16* y_bf16, int len) {
 #pragma HLS INLINE off
  const int UF = 32;
@@ -55900,7 +55911,9 @@ float Q_rsqrt(float number)
 
  return y;
 }
-# 870 "activation_accelerator.cpp"
+
+
+
 void float_gelu2(const float* x, uint16* y_bf16, int len) {
 #pragma HLS INLINE off
  const int UF = 32;
@@ -55932,7 +55945,8 @@ void float_gelu2(const float* x, uint16* y_bf16, int len) {
         }
     }
 }
-# 911 "activation_accelerator.cpp"
+
+
 void float_add2(const float* x, const float* y, uint16* out, int len) {
 #pragma HLS INLINE off
  const int UF = 32;
@@ -55955,141 +55969,112 @@ void float_add2(const float* x, const float* y, uint16* out, int len) {
         }
     }
 }
-# 1097 "activation_accelerator.cpp"
-template<int LANES = 64>
-static float row_max_hls(const float* x, int cols) {
-#pragma HLS INLINE
- const int steps = cols / LANES;
-
-    float lane_max[LANES];
-#pragma HLS ARRAY_PARTITION variable=lane_max complete
+# 892 "activation_accelerator.cpp"
+template<int ROWS = 64, int COLS_PER_ROW = 768>
+static void row_max_hls(const float* x, float max_row[ROWS]) {
+#pragma HLS INLINE off
 
 
 init_lane_max:
-    for (int u = 0; u < LANES; ++u) {
+    for (int u = 0; u < ROWS; ++u) {
 #pragma HLS UNROLL
- lane_max[u] = -std::numeric_limits<float>::max();
+ max_row[u] = -std::numeric_limits<float>::max();
     }
 
 
 step_loop:
-    for (int i = 0; i < steps; ++i) {
+    for (int i = 0; i < COLS_PER_ROW; ++i) {
 
 
     lane_reduce:
-        for (int u = 0; u < LANES; ++u) {
+        for (int u = 0; u < ROWS; ++u) {
 #pragma HLS UNROLL
 
- int idx = u * steps + i;
-            float v = (idx < cols) ? x[idx] : -std::numeric_limits<float>::max();
-            lane_max[u] = hls::fmaxf(lane_max[u], v);
+ int idx = u * COLS_PER_ROW + i;
+            float v = x[idx];
+            max_row[u] = hls::fmaxf(max_row[u], v);
         }
     }
-
-
-    float max_val = lane_max[0];
-final_reduce:
-    for (int u = 1; u < LANES; ++u) {
-#pragma HLS UNROLL
- max_val = hls::fmaxf(max_val, lane_max[u]);
-    }
-    return max_val;
 }
 
-template<int LANES = 64>
-static float row_exp_bucket_sum(const float* x, int cols, float max_val, float* exp_x) {
-#pragma HLS INLINE
- const int steps = cols / LANES;
-
-    float partial[LANES];
-#pragma HLS ARRAY_PARTITION variable=partial complete
+template<int ROWS = 64, int COLS_PER_ROW = 768>
+static void row_exp_bucket_sum(const float* x, const float max_row[ROWS], float* exp_buf, float sum_row[ROWS] ) {
+#pragma HLS INLINE off
 
 
 init_partial:
-    for (int k = 0; k < LANES; ++k) {
+    for (int u = 0; u < ROWS; ++u) {
 #pragma HLS UNROLL
- partial[k] = 0.f;
+ sum_row[u] = 0.f;
     }
 
 
 exp_and_bucket:
-    for (int i = 0; i < steps; ++i) {
-
-        float e[LANES];
-#pragma HLS ARRAY_PARTITION variable=e complete
+    for (int i = 0; i < COLS_PER_ROW; ++i) {
 
 
- exp_inner:
-        for (int u = 0; u < LANES; ++u) {
+
+    exp_inner:
+        for (int u = 0; u < ROWS; ++u) {
 #pragma HLS UNROLL
- int idx = u * steps + i;
-            float ex = (idx < cols) ? hls::expf(x[idx] - max_val) : 0.f;
-            e[u] = ex;
-            if (exp_x && idx < cols) exp_x[idx] = ex;
+ int idx = u * COLS_PER_ROW + i;
+            float ex = hls::expf(x[idx] - max_row[u]);
+            exp_buf[idx] = ex;
+            sum_row[u] = f32_add(sum_row[u], ex);
         }
 
-
-    bucket_add:
-        for (int u = 0; u < LANES; ++u) {
-#pragma HLS UNROLL
- uint16_t addend_bf16 = f32_to_bf16_rne(e[u]);
-            bf16add_fast(partial[u], addend_bf16);
-        }
     }
 
-
-    uint16_t sum_bf16 = (uint16_t)0;
-reduce_partial:
-    for (int k = 0; k < LANES; ++k) {
-#pragma HLS UNROLL
- sum_bf16 = bf16add_fast(sum_bf16, partial[k]);
-    }
-    return bf16_to_f32(sum_bf16);
 }
 
 
-template<int LANES = 64>
-static void row_norm_store_hls(const float* exp_x, float sum, uint16_t* output, int cols) {
-#pragma HLS INLINE
- if (!exp_x || cols <= 0) return;
-
-
-    float inv_sum = (sum > 0.f) ? (1.0f / sum) : 0.f;
-
-    const int steps = cols / LANES;
-
-step_loop:
-    for (int i = 0; i < steps; ++i) {
-
-    lane_loop:
-        for (int u = 0; u < LANES; ++u) {
-#pragma HLS UNROLL
- int idx = u * steps + i;
-            if (idx < cols) {
-                float y = exp_x[idx] * inv_sum;
-                output[idx] = round_float32_to_bf16_ieee(y);
-            }
-        }
-    }
-}
-
-template<int LANES = 64>
-void float_safe_softmax3(const float* x, uint16_t* out, int rows, int cols) {
+template<int ROWS = 64, int COLS_PER_ROW = 768>
+static void row_norm_store_hls(const float* exp_buf, float sum_row[ROWS], uint16_t* output) {
 #pragma HLS INLINE off
 
+step_loop:
+    for (int i = 0; i < COLS_PER_ROW; ++i) {
 
+    lane_loop:
+        for (int u = 0; u < ROWS; ++u) {
+#pragma HLS UNROLL
+ int idx = u * COLS_PER_ROW + i;
+            float denom = sum_row[u];
+            float inv_sum = (denom > 0.f) ? (1.0f / denom) : 0.f;
 
- float exp_x[64*768];
-#pragma HLS DEPENDENCE variable=exp_x inter false
-#pragma HLS ARRAY_PARTITION variable=exp_x cyclic factor=LANES dim=1
-# 1236 "activation_accelerator.cpp"
- float max_val = row_max_hls<LANES>(x, cols);
-
-    float sum = row_exp_bucket_sum<LANES>(x, cols, max_val, exp_x);
-
-    row_norm_store_hls<LANES>(exp_x, sum, out, cols);
+            float y = exp_buf[idx] * inv_sum;
+            output[idx] = round_float32_to_bf16_ieee(y);
+        }
+    }
 }
-# 1258 "activation_accelerator.cpp"
+
+
+
+template<int ROWS = 64, int COLS_PER_ROW = 768>
+void float_safe_softmax3(const float* x, uint16_t* out) {
+#pragma HLS INLINE off
+
+ float exp_buf[ROWS * COLS_PER_ROW];
+#pragma HLS DEPENDENCE variable=exp_buf inter false
+#pragma HLS ARRAY_PARTITION variable=exp_buf block factor=ROWS
+
+
+ float max_row[ROWS];
+#pragma HLS ARRAY_PARTITION variable=max_row complete
+
+ float sum_row[ROWS];
+#pragma HLS ARRAY_PARTITION variable=sum_row complete
+
+
+ row_max_hls<ROWS, COLS_PER_ROW>(x, max_row);
+
+
+    row_exp_bucket_sum<ROWS, COLS_PER_ROW>(x, max_row, exp_buf, sum_row);
+
+
+    row_norm_store_hls<ROWS, COLS_PER_ROW>(exp_buf, sum_row, out);
+}
+# 1009 "activation_accelerator.cpp"
 void float_Multiply2(const float* x, const float* y, uint16* out, int len) {
 #pragma HLS INLINE off
  const int UF = 32;
@@ -56112,11 +56097,11 @@ void float_Multiply2(const float* x, const float* y, uint16* out, int len) {
         }
     }
 }
-# 1303 "activation_accelerator.cpp"
+# 1054 "activation_accelerator.cpp"
 __attribute__((sdx_kernel("activation_accelerator", 0))) void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, int32 config) {
 #line 39 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/run_hls.tcl"
 #pragma HLSDIRECTIVE TOP name=activation_accelerator
-# 1303 "activation_accelerator.cpp"
+# 1054 "activation_accelerator.cpp"
 
 #pragma HLS INTERFACE m_axi port=in0 offset=slave bundle=gmem0 depth=49152
 #pragma HLS INTERFACE m_axi port=in1 offset=slave bundle=gmem1 depth=49152
@@ -56148,16 +56133,16 @@ __attribute__((sdx_kernel("activation_accelerator", 0))) void activation_acceler
     }
 
     if(stage == 1) {
-# 1343 "activation_accelerator.cpp"
+# 1094 "activation_accelerator.cpp"
         if(config == 0) {
             bf16_to_float(buf0, x, 64*768);
-            float_safe_softmax3(x, buf2, 64, 768);
+            float_safe_softmax3(x, buf2);
 
 
 
 
         }
-# 1376 "activation_accelerator.cpp"
+# 1127 "activation_accelerator.cpp"
     }
 
     if(stage == 2) {
