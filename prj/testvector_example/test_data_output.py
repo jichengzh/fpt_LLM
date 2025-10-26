@@ -9,8 +9,8 @@ N, D = 64, 768
 config = "0"
 
 # Name = "ref_softmax_bf16"
-# Name = "X_test_tensor_bf16"
-Name = "hls_output_config_" + config
+Name = "X_test_tensor_bf16"
+# Name = "hls_output_config_" + config
 # Name = "golden_out_config_" + config + "_bf16"
 
 # Name = "X_test_tensor_bf16"

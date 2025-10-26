@@ -808,14 +808,19 @@ step_loop:
 }
 
 template<int ROWS = 64, int COLS_PER_ROW = 768>
-static void row_exp_bucket_sum(const float* x, const float max_row[ROWS], float* exp_buf, uint16_t sum_row_bf16[ROWS] ) {
+static void row_exp_bucket_sum(const float* x, const float max_row[ROWS], float* exp_buf, float sum_row_bf16[ROWS] ) {
 #pragma HLS INLINE  // 若想多处共享该核，改成 "INLINE off" 并配合 ALLOCATION limit
+    const int BLOCK_SIZE = 8;
 
+    // 1. 初始化全局累加器和块内累加器
+    uint16_t block_accum_bf16[ROWS];
+#pragma HLS ARRAY_PARTITION variable=block_accum_bf16 complete    
 // 初始化桶
 init_partial:
     for (int u = 0; u < ROWS; ++u) {
     #pragma HLS UNROLL
         sum_row_bf16[u] = f32_to_bf16_rne(0.0f);  // 0x0000
+        block_accum_bf16[u]  = f32_to_bf16_rne(0.0f); // 当前块内部分和
     }
 
 
@@ -832,11 +837,23 @@ exp_and_bucket:
             exp_buf[idx] = ex;
 
             uint16_t addend_bf16 = f32_to_bf16_rne(ex);
-            sum_row_bf16[u] = bf16add_fast(sum_row_bf16[u], addend_bf16);
+            block_accum_bf16[u] = bf16add_fast(block_accum_bf16[u], addend_bf16);
         }
+        if ( ((i+1) % BLOCK_SIZE) == 0 ) {
+        flush_block:
+            for (int u = 0; u < ROWS; ++u) {
+            #pragma HLS UNROLL
+                // global_row_bf16[u] += block_accum_bf16[u]
+                sum_row_bf16[u] = bf16add_fast(sum_row_bf16[u],
+                                                  block_accum_bf16[u]);
+
+                // 清零 block 累加器，开始下一个block
+                block_accum_bf16[u] = f32_to_bf16_rne(0.0f);
+            }
+
+        }   
 
     }
-
 }
 
 // 64-lane 并行归一化并写回 BF16；与 rms_norm 的索引一致

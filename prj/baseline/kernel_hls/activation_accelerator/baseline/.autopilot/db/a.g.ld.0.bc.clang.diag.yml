@@ -18,95 +18,153 @@ Args:
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 940, Column: 24 }
-Function:        _ZL18row_exp_bucket_sumILi64ELi768EEvPKfS1_PfS2_
+DebugLoc:        { File: ./bf16_accl.h, Line: 269, Column: 12 }
+Function:        _ZL8f32_expff
 Args:            
   - String:          'Inlining function '''
   - Callee:          'hls::expf(float)'
     DebugLoc:        { File: '/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/expfloat.cpp', 
                        Line: 20, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'void row_exp_bucket_sum<64, 768>(float const*, float const*, float*, float*)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 920, Column: 0 }
+  - Caller:          'f32_expf(float)'
+    DebugLoc:        { File: ./bf16_accl.h, Line: 266, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 898, Column: 2 }
+Function:        _Z19float_safe_softmax3ILi64ELi768EEvPKfPt
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void row_max_hls<64, 768>(float const*, float*)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 783, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void float_safe_softmax3<64, 768>(float const*, unsigned short*)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 883, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 901, Column: 5 }
+Function:        _Z19float_safe_softmax3ILi64ELi768EEvPKfPt
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void row_exp_bucket_sum<64, 768>(float const*, float const*, float*, unsigned short*)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 811, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void float_safe_softmax3<64, 768>(float const*, unsigned short*)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 883, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 904, Column: 5 }
+Function:        _Z19float_safe_softmax3ILi64ELi768EEvPKfPt
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void row_norm_store_hls<64, 768>(float const*, unsigned short const*, unsigned short*)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 861, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void float_safe_softmax3<64, 768>(float const*, unsigned short*)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 883, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 951, Column: 0 }
-Function:        _ZL18row_norm_store_hlsILi64ELi768EEvPKfPfPt
+DebugLoc:        { File: activation_accelerator.cpp, Line: 883, Column: 0 }
+Function:        _Z19float_safe_softmax3ILi64ELi768EEvPKfPt
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        lane_loop
   - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:958:9'
+  - LoopLoc:         'activation_accelerator.cpp:868:9'
   - String:          ') '
   - String:          'in function '''
-  - String:          'row_norm_store_hls<64, 768>'
+  - String:          'float_safe_softmax3<64, 768>'
   - String:          ''' completely with a factor of '
   - Factor:          '64'
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 920, Column: 0 }
-Function:        _ZL18row_exp_bucket_sumILi64ELi768EEvPKfS1_PfS2_
+DebugLoc:        { File: activation_accelerator.cpp, Line: 883, Column: 0 }
+Function:        _Z19float_safe_softmax3ILi64ELi768EEvPKfPt
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        exp_inner
   - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:937:9'
+  - LoopLoc:         'activation_accelerator.cpp:833:9'
   - String:          ') '
   - String:          'in function '''
-  - String:          'row_exp_bucket_sum<64, 768>'
+  - String:          'float_safe_softmax3<64, 768>'
   - String:          ''' completely with a factor of '
   - Factor:          '64'
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 920, Column: 0 }
-Function:        _ZL18row_exp_bucket_sumILi64ELi768EEvPKfS1_PfS2_
+DebugLoc:        { File: activation_accelerator.cpp, Line: 883, Column: 0 }
+Function:        _Z19float_safe_softmax3ILi64ELi768EEvPKfPt
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        flush_block
+  - String:          ''' ('
+  - LoopLoc:         'activation_accelerator.cpp:844:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'float_safe_softmax3<64, 768>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: activation_accelerator.cpp, Line: 883, Column: 0 }
+Function:        _Z19float_safe_softmax3ILi64ELi768EEvPKfPt
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        init_partial
   - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:925:5'
+  - LoopLoc:         'activation_accelerator.cpp:820:5'
   - String:          ') '
   - String:          'in function '''
-  - String:          'row_exp_bucket_sum<64, 768>'
+  - String:          'float_safe_softmax3<64, 768>'
   - String:          ''' completely with a factor of '
   - Factor:          '64'
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 893, Column: 0 }
-Function:        _ZL11row_max_hlsILi64ELi768EEvPKfPf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 883, Column: 0 }
+Function:        _Z19float_safe_softmax3ILi64ELi768EEvPKfPt
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        lane_reduce
   - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:909:9'
+  - LoopLoc:         'activation_accelerator.cpp:800:9'
   - String:          ') '
   - String:          'in function '''
-  - String:          'row_max_hls<64, 768>'
+  - String:          'float_safe_softmax3<64, 768>'
   - String:          ''' completely with a factor of '
   - Factor:          '64'
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 893, Column: 0 }
-Function:        _ZL11row_max_hlsILi64ELi768EEvPKfPf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 883, Column: 0 }
+Function:        _Z19float_safe_softmax3ILi64ELi768EEvPKfPt
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        init_lane_max
   - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:898:5'
+  - LoopLoc:         'activation_accelerator.cpp:789:5'
   - String:          ') '
   - String:          'in function '''
-  - String:          'row_max_hls<64, 768>'
+  - String:          'float_safe_softmax3<64, 768>'
   - String:          ''' completely with a factor of '
   - Factor:          '64'
 ...
@@ -264,9 +322,37 @@ Args:
   - String:          ''''
 ...
 --- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: ./bf16_accl.h, Line: 114, Column: 0 }
+Function:        _ZL12bf16add_fasttt
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'pack_bf16(unsigned short, unsigned short, unsigned short)'
+    DebugLoc:        { File: ./bf16_accl.h, Line: 22, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'bf16add_fast(unsigned short, unsigned short)'
+    DebugLoc:        { File: ./bf16_accl.h, Line: 114, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: ./bf16_accl.h, Line: 114, Column: 0 }
+Function:        _ZL12bf16add_fasttt
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'clz32(unsigned int)'
+    DebugLoc:        { File: ./bf16_accl.h, Line: 20, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'bf16add_fast(unsigned short, unsigned short)'
+    DebugLoc:        { File: ./bf16_accl.h, Line: 114, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: activation_accelerator.cpp, Line: 1064, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 1081, Column: 0 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Applying '
@@ -286,7 +372,7 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: activation_accelerator.cpp, Line: 976, Column: 8 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 886, Column: 8 }
 Function:        _Z19float_safe_softmax3ILi64ELi768EEvPKfPt
 Args:            
   - String:          'Applying '
@@ -306,43 +392,7 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: activation_accelerator.cpp, Line: 981, Column: 8 }
-Function:        _Z19float_safe_softmax3ILi64ELi768EEvPKfPt
-Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          max_row
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Complete
-  - String:          ' partitioning'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
-...
---- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-DebugLoc:        { File: activation_accelerator.cpp, Line: 984, Column: 8 }
-Function:        _Z19float_safe_softmax3ILi64ELi768EEvPKfPt
-Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          sum_row
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Complete
-  - String:          ' partitioning'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
-...
---- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-DebugLoc:        { File: activation_accelerator.cpp, Line: 1065, Column: 11 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 1082, Column: 11 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Applying '
@@ -362,7 +412,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: activation_accelerator.cpp, Line: 1075, Column: 9 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 1092, Column: 9 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Sequential '
@@ -382,16 +432,16 @@ Args:
   - String:          ' '
   - LoopName:        stage_0_load0
   - String:          ' '
-  - LoopLoc:         'activation_accelerator.cpp:1075:9'
+  - LoopLoc:         'activation_accelerator.cpp:1092:9'
   - String:          ' '
   - Function:        'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 1054, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 1071, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: activation_accelerator.cpp, Line: 1131, Column: 9 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 1148, Column: 9 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Sequential '
@@ -411,16 +461,16 @@ Args:
   - String:          ' '
   - LoopName:        stage_2_store
   - String:          ' '
-  - LoopLoc:         'activation_accelerator.cpp:1131:9'
+  - LoopLoc:         'activation_accelerator.cpp:1148:9'
   - String:          ' '
   - Function:        'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 1054, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 1071, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: activation_accelerator.cpp, Line: 1075, Column: 9 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 1092, Column: 9 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Could not widen since type '
@@ -436,16 +486,16 @@ Args:
   - String:          ' '
   - LoopName:        stage_0_load0
   - String:          ' '
-  - LoopLoc:         'activation_accelerator.cpp:1075:9'
+  - LoopLoc:         'activation_accelerator.cpp:1092:9'
   - String:          ' '
   - Function:        'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 1054, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 1071, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: activation_accelerator.cpp, Line: 1131, Column: 9 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 1148, Column: 9 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Could not widen since type '
@@ -461,16 +511,16 @@ Args:
   - String:          ' '
   - LoopName:        stage_2_store
   - String:          ' '
-  - LoopLoc:         'activation_accelerator.cpp:1131:9'
+  - LoopLoc:         'activation_accelerator.cpp:1148:9'
   - String:          ' '
   - Function:        'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 1054, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 1071, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: activation_accelerator.cpp, Line: 1075, Column: 9 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 1092, Column: 9 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Multiple burst '
@@ -490,16 +540,16 @@ Args:
   - String:          ' '
   - LoopName:        stage_0_load0
   - String:          ' '
-  - LoopLoc:         'activation_accelerator.cpp:1075:9'
+  - LoopLoc:         'activation_accelerator.cpp:1092:9'
   - String:          ' '
   - Function:        'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 1054, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 1071, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: activation_accelerator.cpp, Line: 1075, Column: 9 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 1092, Column: 9 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Multiple burst '
@@ -511,7 +561,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        stage_0_load0
   - String:          '''('
-  - LoopLoc:         'activation_accelerator.cpp:1075:9'
+  - LoopLoc:         'activation_accelerator.cpp:1092:9'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem0
@@ -521,7 +571,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: activation_accelerator.cpp, Line: 1131, Column: 9 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 1148, Column: 9 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Multiple burst '
@@ -541,16 +591,16 @@ Args:
   - String:          ' '
   - LoopName:        stage_2_store
   - String:          ' '
-  - LoopLoc:         'activation_accelerator.cpp:1131:9'
+  - LoopLoc:         'activation_accelerator.cpp:1148:9'
   - String:          ' '
   - Function:        'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 1054, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 1071, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: activation_accelerator.cpp, Line: 1131, Column: 9 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 1148, Column: 9 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Multiple burst '
@@ -562,7 +612,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        stage_2_store
   - String:          '''('
-  - LoopLoc:         'activation_accelerator.cpp:1131:9'
+  - LoopLoc:         'activation_accelerator.cpp:1148:9'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem2

@@ -195,20 +195,20 @@ static inline uint16 bf16add_fast(uint16 a_bits, uint16 b_bits) {
     }
 
     // // ---- 5) 同号加/异号减（大减小），得到中间尾数
-    uint32_t M;
-    uint16_t s = sa;
-    if (sa == sb) {
-        M = A + B_aln;
-    } else {
-        if (A >= B_aln) { M = A - B_aln; s = sa; }
-        else           { M = B_aln - A; s = sb; }
-    }
+    // uint32_t M;
+    // uint16_t s = sa;
+    // if (sa == sb) {
+    //     M = A + B_aln;
+    // } else {
+    //     if (A >= B_aln) { M = A - B_aln; s = sa; }
+    //     else           { M = B_aln - A; s = sb; }
+    // }
 
-    if (M == 0) return 0; // 结果为零
+    // if (M == 0) return 0; // 结果为零
         // 5) 只做同号加法（我们假设 softmax 场景下全是正数，sa=sb=0）
     // 不再支持异号相减
-    // uint32_t M = A + B_aln;
-    // uint16_t s  = 0; // 正号
+    uint32_t M = A + B_aln;
+    uint16_t s  = 0; // 正号
 
 
 

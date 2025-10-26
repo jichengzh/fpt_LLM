@@ -407,7 +407,7 @@ for.inc.split:0 %phi_urem_load_1 = load i16 %phi_urem
 
 <Node id="84" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc.split:3 %specloopname_ln49 = specloopname void @_ssdm_op_SpecLoopName, void @empty_11
+for.inc.split:3 %specloopname_ln49 = specloopname void @_ssdm_op_SpecLoopName, void @empty_10
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln49"/></StgValue>

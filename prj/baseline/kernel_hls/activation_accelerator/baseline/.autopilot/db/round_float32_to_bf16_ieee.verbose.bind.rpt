@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'round_float32_to_bf16_ieee'
 ================================================================
-* Date:           Sat Oct 25 22:45:48 2025
+* Date:           Sun Oct 26 09:00:38 2025
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        activation_accelerator
@@ -96,18 +96,18 @@ ST_1 : Operation 15 [1/1] (0.00ns) (grouped into LUT with out node select_ln70) 
 ST_1 : Operation 16 [1/1] (0.00ns) (grouped into LUT with out node select_ln70)   --->   "%ret_1 = or i16 %ret, i16 1" [./bf16_accl.h:76]   --->   Operation 16 'or' 'ret_1' <Predicate = (and_ln75 & icmp_ln70)> <Delay = 0.00>
 ST_1 : Operation 17 [1/1] (0.00ns) (grouped into LUT with out node select_ln70)   --->   "%ret_2 = select i1 %and_ln75, i16 %ret_1, i16 %ret" [./bf16_accl.h:75]   --->   Operation 17 'select' 'ret_2' <Predicate = (icmp_ln70)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_1 : Operation 18 [1/1] (1.10ns)   --->   "%icmp_ln87 = icmp_ugt  i16 %lower, i16 32768" [./bf16_accl.h:87]   --->   Operation 18 'icmp' 'icmp_ln87' <Predicate = (!icmp_ln70)> <Delay = 1.10> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.10> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 19 [1/1] (0.00ns) (grouped into LUT with out node or_ln89)   --->   "%tmp_2 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %fbits, i32 15" [./bf16_accl.h:89]   --->   Operation 19 'bitselect' 'tmp_2' <Predicate = (!icmp_ln70)> <Delay = 0.00>
-ST_1 : Operation 20 [1/1] (0.00ns) (grouped into LUT with out node or_ln89)   --->   "%round_up_1 = and i1 %round_up, i1 %tmp_2" [./bf16_accl.h:89]   --->   Operation 20 'and' 'round_up_1' <Predicate = (!icmp_ln70)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 19 [1/1] (0.00ns) (grouped into LUT with out node or_ln89)   --->   "%tmp_3 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %fbits, i32 15" [./bf16_accl.h:89]   --->   Operation 19 'bitselect' 'tmp_3' <Predicate = (!icmp_ln70)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns) (grouped into LUT with out node or_ln89)   --->   "%round_up_1 = and i1 %round_up, i1 %tmp_3" [./bf16_accl.h:89]   --->   Operation 20 'and' 'round_up_1' <Predicate = (!icmp_ln70)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 21 [1/1] (0.28ns) (out node of the LUT)   --->   "%or_ln89 = or i1 %icmp_ln87, i1 %round_up_1" [./bf16_accl.h:89]   --->   Operation 21 'or' 'or_ln89' <Predicate = (!icmp_ln70)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%zext_ln97 = zext i1 %or_ln89" [./bf16_accl.h:97]   --->   Operation 22 'zext' 'zext_ln97' <Predicate = (!icmp_ln70)> <Delay = 0.00>
 ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%zext_ln97_1 = zext i1 %or_ln89" [./bf16_accl.h:97]   --->   Operation 23 'zext' 'zext_ln97_1' <Predicate = (!icmp_ln70)> <Delay = 0.00>
 ST_1 : Operation 24 [1/1] (0.84ns)   --->   "%rounded = add i15 %trunc_ln, i15 %zext_ln97" [./bf16_accl.h:97]   --->   Operation 24 'add' 'rounded' <Predicate = (!icmp_ln70)> <Delay = 0.84> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%tmp_s = partselect i8 @_ssdm_op_PartSelect.i8.i15.i32.i32, i15 %rounded, i32 7, i32 14" [./bf16_accl.h:100]   --->   Operation 25 'partselect' 'tmp_s' <Predicate = (!icmp_ln70)> <Delay = 0.00>
-ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%new_exp = bitconcatenate i15 @_ssdm_op_BitConcatenate.i15.i8.i7, i8 %tmp_s, i7 0" [./bf16_accl.h:100]   --->   Operation 26 'bitconcatenate' 'new_exp' <Predicate = (!icmp_ln70)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%tmp_1 = partselect i8 @_ssdm_op_PartSelect.i8.i15.i32.i32, i15 %rounded, i32 7, i32 14" [./bf16_accl.h:100]   --->   Operation 25 'partselect' 'tmp_1' <Predicate = (!icmp_ln70)> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%new_exp = bitconcatenate i15 @_ssdm_op_BitConcatenate.i15.i8.i7, i8 %tmp_1, i7 0" [./bf16_accl.h:100]   --->   Operation 26 'bitconcatenate' 'new_exp' <Predicate = (!icmp_ln70)> <Delay = 0.00>
 ST_1 : Operation 27 [1/1] (0.85ns)   --->   "%add_ln101 = add i16 %ret, i16 %zext_ln97_1" [./bf16_accl.h:101]   --->   Operation 27 'add' 'add_ln101' <Predicate = (!icmp_ln70)> <Delay = 0.85> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 28 [1/1] (1.07ns)   --->   "%icmp_ln102 = icmp_eq  i15 %new_exp, i15 32640" [./bf16_accl.h:102]   --->   Operation 28 'icmp' 'icmp_ln102' <Predicate = (!icmp_ln70)> <Delay = 1.07> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 29 [1/1] (0.00ns) (grouped into LUT with out node select_ln102)   --->   "%tmp_3 = bitselect i1 @_ssdm_op_BitSelect.i1.i16.i32, i16 %add_ln101, i32 15" [./bf16_accl.h:103]   --->   Operation 29 'bitselect' 'tmp_3' <Predicate = (icmp_ln102 & !icmp_ln70)> <Delay = 0.00>
-ST_1 : Operation 30 [1/1] (0.00ns) (grouped into LUT with out node select_ln102)   --->   "%and_ln = bitconcatenate i16 @_ssdm_op_BitConcatenate.i16.i1.i15, i1 %tmp_3, i15 0" [./bf16_accl.h:103]   --->   Operation 30 'bitconcatenate' 'and_ln' <Predicate = (icmp_ln102 & !icmp_ln70)> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns) (grouped into LUT with out node select_ln102)   --->   "%tmp_4 = bitselect i1 @_ssdm_op_BitSelect.i1.i16.i32, i16 %add_ln101, i32 15" [./bf16_accl.h:103]   --->   Operation 29 'bitselect' 'tmp_4' <Predicate = (icmp_ln102 & !icmp_ln70)> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns) (grouped into LUT with out node select_ln102)   --->   "%and_ln = bitconcatenate i16 @_ssdm_op_BitConcatenate.i16.i1.i15, i1 %tmp_4, i15 0" [./bf16_accl.h:103]   --->   Operation 30 'bitconcatenate' 'and_ln' <Predicate = (icmp_ln102 & !icmp_ln70)> <Delay = 0.00>
 ST_1 : Operation 31 [1/1] (0.00ns) (grouped into LUT with out node select_ln102)   --->   "%res = or i16 %and_ln, i16 32640" [./bf16_accl.h:103]   --->   Operation 31 'or' 'res' <Predicate = (icmp_ln102 & !icmp_ln70)> <Delay = 0.00>
 ST_1 : Operation 32 [1/1] (0.35ns) (out node of the LUT)   --->   "%select_ln102 = select i1 %icmp_ln102, i16 %res, i16 %add_ln101" [./bf16_accl.h:102]   --->   Operation 32 'select' 'select_ln102' <Predicate = (!icmp_ln70)> <Delay = 0.35> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_1 : Operation 33 [1/1] (0.35ns) (out node of the LUT)   --->   "%select_ln70 = select i1 %icmp_ln70, i16 %ret_2, i16 %select_ln102" [./bf16_accl.h:70]   --->   Operation 33 'select' 'select_ln70' <Predicate = true> <Delay = 0.35> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
@@ -149,17 +149,17 @@ and_ln75     (and           ) [ 01]
 ret_1        (or            ) [ 00]
 ret_2        (select        ) [ 00]
 icmp_ln87    (icmp          ) [ 00]
-tmp_2        (bitselect     ) [ 00]
+tmp_3        (bitselect     ) [ 00]
 round_up_1   (and           ) [ 00]
 or_ln89      (or            ) [ 00]
 zext_ln97    (zext          ) [ 00]
 zext_ln97_1  (zext          ) [ 00]
 rounded      (add           ) [ 00]
-tmp_s        (partselect    ) [ 00]
+tmp_1        (partselect    ) [ 00]
 new_exp      (bitconcatenate) [ 00]
 add_ln101    (add           ) [ 00]
 icmp_ln102   (icmp          ) [ 01]
-tmp_3        (bitselect     ) [ 00]
+tmp_4        (bitselect     ) [ 00]
 and_ln       (bitconcatenate) [ 00]
 res          (or            ) [ 00]
 select_ln102 (select        ) [ 00]
@@ -634,7 +634,7 @@ ret_ln108    (ret           ) [ 00]
 </bind>
 </comp>
 
-<comp id="174" class="1004" name="tmp_2_fu_174">
+<comp id="174" class="1004" name="tmp_3_fu_174">
 <pin_list>
 <pin id="175" dir="0" index="0" bw="1" slack="0"/>
 <pin id="176" dir="0" index="1" bw="32" slack="0"/>
@@ -643,7 +643,7 @@ ret_ln108    (ret           ) [ 00]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_2/1 "/>
+<opset="tmp_3/1 "/>
 </bind>
 </comp>
 
@@ -705,7 +705,7 @@ ret_ln108    (ret           ) [ 00]
 </bind>
 </comp>
 
-<comp id="208" class="1004" name="tmp_s_fu_208">
+<comp id="208" class="1004" name="tmp_1_fu_208">
 <pin_list>
 <pin id="209" dir="0" index="0" bw="8" slack="0"/>
 <pin id="210" dir="0" index="1" bw="15" slack="0"/>
@@ -715,7 +715,7 @@ ret_ln108    (ret           ) [ 00]
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_s/1 "/>
+<opset="tmp_1/1 "/>
 </bind>
 </comp>
 
@@ -756,7 +756,7 @@ ret_ln108    (ret           ) [ 00]
 </bind>
 </comp>
 
-<comp id="238" class="1004" name="tmp_3_fu_238">
+<comp id="238" class="1004" name="tmp_4_fu_238">
 <pin_list>
 <pin id="239" dir="0" index="0" bw="1" slack="0"/>
 <pin id="240" dir="0" index="1" bw="16" slack="0"/>
@@ -765,7 +765,7 @@ ret_ln108    (ret           ) [ 00]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_3/1 "/>
+<opset="tmp_4/1 "/>
 </bind>
 </comp>
 
@@ -1005,17 +1005,17 @@ ret_ln108    (ret           ) [ 00]
 		ret_1 : 2
 		ret_2 : 3
 		icmp_ln87 : 2
-		tmp_2 : 1
+		tmp_3 : 1
 		round_up_1 : 2
 		or_ln89 : 2
 		zext_ln97 : 2
 		zext_ln97_1 : 2
 		rounded : 3
-		tmp_s : 4
+		tmp_1 : 4
 		new_exp : 5
 		add_ln101 : 3
 		icmp_ln102 : 6
-		tmp_3 : 4
+		tmp_4 : 4
 		and_ln : 5
 		res : 6
 		select_ln102 : 6
@@ -1060,11 +1060,11 @@ ret_ln108    (ret           ) [ 00]
 |          |       tmp_fu_92      |    0    |    0    |
 |partselect|      ret_fu_116      |    0    |    0    |
 |          |  trunc_ln71_1_fu_126 |    0    |    0    |
-|          |     tmp_s_fu_208     |    0    |    0    |
+|          |     tmp_1_fu_208     |    0    |    0    |
 |----------|----------------------|---------|---------|
 |          |    round_up_fu_84    |    0    |    0    |
-| bitselect|     tmp_2_fu_174     |    0    |    0    |
-|          |     tmp_3_fu_238     |    0    |    0    |
+| bitselect|     tmp_3_fu_174     |    0    |    0    |
+|          |     tmp_4_fu_238     |    0    |    0    |
 |----------|----------------------|---------|---------|
 |          |   exp_field_fu_102   |    0    |    0    |
 |bitconcatenate|    new_exp_fu_218    |    0    |    0    |

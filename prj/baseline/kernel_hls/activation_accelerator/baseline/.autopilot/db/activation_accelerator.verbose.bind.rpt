@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'activation_accelerator'
 ================================================================
-* Date:           Sat Oct 25 22:46:14 2025
+* Date:           Sun Oct 26 09:02:45 2025
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        activation_accelerator
@@ -29,7 +29,7 @@
     |  Latency (cycles) |  Latency (absolute)  |   Interval  | Pipeline|
     |   min   |   max   |    min    |    max   | min |  max  |   Type  |
     +---------+---------+-----------+----------+-----+-------+---------+
-    |        1|    53808|  10.000 ns|  0.538 ms|    2|  53809|       no|
+    |        1|    51504|  10.000 ns|  0.515 ms|    2|  51505|       no|
     +---------+---------+-----------+----------+-----+-------+---------+
 
     + Detail: 
@@ -40,7 +40,7 @@
         +----------------------------------------------------------+-----------------------------------------------+---------+---------+-----------+-----------+-------+-------+---------+
         |grp_bf16_to_float_fu_515                                  |bf16_to_float                                  |    49154|    49154|   0.492 ms|   0.492 ms|  49154|  49154|       no|
         |grp_activation_accelerator_Pipeline_stage_2_store_fu_649  |activation_accelerator_Pipeline_stage_2_store  |    49155|    49155|   0.492 ms|   0.492 ms|  49155|  49155|       no|
-        |grp_float_safe_softmax3_64_768_s_fu_784                   |float_safe_softmax3_64_768_s                   |     4650|     4650|  46.500 us|  46.500 us|   4650|   4650|       no|
+        |grp_float_safe_softmax3_64_768_s_fu_784                   |float_safe_softmax3_64_768_s                   |     2346|     2346|  23.460 us|  23.460 us|   2346|   2346|       no|
         |grp_activation_accelerator_Pipeline_stage_0_load0_fu_980  |activation_accelerator_Pipeline_stage_0_load0  |    49155|    49155|   0.492 ms|   0.492 ms|  49155|  49155|       no|
         +----------------------------------------------------------+-----------------------------------------------+---------+---------+-----------+-----------+-------+-------+---------+
 
@@ -103,7 +103,7 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 2.27>
-ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%spectopmodule_ln1054 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_0" [activation_accelerator.cpp:1054]   --->   Operation 22 'spectopmodule' 'spectopmodule_ln1054' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%spectopmodule_ln1071 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_0" [activation_accelerator.cpp:1071]   --->   Operation 22 'spectopmodule' 'spectopmodule_ln1071' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %gmem0, void @empty_5, i32 0, i32 0, void @empty_6, i32 0, i32 49152, void @empty_7, void @empty_8, void @empty_6, i32 16, i32 16, i32 16, i32 16, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %gmem0"   --->   Operation 24 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %gmem1, void @empty_5, i32 0, i32 0, void @empty_6, i32 0, i32 49152, void @empty_19, void @empty_8, void @empty_6, i32 16, i32 16, i32 16, i32 16, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
@@ -127,145 +127,145 @@ ST_1 : Operation 42 [1/1] (1.00ns)   --->   "%config_r_read = read i32 @_ssdm_op
 ST_1 : Operation 43 [1/1] (1.00ns)   --->   "%stage_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %stage"   --->   Operation 43 'read' 'stage_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
 ST_1 : Operation 44 [1/1] (1.00ns)   --->   "%out_r_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %out_r"   --->   Operation 44 'read' 'out_r_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
 ST_1 : Operation 45 [1/1] (1.00ns)   --->   "%in0_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %in0"   --->   Operation 45 'read' 'in0_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 46 [1/1] (1.23ns)   --->   "%x = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 46 'alloca' 'x' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 47 [1/1] (1.23ns)   --->   "%x_1 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 47 'alloca' 'x_1' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 48 [1/1] (1.23ns)   --->   "%x_2 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 48 'alloca' 'x_2' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 49 [1/1] (1.23ns)   --->   "%x_3 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 49 'alloca' 'x_3' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 50 [1/1] (1.23ns)   --->   "%x_4 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 50 'alloca' 'x_4' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 51 [1/1] (1.23ns)   --->   "%x_5 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 51 'alloca' 'x_5' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 52 [1/1] (1.23ns)   --->   "%x_6 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 52 'alloca' 'x_6' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 53 [1/1] (1.23ns)   --->   "%x_7 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 53 'alloca' 'x_7' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 54 [1/1] (1.23ns)   --->   "%x_8 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 54 'alloca' 'x_8' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 55 [1/1] (1.23ns)   --->   "%x_9 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 55 'alloca' 'x_9' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 56 [1/1] (1.23ns)   --->   "%x_10 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 56 'alloca' 'x_10' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 57 [1/1] (1.23ns)   --->   "%x_11 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 57 'alloca' 'x_11' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 58 [1/1] (1.23ns)   --->   "%x_12 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 58 'alloca' 'x_12' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 59 [1/1] (1.23ns)   --->   "%x_13 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 59 'alloca' 'x_13' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 60 [1/1] (1.23ns)   --->   "%x_14 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 60 'alloca' 'x_14' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 61 [1/1] (1.23ns)   --->   "%x_15 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 61 'alloca' 'x_15' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 62 [1/1] (1.23ns)   --->   "%x_16 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 62 'alloca' 'x_16' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 63 [1/1] (1.23ns)   --->   "%x_17 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 63 'alloca' 'x_17' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 64 [1/1] (1.23ns)   --->   "%x_18 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 64 'alloca' 'x_18' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 65 [1/1] (1.23ns)   --->   "%x_19 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 65 'alloca' 'x_19' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 66 [1/1] (1.23ns)   --->   "%x_20 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 66 'alloca' 'x_20' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 67 [1/1] (1.23ns)   --->   "%x_21 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 67 'alloca' 'x_21' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 68 [1/1] (1.23ns)   --->   "%x_22 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 68 'alloca' 'x_22' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 69 [1/1] (1.23ns)   --->   "%x_23 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 69 'alloca' 'x_23' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 70 [1/1] (1.23ns)   --->   "%x_24 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 70 'alloca' 'x_24' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 71 [1/1] (1.23ns)   --->   "%x_25 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 71 'alloca' 'x_25' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 72 [1/1] (1.23ns)   --->   "%x_26 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 72 'alloca' 'x_26' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 73 [1/1] (1.23ns)   --->   "%x_27 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 73 'alloca' 'x_27' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 74 [1/1] (1.23ns)   --->   "%x_28 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 74 'alloca' 'x_28' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 75 [1/1] (1.23ns)   --->   "%x_29 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 75 'alloca' 'x_29' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 76 [1/1] (1.23ns)   --->   "%x_30 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 76 'alloca' 'x_30' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 77 [1/1] (1.23ns)   --->   "%x_31 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 77 'alloca' 'x_31' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 78 [1/1] (1.23ns)   --->   "%x_32 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 78 'alloca' 'x_32' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 79 [1/1] (1.23ns)   --->   "%x_33 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 79 'alloca' 'x_33' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 80 [1/1] (1.23ns)   --->   "%x_34 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 80 'alloca' 'x_34' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 81 [1/1] (1.23ns)   --->   "%x_35 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 81 'alloca' 'x_35' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 82 [1/1] (1.23ns)   --->   "%x_36 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 82 'alloca' 'x_36' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 83 [1/1] (1.23ns)   --->   "%x_37 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 83 'alloca' 'x_37' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 84 [1/1] (1.23ns)   --->   "%x_38 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 84 'alloca' 'x_38' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 85 [1/1] (1.23ns)   --->   "%x_39 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 85 'alloca' 'x_39' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 86 [1/1] (1.23ns)   --->   "%x_40 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 86 'alloca' 'x_40' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 87 [1/1] (1.23ns)   --->   "%x_41 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 87 'alloca' 'x_41' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 88 [1/1] (1.23ns)   --->   "%x_42 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 88 'alloca' 'x_42' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 89 [1/1] (1.23ns)   --->   "%x_43 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 89 'alloca' 'x_43' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 90 [1/1] (1.23ns)   --->   "%x_44 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 90 'alloca' 'x_44' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 91 [1/1] (1.23ns)   --->   "%x_45 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 91 'alloca' 'x_45' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 92 [1/1] (1.23ns)   --->   "%x_46 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 92 'alloca' 'x_46' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 93 [1/1] (1.23ns)   --->   "%x_47 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 93 'alloca' 'x_47' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 94 [1/1] (1.23ns)   --->   "%x_48 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 94 'alloca' 'x_48' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 95 [1/1] (1.23ns)   --->   "%x_49 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 95 'alloca' 'x_49' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 96 [1/1] (1.23ns)   --->   "%x_50 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 96 'alloca' 'x_50' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 97 [1/1] (1.23ns)   --->   "%x_51 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 97 'alloca' 'x_51' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 98 [1/1] (1.23ns)   --->   "%x_52 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 98 'alloca' 'x_52' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 99 [1/1] (1.23ns)   --->   "%x_53 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 99 'alloca' 'x_53' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 100 [1/1] (1.23ns)   --->   "%x_54 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 100 'alloca' 'x_54' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 101 [1/1] (1.23ns)   --->   "%x_55 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 101 'alloca' 'x_55' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 102 [1/1] (1.23ns)   --->   "%x_56 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 102 'alloca' 'x_56' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 103 [1/1] (1.23ns)   --->   "%x_57 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 103 'alloca' 'x_57' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 104 [1/1] (1.23ns)   --->   "%x_58 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 104 'alloca' 'x_58' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 105 [1/1] (1.23ns)   --->   "%x_59 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 105 'alloca' 'x_59' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 106 [1/1] (1.23ns)   --->   "%x_60 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 106 'alloca' 'x_60' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 107 [1/1] (1.23ns)   --->   "%x_61 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 107 'alloca' 'x_61' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 108 [1/1] (1.23ns)   --->   "%x_62 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 108 'alloca' 'x_62' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 109 [1/1] (1.23ns)   --->   "%x_63 = alloca i64 1" [activation_accelerator.cpp:1065]   --->   Operation 109 'alloca' 'x_63' <Predicate = true> <Delay = 1.23>
-ST_1 : Operation 110 [1/1] (0.44ns)   --->   "%switch_ln1073 = switch i32 %stage_read, void %if.end37, i32 0, void %stage_0_load0, i32 1, void %if.then17, i32 2, void %stage_2_store" [activation_accelerator.cpp:1073]   --->   Operation 110 'switch' 'switch_ln1073' <Predicate = true> <Delay = 0.44>
-ST_1 : Operation 111 [1/1] (0.00ns)   --->   "%trunc_ln1 = partselect i63 @_ssdm_op_PartSelect.i63.i64.i32.i32, i64 %out_r_read, i32 1, i32 63" [activation_accelerator.cpp:1131]   --->   Operation 111 'partselect' 'trunc_ln1' <Predicate = (stage_read == 2)> <Delay = 0.00>
-ST_1 : Operation 112 [1/1] (0.99ns)   --->   "%icmp_ln1094 = icmp_eq  i32 %config_r_read, i32 0" [activation_accelerator.cpp:1094]   --->   Operation 112 'icmp' 'icmp_ln1094' <Predicate = (stage_read == 1)> <Delay = 0.99> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 113 [1/1] (0.00ns)   --->   "%br_ln1094 = br i1 %icmp_ln1094, void %if.end21, void %if.then19" [activation_accelerator.cpp:1094]   --->   Operation 113 'br' 'br_ln1094' <Predicate = (stage_read == 1)> <Delay = 0.00>
-ST_1 : Operation 114 [2/2] (0.00ns)   --->   "%call_ln1095 = call void @bf16_to_float, i32 %x, i32 %x_1, i32 %x_2, i32 %x_3, i32 %x_4, i32 %x_5, i32 %x_6, i32 %x_7, i32 %x_8, i32 %x_9, i32 %x_10, i32 %x_11, i32 %x_12, i32 %x_13, i32 %x_14, i32 %x_15, i32 %x_16, i32 %x_17, i32 %x_18, i32 %x_19, i32 %x_20, i32 %x_21, i32 %x_22, i32 %x_23, i32 %x_24, i32 %x_25, i32 %x_26, i32 %x_27, i32 %x_28, i32 %x_29, i32 %x_30, i32 %x_31, i32 %x_32, i32 %x_33, i32 %x_34, i32 %x_35, i32 %x_36, i32 %x_37, i32 %x_38, i32 %x_39, i32 %x_40, i32 %x_41, i32 %x_42, i32 %x_43, i32 %x_44, i32 %x_45, i32 %x_46, i32 %x_47, i32 %x_48, i32 %x_49, i32 %x_50, i32 %x_51, i32 %x_52, i32 %x_53, i32 %x_54, i32 %x_55, i32 %x_56, i32 %x_57, i32 %x_58, i32 %x_59, i32 %x_60, i32 %x_61, i32 %x_62, i32 %x_63, i16 %buf0" [activation_accelerator.cpp:1095]   --->   Operation 114 'call' 'call_ln1095' <Predicate = (stage_read == 1 & icmp_ln1094)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_1 : Operation 115 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i63 @_ssdm_op_PartSelect.i63.i64.i32.i32, i64 %in0_read, i32 1, i32 63" [activation_accelerator.cpp:1075]   --->   Operation 115 'partselect' 'trunc_ln' <Predicate = (stage_read == 0)> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (1.23ns)   --->   "%x = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 46 'alloca' 'x' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 47 [1/1] (1.23ns)   --->   "%x_1 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 47 'alloca' 'x_1' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 48 [1/1] (1.23ns)   --->   "%x_2 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 48 'alloca' 'x_2' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 49 [1/1] (1.23ns)   --->   "%x_3 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 49 'alloca' 'x_3' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 50 [1/1] (1.23ns)   --->   "%x_4 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 50 'alloca' 'x_4' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 51 [1/1] (1.23ns)   --->   "%x_5 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 51 'alloca' 'x_5' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 52 [1/1] (1.23ns)   --->   "%x_6 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 52 'alloca' 'x_6' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 53 [1/1] (1.23ns)   --->   "%x_7 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 53 'alloca' 'x_7' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 54 [1/1] (1.23ns)   --->   "%x_8 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 54 'alloca' 'x_8' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 55 [1/1] (1.23ns)   --->   "%x_9 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 55 'alloca' 'x_9' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 56 [1/1] (1.23ns)   --->   "%x_10 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 56 'alloca' 'x_10' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 57 [1/1] (1.23ns)   --->   "%x_11 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 57 'alloca' 'x_11' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 58 [1/1] (1.23ns)   --->   "%x_12 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 58 'alloca' 'x_12' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 59 [1/1] (1.23ns)   --->   "%x_13 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 59 'alloca' 'x_13' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 60 [1/1] (1.23ns)   --->   "%x_14 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 60 'alloca' 'x_14' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 61 [1/1] (1.23ns)   --->   "%x_15 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 61 'alloca' 'x_15' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 62 [1/1] (1.23ns)   --->   "%x_16 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 62 'alloca' 'x_16' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 63 [1/1] (1.23ns)   --->   "%x_17 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 63 'alloca' 'x_17' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 64 [1/1] (1.23ns)   --->   "%x_18 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 64 'alloca' 'x_18' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 65 [1/1] (1.23ns)   --->   "%x_19 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 65 'alloca' 'x_19' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 66 [1/1] (1.23ns)   --->   "%x_20 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 66 'alloca' 'x_20' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 67 [1/1] (1.23ns)   --->   "%x_21 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 67 'alloca' 'x_21' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 68 [1/1] (1.23ns)   --->   "%x_22 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 68 'alloca' 'x_22' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 69 [1/1] (1.23ns)   --->   "%x_23 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 69 'alloca' 'x_23' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 70 [1/1] (1.23ns)   --->   "%x_24 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 70 'alloca' 'x_24' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 71 [1/1] (1.23ns)   --->   "%x_25 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 71 'alloca' 'x_25' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 72 [1/1] (1.23ns)   --->   "%x_26 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 72 'alloca' 'x_26' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 73 [1/1] (1.23ns)   --->   "%x_27 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 73 'alloca' 'x_27' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 74 [1/1] (1.23ns)   --->   "%x_28 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 74 'alloca' 'x_28' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 75 [1/1] (1.23ns)   --->   "%x_29 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 75 'alloca' 'x_29' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 76 [1/1] (1.23ns)   --->   "%x_30 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 76 'alloca' 'x_30' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 77 [1/1] (1.23ns)   --->   "%x_31 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 77 'alloca' 'x_31' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 78 [1/1] (1.23ns)   --->   "%x_32 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 78 'alloca' 'x_32' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 79 [1/1] (1.23ns)   --->   "%x_33 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 79 'alloca' 'x_33' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 80 [1/1] (1.23ns)   --->   "%x_34 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 80 'alloca' 'x_34' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 81 [1/1] (1.23ns)   --->   "%x_35 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 81 'alloca' 'x_35' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 82 [1/1] (1.23ns)   --->   "%x_36 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 82 'alloca' 'x_36' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 83 [1/1] (1.23ns)   --->   "%x_37 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 83 'alloca' 'x_37' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 84 [1/1] (1.23ns)   --->   "%x_38 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 84 'alloca' 'x_38' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 85 [1/1] (1.23ns)   --->   "%x_39 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 85 'alloca' 'x_39' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 86 [1/1] (1.23ns)   --->   "%x_40 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 86 'alloca' 'x_40' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 87 [1/1] (1.23ns)   --->   "%x_41 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 87 'alloca' 'x_41' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 88 [1/1] (1.23ns)   --->   "%x_42 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 88 'alloca' 'x_42' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 89 [1/1] (1.23ns)   --->   "%x_43 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 89 'alloca' 'x_43' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 90 [1/1] (1.23ns)   --->   "%x_44 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 90 'alloca' 'x_44' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 91 [1/1] (1.23ns)   --->   "%x_45 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 91 'alloca' 'x_45' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 92 [1/1] (1.23ns)   --->   "%x_46 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 92 'alloca' 'x_46' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 93 [1/1] (1.23ns)   --->   "%x_47 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 93 'alloca' 'x_47' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 94 [1/1] (1.23ns)   --->   "%x_48 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 94 'alloca' 'x_48' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 95 [1/1] (1.23ns)   --->   "%x_49 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 95 'alloca' 'x_49' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 96 [1/1] (1.23ns)   --->   "%x_50 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 96 'alloca' 'x_50' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 97 [1/1] (1.23ns)   --->   "%x_51 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 97 'alloca' 'x_51' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 98 [1/1] (1.23ns)   --->   "%x_52 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 98 'alloca' 'x_52' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 99 [1/1] (1.23ns)   --->   "%x_53 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 99 'alloca' 'x_53' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 100 [1/1] (1.23ns)   --->   "%x_54 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 100 'alloca' 'x_54' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 101 [1/1] (1.23ns)   --->   "%x_55 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 101 'alloca' 'x_55' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 102 [1/1] (1.23ns)   --->   "%x_56 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 102 'alloca' 'x_56' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 103 [1/1] (1.23ns)   --->   "%x_57 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 103 'alloca' 'x_57' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 104 [1/1] (1.23ns)   --->   "%x_58 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 104 'alloca' 'x_58' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 105 [1/1] (1.23ns)   --->   "%x_59 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 105 'alloca' 'x_59' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 106 [1/1] (1.23ns)   --->   "%x_60 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 106 'alloca' 'x_60' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 107 [1/1] (1.23ns)   --->   "%x_61 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 107 'alloca' 'x_61' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 108 [1/1] (1.23ns)   --->   "%x_62 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 108 'alloca' 'x_62' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 109 [1/1] (1.23ns)   --->   "%x_63 = alloca i64 1" [activation_accelerator.cpp:1082]   --->   Operation 109 'alloca' 'x_63' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 110 [1/1] (0.44ns)   --->   "%switch_ln1090 = switch i32 %stage_read, void %if.end37, i32 0, void %stage_0_load0, i32 1, void %if.then17, i32 2, void %stage_2_store" [activation_accelerator.cpp:1090]   --->   Operation 110 'switch' 'switch_ln1090' <Predicate = true> <Delay = 0.44>
+ST_1 : Operation 111 [1/1] (0.00ns)   --->   "%trunc_ln1 = partselect i63 @_ssdm_op_PartSelect.i63.i64.i32.i32, i64 %out_r_read, i32 1, i32 63" [activation_accelerator.cpp:1148]   --->   Operation 111 'partselect' 'trunc_ln1' <Predicate = (stage_read == 2)> <Delay = 0.00>
+ST_1 : Operation 112 [1/1] (0.99ns)   --->   "%icmp_ln1111 = icmp_eq  i32 %config_r_read, i32 0" [activation_accelerator.cpp:1111]   --->   Operation 112 'icmp' 'icmp_ln1111' <Predicate = (stage_read == 1)> <Delay = 0.99> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 113 [1/1] (0.00ns)   --->   "%br_ln1111 = br i1 %icmp_ln1111, void %if.end21, void %if.then19" [activation_accelerator.cpp:1111]   --->   Operation 113 'br' 'br_ln1111' <Predicate = (stage_read == 1)> <Delay = 0.00>
+ST_1 : Operation 114 [2/2] (0.00ns)   --->   "%call_ln1112 = call void @bf16_to_float, i32 %x, i32 %x_1, i32 %x_2, i32 %x_3, i32 %x_4, i32 %x_5, i32 %x_6, i32 %x_7, i32 %x_8, i32 %x_9, i32 %x_10, i32 %x_11, i32 %x_12, i32 %x_13, i32 %x_14, i32 %x_15, i32 %x_16, i32 %x_17, i32 %x_18, i32 %x_19, i32 %x_20, i32 %x_21, i32 %x_22, i32 %x_23, i32 %x_24, i32 %x_25, i32 %x_26, i32 %x_27, i32 %x_28, i32 %x_29, i32 %x_30, i32 %x_31, i32 %x_32, i32 %x_33, i32 %x_34, i32 %x_35, i32 %x_36, i32 %x_37, i32 %x_38, i32 %x_39, i32 %x_40, i32 %x_41, i32 %x_42, i32 %x_43, i32 %x_44, i32 %x_45, i32 %x_46, i32 %x_47, i32 %x_48, i32 %x_49, i32 %x_50, i32 %x_51, i32 %x_52, i32 %x_53, i32 %x_54, i32 %x_55, i32 %x_56, i32 %x_57, i32 %x_58, i32 %x_59, i32 %x_60, i32 %x_61, i32 %x_62, i32 %x_63, i16 %buf0" [activation_accelerator.cpp:1112]   --->   Operation 114 'call' 'call_ln1112' <Predicate = (stage_read == 1 & icmp_ln1111)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 115 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i63 @_ssdm_op_PartSelect.i63.i64.i32.i32, i64 %in0_read, i32 1, i32 63" [activation_accelerator.cpp:1092]   --->   Operation 115 'partselect' 'trunc_ln' <Predicate = (stage_read == 0)> <Delay = 0.00>
 
 State 2 <SV = 1> <Delay = 7.30>
-ST_2 : Operation 116 [1/1] (0.00ns)   --->   "%sext_ln1131 = sext i63 %trunc_ln1" [activation_accelerator.cpp:1131]   --->   Operation 116 'sext' 'sext_ln1131' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 117 [1/1] (0.00ns)   --->   "%gmem2_addr = getelementptr i16 %gmem2, i64 %sext_ln1131" [activation_accelerator.cpp:1131]   --->   Operation 117 'getelementptr' 'gmem2_addr' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 118 [1/1] (7.30ns)   --->   "%empty_384 = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i16, i16 %gmem2_addr, i32 49152" [activation_accelerator.cpp:1131]   --->   Operation 118 'writereq' 'empty_384' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_2 : Operation 116 [1/1] (0.00ns)   --->   "%sext_ln1148 = sext i63 %trunc_ln1" [activation_accelerator.cpp:1148]   --->   Operation 116 'sext' 'sext_ln1148' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 117 [1/1] (0.00ns)   --->   "%gmem2_addr = getelementptr i16 %gmem2, i64 %sext_ln1148" [activation_accelerator.cpp:1148]   --->   Operation 117 'getelementptr' 'gmem2_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 118 [1/1] (7.30ns)   --->   "%empty_459 = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i16, i16 %gmem2_addr, i32 49152" [activation_accelerator.cpp:1148]   --->   Operation 118 'writereq' 'empty_459' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 3 <SV = 2> <Delay = 0.00>
-ST_3 : Operation 119 [2/2] (0.00ns)   --->   "%call_ln1131 = call void @activation_accelerator_Pipeline_stage_2_store, i16 %gmem2, i63 %trunc_ln1, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63" [activation_accelerator.cpp:1131]   --->   Operation 119 'call' 'call_ln1131' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 119 [2/2] (0.00ns)   --->   "%call_ln1148 = call void @activation_accelerator_Pipeline_stage_2_store, i16 %gmem2, i63 %trunc_ln1, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63" [activation_accelerator.cpp:1148]   --->   Operation 119 'call' 'call_ln1148' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 4 <SV = 3> <Delay = 0.00>
-ST_4 : Operation 120 [1/2] (0.00ns)   --->   "%call_ln1131 = call void @activation_accelerator_Pipeline_stage_2_store, i16 %gmem2, i63 %trunc_ln1, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63" [activation_accelerator.cpp:1131]   --->   Operation 120 'call' 'call_ln1131' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 120 [1/2] (0.00ns)   --->   "%call_ln1148 = call void @activation_accelerator_Pipeline_stage_2_store, i16 %gmem2, i63 %trunc_ln1, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63" [activation_accelerator.cpp:1148]   --->   Operation 120 'call' 'call_ln1148' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 5 <SV = 4> <Delay = 7.30>
-ST_5 : Operation 121 [5/5] (7.30ns)   --->   "%empty_385 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i16, i16 %gmem2_addr" [activation_accelerator.cpp:1135]   --->   Operation 121 'writeresp' 'empty_385' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_5 : Operation 121 [5/5] (7.30ns)   --->   "%empty_460 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i16, i16 %gmem2_addr" [activation_accelerator.cpp:1152]   --->   Operation 121 'writeresp' 'empty_460' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 6 <SV = 5> <Delay = 7.30>
-ST_6 : Operation 122 [4/5] (7.30ns)   --->   "%empty_385 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i16, i16 %gmem2_addr" [activation_accelerator.cpp:1135]   --->   Operation 122 'writeresp' 'empty_385' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_6 : Operation 122 [4/5] (7.30ns)   --->   "%empty_460 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i16, i16 %gmem2_addr" [activation_accelerator.cpp:1152]   --->   Operation 122 'writeresp' 'empty_460' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 7 <SV = 6> <Delay = 7.30>
-ST_7 : Operation 123 [3/5] (7.30ns)   --->   "%empty_385 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i16, i16 %gmem2_addr" [activation_accelerator.cpp:1135]   --->   Operation 123 'writeresp' 'empty_385' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_7 : Operation 123 [3/5] (7.30ns)   --->   "%empty_460 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i16, i16 %gmem2_addr" [activation_accelerator.cpp:1152]   --->   Operation 123 'writeresp' 'empty_460' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 8 <SV = 7> <Delay = 7.30>
-ST_8 : Operation 124 [2/5] (7.30ns)   --->   "%empty_385 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i16, i16 %gmem2_addr" [activation_accelerator.cpp:1135]   --->   Operation 124 'writeresp' 'empty_385' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_8 : Operation 124 [2/5] (7.30ns)   --->   "%empty_460 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i16, i16 %gmem2_addr" [activation_accelerator.cpp:1152]   --->   Operation 124 'writeresp' 'empty_460' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 9 <SV = 8> <Delay = 7.30>
-ST_9 : Operation 125 [1/5] (7.30ns)   --->   "%empty_385 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i16, i16 %gmem2_addr" [activation_accelerator.cpp:1135]   --->   Operation 125 'writeresp' 'empty_385' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_9 : Operation 126 [1/1] (0.00ns)   --->   "%br_ln1135 = br void %if.end37" [activation_accelerator.cpp:1135]   --->   Operation 126 'br' 'br_ln1135' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 125 [1/5] (7.30ns)   --->   "%empty_460 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i16, i16 %gmem2_addr" [activation_accelerator.cpp:1152]   --->   Operation 125 'writeresp' 'empty_460' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_9 : Operation 126 [1/1] (0.00ns)   --->   "%br_ln1152 = br void %if.end37" [activation_accelerator.cpp:1152]   --->   Operation 126 'br' 'br_ln1152' <Predicate = true> <Delay = 0.00>
 
 State 10 <SV = 1> <Delay = 0.00>
-ST_10 : Operation 127 [1/2] (0.00ns)   --->   "%call_ln1095 = call void @bf16_to_float, i32 %x, i32 %x_1, i32 %x_2, i32 %x_3, i32 %x_4, i32 %x_5, i32 %x_6, i32 %x_7, i32 %x_8, i32 %x_9, i32 %x_10, i32 %x_11, i32 %x_12, i32 %x_13, i32 %x_14, i32 %x_15, i32 %x_16, i32 %x_17, i32 %x_18, i32 %x_19, i32 %x_20, i32 %x_21, i32 %x_22, i32 %x_23, i32 %x_24, i32 %x_25, i32 %x_26, i32 %x_27, i32 %x_28, i32 %x_29, i32 %x_30, i32 %x_31, i32 %x_32, i32 %x_33, i32 %x_34, i32 %x_35, i32 %x_36, i32 %x_37, i32 %x_38, i32 %x_39, i32 %x_40, i32 %x_41, i32 %x_42, i32 %x_43, i32 %x_44, i32 %x_45, i32 %x_46, i32 %x_47, i32 %x_48, i32 %x_49, i32 %x_50, i32 %x_51, i32 %x_52, i32 %x_53, i32 %x_54, i32 %x_55, i32 %x_56, i32 %x_57, i32 %x_58, i32 %x_59, i32 %x_60, i32 %x_61, i32 %x_62, i32 %x_63, i16 %buf0" [activation_accelerator.cpp:1095]   --->   Operation 127 'call' 'call_ln1095' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 127 [1/2] (0.00ns)   --->   "%call_ln1112 = call void @bf16_to_float, i32 %x, i32 %x_1, i32 %x_2, i32 %x_3, i32 %x_4, i32 %x_5, i32 %x_6, i32 %x_7, i32 %x_8, i32 %x_9, i32 %x_10, i32 %x_11, i32 %x_12, i32 %x_13, i32 %x_14, i32 %x_15, i32 %x_16, i32 %x_17, i32 %x_18, i32 %x_19, i32 %x_20, i32 %x_21, i32 %x_22, i32 %x_23, i32 %x_24, i32 %x_25, i32 %x_26, i32 %x_27, i32 %x_28, i32 %x_29, i32 %x_30, i32 %x_31, i32 %x_32, i32 %x_33, i32 %x_34, i32 %x_35, i32 %x_36, i32 %x_37, i32 %x_38, i32 %x_39, i32 %x_40, i32 %x_41, i32 %x_42, i32 %x_43, i32 %x_44, i32 %x_45, i32 %x_46, i32 %x_47, i32 %x_48, i32 %x_49, i32 %x_50, i32 %x_51, i32 %x_52, i32 %x_53, i32 %x_54, i32 %x_55, i32 %x_56, i32 %x_57, i32 %x_58, i32 %x_59, i32 %x_60, i32 %x_61, i32 %x_62, i32 %x_63, i16 %buf0" [activation_accelerator.cpp:1112]   --->   Operation 127 'call' 'call_ln1112' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 11 <SV = 2> <Delay = 0.00>
-ST_11 : Operation 128 [2/2] (0.00ns)   --->   "%call_ln1096 = call void @float_safe_softmax3<64, 768>, i32 %x, i32 %x_1, i32 %x_2, i32 %x_3, i32 %x_4, i32 %x_5, i32 %x_6, i32 %x_7, i32 %x_8, i32 %x_9, i32 %x_10, i32 %x_11, i32 %x_12, i32 %x_13, i32 %x_14, i32 %x_15, i32 %x_16, i32 %x_17, i32 %x_18, i32 %x_19, i32 %x_20, i32 %x_21, i32 %x_22, i32 %x_23, i32 %x_24, i32 %x_25, i32 %x_26, i32 %x_27, i32 %x_28, i32 %x_29, i32 %x_30, i32 %x_31, i32 %x_32, i32 %x_33, i32 %x_34, i32 %x_35, i32 %x_36, i32 %x_37, i32 %x_38, i32 %x_39, i32 %x_40, i32 %x_41, i32 %x_42, i32 %x_43, i32 %x_44, i32 %x_45, i32 %x_46, i32 %x_47, i32 %x_48, i32 %x_49, i32 %x_50, i32 %x_51, i32 %x_52, i32 %x_53, i32 %x_54, i32 %x_55, i32 %x_56, i32 %x_57, i32 %x_58, i32 %x_59, i32 %x_60, i32 %x_61, i32 %x_62, i32 %x_63, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63" [activation_accelerator.cpp:1096]   --->   Operation 128 'call' 'call_ln1096' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 128 [2/2] (0.00ns)   --->   "%call_ln1113 = call void @float_safe_softmax3<64, 768>, i32 %x, i32 %x_1, i32 %x_2, i32 %x_3, i32 %x_4, i32 %x_5, i32 %x_6, i32 %x_7, i32 %x_8, i32 %x_9, i32 %x_10, i32 %x_11, i32 %x_12, i32 %x_13, i32 %x_14, i32 %x_15, i32 %x_16, i32 %x_17, i32 %x_18, i32 %x_19, i32 %x_20, i32 %x_21, i32 %x_22, i32 %x_23, i32 %x_24, i32 %x_25, i32 %x_26, i32 %x_27, i32 %x_28, i32 %x_29, i32 %x_30, i32 %x_31, i32 %x_32, i32 %x_33, i32 %x_34, i32 %x_35, i32 %x_36, i32 %x_37, i32 %x_38, i32 %x_39, i32 %x_40, i32 %x_41, i32 %x_42, i32 %x_43, i32 %x_44, i32 %x_45, i32 %x_46, i32 %x_47, i32 %x_48, i32 %x_49, i32 %x_50, i32 %x_51, i32 %x_52, i32 %x_53, i32 %x_54, i32 %x_55, i32 %x_56, i32 %x_57, i32 %x_58, i32 %x_59, i32 %x_60, i32 %x_61, i32 %x_62, i32 %x_63, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63" [activation_accelerator.cpp:1113]   --->   Operation 128 'call' 'call_ln1113' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 12 <SV = 3> <Delay = 0.00>
-ST_12 : Operation 129 [1/2] (0.00ns)   --->   "%call_ln1096 = call void @float_safe_softmax3<64, 768>, i32 %x, i32 %x_1, i32 %x_2, i32 %x_3, i32 %x_4, i32 %x_5, i32 %x_6, i32 %x_7, i32 %x_8, i32 %x_9, i32 %x_10, i32 %x_11, i32 %x_12, i32 %x_13, i32 %x_14, i32 %x_15, i32 %x_16, i32 %x_17, i32 %x_18, i32 %x_19, i32 %x_20, i32 %x_21, i32 %x_22, i32 %x_23, i32 %x_24, i32 %x_25, i32 %x_26, i32 %x_27, i32 %x_28, i32 %x_29, i32 %x_30, i32 %x_31, i32 %x_32, i32 %x_33, i32 %x_34, i32 %x_35, i32 %x_36, i32 %x_37, i32 %x_38, i32 %x_39, i32 %x_40, i32 %x_41, i32 %x_42, i32 %x_43, i32 %x_44, i32 %x_45, i32 %x_46, i32 %x_47, i32 %x_48, i32 %x_49, i32 %x_50, i32 %x_51, i32 %x_52, i32 %x_53, i32 %x_54, i32 %x_55, i32 %x_56, i32 %x_57, i32 %x_58, i32 %x_59, i32 %x_60, i32 %x_61, i32 %x_62, i32 %x_63, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63" [activation_accelerator.cpp:1096]   --->   Operation 129 'call' 'call_ln1096' <Predicate = (icmp_ln1094)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_12 : Operation 130 [1/1] (0.00ns)   --->   "%br_ln1101 = br void %if.end21" [activation_accelerator.cpp:1101]   --->   Operation 130 'br' 'br_ln1101' <Predicate = (icmp_ln1094)> <Delay = 0.00>
-ST_12 : Operation 131 [1/1] (0.00ns)   --->   "%br_ln1129 = br void %if.end37" [activation_accelerator.cpp:1129]   --->   Operation 131 'br' 'br_ln1129' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 129 [1/2] (0.00ns)   --->   "%call_ln1113 = call void @float_safe_softmax3<64, 768>, i32 %x, i32 %x_1, i32 %x_2, i32 %x_3, i32 %x_4, i32 %x_5, i32 %x_6, i32 %x_7, i32 %x_8, i32 %x_9, i32 %x_10, i32 %x_11, i32 %x_12, i32 %x_13, i32 %x_14, i32 %x_15, i32 %x_16, i32 %x_17, i32 %x_18, i32 %x_19, i32 %x_20, i32 %x_21, i32 %x_22, i32 %x_23, i32 %x_24, i32 %x_25, i32 %x_26, i32 %x_27, i32 %x_28, i32 %x_29, i32 %x_30, i32 %x_31, i32 %x_32, i32 %x_33, i32 %x_34, i32 %x_35, i32 %x_36, i32 %x_37, i32 %x_38, i32 %x_39, i32 %x_40, i32 %x_41, i32 %x_42, i32 %x_43, i32 %x_44, i32 %x_45, i32 %x_46, i32 %x_47, i32 %x_48, i32 %x_49, i32 %x_50, i32 %x_51, i32 %x_52, i32 %x_53, i32 %x_54, i32 %x_55, i32 %x_56, i32 %x_57, i32 %x_58, i32 %x_59, i32 %x_60, i32 %x_61, i32 %x_62, i32 %x_63, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63" [activation_accelerator.cpp:1113]   --->   Operation 129 'call' 'call_ln1113' <Predicate = (icmp_ln1111)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_12 : Operation 130 [1/1] (0.00ns)   --->   "%br_ln1118 = br void %if.end21" [activation_accelerator.cpp:1118]   --->   Operation 130 'br' 'br_ln1118' <Predicate = (icmp_ln1111)> <Delay = 0.00>
+ST_12 : Operation 131 [1/1] (0.00ns)   --->   "%br_ln1146 = br void %if.end37" [activation_accelerator.cpp:1146]   --->   Operation 131 'br' 'br_ln1146' <Predicate = true> <Delay = 0.00>
 
 State 13 <SV = 1> <Delay = 7.30>
-ST_13 : Operation 132 [1/1] (0.00ns)   --->   "%sext_ln1075 = sext i63 %trunc_ln" [activation_accelerator.cpp:1075]   --->   Operation 132 'sext' 'sext_ln1075' <Predicate = true> <Delay = 0.00>
-ST_13 : Operation 133 [1/1] (0.00ns)   --->   "%gmem0_addr = getelementptr i16 %gmem0, i64 %sext_ln1075" [activation_accelerator.cpp:1075]   --->   Operation 133 'getelementptr' 'gmem0_addr' <Predicate = true> <Delay = 0.00>
-ST_13 : Operation 134 [7/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem0_addr, i32 49152" [activation_accelerator.cpp:1075]   --->   Operation 134 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_13 : Operation 132 [1/1] (0.00ns)   --->   "%sext_ln1092 = sext i63 %trunc_ln" [activation_accelerator.cpp:1092]   --->   Operation 132 'sext' 'sext_ln1092' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 133 [1/1] (0.00ns)   --->   "%gmem0_addr = getelementptr i16 %gmem0, i64 %sext_ln1092" [activation_accelerator.cpp:1092]   --->   Operation 133 'getelementptr' 'gmem0_addr' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 134 [7/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem0_addr, i32 49152" [activation_accelerator.cpp:1092]   --->   Operation 134 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 14 <SV = 2> <Delay = 7.30>
-ST_14 : Operation 135 [6/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem0_addr, i32 49152" [activation_accelerator.cpp:1075]   --->   Operation 135 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_14 : Operation 135 [6/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem0_addr, i32 49152" [activation_accelerator.cpp:1092]   --->   Operation 135 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 15 <SV = 3> <Delay = 7.30>
-ST_15 : Operation 136 [5/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem0_addr, i32 49152" [activation_accelerator.cpp:1075]   --->   Operation 136 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_15 : Operation 136 [5/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem0_addr, i32 49152" [activation_accelerator.cpp:1092]   --->   Operation 136 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 16 <SV = 4> <Delay = 7.30>
-ST_16 : Operation 137 [4/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem0_addr, i32 49152" [activation_accelerator.cpp:1075]   --->   Operation 137 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_16 : Operation 137 [4/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem0_addr, i32 49152" [activation_accelerator.cpp:1092]   --->   Operation 137 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 17 <SV = 5> <Delay = 7.30>
-ST_17 : Operation 138 [3/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem0_addr, i32 49152" [activation_accelerator.cpp:1075]   --->   Operation 138 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_17 : Operation 138 [3/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem0_addr, i32 49152" [activation_accelerator.cpp:1092]   --->   Operation 138 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 18 <SV = 6> <Delay = 7.30>
-ST_18 : Operation 139 [2/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem0_addr, i32 49152" [activation_accelerator.cpp:1075]   --->   Operation 139 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_18 : Operation 139 [2/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem0_addr, i32 49152" [activation_accelerator.cpp:1092]   --->   Operation 139 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 19 <SV = 7> <Delay = 7.30>
-ST_19 : Operation 140 [1/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem0_addr, i32 49152" [activation_accelerator.cpp:1075]   --->   Operation 140 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_19 : Operation 140 [1/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem0_addr, i32 49152" [activation_accelerator.cpp:1092]   --->   Operation 140 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 20 <SV = 8> <Delay = 0.00>
-ST_20 : Operation 141 [2/2] (0.00ns)   --->   "%call_ln1075 = call void @activation_accelerator_Pipeline_stage_0_load0, i16 %gmem0, i63 %trunc_ln, i16 %buf0" [activation_accelerator.cpp:1075]   --->   Operation 141 'call' 'call_ln1075' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_20 : Operation 141 [2/2] (0.00ns)   --->   "%call_ln1092 = call void @activation_accelerator_Pipeline_stage_0_load0, i16 %gmem0, i63 %trunc_ln, i16 %buf0" [activation_accelerator.cpp:1092]   --->   Operation 141 'call' 'call_ln1092' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 21 <SV = 9> <Delay = 0.00>
-ST_21 : Operation 142 [1/2] (0.00ns)   --->   "%call_ln1075 = call void @activation_accelerator_Pipeline_stage_0_load0, i16 %gmem0, i63 %trunc_ln, i16 %buf0" [activation_accelerator.cpp:1075]   --->   Operation 142 'call' 'call_ln1075' <Predicate = (stage_read == 0)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_21 : Operation 142 [1/2] (0.00ns)   --->   "%call_ln1092 = call void @activation_accelerator_Pipeline_stage_0_load0, i16 %gmem0, i63 %trunc_ln, i16 %buf0" [activation_accelerator.cpp:1092]   --->   Operation 142 'call' 'call_ln1092' <Predicate = (stage_read == 0)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_21 : Operation 143 [1/1] (0.00ns)   --->   "%br_ln0 = br void %if.end37"   --->   Operation 143 'br' 'br_ln0' <Predicate = (stage_read == 0)> <Delay = 0.00>
-ST_21 : Operation 144 [1/1] (0.00ns)   --->   "%ret_ln1135 = ret" [activation_accelerator.cpp:1135]   --->   Operation 144 'ret' 'ret_ln1135' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 144 [1/1] (0.00ns)   --->   "%ret_ln1152 = ret" [activation_accelerator.cpp:1152]   --->   Operation 144 'ret' 'ret_ln1152' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -358,7 +358,7 @@ Port [ p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63]:  wired=0; compound=1; hid
 
 <LifeTime>
 <method=bitvector/>
-spectopmodule_ln1054 (spectopmodule) [ 0000000000000000000000]
+spectopmodule_ln1071 (spectopmodule) [ 0000000000000000000000]
 specinterface_ln0    (specinterface) [ 0000000000000000000000]
 specbitsmap_ln0      (specbitsmap  ) [ 0000000000000000000000]
 specinterface_ln0    (specinterface) [ 0000000000000000000000]
@@ -446,27 +446,27 @@ x_60                 (alloca       ) [ 0000000000111000000000]
 x_61                 (alloca       ) [ 0000000000111000000000]
 x_62                 (alloca       ) [ 0000000000111000000000]
 x_63                 (alloca       ) [ 0000000000111000000000]
-switch_ln1073        (switch       ) [ 0000000000000000000000]
+switch_ln1090        (switch       ) [ 0000000000000000000000]
 trunc_ln1            (partselect   ) [ 0011100000000000000000]
-icmp_ln1094          (icmp         ) [ 0100000000111000000000]
-br_ln1094            (br           ) [ 0000000000000000000000]
+icmp_ln1111          (icmp         ) [ 0100000000111000000000]
+br_ln1111            (br           ) [ 0000000000000000000000]
 trunc_ln             (partselect   ) [ 0011111111111111111111]
-sext_ln1131          (sext         ) [ 0000000000000000000000]
+sext_ln1148          (sext         ) [ 0000000000000000000000]
 gmem2_addr           (getelementptr) [ 0001111111000000000000]
-empty_384            (writereq     ) [ 0000000000000000000000]
-call_ln1131          (call         ) [ 0000000000000000000000]
-empty_385            (writeresp    ) [ 0000000000000000000000]
-br_ln1135            (br           ) [ 0000000000000000000000]
-call_ln1095          (call         ) [ 0000000000000000000000]
-call_ln1096          (call         ) [ 0000000000000000000000]
-br_ln1101            (br           ) [ 0000000000000000000000]
-br_ln1129            (br           ) [ 0000000000000000000000]
-sext_ln1075          (sext         ) [ 0000000000000000000000]
+empty_459            (writereq     ) [ 0000000000000000000000]
+call_ln1148          (call         ) [ 0000000000000000000000]
+empty_460            (writeresp    ) [ 0000000000000000000000]
+br_ln1152            (br           ) [ 0000000000000000000000]
+call_ln1112          (call         ) [ 0000000000000000000000]
+call_ln1113          (call         ) [ 0000000000000000000000]
+br_ln1118            (br           ) [ 0000000000000000000000]
+br_ln1146            (br           ) [ 0000000000000000000000]
+sext_ln1092          (sext         ) [ 0000000000000000000000]
 gmem0_addr           (getelementptr) [ 0000000000000011111100]
 empty                (readreq      ) [ 0000000000000000000000]
-call_ln1075          (call         ) [ 0000000000000000000000]
+call_ln1092          (call         ) [ 0000000000000000000000]
 br_ln0               (br           ) [ 0000000000000000000000]
-ret_ln1135           (ret          ) [ 0000000000000000000000]
+ret_ln1152           (ret          ) [ 0000000000000000000000]
 </LifeTime>
 
 <model>
@@ -2288,7 +2288,7 @@ ret_ln1135           (ret          ) [ 0000000000000000000000]
 </pin_list>
 <bind>
 <opcode="writereq(1155) writeresp(1158) " fcode="writeresp"/>
-<opset="empty_384/2 empty_385/5 "/>
+<opset="empty_459/2 empty_460/5 "/>
 </bind>
 </comp>
 
@@ -2377,7 +2377,7 @@ ret_ln1135           (ret          ) [ 0000000000000000000000]
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
-<opset="call_ln1095/1 "/>
+<opset="call_ln1112/1 "/>
 </bind>
 </comp>
 
@@ -2454,7 +2454,7 @@ ret_ln1135           (ret          ) [ 0000000000000000000000]
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
-<opset="call_ln1131/3 "/>
+<opset="call_ln1148/3 "/>
 </bind>
 </comp>
 
@@ -2593,7 +2593,7 @@ ret_ln1135           (ret          ) [ 0000000000000000000000]
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
-<opset="call_ln1096/11 "/>
+<opset="call_ln1113/11 "/>
 </bind>
 </comp>
 
@@ -2607,7 +2607,7 @@ ret_ln1135           (ret          ) [ 0000000000000000000000]
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
-<opset="call_ln1075/20 "/>
+<opset="call_ln1092/20 "/>
 </bind>
 </comp>
 
@@ -2625,7 +2625,7 @@ ret_ln1135           (ret          ) [ 0000000000000000000000]
 </bind>
 </comp>
 
-<comp id="999" class="1004" name="icmp_ln1094_fu_999">
+<comp id="999" class="1004" name="icmp_ln1111_fu_999">
 <pin_list>
 <pin id="1000" dir="0" index="0" bw="32" slack="0"/>
 <pin id="1001" dir="0" index="1" bw="1" slack="0"/>
@@ -2633,7 +2633,7 @@ ret_ln1135           (ret          ) [ 0000000000000000000000]
 </pin_list>
 <bind>
 <opcode="icmp(45) " fcode="icmp"/>
-<opset="icmp_ln1094/1 "/>
+<opset="icmp_ln1111/1 "/>
 </bind>
 </comp>
 
@@ -2651,14 +2651,14 @@ ret_ln1135           (ret          ) [ 0000000000000000000000]
 </bind>
 </comp>
 
-<comp id="1015" class="1004" name="sext_ln1131_fu_1015">
+<comp id="1015" class="1004" name="sext_ln1148_fu_1015">
 <pin_list>
 <pin id="1016" dir="0" index="0" bw="63" slack="1"/>
 <pin id="1017" dir="1" index="1" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="sext(35) " fcode="sext"/>
-<opset="sext_ln1131/2 "/>
+<opset="sext_ln1148/2 "/>
 </bind>
 </comp>
 
@@ -2674,14 +2674,14 @@ ret_ln1135           (ret          ) [ 0000000000000000000000]
 </bind>
 </comp>
 
-<comp id="1025" class="1004" name="sext_ln1075_fu_1025">
+<comp id="1025" class="1004" name="sext_ln1092_fu_1025">
 <pin_list>
 <pin id="1026" dir="0" index="0" bw="63" slack="1"/>
 <pin id="1027" dir="1" index="1" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="sext(35) " fcode="sext"/>
-<opset="sext_ln1075/13 "/>
+<opset="sext_ln1092/13 "/>
 </bind>
 </comp>
 
@@ -2717,13 +2717,13 @@ ret_ln1135           (ret          ) [ 0000000000000000000000]
 </bind>
 </comp>
 
-<comp id="1045" class="1005" name="icmp_ln1094_reg_1045">
+<comp id="1045" class="1005" name="icmp_ln1111_reg_1045">
 <pin_list>
 <pin id="1046" dir="0" index="0" bw="1" slack="3"/>
 <pin id="1047" dir="1" index="1" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<opset="icmp_ln1094 "/>
+<opset="icmp_ln1111 "/>
 </bind>
 </comp>
 
@@ -3503,252 +3503,4 @@ ret_ln1135           (ret          ) [ 0000000000000000000000]
 	Port: activation_accelerator : p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50 | {3 4 }
 	Port: activation_accelerator : p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51 | {3 4 }
 	Port: activation_accelerator : p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52 | {3 4 }
-	Port: activation_accelerator : p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53 | {3 4 }
-	Port: activation_accelerator : p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54 | {3 4 }
-	Port: activation_accelerator : p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55 | {3 4 }
-	Port: activation_accelerator : p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56 | {3 4 }
-	Port: activation_accelerator : p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57 | {3 4 }
-	Port: activation_accelerator : p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58 | {3 4 }
-	Port: activation_accelerator : p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59 | {3 4 }
-	Port: activation_accelerator : p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60 | {3 4 }
-	Port: activation_accelerator : p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61 | {3 4 }
-	Port: activation_accelerator : p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62 | {3 4 }
-	Port: activation_accelerator : p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63 | {3 4 }
-  - Chain level:
-	State 1
-		br_ln1094 : 1
-		call_ln1095 : 1
-	State 2
-		gmem2_addr : 1
-		empty_384 : 2
-	State 3
-	State 4
-	State 5
-	State 6
-	State 7
-	State 8
-	State 9
-	State 10
-	State 11
-	State 12
-	State 13
-		gmem0_addr : 1
-		empty : 2
-	State 14
-	State 15
-	State 16
-	State 17
-	State 18
-	State 19
-	State 20
-	State 21
-
-
-============================================================
-+ Verbose Summary: Datapath Resource usage 
-============================================================
-
-* Functional unit list:
-|----------|----------------------------------------------------------|---------|---------|---------|---------|---------|---------|
-| Operation|                      Functional Unit                     |   BRAM  |   DSP   |  Delay  |    FF   |   LUT   |   URAM  |
-|----------|----------------------------------------------------------|---------|---------|---------|---------|---------|---------|
-|          |                 grp_bf16_to_float_fu_515                 |    0    |    0    |  0.427  |    87   |   137   |    0    |
-|   call   | grp_activation_accelerator_Pipeline_stage_2_store_fu_649 |    0    |    0    |  27.328 |   738   |   977   |    0    |
-|          |          grp_float_safe_softmax3_64_768_s_fu_784         |   128   |   368   | 222.768 |  54656  |  69428  |    0    |
-|          | grp_activation_accelerator_Pipeline_stage_0_load0_fu_980 |    0    |    0    |    0    |    65   |    36   |    0    |
-|----------|----------------------------------------------------------|---------|---------|---------|---------|---------|---------|
-|   icmp   |                    icmp_ln1094_fu_999                    |    0    |    0    |    0    |    0    |    20   |    0    |
-|----------|----------------------------------------------------------|---------|---------|---------|---------|---------|---------|
-|          |                 config_r_read_read_fu_476                |    0    |    0    |    0    |    0    |    0    |    0    |
-|   read   |                  stage_read_read_fu_482                  |    0    |    0    |    0    |    0    |    0    |    0    |
-|          |                  out_r_read_read_fu_488                  |    0    |    0    |    0    |    0    |    0    |    0    |
-|          |                   in0_read_read_fu_494                   |    0    |    0    |    0    |    0    |    0    |    0    |
-|----------|----------------------------------------------------------|---------|---------|---------|---------|---------|---------|
-| writeresp|                   grp_writeresp_fu_500                   |    0    |    0    |    0    |    0    |    0    |    0    |
-|----------|----------------------------------------------------------|---------|---------|---------|---------|---------|---------|
-|  readreq |                    grp_readreq_fu_508                    |    0    |    0    |    0    |    0    |    0    |    0    |
-|----------|----------------------------------------------------------|---------|---------|---------|---------|---------|---------|
-|partselect|                     trunc_ln1_fu_989                     |    0    |    0    |    0    |    0    |    0    |    0    |
-|          |                     trunc_ln_fu_1005                     |    0    |    0    |    0    |    0    |    0    |    0    |
-|----------|----------------------------------------------------------|---------|---------|---------|---------|---------|---------|
-|   sext   |                    sext_ln1131_fu_1015                   |    0    |    0    |    0    |    0    |    0    |    0    |
-|          |                    sext_ln1075_fu_1025                   |    0    |    0    |    0    |    0    |    0    |    0    |
-|----------|----------------------------------------------------------|---------|---------|---------|---------|---------|---------|
-|   Total  |                                                          |   128   |   368   | 250.523 |  55546  |  70598  |    0    |
-|----------|----------------------------------------------------------|---------|---------|---------|---------|---------|---------|
-
-Memories:
-+---------------------------------------------------------------------------+--------+--------+--------+--------+
-|                                                                           |  BRAM  |   FF   |   LUT  |  URAM  |
-+---------------------------------------------------------------------------+--------+--------+--------+--------+
-| activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i |    1   |    0   |    0   |    0   |
-|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1|    1   |    0   |    0   |    0   |
-|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2|    1   |    0   |    0   |    0   |
-|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3|    1   |    0   |    0   |    0   |
-|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4|    1   |    0   |    0   |    0   |
-|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5|    1   |    0   |    0   |    0   |
-|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6|    1   |    0   |    0   |    0   |
-|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7|    1   |    0   |    0   |    0   |
-|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8|    1   |    0   |    0   |    0   |
-|activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9|    1   |    0   |    0   |    0   |
-|                                    buf0                                   |   46   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62               |    1   |    0   |    0   |    0   |
-|               p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63               |    1   |    0   |    0   |    0   |
-|                                     x                                     |    2   |    0   |    0   |    0   |
-|                                    x_1                                    |    2   |    0   |    0   |    0   |
-|                                    x_10                                   |    2   |    0   |    0   |    0   |
-|                                    x_11                                   |    2   |    0   |    0   |    0   |
-|                                    x_12                                   |    2   |    0   |    0   |    0   |
-|                                    x_13                                   |    2   |    0   |    0   |    0   |
-|                                    x_14                                   |    2   |    0   |    0   |    0   |
-|                                    x_15                                   |    2   |    0   |    0   |    0   |
-|                                    x_16                                   |    2   |    0   |    0   |    0   |
-|                                    x_17                                   |    2   |    0   |    0   |    0   |
-|                                    x_18                                   |    2   |    0   |    0   |    0   |
-|                                    x_19                                   |    2   |    0   |    0   |    0   |
-|                                    x_2                                    |    2   |    0   |    0   |    0   |
-|                                    x_20                                   |    2   |    0   |    0   |    0   |
-|                                    x_21                                   |    2   |    0   |    0   |    0   |
-|                                    x_22                                   |    2   |    0   |    0   |    0   |
-|                                    x_23                                   |    2   |    0   |    0   |    0   |
-|                                    x_24                                   |    2   |    0   |    0   |    0   |
-|                                    x_25                                   |    2   |    0   |    0   |    0   |
-|                                    x_26                                   |    2   |    0   |    0   |    0   |
-|                                    x_27                                   |    2   |    0   |    0   |    0   |
-|                                    x_28                                   |    2   |    0   |    0   |    0   |
-|                                    x_29                                   |    2   |    0   |    0   |    0   |
-|                                    x_3                                    |    2   |    0   |    0   |    0   |
-|                                    x_30                                   |    2   |    0   |    0   |    0   |
-|                                    x_31                                   |    2   |    0   |    0   |    0   |
-|                                    x_32                                   |    2   |    0   |    0   |    0   |
-|                                    x_33                                   |    2   |    0   |    0   |    0   |
-|                                    x_34                                   |    2   |    0   |    0   |    0   |
-|                                    x_35                                   |    2   |    0   |    0   |    0   |
-|                                    x_36                                   |    2   |    0   |    0   |    0   |
-|                                    x_37                                   |    2   |    0   |    0   |    0   |
-|                                    x_38                                   |    2   |    0   |    0   |    0   |
-|                                    x_39                                   |    2   |    0   |    0   |    0   |
-|                                    x_4                                    |    2   |    0   |    0   |    0   |
-|                                    x_40                                   |    2   |    0   |    0   |    0   |
-|                                    x_41                                   |    2   |    0   |    0   |    0   |
-|                                    x_42                                   |    2   |    0   |    0   |    0   |
-|                                    x_43                                   |    2   |    0   |    0   |    0   |
-|                                    x_44                                   |    2   |    0   |    0   |    0   |
-|                                    x_45                                   |    2   |    0   |    0   |    0   |
-|                                    x_46                                   |    2   |    0   |    0   |    0   |
-|                                    x_47                                   |    2   |    0   |    0   |    0   |
-|                                    x_48                                   |    2   |    0   |    0   |    0   |
-|                                    x_49                                   |    2   |    0   |    0   |    0   |
-|                                    x_5                                    |    2   |    0   |    0   |    0   |
-|                                    x_50                                   |    2   |    0   |    0   |    0   |
-|                                    x_51                                   |    2   |    0   |    0   |    0   |
-|                                    x_52                                   |    2   |    0   |    0   |    0   |
-|                                    x_53                                   |    2   |    0   |    0   |    0   |
-|                                    x_54                                   |    2   |    0   |    0   |    0   |
-|                                    x_55                                   |    2   |    0   |    0   |    0   |
-|                                    x_56                                   |    2   |    0   |    0   |    0   |
-|                                    x_57                                   |    2   |    0   |    0   |    0   |
-|                                    x_58                                   |    2   |    0   |    0   |    0   |
-|                                    x_59                                   |    2   |    0   |    0   |    0   |
-|                                    x_6                                    |    2   |    0   |    0   |    0   |
-|                                    x_60                                   |    2   |    0   |    0   |    0   |
-|                                    x_61                                   |    2   |    0   |    0   |    0   |
-|                                    x_62                                   |    2   |    0   |    0   |    0   |
-|                                    x_63                                   |    2   |    0   |    0   |    0   |
-|                                    x_7                                    |    2   |    0   |    0   |    0   |
-|                                    x_8                                    |    2   |    0   |    0   |    0   |
-|                                    x_9                                    |    2   |    0   |    0   |    0   |
-+---------------------------------------------------------------------------+--------+--------+--------+--------+
-|                                   Total                                   |   238  |    0   |    0   |    0   |
-+---------------------------------------------------------------------------+--------+--------+--------+--------+
-
-* Register list:
-+--------------------+--------+
-|                    |   FF   |
-+--------------------+--------+
-| gmem0_addr_reg_1060|   16   |
-| gmem2_addr_reg_1055|   16   |
-|icmp_ln1094_reg_1045|    1   |
-| stage_read_reg_1035|   32   |
-| trunc_ln1_reg_1039 |   63   |
-|  trunc_ln_reg_1049 |   63   |
-+--------------------+--------+
-|        Total       |   191  |
-+--------------------+--------+
-
-* Multiplexer (MUX) list: 
-|----------------------|------|------|------|--------||---------||---------|
-|         Comp         |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
-|----------------------|------|------|------|--------||---------||---------|
-| grp_writeresp_fu_500 |  p0  |   2  |   1  |    2   |
-| grp_writeresp_fu_500 |  p1  |   2  |  16  |   32   ||    9    |
-|  grp_readreq_fu_508  |  p1  |   2  |  16  |   32   ||    9    |
-|----------------------|------|------|------|--------||---------||---------|
-|         Total        |      |      |      |   66   ||  1.281  ||    18   |
-|----------------------|------|------|------|--------||---------||---------|
-
-
-
-* Summary:
-+-----------+--------+--------+--------+--------+--------+--------+
-|           |  BRAM  |   DSP  |  Delay |   FF   |   LUT  |  URAM  |
-+-----------+--------+--------+--------+--------+--------+--------+
-|  Function |   128  |   368  |   250  |  55546 |  70598 |    0   |
-|   Memory  |   238  |    -   |    -   |    0   |    0   |    0   |
-|Multiplexer|    -   |    -   |    1   |    -   |   18   |    -   |
-|  Register |    -   |    -   |    -   |   191  |    -   |    -   |
-+-----------+--------+--------+--------+--------+--------+--------+
-|   Total   |   366  |   368  |   251  |  55737 |  70616 |    0   |
-+-----------+--------+--------+--------+--------+--------+--------+
+	Port: activation_accelerator : p_ZZ22activation_acceleratorPtS_S_iiE4buf2
