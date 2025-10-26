@@ -892,6 +892,90 @@ void float_gelu2(const float* x, uint16* y_bf16, int len) {
         }
     }
 }
+// 使用tanh近似的GELU
+void float_gelu3(const float* x, uint16_t* y_bf16, int len) {
+#pragma HLS INLINE off
+    const int UF = 32;
+    
+    // 预先计算常数
+    const float sqrt_2_over_pi = 0.7978845608028654f;  // sqrt(2/π)
+    const float coef = 0.044715f;
+    const float half = 0.5f;
+    const float one = 1.0f;
+
+    // -------- GELU计算：使用tanh近似 --------
+gelu_blocks:
+    for (int i = 0; i < len; i += UF) {
+#pragma HLS PIPELINE II=1
+    gelu_inner:
+        for (int u = 0; u < UF; ++u) {
+#pragma HLS UNROLL
+            int idx = i + u;
+            if (idx < len) {
+                // GELU近似公式: 0.5 * x * (1 + tanh(√(2/π) * (x + 0.044715 * x³)))
+                float x_val = x[idx];
+                float x_cubed = x_val * x_val * x_val;
+                float inner = sqrt_2_over_pi * (x_val + coef * x_cubed);
+                float tanh_val = hls::tanhf(inner);
+                float xtrue = half * x_val * (one + tanh_val);
+                
+                // 转换为bfloat16
+                uint32_t* xtrue_f32_ptr = (uint32_t*)&xtrue;
+                y_bf16[idx] = (uint16_t)((*xtrue_f32_ptr) >> 16);
+            }
+        }
+    }
+}
+
+// 使用改进sigmoid近似的GELU（资源更优）
+void float_gelu4(const float* x, uint16_t* y_bf16, int len) {
+#pragma HLS INLINE off
+    const int UF = 32;
+    
+    const float alpha = 1.702f;
+    const float half = 0.5f;
+
+    // 添加数组分区以改善内存访问
+    #pragma HLS ARRAY_PARTITION variable=x cyclic factor=UF
+    #pragma HLS ARRAY_PARTITION variable=y_bf16 cyclic factor=UF
+
+gelu_blocks:
+    for (int i = 0; i < len; i += UF) {
+        #pragma HLS PIPELINE II=2  // 增加II以降低资源压力
+        #pragma HLS LATENCY min=10 max=20  // 控制流水线深度
+        
+    gelu_inner:
+        for (int u = 0; u < UF; ++u) {
+            #pragma HLS UNROLL factor=16  // 部分展开而不是完全展开
+            #pragma HLS EXPRESSION_BALANCE
+            
+            int idx = i + u;
+            if (idx < len) {
+                float x_val = x[idx];
+                
+                // 使用更高效的sigmoid近似
+                float sigmoid_arg = alpha * x_val;
+                
+                // 使用查找表近似指数函数
+                float exp_val;
+                if (sigmoid_arg > 5.0f) 
+                    exp_val = 0.0f;
+                else if (sigmoid_arg < -5.0f)
+                    exp_val = 1.0f;
+                else
+                    exp_val = 1.0f / (1.0f + hls::expf(-sigmoid_arg));
+                
+                float xtrue = x_val * exp_val;
+                uint32_t* xtrue_f32_ptr = (uint32_t*)&xtrue;
+                // 使用HLS类型转换
+                
+                y_bf16[idx] = (*xtrue_f32_ptr) >> 16;;
+            }
+        }
+    }
+}
+
+
 
 // float加法
 // void float_add(const float* x, const float* y, uint16* out, int len) {
@@ -1340,7 +1424,7 @@ void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, 
         }
         else if(config == 3) { // Gelu
             bf16_to_float(buf0, x, 64*768);
-            float_gelu2(x, buf2, 64*768);
+            float_gelu4(x, buf2, 64*768);
         }
         else if(config == 4) { // SiLU
             bf16_to_float(buf0, x, 64*768);

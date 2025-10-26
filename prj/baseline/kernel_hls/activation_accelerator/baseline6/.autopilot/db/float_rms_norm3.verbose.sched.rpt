@@ -1,0 +1,1559 @@
+
+
+================================================================
+== Vitis HLS Report for 'float_rms_norm3'
+================================================================
+* Date:           Sun Oct 26 18:18:59 2025
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        activation_accelerator
+* Solution:       baseline (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.057 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     6316|     6316|  63.160 us|  63.160 us|  6316|  6316|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 152
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 41 
+41 --> 42 
+42 --> 43 
+43 --> 44 
+44 --> 45 
+45 --> 46 
+46 --> 47 
+47 --> 48 
+48 --> 49 
+49 --> 50 
+50 --> 51 
+51 --> 52 
+52 --> 53 
+53 --> 54 
+54 --> 55 
+55 --> 56 
+56 --> 57 
+57 --> 58 
+58 --> 59 
+59 --> 60 
+60 --> 61 
+61 --> 62 
+62 --> 63 
+63 --> 64 
+64 --> 65 
+65 --> 66 
+66 --> 67 
+67 --> 68 
+68 --> 69 
+69 --> 70 
+70 --> 71 
+71 --> 72 
+72 --> 73 
+73 --> 74 
+74 --> 75 
+75 --> 76 
+76 --> 77 
+77 --> 78 
+78 --> 79 
+79 --> 80 
+80 --> 81 
+81 --> 82 
+82 --> 83 
+83 --> 84 
+84 --> 85 
+85 --> 86 
+86 --> 87 
+87 --> 88 
+88 --> 89 
+89 --> 90 
+90 --> 91 
+91 --> 92 
+92 --> 93 
+93 --> 94 
+94 --> 95 
+95 --> 96 
+96 --> 97 
+97 --> 98 
+98 --> 99 
+99 --> 100 
+100 --> 101 
+101 --> 102 
+102 --> 103 
+103 --> 104 
+104 --> 105 
+105 --> 106 
+106 --> 107 
+107 --> 108 
+108 --> 109 
+109 --> 110 
+110 --> 111 
+111 --> 112 
+112 --> 113 
+113 --> 114 
+114 --> 115 
+115 --> 116 
+116 --> 117 
+117 --> 118 
+118 --> 119 
+119 --> 120 
+120 --> 121 
+121 --> 122 
+122 --> 123 
+123 --> 124 
+124 --> 125 
+125 --> 126 
+126 --> 127 
+127 --> 128 
+128 --> 129 
+129 --> 130 
+130 --> 131 
+131 --> 132 
+132 --> 133 
+133 --> 134 
+134 --> 135 
+135 --> 136 
+136 --> 137 
+137 --> 138 
+138 --> 139 
+139 --> 140 
+140 --> 141 
+141 --> 142 
+142 --> 143 
+143 --> 144 
+144 --> 145 
+145 --> 146 
+146 --> 147 
+147 --> 148 
+148 --> 149 
+149 --> 150 
+150 --> 151 
+151 --> 152 
+152 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 153 [1/1] (0.00ns)   --->   "%add1610_loc = alloca i64 1"   --->   Operation 153 'alloca' 'add1610_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 154 [1/1] (0.00ns)   --->   "%add16_112_loc = alloca i64 1"   --->   Operation 154 'alloca' 'add16_112_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 155 [1/1] (0.00ns)   --->   "%add16_214_loc = alloca i64 1"   --->   Operation 155 'alloca' 'add16_214_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 156 [1/1] (0.00ns)   --->   "%add16_316_loc = alloca i64 1"   --->   Operation 156 'alloca' 'add16_316_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 157 [1/1] (0.00ns)   --->   "%add16_418_loc = alloca i64 1"   --->   Operation 157 'alloca' 'add16_418_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 158 [1/1] (0.00ns)   --->   "%add16_520_loc = alloca i64 1"   --->   Operation 158 'alloca' 'add16_520_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 159 [1/1] (0.00ns)   --->   "%add16_622_loc = alloca i64 1"   --->   Operation 159 'alloca' 'add16_622_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 160 [1/1] (0.00ns)   --->   "%add16_724_loc = alloca i64 1"   --->   Operation 160 'alloca' 'add16_724_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 161 [1/1] (0.00ns)   --->   "%add16_826_loc = alloca i64 1"   --->   Operation 161 'alloca' 'add16_826_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 162 [1/1] (0.00ns)   --->   "%add16_928_loc = alloca i64 1"   --->   Operation 162 'alloca' 'add16_928_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 163 [1/1] (0.00ns)   --->   "%add16_1030_loc = alloca i64 1"   --->   Operation 163 'alloca' 'add16_1030_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 164 [1/1] (0.00ns)   --->   "%add16_1132_loc = alloca i64 1"   --->   Operation 164 'alloca' 'add16_1132_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 165 [1/1] (0.00ns)   --->   "%add16_1234_loc = alloca i64 1"   --->   Operation 165 'alloca' 'add16_1234_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 166 [1/1] (0.00ns)   --->   "%add16_1336_loc = alloca i64 1"   --->   Operation 166 'alloca' 'add16_1336_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 167 [1/1] (0.00ns)   --->   "%add16_1438_loc = alloca i64 1"   --->   Operation 167 'alloca' 'add16_1438_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 168 [1/1] (0.00ns)   --->   "%add16_1540_loc = alloca i64 1"   --->   Operation 168 'alloca' 'add16_1540_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 169 [1/1] (0.00ns)   --->   "%add16_1642_loc = alloca i64 1"   --->   Operation 169 'alloca' 'add16_1642_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 170 [1/1] (0.00ns)   --->   "%add16_1744_loc = alloca i64 1"   --->   Operation 170 'alloca' 'add16_1744_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 171 [1/1] (0.00ns)   --->   "%add16_1846_loc = alloca i64 1"   --->   Operation 171 'alloca' 'add16_1846_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 172 [1/1] (0.00ns)   --->   "%add16_1948_loc = alloca i64 1"   --->   Operation 172 'alloca' 'add16_1948_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 173 [1/1] (0.00ns)   --->   "%add16_2050_loc = alloca i64 1"   --->   Operation 173 'alloca' 'add16_2050_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 174 [1/1] (0.00ns)   --->   "%add16_2152_loc = alloca i64 1"   --->   Operation 174 'alloca' 'add16_2152_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 175 [1/1] (0.00ns)   --->   "%add16_2254_loc = alloca i64 1"   --->   Operation 175 'alloca' 'add16_2254_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 176 [1/1] (0.00ns)   --->   "%add16_2356_loc = alloca i64 1"   --->   Operation 176 'alloca' 'add16_2356_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 177 [1/1] (0.00ns)   --->   "%add16_2458_loc = alloca i64 1"   --->   Operation 177 'alloca' 'add16_2458_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 178 [1/1] (0.00ns)   --->   "%add16_2560_loc = alloca i64 1"   --->   Operation 178 'alloca' 'add16_2560_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 179 [1/1] (0.00ns)   --->   "%add16_2662_loc = alloca i64 1"   --->   Operation 179 'alloca' 'add16_2662_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 180 [1/1] (0.00ns)   --->   "%add16_2764_loc = alloca i64 1"   --->   Operation 180 'alloca' 'add16_2764_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 181 [1/1] (0.00ns)   --->   "%add16_2866_loc = alloca i64 1"   --->   Operation 181 'alloca' 'add16_2866_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 182 [1/1] (0.00ns)   --->   "%add16_2968_loc = alloca i64 1"   --->   Operation 182 'alloca' 'add16_2968_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 183 [1/1] (0.00ns)   --->   "%add16_3070_loc = alloca i64 1"   --->   Operation 183 'alloca' 'add16_3070_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 184 [1/1] (0.00ns)   --->   "%add16_3172_loc = alloca i64 1"   --->   Operation 184 'alloca' 'add16_3172_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 185 [2/2] (0.00ns)   --->   "%call_ln0 = call void @float_rms_norm3_Pipeline_sum_sq_blocks, i32 %x_0, i32 %x_1, i32 %x_2, i32 %x_3, i32 %x_4, i32 %x_5, i32 %x_6, i32 %x_7, i32 %x_8, i32 %x_9, i32 %x_10, i32 %x_11, i32 %x_12, i32 %x_13, i32 %x_14, i32 %x_15, i32 %x_16, i32 %x_17, i32 %x_18, i32 %x_19, i32 %x_20, i32 %x_21, i32 %x_22, i32 %x_23, i32 %x_24, i32 %x_25, i32 %x_26, i32 %x_27, i32 %x_28, i32 %x_29, i32 %x_30, i32 %x_31, i32 %add16_3172_loc, i32 %add16_3070_loc, i32 %add16_2968_loc, i32 %add16_2866_loc, i32 %add16_2764_loc, i32 %add16_2662_loc, i32 %add16_2560_loc, i32 %add16_2458_loc, i32 %add16_2356_loc, i32 %add16_2254_loc, i32 %add16_2152_loc, i32 %add16_2050_loc, i32 %add16_1948_loc, i32 %add16_1846_loc, i32 %add16_1744_loc, i32 %add16_1642_loc, i32 %add16_1540_loc, i32 %add16_1438_loc, i32 %add16_1336_loc, i32 %add16_1234_loc, i32 %add16_1132_loc, i32 %add16_1030_loc, i32 %add16_928_loc, i32 %add16_826_loc, i32 %add16_724_loc, i32 %add16_622_loc, i32 %add16_520_loc, i32 %add16_418_loc, i32 %add16_316_loc, i32 %add16_214_loc, i32 %add16_112_loc, i32 %add1610_loc"   --->   Operation 185 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 186 [1/2] (0.00ns)   --->   "%call_ln0 = call void @float_rms_norm3_Pipeline_sum_sq_blocks, i32 %x_0, i32 %x_1, i32 %x_2, i32 %x_3, i32 %x_4, i32 %x_5, i32 %x_6, i32 %x_7, i32 %x_8, i32 %x_9, i32 %x_10, i32 %x_11, i32 %x_12, i32 %x_13, i32 %x_14, i32 %x_15, i32 %x_16, i32 %x_17, i32 %x_18, i32 %x_19, i32 %x_20, i32 %x_21, i32 %x_22, i32 %x_23, i32 %x_24, i32 %x_25, i32 %x_26, i32 %x_27, i32 %x_28, i32 %x_29, i32 %x_30, i32 %x_31, i32 %add16_3172_loc, i32 %add16_3070_loc, i32 %add16_2968_loc, i32 %add16_2866_loc, i32 %add16_2764_loc, i32 %add16_2662_loc, i32 %add16_2560_loc, i32 %add16_2458_loc, i32 %add16_2356_loc, i32 %add16_2254_loc, i32 %add16_2152_loc, i32 %add16_2050_loc, i32 %add16_1948_loc, i32 %add16_1846_loc, i32 %add16_1744_loc, i32 %add16_1642_loc, i32 %add16_1540_loc, i32 %add16_1438_loc, i32 %add16_1336_loc, i32 %add16_1234_loc, i32 %add16_1132_loc, i32 %add16_1030_loc, i32 %add16_928_loc, i32 %add16_826_loc, i32 %add16_724_loc, i32 %add16_622_loc, i32 %add16_520_loc, i32 %add16_418_loc, i32 %add16_316_loc, i32 %add16_214_loc, i32 %add16_112_loc, i32 %add1610_loc"   --->   Operation 186 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 6.43>
+ST_3 : Operation 187 [1/1] (0.00ns)   --->   "%add1610_loc_load = load i32 %add1610_loc"   --->   Operation 187 'load' 'add1610_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 188 [4/4] (6.43ns)   --->   "%sum_sq = fadd i32 %add1610_loc_load, i32 0" [activation_accelerator.cpp:569]   --->   Operation 188 'fadd' 'sum_sq' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 6.43>
+ST_4 : Operation 189 [3/4] (6.43ns)   --->   "%sum_sq = fadd i32 %add1610_loc_load, i32 0" [activation_accelerator.cpp:569]   --->   Operation 189 'fadd' 'sum_sq' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 6.43>
+ST_5 : Operation 190 [2/4] (6.43ns)   --->   "%sum_sq = fadd i32 %add1610_loc_load, i32 0" [activation_accelerator.cpp:569]   --->   Operation 190 'fadd' 'sum_sq' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 6.43>
+ST_6 : Operation 191 [1/4] (6.43ns)   --->   "%sum_sq = fadd i32 %add1610_loc_load, i32 0" [activation_accelerator.cpp:569]   --->   Operation 191 'fadd' 'sum_sq' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 6.43>
+ST_7 : Operation 192 [1/1] (0.00ns)   --->   "%add16_112_loc_load = load i32 %add16_112_loc"   --->   Operation 192 'load' 'add16_112_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 193 [4/4] (6.43ns)   --->   "%sum_sq_1 = fadd i32 %sum_sq, i32 %add16_112_loc_load" [activation_accelerator.cpp:569]   --->   Operation 193 'fadd' 'sum_sq_1' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 6.43>
+ST_8 : Operation 194 [3/4] (6.43ns)   --->   "%sum_sq_1 = fadd i32 %sum_sq, i32 %add16_112_loc_load" [activation_accelerator.cpp:569]   --->   Operation 194 'fadd' 'sum_sq_1' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 6.43>
+ST_9 : Operation 195 [2/4] (6.43ns)   --->   "%sum_sq_1 = fadd i32 %sum_sq, i32 %add16_112_loc_load" [activation_accelerator.cpp:569]   --->   Operation 195 'fadd' 'sum_sq_1' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 6.43>
+ST_10 : Operation 196 [1/4] (6.43ns)   --->   "%sum_sq_1 = fadd i32 %sum_sq, i32 %add16_112_loc_load" [activation_accelerator.cpp:569]   --->   Operation 196 'fadd' 'sum_sq_1' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 6.43>
+ST_11 : Operation 197 [1/1] (0.00ns)   --->   "%add16_214_loc_load = load i32 %add16_214_loc"   --->   Operation 197 'load' 'add16_214_loc_load' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 198 [4/4] (6.43ns)   --->   "%sum_sq_2 = fadd i32 %sum_sq_1, i32 %add16_214_loc_load" [activation_accelerator.cpp:569]   --->   Operation 198 'fadd' 'sum_sq_2' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 6.43>
+ST_12 : Operation 199 [3/4] (6.43ns)   --->   "%sum_sq_2 = fadd i32 %sum_sq_1, i32 %add16_214_loc_load" [activation_accelerator.cpp:569]   --->   Operation 199 'fadd' 'sum_sq_2' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 6.43>
+ST_13 : Operation 200 [2/4] (6.43ns)   --->   "%sum_sq_2 = fadd i32 %sum_sq_1, i32 %add16_214_loc_load" [activation_accelerator.cpp:569]   --->   Operation 200 'fadd' 'sum_sq_2' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 6.43>
+ST_14 : Operation 201 [1/4] (6.43ns)   --->   "%sum_sq_2 = fadd i32 %sum_sq_1, i32 %add16_214_loc_load" [activation_accelerator.cpp:569]   --->   Operation 201 'fadd' 'sum_sq_2' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 6.43>
+ST_15 : Operation 202 [1/1] (0.00ns)   --->   "%add16_316_loc_load = load i32 %add16_316_loc"   --->   Operation 202 'load' 'add16_316_loc_load' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 203 [4/4] (6.43ns)   --->   "%sum_sq_3 = fadd i32 %sum_sq_2, i32 %add16_316_loc_load" [activation_accelerator.cpp:569]   --->   Operation 203 'fadd' 'sum_sq_3' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 6.43>
+ST_16 : Operation 204 [3/4] (6.43ns)   --->   "%sum_sq_3 = fadd i32 %sum_sq_2, i32 %add16_316_loc_load" [activation_accelerator.cpp:569]   --->   Operation 204 'fadd' 'sum_sq_3' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 6.43>
+ST_17 : Operation 205 [2/4] (6.43ns)   --->   "%sum_sq_3 = fadd i32 %sum_sq_2, i32 %add16_316_loc_load" [activation_accelerator.cpp:569]   --->   Operation 205 'fadd' 'sum_sq_3' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 6.43>
+ST_18 : Operation 206 [1/4] (6.43ns)   --->   "%sum_sq_3 = fadd i32 %sum_sq_2, i32 %add16_316_loc_load" [activation_accelerator.cpp:569]   --->   Operation 206 'fadd' 'sum_sq_3' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 6.43>
+ST_19 : Operation 207 [1/1] (0.00ns)   --->   "%add16_418_loc_load = load i32 %add16_418_loc"   --->   Operation 207 'load' 'add16_418_loc_load' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 208 [4/4] (6.43ns)   --->   "%sum_sq_4 = fadd i32 %sum_sq_3, i32 %add16_418_loc_load" [activation_accelerator.cpp:569]   --->   Operation 208 'fadd' 'sum_sq_4' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 6.43>
+ST_20 : Operation 209 [3/4] (6.43ns)   --->   "%sum_sq_4 = fadd i32 %sum_sq_3, i32 %add16_418_loc_load" [activation_accelerator.cpp:569]   --->   Operation 209 'fadd' 'sum_sq_4' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 6.43>
+ST_21 : Operation 210 [2/4] (6.43ns)   --->   "%sum_sq_4 = fadd i32 %sum_sq_3, i32 %add16_418_loc_load" [activation_accelerator.cpp:569]   --->   Operation 210 'fadd' 'sum_sq_4' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 21> <Delay = 6.43>
+ST_22 : Operation 211 [1/4] (6.43ns)   --->   "%sum_sq_4 = fadd i32 %sum_sq_3, i32 %add16_418_loc_load" [activation_accelerator.cpp:569]   --->   Operation 211 'fadd' 'sum_sq_4' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 6.43>
+ST_23 : Operation 212 [1/1] (0.00ns)   --->   "%add16_520_loc_load = load i32 %add16_520_loc"   --->   Operation 212 'load' 'add16_520_loc_load' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 213 [4/4] (6.43ns)   --->   "%sum_sq_5 = fadd i32 %sum_sq_4, i32 %add16_520_loc_load" [activation_accelerator.cpp:569]   --->   Operation 213 'fadd' 'sum_sq_5' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 24 <SV = 23> <Delay = 6.43>
+ST_24 : Operation 214 [3/4] (6.43ns)   --->   "%sum_sq_5 = fadd i32 %sum_sq_4, i32 %add16_520_loc_load" [activation_accelerator.cpp:569]   --->   Operation 214 'fadd' 'sum_sq_5' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 25 <SV = 24> <Delay = 6.43>
+ST_25 : Operation 215 [2/4] (6.43ns)   --->   "%sum_sq_5 = fadd i32 %sum_sq_4, i32 %add16_520_loc_load" [activation_accelerator.cpp:569]   --->   Operation 215 'fadd' 'sum_sq_5' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 26 <SV = 25> <Delay = 6.43>
+ST_26 : Operation 216 [1/4] (6.43ns)   --->   "%sum_sq_5 = fadd i32 %sum_sq_4, i32 %add16_520_loc_load" [activation_accelerator.cpp:569]   --->   Operation 216 'fadd' 'sum_sq_5' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 27 <SV = 26> <Delay = 6.43>
+ST_27 : Operation 217 [1/1] (0.00ns)   --->   "%add16_622_loc_load = load i32 %add16_622_loc"   --->   Operation 217 'load' 'add16_622_loc_load' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 218 [4/4] (6.43ns)   --->   "%sum_sq_6 = fadd i32 %sum_sq_5, i32 %add16_622_loc_load" [activation_accelerator.cpp:569]   --->   Operation 218 'fadd' 'sum_sq_6' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 28 <SV = 27> <Delay = 6.43>
+ST_28 : Operation 219 [3/4] (6.43ns)   --->   "%sum_sq_6 = fadd i32 %sum_sq_5, i32 %add16_622_loc_load" [activation_accelerator.cpp:569]   --->   Operation 219 'fadd' 'sum_sq_6' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 29 <SV = 28> <Delay = 6.43>
+ST_29 : Operation 220 [2/4] (6.43ns)   --->   "%sum_sq_6 = fadd i32 %sum_sq_5, i32 %add16_622_loc_load" [activation_accelerator.cpp:569]   --->   Operation 220 'fadd' 'sum_sq_6' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 30 <SV = 29> <Delay = 6.43>
+ST_30 : Operation 221 [1/4] (6.43ns)   --->   "%sum_sq_6 = fadd i32 %sum_sq_5, i32 %add16_622_loc_load" [activation_accelerator.cpp:569]   --->   Operation 221 'fadd' 'sum_sq_6' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 31 <SV = 30> <Delay = 6.43>
+ST_31 : Operation 222 [1/1] (0.00ns)   --->   "%add16_724_loc_load = load i32 %add16_724_loc"   --->   Operation 222 'load' 'add16_724_loc_load' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 223 [4/4] (6.43ns)   --->   "%sum_sq_7 = fadd i32 %sum_sq_6, i32 %add16_724_loc_load" [activation_accelerator.cpp:569]   --->   Operation 223 'fadd' 'sum_sq_7' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 32 <SV = 31> <Delay = 6.43>
+ST_32 : Operation 224 [3/4] (6.43ns)   --->   "%sum_sq_7 = fadd i32 %sum_sq_6, i32 %add16_724_loc_load" [activation_accelerator.cpp:569]   --->   Operation 224 'fadd' 'sum_sq_7' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 33 <SV = 32> <Delay = 6.43>
+ST_33 : Operation 225 [2/4] (6.43ns)   --->   "%sum_sq_7 = fadd i32 %sum_sq_6, i32 %add16_724_loc_load" [activation_accelerator.cpp:569]   --->   Operation 225 'fadd' 'sum_sq_7' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 34 <SV = 33> <Delay = 6.43>
+ST_34 : Operation 226 [1/4] (6.43ns)   --->   "%sum_sq_7 = fadd i32 %sum_sq_6, i32 %add16_724_loc_load" [activation_accelerator.cpp:569]   --->   Operation 226 'fadd' 'sum_sq_7' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 35 <SV = 34> <Delay = 6.43>
+ST_35 : Operation 227 [1/1] (0.00ns)   --->   "%add16_826_loc_load = load i32 %add16_826_loc"   --->   Operation 227 'load' 'add16_826_loc_load' <Predicate = true> <Delay = 0.00>
+ST_35 : Operation 228 [4/4] (6.43ns)   --->   "%sum_sq_8 = fadd i32 %sum_sq_7, i32 %add16_826_loc_load" [activation_accelerator.cpp:569]   --->   Operation 228 'fadd' 'sum_sq_8' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 36 <SV = 35> <Delay = 6.43>
+ST_36 : Operation 229 [3/4] (6.43ns)   --->   "%sum_sq_8 = fadd i32 %sum_sq_7, i32 %add16_826_loc_load" [activation_accelerator.cpp:569]   --->   Operation 229 'fadd' 'sum_sq_8' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 37 <SV = 36> <Delay = 6.43>
+ST_37 : Operation 230 [2/4] (6.43ns)   --->   "%sum_sq_8 = fadd i32 %sum_sq_7, i32 %add16_826_loc_load" [activation_accelerator.cpp:569]   --->   Operation 230 'fadd' 'sum_sq_8' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 38 <SV = 37> <Delay = 6.43>
+ST_38 : Operation 231 [1/4] (6.43ns)   --->   "%sum_sq_8 = fadd i32 %sum_sq_7, i32 %add16_826_loc_load" [activation_accelerator.cpp:569]   --->   Operation 231 'fadd' 'sum_sq_8' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 39 <SV = 38> <Delay = 6.43>
+ST_39 : Operation 232 [1/1] (0.00ns)   --->   "%add16_928_loc_load = load i32 %add16_928_loc"   --->   Operation 232 'load' 'add16_928_loc_load' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 233 [4/4] (6.43ns)   --->   "%sum_sq_9 = fadd i32 %sum_sq_8, i32 %add16_928_loc_load" [activation_accelerator.cpp:569]   --->   Operation 233 'fadd' 'sum_sq_9' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 40 <SV = 39> <Delay = 6.43>
+ST_40 : Operation 234 [3/4] (6.43ns)   --->   "%sum_sq_9 = fadd i32 %sum_sq_8, i32 %add16_928_loc_load" [activation_accelerator.cpp:569]   --->   Operation 234 'fadd' 'sum_sq_9' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 41 <SV = 40> <Delay = 6.43>
+ST_41 : Operation 235 [2/4] (6.43ns)   --->   "%sum_sq_9 = fadd i32 %sum_sq_8, i32 %add16_928_loc_load" [activation_accelerator.cpp:569]   --->   Operation 235 'fadd' 'sum_sq_9' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 42 <SV = 41> <Delay = 6.43>
+ST_42 : Operation 236 [1/4] (6.43ns)   --->   "%sum_sq_9 = fadd i32 %sum_sq_8, i32 %add16_928_loc_load" [activation_accelerator.cpp:569]   --->   Operation 236 'fadd' 'sum_sq_9' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 43 <SV = 42> <Delay = 6.43>
+ST_43 : Operation 237 [1/1] (0.00ns)   --->   "%add16_1030_loc_load = load i32 %add16_1030_loc"   --->   Operation 237 'load' 'add16_1030_loc_load' <Predicate = true> <Delay = 0.00>
+ST_43 : Operation 238 [4/4] (6.43ns)   --->   "%sum_sq_10 = fadd i32 %sum_sq_9, i32 %add16_1030_loc_load" [activation_accelerator.cpp:569]   --->   Operation 238 'fadd' 'sum_sq_10' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 44 <SV = 43> <Delay = 6.43>
+ST_44 : Operation 239 [3/4] (6.43ns)   --->   "%sum_sq_10 = fadd i32 %sum_sq_9, i32 %add16_1030_loc_load" [activation_accelerator.cpp:569]   --->   Operation 239 'fadd' 'sum_sq_10' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 45 <SV = 44> <Delay = 6.43>
+ST_45 : Operation 240 [2/4] (6.43ns)   --->   "%sum_sq_10 = fadd i32 %sum_sq_9, i32 %add16_1030_loc_load" [activation_accelerator.cpp:569]   --->   Operation 240 'fadd' 'sum_sq_10' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 46 <SV = 45> <Delay = 6.43>
+ST_46 : Operation 241 [1/4] (6.43ns)   --->   "%sum_sq_10 = fadd i32 %sum_sq_9, i32 %add16_1030_loc_load" [activation_accelerator.cpp:569]   --->   Operation 241 'fadd' 'sum_sq_10' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 47 <SV = 46> <Delay = 6.43>
+ST_47 : Operation 242 [1/1] (0.00ns)   --->   "%add16_1132_loc_load = load i32 %add16_1132_loc"   --->   Operation 242 'load' 'add16_1132_loc_load' <Predicate = true> <Delay = 0.00>
+ST_47 : Operation 243 [4/4] (6.43ns)   --->   "%sum_sq_11 = fadd i32 %sum_sq_10, i32 %add16_1132_loc_load" [activation_accelerator.cpp:569]   --->   Operation 243 'fadd' 'sum_sq_11' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 48 <SV = 47> <Delay = 6.43>
+ST_48 : Operation 244 [3/4] (6.43ns)   --->   "%sum_sq_11 = fadd i32 %sum_sq_10, i32 %add16_1132_loc_load" [activation_accelerator.cpp:569]   --->   Operation 244 'fadd' 'sum_sq_11' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 49 <SV = 48> <Delay = 6.43>
+ST_49 : Operation 245 [2/4] (6.43ns)   --->   "%sum_sq_11 = fadd i32 %sum_sq_10, i32 %add16_1132_loc_load" [activation_accelerator.cpp:569]   --->   Operation 245 'fadd' 'sum_sq_11' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 50 <SV = 49> <Delay = 6.43>
+ST_50 : Operation 246 [1/4] (6.43ns)   --->   "%sum_sq_11 = fadd i32 %sum_sq_10, i32 %add16_1132_loc_load" [activation_accelerator.cpp:569]   --->   Operation 246 'fadd' 'sum_sq_11' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 51 <SV = 50> <Delay = 6.43>
+ST_51 : Operation 247 [1/1] (0.00ns)   --->   "%add16_1234_loc_load = load i32 %add16_1234_loc"   --->   Operation 247 'load' 'add16_1234_loc_load' <Predicate = true> <Delay = 0.00>
+ST_51 : Operation 248 [4/4] (6.43ns)   --->   "%sum_sq_12 = fadd i32 %sum_sq_11, i32 %add16_1234_loc_load" [activation_accelerator.cpp:569]   --->   Operation 248 'fadd' 'sum_sq_12' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 52 <SV = 51> <Delay = 6.43>
+ST_52 : Operation 249 [3/4] (6.43ns)   --->   "%sum_sq_12 = fadd i32 %sum_sq_11, i32 %add16_1234_loc_load" [activation_accelerator.cpp:569]   --->   Operation 249 'fadd' 'sum_sq_12' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 53 <SV = 52> <Delay = 6.43>
+ST_53 : Operation 250 [2/4] (6.43ns)   --->   "%sum_sq_12 = fadd i32 %sum_sq_11, i32 %add16_1234_loc_load" [activation_accelerator.cpp:569]   --->   Operation 250 'fadd' 'sum_sq_12' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 54 <SV = 53> <Delay = 6.43>
+ST_54 : Operation 251 [1/4] (6.43ns)   --->   "%sum_sq_12 = fadd i32 %sum_sq_11, i32 %add16_1234_loc_load" [activation_accelerator.cpp:569]   --->   Operation 251 'fadd' 'sum_sq_12' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 55 <SV = 54> <Delay = 6.43>
+ST_55 : Operation 252 [1/1] (0.00ns)   --->   "%add16_1336_loc_load = load i32 %add16_1336_loc"   --->   Operation 252 'load' 'add16_1336_loc_load' <Predicate = true> <Delay = 0.00>
+ST_55 : Operation 253 [4/4] (6.43ns)   --->   "%sum_sq_13 = fadd i32 %sum_sq_12, i32 %add16_1336_loc_load" [activation_accelerator.cpp:569]   --->   Operation 253 'fadd' 'sum_sq_13' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 56 <SV = 55> <Delay = 6.43>
+ST_56 : Operation 254 [3/4] (6.43ns)   --->   "%sum_sq_13 = fadd i32 %sum_sq_12, i32 %add16_1336_loc_load" [activation_accelerator.cpp:569]   --->   Operation 254 'fadd' 'sum_sq_13' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 57 <SV = 56> <Delay = 6.43>
+ST_57 : Operation 255 [2/4] (6.43ns)   --->   "%sum_sq_13 = fadd i32 %sum_sq_12, i32 %add16_1336_loc_load" [activation_accelerator.cpp:569]   --->   Operation 255 'fadd' 'sum_sq_13' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 58 <SV = 57> <Delay = 6.43>
+ST_58 : Operation 256 [1/4] (6.43ns)   --->   "%sum_sq_13 = fadd i32 %sum_sq_12, i32 %add16_1336_loc_load" [activation_accelerator.cpp:569]   --->   Operation 256 'fadd' 'sum_sq_13' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 59 <SV = 58> <Delay = 6.43>
+ST_59 : Operation 257 [1/1] (0.00ns)   --->   "%add16_1438_loc_load = load i32 %add16_1438_loc"   --->   Operation 257 'load' 'add16_1438_loc_load' <Predicate = true> <Delay = 0.00>
+ST_59 : Operation 258 [4/4] (6.43ns)   --->   "%sum_sq_14 = fadd i32 %sum_sq_13, i32 %add16_1438_loc_load" [activation_accelerator.cpp:569]   --->   Operation 258 'fadd' 'sum_sq_14' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 60 <SV = 59> <Delay = 6.43>
+ST_60 : Operation 259 [3/4] (6.43ns)   --->   "%sum_sq_14 = fadd i32 %sum_sq_13, i32 %add16_1438_loc_load" [activation_accelerator.cpp:569]   --->   Operation 259 'fadd' 'sum_sq_14' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 61 <SV = 60> <Delay = 6.43>
+ST_61 : Operation 260 [2/4] (6.43ns)   --->   "%sum_sq_14 = fadd i32 %sum_sq_13, i32 %add16_1438_loc_load" [activation_accelerator.cpp:569]   --->   Operation 260 'fadd' 'sum_sq_14' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 62 <SV = 61> <Delay = 6.43>
+ST_62 : Operation 261 [1/4] (6.43ns)   --->   "%sum_sq_14 = fadd i32 %sum_sq_13, i32 %add16_1438_loc_load" [activation_accelerator.cpp:569]   --->   Operation 261 'fadd' 'sum_sq_14' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 63 <SV = 62> <Delay = 6.43>
+ST_63 : Operation 262 [1/1] (0.00ns)   --->   "%add16_1540_loc_load = load i32 %add16_1540_loc"   --->   Operation 262 'load' 'add16_1540_loc_load' <Predicate = true> <Delay = 0.00>
+ST_63 : Operation 263 [4/4] (6.43ns)   --->   "%sum_sq_15 = fadd i32 %sum_sq_14, i32 %add16_1540_loc_load" [activation_accelerator.cpp:569]   --->   Operation 263 'fadd' 'sum_sq_15' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 64 <SV = 63> <Delay = 6.43>
+ST_64 : Operation 264 [3/4] (6.43ns)   --->   "%sum_sq_15 = fadd i32 %sum_sq_14, i32 %add16_1540_loc_load" [activation_accelerator.cpp:569]   --->   Operation 264 'fadd' 'sum_sq_15' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 65 <SV = 64> <Delay = 6.43>
+ST_65 : Operation 265 [2/4] (6.43ns)   --->   "%sum_sq_15 = fadd i32 %sum_sq_14, i32 %add16_1540_loc_load" [activation_accelerator.cpp:569]   --->   Operation 265 'fadd' 'sum_sq_15' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 66 <SV = 65> <Delay = 6.43>
+ST_66 : Operation 266 [1/4] (6.43ns)   --->   "%sum_sq_15 = fadd i32 %sum_sq_14, i32 %add16_1540_loc_load" [activation_accelerator.cpp:569]   --->   Operation 266 'fadd' 'sum_sq_15' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 67 <SV = 66> <Delay = 6.43>
+ST_67 : Operation 267 [1/1] (0.00ns)   --->   "%add16_1642_loc_load = load i32 %add16_1642_loc"   --->   Operation 267 'load' 'add16_1642_loc_load' <Predicate = true> <Delay = 0.00>
+ST_67 : Operation 268 [4/4] (6.43ns)   --->   "%sum_sq_16 = fadd i32 %sum_sq_15, i32 %add16_1642_loc_load" [activation_accelerator.cpp:569]   --->   Operation 268 'fadd' 'sum_sq_16' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 68 <SV = 67> <Delay = 6.43>
+ST_68 : Operation 269 [3/4] (6.43ns)   --->   "%sum_sq_16 = fadd i32 %sum_sq_15, i32 %add16_1642_loc_load" [activation_accelerator.cpp:569]   --->   Operation 269 'fadd' 'sum_sq_16' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 69 <SV = 68> <Delay = 6.43>
+ST_69 : Operation 270 [2/4] (6.43ns)   --->   "%sum_sq_16 = fadd i32 %sum_sq_15, i32 %add16_1642_loc_load" [activation_accelerator.cpp:569]   --->   Operation 270 'fadd' 'sum_sq_16' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 70 <SV = 69> <Delay = 6.43>
+ST_70 : Operation 271 [1/4] (6.43ns)   --->   "%sum_sq_16 = fadd i32 %sum_sq_15, i32 %add16_1642_loc_load" [activation_accelerator.cpp:569]   --->   Operation 271 'fadd' 'sum_sq_16' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 71 <SV = 70> <Delay = 6.43>
+ST_71 : Operation 272 [1/1] (0.00ns)   --->   "%add16_1744_loc_load = load i32 %add16_1744_loc"   --->   Operation 272 'load' 'add16_1744_loc_load' <Predicate = true> <Delay = 0.00>
+ST_71 : Operation 273 [4/4] (6.43ns)   --->   "%sum_sq_17 = fadd i32 %sum_sq_16, i32 %add16_1744_loc_load" [activation_accelerator.cpp:569]   --->   Operation 273 'fadd' 'sum_sq_17' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 72 <SV = 71> <Delay = 6.43>
+ST_72 : Operation 274 [3/4] (6.43ns)   --->   "%sum_sq_17 = fadd i32 %sum_sq_16, i32 %add16_1744_loc_load" [activation_accelerator.cpp:569]   --->   Operation 274 'fadd' 'sum_sq_17' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 73 <SV = 72> <Delay = 6.43>
+ST_73 : Operation 275 [2/4] (6.43ns)   --->   "%sum_sq_17 = fadd i32 %sum_sq_16, i32 %add16_1744_loc_load" [activation_accelerator.cpp:569]   --->   Operation 275 'fadd' 'sum_sq_17' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 74 <SV = 73> <Delay = 6.43>
+ST_74 : Operation 276 [1/4] (6.43ns)   --->   "%sum_sq_17 = fadd i32 %sum_sq_16, i32 %add16_1744_loc_load" [activation_accelerator.cpp:569]   --->   Operation 276 'fadd' 'sum_sq_17' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 75 <SV = 74> <Delay = 6.43>
+ST_75 : Operation 277 [1/1] (0.00ns)   --->   "%add16_1846_loc_load = load i32 %add16_1846_loc"   --->   Operation 277 'load' 'add16_1846_loc_load' <Predicate = true> <Delay = 0.00>
+ST_75 : Operation 278 [4/4] (6.43ns)   --->   "%sum_sq_18 = fadd i32 %sum_sq_17, i32 %add16_1846_loc_load" [activation_accelerator.cpp:569]   --->   Operation 278 'fadd' 'sum_sq_18' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 76 <SV = 75> <Delay = 6.43>
+ST_76 : Operation 279 [3/4] (6.43ns)   --->   "%sum_sq_18 = fadd i32 %sum_sq_17, i32 %add16_1846_loc_load" [activation_accelerator.cpp:569]   --->   Operation 279 'fadd' 'sum_sq_18' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 77 <SV = 76> <Delay = 6.43>
+ST_77 : Operation 280 [2/4] (6.43ns)   --->   "%sum_sq_18 = fadd i32 %sum_sq_17, i32 %add16_1846_loc_load" [activation_accelerator.cpp:569]   --->   Operation 280 'fadd' 'sum_sq_18' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 78 <SV = 77> <Delay = 6.43>
+ST_78 : Operation 281 [1/4] (6.43ns)   --->   "%sum_sq_18 = fadd i32 %sum_sq_17, i32 %add16_1846_loc_load" [activation_accelerator.cpp:569]   --->   Operation 281 'fadd' 'sum_sq_18' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 79 <SV = 78> <Delay = 6.43>
+ST_79 : Operation 282 [1/1] (0.00ns)   --->   "%add16_1948_loc_load = load i32 %add16_1948_loc"   --->   Operation 282 'load' 'add16_1948_loc_load' <Predicate = true> <Delay = 0.00>
+ST_79 : Operation 283 [4/4] (6.43ns)   --->   "%sum_sq_19 = fadd i32 %sum_sq_18, i32 %add16_1948_loc_load" [activation_accelerator.cpp:569]   --->   Operation 283 'fadd' 'sum_sq_19' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 80 <SV = 79> <Delay = 6.43>
+ST_80 : Operation 284 [3/4] (6.43ns)   --->   "%sum_sq_19 = fadd i32 %sum_sq_18, i32 %add16_1948_loc_load" [activation_accelerator.cpp:569]   --->   Operation 284 'fadd' 'sum_sq_19' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 81 <SV = 80> <Delay = 6.43>
+ST_81 : Operation 285 [2/4] (6.43ns)   --->   "%sum_sq_19 = fadd i32 %sum_sq_18, i32 %add16_1948_loc_load" [activation_accelerator.cpp:569]   --->   Operation 285 'fadd' 'sum_sq_19' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 82 <SV = 81> <Delay = 6.43>
+ST_82 : Operation 286 [1/4] (6.43ns)   --->   "%sum_sq_19 = fadd i32 %sum_sq_18, i32 %add16_1948_loc_load" [activation_accelerator.cpp:569]   --->   Operation 286 'fadd' 'sum_sq_19' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 83 <SV = 82> <Delay = 6.43>
+ST_83 : Operation 287 [1/1] (0.00ns)   --->   "%add16_2050_loc_load = load i32 %add16_2050_loc"   --->   Operation 287 'load' 'add16_2050_loc_load' <Predicate = true> <Delay = 0.00>
+ST_83 : Operation 288 [4/4] (6.43ns)   --->   "%sum_sq_20 = fadd i32 %sum_sq_19, i32 %add16_2050_loc_load" [activation_accelerator.cpp:569]   --->   Operation 288 'fadd' 'sum_sq_20' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 84 <SV = 83> <Delay = 6.43>
+ST_84 : Operation 289 [3/4] (6.43ns)   --->   "%sum_sq_20 = fadd i32 %sum_sq_19, i32 %add16_2050_loc_load" [activation_accelerator.cpp:569]   --->   Operation 289 'fadd' 'sum_sq_20' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 85 <SV = 84> <Delay = 6.43>
+ST_85 : Operation 290 [2/4] (6.43ns)   --->   "%sum_sq_20 = fadd i32 %sum_sq_19, i32 %add16_2050_loc_load" [activation_accelerator.cpp:569]   --->   Operation 290 'fadd' 'sum_sq_20' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 86 <SV = 85> <Delay = 6.43>
+ST_86 : Operation 291 [1/4] (6.43ns)   --->   "%sum_sq_20 = fadd i32 %sum_sq_19, i32 %add16_2050_loc_load" [activation_accelerator.cpp:569]   --->   Operation 291 'fadd' 'sum_sq_20' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 87 <SV = 86> <Delay = 6.43>
+ST_87 : Operation 292 [1/1] (0.00ns)   --->   "%add16_2152_loc_load = load i32 %add16_2152_loc"   --->   Operation 292 'load' 'add16_2152_loc_load' <Predicate = true> <Delay = 0.00>
+ST_87 : Operation 293 [4/4] (6.43ns)   --->   "%sum_sq_21 = fadd i32 %sum_sq_20, i32 %add16_2152_loc_load" [activation_accelerator.cpp:569]   --->   Operation 293 'fadd' 'sum_sq_21' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 88 <SV = 87> <Delay = 6.43>
+ST_88 : Operation 294 [3/4] (6.43ns)   --->   "%sum_sq_21 = fadd i32 %sum_sq_20, i32 %add16_2152_loc_load" [activation_accelerator.cpp:569]   --->   Operation 294 'fadd' 'sum_sq_21' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 89 <SV = 88> <Delay = 6.43>
+ST_89 : Operation 295 [2/4] (6.43ns)   --->   "%sum_sq_21 = fadd i32 %sum_sq_20, i32 %add16_2152_loc_load" [activation_accelerator.cpp:569]   --->   Operation 295 'fadd' 'sum_sq_21' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 90 <SV = 89> <Delay = 6.43>
+ST_90 : Operation 296 [1/4] (6.43ns)   --->   "%sum_sq_21 = fadd i32 %sum_sq_20, i32 %add16_2152_loc_load" [activation_accelerator.cpp:569]   --->   Operation 296 'fadd' 'sum_sq_21' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 91 <SV = 90> <Delay = 6.43>
+ST_91 : Operation 297 [1/1] (0.00ns)   --->   "%add16_2254_loc_load = load i32 %add16_2254_loc"   --->   Operation 297 'load' 'add16_2254_loc_load' <Predicate = true> <Delay = 0.00>
+ST_91 : Operation 298 [4/4] (6.43ns)   --->   "%sum_sq_22 = fadd i32 %sum_sq_21, i32 %add16_2254_loc_load" [activation_accelerator.cpp:569]   --->   Operation 298 'fadd' 'sum_sq_22' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 92 <SV = 91> <Delay = 6.43>
+ST_92 : Operation 299 [3/4] (6.43ns)   --->   "%sum_sq_22 = fadd i32 %sum_sq_21, i32 %add16_2254_loc_load" [activation_accelerator.cpp:569]   --->   Operation 299 'fadd' 'sum_sq_22' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 93 <SV = 92> <Delay = 6.43>
+ST_93 : Operation 300 [2/4] (6.43ns)   --->   "%sum_sq_22 = fadd i32 %sum_sq_21, i32 %add16_2254_loc_load" [activation_accelerator.cpp:569]   --->   Operation 300 'fadd' 'sum_sq_22' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 94 <SV = 93> <Delay = 6.43>
+ST_94 : Operation 301 [1/4] (6.43ns)   --->   "%sum_sq_22 = fadd i32 %sum_sq_21, i32 %add16_2254_loc_load" [activation_accelerator.cpp:569]   --->   Operation 301 'fadd' 'sum_sq_22' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 95 <SV = 94> <Delay = 6.43>
+ST_95 : Operation 302 [1/1] (0.00ns)   --->   "%add16_2356_loc_load = load i32 %add16_2356_loc"   --->   Operation 302 'load' 'add16_2356_loc_load' <Predicate = true> <Delay = 0.00>
+ST_95 : Operation 303 [4/4] (6.43ns)   --->   "%sum_sq_23 = fadd i32 %sum_sq_22, i32 %add16_2356_loc_load" [activation_accelerator.cpp:569]   --->   Operation 303 'fadd' 'sum_sq_23' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 96 <SV = 95> <Delay = 6.43>
+ST_96 : Operation 304 [3/4] (6.43ns)   --->   "%sum_sq_23 = fadd i32 %sum_sq_22, i32 %add16_2356_loc_load" [activation_accelerator.cpp:569]   --->   Operation 304 'fadd' 'sum_sq_23' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 97 <SV = 96> <Delay = 6.43>
+ST_97 : Operation 305 [2/4] (6.43ns)   --->   "%sum_sq_23 = fadd i32 %sum_sq_22, i32 %add16_2356_loc_load" [activation_accelerator.cpp:569]   --->   Operation 305 'fadd' 'sum_sq_23' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 98 <SV = 97> <Delay = 6.43>
+ST_98 : Operation 306 [1/4] (6.43ns)   --->   "%sum_sq_23 = fadd i32 %sum_sq_22, i32 %add16_2356_loc_load" [activation_accelerator.cpp:569]   --->   Operation 306 'fadd' 'sum_sq_23' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 99 <SV = 98> <Delay = 6.43>
+ST_99 : Operation 307 [1/1] (0.00ns)   --->   "%add16_2458_loc_load = load i32 %add16_2458_loc"   --->   Operation 307 'load' 'add16_2458_loc_load' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 308 [4/4] (6.43ns)   --->   "%sum_sq_24 = fadd i32 %sum_sq_23, i32 %add16_2458_loc_load" [activation_accelerator.cpp:569]   --->   Operation 308 'fadd' 'sum_sq_24' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 100 <SV = 99> <Delay = 6.43>
+ST_100 : Operation 309 [3/4] (6.43ns)   --->   "%sum_sq_24 = fadd i32 %sum_sq_23, i32 %add16_2458_loc_load" [activation_accelerator.cpp:569]   --->   Operation 309 'fadd' 'sum_sq_24' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 101 <SV = 100> <Delay = 6.43>
+ST_101 : Operation 310 [2/4] (6.43ns)   --->   "%sum_sq_24 = fadd i32 %sum_sq_23, i32 %add16_2458_loc_load" [activation_accelerator.cpp:569]   --->   Operation 310 'fadd' 'sum_sq_24' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 102 <SV = 101> <Delay = 6.43>
+ST_102 : Operation 311 [1/4] (6.43ns)   --->   "%sum_sq_24 = fadd i32 %sum_sq_23, i32 %add16_2458_loc_load" [activation_accelerator.cpp:569]   --->   Operation 311 'fadd' 'sum_sq_24' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 103 <SV = 102> <Delay = 6.43>
+ST_103 : Operation 312 [1/1] (0.00ns)   --->   "%add16_2560_loc_load = load i32 %add16_2560_loc"   --->   Operation 312 'load' 'add16_2560_loc_load' <Predicate = true> <Delay = 0.00>
+ST_103 : Operation 313 [4/4] (6.43ns)   --->   "%sum_sq_25 = fadd i32 %sum_sq_24, i32 %add16_2560_loc_load" [activation_accelerator.cpp:569]   --->   Operation 313 'fadd' 'sum_sq_25' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 104 <SV = 103> <Delay = 6.43>
+ST_104 : Operation 314 [3/4] (6.43ns)   --->   "%sum_sq_25 = fadd i32 %sum_sq_24, i32 %add16_2560_loc_load" [activation_accelerator.cpp:569]   --->   Operation 314 'fadd' 'sum_sq_25' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 105 <SV = 104> <Delay = 6.43>
+ST_105 : Operation 315 [2/4] (6.43ns)   --->   "%sum_sq_25 = fadd i32 %sum_sq_24, i32 %add16_2560_loc_load" [activation_accelerator.cpp:569]   --->   Operation 315 'fadd' 'sum_sq_25' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 106 <SV = 105> <Delay = 6.43>
+ST_106 : Operation 316 [1/4] (6.43ns)   --->   "%sum_sq_25 = fadd i32 %sum_sq_24, i32 %add16_2560_loc_load" [activation_accelerator.cpp:569]   --->   Operation 316 'fadd' 'sum_sq_25' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 107 <SV = 106> <Delay = 6.43>
+ST_107 : Operation 317 [1/1] (0.00ns)   --->   "%add16_2662_loc_load = load i32 %add16_2662_loc"   --->   Operation 317 'load' 'add16_2662_loc_load' <Predicate = true> <Delay = 0.00>
+ST_107 : Operation 318 [4/4] (6.43ns)   --->   "%sum_sq_26 = fadd i32 %sum_sq_25, i32 %add16_2662_loc_load" [activation_accelerator.cpp:569]   --->   Operation 318 'fadd' 'sum_sq_26' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 108 <SV = 107> <Delay = 6.43>
+ST_108 : Operation 319 [3/4] (6.43ns)   --->   "%sum_sq_26 = fadd i32 %sum_sq_25, i32 %add16_2662_loc_load" [activation_accelerator.cpp:569]   --->   Operation 319 'fadd' 'sum_sq_26' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 109 <SV = 108> <Delay = 6.43>
+ST_109 : Operation 320 [2/4] (6.43ns)   --->   "%sum_sq_26 = fadd i32 %sum_sq_25, i32 %add16_2662_loc_load" [activation_accelerator.cpp:569]   --->   Operation 320 'fadd' 'sum_sq_26' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 110 <SV = 109> <Delay = 6.43>
+ST_110 : Operation 321 [1/4] (6.43ns)   --->   "%sum_sq_26 = fadd i32 %sum_sq_25, i32 %add16_2662_loc_load" [activation_accelerator.cpp:569]   --->   Operation 321 'fadd' 'sum_sq_26' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 111 <SV = 110> <Delay = 6.43>
+ST_111 : Operation 322 [1/1] (0.00ns)   --->   "%add16_2764_loc_load = load i32 %add16_2764_loc"   --->   Operation 322 'load' 'add16_2764_loc_load' <Predicate = true> <Delay = 0.00>
+ST_111 : Operation 323 [4/4] (6.43ns)   --->   "%sum_sq_27 = fadd i32 %sum_sq_26, i32 %add16_2764_loc_load" [activation_accelerator.cpp:569]   --->   Operation 323 'fadd' 'sum_sq_27' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 112 <SV = 111> <Delay = 6.43>
+ST_112 : Operation 324 [3/4] (6.43ns)   --->   "%sum_sq_27 = fadd i32 %sum_sq_26, i32 %add16_2764_loc_load" [activation_accelerator.cpp:569]   --->   Operation 324 'fadd' 'sum_sq_27' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 113 <SV = 112> <Delay = 6.43>
+ST_113 : Operation 325 [2/4] (6.43ns)   --->   "%sum_sq_27 = fadd i32 %sum_sq_26, i32 %add16_2764_loc_load" [activation_accelerator.cpp:569]   --->   Operation 325 'fadd' 'sum_sq_27' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 114 <SV = 113> <Delay = 6.43>
+ST_114 : Operation 326 [1/4] (6.43ns)   --->   "%sum_sq_27 = fadd i32 %sum_sq_26, i32 %add16_2764_loc_load" [activation_accelerator.cpp:569]   --->   Operation 326 'fadd' 'sum_sq_27' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 115 <SV = 114> <Delay = 6.43>
+ST_115 : Operation 327 [1/1] (0.00ns)   --->   "%add16_2866_loc_load = load i32 %add16_2866_loc"   --->   Operation 327 'load' 'add16_2866_loc_load' <Predicate = true> <Delay = 0.00>
+ST_115 : Operation 328 [4/4] (6.43ns)   --->   "%sum_sq_28 = fadd i32 %sum_sq_27, i32 %add16_2866_loc_load" [activation_accelerator.cpp:569]   --->   Operation 328 'fadd' 'sum_sq_28' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 116 <SV = 115> <Delay = 6.43>
+ST_116 : Operation 329 [3/4] (6.43ns)   --->   "%sum_sq_28 = fadd i32 %sum_sq_27, i32 %add16_2866_loc_load" [activation_accelerator.cpp:569]   --->   Operation 329 'fadd' 'sum_sq_28' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 117 <SV = 116> <Delay = 6.43>
+ST_117 : Operation 330 [2/4] (6.43ns)   --->   "%sum_sq_28 = fadd i32 %sum_sq_27, i32 %add16_2866_loc_load" [activation_accelerator.cpp:569]   --->   Operation 330 'fadd' 'sum_sq_28' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 118 <SV = 117> <Delay = 6.43>
+ST_118 : Operation 331 [1/4] (6.43ns)   --->   "%sum_sq_28 = fadd i32 %sum_sq_27, i32 %add16_2866_loc_load" [activation_accelerator.cpp:569]   --->   Operation 331 'fadd' 'sum_sq_28' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 119 <SV = 118> <Delay = 6.43>
+ST_119 : Operation 332 [1/1] (0.00ns)   --->   "%add16_2968_loc_load = load i32 %add16_2968_loc"   --->   Operation 332 'load' 'add16_2968_loc_load' <Predicate = true> <Delay = 0.00>
+ST_119 : Operation 333 [4/4] (6.43ns)   --->   "%sum_sq_29 = fadd i32 %sum_sq_28, i32 %add16_2968_loc_load" [activation_accelerator.cpp:569]   --->   Operation 333 'fadd' 'sum_sq_29' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 120 <SV = 119> <Delay = 6.43>
+ST_120 : Operation 334 [3/4] (6.43ns)   --->   "%sum_sq_29 = fadd i32 %sum_sq_28, i32 %add16_2968_loc_load" [activation_accelerator.cpp:569]   --->   Operation 334 'fadd' 'sum_sq_29' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 121 <SV = 120> <Delay = 6.43>
+ST_121 : Operation 335 [2/4] (6.43ns)   --->   "%sum_sq_29 = fadd i32 %sum_sq_28, i32 %add16_2968_loc_load" [activation_accelerator.cpp:569]   --->   Operation 335 'fadd' 'sum_sq_29' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 122 <SV = 121> <Delay = 6.43>
+ST_122 : Operation 336 [1/4] (6.43ns)   --->   "%sum_sq_29 = fadd i32 %sum_sq_28, i32 %add16_2968_loc_load" [activation_accelerator.cpp:569]   --->   Operation 336 'fadd' 'sum_sq_29' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 123 <SV = 122> <Delay = 6.43>
+ST_123 : Operation 337 [1/1] (0.00ns)   --->   "%add16_3070_loc_load = load i32 %add16_3070_loc"   --->   Operation 337 'load' 'add16_3070_loc_load' <Predicate = true> <Delay = 0.00>
+ST_123 : Operation 338 [4/4] (6.43ns)   --->   "%sum_sq_30 = fadd i32 %sum_sq_29, i32 %add16_3070_loc_load" [activation_accelerator.cpp:569]   --->   Operation 338 'fadd' 'sum_sq_30' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 124 <SV = 123> <Delay = 6.43>
+ST_124 : Operation 339 [3/4] (6.43ns)   --->   "%sum_sq_30 = fadd i32 %sum_sq_29, i32 %add16_3070_loc_load" [activation_accelerator.cpp:569]   --->   Operation 339 'fadd' 'sum_sq_30' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 125 <SV = 124> <Delay = 6.43>
+ST_125 : Operation 340 [2/4] (6.43ns)   --->   "%sum_sq_30 = fadd i32 %sum_sq_29, i32 %add16_3070_loc_load" [activation_accelerator.cpp:569]   --->   Operation 340 'fadd' 'sum_sq_30' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 126 <SV = 125> <Delay = 6.43>
+ST_126 : Operation 341 [1/4] (6.43ns)   --->   "%sum_sq_30 = fadd i32 %sum_sq_29, i32 %add16_3070_loc_load" [activation_accelerator.cpp:569]   --->   Operation 341 'fadd' 'sum_sq_30' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 127 <SV = 126> <Delay = 6.43>
+ST_127 : Operation 342 [1/1] (0.00ns)   --->   "%add16_3172_loc_load = load i32 %add16_3172_loc"   --->   Operation 342 'load' 'add16_3172_loc_load' <Predicate = true> <Delay = 0.00>
+ST_127 : Operation 343 [4/4] (6.43ns)   --->   "%sum_sq_31 = fadd i32 %sum_sq_30, i32 %add16_3172_loc_load" [activation_accelerator.cpp:569]   --->   Operation 343 'fadd' 'sum_sq_31' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 128 <SV = 127> <Delay = 6.43>
+ST_128 : Operation 344 [3/4] (6.43ns)   --->   "%sum_sq_31 = fadd i32 %sum_sq_30, i32 %add16_3172_loc_load" [activation_accelerator.cpp:569]   --->   Operation 344 'fadd' 'sum_sq_31' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 129 <SV = 128> <Delay = 6.43>
+ST_129 : Operation 345 [2/4] (6.43ns)   --->   "%sum_sq_31 = fadd i32 %sum_sq_30, i32 %add16_3172_loc_load" [activation_accelerator.cpp:569]   --->   Operation 345 'fadd' 'sum_sq_31' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 130 <SV = 129> <Delay = 6.43>
+ST_130 : Operation 346 [1/4] (6.43ns)   --->   "%sum_sq_31 = fadd i32 %sum_sq_30, i32 %add16_3172_loc_load" [activation_accelerator.cpp:569]   --->   Operation 346 'fadd' 'sum_sq_31' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 131 <SV = 130> <Delay = 7.05>
+ST_131 : Operation 347 [9/9] (7.05ns)   --->   "%mean_sq = fdiv i32 %sum_sq_31, i32 49152" [activation_accelerator.cpp:573]   --->   Operation 347 'fdiv' 'mean_sq' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 132 <SV = 131> <Delay = 7.05>
+ST_132 : Operation 348 [8/9] (7.05ns)   --->   "%mean_sq = fdiv i32 %sum_sq_31, i32 49152" [activation_accelerator.cpp:573]   --->   Operation 348 'fdiv' 'mean_sq' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 133 <SV = 132> <Delay = 7.05>
+ST_133 : Operation 349 [7/9] (7.05ns)   --->   "%mean_sq = fdiv i32 %sum_sq_31, i32 49152" [activation_accelerator.cpp:573]   --->   Operation 349 'fdiv' 'mean_sq' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 134 <SV = 133> <Delay = 7.05>
+ST_134 : Operation 350 [6/9] (7.05ns)   --->   "%mean_sq = fdiv i32 %sum_sq_31, i32 49152" [activation_accelerator.cpp:573]   --->   Operation 350 'fdiv' 'mean_sq' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 135 <SV = 134> <Delay = 7.05>
+ST_135 : Operation 351 [5/9] (7.05ns)   --->   "%mean_sq = fdiv i32 %sum_sq_31, i32 49152" [activation_accelerator.cpp:573]   --->   Operation 351 'fdiv' 'mean_sq' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 136 <SV = 135> <Delay = 7.05>
+ST_136 : Operation 352 [4/9] (7.05ns)   --->   "%mean_sq = fdiv i32 %sum_sq_31, i32 49152" [activation_accelerator.cpp:573]   --->   Operation 352 'fdiv' 'mean_sq' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 137 <SV = 136> <Delay = 7.05>
+ST_137 : Operation 353 [3/9] (7.05ns)   --->   "%mean_sq = fdiv i32 %sum_sq_31, i32 49152" [activation_accelerator.cpp:573]   --->   Operation 353 'fdiv' 'mean_sq' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 138 <SV = 137> <Delay = 7.05>
+ST_138 : Operation 354 [2/9] (7.05ns)   --->   "%mean_sq = fdiv i32 %sum_sq_31, i32 49152" [activation_accelerator.cpp:573]   --->   Operation 354 'fdiv' 'mean_sq' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 139 <SV = 138> <Delay = 7.05>
+ST_139 : Operation 355 [1/9] (7.05ns)   --->   "%mean_sq = fdiv i32 %sum_sq_31, i32 49152" [activation_accelerator.cpp:573]   --->   Operation 355 'fdiv' 'mean_sq' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 140 <SV = 139> <Delay = 6.43>
+ST_140 : Operation 356 [4/4] (6.43ns)   --->   "%x_assign = fadd i32 %mean_sq, i32 1e-06" [activation_accelerator.cpp:574]   --->   Operation 356 'fadd' 'x_assign' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 141 <SV = 140> <Delay = 6.43>
+ST_141 : Operation 357 [3/4] (6.43ns)   --->   "%x_assign = fadd i32 %mean_sq, i32 1e-06" [activation_accelerator.cpp:574]   --->   Operation 357 'fadd' 'x_assign' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 142 <SV = 141> <Delay = 6.43>
+ST_142 : Operation 358 [2/4] (6.43ns)   --->   "%x_assign = fadd i32 %mean_sq, i32 1e-06" [activation_accelerator.cpp:574]   --->   Operation 358 'fadd' 'x_assign' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 143 <SV = 142> <Delay = 6.43>
+ST_143 : Operation 359 [1/4] (6.43ns)   --->   "%x_assign = fadd i32 %mean_sq, i32 1e-06" [activation_accelerator.cpp:574]   --->   Operation 359 'fadd' 'x_assign' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 144 <SV = 143> <Delay = 6.57>
+ST_144 : Operation 360 [8/8] (6.57ns)   --->   "%rms = fsqrt i32 @llvm.sqrt.f32, i32 %x_assign" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13]   --->   Operation 360 'fsqrt' 'rms' <Predicate = true> <Delay = 6.57> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 7> <II = 1> <Delay = 6.57> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 145 <SV = 144> <Delay = 6.57>
+ST_145 : Operation 361 [7/8] (6.57ns)   --->   "%rms = fsqrt i32 @llvm.sqrt.f32, i32 %x_assign" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13]   --->   Operation 361 'fsqrt' 'rms' <Predicate = true> <Delay = 6.57> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 7> <II = 1> <Delay = 6.57> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 146 <SV = 145> <Delay = 6.57>
+ST_146 : Operation 362 [6/8] (6.57ns)   --->   "%rms = fsqrt i32 @llvm.sqrt.f32, i32 %x_assign" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13]   --->   Operation 362 'fsqrt' 'rms' <Predicate = true> <Delay = 6.57> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 7> <II = 1> <Delay = 6.57> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 147 <SV = 146> <Delay = 6.57>
+ST_147 : Operation 363 [5/8] (6.57ns)   --->   "%rms = fsqrt i32 @llvm.sqrt.f32, i32 %x_assign" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13]   --->   Operation 363 'fsqrt' 'rms' <Predicate = true> <Delay = 6.57> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 7> <II = 1> <Delay = 6.57> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 148 <SV = 147> <Delay = 6.57>
+ST_148 : Operation 364 [4/8] (6.57ns)   --->   "%rms = fsqrt i32 @llvm.sqrt.f32, i32 %x_assign" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13]   --->   Operation 364 'fsqrt' 'rms' <Predicate = true> <Delay = 6.57> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 7> <II = 1> <Delay = 6.57> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 149 <SV = 148> <Delay = 6.57>
+ST_149 : Operation 365 [3/8] (6.57ns)   --->   "%rms = fsqrt i32 @llvm.sqrt.f32, i32 %x_assign" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13]   --->   Operation 365 'fsqrt' 'rms' <Predicate = true> <Delay = 6.57> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 7> <II = 1> <Delay = 6.57> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 150 <SV = 149> <Delay = 6.57>
+ST_150 : Operation 366 [2/8] (6.57ns)   --->   "%rms = fsqrt i32 @llvm.sqrt.f32, i32 %x_assign" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13]   --->   Operation 366 'fsqrt' 'rms' <Predicate = true> <Delay = 6.57> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 7> <II = 1> <Delay = 6.57> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 151 <SV = 150> <Delay = 6.57>
+ST_151 : Operation 367 [1/8] (6.57ns)   --->   "%rms = fsqrt i32 @llvm.sqrt.f32, i32 %x_assign" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13]   --->   Operation 367 'fsqrt' 'rms' <Predicate = true> <Delay = 6.57> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 7> <II = 1> <Delay = 6.57> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_151 : Operation 368 [2/2] (0.00ns)   --->   "%call_ln13 = call void @float_rms_norm3_Pipeline_normalize_blocks, i32 %x_0, i32 %rms, i32 %x_1, i32 %x_2, i32 %x_3, i32 %x_4, i32 %x_5, i32 %x_6, i32 %x_7, i32 %x_8, i32 %x_9, i32 %x_10, i32 %x_11, i32 %x_12, i32 %x_13, i32 %x_14, i32 %x_15, i32 %x_16, i32 %x_17, i32 %x_18, i32 %x_19, i32 %x_20, i32 %x_21, i32 %x_22, i32 %x_23, i32 %x_24, i32 %x_25, i32 %x_26, i32 %x_27, i32 %x_28, i32 %x_29, i32 %x_30, i32 %x_31, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13]   --->   Operation 368 'call' 'call_ln13' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 152 <SV = 151> <Delay = 0.00>
+ST_152 : Operation 369 [1/2] (0.00ns)   --->   "%call_ln13 = call void @float_rms_norm3_Pipeline_normalize_blocks, i32 %x_0, i32 %rms, i32 %x_1, i32 %x_2, i32 %x_3, i32 %x_4, i32 %x_5, i32 %x_6, i32 %x_7, i32 %x_8, i32 %x_9, i32 %x_10, i32 %x_11, i32 %x_12, i32 %x_13, i32 %x_14, i32 %x_15, i32 %x_16, i32 %x_17, i32 %x_18, i32 %x_19, i32 %x_20, i32 %x_21, i32 %x_22, i32 %x_23, i32 %x_24, i32 %x_25, i32 %x_26, i32 %x_27, i32 %x_28, i32 %x_29, i32 %x_30, i32 %x_31, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1, i16 %activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30, i16 %p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13]   --->   Operation 369 'call' 'call_ln13' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_152 : Operation 370 [1/1] (0.00ns)   --->   "%ret_ln591 = ret" [activation_accelerator.cpp:591]   --->   Operation 370 'ret' 'ret_ln591' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add1610_loc_load') on local variable 'add1610_loc' [129]  (0 ns)
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [130]  (6.44 ns)
+
+ <State 4>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [130]  (6.44 ns)
+
+ <State 5>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [130]  (6.44 ns)
+
+ <State 6>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [130]  (6.44 ns)
+
+ <State 7>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add16_112_loc_load') on local variable 'add16_112_loc' [128]  (0 ns)
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [131]  (6.44 ns)
+
+ <State 8>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [131]  (6.44 ns)
+
+ <State 9>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [131]  (6.44 ns)
+
+ <State 10>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [131]  (6.44 ns)
+
+ <State 11>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add16_214_loc_load') on local variable 'add16_214_loc' [127]  (0 ns)
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [132]  (6.44 ns)
+
+ <State 12>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [132]  (6.44 ns)
+
+ <State 13>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [132]  (6.44 ns)
+
+ <State 14>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [132]  (6.44 ns)
+
+ <State 15>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add16_316_loc_load') on local variable 'add16_316_loc' [126]  (0 ns)
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [133]  (6.44 ns)
+
+ <State 16>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [133]  (6.44 ns)
+
+ <State 17>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [133]  (6.44 ns)
+
+ <State 18>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [133]  (6.44 ns)
+
+ <State 19>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add16_418_loc_load') on local variable 'add16_418_loc' [125]  (0 ns)
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [134]  (6.44 ns)
+
+ <State 20>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [134]  (6.44 ns)
+
+ <State 21>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [134]  (6.44 ns)
+
+ <State 22>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [134]  (6.44 ns)
+
+ <State 23>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add16_520_loc_load') on local variable 'add16_520_loc' [124]  (0 ns)
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [135]  (6.44 ns)
+
+ <State 24>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [135]  (6.44 ns)
+
+ <State 25>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [135]  (6.44 ns)
+
+ <State 26>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [135]  (6.44 ns)
+
+ <State 27>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add16_622_loc_load') on local variable 'add16_622_loc' [123]  (0 ns)
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [136]  (6.44 ns)
+
+ <State 28>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [136]  (6.44 ns)
+
+ <State 29>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [136]  (6.44 ns)
+
+ <State 30>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [136]  (6.44 ns)
+
+ <State 31>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add16_724_loc_load') on local variable 'add16_724_loc' [122]  (0 ns)
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [137]  (6.44 ns)
+
+ <State 32>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [137]  (6.44 ns)
+
+ <State 33>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [137]  (6.44 ns)
+
+ <State 34>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [137]  (6.44 ns)
+
+ <State 35>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add16_826_loc_load') on local variable 'add16_826_loc' [121]  (0 ns)
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [138]  (6.44 ns)
+
+ <State 36>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [138]  (6.44 ns)
+
+ <State 37>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [138]  (6.44 ns)
+
+ <State 38>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [138]  (6.44 ns)
+
+ <State 39>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add16_928_loc_load') on local variable 'add16_928_loc' [120]  (0 ns)
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [139]  (6.44 ns)
+
+ <State 40>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [139]  (6.44 ns)
+
+ <State 41>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [139]  (6.44 ns)
+
+ <State 42>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [139]  (6.44 ns)
+
+ <State 43>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add16_1030_loc_load') on local variable 'add16_1030_loc' [119]  (0 ns)
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [140]  (6.44 ns)
+
+ <State 44>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [140]  (6.44 ns)
+
+ <State 45>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [140]  (6.44 ns)
+
+ <State 46>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [140]  (6.44 ns)
+
+ <State 47>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add16_1132_loc_load') on local variable 'add16_1132_loc' [118]  (0 ns)
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [141]  (6.44 ns)
+
+ <State 48>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [141]  (6.44 ns)
+
+ <State 49>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [141]  (6.44 ns)
+
+ <State 50>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [141]  (6.44 ns)
+
+ <State 51>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add16_1234_loc_load') on local variable 'add16_1234_loc' [117]  (0 ns)
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [142]  (6.44 ns)
+
+ <State 52>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [142]  (6.44 ns)
+
+ <State 53>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [142]  (6.44 ns)
+
+ <State 54>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [142]  (6.44 ns)
+
+ <State 55>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add16_1336_loc_load') on local variable 'add16_1336_loc' [116]  (0 ns)
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [143]  (6.44 ns)
+
+ <State 56>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [143]  (6.44 ns)
+
+ <State 57>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [143]  (6.44 ns)
+
+ <State 58>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [143]  (6.44 ns)
+
+ <State 59>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add16_1438_loc_load') on local variable 'add16_1438_loc' [115]  (0 ns)
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [144]  (6.44 ns)
+
+ <State 60>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [144]  (6.44 ns)
+
+ <State 61>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [144]  (6.44 ns)
+
+ <State 62>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [144]  (6.44 ns)
+
+ <State 63>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add16_1540_loc_load') on local variable 'add16_1540_loc' [114]  (0 ns)
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [145]  (6.44 ns)
+
+ <State 64>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [145]  (6.44 ns)
+
+ <State 65>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [145]  (6.44 ns)
+
+ <State 66>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [145]  (6.44 ns)
+
+ <State 67>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add16_1642_loc_load') on local variable 'add16_1642_loc' [113]  (0 ns)
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [146]  (6.44 ns)
+
+ <State 68>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [146]  (6.44 ns)
+
+ <State 69>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [146]  (6.44 ns)
+
+ <State 70>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [146]  (6.44 ns)
+
+ <State 71>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add16_1744_loc_load') on local variable 'add16_1744_loc' [112]  (0 ns)
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [147]  (6.44 ns)
+
+ <State 72>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [147]  (6.44 ns)
+
+ <State 73>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [147]  (6.44 ns)
+
+ <State 74>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [147]  (6.44 ns)
+
+ <State 75>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add16_1846_loc_load') on local variable 'add16_1846_loc' [111]  (0 ns)
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [148]  (6.44 ns)
+
+ <State 76>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [148]  (6.44 ns)
+
+ <State 77>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [148]  (6.44 ns)
+
+ <State 78>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [148]  (6.44 ns)
+
+ <State 79>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add16_1948_loc_load') on local variable 'add16_1948_loc' [110]  (0 ns)
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [149]  (6.44 ns)
+
+ <State 80>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [149]  (6.44 ns)
+
+ <State 81>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [149]  (6.44 ns)
+
+ <State 82>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [149]  (6.44 ns)
+
+ <State 83>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add16_2050_loc_load') on local variable 'add16_2050_loc' [109]  (0 ns)
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [150]  (6.44 ns)
+
+ <State 84>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [150]  (6.44 ns)
+
+ <State 85>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [150]  (6.44 ns)
+
+ <State 86>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [150]  (6.44 ns)
+
+ <State 87>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add16_2152_loc_load') on local variable 'add16_2152_loc' [108]  (0 ns)
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [151]  (6.44 ns)
+
+ <State 88>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [151]  (6.44 ns)
+
+ <State 89>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [151]  (6.44 ns)
+
+ <State 90>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [151]  (6.44 ns)
+
+ <State 91>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add16_2254_loc_load') on local variable 'add16_2254_loc' [107]  (0 ns)
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [152]  (6.44 ns)
+
+ <State 92>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [152]  (6.44 ns)
+
+ <State 93>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [152]  (6.44 ns)
+
+ <State 94>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [152]  (6.44 ns)
+
+ <State 95>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add16_2356_loc_load') on local variable 'add16_2356_loc' [106]  (0 ns)
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [153]  (6.44 ns)
+
+ <State 96>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [153]  (6.44 ns)
+
+ <State 97>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [153]  (6.44 ns)
+
+ <State 98>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [153]  (6.44 ns)
+
+ <State 99>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add16_2458_loc_load') on local variable 'add16_2458_loc' [105]  (0 ns)
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [154]  (6.44 ns)
+
+ <State 100>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [154]  (6.44 ns)
+
+ <State 101>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [154]  (6.44 ns)
+
+ <State 102>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [154]  (6.44 ns)
+
+ <State 103>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add16_2560_loc_load') on local variable 'add16_2560_loc' [104]  (0 ns)
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [155]  (6.44 ns)
+
+ <State 104>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [155]  (6.44 ns)
+
+ <State 105>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [155]  (6.44 ns)
+
+ <State 106>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [155]  (6.44 ns)
+
+ <State 107>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add16_2662_loc_load') on local variable 'add16_2662_loc' [103]  (0 ns)
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [156]  (6.44 ns)
+
+ <State 108>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [156]  (6.44 ns)
+
+ <State 109>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [156]  (6.44 ns)
+
+ <State 110>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [156]  (6.44 ns)
+
+ <State 111>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add16_2764_loc_load') on local variable 'add16_2764_loc' [102]  (0 ns)
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [157]  (6.44 ns)
+
+ <State 112>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [157]  (6.44 ns)
+
+ <State 113>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [157]  (6.44 ns)
+
+ <State 114>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [157]  (6.44 ns)
+
+ <State 115>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add16_2866_loc_load') on local variable 'add16_2866_loc' [101]  (0 ns)
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [158]  (6.44 ns)
+
+ <State 116>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [158]  (6.44 ns)
+
+ <State 117>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [158]  (6.44 ns)
+
+ <State 118>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [158]  (6.44 ns)
+
+ <State 119>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add16_2968_loc_load') on local variable 'add16_2968_loc' [100]  (0 ns)
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [159]  (6.44 ns)
+
+ <State 120>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [159]  (6.44 ns)
+
+ <State 121>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [159]  (6.44 ns)
+
+ <State 122>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [159]  (6.44 ns)
+
+ <State 123>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add16_3070_loc_load') on local variable 'add16_3070_loc' [99]  (0 ns)
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [160]  (6.44 ns)
+
+ <State 124>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [160]  (6.44 ns)
+
+ <State 125>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [160]  (6.44 ns)
+
+ <State 126>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [160]  (6.44 ns)
+
+ <State 127>: 6.44ns
+The critical path consists of the following:
+	'load' operation ('add16_3172_loc_load') on local variable 'add16_3172_loc' [98]  (0 ns)
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [161]  (6.44 ns)
+
+ <State 128>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [161]  (6.44 ns)
+
+ <State 129>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [161]  (6.44 ns)
+
+ <State 130>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum_sq', activation_accelerator.cpp:569) [161]  (6.44 ns)
+
+ <State 131>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('mean_sq', activation_accelerator.cpp:573) [162]  (7.06 ns)
+
+ <State 132>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('mean_sq', activation_accelerator.cpp:573) [162]  (7.06 ns)
+
+ <State 133>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('mean_sq', activation_accelerator.cpp:573) [162]  (7.06 ns)
+
+ <State 134>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('mean_sq', activation_accelerator.cpp:573) [162]  (7.06 ns)
+
+ <State 135>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('mean_sq', activation_accelerator.cpp:573) [162]  (7.06 ns)
+
+ <State 136>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('mean_sq', activation_accelerator.cpp:573) [162]  (7.06 ns)
+
+ <State 137>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('mean_sq', activation_accelerator.cpp:573) [162]  (7.06 ns)
+
+ <State 138>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('mean_sq', activation_accelerator.cpp:573) [162]  (7.06 ns)
+
+ <State 139>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('mean_sq', activation_accelerator.cpp:573) [162]  (7.06 ns)
+
+ <State 140>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('x', activation_accelerator.cpp:574) [163]  (6.44 ns)
+
+ <State 141>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('x', activation_accelerator.cpp:574) [163]  (6.44 ns)
+
+ <State 142>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('x', activation_accelerator.cpp:574) [163]  (6.44 ns)
+
+ <State 143>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('x', activation_accelerator.cpp:574) [163]  (6.44 ns)
+
+ <State 144>: 6.58ns
+The critical path consists of the following:
+	'fsqrt' operation ('rms', /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13) [164]  (6.58 ns)
+
+ <State 145>: 6.58ns
+The critical path consists of the following:
+	'fsqrt' operation ('rms', /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13) [164]  (6.58 ns)
+
+ <State 146>: 6.58ns
+The critical path consists of the following:
+	'fsqrt' operation ('rms', /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13) [164]  (6.58 ns)
+
+ <State 147>: 6.58ns
+The critical path consists of the following:
+	'fsqrt' operation ('rms', /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13) [164]  (6.58 ns)
+
+ <State 148>: 6.58ns
+The critical path consists of the following:
+	'fsqrt' operation ('rms', /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13) [164]  (6.58 ns)
+
+ <State 149>: 6.58ns
+The critical path consists of the following:
+	'fsqrt' operation ('rms', /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13) [164]  (6.58 ns)
+
+ <State 150>: 6.58ns
+The critical path consists of the following:
+	'fsqrt' operation ('rms', /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13) [164]  (6.58 ns)
+
+ <State 151>: 6.58ns
+The critical path consists of the following:
+	'fsqrt' operation ('rms', /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:13) [164]  (6.58 ns)
+
+ <State 152>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+	State 75
+	State 76
+	State 77
+	State 78
+	State 79
+	State 80
+	State 81
+	State 82
+	State 83
+	State 84
+	State 85
+	State 86
+	State 87
+	State 88
+	State 89
+	State 90
+	State 91
+	State 92
+	State 93
+	State 94
+	State 95
+	State 96
+	State 97
+	State 98
+	State 99
+	State 100
+	State 101
+	State 102
+	State 103
+	State 104
+	State 105
+	State 106
+	State 107
+	State 108
+	State 109
+	State 110
+	State 111
+	State 112
+	State 113
+	State 114
+	State 115
+	State 116
+	State 117
+	State 118
+	State 119
+	State 120
+	State 121
+	State 122
+	State 123
+	State 124
+	State 125
+	State 126
+	State 127
+	State 128
+	State 129
+	State 130
+	State 131
+	State 132
+	State 133
+	State 134
+	State 135
+	State 136
+	State 137
+	State 138
+	State 139
+	State 140
+	State 141
+	State 142
+	State 143
+	State 144
+	State 145
+	State 146
+	State 147
+	State 148
+	State 149
+	State 150
+	State 151
+	State 152
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
