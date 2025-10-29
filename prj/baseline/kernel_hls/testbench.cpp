@@ -141,7 +141,7 @@ int main() {
     std::cout << "=== HLS Activation Accelerator Testbench ===" << std::endl;
 
     // Load all golden results
-    for (int i = 1; i < 2; ++i) {
+    for (int i = 0; i < 7; ++i) {
         std::string golden_file = data_path + "golden_out_config_" + std::to_string(i) + "_bf16.bin";
         std::cout << "Trying to load: " << golden_file << std::endl;
         if (!load_binary_data(golden_file, golden_data[i])) {
@@ -161,7 +161,7 @@ int main() {
 
     // Main loop for all configs
     double total_time = 0.0;
-    for (int config = 0; config < 1; ++config) {
+    for (int config = 0; config < 7; ++config) {
         // Stage 1: Compute
         stage = STAGE_COMPUTE;
         std::cout << "\n--- Testing Config " << config << " ---" << std::endl;

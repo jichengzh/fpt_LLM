@@ -1,0 +1,286 @@
+
+
+================================================================
+== Vitis HLS Report for 'f32_expf'
+================================================================
+* Date:           Sun Oct 26 20:11:43 2025
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        activation_accelerator
+* Solution:       baseline (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  4.914 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        7|        7|  70.000 ns|  70.000 ns|    1|    1|      yes|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 8
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 8
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 8, States = { 1 2 3 4 5 6 7 8 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 4.91>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%v_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %v" [./bf16_accl.h:266]   --->   Operation 9 'read' 'v_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [8/8] (4.91ns)   --->   "%r = fexp i32 @llvm.exp.f32, i32 %v_read" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/common/hls_exp_float.cpp:17]   --->   Operation 10 'fexp' 'r' <Predicate = true> <Delay = 4.91> <CoreInst = "FExp_fulldsp">   --->   Core 23 'FExp_fulldsp' <Latency = 7> <II = 1> <Delay = 4.91> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 4.91>
+ST_2 : Operation 11 [7/8] (4.91ns)   --->   "%r = fexp i32 @llvm.exp.f32, i32 %v_read" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/common/hls_exp_float.cpp:17]   --->   Operation 11 'fexp' 'r' <Predicate = true> <Delay = 4.91> <CoreInst = "FExp_fulldsp">   --->   Core 23 'FExp_fulldsp' <Latency = 7> <II = 1> <Delay = 4.91> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 4.91>
+ST_3 : Operation 12 [6/8] (4.91ns)   --->   "%r = fexp i32 @llvm.exp.f32, i32 %v_read" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/common/hls_exp_float.cpp:17]   --->   Operation 12 'fexp' 'r' <Predicate = true> <Delay = 4.91> <CoreInst = "FExp_fulldsp">   --->   Core 23 'FExp_fulldsp' <Latency = 7> <II = 1> <Delay = 4.91> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 4.91>
+ST_4 : Operation 13 [5/8] (4.91ns)   --->   "%r = fexp i32 @llvm.exp.f32, i32 %v_read" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/common/hls_exp_float.cpp:17]   --->   Operation 13 'fexp' 'r' <Predicate = true> <Delay = 4.91> <CoreInst = "FExp_fulldsp">   --->   Core 23 'FExp_fulldsp' <Latency = 7> <II = 1> <Delay = 4.91> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 4.91>
+ST_5 : Operation 14 [4/8] (4.91ns)   --->   "%r = fexp i32 @llvm.exp.f32, i32 %v_read" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/common/hls_exp_float.cpp:17]   --->   Operation 14 'fexp' 'r' <Predicate = true> <Delay = 4.91> <CoreInst = "FExp_fulldsp">   --->   Core 23 'FExp_fulldsp' <Latency = 7> <II = 1> <Delay = 4.91> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 4.91>
+ST_6 : Operation 15 [3/8] (4.91ns)   --->   "%r = fexp i32 @llvm.exp.f32, i32 %v_read" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/common/hls_exp_float.cpp:17]   --->   Operation 15 'fexp' 'r' <Predicate = true> <Delay = 4.91> <CoreInst = "FExp_fulldsp">   --->   Core 23 'FExp_fulldsp' <Latency = 7> <II = 1> <Delay = 4.91> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 4.91>
+ST_7 : Operation 16 [2/8] (4.91ns)   --->   "%r = fexp i32 @llvm.exp.f32, i32 %v_read" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/common/hls_exp_float.cpp:17]   --->   Operation 16 'fexp' 'r' <Predicate = true> <Delay = 4.91> <CoreInst = "FExp_fulldsp">   --->   Core 23 'FExp_fulldsp' <Latency = 7> <II = 1> <Delay = 4.91> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 4.91>
+ST_8 : Operation 17 [1/8] (4.91ns)   --->   "%r = fexp i32 @llvm.exp.f32, i32 %v_read" [/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/common/hls_exp_float.cpp:17]   --->   Operation 17 'fexp' 'r' <Predicate = true> <Delay = 4.91> <CoreInst = "FExp_fulldsp">   --->   Core 23 'FExp_fulldsp' <Latency = 7> <II = 1> <Delay = 4.91> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+ST_8 : Operation 18 [1/1] (0.00ns)   --->   "%ret_ln270 = ret i32 %r" [./bf16_accl.h:270]   --->   Operation 18 'ret' 'ret_ln270' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 1
+- Is pipelined: 1
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ v]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+v_read    (read) [ 011111111]
+r         (fexp) [ 000000000]
+ret_ln270 (ret ) [ 000000000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="v">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="v"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1001" name="const_2">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.float"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1001" name="const_4">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="llvm.exp.f32"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1004" name="v_read_read_fu_6">
+<pin_list>
+<pin id="7" dir="0" index="0" bw="32" slack="0"/>
+<pin id="8" dir="0" index="1" bw="32" slack="0"/>
+<pin id="9" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="v_read/1 "/>
+</bind>
+</comp>
+
+<comp id="12" class="1004" name="grp_fu_12">
+<pin_list>
+<pin id="13" dir="0" index="0" bw="32" slack="0"/>
+<pin id="14" dir="0" index="1" bw="32" slack="0"/>
+<pin id="15" dir="1" index="2" bw="32" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="fexp(507) " fcode="fexp"/>
+<opset="r/1 "/>
+</bind>
+</comp>
+
+<comp id="18" class="1005" name="v_read_reg_18">
+<pin_list>
+<pin id="19" dir="0" index="0" bw="32" slack="1"/>
+<pin id="20" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="v_read "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="10"><net_src comp="2" pin="0"/><net_sink comp="6" pin=0"/></net>
+
+<net id="11"><net_src comp="0" pin="0"/><net_sink comp="6" pin=1"/></net>
+
+<net id="16"><net_src comp="4" pin="0"/><net_sink comp="12" pin=0"/></net>
+
+<net id="17"><net_src comp="6" pin="2"/><net_sink comp="12" pin=1"/></net>
+
+<net id="21"><net_src comp="6" pin="2"/><net_sink comp="18" pin=0"/></net>
+
+<net id="22"><net_src comp="18" pin="1"/><net_sink comp="12" pin=1"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+	Port: f32_expf : v | {1 }
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+		ret_ln270 : 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|------------------|---------|---------|---------|
+| Operation|  Functional Unit |   DSP   |    FF   |   LUT   |
+|----------|------------------|---------|---------|---------|
+|   fexp   |     grp_fu_12    |    7    |   324   |   905   |
+|----------|------------------|---------|---------|---------|
+|   read   | v_read_read_fu_6 |    0    |    0    |    0    |
+|----------|------------------|---------|---------|---------|
+|   Total  |                  |    7    |   324   |   905   |
+|----------|------------------|---------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++-------------+--------+
+|             |   FF   |
++-------------+--------+
+|v_read_reg_18|   32   |
++-------------+--------+
+|    Total    |   32   |
++-------------+--------+
+
+* Multiplexer (MUX) list: 
+|-----------|------|------|------|--------||---------||---------|
+|    Comp   |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|-----------|------|------|------|--------||---------||---------|
+| grp_fu_12 |  p1  |   2  |  32  |   64   ||    9    |
+|-----------|------|------|------|--------||---------||---------|
+|   Total   |      |      |      |   64   ||  0.427  ||    9    |
+|-----------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+
+|           |   DSP  |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+--------+
+|  Function |    7   |    -   |   324  |   905  |
+|   Memory  |    -   |    -   |    -   |    -   |
+|Multiplexer|    -   |    0   |    -   |    9   |
+|  Register |    -   |    -   |   32   |    -   |
++-----------+--------+--------+--------+--------+
+|   Total   |    7   |    0   |   356  |   914  |
++-----------+--------+--------+--------+--------+

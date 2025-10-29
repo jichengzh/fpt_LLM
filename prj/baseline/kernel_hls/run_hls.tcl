@@ -18,6 +18,9 @@ add_files -tb testbench.cpp
 # Set the top-level function
 set_top activation_accelerator
 
+
+
+
 # ########################################################
 # Create a solution
 open_solution -reset ${opt_method} -flow_target vivado
@@ -26,9 +29,22 @@ open_solution -reset ${opt_method} -flow_target vivado
 set_part  {xck26-sfvc784-2LV-c}
 create_clock -period 10
 
+
+# -------- HLS directives: 复用 row_reduce --------
+# 1) 禁止内联，否则每处调用都会被摊开，无法复用
+# set_directive_inline -off row_reduce
+
+# 如果你的 row_reduce 是模板并且实例化参数固定（比如 64 x 768），
+# 用实例化名再加一遍（加花括号避免 Tcl 解析 <>）
+# set_directive_inline -off row_reduce_64x768
+
+# # 2) 限制函数实例数量为 1：强制所有调用复用同一份硬件
+# set_directive_allocation row_reduce_64x768 row_reduce_64x768 -limit 1 -type function
+# set_directive_allocation row_reduce_64x768 row_reduce_64x768 -limit 1 -type function
+# -----------------------------------------------
+
 # Set variable to select which steps to execute
 set hls_exec 3
-
 
 csim_design
 # Set any optimization directives

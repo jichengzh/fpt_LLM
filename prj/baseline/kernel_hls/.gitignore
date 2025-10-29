@@ -1,0 +1,4 @@
+prj/baseline/kernel_hls/activation_accelerator/baseline_all/.autopilot/
+*.adb
+*.rpt
+*.xml
