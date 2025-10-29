@@ -55037,6 +55037,20 @@ namespace hls {
 # 1 "/data/xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/lib/clang/7.0.0/include/float.h" 1 3
 # 43 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cfloat" 2 3
 # 7 "activation_accelerator.cpp" 2
+# 1 "./bf16_accl.h" 1
+
+
+
+
+
+# 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath" 1 3
+# 40 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath" 3
+# 7 "./bf16_accl.h" 2
+
+
+# 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cfloat" 1 3
+# 40 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cfloat" 3
+# 10 "./bf16_accl.h" 2
 # 1 "/usr/include/string.h" 1 3 4
 # 26 "/usr/include/string.h" 3 4
 # 1 "/usr/include/x86_64-linux-gnu/bits/libc-header-start.h" 1 3 4
@@ -55415,23 +55429,7 @@ extern "C++" const char *basename (const char *__filename)
      throw () __asm ("basename") __attribute__ ((__nonnull__ (1)));
 # 499 "/usr/include/string.h" 3 4
 }
-# 8 "activation_accelerator.cpp" 2
-
-# 1 "./bf16_accl.h" 1
-
-
-
-
-
-# 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath" 1 3
-# 40 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath" 3
-# 7 "./bf16_accl.h" 2
-
-
-# 1 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cfloat" 1 3
-# 40 "/data/xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cfloat" 3
-# 10 "./bf16_accl.h" 2
-
+# 11 "./bf16_accl.h" 2
 
 
 
@@ -55453,20 +55451,7 @@ static inline float bf16_to_f32(uint16_t b) {
     cvt.u = ((uint32_t)b) << 16;
     return cvt.f;
 }
-
-
-
-static inline uint16_t round_float32_to_bf16_ieee(float x_in);
-
-
-static inline u16 f32_to_bf16_rne(float f) {
-#pragma HLS inline off
- return round_float32_to_bf16_ieee(f);
-}
-
-
-
-
+# 46 "./bf16_accl.h"
 static inline void bf16_to_float(const uint16* in, float* out, int len) {
 #pragma HLS inline off
  bf16_to_float_loop:
@@ -55475,66 +55460,7 @@ static inline void bf16_to_float(const uint16* in, float* out, int len) {
         out[i] = *(float*)&x_f32;
     }
 }
-
-
-static inline uint16_t round_float32_to_bf16_ieee(float x_in) {
-#pragma HLS inline off
- uint32_t fbits = *reinterpret_cast<uint32_t*>(&x_in);
-
-
-
-
-    const uint32_t LOW16_MASK = 0xFFFFu;
-    uint32_t upper = fbits >> 16;
-    uint32_t lower = fbits & LOW16_MASK;
-
-    uint32_t exp_field = (fbits >> 23) & 0xFFu;
-
-
-    if (exp_field == 0xFFu) {
-        uint16_t ret = static_cast<uint16_t>(upper);
-
-
-        uint32_t full_mant = fbits & 0x7FFFFFu;
-        if (full_mant != 0 && (ret & 0x7Fu) == 0) {
-            ret |= 1u;
-        }
-        return ret;
-    }
-
-
-
-
-
-    const uint32_t HALF = 0x8000u;
-    bool round_up = false;
-    if (lower > HALF) {
-        round_up = true;
-    } else if (lower < HALF) {
-        round_up = false;
-    } else {
-        if (upper & 1u) {
-            round_up = true;
-        }
-    }
-
-    uint32_t rounded = upper + (round_up ? 1u : 0u);
-
-
-    uint32_t new_exp = (rounded >> 7) & 0xFFu;
-    uint32_t sign = (rounded >> 15) & 0x1u;
-    if (new_exp == 0xFFu) {
-        uint16_t res = static_cast<uint16_t>((sign << 15) | (0xFFu << 7));
-        return res;
-    }
-
-    return static_cast<uint16_t>(rounded & 0xFFFFu);
-}
-
-
-
-
-
+# 114 "./bf16_accl.h"
 static inline uint16 bf16add_fast(uint16 a_bits, uint16 b_bits) {
 #pragma HLS inline off
 
@@ -55606,18 +55532,9 @@ static inline uint16 bf16add_fast(uint16 a_bits, uint16 b_bits) {
             B_aln = B >> diff;
         }
     }
-
-
-    uint32_t M;
-    uint16_t s = sa;
-    if (sa == sb) {
-        M = A + B_aln;
-    } else {
-        if (A >= B_aln) { M = A - B_aln; s = sa; }
-        else { M = B_aln - A; s = sb; }
-    }
-
-    if (M == 0) return 0;
+# 210 "./bf16_accl.h"
+    uint32_t M = A + B_aln;
+    uint16_t s = 0;
 
 
 
@@ -55665,217 +55582,20 @@ static inline uint16 bf16add_fast(uint16 a_bits, uint16 b_bits) {
     uint16_t m7 = (uint16_t)(rounded & 0x7Fu);
     return pack_bf16(s, maxe, m7);
 }
-# 10 "activation_accelerator.cpp" 2
-# 417 "activation_accelerator.cpp"
-void float_silu(const float* x, uint16* y, int len) {
-    silu_loop:
-    for (int i = 0; i < len; ++i) {
-        float sig = 1.0f / (1.0f + hls::expf(-x[i]));
-        float val = x[i] * sig;
-        uint32_t* y_f32_ptr = (uint32_t*)&val;
-        y[i] = (*y_f32_ptr) >> 16;
-    }
-}
-void float_silu2(const float* x, uint16* y, int len) {
+
+static float f32_add(float a, float b) {
 #pragma HLS INLINE off
- const int UF = 32;
-
-
-    silu_blocks:
-    for (int i = 0; i < len; i += UF) {
-#pragma HLS PIPELINE II=1
- silu_inner:
-        for (int u = 0; u < UF; ++u) {
-#pragma HLS UNROLL
- int idx = i + u;
-            if (idx < len) {
-
-                float sig = 1.0f / (1.0f + hls::expf(-x[idx]));
-
-                float val = x[idx] * sig;
-
-                uint32_t* y_f32_ptr = (uint32_t*)&val;
-                y[idx] = (uint16)((*y_f32_ptr) >> 16);
-            }
-        }
-    }
+ float c = a + b;
+    return c;
 }
 
-
-void float_rms_norm(const float* x, uint16* y_bf16, int len) {
-    const float eps = 1e-6f;
-    float sum_sq = 0.0f;
-    rms_norm_loop1:
-    for (int i = 0; i < len; ++i) {
-        sum_sq += x[i] * x[i];
-    }
-    float mean_sq = sum_sq / len;
-    float rms = hls::sqrtf(mean_sq + eps);
-    rms_norm_loop2:
-    for (int i = 0; i < len; ++i) {
-        float y = x[i] / rms;
-        uint32_t* y_f32_ptr = (uint32_t*)&y;
-        y_bf16[i] = (*y_f32_ptr) >> 16;
-    }
-}
-# 538 "activation_accelerator.cpp"
-void float_rms_norm3(const float* x, uint16* y_bf16, int len) {
+static float f32_expf(float v) {
 #pragma HLS INLINE off
- const int UF = 32;
-    const int ACC = 32;
-    const float eps = 1e-6f;
 
-
-    float partial_sum_sq[ACC];
-#pragma HLS ARRAY_PARTITION variable=partial_sum_sq complete
-#pragma HLS DEPENDENCE variable=partial_sum_sq inter false
-
-
-init_partial_sum_sq:
-    for (int k = 0; k < ACC; ++k) {
-#pragma HLS UNROLL
- partial_sum_sq[k] = 0.f;
-    }
-
-
-sum_sq_blocks:
-    for (int i = 0; i < len; i += UF) {
-#pragma HLS PIPELINE II=1
- sum_sq_inner:
-        for (int u = 0; u < UF; ++u) {
-#pragma HLS UNROLL
- int idx = i + u;
-            if (idx < len) {
-                partial_sum_sq[idx % ACC] += x[idx] * x[idx];
-            }
-        }
-    }
-
-
-    float sum_sq = 0.f;
-reduce_partial_sum_sq:
-    for (int k = 0; k < ACC; ++k) {
-#pragma HLS UNROLL
- sum_sq += partial_sum_sq[k];
-    }
-
-
-    float mean_sq = sum_sq / len;
-    float rms = hls::sqrtf(mean_sq + eps);
-
-
-normalize_blocks:
-    for (int i = 0; i < len; i += UF) {
-#pragma HLS PIPELINE II=1
- normalize_inner:
-        for (int u = 0; u < UF; ++u) {
-#pragma HLS UNROLL
- int idx = i + u;
-            if (idx < len) {
-                float y = x[idx] / rms;
-                uint32_t* y_f32_ptr = (uint32_t*)&y;
-                y_bf16[idx] = (uint16)((*y_f32_ptr) >> 16);
-            }
-        }
-    }
+ float r = hls::expf(v);
+    return r;
 }
-# 735 "activation_accelerator.cpp"
-void float_layer_norm3(const float* x, uint16* y_bf16, int len) {
-#pragma HLS INLINE off
- const int UF = 32;
-    const int ACC = 32;
-    const float eps = 1e-6f;
 
-
-    float partial_sum[ACC];
-#pragma HLS ARRAY_PARTITION variable=partial_sum complete
-#pragma HLS DEPENDENCE variable=partial_sum inter false
-
-
-init_partial_sum:
-    for (int k = 0; k < ACC; ++k) {
-#pragma HLS UNROLL
- partial_sum[k] = 0.f;
-    }
-
-
-sum_blocks:
-    for (int i = 0; i < len; i += UF) {
-#pragma HLS PIPELINE II=1
- sum_inner:
-        for (int u = 0; u < UF; ++u) {
-#pragma HLS UNROLL
- int idx = i + u;
-            if (idx < len) {
-                partial_sum[idx % ACC] += x[idx];
-            }
-        }
-    }
-
-
-    float sum = 0.f;
-reduce_partial_sum:
-    for (int k = 0; k < ACC; ++k) {
-#pragma HLS UNROLL
- sum += partial_sum[k];
-    }
-
-    float mean = sum / len;
-
-
-    float partial_var[ACC];
-#pragma HLS ARRAY_PARTITION variable=partial_var complete
-#pragma HLS DEPENDENCE variable=partial_var inter false
-
-
-init_partial_var:
-    for (int k = 0; k < ACC; ++k) {
-#pragma HLS UNROLL
- partial_var[k] = 0.f;
-    }
-
-
-var_blocks:
-    for (int i = 0; i < len; i += UF) {
-#pragma HLS PIPELINE II=1
- var_inner:
-        for (int u = 0; u < UF; ++u) {
-#pragma HLS UNROLL
- int idx = i + u;
-            if (idx < len) {
-                float diff = x[idx] - mean;
-                partial_var[idx % ACC] += diff * diff;
-            }
-        }
-    }
-
-
-    float var_sum = 0.f;
-reduce_partial_var:
-    for (int k = 0; k < ACC; ++k) {
-#pragma HLS UNROLL
- var_sum += partial_var[k];
-    }
-
-    float var = var_sum / len;
-    float stddev = hls::sqrtf(var + eps);
-
-
-normalize_blocks:
-    for (int i = 0; i < len; i += UF) {
-#pragma HLS PIPELINE II=1
- normalize_inner:
-        for (int u = 0; u < UF; ++u) {
-#pragma HLS UNROLL
- int idx = i + u;
-            if (idx < len) {
-                float y = (x[idx] - mean) / stddev;
-                uint32_t* y_f32_ptr = (uint32_t*)&y;
-                y_bf16[idx] = (uint16)((*y_f32_ptr) >> 16);
-            }
-        }
-    }
-}
 
 
 float Q_rsqrt(float number)
@@ -55900,223 +55620,505 @@ float Q_rsqrt(float number)
 
  return y;
 }
-# 870 "activation_accelerator.cpp"
-void float_gelu2(const float* x, uint16* y_bf16, int len) {
+
+
+void square(const float* x, float* y_sum_sq, int len){
 #pragma HLS INLINE off
- const int UF = 32;
+ const int col_len = 64;
+    const int row_len = len/col_len;
+sum_square:
+    for (int i = 0; i < row_len; ++i) {
+
+    sum_inner_square:
+        for (int j = 0; j < col_len; ++j) {
+#pragma HLS UNROLL
+ int idx = i + j * row_len;
+            y_sum_sq[j] += x[idx] * x[idx] ;
+        }
+    }
+sum_square2:
+    for (int i = 0; i < col_len; ++i) {
+#pragma HLS UNROLL
+ y_sum_sq[i] = y_sum_sq[i]/ row_len;
+    }
+}
 
 
-    float down2 = Q_rsqrt(2.0f);
-    float half = 0.5f;
-    float one = 1.0f;
+template<int ROWS = 64, int COLS_PER_ROW = 768>
+void accumulate_column(
+    const float* x,
+    float acc_vec[ROWS],
+    int col_i
+) {
+#pragma HLS INLINE off
 
+acc_loop:
+    for (int u = 0; u < ROWS; ++u) {
+#pragma HLS UNROLL
+ int idx = u * COLS_PER_ROW + col_i;
+        acc_vec[u] += x[idx];
+    }
+}
+# 8 "activation_accelerator.cpp" 2
+# 1 "./reduce_tree.h" 1
+
+
+
+
+
+
+enum ReduceOp {
+    REDUCE_MAX,
+    REDUCE_MIN,
+    REDUCE_SUM,
+    REDUCE_MEAN
+};
+
+
+
+void row_reduce(const float* x, float acc[64], ReduceOp op) {
+#pragma HLS INLINE off
+#pragma HLS ARRAY_PARTITION variable=acc complete
+ const int col_len = 64;
+    const int row_len = 768;
+
+
+init_acc:
+    for (int u = 0; u < col_len; ++u) {
+#pragma HLS UNROLL
+ if (op == REDUCE_MAX) acc[u] = -std::numeric_limits<float>::infinity();
+
+        else acc[u] = 1e-5f;
+    }
+
+
+    if (op == REDUCE_MAX) {
+    col_loop_max:
+        for (int i = 0; i < row_len; ++i) {
+#pragma HLS PIPELINE II=1
+ lane_loop_max:
+            for (int u = 0; u < col_len; ++u) {
+#pragma HLS UNROLL
+ const int idx = u * row_len + i;
+                const float v = x[idx];
+                acc[u] = hls::fmaxf(acc[u], v);
+            }
+        }
+    }
+# 58 "./reduce_tree.h"
+    else {
+    col_loop_sum:
+        for (int i = 0; i < row_len; ++i) {
+#pragma HLS PIPELINE II=1
+ lane_loop_sum:
+            for (int u = 0; u < col_len; ++u) {
+#pragma HLS UNROLL
+ const int idx = u * row_len + i;
+                const float v = x[idx];
+                acc[u] = acc[u] + v;
+            }
+        }
+
+
+        if (op == REDUCE_MEAN) {
+            const float inv_cols = 1.0f / (float)row_len;
+        scale_mean:
+            for (int u = 0; u < col_len; ++u) {
+#pragma HLS UNROLL
+ acc[u] = acc[u] * inv_cols;
+            }
+        }
+    }
+}
+# 9 "activation_accelerator.cpp" 2
+
+
+
+
+
+
+
+
+static inline uint16_t round_float32_to_bf16_ieee(float x_in) {
+#pragma HLS inline off
+ uint32_t fbits = *reinterpret_cast<uint32_t*>(&x_in);
+
+
+
+
+    const uint32_t LOW16_MASK = 0xFFFFu;
+    uint32_t upper = fbits >> 16;
+    uint32_t lower = fbits & LOW16_MASK;
+
+    uint32_t exp_field = (fbits >> 23) & 0xFFu;
+
+
+    if (exp_field == 0xFFu) {
+        uint16_t ret = static_cast<uint16_t>(upper);
+
+
+        uint32_t full_mant = fbits & 0x7FFFFFu;
+        if (full_mant != 0 && (ret & 0x7Fu) == 0) {
+            ret |= 1u;
+        }
+        return ret;
+    }
+
+
+
+
+
+    const uint32_t HALF = 0x8000u;
+    bool round_up = false;
+    if (lower > HALF) {
+        round_up = true;
+    } else if (lower < HALF) {
+        round_up = false;
+    } else {
+        if (upper & 1u) {
+            round_up = true;
+        }
+    }
+
+    uint32_t rounded = upper + (round_up ? 1u : 0u);
+
+
+    uint32_t new_exp = (rounded >> 7) & 0xFFu;
+    uint32_t sign = (rounded >> 15) & 0x1u;
+    if (new_exp == 0xFFu) {
+        uint16_t res = static_cast<uint16_t>((sign << 15) | (0xFFu << 7));
+        return res;
+    }
+
+    return static_cast<uint16_t>(rounded & 0xFFFFu);
+}
+
+
+static void round_vec64(
+    const float in_val[64],
+    uint16_t out_val[64]
+) {
+#pragma HLS INLINE off
+
+
+
+
+round_vec64_loop:
+    for (int u = 0; u < 64; ++u) {
+#pragma HLS UNROLL
+ out_val[u] = round_float32_to_bf16_ieee(in_val[u]);
+    }
+}
+
+void float_silu2(const float* x, uint16* y, int len){
+#pragma HLS INLINE off
+#pragma HLS ALLOCATION function instances=round_float32_to_bf16_ieee limit=64
+
+ const int col_len = 64;
+    const int row_len = len/col_len;
+
+
+    silu_blocks:
+    for (int i = 0; i < row_len; ++i){
+
+        silu_inner:
+        for (int u = 0; u < col_len; ++u){
+#pragma HLS UNROLL
+ int idx = i + u * row_len;
+            float sil = x[idx] / (expf(-x[idx]) + 1.0f);
+            y[idx] = round_float32_to_bf16_ieee(sil);
+        }
+    }
+}
+
+
+
+void float_rms_norm3(const float* x, uint16* y_bf16, int len) {
+#pragma HLS INLINE
+
+
+ const int col_len = 64;
+    const int row_len = len/col_len;
+    const float eps = 1e-5f;
+
+    float y_sum_sq[col_len];
+    float rms_sq[col_len];
+
+#pragma HLS ARRAY_PARTITION variable=y_sum_sq complete
+#pragma HLS DEPENDENCE variable=y_sum_sq inter false
+#pragma HLS ARRAY_PARTITION variable=rms_sq complete
+#pragma HLS DEPENDENCE variable=rms_sq inter false
+
+
+init_y_sum_and_rms_sq:
+    for (int k = 0; k < col_len; ++k) {
+#pragma HLS UNROLL
+ y_sum_sq[k] = 0.f;
+        rms_sq[k] = 0.f;
+    }
+
+    square(x, y_sum_sq, len);
+
+rms_calculate_loop_rms_norm3:
+    for (int k = 0; k < col_len; ++k) {
+#pragma HLS UNROLL
+ rms_sq[k] = hls::sqrtf(y_sum_sq[k] + eps);
+    }
+
+
+normalize_blocks_rms_norm3:
+    for (int i = 0; i < row_len; ++i) {
+
+    normalize_inner_rms_norm3:
+        for (int u = 0; u < col_len; ++u) {
+#pragma HLS UNROLL
+ int idx = u * row_len + i;
+            float y = x[idx] / rms_sq[u];
+            y_bf16[idx] = round_float32_to_bf16_ieee(y);
+        }
+    }
+}
+
+
+
+
+
+void float_layer_norm3(const float* x, uint16* y_bf16, int len) {
+#pragma HLS INLINE
+ const int col_len = 64;
+    const int row_len = len/col_len;
+    const float eps = 1e-5f;
+
+
+    float partial_mean[col_len];
+    float y_sum_sq[col_len];
+
+#pragma HLS ARRAY_PARTITION variable=partial_mean complete
+#pragma HLS ARRAY_PARTITION variable=y_sum_sq complete
+
+#pragma HLS DEPENDENCE variable=partial_mean inter false
+#pragma HLS DEPENDENCE variable=y_sum_sq inter false
+
+
+
+init_partial_layernorm:
+    for (int k = 0; k < col_len; ++k) {
+#pragma HLS UNROLL
+ partial_mean[k] = 0.f;
+        y_sum_sq[k] = 0.f;
+    }
+
+
+    square(x, y_sum_sq, len);
+
+
+mean_blocks_layer_norm3:
+    for (int i = 0; i < row_len; ++i) {
+    mean_inner_layer_norm3:
+        for (int j = 0; j < col_len; ++j) {
+#pragma HLS UNROLL
+ int idx = i + j * row_len;
+            partial_mean[j] += x[idx];
+        }
+    }
+mean_blocks2_layer_norm3:
+    for (int i = 0; i < col_len; i++){
+#pragma HLS UNROLL
+ partial_mean[i] = partial_mean[i] / row_len;
+    }
+
+
+
+std_blocks_layer_norm3:
+    for (int i = 0; i < col_len; ++i) {
+#pragma HLS UNROLL
+ y_sum_sq[i] = hls::sqrtf(y_sum_sq[i] - partial_mean[i] * partial_mean[i] + eps);
+    }
+
+
+normalize_blocks_layer_norm3:
+    for (int i = 0; i < row_len; ++i) {
+    normalize_inner_layer_norm3:
+        for (int u = 0; u < col_len; ++u) {
+#pragma HLS UNROLL
+ int idx = i + u * row_len;
+            float y = (x[idx] - partial_mean[u]) / y_sum_sq[u];
+            y_bf16[idx] = round_float32_to_bf16_ieee(y);
+        }
+    }
+}
+
+
+
+void float_gelu2(const float* x, uint16_t* y_bf16, int len) {
+#pragma HLS INLINE off
+ const float alpha = 1.702f;
+        const float half = 0.5f;
+        const int col_len = 64;
+        const int row_len = len/col_len;
 
     gelu_blocks:
-    for (int i = 0; i < len; i += UF) {
-#pragma HLS PIPELINE II=1
- gelu_inner:
-        for (int u = 0; u < UF; ++u) {
+    for (int i = 0; i < row_len; ++i) {
+
+
+        gelu_inner:
+        for (int u = 0; u < col_len; ++u) {
 #pragma HLS UNROLL
- int idx = i + u;
-            if (idx < len) {
 
-                float x_val = x[idx];
-                float erf_arg = x_val * down2;
-                float erf_val = std::erff(erf_arg);
-                float xtrue = half * x_val * (one + erf_val);
+ int idx = i + u * row_len;
 
+            float sigmoid_arg = alpha * x[idx];
 
-                uint32_t* xtrue_f32_ptr = (uint32_t*)&xtrue;
-                y_bf16[idx] = (uint16)((*xtrue_f32_ptr) >> 16);
-            }
+            float xtrue;
+            xtrue = x[idx] / (1.0f + hls::expf(-sigmoid_arg));
+# 258 "activation_accelerator.cpp"
+            y_bf16[idx] = round_float32_to_bf16_ieee(xtrue);
         }
     }
 }
-# 911 "activation_accelerator.cpp"
-void float_add2(const float* x, const float* y, uint16* out, int len) {
-#pragma HLS INLINE off
- const int UF = 32;
 
 
-    add_blocks:
-    for (int i = 0; i < len; i += UF) {
-#pragma HLS PIPELINE II=1
- add_inner:
-        for (int u = 0; u < UF; ++u) {
-#pragma HLS UNROLL
- int idx = i + u;
-            if (idx < len) {
 
-                float sum = x[idx] + y[idx];
 
-                uint32_t* sum_f32_ptr = (uint32_t*)&sum;
-                out[idx] = (uint16)((*sum_f32_ptr) >> 16);
-            }
-        }
-    }
-}
-# 1097 "activation_accelerator.cpp"
-template<int LANES = 64>
-static float row_max_hls(const float* x, int cols) {
+static void float_add2(const float* x, const float* y, uint16* out, int len) {
 #pragma HLS INLINE
- const int steps = cols / LANES;
+ const int col_len = 64;
+    const int row_len = len/col_len;
 
-    float lane_max[LANES];
-#pragma HLS ARRAY_PARTITION variable=lane_max complete
+    float tmp_batch[64];
+    uint16 tmp_batch_bf16[64];
+#pragma HLS ARRAY_PARTITION variable=tmp_batch complete
+#pragma HLS ARRAY_PARTITION variable=tmp_batch_bf16 complete
 
-
-init_lane_max:
-    for (int u = 0; u < LANES; ++u) {
+ add_blocks:
+    for (int i = 0; i < row_len; ++i) {
+        add_inner:
+        for (int u = 0; u < col_len; ++u) {
 #pragma HLS UNROLL
- lane_max[u] = -std::numeric_limits<float>::max();
+ int idx = u * row_len + i;
+
+
+
+            float sum = x[idx] + y[idx];
+
+            out[idx] = round_float32_to_bf16_ieee(sum);
+        }
+# 297 "activation_accelerator.cpp"
+    }
+}
+
+
+void float_safe_softmax3(const float* x, uint16_t* out, int len) {
+#pragma HLS INLINE
+ const int col_len = 64;
+    const int row_len = len/col_len;
+
+    float exp_buf[64 * 768];
+#pragma HLS DEPENDENCE variable=exp_buf inter false
+#pragma HLS ARRAY_PARTITION variable=exp_buf block factor=col_len
+
+
+ float max_row[col_len];
+#pragma HLS ARRAY_PARTITION variable=max_row complete
+
+ float sum_row[col_len];
+#pragma HLS ARRAY_PARTITION variable=sum_row complete
+# 331 "activation_accelerator.cpp"
+init_lane_max:
+    for (int u = 0; u < col_len; ++u) {
+#pragma HLS UNROLL
+ max_row[u] = -std::numeric_limits<float>::max();
     }
 
 
-step_loop:
-    for (int i = 0; i < steps; ++i) {
+max_step_loop:
+    for (int i = 0; i < row_len; ++i) {
 
 
     lane_reduce:
-        for (int u = 0; u < LANES; ++u) {
+        for (int u = 0; u < col_len; ++u) {
 #pragma HLS UNROLL
 
- int idx = u * steps + i;
-            float v = (idx < cols) ? x[idx] : -std::numeric_limits<float>::max();
-            lane_max[u] = hls::fmaxf(lane_max[u], v);
+ int idx = u * row_len + i;
+            float v = x[idx];
+            max_row[u] = hls::fmaxf(max_row[u], v);
         }
     }
-
-
-    float max_val = lane_max[0];
-final_reduce:
-    for (int u = 1; u < LANES; ++u) {
-#pragma HLS UNROLL
- max_val = hls::fmaxf(max_val, lane_max[u]);
-    }
-    return max_val;
-}
-
-template<int LANES = 64>
-static float row_exp_bucket_sum(const float* x, int cols, float max_val, float* exp_x) {
-#pragma HLS INLINE
- const int steps = cols / LANES;
-
-    float partial[LANES];
-#pragma HLS ARRAY_PARTITION variable=partial complete
-
 
 init_partial:
-    for (int k = 0; k < LANES; ++k) {
+    for (int u = 0; u < col_len; ++u) {
 #pragma HLS UNROLL
- partial[k] = 0.f;
+ sum_row[u] = 0.f;
     }
-
 
 exp_and_bucket:
-    for (int i = 0; i < steps; ++i) {
-
-        float e[LANES];
-#pragma HLS ARRAY_PARTITION variable=e complete
+    for (int i = 0; i < row_len; ++i) {
 
 
- exp_inner:
-        for (int u = 0; u < LANES; ++u) {
+
+    exp_inner:
+
+        for (int u = 0; u < col_len; ++u) {
 #pragma HLS UNROLL
- int idx = u * steps + i;
-            float ex = (idx < cols) ? hls::expf(x[idx] - max_val) : 0.f;
-            e[u] = ex;
-            if (exp_x && idx < cols) exp_x[idx] = ex;
-        }
-
-
-    bucket_add:
-        for (int u = 0; u < LANES; ++u) {
-#pragma HLS UNROLL
- uint16_t addend_bf16 = f32_to_bf16_rne(e[u]);
-            bf16add_fast(partial[u], addend_bf16);
+ int idx = u * row_len + i;
+            float ex = hls::expf(x[idx] - max_row[u]);
+            exp_buf[idx] = ex;
+            sum_row[u] += exp_buf[idx];
         }
     }
 
+    softmax_final:
+    for (int i = 0; i < row_len; ++i) {
 
-    uint16_t sum_bf16 = (uint16_t)0;
-reduce_partial:
-    for (int k = 0; k < LANES; ++k) {
+        VITIS_LOOP_377_1: for (int u = 0; u < col_len; ++u) {
 #pragma HLS UNROLL
- sum_bf16 = bf16add_fast(sum_bf16, partial[k]);
-    }
-    return bf16_to_f32(sum_bf16);
-}
-
-
-template<int LANES = 64>
-static void row_norm_store_hls(const float* exp_x, float sum, uint16_t* output, int cols) {
-#pragma HLS INLINE
- if (!exp_x || cols <= 0) return;
-
-
-    float inv_sum = (sum > 0.f) ? (1.0f / sum) : 0.f;
-
-    const int steps = cols / LANES;
-
-step_loop:
-    for (int i = 0; i < steps; ++i) {
-
-    lane_loop:
-        for (int u = 0; u < LANES; ++u) {
-#pragma HLS UNROLL
- int idx = u * steps + i;
-            if (idx < cols) {
-                float y = exp_x[idx] * inv_sum;
-                output[idx] = round_float32_to_bf16_ieee(y);
-            }
+ int idx = u * row_len + i;
+            float den = sum_row[u];
+            float inv = (den > 0.f) ? (1.0f/den) : 0.f;
+            out[idx] = round_float32_to_bf16_ieee(exp_buf[idx] * inv);
         }
-    }
+        }
 }
 
-template<int LANES = 64>
-void float_safe_softmax3(const float* x, uint16_t* out, int rows, int cols) {
-#pragma HLS INLINE off
 
 
 
- float exp_x[64*768];
-#pragma HLS DEPENDENCE variable=exp_x inter false
-#pragma HLS ARRAY_PARTITION variable=exp_x cyclic factor=LANES dim=1
-# 1236 "activation_accelerator.cpp"
- float max_val = row_max_hls<LANES>(x, cols);
-
-    float sum = row_exp_bucket_sum<LANES>(x, cols, max_val, exp_x);
-
-    row_norm_store_hls<LANES>(exp_x, sum, out, cols);
-}
-# 1258 "activation_accelerator.cpp"
 void float_Multiply2(const float* x, const float* y, uint16* out, int len) {
-#pragma HLS INLINE off
- const int UF = 32;
+#pragma HLS INLINE
+ const int col_len = 64;
+    const int row_len = len/col_len;
+
+    float tmp_batch[64];
+    uint16 tmp_batch_bf16[64];
+#pragma HLS ARRAY_PARTITION variable=tmp_batch complete
+#pragma HLS ARRAY_PARTITION variable=tmp_batch_bf16 complete
 
 
-    multiply_blocks:
-    for (int i = 0; i < len; i += UF) {
-#pragma HLS PIPELINE II=1
- multiply_inner:
-        for (int u = 0; u < UF; ++u) {
+
+
+ multiply_blocks:
+    for (int i = 0; i < row_len; ++i) {
+
+        multiply_inner:
+        for (int u = 0; u < col_len; ++u) {
 #pragma HLS UNROLL
- int idx = i + u;
-            if (idx < len) {
+ int idx = u * row_len + i;
 
-                float mut = x[idx] * y[idx];
 
-                uint32_t* mut_f32_ptr = (uint32_t*)&mut;
-                out[idx] = (uint16)((*mut_f32_ptr) >> 16);
-            }
+
+            float mut = x[idx] * y[idx];
+
+            out[idx] = round_float32_to_bf16_ieee(mut);
         }
+# 428 "activation_accelerator.cpp"
     }
 }
-# 1303 "activation_accelerator.cpp"
+
+
 __attribute__((sdx_kernel("activation_accelerator", 0))) void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, int32 config) {
-#line 39 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/run_hls.tcl"
+#line 55 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/run_hls.tcl"
 #pragma HLSDIRECTIVE TOP name=activation_accelerator
-# 1303 "activation_accelerator.cpp"
+# 432 "activation_accelerator.cpp"
 
 #pragma HLS INTERFACE m_axi port=in0 offset=slave bundle=gmem0 depth=49152
 #pragma HLS INTERFACE m_axi port=in1 offset=slave bundle=gmem1 depth=49152
@@ -56134,9 +56136,27 @@ __attribute__((sdx_kernel("activation_accelerator", 0))) void activation_acceler
 #pragma HLS DEPENDENCE variable=x inter false
 #pragma HLS ARRAY_PARTITION variable=buf2 block factor = 64
 #pragma HLS DEPENDENCE variable=buf2 inter false
+#pragma HLS ARRAY_PARTITION variable=y block factor = 64
+#pragma HLS DEPENDENCE variable=y inter false
 
 
- if(stage == 0) {
+#pragma HLS ALLOCATION function instances = round_float32_to_bf16_ieee limit = 64
+
+#pragma HLS ALLOCATION operation instances=fmul limit=64
+#pragma HLS ALLOCATION operation instances=fadd limit=64
+#pragma HLS ALLOCATION operation instances=fsub limit=64
+#pragma HLS ALLOCATION operation instances=fexp limit=64
+
+#pragma HLS ALLOCATION operation instances=fdiv limit=64
+
+ volatile uint16 anchor_reg;
+    {
+        float dummy_val = 0.0f;
+        uint16 tmp_quant = round_float32_to_bf16_ieee(dummy_val);
+        anchor_reg = tmp_quant;
+    }
+
+    if(stage == 0) {
         stage_0_load0:
         for(int i = 0; i <64*768 ; i++) {
             buf0[i] = in0[i];
@@ -56147,21 +56167,20 @@ __attribute__((sdx_kernel("activation_accelerator", 0))) void activation_acceler
         }
     }
 
+
+
     if(stage == 1) {
-# 1343 "activation_accelerator.cpp"
+
         if(config == 0) {
             bf16_to_float(buf0, x, 64*768);
-            float_safe_softmax3(x, buf2, 64, 768);
-
-
-
-
+            float_silu2(x, buf2, 64*768);
+# 502 "activation_accelerator.cpp"
         }
-# 1376 "activation_accelerator.cpp"
+# 538 "activation_accelerator.cpp"
     }
 
     if(stage == 2) {
-        stage_2_store:
+    stage_2_store:
         for(int i = 0; i < 64*768; i++) {
             out[i] = buf2[i];
         }

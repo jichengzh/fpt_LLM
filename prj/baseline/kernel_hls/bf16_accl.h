@@ -32,13 +32,13 @@ static inline float bf16_to_f32(uint16_t b) {
 
 
 // —— 先做前置声明，供下方内联函数调用 ——
-static inline uint16_t round_float32_to_bf16_ieee(float x_in);
+// static inline uint16_t round_float32_to_bf16_ieee(float x_in);
 
 // f32 -> bf16 (RNE)
-static inline u16 f32_to_bf16_rne(float f) {
-#pragma HLS inline off 
-    return round_float32_to_bf16_ieee(f);
-}
+// static inline u16 f32_to_bf16_rne(float f) {
+// #pragma HLS inline off 
+//     return round_float32_to_bf16_ieee(f);
+// }
 
 
 
@@ -53,59 +53,59 @@ static inline void bf16_to_float(const uint16* in, float* out, int len) {
 }
 
 
-static inline uint16_t round_float32_to_bf16_ieee(float x_in) {
-#pragma HLS inline off 
-    uint32_t fbits = *reinterpret_cast<uint32_t*>(&x_in);
+// static inline uint16_t round_float32_to_bf16_ieee(float x_in) {
+// #pragma HLS inline off 
+//     uint32_t fbits = *reinterpret_cast<uint32_t*>(&x_in);
 
-    // static_assert(sizeof(float) == 4, "This code assumes 32-bit float");
-    // std::memcpy(&fbits, &x_in, sizeof(fbits));
+//     // static_assert(sizeof(float) == 4, "This code assumes 32-bit float");
+//     // std::memcpy(&fbits, &x_in, sizeof(fbits));
 
-    const uint32_t LOW16_MASK = 0xFFFFu;
-    uint32_t upper = fbits >> 16;        // 高 16 位（将成为 bfloat16 的位模式）
-    uint32_t lower = fbits & LOW16_MASK; // 低 16 位（被丢弃部分）
+//     const uint32_t LOW16_MASK = 0xFFFFu;
+//     uint32_t upper = fbits >> 16;        // 高 16 位（将成为 bfloat16 的位模式）
+//     uint32_t lower = fbits & LOW16_MASK; // 低 16 位（被丢弃部分）
 
-    uint32_t exp_field = (fbits >> 23) & 0xFFu;
+//     uint32_t exp_field = (fbits >> 23) & 0xFFu;
 
-    // 如果是 Inf 或 NaN，直接返回高 16 位（保留 NaN/Inf 表示）
-    if (exp_field == 0xFFu) {
-        uint16_t ret = static_cast<uint16_t>(upper);
-        // 如果原始是 NaN（mantissa != 0），但高 7 位恰好被截掉为 0，
-        // 为确保返回值仍为 NaN（而不是正负无穷），至少保留一个非零位。
-        uint32_t full_mant = fbits & 0x7FFFFFu;
-        if (full_mant != 0 && (ret & 0x7Fu) == 0) {
-            ret |= 1u; // 保留最小 payload 位（使其成为 NaN）
-        }
-        return ret;
-    }
+//     // 如果是 Inf 或 NaN，直接返回高 16 位（保留 NaN/Inf 表示）
+//     if (exp_field == 0xFFu) {
+//         uint16_t ret = static_cast<uint16_t>(upper);
+//         // 如果原始是 NaN（mantissa != 0），但高 7 位恰好被截掉为 0，
+//         // 为确保返回值仍为 NaN（而不是正负无穷），至少保留一个非零位。
+//         uint32_t full_mant = fbits & 0x7FFFFFu;
+//         if (full_mant != 0 && (ret & 0x7Fu) == 0) {
+//             ret |= 1u; // 保留最小 payload 位（使其成为 NaN）
+//         }
+//         return ret;
+//     }
 
-    // round-to-nearest-even: 比较被丢弃的低 16 位和 0x8000
-    // lower > 0x8000 -> round up
-    // lower < 0x8000 -> round down
-    // lower == 0x8000 -> tie -> round to even (看 upper 的最低位)
-    const uint32_t HALF = 0x8000u; // 1 << 15
-    bool round_up = false;
-    if (lower > HALF) {
-        round_up = true;
-    } else if (lower < HALF) {
-        round_up = false;
-    } else { // lower == HALF: tie
-        if (upper & 1u) { // 如果当前保留位的最低位为 1（奇数），则进位成偶数
-            round_up = true;
-        }
-    }
+//     // round-to-nearest-even: 比较被丢弃的低 16 位和 0x8000
+//     // lower > 0x8000 -> round up
+//     // lower < 0x8000 -> round down
+//     // lower == 0x8000 -> tie -> round to even (看 upper 的最低位)
+//     const uint32_t HALF = 0x8000u; // 1 << 15
+//     bool round_up = false;
+//     if (lower > HALF) {
+//         round_up = true;
+//     } else if (lower < HALF) {
+//         round_up = false;
+//     } else { // lower == HALF: tie
+//         if (upper & 1u) { // 如果当前保留位的最低位为 1（奇数），则进位成偶数
+//             round_up = true;
+//         }
+//     }
 
-    uint32_t rounded = upper + (round_up ? 1u : 0u);
+//     uint32_t rounded = upper + (round_up ? 1u : 0u);
 
-    // 检查进位是否造成指数变为全 1（溢出 -> ±Inf），若是则清零尾数
-    uint32_t new_exp = (rounded >> 7) & 0xFFu;
-    uint32_t sign = (rounded >> 15) & 0x1u;
-    if (new_exp == 0xFFu) {
-        uint16_t res = static_cast<uint16_t>((sign << 15) | (0xFFu << 7));
-        return res;
-    }
+//     // 检查进位是否造成指数变为全 1（溢出 -> ±Inf），若是则清零尾数
+//     uint32_t new_exp = (rounded >> 7) & 0xFFu;
+//     uint32_t sign = (rounded >> 15) & 0x1u;
+//     if (new_exp == 0xFFu) {
+//         uint16_t res = static_cast<uint16_t>((sign << 15) | (0xFFu << 7));
+//         return res;
+//     }
 
-    return static_cast<uint16_t>(rounded & 0xFFFFu);
-}
+//     return static_cast<uint16_t>(rounded & 0xFFFFu);
+// }
 
 
 
@@ -194,17 +194,21 @@ static inline uint16 bf16add_fast(uint16 a_bits, uint16 b_bits) {
         }
     }
 
-    // ---- 5) 同号加/异号减（大减小），得到中间尾数
-    uint32_t M;
-    uint16_t s = sa;
-    if (sa == sb) {
-        M = A + B_aln;
-    } else {
-        if (A >= B_aln) { M = A - B_aln; s = sa; }
-        else           { M = B_aln - A; s = sb; }
-    }
+    // // ---- 5) 同号加/异号减（大减小），得到中间尾数
+    // uint32_t M;
+    // uint16_t s = sa;
+    // if (sa == sb) {
+    //     M = A + B_aln;
+    // } else {
+    //     if (A >= B_aln) { M = A - B_aln; s = sa; }
+    //     else           { M = B_aln - A; s = sb; }
+    // }
 
-    if (M == 0) return 0; // 结果为零
+    // if (M == 0) return 0; // 结果为零
+        // 5) 只做同号加法（我们假设 softmax 场景下全是正数，sa=sb=0）
+    // 不再支持异号相减
+    uint32_t M = A + B_aln;
+    uint16_t s  = 0; // 正号
 
 
 
@@ -251,6 +255,83 @@ static inline uint16 bf16add_fast(uint16 a_bits, uint16 b_bits) {
     if (maxe == 0)  rounded &= 0x7Fu;                   // 非正规清隐含位
     uint16_t m7 = (uint16_t)(rounded & 0x7Fu);
     return pack_bf16(s, maxe, m7);
+}
+
+static float f32_add(float a, float b) {
+#pragma HLS INLINE off
+    float c = a + b;
+    return c;
+}
+
+static float f32_expf(float v) {
+#pragma HLS INLINE off
+    // 这里依然调用 hls::expf，保持数值一致
+    float r = hls::expf(v);
+    return r;
+}
+
+
+//雷神之锤求平方根倒数
+float Q_rsqrt(float number)
+{
+	// long i;
+	float x2, y;
+	const float threehalfs = 1.5F;
+	x2 = number * 0.5F;
+	y  = number;
+    
+    /*核心代码*/
+    // 1. reinterpret_cast from float to int
+    int32_t i = *reinterpret_cast<int32_t*>(&y);  // 32-bit
+	i  = * ( long * ) &y;                       // evil floating point bit level hacking（对浮点数的邪恶位元hack）
+    // 2. 估算平方根倒数
+	i  = 0x5f3759df - ( i >> 1 );               // what the fuck? (....why not 0x69696969?)
+    // reinterpret_cast from int to float
+	y  = * ( float * ) &i;
+  	// 3. 牛顿法
+	y  = y * ( threehalfs - ( x2 * y * y ) );   // 1st iteration 
+    // y  = y * ( threehalfs - ( x2 * y * y ) );   // 2nd iteration, this can be removed
+
+	return y;
+}
+
+// template<int col_len = 64, int COLS_PER_ROW = 768>
+void square(const float* x, float* y_sum_sq, int len){
+#pragma HLS INLINE off
+    const int col_len = 64;
+    const int row_len = len/col_len;
+sum_square:
+    for (int i = 0; i < row_len; ++i) {
+// #pragma HLS PIPELINE II = 1 
+    sum_inner_square:
+        for (int j = 0; j < col_len; ++j) {
+#pragma HLS UNROLL
+            int idx = i + j * row_len;
+            y_sum_sq[j] += x[idx] * x[idx] ;
+        }
+    }
+sum_square2://在内部循环里多次分开除好像影响精度了，合起来除
+    for (int i = 0; i < col_len; ++i) {
+#pragma HLS UNROLL   
+        y_sum_sq[i] = y_sum_sq[i]/ row_len;
+    }
+}//属于函数的括号
+
+
+template<int ROWS = 64, int COLS_PER_ROW = 768>
+void accumulate_column(
+    const float* x,          // 整个矩阵首地址
+    float acc_vec[ROWS],     // 行累加器数组，比如 partial_mean 或 sum_row
+    int col_i                // 当前列 index i
+) {
+#pragma HLS INLINE off
+
+acc_loop:
+    for (int u = 0; u < ROWS; ++u) {
+    #pragma HLS UNROLL
+        int idx = u * COLS_PER_ROW + col_i;
+        acc_vec[u] += x[idx];
+    }
 }
 
 

@@ -407,7 +407,7 @@ for.inc.split:0 %phi_urem_load_1 = load i16 %phi_urem
 
 <Node id="84" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc.split:3 %specloopname_ln49 = specloopname void @_ssdm_op_SpecLoopName, void @empty_16
+for.inc.split:3 %specloopname_ln49 = specloopname void @_ssdm_op_SpecLoopName, void @empty_12
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln49"/></StgValue>
@@ -3418,7 +3418,7 @@ arrayidx21.case.1:1 %br_ln51 = br void %arrayidx21.exit
 </operation>
 
 <operation id="221" st_id="3" stage="1" lat="1">
-<core>RAM_1WnR</core>
+<core>RAM</core>
 <MemPortIdVec>0 </MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp><literal name="trunc_ln" val="0"/>
@@ -3576,7 +3576,7 @@ arrayidx21.exit:7 %br_ln49 = br void %for.inc
 
 <ports>
 <port id="243" name="out_0" dir="1" iftype="1">
-<core>RAM_1WnR</core><StgValue><ssdm name="out_0"/><MemPortTyVec>0 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 </MemPortTyVec>
+<core>RAM</core><StgValue><ssdm name="out_0"/><MemPortTyVec>0 3 </MemPortTyVec>
 </StgValue>
 </port>
 <port id="244" name="out_1" dir="1" iftype="1">
@@ -4053,7 +4053,7 @@ arrayidx21.exit:7 %br_ln49 = br void %for.inc
 </dataflow>
 <dataflow id="494" from="_ssdm_op_SpecLoopName" to="specloopname_ln49" fromId="493" toId="28">
 </dataflow>
-<dataflow id="496" from="empty_16" to="specloopname_ln49" fromId="495" toId="28">
+<dataflow id="496" from="empty_12" to="specloopname_ln49" fromId="495" toId="28">
 </dataflow>
 <dataflow id="497" from="buf0_addr" to="buf0_load" fromId="20" toId="29">
 </dataflow>

@@ -636,8 +636,8 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>sext_ln1324</name>
-<Object>sext_ln1324</Object>
+<name>sext_ln471</name>
+<Object>sext_ln471</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>

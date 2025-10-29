@@ -34,7 +34,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3</coreId>
+						<coreId>4294967294</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -57,9 +57,9 @@
 						<type>0</type>
 						<id>2</id>
 						<name>x_in_read</name>
-						<fileName>./bf16_accl.h</fileName>
+						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>56</lineNumber>
+						<lineNumber>17</lineNumber>
 						<contextFuncName>round_float32_to_bf16_ieee</contextFuncName>
 						<contextNormFuncName>round_float32_to_bf16_ieee</contextNormFuncName>
 						<inlineStackInfo>
@@ -72,10 +72,10 @@
 									<item_version>0</item_version>
 									<item class_id="12" tracking_level="0" version="0">
 										<first class_id="13" tracking_level="0" version="0">
-											<first>./bf16_accl.h</first>
+											<first>activation_accelerator.cpp</first>
 											<second>round_float32_to_bf16_ieee</second>
 										</first>
-										<second>56</second>
+										<second>17</second>
 									</item>
 								</second>
 							</item>
@@ -88,7 +88,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>369770192</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -114,9 +114,9 @@
 						<type>0</type>
 						<id>3</id>
 						<name>fbits</name>
-						<fileName>./bf16_accl.h</fileName>
+						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>19</lineNumber>
 						<contextFuncName>round_float32_to_bf16_ieee</contextFuncName>
 						<contextNormFuncName>round_float32_to_bf16_ieee</contextNormFuncName>
 						<inlineStackInfo>
@@ -129,10 +129,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>./bf16_accl.h</first>
+											<first>activation_accelerator.cpp</first>
 											<second>round_float32_to_bf16_ieee</second>
 										</first>
-										<second>58</second>
+										<second>19</second>
 									</item>
 								</second>
 							</item>
@@ -145,7 +145,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>370050112</coreId>
+						<coreId>3621216858</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -170,9 +170,9 @@
 						<type>0</type>
 						<id>4</id>
 						<name>full_mant</name>
-						<fileName>./bf16_accl.h</fileName>
+						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>19</lineNumber>
 						<contextFuncName>round_float32_to_bf16_ieee</contextFuncName>
 						<contextNormFuncName>round_float32_to_bf16_ieee</contextNormFuncName>
 						<inlineStackInfo>
@@ -185,10 +185,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>./bf16_accl.h</first>
+											<first>activation_accelerator.cpp</first>
 											<second>round_float32_to_bf16_ieee</second>
 										</first>
-										<second>58</second>
+										<second>19</second>
 									</item>
 								</second>
 							</item>
@@ -201,7 +201,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>368866096</coreId>
+						<coreId>583707120</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>23</bitwidth>
@@ -226,9 +226,9 @@
 						<type>0</type>
 						<id>5</id>
 						<name>lower</name>
-						<fileName>./bf16_accl.h</fileName>
+						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>19</lineNumber>
 						<contextFuncName>round_float32_to_bf16_ieee</contextFuncName>
 						<contextNormFuncName>round_float32_to_bf16_ieee</contextNormFuncName>
 						<inlineStackInfo>
@@ -241,10 +241,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>./bf16_accl.h</first>
+											<first>activation_accelerator.cpp</first>
 											<second>round_float32_to_bf16_ieee</second>
 										</first>
-										<second>58</second>
+										<second>19</second>
 									</item>
 								</second>
 							</item>
@@ -257,7 +257,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>368674560</coreId>
+						<coreId>578028336</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -282,9 +282,9 @@
 						<type>0</type>
 						<id>6</id>
 						<name>trunc_ln</name>
-						<fileName>./bf16_accl.h</fileName>
+						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>64</lineNumber>
+						<lineNumber>25</lineNumber>
 						<contextFuncName>round_float32_to_bf16_ieee</contextFuncName>
 						<contextNormFuncName>round_float32_to_bf16_ieee</contextNormFuncName>
 						<inlineStackInfo>
@@ -297,10 +297,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>./bf16_accl.h</first>
+											<first>activation_accelerator.cpp</first>
 											<second>round_float32_to_bf16_ieee</second>
 										</first>
-										<second>64</second>
+										<second>25</second>
 									</item>
 								</second>
 							</item>
@@ -313,7 +313,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>369702752</coreId>
+						<coreId>578028336</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>15</bitwidth>
@@ -341,9 +341,9 @@
 						<type>0</type>
 						<id>7</id>
 						<name>round_up</name>
-						<fileName>./bf16_accl.h</fileName>
+						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>64</lineNumber>
+						<lineNumber>25</lineNumber>
 						<contextFuncName>round_float32_to_bf16_ieee</contextFuncName>
 						<contextNormFuncName>round_float32_to_bf16_ieee</contextNormFuncName>
 						<inlineStackInfo>
@@ -356,10 +356,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>./bf16_accl.h</first>
+											<first>activation_accelerator.cpp</first>
 											<second>round_float32_to_bf16_ieee</second>
 										</first>
-										<second>64</second>
+										<second>25</second>
 									</item>
 								</second>
 							</item>
@@ -372,7 +372,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>192</coreId>
+						<coreId>578028336</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -399,9 +399,9 @@
 						<type>0</type>
 						<id>8</id>
 						<name>tmp</name>
-						<fileName>./bf16_accl.h</fileName>
+						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>67</lineNumber>
+						<lineNumber>28</lineNumber>
 						<contextFuncName>round_float32_to_bf16_ieee</contextFuncName>
 						<contextNormFuncName>round_float32_to_bf16_ieee</contextNormFuncName>
 						<inlineStackInfo>
@@ -414,10 +414,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>./bf16_accl.h</first>
+											<first>activation_accelerator.cpp</first>
 											<second>round_float32_to_bf16_ieee</second>
 										</first>
-										<second>67</second>
+										<second>28</second>
 									</item>
 								</second>
 							</item>
@@ -430,7 +430,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>825911342</coreId>
+						<coreId>579074432</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -458,9 +458,9 @@
 						<type>0</type>
 						<id>9</id>
 						<name>exp_field</name>
-						<fileName>./bf16_accl.h</fileName>
+						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>67</lineNumber>
+						<lineNumber>28</lineNumber>
 						<contextFuncName>round_float32_to_bf16_ieee</contextFuncName>
 						<contextNormFuncName>round_float32_to_bf16_ieee</contextNormFuncName>
 						<inlineStackInfo>
@@ -473,10 +473,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>./bf16_accl.h</first>
+											<first>activation_accelerator.cpp</first>
 											<second>round_float32_to_bf16_ieee</second>
 										</first>
-										<second>67</second>
+										<second>28</second>
 									</item>
 								</second>
 							</item>
@@ -489,7 +489,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>369772400</coreId>
+						<coreId>579074432</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>31</bitwidth>
@@ -515,10 +515,10 @@
 					<Obj>
 						<type>0</type>
 						<id>10</id>
-						<name>icmp_ln70</name>
-						<fileName>./bf16_accl.h</fileName>
+						<name>icmp_ln31</name>
+						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>70</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>round_float32_to_bf16_ieee</contextFuncName>
 						<contextNormFuncName>round_float32_to_bf16_ieee</contextNormFuncName>
 						<inlineStackInfo>
@@ -531,10 +531,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>./bf16_accl.h</first>
+											<first>activation_accelerator.cpp</first>
 											<second>round_float32_to_bf16_ieee</second>
 										</first>
-										<second>70</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -573,9 +573,9 @@
 						<type>0</type>
 						<id>11</id>
 						<name>ret</name>
-						<fileName>./bf16_accl.h</fileName>
+						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>71</lineNumber>
+						<lineNumber>32</lineNumber>
 						<contextFuncName>round_float32_to_bf16_ieee</contextFuncName>
 						<contextNormFuncName>round_float32_to_bf16_ieee</contextNormFuncName>
 						<inlineStackInfo>
@@ -588,10 +588,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>./bf16_accl.h</first>
+											<first>activation_accelerator.cpp</first>
 											<second>round_float32_to_bf16_ieee</second>
 										</first>
-										<second>71</second>
+										<second>32</second>
 									</item>
 								</second>
 							</item>
@@ -604,7 +604,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>368622240</coreId>
+						<coreId>579074432</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -631,10 +631,10 @@
 					<Obj>
 						<type>0</type>
 						<id>12</id>
-						<name>trunc_ln71_1</name>
-						<fileName>./bf16_accl.h</fileName>
+						<name>trunc_ln32_1</name>
+						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>71</lineNumber>
+						<lineNumber>32</lineNumber>
 						<contextFuncName>round_float32_to_bf16_ieee</contextFuncName>
 						<contextNormFuncName>round_float32_to_bf16_ieee</contextNormFuncName>
 						<inlineStackInfo>
@@ -647,10 +647,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>./bf16_accl.h</first>
+											<first>activation_accelerator.cpp</first>
 											<second>round_float32_to_bf16_ieee</second>
 										</first>
-										<second>71</second>
+										<second>32</second>
 									</item>
 								</second>
 							</item>
@@ -663,7 +663,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>370060664</coreId>
+						<coreId>584134736</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>7</bitwidth>
@@ -690,10 +690,10 @@
 					<Obj>
 						<type>0</type>
 						<id>13</id>
-						<name>icmp_ln75</name>
-						<fileName>./bf16_accl.h</fileName>
+						<name>icmp_ln36</name>
+						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>75</lineNumber>
+						<lineNumber>36</lineNumber>
 						<contextFuncName>round_float32_to_bf16_ieee</contextFuncName>
 						<contextNormFuncName>round_float32_to_bf16_ieee</contextNormFuncName>
 						<inlineStackInfo>
@@ -706,10 +706,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>./bf16_accl.h</first>
+											<first>activation_accelerator.cpp</first>
 											<second>round_float32_to_bf16_ieee</second>
 										</first>
-										<second>75</second>
+										<second>36</second>
 									</item>
 								</second>
 							</item>
@@ -747,10 +747,10 @@
 					<Obj>
 						<type>0</type>
 						<id>14</id>
-						<name>icmp_ln75_1</name>
-						<fileName>./bf16_accl.h</fileName>
+						<name>icmp_ln36_1</name>
+						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>75</lineNumber>
+						<lineNumber>36</lineNumber>
 						<contextFuncName>round_float32_to_bf16_ieee</contextFuncName>
 						<contextNormFuncName>round_float32_to_bf16_ieee</contextNormFuncName>
 						<inlineStackInfo>
@@ -763,10 +763,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>./bf16_accl.h</first>
+											<first>activation_accelerator.cpp</first>
 											<second>round_float32_to_bf16_ieee</second>
 										</first>
-										<second>75</second>
+										<second>36</second>
 									</item>
 								</second>
 							</item>
@@ -804,10 +804,10 @@
 					<Obj>
 						<type>0</type>
 						<id>15</id>
-						<name>and_ln75</name>
-						<fileName>./bf16_accl.h</fileName>
+						<name>and_ln36</name>
+						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>75</lineNumber>
+						<lineNumber>36</lineNumber>
 						<contextFuncName>round_float32_to_bf16_ieee</contextFuncName>
 						<contextNormFuncName>round_float32_to_bf16_ieee</contextNormFuncName>
 						<inlineStackInfo>
@@ -820,10 +820,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>./bf16_accl.h</first>
+											<first>activation_accelerator.cpp</first>
 											<second>round_float32_to_bf16_ieee</second>
 										</first>
-										<second>75</second>
+										<second>36</second>
 									</item>
 								</second>
 							</item>
@@ -862,9 +862,9 @@
 						<type>0</type>
 						<id>16</id>
 						<name>ret_1</name>
-						<fileName>./bf16_accl.h</fileName>
+						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>76</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>round_float32_to_bf16_ieee</contextFuncName>
 						<contextNormFuncName>round_float32_to_bf16_ieee</contextNormFuncName>
 						<inlineStackInfo>
@@ -877,10 +877,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>./bf16_accl.h</first>
+											<first>activation_accelerator.cpp</first>
 											<second>round_float32_to_bf16_ieee</second>
 										</first>
-										<second>76</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -893,7 +893,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>369882096</coreId>
+						<coreId>577889664</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -919,9 +919,9 @@
 						<type>0</type>
 						<id>17</id>
 						<name>ret_2</name>
-						<fileName>./bf16_accl.h</fileName>
+						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>75</lineNumber>
+						<lineNumber>36</lineNumber>
 						<contextFuncName>round_float32_to_bf16_ieee</contextFuncName>
 						<contextNormFuncName>round_float32_to_bf16_ieee</contextNormFuncName>
 						<inlineStackInfo>
@@ -934,10 +934,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>./bf16_accl.h</first>
+											<first>activation_accelerator.cpp</first>
 											<second>round_float32_to_bf16_ieee</second>
 										</first>
-										<second>75</second>
+										<second>36</second>
 									</item>
 								</second>
 							</item>
@@ -976,10 +976,10 @@
 					<Obj>
 						<type>0</type>
 						<id>18</id>
-						<name>icmp_ln87</name>
-						<fileName>./bf16_accl.h</fileName>
+						<name>icmp_ln48</name>
+						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>87</lineNumber>
+						<lineNumber>48</lineNumber>
 						<contextFuncName>round_float32_to_bf16_ieee</contextFuncName>
 						<contextNormFuncName>round_float32_to_bf16_ieee</contextNormFuncName>
 						<inlineStackInfo>
@@ -992,10 +992,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>./bf16_accl.h</first>
+											<first>activation_accelerator.cpp</first>
 											<second>round_float32_to_bf16_ieee</second>
 										</first>
-										<second>87</second>
+										<second>48</second>
 									</item>
 								</second>
 							</item>
@@ -1034,9 +1034,9 @@
 						<type>0</type>
 						<id>19</id>
 						<name>tmp_3</name>
-						<fileName>./bf16_accl.h</fileName>
+						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>89</lineNumber>
+						<lineNumber>50</lineNumber>
 						<contextFuncName>round_float32_to_bf16_ieee</contextFuncName>
 						<contextNormFuncName>round_float32_to_bf16_ieee</contextNormFuncName>
 						<inlineStackInfo>
@@ -1049,10 +1049,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>./bf16_accl.h</first>
+											<first>activation_accelerator.cpp</first>
 											<second>round_float32_to_bf16_ieee</second>
 										</first>
-										<second>89</second>
+										<second>50</second>
 									</item>
 								</second>
 							</item>
@@ -1065,7 +1065,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>368868888</coreId>
+						<coreId>582671360</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1092,9 +1092,9 @@
 						<type>0</type>
 						<id>20</id>
 						<name>round_up_1</name>
-						<fileName>./bf16_accl.h</fileName>
+						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>89</lineNumber>
+						<lineNumber>50</lineNumber>
 						<contextFuncName>round_float32_to_bf16_ieee</contextFuncName>
 						<contextNormFuncName>round_float32_to_bf16_ieee</contextNormFuncName>
 						<inlineStackInfo>
@@ -1107,10 +1107,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>./bf16_accl.h</first>
+											<first>activation_accelerator.cpp</first>
 											<second>round_float32_to_bf16_ieee</second>
 										</first>
-										<second>89</second>
+										<second>50</second>
 									</item>
 								</second>
 							</item>
@@ -1148,10 +1148,10 @@
 					<Obj>
 						<type>0</type>
 						<id>21</id>
-						<name>or_ln89</name>
-						<fileName>./bf16_accl.h</fileName>
+						<name>or_ln50</name>
+						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>89</lineNumber>
+						<lineNumber>50</lineNumber>
 						<contextFuncName>round_float32_to_bf16_ieee</contextFuncName>
 						<contextNormFuncName>round_float32_to_bf16_ieee</contextNormFuncName>
 						<inlineStackInfo>
@@ -1164,10 +1164,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>./bf16_accl.h</first>
+											<first>activation_accelerator.cpp</first>
 											<second>round_float32_to_bf16_ieee</second>
 										</first>
-										<second>89</second>
+										<second>50</second>
 									</item>
 								</second>
 							</item>
@@ -1205,10 +1205,10 @@
 					<Obj>
 						<type>0</type>
 						<id>22</id>
-						<name>zext_ln97</name>
-						<fileName>./bf16_accl.h</fileName>
+						<name>zext_ln58</name>
+						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>97</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>round_float32_to_bf16_ieee</contextFuncName>
 						<contextNormFuncName>round_float32_to_bf16_ieee</contextNormFuncName>
 						<inlineStackInfo>
@@ -1221,10 +1221,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>./bf16_accl.h</first>
+											<first>activation_accelerator.cpp</first>
 											<second>round_float32_to_bf16_ieee</second>
 										</first>
-										<second>97</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -1237,7 +1237,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>368896816</coreId>
+						<coreId>577834464</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>15</bitwidth>
@@ -1261,10 +1261,10 @@
 					<Obj>
 						<type>0</type>
 						<id>23</id>
-						<name>zext_ln97_1</name>
-						<fileName>./bf16_accl.h</fileName>
+						<name>zext_ln58_1</name>
+						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>97</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>round_float32_to_bf16_ieee</contextFuncName>
 						<contextNormFuncName>round_float32_to_bf16_ieee</contextNormFuncName>
 						<inlineStackInfo>
@@ -1277,10 +1277,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>./bf16_accl.h</first>
+											<first>activation_accelerator.cpp</first>
 											<second>round_float32_to_bf16_ieee</second>
 										</first>
-										<second>97</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -1293,7 +1293,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>691101280</coreId>
+						<coreId>583853680</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -1318,9 +1318,9 @@
 						<type>0</type>
 						<id>24</id>
 						<name>rounded</name>
-						<fileName>./bf16_accl.h</fileName>
+						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>97</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>round_float32_to_bf16_ieee</contextFuncName>
 						<contextNormFuncName>round_float32_to_bf16_ieee</contextNormFuncName>
 						<inlineStackInfo>
@@ -1333,10 +1333,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>./bf16_accl.h</first>
+											<first>activation_accelerator.cpp</first>
 											<second>round_float32_to_bf16_ieee</second>
 										</first>
-										<second>97</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -1375,9 +1375,9 @@
 						<type>0</type>
 						<id>25</id>
 						<name>tmp_1</name>
-						<fileName>./bf16_accl.h</fileName>
+						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>100</lineNumber>
+						<lineNumber>61</lineNumber>
 						<contextFuncName>round_float32_to_bf16_ieee</contextFuncName>
 						<contextNormFuncName>round_float32_to_bf16_ieee</contextNormFuncName>
 						<inlineStackInfo>
@@ -1390,10 +1390,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>./bf16_accl.h</first>
+											<first>activation_accelerator.cpp</first>
 											<second>round_float32_to_bf16_ieee</second>
 										</first>
-										<second>100</second>
+										<second>61</second>
 									</item>
 								</second>
 							</item>
@@ -1406,7 +1406,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>369815040</coreId>
+						<coreId>583183824</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -1434,9 +1434,9 @@
 						<type>0</type>
 						<id>26</id>
 						<name>new_exp</name>
-						<fileName>./bf16_accl.h</fileName>
+						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>100</lineNumber>
+						<lineNumber>61</lineNumber>
 						<contextFuncName>round_float32_to_bf16_ieee</contextFuncName>
 						<contextNormFuncName>round_float32_to_bf16_ieee</contextNormFuncName>
 						<inlineStackInfo>
@@ -1449,10 +1449,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>./bf16_accl.h</first>
+											<first>activation_accelerator.cpp</first>
 											<second>round_float32_to_bf16_ieee</second>
 										</first>
-										<second>100</second>
+										<second>61</second>
 									</item>
 								</second>
 							</item>
@@ -1465,7 +1465,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>370023936</coreId>
+						<coreId>583853680</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>15</bitwidth>
@@ -1491,10 +1491,10 @@
 					<Obj>
 						<type>0</type>
 						<id>27</id>
-						<name>add_ln101</name>
-						<fileName>./bf16_accl.h</fileName>
+						<name>add_ln62</name>
+						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>101</lineNumber>
+						<lineNumber>62</lineNumber>
 						<contextFuncName>round_float32_to_bf16_ieee</contextFuncName>
 						<contextNormFuncName>round_float32_to_bf16_ieee</contextNormFuncName>
 						<inlineStackInfo>
@@ -1507,10 +1507,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>./bf16_accl.h</first>
+											<first>activation_accelerator.cpp</first>
 											<second>round_float32_to_bf16_ieee</second>
 										</first>
-										<second>101</second>
+										<second>62</second>
 									</item>
 								</second>
 							</item>
@@ -1548,10 +1548,10 @@
 					<Obj>
 						<type>0</type>
 						<id>28</id>
-						<name>icmp_ln102</name>
-						<fileName>./bf16_accl.h</fileName>
+						<name>icmp_ln63</name>
+						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>102</lineNumber>
+						<lineNumber>63</lineNumber>
 						<contextFuncName>round_float32_to_bf16_ieee</contextFuncName>
 						<contextNormFuncName>round_float32_to_bf16_ieee</contextNormFuncName>
 						<inlineStackInfo>
@@ -1564,10 +1564,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>./bf16_accl.h</first>
+											<first>activation_accelerator.cpp</first>
 											<second>round_float32_to_bf16_ieee</second>
 										</first>
-										<second>102</second>
+										<second>63</second>
 									</item>
 								</second>
 							</item>
@@ -1606,9 +1606,9 @@
 						<type>0</type>
 						<id>29</id>
 						<name>tmp_4</name>
-						<fileName>./bf16_accl.h</fileName>
+						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>103</lineNumber>
+						<lineNumber>64</lineNumber>
 						<contextFuncName>round_float32_to_bf16_ieee</contextFuncName>
 						<contextNormFuncName>round_float32_to_bf16_ieee</contextNormFuncName>
 						<inlineStackInfo>
@@ -1621,10 +1621,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>./bf16_accl.h</first>
+											<first>activation_accelerator.cpp</first>
 											<second>round_float32_to_bf16_ieee</second>
 										</first>
-										<second>103</second>
+										<second>64</second>
 									</item>
 								</second>
 							</item>
@@ -1637,7 +1637,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>369164368</coreId>
+						<coreId>584253840</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1664,9 +1664,9 @@
 						<type>0</type>
 						<id>30</id>
 						<name>and_ln</name>
-						<fileName>./bf16_accl.h</fileName>
+						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>103</lineNumber>
+						<lineNumber>64</lineNumber>
 						<contextFuncName>round_float32_to_bf16_ieee</contextFuncName>
 						<contextNormFuncName>round_float32_to_bf16_ieee</contextNormFuncName>
 						<inlineStackInfo>
@@ -1679,10 +1679,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>./bf16_accl.h</first>
+											<first>activation_accelerator.cpp</first>
 											<second>round_float32_to_bf16_ieee</second>
 										</first>
-										<second>103</second>
+										<second>64</second>
 									</item>
 								</second>
 							</item>
@@ -1695,7 +1695,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>167</coreId>
+						<coreId>584253840</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -1722,9 +1722,9 @@
 						<type>0</type>
 						<id>31</id>
 						<name>res</name>
-						<fileName>./bf16_accl.h</fileName>
+						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>103</lineNumber>
+						<lineNumber>64</lineNumber>
 						<contextFuncName>round_float32_to_bf16_ieee</contextFuncName>
 						<contextNormFuncName>round_float32_to_bf16_ieee</contextNormFuncName>
 						<inlineStackInfo>
@@ -1737,10 +1737,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>./bf16_accl.h</first>
+											<first>activation_accelerator.cpp</first>
 											<second>round_float32_to_bf16_ieee</second>
 										</first>
-										<second>103</second>
+										<second>64</second>
 									</item>
 								</second>
 							</item>
@@ -1753,7 +1753,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>369158608</coreId>
+						<coreId>584253840</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -1778,10 +1778,10 @@
 					<Obj>
 						<type>0</type>
 						<id>32</id>
-						<name>select_ln102</name>
-						<fileName>./bf16_accl.h</fileName>
+						<name>select_ln63</name>
+						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>102</lineNumber>
+						<lineNumber>63</lineNumber>
 						<contextFuncName>round_float32_to_bf16_ieee</contextFuncName>
 						<contextNormFuncName>round_float32_to_bf16_ieee</contextNormFuncName>
 						<inlineStackInfo>
@@ -1794,10 +1794,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>./bf16_accl.h</first>
+											<first>activation_accelerator.cpp</first>
 											<second>round_float32_to_bf16_ieee</second>
 										</first>
-										<second>102</second>
+										<second>63</second>
 									</item>
 								</second>
 							</item>
@@ -1836,10 +1836,10 @@
 					<Obj>
 						<type>0</type>
 						<id>33</id>
-						<name>select_ln70</name>
-						<fileName>./bf16_accl.h</fileName>
+						<name>select_ln31</name>
+						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>70</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>round_float32_to_bf16_ieee</contextFuncName>
 						<contextNormFuncName>round_float32_to_bf16_ieee</contextNormFuncName>
 						<inlineStackInfo>
@@ -1852,10 +1852,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>./bf16_accl.h</first>
+											<first>activation_accelerator.cpp</first>
 											<second>round_float32_to_bf16_ieee</second>
 										</first>
-										<second>70</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -1894,10 +1894,10 @@
 					<Obj>
 						<type>0</type>
 						<id>34</id>
-						<name>_ln108</name>
-						<fileName>./bf16_accl.h</fileName>
+						<name>_ln69</name>
+						<fileName>activation_accelerator.cpp</fileName>
 						<fileDirectory>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</fileDirectory>
-						<lineNumber>108</lineNumber>
+						<lineNumber>69</lineNumber>
 						<contextFuncName>round_float32_to_bf16_ieee</contextFuncName>
 						<contextNormFuncName>round_float32_to_bf16_ieee</contextNormFuncName>
 						<inlineStackInfo>
@@ -1910,10 +1910,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>./bf16_accl.h</first>
+											<first>activation_accelerator.cpp</first>
 											<second>round_float32_to_bf16_ieee</second>
 										</first>
-										<second>108</second>
+										<second>69</second>
 									</item>
 								</second>
 							</item>
@@ -1926,7 +1926,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330007625</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1972,7 +1972,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>368863616</coreId>
+						<coreId>3</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2003,7 +2003,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>369161568</coreId>
+						<coreId>1</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2034,7 +2034,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>368648976</coreId>
+						<coreId>583935904</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2065,7 +2065,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>369135552</coreId>
+						<coreId>583997264</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>23</bitwidth>
@@ -2096,7 +2096,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>542329928</coreId>
+						<coreId>578859208</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>31</bitwidth>
@@ -2127,7 +2127,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>369136032</coreId>
+						<coreId>580934160</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2158,7 +2158,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>174</coreId>
+						<coreId>584012272</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2189,7 +2189,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>369132848</coreId>
+						<coreId>25</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>7</bitwidth>
@@ -2220,7 +2220,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1919906304</coreId>
+						<coreId>584017936</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -2251,7 +2251,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330007625</coreId>
+						<coreId>25</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -2282,7 +2282,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>369102064</coreId>
+						<coreId>1869182049</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2313,7 +2313,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>542329928</coreId>
+						<coreId>581819040</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2344,7 +2344,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>369102544</coreId>
+						<coreId>577866384</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2375,7 +2375,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>50</coreId>
+						<coreId>584121712</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>15</bitwidth>
@@ -2406,7 +2406,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>369107088</coreId>
+						<coreId>584121664</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>15</bitwidth>
@@ -2437,7 +2437,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>368999168</coreId>
+						<coreId>582194352</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -3731,7 +3731,7 @@
 		<count>31</count>
 		<item_version>0</item_version>
 		<item class_id="44" tracking_level="0" version="0">
-			<first>add_ln101_fu_226</first>
+			<first>add_ln62_fu_226</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3739,7 +3739,7 @@
 			</second>
 		</item>
 		<item>
-			<first>and_ln75_fu_148</first>
+			<first>and_ln36_fu_148</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3779,15 +3779,7 @@
 			</second>
 		</item>
 		<item>
-			<first>icmp_ln102_fu_232</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>28</item>
-			</second>
-		</item>
-		<item>
-			<first>icmp_ln70_fu_110</first>
+			<first>icmp_ln31_fu_110</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3795,7 +3787,7 @@
 			</second>
 		</item>
 		<item>
-			<first>icmp_ln75_1_fu_142</first>
+			<first>icmp_ln36_1_fu_142</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3803,7 +3795,7 @@
 			</second>
 		</item>
 		<item>
-			<first>icmp_ln75_fu_136</first>
+			<first>icmp_ln36_fu_136</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3811,11 +3803,19 @@
 			</second>
 		</item>
 		<item>
-			<first>icmp_ln87_fu_168</first>
+			<first>icmp_ln48_fu_168</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
 				<item>18</item>
+			</second>
+		</item>
+		<item>
+			<first>icmp_ln63_fu_232</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>28</item>
 			</second>
 		</item>
 		<item>
@@ -3835,7 +3835,7 @@
 			</second>
 		</item>
 		<item>
-			<first>or_ln89_fu_188</first>
+			<first>or_ln50_fu_188</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3899,19 +3899,19 @@
 			</second>
 		</item>
 		<item>
-			<first>select_ln102_fu_260</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>32</item>
-			</second>
-		</item>
-		<item>
-			<first>select_ln70_fu_268</first>
+			<first>select_ln31_fu_268</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
 				<item>33</item>
+			</second>
+		</item>
+		<item>
+			<first>select_ln63_fu_260</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>32</item>
 			</second>
 		</item>
 		<item>
@@ -3947,7 +3947,7 @@
 			</second>
 		</item>
 		<item>
-			<first>trunc_ln71_1_fu_126</first>
+			<first>trunc_ln32_1_fu_126</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3963,7 +3963,7 @@
 			</second>
 		</item>
 		<item>
-			<first>zext_ln97_1_fu_198</first>
+			<first>zext_ln58_1_fu_198</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3971,7 +3971,7 @@
 			</second>
 		</item>
 		<item>
-			<first>zext_ln97_fu_194</first>
+			<first>zext_ln58_fu_194</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>

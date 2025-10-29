@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'activation_accelerator'" level="0">
-<item name = "Date">Thu Oct 23 18:56:04 2025
+<item name = "Date">Wed Oct 29 10:42:17 2025
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">activation_accelerator</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.331 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">1, 49702, 10.000 ns, 0.497 ms, 2, 49703, no</column>
+<column name="">1, 49949, 10.000 ns, 0.499 ms, 2, 49950, no</column>
 </table>
 </item>
 <item name = "Detail">

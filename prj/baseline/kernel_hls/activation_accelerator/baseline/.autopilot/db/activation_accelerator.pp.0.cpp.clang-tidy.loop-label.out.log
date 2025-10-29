@@ -726,3 +726,8 @@
        ^~~
        VITIS_LOOP_195_3: 
 /data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:52811:8: note: FIX-IT applied suggested code changes
+/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:56073:9: warning: Added loop label VITIS_LOOP_377_1:   [xilinx-label-all-loops]
+        for (int u = 0; u < col_len; ++u) {
+        ^~~
+        VITIS_LOOP_377_1: 
+/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:56073:9: note: FIX-IT applied suggested code changes

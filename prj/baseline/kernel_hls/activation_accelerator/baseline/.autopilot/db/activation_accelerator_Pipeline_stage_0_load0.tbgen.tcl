@@ -14,12 +14,12 @@ set C_modelName {activation_accelerator_Pipeline_stage_0_load0}
 set C_modelType { void 0 }
 set C_modelArgList {
 	{ gmem0 int 16 regular {axi_master 0}  }
-	{ sext_ln1324 int 63 regular  }
+	{ sext_ln471 int 63 regular  }
 	{ buf0 int 16 regular {array 49152 { 0 3 } 0 1 } {global 1}  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "gmem0", "interface" : "axi_master", "bitwidth" : 16, "direction" : "READONLY", "bitSlice":[ {"cElement": [{"cName": "in0","offset": { "type": "dynamic","port_name": "in0","bundle": "control"},"direction": "READONLY"}]}]} , 
- 	{ "Name" : "sext_ln1324", "interface" : "wire", "bitwidth" : 63, "direction" : "READONLY"} , 
+ 	{ "Name" : "sext_ln471", "interface" : "wire", "bitwidth" : 63, "direction" : "READONLY"} , 
  	{ "Name" : "buf0", "interface" : "memory", "bitwidth" : 16, "direction" : "WRITEONLY", "extern" : 0} ]}
 # RTL Port declarations: 
 set portNum 57
@@ -76,7 +76,7 @@ set portList {
 	{ m_axi_gmem0_BRESP sc_in sc_lv 2 signal 0 } 
 	{ m_axi_gmem0_BID sc_in sc_lv 1 signal 0 } 
 	{ m_axi_gmem0_BUSER sc_in sc_lv 1 signal 0 } 
-	{ sext_ln1324 sc_in sc_lv 63 signal 1 } 
+	{ sext_ln471 sc_in sc_lv 63 signal 1 } 
 	{ buf0_address0 sc_out sc_lv 16 signal 2 } 
 	{ buf0_ce0 sc_out sc_logic 1 signal 2 } 
 	{ buf0_we0 sc_out sc_logic 1 signal 2 } 
@@ -135,7 +135,7 @@ set NewPortList {[
  	{ "name": "m_axi_gmem0_BRESP", "direction": "in", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "gmem0", "role": "BRESP" }} , 
  	{ "name": "m_axi_gmem0_BID", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem0", "role": "BID" }} , 
  	{ "name": "m_axi_gmem0_BUSER", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem0", "role": "BUSER" }} , 
- 	{ "name": "sext_ln1324", "direction": "in", "datatype": "sc_lv", "bitwidth":63, "type": "signal", "bundle":{"name": "sext_ln1324", "role": "default" }} , 
+ 	{ "name": "sext_ln471", "direction": "in", "datatype": "sc_lv", "bitwidth":63, "type": "signal", "bundle":{"name": "sext_ln471", "role": "default" }} , 
  	{ "name": "buf0_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "buf0", "role": "address0" }} , 
  	{ "name": "buf0_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "buf0", "role": "ce0" }} , 
  	{ "name": "buf0_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "buf0", "role": "we0" }} , 
@@ -160,7 +160,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "gmem0", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "gmem0_blk_n_R", "Type" : "RtlSignal"}]},
-			{"Name" : "sext_ln1324", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sext_ln471", "Type" : "None", "Direction" : "I"},
 			{"Name" : "buf0", "Type" : "Memory", "Direction" : "O"}],
 		"Loop" : [
 			{"Name" : "stage_0_load0", "PipelineType" : "UPC",
@@ -171,7 +171,7 @@ set RtlHierarchyInfo {[
 set ArgLastReadFirstWriteLatency {
 	activation_accelerator_Pipeline_stage_0_load0 {
 		gmem0 {Type I LastRead 1 FirstWrite -1}
-		sext_ln1324 {Type I LastRead 0 FirstWrite -1}
+		sext_ln471 {Type I LastRead 0 FirstWrite -1}
 		buf0 {Type O LastRead -1 FirstWrite 2}}}
 
 set hasDtUnsupportedChannel 0
@@ -187,6 +187,6 @@ set PipelineEnableSignalInfo {[
 
 set Spec2ImplPortList { 
 	 { m_axi {  { m_axi_gmem0_AWVALID VALID 1 1 }  { m_axi_gmem0_AWREADY READY 0 1 }  { m_axi_gmem0_AWADDR ADDR 1 64 }  { m_axi_gmem0_AWID ID 1 1 }  { m_axi_gmem0_AWLEN SIZE 1 32 }  { m_axi_gmem0_AWSIZE BURST 1 3 }  { m_axi_gmem0_AWBURST LOCK 1 2 }  { m_axi_gmem0_AWLOCK CACHE 1 2 }  { m_axi_gmem0_AWCACHE PROT 1 4 }  { m_axi_gmem0_AWPROT QOS 1 3 }  { m_axi_gmem0_AWQOS REGION 1 4 }  { m_axi_gmem0_AWREGION USER 1 4 }  { m_axi_gmem0_AWUSER DATA 1 1 }  { m_axi_gmem0_WVALID VALID 1 1 }  { m_axi_gmem0_WREADY READY 0 1 }  { m_axi_gmem0_WDATA FIFONUM 1 16 }  { m_axi_gmem0_WSTRB STRB 1 2 }  { m_axi_gmem0_WLAST LAST 1 1 }  { m_axi_gmem0_WID ID 1 1 }  { m_axi_gmem0_WUSER DATA 1 1 }  { m_axi_gmem0_ARVALID VALID 1 1 }  { m_axi_gmem0_ARREADY READY 0 1 }  { m_axi_gmem0_ARADDR ADDR 1 64 }  { m_axi_gmem0_ARID ID 1 1 }  { m_axi_gmem0_ARLEN SIZE 1 32 }  { m_axi_gmem0_ARSIZE BURST 1 3 }  { m_axi_gmem0_ARBURST LOCK 1 2 }  { m_axi_gmem0_ARLOCK CACHE 1 2 }  { m_axi_gmem0_ARCACHE PROT 1 4 }  { m_axi_gmem0_ARPROT QOS 1 3 }  { m_axi_gmem0_ARQOS REGION 1 4 }  { m_axi_gmem0_ARREGION USER 1 4 }  { m_axi_gmem0_ARUSER DATA 1 1 }  { m_axi_gmem0_RVALID VALID 0 1 }  { m_axi_gmem0_RREADY READY 1 1 }  { m_axi_gmem0_RDATA FIFONUM 0 16 }  { m_axi_gmem0_RLAST LAST 0 1 }  { m_axi_gmem0_RID ID 0 1 }  { m_axi_gmem0_RFIFONUM LEN 0 10 }  { m_axi_gmem0_RUSER DATA 0 1 }  { m_axi_gmem0_RRESP RESP 0 2 }  { m_axi_gmem0_BVALID VALID 0 1 }  { m_axi_gmem0_BREADY READY 1 1 }  { m_axi_gmem0_BRESP RESP 0 2 }  { m_axi_gmem0_BID ID 0 1 }  { m_axi_gmem0_BUSER DATA 0 1 } } }
-	sext_ln1324 { ap_none {  { sext_ln1324 in_data 0 63 } } }
+	sext_ln471 { ap_none {  { sext_ln471 in_data 0 63 } } }
 	buf0 { ap_memory {  { buf0_address0 mem_address 1 16 }  { buf0_ce0 mem_ce 1 1 }  { buf0_we0 mem_we 1 1 }  { buf0_d0 mem_din 1 16 } } }
 }

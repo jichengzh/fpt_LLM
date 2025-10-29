@@ -1,474 +1,23 @@
 --- !Passed
-Pass:            inline
-Name:            AlwaysInline
-DebugLoc:        { File: '/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/expfloat.cpp', 
-                   Line: 22, Column: 9 }
-Function:        _ZN3hls4expfEf
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'exp_reduce_::exp(float)'
-    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/common/hls_exp_float.cpp, 
-                       Line: 15, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'hls::expf(float)'
-    DebugLoc:        { File: '/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/expfloat.cpp', 
-                       Line: 20, Column: 0 }
-  - String:          ''''
-...
---- !Passed
-Pass:            inline
-Name:            AlwaysInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 1164, Column: 39 }
-Function:        _ZL18row_exp_bucket_sumILi64EEfPKfifPf
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'hls::expf(float)'
-    DebugLoc:        { File: '/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/expfloat.cpp', 
-                       Line: 20, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'float row_exp_bucket_sum<64>(float const*, int, float, float*)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 1138, Column: 0 }
-  - String:          ''''
-...
---- !Passed
-Pass:            inline
-Name:            AlwaysInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 1236, Column: 18 }
-Function:        _Z19float_safe_softmax3ILi64EEvPKfPtii
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'float row_max_hls<64>(float const*, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 1098, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'void float_safe_softmax3<64>(float const*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 1215, Column: 0 }
-  - String:          ''''
-...
---- !Passed
-Pass:            inline
-Name:            AlwaysInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 1238, Column: 17 }
-Function:        _Z19float_safe_softmax3ILi64EEvPKfPtii
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'float row_exp_bucket_sum<64>(float const*, int, float, float*)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 1138, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'void float_safe_softmax3<64>(float const*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 1215, Column: 0 }
-  - String:          ''''
-...
---- !Passed
-Pass:            inline
-Name:            AlwaysInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 1240, Column: 5 }
-Function:        _Z19float_safe_softmax3ILi64EEvPKfPtii
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'void row_norm_store_hls<64>(float const*, float, unsigned short*, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 1190, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'void float_safe_softmax3<64>(float const*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 1215, Column: 0 }
-  - String:          ''''
-...
---- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 1215, Column: 0 }
-Function:        _Z19float_safe_softmax3ILi64EEvPKfPtii
+DebugLoc:        { File: activation_accelerator.cpp, Line: 88, Column: 0 }
+Function:        _Z11float_silu2PKfPti
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        lane_loop
+  - LoopName:        silu_inner
   - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:1203:9'
+  - LoopLoc:         'activation_accelerator.cpp:100:9'
   - String:          ') '
   - String:          'in function '''
-  - String:          'float_safe_softmax3<64>'
+  - String:          float_silu2
   - String:          ''' completely with a factor of '
   - Factor:          '64'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 1215, Column: 0 }
-Function:        _Z19float_safe_softmax3ILi64EEvPKfPtii
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        reduce_partial
-  - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:1181:5'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          'float_safe_softmax3<64>'
-  - String:          ''' completely with a factor of '
-  - Factor:          '64'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 1215, Column: 0 }
-Function:        _Z19float_safe_softmax3ILi64EEvPKfPtii
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        exp_inner
-  - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:1161:9'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          'float_safe_softmax3<64>'
-  - String:          ''' completely with a factor of '
-  - Factor:          '64'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 1215, Column: 0 }
-Function:        _Z19float_safe_softmax3ILi64EEvPKfPtii
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        bucket_add
-  - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:1171:9'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          'float_safe_softmax3<64>'
-  - String:          ''' completely with a factor of '
-  - Factor:          '65'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 1215, Column: 0 }
-Function:        _Z19float_safe_softmax3ILi64EEvPKfPtii
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        final_reduce
-  - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:1130:5'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          'float_safe_softmax3<64>'
-  - String:          ''' completely with a factor of '
-  - Factor:          '63'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 1215, Column: 0 }
-Function:        _Z19float_safe_softmax3ILi64EEvPKfPtii
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        lane_reduce
-  - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:1118:9'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          'float_safe_softmax3<64>'
-  - String:          ''' completely with a factor of '
-  - Factor:          '64'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 1215, Column: 0 }
-Function:        _Z19float_safe_softmax3ILi64EEvPKfPtii
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        init_lane_max
-  - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:1107:5'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          'float_safe_softmax3<64>'
-  - String:          ''' completely with a factor of '
-  - Factor:          '64'
-...
---- !Passed
-Pass:            reflow-inliner
-Name:            AutoInline
-DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h, 
-                   Line: 16, Column: 0 }
-Function:        _Z13generic_isnanIfEiT_
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'fp_struct<float>::fp_struct(float)'
-    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
-                       Line: 312, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'int generic_isnan<float>(float)'
-    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h, 
-                       Line: 16, Column: 0 }
-  - String:          ''''
-...
---- !Passed
-Pass:            reflow-inliner
-Name:            AutoInline
-DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
-                   Line: 351, Column: 0 }
-Function:        _ZNK9fp_structIfE8to_floatEv
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'fp_struct<float>::data() const (.48.55.61.69.75.83.89.97.103.111)'
-    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
-                       Line: 338, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'fp_struct<float>::to_float() const'
-    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
-                       Line: 351, Column: 0 }
-  - String:          ''''
-...
---- !Passed
-Pass:            reflow-inliner
-Name:            AutoInline
-DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
-                   Line: 375, Column: 0 }
-Function:        _ZNK9fp_structIfE7to_ieeeEv
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'fp_struct<float>::to_float() const'
-    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
-                       Line: 351, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'fp_struct<float>::to_ieee() const'
-    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
-                       Line: 375, Column: 0 }
-  - String:          ''''
-...
---- !Passed
-Pass:            reflow-inliner
-Name:            AutoInline
-DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
-                   Line: 348, Column: 0 }
-Function:        _ZNK9fp_structIfE6to_intEv
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'fp_struct<float>::data() const (.48.55.61.69.75.83.89.97.103.111)'
-    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
-                       Line: 338, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'fp_struct<float>::to_int() const'
-    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
-                       Line: 348, Column: 0 }
-  - String:          ''''
-...
---- !Passed
-Pass:            reflow-inliner
-Name:            AutoInline
-DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmax.h, 
-                   Line: 20, Column: 0 }
-Function:        _Z12generic_fmaxIfET_S0_S0_
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'fp_struct<float>::fp_struct(float)'
-    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
-                       Line: 312, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'float generic_fmax<float>(float, float)'
-    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmax.h, 
-                       Line: 20, Column: 0 }
-  - String:          ''''
-...
---- !Passed
-Pass:            reflow-inliner
-Name:            AutoInline
-DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmax.h, 
-                   Line: 20, Column: 0 }
-Function:        _Z12generic_fmaxIfET_S0_S0_
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'int generic_isnan<float>(float)'
-    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h, 
-                       Line: 16, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'float generic_fmax<float>(float, float)'
-    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmax.h, 
-                       Line: 20, Column: 0 }
-  - String:          ''''
-...
---- !Passed
-Pass:            reflow-inliner
-Name:            AutoInline
-DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmax.h, 
-                   Line: 20, Column: 0 }
-Function:        _Z12generic_fmaxIfET_S0_S0_
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'fp_struct<float>::to_ieee() const'
-    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
-                       Line: 375, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'float generic_fmax<float>(float, float)'
-    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmax.h, 
-                       Line: 20, Column: 0 }
-  - String:          ''''
-...
---- !Passed
-Pass:            reflow-inliner
-Name:            AutoInline
-DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmax.h, 
-                   Line: 20, Column: 0 }
-Function:        _Z12generic_fmaxIfET_S0_S0_
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'fp_struct<float>::to_int() const'
-    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
-                       Line: 348, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'float generic_fmax<float>(float, float)'
-    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmax.h, 
-                       Line: 20, Column: 0 }
-  - String:          ''''
-...
---- !Passed
-Pass:            reflow-inliner
-Name:            AutoInline
-DebugLoc:        { File: '/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
-                   Line: 10, Column: 0 }
-Function:        _ZN3hls5fmaxfEff
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'hls::fmax(float, float)'
-    DebugLoc:        { File: '/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
-                       Line: 6, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'hls::fmaxf(float, float)'
-    DebugLoc:        { File: '/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
-                       Line: 10, Column: 0 }
-  - String:          ''''
-...
---- !Passed
-Pass:            reflow-inliner
-Name:            AutoInline
-DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
-                   Line: 65, Column: 0 }
-Function:        _Z20generic_cast_IEEE754ItL9ap_q_mode6EfET_T1_bN3hls9enable_ifIXntsr3std14numeric_limitsIS1_EE9is_signedEbE4typeE
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'fp_struct<float>::fp_struct(float)'
-    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
-                       Line: 312, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'unsigned short generic_cast_IEEE754<unsigned short, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned short>::is_signed), bool>::type)'
-    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
-                       Line: 65, Column: 0 }
-  - String:          ''''
-...
---- !Passed
-Pass:            reflow-inliner
-Name:            AutoInline
-DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
-                   Line: 65, Column: 0 }
-Function:        _Z20generic_cast_IEEE754ItL9ap_q_mode6EfET_T1_bN3hls9enable_ifIXntsr3std14numeric_limitsIS1_EE9is_signedEbE4typeE
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'fp_struct<float>::mantissa() const'
-    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
-                       Line: 369, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'unsigned short generic_cast_IEEE754<unsigned short, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned short>::is_signed), bool>::type)'
-    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
-                       Line: 65, Column: 0 }
-  - String:          ''''
-...
---- !Passed
-Pass:            reflow-inliner
-Name:            AutoInline
-DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
-                   Line: 65, Column: 0 }
-Function:        _Z20generic_cast_IEEE754ItL9ap_q_mode6EfET_T1_bN3hls9enable_ifIXntsr3std14numeric_limitsIS1_EE9is_signedEbE4typeE
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'fp_struct<float>::expv() const'
-    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
-                       Line: 345, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'unsigned short generic_cast_IEEE754<unsigned short, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned short>::is_signed), bool>::type)'
-    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
-                       Line: 65, Column: 0 }
-  - String:          ''''
-...
---- !Passed
-Pass:            reflow-inliner
-Name:            AutoInline
-DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
-                   Line: 116, Column: 0 }
-Function:        _Z20generic_cast_IEEE754ItfET_T0_b
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'unsigned short generic_cast_IEEE754<unsigned short, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned short>::is_signed), bool>::type)'
-    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
-                       Line: 65, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'unsigned short generic_cast_IEEE754<unsigned short, float>(float, bool)'
-    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
-                       Line: 116, Column: 0 }
-  - String:          ''''
-...
---- !Passed
-Pass:            reflow-inliner
-Name:            AutoInline
-DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp, 
-                   Line: 64, Column: 0 }
-Function:        __hls_fptoui_float_i16
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'unsigned short generic_cast_IEEE754<unsigned short, float>(float, bool)'
-    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
-                       Line: 116, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          __hls_fptoui_float_i16
-    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp, 
-                       Line: 64, Column: 0 }
-  - String:          ''''
-...
---- !Passed
-Pass:            reflow-inliner
-Name:            AutoInline
-DebugLoc:        { File: ./bf16_accl.h, Line: 114, Column: 0 }
-Function:        _ZL12bf16add_fasttt
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'pack_bf16(unsigned short, unsigned short, unsigned short)'
-    DebugLoc:        { File: ./bf16_accl.h, Line: 22, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'bf16add_fast(unsigned short, unsigned short)'
-    DebugLoc:        { File: ./bf16_accl.h, Line: 114, Column: 0 }
-  - String:          ''''
-...
---- !Passed
-Pass:            reflow-inliner
-Name:            AutoInline
-DebugLoc:        { File: ./bf16_accl.h, Line: 114, Column: 0 }
-Function:        _ZL12bf16add_fasttt
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'clz32(unsigned int)'
-    DebugLoc:        { File: ./bf16_accl.h, Line: 20, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'bf16add_fast(unsigned short, unsigned short)'
-    DebugLoc:        { File: ./bf16_accl.h, Line: 114, Column: 0 }
-  - String:          ''''
-...
---- !Passed
-Pass:            reflow-inliner
-Name:            AutoInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 1215, Column: 0 }
-Function:        _Z19float_safe_softmax3ILi64EEvPKfPtii
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          __hls_fptoui_float_i16
-    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp, 
-                       Line: 64, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'void float_safe_softmax3<64>(float const*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 1215, Column: 0 }
-  - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: activation_accelerator.cpp, Line: 1313, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 442, Column: 0 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Applying '
@@ -488,27 +37,7 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: activation_accelerator.cpp, Line: 1220, Column: 8 }
-Function:        _Z19float_safe_softmax3ILi64EEvPKfPtii
-Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          exp_x
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Cyclic
-  - String:          ' partitioning'
-  - String:          ' with factor '
-  - Factor:          '64'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
-...
---- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-DebugLoc:        { File: activation_accelerator.cpp, Line: 1314, Column: 11 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 443, Column: 11 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Applying '
@@ -528,7 +57,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: activation_accelerator.cpp, Line: 1324, Column: 9 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 471, Column: 9 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Sequential '
@@ -548,16 +77,16 @@ Args:
   - String:          ' '
   - LoopName:        stage_0_load0
   - String:          ' '
-  - LoopLoc:         'activation_accelerator.cpp:1324:9'
+  - LoopLoc:         'activation_accelerator.cpp:471:9'
   - String:          ' '
   - Function:        'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 1303, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 432, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: activation_accelerator.cpp, Line: 1380, Column: 9 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 542, Column: 9 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Sequential '
@@ -577,16 +106,34 @@ Args:
   - String:          ' '
   - LoopName:        stage_2_store
   - String:          ' '
-  - LoopLoc:         'activation_accelerator.cpp:1380:9'
+  - LoopLoc:         'activation_accelerator.cpp:542:9'
   - String:          ' '
   - Function:        'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 1303, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 432, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: activation_accelerator.cpp, Line: 466, Column: 20 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        entry.store.409
+  - String:          ' '
+  - ArrayName:       anchor_reg
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 432, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: activation_accelerator.cpp, Line: 1324, Column: 9 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 471, Column: 9 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Could not widen since type '
@@ -602,16 +149,16 @@ Args:
   - String:          ' '
   - LoopName:        stage_0_load0
   - String:          ' '
-  - LoopLoc:         'activation_accelerator.cpp:1324:9'
+  - LoopLoc:         'activation_accelerator.cpp:471:9'
   - String:          ' '
   - Function:        'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 1303, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 432, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: activation_accelerator.cpp, Line: 1380, Column: 9 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 542, Column: 9 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Could not widen since type '
@@ -627,16 +174,16 @@ Args:
   - String:          ' '
   - LoopName:        stage_2_store
   - String:          ' '
-  - LoopLoc:         'activation_accelerator.cpp:1380:9'
+  - LoopLoc:         'activation_accelerator.cpp:542:9'
   - String:          ' '
   - Function:        'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 1303, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 432, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: activation_accelerator.cpp, Line: 1324, Column: 9 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 471, Column: 9 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Multiple burst '
@@ -656,16 +203,16 @@ Args:
   - String:          ' '
   - LoopName:        stage_0_load0
   - String:          ' '
-  - LoopLoc:         'activation_accelerator.cpp:1324:9'
+  - LoopLoc:         'activation_accelerator.cpp:471:9'
   - String:          ' '
   - Function:        'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 1303, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 432, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: activation_accelerator.cpp, Line: 1324, Column: 9 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 471, Column: 9 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Multiple burst '
@@ -677,7 +224,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        stage_0_load0
   - String:          '''('
-  - LoopLoc:         'activation_accelerator.cpp:1324:9'
+  - LoopLoc:         'activation_accelerator.cpp:471:9'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem0
@@ -687,7 +234,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: activation_accelerator.cpp, Line: 1380, Column: 9 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 542, Column: 9 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Multiple burst '
@@ -707,16 +254,16 @@ Args:
   - String:          ' '
   - LoopName:        stage_2_store
   - String:          ' '
-  - LoopLoc:         'activation_accelerator.cpp:1380:9'
+  - LoopLoc:         'activation_accelerator.cpp:542:9'
   - String:          ' '
   - Function:        'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 1303, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 432, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: activation_accelerator.cpp, Line: 1380, Column: 9 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 542, Column: 9 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Multiple burst '
@@ -728,7 +275,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        stage_2_store
   - String:          '''('
-  - LoopLoc:         'activation_accelerator.cpp:1380:9'
+  - LoopLoc:         'activation_accelerator.cpp:542:9'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem2

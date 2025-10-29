@@ -407,7 +407,7 @@ for.inc.split:0 %phi_urem_load_1 = load i16 %phi_urem
 
 <Node id="84" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc.split:3 %specloopname_ln49 = specloopname void @_ssdm_op_SpecLoopName, void @empty_16
+for.inc.split:3 %specloopname_ln49 = specloopname void @_ssdm_op_SpecLoopName, void @empty_12
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln49"/></StgValue>
@@ -3418,7 +3418,7 @@ arrayidx21.case.1:1 %br_ln51 = br void %arrayidx21.exit
 </operation>
 
 <operation id="221" st_id="3" stage="1" lat="1">
-<core>RAM_1WnR</core>
+<core>RAM</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp><literal name="trunc_ln" val="0"/>

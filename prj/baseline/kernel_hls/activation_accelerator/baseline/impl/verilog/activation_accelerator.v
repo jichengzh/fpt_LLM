@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="activation_accelerator_activation_accelerator,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xck26-sfvc784-2LV-c,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.331000,HLS_SYN_LAT=30795,HLS_SYN_TPT=none,HLS_SYN_MEM=333,HLS_SYN_DSP=0,HLS_SYN_FF=34387,HLS_SYN_LUT=61000,HLS_VERSION=2022_2}" *)
+(* CORE_GENERATION_INFO="activation_accelerator_activation_accelerator,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xck26-sfvc784-2LV-c,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=30826,HLS_SYN_TPT=none,HLS_SYN_MEM=238,HLS_SYN_DSP=0,HLS_SYN_FF=49887,HLS_SYN_LUT=97829,HLS_VERSION=2022_2}" *)
 
 module activation_accelerator (
         ap_clk,
@@ -405,446 +405,1384 @@ reg   [15:0] buf0_address0;
 reg    buf0_ce0;
 reg    buf0_we0;
 wire   [15:0] buf0_q0;
+reg   [9:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0;
+wire   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_q0;
+reg   [9:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0;
+wire   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_q0;
+reg   [9:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0;
+wire   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_q0;
+reg   [9:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0;
+wire   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_q0;
+reg   [9:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0;
+wire   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_q0;
+reg   [9:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0;
+wire   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_q0;
+reg   [9:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0;
+wire   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_q0;
+reg   [9:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0;
+wire   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_q0;
+reg   [9:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0;
+reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0;
+wire   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_q0;
 reg   [9:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0;
 reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0;
 reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0;
 wire   [15:0] activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_q0;
-reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1;
-reg    activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_q0;
+reg   [9:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_address0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_ce0;
+reg    p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_we0;
+wire   [15:0] p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_q0;
 reg    gmem0_blk_n_AR;
 wire    ap_CS_fsm_state13;
 reg    gmem2_blk_n_AW;
 wire    ap_CS_fsm_state2;
 reg    gmem2_blk_n_B;
 wire    ap_CS_fsm_state9;
-wire   [31:0] stage_read_read_fu_356_p2;
-reg   [31:0] stage_read_reg_594;
-reg   [62:0] trunc_ln3_reg_598;
-wire   [0:0] icmp_ln1343_fu_558_p2;
-reg   [0:0] icmp_ln1343_reg_604;
-reg   [62:0] trunc_ln_reg_608;
+wire   [31:0] stage_read_read_fu_498_p2;
+reg   [31:0] stage_read_reg_1051;
+reg   [62:0] trunc_ln1_reg_1055;
+wire   [0:0] icmp_ln484_fu_1015_p2;
+reg   [0:0] icmp_ln484_reg_1061;
+reg   [62:0] trunc_ln_reg_1065;
 reg   [9:0] x_address0;
 reg    x_ce0;
 reg    x_we0;
 wire   [31:0] x_q0;
-reg    x_ce1;
-wire   [31:0] x_q1;
-reg    x_ce2;
-wire   [31:0] x_q2;
-reg    x_ce3;
-wire   [31:0] x_q3;
-reg    x_ce4;
-wire   [31:0] x_q4;
-reg    x_ce5;
-wire   [31:0] x_q5;
-reg    x_ce6;
-wire   [31:0] x_q6;
-reg    x_ce7;
-wire   [31:0] x_q7;
-reg    x_ce8;
-wire   [31:0] x_q8;
-reg    x_ce9;
-wire   [31:0] x_q9;
-reg    x_ce10;
-wire   [31:0] x_q10;
-reg    x_ce11;
-wire   [31:0] x_q11;
-reg    x_ce12;
-wire   [31:0] x_q12;
-reg    x_ce13;
-wire   [31:0] x_q13;
-reg    x_ce14;
-wire   [31:0] x_q14;
-reg    x_ce15;
-wire   [31:0] x_q15;
-reg    x_ce16;
-wire   [31:0] x_q16;
-wire    grp_bf16_to_float_fu_389_ap_start;
-wire    grp_bf16_to_float_fu_389_ap_done;
-wire    grp_bf16_to_float_fu_389_ap_idle;
-wire    grp_bf16_to_float_fu_389_ap_ready;
-wire   [9:0] grp_bf16_to_float_fu_389_out_0_address0;
-wire    grp_bf16_to_float_fu_389_out_0_ce0;
-wire    grp_bf16_to_float_fu_389_out_0_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_0_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_1_address0;
-wire    grp_bf16_to_float_fu_389_out_1_ce0;
-wire    grp_bf16_to_float_fu_389_out_1_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_1_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_2_address0;
-wire    grp_bf16_to_float_fu_389_out_2_ce0;
-wire    grp_bf16_to_float_fu_389_out_2_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_2_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_3_address0;
-wire    grp_bf16_to_float_fu_389_out_3_ce0;
-wire    grp_bf16_to_float_fu_389_out_3_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_3_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_4_address0;
-wire    grp_bf16_to_float_fu_389_out_4_ce0;
-wire    grp_bf16_to_float_fu_389_out_4_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_4_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_5_address0;
-wire    grp_bf16_to_float_fu_389_out_5_ce0;
-wire    grp_bf16_to_float_fu_389_out_5_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_5_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_6_address0;
-wire    grp_bf16_to_float_fu_389_out_6_ce0;
-wire    grp_bf16_to_float_fu_389_out_6_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_6_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_7_address0;
-wire    grp_bf16_to_float_fu_389_out_7_ce0;
-wire    grp_bf16_to_float_fu_389_out_7_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_7_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_8_address0;
-wire    grp_bf16_to_float_fu_389_out_8_ce0;
-wire    grp_bf16_to_float_fu_389_out_8_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_8_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_9_address0;
-wire    grp_bf16_to_float_fu_389_out_9_ce0;
-wire    grp_bf16_to_float_fu_389_out_9_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_9_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_10_address0;
-wire    grp_bf16_to_float_fu_389_out_10_ce0;
-wire    grp_bf16_to_float_fu_389_out_10_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_10_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_11_address0;
-wire    grp_bf16_to_float_fu_389_out_11_ce0;
-wire    grp_bf16_to_float_fu_389_out_11_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_11_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_12_address0;
-wire    grp_bf16_to_float_fu_389_out_12_ce0;
-wire    grp_bf16_to_float_fu_389_out_12_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_12_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_13_address0;
-wire    grp_bf16_to_float_fu_389_out_13_ce0;
-wire    grp_bf16_to_float_fu_389_out_13_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_13_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_14_address0;
-wire    grp_bf16_to_float_fu_389_out_14_ce0;
-wire    grp_bf16_to_float_fu_389_out_14_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_14_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_15_address0;
-wire    grp_bf16_to_float_fu_389_out_15_ce0;
-wire    grp_bf16_to_float_fu_389_out_15_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_15_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_16_address0;
-wire    grp_bf16_to_float_fu_389_out_16_ce0;
-wire    grp_bf16_to_float_fu_389_out_16_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_16_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_17_address0;
-wire    grp_bf16_to_float_fu_389_out_17_ce0;
-wire    grp_bf16_to_float_fu_389_out_17_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_17_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_18_address0;
-wire    grp_bf16_to_float_fu_389_out_18_ce0;
-wire    grp_bf16_to_float_fu_389_out_18_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_18_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_19_address0;
-wire    grp_bf16_to_float_fu_389_out_19_ce0;
-wire    grp_bf16_to_float_fu_389_out_19_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_19_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_20_address0;
-wire    grp_bf16_to_float_fu_389_out_20_ce0;
-wire    grp_bf16_to_float_fu_389_out_20_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_20_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_21_address0;
-wire    grp_bf16_to_float_fu_389_out_21_ce0;
-wire    grp_bf16_to_float_fu_389_out_21_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_21_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_22_address0;
-wire    grp_bf16_to_float_fu_389_out_22_ce0;
-wire    grp_bf16_to_float_fu_389_out_22_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_22_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_23_address0;
-wire    grp_bf16_to_float_fu_389_out_23_ce0;
-wire    grp_bf16_to_float_fu_389_out_23_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_23_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_24_address0;
-wire    grp_bf16_to_float_fu_389_out_24_ce0;
-wire    grp_bf16_to_float_fu_389_out_24_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_24_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_25_address0;
-wire    grp_bf16_to_float_fu_389_out_25_ce0;
-wire    grp_bf16_to_float_fu_389_out_25_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_25_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_26_address0;
-wire    grp_bf16_to_float_fu_389_out_26_ce0;
-wire    grp_bf16_to_float_fu_389_out_26_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_26_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_27_address0;
-wire    grp_bf16_to_float_fu_389_out_27_ce0;
-wire    grp_bf16_to_float_fu_389_out_27_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_27_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_28_address0;
-wire    grp_bf16_to_float_fu_389_out_28_ce0;
-wire    grp_bf16_to_float_fu_389_out_28_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_28_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_29_address0;
-wire    grp_bf16_to_float_fu_389_out_29_ce0;
-wire    grp_bf16_to_float_fu_389_out_29_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_29_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_30_address0;
-wire    grp_bf16_to_float_fu_389_out_30_ce0;
-wire    grp_bf16_to_float_fu_389_out_30_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_30_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_31_address0;
-wire    grp_bf16_to_float_fu_389_out_31_ce0;
-wire    grp_bf16_to_float_fu_389_out_31_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_31_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_32_address0;
-wire    grp_bf16_to_float_fu_389_out_32_ce0;
-wire    grp_bf16_to_float_fu_389_out_32_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_32_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_33_address0;
-wire    grp_bf16_to_float_fu_389_out_33_ce0;
-wire    grp_bf16_to_float_fu_389_out_33_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_33_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_34_address0;
-wire    grp_bf16_to_float_fu_389_out_34_ce0;
-wire    grp_bf16_to_float_fu_389_out_34_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_34_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_35_address0;
-wire    grp_bf16_to_float_fu_389_out_35_ce0;
-wire    grp_bf16_to_float_fu_389_out_35_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_35_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_36_address0;
-wire    grp_bf16_to_float_fu_389_out_36_ce0;
-wire    grp_bf16_to_float_fu_389_out_36_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_36_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_37_address0;
-wire    grp_bf16_to_float_fu_389_out_37_ce0;
-wire    grp_bf16_to_float_fu_389_out_37_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_37_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_38_address0;
-wire    grp_bf16_to_float_fu_389_out_38_ce0;
-wire    grp_bf16_to_float_fu_389_out_38_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_38_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_39_address0;
-wire    grp_bf16_to_float_fu_389_out_39_ce0;
-wire    grp_bf16_to_float_fu_389_out_39_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_39_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_40_address0;
-wire    grp_bf16_to_float_fu_389_out_40_ce0;
-wire    grp_bf16_to_float_fu_389_out_40_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_40_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_41_address0;
-wire    grp_bf16_to_float_fu_389_out_41_ce0;
-wire    grp_bf16_to_float_fu_389_out_41_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_41_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_42_address0;
-wire    grp_bf16_to_float_fu_389_out_42_ce0;
-wire    grp_bf16_to_float_fu_389_out_42_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_42_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_43_address0;
-wire    grp_bf16_to_float_fu_389_out_43_ce0;
-wire    grp_bf16_to_float_fu_389_out_43_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_43_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_44_address0;
-wire    grp_bf16_to_float_fu_389_out_44_ce0;
-wire    grp_bf16_to_float_fu_389_out_44_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_44_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_45_address0;
-wire    grp_bf16_to_float_fu_389_out_45_ce0;
-wire    grp_bf16_to_float_fu_389_out_45_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_45_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_46_address0;
-wire    grp_bf16_to_float_fu_389_out_46_ce0;
-wire    grp_bf16_to_float_fu_389_out_46_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_46_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_47_address0;
-wire    grp_bf16_to_float_fu_389_out_47_ce0;
-wire    grp_bf16_to_float_fu_389_out_47_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_47_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_48_address0;
-wire    grp_bf16_to_float_fu_389_out_48_ce0;
-wire    grp_bf16_to_float_fu_389_out_48_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_48_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_49_address0;
-wire    grp_bf16_to_float_fu_389_out_49_ce0;
-wire    grp_bf16_to_float_fu_389_out_49_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_49_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_50_address0;
-wire    grp_bf16_to_float_fu_389_out_50_ce0;
-wire    grp_bf16_to_float_fu_389_out_50_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_50_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_51_address0;
-wire    grp_bf16_to_float_fu_389_out_51_ce0;
-wire    grp_bf16_to_float_fu_389_out_51_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_51_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_52_address0;
-wire    grp_bf16_to_float_fu_389_out_52_ce0;
-wire    grp_bf16_to_float_fu_389_out_52_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_52_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_53_address0;
-wire    grp_bf16_to_float_fu_389_out_53_ce0;
-wire    grp_bf16_to_float_fu_389_out_53_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_53_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_54_address0;
-wire    grp_bf16_to_float_fu_389_out_54_ce0;
-wire    grp_bf16_to_float_fu_389_out_54_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_54_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_55_address0;
-wire    grp_bf16_to_float_fu_389_out_55_ce0;
-wire    grp_bf16_to_float_fu_389_out_55_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_55_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_56_address0;
-wire    grp_bf16_to_float_fu_389_out_56_ce0;
-wire    grp_bf16_to_float_fu_389_out_56_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_56_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_57_address0;
-wire    grp_bf16_to_float_fu_389_out_57_ce0;
-wire    grp_bf16_to_float_fu_389_out_57_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_57_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_58_address0;
-wire    grp_bf16_to_float_fu_389_out_58_ce0;
-wire    grp_bf16_to_float_fu_389_out_58_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_58_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_59_address0;
-wire    grp_bf16_to_float_fu_389_out_59_ce0;
-wire    grp_bf16_to_float_fu_389_out_59_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_59_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_60_address0;
-wire    grp_bf16_to_float_fu_389_out_60_ce0;
-wire    grp_bf16_to_float_fu_389_out_60_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_60_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_61_address0;
-wire    grp_bf16_to_float_fu_389_out_61_ce0;
-wire    grp_bf16_to_float_fu_389_out_61_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_61_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_62_address0;
-wire    grp_bf16_to_float_fu_389_out_62_ce0;
-wire    grp_bf16_to_float_fu_389_out_62_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_62_d0;
-wire   [9:0] grp_bf16_to_float_fu_389_out_63_address0;
-wire    grp_bf16_to_float_fu_389_out_63_ce0;
-wire    grp_bf16_to_float_fu_389_out_63_we0;
-wire   [31:0] grp_bf16_to_float_fu_389_out_63_d0;
-wire   [15:0] grp_bf16_to_float_fu_389_buf0_address0;
-wire    grp_bf16_to_float_fu_389_buf0_ce0;
-wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_523_ap_start;
-wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_523_ap_done;
-wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_523_ap_idle;
-wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_523_ap_ready;
-wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_AWVALID;
-wire   [63:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_AWADDR;
-wire   [0:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_AWID;
-wire   [31:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_AWLEN;
-wire   [2:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_AWSIZE;
-wire   [1:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_AWBURST;
-wire   [1:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_AWLOCK;
-wire   [3:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_AWCACHE;
-wire   [2:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_AWPROT;
-wire   [3:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_AWQOS;
-wire   [3:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_AWREGION;
-wire   [0:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_AWUSER;
-wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_WVALID;
-wire   [15:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_WDATA;
-wire   [1:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_WSTRB;
-wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_WLAST;
-wire   [0:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_WID;
-wire   [0:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_WUSER;
-wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_ARVALID;
-wire   [63:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_ARADDR;
-wire   [0:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_ARID;
-wire   [31:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_ARLEN;
-wire   [2:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_ARSIZE;
-wire   [1:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_ARBURST;
-wire   [1:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_ARLOCK;
-wire   [3:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_ARCACHE;
-wire   [2:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_ARPROT;
-wire   [3:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_ARQOS;
-wire   [3:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_ARREGION;
-wire   [0:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_ARUSER;
-wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_RREADY;
-wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_BREADY;
-wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_523_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0;
-wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_523_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0;
-wire    grp_float_safe_softmax3_64_s_fu_532_ap_start;
-wire    grp_float_safe_softmax3_64_s_fu_532_ap_done;
-wire    grp_float_safe_softmax3_64_s_fu_532_ap_idle;
-wire    grp_float_safe_softmax3_64_s_fu_532_ap_ready;
-wire   [9:0] grp_float_safe_softmax3_64_s_fu_532_x_0_address0;
-wire    grp_float_safe_softmax3_64_s_fu_532_x_0_ce0;
-wire   [9:0] grp_float_safe_softmax3_64_s_fu_532_x_0_address1;
-wire    grp_float_safe_softmax3_64_s_fu_532_x_0_ce1;
-wire   [9:0] grp_float_safe_softmax3_64_s_fu_532_x_0_address2;
-wire    grp_float_safe_softmax3_64_s_fu_532_x_0_ce2;
-wire   [9:0] grp_float_safe_softmax3_64_s_fu_532_x_0_address3;
-wire    grp_float_safe_softmax3_64_s_fu_532_x_0_ce3;
-wire   [9:0] grp_float_safe_softmax3_64_s_fu_532_x_0_address4;
-wire    grp_float_safe_softmax3_64_s_fu_532_x_0_ce4;
-wire   [9:0] grp_float_safe_softmax3_64_s_fu_532_x_0_address5;
-wire    grp_float_safe_softmax3_64_s_fu_532_x_0_ce5;
-wire   [9:0] grp_float_safe_softmax3_64_s_fu_532_x_0_address6;
-wire    grp_float_safe_softmax3_64_s_fu_532_x_0_ce6;
-wire   [9:0] grp_float_safe_softmax3_64_s_fu_532_x_0_address7;
-wire    grp_float_safe_softmax3_64_s_fu_532_x_0_ce7;
-wire   [9:0] grp_float_safe_softmax3_64_s_fu_532_x_0_address8;
-wire    grp_float_safe_softmax3_64_s_fu_532_x_0_ce8;
-wire   [9:0] grp_float_safe_softmax3_64_s_fu_532_x_0_address9;
-wire    grp_float_safe_softmax3_64_s_fu_532_x_0_ce9;
-wire   [9:0] grp_float_safe_softmax3_64_s_fu_532_x_0_address10;
-wire    grp_float_safe_softmax3_64_s_fu_532_x_0_ce10;
-wire   [9:0] grp_float_safe_softmax3_64_s_fu_532_x_0_address11;
-wire    grp_float_safe_softmax3_64_s_fu_532_x_0_ce11;
-wire   [9:0] grp_float_safe_softmax3_64_s_fu_532_x_0_address12;
-wire    grp_float_safe_softmax3_64_s_fu_532_x_0_ce12;
-wire   [9:0] grp_float_safe_softmax3_64_s_fu_532_x_0_address13;
-wire    grp_float_safe_softmax3_64_s_fu_532_x_0_ce13;
-wire   [9:0] grp_float_safe_softmax3_64_s_fu_532_x_0_address14;
-wire    grp_float_safe_softmax3_64_s_fu_532_x_0_ce14;
-wire   [9:0] grp_float_safe_softmax3_64_s_fu_532_x_0_address15;
-wire    grp_float_safe_softmax3_64_s_fu_532_x_0_ce15;
-wire   [9:0] grp_float_safe_softmax3_64_s_fu_532_x_0_address16;
-wire    grp_float_safe_softmax3_64_s_fu_532_x_0_ce16;
-wire   [9:0] grp_float_safe_softmax3_64_s_fu_532_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0;
-wire    grp_float_safe_softmax3_64_s_fu_532_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0;
-wire    grp_float_safe_softmax3_64_s_fu_532_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0;
-wire   [15:0] grp_float_safe_softmax3_64_s_fu_532_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0;
-wire   [9:0] grp_float_safe_softmax3_64_s_fu_532_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1;
-wire    grp_float_safe_softmax3_64_s_fu_532_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1;
-wire    grp_float_safe_softmax3_64_s_fu_532_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1;
-wire   [15:0] grp_float_safe_softmax3_64_s_fu_532_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1;
-wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_ap_start;
-wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_ap_done;
-wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_ap_idle;
-wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_ap_ready;
-wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_AWVALID;
-wire   [63:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_AWADDR;
-wire   [0:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_AWID;
-wire   [31:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_AWLEN;
-wire   [2:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_AWSIZE;
-wire   [1:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_AWBURST;
-wire   [1:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_AWLOCK;
-wire   [3:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_AWCACHE;
-wire   [2:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_AWPROT;
-wire   [3:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_AWQOS;
-wire   [3:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_AWREGION;
-wire   [0:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_AWUSER;
-wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_WVALID;
-wire   [15:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_WDATA;
-wire   [1:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_WSTRB;
-wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_WLAST;
-wire   [0:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_WID;
-wire   [0:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_WUSER;
-wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_ARVALID;
-wire   [63:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_ARADDR;
-wire   [0:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_ARID;
-wire   [31:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_ARLEN;
-wire   [2:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_ARSIZE;
-wire   [1:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_ARBURST;
-wire   [1:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_ARLOCK;
-wire   [3:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_ARCACHE;
-wire   [2:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_ARPROT;
-wire   [3:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_ARQOS;
-wire   [3:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_ARREGION;
-wire   [0:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_ARUSER;
-wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_RREADY;
-wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_BREADY;
-wire   [15:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_buf0_address0;
-wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_buf0_ce0;
-wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_buf0_we0;
-wire   [15:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_buf0_d0;
+reg   [9:0] x_1_address0;
+reg    x_1_ce0;
+reg    x_1_we0;
+wire   [31:0] x_1_q0;
+reg   [9:0] x_2_address0;
+reg    x_2_ce0;
+reg    x_2_we0;
+wire   [31:0] x_2_q0;
+reg   [9:0] x_3_address0;
+reg    x_3_ce0;
+reg    x_3_we0;
+wire   [31:0] x_3_q0;
+reg   [9:0] x_4_address0;
+reg    x_4_ce0;
+reg    x_4_we0;
+wire   [31:0] x_4_q0;
+reg   [9:0] x_5_address0;
+reg    x_5_ce0;
+reg    x_5_we0;
+wire   [31:0] x_5_q0;
+reg   [9:0] x_6_address0;
+reg    x_6_ce0;
+reg    x_6_we0;
+wire   [31:0] x_6_q0;
+reg   [9:0] x_7_address0;
+reg    x_7_ce0;
+reg    x_7_we0;
+wire   [31:0] x_7_q0;
+reg   [9:0] x_8_address0;
+reg    x_8_ce0;
+reg    x_8_we0;
+wire   [31:0] x_8_q0;
+reg   [9:0] x_9_address0;
+reg    x_9_ce0;
+reg    x_9_we0;
+wire   [31:0] x_9_q0;
+reg   [9:0] x_10_address0;
+reg    x_10_ce0;
+reg    x_10_we0;
+wire   [31:0] x_10_q0;
+reg   [9:0] x_11_address0;
+reg    x_11_ce0;
+reg    x_11_we0;
+wire   [31:0] x_11_q0;
+reg   [9:0] x_12_address0;
+reg    x_12_ce0;
+reg    x_12_we0;
+wire   [31:0] x_12_q0;
+reg   [9:0] x_13_address0;
+reg    x_13_ce0;
+reg    x_13_we0;
+wire   [31:0] x_13_q0;
+reg   [9:0] x_14_address0;
+reg    x_14_ce0;
+reg    x_14_we0;
+wire   [31:0] x_14_q0;
+reg   [9:0] x_15_address0;
+reg    x_15_ce0;
+reg    x_15_we0;
+wire   [31:0] x_15_q0;
+reg   [9:0] x_16_address0;
+reg    x_16_ce0;
+reg    x_16_we0;
+wire   [31:0] x_16_q0;
+reg   [9:0] x_17_address0;
+reg    x_17_ce0;
+reg    x_17_we0;
+wire   [31:0] x_17_q0;
+reg   [9:0] x_18_address0;
+reg    x_18_ce0;
+reg    x_18_we0;
+wire   [31:0] x_18_q0;
+reg   [9:0] x_19_address0;
+reg    x_19_ce0;
+reg    x_19_we0;
+wire   [31:0] x_19_q0;
+reg   [9:0] x_20_address0;
+reg    x_20_ce0;
+reg    x_20_we0;
+wire   [31:0] x_20_q0;
+reg   [9:0] x_21_address0;
+reg    x_21_ce0;
+reg    x_21_we0;
+wire   [31:0] x_21_q0;
+reg   [9:0] x_22_address0;
+reg    x_22_ce0;
+reg    x_22_we0;
+wire   [31:0] x_22_q0;
+reg   [9:0] x_23_address0;
+reg    x_23_ce0;
+reg    x_23_we0;
+wire   [31:0] x_23_q0;
+reg   [9:0] x_24_address0;
+reg    x_24_ce0;
+reg    x_24_we0;
+wire   [31:0] x_24_q0;
+reg   [9:0] x_25_address0;
+reg    x_25_ce0;
+reg    x_25_we0;
+wire   [31:0] x_25_q0;
+reg   [9:0] x_26_address0;
+reg    x_26_ce0;
+reg    x_26_we0;
+wire   [31:0] x_26_q0;
+reg   [9:0] x_27_address0;
+reg    x_27_ce0;
+reg    x_27_we0;
+wire   [31:0] x_27_q0;
+reg   [9:0] x_28_address0;
+reg    x_28_ce0;
+reg    x_28_we0;
+wire   [31:0] x_28_q0;
+reg   [9:0] x_29_address0;
+reg    x_29_ce0;
+reg    x_29_we0;
+wire   [31:0] x_29_q0;
+reg   [9:0] x_30_address0;
+reg    x_30_ce0;
+reg    x_30_we0;
+wire   [31:0] x_30_q0;
+reg   [9:0] x_31_address0;
+reg    x_31_ce0;
+reg    x_31_we0;
+wire   [31:0] x_31_q0;
+reg   [9:0] x_32_address0;
+reg    x_32_ce0;
+reg    x_32_we0;
+wire   [31:0] x_32_q0;
+reg   [9:0] x_33_address0;
+reg    x_33_ce0;
+reg    x_33_we0;
+wire   [31:0] x_33_q0;
+reg   [9:0] x_34_address0;
+reg    x_34_ce0;
+reg    x_34_we0;
+wire   [31:0] x_34_q0;
+reg   [9:0] x_35_address0;
+reg    x_35_ce0;
+reg    x_35_we0;
+wire   [31:0] x_35_q0;
+reg   [9:0] x_36_address0;
+reg    x_36_ce0;
+reg    x_36_we0;
+wire   [31:0] x_36_q0;
+reg   [9:0] x_37_address0;
+reg    x_37_ce0;
+reg    x_37_we0;
+wire   [31:0] x_37_q0;
+reg   [9:0] x_38_address0;
+reg    x_38_ce0;
+reg    x_38_we0;
+wire   [31:0] x_38_q0;
+reg   [9:0] x_39_address0;
+reg    x_39_ce0;
+reg    x_39_we0;
+wire   [31:0] x_39_q0;
+reg   [9:0] x_40_address0;
+reg    x_40_ce0;
+reg    x_40_we0;
+wire   [31:0] x_40_q0;
+reg   [9:0] x_41_address0;
+reg    x_41_ce0;
+reg    x_41_we0;
+wire   [31:0] x_41_q0;
+reg   [9:0] x_42_address0;
+reg    x_42_ce0;
+reg    x_42_we0;
+wire   [31:0] x_42_q0;
+reg   [9:0] x_43_address0;
+reg    x_43_ce0;
+reg    x_43_we0;
+wire   [31:0] x_43_q0;
+reg   [9:0] x_44_address0;
+reg    x_44_ce0;
+reg    x_44_we0;
+wire   [31:0] x_44_q0;
+reg   [9:0] x_45_address0;
+reg    x_45_ce0;
+reg    x_45_we0;
+wire   [31:0] x_45_q0;
+reg   [9:0] x_46_address0;
+reg    x_46_ce0;
+reg    x_46_we0;
+wire   [31:0] x_46_q0;
+reg   [9:0] x_47_address0;
+reg    x_47_ce0;
+reg    x_47_we0;
+wire   [31:0] x_47_q0;
+reg   [9:0] x_48_address0;
+reg    x_48_ce0;
+reg    x_48_we0;
+wire   [31:0] x_48_q0;
+reg   [9:0] x_49_address0;
+reg    x_49_ce0;
+reg    x_49_we0;
+wire   [31:0] x_49_q0;
+reg   [9:0] x_50_address0;
+reg    x_50_ce0;
+reg    x_50_we0;
+wire   [31:0] x_50_q0;
+reg   [9:0] x_51_address0;
+reg    x_51_ce0;
+reg    x_51_we0;
+wire   [31:0] x_51_q0;
+reg   [9:0] x_52_address0;
+reg    x_52_ce0;
+reg    x_52_we0;
+wire   [31:0] x_52_q0;
+reg   [9:0] x_53_address0;
+reg    x_53_ce0;
+reg    x_53_we0;
+wire   [31:0] x_53_q0;
+reg   [9:0] x_54_address0;
+reg    x_54_ce0;
+reg    x_54_we0;
+wire   [31:0] x_54_q0;
+reg   [9:0] x_55_address0;
+reg    x_55_ce0;
+reg    x_55_we0;
+wire   [31:0] x_55_q0;
+reg   [9:0] x_56_address0;
+reg    x_56_ce0;
+reg    x_56_we0;
+wire   [31:0] x_56_q0;
+reg   [9:0] x_57_address0;
+reg    x_57_ce0;
+reg    x_57_we0;
+wire   [31:0] x_57_q0;
+reg   [9:0] x_58_address0;
+reg    x_58_ce0;
+reg    x_58_we0;
+wire   [31:0] x_58_q0;
+reg   [9:0] x_59_address0;
+reg    x_59_ce0;
+reg    x_59_we0;
+wire   [31:0] x_59_q0;
+reg   [9:0] x_60_address0;
+reg    x_60_ce0;
+reg    x_60_we0;
+wire   [31:0] x_60_q0;
+reg   [9:0] x_61_address0;
+reg    x_61_ce0;
+reg    x_61_we0;
+wire   [31:0] x_61_q0;
+reg   [9:0] x_62_address0;
+reg    x_62_ce0;
+reg    x_62_we0;
+wire   [31:0] x_62_q0;
+reg   [9:0] x_63_address0;
+reg    x_63_ce0;
+reg    x_63_we0;
+wire   [31:0] x_63_q0;
+wire    grp_bf16_to_float_fu_531_ap_start;
+wire    grp_bf16_to_float_fu_531_ap_done;
+wire    grp_bf16_to_float_fu_531_ap_idle;
+wire    grp_bf16_to_float_fu_531_ap_ready;
+wire   [9:0] grp_bf16_to_float_fu_531_out_0_address0;
+wire    grp_bf16_to_float_fu_531_out_0_ce0;
+wire    grp_bf16_to_float_fu_531_out_0_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_0_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_1_address0;
+wire    grp_bf16_to_float_fu_531_out_1_ce0;
+wire    grp_bf16_to_float_fu_531_out_1_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_1_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_2_address0;
+wire    grp_bf16_to_float_fu_531_out_2_ce0;
+wire    grp_bf16_to_float_fu_531_out_2_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_2_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_3_address0;
+wire    grp_bf16_to_float_fu_531_out_3_ce0;
+wire    grp_bf16_to_float_fu_531_out_3_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_3_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_4_address0;
+wire    grp_bf16_to_float_fu_531_out_4_ce0;
+wire    grp_bf16_to_float_fu_531_out_4_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_4_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_5_address0;
+wire    grp_bf16_to_float_fu_531_out_5_ce0;
+wire    grp_bf16_to_float_fu_531_out_5_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_5_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_6_address0;
+wire    grp_bf16_to_float_fu_531_out_6_ce0;
+wire    grp_bf16_to_float_fu_531_out_6_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_6_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_7_address0;
+wire    grp_bf16_to_float_fu_531_out_7_ce0;
+wire    grp_bf16_to_float_fu_531_out_7_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_7_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_8_address0;
+wire    grp_bf16_to_float_fu_531_out_8_ce0;
+wire    grp_bf16_to_float_fu_531_out_8_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_8_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_9_address0;
+wire    grp_bf16_to_float_fu_531_out_9_ce0;
+wire    grp_bf16_to_float_fu_531_out_9_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_9_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_10_address0;
+wire    grp_bf16_to_float_fu_531_out_10_ce0;
+wire    grp_bf16_to_float_fu_531_out_10_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_10_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_11_address0;
+wire    grp_bf16_to_float_fu_531_out_11_ce0;
+wire    grp_bf16_to_float_fu_531_out_11_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_11_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_12_address0;
+wire    grp_bf16_to_float_fu_531_out_12_ce0;
+wire    grp_bf16_to_float_fu_531_out_12_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_12_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_13_address0;
+wire    grp_bf16_to_float_fu_531_out_13_ce0;
+wire    grp_bf16_to_float_fu_531_out_13_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_13_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_14_address0;
+wire    grp_bf16_to_float_fu_531_out_14_ce0;
+wire    grp_bf16_to_float_fu_531_out_14_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_14_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_15_address0;
+wire    grp_bf16_to_float_fu_531_out_15_ce0;
+wire    grp_bf16_to_float_fu_531_out_15_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_15_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_16_address0;
+wire    grp_bf16_to_float_fu_531_out_16_ce0;
+wire    grp_bf16_to_float_fu_531_out_16_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_16_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_17_address0;
+wire    grp_bf16_to_float_fu_531_out_17_ce0;
+wire    grp_bf16_to_float_fu_531_out_17_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_17_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_18_address0;
+wire    grp_bf16_to_float_fu_531_out_18_ce0;
+wire    grp_bf16_to_float_fu_531_out_18_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_18_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_19_address0;
+wire    grp_bf16_to_float_fu_531_out_19_ce0;
+wire    grp_bf16_to_float_fu_531_out_19_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_19_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_20_address0;
+wire    grp_bf16_to_float_fu_531_out_20_ce0;
+wire    grp_bf16_to_float_fu_531_out_20_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_20_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_21_address0;
+wire    grp_bf16_to_float_fu_531_out_21_ce0;
+wire    grp_bf16_to_float_fu_531_out_21_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_21_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_22_address0;
+wire    grp_bf16_to_float_fu_531_out_22_ce0;
+wire    grp_bf16_to_float_fu_531_out_22_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_22_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_23_address0;
+wire    grp_bf16_to_float_fu_531_out_23_ce0;
+wire    grp_bf16_to_float_fu_531_out_23_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_23_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_24_address0;
+wire    grp_bf16_to_float_fu_531_out_24_ce0;
+wire    grp_bf16_to_float_fu_531_out_24_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_24_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_25_address0;
+wire    grp_bf16_to_float_fu_531_out_25_ce0;
+wire    grp_bf16_to_float_fu_531_out_25_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_25_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_26_address0;
+wire    grp_bf16_to_float_fu_531_out_26_ce0;
+wire    grp_bf16_to_float_fu_531_out_26_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_26_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_27_address0;
+wire    grp_bf16_to_float_fu_531_out_27_ce0;
+wire    grp_bf16_to_float_fu_531_out_27_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_27_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_28_address0;
+wire    grp_bf16_to_float_fu_531_out_28_ce0;
+wire    grp_bf16_to_float_fu_531_out_28_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_28_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_29_address0;
+wire    grp_bf16_to_float_fu_531_out_29_ce0;
+wire    grp_bf16_to_float_fu_531_out_29_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_29_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_30_address0;
+wire    grp_bf16_to_float_fu_531_out_30_ce0;
+wire    grp_bf16_to_float_fu_531_out_30_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_30_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_31_address0;
+wire    grp_bf16_to_float_fu_531_out_31_ce0;
+wire    grp_bf16_to_float_fu_531_out_31_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_31_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_32_address0;
+wire    grp_bf16_to_float_fu_531_out_32_ce0;
+wire    grp_bf16_to_float_fu_531_out_32_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_32_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_33_address0;
+wire    grp_bf16_to_float_fu_531_out_33_ce0;
+wire    grp_bf16_to_float_fu_531_out_33_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_33_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_34_address0;
+wire    grp_bf16_to_float_fu_531_out_34_ce0;
+wire    grp_bf16_to_float_fu_531_out_34_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_34_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_35_address0;
+wire    grp_bf16_to_float_fu_531_out_35_ce0;
+wire    grp_bf16_to_float_fu_531_out_35_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_35_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_36_address0;
+wire    grp_bf16_to_float_fu_531_out_36_ce0;
+wire    grp_bf16_to_float_fu_531_out_36_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_36_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_37_address0;
+wire    grp_bf16_to_float_fu_531_out_37_ce0;
+wire    grp_bf16_to_float_fu_531_out_37_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_37_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_38_address0;
+wire    grp_bf16_to_float_fu_531_out_38_ce0;
+wire    grp_bf16_to_float_fu_531_out_38_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_38_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_39_address0;
+wire    grp_bf16_to_float_fu_531_out_39_ce0;
+wire    grp_bf16_to_float_fu_531_out_39_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_39_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_40_address0;
+wire    grp_bf16_to_float_fu_531_out_40_ce0;
+wire    grp_bf16_to_float_fu_531_out_40_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_40_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_41_address0;
+wire    grp_bf16_to_float_fu_531_out_41_ce0;
+wire    grp_bf16_to_float_fu_531_out_41_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_41_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_42_address0;
+wire    grp_bf16_to_float_fu_531_out_42_ce0;
+wire    grp_bf16_to_float_fu_531_out_42_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_42_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_43_address0;
+wire    grp_bf16_to_float_fu_531_out_43_ce0;
+wire    grp_bf16_to_float_fu_531_out_43_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_43_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_44_address0;
+wire    grp_bf16_to_float_fu_531_out_44_ce0;
+wire    grp_bf16_to_float_fu_531_out_44_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_44_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_45_address0;
+wire    grp_bf16_to_float_fu_531_out_45_ce0;
+wire    grp_bf16_to_float_fu_531_out_45_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_45_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_46_address0;
+wire    grp_bf16_to_float_fu_531_out_46_ce0;
+wire    grp_bf16_to_float_fu_531_out_46_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_46_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_47_address0;
+wire    grp_bf16_to_float_fu_531_out_47_ce0;
+wire    grp_bf16_to_float_fu_531_out_47_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_47_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_48_address0;
+wire    grp_bf16_to_float_fu_531_out_48_ce0;
+wire    grp_bf16_to_float_fu_531_out_48_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_48_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_49_address0;
+wire    grp_bf16_to_float_fu_531_out_49_ce0;
+wire    grp_bf16_to_float_fu_531_out_49_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_49_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_50_address0;
+wire    grp_bf16_to_float_fu_531_out_50_ce0;
+wire    grp_bf16_to_float_fu_531_out_50_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_50_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_51_address0;
+wire    grp_bf16_to_float_fu_531_out_51_ce0;
+wire    grp_bf16_to_float_fu_531_out_51_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_51_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_52_address0;
+wire    grp_bf16_to_float_fu_531_out_52_ce0;
+wire    grp_bf16_to_float_fu_531_out_52_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_52_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_53_address0;
+wire    grp_bf16_to_float_fu_531_out_53_ce0;
+wire    grp_bf16_to_float_fu_531_out_53_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_53_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_54_address0;
+wire    grp_bf16_to_float_fu_531_out_54_ce0;
+wire    grp_bf16_to_float_fu_531_out_54_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_54_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_55_address0;
+wire    grp_bf16_to_float_fu_531_out_55_ce0;
+wire    grp_bf16_to_float_fu_531_out_55_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_55_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_56_address0;
+wire    grp_bf16_to_float_fu_531_out_56_ce0;
+wire    grp_bf16_to_float_fu_531_out_56_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_56_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_57_address0;
+wire    grp_bf16_to_float_fu_531_out_57_ce0;
+wire    grp_bf16_to_float_fu_531_out_57_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_57_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_58_address0;
+wire    grp_bf16_to_float_fu_531_out_58_ce0;
+wire    grp_bf16_to_float_fu_531_out_58_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_58_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_59_address0;
+wire    grp_bf16_to_float_fu_531_out_59_ce0;
+wire    grp_bf16_to_float_fu_531_out_59_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_59_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_60_address0;
+wire    grp_bf16_to_float_fu_531_out_60_ce0;
+wire    grp_bf16_to_float_fu_531_out_60_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_60_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_61_address0;
+wire    grp_bf16_to_float_fu_531_out_61_ce0;
+wire    grp_bf16_to_float_fu_531_out_61_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_61_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_62_address0;
+wire    grp_bf16_to_float_fu_531_out_62_ce0;
+wire    grp_bf16_to_float_fu_531_out_62_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_62_d0;
+wire   [9:0] grp_bf16_to_float_fu_531_out_63_address0;
+wire    grp_bf16_to_float_fu_531_out_63_ce0;
+wire    grp_bf16_to_float_fu_531_out_63_we0;
+wire   [31:0] grp_bf16_to_float_fu_531_out_63_d0;
+wire   [15:0] grp_bf16_to_float_fu_531_buf0_address0;
+wire    grp_bf16_to_float_fu_531_buf0_ce0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_ap_start;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_ap_done;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_ap_idle;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_ap_ready;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_AWVALID;
+wire   [63:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_AWADDR;
+wire   [0:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_AWID;
+wire   [31:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_AWLEN;
+wire   [2:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_AWSIZE;
+wire   [1:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_AWBURST;
+wire   [1:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_AWLOCK;
+wire   [3:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_AWCACHE;
+wire   [2:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_AWPROT;
+wire   [3:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_AWQOS;
+wire   [3:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_AWREGION;
+wire   [0:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_AWUSER;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_WVALID;
+wire   [15:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_WDATA;
+wire   [1:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_WSTRB;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_WLAST;
+wire   [0:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_WID;
+wire   [0:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_WUSER;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_ARVALID;
+wire   [63:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_ARADDR;
+wire   [0:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_ARID;
+wire   [31:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_ARLEN;
+wire   [2:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_ARSIZE;
+wire   [1:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_ARBURST;
+wire   [1:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_ARLOCK;
+wire   [3:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_ARCACHE;
+wire   [2:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_ARPROT;
+wire   [3:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_ARQOS;
+wire   [3:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_ARREGION;
+wire   [0:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_ARUSER;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_RREADY;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_BREADY;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_ce0;
+wire   [9:0] grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_address0;
+wire    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_ce0;
+wire    grp_float_silu2_fu_800_ap_start;
+wire    grp_float_silu2_fu_800_ap_done;
+wire    grp_float_silu2_fu_800_ap_idle;
+wire    grp_float_silu2_fu_800_ap_ready;
+wire   [9:0] grp_float_silu2_fu_800_x_0_address0;
+wire    grp_float_silu2_fu_800_x_0_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_1_address0;
+wire    grp_float_silu2_fu_800_x_1_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_2_address0;
+wire    grp_float_silu2_fu_800_x_2_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_3_address0;
+wire    grp_float_silu2_fu_800_x_3_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_4_address0;
+wire    grp_float_silu2_fu_800_x_4_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_5_address0;
+wire    grp_float_silu2_fu_800_x_5_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_6_address0;
+wire    grp_float_silu2_fu_800_x_6_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_7_address0;
+wire    grp_float_silu2_fu_800_x_7_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_8_address0;
+wire    grp_float_silu2_fu_800_x_8_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_9_address0;
+wire    grp_float_silu2_fu_800_x_9_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_10_address0;
+wire    grp_float_silu2_fu_800_x_10_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_11_address0;
+wire    grp_float_silu2_fu_800_x_11_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_12_address0;
+wire    grp_float_silu2_fu_800_x_12_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_13_address0;
+wire    grp_float_silu2_fu_800_x_13_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_14_address0;
+wire    grp_float_silu2_fu_800_x_14_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_15_address0;
+wire    grp_float_silu2_fu_800_x_15_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_16_address0;
+wire    grp_float_silu2_fu_800_x_16_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_17_address0;
+wire    grp_float_silu2_fu_800_x_17_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_18_address0;
+wire    grp_float_silu2_fu_800_x_18_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_19_address0;
+wire    grp_float_silu2_fu_800_x_19_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_20_address0;
+wire    grp_float_silu2_fu_800_x_20_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_21_address0;
+wire    grp_float_silu2_fu_800_x_21_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_22_address0;
+wire    grp_float_silu2_fu_800_x_22_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_23_address0;
+wire    grp_float_silu2_fu_800_x_23_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_24_address0;
+wire    grp_float_silu2_fu_800_x_24_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_25_address0;
+wire    grp_float_silu2_fu_800_x_25_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_26_address0;
+wire    grp_float_silu2_fu_800_x_26_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_27_address0;
+wire    grp_float_silu2_fu_800_x_27_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_28_address0;
+wire    grp_float_silu2_fu_800_x_28_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_29_address0;
+wire    grp_float_silu2_fu_800_x_29_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_30_address0;
+wire    grp_float_silu2_fu_800_x_30_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_31_address0;
+wire    grp_float_silu2_fu_800_x_31_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_32_address0;
+wire    grp_float_silu2_fu_800_x_32_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_33_address0;
+wire    grp_float_silu2_fu_800_x_33_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_34_address0;
+wire    grp_float_silu2_fu_800_x_34_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_35_address0;
+wire    grp_float_silu2_fu_800_x_35_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_36_address0;
+wire    grp_float_silu2_fu_800_x_36_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_37_address0;
+wire    grp_float_silu2_fu_800_x_37_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_38_address0;
+wire    grp_float_silu2_fu_800_x_38_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_39_address0;
+wire    grp_float_silu2_fu_800_x_39_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_40_address0;
+wire    grp_float_silu2_fu_800_x_40_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_41_address0;
+wire    grp_float_silu2_fu_800_x_41_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_42_address0;
+wire    grp_float_silu2_fu_800_x_42_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_43_address0;
+wire    grp_float_silu2_fu_800_x_43_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_44_address0;
+wire    grp_float_silu2_fu_800_x_44_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_45_address0;
+wire    grp_float_silu2_fu_800_x_45_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_46_address0;
+wire    grp_float_silu2_fu_800_x_46_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_47_address0;
+wire    grp_float_silu2_fu_800_x_47_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_48_address0;
+wire    grp_float_silu2_fu_800_x_48_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_49_address0;
+wire    grp_float_silu2_fu_800_x_49_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_50_address0;
+wire    grp_float_silu2_fu_800_x_50_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_51_address0;
+wire    grp_float_silu2_fu_800_x_51_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_52_address0;
+wire    grp_float_silu2_fu_800_x_52_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_53_address0;
+wire    grp_float_silu2_fu_800_x_53_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_54_address0;
+wire    grp_float_silu2_fu_800_x_54_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_55_address0;
+wire    grp_float_silu2_fu_800_x_55_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_56_address0;
+wire    grp_float_silu2_fu_800_x_56_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_57_address0;
+wire    grp_float_silu2_fu_800_x_57_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_58_address0;
+wire    grp_float_silu2_fu_800_x_58_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_59_address0;
+wire    grp_float_silu2_fu_800_x_59_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_60_address0;
+wire    grp_float_silu2_fu_800_x_60_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_61_address0;
+wire    grp_float_silu2_fu_800_x_61_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_62_address0;
+wire    grp_float_silu2_fu_800_x_62_ce0;
+wire   [9:0] grp_float_silu2_fu_800_x_63_address0;
+wire    grp_float_silu2_fu_800_x_63_ce0;
+wire   [9:0] grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0;
+wire    grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0;
+wire    grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0;
+wire   [15:0] grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0;
+wire   [9:0] grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0;
+wire    grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0;
+wire    grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0;
+wire   [15:0] grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0;
+wire   [9:0] grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0;
+wire    grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0;
+wire    grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0;
+wire   [15:0] grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0;
+wire   [9:0] grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0;
+wire    grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0;
+wire    grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0;
+wire   [15:0] grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0;
+wire   [9:0] grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0;
+wire    grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0;
+wire    grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0;
+wire   [15:0] grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0;
+wire   [9:0] grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0;
+wire    grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0;
+wire    grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0;
+wire   [15:0] grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0;
+wire   [9:0] grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0;
+wire    grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0;
+wire    grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0;
+wire   [15:0] grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0;
+wire   [9:0] grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0;
+wire    grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0;
+wire    grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0;
+wire   [15:0] grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0;
+wire   [9:0] grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0;
+wire    grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0;
+wire    grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0;
+wire   [15:0] grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0;
+wire   [9:0] grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0;
+wire    grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0;
+wire    grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0;
+wire   [15:0] grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_d0;
+wire   [9:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_address0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_ce0;
+wire    grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_we0;
+wire   [15:0] grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_d0;
+wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_ap_start;
+wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_ap_done;
+wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_ap_idle;
+wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_ap_ready;
+wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_AWVALID;
+wire   [63:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_AWADDR;
+wire   [0:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_AWID;
+wire   [31:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_AWLEN;
+wire   [2:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_AWSIZE;
+wire   [1:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_AWBURST;
+wire   [1:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_AWLOCK;
+wire   [3:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_AWCACHE;
+wire   [2:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_AWPROT;
+wire   [3:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_AWQOS;
+wire   [3:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_AWREGION;
+wire   [0:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_AWUSER;
+wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_WVALID;
+wire   [15:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_WDATA;
+wire   [1:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_WSTRB;
+wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_WLAST;
+wire   [0:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_WID;
+wire   [0:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_WUSER;
+wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_ARVALID;
+wire   [63:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_ARADDR;
+wire   [0:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_ARID;
+wire   [31:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_ARLEN;
+wire   [2:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_ARSIZE;
+wire   [1:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_ARBURST;
+wire   [1:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_ARLOCK;
+wire   [3:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_ARCACHE;
+wire   [2:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_ARPROT;
+wire   [3:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_ARQOS;
+wire   [3:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_ARREGION;
+wire   [0:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_ARUSER;
+wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_RREADY;
+wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_BREADY;
+wire   [15:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_buf0_address0;
+wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_buf0_ce0;
+wire    grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_buf0_we0;
+wire   [15:0] grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_buf0_d0;
 wire    gmem0_AWREADY;
 wire    gmem0_WREADY;
 reg    gmem0_ARVALID;
@@ -868,19 +1806,19 @@ wire   [15:0] gmem2_RDATA;
 wire   [9:0] gmem2_RFIFONUM;
 wire    gmem2_BVALID;
 reg    gmem2_BREADY;
-reg    grp_bf16_to_float_fu_389_ap_start_reg;
+reg    grp_bf16_to_float_fu_531_ap_start_reg;
 wire    ap_CS_fsm_state10;
-reg    grp_activation_accelerator_Pipeline_stage_2_store_fu_523_ap_start_reg;
+reg    grp_activation_accelerator_Pipeline_stage_2_store_fu_665_ap_start_reg;
 wire    ap_CS_fsm_state3;
 wire    ap_CS_fsm_state4;
-reg    grp_float_safe_softmax3_64_s_fu_532_ap_start_reg;
+reg    grp_float_silu2_fu_800_ap_start_reg;
 wire    ap_CS_fsm_state11;
 wire    ap_CS_fsm_state12;
-reg    grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_ap_start_reg;
+reg    grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_ap_start_reg;
 wire    ap_CS_fsm_state20;
 wire    ap_CS_fsm_state21;
-wire  signed [63:0] sext_ln1380_fu_574_p1;
-wire  signed [63:0] sext_ln1324_fu_584_p1;
+wire  signed [63:0] sext_ln542_fu_1031_p1;
+wire  signed [63:0] sext_ln471_fu_1041_p1;
 reg    ap_block_state21_on_subcall_done;
 reg   [20:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
@@ -910,10 +1848,10 @@ wire    ap_ce_reg;
 // power-on initialization
 initial begin
 #0 ap_CS_fsm = 21'd1;
-#0 grp_bf16_to_float_fu_389_ap_start_reg = 1'b0;
-#0 grp_activation_accelerator_Pipeline_stage_2_store_fu_523_ap_start_reg = 1'b0;
-#0 grp_float_safe_softmax3_64_s_fu_532_ap_start_reg = 1'b0;
-#0 grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_ap_start_reg = 1'b0;
+#0 grp_bf16_to_float_fu_531_ap_start_reg = 1'b0;
+#0 grp_activation_accelerator_Pipeline_stage_2_store_fu_665_ap_start_reg = 1'b0;
+#0 grp_float_silu2_fu_800_ap_start_reg = 1'b0;
+#0 grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_ap_start_reg = 1'b0;
 end
 
 activation_accelerator_buf0_RAM_AUTO_1R1W #(
@@ -926,11 +1864,137 @@ buf0_U(
     .address0(buf0_address0),
     .ce0(buf0_ce0),
     .we0(buf0_we0),
-    .d0(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_buf0_d0),
+    .d0(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_buf0_d0),
     .q0(buf0_q0)
 );
 
-activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_RAMbkb #(
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0),
+    .ce0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0),
+    .we0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0),
+    .d0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0),
+    .q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0),
+    .ce0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0),
+    .we0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0),
+    .d0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0),
+    .q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0),
+    .ce0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0),
+    .we0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0),
+    .d0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0),
+    .q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0),
+    .ce0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0),
+    .we0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0),
+    .d0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0),
+    .q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0),
+    .ce0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0),
+    .we0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0),
+    .d0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0),
+    .q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0),
+    .ce0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0),
+    .we0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0),
+    .d0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0),
+    .q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0),
+    .ce0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0),
+    .we0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0),
+    .d0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0),
+    .q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0),
+    .ce0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0),
+    .we0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0),
+    .d0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0),
+    .q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0),
+    .ce0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0),
+    .we0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0),
+    .d0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0),
+    .q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
     .DataWidth( 16 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
@@ -940,15 +2004,767 @@ activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_U(
     .address0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0),
     .ce0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0),
     .we0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0),
-    .d0(grp_float_safe_softmax3_64_s_fu_532_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0),
-    .q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_q0),
-    .address1(grp_float_safe_softmax3_64_s_fu_532_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1),
-    .ce1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1),
-    .we1(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1),
-    .d1(grp_float_safe_softmax3_64_s_fu_532_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1)
+    .d0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0),
+    .q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_q0)
 );
 
-activation_accelerator_x_RAM_1WNR_AUTO_1R1W #(
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_q0)
+);
+
+activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb #(
+    .DataWidth( 16 ),
+    .AddressRange( 768 ),
+    .AddressWidth( 10 ))
+p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_address0),
+    .ce0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_ce0),
+    .we0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_we0),
+    .d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_d0),
+    .q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_q0)
+);
+
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
@@ -958,1187 +2774,1202 @@ x_U(
     .address0(x_address0),
     .ce0(x_ce0),
     .we0(x_we0),
-    .d0(grp_bf16_to_float_fu_389_out_0_d0),
-    .q0(x_q0),
-    .address1(grp_float_safe_softmax3_64_s_fu_532_x_0_address1),
-    .ce1(x_ce1),
-    .q1(x_q1),
-    .address2(grp_float_safe_softmax3_64_s_fu_532_x_0_address2),
-    .ce2(x_ce2),
-    .q2(x_q2),
-    .address3(grp_float_safe_softmax3_64_s_fu_532_x_0_address3),
-    .ce3(x_ce3),
-    .q3(x_q3),
-    .address4(grp_float_safe_softmax3_64_s_fu_532_x_0_address4),
-    .ce4(x_ce4),
-    .q4(x_q4),
-    .address5(grp_float_safe_softmax3_64_s_fu_532_x_0_address5),
-    .ce5(x_ce5),
-    .q5(x_q5),
-    .address6(grp_float_safe_softmax3_64_s_fu_532_x_0_address6),
-    .ce6(x_ce6),
-    .q6(x_q6),
-    .address7(grp_float_safe_softmax3_64_s_fu_532_x_0_address7),
-    .ce7(x_ce7),
-    .q7(x_q7),
-    .address8(grp_float_safe_softmax3_64_s_fu_532_x_0_address8),
-    .ce8(x_ce8),
-    .q8(x_q8),
-    .address9(grp_float_safe_softmax3_64_s_fu_532_x_0_address9),
-    .ce9(x_ce9),
-    .q9(x_q9),
-    .address10(grp_float_safe_softmax3_64_s_fu_532_x_0_address10),
-    .ce10(x_ce10),
-    .q10(x_q10),
-    .address11(grp_float_safe_softmax3_64_s_fu_532_x_0_address11),
-    .ce11(x_ce11),
-    .q11(x_q11),
-    .address12(grp_float_safe_softmax3_64_s_fu_532_x_0_address12),
-    .ce12(x_ce12),
-    .q12(x_q12),
-    .address13(grp_float_safe_softmax3_64_s_fu_532_x_0_address13),
-    .ce13(x_ce13),
-    .q13(x_q13),
-    .address14(grp_float_safe_softmax3_64_s_fu_532_x_0_address14),
-    .ce14(x_ce14),
-    .q14(x_q14),
-    .address15(grp_float_safe_softmax3_64_s_fu_532_x_0_address15),
-    .ce15(x_ce15),
-    .q15(x_q15),
-    .address16(grp_float_safe_softmax3_64_s_fu_532_x_0_address16),
-    .ce16(x_ce16),
-    .q16(x_q16)
+    .d0(grp_bf16_to_float_fu_531_out_0_d0),
+    .q0(x_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_1_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_1_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_1_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_1_we0),
-    .d0(grp_bf16_to_float_fu_389_out_1_d0)
+    .address0(x_1_address0),
+    .ce0(x_1_ce0),
+    .we0(x_1_we0),
+    .d0(grp_bf16_to_float_fu_531_out_1_d0),
+    .q0(x_1_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_2_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_2_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_2_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_2_we0),
-    .d0(grp_bf16_to_float_fu_389_out_2_d0)
+    .address0(x_2_address0),
+    .ce0(x_2_ce0),
+    .we0(x_2_we0),
+    .d0(grp_bf16_to_float_fu_531_out_2_d0),
+    .q0(x_2_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_3_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_3_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_3_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_3_we0),
-    .d0(grp_bf16_to_float_fu_389_out_3_d0)
+    .address0(x_3_address0),
+    .ce0(x_3_ce0),
+    .we0(x_3_we0),
+    .d0(grp_bf16_to_float_fu_531_out_3_d0),
+    .q0(x_3_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_4_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_4_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_4_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_4_we0),
-    .d0(grp_bf16_to_float_fu_389_out_4_d0)
+    .address0(x_4_address0),
+    .ce0(x_4_ce0),
+    .we0(x_4_we0),
+    .d0(grp_bf16_to_float_fu_531_out_4_d0),
+    .q0(x_4_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_5_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_5_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_5_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_5_we0),
-    .d0(grp_bf16_to_float_fu_389_out_5_d0)
+    .address0(x_5_address0),
+    .ce0(x_5_ce0),
+    .we0(x_5_we0),
+    .d0(grp_bf16_to_float_fu_531_out_5_d0),
+    .q0(x_5_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_6_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_6_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_6_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_6_we0),
-    .d0(grp_bf16_to_float_fu_389_out_6_d0)
+    .address0(x_6_address0),
+    .ce0(x_6_ce0),
+    .we0(x_6_we0),
+    .d0(grp_bf16_to_float_fu_531_out_6_d0),
+    .q0(x_6_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_7_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_7_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_7_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_7_we0),
-    .d0(grp_bf16_to_float_fu_389_out_7_d0)
+    .address0(x_7_address0),
+    .ce0(x_7_ce0),
+    .we0(x_7_we0),
+    .d0(grp_bf16_to_float_fu_531_out_7_d0),
+    .q0(x_7_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_8_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_8_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_8_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_8_we0),
-    .d0(grp_bf16_to_float_fu_389_out_8_d0)
+    .address0(x_8_address0),
+    .ce0(x_8_ce0),
+    .we0(x_8_we0),
+    .d0(grp_bf16_to_float_fu_531_out_8_d0),
+    .q0(x_8_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_9_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_9_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_9_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_9_we0),
-    .d0(grp_bf16_to_float_fu_389_out_9_d0)
+    .address0(x_9_address0),
+    .ce0(x_9_ce0),
+    .we0(x_9_we0),
+    .d0(grp_bf16_to_float_fu_531_out_9_d0),
+    .q0(x_9_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_10_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_10_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_10_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_10_we0),
-    .d0(grp_bf16_to_float_fu_389_out_10_d0)
+    .address0(x_10_address0),
+    .ce0(x_10_ce0),
+    .we0(x_10_we0),
+    .d0(grp_bf16_to_float_fu_531_out_10_d0),
+    .q0(x_10_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_11_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_11_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_11_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_11_we0),
-    .d0(grp_bf16_to_float_fu_389_out_11_d0)
+    .address0(x_11_address0),
+    .ce0(x_11_ce0),
+    .we0(x_11_we0),
+    .d0(grp_bf16_to_float_fu_531_out_11_d0),
+    .q0(x_11_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_12_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_12_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_12_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_12_we0),
-    .d0(grp_bf16_to_float_fu_389_out_12_d0)
+    .address0(x_12_address0),
+    .ce0(x_12_ce0),
+    .we0(x_12_we0),
+    .d0(grp_bf16_to_float_fu_531_out_12_d0),
+    .q0(x_12_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_13_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_13_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_13_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_13_we0),
-    .d0(grp_bf16_to_float_fu_389_out_13_d0)
+    .address0(x_13_address0),
+    .ce0(x_13_ce0),
+    .we0(x_13_we0),
+    .d0(grp_bf16_to_float_fu_531_out_13_d0),
+    .q0(x_13_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_14_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_14_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_14_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_14_we0),
-    .d0(grp_bf16_to_float_fu_389_out_14_d0)
+    .address0(x_14_address0),
+    .ce0(x_14_ce0),
+    .we0(x_14_we0),
+    .d0(grp_bf16_to_float_fu_531_out_14_d0),
+    .q0(x_14_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_15_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_15_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_15_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_15_we0),
-    .d0(grp_bf16_to_float_fu_389_out_15_d0)
+    .address0(x_15_address0),
+    .ce0(x_15_ce0),
+    .we0(x_15_we0),
+    .d0(grp_bf16_to_float_fu_531_out_15_d0),
+    .q0(x_15_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_16_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_16_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_16_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_16_we0),
-    .d0(grp_bf16_to_float_fu_389_out_16_d0)
+    .address0(x_16_address0),
+    .ce0(x_16_ce0),
+    .we0(x_16_we0),
+    .d0(grp_bf16_to_float_fu_531_out_16_d0),
+    .q0(x_16_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_17_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_17_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_17_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_17_we0),
-    .d0(grp_bf16_to_float_fu_389_out_17_d0)
+    .address0(x_17_address0),
+    .ce0(x_17_ce0),
+    .we0(x_17_we0),
+    .d0(grp_bf16_to_float_fu_531_out_17_d0),
+    .q0(x_17_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_18_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_18_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_18_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_18_we0),
-    .d0(grp_bf16_to_float_fu_389_out_18_d0)
+    .address0(x_18_address0),
+    .ce0(x_18_ce0),
+    .we0(x_18_we0),
+    .d0(grp_bf16_to_float_fu_531_out_18_d0),
+    .q0(x_18_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_19_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_19_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_19_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_19_we0),
-    .d0(grp_bf16_to_float_fu_389_out_19_d0)
+    .address0(x_19_address0),
+    .ce0(x_19_ce0),
+    .we0(x_19_we0),
+    .d0(grp_bf16_to_float_fu_531_out_19_d0),
+    .q0(x_19_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_20_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_20_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_20_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_20_we0),
-    .d0(grp_bf16_to_float_fu_389_out_20_d0)
+    .address0(x_20_address0),
+    .ce0(x_20_ce0),
+    .we0(x_20_we0),
+    .d0(grp_bf16_to_float_fu_531_out_20_d0),
+    .q0(x_20_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_21_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_21_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_21_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_21_we0),
-    .d0(grp_bf16_to_float_fu_389_out_21_d0)
+    .address0(x_21_address0),
+    .ce0(x_21_ce0),
+    .we0(x_21_we0),
+    .d0(grp_bf16_to_float_fu_531_out_21_d0),
+    .q0(x_21_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_22_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_22_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_22_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_22_we0),
-    .d0(grp_bf16_to_float_fu_389_out_22_d0)
+    .address0(x_22_address0),
+    .ce0(x_22_ce0),
+    .we0(x_22_we0),
+    .d0(grp_bf16_to_float_fu_531_out_22_d0),
+    .q0(x_22_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_23_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_23_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_23_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_23_we0),
-    .d0(grp_bf16_to_float_fu_389_out_23_d0)
+    .address0(x_23_address0),
+    .ce0(x_23_ce0),
+    .we0(x_23_we0),
+    .d0(grp_bf16_to_float_fu_531_out_23_d0),
+    .q0(x_23_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_24_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_24_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_24_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_24_we0),
-    .d0(grp_bf16_to_float_fu_389_out_24_d0)
+    .address0(x_24_address0),
+    .ce0(x_24_ce0),
+    .we0(x_24_we0),
+    .d0(grp_bf16_to_float_fu_531_out_24_d0),
+    .q0(x_24_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_25_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_25_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_25_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_25_we0),
-    .d0(grp_bf16_to_float_fu_389_out_25_d0)
+    .address0(x_25_address0),
+    .ce0(x_25_ce0),
+    .we0(x_25_we0),
+    .d0(grp_bf16_to_float_fu_531_out_25_d0),
+    .q0(x_25_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_26_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_26_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_26_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_26_we0),
-    .d0(grp_bf16_to_float_fu_389_out_26_d0)
+    .address0(x_26_address0),
+    .ce0(x_26_ce0),
+    .we0(x_26_we0),
+    .d0(grp_bf16_to_float_fu_531_out_26_d0),
+    .q0(x_26_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_27_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_27_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_27_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_27_we0),
-    .d0(grp_bf16_to_float_fu_389_out_27_d0)
+    .address0(x_27_address0),
+    .ce0(x_27_ce0),
+    .we0(x_27_we0),
+    .d0(grp_bf16_to_float_fu_531_out_27_d0),
+    .q0(x_27_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_28_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_28_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_28_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_28_we0),
-    .d0(grp_bf16_to_float_fu_389_out_28_d0)
+    .address0(x_28_address0),
+    .ce0(x_28_ce0),
+    .we0(x_28_we0),
+    .d0(grp_bf16_to_float_fu_531_out_28_d0),
+    .q0(x_28_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_29_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_29_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_29_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_29_we0),
-    .d0(grp_bf16_to_float_fu_389_out_29_d0)
+    .address0(x_29_address0),
+    .ce0(x_29_ce0),
+    .we0(x_29_we0),
+    .d0(grp_bf16_to_float_fu_531_out_29_d0),
+    .q0(x_29_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_30_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_30_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_30_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_30_we0),
-    .d0(grp_bf16_to_float_fu_389_out_30_d0)
+    .address0(x_30_address0),
+    .ce0(x_30_ce0),
+    .we0(x_30_we0),
+    .d0(grp_bf16_to_float_fu_531_out_30_d0),
+    .q0(x_30_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_31_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_31_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_31_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_31_we0),
-    .d0(grp_bf16_to_float_fu_389_out_31_d0)
+    .address0(x_31_address0),
+    .ce0(x_31_ce0),
+    .we0(x_31_we0),
+    .d0(grp_bf16_to_float_fu_531_out_31_d0),
+    .q0(x_31_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_32_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_32_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_32_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_32_we0),
-    .d0(grp_bf16_to_float_fu_389_out_32_d0)
+    .address0(x_32_address0),
+    .ce0(x_32_ce0),
+    .we0(x_32_we0),
+    .d0(grp_bf16_to_float_fu_531_out_32_d0),
+    .q0(x_32_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_33_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_33_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_33_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_33_we0),
-    .d0(grp_bf16_to_float_fu_389_out_33_d0)
+    .address0(x_33_address0),
+    .ce0(x_33_ce0),
+    .we0(x_33_we0),
+    .d0(grp_bf16_to_float_fu_531_out_33_d0),
+    .q0(x_33_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_34_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_34_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_34_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_34_we0),
-    .d0(grp_bf16_to_float_fu_389_out_34_d0)
+    .address0(x_34_address0),
+    .ce0(x_34_ce0),
+    .we0(x_34_we0),
+    .d0(grp_bf16_to_float_fu_531_out_34_d0),
+    .q0(x_34_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_35_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_35_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_35_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_35_we0),
-    .d0(grp_bf16_to_float_fu_389_out_35_d0)
+    .address0(x_35_address0),
+    .ce0(x_35_ce0),
+    .we0(x_35_we0),
+    .d0(grp_bf16_to_float_fu_531_out_35_d0),
+    .q0(x_35_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_36_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_36_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_36_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_36_we0),
-    .d0(grp_bf16_to_float_fu_389_out_36_d0)
+    .address0(x_36_address0),
+    .ce0(x_36_ce0),
+    .we0(x_36_we0),
+    .d0(grp_bf16_to_float_fu_531_out_36_d0),
+    .q0(x_36_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_37_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_37_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_37_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_37_we0),
-    .d0(grp_bf16_to_float_fu_389_out_37_d0)
+    .address0(x_37_address0),
+    .ce0(x_37_ce0),
+    .we0(x_37_we0),
+    .d0(grp_bf16_to_float_fu_531_out_37_d0),
+    .q0(x_37_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_38_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_38_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_38_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_38_we0),
-    .d0(grp_bf16_to_float_fu_389_out_38_d0)
+    .address0(x_38_address0),
+    .ce0(x_38_ce0),
+    .we0(x_38_we0),
+    .d0(grp_bf16_to_float_fu_531_out_38_d0),
+    .q0(x_38_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_39_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_39_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_39_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_39_we0),
-    .d0(grp_bf16_to_float_fu_389_out_39_d0)
+    .address0(x_39_address0),
+    .ce0(x_39_ce0),
+    .we0(x_39_we0),
+    .d0(grp_bf16_to_float_fu_531_out_39_d0),
+    .q0(x_39_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_40_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_40_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_40_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_40_we0),
-    .d0(grp_bf16_to_float_fu_389_out_40_d0)
+    .address0(x_40_address0),
+    .ce0(x_40_ce0),
+    .we0(x_40_we0),
+    .d0(grp_bf16_to_float_fu_531_out_40_d0),
+    .q0(x_40_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_41_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_41_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_41_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_41_we0),
-    .d0(grp_bf16_to_float_fu_389_out_41_d0)
+    .address0(x_41_address0),
+    .ce0(x_41_ce0),
+    .we0(x_41_we0),
+    .d0(grp_bf16_to_float_fu_531_out_41_d0),
+    .q0(x_41_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_42_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_42_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_42_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_42_we0),
-    .d0(grp_bf16_to_float_fu_389_out_42_d0)
+    .address0(x_42_address0),
+    .ce0(x_42_ce0),
+    .we0(x_42_we0),
+    .d0(grp_bf16_to_float_fu_531_out_42_d0),
+    .q0(x_42_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_43_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_43_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_43_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_43_we0),
-    .d0(grp_bf16_to_float_fu_389_out_43_d0)
+    .address0(x_43_address0),
+    .ce0(x_43_ce0),
+    .we0(x_43_we0),
+    .d0(grp_bf16_to_float_fu_531_out_43_d0),
+    .q0(x_43_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_44_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_44_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_44_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_44_we0),
-    .d0(grp_bf16_to_float_fu_389_out_44_d0)
+    .address0(x_44_address0),
+    .ce0(x_44_ce0),
+    .we0(x_44_we0),
+    .d0(grp_bf16_to_float_fu_531_out_44_d0),
+    .q0(x_44_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_45_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_45_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_45_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_45_we0),
-    .d0(grp_bf16_to_float_fu_389_out_45_d0)
+    .address0(x_45_address0),
+    .ce0(x_45_ce0),
+    .we0(x_45_we0),
+    .d0(grp_bf16_to_float_fu_531_out_45_d0),
+    .q0(x_45_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_46_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_46_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_46_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_46_we0),
-    .d0(grp_bf16_to_float_fu_389_out_46_d0)
+    .address0(x_46_address0),
+    .ce0(x_46_ce0),
+    .we0(x_46_we0),
+    .d0(grp_bf16_to_float_fu_531_out_46_d0),
+    .q0(x_46_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_47_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_47_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_47_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_47_we0),
-    .d0(grp_bf16_to_float_fu_389_out_47_d0)
+    .address0(x_47_address0),
+    .ce0(x_47_ce0),
+    .we0(x_47_we0),
+    .d0(grp_bf16_to_float_fu_531_out_47_d0),
+    .q0(x_47_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_48_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_48_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_48_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_48_we0),
-    .d0(grp_bf16_to_float_fu_389_out_48_d0)
+    .address0(x_48_address0),
+    .ce0(x_48_ce0),
+    .we0(x_48_we0),
+    .d0(grp_bf16_to_float_fu_531_out_48_d0),
+    .q0(x_48_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_49_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_49_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_49_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_49_we0),
-    .d0(grp_bf16_to_float_fu_389_out_49_d0)
+    .address0(x_49_address0),
+    .ce0(x_49_ce0),
+    .we0(x_49_we0),
+    .d0(grp_bf16_to_float_fu_531_out_49_d0),
+    .q0(x_49_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_50_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_50_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_50_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_50_we0),
-    .d0(grp_bf16_to_float_fu_389_out_50_d0)
+    .address0(x_50_address0),
+    .ce0(x_50_ce0),
+    .we0(x_50_we0),
+    .d0(grp_bf16_to_float_fu_531_out_50_d0),
+    .q0(x_50_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_51_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_51_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_51_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_51_we0),
-    .d0(grp_bf16_to_float_fu_389_out_51_d0)
+    .address0(x_51_address0),
+    .ce0(x_51_ce0),
+    .we0(x_51_we0),
+    .d0(grp_bf16_to_float_fu_531_out_51_d0),
+    .q0(x_51_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_52_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_52_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_52_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_52_we0),
-    .d0(grp_bf16_to_float_fu_389_out_52_d0)
+    .address0(x_52_address0),
+    .ce0(x_52_ce0),
+    .we0(x_52_we0),
+    .d0(grp_bf16_to_float_fu_531_out_52_d0),
+    .q0(x_52_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_53_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_53_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_53_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_53_we0),
-    .d0(grp_bf16_to_float_fu_389_out_53_d0)
+    .address0(x_53_address0),
+    .ce0(x_53_ce0),
+    .we0(x_53_we0),
+    .d0(grp_bf16_to_float_fu_531_out_53_d0),
+    .q0(x_53_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_54_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_54_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_54_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_54_we0),
-    .d0(grp_bf16_to_float_fu_389_out_54_d0)
+    .address0(x_54_address0),
+    .ce0(x_54_ce0),
+    .we0(x_54_we0),
+    .d0(grp_bf16_to_float_fu_531_out_54_d0),
+    .q0(x_54_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_55_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_55_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_55_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_55_we0),
-    .d0(grp_bf16_to_float_fu_389_out_55_d0)
+    .address0(x_55_address0),
+    .ce0(x_55_ce0),
+    .we0(x_55_we0),
+    .d0(grp_bf16_to_float_fu_531_out_55_d0),
+    .q0(x_55_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_56_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_56_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_56_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_56_we0),
-    .d0(grp_bf16_to_float_fu_389_out_56_d0)
+    .address0(x_56_address0),
+    .ce0(x_56_ce0),
+    .we0(x_56_we0),
+    .d0(grp_bf16_to_float_fu_531_out_56_d0),
+    .q0(x_56_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_57_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_57_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_57_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_57_we0),
-    .d0(grp_bf16_to_float_fu_389_out_57_d0)
+    .address0(x_57_address0),
+    .ce0(x_57_ce0),
+    .we0(x_57_we0),
+    .d0(grp_bf16_to_float_fu_531_out_57_d0),
+    .q0(x_57_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_58_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_58_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_58_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_58_we0),
-    .d0(grp_bf16_to_float_fu_389_out_58_d0)
+    .address0(x_58_address0),
+    .ce0(x_58_ce0),
+    .we0(x_58_we0),
+    .d0(grp_bf16_to_float_fu_531_out_58_d0),
+    .q0(x_58_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_59_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_59_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_59_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_59_we0),
-    .d0(grp_bf16_to_float_fu_389_out_59_d0)
+    .address0(x_59_address0),
+    .ce0(x_59_ce0),
+    .we0(x_59_we0),
+    .d0(grp_bf16_to_float_fu_531_out_59_d0),
+    .q0(x_59_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_60_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_60_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_60_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_60_we0),
-    .d0(grp_bf16_to_float_fu_389_out_60_d0)
+    .address0(x_60_address0),
+    .ce0(x_60_ce0),
+    .we0(x_60_we0),
+    .d0(grp_bf16_to_float_fu_531_out_60_d0),
+    .q0(x_60_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_61_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_61_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_61_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_61_we0),
-    .d0(grp_bf16_to_float_fu_389_out_61_d0)
+    .address0(x_61_address0),
+    .ce0(x_61_ce0),
+    .we0(x_61_we0),
+    .d0(grp_bf16_to_float_fu_531_out_61_d0),
+    .q0(x_61_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_62_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_62_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_62_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_62_we0),
-    .d0(grp_bf16_to_float_fu_389_out_62_d0)
+    .address0(x_62_address0),
+    .ce0(x_62_ce0),
+    .we0(x_62_we0),
+    .d0(grp_bf16_to_float_fu_531_out_62_d0),
+    .q0(x_62_q0)
 );
 
-activation_accelerator_x_1_RAM_AUTO_0R0W #(
+activation_accelerator_x_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
     .AddressRange( 768 ),
     .AddressWidth( 10 ))
 x_63_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(grp_bf16_to_float_fu_389_out_63_address0),
-    .ce0(grp_bf16_to_float_fu_389_out_63_ce0),
-    .we0(grp_bf16_to_float_fu_389_out_63_we0),
-    .d0(grp_bf16_to_float_fu_389_out_63_d0)
+    .address0(x_63_address0),
+    .ce0(x_63_ce0),
+    .we0(x_63_we0),
+    .d0(grp_bf16_to_float_fu_531_out_63_d0),
+    .q0(x_63_q0)
 );
 
-activation_accelerator_bf16_to_float grp_bf16_to_float_fu_389(
+activation_accelerator_bf16_to_float grp_bf16_to_float_fu_531(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_bf16_to_float_fu_389_ap_start),
-    .ap_done(grp_bf16_to_float_fu_389_ap_done),
-    .ap_idle(grp_bf16_to_float_fu_389_ap_idle),
-    .ap_ready(grp_bf16_to_float_fu_389_ap_ready),
-    .out_0_address0(grp_bf16_to_float_fu_389_out_0_address0),
-    .out_0_ce0(grp_bf16_to_float_fu_389_out_0_ce0),
-    .out_0_we0(grp_bf16_to_float_fu_389_out_0_we0),
-    .out_0_d0(grp_bf16_to_float_fu_389_out_0_d0),
-    .out_1_address0(grp_bf16_to_float_fu_389_out_1_address0),
-    .out_1_ce0(grp_bf16_to_float_fu_389_out_1_ce0),
-    .out_1_we0(grp_bf16_to_float_fu_389_out_1_we0),
-    .out_1_d0(grp_bf16_to_float_fu_389_out_1_d0),
-    .out_2_address0(grp_bf16_to_float_fu_389_out_2_address0),
-    .out_2_ce0(grp_bf16_to_float_fu_389_out_2_ce0),
-    .out_2_we0(grp_bf16_to_float_fu_389_out_2_we0),
-    .out_2_d0(grp_bf16_to_float_fu_389_out_2_d0),
-    .out_3_address0(grp_bf16_to_float_fu_389_out_3_address0),
-    .out_3_ce0(grp_bf16_to_float_fu_389_out_3_ce0),
-    .out_3_we0(grp_bf16_to_float_fu_389_out_3_we0),
-    .out_3_d0(grp_bf16_to_float_fu_389_out_3_d0),
-    .out_4_address0(grp_bf16_to_float_fu_389_out_4_address0),
-    .out_4_ce0(grp_bf16_to_float_fu_389_out_4_ce0),
-    .out_4_we0(grp_bf16_to_float_fu_389_out_4_we0),
-    .out_4_d0(grp_bf16_to_float_fu_389_out_4_d0),
-    .out_5_address0(grp_bf16_to_float_fu_389_out_5_address0),
-    .out_5_ce0(grp_bf16_to_float_fu_389_out_5_ce0),
-    .out_5_we0(grp_bf16_to_float_fu_389_out_5_we0),
-    .out_5_d0(grp_bf16_to_float_fu_389_out_5_d0),
-    .out_6_address0(grp_bf16_to_float_fu_389_out_6_address0),
-    .out_6_ce0(grp_bf16_to_float_fu_389_out_6_ce0),
-    .out_6_we0(grp_bf16_to_float_fu_389_out_6_we0),
-    .out_6_d0(grp_bf16_to_float_fu_389_out_6_d0),
-    .out_7_address0(grp_bf16_to_float_fu_389_out_7_address0),
-    .out_7_ce0(grp_bf16_to_float_fu_389_out_7_ce0),
-    .out_7_we0(grp_bf16_to_float_fu_389_out_7_we0),
-    .out_7_d0(grp_bf16_to_float_fu_389_out_7_d0),
-    .out_8_address0(grp_bf16_to_float_fu_389_out_8_address0),
-    .out_8_ce0(grp_bf16_to_float_fu_389_out_8_ce0),
-    .out_8_we0(grp_bf16_to_float_fu_389_out_8_we0),
-    .out_8_d0(grp_bf16_to_float_fu_389_out_8_d0),
-    .out_9_address0(grp_bf16_to_float_fu_389_out_9_address0),
-    .out_9_ce0(grp_bf16_to_float_fu_389_out_9_ce0),
-    .out_9_we0(grp_bf16_to_float_fu_389_out_9_we0),
-    .out_9_d0(grp_bf16_to_float_fu_389_out_9_d0),
-    .out_10_address0(grp_bf16_to_float_fu_389_out_10_address0),
-    .out_10_ce0(grp_bf16_to_float_fu_389_out_10_ce0),
-    .out_10_we0(grp_bf16_to_float_fu_389_out_10_we0),
-    .out_10_d0(grp_bf16_to_float_fu_389_out_10_d0),
-    .out_11_address0(grp_bf16_to_float_fu_389_out_11_address0),
-    .out_11_ce0(grp_bf16_to_float_fu_389_out_11_ce0),
-    .out_11_we0(grp_bf16_to_float_fu_389_out_11_we0),
-    .out_11_d0(grp_bf16_to_float_fu_389_out_11_d0),
-    .out_12_address0(grp_bf16_to_float_fu_389_out_12_address0),
-    .out_12_ce0(grp_bf16_to_float_fu_389_out_12_ce0),
-    .out_12_we0(grp_bf16_to_float_fu_389_out_12_we0),
-    .out_12_d0(grp_bf16_to_float_fu_389_out_12_d0),
-    .out_13_address0(grp_bf16_to_float_fu_389_out_13_address0),
-    .out_13_ce0(grp_bf16_to_float_fu_389_out_13_ce0),
-    .out_13_we0(grp_bf16_to_float_fu_389_out_13_we0),
-    .out_13_d0(grp_bf16_to_float_fu_389_out_13_d0),
-    .out_14_address0(grp_bf16_to_float_fu_389_out_14_address0),
-    .out_14_ce0(grp_bf16_to_float_fu_389_out_14_ce0),
-    .out_14_we0(grp_bf16_to_float_fu_389_out_14_we0),
-    .out_14_d0(grp_bf16_to_float_fu_389_out_14_d0),
-    .out_15_address0(grp_bf16_to_float_fu_389_out_15_address0),
-    .out_15_ce0(grp_bf16_to_float_fu_389_out_15_ce0),
-    .out_15_we0(grp_bf16_to_float_fu_389_out_15_we0),
-    .out_15_d0(grp_bf16_to_float_fu_389_out_15_d0),
-    .out_16_address0(grp_bf16_to_float_fu_389_out_16_address0),
-    .out_16_ce0(grp_bf16_to_float_fu_389_out_16_ce0),
-    .out_16_we0(grp_bf16_to_float_fu_389_out_16_we0),
-    .out_16_d0(grp_bf16_to_float_fu_389_out_16_d0),
-    .out_17_address0(grp_bf16_to_float_fu_389_out_17_address0),
-    .out_17_ce0(grp_bf16_to_float_fu_389_out_17_ce0),
-    .out_17_we0(grp_bf16_to_float_fu_389_out_17_we0),
-    .out_17_d0(grp_bf16_to_float_fu_389_out_17_d0),
-    .out_18_address0(grp_bf16_to_float_fu_389_out_18_address0),
-    .out_18_ce0(grp_bf16_to_float_fu_389_out_18_ce0),
-    .out_18_we0(grp_bf16_to_float_fu_389_out_18_we0),
-    .out_18_d0(grp_bf16_to_float_fu_389_out_18_d0),
-    .out_19_address0(grp_bf16_to_float_fu_389_out_19_address0),
-    .out_19_ce0(grp_bf16_to_float_fu_389_out_19_ce0),
-    .out_19_we0(grp_bf16_to_float_fu_389_out_19_we0),
-    .out_19_d0(grp_bf16_to_float_fu_389_out_19_d0),
-    .out_20_address0(grp_bf16_to_float_fu_389_out_20_address0),
-    .out_20_ce0(grp_bf16_to_float_fu_389_out_20_ce0),
-    .out_20_we0(grp_bf16_to_float_fu_389_out_20_we0),
-    .out_20_d0(grp_bf16_to_float_fu_389_out_20_d0),
-    .out_21_address0(grp_bf16_to_float_fu_389_out_21_address0),
-    .out_21_ce0(grp_bf16_to_float_fu_389_out_21_ce0),
-    .out_21_we0(grp_bf16_to_float_fu_389_out_21_we0),
-    .out_21_d0(grp_bf16_to_float_fu_389_out_21_d0),
-    .out_22_address0(grp_bf16_to_float_fu_389_out_22_address0),
-    .out_22_ce0(grp_bf16_to_float_fu_389_out_22_ce0),
-    .out_22_we0(grp_bf16_to_float_fu_389_out_22_we0),
-    .out_22_d0(grp_bf16_to_float_fu_389_out_22_d0),
-    .out_23_address0(grp_bf16_to_float_fu_389_out_23_address0),
-    .out_23_ce0(grp_bf16_to_float_fu_389_out_23_ce0),
-    .out_23_we0(grp_bf16_to_float_fu_389_out_23_we0),
-    .out_23_d0(grp_bf16_to_float_fu_389_out_23_d0),
-    .out_24_address0(grp_bf16_to_float_fu_389_out_24_address0),
-    .out_24_ce0(grp_bf16_to_float_fu_389_out_24_ce0),
-    .out_24_we0(grp_bf16_to_float_fu_389_out_24_we0),
-    .out_24_d0(grp_bf16_to_float_fu_389_out_24_d0),
-    .out_25_address0(grp_bf16_to_float_fu_389_out_25_address0),
-    .out_25_ce0(grp_bf16_to_float_fu_389_out_25_ce0),
-    .out_25_we0(grp_bf16_to_float_fu_389_out_25_we0),
-    .out_25_d0(grp_bf16_to_float_fu_389_out_25_d0),
-    .out_26_address0(grp_bf16_to_float_fu_389_out_26_address0),
-    .out_26_ce0(grp_bf16_to_float_fu_389_out_26_ce0),
-    .out_26_we0(grp_bf16_to_float_fu_389_out_26_we0),
-    .out_26_d0(grp_bf16_to_float_fu_389_out_26_d0),
-    .out_27_address0(grp_bf16_to_float_fu_389_out_27_address0),
-    .out_27_ce0(grp_bf16_to_float_fu_389_out_27_ce0),
-    .out_27_we0(grp_bf16_to_float_fu_389_out_27_we0),
-    .out_27_d0(grp_bf16_to_float_fu_389_out_27_d0),
-    .out_28_address0(grp_bf16_to_float_fu_389_out_28_address0),
-    .out_28_ce0(grp_bf16_to_float_fu_389_out_28_ce0),
-    .out_28_we0(grp_bf16_to_float_fu_389_out_28_we0),
-    .out_28_d0(grp_bf16_to_float_fu_389_out_28_d0),
-    .out_29_address0(grp_bf16_to_float_fu_389_out_29_address0),
-    .out_29_ce0(grp_bf16_to_float_fu_389_out_29_ce0),
-    .out_29_we0(grp_bf16_to_float_fu_389_out_29_we0),
-    .out_29_d0(grp_bf16_to_float_fu_389_out_29_d0),
-    .out_30_address0(grp_bf16_to_float_fu_389_out_30_address0),
-    .out_30_ce0(grp_bf16_to_float_fu_389_out_30_ce0),
-    .out_30_we0(grp_bf16_to_float_fu_389_out_30_we0),
-    .out_30_d0(grp_bf16_to_float_fu_389_out_30_d0),
-    .out_31_address0(grp_bf16_to_float_fu_389_out_31_address0),
-    .out_31_ce0(grp_bf16_to_float_fu_389_out_31_ce0),
-    .out_31_we0(grp_bf16_to_float_fu_389_out_31_we0),
-    .out_31_d0(grp_bf16_to_float_fu_389_out_31_d0),
-    .out_32_address0(grp_bf16_to_float_fu_389_out_32_address0),
-    .out_32_ce0(grp_bf16_to_float_fu_389_out_32_ce0),
-    .out_32_we0(grp_bf16_to_float_fu_389_out_32_we0),
-    .out_32_d0(grp_bf16_to_float_fu_389_out_32_d0),
-    .out_33_address0(grp_bf16_to_float_fu_389_out_33_address0),
-    .out_33_ce0(grp_bf16_to_float_fu_389_out_33_ce0),
-    .out_33_we0(grp_bf16_to_float_fu_389_out_33_we0),
-    .out_33_d0(grp_bf16_to_float_fu_389_out_33_d0),
-    .out_34_address0(grp_bf16_to_float_fu_389_out_34_address0),
-    .out_34_ce0(grp_bf16_to_float_fu_389_out_34_ce0),
-    .out_34_we0(grp_bf16_to_float_fu_389_out_34_we0),
-    .out_34_d0(grp_bf16_to_float_fu_389_out_34_d0),
-    .out_35_address0(grp_bf16_to_float_fu_389_out_35_address0),
-    .out_35_ce0(grp_bf16_to_float_fu_389_out_35_ce0),
-    .out_35_we0(grp_bf16_to_float_fu_389_out_35_we0),
-    .out_35_d0(grp_bf16_to_float_fu_389_out_35_d0),
-    .out_36_address0(grp_bf16_to_float_fu_389_out_36_address0),
-    .out_36_ce0(grp_bf16_to_float_fu_389_out_36_ce0),
-    .out_36_we0(grp_bf16_to_float_fu_389_out_36_we0),
-    .out_36_d0(grp_bf16_to_float_fu_389_out_36_d0),
-    .out_37_address0(grp_bf16_to_float_fu_389_out_37_address0),
-    .out_37_ce0(grp_bf16_to_float_fu_389_out_37_ce0),
-    .out_37_we0(grp_bf16_to_float_fu_389_out_37_we0),
-    .out_37_d0(grp_bf16_to_float_fu_389_out_37_d0),
-    .out_38_address0(grp_bf16_to_float_fu_389_out_38_address0),
-    .out_38_ce0(grp_bf16_to_float_fu_389_out_38_ce0),
-    .out_38_we0(grp_bf16_to_float_fu_389_out_38_we0),
-    .out_38_d0(grp_bf16_to_float_fu_389_out_38_d0),
-    .out_39_address0(grp_bf16_to_float_fu_389_out_39_address0),
-    .out_39_ce0(grp_bf16_to_float_fu_389_out_39_ce0),
-    .out_39_we0(grp_bf16_to_float_fu_389_out_39_we0),
-    .out_39_d0(grp_bf16_to_float_fu_389_out_39_d0),
-    .out_40_address0(grp_bf16_to_float_fu_389_out_40_address0),
-    .out_40_ce0(grp_bf16_to_float_fu_389_out_40_ce0),
-    .out_40_we0(grp_bf16_to_float_fu_389_out_40_we0),
-    .out_40_d0(grp_bf16_to_float_fu_389_out_40_d0),
-    .out_41_address0(grp_bf16_to_float_fu_389_out_41_address0),
-    .out_41_ce0(grp_bf16_to_float_fu_389_out_41_ce0),
-    .out_41_we0(grp_bf16_to_float_fu_389_out_41_we0),
-    .out_41_d0(grp_bf16_to_float_fu_389_out_41_d0),
-    .out_42_address0(grp_bf16_to_float_fu_389_out_42_address0),
-    .out_42_ce0(grp_bf16_to_float_fu_389_out_42_ce0),
-    .out_42_we0(grp_bf16_to_float_fu_389_out_42_we0),
-    .out_42_d0(grp_bf16_to_float_fu_389_out_42_d0),
-    .out_43_address0(grp_bf16_to_float_fu_389_out_43_address0),
-    .out_43_ce0(grp_bf16_to_float_fu_389_out_43_ce0),
-    .out_43_we0(grp_bf16_to_float_fu_389_out_43_we0),
-    .out_43_d0(grp_bf16_to_float_fu_389_out_43_d0),
-    .out_44_address0(grp_bf16_to_float_fu_389_out_44_address0),
-    .out_44_ce0(grp_bf16_to_float_fu_389_out_44_ce0),
-    .out_44_we0(grp_bf16_to_float_fu_389_out_44_we0),
-    .out_44_d0(grp_bf16_to_float_fu_389_out_44_d0),
-    .out_45_address0(grp_bf16_to_float_fu_389_out_45_address0),
-    .out_45_ce0(grp_bf16_to_float_fu_389_out_45_ce0),
-    .out_45_we0(grp_bf16_to_float_fu_389_out_45_we0),
-    .out_45_d0(grp_bf16_to_float_fu_389_out_45_d0),
-    .out_46_address0(grp_bf16_to_float_fu_389_out_46_address0),
-    .out_46_ce0(grp_bf16_to_float_fu_389_out_46_ce0),
-    .out_46_we0(grp_bf16_to_float_fu_389_out_46_we0),
-    .out_46_d0(grp_bf16_to_float_fu_389_out_46_d0),
-    .out_47_address0(grp_bf16_to_float_fu_389_out_47_address0),
-    .out_47_ce0(grp_bf16_to_float_fu_389_out_47_ce0),
-    .out_47_we0(grp_bf16_to_float_fu_389_out_47_we0),
-    .out_47_d0(grp_bf16_to_float_fu_389_out_47_d0),
-    .out_48_address0(grp_bf16_to_float_fu_389_out_48_address0),
-    .out_48_ce0(grp_bf16_to_float_fu_389_out_48_ce0),
-    .out_48_we0(grp_bf16_to_float_fu_389_out_48_we0),
-    .out_48_d0(grp_bf16_to_float_fu_389_out_48_d0),
-    .out_49_address0(grp_bf16_to_float_fu_389_out_49_address0),
-    .out_49_ce0(grp_bf16_to_float_fu_389_out_49_ce0),
-    .out_49_we0(grp_bf16_to_float_fu_389_out_49_we0),
-    .out_49_d0(grp_bf16_to_float_fu_389_out_49_d0),
-    .out_50_address0(grp_bf16_to_float_fu_389_out_50_address0),
-    .out_50_ce0(grp_bf16_to_float_fu_389_out_50_ce0),
-    .out_50_we0(grp_bf16_to_float_fu_389_out_50_we0),
-    .out_50_d0(grp_bf16_to_float_fu_389_out_50_d0),
-    .out_51_address0(grp_bf16_to_float_fu_389_out_51_address0),
-    .out_51_ce0(grp_bf16_to_float_fu_389_out_51_ce0),
-    .out_51_we0(grp_bf16_to_float_fu_389_out_51_we0),
-    .out_51_d0(grp_bf16_to_float_fu_389_out_51_d0),
-    .out_52_address0(grp_bf16_to_float_fu_389_out_52_address0),
-    .out_52_ce0(grp_bf16_to_float_fu_389_out_52_ce0),
-    .out_52_we0(grp_bf16_to_float_fu_389_out_52_we0),
-    .out_52_d0(grp_bf16_to_float_fu_389_out_52_d0),
-    .out_53_address0(grp_bf16_to_float_fu_389_out_53_address0),
-    .out_53_ce0(grp_bf16_to_float_fu_389_out_53_ce0),
-    .out_53_we0(grp_bf16_to_float_fu_389_out_53_we0),
-    .out_53_d0(grp_bf16_to_float_fu_389_out_53_d0),
-    .out_54_address0(grp_bf16_to_float_fu_389_out_54_address0),
-    .out_54_ce0(grp_bf16_to_float_fu_389_out_54_ce0),
-    .out_54_we0(grp_bf16_to_float_fu_389_out_54_we0),
-    .out_54_d0(grp_bf16_to_float_fu_389_out_54_d0),
-    .out_55_address0(grp_bf16_to_float_fu_389_out_55_address0),
-    .out_55_ce0(grp_bf16_to_float_fu_389_out_55_ce0),
-    .out_55_we0(grp_bf16_to_float_fu_389_out_55_we0),
-    .out_55_d0(grp_bf16_to_float_fu_389_out_55_d0),
-    .out_56_address0(grp_bf16_to_float_fu_389_out_56_address0),
-    .out_56_ce0(grp_bf16_to_float_fu_389_out_56_ce0),
-    .out_56_we0(grp_bf16_to_float_fu_389_out_56_we0),
-    .out_56_d0(grp_bf16_to_float_fu_389_out_56_d0),
-    .out_57_address0(grp_bf16_to_float_fu_389_out_57_address0),
-    .out_57_ce0(grp_bf16_to_float_fu_389_out_57_ce0),
-    .out_57_we0(grp_bf16_to_float_fu_389_out_57_we0),
-    .out_57_d0(grp_bf16_to_float_fu_389_out_57_d0),
-    .out_58_address0(grp_bf16_to_float_fu_389_out_58_address0),
-    .out_58_ce0(grp_bf16_to_float_fu_389_out_58_ce0),
-    .out_58_we0(grp_bf16_to_float_fu_389_out_58_we0),
-    .out_58_d0(grp_bf16_to_float_fu_389_out_58_d0),
-    .out_59_address0(grp_bf16_to_float_fu_389_out_59_address0),
-    .out_59_ce0(grp_bf16_to_float_fu_389_out_59_ce0),
-    .out_59_we0(grp_bf16_to_float_fu_389_out_59_we0),
-    .out_59_d0(grp_bf16_to_float_fu_389_out_59_d0),
-    .out_60_address0(grp_bf16_to_float_fu_389_out_60_address0),
-    .out_60_ce0(grp_bf16_to_float_fu_389_out_60_ce0),
-    .out_60_we0(grp_bf16_to_float_fu_389_out_60_we0),
-    .out_60_d0(grp_bf16_to_float_fu_389_out_60_d0),
-    .out_61_address0(grp_bf16_to_float_fu_389_out_61_address0),
-    .out_61_ce0(grp_bf16_to_float_fu_389_out_61_ce0),
-    .out_61_we0(grp_bf16_to_float_fu_389_out_61_we0),
-    .out_61_d0(grp_bf16_to_float_fu_389_out_61_d0),
-    .out_62_address0(grp_bf16_to_float_fu_389_out_62_address0),
-    .out_62_ce0(grp_bf16_to_float_fu_389_out_62_ce0),
-    .out_62_we0(grp_bf16_to_float_fu_389_out_62_we0),
-    .out_62_d0(grp_bf16_to_float_fu_389_out_62_d0),
-    .out_63_address0(grp_bf16_to_float_fu_389_out_63_address0),
-    .out_63_ce0(grp_bf16_to_float_fu_389_out_63_ce0),
-    .out_63_we0(grp_bf16_to_float_fu_389_out_63_we0),
-    .out_63_d0(grp_bf16_to_float_fu_389_out_63_d0),
-    .buf0_address0(grp_bf16_to_float_fu_389_buf0_address0),
-    .buf0_ce0(grp_bf16_to_float_fu_389_buf0_ce0),
+    .ap_start(grp_bf16_to_float_fu_531_ap_start),
+    .ap_done(grp_bf16_to_float_fu_531_ap_done),
+    .ap_idle(grp_bf16_to_float_fu_531_ap_idle),
+    .ap_ready(grp_bf16_to_float_fu_531_ap_ready),
+    .out_0_address0(grp_bf16_to_float_fu_531_out_0_address0),
+    .out_0_ce0(grp_bf16_to_float_fu_531_out_0_ce0),
+    .out_0_we0(grp_bf16_to_float_fu_531_out_0_we0),
+    .out_0_d0(grp_bf16_to_float_fu_531_out_0_d0),
+    .out_1_address0(grp_bf16_to_float_fu_531_out_1_address0),
+    .out_1_ce0(grp_bf16_to_float_fu_531_out_1_ce0),
+    .out_1_we0(grp_bf16_to_float_fu_531_out_1_we0),
+    .out_1_d0(grp_bf16_to_float_fu_531_out_1_d0),
+    .out_2_address0(grp_bf16_to_float_fu_531_out_2_address0),
+    .out_2_ce0(grp_bf16_to_float_fu_531_out_2_ce0),
+    .out_2_we0(grp_bf16_to_float_fu_531_out_2_we0),
+    .out_2_d0(grp_bf16_to_float_fu_531_out_2_d0),
+    .out_3_address0(grp_bf16_to_float_fu_531_out_3_address0),
+    .out_3_ce0(grp_bf16_to_float_fu_531_out_3_ce0),
+    .out_3_we0(grp_bf16_to_float_fu_531_out_3_we0),
+    .out_3_d0(grp_bf16_to_float_fu_531_out_3_d0),
+    .out_4_address0(grp_bf16_to_float_fu_531_out_4_address0),
+    .out_4_ce0(grp_bf16_to_float_fu_531_out_4_ce0),
+    .out_4_we0(grp_bf16_to_float_fu_531_out_4_we0),
+    .out_4_d0(grp_bf16_to_float_fu_531_out_4_d0),
+    .out_5_address0(grp_bf16_to_float_fu_531_out_5_address0),
+    .out_5_ce0(grp_bf16_to_float_fu_531_out_5_ce0),
+    .out_5_we0(grp_bf16_to_float_fu_531_out_5_we0),
+    .out_5_d0(grp_bf16_to_float_fu_531_out_5_d0),
+    .out_6_address0(grp_bf16_to_float_fu_531_out_6_address0),
+    .out_6_ce0(grp_bf16_to_float_fu_531_out_6_ce0),
+    .out_6_we0(grp_bf16_to_float_fu_531_out_6_we0),
+    .out_6_d0(grp_bf16_to_float_fu_531_out_6_d0),
+    .out_7_address0(grp_bf16_to_float_fu_531_out_7_address0),
+    .out_7_ce0(grp_bf16_to_float_fu_531_out_7_ce0),
+    .out_7_we0(grp_bf16_to_float_fu_531_out_7_we0),
+    .out_7_d0(grp_bf16_to_float_fu_531_out_7_d0),
+    .out_8_address0(grp_bf16_to_float_fu_531_out_8_address0),
+    .out_8_ce0(grp_bf16_to_float_fu_531_out_8_ce0),
+    .out_8_we0(grp_bf16_to_float_fu_531_out_8_we0),
+    .out_8_d0(grp_bf16_to_float_fu_531_out_8_d0),
+    .out_9_address0(grp_bf16_to_float_fu_531_out_9_address0),
+    .out_9_ce0(grp_bf16_to_float_fu_531_out_9_ce0),
+    .out_9_we0(grp_bf16_to_float_fu_531_out_9_we0),
+    .out_9_d0(grp_bf16_to_float_fu_531_out_9_d0),
+    .out_10_address0(grp_bf16_to_float_fu_531_out_10_address0),
+    .out_10_ce0(grp_bf16_to_float_fu_531_out_10_ce0),
+    .out_10_we0(grp_bf16_to_float_fu_531_out_10_we0),
+    .out_10_d0(grp_bf16_to_float_fu_531_out_10_d0),
+    .out_11_address0(grp_bf16_to_float_fu_531_out_11_address0),
+    .out_11_ce0(grp_bf16_to_float_fu_531_out_11_ce0),
+    .out_11_we0(grp_bf16_to_float_fu_531_out_11_we0),
+    .out_11_d0(grp_bf16_to_float_fu_531_out_11_d0),
+    .out_12_address0(grp_bf16_to_float_fu_531_out_12_address0),
+    .out_12_ce0(grp_bf16_to_float_fu_531_out_12_ce0),
+    .out_12_we0(grp_bf16_to_float_fu_531_out_12_we0),
+    .out_12_d0(grp_bf16_to_float_fu_531_out_12_d0),
+    .out_13_address0(grp_bf16_to_float_fu_531_out_13_address0),
+    .out_13_ce0(grp_bf16_to_float_fu_531_out_13_ce0),
+    .out_13_we0(grp_bf16_to_float_fu_531_out_13_we0),
+    .out_13_d0(grp_bf16_to_float_fu_531_out_13_d0),
+    .out_14_address0(grp_bf16_to_float_fu_531_out_14_address0),
+    .out_14_ce0(grp_bf16_to_float_fu_531_out_14_ce0),
+    .out_14_we0(grp_bf16_to_float_fu_531_out_14_we0),
+    .out_14_d0(grp_bf16_to_float_fu_531_out_14_d0),
+    .out_15_address0(grp_bf16_to_float_fu_531_out_15_address0),
+    .out_15_ce0(grp_bf16_to_float_fu_531_out_15_ce0),
+    .out_15_we0(grp_bf16_to_float_fu_531_out_15_we0),
+    .out_15_d0(grp_bf16_to_float_fu_531_out_15_d0),
+    .out_16_address0(grp_bf16_to_float_fu_531_out_16_address0),
+    .out_16_ce0(grp_bf16_to_float_fu_531_out_16_ce0),
+    .out_16_we0(grp_bf16_to_float_fu_531_out_16_we0),
+    .out_16_d0(grp_bf16_to_float_fu_531_out_16_d0),
+    .out_17_address0(grp_bf16_to_float_fu_531_out_17_address0),
+    .out_17_ce0(grp_bf16_to_float_fu_531_out_17_ce0),
+    .out_17_we0(grp_bf16_to_float_fu_531_out_17_we0),
+    .out_17_d0(grp_bf16_to_float_fu_531_out_17_d0),
+    .out_18_address0(grp_bf16_to_float_fu_531_out_18_address0),
+    .out_18_ce0(grp_bf16_to_float_fu_531_out_18_ce0),
+    .out_18_we0(grp_bf16_to_float_fu_531_out_18_we0),
+    .out_18_d0(grp_bf16_to_float_fu_531_out_18_d0),
+    .out_19_address0(grp_bf16_to_float_fu_531_out_19_address0),
+    .out_19_ce0(grp_bf16_to_float_fu_531_out_19_ce0),
+    .out_19_we0(grp_bf16_to_float_fu_531_out_19_we0),
+    .out_19_d0(grp_bf16_to_float_fu_531_out_19_d0),
+    .out_20_address0(grp_bf16_to_float_fu_531_out_20_address0),
+    .out_20_ce0(grp_bf16_to_float_fu_531_out_20_ce0),
+    .out_20_we0(grp_bf16_to_float_fu_531_out_20_we0),
+    .out_20_d0(grp_bf16_to_float_fu_531_out_20_d0),
+    .out_21_address0(grp_bf16_to_float_fu_531_out_21_address0),
+    .out_21_ce0(grp_bf16_to_float_fu_531_out_21_ce0),
+    .out_21_we0(grp_bf16_to_float_fu_531_out_21_we0),
+    .out_21_d0(grp_bf16_to_float_fu_531_out_21_d0),
+    .out_22_address0(grp_bf16_to_float_fu_531_out_22_address0),
+    .out_22_ce0(grp_bf16_to_float_fu_531_out_22_ce0),
+    .out_22_we0(grp_bf16_to_float_fu_531_out_22_we0),
+    .out_22_d0(grp_bf16_to_float_fu_531_out_22_d0),
+    .out_23_address0(grp_bf16_to_float_fu_531_out_23_address0),
+    .out_23_ce0(grp_bf16_to_float_fu_531_out_23_ce0),
+    .out_23_we0(grp_bf16_to_float_fu_531_out_23_we0),
+    .out_23_d0(grp_bf16_to_float_fu_531_out_23_d0),
+    .out_24_address0(grp_bf16_to_float_fu_531_out_24_address0),
+    .out_24_ce0(grp_bf16_to_float_fu_531_out_24_ce0),
+    .out_24_we0(grp_bf16_to_float_fu_531_out_24_we0),
+    .out_24_d0(grp_bf16_to_float_fu_531_out_24_d0),
+    .out_25_address0(grp_bf16_to_float_fu_531_out_25_address0),
+    .out_25_ce0(grp_bf16_to_float_fu_531_out_25_ce0),
+    .out_25_we0(grp_bf16_to_float_fu_531_out_25_we0),
+    .out_25_d0(grp_bf16_to_float_fu_531_out_25_d0),
+    .out_26_address0(grp_bf16_to_float_fu_531_out_26_address0),
+    .out_26_ce0(grp_bf16_to_float_fu_531_out_26_ce0),
+    .out_26_we0(grp_bf16_to_float_fu_531_out_26_we0),
+    .out_26_d0(grp_bf16_to_float_fu_531_out_26_d0),
+    .out_27_address0(grp_bf16_to_float_fu_531_out_27_address0),
+    .out_27_ce0(grp_bf16_to_float_fu_531_out_27_ce0),
+    .out_27_we0(grp_bf16_to_float_fu_531_out_27_we0),
+    .out_27_d0(grp_bf16_to_float_fu_531_out_27_d0),
+    .out_28_address0(grp_bf16_to_float_fu_531_out_28_address0),
+    .out_28_ce0(grp_bf16_to_float_fu_531_out_28_ce0),
+    .out_28_we0(grp_bf16_to_float_fu_531_out_28_we0),
+    .out_28_d0(grp_bf16_to_float_fu_531_out_28_d0),
+    .out_29_address0(grp_bf16_to_float_fu_531_out_29_address0),
+    .out_29_ce0(grp_bf16_to_float_fu_531_out_29_ce0),
+    .out_29_we0(grp_bf16_to_float_fu_531_out_29_we0),
+    .out_29_d0(grp_bf16_to_float_fu_531_out_29_d0),
+    .out_30_address0(grp_bf16_to_float_fu_531_out_30_address0),
+    .out_30_ce0(grp_bf16_to_float_fu_531_out_30_ce0),
+    .out_30_we0(grp_bf16_to_float_fu_531_out_30_we0),
+    .out_30_d0(grp_bf16_to_float_fu_531_out_30_d0),
+    .out_31_address0(grp_bf16_to_float_fu_531_out_31_address0),
+    .out_31_ce0(grp_bf16_to_float_fu_531_out_31_ce0),
+    .out_31_we0(grp_bf16_to_float_fu_531_out_31_we0),
+    .out_31_d0(grp_bf16_to_float_fu_531_out_31_d0),
+    .out_32_address0(grp_bf16_to_float_fu_531_out_32_address0),
+    .out_32_ce0(grp_bf16_to_float_fu_531_out_32_ce0),
+    .out_32_we0(grp_bf16_to_float_fu_531_out_32_we0),
+    .out_32_d0(grp_bf16_to_float_fu_531_out_32_d0),
+    .out_33_address0(grp_bf16_to_float_fu_531_out_33_address0),
+    .out_33_ce0(grp_bf16_to_float_fu_531_out_33_ce0),
+    .out_33_we0(grp_bf16_to_float_fu_531_out_33_we0),
+    .out_33_d0(grp_bf16_to_float_fu_531_out_33_d0),
+    .out_34_address0(grp_bf16_to_float_fu_531_out_34_address0),
+    .out_34_ce0(grp_bf16_to_float_fu_531_out_34_ce0),
+    .out_34_we0(grp_bf16_to_float_fu_531_out_34_we0),
+    .out_34_d0(grp_bf16_to_float_fu_531_out_34_d0),
+    .out_35_address0(grp_bf16_to_float_fu_531_out_35_address0),
+    .out_35_ce0(grp_bf16_to_float_fu_531_out_35_ce0),
+    .out_35_we0(grp_bf16_to_float_fu_531_out_35_we0),
+    .out_35_d0(grp_bf16_to_float_fu_531_out_35_d0),
+    .out_36_address0(grp_bf16_to_float_fu_531_out_36_address0),
+    .out_36_ce0(grp_bf16_to_float_fu_531_out_36_ce0),
+    .out_36_we0(grp_bf16_to_float_fu_531_out_36_we0),
+    .out_36_d0(grp_bf16_to_float_fu_531_out_36_d0),
+    .out_37_address0(grp_bf16_to_float_fu_531_out_37_address0),
+    .out_37_ce0(grp_bf16_to_float_fu_531_out_37_ce0),
+    .out_37_we0(grp_bf16_to_float_fu_531_out_37_we0),
+    .out_37_d0(grp_bf16_to_float_fu_531_out_37_d0),
+    .out_38_address0(grp_bf16_to_float_fu_531_out_38_address0),
+    .out_38_ce0(grp_bf16_to_float_fu_531_out_38_ce0),
+    .out_38_we0(grp_bf16_to_float_fu_531_out_38_we0),
+    .out_38_d0(grp_bf16_to_float_fu_531_out_38_d0),
+    .out_39_address0(grp_bf16_to_float_fu_531_out_39_address0),
+    .out_39_ce0(grp_bf16_to_float_fu_531_out_39_ce0),
+    .out_39_we0(grp_bf16_to_float_fu_531_out_39_we0),
+    .out_39_d0(grp_bf16_to_float_fu_531_out_39_d0),
+    .out_40_address0(grp_bf16_to_float_fu_531_out_40_address0),
+    .out_40_ce0(grp_bf16_to_float_fu_531_out_40_ce0),
+    .out_40_we0(grp_bf16_to_float_fu_531_out_40_we0),
+    .out_40_d0(grp_bf16_to_float_fu_531_out_40_d0),
+    .out_41_address0(grp_bf16_to_float_fu_531_out_41_address0),
+    .out_41_ce0(grp_bf16_to_float_fu_531_out_41_ce0),
+    .out_41_we0(grp_bf16_to_float_fu_531_out_41_we0),
+    .out_41_d0(grp_bf16_to_float_fu_531_out_41_d0),
+    .out_42_address0(grp_bf16_to_float_fu_531_out_42_address0),
+    .out_42_ce0(grp_bf16_to_float_fu_531_out_42_ce0),
+    .out_42_we0(grp_bf16_to_float_fu_531_out_42_we0),
+    .out_42_d0(grp_bf16_to_float_fu_531_out_42_d0),
+    .out_43_address0(grp_bf16_to_float_fu_531_out_43_address0),
+    .out_43_ce0(grp_bf16_to_float_fu_531_out_43_ce0),
+    .out_43_we0(grp_bf16_to_float_fu_531_out_43_we0),
+    .out_43_d0(grp_bf16_to_float_fu_531_out_43_d0),
+    .out_44_address0(grp_bf16_to_float_fu_531_out_44_address0),
+    .out_44_ce0(grp_bf16_to_float_fu_531_out_44_ce0),
+    .out_44_we0(grp_bf16_to_float_fu_531_out_44_we0),
+    .out_44_d0(grp_bf16_to_float_fu_531_out_44_d0),
+    .out_45_address0(grp_bf16_to_float_fu_531_out_45_address0),
+    .out_45_ce0(grp_bf16_to_float_fu_531_out_45_ce0),
+    .out_45_we0(grp_bf16_to_float_fu_531_out_45_we0),
+    .out_45_d0(grp_bf16_to_float_fu_531_out_45_d0),
+    .out_46_address0(grp_bf16_to_float_fu_531_out_46_address0),
+    .out_46_ce0(grp_bf16_to_float_fu_531_out_46_ce0),
+    .out_46_we0(grp_bf16_to_float_fu_531_out_46_we0),
+    .out_46_d0(grp_bf16_to_float_fu_531_out_46_d0),
+    .out_47_address0(grp_bf16_to_float_fu_531_out_47_address0),
+    .out_47_ce0(grp_bf16_to_float_fu_531_out_47_ce0),
+    .out_47_we0(grp_bf16_to_float_fu_531_out_47_we0),
+    .out_47_d0(grp_bf16_to_float_fu_531_out_47_d0),
+    .out_48_address0(grp_bf16_to_float_fu_531_out_48_address0),
+    .out_48_ce0(grp_bf16_to_float_fu_531_out_48_ce0),
+    .out_48_we0(grp_bf16_to_float_fu_531_out_48_we0),
+    .out_48_d0(grp_bf16_to_float_fu_531_out_48_d0),
+    .out_49_address0(grp_bf16_to_float_fu_531_out_49_address0),
+    .out_49_ce0(grp_bf16_to_float_fu_531_out_49_ce0),
+    .out_49_we0(grp_bf16_to_float_fu_531_out_49_we0),
+    .out_49_d0(grp_bf16_to_float_fu_531_out_49_d0),
+    .out_50_address0(grp_bf16_to_float_fu_531_out_50_address0),
+    .out_50_ce0(grp_bf16_to_float_fu_531_out_50_ce0),
+    .out_50_we0(grp_bf16_to_float_fu_531_out_50_we0),
+    .out_50_d0(grp_bf16_to_float_fu_531_out_50_d0),
+    .out_51_address0(grp_bf16_to_float_fu_531_out_51_address0),
+    .out_51_ce0(grp_bf16_to_float_fu_531_out_51_ce0),
+    .out_51_we0(grp_bf16_to_float_fu_531_out_51_we0),
+    .out_51_d0(grp_bf16_to_float_fu_531_out_51_d0),
+    .out_52_address0(grp_bf16_to_float_fu_531_out_52_address0),
+    .out_52_ce0(grp_bf16_to_float_fu_531_out_52_ce0),
+    .out_52_we0(grp_bf16_to_float_fu_531_out_52_we0),
+    .out_52_d0(grp_bf16_to_float_fu_531_out_52_d0),
+    .out_53_address0(grp_bf16_to_float_fu_531_out_53_address0),
+    .out_53_ce0(grp_bf16_to_float_fu_531_out_53_ce0),
+    .out_53_we0(grp_bf16_to_float_fu_531_out_53_we0),
+    .out_53_d0(grp_bf16_to_float_fu_531_out_53_d0),
+    .out_54_address0(grp_bf16_to_float_fu_531_out_54_address0),
+    .out_54_ce0(grp_bf16_to_float_fu_531_out_54_ce0),
+    .out_54_we0(grp_bf16_to_float_fu_531_out_54_we0),
+    .out_54_d0(grp_bf16_to_float_fu_531_out_54_d0),
+    .out_55_address0(grp_bf16_to_float_fu_531_out_55_address0),
+    .out_55_ce0(grp_bf16_to_float_fu_531_out_55_ce0),
+    .out_55_we0(grp_bf16_to_float_fu_531_out_55_we0),
+    .out_55_d0(grp_bf16_to_float_fu_531_out_55_d0),
+    .out_56_address0(grp_bf16_to_float_fu_531_out_56_address0),
+    .out_56_ce0(grp_bf16_to_float_fu_531_out_56_ce0),
+    .out_56_we0(grp_bf16_to_float_fu_531_out_56_we0),
+    .out_56_d0(grp_bf16_to_float_fu_531_out_56_d0),
+    .out_57_address0(grp_bf16_to_float_fu_531_out_57_address0),
+    .out_57_ce0(grp_bf16_to_float_fu_531_out_57_ce0),
+    .out_57_we0(grp_bf16_to_float_fu_531_out_57_we0),
+    .out_57_d0(grp_bf16_to_float_fu_531_out_57_d0),
+    .out_58_address0(grp_bf16_to_float_fu_531_out_58_address0),
+    .out_58_ce0(grp_bf16_to_float_fu_531_out_58_ce0),
+    .out_58_we0(grp_bf16_to_float_fu_531_out_58_we0),
+    .out_58_d0(grp_bf16_to_float_fu_531_out_58_d0),
+    .out_59_address0(grp_bf16_to_float_fu_531_out_59_address0),
+    .out_59_ce0(grp_bf16_to_float_fu_531_out_59_ce0),
+    .out_59_we0(grp_bf16_to_float_fu_531_out_59_we0),
+    .out_59_d0(grp_bf16_to_float_fu_531_out_59_d0),
+    .out_60_address0(grp_bf16_to_float_fu_531_out_60_address0),
+    .out_60_ce0(grp_bf16_to_float_fu_531_out_60_ce0),
+    .out_60_we0(grp_bf16_to_float_fu_531_out_60_we0),
+    .out_60_d0(grp_bf16_to_float_fu_531_out_60_d0),
+    .out_61_address0(grp_bf16_to_float_fu_531_out_61_address0),
+    .out_61_ce0(grp_bf16_to_float_fu_531_out_61_ce0),
+    .out_61_we0(grp_bf16_to_float_fu_531_out_61_we0),
+    .out_61_d0(grp_bf16_to_float_fu_531_out_61_d0),
+    .out_62_address0(grp_bf16_to_float_fu_531_out_62_address0),
+    .out_62_ce0(grp_bf16_to_float_fu_531_out_62_ce0),
+    .out_62_we0(grp_bf16_to_float_fu_531_out_62_we0),
+    .out_62_d0(grp_bf16_to_float_fu_531_out_62_d0),
+    .out_63_address0(grp_bf16_to_float_fu_531_out_63_address0),
+    .out_63_ce0(grp_bf16_to_float_fu_531_out_63_ce0),
+    .out_63_we0(grp_bf16_to_float_fu_531_out_63_we0),
+    .out_63_d0(grp_bf16_to_float_fu_531_out_63_d0),
+    .buf0_address0(grp_bf16_to_float_fu_531_buf0_address0),
+    .buf0_ce0(grp_bf16_to_float_fu_531_buf0_ce0),
     .buf0_q0(buf0_q0)
 );
 
-activation_accelerator_activation_accelerator_Pipeline_stage_2_store grp_activation_accelerator_Pipeline_stage_2_store_fu_523(
+activation_accelerator_activation_accelerator_Pipeline_stage_2_store grp_activation_accelerator_Pipeline_stage_2_store_fu_665(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_ap_start),
-    .ap_done(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_ap_done),
-    .ap_idle(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_ap_idle),
-    .ap_ready(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_ap_ready),
-    .m_axi_gmem2_AWVALID(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_AWVALID),
+    .ap_start(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_ap_start),
+    .ap_done(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_ap_done),
+    .ap_idle(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_ap_idle),
+    .ap_ready(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_ap_ready),
+    .m_axi_gmem2_AWVALID(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_AWVALID),
     .m_axi_gmem2_AWREADY(gmem2_AWREADY),
-    .m_axi_gmem2_AWADDR(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_AWADDR),
-    .m_axi_gmem2_AWID(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_AWID),
-    .m_axi_gmem2_AWLEN(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_AWLEN),
-    .m_axi_gmem2_AWSIZE(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_AWSIZE),
-    .m_axi_gmem2_AWBURST(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_AWBURST),
-    .m_axi_gmem2_AWLOCK(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_AWLOCK),
-    .m_axi_gmem2_AWCACHE(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_AWCACHE),
-    .m_axi_gmem2_AWPROT(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_AWPROT),
-    .m_axi_gmem2_AWQOS(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_AWQOS),
-    .m_axi_gmem2_AWREGION(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_AWREGION),
-    .m_axi_gmem2_AWUSER(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_AWUSER),
-    .m_axi_gmem2_WVALID(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_WVALID),
+    .m_axi_gmem2_AWADDR(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_AWADDR),
+    .m_axi_gmem2_AWID(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_AWID),
+    .m_axi_gmem2_AWLEN(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_AWLEN),
+    .m_axi_gmem2_AWSIZE(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_AWSIZE),
+    .m_axi_gmem2_AWBURST(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_AWBURST),
+    .m_axi_gmem2_AWLOCK(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_AWLOCK),
+    .m_axi_gmem2_AWCACHE(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_AWCACHE),
+    .m_axi_gmem2_AWPROT(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_AWPROT),
+    .m_axi_gmem2_AWQOS(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_AWQOS),
+    .m_axi_gmem2_AWREGION(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_AWREGION),
+    .m_axi_gmem2_AWUSER(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_AWUSER),
+    .m_axi_gmem2_WVALID(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_WVALID),
     .m_axi_gmem2_WREADY(gmem2_WREADY),
-    .m_axi_gmem2_WDATA(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_WDATA),
-    .m_axi_gmem2_WSTRB(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_WSTRB),
-    .m_axi_gmem2_WLAST(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_WLAST),
-    .m_axi_gmem2_WID(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_WID),
-    .m_axi_gmem2_WUSER(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_WUSER),
-    .m_axi_gmem2_ARVALID(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_ARVALID),
+    .m_axi_gmem2_WDATA(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_WDATA),
+    .m_axi_gmem2_WSTRB(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_WSTRB),
+    .m_axi_gmem2_WLAST(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_WLAST),
+    .m_axi_gmem2_WID(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_WID),
+    .m_axi_gmem2_WUSER(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_WUSER),
+    .m_axi_gmem2_ARVALID(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_ARVALID),
     .m_axi_gmem2_ARREADY(1'b0),
-    .m_axi_gmem2_ARADDR(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_ARADDR),
-    .m_axi_gmem2_ARID(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_ARID),
-    .m_axi_gmem2_ARLEN(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_ARLEN),
-    .m_axi_gmem2_ARSIZE(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_ARSIZE),
-    .m_axi_gmem2_ARBURST(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_ARBURST),
-    .m_axi_gmem2_ARLOCK(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_ARLOCK),
-    .m_axi_gmem2_ARCACHE(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_ARCACHE),
-    .m_axi_gmem2_ARPROT(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_ARPROT),
-    .m_axi_gmem2_ARQOS(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_ARQOS),
-    .m_axi_gmem2_ARREGION(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_ARREGION),
-    .m_axi_gmem2_ARUSER(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_ARUSER),
+    .m_axi_gmem2_ARADDR(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_ARADDR),
+    .m_axi_gmem2_ARID(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_ARID),
+    .m_axi_gmem2_ARLEN(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_ARLEN),
+    .m_axi_gmem2_ARSIZE(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_ARSIZE),
+    .m_axi_gmem2_ARBURST(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_ARBURST),
+    .m_axi_gmem2_ARLOCK(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_ARLOCK),
+    .m_axi_gmem2_ARCACHE(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_ARCACHE),
+    .m_axi_gmem2_ARPROT(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_ARPROT),
+    .m_axi_gmem2_ARQOS(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_ARQOS),
+    .m_axi_gmem2_ARREGION(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_ARREGION),
+    .m_axi_gmem2_ARUSER(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_ARUSER),
     .m_axi_gmem2_RVALID(1'b0),
-    .m_axi_gmem2_RREADY(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_RREADY),
+    .m_axi_gmem2_RREADY(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_RREADY),
     .m_axi_gmem2_RDATA(16'd0),
     .m_axi_gmem2_RLAST(1'b0),
     .m_axi_gmem2_RID(1'd0),
@@ -2146,126 +3977,704 @@ activation_accelerator_activation_accelerator_Pipeline_stage_2_store grp_activat
     .m_axi_gmem2_RUSER(1'd0),
     .m_axi_gmem2_RRESP(2'd0),
     .m_axi_gmem2_BVALID(gmem2_BVALID),
-    .m_axi_gmem2_BREADY(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_BREADY),
+    .m_axi_gmem2_BREADY(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_BREADY),
     .m_axi_gmem2_BRESP(2'd0),
     .m_axi_gmem2_BID(1'd0),
     .m_axi_gmem2_BUSER(1'd0),
-    .sext_ln1380(trunc_ln3_reg_598),
-    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0),
-    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0),
-    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_q0)
+    .sext_ln542(trunc_ln1_reg_1055),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_q0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_q0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_q0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_q0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_q0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_q0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_q0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_q0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_q0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_q0(activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_q0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_address0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_ce0(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_q0(p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_q0)
 );
 
-activation_accelerator_float_safe_softmax3_64_s grp_float_safe_softmax3_64_s_fu_532(
+activation_accelerator_float_silu2 grp_float_silu2_fu_800(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_float_safe_softmax3_64_s_fu_532_ap_start),
-    .ap_done(grp_float_safe_softmax3_64_s_fu_532_ap_done),
-    .ap_idle(grp_float_safe_softmax3_64_s_fu_532_ap_idle),
-    .ap_ready(grp_float_safe_softmax3_64_s_fu_532_ap_ready),
-    .x_0_address0(grp_float_safe_softmax3_64_s_fu_532_x_0_address0),
-    .x_0_ce0(grp_float_safe_softmax3_64_s_fu_532_x_0_ce0),
+    .ap_start(grp_float_silu2_fu_800_ap_start),
+    .ap_done(grp_float_silu2_fu_800_ap_done),
+    .ap_idle(grp_float_silu2_fu_800_ap_idle),
+    .ap_ready(grp_float_silu2_fu_800_ap_ready),
+    .x_0_address0(grp_float_silu2_fu_800_x_0_address0),
+    .x_0_ce0(grp_float_silu2_fu_800_x_0_ce0),
     .x_0_q0(x_q0),
-    .x_0_address1(grp_float_safe_softmax3_64_s_fu_532_x_0_address1),
-    .x_0_ce1(grp_float_safe_softmax3_64_s_fu_532_x_0_ce1),
-    .x_0_q1(x_q1),
-    .x_0_address2(grp_float_safe_softmax3_64_s_fu_532_x_0_address2),
-    .x_0_ce2(grp_float_safe_softmax3_64_s_fu_532_x_0_ce2),
-    .x_0_q2(x_q2),
-    .x_0_address3(grp_float_safe_softmax3_64_s_fu_532_x_0_address3),
-    .x_0_ce3(grp_float_safe_softmax3_64_s_fu_532_x_0_ce3),
-    .x_0_q3(x_q3),
-    .x_0_address4(grp_float_safe_softmax3_64_s_fu_532_x_0_address4),
-    .x_0_ce4(grp_float_safe_softmax3_64_s_fu_532_x_0_ce4),
-    .x_0_q4(x_q4),
-    .x_0_address5(grp_float_safe_softmax3_64_s_fu_532_x_0_address5),
-    .x_0_ce5(grp_float_safe_softmax3_64_s_fu_532_x_0_ce5),
-    .x_0_q5(x_q5),
-    .x_0_address6(grp_float_safe_softmax3_64_s_fu_532_x_0_address6),
-    .x_0_ce6(grp_float_safe_softmax3_64_s_fu_532_x_0_ce6),
-    .x_0_q6(x_q6),
-    .x_0_address7(grp_float_safe_softmax3_64_s_fu_532_x_0_address7),
-    .x_0_ce7(grp_float_safe_softmax3_64_s_fu_532_x_0_ce7),
-    .x_0_q7(x_q7),
-    .x_0_address8(grp_float_safe_softmax3_64_s_fu_532_x_0_address8),
-    .x_0_ce8(grp_float_safe_softmax3_64_s_fu_532_x_0_ce8),
-    .x_0_q8(x_q8),
-    .x_0_address9(grp_float_safe_softmax3_64_s_fu_532_x_0_address9),
-    .x_0_ce9(grp_float_safe_softmax3_64_s_fu_532_x_0_ce9),
-    .x_0_q9(x_q9),
-    .x_0_address10(grp_float_safe_softmax3_64_s_fu_532_x_0_address10),
-    .x_0_ce10(grp_float_safe_softmax3_64_s_fu_532_x_0_ce10),
-    .x_0_q10(x_q10),
-    .x_0_address11(grp_float_safe_softmax3_64_s_fu_532_x_0_address11),
-    .x_0_ce11(grp_float_safe_softmax3_64_s_fu_532_x_0_ce11),
-    .x_0_q11(x_q11),
-    .x_0_address12(grp_float_safe_softmax3_64_s_fu_532_x_0_address12),
-    .x_0_ce12(grp_float_safe_softmax3_64_s_fu_532_x_0_ce12),
-    .x_0_q12(x_q12),
-    .x_0_address13(grp_float_safe_softmax3_64_s_fu_532_x_0_address13),
-    .x_0_ce13(grp_float_safe_softmax3_64_s_fu_532_x_0_ce13),
-    .x_0_q13(x_q13),
-    .x_0_address14(grp_float_safe_softmax3_64_s_fu_532_x_0_address14),
-    .x_0_ce14(grp_float_safe_softmax3_64_s_fu_532_x_0_ce14),
-    .x_0_q14(x_q14),
-    .x_0_address15(grp_float_safe_softmax3_64_s_fu_532_x_0_address15),
-    .x_0_ce15(grp_float_safe_softmax3_64_s_fu_532_x_0_ce15),
-    .x_0_q15(x_q15),
-    .x_0_address16(grp_float_safe_softmax3_64_s_fu_532_x_0_address16),
-    .x_0_ce16(grp_float_safe_softmax3_64_s_fu_532_x_0_ce16),
-    .x_0_q16(x_q16),
-    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0(grp_float_safe_softmax3_64_s_fu_532_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0),
-    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0(grp_float_safe_softmax3_64_s_fu_532_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0),
-    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0(grp_float_safe_softmax3_64_s_fu_532_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0),
-    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0(grp_float_safe_softmax3_64_s_fu_532_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0),
-    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1(grp_float_safe_softmax3_64_s_fu_532_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address1),
-    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1(grp_float_safe_softmax3_64_s_fu_532_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1),
-    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1(grp_float_safe_softmax3_64_s_fu_532_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1),
-    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1(grp_float_safe_softmax3_64_s_fu_532_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d1)
+    .x_1_address0(grp_float_silu2_fu_800_x_1_address0),
+    .x_1_ce0(grp_float_silu2_fu_800_x_1_ce0),
+    .x_1_q0(x_1_q0),
+    .x_2_address0(grp_float_silu2_fu_800_x_2_address0),
+    .x_2_ce0(grp_float_silu2_fu_800_x_2_ce0),
+    .x_2_q0(x_2_q0),
+    .x_3_address0(grp_float_silu2_fu_800_x_3_address0),
+    .x_3_ce0(grp_float_silu2_fu_800_x_3_ce0),
+    .x_3_q0(x_3_q0),
+    .x_4_address0(grp_float_silu2_fu_800_x_4_address0),
+    .x_4_ce0(grp_float_silu2_fu_800_x_4_ce0),
+    .x_4_q0(x_4_q0),
+    .x_5_address0(grp_float_silu2_fu_800_x_5_address0),
+    .x_5_ce0(grp_float_silu2_fu_800_x_5_ce0),
+    .x_5_q0(x_5_q0),
+    .x_6_address0(grp_float_silu2_fu_800_x_6_address0),
+    .x_6_ce0(grp_float_silu2_fu_800_x_6_ce0),
+    .x_6_q0(x_6_q0),
+    .x_7_address0(grp_float_silu2_fu_800_x_7_address0),
+    .x_7_ce0(grp_float_silu2_fu_800_x_7_ce0),
+    .x_7_q0(x_7_q0),
+    .x_8_address0(grp_float_silu2_fu_800_x_8_address0),
+    .x_8_ce0(grp_float_silu2_fu_800_x_8_ce0),
+    .x_8_q0(x_8_q0),
+    .x_9_address0(grp_float_silu2_fu_800_x_9_address0),
+    .x_9_ce0(grp_float_silu2_fu_800_x_9_ce0),
+    .x_9_q0(x_9_q0),
+    .x_10_address0(grp_float_silu2_fu_800_x_10_address0),
+    .x_10_ce0(grp_float_silu2_fu_800_x_10_ce0),
+    .x_10_q0(x_10_q0),
+    .x_11_address0(grp_float_silu2_fu_800_x_11_address0),
+    .x_11_ce0(grp_float_silu2_fu_800_x_11_ce0),
+    .x_11_q0(x_11_q0),
+    .x_12_address0(grp_float_silu2_fu_800_x_12_address0),
+    .x_12_ce0(grp_float_silu2_fu_800_x_12_ce0),
+    .x_12_q0(x_12_q0),
+    .x_13_address0(grp_float_silu2_fu_800_x_13_address0),
+    .x_13_ce0(grp_float_silu2_fu_800_x_13_ce0),
+    .x_13_q0(x_13_q0),
+    .x_14_address0(grp_float_silu2_fu_800_x_14_address0),
+    .x_14_ce0(grp_float_silu2_fu_800_x_14_ce0),
+    .x_14_q0(x_14_q0),
+    .x_15_address0(grp_float_silu2_fu_800_x_15_address0),
+    .x_15_ce0(grp_float_silu2_fu_800_x_15_ce0),
+    .x_15_q0(x_15_q0),
+    .x_16_address0(grp_float_silu2_fu_800_x_16_address0),
+    .x_16_ce0(grp_float_silu2_fu_800_x_16_ce0),
+    .x_16_q0(x_16_q0),
+    .x_17_address0(grp_float_silu2_fu_800_x_17_address0),
+    .x_17_ce0(grp_float_silu2_fu_800_x_17_ce0),
+    .x_17_q0(x_17_q0),
+    .x_18_address0(grp_float_silu2_fu_800_x_18_address0),
+    .x_18_ce0(grp_float_silu2_fu_800_x_18_ce0),
+    .x_18_q0(x_18_q0),
+    .x_19_address0(grp_float_silu2_fu_800_x_19_address0),
+    .x_19_ce0(grp_float_silu2_fu_800_x_19_ce0),
+    .x_19_q0(x_19_q0),
+    .x_20_address0(grp_float_silu2_fu_800_x_20_address0),
+    .x_20_ce0(grp_float_silu2_fu_800_x_20_ce0),
+    .x_20_q0(x_20_q0),
+    .x_21_address0(grp_float_silu2_fu_800_x_21_address0),
+    .x_21_ce0(grp_float_silu2_fu_800_x_21_ce0),
+    .x_21_q0(x_21_q0),
+    .x_22_address0(grp_float_silu2_fu_800_x_22_address0),
+    .x_22_ce0(grp_float_silu2_fu_800_x_22_ce0),
+    .x_22_q0(x_22_q0),
+    .x_23_address0(grp_float_silu2_fu_800_x_23_address0),
+    .x_23_ce0(grp_float_silu2_fu_800_x_23_ce0),
+    .x_23_q0(x_23_q0),
+    .x_24_address0(grp_float_silu2_fu_800_x_24_address0),
+    .x_24_ce0(grp_float_silu2_fu_800_x_24_ce0),
+    .x_24_q0(x_24_q0),
+    .x_25_address0(grp_float_silu2_fu_800_x_25_address0),
+    .x_25_ce0(grp_float_silu2_fu_800_x_25_ce0),
+    .x_25_q0(x_25_q0),
+    .x_26_address0(grp_float_silu2_fu_800_x_26_address0),
+    .x_26_ce0(grp_float_silu2_fu_800_x_26_ce0),
+    .x_26_q0(x_26_q0),
+    .x_27_address0(grp_float_silu2_fu_800_x_27_address0),
+    .x_27_ce0(grp_float_silu2_fu_800_x_27_ce0),
+    .x_27_q0(x_27_q0),
+    .x_28_address0(grp_float_silu2_fu_800_x_28_address0),
+    .x_28_ce0(grp_float_silu2_fu_800_x_28_ce0),
+    .x_28_q0(x_28_q0),
+    .x_29_address0(grp_float_silu2_fu_800_x_29_address0),
+    .x_29_ce0(grp_float_silu2_fu_800_x_29_ce0),
+    .x_29_q0(x_29_q0),
+    .x_30_address0(grp_float_silu2_fu_800_x_30_address0),
+    .x_30_ce0(grp_float_silu2_fu_800_x_30_ce0),
+    .x_30_q0(x_30_q0),
+    .x_31_address0(grp_float_silu2_fu_800_x_31_address0),
+    .x_31_ce0(grp_float_silu2_fu_800_x_31_ce0),
+    .x_31_q0(x_31_q0),
+    .x_32_address0(grp_float_silu2_fu_800_x_32_address0),
+    .x_32_ce0(grp_float_silu2_fu_800_x_32_ce0),
+    .x_32_q0(x_32_q0),
+    .x_33_address0(grp_float_silu2_fu_800_x_33_address0),
+    .x_33_ce0(grp_float_silu2_fu_800_x_33_ce0),
+    .x_33_q0(x_33_q0),
+    .x_34_address0(grp_float_silu2_fu_800_x_34_address0),
+    .x_34_ce0(grp_float_silu2_fu_800_x_34_ce0),
+    .x_34_q0(x_34_q0),
+    .x_35_address0(grp_float_silu2_fu_800_x_35_address0),
+    .x_35_ce0(grp_float_silu2_fu_800_x_35_ce0),
+    .x_35_q0(x_35_q0),
+    .x_36_address0(grp_float_silu2_fu_800_x_36_address0),
+    .x_36_ce0(grp_float_silu2_fu_800_x_36_ce0),
+    .x_36_q0(x_36_q0),
+    .x_37_address0(grp_float_silu2_fu_800_x_37_address0),
+    .x_37_ce0(grp_float_silu2_fu_800_x_37_ce0),
+    .x_37_q0(x_37_q0),
+    .x_38_address0(grp_float_silu2_fu_800_x_38_address0),
+    .x_38_ce0(grp_float_silu2_fu_800_x_38_ce0),
+    .x_38_q0(x_38_q0),
+    .x_39_address0(grp_float_silu2_fu_800_x_39_address0),
+    .x_39_ce0(grp_float_silu2_fu_800_x_39_ce0),
+    .x_39_q0(x_39_q0),
+    .x_40_address0(grp_float_silu2_fu_800_x_40_address0),
+    .x_40_ce0(grp_float_silu2_fu_800_x_40_ce0),
+    .x_40_q0(x_40_q0),
+    .x_41_address0(grp_float_silu2_fu_800_x_41_address0),
+    .x_41_ce0(grp_float_silu2_fu_800_x_41_ce0),
+    .x_41_q0(x_41_q0),
+    .x_42_address0(grp_float_silu2_fu_800_x_42_address0),
+    .x_42_ce0(grp_float_silu2_fu_800_x_42_ce0),
+    .x_42_q0(x_42_q0),
+    .x_43_address0(grp_float_silu2_fu_800_x_43_address0),
+    .x_43_ce0(grp_float_silu2_fu_800_x_43_ce0),
+    .x_43_q0(x_43_q0),
+    .x_44_address0(grp_float_silu2_fu_800_x_44_address0),
+    .x_44_ce0(grp_float_silu2_fu_800_x_44_ce0),
+    .x_44_q0(x_44_q0),
+    .x_45_address0(grp_float_silu2_fu_800_x_45_address0),
+    .x_45_ce0(grp_float_silu2_fu_800_x_45_ce0),
+    .x_45_q0(x_45_q0),
+    .x_46_address0(grp_float_silu2_fu_800_x_46_address0),
+    .x_46_ce0(grp_float_silu2_fu_800_x_46_ce0),
+    .x_46_q0(x_46_q0),
+    .x_47_address0(grp_float_silu2_fu_800_x_47_address0),
+    .x_47_ce0(grp_float_silu2_fu_800_x_47_ce0),
+    .x_47_q0(x_47_q0),
+    .x_48_address0(grp_float_silu2_fu_800_x_48_address0),
+    .x_48_ce0(grp_float_silu2_fu_800_x_48_ce0),
+    .x_48_q0(x_48_q0),
+    .x_49_address0(grp_float_silu2_fu_800_x_49_address0),
+    .x_49_ce0(grp_float_silu2_fu_800_x_49_ce0),
+    .x_49_q0(x_49_q0),
+    .x_50_address0(grp_float_silu2_fu_800_x_50_address0),
+    .x_50_ce0(grp_float_silu2_fu_800_x_50_ce0),
+    .x_50_q0(x_50_q0),
+    .x_51_address0(grp_float_silu2_fu_800_x_51_address0),
+    .x_51_ce0(grp_float_silu2_fu_800_x_51_ce0),
+    .x_51_q0(x_51_q0),
+    .x_52_address0(grp_float_silu2_fu_800_x_52_address0),
+    .x_52_ce0(grp_float_silu2_fu_800_x_52_ce0),
+    .x_52_q0(x_52_q0),
+    .x_53_address0(grp_float_silu2_fu_800_x_53_address0),
+    .x_53_ce0(grp_float_silu2_fu_800_x_53_ce0),
+    .x_53_q0(x_53_q0),
+    .x_54_address0(grp_float_silu2_fu_800_x_54_address0),
+    .x_54_ce0(grp_float_silu2_fu_800_x_54_ce0),
+    .x_54_q0(x_54_q0),
+    .x_55_address0(grp_float_silu2_fu_800_x_55_address0),
+    .x_55_ce0(grp_float_silu2_fu_800_x_55_ce0),
+    .x_55_q0(x_55_q0),
+    .x_56_address0(grp_float_silu2_fu_800_x_56_address0),
+    .x_56_ce0(grp_float_silu2_fu_800_x_56_ce0),
+    .x_56_q0(x_56_q0),
+    .x_57_address0(grp_float_silu2_fu_800_x_57_address0),
+    .x_57_ce0(grp_float_silu2_fu_800_x_57_ce0),
+    .x_57_q0(x_57_q0),
+    .x_58_address0(grp_float_silu2_fu_800_x_58_address0),
+    .x_58_ce0(grp_float_silu2_fu_800_x_58_ce0),
+    .x_58_q0(x_58_q0),
+    .x_59_address0(grp_float_silu2_fu_800_x_59_address0),
+    .x_59_ce0(grp_float_silu2_fu_800_x_59_ce0),
+    .x_59_q0(x_59_q0),
+    .x_60_address0(grp_float_silu2_fu_800_x_60_address0),
+    .x_60_ce0(grp_float_silu2_fu_800_x_60_ce0),
+    .x_60_q0(x_60_q0),
+    .x_61_address0(grp_float_silu2_fu_800_x_61_address0),
+    .x_61_ce0(grp_float_silu2_fu_800_x_61_ce0),
+    .x_61_q0(x_61_q0),
+    .x_62_address0(grp_float_silu2_fu_800_x_62_address0),
+    .x_62_ce0(grp_float_silu2_fu_800_x_62_ce0),
+    .x_62_q0(x_62_q0),
+    .x_63_address0(grp_float_silu2_fu_800_x_63_address0),
+    .x_63_ce0(grp_float_silu2_fu_800_x_63_ce0),
+    .x_63_q0(x_63_q0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_d0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0),
+    .activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0(grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_d0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_address0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_address0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_ce0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_ce0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_we0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_we0),
+    .p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_d0(grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_d0)
 );
 
-activation_accelerator_activation_accelerator_Pipeline_stage_0_load0 grp_activation_accelerator_Pipeline_stage_0_load0_fu_539(
+activation_accelerator_activation_accelerator_Pipeline_stage_0_load0 grp_activation_accelerator_Pipeline_stage_0_load0_fu_996(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_ap_start),
-    .ap_done(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_ap_done),
-    .ap_idle(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_ap_idle),
-    .ap_ready(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_ap_ready),
-    .m_axi_gmem0_AWVALID(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_AWVALID),
+    .ap_start(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_ap_start),
+    .ap_done(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_ap_done),
+    .ap_idle(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_ap_idle),
+    .ap_ready(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_ap_ready),
+    .m_axi_gmem0_AWVALID(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_AWVALID),
     .m_axi_gmem0_AWREADY(1'b0),
-    .m_axi_gmem0_AWADDR(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_AWADDR),
-    .m_axi_gmem0_AWID(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_AWID),
-    .m_axi_gmem0_AWLEN(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_AWLEN),
-    .m_axi_gmem0_AWSIZE(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_AWSIZE),
-    .m_axi_gmem0_AWBURST(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_AWBURST),
-    .m_axi_gmem0_AWLOCK(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_AWLOCK),
-    .m_axi_gmem0_AWCACHE(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_AWCACHE),
-    .m_axi_gmem0_AWPROT(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_AWPROT),
-    .m_axi_gmem0_AWQOS(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_AWQOS),
-    .m_axi_gmem0_AWREGION(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_AWREGION),
-    .m_axi_gmem0_AWUSER(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_AWUSER),
-    .m_axi_gmem0_WVALID(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_WVALID),
+    .m_axi_gmem0_AWADDR(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_AWADDR),
+    .m_axi_gmem0_AWID(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_AWID),
+    .m_axi_gmem0_AWLEN(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_AWLEN),
+    .m_axi_gmem0_AWSIZE(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_AWSIZE),
+    .m_axi_gmem0_AWBURST(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_AWBURST),
+    .m_axi_gmem0_AWLOCK(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_AWLOCK),
+    .m_axi_gmem0_AWCACHE(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_AWCACHE),
+    .m_axi_gmem0_AWPROT(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_AWPROT),
+    .m_axi_gmem0_AWQOS(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_AWQOS),
+    .m_axi_gmem0_AWREGION(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_AWREGION),
+    .m_axi_gmem0_AWUSER(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_AWUSER),
+    .m_axi_gmem0_WVALID(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_WVALID),
     .m_axi_gmem0_WREADY(1'b0),
-    .m_axi_gmem0_WDATA(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_WDATA),
-    .m_axi_gmem0_WSTRB(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_WSTRB),
-    .m_axi_gmem0_WLAST(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_WLAST),
-    .m_axi_gmem0_WID(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_WID),
-    .m_axi_gmem0_WUSER(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_WUSER),
-    .m_axi_gmem0_ARVALID(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_ARVALID),
+    .m_axi_gmem0_WDATA(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_WDATA),
+    .m_axi_gmem0_WSTRB(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_WSTRB),
+    .m_axi_gmem0_WLAST(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_WLAST),
+    .m_axi_gmem0_WID(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_WID),
+    .m_axi_gmem0_WUSER(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_WUSER),
+    .m_axi_gmem0_ARVALID(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_ARVALID),
     .m_axi_gmem0_ARREADY(gmem0_ARREADY),
-    .m_axi_gmem0_ARADDR(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_ARADDR),
-    .m_axi_gmem0_ARID(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_ARID),
-    .m_axi_gmem0_ARLEN(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_ARLEN),
-    .m_axi_gmem0_ARSIZE(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_ARSIZE),
-    .m_axi_gmem0_ARBURST(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_ARBURST),
-    .m_axi_gmem0_ARLOCK(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_ARLOCK),
-    .m_axi_gmem0_ARCACHE(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_ARCACHE),
-    .m_axi_gmem0_ARPROT(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_ARPROT),
-    .m_axi_gmem0_ARQOS(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_ARQOS),
-    .m_axi_gmem0_ARREGION(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_ARREGION),
-    .m_axi_gmem0_ARUSER(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_ARUSER),
+    .m_axi_gmem0_ARADDR(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_ARADDR),
+    .m_axi_gmem0_ARID(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_ARID),
+    .m_axi_gmem0_ARLEN(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_ARLEN),
+    .m_axi_gmem0_ARSIZE(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_ARSIZE),
+    .m_axi_gmem0_ARBURST(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_ARBURST),
+    .m_axi_gmem0_ARLOCK(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_ARLOCK),
+    .m_axi_gmem0_ARCACHE(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_ARCACHE),
+    .m_axi_gmem0_ARPROT(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_ARPROT),
+    .m_axi_gmem0_ARQOS(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_ARQOS),
+    .m_axi_gmem0_ARREGION(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_ARREGION),
+    .m_axi_gmem0_ARUSER(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_ARUSER),
     .m_axi_gmem0_RVALID(gmem0_RVALID),
-    .m_axi_gmem0_RREADY(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_RREADY),
+    .m_axi_gmem0_RREADY(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_RREADY),
     .m_axi_gmem0_RDATA(gmem0_RDATA),
     .m_axi_gmem0_RLAST(1'b0),
     .m_axi_gmem0_RID(1'd0),
@@ -2273,15 +4682,15 @@ activation_accelerator_activation_accelerator_Pipeline_stage_0_load0 grp_activat
     .m_axi_gmem0_RUSER(1'd0),
     .m_axi_gmem0_RRESP(2'd0),
     .m_axi_gmem0_BVALID(1'b0),
-    .m_axi_gmem0_BREADY(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_BREADY),
+    .m_axi_gmem0_BREADY(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_BREADY),
     .m_axi_gmem0_BRESP(2'd0),
     .m_axi_gmem0_BID(1'd0),
     .m_axi_gmem0_BUSER(1'd0),
-    .sext_ln1324(trunc_ln_reg_608),
-    .buf0_address0(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_buf0_address0),
-    .buf0_ce0(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_buf0_ce0),
-    .buf0_we0(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_buf0_we0),
-    .buf0_d0(grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_buf0_d0)
+    .sext_ln471(trunc_ln_reg_1065),
+    .buf0_address0(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_buf0_address0),
+    .buf0_ce0(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_buf0_ce0),
+    .buf0_we0(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_buf0_we0),
+    .buf0_d0(grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_buf0_d0)
 );
 
 activation_accelerator_control_s_axi #(
@@ -2494,8 +4903,8 @@ gmem2_m_axi_U(
     .I_AWLEN(gmem2_AWLEN),
     .I_WVALID(gmem2_WVALID),
     .I_WREADY(gmem2_WREADY),
-    .I_WDATA(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_WDATA),
-    .I_WSTRB(grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_WSTRB),
+    .I_WDATA(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_WDATA),
+    .I_WSTRB(grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_WSTRB),
     .I_BVALID(gmem2_BVALID),
     .I_BREADY(gmem2_BREADY)
 );
@@ -2510,122 +4919,358 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_ap_start_reg <= 1'b0;
+        grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_ap_start_reg <= 1'b0;
     end else begin
         if ((1'b1 == ap_CS_fsm_state20)) begin
-            grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_ap_start_reg <= 1'b1;
-        end else if ((grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_ap_ready == 1'b1)) begin
-            grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_ap_start_reg <= 1'b0;
+            grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_ap_start_reg <= 1'b1;
+        end else if ((grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_ap_ready == 1'b1)) begin
+            grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        grp_activation_accelerator_Pipeline_stage_2_store_fu_523_ap_start_reg <= 1'b0;
+        grp_activation_accelerator_Pipeline_stage_2_store_fu_665_ap_start_reg <= 1'b0;
     end else begin
         if ((1'b1 == ap_CS_fsm_state3)) begin
-            grp_activation_accelerator_Pipeline_stage_2_store_fu_523_ap_start_reg <= 1'b1;
-        end else if ((grp_activation_accelerator_Pipeline_stage_2_store_fu_523_ap_ready == 1'b1)) begin
-            grp_activation_accelerator_Pipeline_stage_2_store_fu_523_ap_start_reg <= 1'b0;
+            grp_activation_accelerator_Pipeline_stage_2_store_fu_665_ap_start_reg <= 1'b1;
+        end else if ((grp_activation_accelerator_Pipeline_stage_2_store_fu_665_ap_ready == 1'b1)) begin
+            grp_activation_accelerator_Pipeline_stage_2_store_fu_665_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        grp_bf16_to_float_fu_389_ap_start_reg <= 1'b0;
+        grp_bf16_to_float_fu_531_ap_start_reg <= 1'b0;
     end else begin
-        if (((ap_start == 1'b1) & (icmp_ln1343_fu_558_p2 == 1'd1) & (stage_read_read_fu_356_p2 == 32'd1) & (1'b1 == ap_CS_fsm_state1))) begin
-            grp_bf16_to_float_fu_389_ap_start_reg <= 1'b1;
-        end else if ((grp_bf16_to_float_fu_389_ap_ready == 1'b1)) begin
-            grp_bf16_to_float_fu_389_ap_start_reg <= 1'b0;
+        if (((icmp_ln484_fu_1015_p2 == 1'd1) & (stage_read_read_fu_498_p2 == 32'd1) & (ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
+            grp_bf16_to_float_fu_531_ap_start_reg <= 1'b1;
+        end else if ((grp_bf16_to_float_fu_531_ap_ready == 1'b1)) begin
+            grp_bf16_to_float_fu_531_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        grp_float_safe_softmax3_64_s_fu_532_ap_start_reg <= 1'b0;
+        grp_float_silu2_fu_800_ap_start_reg <= 1'b0;
     end else begin
         if ((1'b1 == ap_CS_fsm_state11)) begin
-            grp_float_safe_softmax3_64_s_fu_532_ap_start_reg <= 1'b1;
-        end else if ((grp_float_safe_softmax3_64_s_fu_532_ap_ready == 1'b1)) begin
-            grp_float_safe_softmax3_64_s_fu_532_ap_start_reg <= 1'b0;
+            grp_float_silu2_fu_800_ap_start_reg <= 1'b1;
+        end else if ((grp_float_silu2_fu_800_ap_ready == 1'b1)) begin
+            grp_float_silu2_fu_800_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((stage_read_read_fu_356_p2 == 32'd1) & (1'b1 == ap_CS_fsm_state1))) begin
-        icmp_ln1343_reg_604 <= icmp_ln1343_fu_558_p2;
+    if (((stage_read_read_fu_498_p2 == 32'd1) & (1'b1 == ap_CS_fsm_state1))) begin
+        icmp_ln484_reg_1061 <= icmp_ln484_fu_1015_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state1)) begin
-        stage_read_reg_594 <= stage;
+        stage_read_reg_1051 <= stage;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((stage_read_read_fu_356_p2 == 32'd2) & (1'b1 == ap_CS_fsm_state1))) begin
-        trunc_ln3_reg_598 <= {{out_r[63:1]}};
+    if (((stage_read_read_fu_498_p2 == 32'd2) & (1'b1 == ap_CS_fsm_state1))) begin
+        trunc_ln1_reg_1055 <= {{out_r[63:1]}};
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((stage_read_read_fu_356_p2 == 32'd0) & (1'b1 == ap_CS_fsm_state1))) begin
-        trunc_ln_reg_608 <= {{in0[63:1]}};
+    if (((stage_read_read_fu_498_p2 == 32'd0) & (1'b1 == ap_CS_fsm_state1))) begin
+        trunc_ln_reg_1065 <= {{in0[63:1]}};
     end
 end
 
 always @ (*) begin
-    if (((icmp_ln1343_reg_604 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
-        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0 = grp_float_safe_softmax3_64_s_fu_532_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0;
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0 = grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0;
     end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_523_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0;
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0 = grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0 = grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0 = grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0 = grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0 = grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0 = grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0 = grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0 = grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0 = grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0 = grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0 = grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0 = grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0 = grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0 = grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0 = grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0 = grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0 = grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0 = grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0 = grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0 = grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0 = grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0 = grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0 = grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0 = grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0 = grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0 = grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0;
+    end else begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0 = grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0;
     end else begin
         activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((icmp_ln1343_reg_604 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
-        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0 = grp_float_safe_softmax3_64_s_fu_532_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0;
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0 = grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0;
     end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_523_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0;
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0;
     end else begin
         activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((icmp_ln1343_reg_604 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
-        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1 = grp_float_safe_softmax3_64_s_fu_532_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1;
-    end else begin
-        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_ce1 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((icmp_ln1343_reg_604 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
-        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0 = grp_float_safe_softmax3_64_s_fu_532_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0;
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0 = grp_float_silu2_fu_800_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0;
     end else begin
         activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((icmp_ln1343_reg_604 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
-        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1 = grp_float_safe_softmax3_64_s_fu_532_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1;
-    end else begin
-        activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_we1 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((grp_bf16_to_float_fu_389_ap_done == 1'b0)) begin
+    if ((grp_bf16_to_float_fu_531_ap_done == 1'b0)) begin
         ap_ST_fsm_state10_blk = 1'b1;
     end else begin
         ap_ST_fsm_state10_blk = 1'b0;
@@ -2691,7 +5336,7 @@ end
 assign ap_ST_fsm_state3_blk = 1'b0;
 
 always @ (*) begin
-    if ((grp_activation_accelerator_Pipeline_stage_2_store_fu_523_ap_done == 1'b0)) begin
+    if ((grp_activation_accelerator_Pipeline_stage_2_store_fu_665_ap_done == 1'b0)) begin
         ap_ST_fsm_state4_blk = 1'b1;
     end else begin
         ap_ST_fsm_state4_blk = 1'b0;
@@ -2715,7 +5360,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state21) & (1'b0 == ap_block_state21_on_subcall_done))) begin
+    if (((1'b0 == ap_block_state21_on_subcall_done) & (1'b1 == ap_CS_fsm_state21))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -2731,7 +5376,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state21) & (1'b0 == ap_block_state21_on_subcall_done))) begin
+    if (((1'b0 == ap_block_state21_on_subcall_done) & (1'b1 == ap_CS_fsm_state21))) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -2739,66 +5384,66 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((stage_read_reg_594 == 32'd0) & (1'b1 == ap_CS_fsm_state21))) begin
-        buf0_address0 = grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_buf0_address0;
+    if (((stage_read_reg_1051 == 32'd0) & (1'b1 == ap_CS_fsm_state21))) begin
+        buf0_address0 = grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_buf0_address0;
     end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        buf0_address0 = grp_bf16_to_float_fu_389_buf0_address0;
+        buf0_address0 = grp_bf16_to_float_fu_531_buf0_address0;
     end else begin
         buf0_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((stage_read_reg_594 == 32'd0) & (1'b1 == ap_CS_fsm_state21))) begin
-        buf0_ce0 = grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_buf0_ce0;
+    if (((stage_read_reg_1051 == 32'd0) & (1'b1 == ap_CS_fsm_state21))) begin
+        buf0_ce0 = grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_buf0_ce0;
     end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        buf0_ce0 = grp_bf16_to_float_fu_389_buf0_ce0;
+        buf0_ce0 = grp_bf16_to_float_fu_531_buf0_ce0;
     end else begin
         buf0_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((stage_read_reg_594 == 32'd0) & (1'b1 == ap_CS_fsm_state21))) begin
-        buf0_we0 = grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_buf0_we0;
+    if (((stage_read_reg_1051 == 32'd0) & (1'b1 == ap_CS_fsm_state21))) begin
+        buf0_we0 = grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_buf0_we0;
     end else begin
         buf0_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state13) & (gmem0_ARREADY == 1'b1))) begin
-        gmem0_ARADDR = sext_ln1324_fu_584_p1;
-    end else if (((1'b1 == ap_CS_fsm_state20) | ((stage_read_reg_594 == 32'd0) & (1'b1 == ap_CS_fsm_state21)))) begin
-        gmem0_ARADDR = grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_ARADDR;
+    if (((gmem0_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state13))) begin
+        gmem0_ARADDR = sext_ln471_fu_1041_p1;
+    end else if (((1'b1 == ap_CS_fsm_state20) | ((stage_read_reg_1051 == 32'd0) & (1'b1 == ap_CS_fsm_state21)))) begin
+        gmem0_ARADDR = grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_ARADDR;
     end else begin
         gmem0_ARADDR = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state13) & (gmem0_ARREADY == 1'b1))) begin
+    if (((gmem0_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state13))) begin
         gmem0_ARLEN = 32'd49152;
-    end else if (((1'b1 == ap_CS_fsm_state20) | ((stage_read_reg_594 == 32'd0) & (1'b1 == ap_CS_fsm_state21)))) begin
-        gmem0_ARLEN = grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_ARLEN;
+    end else if (((1'b1 == ap_CS_fsm_state20) | ((stage_read_reg_1051 == 32'd0) & (1'b1 == ap_CS_fsm_state21)))) begin
+        gmem0_ARLEN = grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_ARLEN;
     end else begin
         gmem0_ARLEN = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state13) & (gmem0_ARREADY == 1'b1))) begin
+    if (((gmem0_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state13))) begin
         gmem0_ARVALID = 1'b1;
-    end else if (((1'b1 == ap_CS_fsm_state20) | ((stage_read_reg_594 == 32'd0) & (1'b1 == ap_CS_fsm_state21)))) begin
-        gmem0_ARVALID = grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_ARVALID;
+    end else if (((1'b1 == ap_CS_fsm_state20) | ((stage_read_reg_1051 == 32'd0) & (1'b1 == ap_CS_fsm_state21)))) begin
+        gmem0_ARVALID = grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_ARVALID;
     end else begin
         gmem0_ARVALID = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state20) | ((stage_read_reg_594 == 32'd0) & (1'b1 == ap_CS_fsm_state21)))) begin
-        gmem0_RREADY = grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_m_axi_gmem0_RREADY;
+    if (((1'b1 == ap_CS_fsm_state20) | ((stage_read_reg_1051 == 32'd0) & (1'b1 == ap_CS_fsm_state21)))) begin
+        gmem0_RREADY = grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_m_axi_gmem0_RREADY;
     end else begin
         gmem0_RREADY = 1'b0;
     end
@@ -2813,40 +5458,40 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state2) & (gmem2_AWREADY == 1'b1))) begin
-        gmem2_AWADDR = sext_ln1380_fu_574_p1;
+    if (((gmem2_AWREADY == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
+        gmem2_AWADDR = sext_ln542_fu_1031_p1;
     end else if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem2_AWADDR = grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_AWADDR;
+        gmem2_AWADDR = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_AWADDR;
     end else begin
         gmem2_AWADDR = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state2) & (gmem2_AWREADY == 1'b1))) begin
+    if (((gmem2_AWREADY == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
         gmem2_AWLEN = 32'd49152;
     end else if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem2_AWLEN = grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_AWLEN;
+        gmem2_AWLEN = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_AWLEN;
     end else begin
         gmem2_AWLEN = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state2) & (gmem2_AWREADY == 1'b1))) begin
+    if (((gmem2_AWREADY == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
         gmem2_AWVALID = 1'b1;
     end else if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem2_AWVALID = grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_AWVALID;
+        gmem2_AWVALID = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_AWVALID;
     end else begin
         gmem2_AWVALID = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state9) & (gmem2_BVALID == 1'b1))) begin
+    if (((gmem2_BVALID == 1'b1) & (1'b1 == ap_CS_fsm_state9))) begin
         gmem2_BREADY = 1'b1;
     end else if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem2_BREADY = grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_BREADY;
+        gmem2_BREADY = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_BREADY;
     end else begin
         gmem2_BREADY = 1'b0;
     end
@@ -2854,7 +5499,7 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem2_WVALID = grp_activation_accelerator_Pipeline_stage_2_store_fu_523_m_axi_gmem2_WVALID;
+        gmem2_WVALID = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_m_axi_gmem2_WVALID;
     end else begin
         gmem2_WVALID = 1'b0;
     end
@@ -2877,156 +5522,3304 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln1343_reg_604 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
-        x_address0 = grp_float_safe_softmax3_64_s_fu_532_x_0_address0;
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_15_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_25_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_35_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_45_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_55_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_address0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_address0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_address0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_ce0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_ce0 = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_ce0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_we0 = grp_float_silu2_fu_800_p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_we0;
+    end else begin
+        p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_10_address0 = grp_float_silu2_fu_800_x_10_address0;
     end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        x_address0 = grp_bf16_to_float_fu_389_out_0_address0;
+        x_10_address0 = grp_bf16_to_float_fu_531_out_10_address0;
+    end else begin
+        x_10_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_10_ce0 = grp_float_silu2_fu_800_x_10_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_10_ce0 = grp_bf16_to_float_fu_531_out_10_ce0;
+    end else begin
+        x_10_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_10_we0 = grp_bf16_to_float_fu_531_out_10_we0;
+    end else begin
+        x_10_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_11_address0 = grp_float_silu2_fu_800_x_11_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_11_address0 = grp_bf16_to_float_fu_531_out_11_address0;
+    end else begin
+        x_11_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_11_ce0 = grp_float_silu2_fu_800_x_11_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_11_ce0 = grp_bf16_to_float_fu_531_out_11_ce0;
+    end else begin
+        x_11_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_11_we0 = grp_bf16_to_float_fu_531_out_11_we0;
+    end else begin
+        x_11_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_12_address0 = grp_float_silu2_fu_800_x_12_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_12_address0 = grp_bf16_to_float_fu_531_out_12_address0;
+    end else begin
+        x_12_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_12_ce0 = grp_float_silu2_fu_800_x_12_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_12_ce0 = grp_bf16_to_float_fu_531_out_12_ce0;
+    end else begin
+        x_12_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_12_we0 = grp_bf16_to_float_fu_531_out_12_we0;
+    end else begin
+        x_12_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_13_address0 = grp_float_silu2_fu_800_x_13_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_13_address0 = grp_bf16_to_float_fu_531_out_13_address0;
+    end else begin
+        x_13_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_13_ce0 = grp_float_silu2_fu_800_x_13_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_13_ce0 = grp_bf16_to_float_fu_531_out_13_ce0;
+    end else begin
+        x_13_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_13_we0 = grp_bf16_to_float_fu_531_out_13_we0;
+    end else begin
+        x_13_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_14_address0 = grp_float_silu2_fu_800_x_14_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_14_address0 = grp_bf16_to_float_fu_531_out_14_address0;
+    end else begin
+        x_14_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_14_ce0 = grp_float_silu2_fu_800_x_14_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_14_ce0 = grp_bf16_to_float_fu_531_out_14_ce0;
+    end else begin
+        x_14_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_14_we0 = grp_bf16_to_float_fu_531_out_14_we0;
+    end else begin
+        x_14_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_15_address0 = grp_float_silu2_fu_800_x_15_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_15_address0 = grp_bf16_to_float_fu_531_out_15_address0;
+    end else begin
+        x_15_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_15_ce0 = grp_float_silu2_fu_800_x_15_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_15_ce0 = grp_bf16_to_float_fu_531_out_15_ce0;
+    end else begin
+        x_15_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_15_we0 = grp_bf16_to_float_fu_531_out_15_we0;
+    end else begin
+        x_15_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_16_address0 = grp_float_silu2_fu_800_x_16_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_16_address0 = grp_bf16_to_float_fu_531_out_16_address0;
+    end else begin
+        x_16_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_16_ce0 = grp_float_silu2_fu_800_x_16_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_16_ce0 = grp_bf16_to_float_fu_531_out_16_ce0;
+    end else begin
+        x_16_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_16_we0 = grp_bf16_to_float_fu_531_out_16_we0;
+    end else begin
+        x_16_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_17_address0 = grp_float_silu2_fu_800_x_17_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_17_address0 = grp_bf16_to_float_fu_531_out_17_address0;
+    end else begin
+        x_17_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_17_ce0 = grp_float_silu2_fu_800_x_17_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_17_ce0 = grp_bf16_to_float_fu_531_out_17_ce0;
+    end else begin
+        x_17_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_17_we0 = grp_bf16_to_float_fu_531_out_17_we0;
+    end else begin
+        x_17_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_18_address0 = grp_float_silu2_fu_800_x_18_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_18_address0 = grp_bf16_to_float_fu_531_out_18_address0;
+    end else begin
+        x_18_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_18_ce0 = grp_float_silu2_fu_800_x_18_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_18_ce0 = grp_bf16_to_float_fu_531_out_18_ce0;
+    end else begin
+        x_18_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_18_we0 = grp_bf16_to_float_fu_531_out_18_we0;
+    end else begin
+        x_18_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_19_address0 = grp_float_silu2_fu_800_x_19_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_19_address0 = grp_bf16_to_float_fu_531_out_19_address0;
+    end else begin
+        x_19_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_19_ce0 = grp_float_silu2_fu_800_x_19_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_19_ce0 = grp_bf16_to_float_fu_531_out_19_ce0;
+    end else begin
+        x_19_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_19_we0 = grp_bf16_to_float_fu_531_out_19_we0;
+    end else begin
+        x_19_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_1_address0 = grp_float_silu2_fu_800_x_1_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_1_address0 = grp_bf16_to_float_fu_531_out_1_address0;
+    end else begin
+        x_1_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_1_ce0 = grp_float_silu2_fu_800_x_1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_1_ce0 = grp_bf16_to_float_fu_531_out_1_ce0;
+    end else begin
+        x_1_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_1_we0 = grp_bf16_to_float_fu_531_out_1_we0;
+    end else begin
+        x_1_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_20_address0 = grp_float_silu2_fu_800_x_20_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_20_address0 = grp_bf16_to_float_fu_531_out_20_address0;
+    end else begin
+        x_20_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_20_ce0 = grp_float_silu2_fu_800_x_20_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_20_ce0 = grp_bf16_to_float_fu_531_out_20_ce0;
+    end else begin
+        x_20_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_20_we0 = grp_bf16_to_float_fu_531_out_20_we0;
+    end else begin
+        x_20_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_21_address0 = grp_float_silu2_fu_800_x_21_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_21_address0 = grp_bf16_to_float_fu_531_out_21_address0;
+    end else begin
+        x_21_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_21_ce0 = grp_float_silu2_fu_800_x_21_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_21_ce0 = grp_bf16_to_float_fu_531_out_21_ce0;
+    end else begin
+        x_21_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_21_we0 = grp_bf16_to_float_fu_531_out_21_we0;
+    end else begin
+        x_21_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_22_address0 = grp_float_silu2_fu_800_x_22_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_22_address0 = grp_bf16_to_float_fu_531_out_22_address0;
+    end else begin
+        x_22_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_22_ce0 = grp_float_silu2_fu_800_x_22_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_22_ce0 = grp_bf16_to_float_fu_531_out_22_ce0;
+    end else begin
+        x_22_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_22_we0 = grp_bf16_to_float_fu_531_out_22_we0;
+    end else begin
+        x_22_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_23_address0 = grp_float_silu2_fu_800_x_23_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_23_address0 = grp_bf16_to_float_fu_531_out_23_address0;
+    end else begin
+        x_23_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_23_ce0 = grp_float_silu2_fu_800_x_23_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_23_ce0 = grp_bf16_to_float_fu_531_out_23_ce0;
+    end else begin
+        x_23_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_23_we0 = grp_bf16_to_float_fu_531_out_23_we0;
+    end else begin
+        x_23_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_24_address0 = grp_float_silu2_fu_800_x_24_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_24_address0 = grp_bf16_to_float_fu_531_out_24_address0;
+    end else begin
+        x_24_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_24_ce0 = grp_float_silu2_fu_800_x_24_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_24_ce0 = grp_bf16_to_float_fu_531_out_24_ce0;
+    end else begin
+        x_24_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_24_we0 = grp_bf16_to_float_fu_531_out_24_we0;
+    end else begin
+        x_24_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_25_address0 = grp_float_silu2_fu_800_x_25_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_25_address0 = grp_bf16_to_float_fu_531_out_25_address0;
+    end else begin
+        x_25_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_25_ce0 = grp_float_silu2_fu_800_x_25_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_25_ce0 = grp_bf16_to_float_fu_531_out_25_ce0;
+    end else begin
+        x_25_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_25_we0 = grp_bf16_to_float_fu_531_out_25_we0;
+    end else begin
+        x_25_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_26_address0 = grp_float_silu2_fu_800_x_26_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_26_address0 = grp_bf16_to_float_fu_531_out_26_address0;
+    end else begin
+        x_26_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_26_ce0 = grp_float_silu2_fu_800_x_26_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_26_ce0 = grp_bf16_to_float_fu_531_out_26_ce0;
+    end else begin
+        x_26_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_26_we0 = grp_bf16_to_float_fu_531_out_26_we0;
+    end else begin
+        x_26_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_27_address0 = grp_float_silu2_fu_800_x_27_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_27_address0 = grp_bf16_to_float_fu_531_out_27_address0;
+    end else begin
+        x_27_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_27_ce0 = grp_float_silu2_fu_800_x_27_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_27_ce0 = grp_bf16_to_float_fu_531_out_27_ce0;
+    end else begin
+        x_27_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_27_we0 = grp_bf16_to_float_fu_531_out_27_we0;
+    end else begin
+        x_27_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_28_address0 = grp_float_silu2_fu_800_x_28_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_28_address0 = grp_bf16_to_float_fu_531_out_28_address0;
+    end else begin
+        x_28_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_28_ce0 = grp_float_silu2_fu_800_x_28_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_28_ce0 = grp_bf16_to_float_fu_531_out_28_ce0;
+    end else begin
+        x_28_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_28_we0 = grp_bf16_to_float_fu_531_out_28_we0;
+    end else begin
+        x_28_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_29_address0 = grp_float_silu2_fu_800_x_29_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_29_address0 = grp_bf16_to_float_fu_531_out_29_address0;
+    end else begin
+        x_29_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_29_ce0 = grp_float_silu2_fu_800_x_29_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_29_ce0 = grp_bf16_to_float_fu_531_out_29_ce0;
+    end else begin
+        x_29_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_29_we0 = grp_bf16_to_float_fu_531_out_29_we0;
+    end else begin
+        x_29_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_2_address0 = grp_float_silu2_fu_800_x_2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_2_address0 = grp_bf16_to_float_fu_531_out_2_address0;
+    end else begin
+        x_2_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_2_ce0 = grp_float_silu2_fu_800_x_2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_2_ce0 = grp_bf16_to_float_fu_531_out_2_ce0;
+    end else begin
+        x_2_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_2_we0 = grp_bf16_to_float_fu_531_out_2_we0;
+    end else begin
+        x_2_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_30_address0 = grp_float_silu2_fu_800_x_30_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_30_address0 = grp_bf16_to_float_fu_531_out_30_address0;
+    end else begin
+        x_30_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_30_ce0 = grp_float_silu2_fu_800_x_30_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_30_ce0 = grp_bf16_to_float_fu_531_out_30_ce0;
+    end else begin
+        x_30_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_30_we0 = grp_bf16_to_float_fu_531_out_30_we0;
+    end else begin
+        x_30_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_31_address0 = grp_float_silu2_fu_800_x_31_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_31_address0 = grp_bf16_to_float_fu_531_out_31_address0;
+    end else begin
+        x_31_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_31_ce0 = grp_float_silu2_fu_800_x_31_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_31_ce0 = grp_bf16_to_float_fu_531_out_31_ce0;
+    end else begin
+        x_31_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_31_we0 = grp_bf16_to_float_fu_531_out_31_we0;
+    end else begin
+        x_31_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_32_address0 = grp_float_silu2_fu_800_x_32_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_32_address0 = grp_bf16_to_float_fu_531_out_32_address0;
+    end else begin
+        x_32_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_32_ce0 = grp_float_silu2_fu_800_x_32_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_32_ce0 = grp_bf16_to_float_fu_531_out_32_ce0;
+    end else begin
+        x_32_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_32_we0 = grp_bf16_to_float_fu_531_out_32_we0;
+    end else begin
+        x_32_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_33_address0 = grp_float_silu2_fu_800_x_33_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_33_address0 = grp_bf16_to_float_fu_531_out_33_address0;
+    end else begin
+        x_33_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_33_ce0 = grp_float_silu2_fu_800_x_33_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_33_ce0 = grp_bf16_to_float_fu_531_out_33_ce0;
+    end else begin
+        x_33_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_33_we0 = grp_bf16_to_float_fu_531_out_33_we0;
+    end else begin
+        x_33_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_34_address0 = grp_float_silu2_fu_800_x_34_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_34_address0 = grp_bf16_to_float_fu_531_out_34_address0;
+    end else begin
+        x_34_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_34_ce0 = grp_float_silu2_fu_800_x_34_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_34_ce0 = grp_bf16_to_float_fu_531_out_34_ce0;
+    end else begin
+        x_34_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_34_we0 = grp_bf16_to_float_fu_531_out_34_we0;
+    end else begin
+        x_34_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_35_address0 = grp_float_silu2_fu_800_x_35_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_35_address0 = grp_bf16_to_float_fu_531_out_35_address0;
+    end else begin
+        x_35_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_35_ce0 = grp_float_silu2_fu_800_x_35_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_35_ce0 = grp_bf16_to_float_fu_531_out_35_ce0;
+    end else begin
+        x_35_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_35_we0 = grp_bf16_to_float_fu_531_out_35_we0;
+    end else begin
+        x_35_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_36_address0 = grp_float_silu2_fu_800_x_36_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_36_address0 = grp_bf16_to_float_fu_531_out_36_address0;
+    end else begin
+        x_36_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_36_ce0 = grp_float_silu2_fu_800_x_36_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_36_ce0 = grp_bf16_to_float_fu_531_out_36_ce0;
+    end else begin
+        x_36_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_36_we0 = grp_bf16_to_float_fu_531_out_36_we0;
+    end else begin
+        x_36_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_37_address0 = grp_float_silu2_fu_800_x_37_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_37_address0 = grp_bf16_to_float_fu_531_out_37_address0;
+    end else begin
+        x_37_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_37_ce0 = grp_float_silu2_fu_800_x_37_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_37_ce0 = grp_bf16_to_float_fu_531_out_37_ce0;
+    end else begin
+        x_37_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_37_we0 = grp_bf16_to_float_fu_531_out_37_we0;
+    end else begin
+        x_37_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_38_address0 = grp_float_silu2_fu_800_x_38_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_38_address0 = grp_bf16_to_float_fu_531_out_38_address0;
+    end else begin
+        x_38_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_38_ce0 = grp_float_silu2_fu_800_x_38_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_38_ce0 = grp_bf16_to_float_fu_531_out_38_ce0;
+    end else begin
+        x_38_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_38_we0 = grp_bf16_to_float_fu_531_out_38_we0;
+    end else begin
+        x_38_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_39_address0 = grp_float_silu2_fu_800_x_39_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_39_address0 = grp_bf16_to_float_fu_531_out_39_address0;
+    end else begin
+        x_39_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_39_ce0 = grp_float_silu2_fu_800_x_39_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_39_ce0 = grp_bf16_to_float_fu_531_out_39_ce0;
+    end else begin
+        x_39_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_39_we0 = grp_bf16_to_float_fu_531_out_39_we0;
+    end else begin
+        x_39_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_3_address0 = grp_float_silu2_fu_800_x_3_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_3_address0 = grp_bf16_to_float_fu_531_out_3_address0;
+    end else begin
+        x_3_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_3_ce0 = grp_float_silu2_fu_800_x_3_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_3_ce0 = grp_bf16_to_float_fu_531_out_3_ce0;
+    end else begin
+        x_3_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_3_we0 = grp_bf16_to_float_fu_531_out_3_we0;
+    end else begin
+        x_3_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_40_address0 = grp_float_silu2_fu_800_x_40_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_40_address0 = grp_bf16_to_float_fu_531_out_40_address0;
+    end else begin
+        x_40_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_40_ce0 = grp_float_silu2_fu_800_x_40_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_40_ce0 = grp_bf16_to_float_fu_531_out_40_ce0;
+    end else begin
+        x_40_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_40_we0 = grp_bf16_to_float_fu_531_out_40_we0;
+    end else begin
+        x_40_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_41_address0 = grp_float_silu2_fu_800_x_41_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_41_address0 = grp_bf16_to_float_fu_531_out_41_address0;
+    end else begin
+        x_41_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_41_ce0 = grp_float_silu2_fu_800_x_41_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_41_ce0 = grp_bf16_to_float_fu_531_out_41_ce0;
+    end else begin
+        x_41_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_41_we0 = grp_bf16_to_float_fu_531_out_41_we0;
+    end else begin
+        x_41_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_42_address0 = grp_float_silu2_fu_800_x_42_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_42_address0 = grp_bf16_to_float_fu_531_out_42_address0;
+    end else begin
+        x_42_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_42_ce0 = grp_float_silu2_fu_800_x_42_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_42_ce0 = grp_bf16_to_float_fu_531_out_42_ce0;
+    end else begin
+        x_42_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_42_we0 = grp_bf16_to_float_fu_531_out_42_we0;
+    end else begin
+        x_42_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_43_address0 = grp_float_silu2_fu_800_x_43_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_43_address0 = grp_bf16_to_float_fu_531_out_43_address0;
+    end else begin
+        x_43_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_43_ce0 = grp_float_silu2_fu_800_x_43_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_43_ce0 = grp_bf16_to_float_fu_531_out_43_ce0;
+    end else begin
+        x_43_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_43_we0 = grp_bf16_to_float_fu_531_out_43_we0;
+    end else begin
+        x_43_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_44_address0 = grp_float_silu2_fu_800_x_44_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_44_address0 = grp_bf16_to_float_fu_531_out_44_address0;
+    end else begin
+        x_44_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_44_ce0 = grp_float_silu2_fu_800_x_44_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_44_ce0 = grp_bf16_to_float_fu_531_out_44_ce0;
+    end else begin
+        x_44_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_44_we0 = grp_bf16_to_float_fu_531_out_44_we0;
+    end else begin
+        x_44_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_45_address0 = grp_float_silu2_fu_800_x_45_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_45_address0 = grp_bf16_to_float_fu_531_out_45_address0;
+    end else begin
+        x_45_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_45_ce0 = grp_float_silu2_fu_800_x_45_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_45_ce0 = grp_bf16_to_float_fu_531_out_45_ce0;
+    end else begin
+        x_45_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_45_we0 = grp_bf16_to_float_fu_531_out_45_we0;
+    end else begin
+        x_45_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_46_address0 = grp_float_silu2_fu_800_x_46_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_46_address0 = grp_bf16_to_float_fu_531_out_46_address0;
+    end else begin
+        x_46_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_46_ce0 = grp_float_silu2_fu_800_x_46_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_46_ce0 = grp_bf16_to_float_fu_531_out_46_ce0;
+    end else begin
+        x_46_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_46_we0 = grp_bf16_to_float_fu_531_out_46_we0;
+    end else begin
+        x_46_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_47_address0 = grp_float_silu2_fu_800_x_47_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_47_address0 = grp_bf16_to_float_fu_531_out_47_address0;
+    end else begin
+        x_47_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_47_ce0 = grp_float_silu2_fu_800_x_47_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_47_ce0 = grp_bf16_to_float_fu_531_out_47_ce0;
+    end else begin
+        x_47_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_47_we0 = grp_bf16_to_float_fu_531_out_47_we0;
+    end else begin
+        x_47_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_48_address0 = grp_float_silu2_fu_800_x_48_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_48_address0 = grp_bf16_to_float_fu_531_out_48_address0;
+    end else begin
+        x_48_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_48_ce0 = grp_float_silu2_fu_800_x_48_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_48_ce0 = grp_bf16_to_float_fu_531_out_48_ce0;
+    end else begin
+        x_48_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_48_we0 = grp_bf16_to_float_fu_531_out_48_we0;
+    end else begin
+        x_48_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_49_address0 = grp_float_silu2_fu_800_x_49_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_49_address0 = grp_bf16_to_float_fu_531_out_49_address0;
+    end else begin
+        x_49_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_49_ce0 = grp_float_silu2_fu_800_x_49_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_49_ce0 = grp_bf16_to_float_fu_531_out_49_ce0;
+    end else begin
+        x_49_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_49_we0 = grp_bf16_to_float_fu_531_out_49_we0;
+    end else begin
+        x_49_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_4_address0 = grp_float_silu2_fu_800_x_4_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_4_address0 = grp_bf16_to_float_fu_531_out_4_address0;
+    end else begin
+        x_4_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_4_ce0 = grp_float_silu2_fu_800_x_4_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_4_ce0 = grp_bf16_to_float_fu_531_out_4_ce0;
+    end else begin
+        x_4_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_4_we0 = grp_bf16_to_float_fu_531_out_4_we0;
+    end else begin
+        x_4_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_50_address0 = grp_float_silu2_fu_800_x_50_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_50_address0 = grp_bf16_to_float_fu_531_out_50_address0;
+    end else begin
+        x_50_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_50_ce0 = grp_float_silu2_fu_800_x_50_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_50_ce0 = grp_bf16_to_float_fu_531_out_50_ce0;
+    end else begin
+        x_50_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_50_we0 = grp_bf16_to_float_fu_531_out_50_we0;
+    end else begin
+        x_50_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_51_address0 = grp_float_silu2_fu_800_x_51_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_51_address0 = grp_bf16_to_float_fu_531_out_51_address0;
+    end else begin
+        x_51_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_51_ce0 = grp_float_silu2_fu_800_x_51_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_51_ce0 = grp_bf16_to_float_fu_531_out_51_ce0;
+    end else begin
+        x_51_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_51_we0 = grp_bf16_to_float_fu_531_out_51_we0;
+    end else begin
+        x_51_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_52_address0 = grp_float_silu2_fu_800_x_52_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_52_address0 = grp_bf16_to_float_fu_531_out_52_address0;
+    end else begin
+        x_52_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_52_ce0 = grp_float_silu2_fu_800_x_52_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_52_ce0 = grp_bf16_to_float_fu_531_out_52_ce0;
+    end else begin
+        x_52_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_52_we0 = grp_bf16_to_float_fu_531_out_52_we0;
+    end else begin
+        x_52_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_53_address0 = grp_float_silu2_fu_800_x_53_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_53_address0 = grp_bf16_to_float_fu_531_out_53_address0;
+    end else begin
+        x_53_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_53_ce0 = grp_float_silu2_fu_800_x_53_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_53_ce0 = grp_bf16_to_float_fu_531_out_53_ce0;
+    end else begin
+        x_53_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_53_we0 = grp_bf16_to_float_fu_531_out_53_we0;
+    end else begin
+        x_53_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_54_address0 = grp_float_silu2_fu_800_x_54_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_54_address0 = grp_bf16_to_float_fu_531_out_54_address0;
+    end else begin
+        x_54_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_54_ce0 = grp_float_silu2_fu_800_x_54_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_54_ce0 = grp_bf16_to_float_fu_531_out_54_ce0;
+    end else begin
+        x_54_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_54_we0 = grp_bf16_to_float_fu_531_out_54_we0;
+    end else begin
+        x_54_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_55_address0 = grp_float_silu2_fu_800_x_55_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_55_address0 = grp_bf16_to_float_fu_531_out_55_address0;
+    end else begin
+        x_55_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_55_ce0 = grp_float_silu2_fu_800_x_55_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_55_ce0 = grp_bf16_to_float_fu_531_out_55_ce0;
+    end else begin
+        x_55_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_55_we0 = grp_bf16_to_float_fu_531_out_55_we0;
+    end else begin
+        x_55_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_56_address0 = grp_float_silu2_fu_800_x_56_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_56_address0 = grp_bf16_to_float_fu_531_out_56_address0;
+    end else begin
+        x_56_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_56_ce0 = grp_float_silu2_fu_800_x_56_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_56_ce0 = grp_bf16_to_float_fu_531_out_56_ce0;
+    end else begin
+        x_56_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_56_we0 = grp_bf16_to_float_fu_531_out_56_we0;
+    end else begin
+        x_56_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_57_address0 = grp_float_silu2_fu_800_x_57_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_57_address0 = grp_bf16_to_float_fu_531_out_57_address0;
+    end else begin
+        x_57_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_57_ce0 = grp_float_silu2_fu_800_x_57_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_57_ce0 = grp_bf16_to_float_fu_531_out_57_ce0;
+    end else begin
+        x_57_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_57_we0 = grp_bf16_to_float_fu_531_out_57_we0;
+    end else begin
+        x_57_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_58_address0 = grp_float_silu2_fu_800_x_58_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_58_address0 = grp_bf16_to_float_fu_531_out_58_address0;
+    end else begin
+        x_58_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_58_ce0 = grp_float_silu2_fu_800_x_58_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_58_ce0 = grp_bf16_to_float_fu_531_out_58_ce0;
+    end else begin
+        x_58_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_58_we0 = grp_bf16_to_float_fu_531_out_58_we0;
+    end else begin
+        x_58_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_59_address0 = grp_float_silu2_fu_800_x_59_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_59_address0 = grp_bf16_to_float_fu_531_out_59_address0;
+    end else begin
+        x_59_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_59_ce0 = grp_float_silu2_fu_800_x_59_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_59_ce0 = grp_bf16_to_float_fu_531_out_59_ce0;
+    end else begin
+        x_59_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_59_we0 = grp_bf16_to_float_fu_531_out_59_we0;
+    end else begin
+        x_59_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_5_address0 = grp_float_silu2_fu_800_x_5_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_5_address0 = grp_bf16_to_float_fu_531_out_5_address0;
+    end else begin
+        x_5_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_5_ce0 = grp_float_silu2_fu_800_x_5_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_5_ce0 = grp_bf16_to_float_fu_531_out_5_ce0;
+    end else begin
+        x_5_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_5_we0 = grp_bf16_to_float_fu_531_out_5_we0;
+    end else begin
+        x_5_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_60_address0 = grp_float_silu2_fu_800_x_60_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_60_address0 = grp_bf16_to_float_fu_531_out_60_address0;
+    end else begin
+        x_60_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_60_ce0 = grp_float_silu2_fu_800_x_60_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_60_ce0 = grp_bf16_to_float_fu_531_out_60_ce0;
+    end else begin
+        x_60_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_60_we0 = grp_bf16_to_float_fu_531_out_60_we0;
+    end else begin
+        x_60_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_61_address0 = grp_float_silu2_fu_800_x_61_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_61_address0 = grp_bf16_to_float_fu_531_out_61_address0;
+    end else begin
+        x_61_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_61_ce0 = grp_float_silu2_fu_800_x_61_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_61_ce0 = grp_bf16_to_float_fu_531_out_61_ce0;
+    end else begin
+        x_61_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_61_we0 = grp_bf16_to_float_fu_531_out_61_we0;
+    end else begin
+        x_61_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_62_address0 = grp_float_silu2_fu_800_x_62_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_62_address0 = grp_bf16_to_float_fu_531_out_62_address0;
+    end else begin
+        x_62_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_62_ce0 = grp_float_silu2_fu_800_x_62_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_62_ce0 = grp_bf16_to_float_fu_531_out_62_ce0;
+    end else begin
+        x_62_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_62_we0 = grp_bf16_to_float_fu_531_out_62_we0;
+    end else begin
+        x_62_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_63_address0 = grp_float_silu2_fu_800_x_63_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_63_address0 = grp_bf16_to_float_fu_531_out_63_address0;
+    end else begin
+        x_63_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_63_ce0 = grp_float_silu2_fu_800_x_63_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_63_ce0 = grp_bf16_to_float_fu_531_out_63_ce0;
+    end else begin
+        x_63_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_63_we0 = grp_bf16_to_float_fu_531_out_63_we0;
+    end else begin
+        x_63_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_6_address0 = grp_float_silu2_fu_800_x_6_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_6_address0 = grp_bf16_to_float_fu_531_out_6_address0;
+    end else begin
+        x_6_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_6_ce0 = grp_float_silu2_fu_800_x_6_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_6_ce0 = grp_bf16_to_float_fu_531_out_6_ce0;
+    end else begin
+        x_6_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_6_we0 = grp_bf16_to_float_fu_531_out_6_we0;
+    end else begin
+        x_6_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_7_address0 = grp_float_silu2_fu_800_x_7_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_7_address0 = grp_bf16_to_float_fu_531_out_7_address0;
+    end else begin
+        x_7_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_7_ce0 = grp_float_silu2_fu_800_x_7_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_7_ce0 = grp_bf16_to_float_fu_531_out_7_ce0;
+    end else begin
+        x_7_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_7_we0 = grp_bf16_to_float_fu_531_out_7_we0;
+    end else begin
+        x_7_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_8_address0 = grp_float_silu2_fu_800_x_8_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_8_address0 = grp_bf16_to_float_fu_531_out_8_address0;
+    end else begin
+        x_8_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_8_ce0 = grp_float_silu2_fu_800_x_8_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_8_ce0 = grp_bf16_to_float_fu_531_out_8_ce0;
+    end else begin
+        x_8_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_8_we0 = grp_bf16_to_float_fu_531_out_8_we0;
+    end else begin
+        x_8_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_9_address0 = grp_float_silu2_fu_800_x_9_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_9_address0 = grp_bf16_to_float_fu_531_out_9_address0;
+    end else begin
+        x_9_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_9_ce0 = grp_float_silu2_fu_800_x_9_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_9_ce0 = grp_bf16_to_float_fu_531_out_9_ce0;
+    end else begin
+        x_9_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_9_we0 = grp_bf16_to_float_fu_531_out_9_we0;
+    end else begin
+        x_9_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_address0 = grp_float_silu2_fu_800_x_0_address0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        x_address0 = grp_bf16_to_float_fu_531_out_0_address0;
     end else begin
         x_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((icmp_ln1343_reg_604 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
-        x_ce0 = grp_float_safe_softmax3_64_s_fu_532_x_0_ce0;
+    if (((icmp_ln484_reg_1061 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
+        x_ce0 = grp_float_silu2_fu_800_x_0_ce0;
     end else if ((1'b1 == ap_CS_fsm_state10)) begin
-        x_ce0 = grp_bf16_to_float_fu_389_out_0_ce0;
+        x_ce0 = grp_bf16_to_float_fu_531_out_0_ce0;
     end else begin
         x_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((icmp_ln1343_reg_604 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
-        x_ce1 = grp_float_safe_softmax3_64_s_fu_532_x_0_ce1;
-    end else begin
-        x_ce1 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((icmp_ln1343_reg_604 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
-        x_ce10 = grp_float_safe_softmax3_64_s_fu_532_x_0_ce10;
-    end else begin
-        x_ce10 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((icmp_ln1343_reg_604 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
-        x_ce11 = grp_float_safe_softmax3_64_s_fu_532_x_0_ce11;
-    end else begin
-        x_ce11 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((icmp_ln1343_reg_604 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
-        x_ce12 = grp_float_safe_softmax3_64_s_fu_532_x_0_ce12;
-    end else begin
-        x_ce12 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((icmp_ln1343_reg_604 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
-        x_ce13 = grp_float_safe_softmax3_64_s_fu_532_x_0_ce13;
-    end else begin
-        x_ce13 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((icmp_ln1343_reg_604 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
-        x_ce14 = grp_float_safe_softmax3_64_s_fu_532_x_0_ce14;
-    end else begin
-        x_ce14 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((icmp_ln1343_reg_604 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
-        x_ce15 = grp_float_safe_softmax3_64_s_fu_532_x_0_ce15;
-    end else begin
-        x_ce15 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((icmp_ln1343_reg_604 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
-        x_ce16 = grp_float_safe_softmax3_64_s_fu_532_x_0_ce16;
-    end else begin
-        x_ce16 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((icmp_ln1343_reg_604 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
-        x_ce2 = grp_float_safe_softmax3_64_s_fu_532_x_0_ce2;
-    end else begin
-        x_ce2 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((icmp_ln1343_reg_604 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
-        x_ce3 = grp_float_safe_softmax3_64_s_fu_532_x_0_ce3;
-    end else begin
-        x_ce3 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((icmp_ln1343_reg_604 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
-        x_ce4 = grp_float_safe_softmax3_64_s_fu_532_x_0_ce4;
-    end else begin
-        x_ce4 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((icmp_ln1343_reg_604 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
-        x_ce5 = grp_float_safe_softmax3_64_s_fu_532_x_0_ce5;
-    end else begin
-        x_ce5 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((icmp_ln1343_reg_604 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
-        x_ce6 = grp_float_safe_softmax3_64_s_fu_532_x_0_ce6;
-    end else begin
-        x_ce6 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((icmp_ln1343_reg_604 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
-        x_ce7 = grp_float_safe_softmax3_64_s_fu_532_x_0_ce7;
-    end else begin
-        x_ce7 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((icmp_ln1343_reg_604 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
-        x_ce8 = grp_float_safe_softmax3_64_s_fu_532_x_0_ce8;
-    end else begin
-        x_ce8 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((icmp_ln1343_reg_604 == 1'd1) & (1'b1 == ap_CS_fsm_state12))) begin
-        x_ce9 = grp_float_safe_softmax3_64_s_fu_532_x_0_ce9;
-    end else begin
-        x_ce9 = 1'b0;
-    end
-end
-
-always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state10)) begin
-        x_we0 = grp_bf16_to_float_fu_389_out_0_we0;
+        x_we0 = grp_bf16_to_float_fu_531_out_0_we0;
     end else begin
         x_we0 = 1'b0;
     end
@@ -3035,22 +8828,22 @@ end
 always @ (*) begin
     case (ap_CS_fsm)
         ap_ST_fsm_state1 : begin
-            if (((ap_start == 1'b1) & (icmp_ln1343_fu_558_p2 == 1'd0) & (stage_read_read_fu_356_p2 == 32'd1) & (1'b1 == ap_CS_fsm_state1))) begin
+            if (((icmp_ln484_fu_1015_p2 == 1'd0) & (stage_read_read_fu_498_p2 == 32'd1) & (ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
                 ap_NS_fsm = ap_ST_fsm_state12;
-            end else if (((ap_start == 1'b1) & (icmp_ln1343_fu_558_p2 == 1'd1) & (stage_read_read_fu_356_p2 == 32'd1) & (1'b1 == ap_CS_fsm_state1))) begin
+            end else if (((icmp_ln484_fu_1015_p2 == 1'd1) & (stage_read_read_fu_498_p2 == 32'd1) & (ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
                 ap_NS_fsm = ap_ST_fsm_state10;
-            end else if ((~(stage_read_read_fu_356_p2 == 32'd0) & ~(stage_read_read_fu_356_p2 == 32'd1) & ~(stage_read_read_fu_356_p2 == 32'd2) & (ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
+            end else if ((~(stage_read_read_fu_498_p2 == 32'd0) & ~(stage_read_read_fu_498_p2 == 32'd1) & ~(stage_read_read_fu_498_p2 == 32'd2) & (ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
                 ap_NS_fsm = ap_ST_fsm_state21;
-            end else if (((ap_start == 1'b1) & (stage_read_read_fu_356_p2 == 32'd0) & (1'b1 == ap_CS_fsm_state1))) begin
+            end else if (((stage_read_read_fu_498_p2 == 32'd0) & (ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
                 ap_NS_fsm = ap_ST_fsm_state13;
-            end else if (((ap_start == 1'b1) & (stage_read_read_fu_356_p2 == 32'd2) & (1'b1 == ap_CS_fsm_state1))) begin
+            end else if (((stage_read_read_fu_498_p2 == 32'd2) & (ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
                 ap_NS_fsm = ap_ST_fsm_state2;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end
         end
         ap_ST_fsm_state2 : begin
-            if (((1'b1 == ap_CS_fsm_state2) & (gmem2_AWREADY == 1'b1))) begin
+            if (((gmem2_AWREADY == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
                 ap_NS_fsm = ap_ST_fsm_state3;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state2;
@@ -3060,7 +8853,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state4;
         end
         ap_ST_fsm_state4 : begin
-            if (((1'b1 == ap_CS_fsm_state4) & (grp_activation_accelerator_Pipeline_stage_2_store_fu_523_ap_done == 1'b1))) begin
+            if (((1'b1 == ap_CS_fsm_state4) & (grp_activation_accelerator_Pipeline_stage_2_store_fu_665_ap_done == 1'b1))) begin
                 ap_NS_fsm = ap_ST_fsm_state5;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state4;
@@ -3079,14 +8872,14 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state9;
         end
         ap_ST_fsm_state9 : begin
-            if (((1'b1 == ap_CS_fsm_state9) & (gmem2_BVALID == 1'b1))) begin
+            if (((gmem2_BVALID == 1'b1) & (1'b1 == ap_CS_fsm_state9))) begin
                 ap_NS_fsm = ap_ST_fsm_state21;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state9;
             end
         end
         ap_ST_fsm_state10 : begin
-            if (((grp_bf16_to_float_fu_389_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state10))) begin
+            if (((1'b1 == ap_CS_fsm_state10) & (grp_bf16_to_float_fu_531_ap_done == 1'b1))) begin
                 ap_NS_fsm = ap_ST_fsm_state11;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state10;
@@ -3096,14 +8889,14 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state12;
         end
         ap_ST_fsm_state12 : begin
-            if (((1'b1 == ap_CS_fsm_state12) & (1'b0 == ap_block_state12_on_subcall_done))) begin
+            if (((1'b0 == ap_block_state12_on_subcall_done) & (1'b1 == ap_CS_fsm_state12))) begin
                 ap_NS_fsm = ap_ST_fsm_state21;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state12;
             end
         end
         ap_ST_fsm_state13 : begin
-            if (((1'b1 == ap_CS_fsm_state13) & (gmem0_ARREADY == 1'b1))) begin
+            if (((gmem0_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state13))) begin
                 ap_NS_fsm = ap_ST_fsm_state14;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state13;
@@ -3131,7 +8924,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state21;
         end
         ap_ST_fsm_state21 : begin
-            if (((1'b1 == ap_CS_fsm_state21) & (1'b0 == ap_block_state21_on_subcall_done))) begin
+            if (((1'b0 == ap_block_state21_on_subcall_done) & (1'b1 == ap_CS_fsm_state21))) begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state21;
@@ -3166,26 +8959,26 @@ assign ap_CS_fsm_state4 = ap_CS_fsm[32'd3];
 assign ap_CS_fsm_state9 = ap_CS_fsm[32'd8];
 
 always @ (*) begin
-    ap_block_state12_on_subcall_done = ((icmp_ln1343_reg_604 == 1'd1) & (grp_float_safe_softmax3_64_s_fu_532_ap_done == 1'b0));
+    ap_block_state12_on_subcall_done = ((icmp_ln484_reg_1061 == 1'd1) & (grp_float_silu2_fu_800_ap_done == 1'b0));
 end
 
 always @ (*) begin
-    ap_block_state21_on_subcall_done = ((stage_read_reg_594 == 32'd0) & (grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_ap_done == 1'b0));
+    ap_block_state21_on_subcall_done = ((stage_read_reg_1051 == 32'd0) & (grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_ap_done == 1'b0));
 end
 
 always @ (*) begin
     ap_rst_n_inv = ~ap_rst_n;
 end
 
-assign grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_ap_start = grp_activation_accelerator_Pipeline_stage_0_load0_fu_539_ap_start_reg;
+assign grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_ap_start = grp_activation_accelerator_Pipeline_stage_0_load0_fu_996_ap_start_reg;
 
-assign grp_activation_accelerator_Pipeline_stage_2_store_fu_523_ap_start = grp_activation_accelerator_Pipeline_stage_2_store_fu_523_ap_start_reg;
+assign grp_activation_accelerator_Pipeline_stage_2_store_fu_665_ap_start = grp_activation_accelerator_Pipeline_stage_2_store_fu_665_ap_start_reg;
 
-assign grp_bf16_to_float_fu_389_ap_start = grp_bf16_to_float_fu_389_ap_start_reg;
+assign grp_bf16_to_float_fu_531_ap_start = grp_bf16_to_float_fu_531_ap_start_reg;
 
-assign grp_float_safe_softmax3_64_s_fu_532_ap_start = grp_float_safe_softmax3_64_s_fu_532_ap_start_reg;
+assign grp_float_silu2_fu_800_ap_start = grp_float_silu2_fu_800_ap_start_reg;
 
-assign icmp_ln1343_fu_558_p2 = ((config_r == 32'd0) ? 1'b1 : 1'b0);
+assign icmp_ln484_fu_1015_p2 = ((config_r == 32'd0) ? 1'b1 : 1'b0);
 
 assign m_axi_gmem1_ARADDR = 64'd0;
 
@@ -3251,10 +9044,10 @@ assign m_axi_gmem1_WUSER = 1'd0;
 
 assign m_axi_gmem1_WVALID = 1'b0;
 
-assign sext_ln1324_fu_584_p1 = $signed(trunc_ln_reg_608);
+assign sext_ln471_fu_1041_p1 = $signed(trunc_ln_reg_1065);
 
-assign sext_ln1380_fu_574_p1 = $signed(trunc_ln3_reg_598);
+assign sext_ln542_fu_1031_p1 = $signed(trunc_ln1_reg_1055);
 
-assign stage_read_read_fu_356_p2 = stage;
+assign stage_read_read_fu_498_p2 = stage;
 
 endmodule //activation_accelerator

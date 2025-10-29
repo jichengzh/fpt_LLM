@@ -55,4 +55,4 @@ obj/activation_accelerator.o: ../../../../activation_accelerator.cpp \
  /data/xilinx/Vitis_HLS/2022.2/include/hls_cbrt_apfixed.h \
  /data/xilinx/Vitis_HLS/2022.2/include/hls_hypot_apfixed.h \
  /data/xilinx/Vitis_HLS/2022.2/include/hls_ldexp_apfixed.h \
- ../../../../bf16_accl.h
+ ../../../../bf16_accl.h ../../../../reduce_tree.h

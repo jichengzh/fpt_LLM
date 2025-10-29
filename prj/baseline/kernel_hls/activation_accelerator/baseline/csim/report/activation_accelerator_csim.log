@@ -9,18 +9,66 @@ BF16 data loaded successfully
 in0 statistics: min=0, max=65535, mean=26455.6
 in1 statistics: min=0, max=65535, mean=26442.7
 === HLS Activation Accelerator Testbench ===
+Trying to load: /data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors3/golden_out_config_0_bf16.bin
+Loaded Config 0 golden data from bf16
 Trying to load: /data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors3/golden_out_config_1_bf16.bin
 Loaded Config 1 golden data from bf16
+Trying to load: /data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors3/golden_out_config_2_bf16.bin
+Loaded Config 2 golden data from bf16
+Trying to load: /data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors3/golden_out_config_3_bf16.bin
+Loaded Config 3 golden data from bf16
+Trying to load: /data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors3/golden_out_config_4_bf16.bin
+Loaded Config 4 golden data from bf16
+Trying to load: /data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors3/golden_out_config_5_bf16.bin
+Loaded Config 5 golden data from bf16
+Trying to load: /data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors3/golden_out_config_6_bf16.bin
+Loaded Config 6 golden data from bf16
 Set activation_accelerator.stage = 0
 Data transfer complete
 
 --- Testing Config 0 ---
-Config 0 compute time: 29.2911 ms
+Config 0 compute time: 11410.3 ms
 Output results saved to: /data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors3/hls_output_config_0.bin
-Max Difference: 0
-Config 0 test passed!
+Max Difference: 65535
+Config 0 test failed with 49011 errors
 
-Total compute time for all configs: 29.2911 ms
+--- Testing Config 1 ---
+Config 1 compute time: 0.000276 ms
+Output results saved to: /data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors3/hls_output_config_1.bin
+Max Difference: 63
+Config 1 test failed with 126 errors
+
+--- Testing Config 2 ---
+Config 2 compute time: 9.9e-05 ms
+Output results saved to: /data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors3/hls_output_config_2.bin
+Max Difference: 65535
+Config 2 test failed with 43242 errors
+
+--- Testing Config 3 ---
+Config 3 compute time: 8.6e-05 ms
+Output results saved to: /data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors3/hls_output_config_3.bin
+Max Difference: 65535
+Config 3 test failed with 47855 errors
+
+--- Testing Config 4 ---
+Config 4 compute time: 8.4e-05 ms
+Output results saved to: /data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors3/hls_output_config_4.bin
+Max Difference: 15618
+Config 4 test failed with 25671 errors
+
+--- Testing Config 5 ---
+Config 5 compute time: 7.5e-05 ms
+Output results saved to: /data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors3/hls_output_config_5.bin
+Max Difference: 49641
+Config 5 test failed with 44044 errors
+
+--- Testing Config 6 ---
+Config 6 compute time: 8.9e-05 ms
+Output results saved to: /data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors3/hls_output_config_6.bin
+Max Difference: 49641
+Config 6 test failed with 44518 errors
+
+Total compute time for all configs: 11410.3 ms
 
 === Test Complete ===
 INFO: [SIM 1] CSim done with 0 errors.

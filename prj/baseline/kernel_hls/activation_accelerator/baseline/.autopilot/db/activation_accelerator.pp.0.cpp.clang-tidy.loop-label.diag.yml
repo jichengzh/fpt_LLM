@@ -1301,4 +1301,13 @@ Diagnostics:
         Offset:          2298627
         Length:          0
         ReplacementText: 'VITIS_LOOP_195_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_377_1:  '
+    FileOffset:      377
+    FilePath:        activation_accelerator.cpp
+    Replacements:    
+      - FilePath:        /data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp
+        Offset:          2376744
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_377_1: '
 ...

@@ -1,0 +1,174 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'float_add2_64_768_s'" level="0">
+<item name = "Date">Sun Oct 26 18:04:20 2025
+</item>
+<item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
+<item name = "Project">activation_accelerator</item>
+<item name = "Solution">baseline (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xck26-sfvc784-2LV-c</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 6.437 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">6145, 6145, 61.450 us, 61.450 us, 6145, 6145, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_f32_add_fu_2906">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_2912">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_2918">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_2924">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_2930">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_2936">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_2942">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_2948">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_2954">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_2960">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_2966">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_2972">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_2978">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_2984">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_2990">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_2996">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3002">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3008">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3014">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3020">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3026">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3032">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3038">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3044">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3050">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3056">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3062">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3068">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3074">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3080">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3086">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3092">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3098">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3104">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3110">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3116">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3122">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3128">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3134">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3140">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3146">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3152">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3158">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3164">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3170">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3176">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3182">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3188">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3194">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3200">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3206">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3212">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3218">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3224">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3230">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3236">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3242">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3248">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3254">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3260">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3266">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3272">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3278">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_f32_add_fu_3284">f32_add, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="tmp_round_float32_to_bf16_ieee_fu_3290">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_s_round_float32_to_bf16_ieee_fu_3296">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1949_round_float32_to_bf16_ieee_fu_3302">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1950_round_float32_to_bf16_ieee_fu_3308">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1951_round_float32_to_bf16_ieee_fu_3314">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1952_round_float32_to_bf16_ieee_fu_3320">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1953_round_float32_to_bf16_ieee_fu_3326">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1954_round_float32_to_bf16_ieee_fu_3332">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1955_round_float32_to_bf16_ieee_fu_3338">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1956_round_float32_to_bf16_ieee_fu_3344">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1957_round_float32_to_bf16_ieee_fu_3350">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1958_round_float32_to_bf16_ieee_fu_3356">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1959_round_float32_to_bf16_ieee_fu_3362">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1960_round_float32_to_bf16_ieee_fu_3368">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1961_round_float32_to_bf16_ieee_fu_3374">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1962_round_float32_to_bf16_ieee_fu_3380">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1963_round_float32_to_bf16_ieee_fu_3386">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1964_round_float32_to_bf16_ieee_fu_3392">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1965_round_float32_to_bf16_ieee_fu_3398">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1966_round_float32_to_bf16_ieee_fu_3404">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1967_round_float32_to_bf16_ieee_fu_3410">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1968_round_float32_to_bf16_ieee_fu_3416">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1969_round_float32_to_bf16_ieee_fu_3422">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1970_round_float32_to_bf16_ieee_fu_3428">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1971_round_float32_to_bf16_ieee_fu_3434">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1972_round_float32_to_bf16_ieee_fu_3440">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1973_round_float32_to_bf16_ieee_fu_3446">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1974_round_float32_to_bf16_ieee_fu_3452">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1975_round_float32_to_bf16_ieee_fu_3458">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1976_round_float32_to_bf16_ieee_fu_3464">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1977_round_float32_to_bf16_ieee_fu_3470">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1978_round_float32_to_bf16_ieee_fu_3476">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1979_round_float32_to_bf16_ieee_fu_3482">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1980_round_float32_to_bf16_ieee_fu_3488">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1981_round_float32_to_bf16_ieee_fu_3494">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1982_round_float32_to_bf16_ieee_fu_3500">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1983_round_float32_to_bf16_ieee_fu_3506">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1984_round_float32_to_bf16_ieee_fu_3512">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1985_round_float32_to_bf16_ieee_fu_3518">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1986_round_float32_to_bf16_ieee_fu_3524">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1987_round_float32_to_bf16_ieee_fu_3530">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1988_round_float32_to_bf16_ieee_fu_3536">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1989_round_float32_to_bf16_ieee_fu_3542">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1990_round_float32_to_bf16_ieee_fu_3548">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1991_round_float32_to_bf16_ieee_fu_3554">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1992_round_float32_to_bf16_ieee_fu_3560">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1993_round_float32_to_bf16_ieee_fu_3566">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1994_round_float32_to_bf16_ieee_fu_3572">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1995_round_float32_to_bf16_ieee_fu_3578">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1996_round_float32_to_bf16_ieee_fu_3584">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1997_round_float32_to_bf16_ieee_fu_3590">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1998_round_float32_to_bf16_ieee_fu_3596">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_1999_round_float32_to_bf16_ieee_fu_3602">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_2000_round_float32_to_bf16_ieee_fu_3608">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_2001_round_float32_to_bf16_ieee_fu_3614">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_2002_round_float32_to_bf16_ieee_fu_3620">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_2003_round_float32_to_bf16_ieee_fu_3626">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_2004_round_float32_to_bf16_ieee_fu_3632">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_2005_round_float32_to_bf16_ieee_fu_3638">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_2006_round_float32_to_bf16_ieee_fu_3644">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_2007_round_float32_to_bf16_ieee_fu_3650">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_2008_round_float32_to_bf16_ieee_fu_3656">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_2009_round_float32_to_bf16_ieee_fu_3662">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_2010_round_float32_to_bf16_ieee_fu_3668">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- add_blocks">6144, 6144, 8, -, -, 768, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>
