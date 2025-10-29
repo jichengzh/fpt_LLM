@@ -1,0 +1,110 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'float_silu2'" level="0">
+<item name = "Date">Tue Oct 28 21:24:17 2025
+</item>
+<item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
+<item name = "Project">activation_accelerator</item>
+<item name = "Solution">baseline (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xck26-sfvc784-2LV-c</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.057 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">791, 791, 7.910 us, 7.910 us, 791, 791, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="tmp_1_round_float32_to_bf16_ieee_fu_1958">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_3_round_float32_to_bf16_ieee_fu_1964">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_5_round_float32_to_bf16_ieee_fu_1970">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_7_round_float32_to_bf16_ieee_fu_1976">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_9_round_float32_to_bf16_ieee_fu_1982">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_10_round_float32_to_bf16_ieee_fu_1988">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_12_round_float32_to_bf16_ieee_fu_1994">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_14_round_float32_to_bf16_ieee_fu_2000">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_16_round_float32_to_bf16_ieee_fu_2006">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_18_round_float32_to_bf16_ieee_fu_2012">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_20_round_float32_to_bf16_ieee_fu_2018">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_22_round_float32_to_bf16_ieee_fu_2024">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_24_round_float32_to_bf16_ieee_fu_2030">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_26_round_float32_to_bf16_ieee_fu_2036">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_28_round_float32_to_bf16_ieee_fu_2042">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_30_round_float32_to_bf16_ieee_fu_2048">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_32_round_float32_to_bf16_ieee_fu_2054">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_34_round_float32_to_bf16_ieee_fu_2060">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_36_round_float32_to_bf16_ieee_fu_2066">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_38_round_float32_to_bf16_ieee_fu_2072">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_40_round_float32_to_bf16_ieee_fu_2078">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_42_round_float32_to_bf16_ieee_fu_2084">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_44_round_float32_to_bf16_ieee_fu_2090">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_46_round_float32_to_bf16_ieee_fu_2096">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_48_round_float32_to_bf16_ieee_fu_2102">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_50_round_float32_to_bf16_ieee_fu_2108">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_52_round_float32_to_bf16_ieee_fu_2114">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_54_round_float32_to_bf16_ieee_fu_2120">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_56_round_float32_to_bf16_ieee_fu_2126">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_58_round_float32_to_bf16_ieee_fu_2132">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_60_round_float32_to_bf16_ieee_fu_2138">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_62_round_float32_to_bf16_ieee_fu_2144">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_64_round_float32_to_bf16_ieee_fu_2150">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_66_round_float32_to_bf16_ieee_fu_2156">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_68_round_float32_to_bf16_ieee_fu_2162">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_70_round_float32_to_bf16_ieee_fu_2168">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_72_round_float32_to_bf16_ieee_fu_2174">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_74_round_float32_to_bf16_ieee_fu_2180">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_76_round_float32_to_bf16_ieee_fu_2186">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_78_round_float32_to_bf16_ieee_fu_2192">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_80_round_float32_to_bf16_ieee_fu_2198">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_82_round_float32_to_bf16_ieee_fu_2204">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_84_round_float32_to_bf16_ieee_fu_2210">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_86_round_float32_to_bf16_ieee_fu_2216">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_88_round_float32_to_bf16_ieee_fu_2222">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_90_round_float32_to_bf16_ieee_fu_2228">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_92_round_float32_to_bf16_ieee_fu_2234">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_94_round_float32_to_bf16_ieee_fu_2240">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_96_round_float32_to_bf16_ieee_fu_2246">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_98_round_float32_to_bf16_ieee_fu_2252">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_100_round_float32_to_bf16_ieee_fu_2258">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_102_round_float32_to_bf16_ieee_fu_2264">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_104_round_float32_to_bf16_ieee_fu_2270">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_106_round_float32_to_bf16_ieee_fu_2276">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_108_round_float32_to_bf16_ieee_fu_2282">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_110_round_float32_to_bf16_ieee_fu_2288">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_112_round_float32_to_bf16_ieee_fu_2294">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_114_round_float32_to_bf16_ieee_fu_2300">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_116_round_float32_to_bf16_ieee_fu_2306">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_118_round_float32_to_bf16_ieee_fu_2312">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_120_round_float32_to_bf16_ieee_fu_2318">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_122_round_float32_to_bf16_ieee_fu_2324">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_124_round_float32_to_bf16_ieee_fu_2330">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="tmp_126_round_float32_to_bf16_ieee_fu_2336">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- silu_blocks">789, 789, 23, 1, 1, 768, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

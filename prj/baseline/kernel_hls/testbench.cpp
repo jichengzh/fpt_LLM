@@ -164,7 +164,7 @@ int main() {
 
     // Main loop for all configs Stage 1 + Stage 2
     double total_time = 0.0;
-    for (int config = 2; config < 4; ++config) {
+    for (int config = 1; config < 5; ++config) {
         // Stage 1: Compute
         stage = STAGE_COMPUTE;
         std::cout << "\n--- Testing Config " << config << " ---" << std::endl;

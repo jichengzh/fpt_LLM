@@ -19,8 +19,8 @@ uint16 bf16add(uint16 a_bits, uint16 b_bits);
 // Function declaration - 使用uint16数据类型
 void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, int32 config);
 
-//提供square的编译声明，支持复用
-void square(const float* x, float* y_sum_sq, int len);
+// //提供square的编译声明，支持复用
+// void square(const float* x, float* y_sum_sq, int len);
 
 
 // Configuration definitions

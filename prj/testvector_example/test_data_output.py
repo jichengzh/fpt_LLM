@@ -6,12 +6,12 @@ N, D = 64, 768
 # /home/xushaohui/FPT/fpt_LLM/prj/testvector_example/
 #启动命令：python test_data_output.py
 
-config = "2"
+config = "4"
 
 # Name = "ref_softmax_bf16"
 # Name = "X_test_tensor_bf16"
-# Name = "hls_output_config_" + config
-Name = "golden_out_config_" + config + "_bf16"
+Name = "hls_output_config_" + config
+# Name = "golden_out_config_" + config + "_bf16"
 # Name = "X_test_tensor_bf16"
 # Name = "Y_test_tensor_bf16"
 path = "/home/xushaohui/FPT/fpt_LLM/prj/testvector_example/bf16_vectors4/"+ Name + ".bin" 
