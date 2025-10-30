@@ -55460,7 +55460,34 @@ static inline void bf16_to_float(const uint16* in, float* out, int len) {
         out[i] = *(float*)&x_f32;
     }
 }
-# 114 "./bf16_accl.h"
+# 112 "./bf16_accl.h"
+static inline uint16_t bf16_fmax_u16(uint16_t a, uint16_t b) {
+#pragma HLS INLINE off
+
+ uint16_t expa = (a >> 7) & 0xFF;
+    uint16_t fraca = a & 0x7F;
+    bool a_is_nan = (expa == 0xFF) && (fraca != 0);
+
+    uint16_t expb = (b >> 7) & 0xFF;
+    uint16_t fracb = b & 0x7F;
+    bool b_is_nan = (expb == 0xFF) && (fracb != 0);
+
+
+    if (a_is_nan && b_is_nan) return a;
+    if (a_is_nan) return b;
+    if (b_is_nan) return a;
+
+
+
+    uint16_t ka = (a & 0x8000) ? (uint16_t)(~a) : (uint16_t)(a ^ 0x8000);
+    uint16_t kb = (b & 0x8000) ? (uint16_t)(~b) : (uint16_t)(b ^ 0x8000);
+
+
+
+    return (ka < kb) ? b : a;
+}
+
+
 static inline uint16 bf16add_fast(uint16 a_bits, uint16 b_bits) {
 #pragma HLS inline off
 
@@ -55493,7 +55520,7 @@ static inline uint16 bf16add_fast(uint16 a_bits, uint16 b_bits) {
 
     if ((ea | ma) == 0) return b_bits;
     if ((eb | mb) == 0) return a_bits;
-# 158 "./bf16_accl.h"
+# 183 "./bf16_accl.h"
     uint32_t A = (ea ? (ONE_I | ma) : ma), B = (eb ? (ONE_I | mb) : mb);
     A <<= PREC_SHIFT; B <<= PREC_SHIFT;
 
@@ -55532,7 +55559,7 @@ static inline uint16 bf16add_fast(uint16 a_bits, uint16 b_bits) {
             B_aln = B >> diff;
         }
     }
-# 210 "./bf16_accl.h"
+# 235 "./bf16_accl.h"
     uint32_t M = A + B_aln;
     uint16_t s = 0;
 
@@ -55792,24 +55819,7 @@ static inline uint16_t round_float32_to_bf16_ieee(float x_in) {
 
     return static_cast<uint16_t>(rounded & 0xFFFFu);
 }
-
-
-static void round_vec64(
-    const float in_val[64],
-    uint16_t out_val[64]
-) {
-#pragma HLS INLINE off
-
-
-
-
-round_vec64_loop:
-    for (int u = 0; u < 64; ++u) {
-#pragma HLS UNROLL
- out_val[u] = round_float32_to_bf16_ieee(in_val[u]);
-    }
-}
-
+# 88 "activation_accelerator.cpp"
 void float_silu2(const float* x, uint16* y, int len){
 #pragma HLS INLINE off
 #pragma HLS ALLOCATION function instances=round_float32_to_bf16_ieee limit=64
@@ -55820,12 +55830,15 @@ void float_silu2(const float* x, uint16* y, int len){
 
     silu_blocks:
     for (int i = 0; i < row_len; ++i){
+#pragma HLS ALLOCATION operation instances=fexp limit=32
+#pragma HLS ALLOCATION operation instances=fadd limit=32
+#pragma HLS ALLOCATION function instances = round_float32_to_bf16_ieee limit = 32
 
-        silu_inner:
+ silu_inner:
         for (int u = 0; u < col_len; ++u){
 #pragma HLS UNROLL
  int idx = i + u * row_len;
-            float sil = x[idx] / (expf(-x[idx]) + 1.0f);
+            float sil = x[idx] / (hls::expf(-x[idx]) + 1.0f);
             y[idx] = round_float32_to_bf16_ieee(sil);
         }
     }
@@ -55868,8 +55881,9 @@ rms_calculate_loop_rms_norm3:
 
 normalize_blocks_rms_norm3:
     for (int i = 0; i < row_len; ++i) {
+#pragma HLS ALLOCATION function instances = round_float32_to_bf16_ieee limit = 32
 
-    normalize_inner_rms_norm3:
+ normalize_inner_rms_norm3:
         for (int u = 0; u < col_len; ++u) {
 #pragma HLS UNROLL
  int idx = u * row_len + i;
@@ -55914,7 +55928,8 @@ init_partial_layernorm:
 
 mean_blocks_layer_norm3:
     for (int i = 0; i < row_len; ++i) {
-    mean_inner_layer_norm3:
+#pragma HLS ALLOCATION operation instances=fadd limit=32
+ mean_inner_layer_norm3:
         for (int j = 0; j < col_len; ++j) {
 #pragma HLS UNROLL
  int idx = i + j * row_len;
@@ -55931,6 +55946,9 @@ mean_blocks2_layer_norm3:
 
 std_blocks_layer_norm3:
     for (int i = 0; i < col_len; ++i) {
+#pragma HLS ALLOCATION operation instances=fmul limit=32
+#pragma HLS ALLOCATION operation instances=fadd limit=32
+#pragma HLS ALLOCATION operation instances=fsub limit=32
 #pragma HLS UNROLL
  y_sum_sq[i] = hls::sqrtf(y_sum_sq[i] - partial_mean[i] * partial_mean[i] + eps);
     }
@@ -55938,7 +55956,9 @@ std_blocks_layer_norm3:
 
 normalize_blocks_layer_norm3:
     for (int i = 0; i < row_len; ++i) {
-    normalize_inner_layer_norm3:
+#pragma HLS ALLOCATION function instances = round_float32_to_bf16_ieee limit = 32
+#pragma HLS ALLOCATION operation instances=fsub limit=32
+ normalize_inner_layer_norm3:
         for (int u = 0; u < col_len; ++u) {
 #pragma HLS UNROLL
  int idx = i + u * row_len;
@@ -55963,6 +55983,10 @@ void float_gelu2(const float* x, uint16_t* y_bf16, int len) {
 
         gelu_inner:
         for (int u = 0; u < col_len; ++u) {
+#pragma HLS ALLOCATION operation instances=fexp limit=32
+#pragma HLS ALLOCATION operation instances=fmul limit=32
+#pragma HLS ALLOCATION operation instances=fadd limit=32
+#pragma HLS ALLOCATION function instances = round_float32_to_bf16_ieee limit = 32
 #pragma HLS UNROLL
 
  int idx = i + u * row_len;
@@ -55971,7 +55995,7 @@ void float_gelu2(const float* x, uint16_t* y_bf16, int len) {
 
             float xtrue;
             xtrue = x[idx] / (1.0f + hls::expf(-sigmoid_arg));
-# 258 "activation_accelerator.cpp"
+# 272 "activation_accelerator.cpp"
             y_bf16[idx] = round_float32_to_bf16_ieee(xtrue);
         }
     }
@@ -55985,14 +56009,13 @@ static void float_add2(const float* x, const float* y, uint16* out, int len) {
  const int col_len = 64;
     const int row_len = len/col_len;
 
-    float tmp_batch[64];
-    uint16 tmp_batch_bf16[64];
-#pragma HLS ARRAY_PARTITION variable=tmp_batch complete
-#pragma HLS ARRAY_PARTITION variable=tmp_batch_bf16 complete
 
- add_blocks:
+
+    add_blocks:
     for (int i = 0; i < row_len; ++i) {
-        add_inner:
+#pragma HLS ALLOCATION operation instances=fadd limit=32
+#pragma HLS ALLOCATION function instances = round_float32_to_bf16_ieee limit = 32
+ add_inner:
         for (int u = 0; u < col_len; ++u) {
 #pragma HLS UNROLL
  int idx = u * row_len + i;
@@ -56003,31 +56026,34 @@ static void float_add2(const float* x, const float* y, uint16* out, int len) {
 
             out[idx] = round_float32_to_bf16_ieee(sum);
         }
-# 297 "activation_accelerator.cpp"
     }
 }
 
 
-void float_safe_softmax3(const float* x, uint16_t* out, int len) {
+void float_safe_softmax3(const uint16_t* x, uint16_t* out, int len) {
 #pragma HLS INLINE
  const int col_len = 64;
     const int row_len = len/col_len;
 
-    float exp_buf[64 * 768];
-#pragma HLS DEPENDENCE variable=exp_buf inter false
-#pragma HLS ARRAY_PARTITION variable=exp_buf block factor=col_len
 
 
- float max_row[col_len];
+
+
+
+    float max_row[col_len];
 #pragma HLS ARRAY_PARTITION variable=max_row complete
 
  float sum_row[col_len];
 #pragma HLS ARRAY_PARTITION variable=sum_row complete
-# 331 "activation_accelerator.cpp"
+
+ uint16_t max_row_u16[col_len];
+#pragma HLS ARRAY_PARTITION variable=max_row_u16 complete
+# 339 "activation_accelerator.cpp"
 init_lane_max:
     for (int u = 0; u < col_len; ++u) {
 #pragma HLS UNROLL
- max_row[u] = -std::numeric_limits<float>::max();
+
+ max_row_u16[u] = (uint16_t)0xFF80;
     }
 
 
@@ -56035,15 +56061,21 @@ max_step_loop:
     for (int i = 0; i < row_len; ++i) {
 
 
+
     lane_reduce:
         for (int u = 0; u < col_len; ++u) {
-#pragma HLS UNROLL
+
+#pragma HLS UNROLL factor=32
 
  int idx = u * row_len + i;
-            float v = x[idx];
-            max_row[u] = hls::fmaxf(max_row[u], v);
+            uint16_t v = x[idx];
+
+            max_row_u16[u] = bf16_fmax_u16(max_row_u16[u], v);
+            uint32_t x_f32 = ((uint32_t)max_row_u16[u]) << 16;
+            max_row[u] = *(float*)&x_f32;
         }
     }
+
 
 init_partial:
     for (int u = 0; u < col_len; ++u) {
@@ -56053,29 +56085,41 @@ init_partial:
 
 exp_and_bucket:
     for (int i = 0; i < row_len; ++i) {
+#pragma HLS ALLOCATION operation instances=fexp limit=32
+#pragma HLS ALLOCATION operation instances=fadd limit=32
 
 
 
-    exp_inner:
+ exp_inner:
 
         for (int u = 0; u < col_len; ++u) {
 #pragma HLS UNROLL
  int idx = u * row_len + i;
-            float ex = hls::expf(x[idx] - max_row[u]);
-            exp_buf[idx] = ex;
-            sum_row[u] += exp_buf[idx];
+            float xi = bf16_to_f32(x[idx]);
+            float ex = hls::expf(xi - max_row[u]);
+            sum_row[u] += ex;
+
+
         }
     }
 
     softmax_final:
     for (int i = 0; i < row_len; ++i) {
+#pragma HLS ALLOCATION operation instances=fexp limit=32
+#pragma HLS ALLOCATION operation instances=fmul limit=32
+#pragma HLS ALLOCATION function instances = round_float32_to_bf16_ieee limit = 32
 
-        VITIS_LOOP_377_1: for (int u = 0; u < col_len; ++u) {
+ VITIS_LOOP_399_1: for (int u = 0; u < col_len; ++u) {
 #pragma HLS UNROLL
+
  int idx = u * row_len + i;
+            float xi = bf16_to_f32(x[idx]);
+
+            float num = hls::expf(xi - max_row[u]);
             float den = sum_row[u];
             float inv = (den > 0.f) ? (1.0f/den) : 0.f;
-            out[idx] = round_float32_to_bf16_ieee(exp_buf[idx] * inv);
+            float y_f32 = num * inv;
+            out[idx] = round_float32_to_bf16_ieee(y_f32);
         }
         }
 }
@@ -56098,8 +56142,10 @@ void float_Multiply2(const float* x, const float* y, uint16* out, int len) {
 
  multiply_blocks:
     for (int i = 0; i < row_len; ++i) {
+#pragma HLS ALLOCATION function instances = round_float32_to_bf16_ieee limit = 64
+#pragma HLS ALLOCATION operation instances=fmul limit=32
 
-        multiply_inner:
+ multiply_inner:
         for (int u = 0; u < col_len; ++u) {
 #pragma HLS UNROLL
  int idx = u * row_len + i;
@@ -56110,15 +56156,15 @@ void float_Multiply2(const float* x, const float* y, uint16* out, int len) {
 
             out[idx] = round_float32_to_bf16_ieee(mut);
         }
-# 428 "activation_accelerator.cpp"
+# 457 "activation_accelerator.cpp"
     }
 }
 
 
 __attribute__((sdx_kernel("activation_accelerator", 0))) void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, int32 config) {
-#line 55 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/run_hls.tcl"
+#line 61 "/data1/jcz/fpt_LLM/prj/baseline/kernel_hls/run_hls.tcl"
 #pragma HLSDIRECTIVE TOP name=activation_accelerator
-# 432 "activation_accelerator.cpp"
+# 461 "activation_accelerator.cpp"
 
 #pragma HLS INTERFACE m_axi port=in0 offset=slave bundle=gmem0 depth=49152
 #pragma HLS INTERFACE m_axi port=in1 offset=slave bundle=gmem1 depth=49152
@@ -56127,10 +56173,10 @@ __attribute__((sdx_kernel("activation_accelerator", 0))) void activation_acceler
 #pragma HLS INTERFACE s_axilite port=config
 #pragma HLS INTERFACE s_axilite port=return
 
- static uint16 buf0[64*768];
-    static uint16 buf1[64*768];
-    static uint16 buf2[64*768];
-    float x[64*768], y[64*768];
+
+
+ static uint16 buf2[64*768];
+    static uint16 x[64*768], y[64*768];
 
 #pragma HLS ARRAY_PARTITION variable=x block factor = 64
 #pragma HLS DEPENDENCE variable=x inter false
@@ -56140,14 +56186,14 @@ __attribute__((sdx_kernel("activation_accelerator", 0))) void activation_acceler
 #pragma HLS DEPENDENCE variable=y inter false
 
 
-#pragma HLS ALLOCATION function instances = round_float32_to_bf16_ieee limit = 64
 
-#pragma HLS ALLOCATION operation instances=fmul limit=64
-#pragma HLS ALLOCATION operation instances=fadd limit=64
-#pragma HLS ALLOCATION operation instances=fsub limit=64
-#pragma HLS ALLOCATION operation instances=fexp limit=64
 
-#pragma HLS ALLOCATION operation instances=fdiv limit=64
+#pragma HLS ALLOCATION operation instances=fmul limit=32
+#pragma HLS ALLOCATION operation instances=fadd limit=32
+#pragma HLS ALLOCATION operation instances=fsub limit=32
+#pragma HLS ALLOCATION operation instances=fexp limit=32
+#pragma HLS ALLOCATION operation instances=fmax limit=32
+#pragma HLS ALLOCATION operation instances=fdiv limit=32
 
  volatile uint16 anchor_reg;
     {
@@ -56159,11 +56205,11 @@ __attribute__((sdx_kernel("activation_accelerator", 0))) void activation_acceler
     if(stage == 0) {
         stage_0_load0:
         for(int i = 0; i <64*768 ; i++) {
-            buf0[i] = in0[i];
+            x[i] = in0[i];
         }
         stage_0_load1:
         for(int i = 0; i <64*768 ; i++) {
-            buf1[i] = in1[i];
+            y[i] = in1[i];
         }
     }
 
@@ -56171,12 +56217,16 @@ __attribute__((sdx_kernel("activation_accelerator", 0))) void activation_acceler
 
     if(stage == 1) {
 
-        if(config == 0) {
-            bf16_to_float(buf0, x, 64*768);
-            float_silu2(x, buf2, 64*768);
-# 502 "activation_accelerator.cpp"
+
+
+
+
+
+        if(config == 1) {
+
+            float_safe_softmax3(x, buf2, 64*768);
         }
-# 538 "activation_accelerator.cpp"
+# 552 "activation_accelerator.cpp"
     }
 
     if(stage == 2) {

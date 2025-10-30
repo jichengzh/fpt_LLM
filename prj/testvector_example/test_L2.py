@@ -136,15 +136,23 @@ def calculate_point(error_true):
    
 #计算每行的真实误差和每行的评分
 for f in range(N):
-    numerator = np.linalg.norm(output_f32[f] - golden_f32[f], ord=2)
-    denominator = np.linalg.norm(golden_f32[f] , ord=2) + eps
-    rel_err = numerator / denominator
-    base_score = calculate_point(rel_err)
-    penalty = bad_count_row[f] / D
-    final_score = max(0.0, base_score - penalty)
+    row_out  = output_f32[f]    # 形状: (D,)
+    row_gold = golden_f32[f]    # 形状: (D,)
+    rel_err_vec = np.abs(row_out - row_gold) / (np.abs(row_gold) + eps)   #计算向量中每个元素的相对误差 (D,)
+    base_scores = np.vectorize(calculate_point, otypes=[float])(rel_err_vec) # 依次计算每个元素的评分 (D,)
+    final_scores_vec = np.maximum(0.0, base_scores)
+    row_score = final_scores_vec.mean() - (bad_count_row[f] / D)
+    final_score = max(0.0, row_score)
 
-    errors_per_row.append(numerator / denominator)
-    errors_point_per_row.append(calculate_point(errors_per_row[f]))
+    # numerator = np.linalg.norm(output_f32[f] - golden_f32[f], ord=2)
+    # denominator = np.linalg.norm(golden_f32[f] , ord=2) + eps
+    # rel_err = numerator / denominator
+    # base_score = calculate_point(rel_err)
+    # penalty = bad_count_row[f] / D
+    # final_score = max(0.0, base_score - penalty)
+
+    errors_per_row.append(rel_err_vec.mean())
+    errors_point_per_row.append(final_score)
 
 # #计算总误差和总评分
 # numerator_all   = np.linalg.norm(output_f32 - golden_f32, ord=2)

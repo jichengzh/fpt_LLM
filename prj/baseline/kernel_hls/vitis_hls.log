@@ -6,7 +6,7 @@
 
 source /data/xilinx/Vitis_HLS/2022.2/scripts/vitis_hls/hls.tcl -notrace
 INFO: [HLS 200-10] Running '/data/xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/vitis_hls'
-INFO: [HLS 200-10] For user 'jichengzhi' on host 'super-test' (Linux_x86_64 version 5.4.0-169-generic) on Wed Oct 29 10:40:34 CST 2025
+INFO: [HLS 200-10] For user 'jichengzhi' on host 'super-test' (Linux_x86_64 version 5.4.0-169-generic) on Thu Oct 30 20:13:45 CST 2025
 INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
 INFO: [HLS 200-10] In directory '/data1/jcz/fpt_LLM/prj/baseline/kernel_hls'
 Sourcing Tcl script 'run_hls.tcl'
@@ -29,8 +29,14 @@ INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c
 INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
 INFO: [HLS 200-1510] Running: create_clock -period 10 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_op fmul -impl maxdsp 
+INFO: [HLS 200-1445] Configure operator 'fmul' with implementation style 'maxdsp'.
+INFO: [HLS 200-1510] Running: config_op fadd -impl fulldsp 
+INFO: [HLS 200-1445] Configure operator 'fadd' with implementation style 'fulldsp'.
+INFO: [HLS 200-1510] Running: config_op fsub -impl fulldsp 
+INFO: [HLS 200-1445] Configure operator 'fsub' with implementation style 'fulldsp'.
 INFO: [HLS 200-1510] Running: csim_design 
-Running Dispatch Server on port: 39441
+Running Dispatch Server on port: 35103
 INFO: [SIM 211-2] *************** CSIM start ***************
 INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
    Compiling ../../../../testbench.cpp in debug mode
@@ -60,142 +66,155 @@ Set activation_accelerator.stage = 0
 Data transfer complete
 
 --- Testing Config 0 ---
-Config 0 compute time: 11410.3 ms
+Config 0 compute time: 0.000298 ms
 Output results saved to: /data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors3/hls_output_config_0.bin
 Max Difference: 65535
-Config 0 test failed with 49011 errors
+Config 0 test failed with 44002 errors
 
 --- Testing Config 1 ---
-Config 1 compute time: 0.000276 ms
+Config 1 compute time: 13498 ms
 Output results saved to: /data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors3/hls_output_config_1.bin
-Max Difference: 63
-Config 1 test failed with 126 errors
+Max Difference: 65535
+Config 1 test failed with 46742 errors
 
 --- Testing Config 2 ---
-Config 2 compute time: 9.9e-05 ms
+Config 2 compute time: 0.000128 ms
 Output results saved to: /data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors3/hls_output_config_2.bin
 Max Difference: 65535
-Config 2 test failed with 43242 errors
+Config 2 test failed with 44187 errors
 
 --- Testing Config 3 ---
-Config 3 compute time: 8.6e-05 ms
+Config 3 compute time: 0.000138 ms
 Output results saved to: /data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors3/hls_output_config_3.bin
 Max Difference: 65535
-Config 3 test failed with 47855 errors
+Config 3 test failed with 49152 errors
 
 --- Testing Config 4 ---
-Config 4 compute time: 8.4e-05 ms
+Config 4 compute time: 9.1e-05 ms
 Output results saved to: /data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors3/hls_output_config_4.bin
-Max Difference: 15618
-Config 4 test failed with 25671 errors
+Max Difference: 65535
+Config 4 test failed with 46742 errors
 
 --- Testing Config 5 ---
-Config 5 compute time: 7.5e-05 ms
+Config 5 compute time: 6.2e-05 ms
 Output results saved to: /data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors3/hls_output_config_5.bin
-Max Difference: 49641
-Config 5 test failed with 44044 errors
+Max Difference: 65535
+Config 5 test failed with 46741 errors
 
 --- Testing Config 6 ---
-Config 6 compute time: 8.9e-05 ms
+Config 6 compute time: 0.000127 ms
 Output results saved to: /data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors3/hls_output_config_6.bin
-Max Difference: 49641
-Config 6 test failed with 44518 errors
+Max Difference: 65535
+Config 6 test failed with 46627 errors
 
-Total compute time for all configs: 11410.3 ms
+Total compute time for all configs: 13498 ms
 
 === Test Complete ===
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 21.39 seconds. CPU system time: 1.2 seconds. Elapsed time: 22.54 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 24.16 seconds. CPU system time: 1.14 seconds. Elapsed time: 25.28 seconds; current allocated memory: 0.000 MB.
 INFO: [HLS 200-1510] Running: csynth_design 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0.01 seconds. Elapsed time: 0 seconds; current allocated memory: 754.145 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 748.289 MB.
 INFO: [HLS 200-10] Analyzing design file 'activation_accelerator.cpp' ... 
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 38.09 seconds. CPU system time: 3.11 seconds. Elapsed time: 41.21 seconds; current allocated memory: 761.312 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 39.98 seconds. CPU system time: 3.17 seconds. Elapsed time: 43.2 seconds; current allocated memory: 755.961 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
-INFO: [HLS 214-186] Unrolling loop 'silu_inner' (activation_accelerator.cpp:100:9) in function 'float_silu2' completely with a factor of 64 (activation_accelerator.cpp:88:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZZ22activation_acceleratorPtS_S_iiE4buf2': Block partitioning with factor 64 on dimension 1. (activation_accelerator.cpp:442:0)
-INFO: [HLS 214-248] Applying array_partition to 'x': Block partitioning with factor 64 on dimension 1. (activation_accelerator.cpp:443:11)
-INFO: [HLS 214-115] Multiple burst reads of length 49152 and bit width 16 in loop 'stage_0_load0'(activation_accelerator.cpp:471:9) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (activation_accelerator.cpp:471:9)
-INFO: [HLS 214-115] Multiple burst writes of length 49152 and bit width 16 in loop 'stage_2_store'(activation_accelerator.cpp:542:9) has been inferred on bundle 'gmem2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (activation_accelerator.cpp:542:9)
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 8.14 seconds. CPU system time: 1.19 seconds. Elapsed time: 9.35 seconds; current allocated memory: 761.555 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 761.555 MB.
+INFO: [HLS 214-131] Inlining function 'exp_reduce_::exp(float)' into 'hls::expf(float)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/expfloat.cpp:22:9)
+INFO: [HLS 214-131] Inlining function 'hls::expf(float)' into 'float_safe_softmax3(unsigned short const*, unsigned short*, int)' (activation_accelerator.cpp:386:24)
+INFO: [HLS 214-131] Inlining function 'hls::expf(float)' into 'float_safe_softmax3(unsigned short const*, unsigned short*, int)' (activation_accelerator.cpp:405:25)
+INFO: [HLS 214-131] Inlining function 'float_safe_softmax3(unsigned short const*, unsigned short*, int)' into 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)' (activation_accelerator.cpp:520:13)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_399_1' (activation_accelerator.cpp:399:20) in function 'activation_accelerator' completely with a factor of 64 (activation_accelerator.cpp:461:0)
+INFO: [HLS 214-186] Unrolling loop 'exp_inner' (activation_accelerator.cpp:382:9) in function 'activation_accelerator' completely with a factor of 64 (activation_accelerator.cpp:461:0)
+INFO: [HLS 214-186] Unrolling loop 'init_partial' (activation_accelerator.cpp:368:5) in function 'activation_accelerator' completely with a factor of 64 (activation_accelerator.cpp:461:0)
+INFO: [HLS 214-188] Unrolling loop 'lane_reduce' (activation_accelerator.cpp:353:9) in function 'activation_accelerator' partially with a factor of 32 (activation_accelerator.cpp:461:0)
+INFO: [HLS 214-186] Unrolling loop 'init_lane_max' (activation_accelerator.cpp:340:5) in function 'activation_accelerator' completely with a factor of 64 (activation_accelerator.cpp:461:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ22activation_acceleratorPtS_S_iiE4buf2': Block partitioning with factor 64 on dimension 1. (activation_accelerator.cpp:471:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ22activation_acceleratorPtS_S_iiE1x': Block partitioning with factor 64 on dimension 1. (activation_accelerator.cpp:472:0)
+INFO: [HLS 214-248] Applying array_partition to 'max_row.i': Complete partitioning on dimension 1. (activation_accelerator.cpp:316:11)
+INFO: [HLS 214-248] Applying array_partition to 'sum_row.i': Complete partitioning on dimension 1. (activation_accelerator.cpp:319:8)
+INFO: [HLS 214-248] Applying array_partition to 'max_row_u16.i': Complete partitioning on dimension 1. (activation_accelerator.cpp:322:11)
+INFO: [HLS 214-115] Multiple burst reads of length 49152 and bit width 16 in loop 'stage_0_load0'(activation_accelerator.cpp:500:9) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (activation_accelerator.cpp:500:9)
+INFO: [HLS 214-115] Multiple burst writes of length 49152 and bit width 16 in loop 'stage_2_store'(activation_accelerator.cpp:556:9) has been inferred on bundle 'gmem2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (activation_accelerator.cpp:556:9)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 13.94 seconds. CPU system time: 1.5 seconds. Elapsed time: 15.45 seconds; current allocated memory: 756.250 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 756.250 MB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.19 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 764.211 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.98 seconds. CPU system time: 0.05 seconds. Elapsed time: 1.02 seconds; current allocated memory: 779.711 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.21 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 765.938 MB.
-INFO: [XFORM 203-510] Pipelining loop 'silu_blocks' (activation_accelerator.cpp:97) in function 'float_silu2' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'bf16_to_float_loop' (./bf16_accl.h:49) in function 'bf16_to_float' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'stage_0_load0' (activation_accelerator.cpp:471) in function 'activation_accelerator' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'stage_2_store' (activation_accelerator.cpp:542) in function 'activation_accelerator' automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.89 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.95 seconds; current allocated memory: 800.969 MB.
+INFO: [XFORM 203-510] Pipelining loop 'stage_0_load0' (activation_accelerator.cpp:500) in function 'activation_accelerator' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'lane_reduce' (activation_accelerator.cpp:316) in function 'activation_accelerator' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'exp_and_bucket' (activation_accelerator.cpp:319) in function 'activation_accelerator' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'softmax_final' (activation_accelerator.cpp:394) in function 'activation_accelerator' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'stage_2_store' (activation_accelerator.cpp:556) in function 'activation_accelerator' automatically.
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (activation_accelerator.cpp:18:9) to (activation_accelerator.cpp:69:1) in function 'round_float32_to_bf16_ieee'... converting 7 basic blocks.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.76 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.79 seconds; current allocated memory: 790.734 MB.
-INFO: [HLS 200-472] Inferring partial write operation for 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.9' (activation_accelerator.cpp:104:20)
-INFO: [HLS 200-472] Inferring partial write operation for 'out_0' (./bf16_accl.h:51:16)
-INFO: [HLS 200-472] Inferring partial write operation for 'buf0' (activation_accelerator.cpp:472:21)
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.63' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.62' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.61' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.60' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.59' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.58' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.57' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.56' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.55' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.54' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.53' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.52' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.51' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.50' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.49' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.48' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.47' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.46' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.45' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.44' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.43' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.42' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.41' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.40' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.39' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.38' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.37' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.36' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.35' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.34' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.33' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.32' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.31' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.30' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.29' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.28' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.27' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.26' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.25' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.24' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.23' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.22' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.21' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.20' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.19' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.18' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.17' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.16' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.15' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.14' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.13' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.12' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.11' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.10' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.9' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.8' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.7' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.6' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.5' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.4' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.3' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.2' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.1' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x' (activation_accelerator.cpp:443).
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (./bf16_accl.h:113:9) to (./bf16_accl.h:136:1) in function 'bf16_fmax_u16'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 2.45 seconds. CPU system time: 0.08 seconds. Elapsed time: 2.55 seconds; current allocated memory: 854.527 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'max_step_loop' (activation_accelerator.cpp:316:11) in function 'activation_accelerator'.
+INFO: [HLS 200-472] Inferring partial write operation for 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.9' (activation_accelerator.cpp:501:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.19' (activation_accelerator.cpp:409:22)
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_63'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_62'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_61'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_60'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_59'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_58'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_57'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_56'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_55'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_54'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_53'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_52'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_51'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_50'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_49'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_48'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_47'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_46'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_45'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_44'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_43'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_42'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_41'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_40'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_39'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_38'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_37'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_36'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_35'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_34'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_33'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_32'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_31'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_30'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_29'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_28'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_27'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_26'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_25'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_24'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_23'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_22'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_21'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_20'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_19'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_18'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_17'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_16'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_15'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_14'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_13'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_12'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_11'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_10'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.3'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.4'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.5'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.6'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.7'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.8'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.9'.
 WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE4buf2_63'.
 WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE4buf2_62'.
 WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE4buf2_61'.
@@ -250,6 +269,70 @@ WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activ
 WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE4buf2_12'.
 WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE4buf2_11'.
 WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE4buf2_10'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.10'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.11'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.12'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.13'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.14'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.15'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.16'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.17'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.18'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.19'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_63'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_62'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_61'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_60'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_59'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_58'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_57'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_56'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_55'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_54'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_53'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_52'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_51'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_50'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_49'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_48'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_47'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_46'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_45'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_44'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_43'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_42'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_41'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_40'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_39'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_38'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_37'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_36'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_35'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_34'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_33'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_32'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_31'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_30'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_29'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_28'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_27'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_26'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_25'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_24'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_23'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_22'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_21'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_20'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_19'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_18'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_17'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_16'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_15'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_14'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_13'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_12'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_11'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE1x_10'.
 WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i'.
 WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.1'.
 WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.2'.
@@ -260,70 +343,6 @@ WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation
 WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.7'.
 WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.8'.
 WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.9'.
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.63' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.62' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.61' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.60' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.59' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.58' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.57' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.56' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.55' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.54' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.53' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.52' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.51' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.50' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.49' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.48' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.47' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.46' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.45' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.44' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.43' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.42' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.41' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.40' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.39' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.38' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.37' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.36' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.35' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.34' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.33' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.32' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.31' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.30' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.29' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.28' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.27' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.26' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.25' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.24' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.23' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.22' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.21' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.20' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.19' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.18' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.17' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.16' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.15' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.14' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.13' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.12' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.11' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.10' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.9' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.8' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.7' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.6' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.5' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.4' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.3' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.2' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x.1' (activation_accelerator.cpp:443).
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'x' (activation_accelerator.cpp:443).
 WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE4buf2_63'.
 WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE4buf2_62'.
 WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE4buf2_61'.
@@ -378,25 +397,24 @@ WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activ
 WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE4buf2_12'.
 WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE4buf2_11'.
 WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE4buf2_10'.
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i'.
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.1'.
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.2'.
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.3'.
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.4'.
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.5'.
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.6'.
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.7'.
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.8'.
-WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.9'.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1.04 seconds. CPU system time: 0.07 seconds. Elapsed time: 1.13 seconds; current allocated memory: 826.895 MB.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.10'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.11'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.12'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.13'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.14'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.15'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.16'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.17'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.18'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.19'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 2.2 seconds. CPU system time: 0.16 seconds. Elapsed time: 2.37 seconds; current allocated memory: 941.281 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'activation_accelerator' ...
-WARNING: [SYN 201-223] Checking resource limit in 'activation_accelerator': cannot find any callsite of 'round_float32_to_bf16_ieee'.
 WARNING: [SYN 201-223] Checking resource limit in 'activation_accelerator': cannot find any operation of 'fmul'.
 WARNING: [SYN 201-223] Checking resource limit in 'activation_accelerator': cannot find any operation of 'fadd'.
 WARNING: [SYN 201-223] Checking resource limit in 'activation_accelerator': cannot find any operation of 'fsub'.
 WARNING: [SYN 201-223] Checking resource limit in 'activation_accelerator': cannot find any operation of 'fexp'.
-WARNING: [SYN 201-223] Checking resource limit in 'activation_accelerator': cannot find any operation of 'fdiv'.
+WARNING: [SYN 201-223] Checking resource limit in 'activation_accelerator': cannot find any operation of 'fmax'.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'activation_accelerator_Pipeline_stage_2_store' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -404,27 +422,78 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'stage_2_store'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'stage_2_store'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.32 seconds. CPU system time: 0.09 seconds. Elapsed time: 0.4 seconds; current allocated memory: 831.562 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.64 seconds. CPU system time: 0.09 seconds. Elapsed time: 0.74 seconds; current allocated memory: 946.727 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 831.715 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 946.957 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'bf16_to_float' 
+INFO: [HLS 200-42] -- Implementing module 'bf16_fmax_u16' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'bf16_to_float_loop'.
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'bf16_to_float_loop'
+INFO: [SCHED 204-61] Pipelining function 'bf16_fmax_u16'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, function 'bf16_fmax_u16'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.35 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.37 seconds; current allocated memory: 834.762 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 947.359 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 834.762 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 947.480 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'activation_accelerator_Pipeline_max_step_loop_lane_reduce' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'max_step_loop_lane_reduce'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'max_step_loop_lane_reduce'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.28 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.29 seconds; current allocated memory: 956.656 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.4 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.43 seconds; current allocated memory: 956.656 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bf16_to_f32' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'bf16_to_f32'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, function 'bf16_to_f32'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3.45 seconds. CPU system time: 0.03 seconds. Elapsed time: 3.49 seconds; current allocated memory: 956.656 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 956.656 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'activation_accelerator_Pipeline_exp_and_bucket' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'exp_and_bucket'.
+WARNING: [HLS 200-880] The II Violation in module 'activation_accelerator_Pipeline_exp_and_bucket' (loop 'exp_and_bucket'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('sum_row_write_ln374', activation_accelerator.cpp:374) of variable 'sum_row', activation_accelerator.cpp:387 on local variable 'sum_row' and 'load' operation ('sum_row_load', activation_accelerator.cpp:387) on local variable 'sum_row'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'activation_accelerator_Pipeline_exp_and_bucket' (loop 'exp_and_bucket'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('sum_row_write_ln374', activation_accelerator.cpp:374) of variable 'sum_row', activation_accelerator.cpp:387 on local variable 'sum_row' and 'load' operation ('sum_row_load', activation_accelerator.cpp:387) on local variable 'sum_row'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-885] The II Violation in module 'activation_accelerator_Pipeline_exp_and_bucket' (loop 'exp_and_bucket'): Unable to schedule 'fadd' operation ('sum_row', activation_accelerator.cpp:387) due to limited resources (II = 3).
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 4, Depth = 21, loop 'exp_and_bucket'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.99 seconds. CPU system time: 0.02 seconds. Elapsed time: 2.02 seconds; current allocated memory: 961.668 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Starting global binding ...
+INFO: [BIND 205-100] Starting global binding ...
+INFO: [BIND 205-100] Starting global binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 2.92 seconds. CPU system time: 0.03 seconds. Elapsed time: 2.96 seconds; current allocated memory: 963.848 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'round_float32_to_bf16_ieee' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -432,28 +501,32 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'round_float32_to_bf16_ieee'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, function 'round_float32_to_bf16_ieee'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 834.762 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.69 seconds. CPU system time: 0.03 seconds. Elapsed time: 2.72 seconds; current allocated memory: 964.617 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 834.762 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 964.676 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'float_silu2' 
+INFO: [HLS 200-42] -- Implementing module 'activation_accelerator_Pipeline_softmax_final' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'silu_blocks'.
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 23, loop 'silu_blocks'
+INFO: [SCHED 204-61] Pipelining loop 'softmax_final'.
+WARNING: [HLS 200-882] User specified resource constraint cannot be honored operation type fexp(II = 1)..
+Resolution: For help on HLS 200-882 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-882.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 19, loop 'softmax_final'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.43 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.46 seconds; current allocated memory: 840.152 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.73 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.76 seconds; current allocated memory: 971.309 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Starting global binding ...
+INFO: [BIND 205-100] Starting global binding ...
+INFO: [BIND 205-100] Starting global binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 5.14 seconds. CPU system time: 0.05 seconds. Elapsed time: 5.21 seconds; current allocated memory: 842.996 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 4.36 seconds. CPU system time: 0.02 seconds. Elapsed time: 4.39 seconds; current allocated memory: 973.086 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'activation_accelerator_Pipeline_stage_0_load0' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -461,25 +534,26 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'stage_0_load0'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'stage_0_load0'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 6.27 seconds. CPU system time: 0.05 seconds. Elapsed time: 6.32 seconds; current allocated memory: 844.188 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 4.55 seconds. CPU system time: 0.04 seconds. Elapsed time: 4.62 seconds; current allocated memory: 976.508 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 844.188 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 976.508 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'activation_accelerator' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 844.727 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.21 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.22 seconds; current allocated memory: 982.641 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Starting global binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1.44 seconds. CPU system time: 0 seconds. Elapsed time: 1.44 seconds; current allocated memory: 845.195 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 4.89 seconds. CPU system time: 0.06 seconds. Elapsed time: 4.96 seconds; current allocated memory: 983.609 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'activation_accelerator_Pipeline_stage_2_store' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -499,28 +573,47 @@ WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipel
 WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_2_store/m_axi_gmem2_BREADY' to 0.
 INFO: [RTGEN 206-100] Generating core module 'mux_646_16_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_stage_2_store'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 4.49 seconds. CPU system time: 0.01 seconds. Elapsed time: 4.52 seconds; current allocated memory: 846.871 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 7.5 seconds. CPU system time: 0.05 seconds. Elapsed time: 7.55 seconds; current allocated memory: 985.656 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'bf16_to_float' 
+INFO: [HLS 200-10] -- Generating RTL for module 'bf16_fmax_u16' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'bf16_to_float' pipeline 'bf16_to_float_loop' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Finished creating RTL model for 'bf16_to_float'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.32 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.34 seconds; current allocated memory: 851.164 MB.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bf16_fmax_u16'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.21 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.23 seconds; current allocated memory: 988.922 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'activation_accelerator_Pipeline_max_step_loop_lane_reduce' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'activation_accelerator_Pipeline_max_step_loop_lane_reduce' pipeline 'max_step_loop_lane_reduce' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_max_step_loop_lane_reduce'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.39 seconds. CPU system time: 0 seconds. Elapsed time: 0.4 seconds; current allocated memory: 994.977 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bf16_to_f32' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bf16_to_f32'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 4.19 seconds. CPU system time: 0.04 seconds. Elapsed time: 4.24 seconds; current allocated memory: 1014.102 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'activation_accelerator_Pipeline_exp_and_bucket' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'activation_accelerator_Pipeline_exp_and_bucket' pipeline 'exp_and_bucket' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1': 32 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_8_full_dsp_1': 32 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_4_full_dsp_1': 32 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_exp_and_bucket'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.28 seconds; current allocated memory: 1018.871 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'round_float32_to_bf16_ieee' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'round_float32_to_bf16_ieee'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.28 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.28 seconds; current allocated memory: 855.523 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2.92 seconds. CPU system time: 0.04 seconds. Elapsed time: 2.98 seconds; current allocated memory: 1.012 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'float_silu2' 
+INFO: [HLS 200-10] -- Generating RTL for module 'activation_accelerator_Pipeline_softmax_final' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'float_silu2' pipeline 'silu_blocks' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-104] Estimated max fanout for 'float_silu2' is 29971 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 64 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_9_no_dsp_1': 64 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_8_full_dsp_1': 64 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'float_silu2'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.61 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.63 seconds; current allocated memory: 868.320 MB.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'activation_accelerator_Pipeline_softmax_final' pipeline 'softmax_final' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'activation_accelerator_Pipeline_softmax_final' is 5120, found 2 HDL expressions with this fanout: ((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0)), ((1'b0 == ap_block_pp0_stage1) & (1'b1 == ap_CS_fsm_pp0_stage1))
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1': 32 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_8_full_dsp_1': 32 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 32 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_softmax_final'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.48 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.49 seconds; current allocated memory: 1.018 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'activation_accelerator_Pipeline_stage_0_load0' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -538,7 +631,7 @@ WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipel
 WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_0_load0/m_axi_gmem0_ARREGION' to 0.
 WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_0_load0/m_axi_gmem0_ARUSER' to 0.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_stage_0_load0'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 9.48 seconds. CPU system time: 0.07 seconds. Elapsed time: 9.57 seconds; current allocated memory: 884.672 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 4.3 seconds. CPU system time: 0.03 seconds. Elapsed time: 4.34 seconds; current allocated memory: 1.035 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'activation_accelerator' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -562,7 +655,17 @@ INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_u
 INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_Ribs' due to the length limit 80
 INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_RjbC' due to the length limit 80
 INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_RAMkbM' due to the length limit 80
-INFO: [RTGEN 206-100] Bundling port 'in0', 'in1', 'out_r', 'stage', 'config_r' to AXI-Lite port control.
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19_lbW' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18_mb6' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17_ncg' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16_ocq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_15_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_15_pcA' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_14_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_14_qcK' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_13_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_13_rcU' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_12_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_12_sc4' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_11_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_11_tde' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_10_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_10_udo' due to the length limit 80
+INFO: [RTGEN 206-100] Bundling port 'in0', 'in1', 'out_r', 'stage', 'config_r' and 'return' to AXI-Lite port control.
 WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_AWVALID' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
 WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem1_AWVALID' to 0.
@@ -685,18 +788,21 @@ WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_BID' has no fa
                Please use C simulation to confirm this function argument can be read from or written to.
 WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_BUSER' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-104] Estimated max fanout for 'activation_accelerator' is 5184 from HDL expression: (1'b1 == ap_CS_fsm_state12)
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1': 32 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 32 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_9_no_dsp_1': 32 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_8_full_dsp_1': 32 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator'.
-INFO: [RTMG 210-278] Implementing memory 'activation_accelerator_buf0_RAM_AUTO_1R1W' using auto RAMs.
 INFO: [RTMG 210-278] Implementing memory 'activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb' using auto RAMs.
-INFO: [RTMG 210-278] Implementing memory 'activation_accelerator_x_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.05 seconds. CPU system time: 0.11 seconds. Elapsed time: 1.21 seconds; current allocated memory: 890.918 MB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 6.65 seconds. CPU system time: 0.07 seconds. Elapsed time: 6.72 seconds; current allocated memory: 896.781 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.36 seconds. CPU system time: 0.04 seconds. Elapsed time: 1.4 seconds; current allocated memory: 1.062 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 15.14 seconds. CPU system time: 0.14 seconds. Elapsed time: 15.3 seconds; current allocated memory: 1.081 GB.
 INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 3.31 seconds. CPU system time: 0.03 seconds. Elapsed time: 3.36 seconds; current allocated memory: 912.121 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 4.56 seconds. CPU system time: 0.04 seconds. Elapsed time: 4.65 seconds; current allocated memory: 1.101 GB.
 INFO: [VHDL 208-304] Generating VHDL RTL for activation_accelerator.
 INFO: [VLOG 209-307] Generating Verilog RTL for activation_accelerator.
-INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
 INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 90.35 seconds. CPU system time: 5.03 seconds. Elapsed time: 95.52 seconds; current allocated memory: 158.309 MB.
-INFO: [HLS 200-112] Total CPU user time: 116.29 seconds. Total CPU system time: 7.16 seconds. Total elapsed time: 133.23 seconds; peak allocated memory: 912.453 MB.
-INFO: [Common 17-206] Exiting vitis_hls at Wed Oct 29 10:42:46 2025...
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 133.75 seconds. CPU system time: 5.89 seconds. Elapsed time: 139.89 seconds; current allocated memory: 379.234 MB.
+INFO: [HLS 200-112] Total CPU user time: 162.53 seconds. Total CPU system time: 7.81 seconds. Total elapsed time: 180.24 seconds; peak allocated memory: 1.101 GB.
+INFO: [Common 17-206] Exiting vitis_hls at Thu Oct 30 20:16:45 2025...

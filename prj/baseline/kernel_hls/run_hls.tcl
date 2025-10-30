@@ -43,6 +43,12 @@ create_clock -period 10
 # set_directive_allocation row_reduce_64x768 row_reduce_64x768 -limit 1 -type function
 # -----------------------------------------------
 
+# -------- 控制乘法使用dsp进行计算 --------
+config_op fmul -impl maxdsp
+config_op fadd -impl fulldsp
+config_op fsub -impl fulldsp
+# -------------------------------------------------
+
 # Set variable to select which steps to execute
 set hls_exec 3
 

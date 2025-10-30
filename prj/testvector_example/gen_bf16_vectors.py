@@ -523,10 +523,10 @@ def ref_gelu(x_bf16: torch.Tensor, approximate: str = "tanh") -> torch.Tensor:
     return F.gelu(x_bf16.to(torch.float32), approximate=approximate).to(torch.bfloat16)
 
 def ref_add(x_bf16: torch.Tensor, y_bf16: torch.Tensor) -> torch.Tensor:
-    return torch.add(x_bf16.to(torch.float32), y_bf16.to(torch.float32)).to(torch.bfloat16)
+    return torch.add(x_bf16.to(torch.bfloat16), y_bf16.to(torch.bfloat16))
 
 def ref_mul(x_bf16: torch.Tensor, y_bf16: torch.Tensor) -> torch.Tensor:
-    return torch.mul(x_bf16.to(torch.float32), y_bf16.to(torch.float32)).to(torch.bfloat16)
+    return torch.mul(x_bf16.to(torch.bfloat16), y_bf16.to(torch.bfloat16))
 # ------------------------------
 # 主流程
 # ------------------------------
