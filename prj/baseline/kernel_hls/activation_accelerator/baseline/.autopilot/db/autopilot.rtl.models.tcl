@@ -1,33 +1,42 @@
 set SynModuleInfo {
+  {SRCNAME round_float32_to_bf16_ieee MODELNAME round_float32_to_bf16_ieee RTLNAME activation_accelerator_round_float32_to_bf16_ieee}
   {SRCNAME activation_accelerator_Pipeline_stage_2_store MODELNAME activation_accelerator_Pipeline_stage_2_store RTLNAME activation_accelerator_activation_accelerator_Pipeline_stage_2_store
     SUBMODULES {
       {MODELNAME activation_accelerator_mux_646_16_1_1 RTLNAME activation_accelerator_mux_646_16_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME activation_accelerator_flow_control_loop_pipe_sequential_init RTLNAME activation_accelerator_flow_control_loop_pipe_sequential_init BINDTYPE interface TYPE internal_upc_flow_control INSTNAME activation_accelerator_flow_control_loop_pipe_sequential_init_U}
     }
   }
-  {SRCNAME bf16_fmax_u16 MODELNAME bf16_fmax_u16 RTLNAME activation_accelerator_bf16_fmax_u16}
-  {SRCNAME activation_accelerator_Pipeline_max_step_loop_lane_reduce MODELNAME activation_accelerator_Pipeline_max_step_loop_lane_reduce RTLNAME activation_accelerator_activation_accelerator_Pipeline_max_step_loop_lane_reduce}
-  {SRCNAME bf16_to_f32 MODELNAME bf16_to_f32 RTLNAME activation_accelerator_bf16_to_f32}
-  {SRCNAME activation_accelerator_Pipeline_exp_and_bucket MODELNAME activation_accelerator_Pipeline_exp_and_bucket RTLNAME activation_accelerator_activation_accelerator_Pipeline_exp_and_bucket
+  {SRCNAME float_sige MODELNAME float_sige RTLNAME activation_accelerator_float_sige
     SUBMODULES {
-      {MODELNAME activation_accelerator_fsub_32ns_32ns_32_4_full_dsp_1 RTLNAME activation_accelerator_fsub_32ns_32ns_32_4_full_dsp_1 BINDTYPE op TYPE fsub IMPL fulldsp LATENCY 3 ALLOW_PRAGMA 1}
-    }
-  }
-  {SRCNAME round_float32_to_bf16_ieee MODELNAME round_float32_to_bf16_ieee RTLNAME activation_accelerator_round_float32_to_bf16_ieee}
-  {SRCNAME activation_accelerator_Pipeline_softmax_final MODELNAME activation_accelerator_Pipeline_softmax_final RTLNAME activation_accelerator_activation_accelerator_Pipeline_softmax_final
-    SUBMODULES {
+      {MODELNAME activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1 RTLNAME activation_accelerator_fadd_32ns_32ns_32_4_full_dsp_1 BINDTYPE op TYPE fadd IMPL fulldsp LATENCY 3 ALLOW_PRAGMA 1}
       {MODELNAME activation_accelerator_fmul_32ns_32ns_32_3_max_dsp_1 RTLNAME activation_accelerator_fmul_32ns_32ns_32_3_max_dsp_1 BINDTYPE op TYPE fmul IMPL maxdsp LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME activation_accelerator_fdiv_32ns_32ns_32_9_no_dsp_1 RTLNAME activation_accelerator_fdiv_32ns_32ns_32_9_no_dsp_1 BINDTYPE op TYPE fdiv IMPL fabric LATENCY 8 ALLOW_PRAGMA 1}
+      {MODELNAME activation_accelerator_fexp_32ns_32ns_32_8_full_dsp_1 RTLNAME activation_accelerator_fexp_32ns_32ns_32_8_full_dsp_1 BINDTYPE op TYPE fexp IMPL fulldsp LATENCY 7 ALLOW_PRAGMA 1}
+      {MODELNAME activation_accelerator_mux_21_16_1_1 RTLNAME activation_accelerator_mux_21_16_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
     }
   }
-  {SRCNAME activation_accelerator_Pipeline_stage_0_load0 MODELNAME activation_accelerator_Pipeline_stage_0_load0 RTLNAME activation_accelerator_activation_accelerator_Pipeline_stage_0_load0}
+  {SRCNAME activation_accelerator_Pipeline_add_blocks MODELNAME activation_accelerator_Pipeline_add_blocks RTLNAME activation_accelerator_activation_accelerator_Pipeline_add_blocks}
+  {SRCNAME activation_accelerator_Pipeline_multiply_blocks_Multiply MODELNAME activation_accelerator_Pipeline_multiply_blocks_Multiply RTLNAME activation_accelerator_activation_accelerator_Pipeline_multiply_blocks_Multiply}
+  {SRCNAME square_Pipeline_sum_square MODELNAME square_Pipeline_sum_square RTLNAME activation_accelerator_square_Pipeline_sum_square}
+  {SRCNAME square MODELNAME square RTLNAME activation_accelerator_square}
+  {SRCNAME activation_accelerator_Pipeline_rms_calculate_loop_rms_norm3 MODELNAME activation_accelerator_Pipeline_rms_calculate_loop_rms_norm3 RTLNAME activation_accelerator_activation_accelerator_Pipeline_rms_calculate_loop_rms_norm3
+    SUBMODULES {
+      {MODELNAME activation_accelerator_mux_646_32_1_1 RTLNAME activation_accelerator_mux_646_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+    }
+  }
+  {SRCNAME activation_accelerator_Pipeline_normalize_blocks_rms_norm3 MODELNAME activation_accelerator_Pipeline_normalize_blocks_rms_norm3 RTLNAME activation_accelerator_activation_accelerator_Pipeline_normalize_blocks_rms_norm3}
+  {SRCNAME activation_accelerator_Pipeline_mean_blocks_layer_norm3 MODELNAME activation_accelerator_Pipeline_mean_blocks_layer_norm3 RTLNAME activation_accelerator_activation_accelerator_Pipeline_mean_blocks_layer_norm3}
+  {SRCNAME activation_accelerator_Pipeline_normalize_blocks_layer_norm3 MODELNAME activation_accelerator_Pipeline_normalize_blocks_layer_norm3 RTLNAME activation_accelerator_activation_accelerator_Pipeline_normalize_blocks_layer_norm3}
+  {SRCNAME fmaxf MODELNAME fmaxf RTLNAME activation_accelerator_fmaxf}
+  {SRCNAME activation_accelerator_Pipeline_max_step_loop_softmax MODELNAME activation_accelerator_Pipeline_max_step_loop_softmax RTLNAME activation_accelerator_activation_accelerator_Pipeline_max_step_loop_softmax}
+  {SRCNAME activation_accelerator_Pipeline_exp_and_bucket_softmax MODELNAME activation_accelerator_Pipeline_exp_and_bucket_softmax RTLNAME activation_accelerator_activation_accelerator_Pipeline_exp_and_bucket_softmax}
+  {SRCNAME activation_accelerator_Pipeline_softmax_final MODELNAME activation_accelerator_Pipeline_softmax_final RTLNAME activation_accelerator_activation_accelerator_Pipeline_softmax_final}
   {SRCNAME activation_accelerator MODELNAME activation_accelerator RTLNAME activation_accelerator IS_TOP 1
     SUBMODULES {
-      {MODELNAME activation_accelerator_fdiv_32ns_32ns_32_9_no_dsp_1 RTLNAME activation_accelerator_fdiv_32ns_32ns_32_9_no_dsp_1 BINDTYPE op TYPE fdiv IMPL fabric LATENCY 8 ALLOW_PRAGMA 1}
+      {MODELNAME activation_accelerator_fsub_32ns_32ns_32_4_full_dsp_1 RTLNAME activation_accelerator_fsub_32ns_32ns_32_4_full_dsp_1 BINDTYPE op TYPE fsub IMPL fulldsp LATENCY 3 ALLOW_PRAGMA 1}
       {MODELNAME activation_accelerator_fcmp_32ns_32ns_1_2_no_dsp_1 RTLNAME activation_accelerator_fcmp_32ns_32ns_1_2_no_dsp_1 BINDTYPE op TYPE fcmp IMPL auto LATENCY 1 ALLOW_PRAGMA 1}
-      {MODELNAME activation_accelerator_faddfsub_32ns_32ns_32_4_full_dsp_1 RTLNAME activation_accelerator_faddfsub_32ns_32ns_32_4_full_dsp_1 BINDTYPE op TYPE fadd IMPL fulldsp LATENCY 3 ALLOW_PRAGMA 1}
-      {MODELNAME activation_accelerator_fexp_32ns_32ns_32_8_full_dsp_1 RTLNAME activation_accelerator_fexp_32ns_32ns_32_8_full_dsp_1 BINDTYPE op TYPE fexp IMPL fulldsp LATENCY 7 ALLOW_PRAGMA 1}
+      {MODELNAME activation_accelerator_fsqrt_32ns_32ns_32_8_no_dsp_1 RTLNAME activation_accelerator_fsqrt_32ns_32ns_32_8_no_dsp_1 BINDTYPE op TYPE fsqrt IMPL fabric LATENCY 7 ALLOW_PRAGMA 1}
       {MODELNAME activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb RTLNAME activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
-      {MODELNAME activation_accelerator_gmem0_m_axi RTLNAME activation_accelerator_gmem0_m_axi BINDTYPE interface TYPE adapter IMPL m_axi}
       {MODELNAME activation_accelerator_gmem2_m_axi RTLNAME activation_accelerator_gmem2_m_axi BINDTYPE interface TYPE adapter IMPL m_axi}
       {MODELNAME activation_accelerator_control_s_axi RTLNAME activation_accelerator_control_s_axi BINDTYPE interface TYPE interface_s_axilite}
     }
