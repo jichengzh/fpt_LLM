@@ -630,13 +630,13 @@ def main():
                 torch.save(t_bf16, os.path.join(outdir, f"golden_out_config_{config_idx}_bf16.pt"))
                 torch.save(bf16_to_f32(t_bf16), os.path.join(outdir, f"golden_out_config_{config_idx}_f32.pt"))
         OP2CFG = {
-            "softmax":    0,
-            "silu":       1,
-            "rmsnorm":    2,
-            "layernorm":  3,
-            "gelu":       4, 
+            "softmax":    1,
+            "silu":       0,
+            "rmsnorm":    3,
+            "layernorm":  2,
+            "gelu":       6, 
             "add":        5,
-            "mul":        6,      # 同上
+            "mul":        4,      # 同上
         }
 
         save_ref_pack("ref_softmax", softmax_ref_bf16)
@@ -663,7 +663,9 @@ def main():
         if "mul" in OP2CFG:
             save_as_golden(OP2CFG["mul"], mul_ref_bf16, args.outdir, also_pt_f32=False)
 
-
+        print("\n[Golden Map]")
+        for op, idx in sorted(OP2CFG.items(), key=lambda kv: kv[1]):
+            print(f"  golden{idx}  <=  {op}")
         print("[OK] Saved PyTorch reference outputs (bf16 & f32).")
 
     # 6) 简要报告
