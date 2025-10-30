@@ -34,7 +34,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>4294967294</coreId>
+              <coreId>156969824</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -66,7 +66,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item class_id="10" tracking_level="0" version="0">
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second class_id="11" tracking_level="0" version="0">
                     <count>1</count>
                     <item_version>0</item_version>
@@ -88,7 +88,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>757080096</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -123,7 +123,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -145,7 +145,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3621216858</coreId>
+              <coreId>160514024</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -179,7 +179,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -201,7 +201,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>583707120</coreId>
+              <coreId>158802624</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>23</bitwidth>
@@ -235,7 +235,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -257,7 +257,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>578028336</coreId>
+              <coreId>163307264</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -291,7 +291,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -313,7 +313,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>578028336</coreId>
+              <coreId>163317328</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>15</bitwidth>
@@ -350,7 +350,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -372,7 +372,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>578028336</coreId>
+              <coreId>158832928</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -408,7 +408,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -430,7 +430,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>579074432</coreId>
+              <coreId>160452624</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -467,7 +467,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -489,7 +489,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>579074432</coreId>
+              <coreId>160514288</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>31</bitwidth>
@@ -525,7 +525,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -582,7 +582,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -604,7 +604,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>579074432</coreId>
+              <coreId>161900960</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -641,7 +641,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -663,7 +663,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>584134736</coreId>
+              <coreId>161900960</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>7</bitwidth>
@@ -700,7 +700,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -757,7 +757,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -814,7 +814,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -871,7 +871,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -893,7 +893,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>577889664</coreId>
+              <coreId>163309792</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -928,7 +928,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -986,7 +986,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1043,7 +1043,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1065,7 +1065,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582671360</coreId>
+              <coreId>160439808</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -1101,7 +1101,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1158,7 +1158,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1215,7 +1215,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1237,7 +1237,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>577834464</coreId>
+              <coreId>160527168</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>15</bitwidth>
@@ -1271,7 +1271,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1293,7 +1293,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>583853680</coreId>
+              <coreId>160410448</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -1327,7 +1327,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1384,7 +1384,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1406,7 +1406,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>583183824</coreId>
+              <coreId>160411056</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -1443,7 +1443,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1465,7 +1465,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>583853680</coreId>
+              <coreId>160540512</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>15</bitwidth>
@@ -1501,7 +1501,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1558,7 +1558,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1615,7 +1615,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1637,7 +1637,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>584253840</coreId>
+              <coreId>161475280</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -1673,7 +1673,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1695,7 +1695,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>584253840</coreId>
+              <coreId>160540512</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -1731,7 +1731,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1753,7 +1753,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>584253840</coreId>
+              <coreId>160540512</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -1788,7 +1788,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1846,7 +1846,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1904,7 +1904,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1972,7 +1972,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3</coreId>
+              <coreId>478567456</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2003,7 +2003,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1</coreId>
+              <coreId>160385264</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2034,7 +2034,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>583935904</coreId>
+              <coreId>160373904</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2065,7 +2065,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>583997264</coreId>
+              <coreId>160382432</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>23</bitwidth>
@@ -2096,7 +2096,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>578859208</coreId>
+              <coreId>160413104</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>31</bitwidth>
@@ -2127,7 +2127,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>580934160</coreId>
+              <coreId>160385616</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2158,7 +2158,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>584012272</coreId>
+              <coreId>160385576</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2189,7 +2189,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>25</coreId>
+              <coreId>160369808</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>7</bitwidth>
@@ -2220,7 +2220,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>584017936</coreId>
+              <coreId>160378288</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -2251,7 +2251,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>25</coreId>
+              <coreId>163317760</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -2282,7 +2282,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1869182049</coreId>
+              <coreId>160434048</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2313,7 +2313,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581819040</coreId>
+              <coreId>157221208</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2344,7 +2344,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>577866384</coreId>
+              <coreId>157220768</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2375,7 +2375,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>584121712</coreId>
+              <coreId>163317760</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>15</bitwidth>
@@ -2406,7 +2406,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>584121664</coreId>
+              <coreId>160416176</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>15</bitwidth>
@@ -2437,7 +2437,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582194352</coreId>
+              <coreId>1651076195</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>

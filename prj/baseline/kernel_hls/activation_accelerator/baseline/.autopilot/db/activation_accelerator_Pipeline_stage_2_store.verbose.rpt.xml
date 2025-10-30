@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'activation_accelerator_Pipeline_stage_2_store'" level="0">
-<item name = "Date">Wed Oct 29 10:42:23 2025
+<item name = "Date">Thu Oct 30 20:17:08 2025
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">activation_accelerator</item>
@@ -79,13 +79,13 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln542_1_fu_1095_p2">+, 0, 0, 23, 16, 1</column>
-<column name="add_ln542_fu_1086_p2">+, 0, 0, 23, 16, 1</column>
-<column name="add_ln543_fu_1196_p2">+, 0, 0, 40, 33, 17</column>
+<column name="add_ln703_1_fu_1095_p2">+, 0, 0, 23, 16, 1</column>
+<column name="add_ln703_fu_1086_p2">+, 0, 0, 23, 16, 1</column>
+<column name="add_ln704_fu_1196_p2">+, 0, 0, 40, 33, 17</column>
 <column name="ap_block_pp0_stage0_11001">and, 0, 0, 2, 1, 1</column>
-<column name="icmp_ln542_1_fu_1101_p2">icmp, 0, 0, 13, 16, 10</column>
-<column name="icmp_ln542_fu_1080_p2">icmp, 0, 0, 13, 16, 16</column>
-<column name="select_ln542_fu_1107_p3">select, 0, 0, 16, 1, 16</column>
+<column name="icmp_ln703_1_fu_1101_p2">icmp, 0, 0, 13, 16, 10</column>
+<column name="icmp_ln703_fu_1080_p2">icmp, 0, 0, 13, 16, 16</column>
+<column name="select_ln703_fu_1107_p3">select, 0, 0, 16, 1, 16</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
@@ -94,11 +94,11 @@
 <column name="ap_done_int">9, 2, 1, 2</column>
 <column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
 <column name="ap_sig_allocacmp_i">9, 2, 16, 32</column>
-<column name="ap_sig_allocacmp_phi_urem_load">9, 2, 16, 32</column>
+<column name="ap_sig_allocacmp_phi_urem139_load">9, 2, 16, 32</column>
 <column name="gmem2_blk_n_W">9, 2, 1, 2</column>
 <column name="i_1_fu_202">9, 2, 16, 32</column>
-<column name="phi_mul_fu_198">9, 2, 33, 66</column>
-<column name="phi_urem_fu_194">9, 2, 16, 32</column>
+<column name="phi_mul137_fu_198">9, 2, 33, 66</column>
+<column name="phi_urem139_fu_194">9, 2, 16, 32</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
@@ -109,8 +109,8 @@
 <column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter1_reg">1, 0, 1, 0</column>
 <column name="i_1_fu_202">16, 0, 16, 0</column>
-<column name="phi_mul_fu_198">33, 0, 33, 0</column>
-<column name="phi_urem_fu_194">16, 0, 16, 0</column>
+<column name="phi_mul137_fu_198">33, 0, 33, 0</column>
+<column name="phi_urem139_fu_194">16, 0, 16, 0</column>
 <column name="tmp_reg_1701">16, 0, 16, 0</column>
 </table>
 </item>
@@ -173,7 +173,7 @@
 <column name="m_axi_gmem2_BRESP">in, 2, m_axi, gmem2, pointer</column>
 <column name="m_axi_gmem2_BID">in, 1, m_axi, gmem2, pointer</column>
 <column name="m_axi_gmem2_BUSER">in, 1, m_axi, gmem2, pointer</column>
-<column name="sext_ln542">in, 63, ap_none, sext_ln542, scalar</column>
+<column name="sext_ln703">in, 63, ap_none, sext_ln703, scalar</column>
 <column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0">out, 10, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9, array</column>
 <column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0">out, 1, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9, array</column>
 <column name="activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_q0">in, 16, ap_memory, activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9, array</column>

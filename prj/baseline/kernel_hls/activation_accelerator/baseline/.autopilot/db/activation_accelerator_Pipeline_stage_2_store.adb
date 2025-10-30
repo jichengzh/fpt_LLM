@@ -52,7 +52,7 @@
             <Obj>
               <type>1</type>
               <id>2</id>
-              <name>sext_ln542</name>
+              <name>sext_ln703</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -214,7 +214,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>733017632</coreId>
+              <coreId>474634432</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -250,7 +250,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>580869360</coreId>
+              <coreId>159616480</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -286,7 +286,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582196000</coreId>
+              <coreId>159821424</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -322,7 +322,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>580819744</coreId>
+              <coreId>163642928</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -358,7 +358,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>384</coreId>
+              <coreId>1489004208</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -394,7 +394,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582139576</coreId>
+              <coreId>64</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -430,7 +430,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581080912</coreId>
+              <coreId>159804224</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -466,7 +466,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582182432</coreId>
+              <coreId>256</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -502,7 +502,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582179808</coreId>
+              <coreId>159819424</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -538,7 +538,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>580868688</coreId>
+              <coreId>192</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -574,7 +574,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581339968</coreId>
+              <coreId>161327584</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -610,7 +610,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581340384</coreId>
+              <coreId>163667040</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -646,7 +646,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582215536</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -682,7 +682,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1701060722</coreId>
+              <coreId>159806144</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -718,7 +718,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582182432</coreId>
+              <coreId>163706560</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -754,7 +754,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>64</coreId>
+              <coreId>163645168</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -790,7 +790,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581348688</coreId>
+              <coreId>163647016</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -826,7 +826,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1487417680</coreId>
+              <coreId>160465952</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -862,7 +862,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>580862800</coreId>
+              <coreId>163661296</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -898,7 +898,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>25</coreId>
+              <coreId>163664912</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -934,7 +934,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581077744</coreId>
+              <coreId>163660224</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -970,7 +970,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>7</coreId>
+              <coreId>159812384</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -1006,7 +1006,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581352656</coreId>
+              <coreId>159806464</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -1042,7 +1042,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>580869536</coreId>
+              <coreId>159805856</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -1078,7 +1078,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>176</coreId>
+              <coreId>163652000</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -1114,7 +1114,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582213408</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -1150,7 +1150,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>163653632</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -1186,7 +1186,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581337840</coreId>
+              <coreId>163633664</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -1222,7 +1222,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582186304</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -1258,7 +1258,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1314013527</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -1294,7 +1294,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582179824</coreId>
+              <coreId>161932912</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -1330,7 +1330,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582183680</coreId>
+              <coreId>1869833586</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -1366,7 +1366,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1314013527</coreId>
+              <coreId>161963440</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -1402,7 +1402,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582177200</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -1438,7 +1438,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>128</coreId>
+              <coreId>161932912</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -1474,7 +1474,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>1330007625</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -1510,7 +1510,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>6775156</coreId>
+              <coreId>161961088</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -1546,7 +1546,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>1953394531</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -1582,7 +1582,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>161932912</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -1618,7 +1618,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>1869833586</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -1654,7 +1654,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581988176</coreId>
+              <coreId>161958224</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -1690,7 +1690,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581992640</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -1726,7 +1726,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581993232</coreId>
+              <coreId>161932912</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -1762,7 +1762,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581994144</coreId>
+              <coreId>1330007625</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -1798,7 +1798,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581985568</coreId>
+              <coreId>161955872</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -1834,7 +1834,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>1953394531</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -1870,7 +1870,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581990624</coreId>
+              <coreId>161932912</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -1906,7 +1906,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581991536</coreId>
+              <coreId>542462019</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -1942,7 +1942,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581982960</coreId>
+              <coreId>161953008</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -1978,7 +1978,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581987056</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -2014,7 +2014,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581988016</coreId>
+              <coreId>161932912</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -2050,7 +2050,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581988928</coreId>
+              <coreId>1330007625</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -2086,7 +2086,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581990784</coreId>
+              <coreId>161950656</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -2122,7 +2122,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>89</coreId>
+              <coreId>1953394531</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -2158,7 +2158,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581995840</coreId>
+              <coreId>161932912</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -2194,7 +2194,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581996752</coreId>
+              <coreId>724263727</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -2230,7 +2230,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581825680</coreId>
+              <coreId>161966048</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -2266,7 +2266,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1314013527</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -2302,7 +2302,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581819488</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -2338,7 +2338,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581827392</coreId>
+              <coreId>161934784</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -2374,7 +2374,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581986928</coreId>
+              <coreId>161953472</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -2396,7 +2396,7 @@
             <Obj>
               <type>0</type>
               <id>67</id>
-              <name>phi_urem</name>
+              <name>phi_urem139</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -2438,7 +2438,7 @@
             <Obj>
               <type>0</type>
               <id>68</id>
-              <name>phi_mul</name>
+              <name>phi_mul137</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -2522,7 +2522,7 @@
             <Obj>
               <type>0</type>
               <id>70</id>
-              <name>sext_ln542_read</name>
+              <name>sext_ln703_read</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -2540,7 +2540,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>128</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>63</bitwidth>
@@ -2565,7 +2565,7 @@
             <Obj>
               <type>0</type>
               <id>71</id>
-              <name>sext_ln542_cast</name>
+              <name>sext_ln703_cast</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -2583,7 +2583,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>750387392</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -2625,7 +2625,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1684811367</coreId>
+              <coreId>750871488</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -2650,7 +2650,7 @@
             <Obj>
               <type>0</type>
               <id>74</id>
-              <name>phi_mul_write_ln0</name>
+              <name>phi_mul137_write_ln0</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -2668,7 +2668,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1684811367</coreId>
+              <coreId>750871488</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -2693,7 +2693,7 @@
             <Obj>
               <type>0</type>
               <id>75</id>
-              <name>phi_urem_write_ln0</name>
+              <name>phi_urem139_write_ln0</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -2711,7 +2711,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>608</coreId>
+              <coreId>161935680</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -2754,7 +2754,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582179488</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -2781,14 +2781,14 @@
               <name>i</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>542</lineNumber>
+              <lineNumber>703</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item class_id="11" tracking_level="0" version="0">
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second class_id="12" tracking_level="0" version="0">
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2797,7 +2797,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>542</second>
+                      <second>703</second>
                     </item>
                   </second>
                 </item>
@@ -2810,7 +2810,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>163656912</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -2838,14 +2838,14 @@
               <name>gmem2_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>542</lineNumber>
+              <lineNumber>703</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2854,7 +2854,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>542</second>
+                      <second>703</second>
                     </item>
                   </second>
                 </item>
@@ -2867,7 +2867,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581828304</coreId>
+              <coreId>608</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -2892,17 +2892,17 @@
             <Obj>
               <type>0</type>
               <id>82</id>
-              <name>icmp_ln542</name>
+              <name>icmp_ln703</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>542</lineNumber>
+              <lineNumber>703</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2911,13 +2911,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>542</second>
+                      <second>703</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln542_fu_1080_p2</rtlName>
+              <rtlName>icmp_ln703_fu_1080_p2</rtlName>
               <control>auto</control>
               <opType>icmp</opType>
               <implIndex>auto</implIndex>
@@ -2949,17 +2949,17 @@
             <Obj>
               <type>0</type>
               <id>84</id>
-              <name>add_ln542</name>
+              <name>add_ln703</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>542</lineNumber>
+              <lineNumber>703</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2968,13 +2968,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>542</second>
+                      <second>703</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>add_ln542_fu_1086_p2</rtlName>
+              <rtlName>add_ln703_fu_1086_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -3006,17 +3006,17 @@
             <Obj>
               <type>0</type>
               <id>85</id>
-              <name>br_ln542</name>
+              <name>br_ln703</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>542</lineNumber>
+              <lineNumber>703</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3025,7 +3025,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>542</second>
+                      <second>703</second>
                     </item>
                   </second>
                 </item>
@@ -3038,7 +3038,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581830176</coreId>
+              <coreId>1314013527</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -3064,17 +3064,17 @@
             <Obj>
               <type>0</type>
               <id>87</id>
-              <name>phi_urem_load</name>
+              <name>phi_urem139_load</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>542</lineNumber>
+              <lineNumber>703</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3083,7 +3083,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>542</second>
+                      <second>703</second>
                     </item>
                   </second>
                 </item>
@@ -3096,7 +3096,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582181056</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -3121,17 +3121,17 @@
             <Obj>
               <type>0</type>
               <id>88</id>
-              <name>phi_mul_load</name>
+              <name>phi_mul137_load</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3140,7 +3140,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -3153,7 +3153,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582178288</coreId>
+              <coreId>162296304</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>33</bitwidth>
@@ -3178,17 +3178,17 @@
             <Obj>
               <type>0</type>
               <id>89</id>
-              <name>add_ln542_1</name>
+              <name>add_ln703_1</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>542</lineNumber>
+              <lineNumber>703</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3197,13 +3197,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>542</second>
+                      <second>703</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>add_ln542_1_fu_1095_p2</rtlName>
+              <rtlName>add_ln703_1_fu_1095_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -3235,17 +3235,17 @@
             <Obj>
               <type>0</type>
               <id>90</id>
-              <name>icmp_ln542_1</name>
+              <name>icmp_ln703_1</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>542</lineNumber>
+              <lineNumber>703</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3254,13 +3254,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>542</second>
+                      <second>703</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln542_1_fu_1101_p2</rtlName>
+              <rtlName>icmp_ln703_1_fu_1101_p2</rtlName>
               <control>auto</control>
               <opType>icmp</opType>
               <implIndex>auto</implIndex>
@@ -3292,17 +3292,17 @@
             <Obj>
               <type>0</type>
               <id>91</id>
-              <name>select_ln542</name>
+              <name>select_ln703</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>542</lineNumber>
+              <lineNumber>703</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3311,13 +3311,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>542</second>
+                      <second>703</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>select_ln542_fu_1107_p3</rtlName>
+              <rtlName>select_ln703_fu_1107_p3</rtlName>
               <control>auto</control>
               <opType>select</opType>
               <implIndex>auto_sel</implIndex>
@@ -3350,17 +3350,17 @@
             <Obj>
               <type>0</type>
               <id>93</id>
-              <name>add_ln543</name>
+              <name>add_ln704</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3369,13 +3369,13 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>add_ln543_fu_1196_p2</rtlName>
+              <rtlName>add_ln704_fu_1196_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -3407,17 +3407,17 @@
             <Obj>
               <type>0</type>
               <id>94</id>
-              <name>zext_ln543</name>
+              <name>zext_ln704</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3426,20 +3426,20 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln543_fu_1115_p1</rtlName>
+              <rtlName>zext_ln704_fu_1115_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582173184</coreId>
+              <coreId>162285808</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -3463,17 +3463,17 @@
             <Obj>
               <type>0</type>
               <id>95</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_80</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3482,7 +3482,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -3521,17 +3521,17 @@
             <Obj>
               <type>0</type>
               <id>96</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_81</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3540,7 +3540,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -3553,7 +3553,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>580862528</coreId>
+              <coreId>162280560</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -3579,17 +3579,17 @@
             <Obj>
               <type>0</type>
               <id>97</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_82</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3598,7 +3598,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -3611,7 +3611,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582197432</coreId>
+              <coreId>25</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -3637,17 +3637,17 @@
             <Obj>
               <type>0</type>
               <id>98</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_83</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3656,7 +3656,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -3669,7 +3669,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>162114352</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -3695,17 +3695,17 @@
             <Obj>
               <type>0</type>
               <id>99</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_24</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_84</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3714,7 +3714,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -3727,7 +3727,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>176</coreId>
+              <coreId>7955819</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -3753,17 +3753,17 @@
             <Obj>
               <type>0</type>
               <id>100</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_25</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_85</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3772,7 +3772,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -3785,7 +3785,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>162275312</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -3811,17 +3811,17 @@
             <Obj>
               <type>0</type>
               <id>101</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_26</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_86</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3830,7 +3830,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -3843,7 +3843,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582131272</coreId>
+              <coreId>25</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -3869,17 +3869,17 @@
             <Obj>
               <type>0</type>
               <id>102</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_27</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_87</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3888,7 +3888,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -3901,7 +3901,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>162130096</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -3927,17 +3927,17 @@
             <Obj>
               <type>0</type>
               <id>103</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_28</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_88</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3946,7 +3946,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -3959,7 +3959,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582128648</coreId>
+              <coreId>25</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -3985,17 +3985,17 @@
             <Obj>
               <type>0</type>
               <id>104</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_29</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_89</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4004,7 +4004,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -4017,7 +4017,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>162124848</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -4046,14 +4046,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4062,7 +4062,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -4075,7 +4075,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1819113532</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -4104,14 +4104,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_11_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4120,7 +4120,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -4133,7 +4133,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>162116976</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -4162,14 +4162,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_12_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4178,7 +4178,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -4220,14 +4220,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_13_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4236,7 +4236,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -4249,7 +4249,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>162277936</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -4278,14 +4278,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_14_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4294,7 +4294,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -4307,7 +4307,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582120864</coreId>
+              <coreId>7955819</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -4336,14 +4336,14 @@
               <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4352,7 +4352,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -4365,7 +4365,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>162293680</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -4394,14 +4394,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4410,7 +4410,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -4423,7 +4423,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582118064</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -4452,14 +4452,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4468,7 +4468,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -4481,7 +4481,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>162288432</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -4510,14 +4510,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4526,7 +4526,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -4539,7 +4539,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582116040</coreId>
+              <coreId>7955819</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -4568,14 +4568,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4584,7 +4584,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -4597,7 +4597,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>162283184</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -4626,14 +4626,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4642,7 +4642,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -4684,14 +4684,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_21_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4700,7 +4700,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -4713,7 +4713,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>162111728</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -4742,14 +4742,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_22_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4758,7 +4758,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -4771,7 +4771,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>162105408</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -4800,14 +4800,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_23_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4816,7 +4816,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -4829,7 +4829,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>162127472</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -4858,14 +4858,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_24_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4874,7 +4874,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -4887,7 +4887,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582106992</coreId>
+              <coreId>162129288</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -4913,17 +4913,17 @@
             <Obj>
               <type>0</type>
               <id>120</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_39</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_117</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4932,7 +4932,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -4945,7 +4945,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>162122224</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -4974,14 +4974,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4990,7 +4990,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -5003,7 +5003,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582104336</coreId>
+              <coreId>162123104</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -5032,14 +5032,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5048,7 +5048,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -5061,7 +5061,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>160465952</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -5090,14 +5090,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5106,7 +5106,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -5119,7 +5119,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582102432</coreId>
+              <coreId>163661120</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -5148,14 +5148,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5164,7 +5164,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -5177,7 +5177,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>162957088</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -5206,14 +5206,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5222,7 +5222,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -5235,7 +5235,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582099808</coreId>
+              <coreId>162958336</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -5264,14 +5264,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_31_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5280,7 +5280,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -5293,7 +5293,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>162951776</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -5322,14 +5322,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_32_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5338,7 +5338,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -5351,7 +5351,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582097184</coreId>
+              <coreId>162953624</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -5380,14 +5380,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_33_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5396,7 +5396,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -5409,7 +5409,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>162946464</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -5438,14 +5438,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_34_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5454,7 +5454,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -5467,7 +5467,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582094560</coreId>
+              <coreId>162947344</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -5493,17 +5493,17 @@
             <Obj>
               <type>0</type>
               <id>130</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_40</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_118</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5512,7 +5512,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -5525,7 +5525,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>162463696</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -5554,14 +5554,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5570,7 +5570,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -5583,7 +5583,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>162465544</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -5612,14 +5612,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5628,7 +5628,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -5641,7 +5641,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>163120032</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -5670,14 +5670,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5686,7 +5686,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -5699,7 +5699,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582089376</coreId>
+              <coreId>163120912</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -5728,14 +5728,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5744,7 +5744,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -5757,7 +5757,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>163114720</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -5786,14 +5786,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5802,7 +5802,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -5815,7 +5815,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582081504</coreId>
+              <coreId>176</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -5844,14 +5844,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_41_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5860,7 +5860,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -5873,7 +5873,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>162458384</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -5902,14 +5902,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_42_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5918,7 +5918,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -5931,7 +5931,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582078880</coreId>
+              <coreId>25</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -5960,14 +5960,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_43_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -5976,7 +5976,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -5989,7 +5989,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>162453072</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -6018,14 +6018,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_44_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -6034,7 +6034,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -6047,7 +6047,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582076256</coreId>
+              <coreId>162454320</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -6073,17 +6073,17 @@
             <Obj>
               <type>0</type>
               <id>140</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_41</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_119</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -6092,7 +6092,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -6105,7 +6105,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>162447760</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -6134,14 +6134,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -6150,7 +6150,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -6163,7 +6163,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582073568</coreId>
+              <coreId>25</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -6192,14 +6192,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -6208,7 +6208,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -6221,7 +6221,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>162965056</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -6250,14 +6250,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -6266,7 +6266,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -6279,7 +6279,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582136496</coreId>
+              <coreId>32</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -6308,14 +6308,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -6324,7 +6324,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -6337,7 +6337,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>580870704</coreId>
+              <coreId>163122688</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -6366,14 +6366,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -6382,7 +6382,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -6395,7 +6395,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1931502951</coreId>
+              <coreId>163123968</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -6424,14 +6424,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_51_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -6440,7 +6440,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -6453,7 +6453,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581338144</coreId>
+              <coreId>163133312</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -6482,14 +6482,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_52_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -6498,7 +6498,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -6511,7 +6511,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>580861704</coreId>
+              <coreId>25</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -6540,14 +6540,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_53_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -6556,7 +6556,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -6569,7 +6569,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>580862720</coreId>
+              <coreId>163128000</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -6598,14 +6598,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_54_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -6614,7 +6614,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -6627,7 +6627,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582188928</coreId>
+              <coreId>25</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -6653,17 +6653,17 @@
             <Obj>
               <type>0</type>
               <id>150</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_42</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_120</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -6672,7 +6672,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -6685,7 +6685,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>163285632</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -6714,14 +6714,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -6730,7 +6730,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -6743,7 +6743,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>163279120</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -6772,14 +6772,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -6788,7 +6788,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -6801,7 +6801,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>582192800</coreId>
+              <coreId>163301568</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -6830,14 +6830,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -6846,7 +6846,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -6859,7 +6859,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>25</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -6888,14 +6888,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -6904,7 +6904,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -6917,7 +6917,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>163296256</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -6946,14 +6946,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -6962,7 +6962,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -7004,14 +7004,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_61_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -7020,7 +7020,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -7033,7 +7033,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1819113532</coreId>
+              <coreId>163290944</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -7062,14 +7062,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_62_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -7078,7 +7078,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -7091,7 +7091,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>163292224</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -7120,14 +7120,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_addr</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -7136,7 +7136,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -7149,7 +7149,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1819113532</coreId>
+              <coreId>162461040</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -7175,17 +7175,17 @@
             <Obj>
               <type>0</type>
               <id>159</id>
-              <name>trunc_ln2</name>
+              <name>trunc_ln4</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -7194,7 +7194,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -7207,7 +7207,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>6775156</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>6</bitwidth>
@@ -7234,17 +7234,17 @@
             <Obj>
               <type>0</type>
               <id>160</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_30</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_90</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -7253,7 +7253,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -7290,17 +7290,17 @@
             <Obj>
               <type>0</type>
               <id>161</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_31</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_91</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -7309,7 +7309,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -7346,17 +7346,17 @@
             <Obj>
               <type>0</type>
               <id>162</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_32</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_92</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -7365,7 +7365,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -7402,17 +7402,17 @@
             <Obj>
               <type>0</type>
               <id>163</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_33</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_93</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -7421,7 +7421,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -7458,17 +7458,17 @@
             <Obj>
               <type>0</type>
               <id>164</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_34</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_94</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -7477,7 +7477,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -7514,17 +7514,17 @@
             <Obj>
               <type>0</type>
               <id>165</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_35</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_95</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -7533,7 +7533,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -7570,17 +7570,17 @@
             <Obj>
               <type>0</type>
               <id>166</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_36</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_96</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -7589,7 +7589,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -7626,17 +7626,17 @@
             <Obj>
               <type>0</type>
               <id>167</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_37</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_97</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -7645,7 +7645,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -7682,17 +7682,17 @@
             <Obj>
               <type>0</type>
               <id>168</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_38</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_98</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -7701,7 +7701,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -7738,17 +7738,17 @@
             <Obj>
               <type>0</type>
               <id>169</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_39</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_99</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -7757,7 +7757,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -7797,14 +7797,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_10_load</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -7813,7 +7813,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -7850,17 +7850,17 @@
             <Obj>
               <type>0</type>
               <id>171</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_43</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_121</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -7869,7 +7869,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -7906,17 +7906,17 @@
             <Obj>
               <type>0</type>
               <id>172</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_44</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_122</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -7925,7 +7925,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -7962,17 +7962,17 @@
             <Obj>
               <type>0</type>
               <id>173</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_45</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_123</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -7981,7 +7981,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -8018,17 +8018,17 @@
             <Obj>
               <type>0</type>
               <id>174</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_46</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_124</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -8037,7 +8037,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -8074,17 +8074,17 @@
             <Obj>
               <type>0</type>
               <id>175</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_47</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_125</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -8093,7 +8093,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -8133,14 +8133,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_16_load</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -8149,7 +8149,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -8189,14 +8189,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_17_load</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -8205,7 +8205,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -8245,14 +8245,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_18_load</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -8261,7 +8261,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -8301,14 +8301,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_19_load</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -8317,7 +8317,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -8357,14 +8357,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_20_load</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -8373,7 +8373,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -8410,17 +8410,17 @@
             <Obj>
               <type>0</type>
               <id>181</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_48</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_126</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -8429,7 +8429,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -8466,17 +8466,17 @@
             <Obj>
               <type>0</type>
               <id>182</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_49</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_127</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -8485,7 +8485,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -8522,17 +8522,17 @@
             <Obj>
               <type>0</type>
               <id>183</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_50</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_128</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -8541,7 +8541,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -8578,17 +8578,17 @@
             <Obj>
               <type>0</type>
               <id>184</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_51</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_129</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -8597,7 +8597,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -8634,17 +8634,17 @@
             <Obj>
               <type>0</type>
               <id>185</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_52</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_130</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -8653,7 +8653,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -8693,14 +8693,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_26_load</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -8709,7 +8709,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -8749,14 +8749,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_27_load</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -8765,7 +8765,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -8805,14 +8805,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_28_load</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -8821,7 +8821,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -8861,14 +8861,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_29_load</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -8877,7 +8877,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -8917,14 +8917,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_30_load</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -8933,7 +8933,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -8970,17 +8970,17 @@
             <Obj>
               <type>0</type>
               <id>191</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_53</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_131</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -8989,7 +8989,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -9026,17 +9026,17 @@
             <Obj>
               <type>0</type>
               <id>192</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_54</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_132</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -9045,7 +9045,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -9082,17 +9082,17 @@
             <Obj>
               <type>0</type>
               <id>193</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_55</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_133</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -9101,7 +9101,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -9138,17 +9138,17 @@
             <Obj>
               <type>0</type>
               <id>194</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_56</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_134</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -9157,7 +9157,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -9194,17 +9194,17 @@
             <Obj>
               <type>0</type>
               <id>195</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_57</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_135</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -9213,7 +9213,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -9253,14 +9253,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_36_load</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -9269,7 +9269,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -9309,14 +9309,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_37_load</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -9325,7 +9325,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -9365,14 +9365,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_38_load</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -9381,7 +9381,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -9421,14 +9421,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_39_load</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -9437,7 +9437,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -9477,14 +9477,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_40_load</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -9493,7 +9493,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -9530,17 +9530,17 @@
             <Obj>
               <type>0</type>
               <id>201</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_58</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_136</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -9549,7 +9549,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -9586,17 +9586,17 @@
             <Obj>
               <type>0</type>
               <id>202</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_59</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_137</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -9605,7 +9605,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -9642,17 +9642,17 @@
             <Obj>
               <type>0</type>
               <id>203</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_60</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_138</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -9661,7 +9661,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -9698,17 +9698,17 @@
             <Obj>
               <type>0</type>
               <id>204</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_61</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_139</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -9717,7 +9717,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -9754,17 +9754,17 @@
             <Obj>
               <type>0</type>
               <id>205</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_62</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_140</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -9773,7 +9773,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -9813,14 +9813,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_46_load</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -9829,7 +9829,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -9869,14 +9869,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_47_load</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -9885,7 +9885,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -9925,14 +9925,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_48_load</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -9941,7 +9941,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -9981,14 +9981,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_49_load</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -9997,7 +9997,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -10037,14 +10037,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_50_load</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -10053,7 +10053,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -10090,17 +10090,17 @@
             <Obj>
               <type>0</type>
               <id>211</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_63</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_141</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -10109,7 +10109,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -10146,17 +10146,17 @@
             <Obj>
               <type>0</type>
               <id>212</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_64</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_142</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -10165,7 +10165,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -10202,17 +10202,17 @@
             <Obj>
               <type>0</type>
               <id>213</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_65</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_143</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -10221,7 +10221,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -10258,17 +10258,17 @@
             <Obj>
               <type>0</type>
               <id>214</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_66</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_144</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -10277,7 +10277,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -10314,17 +10314,17 @@
             <Obj>
               <type>0</type>
               <id>215</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_67</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_145</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -10333,7 +10333,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -10373,14 +10373,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_56_load</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -10389,7 +10389,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -10429,14 +10429,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_57_load</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -10445,7 +10445,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -10485,14 +10485,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_58_load</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -10501,7 +10501,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -10541,14 +10541,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_59_load</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -10557,7 +10557,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -10597,14 +10597,14 @@
               <name>p_ZZ22activation_acceleratorPtS_S_iiE4buf2_60_load</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -10613,7 +10613,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -10650,17 +10650,17 @@
             <Obj>
               <type>0</type>
               <id>221</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_68</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_146</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -10669,7 +10669,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -10706,17 +10706,17 @@
             <Obj>
               <type>0</type>
               <id>222</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_69</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_147</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -10725,7 +10725,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -10762,17 +10762,17 @@
             <Obj>
               <type>0</type>
               <id>223</id>
-              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_70</name>
+              <name>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_148</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -10781,7 +10781,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -10821,14 +10821,14 @@
               <name>tmp</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -10837,7 +10837,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -10939,17 +10939,17 @@
             <Obj>
               <type>0</type>
               <id>225</id>
-              <name>gmem2_addr_write_ln543</name>
+              <name>gmem2_addr_write_ln704</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>543</lineNumber>
+              <lineNumber>704</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -10958,7 +10958,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>543</second>
+                      <second>704</second>
                     </item>
                   </second>
                 </item>
@@ -10998,17 +10998,17 @@
             <Obj>
               <type>0</type>
               <id>226</id>
-              <name>i_1_write_ln542</name>
+              <name>i_1_write_ln703</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>542</lineNumber>
+              <lineNumber>703</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -11017,7 +11017,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>542</second>
+                      <second>703</second>
                     </item>
                   </second>
                 </item>
@@ -11030,7 +11030,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581115128</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -11057,17 +11057,17 @@
             <Obj>
               <type>0</type>
               <id>227</id>
-              <name>phi_mul_write_ln542</name>
+              <name>phi_mul137_write_ln703</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>542</lineNumber>
+              <lineNumber>703</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -11076,7 +11076,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>542</second>
+                      <second>703</second>
                     </item>
                   </second>
                 </item>
@@ -11089,7 +11089,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1095647488</coreId>
+              <coreId>176</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -11116,17 +11116,17 @@
             <Obj>
               <type>0</type>
               <id>228</id>
-              <name>phi_urem_write_ln542</name>
+              <name>phi_urem139_write_ln703</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>542</lineNumber>
+              <lineNumber>703</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -11135,7 +11135,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>542</second>
+                      <second>703</second>
                     </item>
                   </second>
                 </item>
@@ -11148,7 +11148,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581117024</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -11175,17 +11175,17 @@
             <Obj>
               <type>0</type>
               <id>229</id>
-              <name>br_ln542</name>
+              <name>br_ln703</name>
               <fileName>activation_accelerator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>542</lineNumber>
+              <lineNumber>703</lineNumber>
               <contextFuncName>activation_accelerator</contextFuncName>
               <contextNormFuncName>activation_accelerator</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/data1/jcz/fpt_LLM/prj/baseline/kernel_hls</first>
+                  <first>/home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -11194,7 +11194,7 @@
                         <first>activation_accelerator.cpp</first>
                         <second>activation_accelerator</second>
                       </first>
-                      <second>542</second>
+                      <second>703</second>
                     </item>
                   </second>
                 </item>
@@ -11207,7 +11207,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581118288</coreId>
+              <coreId>1819113532</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -11249,7 +11249,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581120088</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -11387,7 +11387,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581122568</coreId>
+              <coreId>163585488</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -11418,7 +11418,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581122976</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -11449,7 +11449,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581123728</coreId>
+              <coreId>163581536</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -11480,7 +11480,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581124336</coreId>
+              <coreId>163583040</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>33</bitwidth>
@@ -11511,7 +11511,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>580603888</coreId>
+              <coreId>163579392</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -11542,7 +11542,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581126336</coreId>
+              <coreId>163580048</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -11573,7 +11573,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581128864</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -11604,7 +11604,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>581126336</coreId>
+              <coreId>163580048</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>2</bitwidth>
@@ -11659,7 +11659,7 @@
           <Obj>
             <type>3</type>
             <id>86</id>
-            <name>for.inc34</name>
+            <name>for.inc55</name>
             <fileName/>
             <fileDirectory/>
             <lineNumber>0</lineNumber>
@@ -11694,7 +11694,7 @@
           <Obj>
             <type>3</type>
             <id>230</id>
-            <name>for.inc34.split</name>
+            <name>for.inc55.split</name>
             <fileName/>
             <fileDirectory/>
             <lineNumber>0</lineNumber>
@@ -11866,7 +11866,7 @@
           <Obj>
             <type>3</type>
             <id>232</id>
-            <name>if.end37.loopexit13.exitStub</name>
+            <name>if.end58.loopexit3042.exitStub</name>
             <fileName/>
             <fileDirectory/>
             <lineNumber>0</lineNumber>
@@ -11884,7 +11884,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>1869182049</coreId>
+            <coreId>448</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -15887,7 +15887,7 @@
         <count>8</count>
         <item_version>0</item_version>
         <item>
-          <first>add_ln542_1_fu_1095_p2 ( + ) </first>
+          <first>add_ln703_1_fu_1095_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -15910,7 +15910,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln542_fu_1086_p2 ( + ) </first>
+          <first>add_ln703_fu_1086_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -15933,7 +15933,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln543_fu_1196_p2 ( + ) </first>
+          <first>add_ln704_fu_1196_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -16002,7 +16002,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln542_1_fu_1101_p2 ( icmp ) </first>
+          <first>icmp_ln703_1_fu_1101_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -16025,7 +16025,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln542_fu_1080_p2 ( icmp ) </first>
+          <first>icmp_ln703_fu_1080_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -16048,7 +16048,7 @@
           </second>
         </item>
         <item>
-          <first>select_ln542_fu_1107_p3 ( select ) </first>
+          <first>select_ln703_fu_1107_p3 ( select ) </first>
           <second>
             <count>5</count>
             <item_version>0</item_version>
@@ -16156,7 +16156,7 @@
           </second>
         </item>
         <item>
-          <first>ap_sig_allocacmp_phi_urem_load</first>
+          <first>ap_sig_allocacmp_phi_urem139_load</first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -16225,7 +16225,7 @@
           </second>
         </item>
         <item>
-          <first>phi_mul_fu_198</first>
+          <first>phi_mul137_fu_198</first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -16248,7 +16248,7 @@
           </second>
         </item>
         <item>
-          <first>phi_urem_fu_194</first>
+          <first>phi_urem139_fu_194</first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -16389,7 +16389,7 @@
           </second>
         </item>
         <item>
-          <first>phi_mul_fu_198</first>
+          <first>phi_mul137_fu_198</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -16408,7 +16408,7 @@
           </second>
         </item>
         <item>
-          <first>phi_urem_fu_194</first>
+          <first>phi_urem139_fu_194</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -16480,7 +16480,7 @@
         <count>6</count>
         <item_version>0</item_version>
         <item>
-          <first>add_ln542_1_fu_1095_p2 ( + ) </first>
+          <first>add_ln703_1_fu_1095_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -16488,7 +16488,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln542_fu_1086_p2 ( + ) </first>
+          <first>add_ln703_fu_1086_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -16496,7 +16496,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln543_fu_1196_p2 ( + ) </first>
+          <first>add_ln704_fu_1196_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -16504,7 +16504,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln542_1_fu_1101_p2 ( icmp ) </first>
+          <first>icmp_ln703_1_fu_1101_p2 ( icmp ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -16512,7 +16512,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln542_fu_1080_p2 ( icmp ) </first>
+          <first>icmp_ln703_fu_1080_p2 ( icmp ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -16520,7 +16520,7 @@
           </second>
         </item>
         <item>
-          <first>select_ln542_fu_1107_p3 ( select ) </first>
+          <first>select_ln703_fu_1107_p3 ( select ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -18993,7 +18993,7 @@
       <count>78</count>
       <item_version>0</item_version>
       <item class_id="54" tracking_level="0" version="0">
-        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20_gep_fu_220</first>
+        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_80_gep_fu_220</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -19001,7 +19001,7 @@
         </second>
       </item>
       <item>
-        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21_gep_fu_227</first>
+        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_81_gep_fu_227</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -19009,7 +19009,7 @@
         </second>
       </item>
       <item>
-        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22_gep_fu_234</first>
+        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_82_gep_fu_234</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -19017,7 +19017,7 @@
         </second>
       </item>
       <item>
-        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_gep_fu_241</first>
+        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_83_gep_fu_241</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -19025,7 +19025,7 @@
         </second>
       </item>
       <item>
-        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_24_gep_fu_248</first>
+        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_84_gep_fu_248</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -19033,7 +19033,7 @@
         </second>
       </item>
       <item>
-        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_25_gep_fu_255</first>
+        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_85_gep_fu_255</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -19041,7 +19041,7 @@
         </second>
       </item>
       <item>
-        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_26_gep_fu_262</first>
+        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_86_gep_fu_262</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -19049,7 +19049,7 @@
         </second>
       </item>
       <item>
-        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_27_gep_fu_269</first>
+        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_87_gep_fu_269</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -19057,7 +19057,7 @@
         </second>
       </item>
       <item>
-        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_28_gep_fu_276</first>
+        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_88_gep_fu_276</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -19065,7 +19065,7 @@
         </second>
       </item>
       <item>
-        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_29_gep_fu_283</first>
+        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_89_gep_fu_283</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -19073,7 +19073,7 @@
         </second>
       </item>
       <item>
-        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_39_gep_fu_395</first>
+        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_117_gep_fu_395</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -19081,7 +19081,7 @@
         </second>
       </item>
       <item>
-        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_40_gep_fu_465</first>
+        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_118_gep_fu_465</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -19089,7 +19089,7 @@
         </second>
       </item>
       <item>
-        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_41_gep_fu_535</first>
+        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_119_gep_fu_535</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -19097,7 +19097,7 @@
         </second>
       </item>
       <item>
-        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_42_gep_fu_605</first>
+        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_120_gep_fu_605</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -19113,7 +19113,7 @@
         </second>
       </item>
       <item>
-        <first>add_ln542_1_fu_1095</first>
+        <first>add_ln703_1_fu_1095</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -19121,7 +19121,7 @@
         </second>
       </item>
       <item>
-        <first>add_ln542_fu_1086</first>
+        <first>add_ln703_fu_1086</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -19129,7 +19129,7 @@
         </second>
       </item>
       <item>
-        <first>add_ln543_fu_1196</first>
+        <first>add_ln704_fu_1196</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -19153,7 +19153,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln542_1_fu_1101</first>
+        <first>icmp_ln703_1_fu_1101</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -19161,7 +19161,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln542_fu_1080</first>
+        <first>icmp_ln703_fu_1080</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -19561,7 +19561,7 @@
         </second>
       </item>
       <item>
-        <first>phi_mul_fu_198</first>
+        <first>phi_mul137_fu_198</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -19569,7 +19569,7 @@
         </second>
       </item>
       <item>
-        <first>phi_urem_fu_194</first>
+        <first>phi_urem139_fu_194</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -19577,7 +19577,7 @@
         </second>
       </item>
       <item>
-        <first>select_ln542_fu_1107</first>
+        <first>select_ln703_fu_1107</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -19585,7 +19585,7 @@
         </second>
       </item>
       <item>
-        <first>sext_ln542_cast_fu_1052</first>
+        <first>sext_ln703_cast_fu_1052</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -19601,7 +19601,7 @@
         </second>
       </item>
       <item>
-        <first>trunc_ln2_fu_1202</first>
+        <first>trunc_ln4_fu_1202</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -19609,7 +19609,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln543_fu_1115</first>
+        <first>zext_ln704_fu_1115</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -19633,7 +19633,7 @@
         </second>
       </item>
       <item>
-        <first>phi_mul_load_load_fu_1193</first>
+        <first>phi_mul137_load_load_fu_1193</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -19641,7 +19641,7 @@
         </second>
       </item>
       <item>
-        <first>phi_urem_load_load_fu_1092</first>
+        <first>phi_urem139_load_load_fu_1092</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -19649,7 +19649,7 @@
         </second>
       </item>
       <item>
-        <first>sext_ln542_read_read_fu_206</first>
+        <first>sext_ln703_read_read_fu_206</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -19681,7 +19681,7 @@
         </second>
       </item>
       <item>
-        <first>store_ln542_store_fu_1183</first>
+        <first>store_ln703_store_fu_1183</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -19689,7 +19689,7 @@
         </second>
       </item>
       <item>
-        <first>store_ln542_store_fu_1188</first>
+        <first>store_ln703_store_fu_1188</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -19697,7 +19697,7 @@
         </second>
       </item>
       <item>
-        <first>store_ln542_store_fu_1346</first>
+        <first>store_ln703_store_fu_1346</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -19705,7 +19705,7 @@
         </second>
       </item>
       <item>
-        <first>write_ln543_write_fu_212</first>
+        <first>write_ln704_write_fu_212</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -21057,7 +21057,7 @@
       <count>70</count>
       <item_version>0</item_version>
       <item>
-        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20_reg_1381</first>
+        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_80_reg_1381</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -21065,7 +21065,7 @@
         </second>
       </item>
       <item>
-        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21_reg_1386</first>
+        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_81_reg_1386</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -21073,7 +21073,7 @@
         </second>
       </item>
       <item>
-        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22_reg_1391</first>
+        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_82_reg_1391</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -21081,7 +21081,7 @@
         </second>
       </item>
       <item>
-        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_reg_1396</first>
+        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_83_reg_1396</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -21089,7 +21089,7 @@
         </second>
       </item>
       <item>
-        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_24_reg_1401</first>
+        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_84_reg_1401</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -21097,7 +21097,7 @@
         </second>
       </item>
       <item>
-        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_25_reg_1406</first>
+        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_85_reg_1406</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -21105,7 +21105,7 @@
         </second>
       </item>
       <item>
-        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_26_reg_1411</first>
+        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_86_reg_1411</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -21113,7 +21113,7 @@
         </second>
       </item>
       <item>
-        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_27_reg_1416</first>
+        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_87_reg_1416</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -21121,7 +21121,7 @@
         </second>
       </item>
       <item>
-        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_28_reg_1421</first>
+        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_88_reg_1421</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -21129,7 +21129,7 @@
         </second>
       </item>
       <item>
-        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_29_reg_1426</first>
+        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_89_reg_1426</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -21137,7 +21137,7 @@
         </second>
       </item>
       <item>
-        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_39_reg_1506</first>
+        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_117_reg_1506</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -21145,7 +21145,7 @@
         </second>
       </item>
       <item>
-        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_40_reg_1556</first>
+        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_118_reg_1556</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -21153,7 +21153,7 @@
         </second>
       </item>
       <item>
-        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_41_reg_1606</first>
+        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_119_reg_1606</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -21161,7 +21161,7 @@
         </second>
       </item>
       <item>
-        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_42_reg_1656</first>
+        <first>activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_int_buf2_120_reg_1656</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -21193,7 +21193,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln542_reg_1377</first>
+        <first>icmp_ln703_reg_1377</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -21593,7 +21593,7 @@
         </second>
       </item>
       <item>
-        <first>phi_mul_reg_1358</first>
+        <first>phi_mul137_reg_1358</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -21601,7 +21601,7 @@
         </second>
       </item>
       <item>
-        <first>phi_urem_reg_1351</first>
+        <first>phi_urem139_reg_1351</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -22668,7 +22668,7 @@
         </second>
       </item>
       <item>
-        <first>sext_ln542</first>
+        <first>sext_ln703</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

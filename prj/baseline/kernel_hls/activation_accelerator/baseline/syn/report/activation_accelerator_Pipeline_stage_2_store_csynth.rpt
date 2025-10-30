@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'activation_accelerator_Pipeline_stage_2_store'
 ================================================================
-* Date:           Wed Oct 29 10:42:23 2025
+* Date:           Thu Oct 30 20:17:08 2025
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        activation_accelerator
@@ -91,33 +91,33 @@
     +---------------------------+----------+----+---+----+------------+------------+
     |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +---------------------------+----------+----+---+----+------------+------------+
-    |add_ln542_1_fu_1095_p2     |         +|   0|  0|  23|          16|           1|
-    |add_ln542_fu_1086_p2       |         +|   0|  0|  23|          16|           1|
-    |add_ln543_fu_1196_p2       |         +|   0|  0|  40|          33|          17|
+    |add_ln703_1_fu_1095_p2     |         +|   0|  0|  23|          16|           1|
+    |add_ln703_fu_1086_p2       |         +|   0|  0|  23|          16|           1|
+    |add_ln704_fu_1196_p2       |         +|   0|  0|  40|          33|          17|
     |ap_block_pp0_stage0_11001  |       and|   0|  0|   2|           1|           1|
-    |icmp_ln542_1_fu_1101_p2    |      icmp|   0|  0|  13|          16|          10|
-    |icmp_ln542_fu_1080_p2      |      icmp|   0|  0|  13|          16|          16|
-    |select_ln542_fu_1107_p3    |    select|   0|  0|  16|           1|          16|
+    |icmp_ln703_1_fu_1101_p2    |      icmp|   0|  0|  13|          16|          10|
+    |icmp_ln703_fu_1080_p2      |      icmp|   0|  0|  13|          16|          16|
+    |select_ln703_fu_1107_p3    |    select|   0|  0|  16|           1|          16|
     |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
     +---------------------------+----------+----+---+----+------------+------------+
     |Total                      |          |   0|  0| 132|         100|          64|
     +---------------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
-    +--------------------------------+----+-----------+-----+-----------+
-    |              Name              | LUT| Input Size| Bits| Total Bits|
-    +--------------------------------+----+-----------+-----+-----------+
-    |ap_done_int                     |   9|          2|    1|          2|
-    |ap_enable_reg_pp0_iter1         |   9|          2|    1|          2|
-    |ap_sig_allocacmp_i              |   9|          2|   16|         32|
-    |ap_sig_allocacmp_phi_urem_load  |   9|          2|   16|         32|
-    |gmem2_blk_n_W                   |   9|          2|    1|          2|
-    |i_1_fu_202                      |   9|          2|   16|         32|
-    |phi_mul_fu_198                  |   9|          2|   33|         66|
-    |phi_urem_fu_194                 |   9|          2|   16|         32|
-    +--------------------------------+----+-----------+-----+-----------+
-    |Total                           |  72|         16|  100|        200|
-    +--------------------------------+----+-----------+-----+-----------+
+    +-----------------------------------+----+-----------+-----+-----------+
+    |                Name               | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                        |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1            |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i                 |   9|          2|   16|         32|
+    |ap_sig_allocacmp_phi_urem139_load  |   9|          2|   16|         32|
+    |gmem2_blk_n_W                      |   9|          2|    1|          2|
+    |i_1_fu_202                         |   9|          2|   16|         32|
+    |phi_mul137_fu_198                  |   9|          2|   33|         66|
+    |phi_urem139_fu_194                 |   9|          2|   16|         32|
+    +-----------------------------------+----+-----------+-----+-----------+
+    |Total                              |  72|         16|  100|        200|
+    +-----------------------------------+----+-----------+-----+-----------+
 
     * Register: 
     +----------------------------------+----+----+-----+-----------+
@@ -129,8 +129,8 @@
     |ap_enable_reg_pp0_iter2           |   1|   0|    1|          0|
     |ap_loop_exit_ready_pp0_iter1_reg  |   1|   0|    1|          0|
     |i_1_fu_202                        |  16|   0|   16|          0|
-    |phi_mul_fu_198                    |  33|   0|   33|          0|
-    |phi_urem_fu_194                   |  16|   0|   16|          0|
+    |phi_mul137_fu_198                 |  33|   0|   33|          0|
+    |phi_urem139_fu_194                |  16|   0|   16|          0|
     |tmp_reg_1701                      |  16|   0|   16|          0|
     +----------------------------------+----+----+-----+-----------+
     |Total                             |  86|   0|   86|          0|
@@ -197,7 +197,7 @@
 |m_axi_gmem2_BRESP                                                                     |   in|    2|       m_axi|                                                                        gmem2|       pointer|
 |m_axi_gmem2_BID                                                                       |   in|    1|       m_axi|                                                                        gmem2|       pointer|
 |m_axi_gmem2_BUSER                                                                     |   in|    1|       m_axi|                                                                        gmem2|       pointer|
-|sext_ln542                                                                            |   in|   63|     ap_none|                                                                   sext_ln542|        scalar|
+|sext_ln703                                                                            |   in|   63|     ap_none|                                                                   sext_ln703|        scalar|
 |activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_address0  |  out|   10|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9|         array|
 |activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_ce0       |  out|    1|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9|         array|
 |activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_q0        |   in|   16|   ap_memory|  activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9|         array|
