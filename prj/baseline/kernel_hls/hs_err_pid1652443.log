@@ -1,0 +1,94 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007fbd7eb01020, pid=1652443, tid=1652728
+#
+# JRE version: OpenJDK Runtime Environment 18.9 (11.0.11+9) (build 11.0.11+9)
+# Java VM: OpenJDK 64-Bit Server VM 18.9 (11.0.11+9, mixed mode, tiered, compressed oops, g1 gc, linux-amd64)
+# Problematic frame:
+# C  [libc.so.6+0x185020]
+#
+# Core dump will be written. Default location: Core dumps may be processed with "/usr/share/apport/apport -p%p -s%s -c%c -d%d -P%P -u%u -g%g -- %E" (or dumping to /home/xushaohui/FPT/fpt_LLM/prj/baseline/kernel_hls/core.1652443)
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Xms512m -Xmx4096m -XX:+HeapDumpOnOutOfMemoryError --add-modules=ALL-SYSTEM /data/xilinx/Vitis_HLS/2022.2/lnx64/tools/eclipse/plugins/org.eclipse.equinox.launcher_1.5.700.v20200207-2156.jar -showlocation -vm /data/xilinx/Vitis_HLS/2022.2/tps/lnx64/jre11.0.11_9/bin/java -clean -configuration /home/xushaohui/.Xilinx/vitis_hls/2022.2/workspace7 -data /home/xushaohui/.Xilinx/vitis_hls/2022.2/workspace7 -perspective com.autoesl.autopilot.ui.platform.perspective -application com.autoesl.autopilot.ui.platform.application -showsplash /data/xilinx/Vitis_HLS/2022.2/common/icons/splash_dark.bmp
+
+Host: Intel(R) Xeon(R) Silver 4310 CPU @ 2.10GHz, 48 cores, 125G, Ubuntu 20.04.6 LTS
+Time: Thu Oct 30 10:59:01 2025 CST elapsed time: 12.029939 seconds (0d 0h 0m 12s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007fbd786fc000):  JavaThread "Worker-1: Initialize the SWIG data" [_thread_in_native, id=1652728, stack(0x00007fbbf73f8000,0x00007fbbf74f9000)]
+
+Stack: [0x00007fbbf73f8000,0x00007fbbf74f9000],  sp=0x00007fbbf74f53c8,  free space=1012k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libc.so.6+0x185020]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  com.xilinx.hls.services.hlsvwrap.PartMgr_initParts()Z+0
+j  com.xilinx.hls.services.PartMgr.initParts()Z+0
+j  com.autoesl.autopilot.ui.platform.util.AutoPilotTemplateUtil$1.run(Lorg/eclipse/core/runtime/IProgressMonitor;)Lorg/eclipse/core/runtime/IStatus;+59
+j  org.eclipse.core.internal.jobs.Worker.run()V+33
+v  ~StubRoutines::call_stub
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x000000000000005a
+
+Register to memory mapping:
+
+RAX=0x00007fbba70c6748: <offset 0x0000000001354748> in /data/xilinx/Vitis_HLS/2022.2/lib/lnx64.o/libxv_device.so at 0x00007fbba5d72000
+RBX=0x000000000000005a is an unknown value
+RCX=0x000000006c617372 is an unknown value
+RDX=0x0000000000000006 is an unknown value
+RSP=0x00007fbbf74f53c8 is pointing into the stack for thread: 0x00007fbd786fc000
+RBP=0x0000000000000006 is an unknown value
+RSI=0x00007fbbf74f56e0 is pointing into the stack for thread: 0x00007fbd786fc000
+RDI=0x000000000000005a is an unknown value
+R8 =0x0000000000000001 is an unknown value
+R9 =0x0000000000000020 is an unknown value
+R10=0x0000000000000001 is an unknown value
+R11=0x0000000000000246 is an unknown value
+R12=0x00007fbbf74f56d0 is pointing into the stack for thread: 0x00007fbd786fc000
+R13=0x00007fbbf74f5a40 is pointing into the stack for thread: 0x00007fbd786fc000
+R14=0x00007fbbd5094778 points into unknown readable memory: 0x0000000000000000 | 00 00 00 00 00 00 00 00
+R15=0x00007fbbf74f59d0 is pointing into the stack for thread: 0x00007fbd786fc000
+
+
+Registers:
+RAX=0x00007fbba70c6748, RBX=0x000000000000005a, RCX=0x000000006c617372, RDX=0x0000000000000006
+RSP=0x00007fbbf74f53c8, RBP=0x0000000000000006, RSI=0x00007fbbf74f56e0, RDI=0x000000000000005a
+R8 =0x0000000000000001, R9 =0x0000000000000020, R10=0x0000000000000001, R11=0x0000000000000246
+R12=0x00007fbbf74f56d0, R13=0x00007fbbf74f5a40, R14=0x00007fbbd5094778, R15=0x00007fbbf74f59d0
+RIP=0x00007fbd7eb01020, EFLAGS=0x0000000000010293, CSGSFS=0x002b000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007fbbf74f53c8)
+0x00007fbbf74f53c8:   00007fbd7d45e4fc 00007fbbf74f5a90
+0x00007fbbf74f53d8:   00007fbba70c6748 00007fbbd53bec10
+0x00007fbbf74f53e8:   00007fbba657eec8 00007fbbf74f57a0
+0x00007fbbf74f53f8:   00007fbba70c6748 00007fbb8c70eb50 
+
+Instructions: (pc=0x00007fbd7eb01020)
+0x00007fbd7eb00f20:   c0 48 81 fa 00 01 00 00 0f 87 12 02 00 00 48 81
+0x00007fbd7eb00f30:   fa 80 00 00 00 0f 82 9c 02 00 00 c5 fe 6f 0e c5
+0x00007fbd7eb00f40:   f5 74 0f c5 fe 6f 56 20 c5 ed 74 57 20 c5 fe 6f
+0x00007fbd7eb00f50:   5e 40 c5 e5 74 5f 40 c5 fe 6f 66 60 c5 dd 74 67
+0x00007fbd7eb00f60:   60 c5 ed db e9 c5 dd db f3 c5 cd db ed c4 e2 7d
+0x00007fbd7eb00f70:   17 e8 0f 83 d8 02 00 00 48 8d 7c 17 80 48 8d 74
+0x00007fbd7eb00f80:   16 80 c5 fe 6f 0e c5 f5 74 0f c5 fe 6f 56 20 c5
+0x00007fbd7eb00f90:   ed 74 57 20 c5 f5 db ea c5 fe 6f 5e 40 c5 e5 74
+0x00007fbd7eb00fa0:   5f 40 c5 d5 db eb c5 fe 6f 66 60 c5 dd 74 67 60
+0x00007fbd7eb00fb0:   c5 d5 db ec c4 e2 7d 17 e8 0f 83 91 02 00 00 31
+0x00007fbd7eb00fc0:   c0 c5 f8 77 c3 66 66 2e 0f 1f 84 00 00 00 00 00
+0x00007fbd7eb00fd0:   c5 fe 6f 16 c5 ed 74 17 c5 fd d7 c2 83 e8 ff 75
+0x00007fbd7eb00fe0:   1f 48 8d 7c 17 e0 48 8d 74 16 e0 c5 fe 6f 16 c5
+0x00007fbd7eb00ff0:   ed 74 17 c5 fd d7 c2 83 e8 ff 75 04 c5 f8 77 c3
+0x00007fbd7eb01000:   f3 0f bc c8 0f b6 04 0f 0f b6 14 0e 29 d0 c5 f8
+0x00007fbd7eb01010:   77 c3 66 66 2e 0f 1f 84 00 00 00 00 00 0f 1f 00
+0x00007fbd7eb01020:   0f 38 f0 07 0f 38
