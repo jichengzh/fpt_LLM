@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'activation_accelerator'" level="0">
-<item name = "Date">Thu Oct 30 21:00:01 2025
+<item name = "Date">Thu Oct 30 14:45:31 2025
 </item>
-<item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
+<item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
 <item name = "Project">activation_accelerator</item>
 <item name = "Solution">baseline (Vivado IP Flow Target)</item>
 <item name = "Product family">zynquplus</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.390 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,26 +24,27 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">1, 49164, 10.000 ns, 0.492 ms, 2, 49165, no</column>
+<column name="">1, 49166, 10.000 ns, 0.492 ms, 2, 49167, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="tmp_quant_round_float32_to_bf16_ieee_fu_13726">round_float32_to_bf16_ieee, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
-<column name="grp_activation_accelerator_Pipeline_add_blocks_fu_13732">activation_accelerator_Pipeline_add_blocks, 770, 770, 7.700 us, 7.700 us, 770, 770, no</column>
-<column name="grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_13866">activation_accelerator_Pipeline_multiply_blocks_Multiply, 770, 770, 7.700 us, 7.700 us, 770, 770, no</column>
-<column name="grp_square_fu_14000">square, 4622, 4622, 46.220 us, 46.220 us, 4622, 4622, no</column>
-<column name="grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_14004">activation_accelerator_Pipeline_mean_blocks_layer_norm3, 2307, 2307, 23.070 us, 23.070 us, 2307, 2307, no</column>
-<column name="grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_14072">activation_accelerator_Pipeline_max_step_loop_softmax, 770, 770, 7.700 us, 7.700 us, 770, 770, no</column>
-<column name="grp_activation_accelerator_Pipeline_stage_2_store_fu_14140">activation_accelerator_Pipeline_stage_2_store, 49155, 49155, 0.492 ms, 0.492 ms, 49155, 49155, no</column>
-<column name="grp_float_sige_fu_14275">float_sige, 1562, 1562, 15.620 us, 15.620 us, 1562, 1562, no</column>
-<column name="grp_activation_accelerator_Pipeline_rms_calculate_loop_rms_norm3_fu_14410">activation_accelerator_Pipeline_rms_calculate_loop_rms_norm3, 76, 76, 0.760 us, 0.760 us, 76, 76, no</column>
-<column name="grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_14542">activation_accelerator_Pipeline_normalize_blocks_rms_norm3, 1538, 1538, 15.380 us, 15.380 us, 1538, 1538, no</column>
-<column name="grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_14738">activation_accelerator_Pipeline_normalize_blocks_layer_norm3, 1538, 1538, 15.380 us, 15.380 us, 1538, 1538, no</column>
-<column name="grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_14934">activation_accelerator_Pipeline_exp_and_bucket_softmax, 2315, 2315, 23.150 us, 23.150 us, 2315, 2315, no</column>
-<column name="grp_activation_accelerator_Pipeline_softmax_final_fu_15066">activation_accelerator_Pipeline_softmax_final, 1548, 1548, 15.480 us, 15.480 us, 1548, 1548, no</column>
+<column name="grp_float_sige_fu_13982">float_sige, 1563, 1563, 15.630 us, 15.630 us, 1537, 1537, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_activation_accelerator_Pipeline_add_blocks_fu_14245">activation_accelerator_Pipeline_add_blocks, 1543, 1543, 15.430 us, 15.430 us, 1538, 1538, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_14633">activation_accelerator_Pipeline_multiply_blocks_Multiply, 1542, 1542, 15.420 us, 15.420 us, 1538, 1538, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_square_fu_15021">square, 4627, 4627, 46.270 us, 46.270 us, 4627, 4627, no</column>
+<column name="grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_15153">activation_accelerator_Pipeline_max_step_loop_softmax, 770, 770, 7.700 us, 7.700 us, 769, 769, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_activation_accelerator_Pipeline_stage_2_store_fu_15349">activation_accelerator_Pipeline_stage_2_store, 49155, 49155, 0.492 ms, 0.492 ms, 49153, 49153, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_activation_accelerator_Pipeline_rms_calculate_loop_rms_norm3_fu_15484">activation_accelerator_Pipeline_rms_calculate_loop_rms_norm3, 77, 77, 0.770 us, 0.770 us, 65, 65, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_15616">activation_accelerator_Pipeline_normalize_blocks_rms_norm3, 1548, 1548, 15.480 us, 15.480 us, 1538, 1538, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_15940">activation_accelerator_Pipeline_mean_blocks_layer_norm3, 2309, 2309, 23.090 us, 23.090 us, 2307, 2307, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_16136">activation_accelerator_Pipeline_normalize_blocks_layer_norm3, 1552, 1552, 15.520 us, 15.520 us, 1538, 1538, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_16524">activation_accelerator_Pipeline_exp_and_bucket_softmax, 3090, 3090, 30.900 us, 30.900 us, 3076, 3076, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_activation_accelerator_Pipeline_softmax_final_fu_16784">activation_accelerator_Pipeline_softmax_final, 1554, 1554, 15.540 us, 15.540 us, 1538, 1538, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_activation_accelerator_Pipeline_stage_0_load0_fu_17172">activation_accelerator_Pipeline_stage_0_load0, 49155, 49155, 0.492 ms, 0.492 ms, 49153, 49153, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_activation_accelerator_Pipeline_stage_0_load1_fu_17307">activation_accelerator_Pipeline_stage_0_load1, 49155, 49155, 0.492 ms, 0.492 ms, 49153, 49153, loop auto-rewind stp (delay=0 clock cycles(s))</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

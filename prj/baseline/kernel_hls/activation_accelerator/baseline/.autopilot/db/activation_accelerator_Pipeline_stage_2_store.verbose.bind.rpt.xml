@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'activation_accelerator_Pipeline_stage_2_store'" level="0">
-<item name = "Date">Thu Oct 30 20:59:05 2025
+<item name = "Date">Thu Oct 30 14:45:26 2025
 </item>
-<item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
+<item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
 <item name = "Project">activation_accelerator</item>
 <item name = "Solution">baseline (Vivado IP Flow Target)</item>
 <item name = "Product family">zynquplus</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">49155, 49155, 0.492 ms, 0.492 ms, 49155, 49155, no</column>
+<column name="">49155, 49155, 0.492 ms, 0.492 ms, 49153, 49153, loop auto-rewind stp (delay=0 clock cycles(s))</column>
 </table>
 </item>
 <item name = "Detail">

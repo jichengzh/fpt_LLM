@@ -6,12 +6,6 @@
         <value string="activation_accelerator"/>
     </project>
     <flowTarget value="vivado"/>
-    <config>
-        <config_interface m_axi_latency="0"/>
-        <config_op impl="maxdsp" positional0="fmul"/>
-        <config_op impl="fulldsp" positional0="fadd"/>
-        <config_op impl="fulldsp" positional0="fsub"/>
-    </config>
     <targetInfo>
         <TargetInfo value="xck26:-sfvc784:-2LV-c"/>
     </targetInfo>
@@ -21,5 +15,10 @@
     <clockList>
         <clock name="default" period="10" default="false"/>
     </clockList>
+    <config>
+        <config_op positional0="fmul" impl="maxdsp"/>
+        <config_op positional0="fadd" impl="fulldsp"/>
+        <config_op positional0="fsub" impl="fulldsp"/>
+    </config>
 </AutoPilot:solution>
 

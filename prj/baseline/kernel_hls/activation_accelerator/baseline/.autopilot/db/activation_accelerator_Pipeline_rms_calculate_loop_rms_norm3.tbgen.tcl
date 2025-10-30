@@ -3,15 +3,20 @@ set isTopModule 0
 set isCombinational 0
 set isDatapathOnly 0
 set isPipelined 1
-set pipeline_type none
+set pipeline_type loop_auto_rewind
 set FunctionProtocol ap_ctrl_hs
 set isOneStateSeq 0
 set ProfileFlag 0
 set StallSigGenFlag 0
 set isEnableWaveformDebug 1
 set hasInterrupt 0
+set DLRegFirstOffset 0
+set DLRegItemOffset 0
+set svuvm_can_support 1
+set cdfgNum 20
 set C_modelName {activation_accelerator_Pipeline_rms_calculate_loop_rms_norm3}
 set C_modelType { void 0 }
+set ap_memory_interface_dict [dict create]
 set C_modelArgList {
 	{ y_sum_sq_192 float 32 regular  }
 	{ y_sum_sq_193 float 32 regular  }
@@ -142,6 +147,9 @@ set C_modelArgList {
 	{ p_out62 float 32 regular {pointer 1}  }
 	{ p_out63 float 32 regular {pointer 1}  }
 }
+set hasAXIMCache 0
+set l_AXIML2Cache [list]
+set AXIMCacheInstDict [dict create]
 set C_modelArgMapList {[ 
 	{ "Name" : "y_sum_sq_192", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
  	{ "Name" : "y_sum_sq_193", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
@@ -472,15 +480,15 @@ set portList {
 	{ p_out62_ap_vld sc_out sc_logic 1 outvld 126 } 
 	{ p_out63 sc_out sc_lv 32 signal 127 } 
 	{ p_out63_ap_vld sc_out sc_logic 1 outvld 127 } 
-	{ grp_fu_2238_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_2238_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_2238_p_opcode sc_out sc_lv 2 signal -1 } 
-	{ grp_fu_2238_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_2238_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_15486_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_15486_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_15486_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_15486_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_2526_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2526_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2526_p_opcode sc_out sc_lv 1 signal -1 } 
+	{ grp_fu_2526_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_2526_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_17602_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_17602_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_17602_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_17602_p_ce sc_out sc_logic 1 signal -1 } 
 }
 set NewPortList {[ 
 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
@@ -681,15 +689,15 @@ set NewPortList {[
  	{ "name": "p_out62_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "p_out62", "role": "ap_vld" }} , 
  	{ "name": "p_out63", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "p_out63", "role": "default" }} , 
  	{ "name": "p_out63_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "p_out63", "role": "ap_vld" }} , 
- 	{ "name": "grp_fu_2238_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2238_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_2238_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2238_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_2238_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "grp_fu_2238_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_2238_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2238_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_2238_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2238_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_15486_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_15486_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_15486_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_15486_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_15486_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_15486_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_15486_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_15486_p_ce", "role": "default" }}  ]}
+ 	{ "name": "grp_fu_2526_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2526_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2526_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2526_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_2526_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2526_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_2526_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2526_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2526_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2526_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_17602_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_17602_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_17602_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_17602_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_17602_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_17602_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_17602_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_17602_p_ce", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
 	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2"],
@@ -698,7 +706,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "76", "EstimateLatencyMax" : "76",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "77", "EstimateLatencyMax" : "77",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -837,8 +845,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "p_out63", "Type" : "Vld", "Direction" : "O"}],
 		"Loop" : [
 			{"Name" : "rms_calculate_loop_rms_norm3", "PipelineType" : "UPC",
-				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter11", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter11", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mux_646_32_1_1_U509", "Parent" : "0"},
+				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter12", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter12", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sparsemux_129_6_32_1_1_U1059", "Parent" : "0"},
 	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.flow_control_loop_pipe_sequential_init_U", "Parent" : "0"}]}
 
 
@@ -908,76 +916,76 @@ set ArgLastReadFirstWriteLatency {
 		y_sum_sq_253 {Type I LastRead 0 FirstWrite -1}
 		y_sum_sq_254 {Type I LastRead 0 FirstWrite -1}
 		y_sum_sq_255 {Type I LastRead 0 FirstWrite -1}
-		p_out {Type O LastRead -1 FirstWrite 10}
-		p_out1 {Type O LastRead -1 FirstWrite 10}
-		p_out2 {Type O LastRead -1 FirstWrite 10}
-		p_out3 {Type O LastRead -1 FirstWrite 10}
-		p_out4 {Type O LastRead -1 FirstWrite 10}
-		p_out5 {Type O LastRead -1 FirstWrite 10}
-		p_out6 {Type O LastRead -1 FirstWrite 10}
-		p_out7 {Type O LastRead -1 FirstWrite 10}
-		p_out8 {Type O LastRead -1 FirstWrite 10}
-		p_out9 {Type O LastRead -1 FirstWrite 10}
-		p_out10 {Type O LastRead -1 FirstWrite 10}
-		p_out11 {Type O LastRead -1 FirstWrite 10}
-		p_out12 {Type O LastRead -1 FirstWrite 10}
-		p_out13 {Type O LastRead -1 FirstWrite 10}
-		p_out14 {Type O LastRead -1 FirstWrite 10}
-		p_out15 {Type O LastRead -1 FirstWrite 10}
-		p_out16 {Type O LastRead -1 FirstWrite 10}
-		p_out17 {Type O LastRead -1 FirstWrite 10}
-		p_out18 {Type O LastRead -1 FirstWrite 10}
-		p_out19 {Type O LastRead -1 FirstWrite 10}
-		p_out20 {Type O LastRead -1 FirstWrite 10}
-		p_out21 {Type O LastRead -1 FirstWrite 10}
-		p_out22 {Type O LastRead -1 FirstWrite 10}
-		p_out23 {Type O LastRead -1 FirstWrite 10}
-		p_out24 {Type O LastRead -1 FirstWrite 10}
-		p_out25 {Type O LastRead -1 FirstWrite 10}
-		p_out26 {Type O LastRead -1 FirstWrite 10}
-		p_out27 {Type O LastRead -1 FirstWrite 10}
-		p_out28 {Type O LastRead -1 FirstWrite 10}
-		p_out29 {Type O LastRead -1 FirstWrite 10}
-		p_out30 {Type O LastRead -1 FirstWrite 10}
-		p_out31 {Type O LastRead -1 FirstWrite 10}
-		p_out32 {Type O LastRead -1 FirstWrite 10}
-		p_out33 {Type O LastRead -1 FirstWrite 10}
-		p_out34 {Type O LastRead -1 FirstWrite 10}
-		p_out35 {Type O LastRead -1 FirstWrite 10}
-		p_out36 {Type O LastRead -1 FirstWrite 10}
-		p_out37 {Type O LastRead -1 FirstWrite 10}
-		p_out38 {Type O LastRead -1 FirstWrite 10}
-		p_out39 {Type O LastRead -1 FirstWrite 10}
-		p_out40 {Type O LastRead -1 FirstWrite 10}
-		p_out41 {Type O LastRead -1 FirstWrite 10}
-		p_out42 {Type O LastRead -1 FirstWrite 10}
-		p_out43 {Type O LastRead -1 FirstWrite 10}
-		p_out44 {Type O LastRead -1 FirstWrite 10}
-		p_out45 {Type O LastRead -1 FirstWrite 10}
-		p_out46 {Type O LastRead -1 FirstWrite 10}
-		p_out47 {Type O LastRead -1 FirstWrite 10}
-		p_out48 {Type O LastRead -1 FirstWrite 10}
-		p_out49 {Type O LastRead -1 FirstWrite 10}
-		p_out50 {Type O LastRead -1 FirstWrite 10}
-		p_out51 {Type O LastRead -1 FirstWrite 10}
-		p_out52 {Type O LastRead -1 FirstWrite 10}
-		p_out53 {Type O LastRead -1 FirstWrite 10}
-		p_out54 {Type O LastRead -1 FirstWrite 10}
-		p_out55 {Type O LastRead -1 FirstWrite 10}
-		p_out56 {Type O LastRead -1 FirstWrite 10}
-		p_out57 {Type O LastRead -1 FirstWrite 10}
-		p_out58 {Type O LastRead -1 FirstWrite 10}
-		p_out59 {Type O LastRead -1 FirstWrite 10}
-		p_out60 {Type O LastRead -1 FirstWrite 10}
-		p_out61 {Type O LastRead -1 FirstWrite 10}
-		p_out62 {Type O LastRead -1 FirstWrite 10}
-		p_out63 {Type O LastRead -1 FirstWrite 10}}}
+		p_out {Type O LastRead -1 FirstWrite 11}
+		p_out1 {Type O LastRead -1 FirstWrite 11}
+		p_out2 {Type O LastRead -1 FirstWrite 11}
+		p_out3 {Type O LastRead -1 FirstWrite 11}
+		p_out4 {Type O LastRead -1 FirstWrite 11}
+		p_out5 {Type O LastRead -1 FirstWrite 11}
+		p_out6 {Type O LastRead -1 FirstWrite 11}
+		p_out7 {Type O LastRead -1 FirstWrite 11}
+		p_out8 {Type O LastRead -1 FirstWrite 11}
+		p_out9 {Type O LastRead -1 FirstWrite 11}
+		p_out10 {Type O LastRead -1 FirstWrite 11}
+		p_out11 {Type O LastRead -1 FirstWrite 11}
+		p_out12 {Type O LastRead -1 FirstWrite 11}
+		p_out13 {Type O LastRead -1 FirstWrite 11}
+		p_out14 {Type O LastRead -1 FirstWrite 11}
+		p_out15 {Type O LastRead -1 FirstWrite 11}
+		p_out16 {Type O LastRead -1 FirstWrite 11}
+		p_out17 {Type O LastRead -1 FirstWrite 11}
+		p_out18 {Type O LastRead -1 FirstWrite 11}
+		p_out19 {Type O LastRead -1 FirstWrite 11}
+		p_out20 {Type O LastRead -1 FirstWrite 11}
+		p_out21 {Type O LastRead -1 FirstWrite 11}
+		p_out22 {Type O LastRead -1 FirstWrite 11}
+		p_out23 {Type O LastRead -1 FirstWrite 11}
+		p_out24 {Type O LastRead -1 FirstWrite 11}
+		p_out25 {Type O LastRead -1 FirstWrite 11}
+		p_out26 {Type O LastRead -1 FirstWrite 11}
+		p_out27 {Type O LastRead -1 FirstWrite 11}
+		p_out28 {Type O LastRead -1 FirstWrite 11}
+		p_out29 {Type O LastRead -1 FirstWrite 11}
+		p_out30 {Type O LastRead -1 FirstWrite 11}
+		p_out31 {Type O LastRead -1 FirstWrite 11}
+		p_out32 {Type O LastRead -1 FirstWrite 11}
+		p_out33 {Type O LastRead -1 FirstWrite 11}
+		p_out34 {Type O LastRead -1 FirstWrite 11}
+		p_out35 {Type O LastRead -1 FirstWrite 11}
+		p_out36 {Type O LastRead -1 FirstWrite 11}
+		p_out37 {Type O LastRead -1 FirstWrite 11}
+		p_out38 {Type O LastRead -1 FirstWrite 11}
+		p_out39 {Type O LastRead -1 FirstWrite 11}
+		p_out40 {Type O LastRead -1 FirstWrite 11}
+		p_out41 {Type O LastRead -1 FirstWrite 11}
+		p_out42 {Type O LastRead -1 FirstWrite 11}
+		p_out43 {Type O LastRead -1 FirstWrite 11}
+		p_out44 {Type O LastRead -1 FirstWrite 11}
+		p_out45 {Type O LastRead -1 FirstWrite 11}
+		p_out46 {Type O LastRead -1 FirstWrite 11}
+		p_out47 {Type O LastRead -1 FirstWrite 11}
+		p_out48 {Type O LastRead -1 FirstWrite 11}
+		p_out49 {Type O LastRead -1 FirstWrite 11}
+		p_out50 {Type O LastRead -1 FirstWrite 11}
+		p_out51 {Type O LastRead -1 FirstWrite 11}
+		p_out52 {Type O LastRead -1 FirstWrite 11}
+		p_out53 {Type O LastRead -1 FirstWrite 11}
+		p_out54 {Type O LastRead -1 FirstWrite 11}
+		p_out55 {Type O LastRead -1 FirstWrite 11}
+		p_out56 {Type O LastRead -1 FirstWrite 11}
+		p_out57 {Type O LastRead -1 FirstWrite 11}
+		p_out58 {Type O LastRead -1 FirstWrite 11}
+		p_out59 {Type O LastRead -1 FirstWrite 11}
+		p_out60 {Type O LastRead -1 FirstWrite 11}
+		p_out61 {Type O LastRead -1 FirstWrite 11}
+		p_out62 {Type O LastRead -1 FirstWrite 11}
+		p_out63 {Type O LastRead -1 FirstWrite 11}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "76", "Max" : "76"}
-	, {"Name" : "Interval", "Min" : "76", "Max" : "76"}
+	{"Name" : "Latency", "Min" : "77", "Max" : "77"}
+	, {"Name" : "Interval", "Min" : "77", "Max" : "77"}
 ]}
 
 set PipelineEnableSignalInfo {[

@@ -1,7 +1,9 @@
 -- ==============================================================
--- Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
--- Tool Version Limit: 2019.12
+-- Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.2 (64-bit)
+-- Tool Version Limit: 2024.11
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+-- 
 -- ==============================================================
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
@@ -46,6 +48,8 @@ port (
 end entity activation_accelerator_control_s_axi;
 
 -- ------------------------Address Info-------------------
+-- Protocol Used: ap_ctrl_hs
+--
 -- 0x00 : Control signals
 --        bit 0  - ap_start (Read/Write/COH)
 --        bit 1  - ap_done (Read/COR)
@@ -203,7 +207,7 @@ begin
         if (ACLK'event and ACLK = '1') then
             if (ACLK_EN = '1') then
                 if (aw_hs = '1') then
-                    waddr <= UNSIGNED(AWADDR(ADDR_BITS-1 downto 0));
+                    waddr <= UNSIGNED(AWADDR(ADDR_BITS-1 downto 2) & (1 downto 0 => '0'));
                 end if;
             end if;
         end if;
@@ -480,7 +484,9 @@ begin
     process (ACLK)
     begin
         if (ACLK'event and ACLK = '1') then
-            if (ACLK_EN = '1') then
+            if (ARESET = '1') then
+                int_in0(31 downto 0) <= (others => '0');
+            elsif (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_IN0_DATA_0) then
                     int_in0(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_in0(31 downto 0));
                 end if;
@@ -491,7 +497,9 @@ begin
     process (ACLK)
     begin
         if (ACLK'event and ACLK = '1') then
-            if (ACLK_EN = '1') then
+            if (ARESET = '1') then
+                int_in0(63 downto 32) <= (others => '0');
+            elsif (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_IN0_DATA_1) then
                     int_in0(63 downto 32) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_in0(63 downto 32));
                 end if;
@@ -502,7 +510,9 @@ begin
     process (ACLK)
     begin
         if (ACLK'event and ACLK = '1') then
-            if (ACLK_EN = '1') then
+            if (ARESET = '1') then
+                int_in1(31 downto 0) <= (others => '0');
+            elsif (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_IN1_DATA_0) then
                     int_in1(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_in1(31 downto 0));
                 end if;
@@ -513,7 +523,9 @@ begin
     process (ACLK)
     begin
         if (ACLK'event and ACLK = '1') then
-            if (ACLK_EN = '1') then
+            if (ARESET = '1') then
+                int_in1(63 downto 32) <= (others => '0');
+            elsif (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_IN1_DATA_1) then
                     int_in1(63 downto 32) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_in1(63 downto 32));
                 end if;
@@ -524,7 +536,9 @@ begin
     process (ACLK)
     begin
         if (ACLK'event and ACLK = '1') then
-            if (ACLK_EN = '1') then
+            if (ARESET = '1') then
+                int_out_r(31 downto 0) <= (others => '0');
+            elsif (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_OUT_R_DATA_0) then
                     int_out_r(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_out_r(31 downto 0));
                 end if;
@@ -535,7 +549,9 @@ begin
     process (ACLK)
     begin
         if (ACLK'event and ACLK = '1') then
-            if (ACLK_EN = '1') then
+            if (ARESET = '1') then
+                int_out_r(63 downto 32) <= (others => '0');
+            elsif (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_OUT_R_DATA_1) then
                     int_out_r(63 downto 32) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_out_r(63 downto 32));
                 end if;
@@ -546,7 +562,9 @@ begin
     process (ACLK)
     begin
         if (ACLK'event and ACLK = '1') then
-            if (ACLK_EN = '1') then
+            if (ARESET = '1') then
+                int_stage(31 downto 0) <= (others => '0');
+            elsif (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_STAGE_DATA_0) then
                     int_stage(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_stage(31 downto 0));
                 end if;
@@ -557,7 +575,9 @@ begin
     process (ACLK)
     begin
         if (ACLK'event and ACLK = '1') then
-            if (ACLK_EN = '1') then
+            if (ARESET = '1') then
+                int_config_r(31 downto 0) <= (others => '0');
+            elsif (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_CONFIG_R_DATA_0) then
                     int_config_r(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_config_r(31 downto 0));
                 end if;

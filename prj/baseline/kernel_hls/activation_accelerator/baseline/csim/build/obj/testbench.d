@@ -1,2 +1,2 @@
 obj/testbench.o: ../../../../testbench.cpp \
- ../../../../activation_accelerator.h
+  ../../../../activation_accelerator.h

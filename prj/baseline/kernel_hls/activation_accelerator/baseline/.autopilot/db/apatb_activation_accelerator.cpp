@@ -1,3 +1,4 @@
+#include "hls_signal_handler.h"
 #include <algorithm>
 #include <complex>
 #include <cstdio>
@@ -8,11 +9,12 @@
 #include <iomanip>
 #include <iostream>
 #include <map>
+#include <set>
 #include "ap_fixed.h"
 #include "ap_int.h"
 #include "autopilot_cbe.h"
 #include "hls_half.h"
-#include "hls_signal_handler.h"
+#include "hls_directio.h"
 #include "hls_stream.h"
 
 using namespace std;
@@ -64,20 +66,24 @@ namespace hls::sim
   };
 
   struct SimException : public std::exception {
-    const char *msg;
+    const std::string msg;
     const size_t line;
-    SimException(const char *msg, const size_t line)
+    SimException(const std::string &msg, const size_t line)
       : msg(msg), line(line)
     {
     }
   };
 
-  void errExit(const size_t line, const char *msg)
+  void errExit(const size_t line, const std::string &msg)
   {
     std::string s;
-    s += "at line ";
-    s += std::to_string(line);
-    s += " occurred problem: ";
+    s += "ERROR";
+//  s += '(';
+//  s += __FILE__;
+//  s += ":";
+//  s += std::to_string(line);
+//  s += ')';
+    s += ": ";
     s += msg;
     s += "\n";
     fputs(s.c_str(), stderr);
@@ -87,6 +93,11 @@ namespace hls::sim
 
 namespace hls::sim
 {
+  size_t divide_ceil(size_t a, size_t b)
+  {
+    return (a + b - 1) / b;
+  }
+
   const bool little_endian()
   {
     int a = 1;
@@ -143,27 +154,29 @@ namespace hls::sim
     }
   }
 
-  void unformatData(const char *data, unsigned char *put)
+  void unformatData(const char *data, unsigned char *put, size_t pbytes = 0)
   {
-    size_t wbytes = (strlen(data)-2+1)>>1;
-    put = LE ? put : put+wbytes-1;
+    size_t nchars = strlen(data+2);
+    size_t nbytes = (nchars+1)>>1;
+    if (pbytes == 0) {
+      pbytes = nbytes;
+    } else if (pbytes > nbytes) {
+      throw SimException("Wrong size specified", __LINE__);
+    }
+    put = LE ? put : put+pbytes-1;
     auto nextp = [&] () {
       return LE ? put++ : put--;
     };
-    const char *c = data + strlen(data) - 1;
+    const char *c = data + (nchars + 2) - 1;
     auto next = [&] () {
-      char res = ord(*c);
+      char res { *c == 'x' ? (char)0 : ord(*c) };
       --c;
       return res;
     };
-    size_t fbytes = (strlen(data)-2)>>1;
-    for (size_t i = 0; i < fbytes; ++i) {
+    for (size_t i = 0; i < pbytes; ++i) {
       char l = next();
       char h = next();
       *nextp() = (h<<4)+l;
-    }
-    if (wbytes > fbytes) {
-      *nextp() = next();
     }
   }
 
@@ -198,7 +211,6 @@ namespace hls::sim
     0x5a, 0x5a, 0xa5, 0xa5, 0x0f, 0x0f, 0xf0, 0xf0
   };
 
-#ifdef USE_BINARY_TV_FILE
   class Input {
     FILE *fp;
     long pos;
@@ -229,10 +241,12 @@ namespace hls::sim
       }
     }
 
-    void begin()
+    size_t begin()
     {
-      advance(8);
+      size_t n;
+      read((unsigned char*)&n, sizeof(n));
       pos = ftell(fp);
+      return n;
     }
 
     void reset()
@@ -240,11 +254,17 @@ namespace hls::sim
       fseek(fp, pos, SEEK_SET);
     }
 
-    void into(unsigned char *param, size_t wbytes, size_t psize, size_t depth)
+    void into(unsigned char *param, size_t wbytes, size_t asize, size_t nbytes)
     {
-      for (size_t i = 0; i < depth; ++i) {
+      size_t n = nbytes / asize;
+      size_t r = nbytes % asize;
+      for (size_t i = 0; i < n; ++i) {
         read(param, wbytes);
-        param += psize;
+        param += asize;
+      }
+      if (r > 0) {
+        advance(asize-r);
+        read(param, r);
       }
     }
 
@@ -294,12 +314,13 @@ namespace hls::sim
       write(buf, sizeof(buf));
     }
 
-    void from(unsigned char *param, size_t wbytes, size_t psize, size_t depth, size_t skip)
+    void from(unsigned char *param, size_t wbytes, size_t asize, size_t nbytes, size_t skip)
     {
-      param -= psize*skip;
-      for (size_t i = 0; i < depth; ++i) {
+      param -= asize*skip;
+      size_t n = divide_ceil(nbytes, asize);
+      for (size_t i = 0; i < n; ++i) {
         write(param, wbytes);
-        param += psize;
+        param += asize;
       }
     }
 
@@ -312,7 +333,6 @@ namespace hls::sim
       }
     }
   };
-#endif
 
   class Reader {
     FILE *fp;
@@ -480,6 +500,15 @@ namespace hls::sim
     FILE *fp;
     std::ostringstream ss;
 
+    void fmt(std::vector<size_t> &vec)
+    {
+      ss << "{";
+      for (auto &x : vec) {
+        ss << " " << x;
+      }
+      ss << " }";
+    }
+
     void formatDepth()
     {
       ss << "set depth_list {\n";
@@ -492,9 +521,25 @@ namespace hls::sim
       ss << "}\n";
     }
 
+    void formatTransDepth()
+    {
+      ss << "set trans_depth {\n";
+      for (auto &p : transDepth) {
+        ss << "  {" << p.first << " ";
+        fmt(p.second);
+        ss << " " << bundleNameFor[p.first] << "}\n";
+      }
+      ss << "}\n";
+    }
+
     void formatTransNum()
     {
       ss << "set trans_num " << AESL_transaction << "\n";
+    }
+
+    void formatContainsVLA()
+    {
+      ss << "set containsVLA " << containsVLA << "\n";
     }
 
     void formatHBM()
@@ -509,6 +554,8 @@ namespace hls::sim
     void close()
     {
       formatDepth();
+      formatTransDepth();
+      formatContainsVLA();
       formatTransNum();
       if (nameHBM != "") {
         formatHBM();
@@ -523,11 +570,17 @@ namespace hls::sim
 
   public:
     std::map<const std::string, size_t> depth;
+    typedef const std::string PortName;
+    typedef const char *BundleName;
+    std::map<PortName, std::vector<size_t>> transDepth;
+    std::map<PortName, BundleName> bundleNameFor;
     std::string nameHBM;
     size_t depthHBM;
     std::string portHBM;
     unsigned widthHBM;
     size_t AESL_transaction;
+    bool containsVLA;
+    std::mutex mut;
 
     RefTCL(const char *path)
     {
@@ -539,9 +592,17 @@ namespace hls::sim
 
     void set(const char* name, size_t dep)
     {
+      std::lock_guard<std::mutex> guard(mut);
       if (depth[name] < dep) {
         depth[name] = dep;
       }
+    }
+
+    void append(const char* portName, size_t dep, const char* bundleName)
+    {
+      std::lock_guard<std::mutex> guard(mut);
+      transDepth[portName].push_back(dep);
+      bundleNameFor[portName] = bundleName;
     }
 
     ~RefTCL()
@@ -584,6 +645,58 @@ namespace hls::sim
     }
   };
 
+  template<typename E>
+  struct DirectIO {
+    unsigned width;
+    const char* name;
+#ifdef POST_CHECK
+    Reader* reader;
+#else
+    Writer* writer;
+    Writer* swriter;
+    Writer* gwriter;
+#endif
+    hls::directio<E>* param;
+    std::vector<E> buf;
+    size_t initSize;
+    size_t depth;
+    bool hasWrite;
+
+    void markSize()
+    {
+      initSize = param->size();
+    }
+
+    void buffer()
+    {
+      buf.clear();
+      while (param->valid()) {
+        buf.push_back(param->read());
+      }
+      for (auto &e : buf) {
+        param->write(e);
+      }
+    }
+
+#ifndef POST_CHECK
+    void doTCL(RefTCL &tcl)
+    {
+      tcl.set(name, depth);
+    }
+#endif
+
+    ~DirectIO()
+    {
+#ifdef POST_CHECK
+      delete reader;
+#else
+      delete writer;
+      delete swriter;
+      delete gwriter;
+#endif
+    }
+  };
+
   template<typename Reader, typename Writer>
   struct Memory {
     unsigned width;
@@ -597,14 +710,31 @@ namespace hls::sim
     Writer* iwriter;
 #endif
     std::vector<void*> param;
-    std::vector<size_t> depth;
+    std::vector<const char*> mname;
+    std::vector<size_t> nbytes;
     std::vector<size_t> offset;
     std::vector<bool> hasWrite;
+
+    size_t depth()
+    {
+      if (hbm) {
+        return divide_ceil(nbytes[0], asize);
+      }
+      else {
+        size_t depth = 0;
+        for (size_t n : nbytes) {
+          depth += divide_ceil(n, asize);
+        }
+        return depth;
+      }
+    }
 
 #ifndef POST_CHECK
     void doTCL(RefTCL &tcl)
     {
       if (hbm) {
+        tcl.nameHBM.clear();
+        tcl.portHBM.clear();
         tcl.nameHBM.append(name[0]);
         tcl.portHBM.append("{").append(name[0]);
         for (size_t i = 1; i < name.size(); ++i) {
@@ -614,9 +744,16 @@ namespace hls::sim
         tcl.nameHBM.append("_HBM");
         tcl.portHBM.append("}");
         tcl.widthHBM = width;
-        tcl.depthHBM = depth[0];
+        size_t depthHBM = divide_ceil(nbytes[0], asize);
+        tcl.append(tcl.nameHBM.c_str(), depthHBM, tcl.nameHBM.c_str());
+        if (depthHBM > tcl.depthHBM) {
+          tcl.depthHBM = depthHBM;
+        }
       } else {
-        tcl.set(name[0], sum(depth));
+        tcl.set(name[0], depth());
+        for (size_t i = 0; i < mname.size(); ++i) {
+          tcl.append(mname[i], divide_ceil(nbytes[i], asize), name[0]);
+        }
       }
     }
 #endif
@@ -632,7 +769,7 @@ namespace hls::sim
     }
   };
 
-  struct FIFO {
+  struct A2Stream {
     unsigned width;
     unsigned asize;
     const char* name;
@@ -643,17 +780,17 @@ namespace hls::sim
     Writer* iwriter;
 #endif
     void* param;
-    size_t depth;
+    size_t nbytes;
     bool hasWrite;
 
 #ifndef POST_CHECK
     void doTCL(RefTCL &tcl)
     {
-      tcl.set(name, depth);
+      tcl.set(name, divide_ceil(nbytes, asize));
     }
 #endif
 
-    ~FIFO()
+    ~A2Stream()
     {
 #ifdef POST_CHECK
       delete reader;
@@ -731,19 +868,51 @@ namespace hls::sim
     }
   }
 
-#ifdef USE_BINARY_TV_FILE
+  template<typename E>
+  void check(DirectIO<E> &port)
+  {
+    if (port.hasWrite) {
+      port.reader->begin();
+      bool foundX = false;
+      E *p = new E;
+      while (char *s = port.reader->next()) {
+        foundX |= RTLOutputCheckAndReplacement(s);
+        unformatData(s, (unsigned char*)p);
+        port.param->write(*p);
+      }
+      delete p;
+      port.reader->end();
+      if (foundX) {
+        warnOnX();
+      }
+    } else {
+      port.reader->begin();
+      size_t n = 0;
+      if (char *s = port.reader->next()) {
+        std::istringstream ss(s);
+        ss >> n;
+      } else {
+        throw SimException(bad, __LINE__);
+      }
+      port.reader->end();
+      for (size_t j = 0; j < n; ++j) {
+        port.param->read();
+      }
+    }
+  }
+
   void checkHBM(Memory<Input, Output> &port)
   {
-    port.reader->begin();
     size_t wbytes = least_nbyte(port.width);
     for (size_t i = 0; i < port.param.size(); ++i) {
       if (port.hasWrite[i]) {
-        port.reader->reset();
-        size_t skip = port.offset[i];
-        size_t depth = port.depth[i] - skip;
-        port.reader->advance(wbytes*skip);
+        size_t n = port.reader->begin();
+        size_t skip = wbytes * port.offset[i];
+        port.reader->advance(skip);
         port.reader->into((unsigned char*)port.param[i], wbytes,
-                          port.asize, depth);
+                           port.asize, port.nbytes[i] - skip);
+        port.reader->reset();
+        port.reader->advance(port.asize*n);
       }
     }
   }
@@ -758,26 +927,38 @@ namespace hls::sim
       for (size_t i = 0; i < port.param.size(); ++i) {
         if (port.hasWrite[i]) {
           port.reader->into((unsigned char*)port.param[i], wbytes,
-                            port.asize, port.depth[i]);
+                             port.asize, port.nbytes[i]);
         } else {
-          port.reader->advance(wbytes*port.depth[i]);
+          size_t n = divide_ceil(port.nbytes[i], port.asize);
+          port.reader->advance(port.asize*n);
         }
       }
     }
   }
-#endif
+
+  void transfer(Reader *reader, size_t nbytes, unsigned char *put, bool &foundX)
+  {
+    if (char *s = reader->next()) {
+      foundX |= RTLOutputCheckAndReplacement(s);
+      unformatData(s, put, nbytes);
+    } else {
+      throw SimException("No more data", __LINE__);
+    }
+  }
+
   void checkHBM(Memory<Reader, Writer> &port)
   {
     port.reader->begin();
     bool foundX = false;
+    size_t wbytes = least_nbyte(port.width);
     for (size_t i = 0, last = port.param.size()-1; i <= last; ++i) {
       if (port.hasWrite[i]) {
         port.reader->skip(port.offset[i]);
-        for (size_t j = 0; j < port.depth[i]-port.offset[i]; ++j) {
-          if (char *s = port.reader->next()) {
-            foundX |= RTLOutputCheckAndReplacement(s);
-            unformatData(s, (unsigned char*)port.param[i]+j*port.asize);
-          }
+        size_t n = port.nbytes[i] / port.asize - port.offset[i];
+        unsigned char *put = (unsigned char*)port.param[i];
+        for (size_t j = 0; j < n; ++j) {
+          transfer(port.reader, wbytes, put, foundX);
+          put += port.asize;
         }
         if (i < last) {
           port.reader->reset();
@@ -797,16 +978,22 @@ namespace hls::sim
     } else {
       port.reader->begin();
       bool foundX = false;
+      size_t wbytes = least_nbyte(port.width);
       for (size_t i = 0; i < port.param.size(); ++i) {
         if (port.hasWrite[i]) {
-          for (size_t j = 0; j < port.depth[i]; ++j) {
-            if (char *s = port.reader->next()) {
-              foundX |= RTLOutputCheckAndReplacement(s);
-              unformatData(s, (unsigned char*)port.param[i]+j*port.asize);
-            }
+          size_t n = port.nbytes[i] / port.asize;
+          size_t r = port.nbytes[i] % port.asize;
+          unsigned char *put = (unsigned char*)port.param[i];
+          for (size_t j = 0; j < n; ++j) {
+            transfer(port.reader, wbytes, put, foundX);
+            put += port.asize;
+          }
+          if (r > 0) {
+            transfer(port.reader, r, put, foundX);
           }
         } else {
-          port.reader->skip(port.depth[i]);
+          size_t n = divide_ceil(port.nbytes[i], port.asize);
+          port.reader->skip(n);
         }
       }
       port.reader->end();
@@ -816,15 +1003,26 @@ namespace hls::sim
     }
   }
 
-  void check(FIFO &port)
+  void check(A2Stream &port)
   {
     port.reader->begin();
     bool foundX = false;
     if (port.hasWrite) {
-      for (size_t j = 0; j < port.depth; ++j) {
+      size_t wbytes = least_nbyte(port.width);
+      size_t n = port.nbytes / port.asize;
+      size_t r = port.nbytes % port.asize;
+      unsigned char *put = (unsigned char*)port.param;
+      for (size_t j = 0; j < n; ++j) {
         if (char *s = port.reader->next()) {
           foundX |= RTLOutputCheckAndReplacement(s);
-          unformatData(s, (unsigned char*)port.param+j*port.asize);
+          unformatData(s, put, wbytes);
+        }
+        put += port.asize;
+      }
+      if (r > 0) {
+        if (char *s = port.reader->next()) {
+          foundX |= RTLOutputCheckAndReplacement(s);
+          unformatData(s, put, r);
         }
       }
     }
@@ -875,27 +1073,97 @@ namespace hls::sim
     writer->end();
   }
 
-#ifdef USE_BINARY_TV_FILE
-  void dump(Memory<Input, Output> &port, Output *writer, size_t AESL_transaction)
+  template<typename E>
+  void dump(DirectIO<E> &port, size_t AESL_transaction)
   {
-    writer->begin(sum(port.depth));
-    size_t wbytes = least_nbyte(port.width);
-    for (size_t i = 0; i < port.param.size(); ++i) {
-      writer->from((unsigned char*)port.param[i], wbytes, port.asize,
-                   port.depth[i], 0);
+    if (port.hasWrite) {
+      port.writer->begin(AESL_transaction);
+      port.depth = port.param->size()-port.initSize;
+      for (size_t j = 0; j < port.depth; ++j) {
+        std::string &&s {
+          formatData((unsigned char*)&port.buf[port.initSize+j], port.width)
+        };
+        port.writer->next(s.c_str());
+      }
+      port.writer->end();
+
+      port.swriter->begin(AESL_transaction);
+      port.swriter->next(std::to_string(port.depth).c_str());
+      port.swriter->end();
+    } else {
+      port.writer->begin(AESL_transaction);
+      port.depth = port.initSize-port.param->size();
+      for (size_t j = 0; j < port.depth; ++j) {
+        std::string &&s {
+          formatData((unsigned char*)&port.buf[j], port.width)
+        };
+        port.writer->next(s.c_str());
+      }
+      port.writer->end();
+
+      port.swriter->begin(AESL_transaction);
+      port.swriter->next(std::to_string(port.depth).c_str());
+      port.swriter->end();
+
+      port.gwriter->begin(AESL_transaction);
+      size_t n = (port.depth ? port.initSize : port.depth);
+      size_t d = port.depth;
+      do {
+        port.gwriter->next(std::to_string(n--).c_str());
+      } while (d--);
+      port.gwriter->end();
     }
   }
 
-#endif
+  void error_on_depth_unspecified(const char *portName)
+  {
+    std::string msg {"A depth specification is required for interface port "};
+    msg.append("'");
+    msg.append(portName);
+    msg.append("'");
+    msg.append(" for cosimulation.");
+    throw SimException(msg, __LINE__);
+  }
+
+  void dump(Memory<Input, Output> &port, Output *writer, size_t AESL_transaction)
+  {
+    for (size_t i = 0; i < port.param.size(); ++i) {
+      if (port.nbytes[i] == 0) {
+        error_on_depth_unspecified(port.mname[i]);
+      }
+    }
+
+    writer->begin(port.depth());
+    size_t wbytes = least_nbyte(port.width);
+    if (port.hbm) {
+      writer->from((unsigned char*)port.param[0], wbytes, port.asize,
+                   port.nbytes[0], 0);
+    }
+    else {
+      for (size_t i = 0; i < port.param.size(); ++i) {
+        writer->from((unsigned char*)port.param[i], wbytes, port.asize,
+                     port.nbytes[i], 0);
+      }
+    }
+  }
+
   void dump(Memory<Reader, Writer> &port, Writer *writer, size_t AESL_transaction)
   {
+    for (size_t i = 0; i < port.param.size(); ++i) {
+      if (port.nbytes[i] == 0) {
+        error_on_depth_unspecified(port.mname[i]);
+      }
+    }
     writer->begin(AESL_transaction);
     for (size_t i = 0; i < port.param.size(); ++i) {
-      for (size_t j = 0; j < port.depth[i]; ++j) {
+      size_t n = divide_ceil(port.nbytes[i], port.asize);
+      unsigned char *put = (unsigned char*)port.param[i];
+      for (size_t j = 0; j < n; ++j) {
         std::string &&s {
-          formatData((unsigned char*)port.param[i]+j*port.asize, port.width)
+          formatData(put, port.width)
         };
         writer->next(s.data());
+        put += port.asize;
       }
       if (port.hbm) {
         break;
@@ -904,18 +1172,21 @@ namespace hls::sim
     writer->end();
   }
 
-  void dump(FIFO &port, Writer *writer, size_t AESL_transaction)
+  void dump(A2Stream &port, Writer *writer, size_t AESL_transaction)
   {
+    if (port.nbytes == 0) {
+      error_on_depth_unspecified(port.name);
+    }
     writer->begin(AESL_transaction);
-    for (size_t j = 0; j < port.depth; ++j) {
-      std::string &&s {
-        formatData((unsigned char*)port.param+j*port.asize, port.width)
-      };
+    size_t n = divide_ceil(port.nbytes, port.asize);
+    unsigned char *put = (unsigned char*)port.param;
+    for (size_t j = 0; j < n; ++j) {
+      std::string &&s { formatData(put, port.width) };
       writer->next(s.data());
+      put += port.asize;
     }
     writer->end();
   }
-
 
   template<typename E>
   void dump(Stream<E> &port, size_t AESL_transaction)
@@ -1045,11 +1316,11 @@ void apatb_activation_accelerator_hw(void* __xlx_apatb_param_in0, void* __xlx_ap
     .iwriter = new hls::sim::Writer(AUTOTB_TVIN_gmem0),
 #endif
 #endif
+    .hasWrite = { false },
   };
   port5.param = { __xlx_apatb_param_in0 };
-  port5.depth = { 49152 };
-  port5.offset = {  };
-  port5.hasWrite = { false };
+  port5.mname = { "in0" };
+  port5.nbytes = { 98304 };
 
 #ifdef USE_BINARY_TV_FILE
   static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port6 {
@@ -1069,11 +1340,11 @@ void apatb_activation_accelerator_hw(void* __xlx_apatb_param_in0, void* __xlx_ap
     .iwriter = new hls::sim::Writer(AUTOTB_TVIN_gmem1),
 #endif
 #endif
+    .hasWrite = { false },
   };
   port6.param = { __xlx_apatb_param_in1 };
-  port6.depth = { 49152 };
-  port6.offset = {  };
-  port6.hasWrite = { false };
+  port6.mname = { "in1" };
+  port6.nbytes = { 98304 };
 
 #ifdef USE_BINARY_TV_FILE
   static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port7 {
@@ -1102,19 +1373,19 @@ void apatb_activation_accelerator_hw(void* __xlx_apatb_param_in0, void* __xlx_ap
     .iwriter = new hls::sim::Writer(AUTOTB_TVIN_gmem2),
 #endif
 #endif
+    .hasWrite = { true },
   };
   port7.param = { __xlx_apatb_param_out_r };
-  port7.depth = { 49152 };
-  port7.offset = {  };
-  port7.hasWrite = { true };
+  port7.mname = { "out_r" };
+  port7.nbytes = { 98304 };
 
-  refine_signal_handler();
   try {
 #ifdef POST_CHECK
     CodeState = ENTER_WRAPC_PC;
     check(port7);
 #else
     static hls::sim::RefTCL tcl("../tv/cdatafile/ref.tcl");
+    tcl.containsVLA = 0;
     CodeState = DUMP_INPUTS;
     dump(port0, port0.iwriter, tcl.AESL_transaction);
     dump(port1, port1.iwriter, tcl.AESL_transaction);

@@ -2,6 +2,7 @@
 set TopModule "activation_accelerator"
 set ClockPeriod 10
 set ClockList ap_clk
+set AxiliteClockList {}
 set HasVivadoClockPeriod 0
 set CombLogicFlag 0
 set PipelineFlag 0
@@ -42,9 +43,9 @@ set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
 set TargetInfo xck26:-sfvc784:-2LV-c
-set SourceFiles {sc {} c {../../activation_accelerator.h ../../activation_accelerator.cpp}}
-set SourceFlags {sc {} c {{ } {} { } {}}}
-set DirectiveFile /data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/baseline.directive
+set SourceFiles {sc {} c {../.././activation_accelerator.h ../.././activation_accelerator.cpp ../../activation_accelerator.cpp}}
+set SourceFlags {sc {} c {{ } {} { } {} {}}}
+set DirectiveFile {}
 set TBFiles {verilog ../../testbench.cpp bc ../../testbench.cpp sc ../../testbench.cpp vhdl ../../testbench.cpp c {} cas ../../testbench.cpp}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
@@ -56,7 +57,7 @@ set ExtraGlobalOptions {"area_timing" 1 "clock_gate" 1 "impl_flow" map "power_ga
 set TBTVFileNotFound {}
 set AppFile ../hls.app
 set ApsFile baseline.aps
-set AvePath ../..
+set AvePath ../../.
 set DefaultPlatform DefaultPlatform
 set multiClockList {}
 set SCPortClockMap {}

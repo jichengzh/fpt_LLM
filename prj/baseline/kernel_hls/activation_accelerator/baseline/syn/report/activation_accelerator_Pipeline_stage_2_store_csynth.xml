@@ -1,7 +1,7 @@
 <profile>
 
 <ReportVersion>
-<Version>2022.2</Version>
+<Version>2024.2</Version>
 </ReportVersion>
 
 <UserAssignments>
@@ -15,7 +15,7 @@
 </UserAssignments>
 
 <PerformanceEstimates>
-<PipelineType>no</PipelineType>
+<PipelineType>loop auto-rewind stp (delay=0 cycles)</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
 <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
@@ -28,8 +28,8 @@
 <Best-caseRealTimeLatency>0.492 ms</Best-caseRealTimeLatency>
 <Average-caseRealTimeLatency>0.492 ms</Average-caseRealTimeLatency>
 <Worst-caseRealTimeLatency>0.492 ms</Worst-caseRealTimeLatency>
-<Interval-min>49155</Interval-min>
-<Interval-max>49155</Interval-max>
+<Interval-min>49153</Interval-min>
+<Interval-max>49153</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <stage_2_store>
@@ -43,12 +43,25 @@
 </InstanceList>
 </stage_2_store>
 </SummaryOfLoopLatency>
+<SummaryOfViolations>
+<IssueType>-</IssueType>
+<ViolationType>-</ViolationType>
+<SourceLocation>activation_accelerator.cpp:665</SourceLocation>
+<SummaryOfLoopViolations>
+<stage_2_store>
+<Name>stage_2_store</Name>
+<IssueType>-</IssueType>
+<ViolationType>-</ViolationType>
+<SourceLocation>activation_accelerator.cpp:665</SourceLocation>
+</stage_2_store>
+</SummaryOfLoopViolations>
+</SummaryOfViolations>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
 <FF>86</FF>
-<LUT>477</LUT>
+<LUT>497</LUT>
 <BRAM_18K>0</BRAM_18K>
 <DSP>0</DSP>
 <URAM>0</URAM>
@@ -130,7 +143,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_AWVALID</name>
+<name>m_axi_gmem2_0_AWVALID</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -141,7 +154,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_AWREADY</name>
+<name>m_axi_gmem2_0_AWREADY</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -152,7 +165,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_AWADDR</name>
+<name>m_axi_gmem2_0_AWADDR</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -163,7 +176,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_AWID</name>
+<name>m_axi_gmem2_0_AWID</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -174,7 +187,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_AWLEN</name>
+<name>m_axi_gmem2_0_AWLEN</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -185,7 +198,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_AWSIZE</name>
+<name>m_axi_gmem2_0_AWSIZE</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -196,7 +209,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_AWBURST</name>
+<name>m_axi_gmem2_0_AWBURST</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -207,7 +220,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_AWLOCK</name>
+<name>m_axi_gmem2_0_AWLOCK</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -218,7 +231,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_AWCACHE</name>
+<name>m_axi_gmem2_0_AWCACHE</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -229,7 +242,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_AWPROT</name>
+<name>m_axi_gmem2_0_AWPROT</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -240,7 +253,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_AWQOS</name>
+<name>m_axi_gmem2_0_AWQOS</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -251,7 +264,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_AWREGION</name>
+<name>m_axi_gmem2_0_AWREGION</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -262,7 +275,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_AWUSER</name>
+<name>m_axi_gmem2_0_AWUSER</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -273,7 +286,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_WVALID</name>
+<name>m_axi_gmem2_0_WVALID</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -284,7 +297,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_WREADY</name>
+<name>m_axi_gmem2_0_WREADY</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -295,7 +308,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_WDATA</name>
+<name>m_axi_gmem2_0_WDATA</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -306,7 +319,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_WSTRB</name>
+<name>m_axi_gmem2_0_WSTRB</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -317,7 +330,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_WLAST</name>
+<name>m_axi_gmem2_0_WLAST</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -328,7 +341,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_WID</name>
+<name>m_axi_gmem2_0_WID</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -339,7 +352,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_WUSER</name>
+<name>m_axi_gmem2_0_WUSER</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -350,7 +363,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_ARVALID</name>
+<name>m_axi_gmem2_0_ARVALID</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -361,7 +374,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_ARREADY</name>
+<name>m_axi_gmem2_0_ARREADY</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -372,7 +385,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_ARADDR</name>
+<name>m_axi_gmem2_0_ARADDR</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -383,7 +396,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_ARID</name>
+<name>m_axi_gmem2_0_ARID</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -394,7 +407,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_ARLEN</name>
+<name>m_axi_gmem2_0_ARLEN</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -405,7 +418,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_ARSIZE</name>
+<name>m_axi_gmem2_0_ARSIZE</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -416,7 +429,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_ARBURST</name>
+<name>m_axi_gmem2_0_ARBURST</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -427,7 +440,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_ARLOCK</name>
+<name>m_axi_gmem2_0_ARLOCK</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -438,7 +451,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_ARCACHE</name>
+<name>m_axi_gmem2_0_ARCACHE</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -449,7 +462,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_ARPROT</name>
+<name>m_axi_gmem2_0_ARPROT</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -460,7 +473,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_ARQOS</name>
+<name>m_axi_gmem2_0_ARQOS</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -471,7 +484,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_ARREGION</name>
+<name>m_axi_gmem2_0_ARREGION</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -482,7 +495,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_ARUSER</name>
+<name>m_axi_gmem2_0_ARUSER</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -493,7 +506,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_RVALID</name>
+<name>m_axi_gmem2_0_RVALID</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -504,7 +517,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_RREADY</name>
+<name>m_axi_gmem2_0_RREADY</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -515,7 +528,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_RDATA</name>
+<name>m_axi_gmem2_0_RDATA</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -526,7 +539,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_RLAST</name>
+<name>m_axi_gmem2_0_RLAST</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -537,7 +550,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_RID</name>
+<name>m_axi_gmem2_0_RID</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -548,7 +561,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_RFIFONUM</name>
+<name>m_axi_gmem2_0_RFIFONUM</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -559,7 +572,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_RUSER</name>
+<name>m_axi_gmem2_0_RUSER</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -570,7 +583,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_RRESP</name>
+<name>m_axi_gmem2_0_RRESP</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -581,7 +594,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_BVALID</name>
+<name>m_axi_gmem2_0_BVALID</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -592,7 +605,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_BREADY</name>
+<name>m_axi_gmem2_0_BREADY</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -603,7 +616,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_BRESP</name>
+<name>m_axi_gmem2_0_BRESP</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -614,7 +627,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_BID</name>
+<name>m_axi_gmem2_0_BID</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -625,7 +638,7 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_axi_gmem2_BUSER</name>
+<name>m_axi_gmem2_0_BUSER</name>
 <Object>gmem2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
@@ -636,8 +649,8 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>sext_ln725</name>
-<Object>sext_ln725</Object>
+<name>sext_ln665</name>
+<Object>sext_ln665</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>

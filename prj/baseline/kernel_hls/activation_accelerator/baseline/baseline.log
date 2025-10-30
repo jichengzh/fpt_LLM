@@ -1,10 +1,11 @@
 ==============================================================
-Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
-Tool Version Limit: 2019.12
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.2 (64-bit)
+Tool Version Limit: 2024.11
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
 ==============================================================
 INFO: [HLS 200-1505] Using flow_target 'vivado'
-INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
 INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
 INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
 INFO: [HLS 200-1510] Running: create_clock -period 10 
@@ -17,90 +18,102 @@ INFO: [HLS 200-1510] Running: config_op fsub -impl fulldsp
 INFO: [HLS 200-1445] Configure operator 'fsub' with implementation style 'fulldsp'.
 INFO: [HLS 200-1510] Running: csim_design 
 INFO: [SIM 211-2] *************** CSIM start ***************
-INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 21.07 seconds. CPU system time: 1.39 seconds. Elapsed time: 22.47 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:12; Allocated memory: 0.047 MB.
 INFO: [HLS 200-1510] Running: csynth_design 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 754.227 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 641.758 MB.
 INFO: [HLS 200-10] Analyzing design file 'activation_accelerator.cpp' ... 
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 39.79 seconds. CPU system time: 3.24 seconds. Elapsed time: 43.18 seconds; current allocated memory: 761.875 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 8.1 seconds. CPU system time: 0.56 seconds. Elapsed time: 8.66 seconds; current allocated memory: 649.363 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
-INFO: [HLS 214-131] Inlining function 'exp_reduce_::exp(float)' into 'hls::expf(float)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/expfloat.cpp:22:9)
+INFO: [HLS 200-1995] There were 4,239 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/jicz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 46,079 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/jicz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 36,876 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/jicz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 36,670 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/jicz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 28,734 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/jicz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/report/csynth_design_size.rpt
+WARNING: [HLS 200-1995] There were 115,059 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/jicz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 31,515 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/jicz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 31,515 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/jicz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 31,515 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/jicz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 30,855 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/jicz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 30,852 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/jicz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 30,468 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/jicz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 30,465 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/jicz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 30,337 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/jicz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 30,039 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/jicz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 30,109 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/jicz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-131] Inlining function 'exp_reduce_::exp(float)' into 'hls::expf(float)' (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/expfloat.cpp:22:9)
 INFO: [HLS 214-131] Inlining function 'hls::expf(float)' into 'float_sige(unsigned short const*, unsigned short*, int, float)' (activation_accelerator.cpp:110:41)
 INFO: [HLS 214-131] Inlining function 'hls::expf(float)' into 'float_safe_softmax3(unsigned short const*, unsigned short*, int)' (activation_accelerator.cpp:514:24)
-INFO: [HLS 214-131] Inlining function 'hls::expf(float)' into 'float_safe_softmax3(unsigned short const*, unsigned short*, int)' (activation_accelerator.cpp:536:25)
-INFO: [HLS 214-131] Inlining function 'float_safe_softmax3(unsigned short const*, unsigned short*, int)' into 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)' (activation_accelerator.cpp:699:13)
-INFO: [HLS 214-131] Inlining function 'float_layer_norm3(unsigned short const*, unsigned short*, int)' into 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)' (activation_accelerator.cpp:703:13)
-INFO: [HLS 214-131] Inlining function 'float_rms_norm3(unsigned short const*, unsigned short*, int)' into 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)' (activation_accelerator.cpp:707:13)
-INFO: [HLS 214-131] Inlining function 'float_Multiply2(unsigned short const*, unsigned short const*, unsigned short*, int)' into 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)' (activation_accelerator.cpp:711:13)
-INFO: [HLS 214-131] Inlining function 'float_add2(unsigned short const*, unsigned short const*, unsigned short*, int)' into 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)' (activation_accelerator.cpp:715:13)
+INFO: [HLS 214-131] Inlining function 'float_safe_softmax3(unsigned short const*, unsigned short*, int)' into 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)' (activation_accelerator.cpp:639:13)
+INFO: [HLS 214-131] Inlining function 'float_layer_norm3(unsigned short const*, unsigned short*, int)' into 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)' (activation_accelerator.cpp:643:13)
+INFO: [HLS 214-131] Inlining function 'float_rms_norm3(unsigned short const*, unsigned short*, int)' into 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)' (activation_accelerator.cpp:647:13)
+INFO: [HLS 214-131] Inlining function 'float_Multiply2(unsigned short const*, unsigned short const*, unsigned short*, int)' into 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)' (activation_accelerator.cpp:651:13)
+INFO: [HLS 214-131] Inlining function 'float_add2(unsigned short const*, unsigned short const*, unsigned short*, int)' into 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)' (activation_accelerator.cpp:655:13)
 INFO: [HLS 214-291] Loop 'sum_inner_square' is marked as complete unroll implied by the pipeline pragma (./bf16_accl.h:332:9)
-INFO: [HLS 214-186] Unrolling loop 'softmax_final_inner' (activation_accelerator.cpp:526:9) in function 'activation_accelerator' completely with a factor of 64 (activation_accelerator.cpp:636:0)
-INFO: [HLS 214-186] Unrolling loop 'exp_inner_softmax' (activation_accelerator.cpp:508:9) in function 'activation_accelerator' completely with a factor of 64 (activation_accelerator.cpp:636:0)
-INFO: [HLS 214-186] Unrolling loop 'init_partial_softmax' (activation_accelerator.cpp:496:5) in function 'activation_accelerator' completely with a factor of 64 (activation_accelerator.cpp:636:0)
-INFO: [HLS 214-186] Unrolling loop 'lane_reduce' (activation_accelerator.cpp:481:9) in function 'activation_accelerator' completely with a factor of 64 (activation_accelerator.cpp:636:0)
-INFO: [HLS 214-186] Unrolling loop 'init_lane_max_softmax' (activation_accelerator.cpp:469:5) in function 'activation_accelerator' completely with a factor of 64 (activation_accelerator.cpp:636:0)
-INFO: [HLS 214-186] Unrolling loop 'normalize_inner_layer_norm3' (activation_accelerator.cpp:325:9) in function 'activation_accelerator' completely with a factor of 64 (activation_accelerator.cpp:636:0)
-INFO: [HLS 214-186] Unrolling loop 'std_blocks_layer_norm3' (activation_accelerator.cpp:311:5) in function 'activation_accelerator' completely with a factor of 64 (activation_accelerator.cpp:636:0)
-INFO: [HLS 214-186] Unrolling loop 'mean_blocks2_layer_norm3' (activation_accelerator.cpp:303:5) in function 'activation_accelerator' completely with a factor of 64 (activation_accelerator.cpp:636:0)
-INFO: [HLS 214-186] Unrolling loop 'mean_inner_layer_norm3' (activation_accelerator.cpp:294:9) in function 'activation_accelerator' completely with a factor of 64 (activation_accelerator.cpp:636:0)
-INFO: [HLS 214-186] Unrolling loop 'init_partial_layernorm' (activation_accelerator.cpp:280:5) in function 'activation_accelerator' completely with a factor of 64 (activation_accelerator.cpp:636:0)
-INFO: [HLS 214-186] Unrolling loop 'normalize_inner_rms_norm3' (activation_accelerator.cpp:246:9) in function 'activation_accelerator' completely with a factor of 64 (activation_accelerator.cpp:636:0)
-INFO: [HLS 214-186] Unrolling loop 'init_y_sum_and_rms_sq' (activation_accelerator.cpp:225:5) in function 'activation_accelerator' completely with a factor of 64 (activation_accelerator.cpp:636:0)
-INFO: [HLS 214-186] Unrolling loop 'multiply_inner' (activation_accelerator.cpp:616:9) in function 'activation_accelerator' completely with a factor of 64 (activation_accelerator.cpp:636:0)
-INFO: [HLS 214-186] Unrolling loop 'add_inner' (activation_accelerator.cpp:419:9) in function 'activation_accelerator' completely with a factor of 64 (activation_accelerator.cpp:636:0)
+INFO: [HLS 214-186] Unrolling loop 'softmax_final_inner' (activation_accelerator.cpp:526:9) in function 'activation_accelerator' completely with a factor of 64 (activation_accelerator.cpp:582:0)
+INFO: [HLS 214-186] Unrolling loop 'exp_inner_softmax' (activation_accelerator.cpp:508:9) in function 'activation_accelerator' completely with a factor of 64 (activation_accelerator.cpp:582:0)
+INFO: [HLS 214-186] Unrolling loop 'init_partial_softmax' (activation_accelerator.cpp:496:5) in function 'activation_accelerator' completely with a factor of 64 (activation_accelerator.cpp:582:0)
+INFO: [HLS 214-186] Unrolling loop 'lane_reduce' (activation_accelerator.cpp:481:9) in function 'activation_accelerator' completely with a factor of 64 (activation_accelerator.cpp:582:0)
+INFO: [HLS 214-186] Unrolling loop 'init_lane_max_softmax' (activation_accelerator.cpp:469:5) in function 'activation_accelerator' completely with a factor of 64 (activation_accelerator.cpp:582:0)
+INFO: [HLS 214-186] Unrolling loop 'normalize_inner_layer_norm3' (activation_accelerator.cpp:325:9) in function 'activation_accelerator' completely with a factor of 64 (activation_accelerator.cpp:582:0)
+INFO: [HLS 214-186] Unrolling loop 'std_blocks_layer_norm3' (activation_accelerator.cpp:311:5) in function 'activation_accelerator' completely with a factor of 64 (activation_accelerator.cpp:582:0)
+INFO: [HLS 214-186] Unrolling loop 'mean_blocks2_layer_norm3' (activation_accelerator.cpp:303:5) in function 'activation_accelerator' completely with a factor of 64 (activation_accelerator.cpp:582:0)
+INFO: [HLS 214-186] Unrolling loop 'mean_inner_layer_norm3' (activation_accelerator.cpp:294:9) in function 'activation_accelerator' completely with a factor of 64 (activation_accelerator.cpp:582:0)
+INFO: [HLS 214-186] Unrolling loop 'init_partial_layernorm' (activation_accelerator.cpp:280:5) in function 'activation_accelerator' completely with a factor of 64 (activation_accelerator.cpp:582:0)
+INFO: [HLS 214-186] Unrolling loop 'normalize_inner_rms_norm3' (activation_accelerator.cpp:246:9) in function 'activation_accelerator' completely with a factor of 64 (activation_accelerator.cpp:582:0)
+INFO: [HLS 214-186] Unrolling loop 'init_y_sum_and_rms_sq' (activation_accelerator.cpp:225:5) in function 'activation_accelerator' completely with a factor of 64 (activation_accelerator.cpp:582:0)
+INFO: [HLS 214-186] Unrolling loop 'multiply_inner' (activation_accelerator.cpp:562:9) in function 'activation_accelerator' completely with a factor of 64 (activation_accelerator.cpp:582:0)
+INFO: [HLS 214-186] Unrolling loop 'add_inner' (activation_accelerator.cpp:419:9) in function 'activation_accelerator' completely with a factor of 64 (activation_accelerator.cpp:582:0)
 INFO: [HLS 214-186] Unrolling loop 'sum_square2' (./bf16_accl.h:341:5) in function 'square' completely with a factor of 64 (./bf16_accl.h:324:0)
 INFO: [HLS 214-186] Unrolling loop 'sum_inner_square' (./bf16_accl.h:332:9) in function 'square' completely with a factor of 64 (./bf16_accl.h:324:0)
 INFO: [HLS 214-186] Unrolling loop 'sige_inner' (activation_accelerator.cpp:101:9) in function 'float_sige' completely with a factor of 32 (activation_accelerator.cpp:89:0)
-INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'int generic_isnan<float>(float)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h:16:0)
-INFO: [HLS 214-178] Inlining function 'fp_struct<float>::data() const (.48.55.61.69.75.83.89.97.103.111)' into 'fp_struct<float>::to_float() const' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:351:0)
-INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_float() const' into 'fp_struct<float>::to_ieee() const' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:375:0)
-INFO: [HLS 214-178] Inlining function 'fp_struct<float>::data() const (.48.55.61.69.75.83.89.97.103.111)' into 'fp_struct<float>::to_int() const' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:348:0)
-INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'float generic_fmax<float>(float, float)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmax.h:20:0)
-INFO: [HLS 214-178] Inlining function 'int generic_isnan<float>(float)' into 'float generic_fmax<float>(float, float)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmax.h:20:0)
-INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_ieee() const' into 'float generic_fmax<float>(float, float)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmax.h:20:0)
-INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_int() const' into 'float generic_fmax<float>(float, float)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmax.h:20:0)
-INFO: [HLS 214-178] Inlining function 'hls::fmax(float, float)' into 'hls::fmaxf(float, float)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp:10:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZZ22activation_acceleratorPtS_S_iiE4buf2': Block partitioning with factor 64 on dimension 1. (activation_accelerator.cpp:646:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZZ22activation_acceleratorPtS_S_iiE4buf1': Block partitioning with factor 64 on dimension 1. (activation_accelerator.cpp:645:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZZ22activation_acceleratorPtS_S_iiE4buf0': Block partitioning with factor 64 on dimension 1. (activation_accelerator.cpp:644:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'int generic_isnan<float>(float)' (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h:16:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::data() const (.23.30.36.44)' into 'fp_struct<float>::to_float() const' (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:322:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_float() const' into 'fp_struct<float>::to_ieee() const' (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:346:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::data() const (.23.30.36.44)' into 'fp_struct<float>::to_int() const' (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:319:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'float generic_fmax<float>(float, float)' (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmax.h:20:0)
+INFO: [HLS 214-178] Inlining function 'int generic_isnan<float>(float)' into 'float generic_fmax<float>(float, float)' (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmax.h:20:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_ieee() const' into 'float generic_fmax<float>(float, float)' (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmax.h:20:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_int() const' into 'float generic_fmax<float>(float, float)' (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmax.h:20:0)
+INFO: [HLS 214-178] Inlining function 'hls::fmax(float, float)' into 'hls::fmaxf(float, float)' (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp:10:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ22activation_acceleratorPtS_S_iiE4buf2': Block partitioning with factor 64 on dimension 1. (activation_accelerator.cpp:592:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ22activation_acceleratorPtS_S_iiE4buf1': Block partitioning with factor 64 on dimension 1. (activation_accelerator.cpp:591:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ22activation_acceleratorPtS_S_iiE4buf0': Block partitioning with factor 64 on dimension 1. (activation_accelerator.cpp:590:0)
 INFO: [HLS 214-248] Applying array_partition to 'y_sum_sq.i17': Complete partitioning on dimension 1. (activation_accelerator.cpp:215:11)
 INFO: [HLS 214-248] Applying array_partition to 'rms_sq.i': Complete partitioning on dimension 1. (activation_accelerator.cpp:216:11)
 INFO: [HLS 214-248] Applying array_partition to 'partial_mean.i': Complete partitioning on dimension 1. (activation_accelerator.cpp:268:11)
 INFO: [HLS 214-248] Applying array_partition to 'y_sum_sq.i': Complete partitioning on dimension 1. (activation_accelerator.cpp:269:11)
-INFO: [HLS 214-248] Applying array_partition to 'sum_row.i': Complete partitioning on dimension 1. (activation_accelerator.cpp:449:7)
-INFO: [HLS 214-248] Applying array_partition to 'max_row.i': Complete partitioning on dimension 1. (activation_accelerator.cpp:450:7)
-INFO: [HLS 214-115] Multiple burst writes of length 49152 and bit width 16 in loop 'stage_2_store'(activation_accelerator.cpp:725:9) has been inferred on bundle 'gmem2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (activation_accelerator.cpp:725:9)
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 19.22 seconds. CPU system time: 1.55 seconds. Elapsed time: 20.89 seconds; current allocated memory: 762.164 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 762.164 MB.
+INFO: [HLS 214-376] automatically set the pipeline for Loop< sige_blocks> at activation_accelerator.cpp:98:5 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< stage_2_store> at activation_accelerator.cpp:665:9 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< add_blocks> at activation_accelerator.cpp:415:5 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< multiply_blocks_Multiply> at activation_accelerator.cpp:557:5 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< normalize_blocks_rms_norm3> at activation_accelerator.cpp:242:5 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< mean_blocks_layer_norm3> at activation_accelerator.cpp:291:5 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< normalize_blocks_layer_norm3> at activation_accelerator.cpp:321:5 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< max_step_loop_softmax> at activation_accelerator.cpp:476:5 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< exp_and_bucket_softmax> at activation_accelerator.cpp:502:5 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< softmax_final> at activation_accelerator.cpp:520:5 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< stage_0_load0> at activation_accelerator.cpp:621:9 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< stage_0_load1> at activation_accelerator.cpp:625:9 
+INFO: [HLS 214-115] Multiple burst reads of length 49152 and bit width 16 in loop 'stage_0_load0'(activation_accelerator.cpp:621:9) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (activation_accelerator.cpp:621:9)
+INFO: [HLS 214-115] Multiple burst reads of length 49152 and bit width 16 in loop 'stage_0_load1'(activation_accelerator.cpp:625:9) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (activation_accelerator.cpp:625:9)
+INFO: [HLS 214-115] Multiple burst writes of length 49152 and bit width 16 in loop 'stage_2_store'(activation_accelerator.cpp:665:9) has been inferred on bundle 'gmem2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (activation_accelerator.cpp:665:9)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 4.9 seconds. CPU system time: 0.31 seconds. Elapsed time: 6.71 seconds; current allocated memory: 658.637 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 658.637 MB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 1.38 seconds. CPU system time: 0.06 seconds. Elapsed time: 1.49 seconds; current allocated memory: 814.953 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.49 seconds. CPU system time: 0 seconds. Elapsed time: 0.5 seconds; current allocated memory: 672.973 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [XFORM 203-602] Inlining function 'generic_fmax<float>' into 'hls::fmaxf' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp:7) automatically.
-INFO: [XFORM 203-602] Inlining function 'hls::sqrtf' into 'activation_accelerator' (activation_accelerator.cpp:316) automatically.
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 1.95 seconds. CPU system time: 0.1 seconds. Elapsed time: 2.04 seconds; current allocated memory: 885.492 MB.
-INFO: [XFORM 203-510] Pipelining loop 'sige_blocks' (activation_accelerator.cpp:98) in function 'float_sige' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'max_step_loop_softmax' (activation_accelerator.cpp:450) in function 'activation_accelerator' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'exp_and_bucket_softmax' (activation_accelerator.cpp:449) in function 'activation_accelerator' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'softmax_final' (activation_accelerator.cpp:520) in function 'activation_accelerator' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'mean_blocks_layer_norm3' (activation_accelerator.cpp:291) in function 'activation_accelerator' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'normalize_blocks_layer_norm3' (activation_accelerator.cpp:321) in function 'activation_accelerator' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'normalize_blocks_rms_norm3' (activation_accelerator.cpp:242) in function 'activation_accelerator' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'multiply_blocks_Multiply' (activation_accelerator.cpp:611) in function 'activation_accelerator' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'add_blocks' (activation_accelerator.cpp:415) in function 'activation_accelerator' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'stage_2_store' (activation_accelerator.cpp:725) in function 'activation_accelerator' automatically.
-INFO: [XFORM 203-602] Inlining function 'generic_fmax<float>' into 'hls::fmaxf' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp:7) automatically.
-INFO: [XFORM 203-602] Inlining function 'hls::sqrtf' into 'activation_accelerator' (activation_accelerator.cpp:316) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_fmax<float>' into 'hls::fmaxf' (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp:7->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp:11) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::sqrtf' into 'activation_accelerator' (activation_accelerator.cpp:316->activation_accelerator.cpp:643) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.43 seconds. CPU system time: 0 seconds. Elapsed time: 0.43 seconds; current allocated memory: 684.266 MB.
+INFO: [XFORM 203-602] Inlining function 'generic_fmax<float>' into 'hls::fmaxf' (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp:7->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp:11) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::sqrtf' into 'activation_accelerator' (activation_accelerator.cpp:316->activation_accelerator.cpp:643) automatically.
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (activation_accelerator.cpp:18:9) to (activation_accelerator.cpp:69:1) in function 'round_float32_to_bf16_ieee'... converting 7 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp:10:21) to (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp:11:5) in function 'hls::fmaxf'... converting 4 basic blocks.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 4.93 seconds. CPU system time: 0.2 seconds. Elapsed time: 5.16 seconds; current allocated memory: 970.777 MB.
-INFO: [HLS 200-472] Inferring partial write operation for 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.9' (activation_accelerator.cpp:111:20)
-INFO: [HLS 200-472] Inferring partial write operation for 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.9' (activation_accelerator.cpp:537:22)
-INFO: [HLS 200-472] Inferring partial write operation for 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.9' (activation_accelerator.cpp:331:25)
-INFO: [HLS 200-472] Inferring partial write operation for 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.9' (activation_accelerator.cpp:252:25)
-INFO: [HLS 200-472] Inferring partial write operation for 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.9' (activation_accelerator.cpp:630:22)
-INFO: [HLS 200-472] Inferring partial write operation for 'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, i.9' (activation_accelerator.cpp:429:22)
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp:10:21) to (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp:11:5) in function 'hls::fmaxf'... converting 7 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1.55 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.56 seconds; current allocated memory: 734.207 MB.
 WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE4buf0_63'.
 WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE4buf0_62'.
 WARNING: [ANALYSIS 214-52] Found false inter dependency for variable '_ZZ22activation_acceleratorPtS_S_iiE4buf0_61'.
@@ -741,31 +754,12 @@ WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'y_sum_sq.3
 WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'y_sum_sq.2' (activation_accelerator.cpp:215).
 WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'y_sum_sq.1' (activation_accelerator.cpp:215).
 WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'y_sum_sq' (activation_accelerator.cpp:215).
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 6.83 seconds. CPU system time: 0.48 seconds. Elapsed time: 7.85 seconds; current allocated memory: 1.141 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1.85 seconds. CPU system time: 0.07 seconds. Elapsed time: 1.92 seconds; current allocated memory: 924.152 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'activation_accelerator' ...
-WARNING: [SYN 201-223] Checking resource limit in 'activation_accelerator_Pipeline_add_blocks': cannot find any callsite of 'round_float32_to_bf16_ieee'.
-WARNING: [SYN 201-223] Checking resource limit in 'activation_accelerator_Pipeline_add_blocks': cannot find any operation of 'fadd'.
-WARNING: [SYN 201-223] Checking resource limit in 'activation_accelerator_Pipeline_multiply_blocks_Multiply': cannot find any callsite of 'round_float32_to_bf16_ieee'.
-WARNING: [SYN 201-223] Checking resource limit in 'activation_accelerator_Pipeline_multiply_blocks_Multiply': cannot find any operation of 'fmul'.
-WARNING: [SYN 201-223] Checking resource limit in 'activation_accelerator_Pipeline_normalize_blocks_layer_norm3': cannot find any operation of 'fsub'.
 WARNING: [SYN 201-223] Checking resource limit in 'activation_accelerator_Pipeline_max_step_loop_softmax': cannot find any operation of 'fmaxf'.
 WARNING: [SYN 201-223] Checking resource limit in 'activation_accelerator': cannot find any operation of 'fexp'.
 WARNING: [SYN 201-223] Checking resource limit in 'activation_accelerator': cannot find any operation of 'fmax'.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'round_float32_to_bf16_ieee' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining function 'round_float32_to_bf16_ieee'.
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, function 'round_float32_to_bf16_ieee'
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.89 seconds. CPU system time: 0.1 seconds. Elapsed time: 1.01 seconds; current allocated memory: 1.145 GB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.145 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'activation_accelerator_Pipeline_stage_2_store' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -773,13 +767,27 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'stage_2_store'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'stage_2_store'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.35 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.37 seconds; current allocated memory: 1.148 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.27 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.29 seconds; current allocated memory: 928.562 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.149 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 929.203 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'round_float32_to_bf16_ieee' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'round_float32_to_bf16_ieee'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, function 'round_float32_to_bf16_ieee'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 929.609 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 929.859 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'float_sige' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -787,130 +795,137 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'sige_blocks'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 27, loop 'sige_blocks'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.77 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.78 seconds; current allocated memory: 1.153 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 935.863 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 2.27 seconds. CPU system time: 0.05 seconds. Elapsed time: 2.32 seconds; current allocated memory: 1.153 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 937.176 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'activation_accelerator_Pipeline_add_blocks' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'add_blocks'.
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'add_blocks'
+WARNING: [HLS 200-882] User specified resource constraint cannot be honored operation type fadd(II = 1)..
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 8, loop 'add_blocks'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3.76 seconds. CPU system time: 0.03 seconds. Elapsed time: 3.8 seconds; current allocated memory: 1.154 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.27 seconds. CPU system time: 0 seconds. Elapsed time: 0.28 seconds; current allocated memory: 942.859 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Starting global binding ...
+INFO: [BIND 205-100] Starting global binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.155 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 944.543 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'activation_accelerator_Pipeline_multiply_blocks_Multiply' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'multiply_blocks_Multiply'.
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'multiply_blocks_Multiply'
+WARNING: [HLS 200-882] User specified resource constraint cannot be honored operation type fmul(II = 1)..
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 7, loop 'multiply_blocks_Multiply'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.28 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.28 seconds; current allocated memory: 1.156 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.29 seconds. CPU system time: 0 seconds. Elapsed time: 0.3 seconds; current allocated memory: 950.230 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Starting global binding ...
+INFO: [BIND 205-100] Starting global binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.156 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 951.879 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'square_Pipeline_sum_square' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'sum_square'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 6, Final II = 6, Depth = 10, loop 'sum_square'
+INFO: [HLS 200-1470] Pipelining result : Target II = 6, Final II = 6, Depth = 14, loop 'sum_square'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.54 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.55 seconds; current allocated memory: 1.159 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.2 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 957.555 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.69 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.69 seconds; current allocated memory: 1.159 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 958.527 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'square' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.03 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.05 seconds; current allocated memory: 1.161 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 961.188 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1.2 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.22 seconds; current allocated memory: 1.162 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 961.809 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'activation_accelerator_Pipeline_rms_calculate_loop_rms_norm3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'rms_calculate_loop_rms_norm3'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 12, loop 'rms_calculate_loop_rms_norm3'
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 13, loop 'rms_calculate_loop_rms_norm3'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.39 seconds. CPU system time: 0.04 seconds. Elapsed time: 1.42 seconds; current allocated memory: 1.165 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 964.984 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.29 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.29 seconds; current allocated memory: 1.165 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 965.141 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'activation_accelerator_Pipeline_normalize_blocks_rms_norm3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'normalize_blocks_rms_norm3'.
 WARNING: [HLS 200-882] User specified resource constraint cannot be honored function 'round_float32_to_bf16_ieee' (II = 1)..
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 2, loop 'normalize_blocks_rms_norm3'
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 13, loop 'normalize_blocks_rms_norm3'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.5 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.54 seconds; current allocated memory: 1.167 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 969.770 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Starting global binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1.29 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.3 seconds; current allocated memory: 1.167 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 971.602 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'activation_accelerator_Pipeline_mean_blocks_layer_norm3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'mean_blocks_layer_norm3'.
-WARNING: [HLS 200-880] The II Violation in module 'activation_accelerator_Pipeline_mean_blocks_layer_norm3' (loop 'mean_blocks_layer_norm3'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('empty_write_ln291', activation_accelerator.cpp:291) of variable 'add15_i', activation_accelerator.cpp:299 on local variable 'empty' and 'load' operation ('p_load189', activation_accelerator.cpp:299) on local variable 'empty'.
-WARNING: [HLS 200-880] The II Violation in module 'activation_accelerator_Pipeline_mean_blocks_layer_norm3' (loop 'mean_blocks_layer_norm3'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('empty_write_ln291', activation_accelerator.cpp:291) of variable 'add15_i', activation_accelerator.cpp:299 on local variable 'empty' and 'load' operation ('p_load189', activation_accelerator.cpp:299) on local variable 'empty'.
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 3, Depth = 6, loop 'mean_blocks_layer_norm3'
+WARNING: [HLS 200-880] The II Violation in module 'activation_accelerator_Pipeline_mean_blocks_layer_norm3' (loop 'mean_blocks_layer_norm3'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation 0 bit ('empty_write_ln299', activation_accelerator.cpp:299->activation_accelerator.cpp:643) of variable 'add15_i', activation_accelerator.cpp:299->activation_accelerator.cpp:643 on local variable 'empty' and 'load' operation 32 bit ('p_load189', activation_accelerator.cpp:299->activation_accelerator.cpp:643) on local variable 'empty'.
+WARNING: [HLS 200-880] The II Violation in module 'activation_accelerator_Pipeline_mean_blocks_layer_norm3' (loop 'mean_blocks_layer_norm3'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation 0 bit ('empty_write_ln299', activation_accelerator.cpp:299->activation_accelerator.cpp:643) of variable 'add15_i', activation_accelerator.cpp:299->activation_accelerator.cpp:643 on local variable 'empty' and 'load' operation 32 bit ('p_load189', activation_accelerator.cpp:299->activation_accelerator.cpp:643) on local variable 'empty'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 3, Depth = 7, loop 'mean_blocks_layer_norm3'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.27 seconds. CPU system time: 0.03 seconds. Elapsed time: 2.32 seconds; current allocated memory: 1.170 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.18 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.18 seconds; current allocated memory: 976.578 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Starting global binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.85 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.86 seconds; current allocated memory: 1.171 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 977.570 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'activation_accelerator_Pipeline_normalize_blocks_layer_norm3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'normalize_blocks_layer_norm3'.
-WARNING: [HLS 200-882] User specified resource constraint cannot be honored function 'round_float32_to_bf16_ieee' (II = 1)..
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 2, loop 'normalize_blocks_layer_norm3'
+WARNING: [HLS 200-882] User specified resource constraint cannot be honored operation type fsub(II = 1)..
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 17, loop 'normalize_blocks_layer_norm3'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.36 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.37 seconds; current allocated memory: 1.173 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.22 seconds. CPU system time: 0 seconds. Elapsed time: 0.23 seconds; current allocated memory: 983.410 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Starting global binding ...
+INFO: [BIND 205-100] Starting global binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1.46 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.48 seconds; current allocated memory: 1.173 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 985.996 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'fmaxf' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -918,13 +933,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'fmaxf'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, function 'fmaxf'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.97 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.99 seconds; current allocated memory: 1.173 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 986.879 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.27 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.173 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 987.109 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'activation_accelerator_Pipeline_max_step_loop_softmax' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -932,40 +947,42 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'max_step_loop_softmax'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'max_step_loop_softmax'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.45 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.45 seconds; current allocated memory: 1.176 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 991.152 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.05 seconds; current allocated memory: 1.176 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 991.785 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'activation_accelerator_Pipeline_exp_and_bucket_softmax' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'exp_and_bucket_softmax'.
-WARNING: [HLS 200-880] The II Violation in module 'activation_accelerator_Pipeline_exp_and_bucket_softmax' (loop 'exp_and_bucket_softmax'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('sum_row_write_ln502', activation_accelerator.cpp:502) of variable 'sum_row', activation_accelerator.cpp:515 on local variable 'sum_row' and 'load' operation ('sum_row_load', activation_accelerator.cpp:515) on local variable 'sum_row'.
-WARNING: [HLS 200-880] The II Violation in module 'activation_accelerator_Pipeline_exp_and_bucket_softmax' (loop 'exp_and_bucket_softmax'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('sum_row_write_ln502', activation_accelerator.cpp:502) of variable 'sum_row', activation_accelerator.cpp:515 on local variable 'sum_row' and 'load' operation ('sum_row_load', activation_accelerator.cpp:515) on local variable 'sum_row'.
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 3, Depth = 13, loop 'exp_and_bucket_softmax'
+WARNING: [HLS 200-880] The II Violation in module 'activation_accelerator_Pipeline_exp_and_bucket_softmax' (loop 'exp_and_bucket_softmax'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation 0 bit ('empty_write_ln515', activation_accelerator.cpp:515->activation_accelerator.cpp:639) of variable 'den', activation_accelerator.cpp:515->activation_accelerator.cpp:639 on local variable 'empty' and 'load' operation 32 bit ('p_load253', activation_accelerator.cpp:515->activation_accelerator.cpp:639) on local variable 'empty'.
+WARNING: [HLS 200-880] The II Violation in module 'activation_accelerator_Pipeline_exp_and_bucket_softmax' (loop 'exp_and_bucket_softmax'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation 0 bit ('empty_write_ln515', activation_accelerator.cpp:515->activation_accelerator.cpp:639) of variable 'den', activation_accelerator.cpp:515->activation_accelerator.cpp:639 on local variable 'empty' and 'load' operation 32 bit ('p_load253', activation_accelerator.cpp:515->activation_accelerator.cpp:639) on local variable 'empty'.
+WARNING: [HLS 200-885] The II Violation in module 'activation_accelerator_Pipeline_exp_and_bucket_softmax' (loop 'exp_and_bucket_softmax'): Unable to schedule 'fadd' operation 32 bit ('den_31', activation_accelerator.cpp:515->activation_accelerator.cpp:639) due to limited resources (II = 3).
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 4, Depth = 21, loop 'exp_and_bucket_softmax'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3.49 seconds. CPU system time: 0.03 seconds. Elapsed time: 3.53 seconds; current allocated memory: 1.180 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.24 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.25 seconds; current allocated memory: 999.000 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Starting global binding ...
 INFO: [BIND 205-100] Starting global binding ...
+INFO: [BIND 205-100] Starting global binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 2.05 seconds. CPU system time: 0.02 seconds. Elapsed time: 2.06 seconds; current allocated memory: 1.182 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1001.629 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'activation_accelerator_Pipeline_softmax_final' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'softmax_final'.
 WARNING: [HLS 200-882] User specified resource constraint cannot be honored operation type fexp(II = 1)..
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 13, loop 'softmax_final'
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 19, loop 'softmax_final'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.9 seconds. CPU system time: 0.03 seconds. Elapsed time: 2.94 seconds; current allocated memory: 1.186 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.26 seconds. CPU system time: 0 seconds. Elapsed time: 0.26 seconds; current allocated memory: 1008.262 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
@@ -974,13 +991,41 @@ INFO: [BIND 205-100] Starting global binding ...
 INFO: [BIND 205-100] Starting global binding ...
 INFO: [BIND 205-100] Starting global binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 3.47 seconds. CPU system time: 0.02 seconds. Elapsed time: 3.49 seconds; current allocated memory: 1.188 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1010.957 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'activation_accelerator_Pipeline_stage_0_load0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'stage_0_load0'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'stage_0_load0'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1013.750 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1013.750 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'activation_accelerator_Pipeline_stage_0_load1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'stage_0_load1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'stage_0_load1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1015.926 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1015.926 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'activation_accelerator' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 5.87 seconds. CPU system time: 0.08 seconds. Elapsed time: 5.97 seconds; current allocated memory: 1.206 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.46 seconds. CPU system time: 0 seconds. Elapsed time: 0.47 seconds; current allocated memory: 1.010 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
@@ -990,119 +1035,169 @@ INFO: [BIND 205-100] Starting global binding ...
 INFO: [BIND 205-100] Starting global binding ...
 INFO: [BIND 205-100] Starting global binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 13.24 seconds. CPU system time: 0.09 seconds. Elapsed time: 13.34 seconds; current allocated memory: 1.213 GB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'round_float32_to_bf16_ieee' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Finished creating RTL model for 'round_float32_to_bf16_ieee'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 19.35 seconds. CPU system time: 0.21 seconds. Elapsed time: 19.58 seconds; current allocated memory: 1.214 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.43 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.44 seconds; current allocated memory: 1.018 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'activation_accelerator_Pipeline_stage_2_store' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'activation_accelerator_Pipeline_stage_2_store' pipeline 'stage_2_store' pipeline type 'loop pipeline'
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_2_store/m_axi_gmem2_AWVALID' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_2_store/m_axi_gmem2_AWADDR' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_2_store/m_axi_gmem2_AWID' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_2_store/m_axi_gmem2_AWLEN' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_2_store/m_axi_gmem2_AWSIZE' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_2_store/m_axi_gmem2_AWBURST' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_2_store/m_axi_gmem2_AWLOCK' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_2_store/m_axi_gmem2_AWCACHE' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_2_store/m_axi_gmem2_AWPROT' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_2_store/m_axi_gmem2_AWQOS' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_2_store/m_axi_gmem2_AWREGION' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_2_store/m_axi_gmem2_AWUSER' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_2_store/m_axi_gmem2_BREADY' to 0.
-INFO: [RTGEN 206-100] Generating core module 'mux_646_16_1_1': 1 instance(s).
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_2_store/m_axi_gmem2_0_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_2_store/m_axi_gmem2_0_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_2_store/m_axi_gmem2_0_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_2_store/m_axi_gmem2_0_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_2_store/m_axi_gmem2_0_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_2_store/m_axi_gmem2_0_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_2_store/m_axi_gmem2_0_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_2_store/m_axi_gmem2_0_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_2_store/m_axi_gmem2_0_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_2_store/m_axi_gmem2_0_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_2_store/m_axi_gmem2_0_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_2_store/m_axi_gmem2_0_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_2_store/m_axi_gmem2_0_BREADY' to 0.
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_129_6_16_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_stage_2_store'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.39 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.44 seconds; current allocated memory: 1.216 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.28 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.29 seconds; current allocated memory: 1.021 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'round_float32_to_bf16_ieee' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'round_float32_to_bf16_ieee'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.025 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'float_sige' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'float_sige' pipeline 'sige_blocks' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'float_sige' is 21063 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
 INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 32 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_9_no_dsp_1': 32 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_8_full_dsp_1': 32 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mux_21_16_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 32 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'float_sige'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.54 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.58 seconds; current allocated memory: 1.224 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.036 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'activation_accelerator_Pipeline_add_blocks' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'activation_accelerator_Pipeline_add_blocks' pipeline 'add_blocks' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1': 32 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_add_blocks'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 4.54 seconds. CPU system time: 0.05 seconds. Elapsed time: 4.59 seconds; current allocated memory: 1.232 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.24 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.059 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'activation_accelerator_Pipeline_multiply_blocks_Multiply' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'activation_accelerator_Pipeline_multiply_blocks_Multiply' pipeline 'multiply_blocks_Multiply' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 32 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_multiply_blocks_Multiply'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.25 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.26 seconds; current allocated memory: 1.236 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.21 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.080 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'square_Pipeline_sum_square' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'square_Pipeline_sum_square' pipeline 'sum_square' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 11 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 11 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'square_Pipeline_sum_square'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.39 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.4 seconds; current allocated memory: 1.240 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.2 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.099 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'square' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_9_no_dsp_1': 64 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'square'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.4 seconds. CPU system time: 0.06 seconds. Elapsed time: 1.46 seconds; current allocated memory: 1.260 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.22 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.125 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'activation_accelerator_Pipeline_rms_calculate_loop_rms_norm3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'activation_accelerator_Pipeline_rms_calculate_loop_rms_norm3' pipeline 'rms_calculate_loop_rms_norm3' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'fsqrt_32ns_32ns_32_8_no_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mux_646_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_129_6_32_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_rms_calculate_loop_rms_norm3'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.19 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.22 seconds; current allocated memory: 1.267 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.133 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'activation_accelerator_Pipeline_normalize_blocks_rms_norm3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'activation_accelerator_Pipeline_normalize_blocks_rms_norm3' pipeline 'normalize_blocks_rms_norm3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_9_no_dsp_1': 32 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_normalize_blocks_rms_norm3'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.39 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.41 seconds; current allocated memory: 1.275 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.15 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.148 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'activation_accelerator_Pipeline_mean_blocks_layer_norm3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'activation_accelerator_Pipeline_mean_blocks_layer_norm3' pipeline 'mean_blocks_layer_norm3' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 32 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1': 32 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_mean_blocks_layer_norm3'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.78 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.83 seconds; current allocated memory: 1.282 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 1.164 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'activation_accelerator_Pipeline_normalize_blocks_layer_norm3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'activation_accelerator_Pipeline_normalize_blocks_layer_norm3' pipeline 'normalize_blocks_layer_norm3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1': 32 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_9_no_dsp_1': 32 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_normalize_blocks_layer_norm3'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.11 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.15 seconds; current allocated memory: 1.291 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.21 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.185 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'fmaxf' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_9_3_32_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'fmaxf'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.93 seconds. CPU system time: 0.07 seconds. Elapsed time: 1.99 seconds; current allocated memory: 1.296 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.199 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'activation_accelerator_Pipeline_max_step_loop_softmax' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'activation_accelerator_Pipeline_max_step_loop_softmax' pipeline 'max_step_loop_softmax' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_max_step_loop_softmax'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.33 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.34 seconds; current allocated memory: 1.298 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.204 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'activation_accelerator_Pipeline_exp_and_bucket_softmax' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'activation_accelerator_Pipeline_exp_and_bucket_softmax' pipeline 'exp_and_bucket_softmax' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 32 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1': 32 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_8_full_dsp_1': 32 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_4_full_dsp_1': 32 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_exp_and_bucket_softmax'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2.58 seconds. CPU system time: 0.06 seconds. Elapsed time: 2.64 seconds; current allocated memory: 1.309 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.25 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.223 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'activation_accelerator_Pipeline_softmax_final' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'activation_accelerator_Pipeline_softmax_final' pipeline 'softmax_final' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'activation_accelerator_Pipeline_softmax_final' is 5120, found 2 HDL expressions with this fanout: ((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0)), ((1'b0 == ap_block_pp0_stage1) & (1'b1 == ap_CS_fsm_pp0_stage1))
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1': 32 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_8_full_dsp_1': 32 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 32 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_softmax_final'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.95 seconds. CPU system time: 0.05 seconds. Elapsed time: 1.99 seconds; current allocated memory: 1.324 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.29 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.3 seconds; current allocated memory: 1.249 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'activation_accelerator_Pipeline_stage_0_load0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'activation_accelerator_Pipeline_stage_0_load0' pipeline 'stage_0_load0' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_0_load0/m_axi_gmem0_0_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_0_load0/m_axi_gmem0_0_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_0_load0/m_axi_gmem0_0_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_0_load0/m_axi_gmem0_0_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_0_load0/m_axi_gmem0_0_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_0_load0/m_axi_gmem0_0_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_0_load0/m_axi_gmem0_0_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_0_load0/m_axi_gmem0_0_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_0_load0/m_axi_gmem0_0_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_0_load0/m_axi_gmem0_0_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_0_load0/m_axi_gmem0_0_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_0_load0/m_axi_gmem0_0_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_stage_0_load0'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.24 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.26 seconds; current allocated memory: 1.266 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'activation_accelerator_Pipeline_stage_0_load1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'activation_accelerator_Pipeline_stage_0_load1' pipeline 'stage_0_load1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_0_load1/m_axi_gmem1_0_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_0_load1/m_axi_gmem1_0_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_0_load1/m_axi_gmem1_0_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_0_load1/m_axi_gmem1_0_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_0_load1/m_axi_gmem1_0_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_0_load1/m_axi_gmem1_0_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_0_load1/m_axi_gmem1_0_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_0_load1/m_axi_gmem1_0_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_0_load1/m_axi_gmem1_0_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_0_load1/m_axi_gmem1_0_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_0_load1/m_axi_gmem1_0_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator_Pipeline_stage_0_load1/m_axi_gmem1_0_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator_Pipeline_stage_0_load1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.273 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'activation_accelerator' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1116,249 +1211,53 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'activation_accelerator/out
 INFO: [RTGEN 206-500] Setting interface mode on port 'activation_accelerator/stage' to 's_axilite & ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'activation_accelerator/config_r' to 's_axilite & ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'activation_accelerator' to 's_axilite & ap_ctrl_hs'.
-INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rbkb' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_Rcud' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_RdEe' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_ReOg' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_RfYi' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_Rg8j' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_Rhbi' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_Ribs' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_RjbC' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_RAMkbM' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_29_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_29_bkb' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_28_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_28_cud' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_27_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_27_dEe' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_26_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_26_eOg' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_25_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_25_fYi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_24_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_24_g8j' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_23_hbi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_22_ibs' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_21_jbC' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_20_kbM' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19_lbW' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18_mb6' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17_ncg' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_16_ocq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_15_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_15_pcA' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_14_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_14_qcK' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_13_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_13_rcU' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_12_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_12_sc4' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_11_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_11_tde' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_10_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_10_udo' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_9_Rvdy' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_8_RwdI' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_7_RxdS' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_6_Ryd2' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_5_Rzec' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_4_RAem' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_3_RBew' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_2_RCeG' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_1_RDeQ' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_RAM_AUTO_1R1W' to 'activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_RAMEe0' due to the length limit 80
 INFO: [RTGEN 206-100] Bundling port 'in0', 'in1', 'out_r', 'stage', 'config_r' and 'return' to AXI-Lite port control.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_AWVALID' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem0_AWVALID' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_AWREADY' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_AWADDR' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem0_AWADDR' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_AWID' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem0_AWID' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_AWLEN' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem0_AWLEN' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_AWSIZE' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem0_AWSIZE' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_AWBURST' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem0_AWBURST' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_AWLOCK' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem0_AWLOCK' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_AWCACHE' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem0_AWCACHE' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_AWPROT' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem0_AWPROT' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_AWQOS' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem0_AWQOS' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_AWREGION' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem0_AWREGION' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_AWUSER' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem0_AWUSER' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_WVALID' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem0_WVALID' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_WREADY' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_WDATA' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem0_WDATA' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_WSTRB' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem0_WSTRB' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_WLAST' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem0_WLAST' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_WID' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem0_WID' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_WUSER' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem0_WUSER' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_ARVALID' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem0_ARVALID' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_ARREADY' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_ARADDR' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem0_ARADDR' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_ARID' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem0_ARID' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_ARLEN' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem0_ARLEN' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_ARSIZE' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem0_ARSIZE' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_ARBURST' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem0_ARBURST' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_ARLOCK' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem0_ARLOCK' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_ARCACHE' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem0_ARCACHE' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_ARPROT' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem0_ARPROT' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_ARQOS' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem0_ARQOS' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_ARREGION' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem0_ARREGION' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_ARUSER' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem0_ARUSER' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_RVALID' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_RREADY' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem0_RREADY' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_RDATA' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_RLAST' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_RID' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_RUSER' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_RRESP' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_BVALID' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_BREADY' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem0_BREADY' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_BRESP' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_BID' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem0_BUSER' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_AWVALID' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem1_AWVALID' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_AWREADY' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_AWADDR' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem1_AWADDR' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_AWID' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem1_AWID' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_AWLEN' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem1_AWLEN' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_AWSIZE' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem1_AWSIZE' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_AWBURST' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem1_AWBURST' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_AWLOCK' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem1_AWLOCK' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_AWCACHE' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem1_AWCACHE' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_AWPROT' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem1_AWPROT' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_AWQOS' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem1_AWQOS' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_AWREGION' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem1_AWREGION' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_AWUSER' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem1_AWUSER' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_WVALID' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem1_WVALID' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_WREADY' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_WDATA' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem1_WDATA' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_WSTRB' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem1_WSTRB' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_WLAST' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem1_WLAST' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_WID' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem1_WID' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_WUSER' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem1_WUSER' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_ARVALID' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem1_ARVALID' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_ARREADY' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_ARADDR' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem1_ARADDR' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_ARID' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem1_ARID' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_ARLEN' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem1_ARLEN' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_ARSIZE' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem1_ARSIZE' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_ARBURST' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem1_ARBURST' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_ARLOCK' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem1_ARLOCK' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_ARCACHE' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem1_ARCACHE' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_ARPROT' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem1_ARPROT' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_ARQOS' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem1_ARQOS' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_ARREGION' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem1_ARREGION' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_ARUSER' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem1_ARUSER' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_RVALID' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_RREADY' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'activation_accelerator/m_axi_gmem1_RREADY' to 0.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_RDATA' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_RLAST' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_RID' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_RUSER' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_RRESP' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'activation_accelerator/m_axi_gmem1_BVALID' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-104] Estimated max fanout for 'activation_accelerator' is 9824 from HDL expression: (1'b1 == ap_CS_fsm_state63)
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_4_full_dsp_1': 32 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 32 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_9_no_dsp_1': 32 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_8_full_dsp_1': 32 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 32 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsqrt_32ns_32ns_32_8_no_dsp_1': 64 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_4_full_dsp_1': 32 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'activation_accelerator'.
+INFO: [RTMG 210-278] Implementing memory 'activation_accelerator_activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_29_bkb' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.65 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.69 seconds; current allocated memory: 1.357 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.88 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.93 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1.17 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.18 seconds; current allocated memory: 1.454 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for activation_accelerator.
+INFO: [VLOG 209-307] Generating Verilog RTL for activation_accelerator.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 135.32 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:30; Allocated memory: 847.074 MB.

@@ -540,60 +540,6 @@ softmax_final:
 }
 
 
-// // 外层步进（列方向），II=1
-// max_step_loop_softmax1:
-//     for (int i = 0; i < row_len_unroll; ++i) {
-// // #pragma HLS PIPELINE II=1
-//         for (int u = 0; u < col_len_unroll; ++u) {
-//         #pragma HLS UNROLL
-//         // 索引规则与你 rms_norm 相同：u 是“行/通道”lane，i 是“步”
-//             int idx = u * row_len_unroll + i;
-//             int idx_col = idx/row_len;
-//             // std::cout << "idx_col ≈ " << idx_col << std::endl;
-//             //数据格式变换内置
-//             uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
-//             float f_x = *(float*)&x_f32;     
-//             max_row[idx_col] = hls::fmaxf(max_row[idx_col], f_x);
-//         }
-//     }
-
-// exp_and_bucket_softmax:
-//     for (int i = 0; i < row_len_unroll; ++i) {
-// // #pragma HLS PIPELINE II = 6
-//     exp_inner_softmax:
-//         // pass 1: 只算exp，写到exp_buf
-//         for (int u = 0; u < col_len_unroll; ++u) {
-//         #pragma HLS UNROLL
-//             int idx = u * row_len_unroll + i; 
-//             int idx_col = idx/row_len;
-//             //数据格式变换内置
-//             uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
-//             float f_x = *(float*)&x_f32;
-//             float ex = hls::expf(f_x - max_row[idx_col]);
-//             sum_row[idx_col] += ex;
-//         }
-//     }
-    
-// softmax_final:
-//     for (int i = 0; i < row_len_unroll; ++i) {
-// // #pragma HLS PIPELINE II = 2
-//     softmax_final_inner:
-//         for (int u = 0; u < col_len_unroll; ++u) {
-// #pragma HLS UNROLL
-//             int idx = u * row_len_unroll + i;
-//             int idx_col = idx/row_len;
-
-//             float den = sum_row[idx_col];
-//             float inv = (den > 0.f) ? (1.0f/den) : 0.f;
-
-//             uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
-//             float f_x = *(float*)&x_f32; 
-
-//             float ex1 = hls::expf(f_x - max_row[idx_col]);
-//             out[idx] = round_float32_to_bf16_ieee(ex1 * inv);
-//         }
-
-
 
 // template<int col_len = 64, int row_len = 768>
 void float_Multiply2(const uint16_t* x, const uint16_t* y, uint16* out, int len) {
@@ -669,23 +615,17 @@ void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, 
 #pragma HLS ALLOCATION operation instances=fmax limit=32
 #pragma HLS ALLOCATION operation instances=fdiv limit=32
 
-    volatile uint16 anchor_reg;
-    {
-        float dummy_val = 0.0f;
-        uint16 tmp_quant = round_float32_to_bf16_ieee(dummy_val);
-        anchor_reg = tmp_quant;
-    }
     
-    // if(stage == 0) { // Stage 0: Load data from PS to PL
-    //     stage_0_load0:
-    //     for(int i = 0; i <64*768 ; i++) {
-    //         buf0[i] = in0[i];
-    //     }
-    //     stage_0_load1:
-    //     for(int i = 0; i <64*768 ; i++) {
-    //         buf1[i] = in1[i];
-    //     }
-    // }
+    if(stage == 0) { // Stage 0: Load data from PS to PL
+        stage_0_load0:
+        for(int i = 0; i <64*768 ; i++) {
+            buf0[i] = in0[i];
+        }
+        stage_0_load1:
+        for(int i = 0; i <64*768 ; i++) {
+            buf1[i] = in1[i];
+        }
+    }
 
   //修改两个config，把需要计算的函数改为0
 

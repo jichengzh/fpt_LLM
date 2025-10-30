@@ -1,7 +1,9 @@
 // ==============================================================
-// Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
-// Tool Version Limit: 2019.12
+// Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.2 (64-bit)
+// Tool Version Limit: 2024.11
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+// Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+// 
 // ==============================================================
 #ifndef XACTIVATION_ACCELERATOR_H
 #define XACTIVATION_ACCELERATOR_H
@@ -38,7 +40,11 @@ typedef uint32_t u32;
 typedef uint64_t u64;
 #else
 typedef struct {
+#ifdef SDT
+    char *Name;
+#else
     u16 DeviceId;
+#endif
     u64 Control_BaseAddress;
 } XActivation_accelerator_Config;
 #endif
@@ -73,8 +79,13 @@ typedef u32 word_type;
 
 /************************** Function Prototypes *****************************/
 #ifndef __linux__
+#ifdef SDT
+int XActivation_accelerator_Initialize(XActivation_accelerator *InstancePtr, UINTPTR BaseAddress);
+XActivation_accelerator_Config* XActivation_accelerator_LookupConfig(UINTPTR BaseAddress);
+#else
 int XActivation_accelerator_Initialize(XActivation_accelerator *InstancePtr, u16 DeviceId);
 XActivation_accelerator_Config* XActivation_accelerator_LookupConfig(u16 DeviceId);
+#endif
 int XActivation_accelerator_CfgInitialize(XActivation_accelerator *InstancePtr, XActivation_accelerator_Config *ConfigPtr);
 #else
 int XActivation_accelerator_Initialize(XActivation_accelerator *InstancePtr, const char* InstanceName);
