@@ -56701,7 +56701,7 @@ void float_gelu2(const uint16* x, float* y, int len) {
 
 static void float_add2(const uint16_t* x, const uint16_t* y, float* out, int len) {
 #pragma HLS INLINE
- const int col_len = 64;
+ const int col_len = 32;
     const int row_len = len/col_len;
 
 
@@ -56753,7 +56753,7 @@ init_lane_max_softmax:
     }
 
 
-max_step_loop_softmax:
+softmax_max_step_loop:
     for (int i = 0; i < row_len; ++i) {
 #pragma HLS ALLOCATION operation instances=fmaxf limit=32
 
@@ -56782,7 +56782,7 @@ init_partial_softmax:
  sum_row[u] = 0.f;
     }
 
-exp_and_bucket_softmax:
+softmax_exp_and_bucket:
     for (int i = 0; i < row_len; ++i) {
 
 #pragma HLS ALLOCATION operation instances=fexp limit=32
@@ -56812,7 +56812,7 @@ softmax_final:
  int idx = u * row_len + i;
 
             float den = sum_row[u];
-            float inv = (den > 0.f) ? (1.0f/den) : 0.f;
+            float inv = 1.0f/den;
 
             uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
             float f_x = *(float*)&x_f32;
@@ -56829,7 +56829,7 @@ softmax_final:
 
 void float_Multiply2(const uint16_t* x, const uint16_t* y, float* out, int len) {
 #pragma HLS INLINE
- const int col_len = 64;
+ const int col_len = 32;
     const int row_len = len/col_len;
 
 

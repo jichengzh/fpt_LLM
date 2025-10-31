@@ -1,10 +1,10 @@
 {
   "0": {
-    "basicblocks": 1330,
+    "basicblocks": 1266,
     "calls": "3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 1 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 3 1 4 3 3 3 3",
     "file": "activation_accelerator.cpp",
     "fileloc": 571,
-    "instructions": 96211,
+    "instructions": 82195,
     "loads": {
       "G": 1824,
       "L": 384,
@@ -16,7 +16,7 @@
       "L": 640,
       "T": 1
     },
-    "total_instructions": 149961
+    "total_instructions": 135945
   },
   "1": {
     "basicblocks": 3,

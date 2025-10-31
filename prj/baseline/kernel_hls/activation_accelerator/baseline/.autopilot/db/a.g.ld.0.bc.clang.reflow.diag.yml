@@ -525,7 +525,7 @@ Args:
   - String:          'in function '''
   - String:          activation_accelerator
   - String:          ''' completely with a factor of '
-  - Factor:          '64'
+  - Factor:          '32'
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
@@ -541,7 +541,7 @@ Args:
   - String:          'in function '''
   - String:          activation_accelerator
   - String:          ''' completely with a factor of '
-  - Factor:          '64'
+  - Factor:          '32'
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
@@ -884,7 +884,7 @@ Args:
   - Length:          '49152'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ '
-  - AccessID:        in04746seq
+  - AccessID:        in04872seq
   - ArrayName:       in0
   - String:          ' '
   - BundleName:      gmem0
@@ -914,7 +914,7 @@ Args:
   - Length:          '49152'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ '
-  - AccessID:        in14747seq
+  - AccessID:        in14873seq
   - ArrayName:       in1
   - String:          ' '
   - BundleName:      gmem1
@@ -944,7 +944,7 @@ Args:
   - Length:          '49152'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ '
-  - AccessID:        out4748seq
+  - AccessID:        out4874seq
   - ArrayName:       out
   - String:          ' '
   - BundleName:      gmem2
@@ -976,7 +976,7 @@ Args:
   - OrigAccess:      call
     DebugLoc:        { File: activation_accelerator.cpp, Line: 617, Column: 9 }
   - OrigDirection:   read
-  - OrigID:          in14747seq
+  - OrigID:          in14873seq
   - ArrayName:       in1
   - String:          ' '
   - BundleName:      gmem1
@@ -1003,7 +1003,7 @@ Args:
   - OrigAccess:      call
     DebugLoc:        { File: activation_accelerator.cpp, Line: 613, Column: 9 }
   - OrigDirection:   read
-  - OrigID:          in04746seq
+  - OrigID:          in04872seq
   - ArrayName:       in0
   - String:          ' '
   - BundleName:      gmem0
@@ -1030,7 +1030,7 @@ Args:
   - OrigAccess:      call
     DebugLoc:        { File: activation_accelerator.cpp, Line: 666, Column: 9 }
   - OrigDirection:   write
-  - OrigID:          out4748seq
+  - OrigID:          out4874seq
   - ArrayName:       out
   - String:          ' '
   - BundleName:      gmem2
@@ -1138,7 +1138,7 @@ Pass:            auto-loop-pipeline
 Name:            AutoLoopPipeline
 Args:            
   - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        exp_and_bucket_softmax
+  - LoopName:        softmax_exp_and_bucket
   - String:          '> at '
   - LoopLoc:         'activation_accelerator.cpp:490:5'
   - String:          ' '

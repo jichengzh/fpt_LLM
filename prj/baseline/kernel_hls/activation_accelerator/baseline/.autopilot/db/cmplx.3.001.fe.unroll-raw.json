@@ -1,39 +1,24 @@
 {
   "0": {
-    "basicblocks": 270,
-    "calls": "1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 3 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 1 3 4 1 1 1 1",
+    "basicblocks": 78,
+    "calls": "4 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 4 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 4 2 3 4 4 4 4",
     "file": "activation_accelerator.cpp",
     "fileloc": 571,
-    "instructions": 12502,
+    "instructions": 11094,
     "loads": {
-      "G": 737,
+      "G": 609,
       "L": 801,
       "T": 2
     },
     "name": "activation_accelerator",
     "stores": {
-      "G": 450,
+      "G": 386,
       "L": 705,
       "T": 1
     },
-    "total_instructions": 29383
+    "total_instructions": 27975
   },
   "1": {
-    "basicblocks": 6,
-    "calls": "5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5",
-    "file": "activation_accelerator.cpp",
-    "fileloc": 72,
-    "instructions": 265,
-    "loads": {
-      "G": 32
-    },
-    "name": "f32_to_bf16_array",
-    "stores": {
-      "G": 32
-    },
-    "total_instructions": 1865
-  },
-  "2": {
     "basicblocks": 22,
     "calls": "",
     "file": "bf16_accl.h",
@@ -42,7 +27,7 @@
     "name": "bf16_fmax_u16",
     "total_instructions": 47
   },
-  "3": {
+  "2": {
     "basicblocks": 9,
     "calls": "",
     "file": "bf16_accl.h",
@@ -58,7 +43,7 @@
     },
     "total_instructions": 1096
   },
-  "4": {
+  "3": {
     "basicblocks": 1,
     "calls": "",
     "file": "sqrtfloat.cpp",
@@ -66,6 +51,21 @@
     "instructions": 2,
     "name": "sqrtf",
     "total_instructions": 2
+  },
+  "4": {
+    "basicblocks": 6,
+    "calls": "5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5",
+    "file": "activation_accelerator.cpp",
+    "fileloc": 72,
+    "instructions": 265,
+    "loads": {
+      "G": 32
+    },
+    "name": "f32_to_bf16_array",
+    "stores": {
+      "G": 32
+    },
+    "total_instructions": 1865
   },
   "5": {
     "basicblocks": 18,

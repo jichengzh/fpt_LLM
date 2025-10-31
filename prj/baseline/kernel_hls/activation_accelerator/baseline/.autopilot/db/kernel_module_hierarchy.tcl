@@ -1,27 +1,27 @@
 set ModuleHierarchy {[{
 "Name" : "activation_accelerator","ID" : "0","Type" : "sequential",
 "SubInsts" : [
-	{"Name" : "grp_activation_accelerator_Pipeline_gelu_blocks_fu_14392","ID" : "1","Type" : "sequential",
+	{"Name" : "grp_activation_accelerator_Pipeline_gelu_blocks_fu_14382","ID" : "1","Type" : "sequential",
 		"SubLoops" : [
 		{"Name" : "gelu_blocks","ID" : "2","Type" : "pipeline"},]},
-	{"Name" : "grp_activation_accelerator_Pipeline_add_blocks_fu_14652","ID" : "3","Type" : "sequential",
+	{"Name" : "grp_activation_accelerator_Pipeline_add_blocks_fu_14642","ID" : "3","Type" : "sequential",
 		"SubLoops" : [
 		{"Name" : "add_blocks","ID" : "4","Type" : "pipeline"},]},
-	{"Name" : "grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_15040","ID" : "5","Type" : "sequential",
+	{"Name" : "grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_15030","ID" : "5","Type" : "sequential",
 		"SubLoops" : [
 		{"Name" : "multiply_blocks_Multiply","ID" : "6","Type" : "pipeline"},]},
-	{"Name" : "grp_square_fu_15428","ID" : "7","Type" : "sequential",
+	{"Name" : "grp_square_fu_15418","ID" : "7","Type" : "sequential",
 		"SubInsts" : [
 		{"Name" : "grp_square_Pipeline_sum_square_fu_392","ID" : "8","Type" : "sequential",
 			"SubLoops" : [
 			{"Name" : "sum_square","ID" : "9","Type" : "pipeline"},]},]},
-	{"Name" : "grp_activation_accelerator_Pipeline_silu_blocks_fu_15560","ID" : "10","Type" : "sequential",
+	{"Name" : "grp_activation_accelerator_Pipeline_silu_blocks_fu_15550","ID" : "10","Type" : "sequential",
 		"SubLoops" : [
 		{"Name" : "silu_blocks","ID" : "11","Type" : "pipeline"},]},
-	{"Name" : "grp_activation_accelerator_Pipeline_stage_2_store_fu_15820","ID" : "12","Type" : "sequential",
+	{"Name" : "grp_activation_accelerator_Pipeline_stage_2_store_fu_15810","ID" : "12","Type" : "sequential",
 		"SubLoops" : [
 		{"Name" : "stage_2_store","ID" : "13","Type" : "pipeline"},]},
-	{"Name" : "grp_f32_to_bf16_array_fu_15955","ID" : "14","Type" : "sequential",
+	{"Name" : "grp_f32_to_bf16_array_fu_15945","ID" : "14","Type" : "sequential",
 		"SubLoops" : [
 		{"Name" : "pack_rows","ID" : "15","Type" : "pipeline",
 		"SubInsts" : [
@@ -57,34 +57,34 @@ set ModuleHierarchy {[{
 		{"Name" : "tmp_29_round_float32_to_bf16_ieee_fu_1976","ID" : "45","Type" : "pipeline"},
 		{"Name" : "tmp_30_round_float32_to_bf16_ieee_fu_1967","ID" : "46","Type" : "pipeline"},
 		{"Name" : "tmp_31_round_float32_to_bf16_ieee_fu_1978","ID" : "47","Type" : "pipeline"},]},]},
-	{"Name" : "grp_activation_accelerator_Pipeline_rms_calculate_loop_rms_norm3_fu_16215","ID" : "48","Type" : "sequential",
+	{"Name" : "grp_activation_accelerator_Pipeline_rms_calculate_loop_rms_norm3_fu_16205","ID" : "48","Type" : "sequential",
 		"SubLoops" : [
 		{"Name" : "rms_calculate_loop_rms_norm3","ID" : "49","Type" : "pipeline"},]},
-	{"Name" : "grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_16347","ID" : "50","Type" : "sequential",
+	{"Name" : "grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_16337","ID" : "50","Type" : "sequential",
 		"SubLoops" : [
 		{"Name" : "normalize_blocks_rms_norm3","ID" : "51","Type" : "pipeline"},]},
-	{"Name" : "grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_16671","ID" : "52","Type" : "sequential",
+	{"Name" : "grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_16661","ID" : "52","Type" : "sequential",
 		"SubLoops" : [
 		{"Name" : "mean_blocks_layer_norm3","ID" : "53","Type" : "pipeline"},]},
-	{"Name" : "grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_16867","ID" : "54","Type" : "sequential",
+	{"Name" : "grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_16857","ID" : "54","Type" : "sequential",
 		"SubLoops" : [
 		{"Name" : "normalize_blocks_layer_norm3","ID" : "55","Type" : "pipeline"},]},
-	{"Name" : "grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_17516","ID" : "56","Type" : "sequential",
+	{"Name" : "grp_activation_accelerator_Pipeline_softmax_exp_and_bucket_fu_17506","ID" : "56","Type" : "sequential",
 		"SubLoops" : [
-		{"Name" : "exp_and_bucket_softmax","ID" : "57","Type" : "pipeline"},]},
-	{"Name" : "grp_activation_accelerator_Pipeline_softmax_final_fu_17776","ID" : "58","Type" : "sequential",
+		{"Name" : "softmax_exp_and_bucket","ID" : "57","Type" : "pipeline"},]},
+	{"Name" : "grp_activation_accelerator_Pipeline_softmax_final_fu_17766","ID" : "58","Type" : "sequential",
 		"SubLoops" : [
 		{"Name" : "softmax_final","ID" : "59","Type" : "pipeline"},]},
-	{"Name" : "grp_activation_accelerator_Pipeline_stage_0_load0_fu_18164","ID" : "60","Type" : "sequential",
+	{"Name" : "grp_activation_accelerator_Pipeline_stage_0_load0_fu_18186","ID" : "60","Type" : "sequential",
 		"SubLoops" : [
 		{"Name" : "stage_0_load0","ID" : "61","Type" : "pipeline"},]},
-	{"Name" : "grp_activation_accelerator_Pipeline_stage_0_load1_fu_18299","ID" : "62","Type" : "sequential",
+	{"Name" : "grp_activation_accelerator_Pipeline_stage_0_load1_fu_18321","ID" : "62","Type" : "sequential",
 		"SubLoops" : [
 		{"Name" : "stage_0_load1","ID" : "63","Type" : "pipeline"},]},],
 "SubLoops" : [
-	{"Name" : "max_step_loop_softmax","ID" : "64","Type" : "no",
+	{"Name" : "softmax_max_step_loop","ID" : "64","Type" : "no",
 	"SubInsts" : [
-	{"Name" : "grp_activation_accelerator_Pipeline_lane_reduce_fu_17255","ID" : "65","Type" : "sequential",
+	{"Name" : "grp_activation_accelerator_Pipeline_lane_reduce_fu_17245","ID" : "65","Type" : "sequential",
 			"SubLoops" : [
 			{"Name" : "lane_reduce","ID" : "66","Type" : "pipeline",
 			"SubInsts" : [

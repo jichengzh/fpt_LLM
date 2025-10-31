@@ -116,15 +116,17 @@ void float_sige(const uint16* x, uint16* y, int len, const float alpha){
 
 
 
-void float_silu2(const uint16* x, float* y, int len, int a){
+void float_silu2(const uint16* x, float* y, int len){
 #pragma HLS INLINE// 关键：先禁止整体内联，保留下这个函数层级
 // #pragma HLS ALLOCATION function instances=round_float32_to_bf16_ieee limit=64
     
-    const int col_len = 32;
+    const int col_len = 64;
     const int row_len = len/col_len;
+    const int UF =32;
+    const int row_len_unroll = row_len * 2;
     
     silu_blocks:
-    for (int i = a; i < row_len; ++i){
+    for (int i = 0; i < row_len; ++i){
     #pragma HLS ALLOCATION operation instances=fexp limit=32
     #pragma HLS ALLOCATION operation instances=fadd limit=32
     // #pragma HLS ALLOCATION function instances = round_float32_to_bf16_ieee limit = 32
@@ -577,7 +579,7 @@ void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, 
     static uint16 buf0[64*768];
     static uint16 buf1[64*768];
     static uint16 buf2[64*768];
-    static float fbuf2[32*768];
+    static float fbuf2[64*768];
     // float max_row[64];
     // float sum_row[64];
 // #pragma HLS BIND_STORAGE variable=buf0 type=ram_2p impl=uram
@@ -587,7 +589,7 @@ void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, 
 #pragma HLS DEPENDENCE variable=buf1 inter false
 #pragma HLS ARRAY_PARTITION variable=buf2 block factor = 64 //拆分数组为64块
 #pragma HLS DEPENDENCE variable=buf2 inter false
-#pragma HLS ARRAY_PARTITION variable=fbuf2 block factor = 32 //拆分数组为64块
+#pragma HLS ARRAY_PARTITION variable=fbuf2 block factor = 64 //拆分数组为64块
 #pragma HLS DEPENDENCE variable=fbuf2 inter false
     
 // #pragma HLS ARRAY_PARTITION variable=max_row block factor = 32 //拆分数组为64块
@@ -623,35 +625,33 @@ void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, 
 
         if(config == 3) { // SiLU
             // float_sige(buf0, buf2, 64*768, 1.0f);
-            float_silu2(buf0, fbuf2, 64*768, 0);
-            f32_to_bf16_array(fbuf2, buf2, 32*768, 0);
-            float_silu2(buf0, fbuf2, 64*768, 32);
-            f32_to_bf16_array(fbuf2, buf2, 32*768, 32);
+            float_silu2(buf0, fbuf2, 64*768);
+            f32_to_bf16_array(fbuf2, buf2, 64*768);
         }
 
         else if(config == 0) { // safe softmax
             float_safe_softmax3(buf0, fbuf2, 64*768);
-            f32_to_bf16_array(fbuf2, buf2, 32*768);
+            f32_to_bf16_array(fbuf2, buf2, 64*768);
         }
 
         else if(config == 1) { // Layer normalization
             float_layer_norm3(buf0, fbuf2, 64*768);
-            f32_to_bf16_array(fbuf2, buf2, 32*768);
+            f32_to_bf16_array(fbuf2, buf2, 64*768);
         }
 
         else if(config == 2) { // RMS normalization
             float_rms_norm3(buf0, fbuf2, 64*768);
-            f32_to_bf16_array(fbuf2, buf2, 32*768);
+            f32_to_bf16_array(fbuf2, buf2, 64*768);
         }
 
         else if(config == 6) { // float_Multiply
             float_Multiply2(buf0, buf1, fbuf2, 64*768);
-            f32_to_bf16_array(fbuf2, buf2, 32*768);
+            f32_to_bf16_array(fbuf2, buf2, 64*768);
         }
 
         else if(config == 5) { //Element-wise addition
             float_add2(buf0, buf1, fbuf2, 64*768);
-            f32_to_bf16_array(fbuf2, buf2, 32*768);
+            f32_to_bf16_array(fbuf2, buf2, 64*768);
         }
 
         else if(config == 4) { //Gelu

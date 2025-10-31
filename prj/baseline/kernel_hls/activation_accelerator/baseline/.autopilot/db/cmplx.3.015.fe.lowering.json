@@ -1,10 +1,10 @@
 {
   "0": {
-    "basicblocks": 246,
-    "calls": "1 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 1 4 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 4 2 1 1 1 1",
+    "basicblocks": 252,
+    "calls": "2 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 2 5 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 5 1 2 2 2 2",
     "file": "activation_accelerator.cpp",
     "fileloc": 571,
-    "instructions": 11783,
+    "instructions": 11353,
     "loads": {
       "G": 832,
       "L": 192
@@ -14,9 +14,18 @@
       "G": 576,
       "L": 320
     },
-    "total_instructions": 25893
+    "total_instructions": 25463
   },
   "1": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "sqrtfloat.cpp",
+    "fileloc": 11,
+    "instructions": 2,
+    "name": "sqrtf",
+    "total_instructions": 2
+  },
+  "2": {
     "basicblocks": 6,
     "calls": "3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3",
     "file": "activation_accelerator.cpp",
@@ -31,15 +40,6 @@
     },
     "total_instructions": 1648
   },
-  "2": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "sqrtfloat.cpp",
-    "fileloc": 11,
-    "instructions": 2,
-    "name": "sqrtf",
-    "total_instructions": 2
-  },
   "3": {
     "basicblocks": 7,
     "calls": "",
@@ -50,6 +50,15 @@
     "total_instructions": 39
   },
   "4": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "bf16_accl.h",
+    "fileloc": 112,
+    "instructions": 32,
+    "name": "bf16_fmax_u16",
+    "total_instructions": 32
+  },
+  "5": {
     "basicblocks": 3,
     "calls": "",
     "file": "bf16_accl.h",
@@ -64,14 +73,5 @@
       "L": 64
     },
     "total_instructions": 710
-  },
-  "5": {
-    "basicblocks": 3,
-    "calls": "",
-    "file": "bf16_accl.h",
-    "fileloc": 112,
-    "instructions": 32,
-    "name": "bf16_fmax_u16",
-    "total_instructions": 32
   }
 }

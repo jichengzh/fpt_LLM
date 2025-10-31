@@ -27,48 +27,48 @@ Set activation_accelerator.stage = 0
 Data transfer complete
 
 --- Testing Config 0 ---
-Config 0 compute time: 3399.67 ms
+Config 0 compute time: 3414.02 ms
 Output results saved to: /home/jicz/fpt_LLM/prj/testvector_example/bf16_vectors/hls_output_config_0.bin
-Max Difference: 65535
+Max Difference: 32831
 Config 0 test failed with 8644 errors
 
 --- Testing Config 1 ---
-Config 1 compute time: 0.508225 ms
+Config 1 compute time: 0.519334 ms
 Output results saved to: /home/jicz/fpt_LLM/prj/testvector_example/bf16_vectors/hls_output_config_1.bin
 Max Difference: 65535
 Config 1 test failed with 10496 errors
 
 --- Testing Config 2 ---
-Config 2 compute time: 0.436973 ms
+Config 2 compute time: 0.434418 ms
 Output results saved to: /home/jicz/fpt_LLM/prj/testvector_example/bf16_vectors/hls_output_config_2.bin
 Max Difference: 32831
 Config 2 test failed with 6026 errors
 
 --- Testing Config 3 ---
-Config 3 compute time: 2244.79 ms
+Config 3 compute time: 2241.84 ms
 Output results saved to: /home/jicz/fpt_LLM/prj/testvector_example/bf16_vectors/hls_output_config_3.bin
 Max Difference: 63
 Config 3 test failed with 126 errors
 
 --- Testing Config 4 ---
-Config 4 compute time: 2044.9 ms
+Config 4 compute time: 2045.57 ms
 Output results saved to: /home/jicz/fpt_LLM/prj/testvector_example/bf16_vectors/hls_output_config_4.bin
 Max Difference: 14960
 Config 4 test failed with 20501 errors
 
 --- Testing Config 5 ---
-Config 5 compute time: 0.281184 ms
+Config 5 compute time: 0.27762 ms
 Output results saved to: /home/jicz/fpt_LLM/prj/testvector_example/bf16_vectors/hls_output_config_5.bin
 Max Difference: 0
 Config 5 test passed!
 
 --- Testing Config 6 ---
-Config 6 compute time: 0.374567 ms
+Config 6 compute time: 0.393002 ms
 Output results saved to: /home/jicz/fpt_LLM/prj/testvector_example/bf16_vectors/hls_output_config_6.bin
 Max Difference: 0
 Config 6 test passed!
 
-Total compute time for all configs: 7690.96 ms
+Total compute time for all configs: 7703.06 ms
 
 === Test Complete ===
 INFO: [SIM 1] CSim done with 0 errors.

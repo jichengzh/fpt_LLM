@@ -1,39 +1,24 @@
 {
   "0": {
     "basicblocks": 49,
-    "calls": "1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 3 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 1 3 4 1 1 1 1",
+    "calls": "4 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 4 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 4 2 3 4 4 4 4",
     "file": "activation_accelerator.cpp",
     "fileloc": 571,
-    "instructions": 9665,
+    "instructions": 8641,
     "loads": {
-      "G": 737,
+      "G": 609,
       "L": 289,
       "T": 2
     },
     "name": "activation_accelerator",
     "stores": {
-      "G": 450,
+      "G": 386,
       "L": 641,
       "T": 1
     },
-    "total_instructions": 22613
+    "total_instructions": 21589
   },
   "1": {
-    "basicblocks": 3,
-    "calls": "5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5",
-    "file": "activation_accelerator.cpp",
-    "fileloc": 72,
-    "instructions": 198,
-    "loads": {
-      "G": 32
-    },
-    "name": "f32_to_bf16_array",
-    "stores": {
-      "G": 32
-    },
-    "total_instructions": 1446
-  },
-  "2": {
     "basicblocks": 3,
     "calls": "",
     "file": "bf16_accl.h",
@@ -42,7 +27,7 @@
     "name": "bf16_fmax_u16",
     "total_instructions": 32
   },
-  "3": {
+  "2": {
     "basicblocks": 3,
     "calls": "",
     "file": "bf16_accl.h",
@@ -58,7 +43,7 @@
     },
     "total_instructions": 836
   },
-  "4": {
+  "3": {
     "basicblocks": 1,
     "calls": "",
     "file": "sqrtfloat.cpp",
@@ -66,6 +51,21 @@
     "instructions": 2,
     "name": "sqrtf",
     "total_instructions": 2
+  },
+  "4": {
+    "basicblocks": 3,
+    "calls": "5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5",
+    "file": "activation_accelerator.cpp",
+    "fileloc": 72,
+    "instructions": 198,
+    "loads": {
+      "G": 32
+    },
+    "name": "f32_to_bf16_array",
+    "stores": {
+      "G": 32
+    },
+    "total_instructions": 1446
   },
   "5": {
     "basicblocks": 6,

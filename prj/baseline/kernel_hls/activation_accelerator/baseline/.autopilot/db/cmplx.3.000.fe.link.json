@@ -1,7 +1,7 @@
 {
   "0": {
     "basicblocks": 45,
-    "calls": "7 5 11 5 14 5 13 5 2 5 1 5 8 5",
+    "calls": "10 13 12 13 1 13 9 13 6 13 5 13 3 13",
     "file": "activation_accelerator.cpp",
     "fileloc": 571,
     "instructions": 116,
@@ -14,24 +14,39 @@
       "G": 2,
       "T": 1
     },
-    "total_instructions": 1600
+    "total_instructions": 1595
   },
   "1": {
-    "basicblocks": 13,
-    "calls": "",
+    "basicblocks": 43,
+    "calls": "4 11",
     "file": "activation_accelerator.cpp",
-    "fileloc": 406,
-    "instructions": 54,
+    "fileloc": 260,
+    "instructions": 167,
     "loads": {
-      "L": 4
+      "L": 11
     },
-    "name": "float_add2",
+    "name": "float_layer_norm3",
     "stores": {
-      "L": 3
+      "L": 8
     },
-    "total_instructions": 54
+    "total_instructions": 227
   },
   "10": {
+    "basicblocks": 13,
+    "calls": "7",
+    "file": "activation_accelerator.cpp",
+    "fileloc": 119,
+    "instructions": 47,
+    "loads": {
+      "L": 2
+    },
+    "name": "float_silu2",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 51
+  },
+  "11": {
     "basicblocks": 1,
     "calls": "",
     "file": "sqrtfloat.cpp",
@@ -40,12 +55,12 @@
     "name": "sqrtf",
     "total_instructions": 2
   },
-  "11": {
-    "basicblocks": 52,
-    "calls": "6 3 3",
+  "12": {
+    "basicblocks": 49,
+    "calls": "2 7 7",
     "file": "activation_accelerator.cpp",
     "fileloc": 435,
-    "instructions": 192,
+    "instructions": 187,
     "loads": {
       "L": 12
     },
@@ -53,9 +68,24 @@
     "stores": {
       "L": 9
     },
-    "total_instructions": 271
+    "total_instructions": 266
   },
-  "12": {
+  "13": {
+    "basicblocks": 13,
+    "calls": "14",
+    "file": "activation_accelerator.cpp",
+    "fileloc": 72,
+    "instructions": 30,
+    "loads": {
+      "L": 1
+    },
+    "name": "f32_to_bf16_array",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 89
+  },
+  "14": {
     "basicblocks": 18,
     "calls": "",
     "file": "activation_accelerator.cpp",
@@ -70,37 +100,61 @@
     },
     "total_instructions": 59
   },
-  "13": {
-    "basicblocks": 25,
-    "calls": "9 10",
+  "2": {
+    "basicblocks": 22,
+    "calls": "",
+    "file": "bf16_accl.h",
+    "fileloc": 112,
+    "instructions": 71,
+    "name": "bf16_fmax_u16",
+    "total_instructions": 71
+  },
+  "3": {
+    "basicblocks": 13,
+    "calls": "7",
     "file": "activation_accelerator.cpp",
-    "fileloc": 150,
-    "instructions": 90,
+    "fileloc": 370,
+    "instructions": 50,
+    "loads": {
+      "L": 2
+    },
+    "name": "float_gelu2",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 54
+  },
+  "4": {
+    "basicblocks": 19,
+    "calls": "",
+    "file": "bf16_accl.h",
+    "fileloc": 324,
+    "instructions": 58,
     "loads": {
       "L": 4
     },
-    "name": "float_rms_norm3",
+    "name": "square",
     "stores": {
-      "L": 5
+      "L": 3
     },
-    "total_instructions": 150
+    "total_instructions": 58
   },
-  "14": {
-    "basicblocks": 43,
-    "calls": "9 10",
+  "5": {
+    "basicblocks": 13,
+    "calls": "",
     "file": "activation_accelerator.cpp",
-    "fileloc": 260,
-    "instructions": 167,
+    "fileloc": 406,
+    "instructions": 54,
     "loads": {
-      "L": 11
+      "L": 4
     },
-    "name": "float_layer_norm3",
+    "name": "float_add2",
     "stores": {
-      "L": 8
+      "L": 3
     },
-    "total_instructions": 227
+    "total_instructions": 54
   },
-  "2": {
+  "6": {
     "basicblocks": 13,
     "calls": "",
     "file": "activation_accelerator.cpp",
@@ -115,16 +169,16 @@
     },
     "total_instructions": 54
   },
-  "3": {
+  "7": {
     "basicblocks": 1,
-    "calls": "4",
+    "calls": "8",
     "file": "expfloat.cpp",
     "fileloc": 20,
     "instructions": 2,
     "name": "expf",
     "total_instructions": 4
   },
-  "4": {
+  "8": {
     "basicblocks": 1,
     "calls": "",
     "file": "hls_exp_float.cpp",
@@ -133,73 +187,19 @@
     "name": "exp",
     "total_instructions": 2
   },
-  "5": {
-    "basicblocks": 13,
-    "calls": "12",
-    "file": "activation_accelerator.cpp",
-    "fileloc": 72,
-    "instructions": 30,
-    "loads": {
-      "L": 1
-    },
-    "name": "f32_to_bf16_array",
-    "stores": {
-      "L": 1
-    },
-    "total_instructions": 89
-  },
-  "6": {
-    "basicblocks": 22,
-    "calls": "",
-    "file": "bf16_accl.h",
-    "fileloc": 112,
-    "instructions": 71,
-    "name": "bf16_fmax_u16",
-    "total_instructions": 71
-  },
-  "7": {
-    "basicblocks": 13,
-    "calls": "3",
-    "file": "activation_accelerator.cpp",
-    "fileloc": 119,
-    "instructions": 47,
-    "loads": {
-      "L": 2
-    },
-    "name": "float_silu2",
-    "stores": {
-      "L": 2
-    },
-    "total_instructions": 51
-  },
-  "8": {
-    "basicblocks": 13,
-    "calls": "3",
-    "file": "activation_accelerator.cpp",
-    "fileloc": 370,
-    "instructions": 50,
-    "loads": {
-      "L": 2
-    },
-    "name": "float_gelu2",
-    "stores": {
-      "L": 2
-    },
-    "total_instructions": 54
-  },
   "9": {
-    "basicblocks": 19,
-    "calls": "",
-    "file": "bf16_accl.h",
-    "fileloc": 324,
-    "instructions": 58,
+    "basicblocks": 25,
+    "calls": "4 11",
+    "file": "activation_accelerator.cpp",
+    "fileloc": 150,
+    "instructions": 90,
     "loads": {
       "L": 4
     },
-    "name": "square",
+    "name": "float_rms_norm3",
     "stores": {
-      "L": 3
+      "L": 5
     },
-    "total_instructions": 58
+    "total_instructions": 150
   }
 }
