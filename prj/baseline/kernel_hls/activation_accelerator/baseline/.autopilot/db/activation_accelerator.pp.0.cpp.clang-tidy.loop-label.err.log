@@ -1,4 +1,4 @@
-27 errors generated.
+26 errors generated.
 Error while processing /home/jicz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp.
 clang-tidy applied 129 of 129 suggested fixes.
 Suppressed 87 warnings (87 in non-user code).

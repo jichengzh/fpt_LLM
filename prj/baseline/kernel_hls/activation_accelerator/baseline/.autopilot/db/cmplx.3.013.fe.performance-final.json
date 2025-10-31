@@ -1,38 +1,45 @@
 {
   "0": {
     "basicblocks": 246,
-    "calls": "3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 3 4 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 4 2 3 3 3 3",
+    "calls": "3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 1 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 3 1 4 3 3 3 3",
     "file": "activation_accelerator.cpp",
-    "fileloc": 475,
-    "instructions": 10994,
+    "fileloc": 571,
+    "instructions": 11888,
     "loads": {
-      "G": 768,
-      "L": 256
+      "G": 832,
+      "L": 192
     },
     "name": "activation_accelerator",
     "stores": {
       "G": 576,
       "L": 320
     },
-    "total_instructions": 25552
+    "total_instructions": 25998
   },
   "1": {
-    "basicblocks": 7,
+    "basicblocks": 3,
     "calls": "",
-    "file": "hls_fmax.h",
-    "fileloc": 19,
-    "instructions": 46,
-    "name": "generic_fmax<float>",
-    "total_instructions": 46
+    "file": "bf16_accl.h",
+    "fileloc": 324,
+    "instructions": 710,
+    "loads": {
+      "G": 64,
+      "L": 64
+    },
+    "name": "square",
+    "stores": {
+      "L": 64
+    },
+    "total_instructions": 710
   },
   "2": {
-    "basicblocks": 1,
+    "basicblocks": 3,
     "calls": "",
-    "file": "sqrtfloat.cpp",
-    "fileloc": 11,
-    "instructions": 2,
-    "name": "sqrtf",
-    "total_instructions": 2
+    "file": "bf16_accl.h",
+    "fileloc": 112,
+    "instructions": 32,
+    "name": "bf16_fmax_u16",
+    "total_instructions": 32
   },
   "3": {
     "basicblocks": 6,
@@ -50,20 +57,13 @@
     "total_instructions": 1648
   },
   "4": {
-    "basicblocks": 3,
+    "basicblocks": 1,
     "calls": "",
-    "file": "bf16_accl.h",
-    "fileloc": 324,
-    "instructions": 710,
-    "loads": {
-      "G": 64,
-      "L": 64
-    },
-    "name": "square",
-    "stores": {
-      "L": 64
-    },
-    "total_instructions": 710
+    "file": "sqrtfloat.cpp",
+    "fileloc": 11,
+    "instructions": 2,
+    "name": "sqrtf",
+    "total_instructions": 2
   },
   "5": {
     "basicblocks": 7,

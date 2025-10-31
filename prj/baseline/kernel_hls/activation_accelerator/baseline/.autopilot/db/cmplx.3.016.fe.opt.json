@@ -1,20 +1,20 @@
 {
   "0": {
     "basicblocks": 261,
-    "calls": "3 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 3 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 1 2 3 3 3 3",
+    "calls": "2 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 2 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 1 3 2 2 2 2",
     "file": "activation_accelerator.cpp",
-    "fileloc": 475,
-    "instructions": 10369,
+    "fileloc": 571,
+    "instructions": 11265,
     "loads": {
-      "G": 768,
-      "L": 256
+      "G": 832,
+      "L": 192
     },
     "name": "activation_accelerator",
     "stores": {
       "G": 576,
       "L": 320
     },
-    "total_instructions": 25196
+    "total_instructions": 25676
   },
   "1": {
     "basicblocks": 4,
@@ -33,17 +33,8 @@
     "total_instructions": 715
   },
   "2": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "sqrtfloat.cpp",
-    "fileloc": 11,
-    "instructions": 2,
-    "name": "sqrtf",
-    "total_instructions": 2
-  },
-  "3": {
     "basicblocks": 7,
-    "calls": "5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5",
+    "calls": "4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4",
     "file": "activation_accelerator.cpp",
     "fileloc": 72,
     "instructions": 405,
@@ -56,16 +47,16 @@
     },
     "total_instructions": 1685
   },
-  "4": {
-    "basicblocks": 7,
+  "3": {
+    "basicblocks": 1,
     "calls": "",
-    "file": "hls_fmax.h",
-    "fileloc": 19,
-    "instructions": 46,
-    "name": "generic_fmax<float>",
-    "total_instructions": 46
+    "file": "sqrtfloat.cpp",
+    "fileloc": 11,
+    "instructions": 2,
+    "name": "sqrtf",
+    "total_instructions": 2
   },
-  "5": {
+  "4": {
     "basicblocks": 7,
     "calls": "",
     "file": "activation_accelerator.cpp",
@@ -73,5 +64,14 @@
     "instructions": 40,
     "name": "round_float32_to_bf16_ieee",
     "total_instructions": 40
+  },
+  "5": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "bf16_accl.h",
+    "fileloc": 112,
+    "instructions": 33,
+    "name": "bf16_fmax_u16",
+    "total_instructions": 33
   }
 }

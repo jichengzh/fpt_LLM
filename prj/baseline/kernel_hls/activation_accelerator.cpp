@@ -116,17 +116,15 @@ void float_sige(const uint16* x, uint16* y, int len, const float alpha){
 
 
 
-void float_silu2(const uint16* x, float* y, int len){
+void float_silu2(const uint16* x, float* y, int len, int a){
 #pragma HLS INLINE// 关键：先禁止整体内联，保留下这个函数层级
 // #pragma HLS ALLOCATION function instances=round_float32_to_bf16_ieee limit=64
     
-    const int col_len = 64;
+    const int col_len = 32;
     const int row_len = len/col_len;
-    const int UF =32;
-    const int row_len_unroll = row_len * 2;
     
     silu_blocks:
-    for (int i = 0; i < row_len; ++i){
+    for (int i = a; i < row_len; ++i){
     #pragma HLS ALLOCATION operation instances=fexp limit=32
     #pragma HLS ALLOCATION operation instances=fadd limit=32
     // #pragma HLS ALLOCATION function instances = round_float32_to_bf16_ieee limit = 32
@@ -243,11 +241,10 @@ normalize_blocks_rms_norm3:
 #pragma HLS UNROLL
                 int idx = u * row_len + i;
 
-                // uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
-                // float f_x = *(float*)&x_f32;
+                uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
+                float f_x = *(float*)&x_f32;
                 
-                float f_x = bf16_to_float(x[idx]);
-                
+
                 float y = f_x / rms_sq[u];
                 
                 y_bf16[idx] = round_float32_to_bf16_ieee(y);
@@ -406,7 +403,7 @@ void float_gelu2(const uint16* x, float* y, int len) {
 
 static void float_add2(const uint16_t* x, const uint16_t* y, float* out, int len) {
 #pragma HLS INLINE
-    const int col_len = 64; 
+    const int col_len = 32; 
     const int row_len = len/col_len;
 
 
@@ -453,11 +450,12 @@ uint16_t max_row_bf16[col_len];
 init_lane_max_softmax:
     for (int u = 0; u < col_len; ++u) {
 #pragma HLS UNROLL
-        max_row[u] = -std::numeric_limits<float>::max();
+        // max_row_[u] = -std::numeric_limits<float>::max();
+        max_row_bf16[u] = 0xFF80;  // bf16 的 -INF
     }
 
 // 外层步进（列方向），II=1
-max_step_loop_softmax:
+softmax_max_step_loop:
     for (int i = 0; i < row_len; ++i) {
     #pragma HLS ALLOCATION operation instances=fmaxf limit=32
     // #pragma HLS PIPELINE II=1
@@ -473,8 +471,10 @@ max_step_loop_softmax:
             // uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
             // float f_x = *(float*)&x_f32;     
             // max_row[u] = hls::fmaxf(max_row[u], f_x);
-            max_row_bf16[u]=bf16_fmax_u16(max_row[u], x[idx]);
-        }   
+            max_row_bf16[u]=bf16_fmax_u16(max_row_bf16[u], x[idx]);
+            uint32_t max_f32 = ((uint32_t)max_row_bf16[u]) << 16;
+            max_row[u] = *(float*)&max_f32;
+        }
     }
 
     // 初始化桶
@@ -484,7 +484,7 @@ init_partial_softmax:
         sum_row[u] = 0.f;  // 0x0000
     }
 
-exp_and_bucket_softmax:
+softmax_exp_and_bucket:
     for (int i = 0; i < row_len; ++i) {
 // #pragma HLS PIPELINE II = 6
     #pragma HLS ALLOCATION operation instances=fexp limit=32
@@ -514,12 +514,13 @@ softmax_final:
             int idx = u * row_len + i;
 
             float den = sum_row[u];
-            float inv = (den > 0.f) ? (1.0f/den) : 0.f;
+            float inv = 1.0f/den;
 
             uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
             float f_x = *(float*)&x_f32; 
 
-            y[idx] = hls::expf(f_x - max_row[u]);
+            float ex1 = hls::expf(f_x - max_row[u]);
+            y[idx] = ex1 * inv;
             // out[idx] = round_float32_to_bf16_ieee(ex1 * inv);
         }
     }
@@ -530,7 +531,7 @@ softmax_final:
 // template<int col_len = 64, int row_len = 768>
 void float_Multiply2(const uint16_t* x, const uint16_t* y, float* out, int len) {
 #pragma HLS INLINE
-    const int col_len = 64;
+    const int col_len = 32;
     const int row_len = len/col_len;
 
 //     float  tmp_batch[64];
@@ -576,7 +577,7 @@ void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, 
     static uint16 buf0[64*768];
     static uint16 buf1[64*768];
     static uint16 buf2[64*768];
-    static float fbuf2[64*768];
+    static float fbuf2[32*768];
     // float max_row[64];
     // float sum_row[64];
 // #pragma HLS BIND_STORAGE variable=buf0 type=ram_2p impl=uram
@@ -586,7 +587,7 @@ void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, 
 #pragma HLS DEPENDENCE variable=buf1 inter false
 #pragma HLS ARRAY_PARTITION variable=buf2 block factor = 64 //拆分数组为64块
 #pragma HLS DEPENDENCE variable=buf2 inter false
-#pragma HLS ARRAY_PARTITION variable=fbuf2 block factor = 64 //拆分数组为64块
+#pragma HLS ARRAY_PARTITION variable=fbuf2 block factor = 32 //拆分数组为64块
 #pragma HLS DEPENDENCE variable=fbuf2 inter false
     
 // #pragma HLS ARRAY_PARTITION variable=max_row block factor = 32 //拆分数组为64块
@@ -620,38 +621,40 @@ void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, 
 
     if(stage == 1) { // Stage 1: Compute
 
-        if(config == 0) { // SiLU
+        if(config == 3) { // SiLU
             // float_sige(buf0, buf2, 64*768, 1.0f);
-            float_silu2(buf0, fbuf2, 64*768);
-            f32_to_bf16_array(fbuf2, buf2, 64*768);
+            float_silu2(buf0, fbuf2, 64*768, 0);
+            f32_to_bf16_array(fbuf2, buf2, 32*768, 0);
+            float_silu2(buf0, fbuf2, 64*768, 32);
+            f32_to_bf16_array(fbuf2, buf2, 32*768, 32);
         }
 
-        else if(config == 1) { // safe softmax
+        else if(config == 0) { // safe softmax
             float_safe_softmax3(buf0, fbuf2, 64*768);
-            f32_to_bf16_array(fbuf2, buf2, 64*768);
+            f32_to_bf16_array(fbuf2, buf2, 32*768);
         }
 
-        else if(config == 2) { // Layer normalization
+        else if(config == 1) { // Layer normalization
             float_layer_norm3(buf0, fbuf2, 64*768);
-            f32_to_bf16_array(fbuf2, buf2, 64*768);
+            f32_to_bf16_array(fbuf2, buf2, 32*768);
         }
 
-        else if(config == 3) { // RMS normalization
+        else if(config == 2) { // RMS normalization
             float_rms_norm3(buf0, fbuf2, 64*768);
-            f32_to_bf16_array(fbuf2, buf2, 64*768);
+            f32_to_bf16_array(fbuf2, buf2, 32*768);
         }
 
-        else if(config == 4) { // float_Multiply
+        else if(config == 6) { // float_Multiply
             float_Multiply2(buf0, buf1, fbuf2, 64*768);
-            f32_to_bf16_array(fbuf2, buf2, 64*768);
+            f32_to_bf16_array(fbuf2, buf2, 32*768);
         }
 
         else if(config == 5) { //Element-wise addition
             float_add2(buf0, buf1, fbuf2, 64*768);
-            f32_to_bf16_array(fbuf2, buf2, 64*768);
+            f32_to_bf16_array(fbuf2, buf2, 32*768);
         }
 
-        else if(config == 6) { //Gelu
+        else if(config == 4) { //Gelu
             float_gelu2(buf0, fbuf2, 64*768);
             f32_to_bf16_array(fbuf2, buf2, 64*768);
             // float_sige(buf0, buf2, 64*768, 1.702f);

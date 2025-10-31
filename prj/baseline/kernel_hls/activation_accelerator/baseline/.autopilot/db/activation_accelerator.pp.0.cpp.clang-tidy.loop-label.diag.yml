@@ -1292,9 +1292,4 @@ Diagnostics:
         Offset:          2399653
         Length:          0
         ReplacementText: 'VITIS_LOOP_169_3: '
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ram_2p + uram is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      494
-    FilePath:        activation_accelerator.cpp
-    Replacements:    
 ...

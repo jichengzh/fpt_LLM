@@ -13,7 +13,7 @@ set hasInterrupt 0
 set DLRegFirstOffset 0
 set DLRegItemOffset 0
 set svuvm_can_support 1
-set cdfgNum 21
+set cdfgNum 22
 set C_modelName {activation_accelerator_Pipeline_multiply_blocks_Multiply}
 set C_modelType { void 0 }
 set ap_memory_interface_dict [dict create]

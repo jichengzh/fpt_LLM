@@ -1,10 +1,5 @@
 # This script segment is generated automatically by AutoPilot
 
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler activation_accelerator_sparsemux_9_3_32_1_1 BINDTYPE {op} TYPE {sparsemux} IMPL {onehotencoding_realdef}
-}
-
-
 # clear list
 if {${::AESL::PGuard_autoexp_gen}} {
     cg_default_interface_gen_dc_begin
@@ -15,30 +10,30 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 2051 \
-    name x \
+    id 2049 \
+    name a \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_x \
+    corename dc_a \
     op interface \
-    ports { x { I 32 vector } } \
+    ports { a { I 16 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 2052 \
-    name y \
+    id 2050 \
+    name b \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_y \
+    corename dc_b \
     op interface \
-    ports { y { I 32 vector } } \
+    ports { b { I 16 vector } } \
 } "
 }
 
@@ -66,7 +61,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename ap_return \
     op interface \
-    ports { ap_return { O 32 vector } } \
+    ports { ap_return { O 16 vector } } \
 } "
 }
 
