@@ -1,0 +1,77 @@
+{
+  "0": {
+    "basicblocks": 238,
+    "calls": "1 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 1 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 2 3 1 1 1 1",
+    "file": "activation_accelerator.cpp",
+    "fileloc": 513,
+    "instructions": 9238,
+    "loads": {
+      "G": 672,
+      "L": 256
+    },
+    "name": "activation_accelerator",
+    "stores": {
+      "G": 544,
+      "L": 320
+    },
+    "total_instructions": 23344
+  },
+  "1": {
+    "basicblocks": 4,
+    "calls": "5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5",
+    "file": "activation_accelerator.cpp",
+    "fileloc": 72,
+    "instructions": 302,
+    "loads": {
+      "G": 64
+    },
+    "name": "f32_to_bf16_array",
+    "stores": {
+      "G": 32
+    },
+    "total_instructions": 1582
+  },
+  "2": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "bf16_accl.h",
+    "fileloc": 324,
+    "instructions": 715,
+    "loads": {
+      "G": 64,
+      "L": 64
+    },
+    "name": "square",
+    "stores": {
+      "L": 64
+    },
+    "total_instructions": 715
+  },
+  "3": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "sqrtfloat.cpp",
+    "fileloc": 11,
+    "instructions": 2,
+    "name": "sqrtf",
+    "total_instructions": 2
+  },
+  "4": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "hls_fmax.h",
+    "fileloc": 19,
+    "instructions": 46,
+    "name": "generic_fmax<float>",
+    "total_instructions": 46
+  },
+  "5": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "activation_accelerator.cpp",
+    "fileloc": 17,
+    "instructions": 40,
+    "name": "round_float32_to_bf16_ieee",
+    "total_instructions": 40
+  }
+}
