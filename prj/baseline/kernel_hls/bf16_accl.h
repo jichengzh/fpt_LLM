@@ -23,12 +23,12 @@ static inline uint16_t pack_bf16(uint16_t s, uint16_t e, uint16_t m7) {
     return (uint16_t)((s << 15) | (e << 7) | (m7 & 0x7F));
 }
 
-static inline float bf16_to_f32(uint16_t b) {
-#pragma HLS inline off 
-    union { uint32_t u; float f; } cvt;
-    cvt.u = ((uint32_t)b) << 16;
-    return cvt.f;
-}
+// static inline float bf16_to_f32(uint16_t b) {
+// #pragma HLS inline off 
+//     union { uint32_t u; float f; } cvt;
+//     cvt.u = ((uint32_t)b) << 16;
+//     return cvt.f;
+// }
 
 
 // —— 先做前置声明，供下方内联函数调用 ——
