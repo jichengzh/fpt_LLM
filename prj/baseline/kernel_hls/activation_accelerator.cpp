@@ -15,7 +15,7 @@
 // "mul":        6,
 
 static inline uint16_t round_float32_to_bf16_ieee(float x_in) {
-#pragma HLS inline off 
+#pragma HLS inline off
     uint32_t fbits = *reinterpret_cast<uint32_t*>(&x_in);
 
     // static_assert(sizeof(float) == 4, "This code assumes 32-bit float");
@@ -68,55 +68,64 @@ static inline uint16_t round_float32_to_bf16_ieee(float x_in) {
     return static_cast<uint16_t>(rounded & 0xFFFFu);
 }
 
-// 将 float 批量量化为 bf16（一次性在核外做 rounding）
-void f32_to_bf16_array(const float* in_f32, uint16_t* out_bf16, int len) {
-#pragma HLS INLINE off
-    const int col_len = 32;
-    const int row_len = len / col_len;
+float bf16_to_float(uint16_t x_in){
+#pragma HLS INLINE
+        uint32_t x_f32 = ((uint32_t)x_in) << 16;
+        float y = *(float*)&x_f32;
+        return y;
+    }
 
-pack_rows:
-    for (int i = 0; i < row_len; ++i) {
-    #pragma HLS ALLOCATION function instances=round_float32_to_bf16_ieee limit=32
-    pack_lanes:
-        for (int u = 0; u < col_len; ++u) {
+
+
+static void round_vec64(
+    const float in_val[64],
+    uint16_t out_val[64]
+) {
+#pragma HLS INLINE off
+// #pragma HLS ARRAY_PARTITION variable=in_val  complete
+// #pragma HLS ARRAY_PARTITION variable=out_val complete
+// #pragma HLS PIPELINE II=1
+
+round_vec64_loop:
+    for (int u = 0; u < 64; ++u) {
 #pragma HLS UNROLL
-            int idx = u * row_len + i;
-            out_bf16[idx] = round_float32_to_bf16_ieee(in_f32[idx]);
-        }
+        out_val[u] = round_float32_to_bf16_ieee(in_val[u]);
     }
 }
 
-void float_sige(const uint16* x, uint16* y, int len, const float alpha){
-#pragma HLS INLINE off// 关键：先禁止整体内联，保留下这个函数层级
-// #pragma HLS ALLOCATION function instances=round_float32_to_bf16_ieee limit=64
+
+// void float_sige(const uint16* x, uint16* y, int len, const float alpha){
+// #pragma HLS INLINE// 关键：先禁止整体内联，保留下这个函数层级
+// // #pragma HLS ALLOCATION function instances=round_float32_to_bf16_ieee limit=64
     
-    const int col_len = 64;
-    const int row_len = len/col_len;
-    const int row_len_unroll = row_len * 2;
+//     const int col_len = 64;
+//     const int row_len = len/col_len;
+//     const int UF =32;
+//     const int row_len_unroll = row_len * 2;
     
-    sige_blocks:
-    for (int i = 0; i < row_len_unroll; ++i){
-// #pragma HLS PIPELINE II = 2
-        sige_inner:
-        for (int u = 0; u < col_len; u = u + 2){//尽量减少计算类型
-#pragma HLS UNROLL
-            int idx = i + u * row_len;
+//     sige_blocks:
+//     for (int i = 0; i < row_len_unroll; ++i){
+// // #pragma HLS PIPELINE II = 2
+//         sige_inner:
+//         for (int u = 0; u < col_len; u = u + 2){//尽量减少计算类型
+// #pragma HLS UNROLL
+//             int idx = i + u * row_len;
             
-            uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
-            float f_x = *(float*)&x_f32;
+//             uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
+//             float f_x = *(float*)&x_f32;
+            
+//             float sig = alpha * f_x;
 
-            float sig = alpha * f_x;
-
-            float xtrue = f_x / (1.0f + hls::expf(-sig));      
-            y[idx] = round_float32_to_bf16_ieee(xtrue);
-        }
-    }    
-}
-
-
+//             float xtrue = f_x / (1.0f + hls::expf(-sig));      
+//             y[idx] = round_float32_to_bf16_ieee(xtrue);
+//         }
+//     }    
+// }
 
 
-void float_silu2(const uint16* x, float* y, int len){
+
+
+void float_silu2(const uint16* x, uint16* y, int len){
 #pragma HLS INLINE// 关键：先禁止整体内联，保留下这个函数层级
 // #pragma HLS ALLOCATION function instances=round_float32_to_bf16_ieee limit=64
     
@@ -126,11 +135,8 @@ void float_silu2(const uint16* x, float* y, int len){
     const int row_len_unroll = row_len * 2;
     
     silu_blocks:
-    for (int i = 0; i < row_len; ++i){
-    #pragma HLS ALLOCATION operation instances=fexp limit=32
-    #pragma HLS ALLOCATION operation instances=fadd limit=32
-    // #pragma HLS ALLOCATION function instances = round_float32_to_bf16_ieee limit = 32
-// #pragma HLS PIPELINE II=1
+    for (int i = 0; i < row_len_unroll; ++i){
+// #pragma HLS PIPELINE II = 2
         silu_inner:
         for (int u = 0; u < col_len; ++u){//尽量减少计算类型
 #pragma HLS UNROLL
@@ -139,15 +145,74 @@ void float_silu2(const uint16* x, float* y, int len){
             uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
             float f_x = *(float*)&x_f32;
             
-            y[idx] = f_x / (hls::expf(-f_x) + 1.0f);
-            // y[idx] = round_float32_to_bf16_ieee(sil);
+            float sil = f_x / (expf(-f_x) + 1.0f);
+            y[idx] = round_float32_to_bf16_ieee(sil);
         }
     }    
 }
 
+//GELU
+void float_gelu2(const uint16* x, uint16_t* y_bf16, int len) {
+#pragma HLS INLINE
+        const float alpha = 1.702f;
+        const int col_len = 64; 
+        const int row_len = len/col_len;
+        const int row_len_unroll = row_len * 2; 
+
+    gelu_blocks:
+    for (int i = 0; i < row_len_unroll; ++i) {
+        for (int u = 0; u < col_len; u = u + 2) {
+        #pragma HLS ALLOCATION operation instances=fexp limit=32
+        #pragma HLS ALLOCATION operation instances=fmul limit=32
+        #pragma HLS ALLOCATION operation instances=fadd limit=32
+#pragma HLS UNROLL// 部分展开而不是完全展开
+            // #pragma HLS EXPRESSION_BALANCE    
+            int idx = i + u * row_len; 
+            //函数内转换为f32
+            uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
+            float f_x = *(float*)&x_f32;    
+            
+            float sigmoid_arg = alpha * f_x;
+            float xtrue = f_x / (1.0f + hls::expf(-sigmoid_arg));
+                
+            y_bf16[idx] = round_float32_to_bf16_ieee(xtrue);
+        }
+    }
+}
+
+//     // -------- SiLU计算：外层PIPELINE，内层UNROLL --------
+//     silu_blocks:
+//     for (int i = 0; i < row_len; ++i){
+// // #pragma HLS PIPELINE II = 2
+//         silu_inner:
+//         for (int u = 0; u < col_len; ++u){//尽量减少计算类型
+// #pragma HLS UNROLL factor = 32
+//             int idx = i + u * row_len;
+//             uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
+//             float f_x = *(float*)&x_f32;
+//             float sil = f_x / (expf(-f_x) + 1.0f);
+//             y[idx] = round_float32_to_bf16_ieee(sil);
+//         }
+//     }  
+
+//     silu_blocks:
+//     for (int i = 0; i < row_len_unroll; ++i){
+// // #pragma HLS PIPELINE II = 2
+//         silu_inner1:
+//         for (int u = 0; u < col_len; u = u + 2){//尽量减少计算类型
+// #pragma HLS UNROLL
+//             int idx = i + u * row_len;
+//             uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
+//             float f_x = *(float*)&x_f32;
+//             float sil = f_x / (expf(-f_x) + 1.0f);
+//             y[idx] = round_float32_to_bf16_ieee(sil);
+//         }
+//     } 
+// }
+
 
 //rms_norm config = 5
-void float_rms_norm3(const uint16* x, float* y, int len) {
+void float_rms_norm3(const uint16* x, uint16* y_bf16, int len) {
 #pragma HLS INLINE
 // #pragma HLS ALLOCATION function instances = square limit=1 
     
@@ -156,7 +221,7 @@ void float_rms_norm3(const uint16* x, float* y, int len) {
     const float eps = 1e-5f;//好像生成使用的是1e-5
 
     float y_sum_sq[col_len];// 初始化平方和平均值序列
-    float rms_sq[col_len];// 初始化rms序列
+    float rms_sq[col_len];// 初始化rms序列 
 
 #pragma HLS ARRAY_PARTITION variable=y_sum_sq complete
 #pragma HLS DEPENDENCE variable=y_sum_sq inter false
@@ -176,23 +241,48 @@ init_y_sum_and_rms_sq:
 rms_calculate_loop_rms_norm3:
     for (int k = 0; k < col_len; ++k) {
 // #pragma HLS UNROLL
-#pragma HLS PIPELINE II = 1
+// #pragma HLS PIPELINE II = 1
         rms_sq[k] = hls::sqrtf(y_sum_sq[k] + eps);
     } 
 
-    // -------- 3) 归一化并转 bfloat16 --------
-normalize_blocks_rms_norm3:
+//     // -------- 3) 归一化并转 bfloat16 --------
+// normalize_blocks_rms_norm:
+//     for (int i = 0; i < row_len; ++i) {
+// //64路下为1，32路改为2
+// // #pragma HLS PIPELINE II = 2  
+//         normalize_inner_rms_norm:    
+//             for (int u = j; u < col_len; ++u) {
+// #pragma HLS UNROLL
+//                 int idx = u * row_len + i;
+
+//                 // uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
+//                 // float f_x = *(float*)&x_f32;
+                
+//                 float f_x = bf16_to_float(x[idx]);
+                
+//                 float y = f_x / rms_sq[u];
+                
+//                 y_bf16[idx] = round_float32_to_bf16_ieee(y);
+//             }  
+//     }
+
+    normalize_blocks_rms_norm3:
     for (int i = 0; i < row_len; ++i) {
-    // #pragma HLS ALLOCATION function instances = round_float32_to_bf16_ieee limit = 32
-// #pragma HLS PIPELINE II=1
+//64路下为1，32路改为2
+#pragma HLS PIPELINE II = 2
     normalize_inner_rms_norm3:
         for (int u = 0; u < col_len; ++u) {
 #pragma HLS UNROLL
             int idx = u * row_len + i;
-            uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
-            float f_x = *(float*)&x_f32;
-            y[idx] = f_x / rms_sq[u];
-            // y[idx] = round_float32_to_bf16_ieee(y);
+
+            // uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
+            // float f_x = *(float*)&x_f32;
+            
+            float f_x = bf16_to_float(x[idx]);
+            
+            float y = f_x / rms_sq[u];
+            
+            y_bf16[idx] = round_float32_to_bf16_ieee(y);
         }
     }
 }
@@ -257,7 +347,7 @@ normalize_blocks_rms_norm3:
 
 
 //layer_norm config=5,暂时完全注释HLS命令
-void float_layer_norm3(const uint16* x, float* y, int len) {
+void float_layer_norm3(const uint16* x, uint16* y_bf16, int len) {
 #pragma HLS INLINE
     const int col_len = 64;    // 平方和序列长度
     const int row_len = len/col_len;
@@ -288,16 +378,40 @@ init_partial_layernorm:
 // 均值计算 - 完全流水线并行。
 mean_blocks_layer_norm3:
     for (int i = 0; i < row_len; ++i) {
-    #pragma HLS ALLOCATION operation instances=fadd limit=32
-    mean_inner_layer_norm3:
+//64路下为3，32路改为6
+#pragma HLS PIPELINE II = 6    
         for (int j = 0; j < col_len; ++j) {
 #pragma HLS UNROLL
             int idx = i + j * row_len;
-            uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
-            float f_x = *(float*)&x_f32;
-            partial_mean[j] += f_x;
+                
+                // uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
+                // float f_x = *(float*)&x_f32;
+                
+            float f_x = bf16_to_float(x[idx]);
+                
+             partial_mean[j] += f_x;
         }
     }
+    
+
+// mean_blocks_layer_norm3:
+//     for (int i = 0; i < row_len; ++i) {
+// //64路下为3，32路改为6
+// #pragma HLS PIPELINE II = 6   
+//     mean_inner_layer_norm3:
+//         for (int j = 0; j < col_len; ++j) {
+// #pragma HLS UNROLL
+//             int idx = i + j * row_len;
+            
+//             // uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
+//             // float f_x = *(float*)&x_f32;
+            
+//             float f_x = bf16_to_float(x[idx]);
+            
+//             partial_mean[j] += f_x;
+//         }
+//     }
+
 mean_blocks2_layer_norm3://观察到除太多次好像影响误差了把除法分出来
     for (int i = 0; i < col_len; i++){
 #pragma HLS UNROLL 
@@ -308,33 +422,35 @@ mean_blocks2_layer_norm3://观察到除太多次好像影响误差了把除法�
 //标准差计算循环
 std_blocks_layer_norm3:  
     for (int i = 0; i < col_len; ++i) {
-    #pragma HLS ALLOCATION operation instances=fmul limit=32
-    #pragma HLS ALLOCATION operation instances=fadd limit=32
-    #pragma HLS ALLOCATION operation instances=fsub limit=32
-#pragma HLS UNROLL
+// #pragma HLS UNROLL factor = 32
+// #pragma HLS PIPELINE II = 1
             y_sum_sq[i] = hls::sqrtf(y_sum_sq[i] - partial_mean[i] * partial_mean[i]  + eps);
     }
 
     // -------- 3) 归一化并转 bfloat16 --------
 normalize_blocks_layer_norm3:
     for (int i = 0; i < row_len; ++i) {
-    // #pragma HLS ALLOCATION function instances = round_float32_to_bf16_ieee limit = 32
-    #pragma HLS ALLOCATION operation instances=fsub limit=32
+//64路下为1，32路改为2
+#pragma HLS PIPELINE II = 2 
     normalize_inner_layer_norm3:
         for (int u = 0; u < col_len; ++u) {
 #pragma HLS UNROLL
             int idx = i + u * row_len;
-            uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
-            float f_x = *(float*)&x_f32;
-            y[idx] = (f_x - partial_mean[u]) /  y_sum_sq[u];
-            // y[idx] = round_float32_to_bf16_ieee(y);
+
+            float f_x = bf16_to_float(x[idx]);
+            
+            // uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
+            // float f_x = *(float*)&x_f32; 
+            
+            float y = (f_x - partial_mean[u]) /  y_sum_sq[u];
+            y_bf16[idx] = round_float32_to_bf16_ieee(y);
         }
     }
 }
 
 
 // //GELU
-// void float_gelu2(const uint16* x, float* y, int len) {
+// void float_gelu2(const uint16* x, uint16_t* y_bf16, int len) {
 // #pragma HLS INLINE
 //         const float alpha = 1.702f;
 //         const float half = 0.5f;
@@ -343,101 +459,105 @@ normalize_blocks_layer_norm3:
 //         const int row_len_unroll = row_len/2; 
 
 //     gelu_blocks:
+//     for (int i = 0; i < row_len_unroll; ++i) {
+//         for (int u = 0; u < col_len; u = u + 2) {
+// #pragma HLS UNROLL// 部分展开而不是完全展开
+//             // #pragma HLS EXPRESSION_BALANCE    
+//             int idx = i + u * row_len; 
+            
+//             // //函数内转换为f32
+//             // uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
+//             // float f_x = *(float*)&x_f32;    
+            
+//             float f_x = bf16_to_float(x[idx]);
+
+//             float sigmoid_arg = alpha * f_x;
+//             float xtrue;
+//             xtrue = f_x / (1.0f + hls::expf(-sigmoid_arg));      
+//             y_bf16[idx] = round_float32_to_bf16_ieee(xtrue);
+//         }
+//     }
+// }
+
+//     gelu_blocks:
 //     for (int i = 0; i < row_len; ++i) {
-// // #pragma HLS PIPELINE II = 4  // 增加II以降低资源压力
+//  // 增加II以降低资源压力，64路下为1，32路为2
+// // #pragma HLS PIPELINE II = 2 
 // // #pragma HLS LATENCY min=10 max=20  // 控制流水线深度
 //         gelu_inner:
 //         for (int u = 0; u < col_len; ++u) {
-//         #pragma HLS ALLOCATION operation instances=fexp limit=32
-//         #pragma HLS ALLOCATION operation instances=fmul limit=32
-//         #pragma HLS ALLOCATION operation instances=fadd limit=32
-//         // #pragma HLS ALLOCATION function instances = round_float32_to_bf16_ieee limit = 32
-// #pragma HLS UNROLL  // 部分展开而不是完全展开
+// #pragma HLS UNROLL factor = 32// 部分展开而不是完全展开
 //             // #pragma HLS EXPRESSION_BALANCE    
 //             int idx = i + u * row_len; 
 //             //函数内转换为f32
 //             uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
 //             float f_x = *(float*)&x_f32;    
             
+//                 // 使用更高效的sigmoid近似
 //             float sigmoid_arg = alpha * f_x;
-//             y[idx] = f_x / (1.0f + hls::expf(-sigmoid_arg));      
-//             // y[idx] = round_float32_to_bf16_ieee(xtrue);
+//                 // 使用查找表近似指数函数
+//             float xtrue;
+//             xtrue = f_x / (1.0f + hls::expf(-sigmoid_arg)); 
+//             // if (sigmoid_arg > 5.0f){
+//             //     xtrue = x[idx];
+//             // } 
+//             // else if (sigmoid_arg < -5.0f){
+//             //     xtrue = 0;
+//             // }
+//             // else{
+//             //     xtrue = x[idx] / (1.0f + hls::expf(-sigmoid_arg)); 
+//             // }       
+//             y_bf16[idx] = round_float32_to_bf16_ieee(xtrue);
 //         }
 //     }
-// }
-
-//GELU
-void float_gelu2(const uint16* x, float* y, int len) {
-#pragma HLS INLINE
-        const float alpha = 1.702f;
-        const float half = 0.5f;
-        const int col_len = 64; 
-        const int row_len = len/col_len;
-        const int row_len_unroll = row_len/2; 
-
-    gelu_blocks:
-    for (int i = 0; i < row_len; ++i) {
-// #pragma HLS PIPELINE II = 4  // 增加II以降低资源压力
-// #pragma HLS LATENCY min=10 max=20  // 控制流水线深度
-        gelu_inner:
-        for (int u = 0; u < col_len; ++u) {
-        #pragma HLS ALLOCATION operation instances=fexp limit=32
-        #pragma HLS ALLOCATION operation instances=fmul limit=32
-        #pragma HLS ALLOCATION operation instances=fadd limit=32
-        // #pragma HLS ALLOCATION function instances = round_float32_to_bf16_ieee limit = 32
-#pragma HLS UNROLL  // 部分展开而不是完全展开
-            // #pragma HLS EXPRESSION_BALANCE    
-            int idx = i + u * row_len; 
-            //函数内转换为f32
-            uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
-            float f_x = *(float*)&x_f32;    
-            
-            float sigmoid_arg = alpha * f_x;
-            y[idx] = f_x / (1.0f + hls::expf(-sigmoid_arg));      
-            // y[idx] = round_float32_to_bf16_ieee(xtrue);
-        }
-    }
-}
 
      
 
 
 
-static void float_add2(const uint16_t* x, const uint16_t* y, float* out, int len) {
+static void float_add2(const uint16_t* x, const uint16_t* y, uint16* out, int len) {
 #pragma HLS INLINE
     const int col_len = 32; 
     const int row_len = len/col_len;
+    const int row_len_unroll = row_len * 2;
 
-
-    // -------- 向量加法：外层PIPELINE，内层UNROLL --------
-    add_blocks:
-    for (int i = 0; i < row_len; ++i) {
-    #pragma HLS ALLOCATION operation instances=fadd limit=32
-    // #pragma HLS ALLOCATION function instances = round_float32_to_bf16_ieee limit = 32
+    add_blocks_add:
+    for (int i = 0; i < row_len_unroll; ++i) {
+// 增加II以降低资源压力，64路下为1，32路为2
+// #pragma HLS PIPELINE II = 2 
         add_inner:
-        for (int u = 0; u < col_len; ++u) {
+        for (int u = 0; u < col_len; u = u + 2) {
 #pragma HLS UNROLL
             int idx = u * row_len + i;
             
-            uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
-            float f_x = *(float*)&x_f32;
-            uint32_t y_f32 = ((uint32_t)y[idx]) << 16;
-            float f_y = *(float*)&y_f32;
+            float f_x = bf16_to_float(x[idx]);
+            float f_y = bf16_to_float(y[idx]);
+            
+            // uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
+            // float f_x = *(float*)&x_f32;
+            // uint32_t y_f32 = ((uint32_t)y[idx]) << 16;
+            // float f_y = *(float*)&y_f32;
 
-            out[idx] = f_x + f_y;
-            // out[idx] = round_float32_to_bf16_ieee(sum);
+            float sum = f_x + f_y;
+            out[idx] = round_float32_to_bf16_ieee(sum);
         }
     }
 }   
 
 
 // safe softmax
-void float_safe_softmax3(const uint16_t* x, float* y, int len) {
+void float_safe_softmax3(const uint16_t* x, uint16_t* out, int len) {
 #pragma HLS INLINE 
     const int col_len = 64;
     const int row_len = len/col_len;
     
+    // const int row_len_unroll = row_len * 2;
+    // const int col_len_unroll = col_len / 2;
 
+//     float exp_buf[64 * 768];
+// #pragma HLS DEPENDENCE variable=exp_buf inter false
+// #pragma HLS ARRAY_PARTITION variable=exp_buf block factor=col_len
+    // 之后可以尝试 #pragma HLS ARRAY_PARTITION / CYCLIC 优化访存带宽
 
 float sum_row[col_len];
 #pragma HLS ARRAY_PARTITION variable = sum_row complete
@@ -459,13 +579,9 @@ init_lane_max_softmax:
 // 外层步进（列方向），II=1
 softmax_max_step_loop:
     for (int i = 0; i < row_len; ++i) {
-    #pragma HLS ALLOCATION operation instances=fmaxf limit=32
-    // #pragma HLS PIPELINE II=1
-    // 内层 64 路并行（完全展开）
-    lane_reduce:
+#pragma HLS PIPELINE II = 2
         for (int u = 0; u < col_len; ++u) {
-
-        #pragma HLS UNROLL factor=32
+        #pragma HLS UNROLL
         // 索引规则与你 rms_norm 相同：u 是“行/通道”lane，i 是“步”
             int idx = u * row_len + i;
             // std::cout << "idx_col ≈ " << idx_col << std::endl;
@@ -488,17 +604,19 @@ init_partial_softmax:
 
 softmax_exp_and_bucket:
     for (int i = 0; i < row_len; ++i) {
-// #pragma HLS PIPELINE II = 6
-    #pragma HLS ALLOCATION operation instances=fexp limit=32
-    #pragma HLS ALLOCATION operation instances=fadd limit=32
+#pragma HLS PIPELINE II = 6
     exp_inner_softmax:
         // pass 1: 只算exp，写到exp_buf
         for (int u = 0; u < col_len; ++u) {
         #pragma HLS UNROLL
             int idx = u * row_len + i; 
             //数据格式变换内置
-            uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
-            float f_x = *(float*)&x_f32;
+            
+            // uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
+            // float f_x = *(float*)&x_f32;
+
+            float f_x = bf16_to_float(x[idx]);
+            
             float ex = hls::expf(f_x - max_row[u]);
             sum_row[u] += ex;
         }
@@ -506,35 +624,88 @@ softmax_exp_and_bucket:
 
 softmax_final:
     for (int i = 0; i < row_len; ++i) {
-// #pragma HLS PIPELINE II = 2
-    #pragma HLS ALLOCATION operation instances=fexp limit=32
-    // #pragma HLS ALLOCATION operation instances=fmul limit=32
-    // #pragma HLS ALLOCATION function instances = round_float32_to_bf16_ieee limit = 32
+#pragma HLS PIPELINE II = 2
     softmax_final_inner:
         for (int u = 0; u < col_len; ++u) {
 #pragma HLS UNROLL
             int idx = u * row_len + i;
 
-            float den = sum_row[u];
-            float inv = 1.0f/den;
+            // float den = sum_row[u];
+            // float inv = (den > 0.f) ? (1.0f/den) : 0.f;
 
-            uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
-            float f_x = *(float*)&x_f32; 
+            // uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
+            // float f_x = *(float*)&x_f32; 
+
+            float f_x = bf16_to_float(x[idx]);
 
             float ex1 = hls::expf(f_x - max_row[u]);
-            y[idx] = ex1 * inv;
-            // out[idx] = round_float32_to_bf16_ieee(ex1 * inv);
+            out[idx] = round_float32_to_bf16_ieee(ex1 / sum_row[u]);
         }
     }
 }
 
 
+// // 外层步进（列方向），II=1
+// max_step_loop_softmax1:
+//     for (int i = 0; i < row_len_unroll; ++i) {
+// // #pragma HLS PIPELINE II=1
+//         for (int u = 0; u < col_len_unroll; ++u) {
+//         #pragma HLS UNROLL
+//         // 索引规则与你 rms_norm 相同：u 是“行/通道”lane，i 是“步”
+//             int idx = u * row_len_unroll + i;
+//             int idx_col = idx/row_len;
+//             // std::cout << "idx_col ≈ " << idx_col << std::endl;
+//             //数据格式变换内置
+//             uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
+//             float f_x = *(float*)&x_f32;     
+//             max_row[idx_col] = hls::fmaxf(max_row[idx_col], f_x);
+//         }
+//     }
+
+// exp_and_bucket_softmax:
+//     for (int i = 0; i < row_len_unroll; ++i) {
+// // #pragma HLS PIPELINE II = 6
+//     exp_inner_softmax:
+//         // pass 1: 只算exp，写到exp_buf
+//         for (int u = 0; u < col_len_unroll; ++u) {
+//         #pragma HLS UNROLL
+//             int idx = u * row_len_unroll + i; 
+//             int idx_col = idx/row_len;
+//             //数据格式变换内置
+//             uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
+//             float f_x = *(float*)&x_f32;
+//             float ex = hls::expf(f_x - max_row[idx_col]);
+//             sum_row[idx_col] += ex;
+//         }
+//     }
+    
+// softmax_final:
+//     for (int i = 0; i < row_len_unroll; ++i) {
+// // #pragma HLS PIPELINE II = 2
+//     softmax_final_inner:
+//         for (int u = 0; u < col_len_unroll; ++u) {
+// #pragma HLS UNROLL
+//             int idx = u * row_len_unroll + i;
+//             int idx_col = idx/row_len;
+
+//             float den = sum_row[idx_col];
+//             float inv = (den > 0.f) ? (1.0f/den) : 0.f;
+
+//             uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
+//             float f_x = *(float*)&x_f32; 
+
+//             float ex1 = hls::expf(f_x - max_row[idx_col]);
+//             out[idx] = round_float32_to_bf16_ieee(ex1 * inv);
+//         }
+
+
 
 // template<int col_len = 64, int row_len = 768>
-void float_Multiply2(const uint16_t* x, const uint16_t* y, float* out, int len) {
+void float_Multiply2(const uint16_t* x, const uint16_t* y, uint16* out, int len) {
 #pragma HLS INLINE
     const int col_len = 32;
     const int row_len = len/col_len;
+    const int row_len_unroll = row_len * 2;
 
 //     float  tmp_batch[64];
 //     uint16 tmp_batch_bf16[64];
@@ -543,26 +714,28 @@ void float_Multiply2(const uint16_t* x, const uint16_t* y, float* out, int len) 
 
     // -------- 逐元素乘法：外层PIPELINE，内层UNROLL --------
     multiply_blocks_Multiply:
-    for (int i = 0; i < row_len; ++i) {
-    // #pragma HLS ALLOCATION function instances = round_float32_to_bf16_ieee limit = 32
-    #pragma HLS ALLOCATION operation instances=fmul limit=32
-// #pragma HLS PIPELINE II=1
+    for (int i = 0; i < row_len_unroll; ++i) {
+//64路下为1，32路时设置为2
+#pragma HLS PIPELINE II = 2
         multiply_inner:
-        for (int u = 0; u < col_len; ++u) {
+        for (int u = 0; u < col_len; u = u + 2) {
 #pragma HLS UNROLL
             int idx = u * row_len + i;
 
-            //转换输入格式为bf16
-            uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
-            float f_x = *(float*)&x_f32;
-            uint32_t y_f32 = ((uint32_t)y[idx]) << 16;
-            float f_y = *(float*)&y_f32;
+            // //转换输入格式为bf16
+            // uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
+            // float f_x = *(float*)&x_f32;
+            // uint32_t y_f32 = ((uint32_t)y[idx]) << 16;
+            // float f_y = *(float*)&y_f32;
    
+            float f_x = bf16_to_float(x[idx]);
+            float f_y = bf16_to_float(y[idx]);
+
             // 逐元素乘法: x[i] * y[i]
             // tmp_batch[u] = x[idx] * y[idx];
-            out[idx] = f_x * f_y ;
+            float mut = f_x * f_y ;
  
-            // out[idx] =  round_float32_to_bf16_ieee(mut);
+            out[idx] =  round_float32_to_bf16_ieee(mut);
         }
     }
 }
@@ -579,34 +752,38 @@ void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, 
     static uint16 buf0[64*768];
     static uint16 buf1[64*768];
     static uint16 buf2[64*768];
-    static float fbuf2[64*768];
     // float max_row[64];
     // float sum_row[64];
-// #pragma HLS BIND_STORAGE variable=buf0 type=ram_2p impl=uram
+
 #pragma HLS ARRAY_PARTITION variable=buf0 block factor = 64 //拆分数组为64块
 #pragma HLS DEPENDENCE variable=buf0 inter false
-#pragma HLS ARRAY_PARTITION variable=buf1 block factor = 64 //拆分数组为64块
+#pragma HLS ARRAY_PARTITION variable=buf1 block factor = 32 //拆分数组为64块
 #pragma HLS DEPENDENCE variable=buf1 inter false
 #pragma HLS ARRAY_PARTITION variable=buf2 block factor = 64 //拆分数组为64块
 #pragma HLS DEPENDENCE variable=buf2 inter false
-#pragma HLS ARRAY_PARTITION variable=fbuf2 block factor = 64 //拆分数组为64块
-#pragma HLS DEPENDENCE variable=fbuf2 inter false
     
 // #pragma HLS ARRAY_PARTITION variable=max_row block factor = 32 //拆分数组为64块
 // #pragma HLS DEPENDENCE variable=max_row inter false
 // #pragma HLS ARRAY_PARTITION variable=sum_row block factor = 32 //拆分数组为64块
 // #pragma HLS DEPENDENCE variable=sum_row inter false
 
-// //限制复用次数，限制舍入器为64个，square函数好像将自动设置为只有一个。
-// #pragma HLS ALLOCATION function instances = round_float32_to_bf16_ieee limit = 64
-// // #pragma HLS ALLOCATION function instances = round_vec64 limit = 1
+//限制复用次数，限制舍入器为64个，square函数好像将自动设置为只有一个。
+#pragma HLS ALLOCATION function instances = round_float32_to_bf16_ieee limit = 32
+#pragma HLS ALLOCATION function instances = bf16_to_float limit = 32
+// #pragma HLS ALLOCATION function instances = round_vec64 limit = 1
 #pragma HLS ALLOCATION operation instances=fmul limit=32
 #pragma HLS ALLOCATION operation instances=fadd limit=32
 #pragma HLS ALLOCATION operation instances=fsub limit=32
 #pragma HLS ALLOCATION operation instances=fexp limit=32
-#pragma HLS ALLOCATION operation instances=fmax limit=32
+// #pragma HLS ALLOCATION operation instances=fmax limit=64
 #pragma HLS ALLOCATION operation instances=fdiv limit=32
 
+    volatile uint16 anchor_reg;
+    {
+        float dummy_val = 0.0f;
+        uint16 tmp_quant = round_float32_to_bf16_ieee(dummy_val);
+        anchor_reg = tmp_quant;
+    }
     
     if(stage == 0) { // Stage 0: Load data from PS to PL
         stage_0_load0:
@@ -625,39 +802,32 @@ void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, 
 
         if(config == 3) { // SiLU
             // float_sige(buf0, buf2, 64*768, 1.0f);
-            float_silu2(buf0, fbuf2, 64*768);
-            f32_to_bf16_array(fbuf2, buf2, 64*768);
+            float_silu2(buf0, buf2, 64*768);
         }
 
-        else if(config == 0) { // safe softmax
-            float_safe_softmax3(buf0, fbuf2, 64*768);
-            f32_to_bf16_array(fbuf2, buf2, 64*768);
+        else if(config == 1) { // safe softmax
+            float_safe_softmax3(buf0, buf2, 64*768);
         }
 
-        else if(config == 1) { // Layer normalization
-            float_layer_norm3(buf0, fbuf2, 64*768);
-            f32_to_bf16_array(fbuf2, buf2, 64*768);
+        else if(config == 2) { // Layer normalization
+            float_layer_norm3(buf0, buf2, 64*768);
         }
 
-        else if(config == 2) { // RMS normalization
-            float_rms_norm3(buf0, fbuf2, 64*768);
-            f32_to_bf16_array(fbuf2, buf2, 64*768);
+        else if(config == 3) { // RMS normalization
+            float_rms_norm3(buf0, buf2, 64*768);
         }
 
-        else if(config == 6) { // float_Multiply
-            float_Multiply2(buf0, buf1, fbuf2, 64*768);
-            f32_to_bf16_array(fbuf2, buf2, 64*768);
+        else if(config == 4) { // float_Multiply
+            float_Multiply2(buf0, buf1, buf2, 64*768);
         }
 
         else if(config == 5) { //Element-wise addition
-            float_add2(buf0, buf1, fbuf2, 64*768);
-            f32_to_bf16_array(fbuf2, buf2, 64*768);
+            float_add2(buf0, buf1, buf2, 64*768);
         }
 
-        else if(config == 4) { //Gelu
-            float_gelu2(buf0, fbuf2, 64*768);
-            f32_to_bf16_array(fbuf2, buf2, 64*768);
+        else if(config == 6) { //Gelu
             // float_sige(buf0, buf2, 64*768, 1.702f);
+            float_gelu2(buf0, buf2, 64*768);
         }  
     }
     
