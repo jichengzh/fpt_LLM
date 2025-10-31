@@ -13,7 +13,7 @@ set hasInterrupt 0
 set DLRegFirstOffset 0
 set DLRegItemOffset 0
 set svuvm_can_support 1
-set cdfgNum 22
+set cdfgNum 21
 set C_modelName {activation_accelerator_Pipeline_stage_0_load1}
 set C_modelType { void 0 }
 set ap_memory_interface_dict [dict create]
@@ -51,7 +51,7 @@ dict set ap_memory_interface_dict p_ZZ22activation_acceleratorPtS_S_iiE4buf1_30 
 dict set ap_memory_interface_dict p_ZZ22activation_acceleratorPtS_S_iiE4buf1_31 { MEM_WIDTH 16 MEM_SIZE 3072 MASTER_TYPE BRAM_CTRL MEM_ADDRESS_MODE WORD_ADDRESS PACKAGE_IO port READ_LATENCY 0 }
 set C_modelArgList {
 	{ gmem1 int 16 regular {axi_master 0}  }
-	{ sext_ln746 int 63 regular  }
+	{ sext_ln753 int 63 regular  }
 	{ activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19 int 16 regular {array 1536 { 0 3 } 0 1 } {global 1}  }
 	{ activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18 int 16 regular {array 1536 { 0 3 } 0 1 } {global 1}  }
 	{ activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17 int 16 regular {array 1536 { 0 3 } 0 1 } {global 1}  }
@@ -90,7 +90,7 @@ set l_AXIML2Cache [list]
 set AXIMCacheInstDict [dict create]
 set C_modelArgMapList {[ 
 	{ "Name" : "gmem1", "interface" : "axi_master", "bitwidth" : 16, "direction" : "READONLY", "bitSlice":[ {"cElement": [{"cName": "in1","offset": { "type": "dynamic","port_name": "in1","bundle": "control"},"direction": "READONLY"}]}]} , 
- 	{ "Name" : "sext_ln746", "interface" : "wire", "bitwidth" : 63, "direction" : "READONLY"} , 
+ 	{ "Name" : "sext_ln753", "interface" : "wire", "bitwidth" : 63, "direction" : "READONLY"} , 
  	{ "Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19", "interface" : "memory", "bitwidth" : 16, "direction" : "WRITEONLY", "extern" : 0} , 
  	{ "Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18", "interface" : "memory", "bitwidth" : 16, "direction" : "WRITEONLY", "extern" : 0} , 
  	{ "Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17", "interface" : "memory", "bitwidth" : 16, "direction" : "WRITEONLY", "extern" : 0} , 
@@ -178,7 +178,7 @@ set portList {
 	{ m_axi_gmem1_0_BRESP sc_in sc_lv 2 signal 0 } 
 	{ m_axi_gmem1_0_BID sc_in sc_lv 1 signal 0 } 
 	{ m_axi_gmem1_0_BUSER sc_in sc_lv 1 signal 0 } 
-	{ sext_ln746 sc_in sc_lv 63 signal 1 } 
+	{ sext_ln753 sc_in sc_lv 63 signal 1 } 
 	{ activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19_address0 sc_out sc_lv 11 signal 2 } 
 	{ activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19_ce0 sc_out sc_logic 1 signal 2 } 
 	{ activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19_we0 sc_out sc_logic 1 signal 2 } 
@@ -361,7 +361,7 @@ set NewPortList {[
  	{ "name": "m_axi_gmem1_0_BRESP", "direction": "in", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "gmem1", "role": "0_BRESP" }} , 
  	{ "name": "m_axi_gmem1_0_BID", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem1", "role": "0_BID" }} , 
  	{ "name": "m_axi_gmem1_0_BUSER", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem1", "role": "0_BUSER" }} , 
- 	{ "name": "sext_ln746", "direction": "in", "datatype": "sc_lv", "bitwidth":63, "type": "signal", "bundle":{"name": "sext_ln746", "role": "default" }} , 
+ 	{ "name": "sext_ln753", "direction": "in", "datatype": "sc_lv", "bitwidth":63, "type": "signal", "bundle":{"name": "sext_ln753", "role": "default" }} , 
  	{ "name": "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":11, "type": "signal", "bundle":{"name": "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19", "role": "address0" }} , 
  	{ "name": "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19", "role": "ce0" }} , 
  	{ "name": "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19", "role": "we0" }} , 
@@ -510,7 +510,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "gmem1", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "gmem1_blk_n_R", "Type" : "RtlSignal"}]},
-			{"Name" : "sext_ln746", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sext_ln753", "Type" : "None", "Direction" : "I"},
 			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19", "Type" : "Memory", "Direction" : "O"},
 			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18", "Type" : "Memory", "Direction" : "O"},
 			{"Name" : "activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17", "Type" : "Memory", "Direction" : "O"},
@@ -552,7 +552,7 @@ set RtlHierarchyInfo {[
 set ArgLastReadFirstWriteLatency {
 	activation_accelerator_Pipeline_stage_0_load1 {
 		gmem1 {Type I LastRead 1 FirstWrite -1}
-		sext_ln746 {Type I LastRead 0 FirstWrite -1}
+		sext_ln753 {Type I LastRead 0 FirstWrite -1}
 		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19 {Type O LastRead -1 FirstWrite 2}
 		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18 {Type O LastRead -1 FirstWrite 2}
 		activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17 {Type O LastRead -1 FirstWrite 2}
@@ -599,7 +599,7 @@ set PipelineEnableSignalInfo {[
 
 set Spec2ImplPortList { 
 	 { m_axi {  { m_axi_gmem1_0_AWVALID VALID 1 1 }  { m_axi_gmem1_0_AWREADY READY 0 1 }  { m_axi_gmem1_0_AWADDR ADDR 1 64 }  { m_axi_gmem1_0_AWID ID 1 1 }  { m_axi_gmem1_0_AWLEN SIZE 1 32 }  { m_axi_gmem1_0_AWSIZE BURST 1 3 }  { m_axi_gmem1_0_AWBURST LOCK 1 2 }  { m_axi_gmem1_0_AWLOCK CACHE 1 2 }  { m_axi_gmem1_0_AWCACHE PROT 1 4 }  { m_axi_gmem1_0_AWPROT QOS 1 3 }  { m_axi_gmem1_0_AWQOS REGION 1 4 }  { m_axi_gmem1_0_AWREGION USER 1 4 }  { m_axi_gmem1_0_AWUSER DATA 1 1 }  { m_axi_gmem1_0_WVALID VALID 1 1 }  { m_axi_gmem1_0_WREADY READY 0 1 }  { m_axi_gmem1_0_WDATA FIFONUM 1 16 }  { m_axi_gmem1_0_WSTRB STRB 1 2 }  { m_axi_gmem1_0_WLAST LAST 1 1 }  { m_axi_gmem1_0_WID ID 1 1 }  { m_axi_gmem1_0_WUSER DATA 1 1 }  { m_axi_gmem1_0_ARVALID VALID 1 1 }  { m_axi_gmem1_0_ARREADY READY 0 1 }  { m_axi_gmem1_0_ARADDR ADDR 1 64 }  { m_axi_gmem1_0_ARID ID 1 1 }  { m_axi_gmem1_0_ARLEN SIZE 1 32 }  { m_axi_gmem1_0_ARSIZE BURST 1 3 }  { m_axi_gmem1_0_ARBURST LOCK 1 2 }  { m_axi_gmem1_0_ARLOCK CACHE 1 2 }  { m_axi_gmem1_0_ARCACHE PROT 1 4 }  { m_axi_gmem1_0_ARPROT QOS 1 3 }  { m_axi_gmem1_0_ARQOS REGION 1 4 }  { m_axi_gmem1_0_ARREGION USER 1 4 }  { m_axi_gmem1_0_ARUSER DATA 1 1 }  { m_axi_gmem1_0_RVALID VALID 0 1 }  { m_axi_gmem1_0_RREADY READY 1 1 }  { m_axi_gmem1_0_RDATA FIFONUM 0 16 }  { m_axi_gmem1_0_RLAST LAST 0 1 }  { m_axi_gmem1_0_RID ID 0 1 }  { m_axi_gmem1_0_RFIFONUM LEN 0 10 }  { m_axi_gmem1_0_RUSER DATA 0 1 }  { m_axi_gmem1_0_RRESP RESP 0 2 }  { m_axi_gmem1_0_BVALID VALID 0 1 }  { m_axi_gmem1_0_BREADY READY 1 1 }  { m_axi_gmem1_0_BRESP RESP 0 2 }  { m_axi_gmem1_0_BID ID 0 1 }  { m_axi_gmem1_0_BUSER DATA 0 1 } } }
-	sext_ln746 { ap_none {  { sext_ln746 in_data 0 63 } } }
+	sext_ln753 { ap_none {  { sext_ln753 in_data 0 63 } } }
 	activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19 { ap_memory {  { activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19_address0 mem_address 1 11 }  { activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19_ce0 mem_ce 1 1 }  { activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19_we0 mem_we 1 1 }  { activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_19_d0 mem_din 1 16 } } }
 	activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18 { ap_memory {  { activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18_address0 mem_address 1 11 }  { activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18_ce0 mem_ce 1 1 }  { activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18_we0 mem_we 1 1 }  { activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_18_d0 mem_din 1 16 } } }
 	activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17 { ap_memory {  { activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17_address0 mem_address 1 11 }  { activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17_ce0 mem_ce 1 1 }  { activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17_we0 mem_we 1 1 }  { activation_accelerator_unsigned_short_unsigned_short_unsigned_short_int_i_17_d0 mem_din 1 16 } } }

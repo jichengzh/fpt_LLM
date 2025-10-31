@@ -13,7 +13,7 @@ set hasInterrupt 0
 set DLRegFirstOffset 0
 set DLRegItemOffset 0
 set svuvm_can_support 1
-set cdfgNum 22
+set cdfgNum 21
 set C_modelName {generic_fmax<float>}
 set C_modelType { float 32 }
 set ap_memory_interface_dict [dict create]
@@ -62,7 +62,7 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "x", "Type" : "None", "Direction" : "I"},
 			{"Name" : "y", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sparsemux_9_3_32_1_1_U1923", "Parent" : "0"}]}
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sparsemux_9_3_32_1_1_U1761", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {

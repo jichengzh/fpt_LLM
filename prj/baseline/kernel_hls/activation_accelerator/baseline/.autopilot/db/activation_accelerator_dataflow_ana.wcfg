@@ -37,70 +37,70 @@
          <obj_property name="Render_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator//AESL_inst_activation_accelerator_activity.dataflowTxWaveData.Cycles</obj_property>
          <obj_property name="Value_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator//AESL_inst_activation_accelerator_activity.dataflowTxWaveData.OutStanding</obj_property>
          <obj_property name="Detail_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator//AESL_inst_activation_accelerator_activity.dataflowTxTooltipData</obj_property>
-         <wvobject type="group" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_gelu_blocks_fu_2244/grp_activation_accelerator_Pipeline_gelu_blocks_fu_2244_activity">
-            <obj_property name="label">grp_activation_accelerator_Pipeline_gelu_blocks_fu_2244_activity</obj_property>
+         <wvobject type="group" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_gelu_blocks_fu_6438/grp_activation_accelerator_Pipeline_gelu_blocks_fu_6438_activity">
+            <obj_property name="label">grp_activation_accelerator_Pipeline_gelu_blocks_fu_6438_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_gelu_blocks_fu_2244_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_gelu_blocks_fu_2244_activity</obj_property>
+            <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_gelu_blocks_fu_6438_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_gelu_blocks_fu_6438_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_gelu_blocks_fu_2244/grp_activation_accelerator_Pipeline_gelu_blocks_fu_2244_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_gelu_blocks_fu_2244/grp_activation_accelerator_Pipeline_gelu_blocks_fu_2244_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_gelu_blocks_fu_2244/grp_activation_accelerator_Pipeline_gelu_blocks_fu_2244_activity.dataflowTxTooltipData</obj_property>
+            <obj_property name="Render_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_gelu_blocks_fu_6438/grp_activation_accelerator_Pipeline_gelu_blocks_fu_6438_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_gelu_blocks_fu_6438/grp_activation_accelerator_Pipeline_gelu_blocks_fu_6438_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_gelu_blocks_fu_6438/grp_activation_accelerator_Pipeline_gelu_blocks_fu_6438_activity.dataflowTxTooltipData</obj_property>
          </wvobject>
-         <wvobject type="group" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_add_blocks_add_fu_2504/grp_activation_accelerator_Pipeline_add_blocks_add_fu_2504_activity">
-            <obj_property name="label">grp_activation_accelerator_Pipeline_add_blocks_add_fu_2504_activity</obj_property>
+         <wvobject type="group" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_add_blocks_add_fu_6698/grp_activation_accelerator_Pipeline_add_blocks_add_fu_6698_activity">
+            <obj_property name="label">grp_activation_accelerator_Pipeline_add_blocks_add_fu_6698_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_add_blocks_add_fu_2504_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_add_blocks_add_fu_2504_activity</obj_property>
+            <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_add_blocks_add_fu_6698_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_add_blocks_add_fu_6698_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_add_blocks_add_fu_2504/grp_activation_accelerator_Pipeline_add_blocks_add_fu_2504_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_add_blocks_add_fu_2504/grp_activation_accelerator_Pipeline_add_blocks_add_fu_2504_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_add_blocks_add_fu_2504/grp_activation_accelerator_Pipeline_add_blocks_add_fu_2504_activity.dataflowTxTooltipData</obj_property>
+            <obj_property name="Render_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_add_blocks_add_fu_6698/grp_activation_accelerator_Pipeline_add_blocks_add_fu_6698_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_add_blocks_add_fu_6698/grp_activation_accelerator_Pipeline_add_blocks_add_fu_6698_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_add_blocks_add_fu_6698/grp_activation_accelerator_Pipeline_add_blocks_add_fu_6698_activity.dataflowTxTooltipData</obj_property>
          </wvobject>
-         <wvobject type="group" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_2828/grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_2828_activity">
-            <obj_property name="label">grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_2828_activity</obj_property>
+         <wvobject type="group" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_7022/grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_7022_activity">
+            <obj_property name="label">grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_7022_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_2828_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_2828_activity</obj_property>
+            <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_7022_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_7022_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_2828/grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_2828_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_2828/grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_2828_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_2828/grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_2828_activity.dataflowTxTooltipData</obj_property>
+            <obj_property name="Render_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_7022/grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_7022_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_7022/grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_7022_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_7022/grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_7022_activity.dataflowTxTooltipData</obj_property>
          </wvobject>
-         <wvobject type="group" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_square_fu_3152/grp_square_fu_3152_activity">
-            <obj_property name="label">grp_square_fu_3152_activity</obj_property>
+         <wvobject type="group" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_square_fu_7346/grp_square_fu_7346_activity">
+            <obj_property name="label">grp_square_fu_7346_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">grp_square_fu_3152_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_square_fu_3152_activity</obj_property>
+            <obj_property name="ElementShortName">grp_square_fu_7346_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_square_fu_7346_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_square_fu_3152/grp_square_fu_3152_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_square_fu_3152/grp_square_fu_3152_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_square_fu_3152/grp_square_fu_3152_activity.dataflowTxTooltipData</obj_property>
-            <wvobject type="group" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_square_fu_3152/grp_square_Pipeline_sum_square_fu_392/grp_square_Pipeline_sum_square_fu_392_activity">
+            <obj_property name="Render_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_square_fu_7346/grp_square_fu_7346_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_square_fu_7346/grp_square_fu_7346_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_square_fu_7346/grp_square_fu_7346_activity.dataflowTxTooltipData</obj_property>
+            <wvobject type="group" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_square_fu_7346/grp_square_Pipeline_sum_square_fu_392/grp_square_Pipeline_sum_square_fu_392_activity">
                <obj_property name="label">grp_square_Pipeline_sum_square_fu_392_activity</obj_property>
                <obj_property name="DisplayName">label</obj_property>
                <obj_property name="UseFullPath">true</obj_property>
@@ -112,202 +112,186 @@
                <obj_property name="UseCustomSignalColor">true</obj_property>
                <obj_property name="CustomSignalColor">turquoise</obj_property>
                <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-               <obj_property name="Render_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_square_fu_3152/grp_square_Pipeline_sum_square_fu_392/grp_square_Pipeline_sum_square_fu_392_activity.dataflowTxWaveData.Cycles</obj_property>
-               <obj_property name="Value_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_square_fu_3152/grp_square_Pipeline_sum_square_fu_392/grp_square_Pipeline_sum_square_fu_392_activity.dataflowTxWaveData.OutStanding</obj_property>
-               <obj_property name="Detail_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_square_fu_3152/grp_square_Pipeline_sum_square_fu_392/grp_square_Pipeline_sum_square_fu_392_activity.dataflowTxTooltipData</obj_property>
+               <obj_property name="Render_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_square_fu_7346/grp_square_Pipeline_sum_square_fu_392/grp_square_Pipeline_sum_square_fu_392_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_square_fu_7346/grp_square_Pipeline_sum_square_fu_392/grp_square_Pipeline_sum_square_fu_392_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_square_fu_7346/grp_square_Pipeline_sum_square_fu_392/grp_square_Pipeline_sum_square_fu_392_activity.dataflowTxTooltipData</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject type="group" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_3284/grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_3284_activity">
-            <obj_property name="label">grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_3284_activity</obj_property>
+         <wvobject type="group" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_7478/grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_7478_activity">
+            <obj_property name="label">grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_7478_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_3284_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_3284_activity</obj_property>
+            <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_7478_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_7478_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_3284/grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_3284_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_3284/grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_3284_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_3284/grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_3284_activity.dataflowTxTooltipData</obj_property>
+            <obj_property name="Render_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_7478/grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_7478_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_7478/grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_7478_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_7478/grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_7478_activity.dataflowTxTooltipData</obj_property>
          </wvobject>
-         <wvobject type="group" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_silu_blocks_fu_3480/grp_activation_accelerator_Pipeline_silu_blocks_fu_3480_activity">
-            <obj_property name="label">grp_activation_accelerator_Pipeline_silu_blocks_fu_3480_activity</obj_property>
+         <wvobject type="group" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_silu_blocks_fu_7674/grp_activation_accelerator_Pipeline_silu_blocks_fu_7674_activity">
+            <obj_property name="label">grp_activation_accelerator_Pipeline_silu_blocks_fu_7674_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_silu_blocks_fu_3480_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_silu_blocks_fu_3480_activity</obj_property>
+            <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_silu_blocks_fu_7674_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_silu_blocks_fu_7674_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_silu_blocks_fu_3480/grp_activation_accelerator_Pipeline_silu_blocks_fu_3480_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_silu_blocks_fu_3480/grp_activation_accelerator_Pipeline_silu_blocks_fu_3480_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_silu_blocks_fu_3480/grp_activation_accelerator_Pipeline_silu_blocks_fu_3480_activity.dataflowTxTooltipData</obj_property>
+            <obj_property name="Render_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_silu_blocks_fu_7674/grp_activation_accelerator_Pipeline_silu_blocks_fu_7674_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_silu_blocks_fu_7674/grp_activation_accelerator_Pipeline_silu_blocks_fu_7674_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_silu_blocks_fu_7674/grp_activation_accelerator_Pipeline_silu_blocks_fu_7674_activity.dataflowTxTooltipData</obj_property>
          </wvobject>
-         <wvobject type="group" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_2_store_fu_3740/grp_activation_accelerator_Pipeline_stage_2_store_fu_3740_activity">
-            <obj_property name="label">grp_activation_accelerator_Pipeline_stage_2_store_fu_3740_activity</obj_property>
+         <wvobject type="group" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_2_store_fu_7934/grp_activation_accelerator_Pipeline_stage_2_store_fu_7934_activity">
+            <obj_property name="label">grp_activation_accelerator_Pipeline_stage_2_store_fu_7934_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_stage_2_store_fu_3740_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_stage_2_store_fu_3740_activity</obj_property>
+            <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_stage_2_store_fu_7934_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_stage_2_store_fu_7934_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_2_store_fu_3740/grp_activation_accelerator_Pipeline_stage_2_store_fu_3740_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_2_store_fu_3740/grp_activation_accelerator_Pipeline_stage_2_store_fu_3740_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_2_store_fu_3740/grp_activation_accelerator_Pipeline_stage_2_store_fu_3740_activity.dataflowTxTooltipData</obj_property>
+            <obj_property name="Render_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_2_store_fu_7934/grp_activation_accelerator_Pipeline_stage_2_store_fu_7934_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_2_store_fu_7934/grp_activation_accelerator_Pipeline_stage_2_store_fu_7934_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_2_store_fu_7934/grp_activation_accelerator_Pipeline_stage_2_store_fu_7934_activity.dataflowTxTooltipData</obj_property>
          </wvobject>
-         <wvobject type="group" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_rms_calculate_loop_rms_norm3_fu_3875/grp_activation_accelerator_Pipeline_rms_calculate_loop_rms_norm3_fu_3875_activity">
-            <obj_property name="label">grp_activation_accelerator_Pipeline_rms_calculate_loop_rms_norm3_fu_3875_activity</obj_property>
+         <wvobject type="group" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_8069/grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_8069_activity">
+            <obj_property name="label">grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_8069_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_rms_calculate_loop_rms_norm3_fu_3875_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_rms_calculate_loop_rms_norm3_fu_3875_activity</obj_property>
+            <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_8069_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_8069_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_rms_calculate_loop_rms_norm3_fu_3875/grp_activation_accelerator_Pipeline_rms_calculate_loop_rms_norm3_fu_3875_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_rms_calculate_loop_rms_norm3_fu_3875/grp_activation_accelerator_Pipeline_rms_calculate_loop_rms_norm3_fu_3875_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_rms_calculate_loop_rms_norm3_fu_3875/grp_activation_accelerator_Pipeline_rms_calculate_loop_rms_norm3_fu_3875_activity.dataflowTxTooltipData</obj_property>
+            <obj_property name="Render_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_8069/grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_8069_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_8069/grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_8069_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_8069/grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_8069_activity.dataflowTxTooltipData</obj_property>
          </wvobject>
-         <wvobject type="group" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_4007/grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_4007_activity">
-            <obj_property name="label">grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_4007_activity</obj_property>
+         <wvobject type="group" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_8393/grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_8393_activity">
+            <obj_property name="label">grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_8393_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_4007_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_4007_activity</obj_property>
+            <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_8393_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_8393_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_4007/grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_4007_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_4007/grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_4007_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_4007/grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_4007_activity.dataflowTxTooltipData</obj_property>
+            <obj_property name="Render_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_8393/grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_8393_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_8393/grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_8393_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_8393/grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_8393_activity.dataflowTxTooltipData</obj_property>
          </wvobject>
-         <wvobject type="group" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_4331/grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_4331_activity">
-            <obj_property name="label">grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_4331_activity</obj_property>
+         <wvobject type="group" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_8589/grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_8589_activity">
+            <obj_property name="label">grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_8589_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_4331_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_4331_activity</obj_property>
+            <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_8589_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_8589_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_4331/grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_4331_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_4331/grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_4331_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_4331/grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_4331_activity.dataflowTxTooltipData</obj_property>
+            <obj_property name="Render_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_8589/grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_8589_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_8589/grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_8589_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_8589/grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_8589_activity.dataflowTxTooltipData</obj_property>
          </wvobject>
-         <wvobject type="group" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_4527/grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_4527_activity">
-            <obj_property name="label">grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_4527_activity</obj_property>
+         <wvobject type="group" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_8721/grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_8721_activity">
+            <obj_property name="label">grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_8721_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_4527_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_4527_activity</obj_property>
+            <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_8721_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_8721_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_4527/grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_4527_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_4527/grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_4527_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_4527/grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_4527_activity.dataflowTxTooltipData</obj_property>
+            <obj_property name="Render_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_8721/grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_8721_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_8721/grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_8721_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_8721/grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_8721_activity.dataflowTxTooltipData</obj_property>
          </wvobject>
-         <wvobject type="group" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_4659/grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_4659_activity">
-            <obj_property name="label">grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_4659_activity</obj_property>
+         <wvobject type="group" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_9109/grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_9109_activity">
+            <obj_property name="label">grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_9109_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_4659_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_4659_activity</obj_property>
+            <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_9109_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_9109_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_4659/grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_4659_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_4659/grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_4659_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_4659/grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_4659_activity.dataflowTxTooltipData</obj_property>
+            <obj_property name="Render_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_9109/grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_9109_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_9109/grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_9109_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_9109/grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_9109_activity.dataflowTxTooltipData</obj_property>
          </wvobject>
-         <wvobject type="group" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_5047/grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_5047_activity">
-            <obj_property name="label">grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_5047_activity</obj_property>
+         <wvobject type="group" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_softmax_final_fu_9369/grp_activation_accelerator_Pipeline_softmax_final_fu_9369_activity">
+            <obj_property name="label">grp_activation_accelerator_Pipeline_softmax_final_fu_9369_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_5047_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_5047_activity</obj_property>
+            <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_softmax_final_fu_9369_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_softmax_final_fu_9369_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_5047/grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_5047_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_5047/grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_5047_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_5047/grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_5047_activity.dataflowTxTooltipData</obj_property>
+            <obj_property name="Render_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_softmax_final_fu_9369/grp_activation_accelerator_Pipeline_softmax_final_fu_9369_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_softmax_final_fu_9369/grp_activation_accelerator_Pipeline_softmax_final_fu_9369_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_softmax_final_fu_9369/grp_activation_accelerator_Pipeline_softmax_final_fu_9369_activity.dataflowTxTooltipData</obj_property>
          </wvobject>
-         <wvobject type="group" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_softmax_final_fu_5307/grp_activation_accelerator_Pipeline_softmax_final_fu_5307_activity">
-            <obj_property name="label">grp_activation_accelerator_Pipeline_softmax_final_fu_5307_activity</obj_property>
+         <wvobject type="group" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_0_load0_fu_9757/grp_activation_accelerator_Pipeline_stage_0_load0_fu_9757_activity">
+            <obj_property name="label">grp_activation_accelerator_Pipeline_stage_0_load0_fu_9757_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_softmax_final_fu_5307_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_softmax_final_fu_5307_activity</obj_property>
+            <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_stage_0_load0_fu_9757_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_stage_0_load0_fu_9757_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_softmax_final_fu_5307/grp_activation_accelerator_Pipeline_softmax_final_fu_5307_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_softmax_final_fu_5307/grp_activation_accelerator_Pipeline_softmax_final_fu_5307_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_softmax_final_fu_5307/grp_activation_accelerator_Pipeline_softmax_final_fu_5307_activity.dataflowTxTooltipData</obj_property>
+            <obj_property name="Render_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_0_load0_fu_9757/grp_activation_accelerator_Pipeline_stage_0_load0_fu_9757_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_0_load0_fu_9757/grp_activation_accelerator_Pipeline_stage_0_load0_fu_9757_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_0_load0_fu_9757/grp_activation_accelerator_Pipeline_stage_0_load0_fu_9757_activity.dataflowTxTooltipData</obj_property>
          </wvobject>
-         <wvobject type="group" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_0_load0_fu_5695/grp_activation_accelerator_Pipeline_stage_0_load0_fu_5695_activity">
-            <obj_property name="label">grp_activation_accelerator_Pipeline_stage_0_load0_fu_5695_activity</obj_property>
+         <wvobject type="group" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_0_load1_fu_9892/grp_activation_accelerator_Pipeline_stage_0_load1_fu_9892_activity">
+            <obj_property name="label">grp_activation_accelerator_Pipeline_stage_0_load1_fu_9892_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_stage_0_load0_fu_5695_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_stage_0_load0_fu_5695_activity</obj_property>
+            <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_stage_0_load1_fu_9892_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_stage_0_load1_fu_9892_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_0_load0_fu_5695/grp_activation_accelerator_Pipeline_stage_0_load0_fu_5695_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_0_load0_fu_5695/grp_activation_accelerator_Pipeline_stage_0_load0_fu_5695_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_0_load0_fu_5695/grp_activation_accelerator_Pipeline_stage_0_load0_fu_5695_activity.dataflowTxTooltipData</obj_property>
-         </wvobject>
-         <wvobject type="group" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_0_load1_fu_5830/grp_activation_accelerator_Pipeline_stage_0_load1_fu_5830_activity">
-            <obj_property name="label">grp_activation_accelerator_Pipeline_stage_0_load1_fu_5830_activity</obj_property>
-            <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_stage_0_load1_fu_5830_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_stage_0_load1_fu_5830_activity</obj_property>
-            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
-            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
-            <obj_property name="UseCustomSignalColor">true</obj_property>
-            <obj_property name="CustomSignalColor">turquoise</obj_property>
-            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_0_load1_fu_5830/grp_activation_accelerator_Pipeline_stage_0_load1_fu_5830_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_0_load1_fu_5830/grp_activation_accelerator_Pipeline_stage_0_load1_fu_5830_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_0_load1_fu_5830/grp_activation_accelerator_Pipeline_stage_0_load1_fu_5830_activity.dataflowTxTooltipData</obj_property>
+            <obj_property name="Render_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_0_load1_fu_9892/grp_activation_accelerator_Pipeline_stage_0_load1_fu_9892_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_0_load1_fu_9892/grp_activation_accelerator_Pipeline_stage_0_load1_fu_9892_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_0_load1_fu_9892/grp_activation_accelerator_Pipeline_stage_0_load1_fu_9892_activity.dataflowTxTooltipData</obj_property>
          </wvobject>
       </wvobject>
    </wvobject>
@@ -318,69 +302,65 @@
    <wvobject type="group" fp_name="AESL_inst_activation_accelerator_group">
       <obj_property name="label">AESL_inst_activation_accelerator</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="protoinst" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_gelu_blocks_fu_2244/grp_activation_accelerator_Pipeline_gelu_blocks_fu_2244_activity">
-         <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_gelu_blocks_fu_2244_activity</obj_property>
-         <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_gelu_blocks_fu_2244_activity</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_gelu_blocks_fu_6438/grp_activation_accelerator_Pipeline_gelu_blocks_fu_6438_activity">
+         <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_gelu_blocks_fu_6438_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_gelu_blocks_fu_6438_activity</obj_property>
       </wvobject>
-      <wvobject type="protoinst" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_add_blocks_add_fu_2504/grp_activation_accelerator_Pipeline_add_blocks_add_fu_2504_activity">
-         <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_add_blocks_add_fu_2504_activity</obj_property>
-         <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_add_blocks_add_fu_2504_activity</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_add_blocks_add_fu_6698/grp_activation_accelerator_Pipeline_add_blocks_add_fu_6698_activity">
+         <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_add_blocks_add_fu_6698_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_add_blocks_add_fu_6698_activity</obj_property>
       </wvobject>
-      <wvobject type="protoinst" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_2828/grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_2828_activity">
-         <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_2828_activity</obj_property>
-         <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_2828_activity</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_7022/grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_7022_activity">
+         <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_7022_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_7022_activity</obj_property>
       </wvobject>
-      <wvobject type="protoinst" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_square_fu_3152/grp_square_fu_3152_activity">
-         <obj_property name="ElementShortName">grp_square_fu_3152_activity</obj_property>
-         <obj_property name="ObjectShortName">grp_square_fu_3152_activity</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_square_fu_7346/grp_square_fu_7346_activity">
+         <obj_property name="ElementShortName">grp_square_fu_7346_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_square_fu_7346_activity</obj_property>
       </wvobject>
-      <wvobject type="protoinst" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_3284/grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_3284_activity">
-         <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_3284_activity</obj_property>
-         <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_3284_activity</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_7478/grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_7478_activity">
+         <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_7478_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_7478_activity</obj_property>
       </wvobject>
-      <wvobject type="protoinst" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_silu_blocks_fu_3480/grp_activation_accelerator_Pipeline_silu_blocks_fu_3480_activity">
-         <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_silu_blocks_fu_3480_activity</obj_property>
-         <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_silu_blocks_fu_3480_activity</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_silu_blocks_fu_7674/grp_activation_accelerator_Pipeline_silu_blocks_fu_7674_activity">
+         <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_silu_blocks_fu_7674_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_silu_blocks_fu_7674_activity</obj_property>
       </wvobject>
-      <wvobject type="protoinst" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_2_store_fu_3740/grp_activation_accelerator_Pipeline_stage_2_store_fu_3740_activity">
-         <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_stage_2_store_fu_3740_activity</obj_property>
-         <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_stage_2_store_fu_3740_activity</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_2_store_fu_7934/grp_activation_accelerator_Pipeline_stage_2_store_fu_7934_activity">
+         <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_stage_2_store_fu_7934_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_stage_2_store_fu_7934_activity</obj_property>
       </wvobject>
-      <wvobject type="protoinst" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_rms_calculate_loop_rms_norm3_fu_3875/grp_activation_accelerator_Pipeline_rms_calculate_loop_rms_norm3_fu_3875_activity">
-         <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_rms_calculate_loop_rms_norm3_fu_3875_activity</obj_property>
-         <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_rms_calculate_loop_rms_norm3_fu_3875_activity</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_8069/grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_8069_activity">
+         <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_8069_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_8069_activity</obj_property>
       </wvobject>
-      <wvobject type="protoinst" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_4007/grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_4007_activity">
-         <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_4007_activity</obj_property>
-         <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_4007_activity</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_8393/grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_8393_activity">
+         <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_8393_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_8393_activity</obj_property>
       </wvobject>
-      <wvobject type="protoinst" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_4331/grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_4331_activity">
-         <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_4331_activity</obj_property>
-         <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_4331_activity</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_8589/grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_8589_activity">
+         <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_8589_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_8589_activity</obj_property>
       </wvobject>
-      <wvobject type="protoinst" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_4527/grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_4527_activity">
-         <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_4527_activity</obj_property>
-         <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_4527_activity</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_8721/grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_8721_activity">
+         <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_8721_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_8721_activity</obj_property>
       </wvobject>
-      <wvobject type="protoinst" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_4659/grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_4659_activity">
-         <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_4659_activity</obj_property>
-         <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_4659_activity</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_9109/grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_9109_activity">
+         <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_9109_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_9109_activity</obj_property>
       </wvobject>
-      <wvobject type="protoinst" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_5047/grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_5047_activity">
-         <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_5047_activity</obj_property>
-         <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_5047_activity</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_softmax_final_fu_9369/grp_activation_accelerator_Pipeline_softmax_final_fu_9369_activity">
+         <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_softmax_final_fu_9369_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_softmax_final_fu_9369_activity</obj_property>
       </wvobject>
-      <wvobject type="protoinst" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_softmax_final_fu_5307/grp_activation_accelerator_Pipeline_softmax_final_fu_5307_activity">
-         <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_softmax_final_fu_5307_activity</obj_property>
-         <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_softmax_final_fu_5307_activity</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_0_load0_fu_9757/grp_activation_accelerator_Pipeline_stage_0_load0_fu_9757_activity">
+         <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_stage_0_load0_fu_9757_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_stage_0_load0_fu_9757_activity</obj_property>
       </wvobject>
-      <wvobject type="protoinst" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_0_load0_fu_5695/grp_activation_accelerator_Pipeline_stage_0_load0_fu_5695_activity">
-         <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_stage_0_load0_fu_5695_activity</obj_property>
-         <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_stage_0_load0_fu_5695_activity</obj_property>
-      </wvobject>
-      <wvobject type="protoinst" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_0_load1_fu_5830/grp_activation_accelerator_Pipeline_stage_0_load1_fu_5830_activity">
-         <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_stage_0_load1_fu_5830_activity</obj_property>
-         <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_stage_0_load1_fu_5830_activity</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_0_load1_fu_9892/grp_activation_accelerator_Pipeline_stage_0_load1_fu_9892_activity">
+         <obj_property name="ElementShortName">grp_activation_accelerator_Pipeline_stage_0_load1_fu_9892_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_activation_accelerator_Pipeline_stage_0_load1_fu_9892_activity</obj_property>
       </wvobject>
       <wvobject type="group" fp_name="AESL_inst_activation_accelerator_Handshake_group">
          <obj_property name="label">Block-level handshake</obj_property>
@@ -398,85 +378,85 @@
             <obj_property name="ObjectShortName">ap_done</obj_property>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_gelu_blocks_fu_2244_group">
-         <obj_property name="label">grp_activation_accelerator_Pipeline_gelu_blocks_fu_2244</obj_property>
+      <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_gelu_blocks_fu_6438_group">
+         <obj_property name="label">grp_activation_accelerator_Pipeline_gelu_blocks_fu_6438</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_gelu_blocks_fu_2244_Handshake_group">
+         <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_gelu_blocks_fu_6438_Handshake_group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_gelu_blocks_fu_2244/ap_start">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_gelu_blocks_fu_6438/ap_start">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_gelu_blocks_fu_2244/ap_ready">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_gelu_blocks_fu_6438/ap_ready">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_gelu_blocks_fu_2244/ap_done">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_gelu_blocks_fu_6438/ap_done">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_add_blocks_add_fu_2504_group">
-         <obj_property name="label">grp_activation_accelerator_Pipeline_add_blocks_add_fu_2504</obj_property>
+      <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_add_blocks_add_fu_6698_group">
+         <obj_property name="label">grp_activation_accelerator_Pipeline_add_blocks_add_fu_6698</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_add_blocks_add_fu_2504_Handshake_group">
+         <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_add_blocks_add_fu_6698_Handshake_group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_add_blocks_add_fu_2504/ap_start">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_add_blocks_add_fu_6698/ap_start">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_add_blocks_add_fu_2504/ap_ready">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_add_blocks_add_fu_6698/ap_ready">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_add_blocks_add_fu_2504/ap_done">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_add_blocks_add_fu_6698/ap_done">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_2828_group">
-         <obj_property name="label">grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_2828</obj_property>
+      <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_7022_group">
+         <obj_property name="label">grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_7022</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_2828_Handshake_group">
+         <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_7022_Handshake_group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_2828/ap_start">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_7022/ap_start">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_2828/ap_ready">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_7022/ap_ready">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_2828/ap_done">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_multiply_blocks_Multiply_fu_7022/ap_done">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="grp_square_fu_3152_group">
-         <obj_property name="label">grp_square_fu_3152</obj_property>
+      <wvobject type="group" fp_name="grp_square_fu_7346_group">
+         <obj_property name="label">grp_square_fu_7346</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="protoinst" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_square_fu_3152/grp_square_Pipeline_sum_square_fu_392/grp_square_Pipeline_sum_square_fu_392_activity">
+         <wvobject type="protoinst" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_square_fu_7346/grp_square_Pipeline_sum_square_fu_392/grp_square_Pipeline_sum_square_fu_392_activity">
             <obj_property name="ElementShortName">grp_square_Pipeline_sum_square_fu_392_activity</obj_property>
             <obj_property name="ObjectShortName">grp_square_Pipeline_sum_square_fu_392_activity</obj_property>
          </wvobject>
-         <wvobject type="group" fp_name="grp_square_fu_3152_Handshake_group">
+         <wvobject type="group" fp_name="grp_square_fu_7346_Handshake_group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_square_fu_3152/ap_start">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_square_fu_7346/ap_start">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_square_fu_3152/ap_ready">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_square_fu_7346/ap_ready">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_square_fu_3152/ap_done">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_square_fu_7346/ap_done">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>
@@ -487,256 +467,236 @@
             <wvobject type="group" fp_name="grp_square_Pipeline_sum_square_fu_392_Handshake_group">
                <obj_property name="label">Block-level handshake</obj_property>
                <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_square_fu_3152/grp_square_Pipeline_sum_square_fu_392/ap_start">
+               <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_square_fu_7346/grp_square_Pipeline_sum_square_fu_392/ap_start">
                   <obj_property name="ElementShortName">ap_start</obj_property>
                   <obj_property name="ObjectShortName">ap_start</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_square_fu_3152/grp_square_Pipeline_sum_square_fu_392/ap_ready">
+               <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_square_fu_7346/grp_square_Pipeline_sum_square_fu_392/ap_ready">
                   <obj_property name="ElementShortName">ap_ready</obj_property>
                   <obj_property name="ObjectShortName">ap_ready</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_square_fu_3152/grp_square_Pipeline_sum_square_fu_392/ap_done">
+               <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_square_fu_7346/grp_square_Pipeline_sum_square_fu_392/ap_done">
                   <obj_property name="ElementShortName">ap_done</obj_property>
                   <obj_property name="ObjectShortName">ap_done</obj_property>
                </wvobject>
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_3284_group">
-         <obj_property name="label">grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_3284</obj_property>
+      <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_7478_group">
+         <obj_property name="label">grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_7478</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_3284_Handshake_group">
+         <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_7478_Handshake_group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_3284/ap_start">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_7478/ap_start">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_3284/ap_ready">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_7478/ap_ready">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_3284/ap_done">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_max_step_loop_softmax_fu_7478/ap_done">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_silu_blocks_fu_3480_group">
-         <obj_property name="label">grp_activation_accelerator_Pipeline_silu_blocks_fu_3480</obj_property>
+      <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_silu_blocks_fu_7674_group">
+         <obj_property name="label">grp_activation_accelerator_Pipeline_silu_blocks_fu_7674</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_silu_blocks_fu_3480_Handshake_group">
+         <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_silu_blocks_fu_7674_Handshake_group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_silu_blocks_fu_3480/ap_start">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_silu_blocks_fu_7674/ap_start">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_silu_blocks_fu_3480/ap_ready">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_silu_blocks_fu_7674/ap_ready">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_silu_blocks_fu_3480/ap_done">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_silu_blocks_fu_7674/ap_done">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_stage_2_store_fu_3740_group">
-         <obj_property name="label">grp_activation_accelerator_Pipeline_stage_2_store_fu_3740</obj_property>
+      <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_stage_2_store_fu_7934_group">
+         <obj_property name="label">grp_activation_accelerator_Pipeline_stage_2_store_fu_7934</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_stage_2_store_fu_3740_Handshake_group">
+         <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_stage_2_store_fu_7934_Handshake_group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_2_store_fu_3740/ap_start">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_2_store_fu_7934/ap_start">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_2_store_fu_3740/ap_ready">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_2_store_fu_7934/ap_ready">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_2_store_fu_3740/ap_done">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_2_store_fu_7934/ap_done">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_rms_calculate_loop_rms_norm3_fu_3875_group">
-         <obj_property name="label">grp_activation_accelerator_Pipeline_rms_calculate_loop_rms_norm3_fu_3875</obj_property>
+      <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_8069_group">
+         <obj_property name="label">grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_8069</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_rms_calculate_loop_rms_norm3_fu_3875_Handshake_group">
+         <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_8069_Handshake_group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_rms_calculate_loop_rms_norm3_fu_3875/ap_start">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_8069/ap_start">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_rms_calculate_loop_rms_norm3_fu_3875/ap_ready">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_8069/ap_ready">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_rms_calculate_loop_rms_norm3_fu_3875/ap_done">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_8069/ap_done">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_4007_group">
-         <obj_property name="label">grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_4007</obj_property>
+      <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_8393_group">
+         <obj_property name="label">grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_8393</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_4007_Handshake_group">
+         <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_8393_Handshake_group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_4007/ap_start">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_8393/ap_start">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_4007/ap_ready">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_8393/ap_ready">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_normalize_blocks_rms_norm3_fu_4007/ap_done">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_8393/ap_done">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_4331_group">
-         <obj_property name="label">grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_4331</obj_property>
+      <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_8589_group">
+         <obj_property name="label">grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_8589</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_4331_Handshake_group">
+         <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_8589_Handshake_group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_4331/ap_start">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_8589/ap_start">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_4331/ap_ready">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_8589/ap_ready">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_mean_blocks_layer_norm3_fu_4331/ap_done">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_8589/ap_done">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_4527_group">
-         <obj_property name="label">grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_4527</obj_property>
+      <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_8721_group">
+         <obj_property name="label">grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_8721</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_4527_Handshake_group">
+         <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_8721_Handshake_group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_4527/ap_start">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_8721/ap_start">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_4527/ap_ready">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_8721/ap_ready">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_std_blocks_layer_norm3_fu_4527/ap_done">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_8721/ap_done">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_4659_group">
-         <obj_property name="label">grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_4659</obj_property>
+      <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_9109_group">
+         <obj_property name="label">grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_9109</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_4659_Handshake_group">
+         <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_9109_Handshake_group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_4659/ap_start">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_9109/ap_start">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_4659/ap_ready">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_9109/ap_ready">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_normalize_blocks_layer_norm3_fu_4659/ap_done">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_9109/ap_done">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_5047_group">
-         <obj_property name="label">grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_5047</obj_property>
+      <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_softmax_final_fu_9369_group">
+         <obj_property name="label">grp_activation_accelerator_Pipeline_softmax_final_fu_9369</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_5047_Handshake_group">
+         <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_softmax_final_fu_9369_Handshake_group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_5047/ap_start">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_softmax_final_fu_9369/ap_start">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_5047/ap_ready">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_softmax_final_fu_9369/ap_ready">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_exp_and_bucket_softmax_fu_5047/ap_done">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_softmax_final_fu_9369/ap_done">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_softmax_final_fu_5307_group">
-         <obj_property name="label">grp_activation_accelerator_Pipeline_softmax_final_fu_5307</obj_property>
+      <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_stage_0_load0_fu_9757_group">
+         <obj_property name="label">grp_activation_accelerator_Pipeline_stage_0_load0_fu_9757</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_softmax_final_fu_5307_Handshake_group">
+         <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_stage_0_load0_fu_9757_Handshake_group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_softmax_final_fu_5307/ap_start">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_0_load0_fu_9757/ap_start">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_softmax_final_fu_5307/ap_ready">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_0_load0_fu_9757/ap_ready">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_softmax_final_fu_5307/ap_done">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_0_load0_fu_9757/ap_done">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_stage_0_load0_fu_5695_group">
-         <obj_property name="label">grp_activation_accelerator_Pipeline_stage_0_load0_fu_5695</obj_property>
+      <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_stage_0_load1_fu_9892_group">
+         <obj_property name="label">grp_activation_accelerator_Pipeline_stage_0_load1_fu_9892</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_stage_0_load0_fu_5695_Handshake_group">
+         <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_stage_0_load1_fu_9892_Handshake_group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_0_load0_fu_5695/ap_start">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_0_load1_fu_9892/ap_start">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_0_load0_fu_5695/ap_ready">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_0_load1_fu_9892/ap_ready">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_0_load0_fu_5695/ap_done">
-               <obj_property name="ElementShortName">ap_done</obj_property>
-               <obj_property name="ObjectShortName">ap_done</obj_property>
-            </wvobject>
-         </wvobject>
-      </wvobject>
-      <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_stage_0_load1_fu_5830_group">
-         <obj_property name="label">grp_activation_accelerator_Pipeline_stage_0_load1_fu_5830</obj_property>
-         <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="group" fp_name="grp_activation_accelerator_Pipeline_stage_0_load1_fu_5830_Handshake_group">
-            <obj_property name="label">Block-level handshake</obj_property>
-            <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_0_load1_fu_5830/ap_start">
-               <obj_property name="ElementShortName">ap_start</obj_property>
-               <obj_property name="ObjectShortName">ap_start</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_0_load1_fu_5830/ap_ready">
-               <obj_property name="ElementShortName">ap_ready</obj_property>
-               <obj_property name="ObjectShortName">ap_ready</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_0_load1_fu_5830/ap_done">
+            <wvobject type="logic" fp_name="/apatb_activation_accelerator_top/AESL_inst_activation_accelerator/grp_activation_accelerator_Pipeline_stage_0_load1_fu_9892/ap_done">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>

@@ -56405,24 +56405,6 @@ float bf16_to_float(uint16_t x_in){
         float y = *(float*)&x_f32;
         return y;
     }
-
-
-
-static void round_vec64(
-    const float in_val[64],
-    uint16_t out_val[64]
-) {
-#pragma HLS INLINE off
-
-
-
-
-round_vec64_loop:
-    for (int u = 0; u < 64; ++u) {
-#pragma HLS UNROLL
- out_val[u] = round_float32_to_bf16_ieee(in_val[u]);
-    }
-}
 # 128 "activation_accelerator.cpp"
 void float_silu2(const uint16* x, uint16* y, int len){
 #pragma HLS INLINE
@@ -56456,14 +56438,14 @@ void float_gelu2(const uint16* x, uint16_t* y_bf16, int len) {
  const float alpha = 1.702f;
         const int col_len = 64;
         const int row_len = len/col_len;
-        const int row_len_unroll = row_len * 2;
+        const int row_len_unroll = row_len * 4;
 
     gelu_blocks:
     for (int i = 0; i < row_len_unroll; ++i) {
-        VITIS_LOOP_164_1: for (int u = 0; u < col_len; u = u + 2) {
-#pragma HLS ALLOCATION operation instances=fexp limit=32
-#pragma HLS ALLOCATION operation instances=fmul limit=32
-#pragma HLS ALLOCATION operation instances=fadd limit=32
+        VITIS_LOOP_164_1: for (int u = 0; u < col_len; u = u + 4) {
+
+
+
 #pragma HLS UNROLL
 
  int idx = i + u * row_len;
@@ -56474,11 +56456,14 @@ void float_gelu2(const uint16* x, uint16_t* y_bf16, int len) {
             float sigmoid_arg = alpha * f_x;
             float xtrue = f_x / (1.0f + hls::expf(-sigmoid_arg));
 
-            y_bf16[idx] = round_float32_to_bf16_ieee(xtrue);
+
+
+            uint32_t* y_f32_ptr = (uint32_t*)&xtrue;
+            y_bf16[idx] = (*y_f32_ptr) >> 16;
         }
     }
 }
-# 215 "activation_accelerator.cpp"
+# 218 "activation_accelerator.cpp"
 void float_rms_norm3(const uint16* x, uint16* y_bf16, int len) {
 #pragma HLS INLINE
 
@@ -56499,6 +56484,7 @@ void float_rms_norm3(const uint16* x, uint16* y_bf16, int len) {
 init_y_sum_and_rms_sq:
     for (int k = 0; k < col_len; ++k) {
 #pragma HLS UNROLL
+
  y_sum_sq[k] = 0.f;
         rms_sq[k] = 0.f;
     }
@@ -56507,11 +56493,11 @@ init_y_sum_and_rms_sq:
 
 rms_calculate_loop_rms_norm3:
     for (int k = 0; k < col_len; ++k) {
+#pragma HLS UNROLL
 
-
-        rms_sq[k] = hls::sqrtf(y_sum_sq[k] + eps);
+ rms_sq[k] = hls::sqrtf(y_sum_sq[k] + eps);
     }
-# 269 "activation_accelerator.cpp"
+# 273 "activation_accelerator.cpp"
     normalize_blocks_rms_norm3:
     for (int i = 0; i < row_len; ++i) {
 
@@ -56558,6 +56544,7 @@ void float_layer_norm3(const uint16* x, uint16* y_bf16, int len) {
 init_partial_layernorm:
     for (int k = 0; k < col_len; ++k) {
 #pragma HLS UNROLL
+
  partial_mean[k] = 0.f;
         y_sum_sq[k] = 0.f;
     }
@@ -56570,7 +56557,7 @@ mean_blocks_layer_norm3:
     for (int i = 0; i < row_len; ++i) {
 
 #pragma HLS PIPELINE II = 6
- VITIS_LOOP_327_1: for (int j = 0; j < col_len; ++j) {
+ VITIS_LOOP_332_1: for (int j = 0; j < col_len; ++j) {
 #pragma HLS UNROLL
  int idx = i + j * row_len;
 
@@ -56582,10 +56569,11 @@ mean_blocks_layer_norm3:
              partial_mean[j] += f_x;
         }
     }
-# 359 "activation_accelerator.cpp"
+# 364 "activation_accelerator.cpp"
 mean_blocks2_layer_norm3:
     for (int i = 0; i < col_len; i++){
 #pragma HLS UNROLL
+
  partial_mean[i] = partial_mean[i] / row_len;
     }
 
@@ -56594,8 +56582,8 @@ mean_blocks2_layer_norm3:
 std_blocks_layer_norm3:
     for (int i = 0; i < col_len; ++i) {
 
-
-            y_sum_sq[i] = hls::sqrtf(y_sum_sq[i] - partial_mean[i] * partial_mean[i] + eps);
+#pragma HLS PIPELINE II = 1
+ y_sum_sq[i] = hls::sqrtf(y_sum_sq[i] - partial_mean[i] * partial_mean[i] + eps);
     }
 
 
@@ -56618,7 +56606,7 @@ normalize_blocks_layer_norm3:
         }
     }
 }
-# 462 "activation_accelerator.cpp"
+# 468 "activation_accelerator.cpp"
 static void float_add2(const uint16_t* x, const uint16_t* y, uint16* out, int len) {
 #pragma HLS INLINE
  const int col_len = 64;
@@ -56654,15 +56642,16 @@ void float_safe_softmax3(const uint16_t* x, uint16_t* out, int len) {
 #pragma HLS INLINE
  const int col_len = 64;
     const int row_len = len/col_len;
-# 506 "activation_accelerator.cpp"
+# 512 "activation_accelerator.cpp"
 float sum_row[col_len];
 float max_row[col_len];
 #pragma HLS ARRAY_PARTITION variable = sum_row complete
 #pragma HLS ARRAY_PARTITION variable = max_row complete
-# 525 "activation_accelerator.cpp"
+# 530 "activation_accelerator.cpp"
 init_lane_max_softmax:
     for (int u = 0; u < col_len; ++u) {
 #pragma HLS UNROLL
+
  max_row[u] = -std::numeric_limits<float>::max();
     }
 
@@ -56670,7 +56659,7 @@ init_lane_max_softmax:
 max_step_loop_softmax:
     for (int i = 0; i < row_len; ++i) {
 #pragma HLS PIPELINE II = 2
- VITIS_LOOP_535_1: for (int u = 0; u < col_len; ++u) {
+ VITIS_LOOP_541_1: for (int u = 0; u < col_len; ++u) {
 #pragma HLS UNROLL
 
  int idx = u * row_len + i;
@@ -56689,6 +56678,7 @@ max_step_loop_softmax:
 init_partial_softmax:
     for (int u = 0; u < col_len; ++u) {
 #pragma HLS UNROLL
+
  sum_row[u] = 0.f;
     }
 
@@ -56733,7 +56723,7 @@ softmax_final:
         }
     }
 }
-# 656 "activation_accelerator.cpp"
+# 663 "activation_accelerator.cpp"
 void float_Multiply2(const uint16_t* x, const uint16_t* y, uint16* out, int len) {
 #pragma HLS INLINE
  const int col_len = 64;
@@ -56749,8 +56739,8 @@ void float_Multiply2(const uint16_t* x, const uint16_t* y, uint16* out, int len)
     multiply_blocks_Multiply:
     for (int i = 0; i < row_len_unroll; ++i) {
 
-#pragma HLS PIPELINE II = 2
- multiply_inner:
+
+        multiply_inner:
         for (int u = 0; u < col_len; u = u + 2) {
 #pragma HLS UNROLL
  int idx = u * row_len + i;
@@ -56777,7 +56767,7 @@ void float_Multiply2(const uint16_t* x, const uint16_t* y, uint16* out, int len)
 __attribute__((sdx_kernel("activation_accelerator", 0))) void activation_accelerator(uint16* in0, uint16* in1, uint16* out, int32 stage, int32 config) {
 #line 61 "/home/jicz/xushaohui/fpt_LLM/prj/baseline/kernel_hls/run_hls.tcl"
 #pragma HLSDIRECTIVE TOP name=activation_accelerator
-# 696 "activation_accelerator.cpp"
+# 703 "activation_accelerator.cpp"
 
 #pragma HLS INTERFACE m_axi port=in0 offset=slave bundle=gmem0 depth=49152
 #pragma HLS INTERFACE m_axi port=in1 offset=slave bundle=gmem1 depth=49152

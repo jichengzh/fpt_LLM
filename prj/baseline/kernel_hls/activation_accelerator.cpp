@@ -77,21 +77,21 @@ float bf16_to_float(uint16_t x_in){
 
 
 
-static void round_vec64(
-    const float in_val[64],
-    uint16_t out_val[64]
-) {
-#pragma HLS INLINE off
-// #pragma HLS ARRAY_PARTITION variable=in_val  complete
-// #pragma HLS ARRAY_PARTITION variable=out_val complete
-// #pragma HLS PIPELINE II=1
+// static void round_vec64(
+//     const float in_val[64],
+//     uint16_t out_val[64]
+// ) {
+// #pragma HLS INLINE off
+// // #pragma HLS ARRAY_PARTITION variable=in_val  complete
+// // #pragma HLS ARRAY_PARTITION variable=out_val complete
+// // #pragma HLS PIPELINE II=1
 
-round_vec64_loop:
-    for (int u = 0; u < 64; ++u) {
-#pragma HLS UNROLL
-        out_val[u] = round_float32_to_bf16_ieee(in_val[u]);
-    }
-}
+// round_vec64_loop:
+//     for (int u = 0; u < 64; ++u) {
+// #pragma HLS UNROLL
+//         out_val[u] = round_float32_to_bf16_ieee(in_val[u]);
+//     }
+// }
 
 
 // void float_sige(const uint16* x, uint16* y, int len, const float alpha){
@@ -157,14 +157,14 @@ void float_gelu2(const uint16* x, uint16_t* y_bf16, int len) {
         const float alpha = 1.702f;
         const int col_len = 64; 
         const int row_len = len/col_len;
-        const int row_len_unroll = row_len * 2; 
+        const int row_len_unroll = row_len * 4; 
 
     gelu_blocks:
     for (int i = 0; i < row_len_unroll; ++i) {
-        for (int u = 0; u < col_len; u = u + 2) {
-        #pragma HLS ALLOCATION operation instances=fexp limit=32
-        #pragma HLS ALLOCATION operation instances=fmul limit=32
-        #pragma HLS ALLOCATION operation instances=fadd limit=32
+        for (int u = 0; u < col_len; u = u + 4) {
+        // #pragma HLS ALLOCATION operation instances=fexp limit=32
+        // #pragma HLS ALLOCATION operation instances=fmul limit=32
+        // #pragma HLS ALLOCATION operation instances=fadd limit=32
 #pragma HLS UNROLL// 部分展开而不是完全展开
             // #pragma HLS EXPRESSION_BALANCE    
             int idx = i + u * row_len; 
@@ -175,7 +175,10 @@ void float_gelu2(const uint16* x, uint16_t* y_bf16, int len) {
             float sigmoid_arg = alpha * f_x;
             float xtrue = f_x / (1.0f + hls::expf(-sigmoid_arg));
                 
-            y_bf16[idx] = round_float32_to_bf16_ieee(xtrue);
+            // y_bf16[idx] = round_float32_to_bf16_ieee(xtrue);
+
+            uint32_t* y_f32_ptr = (uint32_t*)&xtrue;
+            y_bf16[idx] = (*y_f32_ptr) >> 16;
         }
     }
 }
@@ -232,6 +235,7 @@ void float_rms_norm3(const uint16* x, uint16* y_bf16, int len) {
 init_y_sum_and_rms_sq:
     for (int k = 0; k < col_len; ++k) {
 #pragma HLS UNROLL
+// #pragma HLS PIPELINE II = 1
         y_sum_sq[k] = 0.f;
         rms_sq[k] = 0.f;
     }
@@ -240,7 +244,7 @@ init_y_sum_and_rms_sq:
 
 rms_calculate_loop_rms_norm3:
     for (int k = 0; k < col_len; ++k) {
-// #pragma HLS UNROLL
+#pragma HLS UNROLL
 // #pragma HLS PIPELINE II = 1
         rms_sq[k] = hls::sqrtf(y_sum_sq[k] + eps);
     } 
@@ -312,6 +316,7 @@ void float_layer_norm3(const uint16* x, uint16* y_bf16, int len) {
 init_partial_layernorm:
     for (int k = 0; k < col_len; ++k) {
 #pragma HLS UNROLL
+// #pragma HLS PIPELINE II = 1
         partial_mean[k] = 0.f;
         y_sum_sq[k] = 0.f;
     }
@@ -358,7 +363,8 @@ mean_blocks_layer_norm3:
 
 mean_blocks2_layer_norm3://观察到除太多次好像影响误差了把除法分出来
     for (int i = 0; i < col_len; i++){
-#pragma HLS UNROLL 
+#pragma HLS UNROLL
+// #pragma HLS PIPELINE II = 1
         partial_mean[i] = partial_mean[i] / row_len;
     }
     
@@ -366,8 +372,8 @@ mean_blocks2_layer_norm3://观察到除太多次好像影响误差了把除法�
 //标准差计算循环
 std_blocks_layer_norm3:  
     for (int i = 0; i < col_len; ++i) {
-// #pragma HLS UNROLL factor = 32
-// #pragma HLS PIPELINE II = 1
+// #pragma HLS UNROLL
+#pragma HLS PIPELINE II = 1
             y_sum_sq[i] = hls::sqrtf(y_sum_sq[i] - partial_mean[i] * partial_mean[i]  + eps);
     }
 
@@ -507,7 +513,6 @@ float sum_row[col_len];
 float max_row[col_len];
 #pragma HLS ARRAY_PARTITION variable = sum_row complete
 #pragma HLS ARRAY_PARTITION variable = max_row complete
-
 // #pragma HLS ALLOCATION function instances=row_reduce limit=1
 
     // // 1) 每行最大值
@@ -525,6 +530,7 @@ float max_row[col_len];
 init_lane_max_softmax:
     for (int u = 0; u < col_len; ++u) {
 #pragma HLS UNROLL
+// #pragma HLS PIPELINE II = 1
         max_row[u] = -std::numeric_limits<float>::max();
     }
 
@@ -551,6 +557,7 @@ max_step_loop_softmax:
 init_partial_softmax:
     for (int u = 0; u < col_len; ++u) {
 #pragma HLS UNROLL
+// #pragma HLS PIPELINE II = 1
         sum_row[u] = 0.f;  // 0x0000
     }
 
@@ -668,7 +675,7 @@ void float_Multiply2(const uint16_t* x, const uint16_t* y, uint16* out, int len)
     multiply_blocks_Multiply:
     for (int i = 0; i < row_len_unroll; ++i) {
 //64路下为1，32路时设置为2
-#pragma HLS PIPELINE II = 2
+// #pragma HLS PIPELINE II = 2
         multiply_inner:
         for (int u = 0; u < col_len; u = u + 2) {
 #pragma HLS UNROLL

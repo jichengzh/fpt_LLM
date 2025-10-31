@@ -13,7 +13,7 @@ set hasInterrupt 0
 set DLRegFirstOffset 0
 set DLRegItemOffset 0
 set svuvm_can_support 1
-set cdfgNum 22
+set cdfgNum 21
 set C_modelName {round_float32_to_bf16_ieee}
 set C_modelType { int 16 }
 set ap_memory_interface_dict [dict create]
