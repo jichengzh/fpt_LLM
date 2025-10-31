@@ -1,0 +1,175 @@
+{
+  "0": {
+    "basicblocks": 47,
+    "calls": "4 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 4 6 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 4 6 5 4 4 4 4",
+    "file": "activation_accelerator.cpp",
+    "fileloc": 475,
+    "instructions": 9918,
+    "loads": {
+      "G": 737,
+      "L": 289,
+      "T": 2
+    },
+    "name": "activation_accelerator",
+    "stores": {
+      "G": 450,
+      "L": 673,
+      "T": 1
+    },
+    "total_instructions": 27442
+  },
+  "1": {
+    "basicblocks": 7,
+    "calls": "3 3 11 11 7 11 10 10",
+    "file": "hls_fmax.h",
+    "fileloc": 19,
+    "instructions": 45,
+    "loads": {
+      "L": 6
+    },
+    "name": "generic_fmax<float>",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 160
+  },
+  "10": {
+    "basicblocks": 1,
+    "calls": "12",
+    "file": "x_hls_utils.h",
+    "fileloc": 319,
+    "instructions": 4,
+    "loads": {
+      "L": 1
+    },
+    "name": "to_int",
+    "total_instructions": 13
+  },
+  "11": {
+    "basicblocks": 1,
+    "calls": "3",
+    "file": "hls_isnan.h",
+    "fileloc": 16,
+    "instructions": 11,
+    "loads": {
+      "L": 2
+    },
+    "name": "generic_isnan<float>",
+    "total_instructions": 19
+  },
+  "12": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 309,
+    "instructions": 9,
+    "loads": {
+      "L": 3
+    },
+    "name": "data",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 9
+  },
+  "13": {
+    "basicblocks": 6,
+    "calls": "",
+    "file": "activation_accelerator.cpp",
+    "fileloc": 17,
+    "instructions": 39,
+    "name": "round_float32_to_bf16_ieee",
+    "total_instructions": 39
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "1",
+    "file": "fmaxfloat.cpp",
+    "fileloc": 6,
+    "instructions": 2,
+    "name": "fmax",
+    "total_instructions": 162
+  },
+  "3": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 283,
+    "instructions": 8,
+    "name": "fp_struct",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 8
+  },
+  "4": {
+    "basicblocks": 3,
+    "calls": "13 13 13 13 13 13 13 13 13 13 13 13 13 13 13 13 13 13 13 13 13 13 13 13 13 13 13 13 13 13 13 13",
+    "file": "activation_accelerator.cpp",
+    "fileloc": 72,
+    "instructions": 230,
+    "loads": {
+      "G": 32
+    },
+    "name": "f32_to_bf16_array",
+    "stores": {
+      "G": 32
+    },
+    "total_instructions": 1478
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "sqrtfloat.cpp",
+    "fileloc": 11,
+    "instructions": 2,
+    "name": "sqrtf",
+    "total_instructions": 2
+  },
+  "6": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "bf16_accl.h",
+    "fileloc": 324,
+    "instructions": 900,
+    "loads": {
+      "G": 64,
+      "L": 64
+    },
+    "name": "square",
+    "stores": {
+      "L": 128
+    },
+    "total_instructions": 900
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "8",
+    "file": "x_hls_utils.h",
+    "fileloc": 346,
+    "instructions": 2,
+    "name": "to_ieee",
+    "total_instructions": 16
+  },
+  "8": {
+    "basicblocks": 1,
+    "calls": "12",
+    "file": "x_hls_utils.h",
+    "fileloc": 322,
+    "instructions": 5,
+    "loads": {
+      "L": 1
+    },
+    "name": "to_float",
+    "total_instructions": 14
+  },
+  "9": {
+    "basicblocks": 1,
+    "calls": "2",
+    "file": "fmaxfloat.cpp",
+    "fileloc": 10,
+    "instructions": 2,
+    "name": "fmaxf",
+    "total_instructions": 164
+  }
+}
