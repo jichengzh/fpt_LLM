@@ -1,0 +1,7 @@
+activation_accelerator.cpp:720:45: warning: Allocation pragma is ignored, because Instances value is not valid function pointer expression  [-Winvalid-hls-pragmas]
+#pragma HLS ALLOCATION function instances = bf16_to_float limit = 32
+                                            ^
+activation_accelerator.cpp:720:9: warning: 'xlx_function_allocation' attribute cannot be applied to a statement [-Wignored-attributes]
+#pragma HLS ALLOCATION function instances = bf16_to_float limit = 32
+~       ^
+2 warnings generated.

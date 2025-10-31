@@ -108,7 +108,7 @@ attribute shreg_extract : string;
 
 
 begin
-    sparsemux_9_3_32_1_1_U1889 : component activation_accelerator_sparsemux_9_3_32_1_1
+    sparsemux_9_3_32_1_1_U1923 : component activation_accelerator_sparsemux_9_3_32_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,

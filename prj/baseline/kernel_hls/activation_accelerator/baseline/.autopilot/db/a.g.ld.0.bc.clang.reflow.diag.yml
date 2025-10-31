@@ -1,46 +1,14 @@
---- !Passed
-Pass:            inline
-Name:            AlwaysInline
-DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/expfloat.cpp', 
-                   Line: 22, Column: 9 }
-Function:        _ZN3hls4expfEf
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'exp_reduce_::exp(float)'
-    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/common/hls_exp_float.cpp, 
-                       Line: 15, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'hls::expf(float)'
-    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/expfloat.cpp', 
-                       Line: 20, Column: 0 }
-  - String:          ''''
-...
---- !Passed
-Pass:            inline
-Name:            AlwaysInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 170, Column: 29 }
-Function:        _Z11float_silu2PKtPfi
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'hls::expf(float)'
-    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/expfloat.cpp', 
-                       Line: 20, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'float_silu2(unsigned short const*, float*, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 149, Column: 0 }
-  - String:          ''''
-...
 --- !Missed
 Pass:            inline
 Name:            NeverInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 85, Column: 29 }
-Function:        _Z17f32_to_bf16_arrayPKfPti
+DebugLoc:        { File: activation_accelerator.cpp, Line: 149, Column: 22 }
+Function:        _Z11float_silu2PKtPti
 Args:            
   - Callee:          'round_float32_to_bf16_ieee(float)'
     DebugLoc:        { File: activation_accelerator.cpp, Line: 17, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'f32_to_bf16_array(float const*, unsigned short*, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 72, Column: 0 }
+  - Caller:          'float_silu2(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 128, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Missed
@@ -203,163 +171,328 @@ Args:
                        Line: 10, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/expfloat.cpp', 
+                   Line: 22, Column: 9 }
+Function:        _ZN3hls4expfEf
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'exp_reduce_::exp(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/common/hls_exp_float.cpp, 
+                       Line: 15, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'hls::expf(float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/expfloat.cpp', 
+                       Line: 20, Column: 0 }
+  - String:          ''''
+...
 --- !Missed
 Pass:            inline
 Name:            NeverInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 402, Column: 16 }
-Function:        _Z19float_safe_softmax3PKtPfi
+DebugLoc:        { File: activation_accelerator.cpp, Line: 528, Column: 16 }
+Function:        _Z19float_safe_softmax3PKtPti
 Args:            
   - Callee:          'std::numeric_limits<float>::max()'
     DebugLoc:        { File: '/tools/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/limits', 
                        Line: 1602, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'float_safe_softmax3(unsigned short const*, float*, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 384, Column: 0 }
-  - String:          ' because it should never be inlined (cost=never)'
-...
---- !Missed
-Pass:            inline
-Name:            NeverInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 420, Column: 26 }
-Function:        _Z19float_safe_softmax3PKtPfi
-Args:            
-  - Callee:          'hls::fmaxf(float, float)'
-    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
-                       Line: 10, Column: 0 }
-  - String:          ' not inlined into '
-  - Caller:          'float_safe_softmax3(unsigned short const*, float*, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 384, Column: 0 }
+  - Caller:          'float_safe_softmax3(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 493, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 444, Column: 24 }
-Function:        _Z19float_safe_softmax3PKtPfi
+DebugLoc:        { File: activation_accelerator.cpp, Line: 544, Column: 25 }
+Function:        _Z19float_safe_softmax3PKtPti
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'bf16_to_float(unsigned short)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 71, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'float_safe_softmax3(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 493, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 594, Column: 24 }
+Function:        _Z19float_safe_softmax3PKtPti
+Args:            
+  - Callee:          'round_float32_to_bf16_ieee(float)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 17, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float_safe_softmax3(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 493, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z19float_safe_softmax3PKtPti
+Args:            
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float_safe_softmax3(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 493, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 593, Column: 25 }
+Function:        _Z19float_safe_softmax3PKtPti
 Args:            
   - String:          'Inlining function '''
   - Callee:          'hls::expf(float)'
     DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/expfloat.cpp', 
                        Line: 20, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'float_safe_softmax3(unsigned short const*, float*, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 384, Column: 0 }
+  - Caller:          'float_safe_softmax3(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 493, Column: 0 }
   - String:          ''''
 ...
 --- !Missed
 Pass:            inline
 Name:            NeverInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 304, Column: 5 }
-Function:        _Z17float_layer_norm3PKtPfi
+DebugLoc:        { File: activation_accelerator.cpp, Line: 320, Column: 5 }
+Function:        _Z17float_layer_norm3PKtPti
 Args:            
   - Callee:          'square(unsigned short const*, float*, int)'
     DebugLoc:        { File: ./bf16_accl.h, Line: 324, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'float_layer_norm3(unsigned short const*, float*, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 278, Column: 0 }
-  - String:          ' because it should never be inlined (cost=never)'
-...
---- !Missed
-Pass:            inline
-Name:            NeverInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 333, Column: 16 }
-Function:        _Z17float_layer_norm3PKtPfi
-Args:            
-  - Callee:          'hls::sqrtf(float)'
-    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp', 
-                       Line: 11, Column: 0 }
-  - String:          ' not inlined into '
-  - Caller:          'float_layer_norm3(unsigned short const*, float*, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 278, Column: 0 }
-  - String:          ' because it should never be inlined (cost=never)'
-...
---- !Missed
-Pass:            inline
-Name:            NeverInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 234, Column: 5 }
-Function:        _Z15float_rms_norm3PKtPfi
-Args:            
-  - Callee:          'square(unsigned short const*, float*, int)'
-    DebugLoc:        { File: ./bf16_accl.h, Line: 324, Column: 0 }
-  - String:          ' not inlined into '
-  - Caller:          'float_rms_norm3(unsigned short const*, float*, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 210, Column: 0 }
-  - String:          ' because it should never be inlined (cost=never)'
-...
---- !Missed
-Pass:            inline
-Name:            NeverInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 240, Column: 14 }
-Function:        _Z15float_rms_norm3PKtPfi
-Args:            
-  - Callee:          'hls::sqrtf(float)'
-    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp', 
-                       Line: 11, Column: 0 }
-  - String:          ' not inlined into '
-  - Caller:          'float_rms_norm3(unsigned short const*, float*, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 210, Column: 0 }
+  - Caller:          'float_layer_norm3(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 294, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 203, Column: 36 }
-Function:        _Z11float_gelu2PKtPfi
+DebugLoc:        { File: activation_accelerator.cpp, Line: 334, Column: 25 }
+Function:        _Z17float_layer_norm3PKtPti
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'bf16_to_float(unsigned short)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 71, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'float_layer_norm3(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 294, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 390, Column: 27 }
+Function:        _Z17float_layer_norm3PKtPti
+Args:            
+  - Callee:          'round_float32_to_bf16_ieee(float)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 17, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float_layer_norm3(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 294, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 371, Column: 27 }
+Function:        _Z17float_layer_norm3PKtPti
+Args:            
+  - Callee:          'hls::sqrtf(float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp', 
+                       Line: 11, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float_layer_norm3(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 294, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 239, Column: 5 }
+Function:        _Z15float_rms_norm3PKtPti
+Args:            
+  - Callee:          'square(unsigned short const*, float*, int)'
+    DebugLoc:        { File: ./bf16_accl.h, Line: 324, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float_rms_norm3(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 215, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 245, Column: 21 }
+Function:        _Z15float_rms_norm3PKtPti
+Args:            
+  - Callee:          'hls::sqrtf(float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp', 
+                       Line: 11, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float_rms_norm3(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 215, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 281, Column: 25 }
+Function:        _Z15float_rms_norm3PKtPti
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'bf16_to_float(unsigned short)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 71, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'float_rms_norm3(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 215, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 285, Column: 27 }
+Function:        _Z15float_rms_norm3PKtPti
+Args:            
+  - Callee:          'round_float32_to_bf16_ieee(float)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 17, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float_rms_norm3(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 215, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 683, Column: 25 }
+Function:        _Z15float_Multiply2PKtS0_Pti
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'bf16_to_float(unsigned short)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 71, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'float_Multiply2(unsigned short const*, unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 656, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 690, Column: 24 }
+Function:        _Z15float_Multiply2PKtS0_Pti
+Args:            
+  - Callee:          'round_float32_to_bf16_ieee(float)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 17, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float_Multiply2(unsigned short const*, unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 656, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 477, Column: 25 }
+Function:        _ZL10float_add2PKtS0_Pti
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'bf16_to_float(unsigned short)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 71, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'float_add2(unsigned short const*, unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 462, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 486, Column: 24 }
+Function:        _ZL10float_add2PKtS0_Pti
+Args:            
+  - Callee:          'round_float32_to_bf16_ieee(float)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 17, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float_add2(unsigned short const*, unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 462, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 176, Column: 41 }
+Function:        _Z11float_gelu2PKtPti
 Args:            
   - String:          'Inlining function '''
   - Callee:          'hls::expf(float)'
     DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/expfloat.cpp', 
                        Line: 20, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'float_gelu2(unsigned short const*, float*, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 177, Column: 0 }
-  - String:          ''''
-...
---- !Passed
-Pass:            inline
-Name:            AlwaysInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 570, Column: 13 }
-Function:        _Z22activation_acceleratorPtS_S_ii
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'float_silu2(unsigned short const*, float*, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 149, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+  - Caller:          'float_gelu2(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 155, Column: 0 }
   - String:          ''''
 ...
 --- !Missed
 Pass:            inline
 Name:            NeverInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 601, Column: 13 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 178, Column: 27 }
+Function:        _Z11float_gelu2PKtPti
+Args:            
+  - Callee:          'round_float32_to_bf16_ieee(float)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 17, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float_gelu2(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 155, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 736, Column: 28 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
-  - Callee:          'f32_to_bf16_array(float const*, unsigned short*, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 72, Column: 0 }
+  - Callee:          'round_float32_to_bf16_ieee(float)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 17, Column: 0 }
   - String:          ' not inlined into '
   - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 575, Column: 13 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 757, Column: 13 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'float_safe_softmax3(unsigned short const*, float*, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 384, Column: 0 }
+  - Callee:          'float_silu2(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 128, Column: 0 }
   - String:          ''' into '''
   - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 761, Column: 13 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'float_safe_softmax3(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 493, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
   - String:          ''''
 ...
 --- !Missed
 Pass:            inline
 Name:            NeverInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 420, Column: 26 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - Callee:          'hls::fmaxf(float, float)'
@@ -367,27 +500,27 @@ Args:
                        Line: 10, Column: 0 }
   - String:          ' not inlined into '
   - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 580, Column: 13 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 765, Column: 13 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'float_layer_norm3(unsigned short const*, float*, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 278, Column: 0 }
+  - Callee:          'float_layer_norm3(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 294, Column: 0 }
   - String:          ''' into '''
   - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
   - String:          ''''
 ...
 --- !Missed
 Pass:            inline
 Name:            NeverInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 333, Column: 16 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 371, Column: 27 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - Callee:          'hls::sqrtf(float)'
@@ -395,82 +528,69 @@ Args:
                        Line: 11, Column: 0 }
   - String:          ' not inlined into '
   - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 585, Column: 13 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 769, Column: 13 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'float_rms_norm3(unsigned short const*, float*, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 210, Column: 0 }
+  - Callee:          'float_rms_norm3(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 215, Column: 0 }
   - String:          ''' into '''
   - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 590, Column: 13 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 773, Column: 13 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'float_Multiply2(unsigned short const*, unsigned short const*, float*, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 475, Column: 0 }
+  - Callee:          'float_Multiply2(unsigned short const*, unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 656, Column: 0 }
   - String:          ''' into '''
   - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 777, Column: 13 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'float_add2(unsigned short const*, unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 462, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 782, Column: 13 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'float_gelu2(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 155, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
   - String:          ''''
 ...
 --- !Missed
 Pass:            inline
 Name:            NeverInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 234, Column: 5 }
-Function:        _Z22activation_acceleratorPtS_S_ii
-Args:            
-  - Callee:          'square(unsigned short const*, float*, int)'
-    DebugLoc:        { File: ./bf16_accl.h, Line: 324, Column: 0 }
-  - String:          ' not inlined into '
-  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
-  - String:          ' because it should never be inlined (cost=never)'
-...
---- !Passed
-Pass:            inline
-Name:            AlwaysInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 595, Column: 13 }
-Function:        _Z22activation_acceleratorPtS_S_ii
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'float_add2(unsigned short const*, unsigned short const*, float*, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 354, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
-  - String:          ''''
-...
---- !Passed
-Pass:            inline
-Name:            AlwaysInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 600, Column: 13 }
-Function:        _Z22activation_acceleratorPtS_S_ii
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'float_gelu2(unsigned short const*, float*, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 177, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
-  - String:          ''''
-...
---- !Missed
-Pass:            inline
-Name:            NeverInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 402, Column: 16 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 528, Column: 16 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - Callee:          'std::numeric_limits<float>::max()'
@@ -478,17 +598,90 @@ Args:
                        Line: 1602, Column: 0 }
   - String:          ' not inlined into '
   - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 320, Column: 5 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - Callee:          'square(unsigned short const*, float*, int)'
+    DebugLoc:        { File: ./bf16_accl.h, Line: 324, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 249, Column: 13 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 581, Column: 9 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Loop '''
-  - LoopName:        normalize_inner_rms_norm3_1
+  - LoopName:        softmax_final_inner
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: activation_accelerator.cpp, Line: 562, Column: 9 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        exp_inner_softmax
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: activation_accelerator.cpp, Line: 535, Column: 20 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_535_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: activation_accelerator.cpp, Line: 380, Column: 9 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        normalize_inner_layer_norm3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: activation_accelerator.cpp, Line: 327, Column: 20 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_327_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: activation_accelerator.cpp, Line: 274, Column: 9 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        normalize_inner_rms_norm3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: activation_accelerator.cpp, Line: 673, Column: 9 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        multiply_inner
   - String:          ''' is marked as complete unroll implied by the pipeline pragma'
 ...
 --- !Passed
@@ -504,13 +697,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        silu_inner
   - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:163:9'
+  - LoopLoc:         'activation_accelerator.cpp:141:9'
   - String:          ') '
   - String:          'in function '''
   - String:          activation_accelerator
@@ -520,13 +713,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        softmax_final_inner
   - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:456:9'
+  - LoopLoc:         'activation_accelerator.cpp:581:9'
   - String:          ') '
   - String:          'in function '''
   - String:          activation_accelerator
@@ -536,13 +729,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        exp_inner_softmax
   - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:438:9'
+  - LoopLoc:         'activation_accelerator.cpp:562:9'
   - String:          ') '
   - String:          'in function '''
   - String:          activation_accelerator
@@ -552,13 +745,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        init_partial_softmax
   - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:426:5'
+  - LoopLoc:         'activation_accelerator.cpp:552:5'
   - String:          ') '
   - String:          'in function '''
   - String:          activation_accelerator
@@ -567,32 +760,30 @@ Args:
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
-Name:            PragmaPartiallyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        lane_reduce_softmax
+  - LoopName:        VITIS_LOOP_535_1
   - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:412:9'
+  - LoopLoc:         'activation_accelerator.cpp:535:20'
   - String:          ') '
   - String:          'in function '''
   - String:          activation_accelerator
-  - String:          ''' partially '
-  - String:          ''
-  - String:          'with a factor of '
-  - Factor:          '32'
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        init_lane_max_softmax
   - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:400:5'
+  - LoopLoc:         'activation_accelerator.cpp:526:5'
   - String:          ') '
   - String:          'in function '''
   - String:          activation_accelerator
@@ -602,13 +793,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        normalize_inner_layer_norm3
   - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:342:9'
+  - LoopLoc:         'activation_accelerator.cpp:380:9'
   - String:          ') '
   - String:          'in function '''
   - String:          activation_accelerator
@@ -618,29 +809,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
-Function:        _Z22activation_acceleratorPtS_S_ii
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        std_blocks_layer_norm3
-  - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:328:5'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          activation_accelerator
-  - String:          ''' completely with a factor of '
-  - Factor:          '64'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        mean_blocks2_layer_norm3
   - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:320:5'
+  - LoopLoc:         'activation_accelerator.cpp:360:5'
   - String:          ') '
   - String:          'in function '''
   - String:          activation_accelerator
@@ -650,13 +825,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        mean_inner_layer_norm3
+  - LoopName:        VITIS_LOOP_327_1
   - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:311:9'
+  - LoopLoc:         'activation_accelerator.cpp:327:20'
   - String:          ') '
   - String:          'in function '''
   - String:          activation_accelerator
@@ -666,13 +841,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        init_partial_layernorm
   - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:297:5'
+  - LoopLoc:         'activation_accelerator.cpp:313:5'
   - String:          ') '
   - String:          'in function '''
   - String:          activation_accelerator
@@ -682,13 +857,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        normalize_inner_rms_norm3_1
+  - LoopName:        normalize_inner_rms_norm3
   - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:249:13'
+  - LoopLoc:         'activation_accelerator.cpp:274:9'
   - String:          ') '
   - String:          'in function '''
   - String:          activation_accelerator
@@ -698,13 +873,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        init_y_sum_and_rms_sq
   - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:228:5'
+  - LoopLoc:         'activation_accelerator.cpp:233:5'
   - String:          ') '
   - String:          'in function '''
   - String:          activation_accelerator
@@ -714,13 +889,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        multiply_inner
   - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:493:9'
+  - LoopLoc:         'activation_accelerator.cpp:673:9'
   - String:          ') '
   - String:          'in function '''
   - String:          activation_accelerator
@@ -730,13 +905,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        add_inner
   - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:367:9'
+  - LoopLoc:         'activation_accelerator.cpp:473:9'
   - String:          ') '
   - String:          'in function '''
   - String:          activation_accelerator
@@ -746,18 +921,18 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        gelu_inner
+  - LoopName:        VITIS_LOOP_164_1
   - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:190:9'
+  - LoopLoc:         'activation_accelerator.cpp:164:27'
   - String:          ') '
   - String:          'in function '''
   - String:          activation_accelerator
   - String:          ''' completely with a factor of '
-  - Factor:          '64'
+  - Factor:          '32'
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
@@ -790,35 +965,6 @@ Args:
   - String:          square
   - String:          ''' completely with a factor of '
   - Factor:          '64'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: activation_accelerator.cpp, Line: 72, Column: 0 }
-Function:        _Z17f32_to_bf16_arrayPKfPti
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        pack_lanes
-  - String:          ''' ('
-  - LoopLoc:         'activation_accelerator.cpp:82:9'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          f32_to_bf16_array
-  - String:          ''' completely with a factor of '
-  - Factor:          '32'
-...
---- !Missed
-Pass:            inline
-Name:            NeverInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 85, Column: 29 }
-Function:        _Z17f32_to_bf16_arrayPKfPti
-Args:            
-  - Callee:          'round_float32_to_bf16_ieee(float)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 17, Column: 0 }
-  - String:          ' not inlined into '
-  - Caller:          'f32_to_bf16_array(float const*, unsigned short*, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 72, Column: 0 }
-  - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Missed
 Pass:            inline
@@ -983,20 +1129,20 @@ Args:
 --- !Missed
 Pass:            inline
 Name:            NeverInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 571, Column: 13 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 736, Column: 28 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
-  - Callee:          'f32_to_bf16_array(float const*, unsigned short*, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 72, Column: 0 }
+  - Callee:          'round_float32_to_bf16_ieee(float)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 17, Column: 0 }
   - String:          ' not inlined into '
   - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Missed
 Pass:            inline
 Name:            NeverInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 420, Column: 26 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - Callee:          'hls::fmaxf(float, float)'
@@ -1004,26 +1150,26 @@ Args:
                        Line: 10, Column: 0 }
   - String:          ' not inlined into '
   - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Missed
 Pass:            inline
 Name:            NeverInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 304, Column: 5 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 320, Column: 5 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - Callee:          'square(unsigned short const*, float*, int)'
     DebugLoc:        { File: ./bf16_accl.h, Line: 324, Column: 0 }
   - String:          ' not inlined into '
   - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Missed
 Pass:            inline
 Name:            NeverInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 333, Column: 16 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 371, Column: 27 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - Callee:          'hls::sqrtf(float)'
@@ -1031,7 +1177,7 @@ Args:
                        Line: 11, Column: 0 }
   - String:          ' not inlined into '
   - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Missed
@@ -1040,7 +1186,7 @@ Name:            NeverInline
 Function:        apatb_activation_accelerator_ir
 Args:            
   - Callee:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
   - String:          ' not inlined into '
   - Caller:          apatb_activation_accelerator_ir
   - String:          ' because it should never be inlined (cost=never)'
@@ -1201,28 +1347,28 @@ Args:
 --- !Passed
 Pass:            reflow-inliner
 Name:            Inline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'hls::fmaxf(float, float)'
-    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
-                       Line: 10, Column: 0 }
+  - Callee:          'hls::sqrtf(float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp', 
+                       Line: 11, Column: 0 }
   - String:          ''' into '''
   - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: activation_accelerator.cpp, Line: 524, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 706, Column: 0 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Applying '
   - String:          array_partition
   - String:          ' to '''
-  - UOName:          _ZZ22activation_acceleratorPtS_S_iiE5fbuf2
+  - UOName:          _ZZ22activation_acceleratorPtS_S_iiE4buf2
   - String:          ''':'
   - String:          ' '
   - Mode:            Block
@@ -1236,27 +1382,7 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: activation_accelerator.cpp, Line: 523, Column: 0 }
-Function:        _Z17f32_to_bf16_arrayPKfPti
-Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          _ZZ22activation_acceleratorPtS_S_iiE4buf2
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Block
-  - String:          ' partitioning'
-  - String:          ' with factor '
-  - Factor:          '32'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
-...
---- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-DebugLoc:        { File: activation_accelerator.cpp, Line: 522, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 705, Column: 0 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Applying '
@@ -1276,7 +1402,7 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: activation_accelerator.cpp, Line: 521, Column: 0 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 704, Column: 0 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Applying '
@@ -1296,13 +1422,13 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: activation_accelerator.cpp, Line: 218, Column: 11 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 223, Column: 11 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Applying '
   - String:          array_partition
   - String:          ' to '''
-  - UOName:          y_sum_sq.i36
+  - UOName:          y_sum_sq.i37
   - String:          ''':'
   - String:          ' '
   - Mode:            Complete
@@ -1314,7 +1440,7 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: activation_accelerator.cpp, Line: 219, Column: 11 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 224, Column: 11 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Applying '
@@ -1332,7 +1458,7 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: activation_accelerator.cpp, Line: 285, Column: 11 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 301, Column: 11 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Applying '
@@ -1350,7 +1476,7 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: activation_accelerator.cpp, Line: 286, Column: 11 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 302, Column: 11 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Applying '
@@ -1366,27 +1492,9 @@ Args:
   - String:          .
 ...
 --- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-DebugLoc:        { File: activation_accelerator.cpp, Line: 392, Column: 7 }
-Function:        _Z22activation_acceleratorPtS_S_ii
-Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          max_row.i
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Complete
-  - String:          ' partitioning'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
-...
---- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: activation_accelerator.cpp, Line: 555, Column: 9 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 742, Column: 9 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Sequential '
@@ -1395,28 +1503,28 @@ Args:
   - Length:          '49152'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ '
-  - AccessID:        in04391seq
+  - AccessID:        in02629seq
   - ArrayName:       in0
   - String:          ' '
   - BundleName:      gmem0
   - String:          ' '
   - LoopName:        stage_0_load0
   - String:          ' '
-  - LoopLoc:         'activation_accelerator.cpp:555:9'
+  - LoopLoc:         'activation_accelerator.cpp:742:9'
   - String:          ' '
   - Function:        'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 556, Column: 23 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 743, Column: 23 }
   - OrigDirection:   read
   - OrigID:          for.inc.load.70
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: activation_accelerator.cpp, Line: 559, Column: 9 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 746, Column: 9 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Sequential '
@@ -1425,28 +1533,28 @@ Args:
   - Length:          '49152'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ '
-  - AccessID:        in14392seq
+  - AccessID:        in12630seq
   - ArrayName:       in1
   - String:          ' '
   - BundleName:      gmem1
   - String:          ' '
   - LoopName:        stage_0_load1
   - String:          ' '
-  - LoopLoc:         'activation_accelerator.cpp:559:9'
+  - LoopLoc:         'activation_accelerator.cpp:746:9'
   - String:          ' '
   - Function:        'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 560, Column: 23 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 747, Column: 23 }
   - OrigDirection:   read
   - OrigID:          for.inc13.load.38
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: activation_accelerator.cpp, Line: 608, Column: 9 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 788, Column: 9 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Sequential '
@@ -1455,28 +1563,28 @@ Args:
   - Length:          '49152'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ '
-  - AccessID:        out4393seq
+  - AccessID:        out2631seq
   - ArrayName:       out
   - String:          ' '
   - BundleName:      gmem2
   - String:          ' '
   - LoopName:        stage_2_store
   - String:          ' '
-  - LoopLoc:         'activation_accelerator.cpp:608:9'
+  - LoopLoc:         'activation_accelerator.cpp:788:9'
   - String:          ' '
   - Function:        'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      store
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 609, Column: 20 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 789, Column: 20 }
   - OrigDirection:   write
-  - OrigID:          for.inc56.store.71
+  - OrigID:          for.inc56.store.135
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: activation_accelerator.cpp, Line: 559, Column: 9 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 746, Column: 9 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Could not widen since type '
@@ -1485,25 +1593,25 @@ Args:
   - Threshold:       '0'
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 559, Column: 9 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 746, Column: 9 }
   - OrigDirection:   read
-  - OrigID:          in14392seq
+  - OrigID:          in12630seq
   - ArrayName:       in1
   - String:          ' '
   - BundleName:      gmem1
   - String:          ' '
   - LoopName:        stage_0_load1
   - String:          ' '
-  - LoopLoc:         'activation_accelerator.cpp:559:9'
+  - LoopLoc:         'activation_accelerator.cpp:746:9'
   - String:          ' '
   - Function:        'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: activation_accelerator.cpp, Line: 555, Column: 9 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 742, Column: 9 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Could not widen since type '
@@ -1512,25 +1620,25 @@ Args:
   - Threshold:       '0'
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 555, Column: 9 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 742, Column: 9 }
   - OrigDirection:   read
-  - OrigID:          in04391seq
+  - OrigID:          in02629seq
   - ArrayName:       in0
   - String:          ' '
   - BundleName:      gmem0
   - String:          ' '
   - LoopName:        stage_0_load0
   - String:          ' '
-  - LoopLoc:         'activation_accelerator.cpp:555:9'
+  - LoopLoc:         'activation_accelerator.cpp:742:9'
   - String:          ' '
   - Function:        'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: activation_accelerator.cpp, Line: 608, Column: 9 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 788, Column: 9 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Could not widen since type '
@@ -1539,29 +1647,19 @@ Args:
   - Threshold:       '0'
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 608, Column: 9 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 788, Column: 9 }
   - OrigDirection:   write
-  - OrigID:          out4393seq
+  - OrigID:          out2631seq
   - ArrayName:       out
   - String:          ' '
   - BundleName:      gmem2
   - String:          ' '
   - LoopName:        stage_2_store
   - String:          ' '
-  - LoopLoc:         'activation_accelerator.cpp:608:9'
+  - LoopLoc:         'activation_accelerator.cpp:788:9'
   - String:          ' '
   - Function:        'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
-  - String:          ' '
-...
---- !HLSReportInfo
-Pass:            auto-loop-pipeline
-Name:            AutoLoopPipeline
-Args:            
-  - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        pack_rows
-  - String:          '> at '
-  - LoopLoc:         'activation_accelerator.cpp:79:5'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
   - String:          ' '
 ...
 --- !HLSReportInfo
@@ -1571,7 +1669,7 @@ Args:
   - String:          'automatically set the pipeline for Loop< '
   - LoopName:        stage_2_store
   - String:          '> at '
-  - LoopLoc:         'activation_accelerator.cpp:608:9'
+  - LoopLoc:         'activation_accelerator.cpp:788:9'
   - String:          ' '
 ...
 --- !HLSReportInfo
@@ -1581,7 +1679,7 @@ Args:
   - String:          'automatically set the pipeline for Loop< '
   - LoopName:        gelu_blocks
   - String:          '> at '
-  - LoopLoc:         'activation_accelerator.cpp:186:5'
+  - LoopLoc:         'activation_accelerator.cpp:163:5'
   - String:          ' '
 ...
 --- !HLSReportInfo
@@ -1589,9 +1687,9 @@ Pass:            auto-loop-pipeline
 Name:            AutoLoopPipeline
 Args:            
   - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        add_blocks
+  - LoopName:        add_blocks_add
   - String:          '> at '
-  - LoopLoc:         'activation_accelerator.cpp:363:5'
+  - LoopLoc:         'activation_accelerator.cpp:469:5'
   - String:          ' '
 ...
 --- !HLSReportInfo
@@ -1599,9 +1697,9 @@ Pass:            auto-loop-pipeline
 Name:            AutoLoopPipeline
 Args:            
   - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        multiply_blocks_Multiply
+  - LoopName:        rms_calculate_loop_rms_norm3
   - String:          '> at '
-  - LoopLoc:         'activation_accelerator.cpp:488:5'
+  - LoopLoc:         'activation_accelerator.cpp:242:5'
   - String:          ' '
 ...
 --- !HLSReportInfo
@@ -1609,49 +1707,9 @@ Pass:            auto-loop-pipeline
 Name:            AutoLoopPipeline
 Args:            
   - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        mean_blocks_layer_norm3
+  - LoopName:        std_blocks_layer_norm3
   - String:          '> at '
-  - LoopLoc:         'activation_accelerator.cpp:308:5'
-  - String:          ' '
-...
---- !HLSReportInfo
-Pass:            auto-loop-pipeline
-Name:            AutoLoopPipeline
-Args:            
-  - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        normalize_blocks_layer_norm3
-  - String:          '> at '
-  - LoopLoc:         'activation_accelerator.cpp:338:5'
-  - String:          ' '
-...
---- !HLSReportInfo
-Pass:            auto-loop-pipeline
-Name:            AutoLoopPipeline
-Args:            
-  - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        lane_reduce_softmax
-  - String:          '> at '
-  - LoopLoc:         'activation_accelerator.cpp:412:9'
-  - String:          ' '
-...
---- !HLSReportInfo
-Pass:            auto-loop-pipeline
-Name:            AutoLoopPipeline
-Args:            
-  - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        exp_and_bucket_softmax
-  - String:          '> at '
-  - LoopLoc:         'activation_accelerator.cpp:432:5'
-  - String:          ' '
-...
---- !HLSReportInfo
-Pass:            auto-loop-pipeline
-Name:            AutoLoopPipeline
-Args:            
-  - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        softmax_final
-  - String:          '> at '
-  - LoopLoc:         'activation_accelerator.cpp:450:5'
+  - LoopLoc:         'activation_accelerator.cpp:368:5'
   - String:          ' '
 ...
 --- !HLSReportInfo
@@ -1661,7 +1719,7 @@ Args:
   - String:          'automatically set the pipeline for Loop< '
   - LoopName:        silu_blocks
   - String:          '> at '
-  - LoopLoc:         'activation_accelerator.cpp:159:5'
+  - LoopLoc:         'activation_accelerator.cpp:138:5'
   - String:          ' '
 ...
 --- !HLSReportInfo
@@ -1671,7 +1729,7 @@ Args:
   - String:          'automatically set the pipeline for Loop< '
   - LoopName:        stage_0_load0
   - String:          '> at '
-  - LoopLoc:         'activation_accelerator.cpp:555:9'
+  - LoopLoc:         'activation_accelerator.cpp:742:9'
   - String:          ' '
 ...
 --- !HLSReportInfo
@@ -1681,13 +1739,973 @@ Args:
   - String:          'automatically set the pipeline for Loop< '
   - LoopName:        stage_0_load1
   - String:          '> at '
-  - LoopLoc:         'activation_accelerator.cpp:559:9'
+  - LoopLoc:         'activation_accelerator.cpp:746:9'
   - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: activation_accelerator.cpp, Line: 546, Column: 26 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'hls::fmaxf(float, float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/fmaxfloat.cpp', 
+                       Line: 10, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
+  - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: activation_accelerator.cpp, Line: 555, Column: 9 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 742, Column: 9 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Multiple burst '
@@ -1706,16 +2724,16 @@ Args:
   - String:          ' '
   - LoopName:        stage_0_load0
   - String:          ' '
-  - LoopLoc:         'activation_accelerator.cpp:555:9'
+  - LoopLoc:         'activation_accelerator.cpp:742:9'
   - String:          ' '
   - Function:        'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: activation_accelerator.cpp, Line: 555, Column: 9 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 742, Column: 9 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Multiple burst '
@@ -1727,7 +2745,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        stage_0_load0
   - String:          '''('
-  - LoopLoc:         'activation_accelerator.cpp:555:9'
+  - LoopLoc:         'activation_accelerator.cpp:742:9'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem0
@@ -1737,7 +2755,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: activation_accelerator.cpp, Line: 559, Column: 9 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 746, Column: 9 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Multiple burst '
@@ -1756,16 +2774,16 @@ Args:
   - String:          ' '
   - LoopName:        stage_0_load1
   - String:          ' '
-  - LoopLoc:         'activation_accelerator.cpp:559:9'
+  - LoopLoc:         'activation_accelerator.cpp:746:9'
   - String:          ' '
   - Function:        'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: activation_accelerator.cpp, Line: 559, Column: 9 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 746, Column: 9 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Multiple burst '
@@ -1777,7 +2795,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        stage_0_load1
   - String:          '''('
-  - LoopLoc:         'activation_accelerator.cpp:559:9'
+  - LoopLoc:         'activation_accelerator.cpp:746:9'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem1
@@ -1787,7 +2805,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: activation_accelerator.cpp, Line: 608, Column: 9 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 788, Column: 9 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Multiple burst '
@@ -1806,16 +2824,16 @@ Args:
   - String:          ' '
   - LoopName:        stage_2_store
   - String:          ' '
-  - LoopLoc:         'activation_accelerator.cpp:608:9'
+  - LoopLoc:         'activation_accelerator.cpp:788:9'
   - String:          ' '
   - Function:        'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: activation_accelerator.cpp, Line: 608, Column: 9 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 788, Column: 9 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - String:          'Multiple burst '
@@ -1827,7 +2845,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        stage_2_store
   - String:          '''('
-  - LoopLoc:         'activation_accelerator.cpp:608:9'
+  - LoopLoc:         'activation_accelerator.cpp:788:9'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem2
@@ -1837,27 +2855,14 @@ Args:
 --- !Missed
 Pass:            inline
 Name:            NeverInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 85, Column: 29 }
-Function:        _Z17f32_to_bf16_arrayPKfPti
+DebugLoc:        { File: activation_accelerator.cpp, Line: 736, Column: 28 }
+Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - Callee:          'round_float32_to_bf16_ieee(float)'
     DebugLoc:        { File: activation_accelerator.cpp, Line: 17, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'f32_to_bf16_array(float const*, unsigned short*, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 72, Column: 0 }
-  - String:          ' because it should never be inlined (cost=never)'
-...
---- !Missed
-Pass:            inline
-Name:            NeverInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 571, Column: 13 }
-Function:        _Z22activation_acceleratorPtS_S_ii
-Args:            
-  - Callee:          'f32_to_bf16_array(float const*, unsigned short*, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 72, Column: 0 }
-  - String:          ' not inlined into '
   - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Missed
@@ -1872,33 +2877,19 @@ Args:
                        Line: 20, Column: 0 }
   - String:          ' not inlined into '
   - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Missed
 Pass:            inline
 Name:            NeverInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 304, Column: 5 }
+DebugLoc:        { File: activation_accelerator.cpp, Line: 320, Column: 5 }
 Function:        _Z22activation_acceleratorPtS_S_ii
 Args:            
   - Callee:          'square(unsigned short const*, float*, int)'
     DebugLoc:        { File: ./bf16_accl.h, Line: 324, Column: 0 }
   - String:          ' not inlined into '
   - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
-  - String:          ' because it should never be inlined (cost=never)'
-...
---- !Missed
-Pass:            inline
-Name:            NeverInline
-DebugLoc:        { File: activation_accelerator.cpp, Line: 333, Column: 16 }
-Function:        _Z22activation_acceleratorPtS_S_ii
-Args:            
-  - Callee:          'hls::sqrtf(float)'
-    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp', 
-                       Line: 11, Column: 0 }
-  - String:          ' not inlined into '
-  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
-    DebugLoc:        { File: activation_accelerator.cpp, Line: 513, Column: 0 }
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 696, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...

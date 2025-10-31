@@ -1292,4 +1292,31 @@ Diagnostics:
         Offset:          2399653
         Length:          0
         ReplacementText: 'VITIS_LOOP_169_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_164_1:  '
+    FileOffset:      164
+    FilePath:        activation_accelerator.cpp
+    Replacements:    
+      - FilePath:        /home/jicz/xushaohui/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp
+        Offset:          2475162
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_164_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_327_1:  '
+    FileOffset:      327
+    FilePath:        activation_accelerator.cpp
+    Replacements:    
+      - FilePath:        /home/jicz/xushaohui/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp
+        Offset:          2477656
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_327_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_535_1:  '
+    FileOffset:      535
+    FilePath:        activation_accelerator.cpp
+    Replacements:    
+      - FilePath:        /home/jicz/xushaohui/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp
+        Offset:          2479850
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_535_1: '
 ...

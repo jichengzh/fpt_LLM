@@ -83,7 +83,7 @@ wire    ap_ce_reg;
     .def_WIDTH( 32 ),
     .sel_WIDTH( 3 ),
     .dout_WIDTH( 32 ))
-sparsemux_9_3_32_1_1_U1889(
+sparsemux_9_3_32_1_1_U1923(
     .din0(res_2_fu_304_p2),
     .din1(y),
     .din2(x),
