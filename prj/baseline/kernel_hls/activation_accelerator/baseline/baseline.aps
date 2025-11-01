@@ -20,5 +20,11 @@
         <config_op positional0="fadd" impl="fulldsp"/>
         <config_op positional0="fsub" impl="fulldsp"/>
     </config>
+    <Simulation argv="">
+        <SimFlow name="cosim" setup="false" dumpTrace="none" optimizeCompile="false" ldflags="" mflags="" compiledLibrary="" toolName="xsim">
+            <Rtl name="verilog" active="true"/>
+            <Rtl name="vhdl" active="false"/>
+        </SimFlow>
+    </Simulation>
 </AutoPilot:solution>
 

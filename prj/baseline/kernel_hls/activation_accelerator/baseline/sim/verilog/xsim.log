@@ -1,0 +1,56 @@
+#-----------------------------------------------------------
+# xsim v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Sat Nov  1 10:24:40 2025
+# Process ID         : 1274875
+# Current directory  : /home/jicz/xushaohui/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog
+# Command line       : xsim -mode tcl -source {xsim.dir/activation_accelerator/xsim_script.tcl}
+# Log file           : /home/jicz/xushaohui/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/xsim.log
+# Journal file       : /home/jicz/xushaohui/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/xsim.jou
+# Running On         : fpga5090
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.2 LTS
+# Processor Detail   : AMD Ryzen 9 9950X 16-Core Processor
+# CPU Frequency      : 5520.526 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 32
+# Host memory        : 98745 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 107335 MB
+# Available Virtual  : 34512 MB
+#-----------------------------------------------------------
+source xsim.dir/activation_accelerator/xsim_script.tcl
+# xsim {activation_accelerator} -autoloadwcfg -tclbatch {activation_accelerator.tcl}
+Time resolution is 1 ps
+source activation_accelerator.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 15 [0.00%] @ "125000"
+// RTL Simulation : 1 / 15 [0.00%] @ "492465000"
+// RTL Simulation : 2 / 15 [0.00%] @ "508345000"
+// RTL Simulation : 3 / 15 [0.00%] @ "1000445000"
+// RTL Simulation : 4 / 15 [0.00%] @ "1093355000"
+// RTL Simulation : 5 / 15 [0.00%] @ "1585455000"
+// RTL Simulation : 6 / 15 [0.00%] @ "1648485000"
+// RTL Simulation : 7 / 15 [0.00%] @ "2140585000"
+// RTL Simulation : 8 / 15 [0.00%] @ "2202775000"
+// RTL Simulation : 9 / 15 [0.00%] @ "2694875000"
+// RTL Simulation : 10 / 15 [0.00%] @ "2710625000"
+// RTL Simulation : 11 / 15 [0.00%] @ "3202725000"
+// RTL Simulation : 12 / 15 [0.00%] @ "3218475000"
+// RTL Simulation : 13 / 15 [0.00%] @ "3710575000"
+// RTL Simulation : 14 / 15 [0.00%] @ "3772585000"
+// RTL Simulation : 15 / 15 [100.00%] @ "4264685000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 4264745 ns : File "/home/jicz/xushaohui/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/sim/verilog/activation_accelerator.autotb.v" Line 743
+run: Time (s): cpu = 00:00:00.13 ; elapsed = 00:14:48 . Memory (MB): peak = 1332.867 ; gain = 0.000 ; free physical = 7970 ; free virtual = 32805
+## quit
+INFO: xsimkernel Simulation Memory Usage: 544272 KB (Peak: 594452 KB), Simulation CPU Usage: 888380 ms
+INFO: [Common 17-206] Exiting xsim at Sat Nov  1 10:39:30 2025...

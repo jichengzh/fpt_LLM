@@ -320,29 +320,29 @@ float Q_rsqrt(float number)
 	return y;
 }
 
-// template<int col_len = 64, int COLS_PER_ROW = 768>
-void square(const uint16* x, float* y_sum_sq, int len){
-#pragma HLS INLINE off
-    const int col_len = 64;
-    const int row_len = len/col_len;
-sum_square:
-    for (int i = 0; i < row_len; ++i) {
-#pragma HLS PIPELINE II = 6 
-    sum_inner_square:
-        for (int j = 0; j < col_len; ++j) {
-#pragma HLS UNROLL
-            int idx = i + j * row_len;
-            uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
-            float f_x = *(float*)&x_f32;
-            y_sum_sq[j] += f_x * f_x ;
-        }
-    }
-sum_square2://在内部循环里多次分开除好像影响精度了，合起来除
-    for (int i = 0; i < col_len; ++i) {
-#pragma HLS UNROLL  
-        y_sum_sq[i] = y_sum_sq[i]/ row_len;
-    }
-}//属于函数的括号
+// // template<int col_len = 64, int COLS_PER_ROW = 768>
+// void square(const uint16* x, float* y_sum_sq, int len){
+// #pragma HLS INLINE off
+//     const int col_len = 64;
+//     const int row_len = len/col_len;
+// sum_square:
+//     for (int i = 0; i < row_len; ++i) {
+// #pragma HLS PIPELINE II = 6 
+//     sum_inner_square:
+//         for (int j = 0; j < col_len; ++j) {
+// #pragma HLS UNROLL
+//             int idx = i + j * row_len;
+//             uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
+//             float f_x = *(float*)&x_f32;
+//             y_sum_sq[j] += f_x * f_x ;
+//         }
+//     }
+// sum_square2://在内部循环里多次分开除好像影响精度了，合起来除
+//     for (int i = 0; i < col_len; ++i) {
+// #pragma HLS UNROLL  
+//         y_sum_sq[i] = y_sum_sq[i]/ row_len;
+//     }
+// }//属于函数的括号
 
 
 template<int ROWS = 64, int COLS_PER_ROW = 768>

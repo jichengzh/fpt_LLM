@@ -13,7 +13,7 @@ set hasInterrupt 0
 set DLRegFirstOffset 0
 set DLRegItemOffset 0
 set svuvm_can_support 1
-set cdfgNum 21
+set cdfgNum 20
 set C_modelName {activation_accelerator_Pipeline_add_blocks_add}
 set C_modelType { void 0 }
 set ap_memory_interface_dict [dict create]
@@ -1056,262 +1056,262 @@ set portList {
 	{ p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_ce0 sc_out sc_logic 1 signal 159 } 
 	{ p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_we0 sc_out sc_logic 1 signal 159 } 
 	{ p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_d0 sc_out sc_lv 16 signal 159 } 
-	{ grp_fu_1798_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1798_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1798_p_opcode sc_out sc_lv 1 signal -1 } 
-	{ grp_fu_1798_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_1798_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_1799_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1799_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1799_p_opcode sc_out sc_lv 1 signal -1 } 
-	{ grp_fu_1799_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_1799_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_1800_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1800_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1800_p_opcode sc_out sc_lv 1 signal -1 } 
-	{ grp_fu_1800_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_1800_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_1801_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1801_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1801_p_opcode sc_out sc_lv 1 signal -1 } 
-	{ grp_fu_1801_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_1801_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_1802_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1802_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1802_p_opcode sc_out sc_lv 1 signal -1 } 
-	{ grp_fu_1802_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_1802_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_1803_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1803_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1803_p_opcode sc_out sc_lv 1 signal -1 } 
-	{ grp_fu_1803_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_1803_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_1804_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1804_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1804_p_opcode sc_out sc_lv 1 signal -1 } 
-	{ grp_fu_1804_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_1804_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_1805_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1805_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1805_p_opcode sc_out sc_lv 1 signal -1 } 
-	{ grp_fu_1805_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_1805_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_1806_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1806_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1806_p_opcode sc_out sc_lv 1 signal -1 } 
-	{ grp_fu_1806_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_1806_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_1807_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1807_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1807_p_opcode sc_out sc_lv 1 signal -1 } 
-	{ grp_fu_1807_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_1807_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_1808_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1808_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1808_p_opcode sc_out sc_lv 1 signal -1 } 
-	{ grp_fu_1808_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_1808_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_1809_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1809_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1809_p_opcode sc_out sc_lv 1 signal -1 } 
-	{ grp_fu_1809_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_1809_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_1810_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1810_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1810_p_opcode sc_out sc_lv 1 signal -1 } 
-	{ grp_fu_1810_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_1810_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_1811_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1811_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1811_p_opcode sc_out sc_lv 1 signal -1 } 
-	{ grp_fu_1811_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_1811_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_1812_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1812_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1812_p_opcode sc_out sc_lv 1 signal -1 } 
-	{ grp_fu_1812_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_1812_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_1813_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1813_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1813_p_opcode sc_out sc_lv 1 signal -1 } 
-	{ grp_fu_1813_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_1813_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_1814_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1814_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1814_p_opcode sc_out sc_lv 1 signal -1 } 
-	{ grp_fu_1814_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_1814_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_1815_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1815_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1815_p_opcode sc_out sc_lv 1 signal -1 } 
-	{ grp_fu_1815_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_1815_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_1816_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1816_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1816_p_opcode sc_out sc_lv 1 signal -1 } 
-	{ grp_fu_1816_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_1816_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_1817_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1817_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1817_p_opcode sc_out sc_lv 1 signal -1 } 
-	{ grp_fu_1817_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_1817_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_1818_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1818_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1818_p_opcode sc_out sc_lv 1 signal -1 } 
-	{ grp_fu_1818_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_1818_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_1819_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1819_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1819_p_opcode sc_out sc_lv 1 signal -1 } 
-	{ grp_fu_1819_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_1819_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_1820_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1820_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1820_p_opcode sc_out sc_lv 1 signal -1 } 
-	{ grp_fu_1820_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_1820_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_1821_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1821_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1821_p_opcode sc_out sc_lv 1 signal -1 } 
-	{ grp_fu_1821_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_1821_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_1822_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1822_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1822_p_opcode sc_out sc_lv 1 signal -1 } 
-	{ grp_fu_1822_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_1822_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_1823_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1823_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1823_p_opcode sc_out sc_lv 1 signal -1 } 
-	{ grp_fu_1823_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_1823_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_1824_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1824_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1824_p_opcode sc_out sc_lv 1 signal -1 } 
-	{ grp_fu_1824_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_1824_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_1825_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1825_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1825_p_opcode sc_out sc_lv 1 signal -1 } 
-	{ grp_fu_1825_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_1825_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_1826_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1826_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1826_p_opcode sc_out sc_lv 1 signal -1 } 
-	{ grp_fu_1826_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_1826_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_1827_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1827_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1827_p_opcode sc_out sc_lv 1 signal -1 } 
-	{ grp_fu_1827_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_1827_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_1828_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1828_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1828_p_opcode sc_out sc_lv 1 signal -1 } 
-	{ grp_fu_1828_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_1828_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_1829_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1829_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1829_p_opcode sc_out sc_lv 1 signal -1 } 
-	{ grp_fu_1829_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_1829_p_ce sc_out sc_logic 1 signal -1 } 
-	{ tmp_225_round_float32_to_bf16_ieee_fu_17236_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ tmp_225_round_float32_to_bf16_ieee_fu_17236_p_dout0 sc_in sc_lv 16 signal -1 } 
-	{ tmp_225_round_float32_to_bf16_ieee_fu_17236_p_ready sc_in sc_logic 1 signal -1 } 
-	{ tmp_226_round_float32_to_bf16_ieee_fu_17240_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ tmp_226_round_float32_to_bf16_ieee_fu_17240_p_dout0 sc_in sc_lv 16 signal -1 } 
-	{ tmp_226_round_float32_to_bf16_ieee_fu_17240_p_ready sc_in sc_logic 1 signal -1 } 
-	{ tmp_227_round_float32_to_bf16_ieee_fu_17244_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ tmp_227_round_float32_to_bf16_ieee_fu_17244_p_dout0 sc_in sc_lv 16 signal -1 } 
-	{ tmp_227_round_float32_to_bf16_ieee_fu_17244_p_ready sc_in sc_logic 1 signal -1 } 
-	{ tmp_228_round_float32_to_bf16_ieee_fu_17248_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ tmp_228_round_float32_to_bf16_ieee_fu_17248_p_dout0 sc_in sc_lv 16 signal -1 } 
-	{ tmp_228_round_float32_to_bf16_ieee_fu_17248_p_ready sc_in sc_logic 1 signal -1 } 
-	{ tmp_229_round_float32_to_bf16_ieee_fu_17252_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ tmp_229_round_float32_to_bf16_ieee_fu_17252_p_dout0 sc_in sc_lv 16 signal -1 } 
-	{ tmp_229_round_float32_to_bf16_ieee_fu_17252_p_ready sc_in sc_logic 1 signal -1 } 
-	{ tmp_230_round_float32_to_bf16_ieee_fu_17256_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ tmp_230_round_float32_to_bf16_ieee_fu_17256_p_dout0 sc_in sc_lv 16 signal -1 } 
-	{ tmp_230_round_float32_to_bf16_ieee_fu_17256_p_ready sc_in sc_logic 1 signal -1 } 
-	{ tmp_231_round_float32_to_bf16_ieee_fu_17260_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ tmp_231_round_float32_to_bf16_ieee_fu_17260_p_dout0 sc_in sc_lv 16 signal -1 } 
-	{ tmp_231_round_float32_to_bf16_ieee_fu_17260_p_ready sc_in sc_logic 1 signal -1 } 
-	{ tmp_232_round_float32_to_bf16_ieee_fu_17264_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ tmp_232_round_float32_to_bf16_ieee_fu_17264_p_dout0 sc_in sc_lv 16 signal -1 } 
-	{ tmp_232_round_float32_to_bf16_ieee_fu_17264_p_ready sc_in sc_logic 1 signal -1 } 
-	{ tmp_233_round_float32_to_bf16_ieee_fu_17268_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ tmp_233_round_float32_to_bf16_ieee_fu_17268_p_dout0 sc_in sc_lv 16 signal -1 } 
-	{ tmp_233_round_float32_to_bf16_ieee_fu_17268_p_ready sc_in sc_logic 1 signal -1 } 
-	{ tmp_234_round_float32_to_bf16_ieee_fu_17272_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ tmp_234_round_float32_to_bf16_ieee_fu_17272_p_dout0 sc_in sc_lv 16 signal -1 } 
-	{ tmp_234_round_float32_to_bf16_ieee_fu_17272_p_ready sc_in sc_logic 1 signal -1 } 
-	{ tmp_235_round_float32_to_bf16_ieee_fu_17276_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ tmp_235_round_float32_to_bf16_ieee_fu_17276_p_dout0 sc_in sc_lv 16 signal -1 } 
-	{ tmp_235_round_float32_to_bf16_ieee_fu_17276_p_ready sc_in sc_logic 1 signal -1 } 
-	{ tmp_236_round_float32_to_bf16_ieee_fu_17280_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ tmp_236_round_float32_to_bf16_ieee_fu_17280_p_dout0 sc_in sc_lv 16 signal -1 } 
-	{ tmp_236_round_float32_to_bf16_ieee_fu_17280_p_ready sc_in sc_logic 1 signal -1 } 
-	{ tmp_237_round_float32_to_bf16_ieee_fu_17284_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ tmp_237_round_float32_to_bf16_ieee_fu_17284_p_dout0 sc_in sc_lv 16 signal -1 } 
-	{ tmp_237_round_float32_to_bf16_ieee_fu_17284_p_ready sc_in sc_logic 1 signal -1 } 
-	{ tmp_238_round_float32_to_bf16_ieee_fu_17288_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ tmp_238_round_float32_to_bf16_ieee_fu_17288_p_dout0 sc_in sc_lv 16 signal -1 } 
-	{ tmp_238_round_float32_to_bf16_ieee_fu_17288_p_ready sc_in sc_logic 1 signal -1 } 
-	{ tmp_239_round_float32_to_bf16_ieee_fu_17292_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ tmp_239_round_float32_to_bf16_ieee_fu_17292_p_dout0 sc_in sc_lv 16 signal -1 } 
-	{ tmp_239_round_float32_to_bf16_ieee_fu_17292_p_ready sc_in sc_logic 1 signal -1 } 
-	{ tmp_240_round_float32_to_bf16_ieee_fu_17296_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ tmp_240_round_float32_to_bf16_ieee_fu_17296_p_dout0 sc_in sc_lv 16 signal -1 } 
-	{ tmp_240_round_float32_to_bf16_ieee_fu_17296_p_ready sc_in sc_logic 1 signal -1 } 
-	{ tmp_241_round_float32_to_bf16_ieee_fu_17300_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ tmp_241_round_float32_to_bf16_ieee_fu_17300_p_dout0 sc_in sc_lv 16 signal -1 } 
-	{ tmp_241_round_float32_to_bf16_ieee_fu_17300_p_ready sc_in sc_logic 1 signal -1 } 
-	{ tmp_242_round_float32_to_bf16_ieee_fu_17304_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ tmp_242_round_float32_to_bf16_ieee_fu_17304_p_dout0 sc_in sc_lv 16 signal -1 } 
-	{ tmp_242_round_float32_to_bf16_ieee_fu_17304_p_ready sc_in sc_logic 1 signal -1 } 
-	{ tmp_243_round_float32_to_bf16_ieee_fu_17308_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ tmp_243_round_float32_to_bf16_ieee_fu_17308_p_dout0 sc_in sc_lv 16 signal -1 } 
-	{ tmp_243_round_float32_to_bf16_ieee_fu_17308_p_ready sc_in sc_logic 1 signal -1 } 
-	{ tmp_244_round_float32_to_bf16_ieee_fu_17312_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ tmp_244_round_float32_to_bf16_ieee_fu_17312_p_dout0 sc_in sc_lv 16 signal -1 } 
-	{ tmp_244_round_float32_to_bf16_ieee_fu_17312_p_ready sc_in sc_logic 1 signal -1 } 
-	{ tmp_245_round_float32_to_bf16_ieee_fu_17316_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ tmp_245_round_float32_to_bf16_ieee_fu_17316_p_dout0 sc_in sc_lv 16 signal -1 } 
-	{ tmp_245_round_float32_to_bf16_ieee_fu_17316_p_ready sc_in sc_logic 1 signal -1 } 
-	{ tmp_246_round_float32_to_bf16_ieee_fu_17320_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ tmp_246_round_float32_to_bf16_ieee_fu_17320_p_dout0 sc_in sc_lv 16 signal -1 } 
-	{ tmp_246_round_float32_to_bf16_ieee_fu_17320_p_ready sc_in sc_logic 1 signal -1 } 
-	{ tmp_247_round_float32_to_bf16_ieee_fu_17324_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ tmp_247_round_float32_to_bf16_ieee_fu_17324_p_dout0 sc_in sc_lv 16 signal -1 } 
-	{ tmp_247_round_float32_to_bf16_ieee_fu_17324_p_ready sc_in sc_logic 1 signal -1 } 
-	{ tmp_248_round_float32_to_bf16_ieee_fu_17328_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ tmp_248_round_float32_to_bf16_ieee_fu_17328_p_dout0 sc_in sc_lv 16 signal -1 } 
-	{ tmp_248_round_float32_to_bf16_ieee_fu_17328_p_ready sc_in sc_logic 1 signal -1 } 
-	{ tmp_249_round_float32_to_bf16_ieee_fu_17332_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ tmp_249_round_float32_to_bf16_ieee_fu_17332_p_dout0 sc_in sc_lv 16 signal -1 } 
-	{ tmp_249_round_float32_to_bf16_ieee_fu_17332_p_ready sc_in sc_logic 1 signal -1 } 
-	{ tmp_250_round_float32_to_bf16_ieee_fu_17336_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ tmp_250_round_float32_to_bf16_ieee_fu_17336_p_dout0 sc_in sc_lv 16 signal -1 } 
-	{ tmp_250_round_float32_to_bf16_ieee_fu_17336_p_ready sc_in sc_logic 1 signal -1 } 
-	{ tmp_251_round_float32_to_bf16_ieee_fu_17340_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ tmp_251_round_float32_to_bf16_ieee_fu_17340_p_dout0 sc_in sc_lv 16 signal -1 } 
-	{ tmp_251_round_float32_to_bf16_ieee_fu_17340_p_ready sc_in sc_logic 1 signal -1 } 
-	{ tmp_252_round_float32_to_bf16_ieee_fu_17344_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ tmp_252_round_float32_to_bf16_ieee_fu_17344_p_dout0 sc_in sc_lv 16 signal -1 } 
-	{ tmp_252_round_float32_to_bf16_ieee_fu_17344_p_ready sc_in sc_logic 1 signal -1 } 
-	{ tmp_253_round_float32_to_bf16_ieee_fu_17348_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ tmp_253_round_float32_to_bf16_ieee_fu_17348_p_dout0 sc_in sc_lv 16 signal -1 } 
-	{ tmp_253_round_float32_to_bf16_ieee_fu_17348_p_ready sc_in sc_logic 1 signal -1 } 
-	{ tmp_254_round_float32_to_bf16_ieee_fu_17352_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ tmp_254_round_float32_to_bf16_ieee_fu_17352_p_dout0 sc_in sc_lv 16 signal -1 } 
-	{ tmp_254_round_float32_to_bf16_ieee_fu_17352_p_ready sc_in sc_logic 1 signal -1 } 
-	{ tmp_255_round_float32_to_bf16_ieee_fu_17356_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ tmp_255_round_float32_to_bf16_ieee_fu_17356_p_dout0 sc_in sc_lv 16 signal -1 } 
-	{ tmp_255_round_float32_to_bf16_ieee_fu_17356_p_ready sc_in sc_logic 1 signal -1 } 
-	{ tmp_s_round_float32_to_bf16_ieee_fu_17360_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ tmp_s_round_float32_to_bf16_ieee_fu_17360_p_dout0 sc_in sc_lv 16 signal -1 } 
-	{ tmp_s_round_float32_to_bf16_ieee_fu_17360_p_ready sc_in sc_logic 1 signal -1 } 
+	{ grp_fu_2052_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2052_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2052_p_opcode sc_out sc_lv 1 signal -1 } 
+	{ grp_fu_2052_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_2052_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_2053_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2053_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2053_p_opcode sc_out sc_lv 1 signal -1 } 
+	{ grp_fu_2053_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_2053_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_2054_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2054_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2054_p_opcode sc_out sc_lv 1 signal -1 } 
+	{ grp_fu_2054_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_2054_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_2055_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2055_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2055_p_opcode sc_out sc_lv 1 signal -1 } 
+	{ grp_fu_2055_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_2055_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_2056_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2056_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2056_p_opcode sc_out sc_lv 1 signal -1 } 
+	{ grp_fu_2056_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_2056_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_2057_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2057_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2057_p_opcode sc_out sc_lv 1 signal -1 } 
+	{ grp_fu_2057_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_2057_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_2058_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2058_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2058_p_opcode sc_out sc_lv 1 signal -1 } 
+	{ grp_fu_2058_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_2058_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_2059_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2059_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2059_p_opcode sc_out sc_lv 1 signal -1 } 
+	{ grp_fu_2059_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_2059_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_2060_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2060_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2060_p_opcode sc_out sc_lv 1 signal -1 } 
+	{ grp_fu_2060_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_2060_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_2061_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2061_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2061_p_opcode sc_out sc_lv 1 signal -1 } 
+	{ grp_fu_2061_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_2061_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_2062_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2062_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2062_p_opcode sc_out sc_lv 1 signal -1 } 
+	{ grp_fu_2062_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_2062_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_2063_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2063_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2063_p_opcode sc_out sc_lv 1 signal -1 } 
+	{ grp_fu_2063_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_2063_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_2064_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2064_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2064_p_opcode sc_out sc_lv 1 signal -1 } 
+	{ grp_fu_2064_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_2064_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_2065_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2065_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2065_p_opcode sc_out sc_lv 1 signal -1 } 
+	{ grp_fu_2065_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_2065_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_2066_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2066_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2066_p_opcode sc_out sc_lv 1 signal -1 } 
+	{ grp_fu_2066_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_2066_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_2067_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2067_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2067_p_opcode sc_out sc_lv 1 signal -1 } 
+	{ grp_fu_2067_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_2067_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_2068_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2068_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2068_p_opcode sc_out sc_lv 1 signal -1 } 
+	{ grp_fu_2068_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_2068_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_2069_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2069_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2069_p_opcode sc_out sc_lv 1 signal -1 } 
+	{ grp_fu_2069_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_2069_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_2070_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2070_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2070_p_opcode sc_out sc_lv 1 signal -1 } 
+	{ grp_fu_2070_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_2070_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_2071_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2071_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2071_p_opcode sc_out sc_lv 1 signal -1 } 
+	{ grp_fu_2071_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_2071_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_2072_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2072_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2072_p_opcode sc_out sc_lv 1 signal -1 } 
+	{ grp_fu_2072_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_2072_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_2073_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2073_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2073_p_opcode sc_out sc_lv 1 signal -1 } 
+	{ grp_fu_2073_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_2073_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_2074_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2074_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2074_p_opcode sc_out sc_lv 1 signal -1 } 
+	{ grp_fu_2074_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_2074_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_2075_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2075_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2075_p_opcode sc_out sc_lv 1 signal -1 } 
+	{ grp_fu_2075_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_2075_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_2076_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2076_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2076_p_opcode sc_out sc_lv 1 signal -1 } 
+	{ grp_fu_2076_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_2076_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_2077_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2077_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2077_p_opcode sc_out sc_lv 1 signal -1 } 
+	{ grp_fu_2077_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_2077_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_2078_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2078_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2078_p_opcode sc_out sc_lv 1 signal -1 } 
+	{ grp_fu_2078_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_2078_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_2079_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2079_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2079_p_opcode sc_out sc_lv 1 signal -1 } 
+	{ grp_fu_2079_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_2079_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_2080_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2080_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2080_p_opcode sc_out sc_lv 1 signal -1 } 
+	{ grp_fu_2080_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_2080_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_2081_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2081_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2081_p_opcode sc_out sc_lv 1 signal -1 } 
+	{ grp_fu_2081_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_2081_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_2082_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2082_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2082_p_opcode sc_out sc_lv 1 signal -1 } 
+	{ grp_fu_2082_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_2082_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_2083_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2083_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_2083_p_opcode sc_out sc_lv 1 signal -1 } 
+	{ grp_fu_2083_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_2083_p_ce sc_out sc_logic 1 signal -1 } 
+	{ tmp_128_round_float32_to_bf16_ieee_fu_17358_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ tmp_128_round_float32_to_bf16_ieee_fu_17358_p_dout0 sc_in sc_lv 16 signal -1 } 
+	{ tmp_128_round_float32_to_bf16_ieee_fu_17358_p_ready sc_in sc_logic 1 signal -1 } 
+	{ tmp_129_round_float32_to_bf16_ieee_fu_17362_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ tmp_129_round_float32_to_bf16_ieee_fu_17362_p_dout0 sc_in sc_lv 16 signal -1 } 
+	{ tmp_129_round_float32_to_bf16_ieee_fu_17362_p_ready sc_in sc_logic 1 signal -1 } 
+	{ tmp_130_round_float32_to_bf16_ieee_fu_17366_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ tmp_130_round_float32_to_bf16_ieee_fu_17366_p_dout0 sc_in sc_lv 16 signal -1 } 
+	{ tmp_130_round_float32_to_bf16_ieee_fu_17366_p_ready sc_in sc_logic 1 signal -1 } 
+	{ tmp_131_round_float32_to_bf16_ieee_fu_17370_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ tmp_131_round_float32_to_bf16_ieee_fu_17370_p_dout0 sc_in sc_lv 16 signal -1 } 
+	{ tmp_131_round_float32_to_bf16_ieee_fu_17370_p_ready sc_in sc_logic 1 signal -1 } 
+	{ tmp_132_round_float32_to_bf16_ieee_fu_17374_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ tmp_132_round_float32_to_bf16_ieee_fu_17374_p_dout0 sc_in sc_lv 16 signal -1 } 
+	{ tmp_132_round_float32_to_bf16_ieee_fu_17374_p_ready sc_in sc_logic 1 signal -1 } 
+	{ tmp_133_round_float32_to_bf16_ieee_fu_17378_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ tmp_133_round_float32_to_bf16_ieee_fu_17378_p_dout0 sc_in sc_lv 16 signal -1 } 
+	{ tmp_133_round_float32_to_bf16_ieee_fu_17378_p_ready sc_in sc_logic 1 signal -1 } 
+	{ tmp_134_round_float32_to_bf16_ieee_fu_17382_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ tmp_134_round_float32_to_bf16_ieee_fu_17382_p_dout0 sc_in sc_lv 16 signal -1 } 
+	{ tmp_134_round_float32_to_bf16_ieee_fu_17382_p_ready sc_in sc_logic 1 signal -1 } 
+	{ tmp_135_round_float32_to_bf16_ieee_fu_17386_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ tmp_135_round_float32_to_bf16_ieee_fu_17386_p_dout0 sc_in sc_lv 16 signal -1 } 
+	{ tmp_135_round_float32_to_bf16_ieee_fu_17386_p_ready sc_in sc_logic 1 signal -1 } 
+	{ tmp_136_round_float32_to_bf16_ieee_fu_17390_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ tmp_136_round_float32_to_bf16_ieee_fu_17390_p_dout0 sc_in sc_lv 16 signal -1 } 
+	{ tmp_136_round_float32_to_bf16_ieee_fu_17390_p_ready sc_in sc_logic 1 signal -1 } 
+	{ tmp_137_round_float32_to_bf16_ieee_fu_17394_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ tmp_137_round_float32_to_bf16_ieee_fu_17394_p_dout0 sc_in sc_lv 16 signal -1 } 
+	{ tmp_137_round_float32_to_bf16_ieee_fu_17394_p_ready sc_in sc_logic 1 signal -1 } 
+	{ tmp_138_round_float32_to_bf16_ieee_fu_17398_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ tmp_138_round_float32_to_bf16_ieee_fu_17398_p_dout0 sc_in sc_lv 16 signal -1 } 
+	{ tmp_138_round_float32_to_bf16_ieee_fu_17398_p_ready sc_in sc_logic 1 signal -1 } 
+	{ tmp_139_round_float32_to_bf16_ieee_fu_17402_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ tmp_139_round_float32_to_bf16_ieee_fu_17402_p_dout0 sc_in sc_lv 16 signal -1 } 
+	{ tmp_139_round_float32_to_bf16_ieee_fu_17402_p_ready sc_in sc_logic 1 signal -1 } 
+	{ tmp_140_round_float32_to_bf16_ieee_fu_17406_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ tmp_140_round_float32_to_bf16_ieee_fu_17406_p_dout0 sc_in sc_lv 16 signal -1 } 
+	{ tmp_140_round_float32_to_bf16_ieee_fu_17406_p_ready sc_in sc_logic 1 signal -1 } 
+	{ tmp_141_round_float32_to_bf16_ieee_fu_17410_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ tmp_141_round_float32_to_bf16_ieee_fu_17410_p_dout0 sc_in sc_lv 16 signal -1 } 
+	{ tmp_141_round_float32_to_bf16_ieee_fu_17410_p_ready sc_in sc_logic 1 signal -1 } 
+	{ tmp_142_round_float32_to_bf16_ieee_fu_17414_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ tmp_142_round_float32_to_bf16_ieee_fu_17414_p_dout0 sc_in sc_lv 16 signal -1 } 
+	{ tmp_142_round_float32_to_bf16_ieee_fu_17414_p_ready sc_in sc_logic 1 signal -1 } 
+	{ tmp_143_round_float32_to_bf16_ieee_fu_17418_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ tmp_143_round_float32_to_bf16_ieee_fu_17418_p_dout0 sc_in sc_lv 16 signal -1 } 
+	{ tmp_143_round_float32_to_bf16_ieee_fu_17418_p_ready sc_in sc_logic 1 signal -1 } 
+	{ tmp_144_round_float32_to_bf16_ieee_fu_17422_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ tmp_144_round_float32_to_bf16_ieee_fu_17422_p_dout0 sc_in sc_lv 16 signal -1 } 
+	{ tmp_144_round_float32_to_bf16_ieee_fu_17422_p_ready sc_in sc_logic 1 signal -1 } 
+	{ tmp_145_round_float32_to_bf16_ieee_fu_17426_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ tmp_145_round_float32_to_bf16_ieee_fu_17426_p_dout0 sc_in sc_lv 16 signal -1 } 
+	{ tmp_145_round_float32_to_bf16_ieee_fu_17426_p_ready sc_in sc_logic 1 signal -1 } 
+	{ tmp_146_round_float32_to_bf16_ieee_fu_17430_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ tmp_146_round_float32_to_bf16_ieee_fu_17430_p_dout0 sc_in sc_lv 16 signal -1 } 
+	{ tmp_146_round_float32_to_bf16_ieee_fu_17430_p_ready sc_in sc_logic 1 signal -1 } 
+	{ tmp_147_round_float32_to_bf16_ieee_fu_17434_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ tmp_147_round_float32_to_bf16_ieee_fu_17434_p_dout0 sc_in sc_lv 16 signal -1 } 
+	{ tmp_147_round_float32_to_bf16_ieee_fu_17434_p_ready sc_in sc_logic 1 signal -1 } 
+	{ tmp_148_round_float32_to_bf16_ieee_fu_17438_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ tmp_148_round_float32_to_bf16_ieee_fu_17438_p_dout0 sc_in sc_lv 16 signal -1 } 
+	{ tmp_148_round_float32_to_bf16_ieee_fu_17438_p_ready sc_in sc_logic 1 signal -1 } 
+	{ tmp_149_round_float32_to_bf16_ieee_fu_17442_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ tmp_149_round_float32_to_bf16_ieee_fu_17442_p_dout0 sc_in sc_lv 16 signal -1 } 
+	{ tmp_149_round_float32_to_bf16_ieee_fu_17442_p_ready sc_in sc_logic 1 signal -1 } 
+	{ tmp_150_round_float32_to_bf16_ieee_fu_17446_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ tmp_150_round_float32_to_bf16_ieee_fu_17446_p_dout0 sc_in sc_lv 16 signal -1 } 
+	{ tmp_150_round_float32_to_bf16_ieee_fu_17446_p_ready sc_in sc_logic 1 signal -1 } 
+	{ tmp_151_round_float32_to_bf16_ieee_fu_17450_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ tmp_151_round_float32_to_bf16_ieee_fu_17450_p_dout0 sc_in sc_lv 16 signal -1 } 
+	{ tmp_151_round_float32_to_bf16_ieee_fu_17450_p_ready sc_in sc_logic 1 signal -1 } 
+	{ tmp_152_round_float32_to_bf16_ieee_fu_17454_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ tmp_152_round_float32_to_bf16_ieee_fu_17454_p_dout0 sc_in sc_lv 16 signal -1 } 
+	{ tmp_152_round_float32_to_bf16_ieee_fu_17454_p_ready sc_in sc_logic 1 signal -1 } 
+	{ tmp_153_round_float32_to_bf16_ieee_fu_17458_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ tmp_153_round_float32_to_bf16_ieee_fu_17458_p_dout0 sc_in sc_lv 16 signal -1 } 
+	{ tmp_153_round_float32_to_bf16_ieee_fu_17458_p_ready sc_in sc_logic 1 signal -1 } 
+	{ tmp_154_round_float32_to_bf16_ieee_fu_17462_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ tmp_154_round_float32_to_bf16_ieee_fu_17462_p_dout0 sc_in sc_lv 16 signal -1 } 
+	{ tmp_154_round_float32_to_bf16_ieee_fu_17462_p_ready sc_in sc_logic 1 signal -1 } 
+	{ tmp_155_round_float32_to_bf16_ieee_fu_17466_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ tmp_155_round_float32_to_bf16_ieee_fu_17466_p_dout0 sc_in sc_lv 16 signal -1 } 
+	{ tmp_155_round_float32_to_bf16_ieee_fu_17466_p_ready sc_in sc_logic 1 signal -1 } 
+	{ tmp_156_round_float32_to_bf16_ieee_fu_17470_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ tmp_156_round_float32_to_bf16_ieee_fu_17470_p_dout0 sc_in sc_lv 16 signal -1 } 
+	{ tmp_156_round_float32_to_bf16_ieee_fu_17470_p_ready sc_in sc_logic 1 signal -1 } 
+	{ tmp_157_round_float32_to_bf16_ieee_fu_17474_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ tmp_157_round_float32_to_bf16_ieee_fu_17474_p_dout0 sc_in sc_lv 16 signal -1 } 
+	{ tmp_157_round_float32_to_bf16_ieee_fu_17474_p_ready sc_in sc_logic 1 signal -1 } 
+	{ tmp_158_round_float32_to_bf16_ieee_fu_17478_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ tmp_158_round_float32_to_bf16_ieee_fu_17478_p_dout0 sc_in sc_lv 16 signal -1 } 
+	{ tmp_158_round_float32_to_bf16_ieee_fu_17478_p_ready sc_in sc_logic 1 signal -1 } 
+	{ tmp_159_round_float32_to_bf16_ieee_fu_17482_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ tmp_159_round_float32_to_bf16_ieee_fu_17482_p_dout0 sc_in sc_lv 16 signal -1 } 
+	{ tmp_159_round_float32_to_bf16_ieee_fu_17482_p_ready sc_in sc_logic 1 signal -1 } 
 }
 set NewPortList {[ 
 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
@@ -1864,262 +1864,262 @@ set NewPortList {[
  	{ "name": "p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63", "role": "ce0" }} , 
  	{ "name": "p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63", "role": "we0" }} , 
  	{ "name": "p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "p_ZZ22activation_acceleratorPtS_S_iiE4buf2_63", "role": "d0" }} , 
- 	{ "name": "grp_fu_1798_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1798_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_1798_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1798_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_1798_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1798_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_1798_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1798_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_1798_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1798_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_1799_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1799_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_1799_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1799_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_1799_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1799_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_1799_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1799_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_1799_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1799_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_1800_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1800_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_1800_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1800_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_1800_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1800_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_1800_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1800_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_1800_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1800_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_1801_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1801_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_1801_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1801_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_1801_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1801_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_1801_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1801_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_1801_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1801_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_1802_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1802_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_1802_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1802_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_1802_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1802_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_1802_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1802_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_1802_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1802_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_1803_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1803_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_1803_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1803_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_1803_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1803_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_1803_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1803_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_1803_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1803_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_1804_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1804_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_1804_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1804_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_1804_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1804_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_1804_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1804_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_1804_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1804_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_1805_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1805_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_1805_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1805_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_1805_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1805_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_1805_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1805_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_1805_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1805_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_1806_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1806_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_1806_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1806_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_1806_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1806_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_1806_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1806_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_1806_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1806_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_1807_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1807_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_1807_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1807_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_1807_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1807_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_1807_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1807_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_1807_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1807_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_1808_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1808_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_1808_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1808_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_1808_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1808_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_1808_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1808_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_1808_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1808_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_1809_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1809_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_1809_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1809_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_1809_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1809_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_1809_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1809_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_1809_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1809_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_1810_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1810_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_1810_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1810_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_1810_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1810_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_1810_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1810_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_1810_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1810_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_1811_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1811_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_1811_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1811_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_1811_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1811_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_1811_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1811_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_1811_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1811_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_1812_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1812_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_1812_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1812_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_1812_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1812_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_1812_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1812_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_1812_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1812_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_1813_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1813_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_1813_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1813_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_1813_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1813_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_1813_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1813_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_1813_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1813_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_1814_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1814_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_1814_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1814_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_1814_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1814_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_1814_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1814_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_1814_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1814_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_1815_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1815_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_1815_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1815_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_1815_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1815_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_1815_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1815_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_1815_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1815_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_1816_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1816_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_1816_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1816_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_1816_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1816_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_1816_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1816_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_1816_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1816_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_1817_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1817_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_1817_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1817_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_1817_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1817_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_1817_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1817_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_1817_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1817_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_1818_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1818_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_1818_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1818_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_1818_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1818_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_1818_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1818_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_1818_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1818_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_1819_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1819_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_1819_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1819_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_1819_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1819_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_1819_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1819_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_1819_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1819_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_1820_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1820_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_1820_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1820_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_1820_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1820_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_1820_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1820_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_1820_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1820_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_1821_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1821_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_1821_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1821_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_1821_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1821_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_1821_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1821_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_1821_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1821_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_1822_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1822_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_1822_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1822_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_1822_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1822_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_1822_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1822_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_1822_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1822_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_1823_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1823_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_1823_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1823_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_1823_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1823_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_1823_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1823_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_1823_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1823_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_1824_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1824_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_1824_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1824_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_1824_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1824_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_1824_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1824_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_1824_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1824_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_1825_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1825_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_1825_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1825_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_1825_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1825_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_1825_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1825_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_1825_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1825_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_1826_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1826_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_1826_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1826_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_1826_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1826_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_1826_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1826_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_1826_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1826_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_1827_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1827_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_1827_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1827_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_1827_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1827_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_1827_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1827_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_1827_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1827_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_1828_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1828_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_1828_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1828_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_1828_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1828_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_1828_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1828_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_1828_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1828_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_1829_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1829_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_1829_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1829_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_1829_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1829_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_1829_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1829_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_1829_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1829_p_ce", "role": "default" }} , 
- 	{ "name": "tmp_225_round_float32_to_bf16_ieee_fu_17236_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_225_round_float32_to_bf16_ieee_fu_17236_p_din1", "role": "default" }} , 
- 	{ "name": "tmp_225_round_float32_to_bf16_ieee_fu_17236_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_225_round_float32_to_bf16_ieee_fu_17236_p_dout0", "role": "default" }} , 
- 	{ "name": "tmp_225_round_float32_to_bf16_ieee_fu_17236_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_225_round_float32_to_bf16_ieee_fu_17236_p_ready", "role": "default" }} , 
- 	{ "name": "tmp_226_round_float32_to_bf16_ieee_fu_17240_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_226_round_float32_to_bf16_ieee_fu_17240_p_din1", "role": "default" }} , 
- 	{ "name": "tmp_226_round_float32_to_bf16_ieee_fu_17240_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_226_round_float32_to_bf16_ieee_fu_17240_p_dout0", "role": "default" }} , 
- 	{ "name": "tmp_226_round_float32_to_bf16_ieee_fu_17240_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_226_round_float32_to_bf16_ieee_fu_17240_p_ready", "role": "default" }} , 
- 	{ "name": "tmp_227_round_float32_to_bf16_ieee_fu_17244_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_227_round_float32_to_bf16_ieee_fu_17244_p_din1", "role": "default" }} , 
- 	{ "name": "tmp_227_round_float32_to_bf16_ieee_fu_17244_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_227_round_float32_to_bf16_ieee_fu_17244_p_dout0", "role": "default" }} , 
- 	{ "name": "tmp_227_round_float32_to_bf16_ieee_fu_17244_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_227_round_float32_to_bf16_ieee_fu_17244_p_ready", "role": "default" }} , 
- 	{ "name": "tmp_228_round_float32_to_bf16_ieee_fu_17248_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_228_round_float32_to_bf16_ieee_fu_17248_p_din1", "role": "default" }} , 
- 	{ "name": "tmp_228_round_float32_to_bf16_ieee_fu_17248_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_228_round_float32_to_bf16_ieee_fu_17248_p_dout0", "role": "default" }} , 
- 	{ "name": "tmp_228_round_float32_to_bf16_ieee_fu_17248_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_228_round_float32_to_bf16_ieee_fu_17248_p_ready", "role": "default" }} , 
- 	{ "name": "tmp_229_round_float32_to_bf16_ieee_fu_17252_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_229_round_float32_to_bf16_ieee_fu_17252_p_din1", "role": "default" }} , 
- 	{ "name": "tmp_229_round_float32_to_bf16_ieee_fu_17252_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_229_round_float32_to_bf16_ieee_fu_17252_p_dout0", "role": "default" }} , 
- 	{ "name": "tmp_229_round_float32_to_bf16_ieee_fu_17252_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_229_round_float32_to_bf16_ieee_fu_17252_p_ready", "role": "default" }} , 
- 	{ "name": "tmp_230_round_float32_to_bf16_ieee_fu_17256_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_230_round_float32_to_bf16_ieee_fu_17256_p_din1", "role": "default" }} , 
- 	{ "name": "tmp_230_round_float32_to_bf16_ieee_fu_17256_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_230_round_float32_to_bf16_ieee_fu_17256_p_dout0", "role": "default" }} , 
- 	{ "name": "tmp_230_round_float32_to_bf16_ieee_fu_17256_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_230_round_float32_to_bf16_ieee_fu_17256_p_ready", "role": "default" }} , 
- 	{ "name": "tmp_231_round_float32_to_bf16_ieee_fu_17260_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_231_round_float32_to_bf16_ieee_fu_17260_p_din1", "role": "default" }} , 
- 	{ "name": "tmp_231_round_float32_to_bf16_ieee_fu_17260_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_231_round_float32_to_bf16_ieee_fu_17260_p_dout0", "role": "default" }} , 
- 	{ "name": "tmp_231_round_float32_to_bf16_ieee_fu_17260_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_231_round_float32_to_bf16_ieee_fu_17260_p_ready", "role": "default" }} , 
- 	{ "name": "tmp_232_round_float32_to_bf16_ieee_fu_17264_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_232_round_float32_to_bf16_ieee_fu_17264_p_din1", "role": "default" }} , 
- 	{ "name": "tmp_232_round_float32_to_bf16_ieee_fu_17264_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_232_round_float32_to_bf16_ieee_fu_17264_p_dout0", "role": "default" }} , 
- 	{ "name": "tmp_232_round_float32_to_bf16_ieee_fu_17264_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_232_round_float32_to_bf16_ieee_fu_17264_p_ready", "role": "default" }} , 
- 	{ "name": "tmp_233_round_float32_to_bf16_ieee_fu_17268_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_233_round_float32_to_bf16_ieee_fu_17268_p_din1", "role": "default" }} , 
- 	{ "name": "tmp_233_round_float32_to_bf16_ieee_fu_17268_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_233_round_float32_to_bf16_ieee_fu_17268_p_dout0", "role": "default" }} , 
- 	{ "name": "tmp_233_round_float32_to_bf16_ieee_fu_17268_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_233_round_float32_to_bf16_ieee_fu_17268_p_ready", "role": "default" }} , 
- 	{ "name": "tmp_234_round_float32_to_bf16_ieee_fu_17272_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_234_round_float32_to_bf16_ieee_fu_17272_p_din1", "role": "default" }} , 
- 	{ "name": "tmp_234_round_float32_to_bf16_ieee_fu_17272_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_234_round_float32_to_bf16_ieee_fu_17272_p_dout0", "role": "default" }} , 
- 	{ "name": "tmp_234_round_float32_to_bf16_ieee_fu_17272_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_234_round_float32_to_bf16_ieee_fu_17272_p_ready", "role": "default" }} , 
- 	{ "name": "tmp_235_round_float32_to_bf16_ieee_fu_17276_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_235_round_float32_to_bf16_ieee_fu_17276_p_din1", "role": "default" }} , 
- 	{ "name": "tmp_235_round_float32_to_bf16_ieee_fu_17276_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_235_round_float32_to_bf16_ieee_fu_17276_p_dout0", "role": "default" }} , 
- 	{ "name": "tmp_235_round_float32_to_bf16_ieee_fu_17276_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_235_round_float32_to_bf16_ieee_fu_17276_p_ready", "role": "default" }} , 
- 	{ "name": "tmp_236_round_float32_to_bf16_ieee_fu_17280_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_236_round_float32_to_bf16_ieee_fu_17280_p_din1", "role": "default" }} , 
- 	{ "name": "tmp_236_round_float32_to_bf16_ieee_fu_17280_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_236_round_float32_to_bf16_ieee_fu_17280_p_dout0", "role": "default" }} , 
- 	{ "name": "tmp_236_round_float32_to_bf16_ieee_fu_17280_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_236_round_float32_to_bf16_ieee_fu_17280_p_ready", "role": "default" }} , 
- 	{ "name": "tmp_237_round_float32_to_bf16_ieee_fu_17284_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_237_round_float32_to_bf16_ieee_fu_17284_p_din1", "role": "default" }} , 
- 	{ "name": "tmp_237_round_float32_to_bf16_ieee_fu_17284_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_237_round_float32_to_bf16_ieee_fu_17284_p_dout0", "role": "default" }} , 
- 	{ "name": "tmp_237_round_float32_to_bf16_ieee_fu_17284_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_237_round_float32_to_bf16_ieee_fu_17284_p_ready", "role": "default" }} , 
- 	{ "name": "tmp_238_round_float32_to_bf16_ieee_fu_17288_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_238_round_float32_to_bf16_ieee_fu_17288_p_din1", "role": "default" }} , 
- 	{ "name": "tmp_238_round_float32_to_bf16_ieee_fu_17288_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_238_round_float32_to_bf16_ieee_fu_17288_p_dout0", "role": "default" }} , 
- 	{ "name": "tmp_238_round_float32_to_bf16_ieee_fu_17288_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_238_round_float32_to_bf16_ieee_fu_17288_p_ready", "role": "default" }} , 
- 	{ "name": "tmp_239_round_float32_to_bf16_ieee_fu_17292_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_239_round_float32_to_bf16_ieee_fu_17292_p_din1", "role": "default" }} , 
- 	{ "name": "tmp_239_round_float32_to_bf16_ieee_fu_17292_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_239_round_float32_to_bf16_ieee_fu_17292_p_dout0", "role": "default" }} , 
- 	{ "name": "tmp_239_round_float32_to_bf16_ieee_fu_17292_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_239_round_float32_to_bf16_ieee_fu_17292_p_ready", "role": "default" }} , 
- 	{ "name": "tmp_240_round_float32_to_bf16_ieee_fu_17296_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_240_round_float32_to_bf16_ieee_fu_17296_p_din1", "role": "default" }} , 
- 	{ "name": "tmp_240_round_float32_to_bf16_ieee_fu_17296_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_240_round_float32_to_bf16_ieee_fu_17296_p_dout0", "role": "default" }} , 
- 	{ "name": "tmp_240_round_float32_to_bf16_ieee_fu_17296_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_240_round_float32_to_bf16_ieee_fu_17296_p_ready", "role": "default" }} , 
- 	{ "name": "tmp_241_round_float32_to_bf16_ieee_fu_17300_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_241_round_float32_to_bf16_ieee_fu_17300_p_din1", "role": "default" }} , 
- 	{ "name": "tmp_241_round_float32_to_bf16_ieee_fu_17300_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_241_round_float32_to_bf16_ieee_fu_17300_p_dout0", "role": "default" }} , 
- 	{ "name": "tmp_241_round_float32_to_bf16_ieee_fu_17300_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_241_round_float32_to_bf16_ieee_fu_17300_p_ready", "role": "default" }} , 
- 	{ "name": "tmp_242_round_float32_to_bf16_ieee_fu_17304_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_242_round_float32_to_bf16_ieee_fu_17304_p_din1", "role": "default" }} , 
- 	{ "name": "tmp_242_round_float32_to_bf16_ieee_fu_17304_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_242_round_float32_to_bf16_ieee_fu_17304_p_dout0", "role": "default" }} , 
- 	{ "name": "tmp_242_round_float32_to_bf16_ieee_fu_17304_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_242_round_float32_to_bf16_ieee_fu_17304_p_ready", "role": "default" }} , 
- 	{ "name": "tmp_243_round_float32_to_bf16_ieee_fu_17308_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_243_round_float32_to_bf16_ieee_fu_17308_p_din1", "role": "default" }} , 
- 	{ "name": "tmp_243_round_float32_to_bf16_ieee_fu_17308_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_243_round_float32_to_bf16_ieee_fu_17308_p_dout0", "role": "default" }} , 
- 	{ "name": "tmp_243_round_float32_to_bf16_ieee_fu_17308_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_243_round_float32_to_bf16_ieee_fu_17308_p_ready", "role": "default" }} , 
- 	{ "name": "tmp_244_round_float32_to_bf16_ieee_fu_17312_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_244_round_float32_to_bf16_ieee_fu_17312_p_din1", "role": "default" }} , 
- 	{ "name": "tmp_244_round_float32_to_bf16_ieee_fu_17312_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_244_round_float32_to_bf16_ieee_fu_17312_p_dout0", "role": "default" }} , 
- 	{ "name": "tmp_244_round_float32_to_bf16_ieee_fu_17312_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_244_round_float32_to_bf16_ieee_fu_17312_p_ready", "role": "default" }} , 
- 	{ "name": "tmp_245_round_float32_to_bf16_ieee_fu_17316_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_245_round_float32_to_bf16_ieee_fu_17316_p_din1", "role": "default" }} , 
- 	{ "name": "tmp_245_round_float32_to_bf16_ieee_fu_17316_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_245_round_float32_to_bf16_ieee_fu_17316_p_dout0", "role": "default" }} , 
- 	{ "name": "tmp_245_round_float32_to_bf16_ieee_fu_17316_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_245_round_float32_to_bf16_ieee_fu_17316_p_ready", "role": "default" }} , 
- 	{ "name": "tmp_246_round_float32_to_bf16_ieee_fu_17320_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_246_round_float32_to_bf16_ieee_fu_17320_p_din1", "role": "default" }} , 
- 	{ "name": "tmp_246_round_float32_to_bf16_ieee_fu_17320_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_246_round_float32_to_bf16_ieee_fu_17320_p_dout0", "role": "default" }} , 
- 	{ "name": "tmp_246_round_float32_to_bf16_ieee_fu_17320_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_246_round_float32_to_bf16_ieee_fu_17320_p_ready", "role": "default" }} , 
- 	{ "name": "tmp_247_round_float32_to_bf16_ieee_fu_17324_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_247_round_float32_to_bf16_ieee_fu_17324_p_din1", "role": "default" }} , 
- 	{ "name": "tmp_247_round_float32_to_bf16_ieee_fu_17324_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_247_round_float32_to_bf16_ieee_fu_17324_p_dout0", "role": "default" }} , 
- 	{ "name": "tmp_247_round_float32_to_bf16_ieee_fu_17324_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_247_round_float32_to_bf16_ieee_fu_17324_p_ready", "role": "default" }} , 
- 	{ "name": "tmp_248_round_float32_to_bf16_ieee_fu_17328_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_248_round_float32_to_bf16_ieee_fu_17328_p_din1", "role": "default" }} , 
- 	{ "name": "tmp_248_round_float32_to_bf16_ieee_fu_17328_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_248_round_float32_to_bf16_ieee_fu_17328_p_dout0", "role": "default" }} , 
- 	{ "name": "tmp_248_round_float32_to_bf16_ieee_fu_17328_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_248_round_float32_to_bf16_ieee_fu_17328_p_ready", "role": "default" }} , 
- 	{ "name": "tmp_249_round_float32_to_bf16_ieee_fu_17332_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_249_round_float32_to_bf16_ieee_fu_17332_p_din1", "role": "default" }} , 
- 	{ "name": "tmp_249_round_float32_to_bf16_ieee_fu_17332_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_249_round_float32_to_bf16_ieee_fu_17332_p_dout0", "role": "default" }} , 
- 	{ "name": "tmp_249_round_float32_to_bf16_ieee_fu_17332_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_249_round_float32_to_bf16_ieee_fu_17332_p_ready", "role": "default" }} , 
- 	{ "name": "tmp_250_round_float32_to_bf16_ieee_fu_17336_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_250_round_float32_to_bf16_ieee_fu_17336_p_din1", "role": "default" }} , 
- 	{ "name": "tmp_250_round_float32_to_bf16_ieee_fu_17336_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_250_round_float32_to_bf16_ieee_fu_17336_p_dout0", "role": "default" }} , 
- 	{ "name": "tmp_250_round_float32_to_bf16_ieee_fu_17336_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_250_round_float32_to_bf16_ieee_fu_17336_p_ready", "role": "default" }} , 
- 	{ "name": "tmp_251_round_float32_to_bf16_ieee_fu_17340_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_251_round_float32_to_bf16_ieee_fu_17340_p_din1", "role": "default" }} , 
- 	{ "name": "tmp_251_round_float32_to_bf16_ieee_fu_17340_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_251_round_float32_to_bf16_ieee_fu_17340_p_dout0", "role": "default" }} , 
- 	{ "name": "tmp_251_round_float32_to_bf16_ieee_fu_17340_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_251_round_float32_to_bf16_ieee_fu_17340_p_ready", "role": "default" }} , 
- 	{ "name": "tmp_252_round_float32_to_bf16_ieee_fu_17344_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_252_round_float32_to_bf16_ieee_fu_17344_p_din1", "role": "default" }} , 
- 	{ "name": "tmp_252_round_float32_to_bf16_ieee_fu_17344_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_252_round_float32_to_bf16_ieee_fu_17344_p_dout0", "role": "default" }} , 
- 	{ "name": "tmp_252_round_float32_to_bf16_ieee_fu_17344_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_252_round_float32_to_bf16_ieee_fu_17344_p_ready", "role": "default" }} , 
- 	{ "name": "tmp_253_round_float32_to_bf16_ieee_fu_17348_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_253_round_float32_to_bf16_ieee_fu_17348_p_din1", "role": "default" }} , 
- 	{ "name": "tmp_253_round_float32_to_bf16_ieee_fu_17348_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_253_round_float32_to_bf16_ieee_fu_17348_p_dout0", "role": "default" }} , 
- 	{ "name": "tmp_253_round_float32_to_bf16_ieee_fu_17348_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_253_round_float32_to_bf16_ieee_fu_17348_p_ready", "role": "default" }} , 
- 	{ "name": "tmp_254_round_float32_to_bf16_ieee_fu_17352_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_254_round_float32_to_bf16_ieee_fu_17352_p_din1", "role": "default" }} , 
- 	{ "name": "tmp_254_round_float32_to_bf16_ieee_fu_17352_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_254_round_float32_to_bf16_ieee_fu_17352_p_dout0", "role": "default" }} , 
- 	{ "name": "tmp_254_round_float32_to_bf16_ieee_fu_17352_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_254_round_float32_to_bf16_ieee_fu_17352_p_ready", "role": "default" }} , 
- 	{ "name": "tmp_255_round_float32_to_bf16_ieee_fu_17356_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_255_round_float32_to_bf16_ieee_fu_17356_p_din1", "role": "default" }} , 
- 	{ "name": "tmp_255_round_float32_to_bf16_ieee_fu_17356_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_255_round_float32_to_bf16_ieee_fu_17356_p_dout0", "role": "default" }} , 
- 	{ "name": "tmp_255_round_float32_to_bf16_ieee_fu_17356_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_255_round_float32_to_bf16_ieee_fu_17356_p_ready", "role": "default" }} , 
- 	{ "name": "tmp_s_round_float32_to_bf16_ieee_fu_17360_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_s_round_float32_to_bf16_ieee_fu_17360_p_din1", "role": "default" }} , 
- 	{ "name": "tmp_s_round_float32_to_bf16_ieee_fu_17360_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_s_round_float32_to_bf16_ieee_fu_17360_p_dout0", "role": "default" }} , 
- 	{ "name": "tmp_s_round_float32_to_bf16_ieee_fu_17360_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_s_round_float32_to_bf16_ieee_fu_17360_p_ready", "role": "default" }}  ]}
+ 	{ "name": "grp_fu_2052_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2052_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2052_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2052_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_2052_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2052_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_2052_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2052_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2052_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2052_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_2053_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2053_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2053_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2053_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_2053_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2053_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_2053_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2053_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2053_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2053_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_2054_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2054_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2054_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2054_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_2054_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2054_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_2054_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2054_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2054_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2054_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_2055_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2055_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2055_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2055_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_2055_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2055_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_2055_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2055_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2055_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2055_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_2056_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2056_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2056_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2056_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_2056_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2056_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_2056_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2056_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2056_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2056_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_2057_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2057_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2057_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2057_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_2057_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2057_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_2057_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2057_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2057_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2057_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_2058_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2058_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2058_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2058_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_2058_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2058_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_2058_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2058_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2058_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2058_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_2059_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2059_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2059_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2059_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_2059_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2059_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_2059_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2059_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2059_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2059_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_2060_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2060_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2060_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2060_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_2060_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2060_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_2060_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2060_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2060_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2060_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_2061_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2061_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2061_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2061_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_2061_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2061_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_2061_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2061_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2061_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2061_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_2062_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2062_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2062_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2062_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_2062_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2062_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_2062_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2062_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2062_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2062_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_2063_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2063_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2063_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2063_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_2063_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2063_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_2063_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2063_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2063_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2063_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_2064_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2064_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2064_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2064_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_2064_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2064_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_2064_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2064_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2064_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2064_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_2065_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2065_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2065_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2065_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_2065_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2065_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_2065_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2065_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2065_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2065_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_2066_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2066_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2066_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2066_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_2066_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2066_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_2066_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2066_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2066_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2066_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_2067_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2067_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2067_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2067_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_2067_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2067_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_2067_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2067_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2067_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2067_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_2068_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2068_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2068_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2068_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_2068_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2068_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_2068_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2068_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2068_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2068_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_2069_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2069_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2069_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2069_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_2069_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2069_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_2069_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2069_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2069_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2069_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_2070_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2070_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2070_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2070_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_2070_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2070_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_2070_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2070_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2070_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2070_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_2071_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2071_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2071_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2071_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_2071_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2071_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_2071_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2071_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2071_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2071_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_2072_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2072_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2072_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2072_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_2072_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2072_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_2072_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2072_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2072_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2072_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_2073_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2073_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2073_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2073_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_2073_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2073_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_2073_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2073_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2073_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2073_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_2074_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2074_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2074_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2074_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_2074_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2074_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_2074_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2074_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2074_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2074_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_2075_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2075_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2075_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2075_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_2075_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2075_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_2075_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2075_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2075_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2075_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_2076_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2076_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2076_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2076_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_2076_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2076_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_2076_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2076_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2076_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2076_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_2077_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2077_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2077_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2077_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_2077_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2077_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_2077_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2077_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2077_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2077_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_2078_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2078_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2078_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2078_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_2078_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2078_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_2078_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2078_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2078_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2078_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_2079_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2079_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2079_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2079_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_2079_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2079_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_2079_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2079_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2079_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2079_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_2080_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2080_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2080_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2080_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_2080_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2080_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_2080_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2080_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2080_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2080_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_2081_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2081_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2081_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2081_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_2081_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2081_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_2081_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2081_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2081_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2081_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_2082_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2082_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2082_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2082_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_2082_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2082_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_2082_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2082_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2082_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2082_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_2083_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2083_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2083_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2083_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_2083_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2083_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_2083_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_2083_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_2083_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_2083_p_ce", "role": "default" }} , 
+ 	{ "name": "tmp_128_round_float32_to_bf16_ieee_fu_17358_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_128_round_float32_to_bf16_ieee_fu_17358_p_din1", "role": "default" }} , 
+ 	{ "name": "tmp_128_round_float32_to_bf16_ieee_fu_17358_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_128_round_float32_to_bf16_ieee_fu_17358_p_dout0", "role": "default" }} , 
+ 	{ "name": "tmp_128_round_float32_to_bf16_ieee_fu_17358_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_128_round_float32_to_bf16_ieee_fu_17358_p_ready", "role": "default" }} , 
+ 	{ "name": "tmp_129_round_float32_to_bf16_ieee_fu_17362_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_129_round_float32_to_bf16_ieee_fu_17362_p_din1", "role": "default" }} , 
+ 	{ "name": "tmp_129_round_float32_to_bf16_ieee_fu_17362_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_129_round_float32_to_bf16_ieee_fu_17362_p_dout0", "role": "default" }} , 
+ 	{ "name": "tmp_129_round_float32_to_bf16_ieee_fu_17362_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_129_round_float32_to_bf16_ieee_fu_17362_p_ready", "role": "default" }} , 
+ 	{ "name": "tmp_130_round_float32_to_bf16_ieee_fu_17366_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_130_round_float32_to_bf16_ieee_fu_17366_p_din1", "role": "default" }} , 
+ 	{ "name": "tmp_130_round_float32_to_bf16_ieee_fu_17366_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_130_round_float32_to_bf16_ieee_fu_17366_p_dout0", "role": "default" }} , 
+ 	{ "name": "tmp_130_round_float32_to_bf16_ieee_fu_17366_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_130_round_float32_to_bf16_ieee_fu_17366_p_ready", "role": "default" }} , 
+ 	{ "name": "tmp_131_round_float32_to_bf16_ieee_fu_17370_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_131_round_float32_to_bf16_ieee_fu_17370_p_din1", "role": "default" }} , 
+ 	{ "name": "tmp_131_round_float32_to_bf16_ieee_fu_17370_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_131_round_float32_to_bf16_ieee_fu_17370_p_dout0", "role": "default" }} , 
+ 	{ "name": "tmp_131_round_float32_to_bf16_ieee_fu_17370_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_131_round_float32_to_bf16_ieee_fu_17370_p_ready", "role": "default" }} , 
+ 	{ "name": "tmp_132_round_float32_to_bf16_ieee_fu_17374_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_132_round_float32_to_bf16_ieee_fu_17374_p_din1", "role": "default" }} , 
+ 	{ "name": "tmp_132_round_float32_to_bf16_ieee_fu_17374_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_132_round_float32_to_bf16_ieee_fu_17374_p_dout0", "role": "default" }} , 
+ 	{ "name": "tmp_132_round_float32_to_bf16_ieee_fu_17374_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_132_round_float32_to_bf16_ieee_fu_17374_p_ready", "role": "default" }} , 
+ 	{ "name": "tmp_133_round_float32_to_bf16_ieee_fu_17378_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_133_round_float32_to_bf16_ieee_fu_17378_p_din1", "role": "default" }} , 
+ 	{ "name": "tmp_133_round_float32_to_bf16_ieee_fu_17378_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_133_round_float32_to_bf16_ieee_fu_17378_p_dout0", "role": "default" }} , 
+ 	{ "name": "tmp_133_round_float32_to_bf16_ieee_fu_17378_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_133_round_float32_to_bf16_ieee_fu_17378_p_ready", "role": "default" }} , 
+ 	{ "name": "tmp_134_round_float32_to_bf16_ieee_fu_17382_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_134_round_float32_to_bf16_ieee_fu_17382_p_din1", "role": "default" }} , 
+ 	{ "name": "tmp_134_round_float32_to_bf16_ieee_fu_17382_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_134_round_float32_to_bf16_ieee_fu_17382_p_dout0", "role": "default" }} , 
+ 	{ "name": "tmp_134_round_float32_to_bf16_ieee_fu_17382_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_134_round_float32_to_bf16_ieee_fu_17382_p_ready", "role": "default" }} , 
+ 	{ "name": "tmp_135_round_float32_to_bf16_ieee_fu_17386_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_135_round_float32_to_bf16_ieee_fu_17386_p_din1", "role": "default" }} , 
+ 	{ "name": "tmp_135_round_float32_to_bf16_ieee_fu_17386_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_135_round_float32_to_bf16_ieee_fu_17386_p_dout0", "role": "default" }} , 
+ 	{ "name": "tmp_135_round_float32_to_bf16_ieee_fu_17386_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_135_round_float32_to_bf16_ieee_fu_17386_p_ready", "role": "default" }} , 
+ 	{ "name": "tmp_136_round_float32_to_bf16_ieee_fu_17390_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_136_round_float32_to_bf16_ieee_fu_17390_p_din1", "role": "default" }} , 
+ 	{ "name": "tmp_136_round_float32_to_bf16_ieee_fu_17390_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_136_round_float32_to_bf16_ieee_fu_17390_p_dout0", "role": "default" }} , 
+ 	{ "name": "tmp_136_round_float32_to_bf16_ieee_fu_17390_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_136_round_float32_to_bf16_ieee_fu_17390_p_ready", "role": "default" }} , 
+ 	{ "name": "tmp_137_round_float32_to_bf16_ieee_fu_17394_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_137_round_float32_to_bf16_ieee_fu_17394_p_din1", "role": "default" }} , 
+ 	{ "name": "tmp_137_round_float32_to_bf16_ieee_fu_17394_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_137_round_float32_to_bf16_ieee_fu_17394_p_dout0", "role": "default" }} , 
+ 	{ "name": "tmp_137_round_float32_to_bf16_ieee_fu_17394_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_137_round_float32_to_bf16_ieee_fu_17394_p_ready", "role": "default" }} , 
+ 	{ "name": "tmp_138_round_float32_to_bf16_ieee_fu_17398_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_138_round_float32_to_bf16_ieee_fu_17398_p_din1", "role": "default" }} , 
+ 	{ "name": "tmp_138_round_float32_to_bf16_ieee_fu_17398_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_138_round_float32_to_bf16_ieee_fu_17398_p_dout0", "role": "default" }} , 
+ 	{ "name": "tmp_138_round_float32_to_bf16_ieee_fu_17398_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_138_round_float32_to_bf16_ieee_fu_17398_p_ready", "role": "default" }} , 
+ 	{ "name": "tmp_139_round_float32_to_bf16_ieee_fu_17402_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_139_round_float32_to_bf16_ieee_fu_17402_p_din1", "role": "default" }} , 
+ 	{ "name": "tmp_139_round_float32_to_bf16_ieee_fu_17402_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_139_round_float32_to_bf16_ieee_fu_17402_p_dout0", "role": "default" }} , 
+ 	{ "name": "tmp_139_round_float32_to_bf16_ieee_fu_17402_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_139_round_float32_to_bf16_ieee_fu_17402_p_ready", "role": "default" }} , 
+ 	{ "name": "tmp_140_round_float32_to_bf16_ieee_fu_17406_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_140_round_float32_to_bf16_ieee_fu_17406_p_din1", "role": "default" }} , 
+ 	{ "name": "tmp_140_round_float32_to_bf16_ieee_fu_17406_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_140_round_float32_to_bf16_ieee_fu_17406_p_dout0", "role": "default" }} , 
+ 	{ "name": "tmp_140_round_float32_to_bf16_ieee_fu_17406_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_140_round_float32_to_bf16_ieee_fu_17406_p_ready", "role": "default" }} , 
+ 	{ "name": "tmp_141_round_float32_to_bf16_ieee_fu_17410_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_141_round_float32_to_bf16_ieee_fu_17410_p_din1", "role": "default" }} , 
+ 	{ "name": "tmp_141_round_float32_to_bf16_ieee_fu_17410_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_141_round_float32_to_bf16_ieee_fu_17410_p_dout0", "role": "default" }} , 
+ 	{ "name": "tmp_141_round_float32_to_bf16_ieee_fu_17410_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_141_round_float32_to_bf16_ieee_fu_17410_p_ready", "role": "default" }} , 
+ 	{ "name": "tmp_142_round_float32_to_bf16_ieee_fu_17414_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_142_round_float32_to_bf16_ieee_fu_17414_p_din1", "role": "default" }} , 
+ 	{ "name": "tmp_142_round_float32_to_bf16_ieee_fu_17414_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_142_round_float32_to_bf16_ieee_fu_17414_p_dout0", "role": "default" }} , 
+ 	{ "name": "tmp_142_round_float32_to_bf16_ieee_fu_17414_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_142_round_float32_to_bf16_ieee_fu_17414_p_ready", "role": "default" }} , 
+ 	{ "name": "tmp_143_round_float32_to_bf16_ieee_fu_17418_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_143_round_float32_to_bf16_ieee_fu_17418_p_din1", "role": "default" }} , 
+ 	{ "name": "tmp_143_round_float32_to_bf16_ieee_fu_17418_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_143_round_float32_to_bf16_ieee_fu_17418_p_dout0", "role": "default" }} , 
+ 	{ "name": "tmp_143_round_float32_to_bf16_ieee_fu_17418_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_143_round_float32_to_bf16_ieee_fu_17418_p_ready", "role": "default" }} , 
+ 	{ "name": "tmp_144_round_float32_to_bf16_ieee_fu_17422_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_144_round_float32_to_bf16_ieee_fu_17422_p_din1", "role": "default" }} , 
+ 	{ "name": "tmp_144_round_float32_to_bf16_ieee_fu_17422_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_144_round_float32_to_bf16_ieee_fu_17422_p_dout0", "role": "default" }} , 
+ 	{ "name": "tmp_144_round_float32_to_bf16_ieee_fu_17422_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_144_round_float32_to_bf16_ieee_fu_17422_p_ready", "role": "default" }} , 
+ 	{ "name": "tmp_145_round_float32_to_bf16_ieee_fu_17426_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_145_round_float32_to_bf16_ieee_fu_17426_p_din1", "role": "default" }} , 
+ 	{ "name": "tmp_145_round_float32_to_bf16_ieee_fu_17426_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_145_round_float32_to_bf16_ieee_fu_17426_p_dout0", "role": "default" }} , 
+ 	{ "name": "tmp_145_round_float32_to_bf16_ieee_fu_17426_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_145_round_float32_to_bf16_ieee_fu_17426_p_ready", "role": "default" }} , 
+ 	{ "name": "tmp_146_round_float32_to_bf16_ieee_fu_17430_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_146_round_float32_to_bf16_ieee_fu_17430_p_din1", "role": "default" }} , 
+ 	{ "name": "tmp_146_round_float32_to_bf16_ieee_fu_17430_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_146_round_float32_to_bf16_ieee_fu_17430_p_dout0", "role": "default" }} , 
+ 	{ "name": "tmp_146_round_float32_to_bf16_ieee_fu_17430_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_146_round_float32_to_bf16_ieee_fu_17430_p_ready", "role": "default" }} , 
+ 	{ "name": "tmp_147_round_float32_to_bf16_ieee_fu_17434_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_147_round_float32_to_bf16_ieee_fu_17434_p_din1", "role": "default" }} , 
+ 	{ "name": "tmp_147_round_float32_to_bf16_ieee_fu_17434_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_147_round_float32_to_bf16_ieee_fu_17434_p_dout0", "role": "default" }} , 
+ 	{ "name": "tmp_147_round_float32_to_bf16_ieee_fu_17434_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_147_round_float32_to_bf16_ieee_fu_17434_p_ready", "role": "default" }} , 
+ 	{ "name": "tmp_148_round_float32_to_bf16_ieee_fu_17438_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_148_round_float32_to_bf16_ieee_fu_17438_p_din1", "role": "default" }} , 
+ 	{ "name": "tmp_148_round_float32_to_bf16_ieee_fu_17438_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_148_round_float32_to_bf16_ieee_fu_17438_p_dout0", "role": "default" }} , 
+ 	{ "name": "tmp_148_round_float32_to_bf16_ieee_fu_17438_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_148_round_float32_to_bf16_ieee_fu_17438_p_ready", "role": "default" }} , 
+ 	{ "name": "tmp_149_round_float32_to_bf16_ieee_fu_17442_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_149_round_float32_to_bf16_ieee_fu_17442_p_din1", "role": "default" }} , 
+ 	{ "name": "tmp_149_round_float32_to_bf16_ieee_fu_17442_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_149_round_float32_to_bf16_ieee_fu_17442_p_dout0", "role": "default" }} , 
+ 	{ "name": "tmp_149_round_float32_to_bf16_ieee_fu_17442_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_149_round_float32_to_bf16_ieee_fu_17442_p_ready", "role": "default" }} , 
+ 	{ "name": "tmp_150_round_float32_to_bf16_ieee_fu_17446_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_150_round_float32_to_bf16_ieee_fu_17446_p_din1", "role": "default" }} , 
+ 	{ "name": "tmp_150_round_float32_to_bf16_ieee_fu_17446_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_150_round_float32_to_bf16_ieee_fu_17446_p_dout0", "role": "default" }} , 
+ 	{ "name": "tmp_150_round_float32_to_bf16_ieee_fu_17446_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_150_round_float32_to_bf16_ieee_fu_17446_p_ready", "role": "default" }} , 
+ 	{ "name": "tmp_151_round_float32_to_bf16_ieee_fu_17450_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_151_round_float32_to_bf16_ieee_fu_17450_p_din1", "role": "default" }} , 
+ 	{ "name": "tmp_151_round_float32_to_bf16_ieee_fu_17450_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_151_round_float32_to_bf16_ieee_fu_17450_p_dout0", "role": "default" }} , 
+ 	{ "name": "tmp_151_round_float32_to_bf16_ieee_fu_17450_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_151_round_float32_to_bf16_ieee_fu_17450_p_ready", "role": "default" }} , 
+ 	{ "name": "tmp_152_round_float32_to_bf16_ieee_fu_17454_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_152_round_float32_to_bf16_ieee_fu_17454_p_din1", "role": "default" }} , 
+ 	{ "name": "tmp_152_round_float32_to_bf16_ieee_fu_17454_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_152_round_float32_to_bf16_ieee_fu_17454_p_dout0", "role": "default" }} , 
+ 	{ "name": "tmp_152_round_float32_to_bf16_ieee_fu_17454_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_152_round_float32_to_bf16_ieee_fu_17454_p_ready", "role": "default" }} , 
+ 	{ "name": "tmp_153_round_float32_to_bf16_ieee_fu_17458_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_153_round_float32_to_bf16_ieee_fu_17458_p_din1", "role": "default" }} , 
+ 	{ "name": "tmp_153_round_float32_to_bf16_ieee_fu_17458_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_153_round_float32_to_bf16_ieee_fu_17458_p_dout0", "role": "default" }} , 
+ 	{ "name": "tmp_153_round_float32_to_bf16_ieee_fu_17458_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_153_round_float32_to_bf16_ieee_fu_17458_p_ready", "role": "default" }} , 
+ 	{ "name": "tmp_154_round_float32_to_bf16_ieee_fu_17462_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_154_round_float32_to_bf16_ieee_fu_17462_p_din1", "role": "default" }} , 
+ 	{ "name": "tmp_154_round_float32_to_bf16_ieee_fu_17462_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_154_round_float32_to_bf16_ieee_fu_17462_p_dout0", "role": "default" }} , 
+ 	{ "name": "tmp_154_round_float32_to_bf16_ieee_fu_17462_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_154_round_float32_to_bf16_ieee_fu_17462_p_ready", "role": "default" }} , 
+ 	{ "name": "tmp_155_round_float32_to_bf16_ieee_fu_17466_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_155_round_float32_to_bf16_ieee_fu_17466_p_din1", "role": "default" }} , 
+ 	{ "name": "tmp_155_round_float32_to_bf16_ieee_fu_17466_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_155_round_float32_to_bf16_ieee_fu_17466_p_dout0", "role": "default" }} , 
+ 	{ "name": "tmp_155_round_float32_to_bf16_ieee_fu_17466_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_155_round_float32_to_bf16_ieee_fu_17466_p_ready", "role": "default" }} , 
+ 	{ "name": "tmp_156_round_float32_to_bf16_ieee_fu_17470_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_156_round_float32_to_bf16_ieee_fu_17470_p_din1", "role": "default" }} , 
+ 	{ "name": "tmp_156_round_float32_to_bf16_ieee_fu_17470_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_156_round_float32_to_bf16_ieee_fu_17470_p_dout0", "role": "default" }} , 
+ 	{ "name": "tmp_156_round_float32_to_bf16_ieee_fu_17470_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_156_round_float32_to_bf16_ieee_fu_17470_p_ready", "role": "default" }} , 
+ 	{ "name": "tmp_157_round_float32_to_bf16_ieee_fu_17474_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_157_round_float32_to_bf16_ieee_fu_17474_p_din1", "role": "default" }} , 
+ 	{ "name": "tmp_157_round_float32_to_bf16_ieee_fu_17474_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_157_round_float32_to_bf16_ieee_fu_17474_p_dout0", "role": "default" }} , 
+ 	{ "name": "tmp_157_round_float32_to_bf16_ieee_fu_17474_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_157_round_float32_to_bf16_ieee_fu_17474_p_ready", "role": "default" }} , 
+ 	{ "name": "tmp_158_round_float32_to_bf16_ieee_fu_17478_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_158_round_float32_to_bf16_ieee_fu_17478_p_din1", "role": "default" }} , 
+ 	{ "name": "tmp_158_round_float32_to_bf16_ieee_fu_17478_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_158_round_float32_to_bf16_ieee_fu_17478_p_dout0", "role": "default" }} , 
+ 	{ "name": "tmp_158_round_float32_to_bf16_ieee_fu_17478_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_158_round_float32_to_bf16_ieee_fu_17478_p_ready", "role": "default" }} , 
+ 	{ "name": "tmp_159_round_float32_to_bf16_ieee_fu_17482_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tmp_159_round_float32_to_bf16_ieee_fu_17482_p_din1", "role": "default" }} , 
+ 	{ "name": "tmp_159_round_float32_to_bf16_ieee_fu_17482_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "tmp_159_round_float32_to_bf16_ieee_fu_17482_p_dout0", "role": "default" }} , 
+ 	{ "name": "tmp_159_round_float32_to_bf16_ieee_fu_17482_p_ready", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tmp_159_round_float32_to_bf16_ieee_fu_17482_p_ready", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
 	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1"],

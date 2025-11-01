@@ -1,0 +1,338 @@
+{
+    "1": {
+        "name": "activation_accelerator_Pipeline_stage_2_store",
+        "file": "activation_accelerator.cpp",
+        "fileloc": "798",
+        "instructions": "162",
+        "total_instructions": "162",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "64",
+            "L": "3"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "activation_accelerator",
+        "file": "activation_accelerator.cpp",
+        "fileloc": "706",
+        "instructions": "1230",
+        "total_instructions": "21410",
+        "calls": "3 5 18 7 17 13 6 11 14 4 9 12 2 4 16 1",
+        "basicblocks": "19",
+        "loads": {
+            "L": "256"
+        },
+        "stores": {
+            "L": "256"
+        }
+    },
+    "2": {
+        "name": "activation_accelerator_Pipeline_normalize_blocks_layer_norm3",
+        "file": "activation_accelerator.cpp",
+        "fileloc": "775",
+        "instructions": "718",
+        "total_instructions": "2638",
+        "calls": "8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8",
+        "basicblocks": "4",
+        "loads": {
+            "G": "64",
+            "L": "1"
+        },
+        "stores": {
+            "G": "64",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "3": {
+        "name": "activation_accelerator_Pipeline_stage_0_load0",
+        "file": "activation_accelerator.cpp",
+        "fileloc": "752",
+        "instructions": "227",
+        "total_instructions": "227",
+        "calls": "",
+        "basicblocks": "69",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "G": "64",
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "4": {
+        "name": "square",
+        "file": ".\/bf16_accl.h",
+        "fileloc": "343",
+        "instructions": "258",
+        "total_instructions": "1040",
+        "calls": "15",
+        "basicblocks": "1",
+        "loads": {
+            "L": "64"
+        }
+    },
+    "5": {
+        "name": "activation_accelerator_Pipeline_stage_0_load1",
+        "file": "activation_accelerator.cpp",
+        "fileloc": "756",
+        "instructions": "131",
+        "total_instructions": "131",
+        "calls": "",
+        "basicblocks": "37",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "G": "32",
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "6": {
+        "name": "activation_accelerator_Pipeline_multiply_blocks_Multiply",
+        "file": "activation_accelerator.cpp",
+        "fileloc": "783",
+        "instructions": "600",
+        "total_instructions": "600",
+        "calls": "",
+        "basicblocks": "7",
+        "loads": {
+            "G": "96",
+            "L": "1"
+        },
+        "stores": {
+            "G": "64",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "7": {
+        "name": "activation_accelerator_Pipeline_max_step_loop_softmax",
+        "file": "activation_accelerator.cpp",
+        "fileloc": "771",
+        "instructions": "718",
+        "total_instructions": "3470",
+        "calls": "10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10",
+        "basicblocks": "4",
+        "loads": {
+            "G": "64",
+            "L": "129"
+        },
+        "stores": {
+            "L": "130"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "8": {
+        "name": "round_float32_to_bf16_ieee",
+        "file": "activation_accelerator.cpp",
+        "fileloc": "17",
+        "instructions": "30",
+        "total_instructions": "30",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "9": {
+        "name": "activation_accelerator_Pipeline_mean_blocks_layer_norm3",
+        "file": "activation_accelerator.cpp",
+        "fileloc": "775",
+        "instructions": "718",
+        "total_instructions": "718",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "64",
+            "L": "129"
+        },
+        "stores": {
+            "L": "130"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "10": {
+        "name": "generic_fmax<float>",
+        "file": "hls_fmax.h",
+        "fileloc": "19",
+        "instructions": "43",
+        "total_instructions": "43",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "11": {
+        "name": "activation_accelerator_Pipeline_add_blocks_add",
+        "file": "activation_accelerator.cpp",
+        "fileloc": "787",
+        "instructions": "568",
+        "total_instructions": "1528",
+        "calls": "8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8",
+        "basicblocks": "7",
+        "loads": {
+            "G": "96",
+            "L": "1"
+        },
+        "stores": {
+            "G": "64",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "12": {
+        "name": "activation_accelerator_Pipeline_std_blocks_layer_norm3",
+        "file": "activation_accelerator.cpp",
+        "fileloc": "775",
+        "instructions": "277",
+        "total_instructions": "277",
+        "calls": "",
+        "basicblocks": "69",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "13": {
+        "name": "activation_accelerator_Pipeline_softmax_final",
+        "file": "activation_accelerator.cpp",
+        "fileloc": "771",
+        "instructions": "782",
+        "total_instructions": "2702",
+        "calls": "8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8",
+        "basicblocks": "4",
+        "loads": {
+            "G": "64",
+            "L": "1"
+        },
+        "stores": {
+            "G": "64",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "14": {
+        "name": "activation_accelerator_Pipeline_gelu_blocks",
+        "file": "activation_accelerator.cpp",
+        "fileloc": "792",
+        "instructions": "604",
+        "total_instructions": "604",
+        "calls": "",
+        "basicblocks": "84",
+        "loads": {
+            "G": "64",
+            "L": "4"
+        },
+        "stores": {
+            "G": "64",
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "15": {
+        "name": "square_Pipeline_sum_square",
+        "file": ".\/bf16_accl.h",
+        "fileloc": "329",
+        "instructions": "782",
+        "total_instructions": "782",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "64",
+            "L": "129"
+        },
+        "stores": {
+            "L": "130"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "16": {
+        "name": "activation_accelerator_Pipeline_normalize_blocks_rms_norm3",
+        "file": "activation_accelerator.cpp",
+        "fileloc": "779",
+        "instructions": "590",
+        "total_instructions": "2510",
+        "calls": "8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8",
+        "basicblocks": "4",
+        "loads": {
+            "G": "64",
+            "L": "1"
+        },
+        "stores": {
+            "G": "64",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "17": {
+        "name": "activation_accelerator_Pipeline_exp_and_bucket_softmax",
+        "file": "activation_accelerator.cpp",
+        "fileloc": "771",
+        "instructions": "910",
+        "total_instructions": "910",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "64",
+            "L": "129"
+        },
+        "stores": {
+            "L": "130"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "18": {
+        "name": "activation_accelerator_Pipeline_silu_blocks",
+        "file": "activation_accelerator.cpp",
+        "fileloc": "767",
+        "instructions": "663",
+        "total_instructions": "1623",
+        "calls": "8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8",
+        "basicblocks": "7",
+        "loads": {
+            "G": "64",
+            "L": "1"
+        },
+        "stores": {
+            "G": "64",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

@@ -27,48 +27,48 @@ Set activation_accelerator.stage = 0
 Data transfer complete
 
 --- Testing Config 0 ---
-Config 0 compute time: 2758.41 ms
+Config 0 compute time: 2710.71 ms
 Output results saved to: /home/jicz/xushaohui/fpt_LLM/prj/testvector_example/bf16_vectors/hls_output_config_0.bin
 Max Difference: 63
 Config 0 test failed with 126 errors
 
 --- Testing Config 1 ---
-Config 1 compute time: 4233.45 ms
+Config 1 compute time: 4217.35 ms
 Output results saved to: /home/jicz/xushaohui/fpt_LLM/prj/testvector_example/bf16_vectors/hls_output_config_1.bin
 Max Difference: 32831
 Config 1 test failed with 8644 errors
 
 --- Testing Config 2 ---
-Config 2 compute time: 0.640237 ms
+Config 2 compute time: 0.508788 ms
 Output results saved to: /home/jicz/xushaohui/fpt_LLM/prj/testvector_example/bf16_vectors/hls_output_config_2.bin
 Max Difference: 65535
 Config 2 test failed with 10496 errors
 
 --- Testing Config 3 ---
-Config 3 compute time: 0.539263 ms
+Config 3 compute time: 0.484563 ms
 Output results saved to: /home/jicz/xushaohui/fpt_LLM/prj/testvector_example/bf16_vectors/hls_output_config_3.bin
 Max Difference: 32831
 Config 3 test failed with 6026 errors
 
 --- Testing Config 4 ---
-Config 4 compute time: 0.544672 ms
+Config 4 compute time: 0.164858 ms
 Output results saved to: /home/jicz/xushaohui/fpt_LLM/prj/testvector_example/bf16_vectors/hls_output_config_4.bin
-Max Difference: 0
-Config 4 test passed!
+Max Difference: 1
+Config 4 test failed with 11882 errors
 
 --- Testing Config 5 ---
-Config 5 compute time: 0.35673 ms
+Config 5 compute time: 0.30631 ms
 Output results saved to: /home/jicz/xushaohui/fpt_LLM/prj/testvector_example/bf16_vectors/hls_output_config_5.bin
 Max Difference: 0
 Config 5 test passed!
 
 --- Testing Config 6 ---
-Config 6 compute time: 2482.88 ms
+Config 6 compute time: 2493.24 ms
 Output results saved to: /home/jicz/xushaohui/fpt_LLM/prj/testvector_example/bf16_vectors/hls_output_config_6.bin
 Max Difference: 14960
 Config 6 test failed with 25215 errors
 
-Total compute time for all configs: 9476.82 ms
+Total compute time for all configs: 9422.76 ms
 
 === Test Complete ===
 INFO: [SIM 1] CSim done with 0 errors.

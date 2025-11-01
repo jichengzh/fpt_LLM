@@ -1,0 +1,269 @@
+{
+  "0": {
+    "basicblocks": 45,
+    "calls": "1 13 20 3 15 14 9 5",
+    "file": "activation_accelerator.cpp",
+    "fileloc": 751,
+    "instructions": 114,
+    "loads": {
+      "G": 1,
+      "T": 2
+    },
+    "name": "activation_accelerator",
+    "stores": {
+      "G": 2,
+      "L": 1,
+      "T": 1
+    },
+    "total_instructions": 4118
+  },
+  "1": {
+    "basicblocks": 18,
+    "calls": "",
+    "file": "activation_accelerator.cpp",
+    "fileloc": 42,
+    "instructions": 59,
+    "loads": {
+      "L": 1
+    },
+    "name": "round_float32_to_bf16_ieee",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 59
+  },
+  "10": {
+    "basicblocks": 1,
+    "calls": "7",
+    "file": "fmaxfloat.cpp",
+    "fileloc": 10,
+    "instructions": 2,
+    "name": "fmaxf",
+    "total_instructions": 2934
+  },
+  "11": {
+    "basicblocks": 1,
+    "calls": "16",
+    "file": "x_hls_utils.h",
+    "fileloc": 319,
+    "instructions": 9,
+    "name": "to_int",
+    "total_instructions": 292
+  },
+  "12": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "limits",
+    "fileloc": 1602,
+    "instructions": 1,
+    "name": "max",
+    "total_instructions": 1
+  },
+  "13": {
+    "basicblocks": 13,
+    "calls": "1",
+    "file": "activation_accelerator.cpp",
+    "fileloc": 153,
+    "instructions": 44,
+    "loads": {
+      "L": 2
+    },
+    "name": "float_silu2",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 103
+  },
+  "14": {
+    "basicblocks": 13,
+    "calls": "",
+    "file": "activation_accelerator.cpp",
+    "fileloc": 708,
+    "instructions": 63,
+    "loads": {
+      "L": 5
+    },
+    "name": "float_Multiply2",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 63
+  },
+  "15": {
+    "basicblocks": 43,
+    "calls": "21 1",
+    "file": "activation_accelerator.cpp",
+    "fileloc": 243,
+    "instructions": 145,
+    "loads": {
+      "L": 8
+    },
+    "name": "float_rms_norm3",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 206
+  },
+  "16": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 309,
+    "instructions": 32,
+    "name": "data",
+    "total_instructions": 279
+  },
+  "17": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 283,
+    "instructions": 55,
+    "loads": {
+      "L": 1
+    },
+    "name": "fp_struct",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 318
+  },
+  "18": {
+    "basicblocks": 1,
+    "calls": "8",
+    "file": "expfloat.cpp",
+    "fileloc": 20,
+    "instructions": 2,
+    "name": "expf",
+    "total_instructions": 4
+  },
+  "19": {
+    "basicblocks": 3,
+    "calls": "17",
+    "file": "hls_isnan.h",
+    "fileloc": 16,
+    "instructions": 18,
+    "name": "generic_isnan<float>",
+    "total_instructions": 389
+  },
+  "2": {
+    "basicblocks": 22,
+    "calls": "17 17 19 19 6 19 11 11",
+    "file": "hls_fmax.h",
+    "fileloc": 19,
+    "instructions": 82,
+    "name": "generic_fmax<float>",
+    "total_instructions": 2930
+  },
+  "20": {
+    "basicblocks": 49,
+    "calls": "12 10 18 18 1",
+    "file": "activation_accelerator.cpp",
+    "fileloc": 544,
+    "instructions": 169,
+    "loads": {
+      "L": 11
+    },
+    "name": "float_safe_softmax3",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 3171
+  },
+  "21": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "sqrtfloat.cpp",
+    "fileloc": 11,
+    "instructions": 2,
+    "name": "sqrtf",
+    "total_instructions": 2
+  },
+  "3": {
+    "basicblocks": 43,
+    "calls": "21 1",
+    "file": "activation_accelerator.cpp",
+    "fileloc": 342,
+    "instructions": 170,
+    "loads": {
+      "L": 13
+    },
+    "name": "float_layer_norm3",
+    "stores": {
+      "L": 10
+    },
+    "total_instructions": 231
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "16",
+    "file": "x_hls_utils.h",
+    "fileloc": 322,
+    "instructions": 18,
+    "loads": {
+      "L": 1
+    },
+    "name": "to_float",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 301
+  },
+  "5": {
+    "basicblocks": 13,
+    "calls": "18",
+    "file": "activation_accelerator.cpp",
+    "fileloc": 180,
+    "instructions": 54,
+    "loads": {
+      "L": 3
+    },
+    "name": "float_gelu2",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 58
+  },
+  "6": {
+    "basicblocks": 1,
+    "calls": "4",
+    "file": "x_hls_utils.h",
+    "fileloc": 346,
+    "instructions": 2,
+    "name": "to_ieee",
+    "total_instructions": 303
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "2",
+    "file": "fmaxfloat.cpp",
+    "fileloc": 6,
+    "instructions": 2,
+    "name": "fmax",
+    "total_instructions": 2932
+  },
+  "8": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_exp_float.cpp",
+    "fileloc": 15,
+    "instructions": 2,
+    "name": "exp",
+    "total_instructions": 2
+  },
+  "9": {
+    "basicblocks": 13,
+    "calls": "1",
+    "file": "activation_accelerator.cpp",
+    "fileloc": 513,
+    "instructions": 54,
+    "loads": {
+      "L": 4
+    },
+    "name": "float_add2",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 113
+  }
+}

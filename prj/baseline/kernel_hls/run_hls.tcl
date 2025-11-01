@@ -50,7 +50,7 @@ config_op fsub -impl fulldsp
 # -------------------------------------------------
 
 # Set variable to select which steps to execute
-set hls_exec 3
+set hls_exec 2
 
 csim_design
 # Set any optimization directives
@@ -60,10 +60,10 @@ if {$hls_exec >= 1} {
 	# Run Synthesis
    csynth_design
 }
-# if {$hls_exec >= 2} {
-# 	# Run Synthesis, RTL Simulation
-#    cosim_design
-# }
+if {$hls_exec >= 2} {
+ 	# Run Synthesis, RTL Simulation
+   cosim_design
+}
 # if {$hls_exec >= 3} { 
 # 	# Run Synthesis, RTL Simulation, RTL implementation
 #    #export_design -format ip_catalog -version "1.00a" -library "hls" -vendor "xilinx.com" -description "A memory mapped IP created by Vitis HLS" -evaluate verilog

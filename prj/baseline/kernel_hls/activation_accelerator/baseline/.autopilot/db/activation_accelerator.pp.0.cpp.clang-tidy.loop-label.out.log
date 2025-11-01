@@ -721,18 +721,8 @@
        ^~~
        VITIS_LOOP_169_3: 
 /home/jicz/xushaohui/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:53357:8: note: FIX-IT applied suggested code changes
-/home/jicz/xushaohui/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:56445:9: warning: Added loop label VITIS_LOOP_164_1:   [xilinx-label-all-loops]
-        for (int u = 0; u < col_len; u = u + 4) {
+/home/jicz/xushaohui/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:56406:9: warning: Added loop label VITIS_LOOP_189_1:   [xilinx-label-all-loops]
+        for (int u = 0; u < col_len; u = u + 8) {
         ^~~
-        VITIS_LOOP_164_1: 
-/home/jicz/xushaohui/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:56445:9: note: FIX-IT applied suggested code changes
-/home/jicz/xushaohui/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:56560:2: warning: Added loop label VITIS_LOOP_332_1:   [xilinx-label-all-loops]
- for (int j = 0; j < col_len; ++j) {
- ^~~
- VITIS_LOOP_332_1: 
-/home/jicz/xushaohui/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:56560:2: note: FIX-IT applied suggested code changes
-/home/jicz/xushaohui/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:56662:2: warning: Added loop label VITIS_LOOP_541_1:   [xilinx-label-all-loops]
- for (int u = 0; u < col_len; ++u) {
- ^~~
- VITIS_LOOP_541_1: 
-/home/jicz/xushaohui/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:56662:2: note: FIX-IT applied suggested code changes
+        VITIS_LOOP_189_1: 
+/home/jicz/xushaohui/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp:56406:9: note: FIX-IT applied suggested code changes

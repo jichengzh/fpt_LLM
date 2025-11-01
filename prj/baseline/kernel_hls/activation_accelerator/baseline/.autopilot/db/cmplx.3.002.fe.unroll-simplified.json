@@ -1,26 +1,26 @@
 {
   "0": {
-    "basicblocks": 41,
-    "calls": "6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 8 3 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 8 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6",
+    "basicblocks": 43,
+    "calls": "10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 9 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10",
     "file": "activation_accelerator.cpp",
-    "fileloc": 703,
-    "instructions": 7467,
+    "fileloc": 752,
+    "instructions": 8549,
     "loads": {
-      "G": 561,
-      "L": 194,
+      "G": 617,
+      "L": 66,
       "T": 2
     },
     "name": "activation_accelerator",
     "stores": {
-      "G": 306,
-      "L": 706,
+      "G": 298,
+      "L": 962,
       "T": 1
     },
-    "total_instructions": 31164
+    "total_instructions": 29198
   },
   "1": {
     "basicblocks": 7,
-    "calls": "9 9 5 5 11 5 7 7",
+    "calls": "8 8 5 5 7 5 11 11",
     "file": "hls_fmax.h",
     "fileloc": 19,
     "instructions": 45,
@@ -34,24 +34,27 @@
     "total_instructions": 160
   },
   "10": {
-    "basicblocks": 1,
-    "calls": "12",
-    "file": "fmaxfloat.cpp",
-    "fileloc": 10,
-    "instructions": 2,
-    "name": "fmaxf",
-    "total_instructions": 164
+    "basicblocks": 6,
+    "calls": "",
+    "file": "activation_accelerator.cpp",
+    "fileloc": 42,
+    "instructions": 39,
+    "name": "round_float32_to_bf16_ieee",
+    "total_instructions": 39
   },
   "11": {
     "basicblocks": 1,
-    "calls": "2",
+    "calls": "3",
     "file": "x_hls_utils.h",
-    "fileloc": 346,
-    "instructions": 2,
-    "name": "to_ieee",
-    "total_instructions": 16
+    "fileloc": 319,
+    "instructions": 4,
+    "loads": {
+      "L": 1
+    },
+    "name": "to_int",
+    "total_instructions": 13
   },
-  "12": {
+  "2": {
     "basicblocks": 1,
     "calls": "1",
     "file": "fmaxfloat.cpp",
@@ -60,28 +63,7 @@
     "name": "fmax",
     "total_instructions": 162
   },
-  "2": {
-    "basicblocks": 1,
-    "calls": "4",
-    "file": "x_hls_utils.h",
-    "fileloc": 322,
-    "instructions": 5,
-    "loads": {
-      "L": 1
-    },
-    "name": "to_float",
-    "total_instructions": 14
-  },
   "3": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "sqrtfloat.cpp",
-    "fileloc": 11,
-    "instructions": 2,
-    "name": "sqrtf",
-    "total_instructions": 2
-  },
-  "4": {
     "basicblocks": 1,
     "calls": "",
     "file": "x_hls_utils.h",
@@ -96,9 +78,18 @@
     },
     "total_instructions": 9
   },
+  "4": {
+    "basicblocks": 1,
+    "calls": "2",
+    "file": "fmaxfloat.cpp",
+    "fileloc": 10,
+    "instructions": 2,
+    "name": "fmaxf",
+    "total_instructions": 164
+  },
   "5": {
     "basicblocks": 1,
-    "calls": "9",
+    "calls": "8",
     "file": "hls_isnan.h",
     "fileloc": 16,
     "instructions": 11,
@@ -109,43 +100,27 @@
     "total_instructions": 19
   },
   "6": {
-    "basicblocks": 6,
-    "calls": "",
-    "file": "activation_accelerator.cpp",
-    "fileloc": 17,
-    "instructions": 39,
-    "name": "round_float32_to_bf16_ieee",
-    "total_instructions": 39
-  },
-  "7": {
     "basicblocks": 1,
-    "calls": "4",
+    "calls": "3",
     "file": "x_hls_utils.h",
-    "fileloc": 319,
-    "instructions": 4,
+    "fileloc": 322,
+    "instructions": 5,
     "loads": {
       "L": 1
     },
-    "name": "to_int",
-    "total_instructions": 13
+    "name": "to_float",
+    "total_instructions": 14
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "6",
+    "file": "x_hls_utils.h",
+    "fileloc": 346,
+    "instructions": 2,
+    "name": "to_ieee",
+    "total_instructions": 16
   },
   "8": {
-    "basicblocks": 3,
-    "calls": "",
-    "file": "bf16_accl.h",
-    "fileloc": 324,
-    "instructions": 900,
-    "loads": {
-      "G": 64,
-      "L": 64
-    },
-    "name": "square",
-    "stores": {
-      "L": 128
-    },
-    "total_instructions": 900
-  },
-  "9": {
     "basicblocks": 1,
     "calls": "",
     "file": "x_hls_utils.h",
@@ -156,5 +131,14 @@
       "L": 3
     },
     "total_instructions": 8
+  },
+  "9": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "sqrtfloat.cpp",
+    "fileloc": 11,
+    "instructions": 2,
+    "name": "sqrtf",
+    "total_instructions": 2
   }
 }
