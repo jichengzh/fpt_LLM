@@ -1,13 +1,17 @@
 import numpy as np, torch
 import pandas as pd
 
-#启动方式：python test_error.py
+#启动方式：python test_L2.py
+
+
 
 config = "5"
+seedata_type = "seedata"
+
 
 N, D = 64, 768
-path_output= "/home/jicz/fpt_LLM/prj/testvector_example/bf16_vectors/hls_output_config_" + config + ".bin"
-path_golden = "/home/jicz/fpt_LLM/prj/testvector_example/bf16_vectors/golden_out_config_"+ config + "_bf16.bin"
+path_output= "/home/jicz/xushaohui/fpt_LLM/prj/testvector_example/bf16_vectors/hls_output_config_" + config + ".bin"
+path_golden = "/home/jicz/xushaohui/fpt_LLM/prj/testvector_example/bf16_vectors/golden_out_config_"+ config + "_bf16.bin"
 
 
 # 读作 uint16 并 reshape
@@ -74,8 +78,8 @@ for i in range(0,64):
 
 df_nandif_out = pd.DataFrame(nandif_out)
 df_nandif_gold = pd.DataFrame(nandif_gold)
-df_nandif_out.to_csv("/home/jicz/fpt_LLM/prj/seedata/config_"+ config +"/df_nandif_out_config_"+ config +".csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
-df_nandif_gold.to_csv("/home/jicz/fpt_LLM/prj/seedata/config_"+ config +"/df_nandif_gold_config_"+ config +".csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
+df_nandif_out.to_csv("/home/jicz/xushaohui/fpt_LLM/prj/seedata_inline/config_"+ config +"/df_nandif_out_config_"+ config +".csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
+df_nandif_gold.to_csv("/home/jicz/xushaohui/fpt_LLM/prj/seedata_inline/config_"+ config +"/df_nandif_gold_config_"+ config +".csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
 
 
 #判断inf分布情况并输出结果，并将所有inf置零
@@ -113,9 +117,9 @@ for i in range(0,64):
 df_infdif_out = pd.DataFrame(infdif_out)
 df_infdif_gold = pd.DataFrame(infdif_gold)
 df_infdif_sign = pd.DataFrame(infdif_sign)
-df_infdif_out.to_csv("/home/jicz/fpt_LLM/prj/seedata/config_"+ config +"/df_infdif_out_config_"+ config +".csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
-df_infdif_gold.to_csv("/home/jicz/fpt_LLM/prj/seedata/config_"+ config +"/df_infdif_gold_config_"+ config +".csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
-df_infdif_sign.to_csv("/home/jicz/fpt_LLM/prj/seedata/config_"+ config +"/df_infdif_sign_config_"+ config +".csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
+df_infdif_out.to_csv("/home/jicz/xushaohui/fpt_LLM/prj/seedata_inline/config_"+ config +"/df_infdif_out_config_"+ config +".csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
+df_infdif_gold.to_csv("/home/jicz/xushaohui/fpt_LLM/prj/seedata_inline/config_"+ config +"/df_infdif_gold_config_"+ config +".csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
+df_infdif_sign.to_csv("/home/jicz/xushaohui/fpt_LLM/prj/seedata_inline/config_"+ config +"/df_infdif_sign_config_"+ config +".csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
 
 #误差计算并计算精度得分
 errors_per_row = []
@@ -184,6 +188,6 @@ df_error_point = pd.DataFrame(errors_point_per_row)
 #df_error_point.to_csv("/home/jicz/fpt_LLM/prj/seedata/config_"+ config +"/errors_point_per_row_config_"+ config +".csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
 
 #输出使用进位算法的结果
-df_error.to_csv("/home/jicz/fpt_LLM/prj/seedata/config_"+ config +"/errors_per_row_config_"+ config +"_round.csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
-df_error_point.to_csv("/home/jicz/fpt_LLM/prj/seedata/config_"+ config +"/errors_point_per_row_config_"+ config +"_round.csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
+df_error.to_csv("/home/jicz/xushaohui/fpt_LLM/prj/seedata_inline/config_"+ config +"/errors_per_row_config_"+ config +"_round.csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
+df_error_point.to_csv("/home/jicz/xushaohui/fpt_LLM/prj/seedata_inline/config_"+ config +"/errors_point_per_row_config_"+ config +"_round.csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
 
