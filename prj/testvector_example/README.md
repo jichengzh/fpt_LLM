@@ -105,6 +105,52 @@ If needed, you can use our provided `test.py` script to inspect the generated ve
 
 ---
 
+
+Here’s a drop-in section you can append to your README to document **test_L2.py**.
+
+---
+
+## Validating FPGA Outputs with `test_L2.py`
+
+Use this script to compute **L2 error** between your FPGA/HLS outputs and the golden references and to save per-op scores.
+
+### Quick Run
+
+```bash
+python /home/jicz/fpt_LLM/prj/testvector_example/test_L2.py
+```
+
+> **Important:** Open the script and set these parameters before running:
+>
+> * `config` — which operator to evaluate
+>   `0: Softmax, 1: LayerNorm, 2: RMSNorm, 3: SiLU, 4: GELU, 5: Add, 6: Mul`
+> * `path_output` — path to your FPGA/HLS output **bf16 bitstream** file (e.g., `.../bf16_vectors/hls_output_config_5.bin`)
+> * `path_golden` — path to the **golden/reference** file for the same op
+>   (e.g., `.../bf16_vectors/ref_add_bf16.pt` or a bf16 `.bin` you generated)
+> * `save_dir` (or similar) — directory where the script writes the **error/score** results
+---
+
+---
+
+## Measuring Compute Time per Operator (from Co-Simulation)
+
+To estimate the **compute latency** of each operator on the HLS design, we use the **Co-Simulation (cosim) waveform** to extract the cycle count between loop iterations.
+
+### Method Summary
+
+During HLS co-simulation, Vivado/Vitis HLS generates a waveform (usually via xsim).
+Each operator (config 0–6) runs through its loop structure once. We measure:
+
+> **Compute Time = (Cycle index of end of Stage-1 – Cycle index of start of Stage-1)**
+
+Where Stage-1 is the compute stage inside `activation_accelerator` that performs the operator logic (e.g., Softmax, LayerNorm, GELU).
+
+
+---
+
+
+
+
 ## License
 
 Free to use for research and engineering validation. Attribution appreciated.

@@ -109,31 +109,149 @@ static inline void bf16_to_float(const uint16* in, float* out, int len) {
 
 
 
-static inline uint16_t bf16_fmax_u16(uint16_t a, uint16_t b) {
+// static inline uint16_t bf16_fmax_u16(uint16_t a, uint16_t b) {
+// #pragma HLS INLINE off
+//     // ---- NaN 检测（BF16: [15]sign [14:7]exp [6:0]frac）----
+//     uint16_t expa  = (a >> 7) & 0xFF;
+//     uint16_t fraca =  a       & 0x7F;
+//     bool a_is_nan  = (expa == 0xFF) && (fraca != 0);
+
+//     uint16_t expb  = (b >> 7) & 0xFF;
+//     uint16_t fracb =  b       & 0x7F;
+//     bool b_is_nan  = (expb == 0xFF) && (fracb != 0);
+
+//     // IEEE-754 fmax 语义：双 NaN -> 返回 a；单侧 NaN -> 返回另一侧
+//     // if (a_is_nan)             return b;
+//     // if (b_is_nan)             return a;
+
+//     // ---- 将 BF16 映射到可直接比较的无符号序（key 越小 => 数值越小）----
+//     // 正数：x ^ 0x8000；负数：~x
+//     uint16_t ka = (a & 0x8000) ? (uint16_t)(~a) : (uint16_t)(a ^ 0x8000);
+//     uint16_t kb = (b & 0x8000) ? (uint16_t)(~b) : (uint16_t)(b ^ 0x8000);
+
+//     // ---- 比较：返回较大的数值对应的原始 bit ----
+//     // +0 和 -0 会正确地返回 +0（符合 fmax 直觉）
+//     return (ka < kb) ? b : a;
+// }
+
+
+uint16 bf16add(uint16 a_bits, uint16 b_bits) {
 #pragma HLS INLINE off
-    // ---- NaN 检测（BF16: [15]sign [14:7]exp [6:0]frac）----
-    uint16_t expa  = (a >> 7) & 0xFF;
-    uint16_t fraca =  a       & 0x7F;
-    bool a_is_nan  = (expa == 0xFF) && (fraca != 0);
+    // Extract sign, exponent, and mantissa
+    uint16_t a_sign = (a_bits >> 15) & 0x1;
+    uint16_t b_sign = (b_bits >> 15) & 0x1;
+    uint16_t a_exp = (a_bits >> 7) & 0xFF;
+    uint16_t b_exp = (b_bits >> 7) & 0xFF;
+    uint16_t a_mantissa = a_bits & 0x7F;
+    uint16_t b_mantissa = b_bits & 0x7F;
 
-    uint16_t expb  = (b >> 7) & 0xFF;
-    uint16_t fracb =  b       & 0x7F;
-    bool b_is_nan  = (expb == 0xFF) && (fracb != 0);
+    // Handle special case: zero
+    if (a_exp == 0 && a_mantissa == 0) return b_bits;
+    if (b_exp == 0 && b_mantissa == 0) return a_bits;
 
-    // IEEE-754 fmax 语义：双 NaN -> 返回 a；单侧 NaN -> 返回另一侧
-    if (a_is_nan && b_is_nan) return a;
-    if (a_is_nan)             return b;
-    if (b_is_nan)             return a;
+    // Increase precision for intermediate calculations (e.g., 8 extra bits for rounding)
+    const int precision_shift = 8;
 
-    // ---- 将 BF16 映射到可直接比较的无符号序（key 越小 => 数值越小）----
-    // 正数：x ^ 0x8000；负数：~x
-    uint16_t ka = (a & 0x8000) ? (uint16_t)(~a) : (uint16_t)(a ^ 0x8000);
-    uint16_t kb = (b & 0x8000) ? (uint16_t)(~b) : (uint16_t)(b ^ 0x8000);
+    // Construct full mantissa with implicit bit and increased precision
+    uint32_t a_full_mantissa = (a_exp == 0) ? (a_mantissa) : ((0x80 | a_mantissa));
+    uint32_t b_full_mantissa = (b_exp == 0) ? (b_mantissa) : ((0x80 | b_mantissa));
 
-    // ---- 比较：返回较大的数值对应的原始 bit ----
-    // +0 和 -0 会正确地返回 +0（符合 fmax 直觉）
-    return (ka < kb) ? b : a;
+    a_full_mantissa <<= precision_shift;
+    b_full_mantissa <<= precision_shift;
+
+    // Adjust exponents for alignment (handle denormalized numbers)
+    uint16_t a_align_exp = (a_exp == 0) ? 1 : a_exp;
+    uint16_t b_align_exp = (b_exp == 0) ? 1 : b_exp;
+
+    // Align exponents
+    uint16_t max_exp;
+    if (a_align_exp > b_align_exp) {
+        max_exp = a_exp; // The result's exponent is based on the larger one
+        b_full_mantissa >>= (a_align_exp - b_align_exp);
+    } else if (b_align_exp > a_align_exp) {
+        max_exp = b_exp;
+        a_full_mantissa >>= (b_align_exp - a_align_exp);
+    } else {
+        max_exp = a_exp; // Both are equal
+    }
+
+    // Mantissa addition/subtraction
+    uint32_t result_mantissa;
+    uint16_t result_sign;
+    if (a_sign == b_sign) {
+        result_mantissa = a_full_mantissa + b_full_mantissa;
+        result_sign = a_sign;
+    } else {
+        if (a_full_mantissa >= b_full_mantissa) {
+            result_mantissa = a_full_mantissa - b_full_mantissa;
+            result_sign = a_sign;
+        } else {
+            result_mantissa = b_full_mantissa - a_full_mantissa;
+            result_sign = b_sign;
+        }
+    }
+
+    // Return directly if the result is zero
+    if (result_mantissa == 0) {
+        return 0;
+    }
+
+    // Normalization
+    // Representation of 1.0 is 0x80 << precision_shift
+    // Representation of 2.0 is 0x100 << precision_shift
+    while (result_mantissa < (0x80 << precision_shift) && max_exp > 0) {
+        result_mantissa <<= 1;
+        max_exp--;
+        // If it becomes a denormalized number
+        if (max_exp == 0) break;
+    }
+
+    if (result_mantissa >= (0x100 << precision_shift)) {
+        result_mantissa >>= 1;
+        max_exp++;
+    }
+
+    // Round half to nearest even
+    uint32_t rounding_bits = result_mantissa & ((1 << precision_shift) - 1);
+    uint32_t halfway = (1 << (precision_shift - 1));
+
+    if (rounding_bits > halfway) {
+        result_mantissa += (1 << precision_shift); // Round up
+    } else if (rounding_bits == halfway) {
+        // If it's a tie, round to nearest even
+        if (((result_mantissa >> precision_shift) & 1) != 0) {
+            result_mantissa += (1 << precision_shift); // Round up to make it even
+        }
+    }
+    // else (rounding_bits < halfway), truncate (do nothing)
+
+
+    // Renormalization might be needed after rounding
+    if (result_mantissa >= (0x100 << precision_shift)) {
+        result_mantissa >>= 1;
+        max_exp++;
+    }
+
+    // Truncate back to original precision
+    uint16_t final_mantissa_full = result_mantissa >> precision_shift;
+
+    // Handle underflow to denormalized number
+    if (max_exp == 0) {
+        final_mantissa_full &= 0x7F;
+    }
+
+    // Remove the implicit bit
+    uint16_t final_mantissa = final_mantissa_full & 0x7F;
+
+    // Check for overflow
+    if (max_exp >= 0xFF) {
+        return (result_sign << 15) | (0xFF << 7); // Infinity
+    }
+
+    // Construct the final result
+    return (result_sign << 15) | (max_exp << 7) | final_mantissa;
 }
+
 
 // bf16 bitwise addition function implementation
 static inline uint16 bf16add_fast(uint16 a_bits, uint16 b_bits) {
@@ -219,21 +337,18 @@ static inline uint16 bf16add_fast(uint16 a_bits, uint16 b_bits) {
         }
     }
 
-    // // ---- 5) 同号加/异号减（大减小），得到中间尾数
-    // uint32_t M;
-    // uint16_t s = sa;
-    // if (sa == sb) {
-    //     M = A + B_aln;
-    // } else {
-    //     if (A >= B_aln) { M = A - B_aln; s = sa; }
-    //     else           { M = B_aln - A; s = sb; }
-    // }
+    // ---- 5) 同号加/异号减（大减小），得到中间尾数
+    uint32_t M;
+    uint16_t s = sa;
+    if (sa == sb) {
+        M = A + B_aln;
+    } else {
+        if (A >= B_aln) { M = A - B_aln; s = sa; }
+        else           { M = B_aln - A; s = sb; }
+    }
 
-    // if (M == 0) return 0; // 结果为零
-        // 5) 只做同号加法（我们假设 softmax 场景下全是正数，sa=sb=0）
-    // 不再支持异号相减
-    uint32_t M = A + B_aln;
-    uint16_t s  = 0; // 正号
+    // uint32_t M = A + B_aln;
+    // uint16_t s  = 0; // 正号
 
 
 
@@ -361,5 +476,6 @@ acc_loop:
     }
 }
 
+// ======================================== bf16 基础工具函数 ======================================================
 
 #endif // BF16_ACCL_H_

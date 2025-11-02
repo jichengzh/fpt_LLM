@@ -1,0 +1,11 @@
+In file included from activation_accelerator.cpp:7:
+./bf16_accl.h:594:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS RESOURCE variable=P core=DSP48
+        ^
+activation_accelerator.cpp:440:45: warning: Allocation pragma is ignored, because Instances value is not valid function pointer expression  [-Winvalid-hls-pragmas]
+#pragma HLS ALLOCATION function instances = bf16_to_float limit = 32
+                                            ^
+activation_accelerator.cpp:440:9: warning: 'xlx_function_allocation' attribute cannot be applied to a statement [-Wignored-attributes]
+#pragma HLS ALLOCATION function instances = bf16_to_float limit = 32
+~       ^
+3 warnings generated.

@@ -1,0 +1,48 @@
+{
+  "0": {
+    "basicblocks": 1338,
+    "calls": "3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3",
+    "file": "activation_accelerator.cpp",
+    "fileloc": 423,
+    "instructions": 67857,
+    "loads": {
+      "G": 3808,
+      "L": 768,
+      "T": 2
+    },
+    "name": "activation_accelerator",
+    "stores": {
+      "G": 544,
+      "L": 833,
+      "T": 1
+    },
+    "total_instructions": 73460
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "activation_accelerator.cpp",
+    "fileloc": 45,
+    "instructions": 13,
+    "name": "bf16_fmax_u16",
+    "total_instructions": 13
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "sqrtfloat.cpp",
+    "fileloc": 11,
+    "instructions": 2,
+    "name": "sqrtf",
+    "total_instructions": 2
+  },
+  "3": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "activation_accelerator.cpp",
+    "fileloc": 17,
+    "instructions": 17,
+    "name": "round_float32_to_bf16_ieee",
+    "total_instructions": 17
+  }
+}

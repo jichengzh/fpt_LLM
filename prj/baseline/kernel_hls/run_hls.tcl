@@ -44,9 +44,10 @@ create_clock -period 10
 # -----------------------------------------------
 
 # -------- 控制乘法使用dsp进行计算 --------
-config_op fmul -impl maxdsp
-config_op fadd -impl fulldsp
-config_op fsub -impl fulldsp
+# config_op fmul -impl maxdsp
+# config_op fadd -impl fulldsp
+# config_op fsub -impl fulldsp
+set_directive_bind_op bf16add_fast M -op add -impl DSP
 # -------------------------------------------------
 
 # Set variable to select which steps to execute
@@ -60,14 +61,14 @@ if {$hls_exec >= 1} {
 	# Run Synthesis
    csynth_design
 }
-# if {$hls_exec >= 2} {
-# 	# Run Synthesis, RTL Simulation
-#    cosim_design
-# }
-# if {$hls_exec >= 3} { 
-# 	# Run Synthesis, RTL Simulation, RTL implementation
-#    #export_design -format ip_catalog -version "1.00a" -library "hls" -vendor "xilinx.com" -description "A memory mapped IP created by Vitis HLS" -evaluate verilog
-#    export_design -format ip_catalog -evaluate verilog
-# }
+if {$hls_exec >= 2} {
+	# Run Synthesis, RTL Simulation
+   #cosim_design
+}
+if {$hls_exec >= 3} { 
+	# Run Synthesis, RTL Simulation, RTL implementation
+   #export_design -format ip_catalog -version "1.00a" -library "hls" -vendor "xilinx.com" -description "A memory mapped IP created by Vitis HLS" -evaluate verilog
+   #export_design -format ip_catalog -evaluate verilog
+}
 
 exit

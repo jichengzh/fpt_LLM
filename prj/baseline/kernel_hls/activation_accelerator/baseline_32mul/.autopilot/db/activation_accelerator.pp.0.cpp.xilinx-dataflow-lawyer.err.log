@@ -1,0 +1,3 @@
+Invalid Directive: for current device, add + DSP is invalid combination for bind_op
+1 error generated.
+Error while processing /home/jicz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp.

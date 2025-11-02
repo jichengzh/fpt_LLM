@@ -1,0 +1,52 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "bf16add_fast",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "BIND_OP",
+      "option": [
+        {
+          "name": "impl",
+          "value": "DSP"
+        },
+        {
+          "name": "op",
+          "value": "add"
+        },
+        {
+          "name": "variable",
+          "value": "M"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/jicz/fpt_LLM/prj/baseline/kernel_hls/run_hls.tcl",
+    "sourceLine": 50,
+    "success": true
+  },
+  {
+    "functionLabel": "",
+    "functionName": "activation_accelerator",
+    "id": 1,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "activation_accelerator"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/jicz/fpt_LLM/prj/baseline/kernel_hls/run_hls.tcl",
+    "sourceLine": 62,
+    "success": true
+  }
+]

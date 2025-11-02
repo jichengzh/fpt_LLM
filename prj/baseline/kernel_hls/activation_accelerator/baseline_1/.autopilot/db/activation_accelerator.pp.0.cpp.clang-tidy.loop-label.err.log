@@ -1,5 +1,0 @@
-5 warnings and 27 errors generated.
-Error while processing /data1/jcz/fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/.autopilot/db/activation_accelerator.pp.0.cpp.
-clang-tidy applied 131 of 131 suggested fixes.
-Suppressed 92 warnings (87 in non-user code, 5 with check filters).
-Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

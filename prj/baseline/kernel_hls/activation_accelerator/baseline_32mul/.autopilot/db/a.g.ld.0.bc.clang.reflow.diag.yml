@@ -1,0 +1,1332 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 90, Column: 22 }
+Function:        _Z11float_silu2PKtPti
+Args:            
+  - Callee:          'round_float32_to_bf16_ieee(float)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 17, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float_silu2(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 69, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/expfloat.cpp', 
+                   Line: 22, Column: 9 }
+Function:        _ZN3hls4expfEf
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'exp_reduce_::exp(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/common/hls_exp_float.cpp, 
+                       Line: 15, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'hls::expf(float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/expfloat.cpp', 
+                       Line: 20, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 311, Column: 29 }
+Function:        _Z19float_safe_softmax3PKtPti
+Args:            
+  - Callee:          'bf16_fmax_u16(unsigned short, unsigned short)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 45, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float_safe_softmax3(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 279, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 338, Column: 29 }
+Function:        _Z19float_safe_softmax3PKtPti
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'bf16_to_float(unsigned short)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 38, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'float_safe_softmax3(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 279, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 357, Column: 24 }
+Function:        _Z19float_safe_softmax3PKtPti
+Args:            
+  - Callee:          'round_float32_to_bf16_ieee(float)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 17, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float_safe_softmax3(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 279, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 340, Column: 28 }
+Function:        _Z19float_safe_softmax3PKtPti
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::expf(float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/expfloat.cpp', 
+                       Line: 20, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'float_safe_softmax3(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 279, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 252, Column: 16 }
+Function:        _Z17float_layer_norm3PKtPti
+Args:            
+  - Callee:          'hls::sqrtf(float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp', 
+                       Line: 11, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float_layer_norm3(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 201, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 271, Column: 27 }
+Function:        _Z17float_layer_norm3PKtPti
+Args:            
+  - Callee:          'round_float32_to_bf16_ieee(float)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 17, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float_layer_norm3(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 201, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 176, Column: 14 }
+Function:        _Z15float_rms_norm3PKtPti
+Args:            
+  - Callee:          'hls::sqrtf(float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp', 
+                       Line: 11, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float_rms_norm3(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 128, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 188, Column: 25 }
+Function:        _Z15float_rms_norm3PKtPti
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'bf16_to_float(unsigned short)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 38, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'float_rms_norm3(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 128, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 192, Column: 27 }
+Function:        _Z15float_rms_norm3PKtPti
+Args:            
+  - Callee:          'round_float32_to_bf16_ieee(float)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 17, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float_rms_norm3(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 128, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 405, Column: 25 }
+Function:        _Z15float_Multiply2PKtS0_Pti
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'bf16_to_float(unsigned short)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 38, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'float_Multiply2(unsigned short const*, unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 387, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 411, Column: 24 }
+Function:        _Z15float_Multiply2PKtS0_Pti
+Args:            
+  - Callee:          'round_float32_to_bf16_ieee(float)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 17, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float_Multiply2(unsigned short const*, unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 387, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 377, Column: 25 }
+Function:        _ZL10float_add2PKtS0_Pti
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'bf16_to_float(unsigned short)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 38, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'float_add2(unsigned short const*, unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 362, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 380, Column: 24 }
+Function:        _ZL10float_add2PKtS0_Pti
+Args:            
+  - Callee:          'round_float32_to_bf16_ieee(float)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 17, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float_add2(unsigned short const*, unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 362, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 114, Column: 41 }
+Function:        _Z11float_gelu2PKtPti
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::expf(float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/expfloat.cpp', 
+                       Line: 20, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'float_gelu2(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 96, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 450, Column: 28 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - Callee:          'round_float32_to_bf16_ieee(float)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 17, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 471, Column: 13 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'float_silu2(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 69, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 475, Column: 13 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'float_safe_softmax3(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 279, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 479, Column: 13 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'float_layer_norm3(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 201, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 483, Column: 13 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'float_rms_norm3(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 128, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 487, Column: 13 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'float_Multiply2(unsigned short const*, unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 387, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 491, Column: 13 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'float_add2(unsigned short const*, unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 362, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 496, Column: 13 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'float_gelu2(unsigned short const*, unsigned short*, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 96, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 176, Column: 14 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - Callee:          'hls::sqrtf(float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp', 
+                       Line: 11, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 311, Column: 29 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - Callee:          'bf16_fmax_u16(unsigned short, unsigned short)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 45, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: activation_accelerator.cpp, Line: 350, Column: 9 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        softmax_final_inner
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: activation_accelerator.cpp, Line: 333, Column: 20 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_333_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: activation_accelerator.cpp, Line: 306, Column: 20 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_306_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: activation_accelerator.cpp, Line: 261, Column: 9 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        layer_norm_normalize_inner
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: activation_accelerator.cpp, Line: 231, Column: 9 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        layernorm_sum_inner_square
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: activation_accelerator.cpp, Line: 184, Column: 9 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        rms_norm_normalize_inner
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: activation_accelerator.cpp, Line: 157, Column: 9 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        sum_inner_square
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        silu_inner
+  - String:          ''' ('
+  - LoopLoc:         'activation_accelerator.cpp:82:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          activation_accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '32'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        softmax_final_inner
+  - String:          ''' ('
+  - LoopLoc:         'activation_accelerator.cpp:350:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          activation_accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_333_2
+  - String:          ''' ('
+  - LoopLoc:         'activation_accelerator.cpp:333:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          activation_accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '32'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        init_partial_softmax
+  - String:          ''' ('
+  - LoopLoc:         'activation_accelerator.cpp:319:5'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          activation_accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_306_1
+  - String:          ''' ('
+  - LoopLoc:         'activation_accelerator.cpp:306:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          activation_accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        softmax_init_lane_max
+  - String:          ''' ('
+  - LoopLoc:         'activation_accelerator.cpp:296:5'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          activation_accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        layer_norm_normalize_inner
+  - String:          ''' ('
+  - LoopLoc:         'activation_accelerator.cpp:261:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          activation_accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        layernorm_std_blocks
+  - String:          ''' ('
+  - LoopLoc:         'activation_accelerator.cpp:241:5'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          activation_accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        layernorm_sum_inner_square
+  - String:          ''' ('
+  - LoopLoc:         'activation_accelerator.cpp:231:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          activation_accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        layernorm_init_partial
+  - String:          ''' ('
+  - LoopLoc:         'activation_accelerator.cpp:219:5'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          activation_accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        rms_norm_normalize_inner
+  - String:          ''' ('
+  - LoopLoc:         'activation_accelerator.cpp:184:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          activation_accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        rms_calculate_loop_rms_norm3
+  - String:          ''' ('
+  - LoopLoc:         'activation_accelerator.cpp:173:5'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          activation_accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        rms_sum_square2
+  - String:          ''' ('
+  - LoopLoc:         'activation_accelerator.cpp:166:5'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          activation_accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        sum_inner_square
+  - String:          ''' ('
+  - LoopLoc:         'activation_accelerator.cpp:157:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          activation_accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        rms_init_y_sum_and_rms_sq
+  - String:          ''' ('
+  - LoopLoc:         'activation_accelerator.cpp:146:5'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          activation_accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        multiply_inner
+  - String:          ''' ('
+  - LoopLoc:         'activation_accelerator.cpp:399:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          activation_accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '32'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        add_inner
+  - String:          ''' ('
+  - LoopLoc:         'activation_accelerator.cpp:373:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          activation_accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '32'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_105_1
+  - String:          ''' ('
+  - LoopLoc:         'activation_accelerator.cpp:105:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          activation_accelerator
+  - String:          ''' completely with a factor of '
+  - Factor:          '16'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 450, Column: 28 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - Callee:          'round_float32_to_bf16_ieee(float)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 17, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 311, Column: 29 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - Callee:          'bf16_fmax_u16(unsigned short, unsigned short)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 45, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 252, Column: 16 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - Callee:          'hls::sqrtf(float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp', 
+                       Line: 11, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_activation_accelerator_ir
+Args:            
+  - Callee:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_activation_accelerator_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: activation_accelerator.cpp, Line: 427, Column: 0 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZ22activation_acceleratorPtS_S_iiE4buf2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '64'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: activation_accelerator.cpp, Line: 426, Column: 0 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZ22activation_acceleratorPtS_S_iiE4buf1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '32'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: activation_accelerator.cpp, Line: 425, Column: 0 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZ22activation_acceleratorPtS_S_iiE4buf0
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '64'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: activation_accelerator.cpp, Line: 208, Column: 11 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          partial_mean.i
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: activation_accelerator.cpp, Line: 209, Column: 11 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          y_sum_sq.i
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: activation_accelerator.cpp, Line: 284, Column: 7 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          sum_row.i
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: activation_accelerator.cpp, Line: 285, Column: 7 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          max_row.i
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: activation_accelerator.cpp, Line: 456, Column: 9 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '49152'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        in04919seq
+  - ArrayName:       in0
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        stage_0_load0
+  - String:          ' '
+  - LoopLoc:         'activation_accelerator.cpp:456:9'
+  - String:          ' '
+  - Function:        'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 457, Column: 23 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.70
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: activation_accelerator.cpp, Line: 460, Column: 9 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '49152'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        in14920seq
+  - ArrayName:       in1
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        stage_0_load1
+  - String:          ' '
+  - LoopLoc:         'activation_accelerator.cpp:460:9'
+  - String:          ' '
+  - Function:        'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 461, Column: 23 }
+  - OrigDirection:   read
+  - OrigID:          for.inc13.load.38
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: activation_accelerator.cpp, Line: 502, Column: 9 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '49152'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        out4921seq
+  - ArrayName:       out
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        stage_2_store
+  - String:          ' '
+  - LoopLoc:         'activation_accelerator.cpp:502:9'
+  - String:          ' '
+  - Function:        'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 503, Column: 20 }
+  - OrigDirection:   write
+  - OrigID:          for.inc56.store.135
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: activation_accelerator.cpp, Line: 460, Column: 9 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i16
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 460, Column: 9 }
+  - OrigDirection:   read
+  - OrigID:          in14920seq
+  - ArrayName:       in1
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        stage_0_load1
+  - String:          ' '
+  - LoopLoc:         'activation_accelerator.cpp:460:9'
+  - String:          ' '
+  - Function:        'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: activation_accelerator.cpp, Line: 456, Column: 9 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i16
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 456, Column: 9 }
+  - OrigDirection:   read
+  - OrigID:          in04919seq
+  - ArrayName:       in0
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        stage_0_load0
+  - String:          ' '
+  - LoopLoc:         'activation_accelerator.cpp:456:9'
+  - String:          ' '
+  - Function:        'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: activation_accelerator.cpp, Line: 502, Column: 9 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i16
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 502, Column: 9 }
+  - OrigDirection:   write
+  - OrigID:          out4921seq
+  - ArrayName:       out
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        stage_2_store
+  - String:          ' '
+  - LoopLoc:         'activation_accelerator.cpp:502:9'
+  - String:          ' '
+  - Function:        'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        stage_2_store
+  - String:          '> at '
+  - LoopLoc:         'activation_accelerator.cpp:502:9'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        gelu_blocks
+  - String:          '> at '
+  - LoopLoc:         'activation_accelerator.cpp:104:5'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        add_blocks_add
+  - String:          '> at '
+  - LoopLoc:         'activation_accelerator.cpp:369:5'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        multiply_blocks_Multiply
+  - String:          '> at '
+  - LoopLoc:         'activation_accelerator.cpp:395:5'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        silu_blocks
+  - String:          '> at '
+  - LoopLoc:         'activation_accelerator.cpp:79:5'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        stage_0_load0
+  - String:          '> at '
+  - LoopLoc:         'activation_accelerator.cpp:456:9'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        stage_0_load1
+  - String:          '> at '
+  - LoopLoc:         'activation_accelerator.cpp:460:9'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: activation_accelerator.cpp, Line: 456, Column: 9 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '49152'
+  - String:          ' and bit width '
+  - Width:           '16'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        stage_0_load0
+  - String:          ' '
+  - LoopLoc:         'activation_accelerator.cpp:456:9'
+  - String:          ' '
+  - Function:        'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: activation_accelerator.cpp, Line: 456, Column: 9 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '49152'
+  - String:          ' and bit width '
+  - Width:           '16'
+  - String:          ' in loop '''
+  - LoopName:        stage_0_load0
+  - String:          '''('
+  - LoopLoc:         'activation_accelerator.cpp:456:9'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: activation_accelerator.cpp, Line: 460, Column: 9 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '49152'
+  - String:          ' and bit width '
+  - Width:           '16'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq2
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        stage_0_load1
+  - String:          ' '
+  - LoopLoc:         'activation_accelerator.cpp:460:9'
+  - String:          ' '
+  - Function:        'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: activation_accelerator.cpp, Line: 460, Column: 9 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '49152'
+  - String:          ' and bit width '
+  - Width:           '16'
+  - String:          ' in loop '''
+  - LoopName:        stage_0_load1
+  - String:          '''('
+  - LoopLoc:         'activation_accelerator.cpp:460:9'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: activation_accelerator.cpp, Line: 502, Column: 9 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '49152'
+  - String:          ' and bit width '
+  - Width:           '16'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        stage_2_store
+  - String:          ' '
+  - LoopLoc:         'activation_accelerator.cpp:502:9'
+  - String:          ' '
+  - Function:        'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: activation_accelerator.cpp, Line: 502, Column: 9 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '49152'
+  - String:          ' and bit width '
+  - Width:           '16'
+  - String:          ' in loop '''
+  - LoopName:        stage_2_store
+  - String:          '''('
+  - LoopLoc:         'activation_accelerator.cpp:502:9'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem2
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 450, Column: 28 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - Callee:          'round_float32_to_bf16_ieee(float)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 17, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 311, Column: 29 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - Callee:          'bf16_fmax_u16(unsigned short, unsigned short)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 45, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: activation_accelerator.cpp, Line: 252, Column: 16 }
+Function:        _Z22activation_acceleratorPtS_S_ii
+Args:            
+  - Callee:          'hls::sqrtf(float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp', 
+                       Line: 11, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'activation_accelerator(unsigned short*, unsigned short*, unsigned short*, int, int)'
+    DebugLoc:        { File: activation_accelerator.cpp, Line: 417, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
