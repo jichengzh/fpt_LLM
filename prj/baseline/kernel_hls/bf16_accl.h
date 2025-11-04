@@ -23,12 +23,12 @@ static inline uint16_t pack_bf16(uint16_t s, uint16_t e, uint16_t m7) {
     return (uint16_t)((s << 15) | (e << 7) | (m7 & 0x7F));
 }
 
-static inline float bf16_to_f32(uint16_t b) {
-#pragma HLS inline off 
-    union { uint32_t u; float f; } cvt;
-    cvt.u = ((uint32_t)b) << 16;
-    return cvt.f;
-}
+// static inline float bf16_to_f32(uint16_t b) {
+// #pragma HLS inline off 
+//     union { uint32_t u; float f; } cvt;
+//     cvt.u = ((uint32_t)b) << 16;
+//     return cvt.f;
+// }
 
 
 // —— 先做前置声明，供下方内联函数调用 ——
@@ -109,6 +109,31 @@ static inline void bf16_to_float(const uint16* in, float* out, int len) {
 
 
 
+static inline uint16_t bf16_fmax_u16(uint16_t a, uint16_t b) {
+#pragma HLS INLINE off
+    // ---- NaN 检测（BF16: [15]sign [14:7]exp [6:0]frac）----
+    uint16_t expa  = (a >> 7) & 0xFF;
+    uint16_t fraca =  a       & 0x7F;
+    bool a_is_nan  = (expa == 0xFF) && (fraca != 0);
+
+    uint16_t expb  = (b >> 7) & 0xFF;
+    uint16_t fracb =  b       & 0x7F;
+    bool b_is_nan  = (expb == 0xFF) && (fracb != 0);
+
+    // IEEE-754 fmax 语义：双 NaN -> 返回 a；单侧 NaN -> 返回另一侧
+    if (a_is_nan && b_is_nan) return a;
+    if (a_is_nan)             return b;
+    if (b_is_nan)             return a;
+
+    // ---- 将 BF16 映射到可直接比较的无符号序（key 越小 => 数值越小）----
+    // 正数：x ^ 0x8000；负数：~x
+    uint16_t ka = (a & 0x8000) ? (uint16_t)(~a) : (uint16_t)(a ^ 0x8000);
+    uint16_t kb = (b & 0x8000) ? (uint16_t)(~b) : (uint16_t)(b ^ 0x8000);
+
+    // ---- 比较：返回较大的数值对应的原始 bit ----
+    // +0 和 -0 会正确地返回 +0（符合 fmax 直觉）
+    return (ka < kb) ? b : a;
+}
 
 // bf16 bitwise addition function implementation
 static inline uint16 bf16add_fast(uint16 a_bits, uint16 b_bits) {
@@ -295,29 +320,29 @@ float Q_rsqrt(float number)
 	return y;
 }
 
-// template<int col_len = 64, int COLS_PER_ROW = 768>
-void square(const uint16* x, float* y_sum_sq, int len){
-#pragma HLS INLINE off
-    const int col_len = 64;
-    const int row_len = len/col_len;
-sum_square:
-    for (int i = 0; i < row_len; ++i) {
-#pragma HLS PIPELINE II = 6 
-    sum_inner_square:
-        for (int j = 0; j < col_len; ++j) {
-#pragma HLS UNROLL
-            int idx = i + j * row_len;
-            uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
-            float f_x = *(float*)&x_f32;
-            y_sum_sq[j] += f_x * f_x ;
-        }
-    }
-sum_square2://在内部循环里多次分开除好像影响精度了，合起来除
-    for (int i = 0; i < col_len; ++i) {
-#pragma HLS UNROLL  
-        y_sum_sq[i] = y_sum_sq[i]/ row_len;
-    }
-}//属于函数的括号
+// // template<int col_len = 64, int COLS_PER_ROW = 768>
+// void square(const uint16* x, float* y_sum_sq, int len){
+// #pragma HLS INLINE off
+//     const int col_len = 64;
+//     const int row_len = len/col_len;
+// sum_square:
+//     for (int i = 0; i < row_len; ++i) {
+// #pragma HLS PIPELINE II = 6 
+//     sum_inner_square:
+//         for (int j = 0; j < col_len; ++j) {
+// #pragma HLS UNROLL
+//             int idx = i + j * row_len;
+//             uint32_t x_f32 = ((uint32_t)x[idx]) << 16;
+//             float f_x = *(float*)&x_f32;
+//             y_sum_sq[j] += f_x * f_x ;
+//         }
+//     }
+// sum_square2://在内部循环里多次分开除好像影响精度了，合起来除
+//     for (int i = 0; i < col_len; ++i) {
+// #pragma HLS UNROLL  
+//         y_sum_sq[i] = y_sum_sq[i]/ row_len;
+//     }
+// }//属于函数的括号
 
 
 template<int ROWS = 64, int COLS_PER_ROW = 768>
