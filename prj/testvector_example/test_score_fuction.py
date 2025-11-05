@@ -6,8 +6,8 @@ import pandas as pd
 
 def calculate_score(config):
     N, D = 64, 768
-    path_output= "/home/jicz/xushaohui/fpt_LLM/prj/testvector_example/bf16_vectors/hls_output_config_" + config + ".bin"
-    path_golden = "/home/jicz/xushaohui/fpt_LLM/prj/testvector_example/bf16_vectors/golden_out_config_"+ config + "_bf16.bin"
+    path_output= "/home/jicz/xushaohui2/fpt_LLM/prj/testvector_example/bf16_vectors/hls_output_config_" + config + ".bin"
+    path_golden = "/home/jicz/xushaohui2/fpt_LLM/prj/testvector_example/bf16_vectors/golden_out_config_"+ config + "_bf16.bin"
 
 
     # 读作 uint16 并 reshape
