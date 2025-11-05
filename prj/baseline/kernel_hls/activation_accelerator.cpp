@@ -5,7 +5,7 @@
 #include <limits> 
 #include <cfloat> 
 // #include"bf16_accl.h"
-#include "reduce_tree.h"
+// #include "reduce_tree.h"
 // "softmax":    0,
 // "silu":       1,
 // "rmsnorm":    2,
@@ -156,7 +156,7 @@ rms_init_y_sum_and_rms_sq:
 
 rms_sum_square1:
     for (int i = 0; i < row_len; ++i) {
-// #pragma HLS PIPELINE II = 2
+#pragma HLS PIPELINE II = 4
 rms_sum_square1_1:       
         for (int j = 0; j < 32; ++j) {
 #pragma HLS UNROLL
@@ -262,7 +262,7 @@ layernorm_init_partial:
 
 layernorm_sum_square:
     for (int i = 0; i < row_len; ++i) {
-// #pragma HLS PIPELINE II = 2
+#pragma HLS PIPELINE II = 4
 layernorm_sum_square_inner_1:       
         for (int j = 0; j < 32; ++j) {
 #pragma HLS UNROLL
@@ -364,52 +364,52 @@ init_partial_softmax:
         sum_row[u] = 0.f;  // 0x0000
     }
 
-// softmax_exp_and_bucket:
-//     for (int i = 0; i < row_len; ++i) {
-// #pragma HLS PIPELINE II = 6
-//     exp_inner_softmax1:
-//         for (int u = 0; u < 32; ++u) {
-//             #pragma HLS UNROLL
-//                 int idx = u * row_len + i; 
-//                 //数据格式变换内置
-
-//                 float f_x1 = bf16_to_float(x[idx]);
-                
-//                 float ex1 = hls::expf(f_x1 - max_row[u]);
-//                 sum_row[u] += ex1;
-//             }
-//     exp_inner_softmax2:
-//         for (int j = 32; j < 64; ++j) {
-//             #pragma HLS UNROLL
-//                 int idx = j * row_len + i; 
-//                 //数据格式变换内置
-
-//                 float f_x = bf16_to_float(x[idx]);
-                
-//                 float ex = hls::expf(f_x - max_row[j]);
-//                 sum_row[j] += ex;
-//             }
-//         }
-
 softmax_exp_and_bucket:
     for (int i = 0; i < row_len; ++i) {
-// #pragma HLS PIPELINE II = 6
-    exp_inner_softmax:
-        // pass 1: 只算exp，写到exp_buf
-        for (int l = 0; l < 2; ++l) {
-        #pragma HLS PIPELINE II = 2
-            for (int u = 32*l; u < 32*(l+1); ++u) {
+#pragma HLS PIPELINE II = 4
+    exp_inner_softmax1:
+        for (int u = 0; u < 32; ++u) {
             #pragma HLS UNROLL
                 int idx = u * row_len + i; 
                 //数据格式变换内置
 
+                float f_x1 = bf16_to_float(x[idx]);
+                
+                float ex1 = hls::expf(f_x1 - max_row[u]);
+                sum_row[u] += ex1;
+            }
+    exp_inner_softmax2:
+        for (int j = 32; j < 64; ++j) {
+            #pragma HLS UNROLL
+                int idx = j * row_len + i; 
+                //数据格式变换内置
+
                 float f_x = bf16_to_float(x[idx]);
                 
-                float ex = hls::expf(f_x - max_row[u]);
-                sum_row[u] += ex;
+                float ex = hls::expf(f_x - max_row[j]);
+                sum_row[j] += ex;
             }
         }
-    }
+
+// softmax_exp_and_bucket:
+//     for (int i = 0; i < row_len; ++i) {
+// // #pragma HLS PIPELINE II = 6
+//     exp_inner_softmax:
+//         // pass 1: 只算exp，写到exp_buf
+//         for (int l = 0; l < 2; ++l) {
+//         #pragma HLS PIPELINE II = 2
+//             for (int u = 32*l; u < 32*(l+1); ++u) {
+//             #pragma HLS UNROLL
+//                 int idx = u * row_len + i; 
+//                 //数据格式变换内置
+
+//                 float f_x = bf16_to_float(x[idx]);
+                
+//                 float ex = hls::expf(f_x - max_row[u]);
+//                 sum_row[u] += ex;
+//             }
+//         }
+//     }
 
 
 

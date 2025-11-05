@@ -6,16 +6,17 @@ N, D = 64, 768
 # /home/xushaohui/FPT/fpt_LLM/prj/testvector_example/
 #启动命令：python test_data_output.py
 
-config = "0"
+config = "5"
 
 # Name = "ref_softmax_bf16"
-Name = "X_test_tensor_bf16"
+# Name = "X_test_tensor_bf16"
 # Name = "hls_output_config_" + config
-# Name = "golden_out_config_" + config + "_bf16"
+
+Name = "golden_out_config_" + config + "_bf16"
 
 # Name = "X_test_tensor_bf16"
 # Name = "Y_test_tensor_bf16"
-path = "/data1/jcz/fpt_LLM/prj/testvector_example/bf16_vectors3/"+ Name + ".bin" 
+path = "/home/jicz/fpt_LLM/prj/testvector_example/bf16_vectors/"+ Name + ".bin" 
 
 
 # 读作 uint16 并 reshape
@@ -50,5 +51,5 @@ df = pd.DataFrame(t_f32)
 # df = df.fillna(0.0)
 
 # 3. 将 DataFrame 输出为 Excel 文件
-df.to_csv("/data1/jcz/fpt_LLM/prj/seedata/config_"+ config +"/"+ Name + ".csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
+df.to_csv("/home/jicz/fpt_LLM/prj/seedata/config_"+ config +"/"+ Name + ".csv", index=False, header=False)  # index=False 去掉行号，header=False 去掉列名
 

@@ -27,7 +27,7 @@ open_solution -reset ${opt_method} -flow_target vivado
 
 # Define technology and clock rate
 set_part  {xck26-sfvc784-2LV-c}
-create_clock -period 10
+create_clock -period 7.5
 
 
 # -------- HLS directives: 复用 row_reduce --------
