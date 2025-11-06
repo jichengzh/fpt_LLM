@@ -31,7 +31,10 @@ FPT_LLM/
 │       ├── test_score_fuction.py
 │       ├── test_data_output.py
 │       └── bf16_vectors/
-│           └──golden_out_config_X_bf16.bin
+│           ├──X_test_tensor_bf16.bin
+│           ├──Y_test_tensor_bf16.bin  
+│           ├──golden_out_config_X_bf16.bin
+│           └──hls_output_config_X.bin
 ├── tutotial/ 
 └── README.md
 ```
@@ -42,19 +45,36 @@ FPT_LLM/
 * **./activation_accelerator/baseline/**: Result storage
 * **test_score_fuction.py**: Calculate the accuracy score
 
-## Golden data
-The ground truth data is generated using the activation function module in PyTorch, named **golden_out_config_X_bf16.bin**, and can be found in the project directory.
+## Data
+* The input values for the acceleration core are stored in the testvector_example/, named **X_test_tensor_bf16.bin** and **Y_test_tensor_bf16.bin**. You can see this folder in Project Directory.
 
-## Getting Started 
+* The ground truth data is generated using the activation function module in PyTorch, named **golden_out_config_X_bf16.bin**, and can be found in the project directory.
+
+* The calculation results will be saved in the same folder as the ground truth data and input values, named **hls_output_config_X.bin**.
+
+* The correspondence between the **config_X** in the project and the **activation functions** is as follows:
+```javascript
+config_0: Softmax
+config_1: LayerNorm
+config_2: RMSNorm
+config_3: SiLU
+config_4: GELU
+config_5: Elementwise Add
+config_6: Elementwise Mul
+```
+
+## Getting Start 
 * Clone the program
 ```javascript
 git clone https://github.com/jichengzh/fpt_LLM.git
 ```
+* Change to the fpt_LLM directory
+
 * Change the file path in the testbench.cpp
 
 * Navigate to the directory containing run_hls.tcl
 ```javascript
-cd ./fpt_LLM/prj/baseline/kernel_hls/
+cd ./prj/baseline/kernel_hls/
 ```
 
 * Run the following command
@@ -64,7 +84,16 @@ vitis_hls -f run_hls.tcl
 
 * Check the simulation results in:
 ```javascript
-./fpt_LLM/prj/baseline/kernel_hls/activation_accelerator/baseline/
+./prj/baseline/kernel_hls/activation_accelerator/baseline/
+```
+
+* Accuracy Measurement Method
+```javascript
+#Navigate to the follow directory
+./prj/testvector_example/
+#Modify the file path in test_score_fuction.py
+#Run the Python program: test_score_fuction.py
+python test_score_fuction.py
 ```
 
 
